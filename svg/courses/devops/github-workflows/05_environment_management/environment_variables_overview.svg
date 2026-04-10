@@ -1,23 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <text x="640" y="44.6897" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Variable / Secret Precedence (Highest → Lowest)</text>
-  <rect x="60" y="74.4828" width="1160" height="94.3448" fill="#c5cae9" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="114.2069" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Organization Secrets</text>
-  <text x="640" y="151.4483" font-size="22" fill="#222" text-anchor="middle">shared across repos</text>
-  <rect x="80" y="173.7931" width="1120" height="94.3448" fill="#9fa8da" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="213.5172" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Repository Secrets</text>
-  <text x="640" y="250.7586" font-size="22" fill="#222" text-anchor="middle">per repository</text>
-  <rect x="100" y="273.1034" width="1080" height="94.3448" fill="#7986cb" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="312.8276" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Environment Secrets</text>
-  <text x="640" y="350.069" font-size="22" fill="#222" text-anchor="middle">per environment</text>
-  <rect x="120" y="372.4138" width="1040" height="94.3448" fill="#5c6bc0" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="412.1379" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Workflow env</text>
-  <text x="640" y="449.3793" font-size="22" fill="#222" text-anchor="middle">workflow-level vars</text>
-  <rect x="140" y="471.7241" width="1000" height="94.3448" fill="#3949ab" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="511.4483" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">Job env</text>
-  <text x="640" y="548.6897" font-size="22" fill="#fff" text-anchor="middle">job-level vars</text>
-  <rect x="160" y="571.0345" width="960" height="94.3448" fill="#283593" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="610.7586" font-size="26" font-weight="bold" fill="#fff" text-anchor="middle">Step env</text>
-  <text x="640" y="648" font-size="22" fill="#fff" text-anchor="middle">step-level vars</text>
-  <text x="1240" y="124.1379" font-size="22" fill="#c00" text-anchor="start">▲ Higher priority</text>
-  <text x="1240" y="670.3448" font-size="22" fill="#666" text-anchor="start">▼ Lower priority</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <!-- Scope gradients: darker = higher priority -->
+    <linearGradient id="scope1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#bbdefb"/>
+      <stop offset="100%" stop-color="#90caf9"/>
+    </linearGradient>
+    <linearGradient id="scope2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#90caf9"/>
+      <stop offset="100%" stop-color="#64b5f6"/>
+    </linearGradient>
+    <linearGradient id="scope3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#64b5f6"/>
+      <stop offset="100%" stop-color="#42a5f5"/>
+    </linearGradient>
+    <linearGradient id="scope4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#42a5f5"/>
+      <stop offset="100%" stop-color="#1e88e5"/>
+    </linearGradient>
+    <linearGradient id="scope5" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="scope6" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1565c0"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Priority label -->
+  <text x="80" y="55" font-size="18" fill="#555555">Scope</text>
+  <text x="1200" y="55" font-size="18" fill="#555555" text-anchor="end">Priority</text>
+  <line x1="80" y1="65" x2="1200" y2="65" stroke="#f2f2f2" stroke-width="1.5"/>
+
+  <!-- Row 1: Organization Secrets (lowest priority, widest) -->
+  <rect x="60" y="75" width="1160" height="84" rx="8" fill="url(#scope1)" filter="url(#shadow)"/>
+  <text x="640" y="110" font-size="24" font-weight="bold" fill="#212121" text-anchor="middle">Organization Secrets</text>
+  <text x="640" y="142" font-size="18" fill="#555555" text-anchor="middle">shared across all repositories in the org</text>
+  <text x="1195" y="130" font-size="16" fill="#555555" text-anchor="end">lowest</text>
+
+  <!-- Row 2: Repository Secrets -->
+  <rect x="100" y="170" width="1080" height="84" rx="8" fill="url(#scope2)" filter="url(#shadow)"/>
+  <text x="640" y="205" font-size="24" font-weight="bold" fill="#212121" text-anchor="middle">Repository Secrets</text>
+  <text x="640" y="237" font-size="18" fill="#555555" text-anchor="middle">scoped to a single repository</text>
+
+  <!-- Row 3: Environment Secrets -->
+  <rect x="140" y="265" width="1000" height="84" rx="8" fill="url(#scope3)" filter="url(#shadow)"/>
+  <text x="640" y="300" font-size="24" font-weight="bold" fill="#212121" text-anchor="middle">Environment Secrets</text>
+  <text x="640" y="332" font-size="18" fill="#555555" text-anchor="middle">scoped to a named deployment environment</text>
+
+  <!-- Row 4: Workflow env -->
+  <rect x="180" y="360" width="920" height="84" rx="8" fill="url(#scope4)" filter="url(#shadow)"/>
+  <text x="640" y="395" font-size="24" font-weight="bold" fill="#212121" text-anchor="middle">Workflow env:</text>
+  <text x="640" y="427" font-size="18" fill="#212121" text-anchor="middle">workflow-level variables (env: at top level)</text>
+
+  <!-- Row 5: Job env -->
+  <rect x="220" y="455" width="840" height="84" rx="8" fill="url(#scope5)" filter="url(#shadow)"/>
+  <text x="640" y="490" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Job env:</text>
+  <text x="640" y="522" font-size="18" fill="#e3f2fd" text-anchor="middle">job-level variables (env: under a job)</text>
+
+  <!-- Row 6: Step env (highest priority, narrowest) -->
+  <rect x="260" y="550" width="760" height="84" rx="8" fill="url(#scope6)" filter="url(#shadow)"/>
+  <text x="640" y="585" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Step env:</text>
+  <text x="640" y="617" font-size="18" fill="#e3f2fd" text-anchor="middle">step-level variables — highest specificity wins</text>
+  <text x="1000" y="600" font-size="16" fill="#e3f2fd">highest</text>
 </svg>

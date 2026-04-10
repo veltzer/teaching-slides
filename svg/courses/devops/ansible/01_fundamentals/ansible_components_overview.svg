@@ -1,34 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="21.913" refX="17.7231" refY="10.9565" orient="auto">
-      <polygon points="0,31.3043 6.8923,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="19.6923" markerHeight="21.913" refX="17.7231" refY="10.9565" orient="auto">
-      <polygon points="0,31.3043 6.8923,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="19.6923" y="31.3043" width="1240.6154" height="657.3913" rx="7.8769" fill="#f8f9fa" stroke="#333" stroke-width="2.9538" />
-  <text x="640" y="100.1739" text-anchor="middle" font-size="29.5385" fill="#222" font-weight="bold">Ansible Ecosystem</text>
-  <rect x="59.0769" y="137.7391" width="344.6154" height="500.8696" rx="7.8769" fill="#e3f2fd" stroke="#555" stroke-width="2.9538" />
-  <text x="230.4" y="200.3478" text-anchor="middle" font-size="25.6" fill="#222" font-weight="bold">Core Tools</text>
-  <text x="230.4" y="262.9565" text-anchor="middle" font-size="21.6615" fill="#333">ansible</text>
-  <text x="230.4" y="319.3043" text-anchor="middle" font-size="21.6615" fill="#333">ansible-playbook</text>
-  <text x="230.4" y="375.6522" text-anchor="middle" font-size="21.6615" fill="#333">ansible-galaxy</text>
-  <text x="230.4" y="432" text-anchor="middle" font-size="21.6615" fill="#333">ansible-vault</text>
-  <text x="230.4" y="488.3478" text-anchor="middle" font-size="21.6615" fill="#333">ansible-doc</text>
-  <text x="230.4" y="544.6957" text-anchor="middle" font-size="21.6615" fill="#333">ansible-pull</text>
-  <rect x="452.9231" y="137.7391" width="344.6154" height="500.8696" rx="7.8769" fill="#e8f5e9" stroke="#555" stroke-width="2.9538" />
-  <text x="624.2462" y="200.3478" text-anchor="middle" font-size="25.6" fill="#222" font-weight="bold">Content</text>
-  <text x="624.2462" y="262.9565" text-anchor="middle" font-size="21.6615" fill="#333">Playbooks</text>
-  <text x="624.2462" y="319.3043" text-anchor="middle" font-size="21.6615" fill="#333">Roles</text>
-  <text x="624.2462" y="375.6522" text-anchor="middle" font-size="21.6615" fill="#333">Collections</text>
-  <text x="624.2462" y="432" text-anchor="middle" font-size="21.6615" fill="#333">Modules</text>
-  <text x="624.2462" y="488.3478" text-anchor="middle" font-size="21.6615" fill="#333">Plugins</text>
-  <text x="624.2462" y="544.6957" text-anchor="middle" font-size="21.6615" fill="#333">Filters</text>
-  <rect x="846.7692" y="137.7391" width="344.6154" height="500.8696" rx="7.8769" fill="#ede7f6" stroke="#555" stroke-width="2.9538" />
-  <text x="1018.0923" y="200.3478" text-anchor="middle" font-size="25.6" fill="#222" font-weight="bold">Platform</text>
-  <text x="1018.0923" y="262.9565" text-anchor="middle" font-size="21.6615" fill="#333">AWX / Tower</text>
-  <text x="1018.0923" y="319.3043" text-anchor="middle" font-size="21.6615" fill="#333">Galaxy</text>
-  <text x="1018.0923" y="375.6522" text-anchor="middle" font-size="21.6615" fill="#333">EE (Exec Environments)</text>
-  <text x="1018.0923" y="432" text-anchor="middle" font-size="21.6615" fill="#333">Navigator</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- outer border -->
+  <rect x="20" y="20" width="1240" height="660" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- title bar -->
+  <rect x="20" y="20" width="1240" height="56" rx="10" fill="url(#grad-accent)"/>
+  <rect x="20" y="56" width="1240" height="20" rx="0" fill="url(#grad-accent)"/>
+  <text x="640" y="57" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="bold">Ansible Ecosystem</text>
+
+  <!-- column 1: Core Tools -->
+  <rect x="55" y="110" width="360" height="540" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="55" y="110" width="360" height="46" rx="8" fill="#1e88e5"/>
+  <rect x="55" y="136" width="360" height="20" rx="0" fill="#1e88e5"/>
+  <text x="235" y="142" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">Core Tools</text>
+  <text x="235" y="206" text-anchor="middle" font-size="18" fill="#222">ansible</text>
+  <text x="235" y="252" text-anchor="middle" font-size="18" fill="#222">ansible-playbook</text>
+  <text x="235" y="298" text-anchor="middle" font-size="18" fill="#222">ansible-galaxy</text>
+  <text x="235" y="344" text-anchor="middle" font-size="18" fill="#222">ansible-vault</text>
+  <text x="235" y="390" text-anchor="middle" font-size="18" fill="#222">ansible-doc</text>
+  <text x="235" y="436" text-anchor="middle" font-size="18" fill="#222">ansible-pull</text>
+  <text x="235" y="482" text-anchor="middle" font-size="18" fill="#222">ansible-lint</text>
+  <text x="235" y="528" text-anchor="middle" font-size="18" fill="#222">ansible-navigator</text>
+
+  <!-- column 2: Content -->
+  <rect x="460" y="110" width="360" height="540" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="460" y="110" width="360" height="46" rx="8" fill="#43a047"/>
+  <rect x="460" y="136" width="360" height="20" rx="0" fill="#43a047"/>
+  <text x="640" y="142" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">Content</text>
+  <text x="640" y="206" text-anchor="middle" font-size="18" fill="#222">Playbooks</text>
+  <text x="640" y="252" text-anchor="middle" font-size="18" fill="#222">Roles</text>
+  <text x="640" y="298" text-anchor="middle" font-size="18" fill="#222">Collections</text>
+  <text x="640" y="344" text-anchor="middle" font-size="18" fill="#222">Modules</text>
+  <text x="640" y="390" text-anchor="middle" font-size="18" fill="#222">Plugins</text>
+  <text x="640" y="436" text-anchor="middle" font-size="18" fill="#222">Filters</text>
+  <text x="640" y="482" text-anchor="middle" font-size="18" fill="#222">Inventory</text>
+  <text x="640" y="528" text-anchor="middle" font-size="18" fill="#222">Vault secrets</text>
+
+  <!-- column 3: Platform -->
+  <rect x="865" y="110" width="360" height="540" rx="8" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="865" y="110" width="360" height="46" rx="8" fill="#7b1fa2"/>
+  <rect x="865" y="136" width="360" height="20" rx="0" fill="#7b1fa2"/>
+  <text x="1045" y="142" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">Platform</text>
+  <text x="1045" y="206" text-anchor="middle" font-size="18" fill="#222">AWX / Tower</text>
+  <text x="1045" y="252" text-anchor="middle" font-size="18" fill="#222">Ansible Galaxy</text>
+  <text x="1045" y="298" text-anchor="middle" font-size="18" fill="#222">Execution Environments</text>
+  <text x="1045" y="344" text-anchor="middle" font-size="18" fill="#222">Navigator</text>
+  <text x="1045" y="390" text-anchor="middle" font-size="18" fill="#222">Automation Hub</text>
+  <text x="1045" y="436" text-anchor="middle" font-size="18" fill="#222">Controller API</text>
 </svg>

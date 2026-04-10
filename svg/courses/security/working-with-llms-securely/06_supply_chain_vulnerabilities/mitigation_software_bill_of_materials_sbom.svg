@@ -1,23 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="56.8421" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">SBOM for LLM Application</text>
-  <rect x="139.6364" y="104.2105" width="1000.7273" height="568.4211" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.7895" />
-  <rect x="197.8182" y="142.1053" width="69.8182" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="232.7273" y="183.7895" text-anchor="middle" font-size="30.3158" fill="#28a745" font-weight="bold">✓</text>
-  <text x="314.1818" y="183.7895" font-size="26.5263" fill="#333">All model sources and versions</text>
-  <rect x="197.8182" y="217.8947" width="69.8182" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="232.7273" y="259.5789" text-anchor="middle" font-size="30.3158" fill="#28a745" font-weight="bold">✓</text>
-  <text x="314.1818" y="259.5789" font-size="26.5263" fill="#333">All training/fine-tuning datasets</text>
-  <rect x="197.8182" y="293.6842" width="69.8182" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="232.7273" y="335.3684" text-anchor="middle" font-size="30.3158" fill="#28a745" font-weight="bold">✓</text>
-  <text x="314.1818" y="335.3684" font-size="26.5263" fill="#333">All software dependencies and versions</text>
-  <rect x="197.8182" y="369.4737" width="69.8182" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="232.7273" y="411.1579" text-anchor="middle" font-size="30.3158" fill="#28a745" font-weight="bold">✓</text>
-  <text x="314.1818" y="411.1579" font-size="26.5263" fill="#333">All plugins and extensions</text>
-  <rect x="197.8182" y="445.2632" width="69.8182" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="232.7273" y="486.9474" text-anchor="middle" font-size="30.3158" fill="#28a745" font-weight="bold">✓</text>
-  <text x="314.1818" y="486.9474" font-size="26.5263" fill="#333">All API providers and versions</text>
-  <rect x="197.8182" y="521.0526" width="69.8182" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="232.7273" y="562.7368" text-anchor="middle" font-size="30.3158" fill="#28a745" font-weight="bold">✓</text>
-  <text x="314.1818" y="562.7368" font-size="26.5263" fill="#333">All infrastructure components</text>
-  <text x="640" y="644.2105" text-anchor="middle" font-size="22.7368" fill="#555" font-style="italic">Maintain an SBOM for your LLM application</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Outer container -->
+  <rect x="135" y="80" width="1010" height="545" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+
+  <!-- Checklist items -->
+  <!-- Item 1 -->
+  <rect x="175" y="110" width="66" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="208" y="148" text-anchor="middle" font-size="26" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="262" y="148" font-size="22" fill="#333333">All model sources and versions</text>
+
+  <!-- Item 2 -->
+  <rect x="175" y="185" width="66" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="208" y="223" text-anchor="middle" font-size="26" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="262" y="223" font-size="22" fill="#333333">All training / fine-tuning datasets</text>
+
+  <!-- Item 3 -->
+  <rect x="175" y="260" width="66" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="208" y="298" text-anchor="middle" font-size="26" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="262" y="298" font-size="22" fill="#333333">All software dependencies and versions</text>
+
+  <!-- Item 4 -->
+  <rect x="175" y="335" width="66" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="208" y="373" text-anchor="middle" font-size="26" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="262" y="373" font-size="22" fill="#333333">All plugins and extensions</text>
+
+  <!-- Item 5 -->
+  <rect x="175" y="410" width="66" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="208" y="448" text-anchor="middle" font-size="26" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="262" y="448" font-size="22" fill="#333333">All API providers and versions</text>
+
+  <!-- Item 6 -->
+  <rect x="175" y="485" width="66" height="55" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="208" y="523" text-anchor="middle" font-size="26" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="262" y="523" font-size="22" fill="#333333">All infrastructure components</text>
+
+  <!-- Footer note -->
+  <text x="640" y="660" text-anchor="middle" font-size="18" fill="#555555" font-style="italic">Maintain an SBOM for your LLM application</text>
 </svg>

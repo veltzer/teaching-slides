@@ -1,32 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="18.2857" markerHeight="12" refX="18.2857" refY="6" orient="auto">
-      <polygon points="0,17.1429 6.4,0" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="51.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.4286" font-weight="bold" fill="#333">Make Dependency Resolution (Top-Down)</text>
-  <rect x="502.8571" y="85.7143" width="274.2857" height="68.5714" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
-  <text x="640" y="128.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" fill="#333">program</text>
-  <rect x="219.4286" y="274.2857" width="274.2857" height="68.5714" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
-  <text x="356.5714" y="317.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" fill="#333">main.o</text>
-  <rect x="786.2857" y="274.2857" width="274.2857" height="68.5714" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
-  <text x="923.4286" y="317.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" fill="#333">utils.o</text>
-  <rect x="219.4286" y="480" width="274.2857" height="68.5714" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
-  <text x="356.5714" y="522.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" fill="#333">main.c</text>
-  <rect x="676.5714" y="480" width="219.4286" height="68.5714" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
-  <text x="786.2857" y="522.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" fill="#333">utils.c</text>
-  <rect x="950.8571" y="480" width="219.4286" height="68.5714" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
-  <text x="1060.5714" y="522.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" fill="#333">utils.h</text>
-  <line x1="566.8571" y1="154.2857" x2="411.4286" y2="265.7143" stroke="#4a90e2" stroke-width="3.4286" marker-end="url(#arrowhead)" />
-  <line x1="713.1429" y1="154.2857" x2="868.5714" y2="265.7143" stroke="#4a90e2" stroke-width="3.4286" marker-end="url(#arrowhead)" />
-  <line x1="356.5714" y1="342.8571" x2="356.5714" y2="471.4286" stroke="#4a90e2" stroke-width="3.4286" marker-end="url(#arrowhead)" />
-  <line x1="877.7143" y1="342.8571" x2="804.5714" y2="471.4286" stroke="#4a90e2" stroke-width="3.4286" marker-end="url(#arrowhead)" />
-  <line x1="969.1429" y1="342.8571" x2="1042.2857" y2="471.4286" stroke="#4a90e2" stroke-width="3.4286" marker-end="url(#arrowhead)" />
-  <rect x="73.1429" y="617.1429" width="29.2571" height="27.4286" rx="5.1429" fill="#d4edda" stroke="#28a745" stroke-width="1.7143" />
-  <text x="113.3714" y="639.4286" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">Final target</text>
-  <rect x="329.1429" y="617.1429" width="29.2571" height="27.4286" rx="5.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7143" />
-  <text x="369.3714" y="639.4286" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">Intermediate objects</text>
-  <rect x="694.8571" y="617.1429" width="29.2571" height="27.4286" rx="5.1429" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7143" />
-  <text x="735.0857" y="639.4286" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">Source files</text>
-  <text x="640" y="702.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8571" fill="#888">Arrows show "depends on" relationships</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Final target: program -->
+  <rect x="490" y="70" width="300" height="72" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="113" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">program</text>
+
+  <!-- Intermediate objects -->
+  <rect x="200" y="250" width="260" height="68" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="330" y="290" text-anchor="middle" font-size="22" fill="#212121">main.o</text>
+
+  <rect x="820" y="250" width="260" height="68" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="950" y="290" text-anchor="middle" font-size="22" fill="#212121">utils.o</text>
+
+  <!-- Source files -->
+  <rect x="80" y="450" width="230" height="68" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="195" y="490" text-anchor="middle" font-size="22" fill="#212121">main.c</text>
+
+  <rect x="360" y="450" width="230" height="68" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="475" y="490" text-anchor="middle" font-size="22" fill="#212121">utils.c</text>
+
+  <rect x="640" y="450" width="230" height="68" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="755" y="490" text-anchor="middle" font-size="22" fill="#212121">utils.h</text>
+
+  <!-- Arrows: program -> objects -->
+  <line x1="580" y1="142" x2="380" y2="250" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="700" y1="142" x2="900" y2="250" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Arrows: main.o -> main.c -->
+  <line x1="330" y1="318" x2="250" y2="450" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrows: utils.o -> utils.c, utils.h -->
+  <line x1="910" y1="318" x2="670" y2="450" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="990" y1="318" x2="830" y2="450" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Legend -->
+  <rect x="60" y="580" width="24" height="24" rx="4" fill="url(#grad-accent)"/>
+  <text x="96" y="598" font-size="18" fill="#555555">Final target</text>
+
+  <rect x="260" y="580" width="24" height="24" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2"/>
+  <text x="296" y="598" font-size="18" fill="#555555">Intermediate objects</text>
+
+  <rect x="560" y="580" width="24" height="24" rx="4" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="596" y="598" font-size="18" fill="#555555">Source files</text>
+
+  <text x="640" y="640" text-anchor="middle" font-size="16" fill="#555555">Arrows show "depends on" relationships (top-down resolution)</text>
 </svg>

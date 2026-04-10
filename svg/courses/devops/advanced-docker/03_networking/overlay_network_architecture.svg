@@ -1,35 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="19.3939" y="21.1765" width="601.2121" height="677.6471" rx="9.697" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.8788" />
-  <text x="320" y="74.1176" text-anchor="middle" font-size="27.1515" font-weight="bold" fill="#4a90e2">Node 1</text>
-  <rect x="58.1818" y="105.8824" width="232.7273" height="116.4706" rx="9.697" fill="#d4edda" stroke="#28a745" stroke-width="2.9091" />
-  <text x="174.5455" y="152.4706" text-anchor="middle" font-size="23.2727" fill="#333">web.1</text>
-  <text x="174.5455" y="194.8235" text-anchor="middle" font-size="19.3939" font-family="monospace" fill="#666">10.20.0.3</text>
-  <rect x="329.697" y="105.8824" width="232.7273" height="116.4706" rx="9.697" fill="#d4edda" stroke="#28a745" stroke-width="2.9091" />
-  <text x="446.0606" y="152.4706" text-anchor="middle" font-size="23.2727" fill="#333">api.1</text>
-  <text x="446.0606" y="194.8235" text-anchor="middle" font-size="19.3939" font-family="monospace" fill="#666">10.20.0.4</text>
-  <line x1="174.5455" y1="222.3529" x2="174.5455" y2="296.4706" stroke="#4a90e2" stroke-width="2.9091" />
-  <line x1="446.0606" y1="222.3529" x2="446.0606" y2="296.4706" stroke="#4a90e2" stroke-width="2.9091" />
-  <rect x="96.9697" y="296.4706" width="426.6667" height="74.1176" rx="9.697" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9091" />
-  <text x="310.303" y="345.1765" text-anchor="middle" font-size="23.2727" fill="#333">br-overlay</text>
-  <line x1="310.303" y1="370.5882" x2="310.303" y2="465.8824" stroke="#dc3545" stroke-width="3.8788" stroke-dasharray="11.6364 5.8182" />
-  <text x="310.303" y="455.2941" text-anchor="middle" font-size="19.3939" fill="#dc3545">VXLAN tunnel</text>
-  <rect x="174.5455" y="529.4118" width="271.5152" height="74.1176" rx="9.697" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9091" />
-  <text x="310.303" y="578.1176" text-anchor="middle" font-size="23.2727" fill="#333">eth0</text>
-  <rect x="659.3939" y="21.1765" width="601.2121" height="677.6471" rx="9.697" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.8788" />
-  <text x="960" y="74.1176" text-anchor="middle" font-size="27.1515" font-weight="bold" fill="#4a90e2">Node 2</text>
-  <rect x="698.1818" y="105.8824" width="232.7273" height="116.4706" rx="9.697" fill="#d4edda" stroke="#28a745" stroke-width="2.9091" />
-  <text x="814.5455" y="152.4706" text-anchor="middle" font-size="23.2727" fill="#333">web.2</text>
-  <text x="814.5455" y="194.8235" text-anchor="middle" font-size="19.3939" font-family="monospace" fill="#666">10.20.0.5</text>
-  <rect x="969.697" y="105.8824" width="232.7273" height="116.4706" rx="9.697" fill="#d4edda" stroke="#28a745" stroke-width="2.9091" />
-  <text x="1086.0606" y="152.4706" text-anchor="middle" font-size="23.2727" fill="#333">api.2</text>
-  <text x="1086.0606" y="194.8235" text-anchor="middle" font-size="19.3939" font-family="monospace" fill="#666">10.20.0.6</text>
-  <line x1="814.5455" y1="222.3529" x2="814.5455" y2="296.4706" stroke="#4a90e2" stroke-width="2.9091" />
-  <line x1="1086.0606" y1="222.3529" x2="1086.0606" y2="296.4706" stroke="#4a90e2" stroke-width="2.9091" />
-  <rect x="736.9697" y="296.4706" width="426.6667" height="74.1176" rx="9.697" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9091" />
-  <text x="950.303" y="345.1765" text-anchor="middle" font-size="23.2727" fill="#333">br-overlay</text>
-  <line x1="950.303" y1="370.5882" x2="950.303" y2="465.8824" stroke="#dc3545" stroke-width="3.8788" stroke-dasharray="11.6364 5.8182" />
-  <text x="950.303" y="455.2941" text-anchor="middle" font-size="19.3939" fill="#dc3545">VXLAN tunnel</text>
-  <rect x="814.5455" y="529.4118" width="271.5152" height="74.1176" rx="9.697" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9091" />
-  <text x="950.303" y="578.1176" text-anchor="middle" font-size="23.2727" fill="#333">eth0</text>
-  <line x1="446.0606" y1="565.4118" x2="814.5455" y2="565.4118" stroke="#dc3545" stroke-width="3.8788" stroke-dasharray="11.6364 5.8182" />
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Node 1 -->
+  <rect x="20" y="20" width="590" height="620" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315" y="65" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Node 1</text>
+  <!-- web.1 -->
+  <rect x="60" y="90" width="220" height="110" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="136" text-anchor="middle" font-size="22" fill="#333333">web.1</text>
+  <text x="170" y="170" text-anchor="middle" font-size="18" font-family="monospace" fill="#555555">10.20.0.3</text>
+  <!-- api.1 -->
+  <rect x="320" y="90" width="220" height="110" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="136" text-anchor="middle" font-size="22" fill="#333333">api.1</text>
+  <text x="430" y="170" text-anchor="middle" font-size="18" font-family="monospace" fill="#555555">10.20.0.4</text>
+  <!-- lines down to bridge -->
+  <line x1="170" y1="200" x2="170" y2="270" stroke="#1565c0" stroke-width="2"/>
+  <line x1="430" y1="200" x2="430" y2="270" stroke="#1565c0" stroke-width="2"/>
+  <!-- br-overlay -->
+  <rect x="100" y="270" width="400" height="68" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="313" text-anchor="middle" font-size="22" fill="#333333">br-overlay</text>
+  <!-- VXLAN tunnel label -->
+  <text x="300" y="420" text-anchor="middle" font-size="18" fill="#c62828">VXLAN tunnel</text>
+  <line x1="300" y1="338" x2="300" y2="460" stroke="#c62828" stroke-width="3" stroke-dasharray="10 6"/>
+  <!-- eth0 -->
+  <rect x="180" y="460" width="240" height="66" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="500" text-anchor="middle" font-size="22" fill="#333333">eth0</text>
+  <!-- Node 2 -->
+  <rect x="670" y="20" width="590" height="620" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="965" y="65" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Node 2</text>
+  <!-- web.2 -->
+  <rect x="710" y="90" width="220" height="110" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="820" y="136" text-anchor="middle" font-size="22" fill="#333333">web.2</text>
+  <text x="820" y="170" text-anchor="middle" font-size="18" font-family="monospace" fill="#555555">10.20.0.5</text>
+  <!-- api.2 -->
+  <rect x="970" y="90" width="220" height="110" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="136" text-anchor="middle" font-size="22" fill="#333333">api.2</text>
+  <text x="1080" y="170" text-anchor="middle" font-size="18" font-family="monospace" fill="#555555">10.20.0.6</text>
+  <!-- lines down to bridge -->
+  <line x1="820" y1="200" x2="820" y2="270" stroke="#1565c0" stroke-width="2"/>
+  <line x1="1080" y1="200" x2="1080" y2="270" stroke="#1565c0" stroke-width="2"/>
+  <!-- br-overlay -->
+  <rect x="750" y="270" width="400" height="68" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="313" text-anchor="middle" font-size="22" fill="#333333">br-overlay</text>
+  <!-- VXLAN tunnel label -->
+  <text x="950" y="420" text-anchor="middle" font-size="18" fill="#c62828">VXLAN tunnel</text>
+  <line x1="950" y1="338" x2="950" y2="460" stroke="#c62828" stroke-width="3" stroke-dasharray="10 6"/>
+  <!-- eth0 -->
+  <rect x="830" y="460" width="240" height="66" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="500" text-anchor="middle" font-size="22" fill="#333333">eth0</text>
+  <!-- cross-node VXLAN line -->
+  <line x1="420" y1="493" x2="830" y2="493" stroke="#c62828" stroke-width="3" stroke-dasharray="10 6"/>
 </svg>

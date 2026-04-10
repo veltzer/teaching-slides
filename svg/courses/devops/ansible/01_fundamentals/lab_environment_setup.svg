@@ -1,24 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="24.6154" markerHeight="18.6667" refX="22.1538" refY="9.3333" orient="auto">
-      <polygon points="0,26.6667 8.6154,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="24.6154" markerHeight="18.6667" refX="22.1538" refY="9.3333" orient="auto">
-      <polygon points="0,26.6667 8.6154,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="369.2308" y="26.6667" width="529.2308" height="253.3333" rx="9.8462" fill="#ede7f6" stroke="#6a1b9a" stroke-width="3.6923" />
-  <text x="632.6154" y="85.3333" text-anchor="middle" font-size="34.4615" fill="#4a148c" font-weight="bold">Control Node</text>
-  <text x="632.6154" y="138.6667" text-anchor="middle" font-size="29.5385" fill="#333">OS: Ubuntu 22.04</text>
-  <text x="632.6154" y="186.6667" text-anchor="middle" font-size="29.5385" fill="#333">IP: 192.168.56.10</text>
-  <line x1="632.6154" y1="280" x2="632.6154" y2="346.6667" stroke="#555" stroke-width="3.6923" />
-  <line x1="320" y1="346.6667" x2="960" y2="346.6667" stroke="#555" stroke-width="3.6923" />
-  <line x1="320" y1="346.6667" x2="320" y2="421.3333" stroke="#555" stroke-width="3.6923" marker-end="url(#arr)" />
-  <line x1="960" y1="346.6667" x2="960" y2="421.3333" stroke="#555" stroke-width="3.6923" marker-end="url(#arr)" />
-  <rect x="110.7692" y="421.3333" width="406.1538" height="213.3333" rx="9.8462" fill="#e8f5e9" stroke="#388e3c" stroke-width="3.6923" />
-  <text x="312.6154" y="488" text-anchor="middle" font-size="34.4615" fill="#222" font-weight="bold">web01</text>
-  <text x="312.6154" y="544" text-anchor="middle" font-size="29.5385" fill="#555">IP: .20</text>
-  <rect x="750.7692" y="421.3333" width="406.1538" height="213.3333" rx="9.8462" fill="#fff3e0" stroke="#f57c00" stroke-width="3.6923" />
-  <text x="952.6154" y="488" text-anchor="middle" font-size="34.4615" fill="#222" font-weight="bold">db01</text>
-  <text x="952.6154" y="544" text-anchor="middle" font-size="29.5385" fill="#555">IP: .30</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Control Node -->
+  <rect x="390" y="30" width="500" height="210" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="390" y="30" width="500" height="50" rx="10" fill="url(#grad-accent)"/>
+  <rect x="390" y="60" width="500" height="20" rx="0" fill="url(#grad-accent)"/>
+  <text x="640" y="64" text-anchor="middle" font-size="22" fill="#ffffff" font-weight="bold">Control Node</text>
+  <text x="640" y="120" text-anchor="middle" font-size="18" fill="#333">OS: Ubuntu 22.04</text>
+  <text x="640" y="158" text-anchor="middle" font-size="18" fill="#333">IP: 192.168.56.10</text>
+  <text x="640" y="196" text-anchor="middle" font-size="16" fill="#1565c0">ansible + python3</text>
+  <text x="640" y="228" text-anchor="middle" font-size="15" fill="#888">SSH key auth configured</text>
+
+  <!-- trunk line down then split -->
+  <line x1="640" y1="242" x2="640" y2="310" stroke="#555" stroke-width="2.5"/>
+  <line x1="200" y1="310" x2="1080" y2="310" stroke="#555" stroke-width="2.5"/>
+  <!-- branches -->
+  <line x1="200" y1="310" x2="200" y2="390" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="560" y1="310" x2="560" y2="390" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="920" y1="310" x2="920" y2="390" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1080" y1="310" x2="1080" y2="390" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- SSH label -->
+  <text x="640" y="300" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="600">SSH</text>
+
+  <!-- Managed node web01 -->
+  <rect x="60" y="398" width="280" height="180" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="398" width="280" height="44" rx="8" fill="#43a047"/>
+  <rect x="60" y="422" width="280" height="20" rx="0" fill="#43a047"/>
+  <text x="200" y="426" text-anchor="middle" font-size="18" fill="#ffffff" font-weight="bold">web01</text>
+  <text x="200" y="472" text-anchor="middle" font-size="16" fill="#555">IP: 192.168.56.20</text>
+  <text x="200" y="506" text-anchor="middle" font-size="15" fill="#777">Ubuntu 22.04</text>
+  <text x="200" y="538" text-anchor="middle" font-size="14" fill="#888">nginx / apache</text>
+
+  <!-- Managed node web02 -->
+  <rect x="420" y="398" width="280" height="180" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="420" y="398" width="280" height="44" rx="8" fill="#43a047"/>
+  <rect x="420" y="422" width="280" height="20" rx="0" fill="#43a047"/>
+  <text x="560" y="426" text-anchor="middle" font-size="18" fill="#ffffff" font-weight="bold">web02</text>
+  <text x="560" y="472" text-anchor="middle" font-size="16" fill="#555">IP: 192.168.56.21</text>
+  <text x="560" y="506" text-anchor="middle" font-size="15" fill="#777">Ubuntu 22.04</text>
+  <text x="560" y="538" text-anchor="middle" font-size="14" fill="#888">nginx / apache</text>
+
+  <!-- Managed node db01 -->
+  <rect x="780" y="398" width="280" height="180" rx="8" fill="url(#grad-surface)" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="780" y="398" width="280" height="44" rx="8" fill="#f57c00"/>
+  <rect x="780" y="422" width="280" height="20" rx="0" fill="#f57c00"/>
+  <text x="920" y="426" text-anchor="middle" font-size="18" fill="#ffffff" font-weight="bold">db01</text>
+  <text x="920" y="472" text-anchor="middle" font-size="16" fill="#555">IP: 192.168.56.30</text>
+  <text x="920" y="506" text-anchor="middle" font-size="15" fill="#777">Ubuntu 22.04</text>
+  <text x="920" y="538" text-anchor="middle" font-size="14" fill="#888">PostgreSQL / MySQL</text>
+
+  <!-- Managed node monitor -->
+  <rect x="940" y="398" width="280" height="180" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="940" y="398" width="280" height="44" rx="8" fill="#8e24aa"/>
+  <rect x="940" y="422" width="280" height="20" rx="0" fill="#8e24aa"/>
+  <text x="1080" y="426" text-anchor="middle" font-size="18" fill="#ffffff" font-weight="bold">monitor01</text>
+  <text x="1080" y="472" text-anchor="middle" font-size="16" fill="#555">IP: 192.168.56.40</text>
+  <text x="1080" y="506" text-anchor="middle" font-size="15" fill="#777">Ubuntu 22.04</text>
+  <text x="1080" y="538" text-anchor="middle" font-size="14" fill="#888">Prometheus / Grafana</text>
+
+  <!-- network label -->
+  <rect x="60" y="618" width="1160" height="36" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="640" y="643" text-anchor="middle" font-size="16" fill="#1565c0" font-weight="600">Host-Only Network: 192.168.56.0/24 (VirtualBox / Vagrant)</text>
 </svg>

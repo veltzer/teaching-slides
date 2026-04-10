@@ -1,28 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="18" refX="17.7231" refY="9" orient="auto">
-      <polygon points="0,25.7143 6.8923,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="19.6923" markerHeight="18" refX="17.7231" refY="9" orient="auto">
-      <polygon points="0,25.7143 6.8923,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="19.6923" y="25.7143" width="571.0769" height="655.7143" rx="7.8769" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.9538" />
-  <text x="305.2308" y="77.1429" text-anchor="middle" font-size="23.6308" fill="#bf360c" font-weight="bold">Agent-Based (Puppet/Chef)</text>
-  <rect x="137.8462" y="115.7143" width="305.2308" height="128.5714" rx="7.8769" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.9538" />
-  <text x="289.4769" y="190.2857" text-anchor="middle" font-size="23.6308" fill="#222">Control Node</text>
-  <line x1="289.4769" y1="244.2857" x2="289.4769" y2="334.2857" stroke="#555" stroke-width="2.9538" marker-end="url(#arr)" />
-  <text x="344.6154" y="295.7143" text-anchor="middle" font-size="19.6923" fill="#777">(Agent polls)</text>
-  <rect x="137.8462" y="334.2857" width="305.2308" height="167.1429" rx="7.8769" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.9538" />
-  <text x="289.4769" y="406.2857" text-anchor="middle" font-size="23.6308" fill="#222">Managed Node</text>
-  <text x="289.4769" y="450" text-anchor="middle" font-size="19.6923" fill="#bf360c">[Agent] ← Running 24/7</text>
-  <rect x="669.5385" y="25.7143" width="580.9231" height="655.7143" rx="7.8769" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.9538" />
-  <text x="959.0154" y="77.1429" text-anchor="middle" font-size="23.6308" fill="#1b5e20" font-weight="bold">Agentless (Ansible)</text>
-  <rect x="797.5385" y="115.7143" width="305.2308" height="128.5714" rx="7.8769" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.9538" />
-  <text x="949.1692" y="190.2857" text-anchor="middle" font-size="23.6308" fill="#222">Control Node</text>
-  <line x1="949.1692" y1="244.2857" x2="949.1692" y2="334.2857" stroke="#555" stroke-width="2.9538" marker-end="url(#arr)" />
-  <text x="1004.3077" y="295.7143" text-anchor="middle" font-size="19.6923" fill="#777">(SSH push)</text>
-  <rect x="797.5385" y="334.2857" width="305.2308" height="167.1429" rx="7.8769" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.9538" />
-  <text x="949.1692" y="406.2857" text-anchor="middle" font-size="23.6308" fill="#222">Managed Node</text>
-  <text x="949.1692" y="450" text-anchor="middle" font-size="19.6923" fill="#1b5e20">[Python] ← Only SSH</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- divider -->
+  <line x1="640" y1="30" x2="640" y2="690" stroke="#cccccc" stroke-width="2" stroke-dasharray="8 5"/>
+
+  <!-- LEFT: Agent-Based panel -->
+  <rect x="20" y="20" width="600" height="660" rx="10" fill="#fff8f5" stroke="#ef6c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="20" width="600" height="52" rx="10" fill="#ef6c00"/>
+  <rect x="20" y="52" width="600" height="20" rx="0" fill="#ef6c00"/>
+  <text x="320" y="55" text-anchor="middle" font-size="22" fill="#ffffff" font-weight="bold">Agent-Based (Puppet / Chef)</text>
+
+  <!-- Control Node -->
+  <rect x="130" y="110" width="370" height="110" rx="8" fill="url(#grad-surface)" stroke="#ef6c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315" y="160" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">Control Node</text>
+  <text x="315" y="195" text-anchor="middle" font-size="16" fill="#555">Puppet Master / Chef Server</text>
+
+  <!-- arrow down -->
+  <line x1="315" y1="222" x2="315" y2="300" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="340" y="270" font-size="15" fill="#777">(Agent polls)</text>
+
+  <!-- Managed Node -->
+  <rect x="130" y="308" width="370" height="150" rx="8" fill="url(#grad-surface)" stroke="#ef6c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="315" y="358" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">Managed Node</text>
+  <text x="315" y="395" text-anchor="middle" font-size="16" fill="#bf360c" font-weight="600">[Agent] running 24/7</text>
+  <text x="315" y="430" text-anchor="middle" font-size="14" fill="#777">Requires installation + maintenance</text>
+
+  <!-- cons -->
+  <text x="50" y="508" font-size="16" fill="#555">- Agent must be installed on every node</text>
+  <text x="50" y="540" font-size="16" fill="#555">- Agent process consumes resources 24/7</text>
+  <text x="50" y="572" font-size="16" fill="#555">- Agent version must be managed</text>
+  <text x="50" y="604" font-size="16" fill="#555">- Bootstrapping new nodes is complex</text>
+
+  <!-- RIGHT: Agentless panel -->
+  <rect x="660" y="20" width="600" height="660" rx="10" fill="#f5fbf5" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="20" width="600" height="52" rx="10" fill="#43a047"/>
+  <rect x="660" y="52" width="600" height="20" rx="0" fill="#43a047"/>
+  <text x="960" y="55" text-anchor="middle" font-size="22" fill="#ffffff" font-weight="bold">Agentless (Ansible)</text>
+
+  <!-- Control Node right -->
+  <rect x="770" y="110" width="370" height="110" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="955" y="160" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">Control Node</text>
+  <text x="955" y="195" text-anchor="middle" font-size="16" fill="#555">Ansible CLI / AWX</text>
+
+  <!-- arrow down right -->
+  <line x1="955" y1="222" x2="955" y2="300" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="980" y="270" font-size="15" fill="#1565c0">(SSH push)</text>
+
+  <!-- Managed Node right -->
+  <rect x="770" y="308" width="370" height="150" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="955" y="358" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">Managed Node</text>
+  <text x="955" y="395" text-anchor="middle" font-size="16" fill="#1b5e20" font-weight="600">[Python] via SSH only</text>
+  <text x="955" y="430" text-anchor="middle" font-size="14" fill="#777">No persistent agent required</text>
+
+  <!-- pros -->
+  <text x="690" y="508" font-size="16" fill="#555">+ No agent installation needed</text>
+  <text x="690" y="540" font-size="16" fill="#555">+ Uses standard SSH (already open)</text>
+  <text x="690" y="572" font-size="16" fill="#555">+ Zero footprint on managed nodes</text>
+  <text x="690" y="604" font-size="16" fill="#555">+ Works with minimal Python only</text>
 </svg>

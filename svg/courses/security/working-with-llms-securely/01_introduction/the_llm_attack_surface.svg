@@ -1,32 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="21.3333" y="20.5714" width="1237.3333" height="678.8571" rx="10.2857" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.1143" />
-  <text x="640" y="82.2857" text-anchor="middle" font-size="37.0286" font-weight="bold" fill="#333">The LLM Attack Surface</text>
   <defs>
-    <marker id="arr" markerWidth="21.3333" markerHeight="14.4" refX="21.3333" refY="7.2" orient="auto">
-      <polygon points="0,20.5714 7.4667,0" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrOut" markerWidth="21.3333" markerHeight="14.4" refX="21.3333" refY="7.2" orient="auto">
-      <polygon points="0,20.5714 7.4667,0" fill="#dc3545" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="53.3333" y="144" width="341.3333" height="82.2857" rx="10.2857" fill="#f8d7da" stroke="#dc3545" stroke-width="4.1143" />
-  <text x="224" y="195.4286" text-anchor="middle" font-size="24.6857" fill="#333">User Input</text>
-  <rect x="53.3333" y="257.1429" width="341.3333" height="82.2857" rx="10.2857" fill="#fff3cd" stroke="#ffc107" stroke-width="4.1143" />
-  <text x="224" y="308.5714" text-anchor="middle" font-size="24.6857" fill="#333">External Data</text>
-  <rect x="53.3333" y="370.2857" width="341.3333" height="82.2857" rx="10.2857" fill="#fff3cd" stroke="#ffc107" stroke-width="4.1143" />
-  <text x="224" y="421.7143" text-anchor="middle" font-size="24.6857" fill="#333">Training Data</text>
-  <rect x="480" y="164.5714" width="320" height="308.5714" rx="10.2857" fill="#d4edda" stroke="#28a745" stroke-width="4.1143" />
-  <text x="640" y="329.1429" text-anchor="middle" font-size="32.9143" font-weight="bold" fill="#28a745">LLM App</text>
-  <rect x="885.3333" y="144" width="341.3333" height="82.2857" rx="10.2857" fill="#f8d7da" stroke="#dc3545" stroke-width="4.1143" />
-  <text x="1056" y="195.4286" text-anchor="middle" font-size="24.6857" fill="#333">Output to User</text>
-  <rect x="885.3333" y="257.1429" width="341.3333" height="82.2857" rx="10.2857" fill="#f8d7da" stroke="#dc3545" stroke-width="4.1143" />
-  <text x="1056" y="308.5714" text-anchor="middle" font-size="24.6857" fill="#333">Actions/API Calls</text>
-  <rect x="885.3333" y="370.2857" width="341.3333" height="82.2857" rx="10.2857" fill="#f8d7da" stroke="#dc3545" stroke-width="4.1143" />
-  <text x="1056" y="421.7143" text-anchor="middle" font-size="24.6857" fill="#333">Database Writes</text>
-  <line x1="394.6667" y1="185.1429" x2="469.3333" y2="246.8571" stroke="#4a90e2" stroke-width="4.1143" marker-end="url(#arr)" />
-  <line x1="394.6667" y1="298.2857" x2="469.3333" y2="318.8571" stroke="#4a90e2" stroke-width="4.1143" marker-end="url(#arr)" />
-  <line x1="394.6667" y1="411.4286" x2="469.3333" y2="390.8571" stroke="#4a90e2" stroke-width="4.1143" marker-end="url(#arr)" />
-  <line x1="800" y1="246.8571" x2="874.6667" y2="185.1429" stroke="#dc3545" stroke-width="4.1143" marker-end="url(#arrOut)" />
-  <line x1="800" y1="318.8571" x2="874.6667" y2="298.2857" stroke="#dc3545" stroke-width="4.1143" marker-end="url(#arrOut)" />
-  <line x1="800" y1="390.8571" x2="874.6667" y2="411.4286" stroke="#dc3545" stroke-width="4.1143" marker-end="url(#arrOut)" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Left column: inputs (red-tinted) -->
+  <rect x="40" y="150" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="198" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">User Input</text>
+
+  <rect x="40" y="265" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="313" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">External Data</text>
+
+  <rect x="40" y="380" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="428" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Training Data</text>
+
+  <!-- Centre: LLM App -->
+  <rect x="460" y="170" width="360" height="300" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="330" text-anchor="middle" font-size="30" font-weight="bold" fill="#1565c0">LLM App</text>
+
+  <!-- Right column: outputs (red-tinted) -->
+  <rect x="910" y="150" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="198" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Output to User</text>
+
+  <rect x="910" y="265" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="313" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Actions / API Calls</text>
+
+  <rect x="910" y="380" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="428" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Database Writes</text>
+
+  <!-- Arrows: inputs -> LLM -->
+  <line x1="370" y1="190" x2="455" y2="255" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="370" y1="305" x2="455" y2="315" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="370" y1="420" x2="455" y2="395" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Arrows: LLM -> outputs -->
+  <line x1="820" y1="255" x2="905" y2="190" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="820" y1="315" x2="905" y2="305" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="820" y1="395" x2="905" y2="420" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Section labels -->
+  <text x="205" y="120" text-anchor="middle" font-size="18" fill="#555555" font-weight="bold">INPUTS</text>
+  <text x="1075" y="120" text-anchor="middle" font-size="18" fill="#555555" font-weight="bold">OUTPUTS</text>
+
+  <!-- Attack surface note -->
+  <rect x="360" y="540" width="560" height="60" rx="8" fill="#fdecea" stroke="#e53935" stroke-width="1.5"/>
+  <text x="640" y="576" text-anchor="middle" font-size="18" fill="#c62828">Every input and output is part of the attack surface</text>
 </svg>

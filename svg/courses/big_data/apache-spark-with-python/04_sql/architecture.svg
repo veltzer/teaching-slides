@@ -1,28 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="80" y="43.2" width="240" height="86.4" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
-  <text x="200" y="93.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">Data Sources</text>
-  <rect x="480" y="43.2" width="288" height="86.4" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.88" />
-  <text x="624" y="79.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">DataFrame/</text>
-  <text x="624" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">Dataset API</text>
-  <rect x="480" y="172.8" width="288" height="86.4" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="624" y="223.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">SQL Interface</text>
-  <rect x="480" y="331.2" width="288" height="86.4" rx="7.2" fill="#cce5ff" stroke="#007bff" stroke-width="2.88" />
-  <text x="624" y="381.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">Catalyst Optimizer</text>
-  <rect x="480" y="489.6" width="288" height="86.4" rx="7.2" fill="#f8d7da" stroke="#dc3545" stroke-width="2.88" />
-  <text x="624" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">Optimized RDD</text>
-  <rect x="880" y="489.6" width="240" height="86.4" rx="7.2" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2.88" />
-  <text x="1000" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">Execution</text>
   <defs>
-    <marker id="arrow7" markerWidth="16" markerHeight="10.08" refX="14.4" refY="5.04" orient="auto">
-      <polygon points="0,14.4 5.6,0" fill="#666" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <line x1="320" y1="86.4" x2="480" y2="86.4" stroke="#666" stroke-width="2.88" marker-end="url(#arrow7)" />
-  <line x1="320" y1="100.8" x2="400" y2="144" stroke="#666" stroke-width="2.16" />
-  <line x1="400" y1="144" x2="400" y2="216" stroke="#666" stroke-width="2.16" />
-  <line x1="400" y1="216" x2="480" y2="216" stroke="#666" stroke-width="2.16" marker-end="url(#arrow7)" />
-  <line x1="624" y1="129.6" x2="624" y2="331.2" stroke="#666" stroke-width="2.88" marker-end="url(#arrow7)" />
-  <line x1="624" y1="259.2" x2="624" y2="331.2" stroke="#666" stroke-width="2.88" marker-end="url(#arrow7)" />
-  <line x1="624" y1="417.6" x2="624" y2="489.6" stroke="#666" stroke-width="2.88" marker-end="url(#arrow7)" />
-  <line x1="768" y1="532.8" x2="880" y2="532.8" stroke="#666" stroke-width="2.88" marker-end="url(#arrow7)" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Data Sources (left) -->
+  <rect x="60" y="40" width="240" height="80" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="180" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Data Sources</text>
+  <!-- DataFrame / Dataset API -->
+  <rect x="460" y="40" width="310" height="80" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="615" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">DataFrame /</text>
+  <text x="615" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">Dataset API</text>
+  <!-- SQL Interface -->
+  <rect x="460" y="175" width="310" height="80" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="615" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e65100">SQL Interface</text>
+  <!-- Catalyst Optimizer -->
+  <rect x="460" y="325" width="310" height="80" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="615" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Catalyst Optimizer</text>
+  <!-- Optimized RDD -->
+  <rect x="460" y="470" width="310" height="80" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="615" y="517" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c62828">Optimized RDD</text>
+  <!-- Execution (right) -->
+  <rect x="880" y="470" width="260" height="80" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1010" y="517" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Execution</text>
+  <!-- Arrows -->
+  <line x1="300" y1="80" x2="460" y2="80" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Data source also feeds SQL interface via connector -->
+  <line x1="300" y1="95" x2="380" y2="140" stroke="#555555" stroke-width="1.5"/>
+  <line x1="380" y1="140" x2="380" y2="215" stroke="#555555" stroke-width="1.5"/>
+  <line x1="380" y1="215" x2="460" y2="215" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- DataFrame/Dataset to Catalyst -->
+  <line x1="615" y1="120" x2="615" y2="325" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- SQL to Catalyst -->
+  <line x1="615" y1="255" x2="615" y2="325" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Catalyst to Optimized RDD -->
+  <line x1="615" y1="405" x2="615" y2="470" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Optimized RDD to Execution -->
+  <line x1="770" y1="510" x2="880" y2="510" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

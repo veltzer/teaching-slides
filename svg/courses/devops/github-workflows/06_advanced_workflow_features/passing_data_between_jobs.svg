@@ -1,29 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="29.7674" markerHeight="19.3846" refX="26.7907" refY="9.6923" orient="auto">
-      <polygon points="0,27.6923 10.4186,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="59.5349" y="55.3846" width="446.5116" height="276.9231" fill="#e3f2fd" stroke="#333" stroke-width="4.1538" rx="11.0769" />
-  <text x="282.7907" y="110.7692" font-size="36" font-weight="bold" fill="#222" text-anchor="middle">Job A</text>
-  <text x="282.7907" y="160.6154" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">steps:</text>
-  <text x="282.7907" y="204.9231" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">- set output</text>
-  <line x1="506.0465" y1="193.8462" x2="738.2326" y2="193.8462" stroke="#555" stroke-width="4.1538" marker-end="url(#arrow)" />
-  <text x="622.1395" y="166.1538" font-size="27.6923" font-weight="normal" fill="#555" text-anchor="middle">outputs</text>
-  <rect x="744.186" y="55.3846" width="446.5116" height="276.9231" fill="#e8f5e9" stroke="#333" stroke-width="4.1538" rx="11.0769" />
-  <text x="967.4419" y="110.7692" font-size="36" font-weight="bold" fill="#222" text-anchor="middle">Job B</text>
-  <text x="967.4419" y="160.6154" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">needs: a</text>
-  <text x="967.4419" y="204.9231" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">steps:</text>
-  <text x="967.4419" y="249.2308" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">- use output</text>
-  <line x1="29.7674" y1="387.6923" x2="1250.2326" y2="387.6923" stroke="#ccc" stroke-width="2.7692" stroke-dasharray="11.0769 8.3077" />
-  <text x="640" y="443.0769" font-size="30.4615" font-weight="normal" fill="#666" text-anchor="middle">Alternative: Use artifacts for large data</text>
-  <rect x="59.5349" y="484.6154" width="446.5116" height="193.8462" fill="#fff3e0" stroke="#333" stroke-width="4.1538" rx="11.0769" />
-  <text x="282.7907" y="548.3077" font-size="36" font-weight="bold" fill="#222" text-anchor="middle">Job A</text>
-  <text x="282.7907" y="595.3846" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">upload artifact</text>
-  <line x1="506.0465" y1="581.5385" x2="738.2326" y2="581.5385" stroke="#555" stroke-width="4.1538" marker-end="url(#arrow)" />
-  <text x="622.1395" y="553.8462" font-size="27.6923" font-weight="normal" fill="#555" text-anchor="middle">artifact</text>
-  <text x="622.1395" y="595.3846" font-size="27.6923" font-weight="normal" fill="#555" text-anchor="middle">(files)</text>
-  <rect x="744.186" y="484.6154" width="446.5116" height="193.8462" fill="#fce4ec" stroke="#333" stroke-width="4.1538" rx="11.0769" />
-  <text x="967.4419" y="548.3077" font-size="36" font-weight="bold" fill="#222" text-anchor="middle">Job B</text>
-  <text x="967.4419" y="595.3846" font-size="30.4615" font-weight="normal" fill="#222" text-anchor="middle">download artifact</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Section label: outputs -->
+  <text x="640" y="38" text-anchor="middle" font-size="20" fill="#555555">Method 1: Job Outputs (for small data)</text>
+
+  <!-- Job A (outputs) -->
+  <rect x="60" y="55" width="440" height="250" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="100" font-size="30" font-weight="bold" fill="#212121" text-anchor="middle">Job A</text>
+  <text x="280" y="138" font-size="20" fill="#555555" text-anchor="middle">steps:</text>
+  <text x="280" y="172" font-size="20" fill="#555555" text-anchor="middle">- name: set output</text>
+  <text x="280" y="206" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">echo "result=42" &gt;&gt; $GITHUB_OUTPUT</text>
+  <text x="280" y="240" font-size="16" fill="#555555" text-anchor="middle">outputs: result: ${{ steps.x.outputs.result }}</text>
+
+  <!-- Arrow with label -->
+  <line x1="500" y1="180" x2="740" y2="180" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="620" y="165" font-size="18" fill="#1565c0" text-anchor="middle">outputs</text>
+  <text x="620" y="200" font-size="14" fill="#555555" text-anchor="middle">(small values)</text>
+
+  <!-- Job B (reads output) -->
+  <rect x="740" y="55" width="480" height="250" rx="8" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="980" y="100" font-size="30" font-weight="bold" fill="#212121" text-anchor="middle">Job B</text>
+  <text x="980" y="138" font-size="20" fill="#555555" text-anchor="middle">needs: [job_a]</text>
+  <text x="980" y="172" font-size="20" fill="#555555" text-anchor="middle">steps:</text>
+  <text x="980" y="206" font-size="20" fill="#555555" text-anchor="middle">- name: use output</text>
+  <text x="980" y="240" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">${{ needs.job_a.outputs.result }}</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="338" x2="1220" y2="338" stroke="#f2f2f2" stroke-width="2" stroke-dasharray="10 6"/>
+  <text x="640" y="370" text-anchor="middle" font-size="20" fill="#555555">Method 2: Artifacts (for large files / binaries)</text>
+
+  <!-- Job A (artifacts) -->
+  <rect x="60" y="390" width="440" height="190" rx="8" fill="#fff3e0" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="435" font-size="30" font-weight="bold" fill="#212121" text-anchor="middle">Job A</text>
+  <text x="280" y="475" font-size="20" fill="#555555" text-anchor="middle">- uses: actions/upload-artifact</text>
+  <text x="280" y="510" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">name: build-output</text>
+  <text x="280" y="545" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">path: ./dist/</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="485" x2="740" y2="485" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="620" y="470" font-size="18" fill="#555555" text-anchor="middle">artifact</text>
+  <text x="620" y="505" font-size="14" fill="#555555" text-anchor="middle">(files/binaries)</text>
+
+  <!-- Job B (artifacts) -->
+  <rect x="740" y="390" width="480" height="190" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="980" y="435" font-size="30" font-weight="bold" fill="#212121" text-anchor="middle">Job B</text>
+  <text x="980" y="475" font-size="20" fill="#555555" text-anchor="middle">- uses: actions/download-artifact</text>
+  <text x="980" y="510" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">name: build-output</text>
+  <text x="980" y="545" font-size="16" fill="#555555" text-anchor="middle">files available in workspace</text>
 </svg>

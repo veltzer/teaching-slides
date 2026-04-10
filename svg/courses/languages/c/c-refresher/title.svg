@@ -1,45 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#1a1a2e" />
-  <text x="128" y="450" font-family="serif" font-size="320" fill="#16213e" stroke="#53d8fb" stroke-width="4.8" font-weight="bold">C</text>
-  <rect x="512" y="72" width="672" height="360" rx="12.8" fill="#16213e" stroke="#0f3460" stroke-width="3.2" />
-  <text x="544" y="126" font-family="monospace" font-size="20.8" fill="#e94560">#include</text>
-  <text x="680" y="126" font-family="monospace" font-size="20.8" fill="#00b894">&lt;stdio.h&gt;</text>
-  <text x="544" y="180" font-family="monospace" font-size="20.8" fill="#53d8fb">int</text>
-  <text x="592" y="180" font-family="monospace" font-size="20.8" fill="#ffd93d">main</text>
-  <text x="656" y="180" font-family="monospace" font-size="20.8" fill="white">(</text>
-  <text x="672" y="180" font-family="monospace" font-size="20.8" fill="#53d8fb">void</text>
-  <text x="728" y="180" font-family="monospace" font-size="20.8" fill="white">) {</text>
-  <text x="576" y="225" font-family="monospace" font-size="20.8" fill="#53d8fb">int</text>
-  <text x="624" y="225" font-family="monospace" font-size="20.8" fill="white">*ptr = </text>
-  <text x="736" y="225" font-family="monospace" font-size="20.8" fill="#ffd93d">malloc</text>
-  <text x="816" y="225" font-family="monospace" font-size="20.8" fill="white">(</text>
-  <text x="832" y="225" font-family="monospace" font-size="20.8" fill="#e94560">sizeof</text>
-  <text x="920" y="225" font-family="monospace" font-size="20.8" fill="white">(</text>
-  <text x="932.8" y="225" font-family="monospace" font-size="20.8" fill="#53d8fb">int</text>
-  <text x="976" y="225" font-family="monospace" font-size="20.8" fill="white">));</text>
-  <text x="576" y="270" font-family="monospace" font-size="20.8" fill="white">*ptr = </text>
-  <text x="672" y="270" font-family="monospace" font-size="20.8" fill="#e94560">42</text>
-  <text x="704" y="270" font-family="monospace" font-size="20.8" fill="white">;</text>
-  <text x="576" y="315" font-family="monospace" font-size="20.8" fill="#ffd93d">printf</text>
-  <text x="656" y="315" font-family="monospace" font-size="20.8" fill="white">(</text>
-  <text x="672" y="315" font-family="monospace" font-size="20.8" fill="#00b894">"%d\n"</text>
-  <text x="760" y="315" font-family="monospace" font-size="20.8" fill="white">, *ptr);</text>
-  <text x="576" y="360" font-family="monospace" font-size="20.8" fill="#ffd93d">free</text>
-  <text x="632" y="360" font-family="monospace" font-size="20.8" fill="white">(ptr);</text>
-  <text x="576" y="405" font-family="monospace" font-size="20.8" fill="#e94560">return</text>
-  <text x="664" y="405" font-family="monospace" font-size="20.8" fill="white">0;</text>
-  <text x="544" y="414" font-family="monospace" font-size="20.8" fill="white">}</text>
-  <rect x="544" y="504" width="96" height="72" rx="6.4" fill="#0f3460" stroke="#e94560" stroke-width="2.4" />
-  <text x="560" y="549" font-family="monospace" font-size="17.6" fill="#e94560">stack</text>
-  <rect x="672" y="504" width="96" height="72" rx="6.4" fill="#0f3460" stroke="#53d8fb" stroke-width="2.4" />
-  <text x="691.2" y="549" font-family="monospace" font-size="17.6" fill="#53d8fb">heap</text>
-  <rect x="800" y="504" width="96" height="72" rx="6.4" fill="#0f3460" stroke="#00b894" stroke-width="2.4" />
-  <text x="824" y="549" font-family="monospace" font-size="17.6" fill="#00b894">bss</text>
-  <rect x="928" y="504" width="96" height="72" rx="6.4" fill="#0f3460" stroke="#ffd93d" stroke-width="2.4" />
-  <text x="947.2" y="549" font-family="monospace" font-size="17.6" fill="#ffd93d">data</text>
-  <rect x="1056" y="504" width="96" height="72" rx="6.4" fill="#0f3460" stroke="white" stroke-width="2.4" />
-  <text x="1075.2" y="549" font-family="monospace" font-size="17.6" fill="white">text</text>
-  <line x1="608" y1="612" x2="720" y2="612" stroke="#53d8fb" stroke-width="3.2" />
-  <polygon points="720,603 736,612 720,621" fill="#53d8fb" />
-  <text x="624" y="657" font-family="monospace" font-size="17.6" fill="#53d8fb">ptr</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#1a1a2e"/>
+  <text x="128" y="450" font-family="serif" font-size="320" fill="#16213e" stroke="#1e88e5" stroke-width="5" font-weight="bold">C</text>
+  <rect x="512" y="72" width="672" height="360" rx="12" fill="#16213e" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="544" y="126" font-family="monospace" font-size="21" fill="#e94560">#include</text>
+  <text x="680" y="126" font-family="monospace" font-size="21" fill="#1e88e5">&lt;stdio.h&gt;</text>
+  <text x="544" y="180" font-family="monospace" font-size="21" fill="#1565c0">int</text>
+  <text x="592" y="180" font-family="monospace" font-size="21" fill="#555555">main</text>
+  <text x="656" y="180" font-family="monospace" font-size="21" fill="#333333">(</text>
+  <text x="672" y="180" font-family="monospace" font-size="21" fill="#1565c0">void</text>
+  <text x="728" y="180" font-family="monospace" font-size="21" fill="#333333">) {</text>
+  <text x="576" y="225" font-family="monospace" font-size="21" fill="#1565c0">int</text>
+  <text x="624" y="225" font-family="monospace" font-size="21" fill="#333333">*ptr = </text>
+  <text x="736" y="225" font-family="monospace" font-size="21" fill="#555555">malloc</text>
+  <text x="816" y="225" font-family="monospace" font-size="21" fill="#333333">(</text>
+  <text x="832" y="225" font-family="monospace" font-size="21" fill="#e94560">sizeof</text>
+  <text x="920" y="225" font-family="monospace" font-size="21" fill="#333333">(</text>
+  <text x="933" y="225" font-family="monospace" font-size="21" fill="#1565c0">int</text>
+  <text x="976" y="225" font-family="monospace" font-size="21" fill="#333333">));</text>
+  <text x="576" y="270" font-family="monospace" font-size="21" fill="#333333">*ptr = </text>
+  <text x="672" y="270" font-family="monospace" font-size="21" fill="#e94560">42</text>
+  <text x="704" y="270" font-family="monospace" font-size="21" fill="#333333">;</text>
+  <text x="576" y="315" font-family="monospace" font-size="21" fill="#555555">printf</text>
+  <text x="656" y="315" font-family="monospace" font-size="21" fill="#333333">(</text>
+  <text x="672" y="315" font-family="monospace" font-size="21" fill="#1e88e5">"%d\n"</text>
+  <text x="760" y="315" font-family="monospace" font-size="21" fill="#333333">, *ptr);</text>
+  <text x="576" y="360" font-family="monospace" font-size="21" fill="#555555">free</text>
+  <text x="632" y="360" font-family="monospace" font-size="21" fill="#333333">(ptr);</text>
+  <text x="576" y="405" font-family="monospace" font-size="21" fill="#e94560">return</text>
+  <text x="664" y="405" font-family="monospace" font-size="21" fill="#333333">0;</text>
+  <text x="544" y="432" font-family="monospace" font-size="21" fill="#333333">}</text>
+  <rect x="544" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#e94560" stroke-width="2" filter="url(#shadow)"/>
+  <text x="594" y="526" font-family="monospace" font-size="16" fill="#e94560" text-anchor="middle">stack</text>
+  <rect x="666" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="716" y="526" font-family="monospace" font-size="16" fill="#1e88e5" text-anchor="middle">heap</text>
+  <rect x="788" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="838" y="526" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">bss</text>
+  <rect x="910" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#555555" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="526" font-family="monospace" font-size="16" fill="#555555" text-anchor="middle">data</text>
+  <rect x="1032" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#333333" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1082" y="526" font-family="monospace" font-size="16" fill="#333333" text-anchor="middle">text</text>
+  <line x1="616" y1="590" x2="716" y2="590" stroke="#1e88e5" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <text x="666" y="620" font-family="monospace" font-size="16" fill="#1e88e5" text-anchor="middle">ptr</text>
 </svg>

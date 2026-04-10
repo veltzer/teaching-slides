@@ -1,39 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arw7" markerWidth="22.8571" markerHeight="11.7209" refX="20.5714" refY="5.8605" orient="auto">
-      <polygon points="0,16.7442 8,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="2.2857" y="1.6744" width="1275.4286" height="716.6512" rx="6.6977" fill="#fff" stroke="#333" stroke-width="2.5116" />
-  <rect x="2.2857" y="1.6744" width="1275.4286" height="56.9302" rx="6.6977" fill="#e3f2fd" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="38.5116" font-size="25.1163" font-weight="bold" fill="#222" text-anchor="middle">docker run — Container Startup Flow</text>
-  <rect x="228.5714" y="73.6744" width="822.8571" height="46.8837" rx="6.6977" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.6744" />
-  <text x="640" y="105.4884" font-size="20.093" fill="#222" text-anchor="middle">1. docker run nginx</text>
-  <line x1="640" y1="120.5581" x2="640" y2="144" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="144" width="822.8571" height="46.8837" rx="6.6977" fill="#f0f4f8" stroke="#555" stroke-width="1.6744" />
-  <text x="640" y="175.814" font-size="20.093" fill="#222" text-anchor="middle">2. CLI sends request to dockerd via REST API</text>
-  <line x1="640" y1="190.8837" x2="640" y2="214.3256" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="214.3256" width="822.8571" height="46.8837" rx="6.6977" fill="#f0f4f8" stroke="#555" stroke-width="1.6744" />
-  <text x="640" y="246.1395" font-size="20.093" fill="#222" text-anchor="middle">3. dockerd pulls image, creates container record</text>
-  <line x1="640" y1="261.2093" x2="640" y2="284.6512" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="284.6512" width="822.8571" height="46.8837" rx="6.6977" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6744" />
-  <text x="640" y="316.4651" font-size="20.093" fill="#222" text-anchor="middle">4. dockerd calls containerd via gRPC</text>
-  <line x1="640" y1="331.5349" x2="640" y2="354.9767" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="354.9767" width="822.8571" height="46.8837" rx="6.6977" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6744" />
-  <text x="640" y="386.7907" font-size="20.093" fill="#222" text-anchor="middle">5. containerd creates a task + shim process</text>
-  <line x1="640" y1="401.8605" x2="640" y2="425.3023" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="425.3023" width="822.8571" height="46.8837" rx="6.6977" fill="#fff9c4" stroke="#f9a825" stroke-width="1.6744" />
-  <text x="640" y="457.1163" font-size="20.093" fill="#222" text-anchor="middle">6. shim calls runc to create the container</text>
-  <line x1="640" y1="472.186" x2="640" y2="495.6279" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="495.6279" width="822.8571" height="46.8837" rx="6.6977" fill="#fff9c4" stroke="#f9a825" stroke-width="1.6744" />
-  <text x="640" y="527.4419" font-size="20.093" fill="#222" text-anchor="middle">7. runc sets up namespaces, cgroups, mounts</text>
-  <line x1="640" y1="542.5116" x2="640" y2="565.9535" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="565.9535" width="822.8571" height="46.8837" rx="6.6977" fill="#fff3e0" stroke="#e65100" stroke-width="1.6744" />
-  <text x="640" y="597.7674" font-size="20.093" fill="#222" text-anchor="middle">8. runc executes the container entrypoint</text>
-  <line x1="640" y1="612.8372" x2="640" y2="636.2791" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="636.2791" width="822.8571" height="36.8372" rx="6.6977" fill="#fff3e0" stroke="#e65100" stroke-width="1.6744" />
-  <text x="640" y="663.0698" font-size="20.093" fill="#222" text-anchor="middle">9. runc exits, shim takes over as parent</text>
-  <line x1="640" y1="673.1163" x2="640" y2="686.5116" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
-  <rect x="228.5714" y="686.5116" width="822.8571" height="26.7907" rx="6.6977" fill="#a5d6a7" stroke="#2e7d32" stroke-width="2.5116" />
-  <text x="640" y="708.2791" font-size="20.093" font-weight="bold" fill="#1b5e20" text-anchor="middle">10. Container process is running ✓</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Steps: 9 steps, y spacing ~64px, starting y=30 -->
+  <!-- Step 1 -->
+  <rect x="229" y="30" width="822" height="52" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="62" font-size="22" fill="#ffffff" text-anchor="middle">1. docker run nginx</text>
+  <line x1="640" y1="82" x2="640" y2="100" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 2 -->
+  <rect x="229" y="100" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="132" font-size="22" fill="#333333" text-anchor="middle">2. CLI sends request to dockerd via REST API</text>
+  <line x1="640" y1="152" x2="640" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 3 -->
+  <rect x="229" y="170" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="202" font-size="22" fill="#333333" text-anchor="middle">3. dockerd pulls image, creates container record</text>
+  <line x1="640" y1="222" x2="640" y2="240" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 4 -->
+  <rect x="229" y="240" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="272" font-size="22" fill="#333333" text-anchor="middle">4. dockerd calls containerd via gRPC</text>
+  <line x1="640" y1="292" x2="640" y2="310" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 5 -->
+  <rect x="229" y="310" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="342" font-size="22" fill="#333333" text-anchor="middle">5. containerd creates a task and shim process</text>
+  <line x1="640" y1="362" x2="640" y2="380" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 6 -->
+  <rect x="229" y="380" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="412" font-size="22" fill="#333333" text-anchor="middle">6. shim calls runc to create the container</text>
+  <line x1="640" y1="432" x2="640" y2="450" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 7 -->
+  <rect x="229" y="450" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="482" font-size="22" fill="#333333" text-anchor="middle">7. runc sets up namespaces, cgroups, mounts</text>
+  <line x1="640" y1="502" x2="640" y2="520" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 8 -->
+  <rect x="229" y="520" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="552" font-size="22" fill="#333333" text-anchor="middle">8. runc executes the container entrypoint</text>
+  <line x1="640" y1="572" x2="640" y2="590" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 9 -->
+  <rect x="229" y="590" width="822" height="52" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="622" font-size="22" fill="#333333" text-anchor="middle">9. runc exits, shim takes over as parent</text>
+  <line x1="640" y1="642" x2="640" y2="660" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Final -->
+  <rect x="229" y="660" width="822" height="44" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="640" y="688" font-size="22" font-weight="bold" fill="#1565c0" text-anchor="middle">10. Container process is running</text>
 </svg>

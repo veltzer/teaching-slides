@@ -1,20 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="2.56" y="2.4324" width="1274.88" height="715.1351" rx="9.7297" fill="#fff" stroke="#333" stroke-width="3.6486" />
-  <rect x="2.56" y="2.4324" width="1274.88" height="82.7027" rx="9.7297" fill="#e3f2fd" stroke="#333" stroke-width="3.6486" />
-  <text x="640" y="55.9459" font-size="36.4865" font-weight="bold" fill="#222" text-anchor="middle">Docker Architecture Stack</text>
-  <rect x="153.6" y="107.027" width="972.8" height="107.027" rx="9.7297" fill="#bbdefb" stroke="#1565c0" stroke-width="3.6486" />
-  <text x="640" y="148.3784" font-size="31.6216" font-weight="bold" fill="#1565c0" text-anchor="middle">Docker CLI / API</text>
-  <text x="640" y="192.1622" font-size="26.7568" fill="#555" text-anchor="middle">docker run, build, pull, push ...</text>
-  <rect x="153.6" y="233.5135" width="972.8" height="107.027" rx="9.7297" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.6486" />
-  <text x="640" y="274.8649" font-size="31.6216" font-weight="bold" fill="#222" text-anchor="middle">dockerd</text>
-  <text x="640" y="318.6486" font-size="26.7568" fill="#555" text-anchor="middle">Docker Daemon — image management, REST API</text>
-  <rect x="153.6" y="360" width="972.8" height="107.027" rx="9.7297" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.6486" />
-  <text x="640" y="401.3514" font-size="31.6216" font-weight="bold" fill="#222" text-anchor="middle">containerd</text>
-  <text x="640" y="445.1351" font-size="26.7568" fill="#555" text-anchor="middle">Container Runtime — lifecycle management</text>
-  <rect x="153.6" y="486.4865" width="972.8" height="107.027" rx="9.7297" fill="#fff9c4" stroke="#f9a825" stroke-width="3.6486" />
-  <text x="640" y="527.8378" font-size="31.6216" font-weight="bold" fill="#222" text-anchor="middle">runc</text>
-  <text x="640" y="571.6216" font-size="26.7568" fill="#555" text-anchor="middle">OCI Runtime Reference Implementation</text>
-  <rect x="153.6" y="612.973" width="972.8" height="87.5676" rx="9.7297" fill="#cfd8dc" stroke="#455a64" stroke-width="3.6486" />
-  <text x="640" y="644.5946" font-size="31.6216" font-weight="bold" fill="#222" text-anchor="middle">Linux Kernel</text>
-  <text x="640" y="683.5135" font-size="26.7568" fill="#555" text-anchor="middle">namespaces • cgroups • seccomp</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Docker CLI / API -->
+  <rect x="154" y="90" width="972" height="100" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="132" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">Docker CLI / API</text>
+  <text x="640" y="170" font-size="22" fill="#bbdefb" text-anchor="middle">docker run, build, pull, push ...</text>
+  <!-- dockerd -->
+  <rect x="154" y="210" width="972" height="100" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="252" font-size="30" font-weight="bold" fill="#1565c0" text-anchor="middle">dockerd</text>
+  <text x="640" y="290" font-size="22" fill="#555555" text-anchor="middle">Docker Daemon — image management, REST API</text>
+  <!-- containerd -->
+  <rect x="154" y="330" width="972" height="100" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="372" font-size="30" font-weight="bold" fill="#1565c0" text-anchor="middle">containerd</text>
+  <text x="640" y="410" font-size="22" fill="#555555" text-anchor="middle">Container Runtime — lifecycle management</text>
+  <!-- runc -->
+  <rect x="154" y="450" width="972" height="100" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="492" font-size="30" font-weight="bold" fill="#1565c0" text-anchor="middle">runc</text>
+  <text x="640" y="530" font-size="22" fill="#555555" text-anchor="middle">OCI Runtime Reference Implementation</text>
+  <!-- Linux Kernel -->
+  <rect x="154" y="570" width="972" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="605" font-size="28" font-weight="bold" fill="#1565c0" text-anchor="middle">Linux Kernel</text>
+  <text x="640" y="635" font-size="22" fill="#555555" text-anchor="middle">namespaces  |  cgroups  |  seccomp</text>
 </svg>

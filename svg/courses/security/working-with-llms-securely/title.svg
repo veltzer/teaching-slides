@@ -1,54 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1.6" y2="1.8">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
   </defs>
-  <rect width="1280" height="720" fill="url(#bg)" />
-  <circle cx="640" cy="324" r="144" fill="none" stroke="#8b5cf6" stroke-width="3.2" opacity="0.6" />
-  <circle cx="640" cy="324" r="96" fill="none" stroke="#8b5cf6" stroke-width="2.4" opacity="0.4" />
-  <circle cx="640" cy="216" r="12.8" fill="#8b5cf6" opacity="0.7" />
-  <circle cx="720" cy="270" r="12.8" fill="#8b5cf6" opacity="0.7" />
-  <circle cx="720" cy="378" r="12.8" fill="#8b5cf6" opacity="0.7" />
-  <circle cx="640" cy="432" r="12.8" fill="#8b5cf6" opacity="0.7" />
-  <circle cx="560" cy="378" r="12.8" fill="#8b5cf6" opacity="0.7" />
-  <circle cx="560" cy="270" r="12.8" fill="#8b5cf6" opacity="0.7" />
-  <circle cx="640" cy="324" r="16" fill="#a78bfa" />
-  <line x1="640" y1="216" x2="720" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
-  <line x1="720" y1="270" x2="720" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
-  <line x1="720" y1="378" x2="640" y2="432" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
-  <line x1="640" y1="432" x2="560" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
-  <line x1="560" y1="378" x2="560" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
-  <line x1="560" y1="270" x2="640" y2="216" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
-  <line x1="640" y1="324" x2="640" y2="216" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
-  <line x1="640" y1="324" x2="720" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
-  <line x1="640" y1="324" x2="720" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
-  <line x1="640" y1="324" x2="640" y2="432" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
-  <line x1="640" y1="324" x2="560" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
-  <line x1="640" y1="324" x2="560" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
-  <path d="M 640 180 L 768 234 L 768 378 Q 768 486 640 540 Q 512 486 512 378 L 512 234 Z" fill="none" stroke="#2ecc71" stroke-width="4" opacity="0.8" />
-  <rect x="620.8" y="486" width="38.4" height="32.4" rx="4.8" fill="#2ecc71" opacity="0.8" />
-  <path d="M 628.8 486 L 628.8 471.6 Q 628.8 453.6 640 453.6 Q 651.2 453.6 651.2 471.6 L 651.2 486" fill="none" stroke="#2ecc71" stroke-width="3.2" />
-  <rect x="96" y="144" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
-  <text x="208" y="180" text-anchor="middle" font-size="16" fill="#e74c3c">Prompt Injection</text>
-  <rect x="96" y="234" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
-  <text x="208" y="270" text-anchor="middle" font-size="16" fill="#e74c3c">Data Leakage</text>
-  <rect x="96" y="324" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
-  <text x="208" y="360" text-anchor="middle" font-size="16" fill="#e74c3c">Model Poisoning</text>
-  <rect x="96" y="414" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
-  <text x="208" y="450" text-anchor="middle" font-size="16" fill="#e74c3c">Jailbreaking</text>
-  <rect x="960" y="144" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
-  <text x="1072" y="180" text-anchor="middle" font-size="16" fill="#2ecc71">Input Validation</text>
-  <rect x="960" y="234" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
-  <text x="1072" y="270" text-anchor="middle" font-size="16" fill="#2ecc71">Output Filtering</text>
-  <rect x="960" y="324" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
-  <text x="1072" y="360" text-anchor="middle" font-size="16" fill="#2ecc71">Access Controls</text>
-  <rect x="960" y="414" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
-  <text x="1072" y="450" text-anchor="middle" font-size="16" fill="#2ecc71">OWASP LLM Top 10</text>
-  <line x1="320" y1="171" x2="504" y2="270" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
-  <line x1="320" y1="261" x2="504" y2="306" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
-  <line x1="320" y1="351" x2="504" y2="351" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
-  <line x1="320" y1="441" x2="504" y2="396" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
-  <text x="640" y="666" text-anchor="middle" font-size="19.2" fill="#555" font-family="monospace">OWASP Top 10 for LLM Applications</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Dark accent bar at top -->
+  <rect width="1280" height="8" fill="url(#grad-accent)"/>
+  <!-- Neural net circles: two rings + center -->
+  <circle cx="640" cy="340" r="150" fill="none" stroke="#1e88e5" stroke-width="3" opacity="0.35"/>
+  <circle cx="640" cy="340" r="100" fill="none" stroke="#1e88e5" stroke-width="2" opacity="0.25"/>
+  <!-- Outer hex nodes -->
+  <circle cx="640" cy="190" r="13" fill="#1e88e5" opacity="0.7"/>
+  <circle cx="770" cy="265" r="13" fill="#1e88e5" opacity="0.7"/>
+  <circle cx="770" cy="415" r="13" fill="#1e88e5" opacity="0.7"/>
+  <circle cx="640" cy="490" r="13" fill="#1e88e5" opacity="0.7"/>
+  <circle cx="510" cy="415" r="13" fill="#1e88e5" opacity="0.7"/>
+  <circle cx="510" cy="265" r="13" fill="#1e88e5" opacity="0.7"/>
+  <!-- Center node -->
+  <circle cx="640" cy="340" r="18" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <!-- Outer ring edges -->
+  <line x1="640" y1="190" x2="770" y2="265" stroke="#1e88e5" stroke-width="1.5" opacity="0.35"/>
+  <line x1="770" y1="265" x2="770" y2="415" stroke="#1e88e5" stroke-width="1.5" opacity="0.35"/>
+  <line x1="770" y1="415" x2="640" y2="490" stroke="#1e88e5" stroke-width="1.5" opacity="0.35"/>
+  <line x1="640" y1="490" x2="510" y2="415" stroke="#1e88e5" stroke-width="1.5" opacity="0.35"/>
+  <line x1="510" y1="415" x2="510" y2="265" stroke="#1e88e5" stroke-width="1.5" opacity="0.35"/>
+  <line x1="510" y1="265" x2="640" y2="190" stroke="#1e88e5" stroke-width="1.5" opacity="0.35"/>
+  <!-- Spokes to center -->
+  <line x1="640" y1="340" x2="640" y2="190" stroke="#1e88e5" stroke-width="1.5" opacity="0.25"/>
+  <line x1="640" y1="340" x2="770" y2="265" stroke="#1e88e5" stroke-width="1.5" opacity="0.25"/>
+  <line x1="640" y1="340" x2="770" y2="415" stroke="#1e88e5" stroke-width="1.5" opacity="0.25"/>
+  <line x1="640" y1="340" x2="640" y2="490" stroke="#1e88e5" stroke-width="1.5" opacity="0.25"/>
+  <line x1="640" y1="340" x2="510" y2="415" stroke="#1e88e5" stroke-width="1.5" opacity="0.25"/>
+  <line x1="640" y1="340" x2="510" y2="265" stroke="#1e88e5" stroke-width="1.5" opacity="0.25"/>
+  <!-- Threat labels left -->
+  <rect x="60" y="155" width="220" height="50" rx="6" fill="#fdecea" stroke="#e53935" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="170" y="186" text-anchor="middle" font-size="16" fill="#c62828">Prompt Injection</text>
+  <rect x="60" y="230" width="220" height="50" rx="6" fill="#fdecea" stroke="#e53935" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="170" y="261" text-anchor="middle" font-size="16" fill="#c62828">Data Leakage</text>
+  <rect x="60" y="305" width="220" height="50" rx="6" fill="#fdecea" stroke="#e53935" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="170" y="336" text-anchor="middle" font-size="16" fill="#c62828">Model Poisoning</text>
+  <rect x="60" y="380" width="220" height="50" rx="6" fill="#fdecea" stroke="#e53935" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="170" y="411" text-anchor="middle" font-size="16" fill="#c62828">Jailbreaking</text>
+  <!-- Dashed lines from threats to LLM circle -->
+  <line x1="280" y1="180" x2="490" y2="280" stroke="#e53935" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+  <line x1="280" y1="255" x2="490" y2="310" stroke="#e53935" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+  <line x1="280" y1="330" x2="490" y2="340" stroke="#e53935" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+  <line x1="280" y1="405" x2="490" y2="390" stroke="#e53935" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+  <!-- Defence labels right -->
+  <rect x="1000" y="155" width="220" height="50" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1110" y="186" text-anchor="middle" font-size="16" fill="#2e7d32">Input Validation</text>
+  <rect x="1000" y="230" width="220" height="50" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1110" y="261" text-anchor="middle" font-size="16" fill="#2e7d32">Output Filtering</text>
+  <rect x="1000" y="305" width="220" height="50" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1110" y="336" text-anchor="middle" font-size="16" fill="#2e7d32">Access Controls</text>
+  <rect x="1000" y="380" width="220" height="50" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1110" y="411" text-anchor="middle" font-size="16" fill="#2e7d32">OWASP LLM Top 10</text>
+  <!-- Footer label -->
+  <text x="640" y="610" text-anchor="middle" font-size="18" fill="#555555" font-family="monospace">OWASP Top 10 for LLM Applications</text>
+  <!-- Bottom accent bar -->
+  <rect y="712" width="1280" height="8" fill="url(#grad-accent)"/>
 </svg>

@@ -1,40 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="24.1509" markerHeight="23.4419" refX="21.7358" refY="11.7209" orient="auto">
-      <polygon points="0,33.4884 8.4528,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="24.1509" y="73.6744" font-size="31.3962" font-weight="bold" fill="#222" text-anchor="start">forks=5 (default):</text>
-  <rect x="72.4528" y="117.2093" width="193.2075" height="100.4651" fill="#e3f2fd" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="169.0566" y="184.186" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host1</text>
-  <line x1="265.6604" y1="167.4419" x2="284.9811" y2="167.4419" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="289.8113" y="117.2093" width="193.2075" height="100.4651" fill="#e3f2fd" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="386.4151" y="184.186" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host2</text>
-  <line x1="483.0189" y1="167.4419" x2="502.3396" y2="167.4419" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="507.1698" y="117.2093" width="193.2075" height="100.4651" fill="#e3f2fd" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="603.7736" y="184.186" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host3</text>
-  <line x1="700.3774" y1="167.4419" x2="719.6981" y2="167.4419" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="724.5283" y="117.2093" width="193.2075" height="100.4651" fill="#e3f2fd" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="821.1321" y="184.186" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host4</text>
-  <line x1="917.7358" y1="167.4419" x2="937.0566" y2="167.4419" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="941.8868" y="117.2093" width="193.2075" height="100.4651" fill="#e3f2fd" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="1038.4906" y="184.186" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host5</text>
-  <text x="72.4528" y="301.3953" font-size="26.566" font-weight="normal" fill="#666" text-anchor="start">Then: Host6 → Host7 → Host8 → ...</text>
-  <text x="24.1509" y="408.5581" font-size="31.3962" font-weight="bold" fill="#222" text-anchor="start">forks=20:</text>
-  <rect x="72.4528" y="452.093" width="193.2075" height="100.4651" fill="#e8f5e9" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="169.0566" y="519.0698" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host1</text>
-  <line x1="265.6604" y1="502.3256" x2="284.9811" y2="502.3256" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="289.8113" y="452.093" width="193.2075" height="100.4651" fill="#e8f5e9" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="386.4151" y="519.0698" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host2</text>
-  <line x1="483.0189" y1="502.3256" x2="502.3396" y2="502.3256" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="507.1698" y="452.093" width="193.2075" height="100.4651" fill="#e8f5e9" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="603.7736" y="519.0698" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host3</text>
-  <line x1="700.3774" y1="502.3256" x2="719.6981" y2="502.3256" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="724.5283" y="452.093" width="193.2075" height="100.4651" fill="#e8f5e9" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="821.1321" y="519.0698" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">...</text>
-  <line x1="917.7358" y1="502.3256" x2="937.0566" y2="502.3256" stroke="#555" stroke-width="3.6226" marker-end="url(#arrow)" />
-  <rect x="941.8868" y="452.093" width="193.2075" height="100.4651" fill="#e8f5e9" stroke="#333" stroke-width="3.6226" rx="9.6604" />
-  <text x="1038.4906" y="519.0698" font-size="26.566" font-weight="normal" fill="#222" text-anchor="middle">Host20</text>
-  <text x="72.4528" y="636.2791" font-size="26.566" font-weight="normal" fill="#666" text-anchor="start">Then: Host21 → Host22 → ...</text>
-  <text x="72.4528" y="693.2093" font-size="26.566" font-weight="normal" fill="#888" text-anchor="start">(all at once in first batch)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Section: forks=5 -->
+  <text x="30" y="52" font-size="26" font-weight="bold" fill="#1565c0">forks=5 (default)</text>
+
+  <!-- 5 host boxes in a row -->
+  <rect x="30"  y="70" width="210" height="100" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="135" y="130" text-anchor="middle" font-size="20" fill="#222">Host 1</text>
+
+  <line x1="240" y1="120" x2="270" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="275" y="70" width="210" height="100" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="130" text-anchor="middle" font-size="20" fill="#222">Host 2</text>
+
+  <line x1="485" y1="120" x2="515" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="520" y="70" width="210" height="100" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="625" y="130" text-anchor="middle" font-size="20" fill="#222">Host 3</text>
+
+  <line x1="730" y1="120" x2="760" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="765" y="70" width="210" height="100" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="870" y="130" text-anchor="middle" font-size="20" fill="#222">Host 4</text>
+
+  <line x1="975" y1="120" x2="1005" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="1010" y="70" width="210" height="100" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115" y="130" text-anchor="middle" font-size="20" fill="#222">Host 5</text>
+
+  <text x="30" y="215" font-size="17" fill="#666">Then sequentially: Host 6 -&gt; Host 7 -&gt; Host 8 ... (one batch of 5 at a time)</text>
+
+  <!-- memory note -->
+  <rect x="30" y="240" width="560" height="60" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="50" y="270" font-size="16" fill="#555">Memory per fork: ~50-100 MB (varies with modules used)</text>
+  <text x="50" y="292" font-size="16" fill="#555">forks=5 means 5 parallel SSH connections + worker processes</text>
+
+  <!-- Section: forks=20 -->
+  <text x="30" y="380" font-size="26" font-weight="bold" fill="#1b5e20">forks=20</text>
+
+  <rect x="30"  y="398" width="190" height="100" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="125" y="458" text-anchor="middle" font-size="20" fill="#222">Host 1</text>
+  <line x1="220" y1="448" x2="248" y2="448" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="253" y="398" width="190" height="100" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="348" y="458" text-anchor="middle" font-size="20" fill="#222">Host 2</text>
+  <line x1="443" y1="448" x2="471" y2="448" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="476" y="398" width="190" height="100" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="571" y="458" text-anchor="middle" font-size="20" fill="#222">Host 3</text>
+  <line x1="666" y1="448" x2="694" y2="448" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="699" y="398" width="190" height="100" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="794" y="458" text-anchor="middle" font-size="20" fill="#222">...</text>
+  <line x1="889" y1="448" x2="917" y2="448" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="922" y="398" width="190" height="100" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1017" y="458" text-anchor="middle" font-size="20" fill="#222">Host 20</text>
+
+  <text x="30" y="548" font-size="17" fill="#666">Then: Host 21 -&gt; Host 22 ... (all 20 in first batch simultaneously)</text>
+
+  <!-- memory comparison table -->
+  <rect x="30" y="575" width="1220" height="120" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="604" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">Memory impact (approx. 100 MB per fork)</text>
+  <text x="120" y="636" text-anchor="middle" font-size="15" fill="#333">forks=5</text>
+  <text x="120" y="658" text-anchor="middle" font-size="15" fill="#555">~500 MB RAM</text>
+  <text x="420" y="636" text-anchor="middle" font-size="15" fill="#333">forks=10</text>
+  <text x="420" y="658" text-anchor="middle" font-size="15" fill="#555">~1 GB RAM</text>
+  <text x="720" y="636" text-anchor="middle" font-size="15" fill="#333">forks=20</text>
+  <text x="720" y="658" text-anchor="middle" font-size="15" fill="#555">~2 GB RAM</text>
+  <text x="1020" y="636" text-anchor="middle" font-size="15" fill="#333">forks=50</text>
+  <text x="1020" y="658" text-anchor="middle" font-size="15" fill="#555">~5 GB RAM (watch out!)</text>
+  <line x1="270" y1="615" x2="270" y2="670" stroke="#cccccc" stroke-width="1"/>
+  <line x1="570" y1="615" x2="570" y2="670" stroke="#cccccc" stroke-width="1"/>
+  <line x1="870" y1="615" x2="870" y2="670" stroke="#cccccc" stroke-width="1"/>
 </svg>

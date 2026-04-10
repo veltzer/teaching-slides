@@ -1,36 +1,60 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#1a1a2e" />
-  <text x="96" y="108" font-family="monospace" font-size="22.4" fill="#53d8fb">.section .text</text>
-  <text x="96" y="153" font-family="monospace" font-size="22.4" fill="#00b894">.globl _start</text>
-  <text x="96" y="207" font-family="monospace" font-size="22.4" fill="#ffd93d">_start:</text>
-  <text x="144" y="252" font-family="monospace" font-size="22.4" fill="#e94560">movl</text>
-  <text x="232" y="252" font-family="monospace" font-size="22.4" fill="white">$0x1, %eax</text>
-  <text x="144" y="297" font-family="monospace" font-size="22.4" fill="#e94560">movl</text>
-  <text x="232" y="297" font-family="monospace" font-size="22.4" fill="white">$0x0, %ebx</text>
-  <text x="144" y="342" font-family="monospace" font-size="22.4" fill="#e94560">int</text>
-  <text x="208" y="342" font-family="monospace" font-size="22.4" fill="white">$0x80</text>
-  <rect x="720" y="90" width="448" height="360" rx="12.8" fill="#16213e" stroke="#53d8fb" stroke-width="3.2" />
-  <text x="848" y="140.4" font-family="monospace" font-size="25.6" fill="#53d8fb" font-weight="bold">Registers</text>
-  <text x="752" y="198" font-family="monospace" font-size="20.8" fill="#ffd93d">%eax</text>
-  <rect x="848" y="171" width="288" height="36" rx="4.8" fill="#0f3460" />
-  <text x="864" y="198" font-family="monospace" font-size="19.2" fill="#e94560">0x00000001</text>
-  <text x="752" y="252" font-family="monospace" font-size="20.8" fill="#ffd93d">%ebx</text>
-  <rect x="848" y="225" width="288" height="36" rx="4.8" fill="#0f3460" />
-  <text x="864" y="252" font-family="monospace" font-size="19.2" fill="#e94560">0x00000000</text>
-  <text x="752" y="306" font-family="monospace" font-size="20.8" fill="#ffd93d">%ecx</text>
-  <rect x="848" y="279" width="288" height="36" rx="4.8" fill="#0f3460" />
-  <text x="864" y="306" font-family="monospace" font-size="19.2" fill="#e94560">0xFFFFFFFF</text>
-  <text x="752" y="360" font-family="monospace" font-size="20.8" fill="#ffd93d">%esp</text>
-  <rect x="848" y="333" width="288" height="36" rx="4.8" fill="#0f3460" />
-  <text x="864" y="360" font-family="monospace" font-size="19.2" fill="#e94560">0xBFFF0000</text>
-  <text x="752" y="414" font-family="monospace" font-size="20.8" fill="#ffd93d">%eip</text>
-  <rect x="848" y="387" width="288" height="36" rx="4.8" fill="#0f3460" />
-  <text x="864" y="414" font-family="monospace" font-size="19.2" fill="#e94560">0x08048054</text>
-  <rect x="800" y="504" width="320" height="180" rx="8" fill="#16213e" stroke="#00b894" stroke-width="3.2" />
-  <text x="888" y="549" font-family="monospace" font-size="22.4" fill="#00b894" font-weight="bold">Stack</text>
-  <line x1="832" y1="567" x2="1088" y2="567" stroke="#0f3460" stroke-width="1.6" />
-  <line x1="832" y1="612" x2="1088" y2="612" stroke="#0f3460" stroke-width="1.6" />
-  <line x1="832" y1="657" x2="1088" y2="657" stroke="#0f3460" stroke-width="1.6" />
-  <text x="160" y="540" font-family="monospace" font-size="67.2" fill="#e94560" font-weight="bold" opacity="0.3">GAS</text>
-  <text x="96" y="666" font-family="monospace" font-size="19.2" fill="#0f3460">01001000 01100101 01101100 01101100 01101111</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <!-- Dark background kept for decorative title -->
+  <rect width="1280" height="720" fill="#1a1a2e"/>
+  <!-- Assembly code block (left) -->
+  <text x="96" y="108" font-family="monospace" font-size="22" fill="#53d8fb">.section .text</text>
+  <text x="96" y="153" font-family="monospace" font-size="22" fill="#00b894">.globl _start</text>
+  <text x="96" y="207" font-family="monospace" font-size="22" fill="#ffd93d">_start:</text>
+  <text x="144" y="252" font-family="monospace" font-size="22" fill="#e94560">movl</text>
+  <text x="232" y="252" font-family="monospace" font-size="22" fill="white">$0x1, %eax</text>
+  <text x="144" y="297" font-family="monospace" font-size="22" fill="#e94560">movl</text>
+  <text x="232" y="297" font-family="monospace" font-size="22" fill="white">$0x0, %ebx</text>
+  <text x="144" y="342" font-family="monospace" font-size="22" fill="#e94560">int</text>
+  <text x="208" y="342" font-family="monospace" font-size="22" fill="white">$0x80</text>
+  <!-- Registers panel (right) -->
+  <rect x="720" y="90" width="448" height="360" rx="12" fill="#16213e" stroke="#53d8fb" stroke-width="3"/>
+  <text x="848" y="140" font-family="monospace" font-size="25" fill="#53d8fb" font-weight="bold">Registers</text>
+  <text x="752" y="198" font-family="monospace" font-size="20" fill="#ffd93d">%eax</text>
+  <rect x="848" y="171" width="288" height="36" rx="4" fill="#0f3460"/>
+  <text x="864" y="198" font-family="monospace" font-size="18" fill="#e94560">0x00000001</text>
+  <text x="752" y="252" font-family="monospace" font-size="20" fill="#ffd93d">%ebx</text>
+  <rect x="848" y="225" width="288" height="36" rx="4" fill="#0f3460"/>
+  <text x="864" y="252" font-family="monospace" font-size="18" fill="#e94560">0x00000000</text>
+  <text x="752" y="306" font-family="monospace" font-size="20" fill="#ffd93d">%ecx</text>
+  <rect x="848" y="279" width="288" height="36" rx="4" fill="#0f3460"/>
+  <text x="864" y="306" font-family="monospace" font-size="18" fill="#e94560">0xFFFFFFFF</text>
+  <text x="752" y="360" font-family="monospace" font-size="20" fill="#ffd93d">%esp</text>
+  <rect x="848" y="333" width="288" height="36" rx="4" fill="#0f3460"/>
+  <text x="864" y="360" font-family="monospace" font-size="18" fill="#e94560">0xBFFF0000</text>
+  <text x="752" y="414" font-family="monospace" font-size="20" fill="#ffd93d">%eip</text>
+  <rect x="848" y="387" width="288" height="36" rx="4" fill="#0f3460"/>
+  <text x="864" y="414" font-family="monospace" font-size="18" fill="#e94560">0x08048054</text>
+  <!-- Stack panel -->
+  <rect x="800" y="504" width="320" height="112" rx="8" fill="#16213e" stroke="#00b894" stroke-width="3"/>
+  <text x="888" y="549" font-family="monospace" font-size="22" fill="#00b894" font-weight="bold">Stack</text>
+  <line x1="832" y1="567" x2="1088" y2="567" stroke="#0f3460" stroke-width="1.5"/>
+  <line x1="832" y1="597" x2="1088" y2="597" stroke="#0f3460" stroke-width="1.5"/>
+  <!-- GAS watermark -->
+  <text x="160" y="520" font-family="monospace" font-size="64" fill="#e94560" font-weight="bold" opacity="0.3">GAS</text>
+  <!-- Binary footer -->
+  <text x="96" y="620" font-family="monospace" font-size="18" fill="#0f3460">01001000 01100101 01101100 01101100 01101111</text>
 </svg>

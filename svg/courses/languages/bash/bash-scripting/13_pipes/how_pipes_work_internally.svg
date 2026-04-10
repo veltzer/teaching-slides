@@ -1,24 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.3939" markerHeight="21" refX="17.4545" refY="10.5" orient="auto">
-      <polygon points="0,30 6.7879,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="19.3939" y="60" width="271.5152" height="180" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="155.1515" y="138" font-size="27.1515" font-weight="bold" fill="#222" text-anchor="middle">command1</text>
-  <text x="155.1515" y="198" font-size="23.2727" fill="#555" text-anchor="middle">stdout = 1</text>
-  <rect x="387.8788" y="60" width="504.2424" height="180" fill="#fff3e0" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="640" y="126" font-size="25.2121" font-weight="bold" fill="#222" text-anchor="middle">pipe buffer</text>
-  <text x="640" y="180" font-size="23.2727" fill="#555" text-anchor="middle">4KB–64KB  (kernel memory)</text>
-  <rect x="989.0909" y="60" width="271.5152" height="180" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="1124.8485" y="138" font-size="27.1515" font-weight="bold" fill="#222" text-anchor="middle">command2</text>
-  <text x="1124.8485" y="198" font-size="23.2727" fill="#555" text-anchor="middle">stdin = 0</text>
-  <line x1="290.9091" y1="150" x2="380.1212" y2="150" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <line x1="892.1212" y1="150" x2="981.3333" y2="150" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <text x="19.3939" y="330" font-size="25.2121" fill="#222">1. Shell creates a pipe (two file descriptors)</text>
-  <text x="19.3939" y="390" font-size="25.2121" fill="#222">2. Shell forks command1, connects its stdout to pipe write end</text>
-  <text x="19.3939" y="450" font-size="25.2121" fill="#222">3. Shell forks command2, connects its stdin to pipe read end</text>
-  <text x="19.3939" y="510" font-size="25.2121" fill="#222">4. Both commands run <tspan font-weight="bold">concurrently</tspan>
-  </text>
-  <text x="19.3939" y="570" font-size="25.2121" fill="#222">5. Kernel manages the buffer between them</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- command1 box -->
+  <rect x="20" y="50" width="280" height="170" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="160" y="122" font-size="26" font-weight="bold" fill="#1565c0" text-anchor="middle">command1</text>
+  <text x="160" y="160" font-size="20" fill="#333" text-anchor="middle" font-family="monospace">stdout = fd 1</text>
+  <text x="160" y="196" font-size="16" fill="#555" text-anchor="middle">writes to pipe</text>
+
+  <!-- arrow command1 -> buffer -->
+  <line x1="300" y1="135" x2="388" y2="135" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- pipe buffer box -->
+  <rect x="390" y="50" width="500" height="170" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="110" font-size="24" font-weight="bold" fill="#e65100" text-anchor="middle">pipe buffer</text>
+  <text x="640" y="150" font-size="20" fill="#555" text-anchor="middle">4 KB - 64 KB  (kernel memory)</text>
+  <text x="640" y="186" font-size="16" fill="#888" text-anchor="middle">managed by the kernel automatically</text>
+
+  <!-- arrow buffer -> command2 -->
+  <line x1="890" y1="135" x2="978" y2="135" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- command2 box -->
+  <rect x="980" y="50" width="280" height="170" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="1120" y="122" font-size="26" font-weight="bold" fill="#2e7d32" text-anchor="middle">command2</text>
+  <text x="1120" y="160" font-size="20" fill="#333" text-anchor="middle" font-family="monospace">stdin = fd 0</text>
+  <text x="1120" y="196" font-size="16" fill="#555" text-anchor="middle">reads from pipe</text>
+
+  <!-- Step list -->
+  <rect x="20" y="258" width="1240" height="340" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+
+  <circle cx="50" cy="308" r="16" fill="url(#grad-accent)"/>
+  <text x="50" y="314" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="80" y="314" font-size="22" fill="#222">Shell calls pipe() — kernel returns two file descriptors: read end and write end</text>
+
+  <circle cx="50" cy="368" r="16" fill="url(#grad-accent)"/>
+  <text x="50" y="374" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="80" y="374" font-size="22" fill="#222">Shell forks command1, connects its stdout (fd 1) to the pipe write end</text>
+
+  <circle cx="50" cy="428" r="16" fill="url(#grad-accent)"/>
+  <text x="50" y="434" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="80" y="434" font-size="22" fill="#222">Shell forks command2, connects its stdin (fd 0) to the pipe read end</text>
+
+  <circle cx="50" cy="488" r="16" fill="url(#grad-accent)"/>
+  <text x="50" y="494" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="80" y="494" font-size="22" fill="#222">Both commands run <tspan font-weight="bold" fill="#1565c0">concurrently</tspan> — they do not wait for each other</text>
+
+  <circle cx="50" cy="548" r="16" fill="url(#grad-accent)"/>
+  <text x="50" y="554" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="80" y="554" font-size="22" fill="#222">Kernel manages back-pressure: command1 blocks when buffer is full</text>
 </svg>

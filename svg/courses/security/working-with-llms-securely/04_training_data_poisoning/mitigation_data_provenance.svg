@@ -1,17 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#f0f4f8" rx="9.1429" stroke="#333" stroke-width="3.4286" />
-  <text x="640" y="81.3913" font-family="sans-serif" font-size="34.2857" font-weight="bold" fill="#222" text-anchor="middle">Training Data Provenance Tracking</text>
-  <text x="640" y="150.2609" font-family="sans-serif" font-size="29.7143" fill="#555" text-anchor="middle">For every training data sample, track:</text>
-  <rect x="137.1429" y="194.087" width="1005.7143" height="112.6957" fill="#e8f5e9" rx="9.1429" stroke="#2e7d32" stroke-width="2.2857" />
-  <text x="205.7143" y="262.9565" font-family="sans-serif" font-size="32" fill="#2e7d32">✓</text>
-  <text x="262.8571" y="262.9565" font-family="sans-serif" font-size="29.7143" fill="#222">
-    <tspan font-weight="bold">Source</tspan> — Where did this data come from?</text>
-  <rect x="137.1429" y="325.5652" width="1005.7143" height="112.6957" fill="#e8f5e9" rx="9.1429" stroke="#2e7d32" stroke-width="2.2857" />
-  <text x="205.7143" y="394.4348" font-family="sans-serif" font-size="32" fill="#2e7d32">✓</text>
-  <text x="262.8571" y="394.4348" font-family="sans-serif" font-size="29.7143" fill="#222">
-    <tspan font-weight="bold">Collection date</tspan> — When was it collected?</text>
-  <rect x="137.1429" y="457.0435" width="1005.7143" height="112.6957" fill="#e8f5e9" rx="9.1429" stroke="#2e7d32" stroke-width="2.2857" />
-  <text x="205.7143" y="525.913" font-family="sans-serif" font-size="32" fill="#2e7d32">✓</text>
-  <text x="262.8571" y="525.913" font-family="sans-serif" font-size="29.7143" fill="#222">
-    <tspan font-weight="bold">Verification / License / Hash</tspan> — Reviewed? Legal? Tampered?</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <text x="640" y="75" text-anchor="middle" font-size="30" font-weight="bold" fill="#333333">Training Data Provenance Tracking</text>
+  <text x="640" y="130" text-anchor="middle" font-size="22" fill="#555555">For every training data sample, track:</text>
+
+  <!-- Row 1: Source -->
+  <rect x="130" y="165" width="1020" height="110" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="235" font-size="28" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="240" y="235" font-size="22" fill="#333333"><tspan font-weight="bold">Source</tspan> — Where did this data come from?</text>
+
+  <!-- Row 2: Collection date -->
+  <rect x="130" y="295" width="1020" height="110" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="365" font-size="28" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="240" y="365" font-size="22" fill="#333333"><tspan font-weight="bold">Collection date</tspan> — When was it collected?</text>
+
+  <!-- Row 3: Verification / License / Hash -->
+  <rect x="130" y="425" width="1020" height="110" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="185" y="495" font-size="28" fill="#2e7d32" font-weight="bold">&#x2713;</text>
+  <text x="240" y="495" font-size="22" fill="#333333"><tspan font-weight="bold">Verification / License / Hash</tspan> — Reviewed? Legal? Tampered?</text>
 </svg>

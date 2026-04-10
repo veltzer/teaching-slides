@@ -1,9 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" rx="25.6" fill="#333" />
-  <rect x="0" y="0" width="320" height="720" rx="25.6" fill="#555" />
-  <rect x="294.4" y="0" width="25.6" height="720" fill="#555" />
-  <rect x="320" y="0" width="960" height="720" rx="25.6" fill="#3fb950" />
-  <rect x="320" y="0" width="25.6" height="720" fill="#3fb950" />
-  <text x="160" y="462.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="76.8" fill="#fff">CI</text>
-  <text x="800" y="462.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="76.8" fill="#fff">passing</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <linearGradient id="label-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#555555"/>
+      <stop offset="100%" stop-color="#444444"/>
+    </linearGradient>
+    <linearGradient id="pass-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#44bb44"/>
+      <stop offset="100%" stop-color="#2e8b2e"/>
+    </linearGradient>
+    <linearGradient id="fail-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e05252"/>
+      <stop offset="100%" stop-color="#b03030"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Passing badge -->
+  <text x="380" y="200" text-anchor="middle" font-size="22" fill="#555555">Passing Build</text>
+  <rect x="140" y="220" width="160" height="60" rx="6" fill="url(#label-grad)" filter="url(#shadow)"/>
+  <rect x="300" y="220" width="240" height="60" rx="6" fill="url(#pass-grad)" filter="url(#shadow)"/>
+  <!-- Round right side of label -->
+  <rect x="140" y="220" width="170" height="60" fill="url(#label-grad)"/>
+  <rect x="300" y="220" width="230" height="60" fill="url(#pass-grad)"/>
+  <text x="220" y="260" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">CI</text>
+  <text x="415" y="260" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">passing</text>
+
+  <!-- Failing badge -->
+  <text x="900" y="200" text-anchor="middle" font-size="22" fill="#555555">Failing Build</text>
+  <rect x="660" y="220" width="160" height="60" rx="6" fill="url(#label-grad)" filter="url(#shadow)"/>
+  <rect x="820" y="220" width="240" height="60" rx="6" fill="url(#fail-grad)" filter="url(#shadow)"/>
+  <rect x="660" y="220" width="170" height="60" fill="url(#label-grad)"/>
+  <rect x="820" y="220" width="230" height="60" fill="url(#fail-grad)"/>
+  <text x="740" y="260" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">CI</text>
+  <text x="935" y="260" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">failing</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="330" x2="1180" y2="330" stroke="#f2f2f2" stroke-width="2"/>
+
+  <!-- Explanation section -->
+  <text x="640" y="390" text-anchor="middle" font-size="20" fill="#555555">CI badges display live build status. Embed in your README with:</text>
+
+  <rect x="200" y="415" width="880" height="100" rx="8" fill="#f2f2f2" filter="url(#shadow)"/>
+  <text x="640" y="460" text-anchor="middle" font-family="monospace" font-size="18" fill="#1565c0">![CI](https://github.com/&lt;owner&gt;/&lt;repo&gt;/actions/workflows/ci.yml/badge.svg)</text>
+  <text x="640" y="495" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">Markdown image link pointing to the GitHub Actions badge endpoint</text>
+
+  <!-- Info bullets -->
+  <circle cx="200" cy="563" r="6" fill="#1565c0"/>
+  <text x="220" y="568" font-size="18" fill="#212121">Badge auto-updates on every workflow run</text>
+  <circle cx="200" cy="603" r="6" fill="#1565c0"/>
+  <text x="220" y="608" font-size="18" fill="#212121">Green = passing, Red = failing, Gray = no runs yet</text>
 </svg>

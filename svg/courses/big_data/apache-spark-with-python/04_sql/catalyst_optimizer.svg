@@ -1,29 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="480" y="36" width="320" height="72" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="640" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">SQL/DataFrame</text>
-  <rect x="440" y="156" width="400" height="72" rx="6" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="2.4" />
-  <text x="640" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Unresolved Logical Plan</text>
-  <rect x="440" y="276" width="400" height="72" rx="6" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="640" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Resolved Logical Plan</text>
-  <rect x="440" y="396" width="400" height="72" rx="6" fill="#cce5ff" stroke="#007bff" stroke-width="2.4" />
-  <text x="640" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Optimized Logical Plan</text>
-  <rect x="480" y="516" width="320" height="72" rx="6" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
-  <text x="640" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Physical Plan</text>
-  <rect x="560" y="636" width="160" height="60" rx="6" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2.4" />
-  <text x="640" y="672" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">RDD</text>
   <defs>
-    <marker id="arrow8" markerWidth="16" markerHeight="8.4" refX="14.4" refY="4.2" orient="auto">
-      <polygon points="0,12 5.6,0" fill="#666" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <line x1="640" y1="108" x2="640" y2="156" stroke="#666" stroke-width="2.4" marker-end="url(#arrow8)" />
-  <line x1="640" y1="228" x2="640" y2="276" stroke="#666" stroke-width="2.4" marker-end="url(#arrow8)" />
-  <line x1="640" y1="348" x2="640" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow8)" />
-  <line x1="640" y1="468" x2="640" y2="516" stroke="#666" stroke-width="2.4" marker-end="url(#arrow8)" />
-  <line x1="640" y1="588" x2="640" y2="636" stroke="#666" stroke-width="2.4" marker-end="url(#arrow8)" />
-  <text x="880" y="192" font-family="Arial, sans-serif" font-size="14.4" fill="#666" font-style="italic">Analysis</text>
-  <text x="880" y="312" font-family="Arial, sans-serif" font-size="14.4" fill="#666" font-style="italic">Resolution</text>
-  <text x="880" y="432" font-family="Arial, sans-serif" font-size="14.4" fill="#666" font-style="italic">Optimization</text>
-  <text x="880" y="552" font-family="Arial, sans-serif" font-size="14.4" fill="#666" font-style="italic">Planning</text>
-  <text x="880" y="672" font-family="Arial, sans-serif" font-size="14.4" fill="#666" font-style="italic">Execution</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Pipeline stages - vertical layout centered -->
+  <!-- SQL / DataFrame input -->
+  <rect x="440" y="30" width="400" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1565c0">SQL / DataFrame Query</text>
+  <!-- Unresolved Logical Plan -->
+  <rect x="420" y="145" width="440" height="70" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#e65100">Unresolved Logical Plan</text>
+  <!-- Resolved Logical Plan -->
+  <rect x="420" y="258" width="440" height="70" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#2e7d32">Resolved Logical Plan</text>
+  <!-- Optimized Logical Plan -->
+  <rect x="420" y="371" width="440" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="413" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#1565c0">Optimized Logical Plan</text>
+  <!-- Physical Plan -->
+  <rect x="440" y="484" width="400" height="70" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="526" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#c62828">Physical Plan</text>
+  <!-- Best Plan / RDD -->
+  <rect x="480" y="584" width="320" height="60" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="621" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Best Plan (RDD)</text>
+  <!-- Arrows -->
+  <line x1="640" y1="100" x2="640" y2="145" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="215" x2="640" y2="258" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="328" x2="640" y2="371" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="441" x2="640" y2="484" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="554" x2="640" y2="584" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Stage annotations -->
+  <text x="890" y="187" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-style="italic">Parsing</text>
+  <text x="890" y="300" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-style="italic">Analysis</text>
+  <text x="890" y="413" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-style="italic">Optimization</text>
+  <text x="890" y="526" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-style="italic">Planning</text>
+  <text x="890" y="621" font-family="Arial, sans-serif" font-size="14" fill="#888888" font-style="italic">Execution</text>
 </svg>

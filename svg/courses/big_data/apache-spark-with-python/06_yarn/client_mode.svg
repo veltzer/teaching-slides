@@ -1,22 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="80" y="288" width="160" height="144" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="160" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Driver</text>
-  <rect x="336" y="288" width="160" height="144" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="416" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Client</text>
-  <rect x="592" y="288" width="240" height="144" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="712" y="348" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Resource</text>
-  <text x="712" y="396" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Manager</text>
-  <rect x="928" y="288" width="192" height="144" rx="8" fill="#cce5ff" stroke="#007bff" stroke-width="3.2" />
-  <text x="1024" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Node Manager</text>
-  <rect x="1216" y="288" width="160" height="144" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="1296" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Executor</text>
   <defs>
-    <marker id="arrow11" markerWidth="16" markerHeight="16.8" refX="14.4" refY="8.4" orient="auto">
-      <polygon points="0,24 5.6,0" fill="#666" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <line x1="240" y1="360" x2="336" y2="360" stroke="#666" stroke-width="3.2" marker-end="url(#arrow11)" />
-  <line x1="496" y1="360" x2="592" y2="360" stroke="#666" stroke-width="3.2" marker-end="url(#arrow11)" />
-  <line x1="832" y1="360" x2="928" y2="360" stroke="#666" stroke-width="3.2" marker-end="url(#arrow11)" />
-  <line x1="1120" y1="360" x2="1216" y2="360" stroke="#666" stroke-width="3.2" marker-end="url(#arrow11)" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- CLIENT MACHINE boundary -->
+  <rect x="30" y="30" width="340" height="400" rx="10" fill="#f9fbe7" stroke="#cddc39" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="200" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#827717" font-weight="bold">Client Machine</text>
+  <!-- Driver (on client) -->
+  <rect x="65" y="80" width="270" height="80" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="200" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Driver</text>
+  <text x="200" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e3f2fd">SparkContext here</text>
+  <!-- SparkContext label -->
+  <rect x="65" y="210" width="270" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">SparkContext</text>
+  <!-- CLUSTER boundary -->
+  <rect x="420" y="30" width="840" height="590" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="840" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0d47a1" font-weight="bold">YARN Cluster</text>
+  <!-- Resource Manager -->
+  <rect x="510" y="80" width="270" height="80" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="645" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e65100">Resource Manager</text>
+  <text x="645" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">schedules containers</text>
+  <!-- Node Manager + Executor 1 -->
+  <rect x="460" y="230" width="230" height="65" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Node Manager 1</text>
+  <rect x="460" y="320" width="230" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e65100">Executor 1</text>
+  <!-- Node Manager + Executor 2 -->
+  <rect x="770" y="230" width="230" height="65" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="885" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Node Manager 2</text>
+  <rect x="770" y="320" width="230" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="885" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e65100">Executor 2</text>
+  <!-- Arrows: Client to RM -->
+  <line x1="335" y1="290" x2="510" y2="290" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="423" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888888" font-style="italic">job submit</text>
+  <!-- RM to Node Managers -->
+  <line x1="600" y1="160" x2="545" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="160" x2="840" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Node Managers to Executors -->
+  <line x1="575" y1="295" x2="575" y2="320" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="885" y1="295" x2="885" y2="320" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Driver to Executors (task dispatch) -->
+  <line x1="335" y1="130" x2="510" y2="355" stroke="#1e88e5" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrow-accent)"/>
+  <line x1="335" y1="130" x2="770" y2="355" stroke="#1e88e5" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrow-accent)"/>
+  <text x="460" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#1565c0" font-style="italic">Driver dispatches tasks directly to executors</text>
 </svg>

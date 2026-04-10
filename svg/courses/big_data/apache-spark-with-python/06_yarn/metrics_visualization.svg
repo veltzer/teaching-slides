@@ -1,21 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="80" y="205.7143" width="240" height="123.4286" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="200" y="277.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">YARN Metrics</text>
-  <rect x="80" y="411.4286" width="240" height="123.4286" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="200" y="483.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Spark Metrics</text>
-  <rect x="560" y="308.5714" width="240" height="123.4286" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="680" y="380.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Graphite</text>
-  <rect x="960" y="308.5714" width="240" height="123.4286" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="1080" y="380.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold">Grafana</text>
   <defs>
-    <marker id="arrow13" markerWidth="16" markerHeight="14.4" refX="14.4" refY="7.2" orient="auto">
-      <polygon points="0,20.5714 5.6,0" fill="#666" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <line x1="320" y1="288" x2="560" y2="349.7143" stroke="#666" stroke-width="3.2" marker-end="url(#arrow13)" />
-  <line x1="320" y1="452.5714" x2="560" y2="390.8571" stroke="#666" stroke-width="3.2" marker-end="url(#arrow13)" />
-  <line x1="800" y1="370.2857" x2="960" y2="370.2857" stroke="#666" stroke-width="3.2" marker-end="url(#arrow13)" />
-  <text x="400" y="298.2857" font-family="Arial, sans-serif" font-size="17.6" fill="#666" font-style="italic">collect</text>
-  <text x="400" y="432" font-family="Arial, sans-serif" font-size="17.6" fill="#666" font-style="italic">collect</text>
-  <text x="864" y="360" font-family="Arial, sans-serif" font-size="17.6" fill="#666" font-style="italic">visualize</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title area -->
+  <text x="640" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1565c0">YARN Metrics and Visualization Pipeline</text>
+  <!-- YARN Metrics source -->
+  <rect x="60" y="180" width="260" height="120" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">YARN Metrics</text>
+  <text x="190" y="243" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">CPU utilization</text>
+  <text x="190" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Memory utilization</text>
+  <text x="190" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Container counts</text>
+  <!-- Spark Metrics source -->
+  <rect x="60" y="380" width="260" height="120" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">Spark Metrics</text>
+  <text x="190" y="443" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Stage duration</text>
+  <text x="190" y="463" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Task throughput</text>
+  <text x="190" y="483" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Shuffle read/write</text>
+  <!-- Graphite (aggregation) -->
+  <rect x="500" y="270" width="280" height="130" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">Graphite</text>
+  <text x="640" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Time-series store</text>
+  <text x="640" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Aggregation</text>
+  <text x="640" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Retention policies</text>
+  <!-- Grafana (visualization) -->
+  <rect x="950" y="270" width="280" height="130" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#c62828">Grafana</text>
+  <text x="1090" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Dashboards</text>
+  <text x="1090" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Alerts</text>
+  <text x="1090" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Visual analytics</text>
+  <!-- Arrows -->
+  <line x1="320" y1="250" x2="500" y2="320" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="415" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888888" font-style="italic">collect</text>
+  <line x1="320" y1="430" x2="500" y2="380" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="415" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888888" font-style="italic">collect</text>
+  <line x1="780" y1="335" x2="950" y2="335" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="865" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888888" font-style="italic">visualize</text>
+  <!-- Node bars (decorative metric chart) -->
+  <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#555555">Example: CPU Utilization per Node</text>
+  <!-- Bar chart -->
+  <rect x="350" y="610" width="60" height="0" rx="2" fill="#1e88e5"/>
+  <rect x="350" y="583" width="60" height="27" rx="2" fill="#1e88e5"/>
+  <text x="380" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555555">Node 1</text>
+  <text x="380" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">45%</text>
+  <rect x="460" y="560" width="60" height="50" rx="2" fill="#1e88e5"/>
+  <text x="490" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555555">Node 2</text>
+  <text x="490" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">83%</text>
+  <rect x="570" y="570" width="60" height="40" rx="2" fill="#1e88e5"/>
+  <text x="600" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555555">Node 3</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">67%</text>
+  <rect x="680" y="590" width="60" height="20" rx="2" fill="#43a047"/>
+  <text x="710" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555555">Node 4</text>
+  <text x="710" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">33%</text>
+  <rect x="790" y="575" width="60" height="35" rx="2" fill="#1e88e5"/>
+  <text x="820" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555555">Node 5</text>
+  <text x="820" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1565c0">58%</text>
+  <!-- baseline -->
+  <line x1="340" y1="610" x2="870" y2="610" stroke="#cccccc" stroke-width="1"/>
 </svg>

@@ -1,33 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="20" markerHeight="17.0847" refX="18" refY="8.5424" orient="auto">
-      <polygon points="0,24.4068 7,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="400" y="24.4068" width="480" height="109.8305" fill="#c5cae9" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="68.339" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">GitHub Event</text>
-  <text x="640" y="104.9492" font-size="20" font-weight="normal" fill="#222" text-anchor="middle">(push, PR, schedule, etc.)</text>
-  <line x1="640" y1="134.2373" x2="640" y2="195.2542" stroke="#555" stroke-width="3" marker-end="url(#arrow)" />
-  <rect x="400" y="195.2542" width="480" height="109.8305" fill="#e3f2fd" stroke="#333" stroke-width="3" rx="8" />
-  <text x="640" y="239.1864" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Workflow</text>
-  <text x="640" y="275.7966" font-size="20" font-weight="normal" fill="#222" text-anchor="middle">(.github/workflows/*.yml)</text>
-  <line x1="640" y1="305.0847" x2="640" y2="353.8983" stroke="#555" stroke-width="3" />
-  <line x1="640" y1="353.8983" x2="340" y2="353.8983" stroke="#555" stroke-width="3" />
-  <line x1="640" y1="353.8983" x2="940" y2="353.8983" stroke="#555" stroke-width="3" />
-  <line x1="340" y1="353.8983" x2="340" y2="402.7119" stroke="#555" stroke-width="3" marker-end="url(#arrow)" />
-  <line x1="940" y1="353.8983" x2="940" y2="402.7119" stroke="#555" stroke-width="3" marker-end="url(#arrow)" />
-  <rect x="200" y="402.7119" width="280" height="109.8305" fill="#e8f5e9" stroke="#333" stroke-width="3" rx="8" />
-  <text x="340" y="446.6441" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Job 1</text>
-  <text x="340" y="483.2542" font-size="20" font-weight="normal" fill="#222" text-anchor="middle">(parallel or sequential)</text>
-  <line x1="340" y1="512.5424" x2="340" y2="585.7627" stroke="#555" stroke-width="3" marker-end="url(#arrow)" />
-  <rect x="200" y="585.7627" width="280" height="97.6271" fill="#fff3e0" stroke="#333" stroke-width="3" rx="8" />
-  <text x="340" y="622.3729" font-size="24" font-weight="bold" fill="#222" text-anchor="middle">Steps</text>
-  <text x="340" y="658.9831" font-size="20" font-weight="normal" fill="#222" text-anchor="middle">(commands/actions)</text>
-  <rect x="800" y="402.7119" width="280" height="109.8305" fill="#e8f5e9" stroke="#333" stroke-width="3" rx="8" />
-  <text x="940" y="446.6441" font-size="26" font-weight="bold" fill="#222" text-anchor="middle">Job 2</text>
-  <text x="940" y="483.2542" font-size="20" font-weight="normal" fill="#222" text-anchor="middle">(parallel or sequential)</text>
-  <line x1="940" y1="512.5424" x2="940" y2="585.7627" stroke="#555" stroke-width="3" marker-end="url(#arrow)" />
-  <rect x="800" y="585.7627" width="280" height="97.6271" fill="#fff3e0" stroke="#333" stroke-width="3" rx="8" />
-  <text x="940" y="622.3729" font-size="24" font-weight="bold" fill="#222" text-anchor="middle">Steps</text>
-  <text x="940" y="658.9831" font-size="20" font-weight="normal" fill="#222" text-anchor="middle">(commands/actions)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- GitHub Event (top) -->
+  <rect x="390" y="30" width="500" height="100" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="72" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">GitHub Event</text>
+  <text x="640" y="105" font-size="19" fill="#e3f2fd" text-anchor="middle">(push, PR, schedule, etc.)</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="130" x2="640" y2="185" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Workflow -->
+  <rect x="390" y="185" width="500" height="100" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="228" font-size="26" font-weight="bold" fill="#212121" text-anchor="middle">Workflow</text>
+  <text x="640" y="262" font-size="19" fill="#555555" text-anchor="middle">.github/workflows/*.yml</text>
+
+  <!-- Branch to Job1 and Job2 -->
+  <line x1="640" y1="285" x2="640" y2="330" stroke="#555555" stroke-width="2.5"/>
+  <line x1="320" y1="330" x2="960" y2="330" stroke="#555555" stroke-width="2.5"/>
+  <line x1="320" y1="330" x2="320" y2="375" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="960" y1="330" x2="960" y2="375" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Job 1 -->
+  <rect x="170" y="375" width="300" height="100" rx="8" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="418" font-size="24" font-weight="bold" fill="#212121" text-anchor="middle">Job 1</text>
+  <text x="320" y="453" font-size="18" fill="#555555" text-anchor="middle">(parallel or sequential)</text>
+
+  <!-- Arrow Job1 -> Steps1 -->
+  <line x1="320" y1="475" x2="320" y2="530" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Steps 1 -->
+  <rect x="170" y="530" width="300" height="88" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="568" font-size="22" font-weight="bold" fill="#212121" text-anchor="middle">Steps</text>
+  <text x="320" y="602" font-size="17" fill="#555555" text-anchor="middle">(commands / actions)</text>
+
+  <!-- Job 2 -->
+  <rect x="810" y="375" width="300" height="100" rx="8" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="418" font-size="24" font-weight="bold" fill="#212121" text-anchor="middle">Job 2</text>
+  <text x="960" y="453" font-size="18" fill="#555555" text-anchor="middle">(parallel or sequential)</text>
+
+  <!-- Arrow Job2 -> Steps2 -->
+  <line x1="960" y1="475" x2="960" y2="530" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Steps 2 -->
+  <rect x="810" y="530" width="300" height="88" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="568" font-size="22" font-weight="bold" fill="#212121" text-anchor="middle">Steps</text>
+  <text x="960" y="602" font-size="17" fill="#555555" text-anchor="middle">(commands / actions)</text>
 </svg>

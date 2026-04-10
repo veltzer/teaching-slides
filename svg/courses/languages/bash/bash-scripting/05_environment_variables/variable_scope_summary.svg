@@ -1,17 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="52.9412" text-anchor="middle" font-size="33.8824" font-weight="bold" fill="#333">Variable Scope: Parent vs Child</text>
-  <rect x="85.3333" y="95.2941" width="1109.3333" height="550.5882" rx="10.5882" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2353" />
-  <text x="640" y="148.2353" text-anchor="middle" font-size="27.5294" font-weight="bold" fill="#4a90e2">Parent Shell</text>
-  <text x="128" y="201.1765" font-size="23.2941" fill="#333" font-family="monospace">x=1 (shell var)</text>
-  <text x="128" y="243.5294" font-size="23.2941" fill="#333" font-family="monospace">export y=2 (env var)</text>
-  <rect x="170.6667" y="285.8824" width="853.3333" height="254.1176" rx="10.5882" fill="#d4edda" stroke="#28a745" stroke-width="4.2353" />
-  <text x="597.3333" y="334.5882" text-anchor="middle" font-size="25.4118" font-weight="bold" fill="#28a745">Child Process</text>
-  <rect x="213.3333" y="355.7647" width="362.6667" height="52.9412" rx="6.3529" fill="#f8d7da" stroke="#dc3545" stroke-width="2.1176" />
-  <text x="394.6667" y="391.7647" text-anchor="middle" font-size="21.1765" fill="#dc3545">x is NOT visible</text>
-  <rect x="618.6667" y="355.7647" width="362.6667" height="52.9412" rx="6.3529" fill="#d4edda" stroke="#28a745" stroke-width="2.1176" />
-  <text x="800" y="391.7647" text-anchor="middle" font-size="21.1765" fill="#28a745">y=2 (inherited)</text>
-  <text x="213.3333" y="461.6471" font-size="21.1765" fill="#666">Changes to y do NOT affect parent</text>
-  <text x="213.3333" y="504" font-size="21.1765" fill="#666">Child gets a copy, not a reference</text>
-  <text x="128" y="592.9412" font-size="23.2941" fill="#333">After child exits: y is still 2 in parent (unchanged)</text>
-  <text x="640" y="688.2353" text-anchor="middle" font-size="25.4118" fill="#666">Environment variables flow down (parent to child), never up</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Parent Shell frame -->
+  <rect x="40" y="30" width="1200" height="560" rx="12" fill="#e8f4f8" stroke="#1e88e5" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="80" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Parent Shell</text>
+
+  <!-- Parent shell var lines -->
+  <text x="80" y="128" font-size="22" fill="#333" font-family="monospace">x=1</text>
+  <text x="300" y="128" font-size="18" fill="#555">shell variable — private to this shell</text>
+  <text x="80" y="166" font-size="22" fill="#333" font-family="monospace">export y=2</text>
+  <text x="300" y="166" font-size="18" fill="#555">environment variable — will be inherited</text>
+
+  <!-- Child Process frame -->
+  <rect x="120" y="200" width="1000" height="290" rx="10" fill="#d4edda" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="620" y="248" text-anchor="middle" font-size="24" font-weight="bold" fill="#2e7d32">Child Process</text>
+
+  <!-- x not visible badge -->
+  <rect x="160" y="268" width="380" height="56" rx="8" fill="#ffebee" stroke="#e53935" stroke-width="2"/>
+  <text x="350" y="302" text-anchor="middle" font-size="20" fill="#c62828" font-weight="bold">x is NOT visible</text>
+
+  <!-- y inherited badge -->
+  <rect x="580" y="268" width="380" height="56" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="770" y="302" text-anchor="middle" font-size="20" fill="#1b5e20" font-weight="bold">y=2  (inherited)</text>
+
+  <text x="160" y="370" font-size="18" fill="#555">Changes to y inside child do NOT affect parent.</text>
+  <text x="160" y="400" font-size="18" fill="#555">Child receives a copy, not a reference.</text>
+  <text x="160" y="430" font-size="18" fill="#555">Child can export new vars — only its own children will see them.</text>
+  <text x="160" y="460" font-size="18" fill="#555">Variables never flow upward (child cannot modify parent).</text>
+
+  <!-- After child exits note -->
+  <text x="80" y="540" font-size="20" fill="#333" font-family="monospace">After child exits:  y is still 2 in parent  (unchanged)</text>
+
+  <!-- Footer note -->
+  <rect x="40" y="610" width="1200" height="52" rx="8" fill="url(#grad-surface)" stroke="#bbbbbb" stroke-width="1.5"/>
+  <text x="640" y="643" text-anchor="middle" font-size="20" fill="#555">Environment variables flow <tspan font-weight="bold">down</tspan> (parent to child), never up</text>
 </svg>

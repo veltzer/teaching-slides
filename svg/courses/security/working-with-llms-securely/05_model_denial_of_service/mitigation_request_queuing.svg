@@ -1,26 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="20.6452" markerHeight="21.913" refX="18.5806" refY="10.9565" orient="auto">
-      <polygon points="0,31.3043 7.2258,0" fill="#555555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="20.6452" y="93.913" width="320" height="219.1304" fill="#fce4ec" stroke="#c62828" stroke-width="3.0968" rx="8.2581" />
-  <text x="179.6129" y="162.7826" text-anchor="middle" font-size="24.7742" font-weight="bold" fill="#222222">Incoming Requests</text>
-  <text x="179.6129" y="219.1304" text-anchor="middle" font-size="22.7097" fill="#555555">High volume /</text>
-  <text x="179.6129" y="272.3478" text-anchor="middle" font-size="22.7097" fill="#555555">complex prompts</text>
-  <line x1="340.6452" y1="203.4783" x2="433.5484" y2="203.4783" stroke="#555555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="437.6774" y="93.913" width="361.2903" height="219.1304" fill="#e3f2fd" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="617.2903" y="162.7826" text-anchor="middle" font-size="24.7742" font-weight="bold" fill="#222222">Queue</text>
-  <text x="617.2903" y="219.1304" text-anchor="middle" font-size="22.7097" fill="#333333">Priority + Limit</text>
-  <text x="617.2903" y="272.3478" text-anchor="middle" font-size="22.7097" fill="#333333">Max depth + Timeout</text>
-  <line x1="798.9677" y1="203.4783" x2="891.871" y2="203.4783" stroke="#555555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="896" y="93.913" width="361.2903" height="219.1304" fill="#e8f5e9" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="1075.6129" y="162.7826" text-anchor="middle" font-size="24.7742" font-weight="bold" fill="#222222">LLM Workers</text>
-  <text x="1075.6129" y="219.1304" text-anchor="middle" font-size="22.7097" fill="#333333">Worker pool</text>
-  <text x="1075.6129" y="272.3478" text-anchor="middle" font-size="22.7097" fill="#333333">Rate-limited</text>
-  <rect x="20.6452" y="375.6522" width="1238.7097" height="313.0435" fill="#fff9c4" stroke="#f9a825" stroke-width="3.0968" rx="8.2581" />
-  <text x="640" y="438.2609" text-anchor="middle" font-size="24.7742" font-weight="bold" fill="#e65100">Mitigations</text>
-  <text x="61.9355" y="500.8696" font-size="24.7742" fill="#333333">• Priority queuing — paying / trusted users served first</text>
-  <text x="61.9355" y="557.2174" font-size="24.7742" fill="#333333">• Maximum queue depth — reject when overloaded</text>
-  <text x="61.9355" y="613.5652" font-size="24.7742" fill="#333333">• Request timeout in queue  • Graceful degradation under load</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Incoming Requests box -->
+  <rect x="20" y="80" width="310" height="210" rx="8" fill="#fdecea" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="175" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="#c62828">Incoming Requests</text>
+  <text x="175" y="210" text-anchor="middle" font-size="19" fill="#555555">High volume /</text>
+  <text x="175" y="248" text-anchor="middle" font-size="19" fill="#555555">complex prompts</text>
+
+  <line x1="330" y1="185" x2="418" y2="185" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Queue box -->
+  <rect x="422" y="80" width="340" height="210" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="592" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Queue</text>
+  <text x="592" y="210" text-anchor="middle" font-size="19" fill="#333333">Priority + Limit</text>
+  <text x="592" y="248" text-anchor="middle" font-size="19" fill="#333333">Max depth + Timeout</text>
+
+  <line x1="762" y1="185" x2="850" y2="185" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- LLM Workers box -->
+  <rect x="854" y="80" width="400" height="210" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="1054" y="155" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e7d32">LLM Workers</text>
+  <text x="1054" y="210" text-anchor="middle" font-size="19" fill="#333333">Worker pool</text>
+  <text x="1054" y="248" text-anchor="middle" font-size="19" fill="#333333">Rate-limited</text>
+
+  <!-- Mitigations panel -->
+  <rect x="20" y="345" width="1235" height="295" rx="8" fill="#fff8e1" stroke="#f57f17" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="637" y="408" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">Mitigations</text>
+  <text x="60" y="465" font-size="20" fill="#333333">&#x2022; Priority queuing — paying / trusted users served first</text>
+  <text x="60" y="515" font-size="20" fill="#333333">&#x2022; Maximum queue depth — reject when overloaded</text>
+  <text x="60" y="565" font-size="20" fill="#333333">&#x2022; Request timeout in queue</text>
+  <text x="60" y="610" font-size="20" fill="#333333">&#x2022; Graceful degradation under load</text>
 </svg>

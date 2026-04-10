@@ -1,32 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.3939" markerHeight="31.5" refX="17.4545" refY="15.75" orient="auto">
-      <polygon points="0,45 6.7879,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect width="1280" height="720" fill="#f0f4f8" rx="7.7576" stroke="#333" stroke-width="2.9091" />
-  <text x="640" y="108" font-family="sans-serif" font-size="29.0909" font-weight="bold" fill="#222" text-anchor="middle">Training Data Cleaning Pipeline</text>
-  <rect x="38.7879" y="189" width="174.5455" height="135" fill="#fff3e0" rx="7.7576" stroke="#e65100" stroke-width="2.9091" />
-  <text x="126.0606" y="279" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">Raw Data</text>
-  <line x1="213.3333" y1="256.5" x2="248.2424" y2="256.5" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="252.1212" y="189" width="193.9394" height="135" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
-  <text x="349.0909" y="279" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">Deduplication</text>
-  <line x1="446.0606" y1="256.5" x2="480.9697" y2="256.5" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="484.8485" y="189" width="213.3333" height="135" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
-  <text x="591.5152" y="279" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">Lang Filtering</text>
-  <line x1="698.1818" y1="256.5" x2="733.0909" y2="256.5" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="736.9697" y="189" width="213.3333" height="135" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
-  <text x="843.6364" y="279" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">Toxicity Filter</text>
-  <line x1="950.303" y1="256.5" x2="985.2121" y2="256.5" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="989.0909" y="189" width="213.3333" height="135" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
-  <text x="1095.7576" y="279" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">Quality Scoring</text>
-  <line x1="1095.7576" y1="324" x2="1095.7576" y2="427.5" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="989.0909" y="436.5" width="213.3333" height="135" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
-  <text x="1095.7576" y="526.5" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">PII Removal</text>
-  <line x1="989.0909" y1="504" x2="946.4242" y2="504" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="620.6061" y="436.5" width="320" height="135" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
-  <text x="779.6364" y="526.5" font-family="sans-serif" font-size="23.2727" fill="#222" text-anchor="middle">Manual Sampling &amp; Review</text>
-  <line x1="620.6061" y1="504" x2="577.9394" y2="504" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="271.5152" y="436.5" width="300.6061" height="135" fill="#e8f5e9" rx="7.7576" stroke="#2e7d32" stroke-width="3.8788" />
-  <text x="420.8485" y="526.5" font-family="sans-serif" font-size="23.2727" font-weight="bold" fill="#2e7d32" text-anchor="middle">Clean Training Data</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <text x="640" y="80" text-anchor="middle" font-size="26" font-weight="bold" fill="#333333">Training Data Cleaning Pipeline</text>
+
+  <!-- Top row of pipeline boxes -->
+  <!-- Raw Data -->
+  <rect x="30" y="140" width="165" height="120" rx="8" fill="#fff8e1" stroke="#f57f17" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="113" y="208" text-anchor="middle" font-size="18" fill="#333333">Raw Data</text>
+
+  <line x1="195" y1="200" x2="228" y2="200" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Deduplication -->
+  <rect x="232" y="140" width="175" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="208" text-anchor="middle" font-size="18" fill="#333333">Deduplication</text>
+
+  <line x1="407" y1="200" x2="440" y2="200" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Lang Filtering -->
+  <rect x="444" y="140" width="185" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="537" y="208" text-anchor="middle" font-size="18" fill="#333333">Lang Filtering</text>
+
+  <line x1="629" y1="200" x2="662" y2="200" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Toxicity Filter -->
+  <rect x="666" y="140" width="185" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="759" y="208" text-anchor="middle" font-size="18" fill="#333333">Toxicity Filter</text>
+
+  <line x1="851" y1="200" x2="884" y2="200" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Quality Scoring -->
+  <rect x="888" y="140" width="185" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="981" y="208" text-anchor="middle" font-size="18" fill="#333333">Quality Scoring</text>
+
+  <!-- Arrow down from Quality Scoring -->
+  <line x1="981" y1="260" x2="981" y2="360" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- PII Removal -->
+  <rect x="888" y="368" width="185" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="981" y="436" text-anchor="middle" font-size="18" fill="#333333">PII Removal</text>
+
+  <!-- Arrow left from PII Removal -->
+  <line x1="888" y1="428" x2="838" y2="428" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Manual Sampling -->
+  <rect x="580" y="368" width="250" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="705" y="436" text-anchor="middle" font-size="18" fill="#333333">Manual Sampling</text>
+  <text x="705" y="462" text-anchor="middle" font-size="18" fill="#333333">&amp; Review</text>
+
+  <!-- Arrow left from Manual Sampling -->
+  <line x1="580" y1="428" x2="530" y2="428" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Clean Training Data (final output) -->
+  <rect x="240" y="368" width="280" height="120" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="380" y="436" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">Clean Training Data</text>
 </svg>

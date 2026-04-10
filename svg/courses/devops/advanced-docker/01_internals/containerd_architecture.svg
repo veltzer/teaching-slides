@@ -1,27 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="2.2857" y="2.4658" width="1275.4286" height="715.0685" rx="9.1429" fill="#fff" stroke="#333" stroke-width="3.4286" />
-  <rect x="2.2857" y="2.4658" width="1275.4286" height="83.8356" rx="9.1429" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.4286" />
-  <text x="640" y="56.7123" font-size="34.2857" font-weight="bold" fill="#1b5e20" text-anchor="middle">containerd Architecture</text>
-  <rect x="32" y="108.4932" width="1211.4286" height="83.8356" rx="6.8571" fill="#2e7d32" />
-  <text x="637.7143" y="162.7397" font-size="32" font-weight="bold" fill="#fff" text-anchor="middle">containerd</text>
-  <rect x="32" y="212.0548" width="292.5714" height="118.3562" rx="6.8571" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2857" />
-  <text x="178.2857" y="261.3699" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">Content</text>
-  <text x="178.2857" y="300.8219" font-size="27.4286" fill="#555" text-anchor="middle">Store</text>
-  <rect x="338.2857" y="212.0548" width="292.5714" height="118.3562" rx="6.8571" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2857" />
-  <text x="484.5714" y="261.3699" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">Snapshot</text>
-  <text x="484.5714" y="300.8219" font-size="27.4286" fill="#555" text-anchor="middle">Manager</text>
-  <rect x="644.5714" y="212.0548" width="292.5714" height="118.3562" rx="6.8571" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2857" />
-  <text x="790.8571" y="261.3699" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">Runtime</text>
-  <text x="790.8571" y="300.8219" font-size="27.4286" fill="#555" text-anchor="middle">Manager</text>
-  <rect x="950.8571" y="212.0548" width="292.5714" height="118.3562" rx="6.8571" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2857" />
-  <text x="1097.1429" y="261.3699" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">Image</text>
-  <text x="1097.1429" y="300.8219" font-size="27.4286" fill="#555" text-anchor="middle">Store</text>
-  <rect x="32" y="350.137" width="1211.4286" height="88.7671" rx="6.8571" fill="#c8e6c9" stroke="#388e3c" stroke-width="2.2857" />
-  <text x="637.7143" y="406.8493" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">Metadata Store (bbolt)</text>
-  <rect x="32" y="458.6301" width="1211.4286" height="83.8356" rx="6.8571" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2857" />
-  <text x="637.7143" y="512.8767" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">Shim API (ttrpc)</text>
-  <rect x="32" y="562.1918" width="1211.4286" height="73.9726" rx="6.8571" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2857" />
-  <text x="637.7143" y="611.5068" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">containerd-shim-runc-v2</text>
-  <rect x="32" y="655.8904" width="1211.4286" height="54.2466" rx="6.8571" fill="#fff9c4" stroke="#f9a825" stroke-width="2.2857" />
-  <text x="637.7143" y="695.3425" font-size="27.4286" font-weight="bold" fill="#222" text-anchor="middle">runc</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- containerd banner -->
+  <rect x="32" y="60" width="1216" height="72" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="105" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">containerd</text>
+  <!-- Four service boxes -->
+  <rect x="32" y="154" width="284" height="110" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="174" y="199" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">Content</text>
+  <text x="174" y="233" font-size="22" fill="#555555" text-anchor="middle">Store</text>
+  <rect x="334" y="154" width="284" height="110" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="476" y="199" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">Snapshot</text>
+  <text x="476" y="233" font-size="22" fill="#555555" text-anchor="middle">Manager</text>
+  <rect x="636" y="154" width="284" height="110" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="778" y="199" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">Runtime</text>
+  <text x="778" y="233" font-size="22" fill="#555555" text-anchor="middle">Manager</text>
+  <rect x="938" y="154" width="274" height="110" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="199" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">Image</text>
+  <text x="1075" y="233" font-size="22" fill="#555555" text-anchor="middle">Store</text>
+  <!-- Metadata Store -->
+  <rect x="32" y="286" width="1216" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="335" font-size="26" font-weight="bold" fill="#1565c0" text-anchor="middle">Metadata Store (bbolt)</text>
+  <!-- Shim API -->
+  <rect x="32" y="386" width="1216" height="80" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="435" font-size="26" font-weight="bold" fill="#1565c0" text-anchor="middle">Shim API (ttrpc)</text>
+  <!-- containerd-shim-runc-v2 -->
+  <rect x="32" y="486" width="1216" height="72" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="531" font-size="24" font-weight="bold" fill="#1565c0" text-anchor="middle">containerd-shim-runc-v2</text>
+  <!-- runc -->
+  <rect x="32" y="578" width="1216" height="60" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="616" font-size="26" font-weight="bold" fill="#1565c0" text-anchor="middle">runc</text>
 </svg>

@@ -1,24 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="480" y="43.2" width="320" height="86.4" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
-  <text x="640" y="93.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16" font-weight="bold">Performance Optimization</text>
-  <rect x="128" y="259.2" width="192" height="72" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.88" />
-  <text x="224" y="302.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16">Caching</text>
-  <rect x="384" y="259.2" width="192" height="72" rx="7.2" fill="#cce5ff" stroke="#007bff" stroke-width="2.88" />
-  <text x="480" y="302.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16">Partitioning</text>
-  <rect x="640" y="259.2" width="192" height="72" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="736" y="302.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16">Serialization</text>
-  <rect x="288" y="432" width="256" height="72" rx="7.2" fill="#f8d7da" stroke="#dc3545" stroke-width="2.88" />
-  <text x="416" y="475.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16">Memory Management</text>
-  <rect x="608" y="432" width="256" height="72" rx="7.2" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2.88" />
-  <text x="736" y="475.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.16">Shuffle Optimization</text>
   <defs>
-    <marker id="arrow4" markerWidth="16" markerHeight="10.08" refX="14.4" refY="5.04" orient="auto">
-      <polygon points="0,14.4 5.6,0" fill="#666" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <line x1="560" y1="129.6" x2="256" y2="259.2" stroke="#666" stroke-width="2.88" marker-end="url(#arrow4)" />
-  <line x1="608" y1="129.6" x2="480" y2="259.2" stroke="#666" stroke-width="2.88" marker-end="url(#arrow4)" />
-  <line x1="672" y1="129.6" x2="736" y2="259.2" stroke="#666" stroke-width="2.88" marker-end="url(#arrow4)" />
-  <line x1="592" y1="129.6" x2="416" y2="432" stroke="#666" stroke-width="2.88" marker-end="url(#arrow4)" />
-  <line x1="688" y1="129.6" x2="736" y2="432" stroke="#666" stroke-width="2.88" marker-end="url(#arrow4)" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Central hub -->
+  <rect x="465" y="40" width="350" height="80" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Performance Optimization</text>
+  <!-- Top row of strategies -->
+  <rect x="80" y="230" width="220" height="80" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">Caching</text>
+  <text x="190" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">persist() / cache()</text>
+  <rect x="360" y="230" width="220" height="80" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="470" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Partitioning</text>
+  <text x="470" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">repartition / coalesce</text>
+  <rect x="640" y="230" width="220" height="80" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="750" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e65100">Serialization</text>
+  <text x="750" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">Kryo serializer</text>
+  <rect x="920" y="230" width="260" height="80" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c62828">Broadcast Joins</text>
+  <text x="1050" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">small table broadcast</text>
+  <!-- Bottom row -->
+  <rect x="220" y="430" width="280" height="80" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c62828">Memory Management</text>
+  <text x="360" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">spark.memory.fraction</text>
+  <rect x="560" y="430" width="280" height="80" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6a1b9a">Shuffle Reduction</text>
+  <text x="700" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555555">reduceByKey vs groupByKey</text>
+  <!-- Arrows from hub -->
+  <line x1="545" y1="120" x2="220" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="120" x2="450" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="120" x2="730" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="720" y1="120" x2="1010" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="575" y1="120" x2="360" y2="430" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="670" y1="120" x2="680" y2="430" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

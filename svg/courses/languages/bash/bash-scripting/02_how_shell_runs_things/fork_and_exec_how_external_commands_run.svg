@@ -1,30 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="13.9355" refX="17.2308" refY="6.9677" orient="auto">
-      <path d="M 0 0 L 0 13.9355 L 19.6923 6.9677 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="24.6154" y="23.2258" width="541.5385" height="116.129" rx="9.2903" fill="#333" stroke="#333" stroke-width="3.4839" />
-  <text x="295.3846" y="69.6774" font-family="monospace" font-size="30.1935" fill="#fff" text-anchor="middle">Shell Process</text>
-  <text x="295.3846" y="116.129" font-family="monospace" font-size="27.871" fill="#aaa" text-anchor="middle">(PID 100)</text>
-  <line x1="295.3846" y1="139.3548" x2="295.3846" y2="209.0323" stroke="#555" stroke-width="3.4839" />
-  <line x1="295.3846" y1="209.0323" x2="787.6923" y2="209.0323" stroke="#555" stroke-width="3.4839" />
-  <line x1="787.6923" y1="209.0323" x2="787.6923" y2="278.7097" stroke="#555" stroke-width="3.4839" marker-end="url(#arr)" />
-  <text x="455.3846" y="195.0968" font-family="monospace" font-size="27.871" fill="#333">fork()</text>
-  <line x1="295.3846" y1="209.0323" x2="295.3846" y2="557.4194" stroke="#555" stroke-width="3.4839" />
-  <rect x="615.3846" y="278.7097" width="640" height="116.129" rx="9.2903" fill="#e3f2fd" stroke="#333" stroke-width="3.4839" />
-  <text x="935.3846" y="325.1613" font-family="monospace" font-size="30.1935" fill="#222" text-anchor="middle">Child Process</text>
-  <text x="935.3846" y="371.6129" font-family="monospace" font-size="27.871" fill="#555" text-anchor="middle">(PID 101)</text>
-  <line x1="787.6923" y1="394.8387" x2="787.6923" y2="452.9032" stroke="#555" stroke-width="3.4839" marker-end="url(#arr)" />
-  <rect x="615.3846" y="452.9032" width="640" height="102.1935" rx="9.2903" fill="#fff3e0" stroke="#555" stroke-width="3.4839" />
-  <text x="935.3846" y="499.3548" font-family="monospace" font-size="27.871" fill="#222" text-anchor="middle">exec("/usr/bin/ls", ...)</text>
-  <text x="935.3846" y="536.5161" font-family="sans-serif" font-size="25.5484" fill="#555" text-anchor="middle">(child becomes ls)</text>
-  <line x1="787.6923" y1="555.0968" x2="787.6923" y2="603.871" stroke="#555" stroke-width="3.4839" marker-end="url(#arr)" />
-  <rect x="615.3846" y="603.871" width="640" height="83.6129" rx="9.2903" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.4839" />
-  <text x="935.3846" y="657.2903" font-family="monospace" font-size="27.871" fill="#222" text-anchor="middle">ls runs and exits</text>
-  <rect x="24.6154" y="557.4194" width="541.5385" height="83.6129" rx="9.2903" fill="#f0f4f8" stroke="#555" stroke-width="3.4839" />
-  <text x="295.3846" y="610.8387" font-family="monospace" font-size="27.871" fill="#222" text-anchor="middle">wait() → collect exit status</text>
-  <line x1="295.3846" y1="641.0323" x2="295.3846" y2="687.4839" stroke="#555" stroke-width="3.4839" marker-end="url(#arr)" />
-  <rect x="24.6154" y="687.4839" width="541.5385" height="83.6129" rx="9.2903" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.4839" />
-  <text x="295.3846" y="740.9032" font-family="monospace" font-size="27.871" fill="#222" text-anchor="middle">ready for next command</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Shell Process box (left column) -->
+  <rect x="30" y="30" width="500" height="110" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="280" y="82" font-family="monospace" font-size="28" fill="#ffffff" text-anchor="middle" font-weight="bold">Shell Process</text>
+  <text x="280" y="120" font-family="monospace" font-size="22" fill="#bbdefb" text-anchor="middle">(PID 100)</text>
+
+  <!-- fork() label + branch lines -->
+  <line x1="280" y1="140" x2="280" y2="200" stroke="#555555" stroke-width="3"/>
+  <line x1="280" y1="200" x2="760" y2="200" stroke="#555555" stroke-width="3"/>
+  <line x1="760" y1="200" x2="760" y2="260" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="490" y="190" font-family="monospace" font-size="22" fill="#1565c0" text-anchor="middle" font-weight="bold">fork()</text>
+
+  <!-- Shell continues down (wait) -->
+  <line x1="280" y1="200" x2="280" y2="510" stroke="#555555" stroke-width="3"/>
+
+  <!-- Child Process box -->
+  <rect x="510" y="260" width="540" height="110" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780" y="312" font-family="monospace" font-size="26" fill="#1565c0" text-anchor="middle" font-weight="bold">Child Process</text>
+  <text x="780" y="348" font-family="monospace" font-size="20" fill="#555555" text-anchor="middle">(PID 101 — copy of shell)</text>
+
+  <!-- exec() arrow -->
+  <line x1="760" y1="370" x2="760" y2="430" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="800" y="408" font-family="monospace" font-size="20" fill="#555555">exec()</text>
+
+  <!-- exec box -->
+  <rect x="510" y="430" width="540" height="100" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780" y="478" font-family="monospace" font-size="22" fill="#e65100" text-anchor="middle" font-weight="bold">exec("/usr/bin/ls", ...)</text>
+  <text x="780" y="512" font-family="sans-serif" font-size="18" fill="#555555" text-anchor="middle">child image replaced by ls binary</text>
+
+  <!-- ls runs arrow -->
+  <line x1="760" y1="530" x2="760" y2="580" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- ls exits box -->
+  <rect x="510" y="580" width="540" height="70" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="780" y="623" font-family="monospace" font-size="22" fill="#2e7d32" text-anchor="middle" font-weight="bold">ls runs and exits (status 0)</text>
+
+  <!-- wait() box (shell side) -->
+  <rect x="30" y="510" width="500" height="80" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="558" font-family="monospace" font-size="22" fill="#1565c0" text-anchor="middle" font-weight="bold">wait() — collect exit status</text>
+
+  <!-- ready for next -->
+  <line x1="280" y1="590" x2="280" y2="630" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="30" y="630" width="500" height="60" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="668" font-family="monospace" font-size="20" fill="#2e7d32" text-anchor="middle">ready for next command</text>
 </svg>

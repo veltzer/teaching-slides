@@ -1,46 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
     <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
-      <stop offset="0%" style="stop-color:#0d1117" />
-      <stop offset="100%" style="stop-color:#161b22" />
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="720" fill="url(#bg)" />
+  <!-- Dark background kept for decorative title -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- GitHub Octocat shape (simplified circle + arms) -->
   <g transform="translate(400,155)">
-    <circle cx="0" cy="0" r="104" fill="#f0f6fc" opacity="0.9" />
-    <ellipse cx="-28.8" cy="-18" rx="19.2" ry="22.4" fill="#0d1117" />
-    <ellipse cx="28.8" cy="-18" rx="19.2" ry="22.4" fill="#0d1117" />
-    <ellipse cx="-24" cy="-21.6" rx="8" ry="9.6" fill="#f0f6fc" />
-    <ellipse cx="33.6" cy="-21.6" rx="8" ry="9.6" fill="#f0f6fc" />
-    <path d="M -19.2 27 Q 0 45 19.2 27" fill="none" stroke="#0d1117" stroke-width="4" />
-    <path d="M -80 72 Q -104 126 -72 153" fill="none" stroke="#f0f6fc" stroke-width="9.6" stroke-linecap="round" opacity="0.7" />
-    <path d="M 80 72 Q 104 126 72 153" fill="none" stroke="#f0f6fc" stroke-width="9.6" stroke-linecap="round" opacity="0.7" />
+    <circle cx="0" cy="0" r="104" fill="#f0f6fc" opacity="0.9"/>
+    <ellipse cx="-29" cy="-18" rx="19" ry="22" fill="#0d1117"/>
+    <ellipse cx="29" cy="-18" rx="19" ry="22" fill="#0d1117"/>
+    <ellipse cx="-24" cy="-22" rx="8" ry="10" fill="#f0f6fc"/>
+    <ellipse cx="34" cy="-22" rx="8" ry="10" fill="#f0f6fc"/>
+    <path d="M -19 27 Q 0 45 19 27" fill="none" stroke="#0d1117" stroke-width="4"/>
+    <path d="M -80 72 Q -104 126 -72 153" fill="none" stroke="#f0f6fc" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 80 72 Q 104 126 72 153" fill="none" stroke="#f0f6fc" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
   </g>
+
+  <!-- Pipeline commit dots -->
   <g transform="translate(0,310)">
-    <line x1="192" y1="54" x2="1088" y2="54" stroke="#238636" stroke-width="3.2" opacity="0.5" />
-    <circle cx="272" cy="54" r="28.8" fill="#0d1117" stroke="#238636" stroke-width="3.2" />
-    <text x="272" y="61.2" font-family="monospace" font-size="22.4" fill="#238636" text-anchor="middle">1</text>
-    <circle cx="496" cy="54" r="28.8" fill="#0d1117" stroke="#238636" stroke-width="3.2" />
-    <text x="496" y="61.2" font-family="monospace" font-size="22.4" fill="#238636" text-anchor="middle">2</text>
-    <circle cx="720" cy="54" r="28.8" fill="#0d1117" stroke="#238636" stroke-width="3.2" />
-    <text x="720" y="61.2" font-family="monospace" font-size="22.4" fill="#238636" text-anchor="middle">3</text>
-    <circle cx="944" cy="54" r="28.8" fill="#238636" opacity="0.8" />
-    <polyline points="929.6,54 939.2,64.8 960,41.4" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-    <polygon points="360,48.6 376,54 360,59.4" fill="#238636" opacity="0.6" />
-    <polygon points="584,48.6 600,54 584,59.4" fill="#238636" opacity="0.6" />
-    <polygon points="808,48.6 824,54 808,59.4" fill="#238636" opacity="0.6" />
+    <line x1="192" y1="54" x2="1088" y2="54" stroke="#238636" stroke-width="3" opacity="0.5"/>
+    <circle cx="272" cy="54" r="29" fill="#0d1117" stroke="#238636" stroke-width="3"/>
+    <text x="272" y="62" font-family="monospace" font-size="22" fill="#238636" text-anchor="middle">1</text>
+    <circle cx="496" cy="54" r="29" fill="#0d1117" stroke="#238636" stroke-width="3"/>
+    <text x="496" y="62" font-family="monospace" font-size="22" fill="#238636" text-anchor="middle">2</text>
+    <circle cx="720" cy="54" r="29" fill="#0d1117" stroke="#238636" stroke-width="3"/>
+    <text x="720" y="62" font-family="monospace" font-size="22" fill="#238636" text-anchor="middle">3</text>
+    <circle cx="944" cy="54" r="29" fill="#238636" opacity="0.8"/>
+    <polyline points="930,54 940,65 960,42" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Arrow chevrons -->
+    <polygon points="360,49 376,54 360,59" fill="#238636" opacity="0.6"/>
+    <polygon points="584,49 600,54 584,59" fill="#238636" opacity="0.6"/>
+    <polygon points="808,49 824,54 808,59" fill="#238636" opacity="0.6"/>
   </g>
+
+  <!-- Code snippets (decorative) -->
   <g transform="translate(100,50)" opacity="0.4">
     <text x="0" y="0" font-family="monospace" font-size="16" fill="#8b949e">on: push</text>
-    <text x="0" y="25.2" font-family="monospace" font-size="16" fill="#8b949e">jobs:</text>
-    <text x="0" y="50.4" font-family="monospace" font-size="16" fill="#238636">  build:</text>
+    <text x="0" y="25" font-family="monospace" font-size="16" fill="#8b949e">jobs:</text>
+    <text x="0" y="50" font-family="monospace" font-size="16" fill="#238636">  build:</text>
   </g>
   <g transform="translate(600,50)" opacity="0.4">
     <text x="0" y="0" font-family="monospace" font-size="16" fill="#8b949e">steps:</text>
-    <text x="0" y="25.2" font-family="monospace" font-size="16" fill="#238636">  - uses: ...</text>
-    <text x="0" y="50.4" font-family="monospace" font-size="16" fill="#238636">  - run: ...</text>
+    <text x="0" y="25" font-family="monospace" font-size="16" fill="#238636">  - uses: ...</text>
+    <text x="0" y="50" font-family="monospace" font-size="16" fill="#238636">  - run: ...</text>
   </g>
-  <circle cx="96" cy="360" r="3.2" fill="#238636" opacity="0.3" />
-  <circle cx="1184" cy="324" r="4.8" fill="#238636" opacity="0.25" />
-  <rect x="480" y="693" width="320" height="5.4" rx="2.4" fill="#238636" opacity="0.4" />
+
+  <!-- Decorative dots -->
+  <circle cx="96" cy="360" r="3" fill="#238636" opacity="0.3"/>
+  <circle cx="1184" cy="324" r="5" fill="#238636" opacity="0.25"/>
+
+  <!-- Accent bar at bottom -->
+  <rect x="480" y="668" width="320" height="5" rx="2" fill="#238636" opacity="0.4"/>
 </svg>

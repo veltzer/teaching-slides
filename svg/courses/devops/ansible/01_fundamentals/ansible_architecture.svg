@@ -1,26 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="20.6452" markerHeight="17.3793" refX="18.5806" refY="8.6897" orient="auto">
-      <polygon points="0,24.8276 7.2258,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="20.6452" markerHeight="17.3793" refX="18.5806" refY="8.6897" orient="auto">
-      <polygon points="0,24.8276 7.2258,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="371.6129" y="24.8276" width="526.4516" height="322.7586" rx="8.2581" fill="#ede7f6" stroke="#6a1b9a" stroke-width="3.0968" />
-  <text x="633.8065" y="79.4483" text-anchor="middle" font-size="28.9032" fill="#4a148c" font-weight="bold">Control Node</text>
-  <text x="633.8065" y="129.1034" text-anchor="middle" font-size="24.7742" fill="#555">(your laptop)</text>
-  <text x="633.8065" y="183.7241" text-anchor="middle" font-size="24.7742" fill="#333">ansible</text>
-  <text x="633.8065" y="225.931" text-anchor="middle" font-size="24.7742" fill="#333">ansible-playbook</text>
-  <text x="633.8065" y="268.1379" text-anchor="middle" font-size="24.7742" fill="#333">ansible-galaxy</text>
-  <line x1="633.8065" y1="347.5862" x2="633.8065" y2="434.4828" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <text x="681.2903" y="402.2069" text-anchor="middle" font-size="22.7097" fill="#555">SSH / WinRM</text>
-  <rect x="61.9355" y="434.4828" width="474.8387" height="223.4483" rx="8.2581" fill="#e8f5e9" stroke="#388e3c" stroke-width="3.0968" />
-  <text x="299.3548" y="499.0345" text-anchor="middle" font-size="26.8387" fill="#222" font-weight="bold">Managed Node 1</text>
-  <text x="299.3548" y="546.2069" text-anchor="middle" font-size="22.7097" fill="#555">(web server)</text>
-  <text x="299.3548" y="600.8276" text-anchor="middle" font-size="22.7097" fill="#777">No agent needed</text>
-  <rect x="722.5806" y="434.4828" width="474.8387" height="223.4483" rx="8.2581" fill="#e8f5e9" stroke="#388e3c" stroke-width="3.0968" />
-  <text x="960" y="499.0345" text-anchor="middle" font-size="26.8387" fill="#222" font-weight="bold">Managed Node 2</text>
-  <text x="960" y="546.2069" text-anchor="middle" font-size="22.7097" fill="#555">(db server)</text>
-  <text x="960" y="600.8276" text-anchor="middle" font-size="22.7097" fill="#777">No agent needed</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Control Node box -->
+  <rect x="390" y="40" width="500" height="260" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="390" y="40" width="500" height="52" rx="10" fill="url(#grad-accent)"/>
+  <rect x="390" y="72" width="500" height="20" rx="0" fill="url(#grad-accent)"/>
+  <text x="640" y="75" text-anchor="middle" font-size="24" fill="#ffffff" font-weight="bold">Control Node</text>
+  <text x="640" y="130" text-anchor="middle" font-size="18" fill="#555">(your laptop / jump host)</text>
+  <text x="640" y="175" text-anchor="middle" font-size="18" fill="#333">ansible</text>
+  <text x="640" y="210" text-anchor="middle" font-size="18" fill="#333">ansible-playbook</text>
+  <text x="640" y="245" text-anchor="middle" font-size="18" fill="#333">ansible-galaxy</text>
+  <text x="640" y="280" text-anchor="middle" font-size="18" fill="#333">ansible-vault</text>
+
+  <!-- arrow down -->
+  <line x1="640" y1="302" x2="640" y2="400" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <text x="660" y="360" font-size="16" fill="#1565c0" font-weight="600">SSH / WinRM</text>
+
+  <!-- Managed Node 1 -->
+  <rect x="60" y="408" width="500" height="200" rx="10" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="60" y="408" width="500" height="48" rx="10" fill="#43a047"/>
+  <rect x="60" y="438" width="500" height="18" rx="0" fill="#43a047"/>
+  <text x="310" y="440" text-anchor="middle" font-size="22" fill="#ffffff" font-weight="bold">Managed Node 1</text>
+  <text x="310" y="490" text-anchor="middle" font-size="18" fill="#555">(web server)</text>
+  <text x="310" y="528" text-anchor="middle" font-size="16" fill="#1565c0">Python required (SSH only)</text>
+  <text x="310" y="565" text-anchor="middle" font-size="15" fill="#888">No agent needed</text>
+
+  <!-- Managed Node 2 -->
+  <rect x="720" y="408" width="500" height="200" rx="10" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="720" y="408" width="500" height="48" rx="10" fill="#43a047"/>
+  <rect x="720" y="438" width="500" height="18" rx="0" fill="#43a047"/>
+  <text x="970" y="440" text-anchor="middle" font-size="22" fill="#ffffff" font-weight="bold">Managed Node 2</text>
+  <text x="970" y="490" text-anchor="middle" font-size="18" fill="#555">(db server)</text>
+  <text x="970" y="528" text-anchor="middle" font-size="16" fill="#1565c0">Python required (SSH only)</text>
+  <text x="970" y="565" text-anchor="middle" font-size="15" fill="#888">No agent needed</text>
 </svg>

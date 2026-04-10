@@ -1,31 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="72" text-anchor="middle" font-size="34.1333" font-weight="bold" fill="#333">String Memory Layout: char[]</text>
-  <text x="106.6667" y="158.4" font-size="25.6" font-weight="bold" fill="#333" font-family="monospace">char greeting[] = "Hello";</text>
-  <rect x="128" y="201.6" width="149.3333" height="144" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="202.6667" y="259.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">'H'</text>
-  <text x="202.6667" y="311.04" text-anchor="middle" font-size="21.3333" fill="#666" font-family="monospace">0x48</text>
-  <rect x="277.3333" y="201.6" width="149.3333" height="144" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="352" y="259.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">'e'</text>
-  <text x="352" y="311.04" text-anchor="middle" font-size="21.3333" fill="#666" font-family="monospace">0x65</text>
-  <rect x="426.6667" y="201.6" width="149.3333" height="144" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="501.3333" y="259.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">'l'</text>
-  <text x="501.3333" y="311.04" text-anchor="middle" font-size="21.3333" fill="#666" font-family="monospace">0x6C</text>
-  <rect x="576" y="201.6" width="149.3333" height="144" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="650.6667" y="259.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">'l'</text>
-  <text x="650.6667" y="311.04" text-anchor="middle" font-size="21.3333" fill="#666" font-family="monospace">0x6C</text>
-  <rect x="725.3333" y="201.6" width="149.3333" height="144" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="800" y="259.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">'o'</text>
-  <text x="800" y="311.04" text-anchor="middle" font-size="21.3333" fill="#666" font-family="monospace">0x6F</text>
-  <rect x="874.6667" y="201.6" width="149.3333" height="144" rx="10.6667" fill="#f8d7da" stroke="#dc3545" stroke-width="4.2667" />
-  <text x="949.3333" y="259.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#dc3545">'\0'</text>
-  <text x="949.3333" y="311.04" text-anchor="middle" font-size="21.3333" fill="#666" font-family="monospace">0x00</text>
-  <text x="202.6667" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">[0]</text>
-  <text x="352" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">[1]</text>
-  <text x="501.3333" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">[2]</text>
-  <text x="650.6667" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">[3]</text>
-  <text x="800" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">[4]</text>
-  <text x="949.3333" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">[5]</text>
-  <rect x="128" y="460.8" width="896" height="187.2" rx="10.6667" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="576" y="527.04" text-anchor="middle" font-size="25.6" fill="#333" font-weight="bold">sizeof(greeting) = 6  (includes '\0')</text>
-  <text x="576" y="590.4" text-anchor="middle" font-size="25.6" fill="#333" font-weight="bold">strlen(greeting) = 5  (excludes '\0')</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <text x="128" y="80" font-size="24" font-weight="bold" fill="#222222" font-family="monospace">char greeting[] = "Hello";</text>
+
+  <!-- Character cells -->
+  <rect x="128" y="110" width="140" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="198" y="168" text-anchor="middle" font-size="26" font-weight="bold" fill="#222222">'H'</text>
+  <text x="198" y="210" text-anchor="middle" font-size="18" fill="#888888" font-family="monospace">0x48</text>
+
+  <rect x="272" y="110" width="140" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="342" y="168" text-anchor="middle" font-size="26" font-weight="bold" fill="#222222">'e'</text>
+  <text x="342" y="210" text-anchor="middle" font-size="18" fill="#888888" font-family="monospace">0x65</text>
+
+  <rect x="416" y="110" width="140" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="486" y="168" text-anchor="middle" font-size="26" font-weight="bold" fill="#222222">'l'</text>
+  <text x="486" y="210" text-anchor="middle" font-size="18" fill="#888888" font-family="monospace">0x6C</text>
+
+  <rect x="560" y="110" width="140" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="630" y="168" text-anchor="middle" font-size="26" font-weight="bold" fill="#222222">'l'</text>
+  <text x="630" y="210" text-anchor="middle" font-size="18" fill="#888888" font-family="monospace">0x6C</text>
+
+  <rect x="704" y="110" width="140" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="774" y="168" text-anchor="middle" font-size="26" font-weight="bold" fill="#222222">'o'</text>
+  <text x="774" y="210" text-anchor="middle" font-size="18" fill="#888888" font-family="monospace">0x6F</text>
+
+  <!-- Null terminator - highlighted red -->
+  <rect x="848" y="110" width="140" height="130" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="918" y="168" text-anchor="middle" font-size="26" font-weight="bold" fill="#e53935">'\0'</text>
+  <text x="918" y="210" text-anchor="middle" font-size="18" fill="#888888" font-family="monospace">0x00</text>
+
+  <!-- Index labels -->
+  <text x="198" y="278" text-anchor="middle" font-size="18" fill="#888888">[0]</text>
+  <text x="342" y="278" text-anchor="middle" font-size="18" fill="#888888">[1]</text>
+  <text x="486" y="278" text-anchor="middle" font-size="18" fill="#888888">[2]</text>
+  <text x="630" y="278" text-anchor="middle" font-size="18" fill="#888888">[3]</text>
+  <text x="774" y="278" text-anchor="middle" font-size="18" fill="#888888">[4]</text>
+  <text x="918" y="278" text-anchor="middle" font-size="18" fill="#888888">[5]</text>
+
+  <!-- Info box -->
+  <rect x="128" y="320" width="870" height="170" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="563" y="372" text-anchor="middle" font-size="22" fill="#222222" font-weight="bold">sizeof(greeting) = 6  (includes '\0')</text>
+  <text x="563" y="434" text-anchor="middle" font-size="22" fill="#222222" font-weight="bold">strlen(greeting) = 5  (excludes '\0')</text>
 </svg>

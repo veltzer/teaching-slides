@@ -1,13 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="30.4762" y="36" width="1219.0476" height="648" rx="12.1905" fill="#f0f4f8" stroke="#333" stroke-width="4.5714" />
-  <text x="60.9524" y="115.2" font-family="sans-serif" font-size="39.619" font-weight="bold" fill="#222">Layers</text>
-  <line x1="30.4762" y1="136.8" x2="1249.5238" y2="136.8" stroke="#333" stroke-width="3.0476" />
-  <text x="60.9524" y="216" font-family="monospace" font-size="36.5714" fill="#222"> 5.6 MB  FROM alpine:3.19</text>
-  <text x="60.9524" y="288" font-family="monospace" font-size="36.5714" fill="#222"> 1.2 kB  COPY package*.json</text>
-  <text x="60.9524" y="360" font-family="monospace" font-size="36.5714" fill="#222">  15 MB  RUN npm ci</text>
-  <text x="60.9524" y="432" font-family="monospace" font-size="36.5714" fill="#222"> 234 B   COPY . .</text>
-  <line x1="30.4762" y1="460.8" x2="1249.5238" y2="460.8" stroke="#333" stroke-width="3.0476" />
-  <text x="60.9524" y="529.2" font-family="sans-serif" font-size="39.619" font-weight="bold" fill="#222">Layer Contents</text>
-  <text x="60.9524" y="594" font-family="monospace" font-size="36.5714" fill="#555">/app/node_modules/</text>
-  <text x="60.9524" y="658.8" font-family="monospace" font-size="36.5714" fill="#555">/app/package.json</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- outer card -->
+  <rect x="30" y="30" width="1220" height="620" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <!-- Layers heading -->
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#1565c0">Layers</text>
+  <line x1="30" y1="120" x2="1250" y2="120" stroke="#1565c0" stroke-width="2"/>
+  <!-- Layer rows -->
+  <text x="60" y="185" font-family="monospace" font-size="32" fill="#333333">  5.6 MB  FROM alpine:3.19</text>
+  <text x="60" y="255" font-family="monospace" font-size="32" fill="#333333">  1.2 kB  COPY package*.json</text>
+  <text x="60" y="325" font-family="monospace" font-size="32" fill="#333333">   15 MB  RUN npm ci</text>
+  <text x="60" y="395" font-family="monospace" font-size="32" fill="#333333">  234 B   COPY . .</text>
+  <line x1="30" y1="420" x2="1250" y2="420" stroke="#1565c0" stroke-width="2"/>
+  <!-- Layer Contents heading -->
+  <text x="60" y="480" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#1565c0">Layer Contents</text>
+  <text x="60" y="540" font-family="monospace" font-size="32" fill="#555555">/app/node_modules/</text>
+  <text x="60" y="605" font-family="monospace" font-size="32" fill="#555555">/app/package.json</text>
 </svg>
