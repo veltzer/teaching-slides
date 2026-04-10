@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <rect x="30" y="14" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Architecture Exercises Guide</text>
+
+  <!-- lscpu + /proc/cpuinfo -->
+  <rect x="30" y="74" width="580" height="220" rx="5" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="320" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">CPU Identification: lscpu and /proc/cpuinfo</text>
+  <text x="45" y="120" font-family="monospace" font-size="11" fill="#333333">lscpu | grep -E "Model name|Socket|Core|Thread|MHz|Cache"</text>
+  <text x="45" y="142" font-family="Arial, sans-serif" font-size="12" fill="#555555">Key fields to interpret:</text>
+  <text x="60" y="162" font-family="monospace" font-size="11" fill="#333333">Architecture:    x86_64</text>
+  <text x="60" y="180" font-family="monospace" font-size="11" fill="#333333">CPU(s):          8       # logical CPUs</text>
+  <text x="60" y="198" font-family="monospace" font-size="11" fill="#333333">Thread(s) per core: 2   # hyperthreading</text>
+  <text x="60" y="216" font-family="monospace" font-size="11" fill="#333333">Core(s) per socket: 4   # physical cores</text>
+  <text x="60" y="234" font-family="monospace" font-size="11" fill="#333333">L1d cache:       32K    # per core</text>
+  <text x="60" y="252" font-family="monospace" font-size="11" fill="#333333">L3 cache:        8M     # shared</text>
+  <text x="45" y="276" font-family="Arial, sans-serif" font-size="11" fill="#888888">/proc/cpuinfo: per-CPU details, flags, model id</text>
+
+  <!-- Cache performance -->
+  <rect x="650" y="74" width="600" height="220" rx="5" fill="#e8f5e9" filter="url(#shadow)"/>
+  <text x="950" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Cache Performance Measurement</text>
+  <text x="665" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Sequential vs random access experiment:</text>
+  <text x="665" y="140" font-family="monospace" font-size="11" fill="#333333">perf stat -e cache-misses,cache-references \</text>
+  <text x="680" y="158" font-family="monospace" font-size="11" fill="#333333">  ./access_pattern sequential</text>
+  <text x="665" y="178" font-family="monospace" font-size="11" fill="#333333">perf stat -e cache-misses,cache-references \</text>
+  <text x="680" y="196" font-family="monospace" font-size="11" fill="#333333">  ./access_pattern random</text>
+  <text x="665" y="218" font-family="Arial, sans-serif" font-size="12" fill="#555555">Cache line size: 64 bytes on x86</text>
+  <text x="665" y="238" font-family="Arial, sans-serif" font-size="12" fill="#555555">False sharing: two threads writing same cache line</text>
+  <text x="665" y="258" font-family="Arial, sans-serif" font-size="12" fill="#555555">Prefetch friendly: stride-1 access patterns</text>
+  <text x="665" y="278" font-family="Arial, sans-serif" font-size="11" fill="#888888">valgrind --tool=cachegrind also available</text>
+
+  <!-- Memory latency -->
+  <rect x="30" y="314" width="580" height="200" rx="5" fill="#fff3e0" filter="url(#shadow)"/>
+  <text x="320" y="338" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Memory Latency Measurement</text>
+  <text x="45" y="362" font-family="Arial, sans-serif" font-size="12" fill="#333333">Pointer-chasing benchmark reveals latency hierarchy:</text>
+  <text x="60" y="384" font-family="Arial, sans-serif" font-size="12" fill="#555555">L1 cache:   ~4 cycles   (~1.5 ns)</text>
+  <text x="60" y="404" font-family="Arial, sans-serif" font-size="12" fill="#555555">L2 cache:   ~12 cycles  (~4 ns)</text>
+  <text x="60" y="424" font-family="Arial, sans-serif" font-size="12" fill="#555555">L3 cache:   ~40 cycles  (~14 ns)</text>
+  <text x="60" y="444" font-family="Arial, sans-serif" font-size="12" fill="#555555">DRAM:       ~200 cycles (~60 ns)</text>
+  <text x="45" y="468" font-family="monospace" font-size="11" fill="#333333">perf stat -e instructions,cycles ./bench</text>
+  <text x="45" y="488" font-family="Arial, sans-serif" font-size="12" fill="#555555">IPC (instructions/cycle) drops with cache misses</text>
+  <text x="45" y="508" font-family="Arial, sans-serif" font-size="12" fill="#555555">Stream benchmark measures memory bandwidth</text>
+
+  <!-- TLB and page tables -->
+  <rect x="650" y="314" width="600" height="200" rx="5" fill="#f3e5f5" filter="url(#shadow)"/>
+  <text x="950" y="338" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">TLB and Page Tables</text>
+  <text x="665" y="362" font-family="Arial, sans-serif" font-size="12" fill="#333333">TLB: caches virtual-to-physical page mappings</text>
+  <text x="665" y="382" font-family="Arial, sans-serif" font-size="12" fill="#333333">TLB miss forces hardware page walk (expensive)</text>
+  <text x="665" y="404" font-family="monospace" font-size="11" fill="#333333">cat /proc/self/maps    # VMA layout</text>
+  <text x="665" y="422" font-family="monospace" font-size="11" fill="#333333">cat /proc/$$/smaps     # per-region stats</text>
+  <text x="665" y="442" font-family="monospace" font-size="11" fill="#333333">getconf PAGE_SIZE       # typically 4096</text>
+  <text x="665" y="462" font-family="Arial, sans-serif" font-size="12" fill="#555555">Huge pages (2MB) reduce TLB pressure</text>
+  <text x="665" y="482" font-family="Arial, sans-serif" font-size="12" fill="#555555">perf stat -e dTLB-misses ./program</text>
+  <text x="665" y="502" font-family="Arial, sans-serif" font-size="12" fill="#555555">4-level paging on x86-64: PGD-PUD-PMD-PTE</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="532" width="1220" height="88" rx="6" fill="#f5f5f5" filter="url(#shadow)"/>
+  <text x="640" y="556" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Exercise Workflow</text>
+  <text x="50" y="578" font-family="Arial, sans-serif" font-size="12" fill="#333333">1. lscpu to survey topology  2. perf stat to count events  3. Write benchmark (vary array size to probe cache boundaries)</text>
+  <text x="50" y="598" font-family="Arial, sans-serif" font-size="12" fill="#333333">4. Plot latency vs working set size - L1/L2/L3/DRAM steps are clearly visible</text>
+  <text x="50" y="618" font-family="Arial, sans-serif" font-size="12" fill="#333333">5. Use numactl / taskset to pin threads; compare NUMA local vs remote memory access times</text>
+</svg>

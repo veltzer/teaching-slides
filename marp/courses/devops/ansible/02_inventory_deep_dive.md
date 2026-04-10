@@ -9,6 +9,12 @@
 
 ---
 
+## Ansible Inventory Architecture
+
+![Ansible Inventory Architecture](svg/courses/devops/ansible/02_inventory_deep_dive/inventory_architecture.svg)
+
+---
+
 ## Static Inventory Patterns
 
 ```ini

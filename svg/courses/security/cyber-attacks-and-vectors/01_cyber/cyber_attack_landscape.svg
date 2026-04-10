@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- == ATTACK LIFECYCLE (top bar) == -->
+  <text x="60" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c62828">Cyber Attack Lifecycle</text>
+
+  <!-- Phase boxes -->
+  <rect x="60" y="46" width="160" height="72" rx="8" fill="#1e88e5" filter="url(#shadow)"/>
+  <text x="140" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">1. Recon</text>
+  <text x="140" y="94" font-family="Arial, sans-serif" font-size="11" fill="#bbdefb" text-anchor="middle">OSINT, scanning,</text>
+  <text x="140" y="108" font-family="Arial, sans-serif" font-size="11" fill="#bbdefb" text-anchor="middle">enumeration</text>
+
+  <line x1="220" y1="82" x2="256" y2="82" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="256" y="46" width="160" height="72" rx="8" fill="#fb8c00" filter="url(#shadow)"/>
+  <text x="336" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">2. Weaponize</text>
+  <text x="336" y="94" font-family="Arial, sans-serif" font-size="11" fill="#fff3e0" text-anchor="middle">Exploit kit, malware,</text>
+  <text x="336" y="108" font-family="Arial, sans-serif" font-size="11" fill="#fff3e0" text-anchor="middle">phishing lure</text>
+
+  <line x1="416" y1="82" x2="452" y2="82" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="452" y="46" width="160" height="72" rx="8" fill="#c62828" filter="url(#shadow)"/>
+  <text x="532" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">3. Exploit</text>
+  <text x="532" y="94" font-family="Arial, sans-serif" font-size="11" fill="#ffcdd2" text-anchor="middle">Deliver and execute</text>
+  <text x="532" y="108" font-family="Arial, sans-serif" font-size="11" fill="#ffcdd2" text-anchor="middle">initial access</text>
+
+  <line x1="612" y1="82" x2="648" y2="82" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="648" y="46" width="160" height="72" rx="8" fill="#8e24aa" filter="url(#shadow)"/>
+  <text x="728" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">4. Persist</text>
+  <text x="728" y="94" font-family="Arial, sans-serif" font-size="11" fill="#e1bee7" text-anchor="middle">Backdoor, cron,</text>
+  <text x="728" y="108" font-family="Arial, sans-serif" font-size="11" fill="#e1bee7" text-anchor="middle">privilege escalation</text>
+
+  <line x1="808" y1="82" x2="844" y2="82" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="844" y="46" width="160" height="72" rx="8" fill="#43a047" filter="url(#shadow)"/>
+  <text x="924" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">5. Move Laterally</text>
+  <text x="924" y="94" font-family="Arial, sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">Pivot hosts,</text>
+  <text x="924" y="108" font-family="Arial, sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">credential harvest</text>
+
+  <line x1="1004" y1="82" x2="1040" y2="82" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1040" y="46" width="196" height="72" rx="8" fill="#e53935" filter="url(#shadow)"/>
+  <text x="1138" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">6. Exfiltrate / Impact</text>
+  <text x="1138" y="94" font-family="Arial, sans-serif" font-size="11" fill="#ffcdd2" text-anchor="middle">Data theft, ransomware,</text>
+  <text x="1138" y="108" font-family="Arial, sans-serif" font-size="11" fill="#ffcdd2" text-anchor="middle">sabotage</text>
+
+  <!-- == ATTACK CATEGORIES == -->
+  <text x="60" y="148" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#555555">Attack Categories</text>
+
+  <!-- Social Engineering -->
+  <rect x="60" y="164" width="280" height="200" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="164" width="280" height="36" rx="10" fill="#c62828"/>
+  <rect x="60" y="183" width="280" height="17" fill="#c62828"/>
+  <text x="200" y="188" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Social Engineering</text>
+  <text x="80" y="216" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Phishing (email lures)</text>
+  <text x="80" y="234" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Spear phishing (targeted)</text>
+  <text x="80" y="252" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Vishing (voice calls)</text>
+  <text x="80" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Smishing (SMS)</text>
+  <text x="80" y="288" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Pretexting and baiting</text>
+  <text x="80" y="306" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; BEC (business email compromise)</text>
+  <text x="80" y="330" font-family="Arial, sans-serif" font-size="12" fill="#777777">Targets: human psychology not tech</text>
+  <text x="80" y="350" font-family="Arial, sans-serif" font-size="12" fill="#777777">Defense: security awareness training</text>
+
+  <!-- Network Attacks -->
+  <rect x="360" y="164" width="280" height="200" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="360" y="164" width="280" height="36" rx="10" fill="#f57c00"/>
+  <rect x="360" y="183" width="280" height="17" fill="#f57c00"/>
+  <text x="500" y="188" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Network Attacks</text>
+  <text x="380" y="216" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; DDoS (volumetric/protocol/app)</text>
+  <text x="380" y="234" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; MitM (ARP spoof, SSL strip)</text>
+  <text x="380" y="252" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Port scanning and fingerprinting</text>
+  <text x="380" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Packet sniffing on shared nets</text>
+  <text x="380" y="288" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; DNS poisoning / hijacking</text>
+  <text x="380" y="306" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; BGP hijacking (routing attack)</text>
+  <text x="380" y="330" font-family="Arial, sans-serif" font-size="12" fill="#777777">Targets: network infrastructure</text>
+  <text x="380" y="350" font-family="Arial, sans-serif" font-size="12" fill="#777777">Defense: firewall, IDS, network seg.</text>
+
+  <!-- Application Attacks -->
+  <rect x="660" y="164" width="280" height="200" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="164" width="280" height="36" rx="10" fill="#1e88e5"/>
+  <rect x="660" y="183" width="280" height="17" fill="#1e88e5"/>
+  <text x="800" y="188" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Application Attacks</text>
+  <text x="680" y="216" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; SQL injection (auth bypass, data)</text>
+  <text x="680" y="234" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; XSS (stored, reflected, DOM)</text>
+  <text x="680" y="252" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; CSRF (cross-site request forgery)</text>
+  <text x="680" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; IDOR (insecure direct object ref)</text>
+  <text x="680" y="288" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Deserialization / XXE</text>
+  <text x="680" y="306" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; API abuse and BOLA</text>
+  <text x="680" y="330" font-family="Arial, sans-serif" font-size="12" fill="#777777">Targets: web/mobile applications</text>
+  <text x="680" y="350" font-family="Arial, sans-serif" font-size="12" fill="#777777">Defense: OWASP Top 10, WAF, SAST</text>
+
+  <!-- Supply Chain Attacks -->
+  <rect x="960" y="164" width="276" height="200" rx="10" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="960" y="164" width="276" height="36" rx="10" fill="#8e24aa"/>
+  <rect x="960" y="183" width="276" height="17" fill="#8e24aa"/>
+  <text x="1098" y="188" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Supply Chain Attacks</text>
+  <text x="980" y="216" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Malicious npm/PyPI packages</text>
+  <text x="980" y="234" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Typosquatting dependencies</text>
+  <text x="980" y="252" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Compromised build pipelines</text>
+  <text x="980" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; SolarWinds-style implants</text>
+  <text x="980" y="288" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Malicious container images</text>
+  <text x="980" y="306" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Compromised open-source libs</text>
+  <text x="980" y="330" font-family="Arial, sans-serif" font-size="12" fill="#777777">Targets: software build/deploy chain</text>
+  <text x="980" y="350" font-family="Arial, sans-serif" font-size="12" fill="#777777">Defense: SBOM, signing, SLSA</text>
+
+  <!-- == THREAT ACTORS == -->
+  <text x="60" y="390" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#555555">Threat Actors</text>
+  <rect x="60" y="406" width="1176" height="214" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- Nation-State -->
+  <rect x="80" y="422" width="250" height="188" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="1"/>
+  <text x="205" y="444" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Nation-State (APT)</text>
+  <text x="100" y="464" font-family="Arial, sans-serif" font-size="11" fill="#333333">Motivation: espionage, sabotage</text>
+  <text x="100" y="480" font-family="Arial, sans-serif" font-size="11" fill="#333333">Sophistication: very high</text>
+  <text x="100" y="496" font-family="Arial, sans-serif" font-size="11" fill="#333333">Resources: unlimited</text>
+  <text x="100" y="512" font-family="Arial, sans-serif" font-size="11" fill="#333333">Examples: Lazarus, APT28,</text>
+  <text x="100" y="528" font-family="Arial, sans-serif" font-size="11" fill="#333333">Fancy Bear, Cozy Bear</text>
+  <text x="100" y="548" font-family="Arial, sans-serif" font-size="11" fill="#777777">Target: critical infra, govt,</text>
+  <text x="100" y="564" font-family="Arial, sans-serif" font-size="11" fill="#777777">defense contractors, banks</text>
+  <text x="100" y="584" font-family="Arial, sans-serif" font-size="11" fill="#555555">Long dwell time (months-years)</text>
+  <text x="100" y="600" font-family="Arial, sans-serif" font-size="11" fill="#555555">Custom zero-day exploits</text>
+
+  <!-- Cybercriminals -->
+  <rect x="350" y="422" width="250" height="188" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="475" y="444" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f57c00" text-anchor="middle">Cybercriminals</text>
+  <text x="370" y="464" font-family="Arial, sans-serif" font-size="11" fill="#333333">Motivation: financial gain</text>
+  <text x="370" y="480" font-family="Arial, sans-serif" font-size="11" fill="#333333">Sophistication: medium-high</text>
+  <text x="370" y="496" font-family="Arial, sans-serif" font-size="11" fill="#333333">Resources: moderate</text>
+  <text x="370" y="512" font-family="Arial, sans-serif" font-size="11" fill="#333333">Examples: REvil, Conti,</text>
+  <text x="370" y="528" font-family="Arial, sans-serif" font-size="11" fill="#333333">LockBit ransomware groups</text>
+  <text x="370" y="548" font-family="Arial, sans-serif" font-size="11" fill="#777777">Target: businesses, hospitals,</text>
+  <text x="370" y="564" font-family="Arial, sans-serif" font-size="11" fill="#777777">municipalities with weak defenses</text>
+  <text x="370" y="584" font-family="Arial, sans-serif" font-size="11" fill="#555555">Ransomware-as-a-Service (RaaS)</text>
+  <text x="370" y="600" font-family="Arial, sans-serif" font-size="11" fill="#555555">Double extortion tactics</text>
+
+  <!-- Hacktivists -->
+  <rect x="620" y="422" width="250" height="188" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1"/>
+  <text x="745" y="444" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Hacktivists</text>
+  <text x="640" y="464" font-family="Arial, sans-serif" font-size="11" fill="#333333">Motivation: ideology, protest</text>
+  <text x="640" y="480" font-family="Arial, sans-serif" font-size="11" fill="#333333">Sophistication: low-medium</text>
+  <text x="640" y="496" font-family="Arial, sans-serif" font-size="11" fill="#333333">Resources: low</text>
+  <text x="640" y="512" font-family="Arial, sans-serif" font-size="11" fill="#333333">Examples: Anonymous,</text>
+  <text x="640" y="528" font-family="Arial, sans-serif" font-size="11" fill="#333333">LulzSec, various collectives</text>
+  <text x="640" y="548" font-family="Arial, sans-serif" font-size="11" fill="#777777">Target: political/corporate</text>
+  <text x="640" y="564" font-family="Arial, sans-serif" font-size="11" fill="#777777">organizations and governments</text>
+  <text x="640" y="584" font-family="Arial, sans-serif" font-size="11" fill="#555555">DDoS, defacement, leaks</text>
+  <text x="640" y="600" font-family="Arial, sans-serif" font-size="11" fill="#555555">Opportunistic, noisy</text>
+
+  <!-- Insider Threats -->
+  <rect x="890" y="422" width="326" height="188" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+  <text x="1053" y="444" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Insider Threats</text>
+  <text x="910" y="464" font-family="Arial, sans-serif" font-size="11" fill="#333333">Motivation: disgruntled, financial, recruited</text>
+  <text x="910" y="480" font-family="Arial, sans-serif" font-size="11" fill="#333333">Sophistication: varies (has access!)</text>
+  <text x="910" y="496" font-family="Arial, sans-serif" font-size="11" fill="#333333">Resources: legitimate org access</text>
+  <text x="910" y="512" font-family="Arial, sans-serif" font-size="11" fill="#333333">Types: malicious, negligent, compromised</text>
+  <text x="910" y="528" font-family="Arial, sans-serif" font-size="11" fill="#333333">Examples: Edward Snowden (leaks),</text>
+  <text x="910" y="544" font-family="Arial, sans-serif" font-size="11" fill="#333333">employees stealing IP before leaving</text>
+  <text x="910" y="562" font-family="Arial, sans-serif" font-size="11" fill="#777777">Target: own organization's assets</text>
+  <text x="910" y="578" font-family="Arial, sans-serif" font-size="11" fill="#555555">Defense: least-privilege, UEBA, DLP</text>
+  <text x="910" y="594" font-family="Arial, sans-serif" font-size="11" fill="#555555">Hardest to detect: appears legitimate</text>
+  <text x="910" y="610" font-family="Arial, sans-serif" font-size="11" fill="#555555">Zero-trust: "never trust, always verify"</text>
+</svg>

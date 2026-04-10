@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <rect x="30" y="14" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">GitHub Actions Marketplace</text>
+
+  <rect x="30" y="74" width="380" height="220" rx="5" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="220" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">JavaScript Actions</text>
+  <text x="45" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Runs directly on the runner</text>
+  <text x="45" y="140" font-family="Arial, sans-serif" font-size="12" fill="#333333">Fast startup - no container overhead</text>
+  <text x="45" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">Cross-platform: Linux / macOS / Windows</text>
+  <text x="45" y="184" font-family="monospace" font-size="12" fill="#333333">uses: actions/checkout@v4</text>
+  <text x="45" y="202" font-family="monospace" font-size="12" fill="#333333">uses: actions/setup-node@v4</text>
+  <text x="45" y="220" font-family="monospace" font-size="12" fill="#333333">uses: actions/cache@v4</text>
+  <text x="45" y="238" font-family="monospace" font-size="12" fill="#333333">uses: actions/upload-artifact@v4</text>
+  <text x="45" y="260" font-family="Arial, sans-serif" font-size="11" fill="#888888">Implemented in Node.js with @actions/core SDK</text>
+  <text x="45" y="278" font-family="Arial, sans-serif" font-size="11" fill="#888888">action.yml: runs.using: node20</text>
+
+  <rect x="440" y="74" width="380" height="220" rx="5" fill="#e8f5e9" filter="url(#shadow)"/>
+  <text x="630" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Docker Container Actions</text>
+  <text x="455" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Runs inside a Docker container</text>
+  <text x="455" y="140" font-family="Arial, sans-serif" font-size="12" fill="#333333">Any language or toolchain</text>
+  <text x="455" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">Consistent reproducible environment</text>
+  <text x="455" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">Linux runners only</text>
+  <text x="455" y="204" font-family="monospace" font-size="11" fill="#333333">uses: github/codeql-action/analyze@v3</text>
+  <text x="455" y="222" font-family="monospace" font-size="11" fill="#333333">uses: snyk/actions/python@master</text>
+  <text x="455" y="244" font-family="Arial, sans-serif" font-size="12" fill="#555555">Slower start due to container pull</text>
+  <text x="455" y="264" font-family="Arial, sans-serif" font-size="11" fill="#888888">action.yml: runs.using: docker</text>
+  <text x="455" y="282" font-family="Arial, sans-serif" font-size="11" fill="#888888">Requires Dockerfile in action repo</text>
+
+  <rect x="850" y="74" width="400" height="220" rx="5" fill="#fff3e0" filter="url(#shadow)"/>
+  <text x="1050" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Composite Actions</text>
+  <text x="865" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Combines multiple workflow steps</text>
+  <text x="865" y="140" font-family="Arial, sans-serif" font-size="12" fill="#333333">Written entirely in YAML</text>
+  <text x="865" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">Can call other actions via uses:</text>
+  <text x="865" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">Great for reusing setup steps</text>
+  <text x="865" y="204" font-family="monospace" font-size="11" fill="#333333">uses: ./.github/actions/my-setup</text>
+  <text x="865" y="222" font-family="monospace" font-size="11" fill="#333333">uses: org/repo/.github/actions/x@v1</text>
+  <text x="865" y="244" font-family="Arial, sans-serif" font-size="12" fill="#555555">action.yml: runs.using: composite</text>
+  <text x="865" y="264" font-family="Arial, sans-serif" font-size="11" fill="#888888">Each step must have shell: defined</text>
+  <text x="865" y="282" font-family="Arial, sans-serif" font-size="11" fill="#888888">No separate runtime - runs in caller job</text>
+
+  <rect x="30" y="314" width="600" height="200" rx="5" fill="#f3e5f5" filter="url(#shadow)"/>
+  <text x="330" y="338" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">uses: Syntax and Parameters</text>
+  <text x="45" y="362" font-family="monospace" font-size="12" fill="#333333">steps:</text>
+  <text x="45" y="380" font-family="monospace" font-size="12" fill="#333333">  - uses: actions/setup-python@v5</text>
+  <text x="60" y="398" font-family="monospace" font-size="12" fill="#333333">    with:</text>
+  <text x="75" y="416" font-family="monospace" font-size="12" fill="#333333">      python-version: "3.12"</text>
+  <text x="75" y="434" font-family="monospace" font-size="12" fill="#333333">      cache: "pip"</text>
+  <text x="45" y="458" font-family="Arial, sans-serif" font-size="12" fill="#555555">Pin to SHA for security: @a1b2c3d</text>
+  <text x="45" y="478" font-family="Arial, sans-serif" font-size="12" fill="#555555">Pin to tag for convenience: @v4</text>
+  <text x="45" y="498" font-family="Arial, sans-serif" font-size="12" fill="#555555">Never use @main in production</text>
+
+  <rect x="650" y="314" width="600" height="200" rx="5" fill="#fce4ec" filter="url(#shadow)"/>
+  <text x="950" y="338" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">Popular Action Categories</text>
+  <text x="665" y="362" font-family="Arial, sans-serif" font-size="12" fill="#333333">CI/CD:       checkout, setup-*, upload/download-artifact</text>
+  <text x="665" y="382" font-family="Arial, sans-serif" font-size="12" fill="#333333">Code Quality: super-linter, eslint, pylint</text>
+  <text x="665" y="402" font-family="Arial, sans-serif" font-size="12" fill="#333333">Security:    codeql-action, snyk, trivy, dependency-review</text>
+  <text x="665" y="422" font-family="Arial, sans-serif" font-size="12" fill="#333333">Deployment:  aws-actions, azure/login, google-github-actions</text>
+  <text x="665" y="442" font-family="Arial, sans-serif" font-size="12" fill="#333333">Notifications: slack-notify, send-email</text>
+  <text x="665" y="462" font-family="Arial, sans-serif" font-size="12" fill="#333333">Release:     release-please, semantic-release, gh-release</text>
+  <text x="665" y="486" font-family="Arial, sans-serif" font-size="12" fill="#555555">Browse: github.com/marketplace?type=actions</text>
+  <text x="665" y="506" font-family="Arial, sans-serif" font-size="12" fill="#555555">Filter by: Verified Creator, Category, Stars</text>
+
+  <rect x="30" y="530" width="1220" height="90" rx="6" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="640" y="554" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Action Security and Pinning</text>
+  <text x="50" y="576" font-family="Arial, sans-serif" font-size="12" fill="#333333">Always pin third-party actions to a specific SHA commit hash to prevent supply chain attacks</text>
+  <text x="50" y="596" font-family="Arial, sans-serif" font-size="12" fill="#333333">Use Dependabot to automatically update action versions in .github/dependabot.yml</text>
+  <text x="50" y="616" font-family="Arial, sans-serif" font-size="12" fill="#333333">Prefer GitHub-verified actions (checkmark badge) and first-party actions from trusted orgs</text>
+</svg>

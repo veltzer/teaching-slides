@@ -12,6 +12,12 @@
 
 ---
 
+## Ansible Best Practices
+
+![Ansible Best Practices](svg/courses/devops/ansible/17_best_practices/ansible_best_practices.svg)
+
+---
+
 ## Recommended Project Structure
 
 ```tree

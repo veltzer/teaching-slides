@@ -10,6 +10,12 @@
 
 ---
 
+## Ansible Error Handling Flow
+
+![Ansible Error Handling Flow](svg/courses/devops/ansible/08_error_handling_debugging/error_handling_flow.svg)
+
+---
+
 ## Default Error Behavior
 
 - By default, `Ansible` stops executing on a host when a task fails

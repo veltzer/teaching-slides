@@ -9,6 +9,12 @@
 
 ---
 
+## Ansible Module Categories
+
+![Ansible Module Categories](svg/courses/devops/ansible/03_modules_and_ad_hoc/module_categories.svg)
+
+---
+
 ## What Are Modules?
 
 - Modules are the units of work in `Ansible`

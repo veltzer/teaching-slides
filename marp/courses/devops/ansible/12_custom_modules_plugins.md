@@ -11,6 +11,12 @@
 
 ---
 
+## Custom Module Structure
+
+![Custom Module Structure](svg/courses/devops/ansible/12_custom_modules_plugins/custom_module_structure.svg)
+
+---
+
 ## When to Write Custom Modules
 
 - No existing module does what you need

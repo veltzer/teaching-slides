@@ -2,6 +2,12 @@
 
 ---
 
+## Custom GitHub Action Types
+
+![Custom GitHub Actions: JavaScript, Docker, Composite types and action.yml structure](svg/courses/devops/github-workflows/07_custom_actions_development/custom_action_types.svg)
+
+---
+
 ## Types of Custom Actions
 
 | Type        | Language      | Runs On          | Best For                   |

@@ -2,6 +2,12 @@
 
 ---
 
+## CPack Packaging Generators
+
+![CPack generators: TGZ, DEB, RPM, NSIS and workflow](svg/courses/build_systems/cmake/06_packaging_software/cpack_generators.svg)
+
+---
+
 ## Chapter Overview
 
 - What is `CPack` and why packaging matters

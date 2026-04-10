@@ -2,6 +2,12 @@
 
 ---
 
+## CMake Variables and Control Flow
+
+![CMake variables, control flow, macros and functions](svg/courses/build_systems/cmake/03_in_depth_syntax/cmake_variables_and_flow.svg)
+
+---
+
 ## Chapter Overview
 
 - Variables: normal, cache, and environment

@@ -9,6 +9,12 @@
 
 ---
 
+## Ansible Variable Precedence
+
+![Ansible Variable Precedence](svg/courses/devops/ansible/05_variables_facts_templates/variable_precedence.svg)
+
+---
+
 ## Magic Variables
 
 ```yaml

@@ -1,5 +1,13 @@
 # Advanced Features
 
+---
+
+## GNU Make Advanced Features
+
+![GNU Make pattern rules, automatic variables, functions, conditionals, parallel builds](svg/courses/build_systems/make/04_advanced_features/make_advanced_features.svg)
+
+---
+
 ## Overview
 - Pattern rules and implicit rules
 - Functions for string manipulation

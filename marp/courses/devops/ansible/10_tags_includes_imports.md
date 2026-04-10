@@ -9,6 +9,12 @@
 
 ---
 
+## Includes vs Imports in Ansible
+
+![Includes vs Imports in Ansible](svg/courses/devops/ansible/10_tags_includes_imports/includes_vs_imports.svg)
+
+---
+
 ## Tags Strategy
 
 ```yaml

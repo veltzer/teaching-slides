@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Custom Module Structure</text>
+
+  <!-- LEFT: Python Module Structure -->
+  <rect x="20" y="62" width="470" height="440" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="62" width="470" height="30" rx="8" fill="url(#grad-accent)"/>
+  <rect x="20" y="80" width="470" height="12" fill="url(#grad-accent)"/>
+  <text x="255" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Python Module Structure</text>
+
+  <text x="35" y="112" font-family="monospace" font-size="11" fill="#888888">#!/usr/bin/python</text>
+  <text x="35" y="129" font-family="monospace" font-size="11" fill="#888888"># -*- coding: utf-8 -*-</text>
+  <text x="35" y="146" font-family="monospace" font-size="11" fill="#2e7d32">from ansible.module_utils.basic import AnsibleModule</text>
+  <line x1="35" y1="158" x2="475" y2="158" stroke="#dddddd" stroke-width="1"/>
+
+  <text x="35" y="176" font-family="monospace" font-size="11" fill="#1565c0">DOCUMENTATION = r'''</text>
+  <text x="35" y="193" font-family="monospace" font-size="11" fill="#333333">  module: my_module</text>
+  <text x="35" y="210" font-family="monospace" font-size="11" fill="#333333">  short_description: Does X</text>
+  <text x="35" y="227" font-family="monospace" font-size="11" fill="#1565c0">'''</text>
+  <line x1="35" y1="239" x2="475" y2="239" stroke="#dddddd" stroke-width="1"/>
+
+  <text x="35" y="257" font-family="monospace" font-size="11" fill="#e65100">def main():</text>
+  <text x="35" y="274" font-family="monospace" font-size="11" fill="#6a1b9a">  module = AnsibleModule(</text>
+  <text x="35" y="291" font-family="monospace" font-size="11" fill="#6a1b9a">    argument_spec=dict(</text>
+  <text x="35" y="308" font-family="monospace" font-size="11" fill="#333333">      name=dict(type='str', required=True),</text>
+  <text x="35" y="325" font-family="monospace" font-size="11" fill="#333333">      state=dict(type='str',</text>
+  <text x="35" y="342" font-family="monospace" font-size="11" fill="#333333">             choices=['present','absent'],</text>
+  <text x="35" y="359" font-family="monospace" font-size="11" fill="#333333">             default='present'),</text>
+  <text x="35" y="376" font-family="monospace" font-size="11" fill="#333333">      port=dict(type='int', default=8080),</text>
+  <text x="35" y="393" font-family="monospace" font-size="11" fill="#333333">      secret=dict(type='str', no_log=True),</text>
+  <text x="35" y="410" font-family="monospace" font-size="11" fill="#6a1b9a">    ),</text>
+  <text x="35" y="427" font-family="monospace" font-size="11" fill="#6a1b9a">    supports_check_mode=True,</text>
+  <text x="35" y="444" font-family="monospace" font-size="11" fill="#6a1b9a">  )</text>
+  <line x1="35" y1="456" x2="475" y2="456" stroke="#dddddd" stroke-width="1"/>
+  <text x="35" y="474" font-family="monospace" font-size="11" fill="#333333">  name = module.params['name']</text>
+  <text x="35" y="491" font-family="monospace" font-size="11" fill="#2e7d32">  module.exit_json(changed=True,</text>
+  <text x="35" y="508" font-family="monospace" font-size="11" fill="#2e7d32">                  msg="Created",</text>
+  <text x="35" y="525" font-family="monospace" font-size="11" fill="#2e7d32">                  result={"name": name})</text>
+
+  <!-- CENTER: AnsibleModule class features -->
+  <rect x="510" y="62" width="330" height="280" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="510" y="62" width="330" height="30" rx="8" fill="url(#grad-purple)"/>
+  <rect x="510" y="80" width="330" height="12" fill="url(#grad-purple)"/>
+  <text x="675" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">AnsibleModule Features</text>
+
+  <text x="525" y="113" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">Exit methods:</text>
+  <text x="525" y="131" font-family="monospace" font-size="11" fill="#333333">module.exit_json(**result)</text>
+  <text x="525" y="148" font-family="monospace" font-size="11" fill="#333333">module.fail_json(msg="err")</text>
+  <line x1="525" y1="160" x2="825" y2="160" stroke="#dddddd" stroke-width="1"/>
+
+  <text x="525" y="178" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">Helpers:</text>
+  <text x="525" y="196" font-family="monospace" font-size="11" fill="#333333">module.run_command(cmd)</text>
+  <text x="525" y="213" font-family="monospace" font-size="11" fill="#333333">module.get_bin_path('git')</text>
+  <text x="525" y="230" font-family="monospace" font-size="11" fill="#333333">module.atomic_move(src,dst)</text>
+  <text x="525" y="247" font-family="monospace" font-size="11" fill="#333333">module.set_mode_if_different()</text>
+  <line x1="525" y1="259" x2="825" y2="259" stroke="#dddddd" stroke-width="1"/>
+
+  <text x="525" y="277" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">Check mode support:</text>
+  <text x="525" y="295" font-family="monospace" font-size="11" fill="#333333">if module.check_mode:</text>
+  <text x="525" y="312" font-family="monospace" font-size="11" fill="#333333">  module.exit_json(changed=True)</text>
+  <text x="525" y="329" font-family="Arial, sans-serif" font-size="11" fill="#555555">  # no real changes in check mode</text>
+
+  <!-- CENTER: Return Values -->
+  <rect x="510" y="355" width="330" height="148" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="510" y="355" width="330" height="30" rx="8" fill="url(#grad-orange)"/>
+  <rect x="510" y="373" width="330" height="12" fill="url(#grad-orange)"/>
+  <text x="675" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Standard Return Values</text>
+  <text x="525" y="406" font-family="monospace" font-size="11" fill="#333333">changed: true/false</text>
+  <text x="680" y="406" font-family="Arial, sans-serif" font-size="10" fill="#555555">was anything changed?</text>
+  <text x="525" y="423" font-family="monospace" font-size="11" fill="#333333">failed: true/false</text>
+  <text x="680" y="423" font-family="Arial, sans-serif" font-size="10" fill="#555555">did the task fail?</text>
+  <text x="525" y="440" font-family="monospace" font-size="11" fill="#333333">msg: "human message"</text>
+  <text x="525" y="457" font-family="monospace" font-size="11" fill="#333333">diff: {before:, after:}</text>
+  <text x="680" y="457" font-family="Arial, sans-serif" font-size="10" fill="#555555">for --diff mode</text>
+  <text x="525" y="474" font-family="monospace" font-size="11" fill="#333333">result: {}</text>
+  <text x="680" y="474" font-family="Arial, sans-serif" font-size="10" fill="#555555">custom data</text>
+  <text x="525" y="491" font-family="monospace" font-size="11" fill="#333333">invocation: {}</text>
+  <text x="680" y="491" font-family="Arial, sans-serif" font-size="10" fill="#555555">auto-added by Ansible</text>
+
+  <!-- RIGHT: Filter Plugins vs Callback Plugins -->
+  <rect x="860" y="62" width="400" height="205" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="62" width="400" height="30" rx="8" fill="url(#grad-green)"/>
+  <rect x="860" y="80" width="400" height="12" fill="url(#grad-green)"/>
+  <text x="1060" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Filter Plugins</text>
+  <text x="875" y="112" font-family="monospace" font-size="11" fill="#333333"># filter_plugins/my_filters.py</text>
+  <text x="875" y="129" font-family="monospace" font-size="11" fill="#333333">class FilterModule(object):</text>
+  <text x="875" y="146" font-family="monospace" font-size="11" fill="#333333">  def filters(self):</text>
+  <text x="875" y="163" font-family="monospace" font-size="11" fill="#333333">    return {'my_filter': self.do_it}</text>
+  <text x="875" y="180" font-family="monospace" font-size="11" fill="#333333">  def do_it(self, value, arg='default'):</text>
+  <text x="875" y="197" font-family="monospace" font-size="11" fill="#333333">    return value.upper()</text>
+  <text x="875" y="214" font-family="monospace" font-size="11" fill="#555555"># usage: {{ my_var | my_filter }}</text>
+  <text x="875" y="231" font-family="monospace" font-size="11" fill="#555555"># usage: {{ my_var | my_filter('arg') }}</text>
+  <text x="875" y="258" font-family="Arial, sans-serif" font-size="11" fill="#888888">Place in filter_plugins/ next to playbook or in role</text>
+
+  <!-- RIGHT: Callback Plugins -->
+  <rect x="860" y="280" width="400" height="225" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="280" width="400" height="30" rx="8" fill="url(#grad-accent)"/>
+  <rect x="860" y="298" width="400" height="12" fill="url(#grad-accent)"/>
+  <text x="1060" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Callback Plugins</text>
+  <text x="875" y="332" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Built-in callbacks:</text>
+  <text x="875" y="350" font-family="monospace" font-size="11" fill="#333333">yaml       # pretty YAML output</text>
+  <text x="875" y="367" font-family="monospace" font-size="11" fill="#333333">json       # JSON output for CI</text>
+  <text x="875" y="384" font-family="monospace" font-size="11" fill="#333333">junit      # JUnit XML for Jenkins</text>
+  <text x="875" y="401" font-family="monospace" font-size="11" fill="#333333">profile_tasks  # timing info</text>
+  <line x1="875" y1="413" x2="1245" y2="413" stroke="#dddddd" stroke-width="1"/>
+  <text x="875" y="431" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Enable in ansible.cfg:</text>
+  <text x="875" y="449" font-family="monospace" font-size="11" fill="#333333">[defaults]</text>
+  <text x="875" y="466" font-family="monospace" font-size="11" fill="#333333">stdout_callback = yaml</text>
+  <text x="875" y="483" font-family="monospace" font-size="11" fill="#333333">callback_whitelist = profile_tasks</text>
+
+  <!-- File locations box -->
+  <rect x="20" y="518" width="470" height="75" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+  <text x="35" y="538" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Module search path:</text>
+  <text x="35" y="556" font-family="monospace" font-size="11" fill="#333333">./library/       # next to playbook</text>
+  <text x="250" y="556" font-family="Arial, sans-serif" font-size="11" fill="#555555">role/library/    # in role</text>
+  <text x="35" y="574" font-family="monospace" font-size="11" fill="#333333">collections/ansible_collections/ns/name/plugins/modules/</text>
+  <text x="35" y="588" font-family="Arial, sans-serif" font-size="11" fill="#888888">Test with: python -m pytest tests/unit/ or ansible-test units</text>
+</svg>

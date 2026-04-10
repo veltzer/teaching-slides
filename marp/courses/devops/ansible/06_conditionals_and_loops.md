@@ -9,6 +9,12 @@
 
 ---
 
+## Loops and Conditionals in Ansible
+
+![Loops and Conditionals in Ansible](svg/courses/devops/ansible/06_conditionals_and_loops/loops_and_conditionals.svg)
+
+---
+
 ## Conditional Operators
 
 ```yaml

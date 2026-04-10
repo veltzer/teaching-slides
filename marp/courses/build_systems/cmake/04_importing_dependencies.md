@@ -2,6 +2,12 @@
 
 ---
 
+## CMake Dependency Management
+
+![CMake find_package Config vs Module mode, FetchContent workflow](svg/courses/build_systems/cmake/04_importing_dependencies/cmake_find_package.svg)
+
+---
+
 ## Chapter Overview
 
 - Why dependency management matters

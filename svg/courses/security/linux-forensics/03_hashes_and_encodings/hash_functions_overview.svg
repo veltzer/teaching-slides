@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- == HASH FUNCTION CONCEPT == -->
+  <text x="60" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Cryptographic Hash Functions</text>
+
+  <!-- Input -->
+  <rect x="60" y="50" width="170" height="80" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="145" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">INPUT</text>
+  <text x="145" y="100" font-family="monospace" font-size="11" fill="#333333" text-anchor="middle">"Hello"</text>
+  <text x="145" y="118" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">any size data</text>
+
+  <!-- Arrow -->
+  <line x1="230" y1="90" x2="270" y2="90" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Hash Function box -->
+  <rect x="270" y="44" width="180" height="92" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="360" y="80" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Hash</text>
+  <text x="360" y="100" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Function</text>
+  <text x="360" y="120" font-family="Arial, sans-serif" font-size="11" fill="#bbdefb" text-anchor="middle">deterministic</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="90" x2="490" y2="90" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Digest -->
+  <rect x="490" y="50" width="270" height="80" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="625" y="76" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">DIGEST (fixed size)</text>
+  <text x="625" y="96" font-family="monospace" font-size="10" fill="#333333" text-anchor="middle">185f8db32921bd46d35...a5</text>
+  <text x="625" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">always same length regardless of input</text>
+
+  <!-- PROPERTIES -->
+  <text x="830" y="58" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Five Core Properties</text>
+  <rect x="830" y="66" width="406" height="156" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1"/>
+  <text x="850" y="88" font-family="Arial, sans-serif" font-size="12" fill="#333333">1. <tspan font-weight="bold">Deterministic</tspan>: same input -&gt; same hash always</text>
+  <text x="850" y="108" font-family="Arial, sans-serif" font-size="12" fill="#333333">2. <tspan font-weight="bold">Fast</tspan>: quick to compute for any input size</text>
+  <text x="850" y="128" font-family="Arial, sans-serif" font-size="12" fill="#333333">3. <tspan font-weight="bold">One-way</tspan>: cannot reverse hash to input (pre-image)</text>
+  <text x="850" y="148" font-family="Arial, sans-serif" font-size="12" fill="#333333">4. <tspan font-weight="bold">Avalanche</tspan>: 1-bit input change -&gt; ~50% output change</text>
+  <text x="850" y="168" font-family="Arial, sans-serif" font-size="12" fill="#333333">5. <tspan font-weight="bold">Collision-resistant</tspan>: hard to find two inputs</text>
+  <text x="850" y="184" font-family="Arial, sans-serif" font-size="12" fill="#333333">   with the same hash (second pre-image resistance)</text>
+  <text x="850" y="210" font-family="Arial, sans-serif" font-size="11" fill="#555555">Forensics: hash proves file integrity (tamper detection)</text>
+
+  <!-- == ALGORITHM COMPARISON TABLE == -->
+  <text x="60" y="160" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#555555">Algorithm Comparison</text>
+
+  <!-- Table header -->
+  <rect x="60" y="174" width="750" height="32" rx="4" fill="#1565c0"/>
+  <text x="120" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Algorithm</text>
+  <text x="250" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Output Size</text>
+  <text x="370" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Speed</text>
+  <text x="460" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Security Status</text>
+  <text x="620" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Use Case</text>
+
+  <!-- MD5 row -->
+  <rect x="60" y="206" width="750" height="36" rx="0" fill="#fff8f8" stroke="#eeeeee" stroke-width="1"/>
+  <text x="120" y="229" font-family="monospace" font-size="12" fill="#c62828">MD5</text>
+  <text x="250" y="229" font-family="Arial, sans-serif" font-size="12" fill="#333333">128-bit (32 hex)</text>
+  <text x="370" y="229" font-family="Arial, sans-serif" font-size="12" fill="#333333">Very fast</text>
+  <text x="460" y="229" font-family="Arial, sans-serif" font-size="12" fill="#c62828">BROKEN (collisions)</text>
+  <text x="620" y="229" font-family="Arial, sans-serif" font-size="12" fill="#555555">Legacy/checksum only</text>
+
+  <!-- SHA1 row -->
+  <rect x="60" y="242" width="750" height="36" rx="0" fill="#fff3e0" stroke="#eeeeee" stroke-width="1"/>
+  <text x="120" y="265" font-family="monospace" font-size="12" fill="#f57c00">SHA-1</text>
+  <text x="250" y="265" font-family="Arial, sans-serif" font-size="12" fill="#333333">160-bit (40 hex)</text>
+  <text x="370" y="265" font-family="Arial, sans-serif" font-size="12" fill="#333333">Fast</text>
+  <text x="460" y="265" font-family="Arial, sans-serif" font-size="12" fill="#f57c00">DEPRECATED (SHAttered)</text>
+  <text x="620" y="265" font-family="Arial, sans-serif" font-size="12" fill="#555555">Avoid new use</text>
+
+  <!-- SHA256 row -->
+  <rect x="60" y="278" width="750" height="36" rx="0" fill="#f1f8f1" stroke="#eeeeee" stroke-width="1"/>
+  <text x="120" y="301" font-family="monospace" font-size="12" fill="#2e7d32">SHA-256</text>
+  <text x="250" y="301" font-family="Arial, sans-serif" font-size="12" fill="#333333">256-bit (64 hex)</text>
+  <text x="370" y="301" font-family="Arial, sans-serif" font-size="12" fill="#333333">Good</text>
+  <text x="460" y="301" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">SECURE (standard)</text>
+  <text x="620" y="301" font-family="Arial, sans-serif" font-size="12" fill="#555555">Files, TLS, Bitcoin</text>
+
+  <!-- SHA512 row -->
+  <rect x="60" y="314" width="750" height="36" rx="0" fill="#e3f2fd" stroke="#eeeeee" stroke-width="1"/>
+  <text x="120" y="337" font-family="monospace" font-size="12" fill="#1565c0">SHA-512</text>
+  <text x="250" y="337" font-family="Arial, sans-serif" font-size="12" fill="#333333">512-bit (128 hex)</text>
+  <text x="370" y="337" font-family="Arial, sans-serif" font-size="12" fill="#333333">Good (fast on 64-bit)</text>
+  <text x="460" y="337" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">SECURE (strong)</text>
+  <text x="620" y="337" font-family="Arial, sans-serif" font-size="12" fill="#555555">Passwords, certs</text>
+
+  <!-- SHA3 row -->
+  <rect x="60" y="350" width="750" height="36" rx="0" fill="#f3e5f5" stroke="#eeeeee" stroke-width="1"/>
+  <text x="120" y="373" font-family="monospace" font-size="12" fill="#6a1b9a">SHA-3</text>
+  <text x="250" y="373" font-family="Arial, sans-serif" font-size="12" fill="#333333">224-512-bit var</text>
+  <text x="370" y="373" font-family="Arial, sans-serif" font-size="12" fill="#333333">Moderate</text>
+  <text x="460" y="373" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">SECURE (Keccak)</text>
+  <text x="620" y="373" font-family="Arial, sans-serif" font-size="12" fill="#555555">Future-proof option</text>
+
+  <!-- == AVALANCHE DEMO == -->
+  <rect x="830" y="238" width="406" height="148" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5"/>
+  <text x="1033" y="260" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f57c00" text-anchor="middle">Avalanche Effect Demo</text>
+  <text x="850" y="282" font-family="monospace" font-size="11" fill="#333333">Input: "Hello"</text>
+  <text x="850" y="300" font-family="monospace" font-size="10" fill="#555555">SHA256: 185f8db3292...1a95</text>
+  <text x="850" y="322" font-family="monospace" font-size="11" fill="#333333">Input: "hello"  (1 char changed)</text>
+  <text x="850" y="340" font-family="monospace" font-size="10" fill="#555555">SHA256: 2cf24dba5fb0...e26</text>
+  <text x="850" y="362" font-family="Arial, sans-serif" font-size="12" fill="#f57c00">~50% of bits differ despite tiny input change.</text>
+  <text x="850" y="378" font-family="Arial, sans-serif" font-size="12" fill="#f57c00">Impossible to "nudge" a hash toward a target.</text>
+
+  <!-- == DIGITAL SIGNATURES section == -->
+  <text x="60" y="410" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Digital Signatures (Hash + Asymmetric Crypto)</text>
+  <rect x="60" y="426" width="740" height="190" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+
+  <!-- Sign flow -->
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Signing:</text>
+  <rect x="80" y="458" width="100" height="32" rx="4" fill="#1e88e5"/>
+  <text x="130" y="479" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Document</text>
+  <line x1="180" y1="474" x2="210" y2="474" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="210" y="458" width="100" height="32" rx="4" fill="#43a047"/>
+  <text x="260" y="479" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Hash(doc)</text>
+  <line x1="310" y1="474" x2="340" y2="474" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="340" y="458" width="130" height="32" rx="4" fill="#8e24aa"/>
+  <text x="405" y="474" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Encrypt(hash,</text>
+  <text x="405" y="485" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">private key)</text>
+  <line x1="470" y1="474" x2="500" y2="474" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="500" y="458" width="100" height="32" rx="4" fill="#c62828"/>
+  <text x="550" y="479" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Signature</text>
+
+  <!-- Verify flow -->
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Verifying:</text>
+  <text x="80" y="532" font-family="Arial, sans-serif" font-size="12" fill="#333333">Receiver: Hash(received doc) == Decrypt(signature, public key) ?</text>
+  <text x="80" y="552" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">YES -&gt; document is authentic and untampered</text>
+  <text x="80" y="572" font-family="Arial, sans-serif" font-size="12" fill="#c62828">NO  -&gt; document modified in transit or wrong signer</text>
+
+  <text x="80" y="596" font-family="Arial, sans-serif" font-size="12" fill="#1565c0">Used in: code signing, SSL/TLS, SSH, PGP email, git commit signing</text>
+  <text x="80" y="612" font-family="monospace" font-size="11" fill="#555555">sha256sum file.iso | sha256sum --check  # verify download integrity</text>
+
+  <!-- Forensics uses -->
+  <rect x="830" y="402" width="406" height="214" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="1.5"/>
+  <text x="1033" y="424" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Forensics: Hash Usage</text>
+  <text x="850" y="446" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Hash evidence files immediately on acquisition</text>
+  <text x="850" y="464" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Record hash in chain of custody documentation</text>
+  <text x="850" y="482" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Re-hash before analysis: proves no tampering</text>
+  <text x="850" y="500" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; NSRL database: match hashes to known malware</text>
+  <text x="850" y="518" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Hash matching: find identical files across drives</text>
+  <text x="850" y="540" font-family="monospace" font-size="11" fill="#555555">sha256sum evidence.dd</text>
+  <text x="850" y="558" font-family="monospace" font-size="11" fill="#555555">md5sum -c hashes.txt</text>
+  <text x="850" y="576" font-family="monospace" font-size="11" fill="#555555">sha512sum /dev/sdb &gt; disk.sha512</text>
+  <text x="850" y="594" font-family="Arial, sans-serif" font-size="12" fill="#c62828">Court-admissible only if hash recorded at acquisition.</text>
+  <text x="850" y="610" font-family="Arial, sans-serif" font-size="12" fill="#c62828">Use SHA-256 or better for new forensic work.</text>
+</svg>

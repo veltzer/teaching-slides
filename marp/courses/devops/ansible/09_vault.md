@@ -10,6 +10,12 @@
 
 ---
 
+## Ansible Vault Workflow
+
+![Ansible Vault Workflow](svg/courses/devops/ansible/09_vault/vault_workflow.svg)
+
+---
+
 ## Why Ansible Vault?
 
 - Playbooks and inventory are stored in version control

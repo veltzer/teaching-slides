@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- == ATTACK VECTORS (top half) == -->
+  <text x="60" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c62828">LLM Model Theft - Attack Vectors</text>
+  <text x="820" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">Mitigations</text>
+
+  <!-- Attack 1: Weight Theft -->
+  <rect x="60" y="48" width="340" height="140" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="48" width="340" height="36" rx="10" fill="#c62828"/>
+  <rect x="60" y="68" width="340" height="16" fill="#c62828"/>
+  <text x="230" y="72" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Weight Theft (Direct)</text>
+  <text x="80" y="102" font-family="Arial, sans-serif" font-size="12" fill="#333333">Attacker gains access to model files on disk</text>
+  <text x="80" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">or cloud storage, copies weights directly.</text>
+  <text x="80" y="140" font-family="Arial, sans-serif" font-size="12" fill="#555555">Attack surface: insider threat, misconfigured</text>
+  <text x="80" y="158" font-family="Arial, sans-serif" font-size="12" fill="#555555">S3 bucket, stolen cloud credentials, CI/CD</text>
+  <text x="80" y="174" font-family="Arial, sans-serif" font-size="12" fill="#555555">pipeline compromise, unencrypted storage.</text>
+
+  <!-- Attack 2: API Extraction / Model Stealing -->
+  <rect x="430" y="48" width="360" height="140" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="48" width="360" height="36" rx="10" fill="#c62828"/>
+  <rect x="430" y="68" width="360" height="16" fill="#c62828"/>
+  <text x="610" y="72" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">API Extraction (Model Stealing)</text>
+  <text x="450" y="102" font-family="Arial, sans-serif" font-size="12" fill="#333333">Attacker queries the API with crafted inputs</text>
+  <text x="450" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">and uses input/output pairs to train a surrogate</text>
+  <text x="450" y="138" font-family="Arial, sans-serif" font-size="12" fill="#333333">model that mimics the target model's behavior.</text>
+  <text x="450" y="158" font-family="Arial, sans-serif" font-size="12" fill="#555555">Technique: thousands of adaptive queries,</text>
+  <text x="450" y="174" font-family="Arial, sans-serif" font-size="12" fill="#555555">then distill into smaller clone model.</text>
+
+  <!-- Attack 3: Membership Inference -->
+  <rect x="60" y="208" width="340" height="130" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="208" width="340" height="36" rx="10" fill="#f57c00"/>
+  <rect x="60" y="228" width="340" height="16" fill="#f57c00"/>
+  <text x="230" y="232" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Membership Inference</text>
+  <text x="80" y="262" font-family="Arial, sans-serif" font-size="12" fill="#333333">Attacker determines whether a specific data</text>
+  <text x="80" y="280" font-family="Arial, sans-serif" font-size="12" fill="#333333">record was in the training set, extracting</text>
+  <text x="80" y="298" font-family="Arial, sans-serif" font-size="12" fill="#333333">private information or IP about training data.</text>
+  <text x="80" y="318" font-family="Arial, sans-serif" font-size="12" fill="#555555">Risk: reveals PII or proprietary training sets.</text>
+
+  <!-- Attack 4: Hyperparameter Extraction -->
+  <rect x="430" y="208" width="360" height="130" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="208" width="360" height="36" rx="10" fill="#f57c00"/>
+  <rect x="430" y="228" width="360" height="16" fill="#f57c00"/>
+  <text x="610" y="232" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Hyperparameter Extraction</text>
+  <text x="450" y="262" font-family="Arial, sans-serif" font-size="12" fill="#333333">Attacker probes the API to reverse-engineer</text>
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="12" fill="#333333">model architecture: layer count, embedding</text>
+  <text x="450" y="298" font-family="Arial, sans-serif" font-size="12" fill="#333333">dimensions, activation functions, context size.</text>
+  <text x="450" y="318" font-family="Arial, sans-serif" font-size="12" fill="#555555">Used to guide targeted model stealing effort.</text>
+
+  <!-- == MITIGATIONS == -->
+  <!-- Mitigation 1: Rate Limiting -->
+  <rect x="820" y="48" width="420" height="108" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="820" y="48" width="420" height="32" rx="10" fill="#2e7d32"/>
+  <rect x="820" y="64" width="420" height="16" fill="#2e7d32"/>
+  <text x="1030" y="70" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Rate Limiting + API Throttling</text>
+  <text x="840" y="96" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Limit queries per user/key per time window</text>
+  <text x="840" y="114" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Detect and block systematic probing patterns</text>
+  <text x="840" y="132" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Increase pricing / CAPTCHA at high volumes</text>
+  <text x="840" y="148" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Alert on anomalous input diversity patterns</text>
+
+  <!-- Mitigation 2: Output Filtering -->
+  <rect x="820" y="170" width="420" height="108" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="820" y="170" width="420" height="32" rx="10" fill="#2e7d32"/>
+  <rect x="820" y="186" width="420" height="16" fill="#2e7d32"/>
+  <text x="1030" y="192" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Output Filtering + Truncation</text>
+  <text x="840" y="218" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Return rounded/noisy logits instead of exact probs</text>
+  <text x="840" y="236" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Do not expose raw token probabilities</text>
+  <text x="840" y="254" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Limit output tokens to what the task requires</text>
+  <text x="840" y="272" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Redact model metadata from API responses</text>
+
+  <!-- Mitigation 3: Watermarking -->
+  <rect x="820" y="292" width="420" height="108" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="820" y="292" width="420" height="32" rx="10" fill="#2e7d32"/>
+  <rect x="820" y="308" width="420" height="16" fill="#2e7d32"/>
+  <text x="1030" y="314" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Model Watermarking</text>
+  <text x="840" y="340" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Embed covert signals in model outputs</text>
+  <text x="840" y="358" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Survive distillation into clone models</text>
+  <text x="840" y="376" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Detect stolen/cloned model in the wild</text>
+  <text x="840" y="394" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Legal evidence for IP theft litigation</text>
+
+  <!-- == BOTTOM: IMPACT AND DEFENSE LAYERS == -->
+  <rect x="60" y="360" width="740" height="250" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="430" y="384" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#555555" text-anchor="middle">Attack Impact and Defense Layers</text>
+
+  <!-- Impact table -->
+  <text x="80" y="406" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828">Impact of Successful Model Theft:</text>
+  <text x="80" y="426" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Competitor gains model without training cost (millions $)</text>
+  <text x="80" y="444" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Clone can be used to find adversarial examples against original</text>
+  <text x="80" y="462" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Safety guardrails removed from stolen weights via fine-tuning</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Private training data (PII, code) may be extractable from clone</text>
+  <text x="80" y="498" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Stolen model used to undermine API pricing strategy</text>
+
+  <text x="80" y="522" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Defense-in-Depth Layers:</text>
+  <text x="80" y="542" font-family="Arial, sans-serif" font-size="12" fill="#333333">Access control -&gt; Rate limiting -&gt; Output noise -&gt; Watermark -&gt; Monitoring -&gt; Legal</text>
+  <text x="80" y="562" font-family="Arial, sans-serif" font-size="12" fill="#333333">No single control is sufficient; layer all defenses together.</text>
+  <text x="80" y="582" font-family="Arial, sans-serif" font-size="12" fill="#555555">OWASP LLM10: Model Theft - monitor API usage anomalies continuously</text>
+  <text x="80" y="598" font-family="Arial, sans-serif" font-size="12" fill="#555555">Encrypt model weights at rest (AES-256), restrict filesystem access strictly.</text>
+
+  <!-- Monitoring box -->
+  <rect x="820" y="414" width="420" height="170" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="1030" y="436" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Monitoring and Detection</text>
+  <text x="840" y="458" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Log and analyze all API requests</text>
+  <text x="840" y="476" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Flag high-volume users with broad input diversity</text>
+  <text x="840" y="494" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Honeypot queries: plant known unique outputs</text>
+  <text x="840" y="512" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Alert on sequential/grid-search-like query patterns</text>
+  <text x="840" y="530" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Track IP ranges, user agents, time distributions</text>
+  <text x="840" y="548" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Compare public model outputs vs your API outputs</text>
+  <text x="840" y="570" font-family="Arial, sans-serif" font-size="12" fill="#555555">If clone appears in wild: activate watermark verification.</text>
+</svg>

@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- == CAPTURE WORKFLOW PIPELINE == -->
+  <text x="60" y="34" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Packet Capture Workflow</text>
+
+  <!-- Step 1 -->
+  <rect x="60" y="50" width="210" height="90" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="165" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">1. Capture</text>
+  <text x="165" y="100" font-family="Arial, sans-serif" font-size="12" fill="#bbdefb" text-anchor="middle">Select interface</text>
+  <text x="165" y="118" font-family="Arial, sans-serif" font-size="12" fill="#bbdefb" text-anchor="middle">Apply capture filter</text>
+  <text x="165" y="133" font-family="Arial, sans-serif" font-size="12" fill="#bbdefb" text-anchor="middle">NIC promiscuous mode</text>
+
+  <line x1="270" y1="95" x2="310" y2="95" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="310" y="50" width="210" height="90" rx="10" fill="#43a047" filter="url(#shadow)"/>
+  <text x="415" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">2. Filter</text>
+  <text x="415" y="100" font-family="Arial, sans-serif" font-size="12" fill="#c8e6c9" text-anchor="middle">BPF capture filter</text>
+  <text x="415" y="118" font-family="Arial, sans-serif" font-size="12" fill="#c8e6c9" text-anchor="middle">Display filter (Wireshark)</text>
+  <text x="415" y="133" font-family="Arial, sans-serif" font-size="12" fill="#c8e6c9" text-anchor="middle">Reduce noise</text>
+
+  <line x1="520" y1="95" x2="560" y2="95" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="560" y="50" width="210" height="90" rx="10" fill="#fb8c00" filter="url(#shadow)"/>
+  <text x="665" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">3. Protocol Decode</text>
+  <text x="665" y="100" font-family="Arial, sans-serif" font-size="12" fill="#fff3e0" text-anchor="middle">Layer 2-7 dissection</text>
+  <text x="665" y="118" font-family="Arial, sans-serif" font-size="12" fill="#fff3e0" text-anchor="middle">TCP streams, HTTP</text>
+  <text x="665" y="133" font-family="Arial, sans-serif" font-size="12" fill="#fff3e0" text-anchor="middle">DNS, TLS, gRPC...</text>
+
+  <line x1="770" y1="95" x2="810" y2="95" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="810" y="50" width="210" height="90" rx="10" fill="#8e24aa" filter="url(#shadow)"/>
+  <text x="915" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">4. Analysis</text>
+  <text x="915" y="100" font-family="Arial, sans-serif" font-size="12" fill="#e1bee7" text-anchor="middle">Follow streams</text>
+  <text x="915" y="118" font-family="Arial, sans-serif" font-size="12" fill="#e1bee7" text-anchor="middle">I/O graphs, stats</text>
+  <text x="915" y="133" font-family="Arial, sans-serif" font-size="12" fill="#e1bee7" text-anchor="middle">Export artifacts</text>
+
+  <!-- Step 5 -->
+  <line x1="1020" y1="95" x2="1060" y2="95" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1060" y="50" width="180" height="90" rx="10" fill="#e53935" filter="url(#shadow)"/>
+  <text x="1150" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">5. Report</text>
+  <text x="1150" y="100" font-family="Arial, sans-serif" font-size="12" fill="#ffcdd2" text-anchor="middle">Save .pcap file</text>
+  <text x="1150" y="118" font-family="Arial, sans-serif" font-size="12" fill="#ffcdd2" text-anchor="middle">Document findings</text>
+  <text x="1150" y="133" font-family="Arial, sans-serif" font-size="12" fill="#ffcdd2" text-anchor="middle">Evidence chain</text>
+
+  <!-- == WIRESHARK vs TCPDUMP == -->
+  <text x="60" y="174" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#555555">Wireshark vs tcpdump</text>
+
+  <!-- Wireshark -->
+  <rect x="60" y="190" width="540" height="200" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="330" y="212" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">Wireshark (GUI)</text>
+  <text x="80" y="234" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Graphical protocol tree: see all fields at a glance</text>
+  <text x="80" y="252" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; "Follow TCP/UDP stream" reconstructs full session</text>
+  <text x="80" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Statistics: I/O graphs, protocol hierarchy, conversations</text>
+  <text x="80" y="288" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Coloring rules highlight anomalies automatically</text>
+  <text x="80" y="306" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Decode as: force interpretation of port/protocol</text>
+  <text x="80" y="324" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; TLS decryption with session keys (SSLKEYLOGFILE)</text>
+  <text x="80" y="346" font-family="monospace" font-size="11" fill="#555555">capture filter: tcp port 80 and host 10.0.0.1</text>
+  <text x="80" y="362" font-family="monospace" font-size="11" fill="#555555">display filter: http.request.method == "POST"</text>
+  <text x="80" y="378" font-family="monospace" font-size="11" fill="#555555">display filter: tcp.flags.syn==1 &amp;&amp; tcp.flags.ack==0</text>
+
+  <!-- tcpdump -->
+  <rect x="640" y="190" width="594" height="200" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="937" y="212" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2e7d32" text-anchor="middle">tcpdump (CLI)</text>
+  <text x="660" y="234" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Lightweight CLI: ideal for remote/headless servers</text>
+  <text x="660" y="252" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; BPF filters: fast in-kernel packet selection</text>
+  <text x="660" y="270" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Write to .pcap: open later in Wireshark</text>
+  <text x="660" y="288" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Script-friendly: pipe to awk/grep for automation</text>
+  <text x="660" y="306" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Capture on production, analyze offline safely</text>
+  <text x="660" y="346" font-family="monospace" font-size="11" fill="#555555">tcpdump -i eth0 'tcp port 443' -w out.pcap</text>
+  <text x="660" y="362" font-family="monospace" font-size="11" fill="#555555">tcpdump -i any 'host 10.0.0.5 and port 80'</text>
+  <text x="660" y="378" font-family="monospace" font-size="11" fill="#555555">tcpdump -r out.pcap 'tcp[tcpflags] &amp; tcp-syn != 0'</text>
+
+  <!-- == BPF FILTER SYNTAX == -->
+  <text x="60" y="416" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565c0">BPF Filter Syntax Reference</text>
+  <rect x="60" y="432" width="740" height="188" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+
+  <text x="80" y="454" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#555555">Primitives:</text>
+  <text x="80" y="474" font-family="monospace" font-size="12" fill="#333333">host 192.168.1.1          # src or dst host</text>
+  <text x="80" y="492" font-family="monospace" font-size="12" fill="#333333">net 10.0.0.0/24           # network range</text>
+  <text x="80" y="510" font-family="monospace" font-size="12" fill="#333333">port 80                   # TCP or UDP port</text>
+  <text x="80" y="528" font-family="monospace" font-size="12" fill="#333333">tcp / udp / icmp           # protocol</text>
+
+  <text x="400" y="454" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#555555">Operators:</text>
+  <text x="400" y="474" font-family="monospace" font-size="12" fill="#333333">and / or / not            # boolean</text>
+  <text x="400" y="492" font-family="monospace" font-size="12" fill="#333333">src host 10.0.0.1         # direction</text>
+  <text x="400" y="510" font-family="monospace" font-size="12" fill="#333333">dst port 443              # destination</text>
+  <text x="400" y="528" font-family="monospace" font-size="12" fill="#333333">greater 1000              # packet size</text>
+
+  <text x="80" y="552" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#555555">Examples:</text>
+  <text x="80" y="570" font-family="monospace" font-size="12" fill="#333333">tcp port 80 or tcp port 443</text>
+  <text x="80" y="588" font-family="monospace" font-size="12" fill="#333333">host 10.0.0.1 and not port 22</text>
+  <text x="80" y="606" font-family="monospace" font-size="12" fill="#333333">icmp and src net 192.168.0.0/16</text>
+
+  <!-- == ANALYSIS USE CASES == -->
+  <rect x="830" y="432" width="404" height="188" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5"/>
+  <text x="1032" y="454" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f57c00" text-anchor="middle">Common Analysis Use Cases</text>
+  <text x="850" y="476" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Debug connection resets (TCP RST)</text>
+  <text x="850" y="496" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Measure RTT and identify latency sources</text>
+  <text x="850" y="516" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Detect retransmissions and packet loss</text>
+  <text x="850" y="536" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Verify TLS handshake and cipher suites</text>
+  <text x="850" y="556" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Inspect HTTP headers and payloads</text>
+  <text x="850" y="576" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Find unexpected outbound connections</text>
+  <text x="850" y="596" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; DNS query/response analysis</text>
+  <text x="850" y="616" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; ARP spoofing / MITM detection</text>
+</svg>

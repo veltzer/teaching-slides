@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <rect x="30" y="14" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Workflow Best Practices</text>
+
+  <!-- Reusable workflows -->
+  <rect x="30" y="74" width="590" height="196" rx="5" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="325" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Reusable Workflows (workflow_call)</text>
+  <text x="45" y="120" font-family="monospace" font-size="11" fill="#888888"># .github/workflows/reusable-ci.yml</text>
+  <text x="45" y="138" font-family="monospace" font-size="11" fill="#333333">on:</text>
+  <text x="60" y="156" font-family="monospace" font-size="11" fill="#333333">  workflow_call:</text>
+  <text x="75" y="174" font-family="monospace" font-size="11" fill="#333333">    inputs:</text>
+  <text x="90" y="192" font-family="monospace" font-size="11" fill="#333333">      node-version: {type: string}</text>
+  <text x="75" y="210" font-family="monospace" font-size="11" fill="#333333">    secrets:</text>
+  <text x="90" y="228" font-family="monospace" font-size="11" fill="#333333">      NPM_TOKEN: {required: true}</text>
+  <text x="45" y="252" font-family="monospace" font-size="11" fill="#888888"># caller workflow</text>
+  <text x="45" y="270" font-family="monospace" font-size="11" fill="#333333">uses: org/repo/.github/workflows/ci.yml@main</text>
+
+  <!-- Caching -->
+  <rect x="660" y="74" width="590" height="196" rx="5" fill="#e8f5e9" filter="url(#shadow)"/>
+  <text x="955" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Caching Dependencies</text>
+  <text x="675" y="120" font-family="monospace" font-size="11" fill="#333333">- uses: actions/cache@v4</text>
+  <text x="690" y="138" font-family="monospace" font-size="11" fill="#333333">  with:</text>
+  <text x="705" y="156" font-family="monospace" font-size="11" fill="#333333">    path: ~/.npm</text>
+  <text x="705" y="174" font-family="monospace" font-size="11" fill="#333333">    key: npm-${{ runner.os }}-</text>
+  <text x="720" y="192" font-family="monospace" font-size="11" fill="#333333">      ${{ hashFiles('**/package-lock.json') }}</text>
+  <text x="705" y="210" font-family="monospace" font-size="11" fill="#333333">    restore-keys: npm-${{ runner.os }}-</text>
+  <text x="675" y="234" font-family="Arial, sans-serif" font-size="12" fill="#555555">setup-* actions have built-in cache: option</text>
+  <text x="675" y="254" font-family="Arial, sans-serif" font-size="12" fill="#555555">Cache key includes file hash - invalidated on change</text>
+  <text x="675" y="274" font-family="Arial, sans-serif" font-size="12" fill="#555555">restore-keys provide fallback partial matches</text>
+
+  <!-- Concurrency -->
+  <rect x="30" y="288" width="390" height="196" rx="5" fill="#fff3e0" filter="url(#shadow)"/>
+  <text x="225" y="312" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Concurrency Control</text>
+  <text x="45" y="336" font-family="monospace" font-size="11" fill="#333333">concurrency:</text>
+  <text x="60" y="354" font-family="monospace" font-size="11" fill="#333333">  group: ${{ github.workflow }}-</text>
+  <text x="75" y="372" font-family="monospace" font-size="11" fill="#333333">    ${{ github.ref }}</text>
+  <text x="60" y="390" font-family="monospace" font-size="11" fill="#333333">  cancel-in-progress: true</text>
+  <text x="45" y="414" font-family="Arial, sans-serif" font-size="12" fill="#555555">Cancels old PR runs when new push arrives</text>
+  <text x="45" y="434" font-family="Arial, sans-serif" font-size="12" fill="#555555">Prevents duplicate deploys</text>
+  <text x="45" y="454" font-family="Arial, sans-serif" font-size="12" fill="#555555">Set cancel-in-progress: false on main branch</text>
+  <text x="45" y="474" font-family="Arial, sans-serif" font-size="12" fill="#555555">Saves runner minutes and reduces conflicts</text>
+
+  <!-- Security -->
+  <rect x="440" y="288" width="400" height="196" rx="5" fill="#fce4ec" filter="url(#shadow)"/>
+  <text x="640" y="312" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">Security: Tokens and Secrets</text>
+  <text x="455" y="336" font-family="monospace" font-size="11" fill="#333333">permissions:</text>
+  <text x="470" y="354" font-family="monospace" font-size="11" fill="#333333">  contents: read</text>
+  <text x="470" y="372" font-family="monospace" font-size="11" fill="#333333">  pull-requests: write</text>
+  <text x="455" y="394" font-family="Arial, sans-serif" font-size="12" fill="#555555">GITHUB_TOKEN: auto-created per job</text>
+  <text x="455" y="414" font-family="Arial, sans-serif" font-size="12" fill="#555555">Limit GITHUB_TOKEN permissions at top level</text>
+  <text x="455" y="434" font-family="Arial, sans-serif" font-size="12" fill="#555555">Never print secrets to logs</text>
+  <text x="455" y="454" font-family="Arial, sans-serif" font-size="12" fill="#555555">Use secrets.NAME - never hardcode in YAML</text>
+  <text x="455" y="474" font-family="Arial, sans-serif" font-size="12" fill="#555555">Environment protection rules for prod secrets</text>
+
+  <!-- Matrix strategy -->
+  <rect x="860" y="288" width="390" height="196" rx="5" fill="#f3e5f5" filter="url(#shadow)"/>
+  <text x="1055" y="312" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Matrix Strategy</text>
+  <text x="875" y="336" font-family="monospace" font-size="11" fill="#333333">strategy:</text>
+  <text x="890" y="354" font-family="monospace" font-size="11" fill="#333333">  matrix:</text>
+  <text x="905" y="372" font-family="monospace" font-size="11" fill="#333333">    os: [ubuntu, macos, windows]</text>
+  <text x="905" y="390" font-family="monospace" font-size="11" fill="#333333">    python: ["3.11", "3.12"]</text>
+  <text x="890" y="408" font-family="monospace" font-size="11" fill="#333333">  fail-fast: false</text>
+  <text x="890" y="426" font-family="monospace" font-size="11" fill="#333333">  max-parallel: 4</text>
+  <text x="875" y="450" font-family="Arial, sans-serif" font-size="12" fill="#555555">3 x 2 = 6 parallel jobs</text>
+  <text x="875" y="470" font-family="Arial, sans-serif" font-size="12" fill="#555555">include/exclude to adjust matrix cells</text>
+  <text x="875" y="490" font-family="Arial, sans-serif" font-size="12" fill="#555555">fail-fast: false - all cells run to completion</text>
+
+  <!-- Bottom tips -->
+  <rect x="30" y="502" width="1220" height="118" rx="6" fill="#f5f5f5" filter="url(#shadow)"/>
+  <text x="640" y="526" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Optimization Tips</text>
+  <text x="50" y="548" font-family="Arial, sans-serif" font-size="12" fill="#333333">Use needs: to express job dependencies and run independent jobs in parallel</text>
+  <text x="50" y="568" font-family="Arial, sans-serif" font-size="12" fill="#333333">Use if: github.event_name == 'push' to skip expensive steps on PR builds</text>
+  <text x="50" y="588" font-family="Arial, sans-serif" font-size="12" fill="#333333">Use paths: filter to skip workflows when unrelated files change (e.g. docs-only changes)</text>
+  <text x="50" y="608" font-family="Arial, sans-serif" font-size="12" fill="#333333">Upload test results as artifacts; use continue-on-error: true on flaky steps</text>
+</svg>

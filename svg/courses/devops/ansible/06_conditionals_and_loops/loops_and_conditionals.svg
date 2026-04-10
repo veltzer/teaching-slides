@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Loops and Conditionals in Ansible</text>
+
+  <!-- === COLUMN 1: when clause === -->
+  <rect x="20" y="62" width="295" height="260" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="62" width="295" height="30" rx="8" fill="url(#grad-accent)"/>
+  <rect x="20" y="80" width="295" height="12" fill="url(#grad-accent)"/>
+  <text x="167" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">when Clause</text>
+  <text x="35" y="112" font-family="monospace" font-size="11" fill="#333333">- name: Install on Debian</text>
+  <text x="35" y="129" font-family="monospace" font-size="11" fill="#333333">  apt:</text>
+  <text x="35" y="146" font-family="monospace" font-size="11" fill="#333333">    name: nginx</text>
+  <text x="35" y="163" font-family="monospace" font-size="11" fill="#e65100">  when: ansible_os_family</text>
+  <text x="35" y="179" font-family="monospace" font-size="11" fill="#e65100">       == "Debian"</text>
+  <line x1="35" y1="192" x2="300" y2="192" stroke="#dddddd" stroke-width="1"/>
+  <text x="35" y="210" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Multiple conditions:</text>
+  <text x="35" y="228" font-family="monospace" font-size="11" fill="#333333">  when:</text>
+  <text x="35" y="245" font-family="monospace" font-size="11" fill="#333333">    - ansible_memtotal_mb &gt;= 2048</text>
+  <text x="35" y="262" font-family="monospace" font-size="11" fill="#333333">    - "'web' in group_names"</text>
+  <text x="35" y="279" font-family="monospace" font-size="11" fill="#555555">  # list items = AND logic</text>
+  <text x="35" y="296" font-family="monospace" font-size="11" fill="#333333">  when: a or b or c</text>
+  <text x="35" y="313" font-family="monospace" font-size="11" fill="#555555">  # 'or' for OR logic</text>
+
+  <!-- === COLUMN 2: loop / with_items === -->
+  <rect x="330" y="62" width="295" height="260" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="330" y="62" width="295" height="30" rx="8" fill="url(#grad-green)"/>
+  <rect x="330" y="80" width="295" height="12" fill="url(#grad-green)"/>
+  <text x="477" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">loop / with_items</text>
+  <text x="345" y="112" font-family="monospace" font-size="11" fill="#333333">- name: Install packages</text>
+  <text x="345" y="129" font-family="monospace" font-size="11" fill="#333333">  apt:</text>
+  <text x="345" y="146" font-family="monospace" font-size="11" fill="#333333">    name: "{{ item }}"</text>
+  <text x="345" y="163" font-family="monospace" font-size="11" fill="#2e7d32">  loop:</text>
+  <text x="345" y="180" font-family="monospace" font-size="11" fill="#2e7d32">    - nginx</text>
+  <text x="345" y="197" font-family="monospace" font-size="11" fill="#2e7d32">    - curl</text>
+  <text x="345" y="214" font-family="monospace" font-size="11" fill="#2e7d32">    - git</text>
+  <line x1="345" y1="226" x2="610" y2="226" stroke="#dddddd" stroke-width="1"/>
+  <text x="345" y="244" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Loop over dicts:</text>
+  <text x="345" y="262" font-family="monospace" font-size="11" fill="#333333">  loop:</text>
+  <text x="345" y="279" font-family="monospace" font-size="11" fill="#333333">    - { name: bob, uid: 1001 }</text>
+  <text x="345" y="296" font-family="monospace" font-size="11" fill="#333333">    - { name: alice, uid: 1002 }</text>
+  <text x="345" y="313" font-family="monospace" font-size="11" fill="#555555">  # access: item.name, item.uid</text>
+
+  <!-- === COLUMN 3: loop_control === -->
+  <rect x="640" y="62" width="295" height="260" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="62" width="295" height="30" rx="8" fill="url(#grad-orange)"/>
+  <rect x="640" y="80" width="295" height="12" fill="url(#grad-orange)"/>
+  <text x="787" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">loop_control</text>
+  <text x="655" y="112" font-family="monospace" font-size="11" fill="#333333">- name: Process users</text>
+  <text x="655" y="129" font-family="monospace" font-size="11" fill="#333333">  user:</text>
+  <text x="655" y="146" font-family="monospace" font-size="11" fill="#333333">    name: "{{ usr.name }}"</text>
+  <text x="655" y="163" font-family="monospace" font-size="11" fill="#333333">  loop: "{{ users }}"</text>
+  <text x="655" y="180" font-family="monospace" font-size="11" fill="#e65100">  loop_control:</text>
+  <text x="655" y="197" font-family="monospace" font-size="11" fill="#e65100">    loop_var: usr</text>
+  <text x="655" y="214" font-family="monospace" font-size="11" fill="#e65100">    label: "{{ usr.name }}"</text>
+  <text x="655" y="231" font-family="monospace" font-size="11" fill="#e65100">    index_var: idx</text>
+  <line x1="655" y1="243" x2="920" y2="243" stroke="#dddddd" stroke-width="1"/>
+  <text x="655" y="261" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e65100">Loop with pause:</text>
+  <text x="655" y="279" font-family="monospace" font-size="11" fill="#e65100">  loop_control:</text>
+  <text x="655" y="296" font-family="monospace" font-size="11" fill="#e65100">    pause: 5</text>
+  <text x="655" y="313" font-family="monospace" font-size="11" fill="#555555">  # 5 second pause/iteration</text>
+
+  <!-- === COLUMN 4: register + when === -->
+  <rect x="950" y="62" width="310" height="260" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="950" y="62" width="310" height="30" rx="8" fill="url(#grad-purple)"/>
+  <rect x="950" y="80" width="310" height="12" fill="url(#grad-purple)"/>
+  <text x="1105" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">register + when Pattern</text>
+  <text x="965" y="112" font-family="monospace" font-size="11" fill="#333333">- name: Check if file exists</text>
+  <text x="965" y="129" font-family="monospace" font-size="11" fill="#333333">  stat:</text>
+  <text x="965" y="146" font-family="monospace" font-size="11" fill="#333333">    path: /etc/app.conf</text>
+  <text x="965" y="163" font-family="monospace" font-size="11" fill="#6a1b9a">  register: conf_stat</text>
+  <text x="965" y="180" font-family="monospace" font-size="11" fill="#333333">- name: Configure app</text>
+  <text x="965" y="197" font-family="monospace" font-size="11" fill="#333333">  template:</text>
+  <text x="965" y="214" font-family="monospace" font-size="11" fill="#333333">    src: app.conf.j2</text>
+  <text x="965" y="231" font-family="monospace" font-size="11" fill="#333333">    dest: /etc/app.conf</text>
+  <text x="965" y="248" font-family="monospace" font-size="11" fill="#6a1b9a">  when: not conf_stat.stat.exists</text>
+  <line x1="965" y1="261" x2="1245" y2="261" stroke="#dddddd" stroke-width="1"/>
+  <text x="965" y="279" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">Check command output:</text>
+  <text x="965" y="297" font-family="monospace" font-size="11" fill="#6a1b9a">  when: result.rc != 0</text>
+  <text x="965" y="314" font-family="monospace" font-size="11" fill="#6a1b9a">  when: "'error' in result.stdout"</text>
+
+  <!-- Bottom section: when+loop combined -->
+  <rect x="20" y="335" width="605" height="125" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="335" width="605" height="30" rx="8" fill="url(#grad-green)"/>
+  <rect x="20" y="353" width="605" height="12" fill="url(#grad-green)"/>
+  <text x="322" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Combining when + loop</text>
+  <text x="35" y="387" font-family="monospace" font-size="12" fill="#333333">- name: Create dirs for enabled services</text>
+  <text x="35" y="405" font-family="monospace" font-size="12" fill="#333333">  file: path=/var/{{ item.name }} state=directory</text>
+  <text x="35" y="423" font-family="monospace" font-size="12" fill="#2e7d32">  loop: "{{ services }}"</text>
+  <text x="35" y="441" font-family="monospace" font-size="12" fill="#e65100">  when: item.enabled | bool</text>
+  <text x="370" y="387" font-family="Arial, sans-serif" font-size="11" fill="#555555">Note: when is evaluated</text>
+  <text x="370" y="405" font-family="Arial, sans-serif" font-size="11" fill="#555555">per iteration, not once.</text>
+  <text x="370" y="423" font-family="Arial, sans-serif" font-size="11" fill="#555555">Use loop_control.when</text>
+  <text x="370" y="441" font-family="Arial, sans-serif" font-size="11" fill="#555555">for clarity in output.</text>
+
+  <!-- Bottom right: useful loop keywords -->
+  <rect x="640" y="335" width="620" height="125" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="335" width="620" height="30" rx="8" fill="url(#grad-accent)"/>
+  <rect x="640" y="353" width="620" height="12" fill="url(#grad-accent)"/>
+  <text x="950" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Useful Loop Patterns</text>
+  <text x="655" y="385" font-family="monospace" font-size="12" fill="#1565c0">loop: "{{ range(1,6) | list }}"</text>
+  <text x="655" y="403" font-family="monospace" font-size="12" fill="#1565c0">loop: "{{ dict | dict2items }}"</text>
+  <text x="655" y="421" font-family="monospace" font-size="12" fill="#1565c0">loop: "{{ list1 + list2 }}"</text>
+  <text x="920" y="385" font-family="Arial, sans-serif" font-size="11" fill="#555555">Numeric range</text>
+  <text x="920" y="403" font-family="Arial, sans-serif" font-size="11" fill="#555555">Dict iteration</text>
+  <text x="920" y="421" font-family="Arial, sans-serif" font-size="11" fill="#555555">List concatenation</text>
+  <text x="655" y="451" font-family="monospace" font-size="12" fill="#1565c0">with_nested: [listA, listB]</text>
+  <text x="920" y="451" font-family="Arial, sans-serif" font-size="11" fill="#555555">Cartesian product (legacy)</text>
+
+  <!-- Quick tips bar -->
+  <rect x="20" y="472" width="1240" height="50" rx="6" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="35" y="490" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e65100">Tips:</text>
+  <text x="80" y="490" font-family="Arial, sans-serif" font-size="12" fill="#555555">Use loop: over with_items: (modern).</text>
+  <text x="360" y="490" font-family="Arial, sans-serif" font-size="12" fill="#555555">Avoid deeply nested loops - extract to roles.</text>
+  <text x="680" y="490" font-family="Arial, sans-serif" font-size="12" fill="#555555">Use until: with retries: for polling patterns.</text>
+  <text x="35" y="512" font-family="monospace" font-size="12" fill="#1565c0">- name: Wait   command: curl http://app   register: r   until: r.rc==0   retries: 10   delay: 3</text>
+</svg>

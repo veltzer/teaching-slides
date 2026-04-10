@@ -2,6 +2,12 @@
 
 ---
 
+## CMake Install Workflow
+
+![CMake install workflow: targets, GNUInstallDirs, component install](svg/courses/build_systems/cmake/05_installing_software/cmake_install_workflow.svg)
+
+---
+
 ## Chapter Overview
 
 - Why install rules matter

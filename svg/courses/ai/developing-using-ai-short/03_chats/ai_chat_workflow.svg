@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- == TITLE ROW == -->
+  <!-- Three main cycle boxes -->
+  <!-- Box 1: Prompt -->
+  <rect x="60" y="60" width="240" height="120" rx="12" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="180" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">PROMPT</text>
+  <text x="180" y="138" font-family="Arial, sans-serif" font-size="14" fill="#bbdefb" text-anchor="middle">Describe your problem</text>
+  <text x="180" y="158" font-family="Arial, sans-serif" font-size="14" fill="#bbdefb" text-anchor="middle">or code task</text>
+
+  <!-- Arrow 1 to 2 -->
+  <line x1="300" y1="120" x2="380" y2="120" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Response -->
+  <rect x="380" y="60" width="240" height="120" rx="12" fill="#43a047" filter="url(#shadow)"/>
+  <text x="500" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">RESPONSE</text>
+  <text x="500" y="138" font-family="Arial, sans-serif" font-size="14" fill="#c8e6c9" text-anchor="middle">AI generates code,</text>
+  <text x="500" y="158" font-family="Arial, sans-serif" font-size="14" fill="#c8e6c9" text-anchor="middle">explanation, or fix</text>
+
+  <!-- Arrow 2 to 3 -->
+  <line x1="620" y1="120" x2="700" y2="120" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Refine -->
+  <rect x="700" y="60" width="240" height="120" rx="12" fill="#fb8c00" filter="url(#shadow)"/>
+  <text x="820" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">REFINE</text>
+  <text x="820" y="138" font-family="Arial, sans-serif" font-size="14" fill="#fff3e0" text-anchor="middle">Review, test, and</text>
+  <text x="820" y="158" font-family="Arial, sans-serif" font-size="14" fill="#fff3e0" text-anchor="middle">iterate on output</text>
+
+  <!-- Loop arrow back: refine -> prompt (curved arc below) -->
+  <path d="M820,180 Q820,240 500,240 Q180,240 180,180" stroke="#8e24aa" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="13" fill="#8e24aa" text-anchor="middle">iterate until satisfied</text>
+
+  <!-- == WHEN TO USE == -->
+  <text x="64" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">When to Use Chat AI</text>
+  <text x="660" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">When to Use IDE AI</text>
+
+  <!-- Chat AI use cases -->
+  <rect x="60" y="335" width="560" height="140" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="80" y="362" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Exploring unfamiliar technologies or APIs</text>
+  <text x="80" y="386" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Designing architecture and brainstorming solutions</text>
+  <text x="80" y="410" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Debugging tricky errors with full context</text>
+  <text x="80" y="434" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Generating boilerplate or scaffold code from scratch</text>
+  <text x="80" y="458" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Long multi-turn conversations with deep context</text>
+
+  <!-- IDE AI use cases -->
+  <rect x="660" y="335" width="560" height="140" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="680" y="362" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Inline autocomplete while typing code</text>
+  <text x="680" y="386" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Quick refactoring within the editor context</text>
+  <text x="680" y="410" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Real-time suggestions tied to open files</text>
+  <text x="680" y="434" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Test generation for the current function</text>
+  <text x="680" y="458" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Navigating and explaining existing code</text>
+
+  <!-- == PROMPTING STRATEGIES == -->
+  <text x="64" y="510" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#555555">Prompting Strategies for Code Generation</text>
+
+  <!-- Strategy boxes -->
+  <rect x="60" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="195" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Be Specific</text>
+  <text x="195" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Language, version, framework,</text>
+  <text x="195" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">style guide, and constraints</text>
+  <text x="195" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">must all be stated explicitly</text>
+
+  <rect x="350" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="485" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Provide Context</text>
+  <text x="485" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Paste relevant code snippets,</text>
+  <text x="485" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">error messages, or data</text>
+  <text x="485" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">samples before asking</text>
+
+  <rect x="640" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="775" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f57c00" text-anchor="middle">Iterate Quickly</text>
+  <text x="775" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Accept partial output, test it,</text>
+  <text x="775" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">then ask for fixes or changes</text>
+  <text x="775" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">in the same conversation</text>
+
+  <rect x="930" y="525" width="290" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="1075" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Verify Output</text>
+  <text x="1075" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Run tests, check logic, and</text>
+  <text x="1075" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">review security implications</text>
+  <text x="1075" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">before using in production</text>
+</svg>

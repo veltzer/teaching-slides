@@ -1,5 +1,13 @@
 # Best Practices and Real Examples
 
+---
+
+## Makefile Best Practices
+
+![Makefile best practices: PHONY targets, variable organization, debug, help target](svg/courses/build_systems/make/05_best_practices/makefile_best_practices.svg)
+
+---
+
 ## Overview
 - Makefile organization and structure
 - Common patterns and idioms

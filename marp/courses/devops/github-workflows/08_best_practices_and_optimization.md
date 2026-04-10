@@ -2,6 +2,12 @@
 
 ---
 
+## Workflow Best Practices
+
+![GitHub Workflow best practices: reusable workflows, caching, concurrency, security, matrix](svg/courses/devops/github-workflows/08_best_practices_and_optimization/workflow_best_practices.svg)
+
+---
+
 ## Workflow Organization
 
 ```tree

@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- == SECTION LABELS == -->
+  <text x="60" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Web Server Architecture</text>
+  <text x="560" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Reverse Proxy Pattern</text>
+  <text x="960" y="30" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f57c00">Postfix Mail Flow</text>
+
+  <!-- == WEB SERVER SECTION == -->
+  <!-- Client -->
+  <rect x="60" y="50" width="100" height="50" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="110" y="80" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Browser</text>
+
+  <!-- Arrow -->
+  <line x1="160" y1="75" x2="200" y2="75" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="180" y="68" font-family="Arial, sans-serif" font-size="10" fill="#555555" text-anchor="middle">HTTP/S</text>
+
+  <!-- nginx box -->
+  <rect x="200" y="42" width="150" height="66" rx="8" fill="#43a047" filter="url(#shadow)"/>
+  <text x="275" y="68" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">nginx</text>
+  <text x="275" y="86" font-family="Arial, sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">Event-driven, async</text>
+  <text x="275" y="100" font-family="Arial, sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">:80 / :443</text>
+
+  <!-- nginx features -->
+  <rect x="200" y="120" width="150" height="140" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+  <text x="275" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">nginx Features</text>
+  <text x="215" y="158" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Static file serving</text>
+  <text x="215" y="174" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; TLS termination</text>
+  <text x="215" y="190" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Load balancing</text>
+  <text x="215" y="206" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Reverse proxy</text>
+  <text x="215" y="222" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Rate limiting</text>
+  <text x="215" y="238" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; HTTP/2 support</text>
+
+  <!-- vs Apache -->
+  <text x="380" y="75" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#555555" text-anchor="middle">vs</text>
+
+  <!-- Apache box -->
+  <rect x="400" y="42" width="150" height="66" rx="8" fill="#fb8c00" filter="url(#shadow)"/>
+  <text x="475" y="68" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Apache</text>
+  <text x="475" y="86" font-family="Arial, sans-serif" font-size="11" fill="#fff3e0" text-anchor="middle">Process/thread model</text>
+  <text x="475" y="100" font-family="Arial, sans-serif" font-size="11" fill="#fff3e0" text-anchor="middle">:80 / :443</text>
+
+  <!-- Apache features -->
+  <rect x="400" y="120" width="150" height="140" rx="6" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="475" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f57c00" text-anchor="middle">Apache Features</text>
+  <text x="415" y="158" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; .htaccess overrides</text>
+  <text x="415" y="174" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; mod_rewrite, mod_ssl</text>
+  <text x="415" y="190" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Dynamic modules</text>
+  <text x="415" y="206" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; CGI/WSGI support</text>
+  <text x="415" y="222" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Per-dir config</text>
+  <text x="415" y="238" font-family="Arial, sans-serif" font-size="11" fill="#333333">&#x2022; Virtual hosting</text>
+
+  <!-- comparison table -->
+  <rect x="60" y="280" width="490" height="130" rx="6" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="305" y="302" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#555555" text-anchor="middle">nginx vs Apache Quick Comparison</text>
+  <text x="80" y="322" font-family="Arial, sans-serif" font-size="12" fill="#333333">Concurrency:  nginx event-driven (thousands)  vs  Apache 1 thread/process</text>
+  <text x="80" y="342" font-family="Arial, sans-serif" font-size="12" fill="#333333">Memory:       nginx low per-connection        vs  Apache higher per-thread</text>
+  <text x="80" y="362" font-family="Arial, sans-serif" font-size="12" fill="#333333">Config:       nginx server/location blocks     vs  Apache .htaccess + VirtualHost</text>
+  <text x="80" y="382" font-family="Arial, sans-serif" font-size="12" fill="#333333">Best for:     nginx static/proxy/LB            vs  Apache dynamic/legacy apps</text>
+  <text x="80" y="402" font-family="Arial, sans-serif" font-size="12" fill="#555555">Both support HTTPS, virtual hosting, and are production-grade choices.</text>
+
+  <!-- == REVERSE PROXY SECTION == -->
+  <!-- Client box -->
+  <rect x="560" y="50" width="80" height="50" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="600" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Clients</text>
+
+  <!-- Arrow to proxy -->
+  <line x1="640" y1="75" x2="680" y2="75" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- HAProxy box -->
+  <rect x="680" y="44" width="130" height="62" rx="8" fill="#8e24aa" filter="url(#shadow)"/>
+  <text x="745" y="68" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">HAProxy /</text>
+  <text x="745" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">nginx proxy</text>
+  <text x="745" y="100" font-family="Arial, sans-serif" font-size="10" fill="#e1bee7" text-anchor="middle">Reverse Proxy + LB</text>
+
+  <!-- Arrows to backends -->
+  <line x1="810" y1="65" x2="856" y2="50" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="810" y1="75" x2="856" y2="90" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="810" y1="85" x2="856" y2="130" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Backend 1 -->
+  <rect x="856" y="32" width="110" height="40" rx="6" fill="#43a047"/>
+  <text x="911" y="56" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">App Server 1</text>
+
+  <!-- Backend 2 -->
+  <rect x="856" y="72" width="110" height="40" rx="6" fill="#43a047"/>
+  <text x="911" y="96" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">App Server 2</text>
+
+  <!-- Backend 3 -->
+  <rect x="856" y="112" width="110" height="40" rx="6" fill="#43a047"/>
+  <text x="911" y="136" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">App Server 3</text>
+
+  <!-- Proxy features -->
+  <rect x="560" y="175" width="490" height="240" rx="6" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1"/>
+  <text x="805" y="196" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Reverse Proxy Benefits</text>
+  <text x="580" y="218" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Hide backend topology from public internet</text>
+  <text x="580" y="238" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; SSL/TLS termination at the proxy layer</text>
+  <text x="580" y="258" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Load balance across multiple backends</text>
+  <text x="580" y="278" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Health checks: auto-remove failed nodes</text>
+  <text x="580" y="298" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Session persistence (sticky sessions)</text>
+  <text x="580" y="318" font-family="Arial, sans-serif" font-size="12" fill="#333333">&#x2022; Caching and request coalescing</text>
+  <text x="580" y="346" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">HAProxy algorithms: roundrobin | leastconn | source | random</text>
+  <text x="580" y="366" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">nginx upstream: round_robin | ip_hash | least_conn | weight</text>
+  <text x="580" y="394" font-family="monospace" font-size="11" fill="#555555">upstream backend &#x7b; least_conn; server app1:8080; server app2:8080; &#x7d;</text>
+
+  <!-- == POSTFIX MAIL FLOW == -->
+  <!-- MUA -->
+  <rect x="960" y="50" width="90" height="44" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1005" y="72" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">MUA</text>
+  <text x="1005" y="87" font-family="Arial, sans-serif" font-size="10" fill="#bbdefb" text-anchor="middle">Email client</text>
+
+  <!-- Arrow down -->
+  <line x1="1005" y1="94" x2="1005" y2="118" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1020" y="110" font-family="Arial, sans-serif" font-size="10" fill="#555555">SMTP 587</text>
+
+  <!-- Postfix MTA -->
+  <rect x="950" y="118" width="200" height="50" rx="8" fill="#fb8c00" filter="url(#shadow)"/>
+  <text x="1050" y="142" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Postfix MTA</text>
+  <text x="1050" y="159" font-family="Arial, sans-serif" font-size="11" fill="#fff3e0" text-anchor="middle">smtpd + smtp + local</text>
+
+  <!-- Arrows from Postfix -->
+  <line x1="1050" y1="168" x2="1050" y2="196" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Queue -->
+  <rect x="990" y="196" width="120" height="36" rx="6" fill="#ff8f00"/>
+  <text x="1050" y="218" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Mail Queue</text>
+
+  <!-- To remote or local delivery -->
+  <line x1="990" y1="214" x2="960" y2="252" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1110" y1="214" x2="1140" y2="252" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Local delivery -->
+  <rect x="920" y="252" width="110" height="36" rx="6" fill="#43a047"/>
+  <text x="975" y="274" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Local Delivery</text>
+
+  <!-- Remote MTA -->
+  <rect x="1100" y="252" width="110" height="36" rx="6" fill="#1e88e5"/>
+  <text x="1155" y="274" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Remote MTA</text>
+
+  <!-- Postfix config notes -->
+  <rect x="940" y="304" width="296" height="110" rx="6" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="1088" y="324" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f57c00" text-anchor="middle">Postfix Key Config</text>
+  <text x="960" y="344" font-family="monospace" font-size="11" fill="#333333">myhostname = mail.example.com</text>
+  <text x="960" y="360" font-family="monospace" font-size="11" fill="#333333">mydomain = example.com</text>
+  <text x="960" y="376" font-family="monospace" font-size="11" fill="#333333">mynetworks = 127.0.0.0/8</text>
+  <text x="960" y="392" font-family="monospace" font-size="11" fill="#333333">relay_domains = $mydestination</text>
+  <text x="960" y="408" font-family="monospace" font-size="11" fill="#333333">smtpd_tls_security_level = may</text>
+
+  <!-- == BOTTOM SUMMARY == -->
+  <rect x="60" y="430" width="1160" height="190" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
+  <text x="640" y="454" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#555555" text-anchor="middle">Service Summary</text>
+
+  <rect x="80" y="464" width="340" height="144" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+  <text x="250" y="484" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">nginx (Web Server)</text>
+  <text x="100" y="504" font-family="monospace" font-size="11" fill="#555555">apt install nginx</text>
+  <text x="100" y="520" font-family="monospace" font-size="11" fill="#555555">systemctl enable --now nginx</text>
+  <text x="100" y="536" font-family="monospace" font-size="11" fill="#555555">/etc/nginx/sites-available/</text>
+  <text x="100" y="552" font-family="monospace" font-size="11" fill="#555555">nginx -t  # test config</text>
+  <text x="100" y="568" font-family="monospace" font-size="11" fill="#555555">nginx -s reload  # hot reload</text>
+  <text x="100" y="588" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">Logs: /var/log/nginx/{access,error}.log</text>
+  <text x="100" y="604" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">TLS: /etc/nginx/ssl/ + certbot</text>
+
+  <rect x="440" y="464" width="360" height="144" rx="6" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1"/>
+  <text x="620" y="484" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a" text-anchor="middle">HAProxy (Load Balancer)</text>
+  <text x="460" y="504" font-family="monospace" font-size="11" fill="#555555">apt install haproxy</text>
+  <text x="460" y="520" font-family="monospace" font-size="11" fill="#555555">/etc/haproxy/haproxy.cfg</text>
+  <text x="460" y="536" font-family="monospace" font-size="11" fill="#555555">frontend http_in</text>
+  <text x="460" y="552" font-family="monospace" font-size="11" fill="#555555">  bind *:80</text>
+  <text x="460" y="568" font-family="monospace" font-size="11" fill="#555555">  default_backend webservers</text>
+  <text x="460" y="584" font-family="monospace" font-size="11" fill="#555555">backend webservers</text>
+  <text x="460" y="600" font-family="monospace" font-size="11" fill="#555555">  balance roundrobin</text>
+  <text x="460" y="616" font-family="monospace" font-size="11" fill="#555555">  server s1 10.0.0.1:80 check</text>
+
+  <rect x="820" y="464" width="380" height="144" rx="6" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="1010" y="484" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f57c00" text-anchor="middle">Postfix (MTA)</text>
+  <text x="840" y="504" font-family="monospace" font-size="11" fill="#555555">apt install postfix</text>
+  <text x="840" y="520" font-family="monospace" font-size="11" fill="#555555">/etc/postfix/main.cf</text>
+  <text x="840" y="536" font-family="monospace" font-size="11" fill="#555555">postfix check  # validate</text>
+  <text x="840" y="552" font-family="monospace" font-size="11" fill="#555555">postfix reload  # hot reload</text>
+  <text x="840" y="568" font-family="monospace" font-size="11" fill="#555555">mailq  # view queue</text>
+  <text x="840" y="584" font-family="monospace" font-size="11" fill="#555555">postsuper -d ALL  # flush queue</text>
+  <text x="840" y="604" font-family="Arial, sans-serif" font-size="11" fill="#f57c00">Logs: /var/log/mail.log</text>
+  <text x="840" y="620" font-family="Arial, sans-serif" font-size="11" fill="#f57c00">DKIM/SPF/DMARC: anti-spam stack</text>
+</svg>

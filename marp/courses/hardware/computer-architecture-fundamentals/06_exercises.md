@@ -2,6 +2,12 @@
 
 ---
 
+## Architecture Exercises Guide
+
+![CPU and memory exercises: lscpu, /proc/cpuinfo, cache performance, memory latency, TLB](svg/courses/hardware/computer-architecture-fundamentals/06_exercises/architecture_exercises_guide.svg)
+
+---
+
 ## Table of Contents
 
 1. Reading CPU Information

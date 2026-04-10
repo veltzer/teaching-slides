@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <rect x="30" y="14" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Custom GitHub Action Types</text>
+
+  <!-- Three type columns -->
+  <rect x="30" y="74" width="380" height="250" rx="5" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="220" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">JavaScript Action</text>
+  <text x="45" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Runtime: Node.js (node20)</text>
+  <text x="45" y="140" font-family="Arial, sans-serif" font-size="12" fill="#333333">Language: JavaScript / TypeScript</text>
+  <text x="45" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">Speed: fast (no container)</text>
+  <text x="45" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">Platform: all runners</text>
+  <text x="45" y="204" font-family="monospace" font-size="11" fill="#555555">runs:</text>
+  <text x="60" y="222" font-family="monospace" font-size="11" fill="#555555">  using: node20</text>
+  <text x="60" y="240" font-family="monospace" font-size="11" fill="#555555">  main: index.js</text>
+  <text x="60" y="258" font-family="monospace" font-size="11" fill="#555555">  pre: setup.js</text>
+  <text x="60" y="276" font-family="monospace" font-size="11" fill="#555555">  post: cleanup.js</text>
+  <text x="45" y="300" font-family="Arial, sans-serif" font-size="11" fill="#888888">Use @actions/core, @actions/exec, @actions/io</text>
+
+  <rect x="440" y="74" width="380" height="250" rx="5" fill="#e8f5e9" filter="url(#shadow)"/>
+  <text x="630" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Docker Container Action</text>
+  <text x="455" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Runtime: Docker container</text>
+  <text x="455" y="140" font-family="Arial, sans-serif" font-size="12" fill="#333333">Language: any (Python, Go, Ruby...)</text>
+  <text x="455" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">Speed: slower (image pull)</text>
+  <text x="455" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">Platform: Linux only</text>
+  <text x="455" y="204" font-family="monospace" font-size="11" fill="#555555">runs:</text>
+  <text x="470" y="222" font-family="monospace" font-size="11" fill="#555555">  using: docker</text>
+  <text x="470" y="240" font-family="monospace" font-size="11" fill="#555555">  image: Dockerfile</text>
+  <text x="470" y="258" font-family="monospace" font-size="11" fill="#555555">  args:</text>
+  <text x="485" y="276" font-family="monospace" font-size="11" fill="#555555">    - ${{ inputs.my-arg }}</text>
+  <text x="455" y="300" font-family="Arial, sans-serif" font-size="11" fill="#888888">ENTRYPOINT in Dockerfile is the main script</text>
+
+  <rect x="850" y="74" width="400" height="250" rx="5" fill="#fff3e0" filter="url(#shadow)"/>
+  <text x="1050" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Composite Action</text>
+  <text x="865" y="120" font-family="Arial, sans-serif" font-size="12" fill="#333333">Runtime: caller job runner</text>
+  <text x="865" y="140" font-family="Arial, sans-serif" font-size="12" fill="#333333">Language: YAML + shell scripts</text>
+  <text x="865" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">Speed: fast (no extra container)</text>
+  <text x="865" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">Platform: all runners</text>
+  <text x="865" y="204" font-family="monospace" font-size="11" fill="#555555">runs:</text>
+  <text x="880" y="222" font-family="monospace" font-size="11" fill="#555555">  using: composite</text>
+  <text x="880" y="240" font-family="monospace" font-size="11" fill="#555555">  steps:</text>
+  <text x="895" y="258" font-family="monospace" font-size="11" fill="#555555">    - run: echo "hi"</text>
+  <text x="910" y="276" font-family="monospace" font-size="11" fill="#555555">      shell: bash</text>
+  <text x="895" y="294" font-family="monospace" font-size="11" fill="#555555">    - uses: actions/checkout@v4</text>
+  <text x="865" y="314" font-family="Arial, sans-serif" font-size="11" fill="#888888">shell: is required for every run step</text>
+
+  <!-- action.yml structure -->
+  <rect x="30" y="344" width="600" height="256" rx="5" fill="#f5f5f5" filter="url(#shadow)"/>
+  <text x="330" y="368" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">action.yml Structure</text>
+  <text x="45" y="392" font-family="monospace" font-size="11" fill="#333333">name: "My Custom Action"</text>
+  <text x="45" y="410" font-family="monospace" font-size="11" fill="#333333">description: "Does something useful"</text>
+  <text x="45" y="428" font-family="monospace" font-size="11" fill="#333333">author: "Your Name"</text>
+  <text x="45" y="448" font-family="monospace" font-size="11" fill="#333333">branding:</text>
+  <text x="60" y="466" font-family="monospace" font-size="11" fill="#333333">  icon: "check-circle"</text>
+  <text x="60" y="484" font-family="monospace" font-size="11" fill="#333333">  color: "green"</text>
+  <text x="45" y="504" font-family="monospace" font-size="11" fill="#333333">inputs:</text>
+  <text x="60" y="522" font-family="monospace" font-size="11" fill="#333333">  token:</text>
+  <text x="75" y="540" font-family="monospace" font-size="11" fill="#333333">    description: "GitHub token"</text>
+  <text x="75" y="558" font-family="monospace" font-size="11" fill="#333333">    required: true</text>
+  <text x="45" y="578" font-family="monospace" font-size="11" fill="#333333">outputs:</text>
+  <text x="60" y="596" font-family="monospace" font-size="11" fill="#333333">  result:</text>
+
+  <!-- Inputs/Outputs/Branding -->
+  <rect x="650" y="344" width="600" height="256" rx="5" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="950" y="368" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Inputs, Outputs, and Branding</text>
+  <text x="665" y="392" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Accessing Inputs in script:</text>
+  <text x="665" y="412" font-family="monospace" font-size="11" fill="#333333">${{ inputs.token }}</text>
+  <text x="665" y="430" font-family="monospace" font-size="11" fill="#555555">process.env.INPUT_TOKEN  (JS)</text>
+  <text x="665" y="454" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Setting Outputs:</text>
+  <text x="665" y="474" font-family="monospace" font-size="11" fill="#333333">echo "result=done" &gt;&gt; $GITHUB_OUTPUT</text>
+  <text x="665" y="492" font-family="monospace" font-size="11" fill="#555555">core.setOutput("result","done")  (JS)</text>
+  <text x="665" y="516" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Branding (Marketplace display):</text>
+  <text x="665" y="536" font-family="Arial, sans-serif" font-size="12" fill="#333333">icon: feather icon name (activity, check-circle...)</text>
+  <text x="665" y="556" font-family="Arial, sans-serif" font-size="12" fill="#333333">color: white/yellow/blue/green/orange/red/purple/gray</text>
+  <text x="665" y="578" font-family="Arial, sans-serif" font-size="12" fill="#555555">Only shown on Marketplace listing</text>
+  <text x="665" y="598" font-family="Arial, sans-serif" font-size="12" fill="#555555">Not required for private/local actions</text>
+</svg>

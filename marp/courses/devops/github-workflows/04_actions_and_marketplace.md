@@ -2,6 +2,12 @@
 
 ---
 
+## GitHub Actions Marketplace
+
+![GitHub Actions Marketplace: action types, uses syntax, parameters, popular categories](svg/courses/devops/github-workflows/04_actions_and_marketplace/github_actions_marketplace.svg)
+
+---
+
 ## What is the GitHub Marketplace?
 
 - Central directory for sharing GitHub Actions
