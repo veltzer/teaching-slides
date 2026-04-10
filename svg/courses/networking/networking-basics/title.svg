@@ -1,5 +1,5 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,39 +157,89 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="bg" x1="0" y1="0" x2="1.6" y2="1.8">
-      <ns0:stop offset="0%" stop-color="#212121" />
-      <ns0:stop offset="100%" stop-color="#212121" />
-    </ns0:linearGradient>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
-  <ns0:rect x="355.5556" y="48" width="426.6667" height="64" rx="7.1111" fill="var(--danger-light)" opacity="0.85" />
-  <ns0:text x="568.8889" y="88" text-anchor="middle" font-size="19.9111" fill="var(--bg)" font-weight="bold">Application</ns0:text>
-  <ns0:rect x="355.5556" y="124.8" width="426.6667" height="64" rx="7.1111" fill="var(--warn-gold)" opacity="0.85" />
-  <ns0:text x="568.8889" y="164.8" text-anchor="middle" font-size="19.9111" fill="var(--bg)" font-weight="bold">Presentation</ns0:text>
-  <ns0:rect x="355.5556" y="201.6" width="426.6667" height="64" rx="7.1111" fill="var(--warn-yellow)" opacity="0.85" />
-  <ns0:text x="568.8889" y="241.6" text-anchor="middle" font-size="19.9111" fill="var(--text)" font-weight="bold">Session</ns0:text>
-  <ns0:rect x="355.5556" y="278.4" width="426.6667" height="64" rx="7.1111" fill="var(--ok-vivid)" opacity="0.85" />
-  <ns0:text x="568.8889" y="318.4" text-anchor="middle" font-size="19.9111" fill="var(--bg)" font-weight="bold">Transport</ns0:text>
-  <ns0:rect x="355.5556" y="355.2" width="426.6667" height="64" rx="7.1111" fill="var(--primary-soft)" opacity="0.85" />
-  <ns0:text x="568.8889" y="395.2" text-anchor="middle" font-size="19.9111" fill="var(--bg)" font-weight="bold">Network</ns0:text>
-  <ns0:rect x="355.5556" y="432" width="426.6667" height="64" rx="7.1111" fill="var(--info-soft)" opacity="0.85" />
-  <ns0:text x="568.8889" y="472" text-anchor="middle" font-size="19.9111" fill="var(--bg)" font-weight="bold">Data Link</ns0:text>
-  <ns0:rect x="355.5556" y="508.8" width="426.6667" height="64" rx="7.1111" fill="var(--ok-vivid)" opacity="0.85" />
-  <ns0:text x="568.8889" y="548.8" text-anchor="middle" font-size="19.9111" fill="var(--bg)" font-weight="bold">Physical</ns0:text>
-  <ns0:text x="327.1111" y="88" text-anchor="end" font-size="15.6444" fill="var(--text-faint)">HTTP, FTP, DNS</ns0:text>
-  <ns0:text x="327.1111" y="318.4" text-anchor="end" font-size="15.6444" fill="var(--text-faint)">TCP / UDP</ns0:text>
-  <ns0:text x="327.1111" y="395.2" text-anchor="end" font-size="15.6444" fill="var(--text-faint)">IP, ICMP</ns0:text>
-  <ns0:text x="327.1111" y="548.8" text-anchor="end" font-size="15.6444" fill="var(--text-faint)">Ethernet, Wi-Fi</ns0:text>
-  <ns0:text x="810.6667" y="88" font-size="15.6444" fill="var(--text-faint)">Layer 7</ns0:text>
-  <ns0:text x="810.6667" y="164.8" font-size="15.6444" fill="var(--text-faint)">Layer 6</ns0:text>
-  <ns0:text x="810.6667" y="241.6" font-size="15.6444" fill="var(--text-faint)">Layer 5</ns0:text>
-  <ns0:text x="810.6667" y="318.4" font-size="15.6444" fill="var(--text-faint)">Layer 4</ns0:text>
-  <ns0:text x="810.6667" y="395.2" font-size="15.6444" fill="var(--text-faint)">Layer 3</ns0:text>
-  <ns0:text x="810.6667" y="472" font-size="15.6444" fill="var(--text-faint)">Layer 2</ns0:text>
-  <ns0:text x="810.6667" y="548.8" font-size="15.6444" fill="var(--text-faint)">Layer 1</ns0:text>
-  <ns0:rect x="113.7778" y="128" width="85.3333" height="48" rx="4.2667" fill="none" stroke="var(--primary-soft)" stroke-width="2.1333" opacity="0.5" />
-  <ns0:rect x="938.6667" y="448" width="85.3333" height="48" rx="4.2667" fill="none" stroke="var(--danger-light)" stroke-width="2.1333" opacity="0.5" />
-  <ns0:rect x="142.2222" y="480" width="71.1111" height="40" rx="4.2667" fill="none" stroke="var(--ok-vivid)" stroke-width="2.1333" opacity="0.4" />
-  <ns0:rect x="967.1111" y="96" width="71.1111" height="40" rx="4.2667" fill="none" stroke="var(--warn-yellow)" stroke-width="2.1333" opacity="0.4" />
-</ns0:svg>
+  </defs>
+
+  <!-- No background rect — Marp provides white slide background -->
+
+  <!-- ===== LEFT: Network topology illustration ===== -->
+
+  <!-- Nodes — circles with gradient fills -->
+  <!-- Router (center) -->
+  <circle cx="200" cy="300" r="52" fill="url(#grad-primary)" stroke="var(--primary-dk)" stroke-width="3" filter="url(#shadow)" />
+  <text x="200" y="295" text-anchor="middle" font-size="14" fill="var(--bg)" font-weight="bold">Router</text>
+  <text x="200" y="313" text-anchor="middle" font-size="12" fill="var(--primary-lt)">IP / ICMP</text>
+
+  <!-- Server (top-right of router) -->
+  <circle cx="400" cy="130" r="44" fill="url(#grad-ok)" stroke="var(--ok-dk)" stroke-width="3" filter="url(#shadow)" />
+  <text x="400" y="127" text-anchor="middle" font-size="14" fill="var(--bg)" font-weight="bold">Server</text>
+  <text x="400" y="143" text-anchor="middle" font-size="11" fill="var(--ok-lt)">HTTP</text>
+
+  <!-- Client (top-left of router) -->
+  <circle cx="70" cy="110" r="40" fill="url(#grad-info)" stroke="var(--info-dk)" stroke-width="3" filter="url(#shadow)" />
+  <text x="70" y="107" text-anchor="middle" font-size="14" fill="var(--bg)" font-weight="bold">Client</text>
+  <text x="70" y="123" text-anchor="middle" font-size="11" fill="var(--info-lt)">Browser</text>
+
+  <!-- Firewall (left of router) -->
+  <circle cx="60" cy="430" r="40" fill="url(#grad-danger)" stroke="var(--danger-dk)" stroke-width="3" filter="url(#shadow)" />
+  <text x="60" y="427" text-anchor="middle" font-size="13" fill="var(--bg)" font-weight="bold">Firewall</text>
+  <text x="60" y="443" text-anchor="middle" font-size="11" fill="var(--danger-lt)">Filter</text>
+
+  <!-- DNS (right of router) -->
+  <circle cx="420" cy="360" r="40" fill="url(#grad-warn)" stroke="var(--warn-dk)" stroke-width="3" filter="url(#shadow)" />
+  <text x="420" y="357" text-anchor="middle" font-size="14" fill="var(--bg)" font-weight="bold">DNS</text>
+  <text x="420" y="373" text-anchor="middle" font-size="11" fill="var(--warn-lt)">Resolve</text>
+
+  <!-- Switch (bottom) -->
+  <circle cx="260" cy="520" r="38" fill="var(--border-strong)" stroke="var(--text-muted)" stroke-width="3" filter="url(#shadow)" />
+  <text x="260" y="517" text-anchor="middle" font-size="13" fill="var(--bg)" font-weight="bold">Switch</text>
+  <text x="260" y="533" text-anchor="middle" font-size="11" fill="var(--surface)">L2</text>
+
+  <!-- Connection lines -->
+  <line x1="105" y1="140" x2="158" y2="264" stroke="var(--primary-tint)" stroke-width="2.5" />
+  <line x1="248" y1="272" x2="362" y2="150" stroke="var(--primary-tint)" stroke-width="2.5" />
+  <line x1="96" y1="410" x2="155" y2="335" stroke="var(--primary-tint)" stroke-width="2.5" />
+  <line x1="245" y1="330" x2="383" y2="340" stroke="var(--primary-tint)" stroke-width="2.5" />
+  <line x1="220" y1="350" x2="250" y2="484" stroke="var(--primary-tint)" stroke-width="2.5" />
+  <line x1="290" y1="500" x2="395" y2="390" stroke="var(--primary-tint)" stroke-width="2" stroke-dasharray="6 4" />
+
+  <!-- ===== RIGHT: Protocol stack + labels ===== -->
+
+  <!-- Compact OSI stack -->
+  <rect x="580" y="60" width="340" height="62" rx="8" fill="url(#grad-danger)" stroke="var(--danger-dk)" stroke-width="2" filter="url(#shadow)" />
+  <text x="750" y="98" text-anchor="middle" font-size="18" fill="var(--bg)" font-weight="bold">Application</text>
+  <text x="940" y="98" font-size="14" fill="var(--text-muted)">HTTP, FTP, DNS</text>
+
+  <rect x="580" y="132" width="340" height="62" rx="8" fill="url(#grad-warn)" stroke="var(--warn-dk)" stroke-width="2" filter="url(#shadow)" />
+  <text x="750" y="170" text-anchor="middle" font-size="18" fill="var(--bg)" font-weight="bold">Transport</text>
+  <text x="940" y="170" font-size="14" fill="var(--text-muted)">TCP, UDP</text>
+
+  <rect x="580" y="204" width="340" height="62" rx="8" fill="url(#grad-primary)" stroke="var(--primary-dk)" stroke-width="2" filter="url(#shadow)" />
+  <text x="750" y="242" text-anchor="middle" font-size="18" fill="var(--bg)" font-weight="bold">Network</text>
+  <text x="940" y="242" font-size="14" fill="var(--text-muted)">IP, ICMP, ARP</text>
+
+  <rect x="580" y="276" width="340" height="62" rx="8" fill="url(#grad-ok)" stroke="var(--ok-dk)" stroke-width="2" filter="url(#shadow)" />
+  <text x="750" y="314" text-anchor="middle" font-size="18" fill="var(--bg)" font-weight="bold">Link / Physical</text>
+  <text x="940" y="314" font-size="14" fill="var(--text-muted)">Ethernet, Wi-Fi</text>
+
+  <!-- Key topics list -->
+  <rect x="580" y="380" width="650" height="240" rx="12" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.5" />
+  <text x="600" y="415" font-size="16" font-weight="bold" fill="var(--primary-dk)">What you will learn:</text>
+
+  <circle cx="610" cy="450" r="5" fill="var(--primary)" />
+  <text x="625" y="455" font-size="15" fill="var(--text-dark)">TCP/IP fundamentals and packet structure</text>
+
+  <circle cx="610" cy="480" r="5" fill="var(--ok)" />
+  <text x="625" y="485" font-size="15" fill="var(--text-dark)">HTTP protocol evolution (1.0 → 3.0)</text>
+
+  <circle cx="610" cy="510" r="5" fill="var(--warn)" />
+  <text x="625" y="515" font-size="15" fill="var(--text-dark)">DNS deep dive and resolution</text>
+
+  <circle cx="610" cy="540" r="5" fill="var(--danger)" />
+  <text x="625" y="545" font-size="15" fill="var(--text-dark)">Network security, TLS, and firewalls</text>
+
+  <circle cx="610" cy="570" r="5" fill="var(--info)" />
+  <text x="625" y="575" font-size="15" fill="var(--text-dark)">Socket programming and modern networking</text>
+
+  <circle cx="610" cy="600" r="5" fill="var(--border-strong)" />
+  <text x="625" y="605" font-size="15" fill="var(--text-dark)">Kubernetes, service mesh, and observability</text>
+</svg>

@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -157,27 +157,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="585.7866" y="38.0198" text-anchor="middle" font-size="22.8119" font-weight="bold" fill="var(--text-dark)">Interpreting MTR Results</ns0:text>
-  <ns0:rect x="33.4735" y="57.0297" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="88.7129" font-size="17.7426" font-weight="bold" fill="var(--ok-bright)">Case 1: Loss at one hop but not later</ns0:text>
-  <ns0:text x="66.9471" y="114.0594" font-size="15.2079" fill="var(--text-dark)">Hop 3: 30% loss | Hop 4: 0% loss | Hop 5: 0% loss</ns0:text>
-  <ns0:text x="66.9471" y="139.406" font-size="15.2079" fill="var(--text-muted)">Router at hop 3 is rate-limiting ICMP responses - NOT an actual problem</ns0:text>
-  <ns0:text x="66.9471" y="164.7525" font-size="13.9406" fill="var(--ok-bright)" font-weight="bold">Verdict: False alarm (ICMP deprioritized)</ns0:text>
-  <ns0:rect x="33.4735" y="190.099" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="221.7822" font-size="17.7426" font-weight="bold" fill="var(--danger-bright)">Case 2: Loss starts at one hop and continues</ns0:text>
-  <ns0:text x="66.9471" y="247.1287" font-size="15.2079" fill="var(--text-dark)">Hop 3: 0% loss | Hop 4: 20% loss | Hop 5: 20% loss | Hop 6: 20% loss</ns0:text>
-  <ns0:text x="66.9471" y="272.4753" font-size="15.2079" fill="var(--text-muted)">Real packet loss starting at hop 4</ns0:text>
-  <ns0:text x="66.9471" y="297.8218" font-size="13.9406" fill="var(--danger-bright)" font-weight="bold">Verdict: Problem at or between hop 3 and hop 4</ns0:text>
-  <ns0:rect x="33.4735" y="323.1683" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="354.8515" font-size="17.7426" font-weight="bold" fill="var(--danger-deeper)">Case 3: Latency spike at one hop</ns0:text>
-  <ns0:text x="66.9471" y="380.198" font-size="15.2079" fill="var(--text-dark)">Hop 3: avg 5ms | Hop 4: avg 150ms (large jump) | Hop 5: avg 152ms</ns0:text>
-  <ns0:text x="66.9471" y="405.5446" font-size="15.2079" fill="var(--text-muted)">Link between hop 3 and 4 has high latency</ns0:text>
-  <ns0:text x="66.9471" y="430.8911" font-size="13.9406" fill="var(--danger-deeper)" font-weight="bold">Verdict: Congestion, distance, or poor peering</ns0:text>
-  <ns0:rect x="33.4735" y="456.2376" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="487.9208" font-size="17.7426" font-weight="bold" fill="var(--primary-bright)">Case 4: High jitter (StDev)</ns0:text>
-  <ns0:text x="66.9471" y="513.2673" font-size="15.2079" fill="var(--text-dark)">Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms</ns0:text>
-  <ns0:text x="66.9471" y="538.6139" font-size="15.2079" fill="var(--text-muted)">Inconsistent performance</ns0:text>
-  <ns0:text x="66.9471" y="563.9604" font-size="13.9406" fill="var(--primary-bright)" font-weight="bold">Verdict: Possible congestion, bufferbloat, or wireless issues</ns0:text>
-  <ns0:rect x="167.3676" y="595.6436" width="836.838" height="44.3564" rx="6.3367" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.901" />
-  <ns0:text x="585.7866" y="623.5248" text-anchor="middle" font-size="15.2079" fill="var(--text-dark)" font-weight="bold">Key: Look for patterns that persist across subsequent hops</ns0:text>
-</ns0:svg>
+  <text x="585.7866" y="38.0198" text-anchor="middle" font-size="22.8119" font-weight="bold" fill="var(--text-dark)">Interpreting MTR Results</text>
+  <rect x="33.4735" y="57.0297" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5346" />
+  <text x="66.9471" y="88.7129" font-size="17.7426" font-weight="bold" fill="var(--ok-bright)">Case 1: Loss at one hop but not later</text>
+  <text x="66.9471" y="114.0594" font-size="15.2079" fill="var(--text-dark)">Hop 3: 30% loss | Hop 4: 0% loss | Hop 5: 0% loss</text>
+  <text x="66.9471" y="139.406" font-size="15.2079" fill="var(--text-muted)">Router at hop 3 is rate-limiting ICMP responses - NOT an actual problem</text>
+  <text x="66.9471" y="164.7525" font-size="13.9406" fill="var(--ok-bright)" font-weight="bold">Verdict: False alarm (ICMP deprioritized)</text>
+  <rect x="33.4735" y="190.099" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5346" />
+  <text x="66.9471" y="221.7822" font-size="17.7426" font-weight="bold" fill="var(--danger-bright)">Case 2: Loss starts at one hop and continues</text>
+  <text x="66.9471" y="247.1287" font-size="15.2079" fill="var(--text-dark)">Hop 3: 0% loss | Hop 4: 20% loss | Hop 5: 20% loss | Hop 6: 20% loss</text>
+  <text x="66.9471" y="272.4753" font-size="15.2079" fill="var(--text-muted)">Real packet loss starting at hop 4</text>
+  <text x="66.9471" y="297.8218" font-size="13.9406" fill="var(--danger-bright)" font-weight="bold">Verdict: Problem at or between hop 3 and hop 4</text>
+  <rect x="33.4735" y="323.1683" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.5346" />
+  <text x="66.9471" y="354.8515" font-size="17.7426" font-weight="bold" fill="var(--danger-deeper)">Case 3: Latency spike at one hop</text>
+  <text x="66.9471" y="380.198" font-size="15.2079" fill="var(--text-dark)">Hop 3: avg 5ms | Hop 4: avg 150ms (large jump) | Hop 5: avg 152ms</text>
+  <text x="66.9471" y="405.5446" font-size="15.2079" fill="var(--text-muted)">Link between hop 3 and 4 has high latency</text>
+  <text x="66.9471" y="430.8911" font-size="13.9406" fill="var(--danger-deeper)" font-weight="bold">Verdict: Congestion, distance, or poor peering</text>
+  <rect x="33.4735" y="456.2376" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5346" />
+  <text x="66.9471" y="487.9208" font-size="17.7426" font-weight="bold" fill="var(--primary-bright)">Case 4: High jitter (StDev)</text>
+  <text x="66.9471" y="513.2673" font-size="15.2079" fill="var(--text-dark)">Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms</text>
+  <text x="66.9471" y="538.6139" font-size="15.2079" fill="var(--text-muted)">Inconsistent performance</text>
+  <text x="66.9471" y="563.9604" font-size="13.9406" fill="var(--primary-bright)" font-weight="bold">Verdict: Possible congestion, bufferbloat, or wireless issues</text>
+  <rect x="167.3676" y="595.6436" width="836.838" height="44.3564" rx="6.3367" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.901" />
+  <text x="585.7866" y="623.5248" text-anchor="middle" font-size="15.2079" fill="var(--text-dark)" font-weight="bold">Key: Look for patterns that persist across subsequent hops</text>
+</svg>

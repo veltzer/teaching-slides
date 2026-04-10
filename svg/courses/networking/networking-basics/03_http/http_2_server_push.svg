@@ -1,5 +1,5 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,27 +157,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowd4_02_http" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <ns0:path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="136.1443" y="16.4103" width="194.4919" height="82.0513" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="3.8899" rx="9.7246" />
-  <ns0:text x="233.3903" y="72.2051" text-anchor="middle" font-size="21.3941" font-weight="bold">Client</ns0:text>
-  <ns0:rect x="816.8661" y="16.4103" width="194.4919" height="82.0513" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="3.8899" rx="9.7246" />
-  <ns0:text x="914.1121" y="72.2051" text-anchor="middle" font-size="21.3941" font-weight="bold">Server</ns0:text>
-  <ns0:line x1="233.3903" y1="114.8718" x2="233.3903" y2="640" stroke="var(--text-dark)" stroke-width="3.8899" />
-  <ns0:line x1="914.1121" y1="114.8718" x2="914.1121" y2="640" stroke="var(--text-dark)" stroke-width="3.8899" />
-  <ns0:line x1="233.3903" y1="164.1026" x2="914.1121" y2="190.359" stroke="var(--primary-dk)" stroke-width="3.8899" marker-end="url(#arrowd4_02_http)" />
-  <ns0:text x="573.7512" y="150.9744" text-anchor="middle" font-size="19.4492" fill="var(--primary-dk)">GET /index.html (Stream 1)</ns0:text>
-  <ns0:line x1="914.1121" y1="236.3077" x2="233.3903" y2="262.5641" stroke="var(--ok-dk)" stroke-width="3.8899" stroke-dasharray="7.7796 5.8348" marker-end="url(#arrowd4_02_http)" />
-  <ns0:text x="573.7512" y="236.3077" text-anchor="middle" font-size="19.4492" fill="var(--ok-dk)">200 OK + HTML (Stream 1)</ns0:text>
-  <ns0:line x1="914.1121" y1="311.7949" x2="233.3903" y2="338.0513" stroke="var(--info-mid)" stroke-width="3.8899" marker-end="url(#arrowd4_02_http)" />
-  <ns0:text x="573.7512" y="311.7949" text-anchor="middle" font-size="19.4492" fill="var(--info-mid)">PUSH_PROMISE: /style.css (Stream 2)</ns0:text>
-  <ns0:line x1="914.1121" y1="387.2821" x2="233.3903" y2="413.5385" stroke="var(--info-mid)" stroke-width="3.8899" stroke-dasharray="7.7796 5.8348" marker-end="url(#arrowd4_02_http)" />
-  <ns0:text x="573.7512" y="387.2821" text-anchor="middle" font-size="19.4492" fill="var(--info-mid)">Push: style.css data (Stream 2)</ns0:text>
-  <ns0:line x1="914.1121" y1="462.7692" x2="233.3903" y2="489.0256" stroke="var(--danger-dk)" stroke-width="3.8899" marker-end="url(#arrowd4_02_http)" />
-  <ns0:text x="573.7512" y="462.7692" text-anchor="middle" font-size="19.4492" fill="var(--danger-dk)">PUSH_PROMISE: /app.js (Stream 4)</ns0:text>
-  <ns0:line x1="914.1121" y1="538.2564" x2="233.3903" y2="564.5128" stroke="var(--danger-dk)" stroke-width="3.8899" stroke-dasharray="7.7796 5.8348" marker-end="url(#arrowd4_02_http)" />
-  <ns0:text x="573.7512" y="538.2564" text-anchor="middle" font-size="19.4492" fill="var(--danger-dk)">Push: app.js data (Stream 4)</ns0:text>
-  <ns0:text x="573.7512" y="630.1538" text-anchor="middle" font-size="19.4492" fill="var(--text-muted)">Server proactively sends resources before client requests them</ns0:text>
-</ns0:svg>
+  </defs>
+  <rect x="136.1443" y="16.4103" width="194.4919" height="82.0513" fill="url(#grad-primary)" stroke="var(--primary-dk)" stroke-width="3.8899" rx="9.7246" filter="url(#shadow)" />
+  <text x="233.3903" y="72.2051" text-anchor="middle" font-size="21.3941" font-weight="bold" fill="var(--bg)">Client</text>
+  <rect x="816.8661" y="16.4103" width="194.4919" height="82.0513" fill="url(#grad-ok)" stroke="var(--ok-dk)" stroke-width="3.8899" rx="9.7246" filter="url(#shadow)" />
+  <text x="914.1121" y="72.2051" text-anchor="middle" font-size="21.3941" font-weight="bold" fill="var(--bg)">Server</text>
+  <line x1="233.3903" y1="114.8718" x2="233.3903" y2="640" stroke="var(--border-strong)" stroke-width="3.8899" />
+  <line x1="914.1121" y1="114.8718" x2="914.1121" y2="640" stroke="var(--border-strong)" stroke-width="3.8899" />
+  <line x1="233.3903" y1="164.1026" x2="914.1121" y2="190.359" stroke="var(--primary-dk)" stroke-width="3.8899" marker-end="url(#arrow-primary)" />
+  <text x="573.7512" y="150.9744" text-anchor="middle" font-size="19.4492" fill="var(--primary-dk)">GET /index.html (Stream 1)</text>
+  <line x1="914.1121" y1="236.3077" x2="233.3903" y2="262.5641" stroke="var(--ok-dk)" stroke-width="3.8899" stroke-dasharray="7.7796 5.8348" marker-end="url(#arrow-ok)" />
+  <text x="573.7512" y="236.3077" text-anchor="middle" font-size="19.4492" fill="var(--ok-dk)">200 OK + HTML (Stream 1)</text>
+  <line x1="914.1121" y1="311.7949" x2="233.3903" y2="338.0513" stroke="var(--info-mid)" stroke-width="3.8899" marker-end="url(#arrow-info)" />
+  <text x="573.7512" y="311.7949" text-anchor="middle" font-size="19.4492" fill="var(--info-mid)">PUSH_PROMISE: /style.css (Stream 2)</text>
+  <line x1="914.1121" y1="387.2821" x2="233.3903" y2="413.5385" stroke="var(--info-mid)" stroke-width="3.8899" stroke-dasharray="7.7796 5.8348" marker-end="url(#arrow-info)" />
+  <text x="573.7512" y="387.2821" text-anchor="middle" font-size="19.4492" fill="var(--info-mid)">Push: style.css data (Stream 2)</text>
+  <line x1="914.1121" y1="462.7692" x2="233.3903" y2="489.0256" stroke="var(--danger-dk)" stroke-width="3.8899" marker-end="url(#arrow-danger)" />
+  <text x="573.7512" y="462.7692" text-anchor="middle" font-size="19.4492" fill="var(--danger-dk)">PUSH_PROMISE: /app.js (Stream 4)</text>
+  <line x1="914.1121" y1="538.2564" x2="233.3903" y2="564.5128" stroke="var(--danger-dk)" stroke-width="3.8899" stroke-dasharray="7.7796 5.8348" marker-end="url(#arrow-danger)" />
+  <text x="573.7512" y="538.2564" text-anchor="middle" font-size="19.4492" fill="var(--danger-dk)">Push: app.js data (Stream 4)</text>
+  <text x="573.7512" y="630.1538" text-anchor="middle" font-size="19.4492" fill="var(--text-muted)">Server proactively sends resources before client requests them</text>
+</svg>
