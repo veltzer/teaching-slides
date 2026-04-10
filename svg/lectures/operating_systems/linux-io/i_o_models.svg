@@ -1,8 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <g transform="translate(50, 50)">
     <rect x="0" y="0" width="219.4286" height="72" fill="#ffcdd2" stroke="#d32f2f" />
     <text x="109.7143" y="45" text-anchor="middle" font-size="25.2">Blocking I/O</text>
-    <rect x="18.2857" y="108" width="182.8571" height="36" fill="#ef5350" />
+    <rect x="18.2857" y="108" width="182.8571" height="36" fill="#e74c3c" />
     <text x="109.7143" y="135" text-anchor="middle" font-size="19.8" fill="white">Wait for data</text>
     <rect x="18.2857" y="162" width="182.8571" height="36" fill="#4caf50" />
     <text x="109.7143" y="189" text-anchor="middle" font-size="19.8" fill="white">Process data</text>
@@ -10,9 +71,9 @@
   <g transform="translate(200, 50)">
     <rect x="0" y="0" width="219.4286" height="72" fill="#c8e6c9" stroke="#388e3c" />
     <text x="109.7143" y="45" text-anchor="middle" font-size="25.2">Non-blocking</text>
-    <rect x="18.2857" y="108" width="54.8571" height="36" fill="#81c784" />
-    <rect x="82.2857" y="108" width="54.8571" height="36" fill="#81c784" />
-    <rect x="146.2857" y="108" width="54.8571" height="36" fill="#81c784" />
+    <rect x="18.2857" y="108" width="54.8571" height="36" fill="#a5d6a7" />
+    <rect x="82.2857" y="108" width="54.8571" height="36" fill="#a5d6a7" />
+    <rect x="146.2857" y="108" width="54.8571" height="36" fill="#a5d6a7" />
     <text x="109.7143" y="135" text-anchor="middle" font-size="19.8">Poll</text>
     <rect x="18.2857" y="162" width="182.8571" height="36" fill="#4caf50" />
     <text x="109.7143" y="189" text-anchor="middle" font-size="19.8" fill="white">Process data</text>
@@ -20,7 +81,7 @@
   <g transform="translate(350, 50)">
     <rect x="0" y="0" width="219.4286" height="72" fill="#e1bee7" stroke="#7b1fa2" />
     <text x="109.7143" y="45" text-anchor="middle" font-size="25.2">Async I/O</text>
-    <rect x="18.2857" y="108" width="182.8571" height="36" fill="#ba68c8" />
+    <rect x="18.2857" y="108" width="182.8571" height="36" fill="#9b59b6" />
     <text x="109.7143" y="135" text-anchor="middle" font-size="19.8" fill="white">Submit request</text>
     <rect x="18.2857" y="162" width="182.8571" height="36" fill="#9c27b0" />
     <text x="109.7143" y="189" text-anchor="middle" font-size="19.8" fill="white">Do other work</text>
@@ -30,7 +91,7 @@
   <g transform="translate(500, 50)">
     <rect x="0" y="0" width="256" height="72" fill="#fff9c4" stroke="#f57c00" />
     <text x="128" y="45" text-anchor="middle" font-size="25.2">I/O Multiplexing</text>
-    <rect x="18.2857" y="108" width="219.4286" height="36" fill="#ffb74d" />
+    <rect x="18.2857" y="108" width="219.4286" height="36" fill="#f9a825" />
     <text x="128" y="135" text-anchor="middle" font-size="19.8">select/poll/epoll</text>
     <rect x="18.2857" y="162" width="219.4286" height="36" fill="#ff9800" />
     <text x="128" y="189" text-anchor="middle" font-size="19.8" fill="white">Monitor multiple FDs</text>

@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="617.0998" y="54.2373" text-anchor="middle" font-size="28.2102" font-weight="bold" fill="#333">SIMD - Single Instruction, Multiple Data</ns0:text>
   <ns0:rect x="52.8942" y="119.322" width="299.7342" height="108.4746" rx="8.8158" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.5262" />
   <ns0:text x="202.7614" y="167.0508" text-anchor="middle" font-size="21.1577" font-weight="bold" fill="#333">Instruction Stream</ns0:text>
@@ -20,9 +81,9 @@
   <ns0:line x1="770.4932" y1="260.339" x2="770.4932" y2="325.4237" stroke="#28a745" stroke-width="2.6448" />
   <ns0:line x1="885.0975" y1="260.339" x2="885.0975" y2="325.4237" stroke="#28a745" stroke-width="2.6448" />
   <ns0:rect x="467.2327" y="325.4237" width="493.6798" height="119.322" rx="8.8158" fill="#fff3cd" stroke="#ffc107" stroke-width="3.5262" />
-  <ns0:text x="714.0726" y="373.1525" text-anchor="middle" font-size="21.1577" font-weight="bold" fill="#856404">Data Stream</ns0:text>
+  <ns0:text x="714.0726" y="373.1525" text-anchor="middle" font-size="21.1577" font-weight="bold" fill="#bf360c">Data Stream</ns0:text>
   <ns0:text x="714.0726" y="416.5424" text-anchor="middle" font-size="19.3946" fill="#666">D0    D1    D2    D3</ns0:text>
-  <ns0:rect x="176.3142" y="498.9831" width="881.5711" height="141.0169" rx="8.8158" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.7632" />
+  <ns0:rect x="176.3142" y="498.9831" width="881.5711" height="141.0169" rx="8.8158" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.7632" />
   <ns0:text x="617.0998" y="546.7119" text-anchor="middle" font-size="21.1577" font-weight="bold" fill="#333">Example: SIMD addition</ns0:text>
   <ns0:text x="617.0998" y="585.7627" text-anchor="middle" font-size="19.3946" fill="#4a90e2" font-family="monospace">A[0..3] = B[0..3] + C[0..3]</ns0:text>
   <ns0:text x="617.0998" y="624.8136" text-anchor="middle" font-size="19.3946" fill="#28a745" font-weight="bold">4 additions in 1 cycle!</ns0:text>

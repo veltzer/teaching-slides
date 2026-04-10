@@ -1,8 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="632.0988" y="71.1111" text-anchor="middle" font-size="37.9259" font-weight="bold">Bare vs Non-Bare Repositories</ns0:text>
   <ns0:rect x="79.0123" y="142.2222" width="505.679" height="497.7778" fill="#E8F5E9" stroke="#388E3C" stroke-width="3.1605" rx="7.9012" />
   <ns0:text x="331.8519" y="195.5556" text-anchor="middle" font-size="28.4444" font-weight="bold">Non-Bare (Local)</ns0:text>
-  <ns0:rect x="110.6173" y="231.1111" width="442.4691" height="53.3333" fill="#81C784" rx="4.7407" />
+  <ns0:rect x="110.6173" y="231.1111" width="442.4691" height="53.3333" fill="#a5d6a7" rx="4.7407" />
   <ns0:text x="331.8519" y="266.6667" text-anchor="middle" font-size="18.963" fill="white">.git/</ns0:text>
   <ns0:rect x="110.6173" y="302.2222" width="442.4691" height="53.3333" fill="#A5D6A7" rx="4.7407" />
   <ns0:text x="331.8519" y="337.7778" text-anchor="middle" font-size="18.963">Working Directory</ns0:text>
@@ -13,7 +74,7 @@
   <ns0:text x="331.8519" y="560" text-anchor="middle" font-size="20.5432" font-weight="bold">Your local repository</ns0:text>
   <ns0:rect x="679.5062" y="142.2222" width="505.679" height="497.7778" fill="#FFF3E0" stroke="#F57C00" stroke-width="3.1605" rx="7.9012" />
   <ns0:text x="932.3457" y="195.5556" text-anchor="middle" font-size="28.4444" font-weight="bold">Bare (Remote)</ns0:text>
-  <ns0:rect x="711.1111" y="231.1111" width="442.4691" height="53.3333" fill="#FFB74D" rx="4.7407" />
+  <ns0:rect x="711.1111" y="231.1111" width="442.4691" height="53.3333" fill="#f9a825" rx="4.7407" />
   <ns0:text x="932.3457" y="266.6667" text-anchor="middle" font-size="18.963" fill="white">repo.git/</ns0:text>
   <ns0:rect x="711.1111" y="302.2222" width="442.4691" height="53.3333" fill="#FFE0B2" rx="4.7407" stroke-dasharray="7.9012 7.9012" stroke="#999" />
   <ns0:text x="932.3457" y="337.7778" text-anchor="middle" font-size="18.963" fill="#999">No Working Directory</ns0:text>

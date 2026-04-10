@@ -1,4 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <rect x="116.3636" y="144" width="232.7273" height="115.2" fill="#ffebee" stroke="#d32f2f" stroke-width="4.6545" />
   <text x="232.7273" y="216" text-anchor="middle" font-size="27.9273">Raw Pointer</text>
   <rect x="395.6364" y="144" width="232.7273" height="115.2" fill="#e8f5e8" stroke="#4caf50" stroke-width="4.6545" />
@@ -9,7 +70,7 @@
   <text x="1070.5455" y="216" text-anchor="middle" font-size="27.9273">weak_ptr</text>
   <rect x="116.3636" y="316.8" width="232.7273" height="86.4" fill="#ffcdd2" />
   <text x="232.7273" y="374.4" text-anchor="middle" font-size="23.2727">Creation: Fast</text>
-  <rect x="395.6364" y="316.8" width="232.7273" height="86.4" fill="#c8e6c8" />
+  <rect x="395.6364" y="316.8" width="232.7273" height="86.4" fill="#c8e6c9" />
   <text x="512" y="374.4" text-anchor="middle" font-size="23.2727">Creation: Fast</text>
   <rect x="674.9091" y="316.8" width="232.7273" height="86.4" fill="#ffe0b2" />
   <text x="791.2727" y="374.4" text-anchor="middle" font-size="23.2727">Creation: Slow</text>
@@ -21,14 +82,14 @@
   <text x="512" y="489.6" text-anchor="middle" font-size="23.2727">Copy: Move only</text>
   <rect x="674.9091" y="432" width="232.7273" height="86.4" fill="#ffe0b2" />
   <text x="791.2727" y="489.6" text-anchor="middle" font-size="23.2727">Copy: Atomic ops</text>
-  <rect x="954.1818" y="432" width="232.7273" height="86.4" fill="#c8e6c8" />
+  <rect x="954.1818" y="432" width="232.7273" height="86.4" fill="#c8e6c9" />
   <text x="1070.5455" y="489.6" text-anchor="middle" font-size="23.2727">Copy: Fast</text>
   <rect x="116.3636" y="547.2" width="232.7273" height="86.4" fill="#ffcdd2" />
   <text x="232.7273" y="604.8" text-anchor="middle" font-size="23.2727">Safety: Poor</text>
-  <rect x="395.6364" y="547.2" width="232.7273" height="86.4" fill="#c8e6c8" />
+  <rect x="395.6364" y="547.2" width="232.7273" height="86.4" fill="#c8e6c9" />
   <text x="512" y="604.8" text-anchor="middle" font-size="23.2727">Safety: Excellent</text>
-  <rect x="674.9091" y="547.2" width="232.7273" height="86.4" fill="#c8e6c8" />
+  <rect x="674.9091" y="547.2" width="232.7273" height="86.4" fill="#c8e6c9" />
   <text x="791.2727" y="604.8" text-anchor="middle" font-size="23.2727">Safety: Excellent</text>
-  <rect x="954.1818" y="547.2" width="232.7273" height="86.4" fill="#c8e6c8" />
+  <rect x="954.1818" y="547.2" width="232.7273" height="86.4" fill="#c8e6c9" />
   <text x="1070.5455" y="604.8" text-anchor="middle" font-size="23.2727">Safety: Excellent</text>
 </svg>

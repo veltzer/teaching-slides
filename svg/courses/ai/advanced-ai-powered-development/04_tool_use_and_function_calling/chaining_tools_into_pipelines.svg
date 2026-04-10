@@ -1,10 +1,70 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="42.6223" markerHeight="141.75" refX="38.3599" refY="70.875" orient="auto">
       <ns0:polygon points="0,202.5 14.9178,0" fill="#555" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="269.4148" height="640" fill="#f8f9fa" />
+  <ns0:rect width="269.4148" height="640" fill="#f9f9f9" />
   <ns0:text x="134.7074" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Tool Pipeline: "Find and Fix All Deprecated API Calls"</ns0:text>
   <ns0:rect x="6.7354" y="128" width="55.5668" height="160" rx="3.3677" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.6735" />
   <ns0:text x="34.3504" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Step 1</ns0:text>
@@ -31,17 +91,17 @@
   <ns0:text x="233.0438" y="275.2" text-anchor="middle" font-size="10" fill="#888">all tests green</ns0:text>
   <ns0:rect x="6.7354" y="352" width="255.9441" height="264" rx="3.3677" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.5052" />
   <ns0:text x="134.7074" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Orchestration Strategies</ns0:text>
-  <ns0:rect x="13.4707" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="13.4707" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="49.505" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Sequential</ns0:text>
   <ns0:text x="49.505" y="508.8" text-anchor="middle" font-size="10" fill="#333">each step depends</ns0:text>
   <ns0:text x="49.505" y="540.8" text-anchor="middle" font-size="10" fill="#333">on previous result</ns0:text>
   <ns0:text x="49.505" y="572.8" text-anchor="middle" font-size="10" fill="#555">e.g. read → analyze → fix</ns0:text>
-  <ns0:rect x="98.6732" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="98.6732" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="134.7074" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Fan-Out / Fan-In</ns0:text>
   <ns0:text x="134.7074" y="508.8" text-anchor="middle" font-size="10" fill="#333">parallel reads,</ns0:text>
   <ns0:text x="134.7074" y="540.8" text-anchor="middle" font-size="10" fill="#333">then aggregate</ns0:text>
   <ns0:text x="134.7074" y="572.8" text-anchor="middle" font-size="10" fill="#555">e.g. read 5 files at once</ns0:text>
-  <ns0:rect x="183.8756" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="183.8756" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="219.9099" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Conditional</ns0:text>
   <ns0:text x="219.9099" y="508.8" text-anchor="middle" font-size="10" fill="#333">branch based on</ns0:text>
   <ns0:text x="219.9099" y="540.8" text-anchor="middle" font-size="10" fill="#333">tool output</ns0:text>

@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="613.633" y="43.1461" text-anchor="middle" font-size="23.0112" font-weight="bold" fill="#333">Group Query Attention (GQA)</ns0:text>
   <ns0:rect x="61.3633" y="79.1011" width="337.4981" height="287.6404" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8764" />
   <ns0:text x="230.1124" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#4a90e2">MHA</ns0:text>
@@ -7,7 +68,7 @@
   <ns0:text x="230.1124" y="208.5393" text-anchor="middle" font-size="15.8202" fill="#555">V: 32 heads</ns0:text>
   <ns0:text x="230.1124" y="251.6854" text-anchor="middle" font-size="14.382" fill="#666">Each head has own Q, K, V</ns0:text>
   <ns0:text x="230.1124" y="280.4494" text-anchor="middle" font-size="14.382" fill="#666">Memory: 96 x d_head</ns0:text>
-  <ns0:rect x="99.7154" y="302.0225" width="260.794" height="35.9551" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="99.7154" y="302.0225" width="260.794" height="35.9551" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="230.1124" y="327.9101" text-anchor="middle" font-size="14.382" fill="#333">KV Cache: 100%</ns0:text>
   <ns0:rect x="444.8839" y="79.1011" width="337.4981" height="287.6404" rx="7.191" fill="#d4edda" stroke="#28a745" stroke-width="2.8764" />
   <ns0:text x="613.633" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#28a745">GQA-8</ns0:text>
@@ -19,14 +80,14 @@
   <ns0:rect x="483.236" y="302.0225" width="260.794" height="35.9551" rx="4.3146" fill="#d4edda" stroke="#28a745" />
   <ns0:text x="613.633" y="327.9101" text-anchor="middle" font-size="14.382" font-weight="bold" fill="#28a745">KV Cache: 25%</ns0:text>
   <ns0:rect x="828.4045" y="79.1011" width="337.4981" height="287.6404" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
-  <ns0:text x="997.1536" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#856404">MQA</ns0:text>
+  <ns0:text x="997.1536" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#bf360c">MQA</ns0:text>
   <ns0:text x="997.1536" y="151.0112" text-anchor="middle" font-size="15.8202" fill="#555">Q: 32 heads</ns0:text>
   <ns0:text x="997.1536" y="179.7753" text-anchor="middle" font-size="15.8202" fill="#555">K: 1 shared</ns0:text>
   <ns0:text x="997.1536" y="208.5393" text-anchor="middle" font-size="15.8202" fill="#555">V: 1 shared</ns0:text>
   <ns0:text x="997.1536" y="251.6854" text-anchor="middle" font-size="14.382" fill="#666">ALL Q share ONE K,V</ns0:text>
   <ns0:text x="997.1536" y="280.4494" text-anchor="middle" font-size="14.382" fill="#666">Memory: 34 x d_head</ns0:text>
   <ns0:rect x="866.7566" y="302.0225" width="260.794" height="35.9551" rx="4.3146" fill="#fff3cd" stroke="#ffc107" />
-  <ns0:text x="997.1536" y="327.9101" text-anchor="middle" font-size="14.382" font-weight="bold" fill="#856404">KV Cache: 3%</ns0:text>
+  <ns0:text x="997.1536" y="327.9101" text-anchor="middle" font-size="14.382" font-weight="bold" fill="#bf360c">KV Cache: 3%</ns0:text>
   <ns0:rect x="153.4082" y="417.0787" width="199.4307" height="50.3371" rx="7.191" fill="#4a90e2" />
   <ns0:text x="253.1236" y="450.1573" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="#fff">Method</ns0:text>
   <ns0:rect x="368.1798" y="417.0787" width="199.4307" height="50.3371" rx="7.191" fill="#4a90e2" />
@@ -37,26 +98,26 @@
   <ns0:text x="897.4382" y="450.1573" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="#fff">Quality</ns0:text>
   <ns0:rect x="153.4082" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#e8f4f8" stroke="#4a90e2" />
   <ns0:text x="253.1236" y="510.5618" text-anchor="middle" font-size="15.8202" fill="#333">MHA</ns0:text>
-  <ns0:rect x="368.1798" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="368.1798" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="467.8951" y="510.5618" text-anchor="middle" font-size="15.8202" fill="#555">32</ns0:text>
-  <ns0:rect x="582.9513" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="582.9513" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="682.6667" y="510.5618" text-anchor="middle" font-size="15.8202" fill="#555">100%</ns0:text>
-  <ns0:rect x="797.7228" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="797.7228" y="481.7978" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="897.4382" y="510.5618" text-anchor="middle" font-size="15.8202" fill="#555">Baseline</ns0:text>
   <ns0:rect x="153.4082" y="539.3258" width="199.4307" height="43.1461" rx="4.3146" fill="#d4edda" stroke="#28a745" />
   <ns0:text x="253.1236" y="568.0899" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="#28a745">GQA-8</ns0:text>
-  <ns0:rect x="368.1798" y="539.3258" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="368.1798" y="539.3258" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="467.8951" y="568.0899" text-anchor="middle" font-size="15.8202" fill="#555">8</ns0:text>
   <ns0:rect x="582.9513" y="539.3258" width="199.4307" height="43.1461" rx="4.3146" fill="#d4edda" stroke="#28a745" />
   <ns0:text x="682.6667" y="568.0899" text-anchor="middle" font-size="15.8202" fill="#28a745">25%</ns0:text>
-  <ns0:rect x="797.7228" y="539.3258" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="797.7228" y="539.3258" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="897.4382" y="568.0899" text-anchor="middle" font-size="15.8202" fill="#555">~99.5%</ns0:text>
   <ns0:rect x="153.4082" y="596.8539" width="199.4307" height="43.1461" rx="4.3146" fill="#fff3cd" stroke="#ffc107" />
-  <ns0:text x="253.1236" y="625.618" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="#856404">MQA</ns0:text>
-  <ns0:rect x="368.1798" y="596.8539" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:text x="253.1236" y="625.618" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="#bf360c">MQA</ns0:text>
+  <ns0:rect x="368.1798" y="596.8539" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="467.8951" y="625.618" text-anchor="middle" font-size="15.8202" fill="#555">1</ns0:text>
   <ns0:rect x="582.9513" y="596.8539" width="199.4307" height="43.1461" rx="4.3146" fill="#d4edda" stroke="#28a745" />
   <ns0:text x="682.6667" y="625.618" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="#28a745">3%</ns0:text>
-  <ns0:rect x="797.7228" y="596.8539" width="199.4307" height="43.1461" rx="4.3146" fill="#f8f9fa" stroke="#dee2e6" />
+  <ns0:rect x="797.7228" y="596.8539" width="199.4307" height="43.1461" rx="4.3146" fill="#f9f9f9" stroke="#e0e0e0" />
   <ns0:text x="897.4382" y="625.618" text-anchor="middle" font-size="15.8202" fill="#555">~98%</ns0:text>
 </ns0:svg>

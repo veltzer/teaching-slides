@@ -1,34 +1,94 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0" y1="0" x2="1.6" y2="1.8">
       <ns0:stop offset="0%" stop-color="#1a1a2e" />
-      <ns0:stop offset="100%" stop-color="#0a0a1a" />
+      <ns0:stop offset="100%" stop-color="#000000" />
     </ns0:linearGradient>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
-  <ns0:rect x="483.5556" y="160" width="170.6667" height="128" rx="56.8889" fill="#3ddc84" />
+  <ns0:rect x="483.5556" y="160" width="170.6667" height="128" rx="56.8889" fill="#2ecc71" />
   <ns0:circle cx="526.2222" cy="208" r="8.5333" fill="#1a1a2e" />
   <ns0:circle cx="611.5556" cy="208" r="8.5333" fill="#1a1a2e" />
-  <ns0:line x1="519.1111" y1="160" x2="497.7778" y2="120" stroke="#3ddc84" stroke-width="5.6889" stroke-linecap="round" />
-  <ns0:line x1="618.6667" y1="160" x2="640" y2="120" stroke="#3ddc84" stroke-width="5.6889" stroke-linecap="round" />
-  <ns0:rect x="483.5556" y="296" width="170.6667" height="160" rx="14.2222" fill="#3ddc84" />
-  <ns0:rect x="433.7778" y="304" width="35.5556" height="112" rx="17.0667" fill="#3ddc84" />
-  <ns0:rect x="668.4444" y="304" width="35.5556" height="112" rx="17.0667" fill="#3ddc84" />
-  <ns0:rect x="512" y="464" width="35.5556" height="80" rx="17.0667" fill="#3ddc84" />
-  <ns0:rect x="590.2222" y="464" width="35.5556" height="80" rx="17.0667" fill="#3ddc84" />
-  <ns0:text x="170.6667" y="240" font-size="85.3333" fill="#bb86fc" opacity="0.6" font-family="monospace">{</ns0:text>
-  <ns0:text x="184.8889" y="336" font-size="22.7556" fill="#03dac6" opacity="0.7" font-family="monospace">class App</ns0:text>
-  <ns0:text x="184.8889" y="376" font-size="22.7556" fill="#cf6679" opacity="0.7" font-family="monospace">  extends</ns0:text>
-  <ns0:text x="184.8889" y="416" font-size="22.7556" fill="#03dac6" opacity="0.7" font-family="monospace">  Activity</ns0:text>
-  <ns0:text x="170.6667" y="496" font-size="85.3333" fill="#bb86fc" opacity="0.6" font-family="monospace">}</ns0:text>
-  <ns0:rect x="810.6667" y="160" width="213.3333" height="56" rx="7.1111" fill="#bb86fc" opacity="0.3" />
-  <ns0:text x="917.3333" y="195.2" text-anchor="middle" font-size="17.0667" fill="#bb86fc">UI Layer</ns0:text>
-  <ns0:rect x="810.6667" y="232" width="213.3333" height="56" rx="7.1111" fill="#03dac6" opacity="0.3" />
-  <ns0:text x="917.3333" y="267.2" text-anchor="middle" font-size="17.0667" fill="#03dac6">ViewModel</ns0:text>
-  <ns0:rect x="810.6667" y="304" width="213.3333" height="56" rx="7.1111" fill="#cf6679" opacity="0.3" />
-  <ns0:text x="917.3333" y="339.2" text-anchor="middle" font-size="17.0667" fill="#cf6679">Repository</ns0:text>
-  <ns0:rect x="810.6667" y="376" width="213.3333" height="56" rx="7.1111" fill="#3ddc84" opacity="0.3" />
-  <ns0:text x="917.3333" y="411.2" text-anchor="middle" font-size="17.0667" fill="#3ddc84">Data Layer</ns0:text>
+  <ns0:line x1="519.1111" y1="160" x2="497.7778" y2="120" stroke="#2ecc71" stroke-width="5.6889" stroke-linecap="round" />
+  <ns0:line x1="618.6667" y1="160" x2="640" y2="120" stroke="#2ecc71" stroke-width="5.6889" stroke-linecap="round" />
+  <ns0:rect x="483.5556" y="296" width="170.6667" height="160" rx="14.2222" fill="#2ecc71" />
+  <ns0:rect x="433.7778" y="304" width="35.5556" height="112" rx="17.0667" fill="#2ecc71" />
+  <ns0:rect x="668.4444" y="304" width="35.5556" height="112" rx="17.0667" fill="#2ecc71" />
+  <ns0:rect x="512" y="464" width="35.5556" height="80" rx="17.0667" fill="#2ecc71" />
+  <ns0:rect x="590.2222" y="464" width="35.5556" height="80" rx="17.0667" fill="#2ecc71" />
+  <ns0:text x="170.6667" y="240" font-size="85.3333" fill="#ce93d8" opacity="0.6" font-family="monospace">{</ns0:text>
+  <ns0:text x="184.8889" y="336" font-size="22.7556" fill="#3498db" opacity="0.7" font-family="monospace">class App</ns0:text>
+  <ns0:text x="184.8889" y="376" font-size="22.7556" fill="#e74c3c" opacity="0.7" font-family="monospace">  extends</ns0:text>
+  <ns0:text x="184.8889" y="416" font-size="22.7556" fill="#3498db" opacity="0.7" font-family="monospace">  Activity</ns0:text>
+  <ns0:text x="170.6667" y="496" font-size="85.3333" fill="#ce93d8" opacity="0.6" font-family="monospace">}</ns0:text>
+  <ns0:rect x="810.6667" y="160" width="213.3333" height="56" rx="7.1111" fill="#ce93d8" opacity="0.3" />
+  <ns0:text x="917.3333" y="195.2" text-anchor="middle" font-size="17.0667" fill="#ce93d8">UI Layer</ns0:text>
+  <ns0:rect x="810.6667" y="232" width="213.3333" height="56" rx="7.1111" fill="#3498db" opacity="0.3" />
+  <ns0:text x="917.3333" y="267.2" text-anchor="middle" font-size="17.0667" fill="#3498db">ViewModel</ns0:text>
+  <ns0:rect x="810.6667" y="304" width="213.3333" height="56" rx="7.1111" fill="#e74c3c" opacity="0.3" />
+  <ns0:text x="917.3333" y="339.2" text-anchor="middle" font-size="17.0667" fill="#e74c3c">Repository</ns0:text>
+  <ns0:rect x="810.6667" y="376" width="213.3333" height="56" rx="7.1111" fill="#2ecc71" opacity="0.3" />
+  <ns0:text x="917.3333" y="411.2" text-anchor="middle" font-size="17.0667" fill="#2ecc71">Data Layer</ns0:text>
   <ns0:line x1="917.3333" y1="216" x2="917.3333" y2="232" stroke="#888" stroke-width="2.1333" />
   <ns0:line x1="917.3333" y1="288" x2="917.3333" y2="304" stroke="#888" stroke-width="2.1333" />
   <ns0:line x1="917.3333" y1="360" x2="917.3333" y2="376" stroke="#888" stroke-width="2.1333" />

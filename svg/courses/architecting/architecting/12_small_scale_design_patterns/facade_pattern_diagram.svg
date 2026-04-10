@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="13.2632" refX="17.0667" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -13,7 +73,7 @@
   <ns0:rect x="216.4706" y="125.387" width="141.1765" height="83.5913" rx="4.7059" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.8823" />
   <ns0:text x="287.0588" y="161.9582" text-anchor="middle" font-size="13.1765" font-weight="bold" fill="#333">Facade</ns0:text>
   <ns0:text x="287.0588" y="184.9458" text-anchor="middle" font-size="10" fill="#666">Simple interface</ns0:text>
-  <ns0:rect x="432.9412" y="47.0201" width="244.7059" height="292.5697" rx="9.4118" fill="#f0fff0" stroke="#28a745" stroke-width="1.4118" stroke-dasharray="5.6471 2.8235" />
+  <ns0:rect x="432.9412" y="47.0201" width="244.7059" height="292.5697" rx="9.4118" fill="#f5f5f5" stroke="#28a745" stroke-width="1.4118" stroke-dasharray="5.6471 2.8235" />
   <ns0:text x="555.2941" y="71.0526" text-anchor="middle" font-size="11.2941" font-weight="bold" fill="#28a745">Complex Subsystem</ns0:text>
   <ns0:rect x="461.1765" y="88.8158" width="103.5294" height="39.7059" rx="4.7059" fill="#d4edda" stroke="#28a745" stroke-width="1.4118" />
   <ns0:text x="512.9412" y="113.8932" text-anchor="middle" font-size="10.3529" fill="#333">Subsystem 1</ns0:text>
@@ -28,11 +88,11 @@
   <ns0:line x1="564.7059" y1="243.4598" x2="564.7059" y2="259.1331" stroke="#999" stroke-width="0.9412" stroke-dasharray="3.7647 2.8235" />
   <ns0:line x1="564.7059" y1="300.9288" x2="602.353" y2="300.9288" stroke="#999" stroke-width="0.9412" stroke-dasharray="3.7647 2.8235" />
   <ns0:path d="M 602.353 300.9288 Q 640 300.9288 640 208.9784 Q 640 99.2647 564.7059 99.2647" stroke="#999" stroke-width="0.9412" stroke-dasharray="3.7647 2.8235" fill="none" />
-  <ns0:line x1="141.1765" y1="172.4071" x2="214.5882" y2="167.1827" stroke="#4a90e2" stroke-width="1.4118" marker-end="url(#arrowhead)" />
+  <ns0:line x1="141.1765" y1="172.4071" x2="214.5882" y2="167.1827" stroke="#4a90e2" stroke-width="1.4118" marker-end="url(#arrow)" />
   <ns0:text x="176.9412" y="158.8235" font-size="10" fill="#4a90e2">Simple API</ns0:text>
-  <ns0:line x1="357.6471" y1="146.2849" x2="459.2941" y2="108.6687" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrowhead)" />
-  <ns0:line x1="357.6471" y1="161.9582" x2="459.2941" y2="166.1378" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrowhead)" />
-  <ns0:line x1="357.6471" y1="177.6316" x2="459.2941" y2="223.6068" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrowhead)" />
-  <ns0:line x1="357.6471" y1="193.305" x2="459.2941" y2="281.0759" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrowhead)" />
+  <ns0:line x1="357.6471" y1="146.2849" x2="459.2941" y2="108.6687" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrow)" />
+  <ns0:line x1="357.6471" y1="161.9582" x2="459.2941" y2="166.1378" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrow)" />
+  <ns0:line x1="357.6471" y1="177.6316" x2="459.2941" y2="223.6068" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrow)" />
+  <ns0:line x1="357.6471" y1="193.305" x2="459.2941" y2="281.0759" stroke="#28a745" stroke-width="1.4118" marker-end="url(#arrow)" />
   <ns0:text x="352.9412" y="376.161" text-anchor="middle" font-size="10.3529" fill="#888" font-style="italic">Facade provides a unified, simple interface to a complex subsystem.</ns0:text>
 </ns0:svg>

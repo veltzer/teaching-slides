@@ -1,6 +1,67 @@
 <svg viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="603.367" y="58.1818" font-family="Arial" font-size="34.4781" font-weight="bold" text-anchor="middle" fill="#333">Ways to Create EKS Clusters</text>
-  <rect x="86.1953" y="116.3637" width="206.8687" height="193.9394" fill="#FF9900" stroke="#E68800" stroke-width="3.4478" rx="13.7913" />
+  <rect x="86.1953" y="116.3637" width="206.8687" height="193.9394" fill="#ff9800" stroke="#f57c00" stroke-width="3.4478" rx="13.7913" />
   <text x="189.6297" y="164.8485" font-family="Arial" font-size="20.6869" font-weight="bold" text-anchor="middle" fill="white">AWS Console</text>
   <rect x="120.6734" y="184.2425" width="137.9125" height="9.697" fill="white" rx="3.4478" />
   <rect x="120.6734" y="203.6364" width="103.4344" height="9.697" fill="white" rx="3.4478" />
@@ -8,34 +69,34 @@
   <text x="189.6297" y="271.5152" font-family="Arial" font-size="17.239" text-anchor="middle" fill="white">Web Interface</text>
   <text x="189.6297" y="339.394" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Easy to use</text>
   <text x="189.6297" y="368.4848" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Visual interface</text>
-  <rect x="344.7812" y="116.3637" width="206.8687" height="193.9394" fill="#232F3E" stroke="#1A252F" stroke-width="3.4478" rx="13.7913" />
-  <text x="448.2155" y="164.8485" font-family="Arial" font-size="20.6869" font-weight="bold" text-anchor="middle" fill="#FF9900">AWS CLI</text>
-  <text x="448.2155" y="193.9394" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#00FF00">$ aws eks</text>
-  <text x="448.2155" y="223.0303" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#00FF00">create-cluster</text>
-  <text x="448.2155" y="252.1213" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#00FF00">--name my-cluster</text>
+  <rect x="344.7812" y="116.3637" width="206.8687" height="193.9394" fill="#333333" stroke="#1a1a2e" stroke-width="3.4478" rx="13.7913" />
+  <text x="448.2155" y="164.8485" font-family="Arial" font-size="20.6869" font-weight="bold" text-anchor="middle" fill="#ff9800">AWS CLI</text>
+  <text x="448.2155" y="193.9394" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#28a745">$ aws eks</text>
+  <text x="448.2155" y="223.0303" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#28a745">create-cluster</text>
+  <text x="448.2155" y="252.1213" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#28a745">--name my-cluster</text>
   <text x="448.2155" y="339.394" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Command line</text>
   <text x="448.2155" y="368.4848" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Scriptable</text>
-  <rect x="603.367" y="116.3637" width="206.8687" height="193.9394" fill="#326CE5" stroke="#1E4A73" stroke-width="3.4478" rx="13.7913" />
+  <rect x="603.367" y="116.3637" width="206.8687" height="193.9394" fill="#1976d2" stroke="#283593" stroke-width="3.4478" rx="13.7913" />
   <text x="706.8014" y="164.8485" font-family="Arial" font-size="20.6869" font-weight="bold" text-anchor="middle" fill="white">eksctl</text>
-  <text x="706.8014" y="193.9394" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#E8F4FD">$ eksctl create</text>
-  <text x="706.8014" y="223.0303" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#E8F4FD">cluster --name</text>
-  <text x="706.8014" y="252.1213" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#E8F4FD">my-cluster</text>
+  <text x="706.8014" y="193.9394" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#e8f4f8">$ eksctl create</text>
+  <text x="706.8014" y="223.0303" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#e8f4f8">cluster --name</text>
+  <text x="706.8014" y="252.1213" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#e8f4f8">my-cluster</text>
   <text x="706.8014" y="339.394" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Kubernetes native</text>
   <text x="706.8014" y="368.4848" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Simple commands</text>
-  <rect x="861.9529" y="116.3637" width="206.8687" height="193.9394" fill="#623CE4" stroke="#4B2DB8" stroke-width="3.4478" rx="13.7913" />
+  <rect x="861.9529" y="116.3637" width="206.8687" height="193.9394" fill="#673ab7" stroke="#673ab7" stroke-width="3.4478" rx="13.7913" />
   <text x="965.3873" y="164.8485" font-family="Arial" font-size="20.6869" font-weight="bold" text-anchor="middle" fill="white">Terraform</text>
-  <text x="965.3873" y="193.9394" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#E8E4FD">resource</text>
-  <text x="965.3873" y="223.0303" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#E8E4FD">"aws_eks_cluster"</text>
-  <text x="965.3873" y="252.1213" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#E8E4FD">"main" {}</text>
+  <text x="965.3873" y="193.9394" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#e8eaf6">resource</text>
+  <text x="965.3873" y="223.0303" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#e8eaf6">"aws_eks_cluster"</text>
+  <text x="965.3873" y="252.1213" font-family="monospace" font-size="17.239" text-anchor="middle" fill="#e8eaf6">"main" {}</text>
   <text x="965.3873" y="339.394" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Infrastructure as Code</text>
   <text x="965.3873" y="368.4848" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#333">• Reproducible</text>
-  <rect x="86.1953" y="426.6667" width="982.6263" height="213.3333" fill="#F8F9FA" stroke="#DEE2E6" stroke-width="1.7239" rx="8.6196" />
+  <rect x="86.1953" y="426.6667" width="982.6263" height="213.3333" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.7239" rx="8.6196" />
   <text x="577.5084" y="465.4546" font-family="Arial" font-size="24.1347" font-weight="bold" text-anchor="middle" fill="#333">Comparison</text>
-  <line x1="120.6734" y1="484.8485" x2="1034.3435" y2="484.8485" stroke="#DEE2E6" stroke-width="1.7239" />
-  <text x="189.6297" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#495057">Console</text>
-  <text x="448.2155" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#495057">CLI</text>
-  <text x="706.8014" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#495057">eksctl</text>
-  <text x="965.3873" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#495057">Terraform</text>
+  <line x1="120.6734" y1="484.8485" x2="1034.3435" y2="484.8485" stroke="#e0e0e0" stroke-width="1.7239" />
+  <text x="189.6297" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#555555">Console</text>
+  <text x="448.2155" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#555555">CLI</text>
+  <text x="706.8014" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#555555">eksctl</text>
+  <text x="965.3873" y="513.9395" font-family="Arial" font-size="17.239" font-weight="bold" text-anchor="middle" fill="#555555">Terraform</text>
   <text x="120.6734" y="552.7273" font-family="Arial" font-size="17.239" fill="#666">Ease:</text>
   <text x="189.6297" y="552.7273" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#28A745">★★★★★</text>
   <text x="448.2155" y="552.7273" font-family="Arial" font-size="17.239" text-anchor="middle" fill="#FFC107">★★★☆☆</text>

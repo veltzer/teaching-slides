@@ -1,10 +1,70 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="ah" markerWidth="33.4367" markerHeight="252" refX="33.4367" refY="126" orient="auto">
       <ns0:polygon points="0,360 11.7029,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="118.8862" height="640" fill="#f8f9fa" />
+  <ns0:rect width="118.8862" height="640" fill="#f9f9f9" />
   <ns0:text x="59.4431" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Autonomous Coding Agents: End-to-End Workflow</ns0:text>
   <ns0:rect x="2.9722" y="160" width="19.319" height="112" rx="1.4861" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.2972" />
   <ns0:text x="12.6317" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Read</ns0:text>
@@ -34,16 +94,16 @@
   <ns0:text x="69.1026" y="376" text-anchor="middle" font-size="10" fill="#F44336">self-correct on failure</ns0:text>
   <ns0:rect x="2.9722" y="432" width="112.9419" height="176" rx="1.4861" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.2229" />
   <ns0:text x="59.4431" y="476.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Capabilities of Autonomous Agents</ns0:text>
-  <ns0:rect x="5.9443" y="496" width="22.2912" height="88" rx="1.1889" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="5.9443" y="496" width="22.2912" height="88" rx="1.1889" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="17.0899" y="536" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Browse Docs</ns0:text>
   <ns0:text x="17.0899" y="568" text-anchor="middle" font-size="10" fill="#333">fetch + parse</ns0:text>
-  <ns0:rect x="31.2076" y="496" width="22.2912" height="88" rx="1.1889" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="31.2076" y="496" width="22.2912" height="88" rx="1.1889" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="42.3532" y="536" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Install Deps</ns0:text>
   <ns0:text x="42.3532" y="568" text-anchor="middle" font-size="10" fill="#333">pip/npm/cargo</ns0:text>
-  <ns0:rect x="56.4709" y="496" width="22.2912" height="88" rx="1.1889" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="56.4709" y="496" width="22.2912" height="88" rx="1.1889" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="67.6165" y="536" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Run CI Checks</ns0:text>
   <ns0:text x="67.6165" y="568" text-anchor="middle" font-size="10" fill="#333">lint + test</ns0:text>
-  <ns0:rect x="81.7342" y="496" width="31.2076" height="88" rx="1.1889" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="81.7342" y="496" width="31.2076" height="88" rx="1.1889" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="97.338" y="536" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">SWE-bench: ~40-50%</ns0:text>
   <ns0:text x="97.338" y="568" text-anchor="middle" font-size="10" fill="#333">real-world issue solve rate</ns0:text>
 </ns0:svg>

@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="635.0388" y="44.6512" text-anchor="middle" font-size="26.7907" font-weight="bold" fill="#333">Deadlock Prevention Strategies</ns0:text>
   <ns0:rect x="54.4319" y="74.4186" width="1161.2137" height="96.7442" rx="7.4419" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9767" />
   <ns0:text x="90.7199" y="111.6279" font-size="20.8372" font-weight="bold" fill="#4a90e2">1. Lock Ordering</ns0:text>
@@ -13,7 +74,7 @@
   <ns0:text x="90.7199" y="446.5116" font-size="20.8372" font-weight="bold" fill="#28a745">4. Message Passing</ns0:text>
   <ns0:text x="90.7199" y="483.7209" font-size="19.3488" fill="#333">Replace shared state with channels. Actors never deadlock.</ns0:text>
   <ns0:rect x="54.4319" y="520.9302" width="1161.2137" height="119.0698" rx="7.4419" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9767" />
-  <ns0:text x="90.7199" y="558.1395" font-size="20.8372" font-weight="bold" fill="#856404">5. Lock Hierarchies</ns0:text>
+  <ns0:text x="90.7199" y="558.1395" font-size="20.8372" font-weight="bold" fill="#bf360c">5. Lock Hierarchies</ns0:text>
   <ns0:text x="90.7199" y="595.3488" font-size="19.3488" fill="#333">Assign a numeric level to each lock. A thread holding level N</ns0:text>
   <ns0:text x="90.7199" y="622.1395" font-size="19.3488" fill="#333">may only acquire locks at level N+1 or higher.</ns0:text>
 </ns0:svg>

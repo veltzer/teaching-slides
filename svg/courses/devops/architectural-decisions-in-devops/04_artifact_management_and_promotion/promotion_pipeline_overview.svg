@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="36.5714" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#4A90D9" stroke="#333" stroke-width="3.6571" />
+  <rect x="36.5714" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#4a90e2" stroke="#333" stroke-width="3.6571" />
   <text x="146.2857" y="302.4" text-anchor="middle" fill="white" font-size="21.9429" font-weight="bold">Build</text>
   <text x="146.2857" y="360" text-anchor="middle" fill="white" font-size="20.1143">Unit Tests</text>
-  <rect x="329.1429" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#E8A838" stroke="#333" stroke-width="3.6571" />
+  <rect x="329.1429" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#f9a825" stroke="#333" stroke-width="3.6571" />
   <text x="438.8571" y="302.4" text-anchor="middle" fill="white" font-size="21.9429" font-weight="bold">Dev Repo</text>
   <text x="438.8571" y="360" text-anchor="middle" fill="white" font-size="20.1143">Snapshot</text>
-  <rect x="621.7143" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#D96B4A" stroke="#333" stroke-width="3.6571" />
+  <rect x="621.7143" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#e74c3c" stroke="#333" stroke-width="3.6571" />
   <text x="731.4286" y="302.4" text-anchor="middle" fill="white" font-size="21.9429" font-weight="bold">Staging Repo</text>
   <text x="731.4286" y="360" text-anchor="middle" fill="white" font-size="20.1143">Integration</text>
-  <rect x="914.2857" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#50B86C" stroke="#333" stroke-width="3.6571" />
+  <rect x="914.2857" y="230.4" width="219.4286" height="172.8" rx="18.2857" fill="#4caf50" stroke="#333" stroke-width="3.6571" />
   <text x="1024" y="302.4" text-anchor="middle" fill="white" font-size="21.9429" font-weight="bold">Prod Repo</text>
   <text x="1024" y="360" text-anchor="middle" fill="white" font-size="20.1143">Release</text>
-  <line x1="256" y1="316.8" x2="329.1429" y2="316.8" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
-  <line x1="548.5714" y1="316.8" x2="621.7143" y2="316.8" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
-  <line x1="841.1429" y1="316.8" x2="914.2857" y2="316.8" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
+  <line x1="256" y1="316.8" x2="329.1429" y2="316.8" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="548.5714" y1="316.8" x2="621.7143" y2="316.8" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="841.1429" y1="316.8" x2="914.2857" y2="316.8" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <text x="420.5714" y="489.6" text-anchor="middle" fill="#555" font-size="18.2857">promote</text>
   <text x="713.1429" y="489.6" text-anchor="middle" fill="#555" font-size="18.2857">promote</text>
   <text x="1005.7143" y="489.6" text-anchor="middle" fill="#555" font-size="18.2857">promote</text>
@@ -21,6 +21,66 @@
   <text x="585.1429" y="158.4" text-anchor="middle" fill="#333" font-size="18.2857">gate: tests pass</text>
   <text x="877.7143" y="158.4" text-anchor="middle" fill="#333" font-size="18.2857">gate: approval</text>
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrow2" viewBox="0 0 10 10" refX="16.4571" refY="14.4" markerWidth="10.9714" markerHeight="17.28" orient="auto-start-reverse">
       <path d="M 0 0 L 18.2857 14.4 L 0 28.8 z" fill="#333" />
     </marker>

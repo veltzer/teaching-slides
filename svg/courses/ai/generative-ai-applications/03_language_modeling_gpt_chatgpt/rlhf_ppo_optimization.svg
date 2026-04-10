@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="apd" markerWidth="17.0667" markerHeight="12.6" refX="8.5333" refY="12.6" orient="auto">
       <ns0:polygon points="0,18 0,9" fill="#4a90e2" />
     </ns0:marker>
@@ -15,8 +75,8 @@
   <ns0:path d="M 593.5484 130.6452 Q 640 130.6452 640 174.1936 Q 640 217.7419 593.5484 217.7419" fill="none" stroke="#4a90e2" stroke-width="2.0645" stroke-dasharray="5.1613 3.0968" />
   <ns0:text x="660.6452" y="179.6371" text-anchor="middle" font-size="10.3226" fill="#4a90e2">repeat</ns0:text>
   <ns0:rect x="103.2258" y="293.9516" width="567.742" height="54.4355" rx="5.1613" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0645" />
-  <ns0:text x="387.0968" y="317.9032" text-anchor="middle" font-size="12.3871" font-weight="bold" fill="#856404">Objective: maximize E[reward(prompt, response)]</ns0:text>
-  <ns0:text x="387.0968" y="337.5" text-anchor="middle" font-size="12.3871" fill="#856404">subject to KL(policy || sft_model) &lt; delta</ns0:text>
+  <ns0:text x="387.0968" y="317.9032" text-anchor="middle" font-size="12.3871" font-weight="bold" fill="#bf360c">Objective: maximize E[reward(prompt, response)]</ns0:text>
+  <ns0:text x="387.0968" y="337.5" text-anchor="middle" font-size="12.3871" fill="#bf360c">subject to KL(policy || sft_model) &lt; delta</ns0:text>
   <ns0:rect x="103.2258" y="370.1613" width="567.742" height="48.9919" rx="5.1613" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5484" />
   <ns0:text x="387.0968" y="391.9355" text-anchor="middle" font-size="11.3548" fill="#dc3545">KL constraint prevents "reward hacking" -- finding degenerate responses</ns0:text>
   <ns0:text x="387.0968" y="409.3549" text-anchor="middle" font-size="11.3548" fill="#dc3545">that score high on reward model but are actually low quality</ns0:text>

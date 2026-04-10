@@ -1,4 +1,65 @@
 <svg viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="516.129" y="87.0968" text-anchor="middle" font-size="33.0323" font-weight="bold">std::string_view</text>
   <rect x="103.2258" y="174.1935" width="412.9032" height="116.129" fill="#e8f5e8" stroke="#4caf50" stroke-width="4.129" rx="10.3226" />
   <text x="309.6774" y="246.7742" text-anchor="middle" font-size="24.7742">Original String Data</text>
@@ -7,7 +68,7 @@
   <text x="701.9355" y="240.9677" text-anchor="middle" font-size="20.6452">char* ptr</text>
   <rect x="784.5161" y="203.2258" width="123.871" height="58.0645" fill="#fff3e0" stroke="#ff9800" rx="4.129" />
   <text x="846.4516" y="240.9677" text-anchor="middle" font-size="20.6452">size_t len</text>
-  <path d="M 640 232.2581 L 309.6774 232.2581" stroke="#666" stroke-width="4.129" marker-end="url(#arrowhead)" stroke-dasharray="10.3226 10.3226" />
+  <path d="M 640 232.2581 L 309.6774 232.2581" stroke="#666" stroke-width="4.129" marker-end="url(#arrow)" stroke-dasharray="10.3226 10.3226" />
   <text x="474.8387" y="217.7419" text-anchor="middle" font-size="20.6452">points to</text>
   <text x="516.129" y="406.4516" text-anchor="middle" font-size="24.7742">No ownership, no allocation</text>
   <text x="516.129" y="464.5161" text-anchor="middle" font-size="20.6452">Danger: Original data must outlive the view!</text>

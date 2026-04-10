@@ -1,48 +1,109 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:circle cx="568.8889" cy="320" r="170.6667" fill="none" stroke="#e94560" stroke-width="4.2667" opacity="0.3" />
-  <ns0:circle cx="568.8889" cy="320" r="128" fill="none" stroke="#e94560" stroke-width="2.8444" opacity="0.2" />
-  <ns0:rect x="547.5556" y="112" width="42.6667" height="40" rx="4.2667" fill="#e94560" opacity="0.3" />
-  <ns0:rect x="547.5556" y="488" width="42.6667" height="40" rx="4.2667" fill="#e94560" opacity="0.3" />
-  <ns0:rect x="384" y="296" width="35.5556" height="48" rx="4.2667" fill="#e94560" opacity="0.3" />
-  <ns0:rect x="718.2222" y="296" width="35.5556" height="48" rx="4.2667" fill="#e94560" opacity="0.3" />
-  <ns0:rect x="71.1111" y="64" width="284.4444" height="112" rx="8.5333" fill="#16213e" stroke="#53d8fb" stroke-width="2.1333" />
-  <ns0:text x="92.4444" y="104" font-family="monospace" font-size="17.0667" fill="#e94560">fn</ns0:text>
-  <ns0:text x="120.8889" y="104" font-family="monospace" font-size="17.0667" fill="#ffd93d">longest</ns0:text>
-  <ns0:text x="206.2222" y="104" font-family="monospace" font-size="17.0667" fill="#53d8fb">&lt;'a&gt;</ns0:text>
+  <ns0:circle cx="568.8889" cy="320" r="170.6667" fill="none" stroke="#dc3545" stroke-width="4.2667" opacity="0.3" />
+  <ns0:circle cx="568.8889" cy="320" r="128" fill="none" stroke="#dc3545" stroke-width="2.8444" opacity="0.2" />
+  <ns0:rect x="547.5556" y="112" width="42.6667" height="40" rx="4.2667" fill="#dc3545" opacity="0.3" />
+  <ns0:rect x="547.5556" y="488" width="42.6667" height="40" rx="4.2667" fill="#dc3545" opacity="0.3" />
+  <ns0:rect x="384" y="296" width="35.5556" height="48" rx="4.2667" fill="#dc3545" opacity="0.3" />
+  <ns0:rect x="718.2222" y="296" width="35.5556" height="48" rx="4.2667" fill="#dc3545" opacity="0.3" />
+  <ns0:rect x="71.1111" y="64" width="284.4444" height="112" rx="8.5333" fill="#1a1a2e" stroke="#90caf9" stroke-width="2.1333" />
+  <ns0:text x="92.4444" y="104" font-family="monospace" font-size="17.0667" fill="#dc3545">fn</ns0:text>
+  <ns0:text x="120.8889" y="104" font-family="monospace" font-size="17.0667" fill="#f9a825">longest</ns0:text>
+  <ns0:text x="206.2222" y="104" font-family="monospace" font-size="17.0667" fill="#90caf9">&lt;'a&gt;</ns0:text>
   <ns0:text x="256" y="104" font-family="monospace" font-size="17.0667" fill="white">(</ns0:text>
   <ns0:text x="106.6667" y="136" font-family="monospace" font-size="17.0667" fill="white">x: &amp;</ns0:text>
-  <ns0:text x="156.4444" y="136" font-family="monospace" font-size="17.0667" fill="#53d8fb">'a</ns0:text>
-  <ns0:text x="184.8889" y="136" font-family="monospace" font-size="17.0667" fill="#e94560">str</ns0:text>
+  <ns0:text x="156.4444" y="136" font-family="monospace" font-size="17.0667" fill="#90caf9">'a</ns0:text>
+  <ns0:text x="184.8889" y="136" font-family="monospace" font-size="17.0667" fill="#dc3545">str</ns0:text>
   <ns0:text x="220.4444" y="136" font-family="monospace" font-size="17.0667" fill="white">)</ns0:text>
   <ns0:text x="234.6667" y="136" font-family="monospace" font-size="17.0667" fill="white">-&gt; &amp;</ns0:text>
-  <ns0:text x="284.4444" y="136" font-family="monospace" font-size="17.0667" fill="#53d8fb">'a</ns0:text>
-  <ns0:text x="312.8889" y="136" font-family="monospace" font-size="17.0667" fill="#e94560">str</ns0:text>
-  <ns0:text x="92.4444" y="160" font-family="monospace" font-size="14.2222" fill="#53d8fb">// lifetimes</ns0:text>
-  <ns0:rect x="782.2222" y="64" width="284.4444" height="112" rx="8.5333" fill="#16213e" stroke="#00b894" stroke-width="2.1333" />
-  <ns0:text x="803.5556" y="104" font-family="monospace" font-size="17.0667" fill="#e94560">impl</ns0:text>
-  <ns0:text x="853.3333" y="104" font-family="monospace" font-size="17.0667" fill="#ffd93d">Iterator</ns0:text>
-  <ns0:text x="960" y="104" font-family="monospace" font-size="17.0667" fill="#e94560">for</ns0:text>
-  <ns0:text x="995.5556" y="104" font-family="monospace" font-size="17.0667" fill="#53d8fb">Fib</ns0:text>
-  <ns0:text x="824.8889" y="136" font-family="monospace" font-size="17.0667" fill="#e94560">type</ns0:text>
+  <ns0:text x="284.4444" y="136" font-family="monospace" font-size="17.0667" fill="#90caf9">'a</ns0:text>
+  <ns0:text x="312.8889" y="136" font-family="monospace" font-size="17.0667" fill="#dc3545">str</ns0:text>
+  <ns0:text x="92.4444" y="160" font-family="monospace" font-size="14.2222" fill="#90caf9">// lifetimes</ns0:text>
+  <ns0:rect x="782.2222" y="64" width="284.4444" height="112" rx="8.5333" fill="#1a1a2e" stroke="#2ecc71" stroke-width="2.1333" />
+  <ns0:text x="803.5556" y="104" font-family="monospace" font-size="17.0667" fill="#dc3545">impl</ns0:text>
+  <ns0:text x="853.3333" y="104" font-family="monospace" font-size="17.0667" fill="#f9a825">Iterator</ns0:text>
+  <ns0:text x="960" y="104" font-family="monospace" font-size="17.0667" fill="#dc3545">for</ns0:text>
+  <ns0:text x="995.5556" y="104" font-family="monospace" font-size="17.0667" fill="#90caf9">Fib</ns0:text>
+  <ns0:text x="824.8889" y="136" font-family="monospace" font-size="17.0667" fill="#dc3545">type</ns0:text>
   <ns0:text x="881.7778" y="136" font-family="monospace" font-size="17.0667" fill="white">Item =</ns0:text>
-  <ns0:text x="967.1111" y="136" font-family="monospace" font-size="17.0667" fill="#53d8fb">u64</ns0:text>
-  <ns0:text x="803.5556" y="160" font-family="monospace" font-size="14.2222" fill="#00b894">// trait impl</ns0:text>
-  <ns0:rect x="71.1111" y="464" width="284.4444" height="112" rx="8.5333" fill="#16213e" stroke="#ffd93d" stroke-width="2.1333" />
-  <ns0:text x="92.4444" y="504" font-family="monospace" font-size="17.0667" fill="#e94560">async fn</ns0:text>
-  <ns0:text x="184.8889" y="504" font-family="monospace" font-size="17.0667" fill="#ffd93d">fetch</ns0:text>
+  <ns0:text x="967.1111" y="136" font-family="monospace" font-size="17.0667" fill="#90caf9">u64</ns0:text>
+  <ns0:text x="803.5556" y="160" font-family="monospace" font-size="14.2222" fill="#2ecc71">// trait impl</ns0:text>
+  <ns0:rect x="71.1111" y="464" width="284.4444" height="112" rx="8.5333" fill="#1a1a2e" stroke="#f9a825" stroke-width="2.1333" />
+  <ns0:text x="92.4444" y="504" font-family="monospace" font-size="17.0667" fill="#dc3545">async fn</ns0:text>
+  <ns0:text x="184.8889" y="504" font-family="monospace" font-size="17.0667" fill="#f9a825">fetch</ns0:text>
   <ns0:text x="241.7778" y="504" font-family="monospace" font-size="17.0667" fill="white">() {</ns0:text>
   <ns0:text x="113.7778" y="536" font-family="monospace" font-size="17.0667" fill="white">client.</ns0:text>
-  <ns0:text x="199.1111" y="536" font-family="monospace" font-size="17.0667" fill="#ffd93d">get</ns0:text>
+  <ns0:text x="199.1111" y="536" font-family="monospace" font-size="17.0667" fill="#f9a825">get</ns0:text>
   <ns0:text x="234.6667" y="536" font-family="monospace" font-size="17.0667" fill="white">(url).</ns0:text>
-  <ns0:text x="298.6667" y="536" font-family="monospace" font-size="17.0667" fill="#53d8fb">await</ns0:text>
-  <ns0:text x="92.4444" y="560" font-family="monospace" font-size="14.2222" fill="#ffd93d">// async runtime</ns0:text>
-  <ns0:rect x="782.2222" y="464" width="284.4444" height="112" rx="8.5333" fill="#16213e" stroke="#e94560" stroke-width="2.1333" />
-  <ns0:text x="803.5556" y="504" font-family="monospace" font-size="17.0667" fill="#e94560">unsafe</ns0:text>
+  <ns0:text x="298.6667" y="536" font-family="monospace" font-size="17.0667" fill="#90caf9">await</ns0:text>
+  <ns0:text x="92.4444" y="560" font-family="monospace" font-size="14.2222" fill="#f9a825">// async runtime</ns0:text>
+  <ns0:rect x="782.2222" y="464" width="284.4444" height="112" rx="8.5333" fill="#1a1a2e" stroke="#dc3545" stroke-width="2.1333" />
+  <ns0:text x="803.5556" y="504" font-family="monospace" font-size="17.0667" fill="#dc3545">unsafe</ns0:text>
   <ns0:text x="881.7778" y="504" font-family="monospace" font-size="17.0667" fill="white">{</ns0:text>
   <ns0:text x="824.8889" y="536" font-family="monospace" font-size="17.0667" fill="white">*raw_ptr = </ns0:text>
-  <ns0:text x="952.8889" y="536" font-family="monospace" font-size="17.0667" fill="#ffd93d">42</ns0:text>
+  <ns0:text x="952.8889" y="536" font-family="monospace" font-size="17.0667" fill="#f9a825">42</ns0:text>
   <ns0:text x="981.3333" y="536" font-family="monospace" font-size="17.0667" fill="white">;</ns0:text>
-  <ns0:text x="803.5556" y="560" font-family="monospace" font-size="14.2222" fill="#e94560">// unsafe blocks</ns0:text>
-  <ns0:text x="526.2222" y="344" font-family="serif" font-size="85.3333" fill="#e94560" font-weight="bold" opacity="0.6">R</ns0:text>
+  <ns0:text x="803.5556" y="560" font-family="monospace" font-size="14.2222" fill="#dc3545">// unsafe blocks</ns0:text>
+  <ns0:text x="526.2222" y="344" font-family="serif" font-size="85.3333" fill="#dc3545" font-weight="bold" opacity="0.6">R</ns0:text>
 </ns0:svg>

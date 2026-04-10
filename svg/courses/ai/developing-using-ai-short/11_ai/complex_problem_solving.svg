@@ -1,34 +1,84 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="778.7072" height="438.0228" fill="#ffffff" />
-  <ns0:rect x="48.6692" y="30.4183" width="681.3688" height="36.5019" rx="6.0837" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="48.6692" y="30.4183" width="681.3688" height="36.5019" rx="6.0837" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="389.3536" y="54.1445" text-anchor="middle" fill="white" font-size="15.8175" font-weight="bold" font-family="Arial, sans-serif">AI-Powered Problem Decomposition</ns0:text>
   <ns0:rect x="48.6692" y="91.2548" width="200.7605" height="79.0875" rx="7.3004" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.2167" filter="url(#shadow)" />
   <ns0:text x="149.0494" y="135.057" text-anchor="middle" fill="#e65100" font-size="12.1673" font-weight="bold" font-family="Arial, sans-serif">Problem Analysis</ns0:text>
   <ns0:text x="149.0494" y="154.5247" text-anchor="middle" fill="#555" font-size="10" font-family="Arial, sans-serif">Understand scope</ns0:text>
-  <ns0:line x1="249.4297" y1="130.7985" x2="285.9316" y2="130.7985" stroke="#1565c0" stroke-width="1.8251" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="249.4297" y1="130.7985" x2="285.9316" y2="130.7985" stroke="#1565c0" stroke-width="1.8251" marker-end="url(#arrow-primary)" />
   <ns0:rect x="292.0152" y="91.2548" width="194.6768" height="79.0875" rx="7.3004" fill="#e8f5e9" stroke="#43a047" stroke-width="1.2167" filter="url(#shadow)" />
   <ns0:text x="389.3536" y="135.057" text-anchor="middle" fill="#2e7d32" font-size="12.1673" font-weight="bold" font-family="Arial, sans-serif">Decomposition</ns0:text>
   <ns0:text x="389.3536" y="154.5247" text-anchor="middle" fill="#555" font-size="10" font-family="Arial, sans-serif">Break into sub-tasks</ns0:text>
-  <ns0:line x1="486.692" y1="130.7985" x2="523.1939" y2="130.7985" stroke="#1565c0" stroke-width="1.8251" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="486.692" y1="130.7985" x2="523.1939" y2="130.7985" stroke="#1565c0" stroke-width="1.8251" marker-end="url(#arrow-primary)" />
   <ns0:rect x="529.2776" y="91.2548" width="200.7605" height="79.0875" rx="7.3004" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.2167" filter="url(#shadow)" />
   <ns0:text x="629.6578" y="135.057" text-anchor="middle" fill="#1565c0" font-size="12.1673" font-weight="bold" font-family="Arial, sans-serif">Solution Synthesis</ns0:text>
   <ns0:text x="629.6578" y="154.5247" text-anchor="middle" fill="#555" font-size="10" font-family="Arial, sans-serif">Combine results</ns0:text>
@@ -46,8 +96,8 @@
   <ns0:path d="M 389.3536 170.3422 L 640 200.7605" stroke="#888" stroke-width="0.9125" fill="none" marker-end="url(#arrow)" />
   <ns0:rect x="48.6692" y="292.0152" width="681.3688" height="121.673" rx="7.3004" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="0.9125" filter="url(#shadow)" />
   <ns0:text x="389.3536" y="316.3498" text-anchor="middle" fill="#1565c0" font-size="12.1673" font-weight="bold" font-family="Arial, sans-serif">AI Strategies for Complex Problems</ns0:text>
-  <ns0:text x="389.3536" y="338.251" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">• Divide-and-conquer: solve each sub-problem independently with AI</ns0:text>
-  <ns0:text x="389.3536" y="358.9354" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">• Chain prompting: output of one AI step feeds the next</ns0:text>
-  <ns0:text x="389.3536" y="379.6198" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">• Iterative refinement: start broad, drill into specifics</ns0:text>
-  <ns0:text x="389.3536" y="400.3042" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">• Multiple AI perspectives: cross-validate solutions</ns0:text>
+  <ns0:text x="389.3536" y="338.251" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">• Divide-and-conquer: solve each sub-problem independently with AI</ns0:text>
+  <ns0:text x="389.3536" y="358.9354" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">• Chain prompting: output of one AI step feeds the next</ns0:text>
+  <ns0:text x="389.3536" y="379.6198" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">• Iterative refinement: start broad, drill into specifics</ns0:text>
+  <ns0:text x="389.3536" y="400.3042" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">• Multiple AI perspectives: cross-validate solutions</ns0:text>
 </ns0:svg>

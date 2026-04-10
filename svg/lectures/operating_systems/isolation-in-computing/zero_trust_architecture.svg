@@ -1,19 +1,76 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:circle cx="457.1429" cy="257.1429" r="192.8571" fill="none" stroke="red" stroke-width="3.8571" stroke-dasharray="12.8571 6.4286" />
   <ns0:text x="457.1429" y="64.2857" text-anchor="middle" font-size="20.5714" font-weight="bold">Zero Trust Perimeter</ns0:text>
-  <ns0:rect x="380.9524" y="192.8571" width="152.3809" height="77.1429" fill="#ffcccc" stroke="black" stroke-width="2.5714" />
+  <ns0:rect x="380.9524" y="192.8571" width="152.3809" height="77.1429" fill="#ffcdd2" stroke="black" stroke-width="2.5714" />
   <ns0:text x="457.1429" y="237.8571" text-anchor="middle" font-size="18">Resource</ns0:text>
-  <ns0:rect x="152.3809" y="231.4286" width="121.9048" height="51.4286" fill="#ccccff" stroke="black" stroke-width="2.5714" />
+  <ns0:rect x="152.3809" y="231.4286" width="121.9048" height="51.4286" fill="#bbdefb" stroke="black" stroke-width="2.5714" />
   <ns0:text x="213.3334" y="263.5714" text-anchor="middle" font-size="15.4286">User</ns0:text>
-  <ns0:rect x="640" y="231.4286" width="121.9048" height="51.4286" fill="#ccffcc" stroke="black" stroke-width="2.5714" />
+  <ns0:rect x="640" y="231.4286" width="121.9048" height="51.4286" fill="#d4edda" stroke="black" stroke-width="2.5714" />
   <ns0:text x="700.9524" y="263.5714" text-anchor="middle" font-size="15.4286">Service</ns0:text>
   <ns0:path d="M 274.2857 257.1429 L 380.9524 231.4286" stroke="black" stroke-width="2.5714" marker-end="url(#arrow)" />
   <ns0:path d="M 640 257.1429 L 533.3334 231.4286" stroke="black" stroke-width="2.5714" marker-end="url(#arrow)" />
   <ns0:text x="327.6191" y="250.7143" font-size="12.8571">Verify</ns0:text>
   <ns0:text x="586.6666" y="250.7143" font-size="12.8571">Verify</ns0:text>
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="21.3333" markerHeight="12.6" refX="21.3333" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 7.4667,0" fill="black" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
 </ns0:svg>

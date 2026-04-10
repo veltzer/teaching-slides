@@ -60,6 +60,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -76,33 +88,33 @@
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Source code panel -->
-  <rect x="30" y="20" width="520" height="580" rx="8" fill="#1e1e2e" filter="url(#shadow)"/>
-  <text x="280" y="50" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#cdd6f4" text-anchor="middle">hello.s (GAS source)</text>
+  <rect x="30" y="20" width="520" height="580" rx="8" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="280" y="50" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#bbdefb" text-anchor="middle">hello.s (GAS source)</text>
 
   <!-- .data section highlight -->
-  <rect x="40" y="60" width="500" height="110" rx="4" fill="#313244"/>
-  <text x="55" y="83" font-family="monospace" font-size="13" fill="#89b4fa">.section .data</text>
-  <text x="55" y="106" font-family="monospace" font-size="13" fill="#a6e3a1">msg: .ascii "Hello, World!\n"</text>
-  <text x="55" y="129" font-family="monospace" font-size="13" fill="#a6e3a1">len: .long . - msg</text>
-  <text x="55" y="152" font-family="monospace" font-size="12" fill="#6c7086"># current loc minus msg start</text>
+  <rect x="40" y="60" width="500" height="110" rx="4" fill="#333333"/>
+  <text x="55" y="83" font-family="monospace" font-size="13" fill="#90caf9">.section .data</text>
+  <text x="55" y="106" font-family="monospace" font-size="13" fill="#a5d6a7">msg: .ascii "Hello, World!\n"</text>
+  <text x="55" y="129" font-family="monospace" font-size="13" fill="#a5d6a7">len: .long . - msg</text>
+  <text x="55" y="152" font-family="monospace" font-size="12" fill="#777777"># current loc minus msg start</text>
 
   <!-- .text section highlight -->
-  <rect x="40" y="180" width="500" height="80" rx="4" fill="#2d2d44"/>
-  <text x="55" y="203" font-family="monospace" font-size="13" fill="#89b4fa">.section .text</text>
-  <text x="55" y="226" font-family="monospace" font-size="13" fill="#cba6f7">.globl _start</text>
-  <text x="55" y="249" font-family="monospace" font-size="12" fill="#6c7086"># exported entry point</text>
+  <rect x="40" y="180" width="500" height="80" rx="4" fill="#333333"/>
+  <text x="55" y="203" font-family="monospace" font-size="13" fill="#90caf9">.section .text</text>
+  <text x="55" y="226" font-family="monospace" font-size="13" fill="#e1bee7">.globl _start</text>
+  <text x="55" y="249" font-family="monospace" font-size="12" fill="#777777"># exported entry point</text>
 
   <!-- _start / syscall sequence -->
-  <rect x="40" y="268" width="500" height="200" rx="4" fill="#252535"/>
-  <text x="55" y="291" font-family="monospace" font-size="13" fill="#f38ba8">_start:</text>
-  <text x="55" y="314" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $4, %eax    <tspan fill="#6c7086"># sys_write</tspan></text>
-  <text x="55" y="337" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $1, %ebx    <tspan fill="#6c7086"># stdout fd=1</tspan></text>
-  <text x="55" y="360" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $msg, %ecx  <tspan fill="#6c7086"># buffer addr</tspan></text>
-  <text x="55" y="383" font-family="monospace" font-size="13" fill="#cdd6f4">  movl len, %edx   <tspan fill="#6c7086"># byte count</tspan></text>
-  <text x="55" y="406" font-family="monospace" font-size="13" fill="#fab387">  int $0x80        <tspan fill="#6c7086"># kernel call</tspan></text>
-  <text x="55" y="432" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $1, %eax    <tspan fill="#6c7086"># sys_exit</tspan></text>
-  <text x="55" y="455" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $0, %ebx    <tspan fill="#6c7086"># exit code 0</tspan></text>
-  <text x="55" y="478" font-family="monospace" font-size="13" fill="#fab387">  int $0x80        <tspan fill="#6c7086"># kernel call</tspan></text>
+  <rect x="40" y="268" width="500" height="200" rx="4" fill="#1a1a2e"/>
+  <text x="55" y="291" font-family="monospace" font-size="13" fill="#ce93d8">_start:</text>
+  <text x="55" y="314" font-family="monospace" font-size="13" fill="#bbdefb">  movl $4, %eax    <tspan fill="#777777"># sys_write</tspan></text>
+  <text x="55" y="337" font-family="monospace" font-size="13" fill="#bbdefb">  movl $1, %ebx    <tspan fill="#777777"># stdout fd=1</tspan></text>
+  <text x="55" y="360" font-family="monospace" font-size="13" fill="#bbdefb">  movl $msg, %ecx  <tspan fill="#777777"># buffer addr</tspan></text>
+  <text x="55" y="383" font-family="monospace" font-size="13" fill="#bbdefb">  movl len, %edx   <tspan fill="#777777"># byte count</tspan></text>
+  <text x="55" y="406" font-family="monospace" font-size="13" fill="#ffcc80">  int $0x80        <tspan fill="#777777"># kernel call</tspan></text>
+  <text x="55" y="432" font-family="monospace" font-size="13" fill="#bbdefb">  movl $1, %eax    <tspan fill="#777777"># sys_exit</tspan></text>
+  <text x="55" y="455" font-family="monospace" font-size="13" fill="#bbdefb">  movl $0, %ebx    <tspan fill="#777777"># exit code 0</tspan></text>
+  <text x="55" y="478" font-family="monospace" font-size="13" fill="#ffcc80">  int $0x80        <tspan fill="#777777"># kernel call</tspan></text>
 
   <!-- Annotation panel -->
   <rect x="580" y="20" width="670" height="580" rx="8" fill="url(#grad-surface)" filter="url(#shadow)"/>
@@ -162,12 +174,12 @@
   <text x="925" y="488" font-family="Arial, sans-serif" font-size="12" fill="#777777">Produced by ld linker from .o object file</text>
 
   <!-- Build command -->
-  <rect x="600" y="445" width="610" height="60" rx="6" fill="#1e1e2e" filter="url(#shadow)"/>
-  <text x="615" y="468" font-family="monospace" font-size="13" fill="#cdd6f4">as -o hello.o hello.s</text>
-  <text x="615" y="493" font-family="monospace" font-size="13" fill="#cdd6f4">ld -o hello hello.o   <tspan fill="#6c7086"># or: gcc -nostdlib -o hello hello.s</tspan></text>
+  <rect x="600" y="445" width="610" height="60" rx="6" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="615" y="468" font-family="monospace" font-size="13" fill="#bbdefb">as -o hello.o hello.s</text>
+  <text x="615" y="493" font-family="monospace" font-size="13" fill="#bbdefb">ld -o hello hello.o   <tspan fill="#777777"># or: gcc -nostdlib -o hello hello.s</tspan></text>
 
   <!-- Run command -->
-  <rect x="600" y="520" width="610" height="50" rx="6" fill="#002200" filter="url(#shadow)"/>
-  <text x="615" y="543" font-family="monospace" font-size="13" fill="#a6e3a1">$ ./hello</text>
-  <text x="750" y="543" font-family="monospace" font-size="13" fill="#f38ba8">Hello, World!</text>
+  <rect x="600" y="520" width="610" height="50" rx="6" fill="#000000" filter="url(#shadow)"/>
+  <text x="615" y="543" font-family="monospace" font-size="13" fill="#a5d6a7">$ ./hello</text>
+  <text x="750" y="543" font-family="monospace" font-size="13" fill="#ce93d8">Hello, World!</text>
 </svg>

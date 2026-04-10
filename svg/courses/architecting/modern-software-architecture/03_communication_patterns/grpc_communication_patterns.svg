@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="15.75" refX="17.0667" refY="7.875" orient="auto">
       <ns0:polygon points="0,22.5 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -7,23 +67,23 @@
   <ns0:text x="627.7395" y="55.1724" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.4356" font-weight="bold" fill="#333">gRPC Communication Patterns</ns0:text>
   <ns0:rect x="50.2192" y="110.3448" width="301.3149" height="99.3103" rx="8.3698" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3479" />
   <ns0:text x="200.8766" y="172.1379" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877" font-weight="bold">Unary RPC</ns0:text>
-  <ns0:line x1="351.5341" y1="161.1034" x2="435.2327" y2="161.1034" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrowhead)" />
+  <ns0:line x1="351.5341" y1="161.1034" x2="435.2327" y2="161.1034" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrow)" />
   <ns0:rect x="443.6026" y="110.3448" width="753.2874" height="99.3103" rx="8.3698" fill="#d4edda" stroke="#28a745" stroke-width="1.674" />
   <ns0:text x="820.2463" y="172.1379" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877">Single request, single response</ns0:text>
   <ns0:rect x="50.2192" y="253.7931" width="301.3149" height="99.3103" rx="8.3698" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3479" />
   <ns0:text x="200.8766" y="315.5862" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877" font-weight="bold">Server Streaming</ns0:text>
-  <ns0:line x1="351.5341" y1="304.5517" x2="435.2327" y2="304.5517" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrowhead)" />
+  <ns0:line x1="351.5341" y1="304.5517" x2="435.2327" y2="304.5517" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrow)" />
   <ns0:rect x="443.6026" y="253.7931" width="753.2874" height="99.3103" rx="8.3698" fill="#fff3cd" stroke="#ffc107" stroke-width="1.674" />
   <ns0:text x="820.2463" y="315.5862" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877">Single request, stream of responses</ns0:text>
   <ns0:rect x="50.2192" y="397.2414" width="301.3149" height="99.3103" rx="8.3698" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3479" />
   <ns0:text x="200.8766" y="459.0345" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877" font-weight="bold">Client Streaming</ns0:text>
-  <ns0:line x1="351.5341" y1="448" x2="435.2327" y2="448" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrowhead)" />
+  <ns0:line x1="351.5341" y1="448" x2="435.2327" y2="448" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrow)" />
   <ns0:rect x="443.6026" y="397.2414" width="753.2874" height="99.3103" rx="8.3698" fill="#fff3cd" stroke="#ffc107" stroke-width="1.674" />
   <ns0:text x="820.2463" y="459.0345" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877">Stream of requests, single response</ns0:text>
   <ns0:rect x="50.2192" y="540.6897" width="301.3149" height="99.3103" rx="8.3698" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3479" />
   <ns0:text x="200.8766" y="584.8276" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4137" font-weight="bold">Bidirectional</ns0:text>
   <ns0:text x="200.8766" y="617.931" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4137" font-weight="bold">Streaming</ns0:text>
-  <ns0:line x1="351.5341" y1="591.4483" x2="435.2327" y2="591.4483" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrowhead)" />
+  <ns0:line x1="351.5341" y1="591.4483" x2="435.2327" y2="591.4483" stroke="#4a90e2" stroke-width="3.3479" marker-end="url(#arrow)" />
   <ns0:rect x="443.6026" y="540.6897" width="753.2874" height="99.3103" rx="8.3698" fill="#f8d7da" stroke="#dc3545" stroke-width="1.674" />
   <ns0:text x="820.2463" y="602.4828" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0877">Stream of requests and responses</ns0:text>
 </ns0:svg>

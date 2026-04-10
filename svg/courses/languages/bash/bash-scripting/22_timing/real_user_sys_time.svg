@@ -60,24 +60,36 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-real" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#42a5f5"/>
+      <stop offset="100%" stop-color="#4a90e2"/>
     </linearGradient>
     <linearGradient id="grad-user" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2e7d32"/>
-      <stop offset="100%" stop-color="#66bb6a"/>
+      <stop offset="100%" stop-color="#4caf50"/>
     </linearGradient>
     <linearGradient id="grad-sys" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#f57c00"/>
-      <stop offset="100%" stop-color="#ffa726"/>
+      <stop offset="100%" stop-color="#f9a825"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#f8f9fa"/>
+  <rect width="1280" height="640" fill="#f9f9f9"/>
 
   <!-- Title banner -->
   <rect x="40" y="18" width="1200" height="52" rx="10" fill="url(#grad-primary)" filter="url(#shadow)"/>
@@ -152,14 +164,14 @@
   <text x="65" y="596" font-family="sans-serif" font-size="12" fill="#888888">multi-core: real can be &lt; user + sys (parallel execution)</text>
 
   <!-- Right side: example output and scenarios -->
-  <rect x="650" y="450" width="590" height="160" rx="12" fill="#1e1e2e" filter="url(#shadow)"/>
+  <rect x="650" y="450" width="590" height="160" rx="12" fill="#1a1a2e" filter="url(#shadow)"/>
   <rect x="650" y="450" width="590" height="40" rx="12" fill="#2e7d32"/>
   <rect x="650" y="478" width="590" height="12" fill="#2e7d32"/>
   <text x="945" y="476" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Example Scenarios</text>
-  <text x="675" y="508" font-family="monospace" font-size="12" fill="#585b70"># CPU-bound:   real ≈ user + sys</text>
-  <text x="675" y="526" font-family="monospace" font-size="12" fill="#cdd6f4">real 0m5.2s  user 0m5.1s  sys 0m0.1s</text>
-  <text x="675" y="546" font-family="monospace" font-size="12" fill="#585b70"># I/O-bound:   real >> user + sys</text>
-  <text x="675" y="564" font-family="monospace" font-size="12" fill="#cdd6f4">real 0m8.3s  user 0m0.2s  sys 0m0.3s</text>
-  <text x="675" y="584" font-family="monospace" font-size="12" fill="#585b70"># Parallel:    real &lt; user + sys</text>
-  <text x="675" y="602" font-family="monospace" font-size="12" fill="#cdd6f4">real 0m2.1s  user 0m7.8s  sys 0m0.2s</text>
+  <text x="675" y="508" font-family="monospace" font-size="12" fill="#666666"># CPU-bound:   real ≈ user + sys</text>
+  <text x="675" y="526" font-family="monospace" font-size="12" fill="#bbdefb">real 0m5.2s  user 0m5.1s  sys 0m0.1s</text>
+  <text x="675" y="546" font-family="monospace" font-size="12" fill="#666666"># I/O-bound:   real >> user + sys</text>
+  <text x="675" y="564" font-family="monospace" font-size="12" fill="#bbdefb">real 0m8.3s  user 0m0.2s  sys 0m0.3s</text>
+  <text x="675" y="584" font-family="monospace" font-size="12" fill="#666666"># Parallel:    real &lt; user + sys</text>
+  <text x="675" y="602" font-family="monospace" font-size="12" fill="#bbdefb">real 0m2.1s  user 0m7.8s  sys 0m0.2s</text>
 </svg>

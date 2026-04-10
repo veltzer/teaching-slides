@@ -1,27 +1,77 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
   <ns0:rect x="26.6667" y="222.2222" width="168.8889" height="106.6667" rx="8.8889" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="1.7778" />
-  <ns0:rect x="26.6667" y="222.2222" width="168.8889" height="32" rx="8.8889" fill="url(#grad-accent)" />
-  <ns0:rect x="26.6667" y="243.5556" width="168.8889" height="10.6667" fill="url(#grad-accent)" />
+  <ns0:rect x="26.6667" y="222.2222" width="168.8889" height="32" rx="8.8889" fill="url(#grad-primary)" />
+  <ns0:rect x="26.6667" y="243.5556" width="168.8889" height="10.6667" fill="url(#grad-primary)" />
   <ns0:text x="111.1111" y="242.6667" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#fff" text-anchor="middle">LLM / ChatModel</ns0:text>
   <ns0:text x="111.1111" y="275.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#333" text-anchor="middle">ChatOpenAI</ns0:text>
   <ns0:text x="111.1111" y="291.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#333" text-anchor="middle">ChatAnthropic</ns0:text>
@@ -55,7 +105,7 @@
   <ns0:text x="982.2222" y="268.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#c62828" text-anchor="middle">Structured</ns0:text>
   <ns0:text x="982.2222" y="284.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#c62828" text-anchor="middle">Output</ns0:text>
   <ns0:text x="982.2222" y="304" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">dict / Pydantic</ns0:text>
-  <ns0:rect x="26.6667" y="391.1111" width="177.7778" height="97.7778" rx="8.8889" fill="#fbe9e7" filter="url(#shadow)" stroke="#bf360c" stroke-width="1.7778" />
+  <ns0:rect x="26.6667" y="391.1111" width="177.7778" height="97.7778" rx="8.8889" fill="#fce4ec" filter="url(#shadow)" stroke="#bf360c" stroke-width="1.7778" />
   <ns0:rect x="26.6667" y="391.1111" width="177.7778" height="30.2222" rx="8.8889" fill="#bf360c" />
   <ns0:rect x="26.6667" y="410.6667" width="177.7778" height="10.6667" fill="#bf360c" />
   <ns0:text x="115.5556" y="410.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#fff" text-anchor="middle">Memory</ns0:text>
@@ -64,26 +114,26 @@
   <ns0:text x="115.5556" y="470.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="#333" text-anchor="middle">VectorStoreRetriever</ns0:text>
   <ns0:line x1="115.5556" y1="391.1111" x2="115.5556" y2="328.8889" stroke="#bf360c" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
   <ns0:text x="126.2222" y="366.2222" font-family="Arial,sans-serif" font-size="10" fill="#bf360c">history</ns0:text>
-  <ns0:rect x="435.5556" y="391.1111" width="231.1111" height="115.5556" rx="8.8889" fill="#e0f7fa" filter="url(#shadow)" stroke="#00838f" stroke-width="1.7778" />
-  <ns0:rect x="435.5556" y="391.1111" width="231.1111" height="30.2222" rx="8.8889" fill="#00838f" />
-  <ns0:rect x="435.5556" y="410.6667" width="231.1111" height="10.6667" fill="#00838f" />
+  <ns0:rect x="435.5556" y="391.1111" width="231.1111" height="115.5556" rx="8.8889" fill="#e1f5fe" filter="url(#shadow)" stroke="#0277bd" stroke-width="1.7778" />
+  <ns0:rect x="435.5556" y="391.1111" width="231.1111" height="30.2222" rx="8.8889" fill="#0277bd" />
+  <ns0:rect x="435.5556" y="410.6667" width="231.1111" height="10.6667" fill="#0277bd" />
   <ns0:text x="551.1111" y="410.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#fff" text-anchor="middle">Tools / Agents</ns0:text>
   <ns0:text x="453.3333" y="440" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Search (DuckDuckGo, Tavily)</ns0:text>
   <ns0:text x="453.3333" y="456" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Python REPL</ns0:text>
   <ns0:text x="453.3333" y="472" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• SQL Database</ns0:text>
   <ns0:text x="453.3333" y="488" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Custom @tool functions</ns0:text>
-  <ns0:line x1="551.1111" y1="391.1111" x2="551.1111" y2="328.8889" stroke="#00838f" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <ns0:text x="561.7778" y="364.4444" font-family="Arial,sans-serif" font-size="10" fill="#00838f">tool results</ns0:text>
-  <ns0:rect x="702.2222" y="391.1111" width="213.3333" height="115.5556" rx="8.8889" fill="#f9fbe7" filter="url(#shadow)" stroke="#827717" stroke-width="1.7778" />
-  <ns0:rect x="702.2222" y="391.1111" width="213.3333" height="30.2222" rx="8.8889" fill="#827717" />
-  <ns0:rect x="702.2222" y="410.6667" width="213.3333" height="10.6667" fill="#827717" />
+  <ns0:line x1="551.1111" y1="391.1111" x2="551.1111" y2="328.8889" stroke="#0277bd" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <ns0:text x="561.7778" y="364.4444" font-family="Arial,sans-serif" font-size="10" fill="#0277bd">tool results</ns0:text>
+  <ns0:rect x="702.2222" y="391.1111" width="213.3333" height="115.5556" rx="8.8889" fill="#fff8e1" filter="url(#shadow)" stroke="#555555" stroke-width="1.7778" />
+  <ns0:rect x="702.2222" y="391.1111" width="213.3333" height="30.2222" rx="8.8889" fill="#555555" />
+  <ns0:rect x="702.2222" y="410.6667" width="213.3333" height="10.6667" fill="#555555" />
   <ns0:text x="808.8889" y="410.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#fff" text-anchor="middle">Vector Store / RAG</ns0:text>
   <ns0:text x="720" y="440" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Chroma / FAISS / Pinecone</ns0:text>
   <ns0:text x="720" y="456" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Document loaders</ns0:text>
   <ns0:text x="720" y="472" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Text splitters</ns0:text>
   <ns0:text x="720" y="488" font-family="Arial,sans-serif" font-size="10.6667" fill="#333">• Embeddings retrieval</ns0:text>
-  <ns0:line x1="773.3333" y1="391.1111" x2="666.6667" y2="328.8889" stroke="#827717" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
-  <ns0:text x="709.3333" y="371.5556" font-family="Arial,sans-serif" font-size="10" fill="#827717">context docs</ns0:text>
+  <ns0:line x1="773.3333" y1="391.1111" x2="666.6667" y2="328.8889" stroke="#555555" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <ns0:text x="709.3333" y="371.5556" font-family="Arial,sans-serif" font-size="10" fill="#555555">context docs</ns0:text>
   <ns0:rect x="26.6667" y="540.4444" width="1084.4444" height="60.4444" rx="7.1111" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="0.8889" />
   <ns0:text x="568.8889" y="558.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#333" text-anchor="middle">LCEL (LangChain Expression Language) — pipe everything together:</ns0:text>
   <ns0:text x="568.8889" y="577.7778" font-family="monospace" font-size="11.5556" fill="#1565c0" text-anchor="middle">chain = prompt | llm | output_parser    response = chain.invoke({"question": "..."})</ns0:text>

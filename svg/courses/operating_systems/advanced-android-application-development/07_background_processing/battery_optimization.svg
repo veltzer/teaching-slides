@@ -1,27 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrow2" markerWidth="16" markerHeight="8.4" refX="16" refY="4.2" orient="auto">
       <polygon points="0,12 5.6,0" fill="#666" />
     </marker>
   </defs>
   <rect x="480" y="60" width="320" height="72" rx="12" fill="#4CAF50" stroke="#2E7D32" stroke-width="2.4" />
   <text x="640" y="102" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" text-anchor="middle" fill="white">Battery Optimization</text>
-  <line x1="480" y1="132" x2="320" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow2)" />
+  <line x1="480" y1="132" x2="320" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
   <rect x="160" y="240" width="224" height="60" rx="9.6" fill="#2196F3" stroke="#1565C0" stroke-width="2.4" />
   <text x="272" y="276" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Deferred Execution</text>
-  <line x1="272" y1="300" x2="272" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow2)" />
+  <line x1="272" y1="300" x2="272" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
   <rect x="176" y="408" width="192" height="54" rx="7.2" fill="#E3F2FD" stroke="#1976D2" />
   <text x="272" y="441.6" font-family="Arial, sans-serif" font-size="15.6" text-anchor="middle">WorkManager</text>
-  <line x1="640" y1="132" x2="640" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow2)" />
+  <line x1="640" y1="132" x2="640" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
   <rect x="512" y="252" width="256" height="60" rx="9.6" fill="#FF9800" stroke="#E65100" stroke-width="2.4" />
   <text x="640" y="288" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Batched Operations</text>
-  <line x1="640" y1="312" x2="640" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow2)" />
+  <line x1="640" y1="312" x2="640" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
   <rect x="512" y="408" width="256" height="54" rx="7.2" fill="#FFF3E0" stroke="#F57C00" />
   <text x="640" y="441.6" font-family="Arial, sans-serif" font-size="15.6" text-anchor="middle">Background Tasks</text>
-  <line x1="800" y1="132" x2="960" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow2)" />
+  <line x1="800" y1="132" x2="960" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
   <rect x="896" y="240" width="224" height="60" rx="9.6" fill="#9C27B0" stroke="#6A1B9A" stroke-width="2.4" />
   <text x="1008" y="276" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Network Efficiency</text>
-  <line x1="1008" y1="300" x2="1008" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow2)" />
+  <line x1="1008" y1="300" x2="1008" y2="396" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
   <rect x="912" y="408" width="192" height="54" rx="7.2" fill="#F3E5F5" stroke="#7B1FA2" />
   <text x="1008" y="441.6" font-family="Arial, sans-serif" font-size="15.6" text-anchor="middle">Data Sync</text>
 </svg>

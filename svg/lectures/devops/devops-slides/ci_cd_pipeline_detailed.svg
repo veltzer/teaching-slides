@@ -1,13 +1,73 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead8" markerWidth="16" markerHeight="18" refX="14.4" refY="5.4" orient="auto">
       <ns0:polygon points="0,18 4.8,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect x="45.0704" y="152.1127" width="72.1127" height="50.7042" rx="4.507" fill="#4a90e2" stroke="#2c5aa0" stroke-width="1.8028" />
+  <ns0:rect x="45.0704" y="152.1127" width="72.1127" height="50.7042" rx="4.507" fill="#4a90e2" stroke="#3949ab" stroke-width="1.8028" />
   <ns0:text x="81.1268" y="182.5352" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6197" font-weight="bold" fill="white">Code</ns0:text>
   <ns0:path d="M 117.1831 177.4648 L 153.2394 177.4648" stroke="#333" stroke-width="1.8028" marker-end="url(#arrowhead8)" />
-  <ns0:rect x="153.2394" y="152.1127" width="72.1127" height="50.7042" rx="4.507" fill="#66bb6a" stroke="#4caf50" stroke-width="1.8028" />
+  <ns0:rect x="153.2394" y="152.1127" width="72.1127" height="50.7042" rx="4.507" fill="#4caf50" stroke="#4caf50" stroke-width="1.8028" />
   <ns0:text x="189.2958" y="182.5352" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6197" font-weight="bold" fill="white">Build</ns0:text>
   <ns0:path d="M 225.3521 177.4648 L 261.4085 177.4648" stroke="#333" stroke-width="1.8028" marker-end="url(#arrowhead8)" />
   <ns0:rect x="261.4085" y="152.1127" width="72.1127" height="50.7042" rx="4.507" fill="#ff9800" stroke="#f57c00" stroke-width="1.8028" />
@@ -26,10 +86,10 @@
   <ns0:text x="640" y="172.3944" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.8169" font-weight="bold" fill="white">Quality</ns0:text>
   <ns0:text x="640" y="187.6056" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.8169" font-weight="bold" fill="white">Gate</ns0:text>
   <ns0:path d="M 640 202.8169 L 640 253.5211" stroke="#333" stroke-width="1.8028" marker-end="url(#arrowhead8)" />
-  <ns0:rect x="603.9437" y="253.5211" width="72.1127" height="50.7042" rx="4.507" fill="#00bcd4" stroke="#0097a7" stroke-width="1.8028" />
+  <ns0:rect x="603.9437" y="253.5211" width="72.1127" height="50.7042" rx="4.507" fill="#2196f3" stroke="#0277bd" stroke-width="1.8028" />
   <ns0:text x="640" y="283.9437" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6197" font-weight="bold" fill="white">Deploy</ns0:text>
   <ns0:path d="M 603.9437 278.8732 L 117.1831 278.8732" stroke="#333" stroke-width="1.8028" marker-end="url(#arrowhead8)" />
-  <ns0:rect x="45.0704" y="253.5211" width="72.1127" height="50.7042" rx="4.507" fill="#e91e63" stroke="#c2185b" stroke-width="1.8028" />
+  <ns0:rect x="45.0704" y="253.5211" width="72.1127" height="50.7042" rx="4.507" fill="#dc3545" stroke="#c2185b" stroke-width="1.8028" />
   <ns0:text x="81.1268" y="283.9437" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6197" font-weight="bold" fill="white">Monitor</ns0:text>
   <ns0:path d="M 81.1268 253.5211 L 81.1268 202.8169" stroke="#333" stroke-width="1.8028" stroke-dasharray="4.507 4.507" marker-end="url(#arrowhead8)" />
   <ns0:text x="45.0704" y="228.169" text-anchor="start" font-family="Arial, sans-serif" font-size="10.8169" fill="#666">Feedback</ns0:text>

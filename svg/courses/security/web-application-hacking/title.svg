@@ -1,28 +1,88 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0" y1="0" x2="1.6" y2="1.8">
-      <ns0:stop offset="0%" stop-color="#0a0a0a" />
-      <ns0:stop offset="100%" stop-color="#1a0a0a" />
+      <ns0:stop offset="0%" stop-color="#000000" />
+      <ns0:stop offset="100%" stop-color="#000000" />
     </ns0:linearGradient>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
-  <ns0:rect x="213.3333" y="64" width="711.1111" height="512" rx="14.2222" fill="#111" stroke="#444" stroke-width="2.8444" />
+  <ns0:rect x="213.3333" y="64" width="711.1111" height="512" rx="14.2222" fill="#212121" stroke="#333333" stroke-width="2.8444" />
   <ns0:rect x="213.3333" y="64" width="711.1111" height="48" rx="14.2222" fill="#333" />
   <ns0:rect x="213.3333" y="96" width="711.1111" height="16" fill="#333" />
-  <ns0:circle cx="241.7778" cy="88" r="7.1111" fill="#ff5f56" />
-  <ns0:circle cx="265.9556" cy="88" r="7.1111" fill="#ffbd2e" />
-  <ns0:circle cx="290.1333" cy="88" r="7.1111" fill="#27c93f" />
+  <ns0:circle cx="241.7778" cy="88" r="7.1111" fill="#e74c3c" />
+  <ns0:circle cx="265.9556" cy="88" r="7.1111" fill="#f9a825" />
+  <ns0:circle cx="290.1333" cy="88" r="7.1111" fill="#28a745" />
   <ns0:rect x="327.1111" y="75.2" width="497.7778" height="25.6" rx="4.2667" fill="#222" />
   <ns0:text x="341.3333" y="92.8" font-size="14.2222" fill="#e74c3c" font-family="monospace">https://target.com/login?id=1' OR 1=1--</ns0:text>
-  <ns0:rect x="241.7778" y="136" width="654.2222" height="64" rx="4.2667" fill="#1a1a1a" />
+  <ns0:rect x="241.7778" y="136" width="654.2222" height="64" rx="4.2667" fill="#212121" />
   <ns0:text x="568.8889" y="176" text-anchor="middle" font-size="19.9111" fill="#666">Login Portal</ns0:text>
-  <ns0:rect x="355.5556" y="224" width="426.6667" height="48" rx="5.6889" fill="#1a1a1a" stroke="#333" stroke-width="1.4222" />
+  <ns0:rect x="355.5556" y="224" width="426.6667" height="48" rx="5.6889" fill="#212121" stroke="#333" stroke-width="1.4222" />
   <ns0:text x="369.7778" y="256" font-size="15.6444" fill="#e74c3c" font-family="monospace">' OR '1'='1</ns0:text>
-  <ns0:rect x="355.5556" y="288" width="426.6667" height="48" rx="5.6889" fill="#1a1a1a" stroke="#333" stroke-width="1.4222" />
+  <ns0:rect x="355.5556" y="288" width="426.6667" height="48" rx="5.6889" fill="#212121" stroke="#333" stroke-width="1.4222" />
   <ns0:text x="369.7778" y="320" font-size="15.6444" fill="#e74c3c" font-family="monospace">password' UNION SELECT--</ns0:text>
   <ns0:rect x="497.7778" y="360" width="142.2222" height="48" rx="5.6889" fill="#e74c3c" opacity="0.7" />
   <ns0:text x="568.8889" y="392" text-anchor="middle" font-size="17.0667" fill="#fff">Exploit</ns0:text>
-  <ns0:rect x="241.7778" y="432" width="654.2222" height="120" rx="7.1111" fill="#0a0a0a" stroke="#333" stroke-width="1.4222" />
+  <ns0:rect x="241.7778" y="432" width="654.2222" height="120" rx="7.1111" fill="#000000" stroke="#333" stroke-width="1.4222" />
   <ns0:text x="256" y="464" font-size="14.2222" fill="#e74c3c" font-weight="bold">OWASP Top 10:</ns0:text>
   <ns0:text x="256" y="492.8" font-size="14.2222" fill="#888" font-family="monospace">A01:Broken Access  A02:Crypto Failures  A03:Injection</ns0:text>
   <ns0:text x="256" y="516.8" font-size="14.2222" fill="#888" font-family="monospace">A04:Insecure Design  A05:Misconfig  A06:Vulnerable Comp</ns0:text>

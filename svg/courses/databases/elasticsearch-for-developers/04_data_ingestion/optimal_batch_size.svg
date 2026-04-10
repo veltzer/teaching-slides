@@ -1,19 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
@@ -32,6 +82,6 @@
   <ns0:text x="269.4737" y="331.2281" text-anchor="middle" font-size="10" fill="#555555">5 MB</ns0:text>
   <ns0:text x="404.2105" y="331.2281" text-anchor="middle" font-size="10" fill="#555555">15 MB</ns0:text>
   <ns0:text x="538.9474" y="331.2281" text-anchor="middle" font-size="10" fill="#555555">50 MB</ns0:text>
-  <ns0:rect x="78.5965" y="359.2982" width="561.4035" height="26.9474" rx="3.3684" fill="#f2f6ff" stroke="#bbdefb" stroke-width="0.5614" />
+  <ns0:rect x="78.5965" y="359.2982" width="561.4035" height="26.9474" rx="3.3684" fill="#f9f9f9" stroke="#bbdefb" stroke-width="0.5614" />
   <ns0:text x="359.2982" y="376.1404" text-anchor="middle" font-size="10" fill="#1565c0">Too small: high overhead. Too large: GC pressure, timeouts. Start with 5-15 MB and tune.</ns0:text>
 </ns0:svg>

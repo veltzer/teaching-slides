@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="12" refX="14.4" refY="6" orient="auto">
-      <ns0:polygon points="0,17.1429 5.6,0" fill="#333" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="604.8946" y="48.6076" text-anchor="middle" font-family="Arial" font-size="27.2203" font-weight="bold" fill="#1a237e">Graph Optimization Techniques</ns0:text>
   <ns0:rect x="45.3671" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.0245" />
@@ -29,8 +86,8 @@
   <ns0:text x="68.0506" y="418.0253" font-family="Arial" font-size="16.6346" fill="#333">- Set maxIterations</ns0:text>
   <ns0:text x="68.0506" y="447.19" font-family="Arial" font-size="16.6346" fill="#333">- Tune tolerance (tol)</ns0:text>
   <ns0:text x="68.0506" y="476.3545" font-family="Arial" font-size="16.6346" fill="#333">- Approximate when ok</ns0:text>
-  <ns0:rect x="430.9874" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="#e0f2f1" stroke="#00695c" stroke-width="3.0245" />
-  <ns0:text x="604.8946" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="#00695c">5. Data Reduction</ns0:text>
+  <ns0:rect x="430.9874" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="#e8f4f8" stroke="#2e7d32" stroke-width="3.0245" />
+  <ns0:text x="604.8946" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="#2e7d32">5. Data Reduction</ns0:text>
   <ns0:text x="453.6709" y="388.8608" font-family="Arial" font-size="16.6346" fill="#333">- Filter before processing</ns0:text>
   <ns0:text x="453.6709" y="418.0253" font-family="Arial" font-size="16.6346" fill="#333">- Use subgraph views</ns0:text>
   <ns0:text x="453.6709" y="447.19" font-family="Arial" font-size="16.6346" fill="#333">- Remove low-degree nodes</ns0:text>

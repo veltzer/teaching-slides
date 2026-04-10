@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="577.641" y="49.2308" text-anchor="middle" font-size="26.4064" font-weight="bold" fill="#333">SISD - Single Instruction, Single Data</ns0:text>
   <ns0:rect x="82.5202" y="108.3077" width="280.5685" height="98.4615" rx="8.2521" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3008" />
   <ns0:text x="222.8044" y="151.6308" text-anchor="middle" font-size="19.8049" font-weight="bold" fill="#333">Instruction</ns0:text>
@@ -13,9 +74,9 @@
   <ns0:text x="891.2176" y="167.3846" font-size="19.8049" font-weight="bold" fill="#333">Result</ns0:text>
   <ns0:line x1="594.145" y1="206.7692" x2="594.145" y2="256" stroke="#28a745" stroke-width="2.4756" />
   <ns0:rect x="470.3649" y="256" width="247.5604" height="88.6154" rx="8.2521" fill="#fff3cd" stroke="#ffc107" stroke-width="3.3008" />
-  <ns0:text x="594.145" y="295.3846" text-anchor="middle" font-size="19.8049" font-weight="bold" fill="#856404">Data Stream</ns0:text>
+  <ns0:text x="594.145" y="295.3846" text-anchor="middle" font-size="19.8049" font-weight="bold" fill="#bf360c">Data Stream</ns0:text>
   <ns0:text x="594.145" y="326.8923" text-anchor="middle" font-size="18.1544" fill="#666">(one item)</ns0:text>
-  <ns0:rect x="132.0322" y="393.8461" width="891.2176" height="216.6154" rx="8.2521" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6504" />
+  <ns0:rect x="132.0322" y="393.8461" width="891.2176" height="216.6154" rx="8.2521" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6504" />
   <ns0:text x="577.641" y="437.1692" text-anchor="middle" font-size="19.8049" font-weight="bold" fill="#333">Example: scalar addition</ns0:text>
   <ns0:text x="330.0806" y="480.4923" font-size="18.1544" fill="#333" font-family="monospace">A[0] = B[0] + C[0]</ns0:text>
   <ns0:text x="693.1692" y="480.4923" font-size="18.1544" fill="#666">(cycle 1)</ns0:text>

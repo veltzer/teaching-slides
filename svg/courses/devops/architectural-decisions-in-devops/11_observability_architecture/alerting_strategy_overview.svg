@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow3" markerWidth="18.2857" markerHeight="22.5" refX="16.4571" refY="6.75" orient="auto">
       <ns0:polygon points="0,22.5 5.4857,0" fill="#333" />
     </ns0:marker>
@@ -8,7 +68,7 @@
   <ns0:text x="152.451" y="154.4828" text-anchor="middle" font-size="23.316" font-weight="bold">Metrics</ns0:text>
   <ns0:rect x="322.8375" y="88.2759" width="233.1604" height="110.3448" fill="#fff9c4" stroke="#f9a825" stroke-width="3.587" rx="10.7612" />
   <ns0:text x="439.4176" y="154.4828" text-anchor="middle" font-size="23.316" font-weight="bold">Alert Rules</ns0:text>
-  <ns0:rect x="609.8041" y="88.2759" width="233.1604" height="110.3448" fill="#ffccbc" stroke="#e64a19" stroke-width="3.587" rx="10.7612" />
+  <ns0:rect x="609.8041" y="88.2759" width="233.1604" height="110.3448" fill="#ffcdd2" stroke="#e65100" stroke-width="3.587" rx="10.7612" />
   <ns0:text x="726.3842" y="154.4828" text-anchor="middle" font-size="23.316" font-weight="bold">Alert Manager</ns0:text>
   <ns0:rect x="609.8041" y="264.8276" width="233.1604" height="77.2414" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.7936" rx="7.1742" />
   <ns0:text x="726.3842" y="315.5862" text-anchor="middle" font-size="19.729">Grouping</ns0:text>
@@ -22,11 +82,11 @@
   <ns0:text x="1085.0925" y="370.7586" text-anchor="middle" font-size="21.5225">PagerDuty</ns0:text>
   <ns0:rect x="968.5123" y="441.3793" width="233.1604" height="77.2414" fill="#fff9c4" stroke="#f9a825" stroke-width="3.587" rx="10.7612" />
   <ns0:text x="1085.0925" y="492.1379" text-anchor="middle" font-size="21.5225">Webhook</ns0:text>
-  <ns0:line x1="269.0312" y1="143.4483" x2="322.8375" y2="143.4483" stroke="#333" stroke-width="3.587" marker-end="url(#arrow3)" />
-  <ns0:line x1="555.9978" y1="143.4483" x2="609.8041" y2="143.4483" stroke="#333" stroke-width="3.587" marker-end="url(#arrow3)" />
-  <ns0:line x1="726.3842" y1="198.6207" x2="726.3842" y2="264.8276" stroke="#3949ab" stroke-width="1.7936" marker-end="url(#arrow3)" />
-  <ns0:line x1="842.9645" y1="302.3448" x2="968.5123" y2="236.1379" stroke="#333" stroke-width="3.587" marker-end="url(#arrow3)" />
-  <ns0:line x1="842.9645" y1="401.6552" x2="968.5123" y2="357.5172" stroke="#333" stroke-width="3.587" marker-end="url(#arrow3)" />
-  <ns0:line x1="842.9645" y1="500.9655" x2="968.5123" y2="478.8966" stroke="#333" stroke-width="3.587" marker-end="url(#arrow3)" />
+  <ns0:line x1="269.0312" y1="143.4483" x2="322.8375" y2="143.4483" stroke="#333" stroke-width="3.587" marker-end="url(#arrow)" />
+  <ns0:line x1="555.9978" y1="143.4483" x2="609.8041" y2="143.4483" stroke="#333" stroke-width="3.587" marker-end="url(#arrow)" />
+  <ns0:line x1="726.3842" y1="198.6207" x2="726.3842" y2="264.8276" stroke="#3949ab" stroke-width="1.7936" marker-end="url(#arrow)" />
+  <ns0:line x1="842.9645" y1="302.3448" x2="968.5123" y2="236.1379" stroke="#333" stroke-width="3.587" marker-end="url(#arrow)" />
+  <ns0:line x1="842.9645" y1="401.6552" x2="968.5123" y2="357.5172" stroke="#333" stroke-width="3.587" marker-end="url(#arrow)" />
+  <ns0:line x1="842.9645" y1="500.9655" x2="968.5123" y2="478.8966" stroke="#333" stroke-width="3.587" marker-end="url(#arrow)" />
   <ns0:text x="627.7395" y="640" text-anchor="middle" font-size="21.5225" fill="#555">Alerts flow from metrics through rules, processing, then routing</ns0:text>
 </ns0:svg>

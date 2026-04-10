@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -14,15 +74,15 @@
   <ns0:text x="302.721" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.1814" font-weight="bold" fill="#dc3545">Traditional I/O (Blocking)</ns0:text>
   <ns0:rect x="86.4917" y="131.2821" width="187.3987" height="73.8462" rx="7.2076" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8831" />
   <ns0:text x="180.1911" y="175.5898" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Application</ns0:text>
-  <ns0:line x1="273.8904" y1="167.3846" x2="338.7592" y2="167.3846" stroke="#dc3545" stroke-width="2.8831" marker-end="url(#arrowred)" />
+  <ns0:line x1="273.8904" y1="167.3846" x2="338.7592" y2="167.3846" stroke="#dc3545" stroke-width="2.8831" marker-end="url(#arrow-danger)" />
   <ns0:text x="307.0455" y="152.6154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4153" fill="#dc3545">syscall</ns0:text>
   <ns0:rect x="345.9669" y="131.2821" width="187.3987" height="73.8462" rx="7.2076" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8831" />
   <ns0:text x="439.6662" y="175.5898" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">read() / write()</ns0:text>
-  <ns0:line x1="439.6662" y1="205.1282" x2="439.6662" y2="287.1795" stroke="#dc3545" stroke-width="2.8831" marker-end="url(#arrowred)" />
+  <ns0:line x1="439.6662" y1="205.1282" x2="439.6662" y2="287.1795" stroke="#dc3545" stroke-width="2.8831" marker-end="url(#arrow-danger)" />
   <ns0:text x="468.4968" y="254.359" font-family="Arial, sans-serif" font-size="14.4153" fill="#dc3545">wait</ns0:text>
   <ns0:rect x="345.9669" y="295.3846" width="187.3987" height="73.8462" rx="7.2076" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8831" />
   <ns0:text x="439.6662" y="339.6923" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Kernel</ns0:text>
-  <ns0:path d="M 345.9669 331.4872 Q 43.2459 331.4872 43.2459 167.3846 L 79.284 167.3846" fill="none" stroke="#4a90e2" stroke-width="2.8831" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 345.9669 331.4872 Q 43.2459 331.4872 43.2459 167.3846 L 79.284 167.3846" fill="none" stroke="#4a90e2" stroke-width="2.8831" marker-end="url(#arrow)" />
   <ns0:text x="28.8305" y="254.359" font-family="Arial, sans-serif" font-size="14.4153" fill="#4a90e2">data</ns0:text>
   <ns0:rect x="144.1528" y="426.6667" width="360.3821" height="49.2308" rx="7.2076" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4415" stroke-dasharray="5.7661 4.3245" />
   <ns0:text x="324.3439" y="459.4872" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8568" fill="#dc3545">Thread blocked during each I/O operation</ns0:text>
@@ -30,24 +90,24 @@
   <ns0:text x="922.5782" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.1814" font-weight="bold" fill="#28a745">io_uring (Async, Batched)</ns0:text>
   <ns0:rect x="677.5184" y="131.2821" width="187.3987" height="73.8462" rx="7.2076" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8831" />
   <ns0:text x="771.2178" y="175.5898" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Application</ns0:text>
-  <ns0:line x1="864.9171" y1="167.3846" x2="929.7858" y2="167.3846" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrowgreen)" />
+  <ns0:line x1="864.9171" y1="167.3846" x2="929.7858" y2="167.3846" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrow-ok)" />
   <ns0:text x="898.0722" y="152.6154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4153" fill="#28a745">submit</ns0:text>
   <ns0:rect x="936.9935" y="131.2821" width="216.2293" height="73.8462" rx="7.2076" fill="#d4edda" stroke="#28a745" stroke-width="2.8831" />
   <ns0:text x="1045.1081" y="164.1026" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Submission</ns0:text>
   <ns0:text x="1045.1081" y="188.718" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Queue (SQ)</ns0:text>
-  <ns0:line x1="1045.1081" y1="205.1282" x2="1045.1081" y2="287.1795" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrowgreen)" />
+  <ns0:line x1="1045.1081" y1="205.1282" x2="1045.1081" y2="287.1795" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrow-ok)" />
   <ns0:text x="1078.2633" y="254.359" font-family="Arial, sans-serif" font-size="14.4153" fill="#28a745">batch</ns0:text>
   <ns0:rect x="951.4088" y="295.3846" width="187.3987" height="73.8462" rx="7.2076" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8831" />
   <ns0:text x="1045.1081" y="339.6923" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Kernel</ns0:text>
-  <ns0:line x1="951.4088" y1="331.4872" x2="879.3323" y2="331.4872" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrowgreen)" />
+  <ns0:line x1="951.4088" y1="331.4872" x2="879.3323" y2="331.4872" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrow-ok)" />
   <ns0:rect x="663.1031" y="295.3846" width="216.2293" height="73.8462" rx="7.2076" fill="#d4edda" stroke="#28a745" stroke-width="2.8831" />
   <ns0:text x="771.2178" y="328.2051" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Completion</ns0:text>
   <ns0:text x="771.2178" y="352.8205" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Queue (CQ)</ns0:text>
-  <ns0:line x1="771.2178" y1="295.3846" x2="771.2178" y2="213.3333" stroke="#4a90e2" stroke-width="2.8831" marker-end="url(#arrowhead)" />
+  <ns0:line x1="771.2178" y1="295.3846" x2="771.2178" y2="213.3333" stroke="#4a90e2" stroke-width="2.8831" marker-end="url(#arrow)" />
   <ns0:text x="800.0483" y="262.5641" font-family="Arial, sans-serif" font-size="14.4153" fill="#4a90e2">poll</ns0:text>
   <ns0:rect x="706.349" y="426.6667" width="403.628" height="49.2308" rx="7.2076" fill="#d4edda" stroke="#28a745" stroke-width="1.4415" stroke-dasharray="5.7661 4.3245" />
   <ns0:text x="908.163" y="459.4872" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8568" fill="#28a745">App continues working; no blocking needed</ns0:text>
-  <ns0:rect x="72.0764" y="525.1282" width="1081.1464" height="106.6667" rx="11.5323" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.4415" />
+  <ns0:rect x="72.0764" y="525.1282" width="1081.1464" height="106.6667" rx="11.5323" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.4415" />
   <ns0:text x="612.6496" y="566.1539" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" font-weight="bold" fill="#333">Key Advantages of io_uring</ns0:text>
   <ns0:text x="288.3057" y="607.1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#555">No per-op syscall overhead</ns0:text>
   <ns0:text x="612.6496" y="607.1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#555">Batched submissions</ns0:text>

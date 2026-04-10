@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="17.7778" markerHeight="12" refX="16" refY="6" orient="auto">
-      <ns0:polygon points="0,17.1429 6.2222,0" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="597.3333" y="48" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Zero-Day Market Ecosystem</ns0:text>
   <ns0:rect x="431.4074" y="80" width="331.8519" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
@@ -16,11 +73,11 @@
   <ns0:text x="215.7037" y="384" text-anchor="middle" font-size="16" fill="#28a745">$5K - $250K</ns0:text>
   <ns0:line x1="497.7777" y1="160" x2="298.6667" y2="220.8" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrow)" />
   <ns0:rect x="431.4074" y="224" width="331.8519" height="192" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <ns0:text x="597.3333" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#e6a800">Gray Market</ns0:text>
+  <ns0:text x="597.3333" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#f39c12">Gray Market</ns0:text>
   <ns0:text x="597.3333" y="296" text-anchor="middle" font-size="16" fill="#333">Government agencies</ns0:text>
   <ns0:text x="597.3333" y="320" text-anchor="middle" font-size="16" fill="#333">Defense contractors</ns0:text>
   <ns0:text x="597.3333" y="344" text-anchor="middle" font-size="16" fill="#333">Zerodium, etc.</ns0:text>
-  <ns0:text x="597.3333" y="384" text-anchor="middle" font-size="16" fill="#e6a800">$50K - $2.5M+</ns0:text>
+  <ns0:text x="597.3333" y="384" text-anchor="middle" font-size="16" fill="#f39c12">$50K - $2.5M+</ns0:text>
   <ns0:line x1="597.3333" y1="160" x2="597.3333" y2="220.8" stroke="#ffc107" stroke-width="2.4" marker-end="url(#arrow)" />
   <ns0:rect x="813.037" y="224" width="331.8519" height="192" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
   <ns0:text x="978.963" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#dc3545">Black Market</ns0:text>

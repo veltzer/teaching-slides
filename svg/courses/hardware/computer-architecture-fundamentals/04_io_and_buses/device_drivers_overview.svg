@@ -9,13 +9,13 @@
   <ns0:text x="258.7486" y="175.4607" text-anchor="middle" font-size="14.382" fill="#555">read()</ns0:text>
   <ns0:text x="611.5875" y="175.4607" text-anchor="middle" font-size="14.382" fill="#555">write()</ns0:text>
   <ns0:rect x="47.0452" y="201.3483" width="1082.0395" height="316.4045" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="230.1124" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#856404">Kernel Space</ns0:text>
+  <ns0:text x="588.065" y="230.1124" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#bf360c">Kernel Space</ns0:text>
   <ns0:rect x="188.1808" y="244.4944" width="799.7683" height="57.5281" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1573" />
   <ns0:text x="588.065" y="280.4495" text-anchor="middle" font-size="17.2584" font-weight="bold" fill="#333">VFS (Virtual File System Layer)</ns0:text>
-  <ns0:line x1="588.065" y1="302.0225" x2="588.065" y2="323.5955" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#dda)" />
+  <ns0:line x1="588.065" y1="302.0225" x2="588.065" y2="323.5955" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#ffe0b2)" />
   <ns0:rect x="188.1808" y="323.5955" width="799.7683" height="57.5281" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1573" />
   <ns0:text x="588.065" y="359.5505" text-anchor="middle" font-size="17.2584" font-weight="bold" fill="#333">Block Layer / Network Stack</ns0:text>
-  <ns0:line x1="588.065" y1="381.1236" x2="588.065" y2="402.6967" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#dda)" />
+  <ns0:line x1="588.065" y1="381.1236" x2="588.065" y2="402.6967" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#ffe0b2)" />
   <ns0:rect x="188.1808" y="402.6967" width="799.7683" height="64.7191" rx="7.191" fill="#d4edda" stroke="#28a745" stroke-width="2.1573" />
   <ns0:text x="588.065" y="434.3371" text-anchor="middle" font-size="17.2584" font-weight="bold" fill="#333">Device Driver</ns0:text>
   <ns0:text x="588.065" y="457.3483" text-anchor="middle" font-size="14.382" fill="#555">(hardware-specific code)</ns0:text>
@@ -25,6 +25,66 @@
   <ns0:text x="588.065" y="611.236" text-anchor="middle" font-size="17.2584" font-weight="bold" fill="#333">Physical Device</ns0:text>
   <ns0:line x1="588.065" y1="467.4158" x2="588.065" y2="536.4495" stroke="#dc3545" stroke-width="2.1573" marker-end="url(#ddr)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="dda" viewBox="0 0 10 10" refX="23.04" refY="7.8261" markerWidth="15.36" markerHeight="9.3913" orient="auto-start-reverse">
       <ns0:path d="M 0 0 L 25.6 7.8261 L 0 15.6522 z" fill="#4a90e2" />
     </ns0:marker>

@@ -1,6 +1,67 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="588.9674" y="37.6471" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Parallel Architectures: Key Takeaways</ns0:text>
-  <ns0:rect x="50.4829" y="60.2353" width="1076.9689" height="579.7647" rx="7.5294" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5059" />
+  <ns0:rect x="50.4829" y="60.2353" width="1076.9689" height="579.7647" rx="7.5294" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.5059" />
   <ns0:rect x="84.1382" y="82.8235" width="1009.6584" height="112.9412" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
   <ns0:text x="117.7935" y="117.4589" font-size="19.5764" font-weight="bold" fill="#4a90e2">Classification</ns0:text>
   <ns0:text x="117.7935" y="147.5764" font-size="16.5647" fill="#333">Flynn's Taxonomy: SISD, SIMD, MISD, MIMD</ns0:text>
@@ -12,7 +73,7 @@
   <ns0:text x="117.7935" y="326.7765" font-size="16.5647" fill="#333">SIMD (SSE/AVX): operate on vectors of data</ns0:text>
   <ns0:text x="622.6226" y="275.5764" font-size="16.5647" fill="#333">GPU: thousands of simple cores for throughput</ns0:text>
   <ns0:rect x="84.1382" y="368.9412" width="1009.6584" height="143.0588" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
-  <ns0:text x="117.7935" y="403.5765" font-size="19.5764" font-weight="bold" fill="#856404">Memory Architecture</ns0:text>
+  <ns0:text x="117.7935" y="403.5765" font-size="19.5764" font-weight="bold" fill="#bf360c">Memory Architecture</ns0:text>
   <ns0:text x="117.7935" y="433.6941" font-size="16.5647" fill="#333">UMA: equal access, simple, limited scalability</ns0:text>
   <ns0:text x="117.7935" y="459.2941" font-size="16.5647" fill="#333">NUMA: non-uniform access, scales to 100+ cores</ns0:text>
   <ns0:text x="117.7935" y="484.8942" font-size="16.5647" fill="#333">Cache coherence (MESI/MOESI) keeps cores consistent</ns0:text>

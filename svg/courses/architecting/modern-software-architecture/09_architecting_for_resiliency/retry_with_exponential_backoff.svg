@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="20.16" refX="16" refY="10.08" orient="auto">
       <ns0:polygon points="0,28.8 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -7,17 +67,17 @@
   <ns0:rect x="47.4074" y="227.5556" width="205.4321" height="128" rx="7.9012" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1605" />
   <ns0:text x="150.1235" y="284.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963">Request</ns0:text>
   <ns0:text x="150.1235" y="332.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3827" fill="#dc3545">FAIL</ns0:text>
-  <ns0:line x1="252.8395" y1="290.1333" x2="331.8519" y2="290.1333" stroke="#4a90e2" stroke-width="3.1605" marker-end="url(#arrowhead)" />
+  <ns0:line x1="252.8395" y1="290.1333" x2="331.8519" y2="290.1333" stroke="#4a90e2" stroke-width="3.1605" marker-end="url(#arrow)" />
   <ns0:text x="292.3457" y="261.6889" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8025" fill="#666">1s</ns0:text>
   <ns0:rect x="335.0123" y="227.5556" width="205.4321" height="128" rx="7.9012" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1605" />
   <ns0:text x="437.7284" y="284.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963">Retry 1</ns0:text>
   <ns0:text x="437.7284" y="332.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3827" fill="#dc3545">FAIL</ns0:text>
-  <ns0:line x1="540.4444" y1="290.1333" x2="632.0988" y2="290.1333" stroke="#4a90e2" stroke-width="3.1605" marker-end="url(#arrowhead)" />
+  <ns0:line x1="540.4444" y1="290.1333" x2="632.0988" y2="290.1333" stroke="#4a90e2" stroke-width="3.1605" marker-end="url(#arrow)" />
   <ns0:text x="586.2716" y="261.6889" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8025" fill="#666">2s</ns0:text>
   <ns0:rect x="635.2593" y="227.5556" width="205.4321" height="128" rx="7.9012" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1605" />
   <ns0:text x="737.9753" y="284.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963">Retry 2</ns0:text>
   <ns0:text x="737.9753" y="332.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3827" fill="#dc3545">FAIL</ns0:text>
-  <ns0:line x1="840.6914" y1="290.1333" x2="944.9877" y2="290.1333" stroke="#4a90e2" stroke-width="3.1605" marker-end="url(#arrowhead)" />
+  <ns0:line x1="840.6914" y1="290.1333" x2="944.9877" y2="290.1333" stroke="#4a90e2" stroke-width="3.1605" marker-end="url(#arrow)" />
   <ns0:text x="892.8395" y="261.6889" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8025" fill="#666">4s</ns0:text>
   <ns0:rect x="948.1481" y="227.5556" width="205.4321" height="128" rx="7.9012" fill="#d4edda" stroke="#28a745" stroke-width="3.1605" />
   <ns0:text x="1050.8642" y="284.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963">Retry 3</ns0:text>

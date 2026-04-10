@@ -19,16 +19,76 @@
   <ns0:text x="584.4554" y="615.1641" text-anchor="middle" font-size="22.9254">Button</ns0:text>
   <ns0:rect x="703.3277" y="573.1343" width="188.2145" height="66.8657" fill="#fff3e0" stroke="#333" stroke-width="3.8209" rx="9.5522" />
   <ns0:text x="796.4444" y="615.1641" text-anchor="middle" font-size="22.9254">Custom View</ns0:text>
-  <ns0:line x1="594.3615" y1="152.8358" x2="594.3615" y2="248.3582" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="554.7374" y1="343.8806" x2="198.1205" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="574.5495" y1="343.8806" x2="465.5831" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="614.1735" y1="343.8806" x2="733.0458" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="633.9856" y1="343.8806" x2="1010.4145" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="534.9253" y1="152.8358" x2="178.3084" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="554.7374" y1="152.8358" x2="380.3914" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="584.4554" y1="152.8358" x2="584.4554" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
-  <ns0:line x1="633.9856" y1="152.8358" x2="796.4444" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow1)" />
+  <ns0:line x1="594.3615" y1="152.8358" x2="594.3615" y2="248.3582" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="554.7374" y1="343.8806" x2="198.1205" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="574.5495" y1="343.8806" x2="465.5831" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="614.1735" y1="343.8806" x2="733.0458" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="633.9856" y1="343.8806" x2="1010.4145" y2="439.403" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="534.9253" y1="152.8358" x2="178.3084" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="554.7374" y1="152.8358" x2="380.3914" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="584.4554" y1="152.8358" x2="584.4554" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
+  <ns0:line x1="633.9856" y1="152.8358" x2="796.4444" y2="573.1343" stroke="#333" stroke-width="3.8209" marker-end="url(#arrow)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow1" markerWidth="21.3333" markerHeight="20.5714" refX="19.2" refY="6.1714" orient="auto">
       <ns0:path d="M 0 0 L 0 12.3429 L 19.2 6.1714 z" fill="#333" />
     </ns0:marker>

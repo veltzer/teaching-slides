@@ -1,28 +1,78 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="35.5556" y="26.6667" width="1066.6667" height="488.8889" rx="10.6667" fill="#f0f4ff" stroke="#1e88e5" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:rect x="35.5556" y="26.6667" width="1066.6667" height="488.8889" rx="10.6667" fill="#e8f4f8" stroke="#1e88e5" stroke-width="2.2222" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="72.8889" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1565c0">Shell Process</ns0:text>
   <ns0:rect x="71.1111" y="97.7778" width="453.3333" height="302.2222" rx="8.8889" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="71.1111" y="97.7778" width="453.3333" height="46.2222" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="71.1111" y="97.7778" width="453.3333" height="46.2222" rx="8.8889" fill="url(#grad-primary)" />
   <ns0:rect x="71.1111" y="124.4444" width="453.3333" height="19.5556" fill="#1565c0" />
   <ns0:text x="297.7778" y="128.8889" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">Shell Variables</ns0:text>
   <ns0:text x="97.7778" y="177.7778" font-size="17.7778" fill="#333" font-family="monospace">x=5</ns0:text>
@@ -43,7 +93,7 @@
   <ns0:text x="604.4444" y="327.1111" font-size="16" fill="#555">Defined with:  export name=value</ns0:text>
   <ns0:text x="604.4444" y="352" font-size="16" fill="#555">Or:  declare -x name=value</ns0:text>
   <ns0:text x="604.4444" y="376.8889" font-size="16" fill="#2e7d32" font-weight="bold">Inherited by all children.</ns0:text>
-  <ns0:line x1="564.4444" y1="115.5556" x2="564.4444" y2="382.2222" stroke="#bbbbbb" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" />
+  <ns0:line x1="564.4444" y1="115.5556" x2="564.4444" y2="382.2222" stroke="#bdbdbd" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" />
   <ns0:rect x="71.1111" y="435.5556" width="995.5556" height="71.1111" rx="8.8889" fill="#fff9c4" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="471.1111" text-anchor="middle" font-size="17.7778" fill="#333" font-weight="bold">Shell vars: local to current shell — not passed to children</ns0:text>
   <ns0:text x="568.8889" y="496" text-anchor="middle" font-size="17.7778" fill="#333" font-weight="bold">Environment vars: exported — inherited by all child processes</ns0:text>

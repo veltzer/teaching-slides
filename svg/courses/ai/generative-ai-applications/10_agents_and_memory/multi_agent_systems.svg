@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arr" markerWidth="17.0667" markerHeight="13.9355" refX="17.0667" refY="6.9677" orient="auto">
       <polygon points="0,18.5806 6.4,0" fill="#555" />
     </marker>
@@ -12,19 +72,19 @@
   <line x1="917.3333" y1="171.871" x2="960" y2="320.5161" stroke="#555" stroke-width="3.2" marker-end="url(#arr)" />
   <rect x="106.6667" y="325.1613" width="320" height="301.9355" rx="8.5333" fill="#e8f5e9" stroke="#333" stroke-width="3.2" />
   <text x="266.6667" y="380.9032" font-size="27.7333" fill="#222" text-anchor="middle" font-weight="bold">Research Agent</text>
-  <line x1="128" y1="404.129" x2="405.3333" y2="404.129" stroke="#bbb" stroke-width="2.1333" />
+  <line x1="128" y1="404.129" x2="405.3333" y2="404.129" stroke="#bdbdbd" stroke-width="2.1333" />
   <text x="266.6667" y="450.5806" font-size="25.6" fill="#555" text-anchor="middle">Search</text>
   <text x="266.6667" y="492.3871" font-size="25.6" fill="#555" text-anchor="middle">Summarize</text>
   <text x="266.6667" y="534.1935" font-size="25.6" fill="#555" text-anchor="middle">Cite</text>
   <rect x="480" y="325.1613" width="320" height="301.9355" rx="8.5333" fill="#fff3e0" stroke="#333" stroke-width="3.2" />
   <text x="640" y="380.9032" font-size="27.7333" fill="#222" text-anchor="middle" font-weight="bold">Code Agent</text>
-  <line x1="501.3333" y1="404.129" x2="778.6667" y2="404.129" stroke="#bbb" stroke-width="2.1333" />
+  <line x1="501.3333" y1="404.129" x2="778.6667" y2="404.129" stroke="#bdbdbd" stroke-width="2.1333" />
   <text x="640" y="450.5806" font-size="25.6" fill="#555" text-anchor="middle">Execute</text>
   <text x="640" y="492.3871" font-size="25.6" fill="#555" text-anchor="middle">Debug</text>
   <text x="640" y="534.1935" font-size="25.6" fill="#555" text-anchor="middle">Test</text>
   <rect x="853.3333" y="325.1613" width="320" height="301.9355" rx="8.5333" fill="#fce4ec" stroke="#333" stroke-width="3.2" />
   <text x="1013.3333" y="380.9032" font-size="27.7333" fill="#222" text-anchor="middle" font-weight="bold">Review Agent</text>
-  <line x1="874.6667" y1="404.129" x2="1152" y2="404.129" stroke="#bbb" stroke-width="2.1333" />
+  <line x1="874.6667" y1="404.129" x2="1152" y2="404.129" stroke="#bdbdbd" stroke-width="2.1333" />
   <text x="1013.3333" y="450.5806" font-size="25.6" fill="#555" text-anchor="middle">Analyze</text>
   <text x="1013.3333" y="492.3871" font-size="25.6" fill="#555" text-anchor="middle">Critique</text>
   <text x="1013.3333" y="534.1935" font-size="25.6" fill="#555" text-anchor="middle">Suggest</text>

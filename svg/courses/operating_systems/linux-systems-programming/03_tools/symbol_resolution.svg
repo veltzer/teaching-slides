@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <rect x="80" y="90" width="240" height="540" fill="#3498DB" stroke="#333" stroke-width="3.2" />
   <text x="200" y="54" text-anchor="middle" font-size="22.4" font-weight="bold">Program</text>
-  <rect x="80" y="144" width="240" height="72" fill="#2980B9" stroke="#333" stroke-width="1.6" />
+  <rect x="80" y="144" width="240" height="72" fill="#1976d2" stroke="#333" stroke-width="1.6" />
   <text x="200" y="189" text-anchor="middle" fill="white" font-size="17.6">main()</text>
-  <rect x="80" y="234" width="240" height="72" fill="#2980B9" stroke="#333" stroke-width="1.6" />
+  <rect x="80" y="234" width="240" height="72" fill="#1976d2" stroke="#333" stroke-width="1.6" />
   <text x="200" y="279" text-anchor="middle" fill="white" font-size="17.6">calls: printf()</text>
-  <rect x="80" y="324" width="240" height="72" fill="#2980B9" stroke="#333" stroke-width="1.6" />
+  <rect x="80" y="324" width="240" height="72" fill="#1976d2" stroke="#333" stroke-width="1.6" />
   <text x="200" y="369" text-anchor="middle" fill="white" font-size="17.6">calls: custom_func()</text>
   <rect x="480" y="90" width="240" height="270" fill="#E74C3C" stroke="#333" stroke-width="3.2" />
   <text x="600" y="54" text-anchor="middle" font-size="22.4" font-weight="bold">libc.so</text>
-  <rect x="480" y="144" width="240" height="72" fill="#C0392B" stroke="#333" stroke-width="1.6" />
+  <rect x="480" y="144" width="240" height="72" fill="#c62828" stroke="#333" stroke-width="1.6" />
   <text x="600" y="189" text-anchor="middle" fill="white" font-size="17.6">printf()</text>
   <rect x="480" y="414" width="240" height="216" fill="#2ECC71" stroke="#333" stroke-width="3.2" />
   <text x="600" y="378" text-anchor="middle" font-size="22.4" font-weight="bold">libcustom.so</text>
@@ -23,6 +23,66 @@
   <text x="896" y="360" font-size="16">custom_func → libcustom:0x5678</text>
   <text x="896" y="396" font-size="16">main → program:0x4000</text>
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrow6" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
       <polygon points="0,18 5.6,0" fill="#333" />
     </marker>

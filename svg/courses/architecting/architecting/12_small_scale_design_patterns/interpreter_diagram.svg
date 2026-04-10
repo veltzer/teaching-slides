@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="13.2632" refX="17.0667" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -8,7 +68,7 @@
     </ns0:marker>
   </ns0:defs>
   <ns0:text x="635.817" y="47.0588" text-anchor="middle" font-size="27.1282" font-weight="bold" fill="#333">Interpreter Pattern - Abstract Syntax Tree</ns0:text>
-  <ns0:rect x="288.237" y="94.1176" width="695.1599" height="432.9412" rx="16.9552" fill="#f0f4ff" stroke="#4a90e2" stroke-width="2.5433" stroke-dasharray="10.1731 5.0865" />
+  <ns0:rect x="288.237" y="94.1176" width="695.1599" height="432.9412" rx="16.9552" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5433" stroke-dasharray="10.1731 5.0865" />
   <ns0:text x="635.817" y="135.5295" text-anchor="middle" font-size="20.3461" font-weight="bold" fill="#4a90e2">Abstract Syntax Tree</ns0:text>
   <ns0:rect x="449.3107" y="165.647" width="322.1473" height="79.0588" rx="8.4775" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.391" />
   <ns0:text x="610.3843" y="214.5882" text-anchor="middle" font-size="22.0417" font-weight="bold" fill="#333">Abstract Expression</ns0:text>
@@ -25,13 +85,13 @@
   <ns0:rect x="50.8654" y="188.2353" width="237.3717" height="103.5294" rx="8.4775" fill="#d4edda" stroke="#28a745" stroke-width="2.5433" />
   <ns0:text x="169.5512" y="229.6471" text-anchor="middle" font-size="22.0417" font-weight="bold" fill="#333">Context</ns0:text>
   <ns0:text x="169.5512" y="267.2941" text-anchor="middle" font-size="16.9552" fill="#666">Global Info / State</ns0:text>
-  <ns0:line x1="542.5638" y1="244.7059" x2="449.3107" y2="316.2353" stroke="#4a90e2" stroke-width="2.5433" marker-end="url(#arrowhead)" />
-  <ns0:line x1="678.2049" y1="244.7059" x2="796.8906" y2="316.2353" stroke="#4a90e2" stroke-width="2.5433" marker-end="url(#arrowhead)" />
-  <ns0:line x1="746.0253" y1="399.0588" x2="720.5926" y2="438.5883" stroke="#28a745" stroke-width="1.6955" marker-end="url(#arrowhead)" />
-  <ns0:line x1="847.756" y1="399.0588" x2="881.6663" y2="438.5883" stroke="#9c27b0" stroke-width="1.6955" marker-end="url(#arrowhead)" />
-  <ns0:line x1="288.237" y1="207.0589" x2="445.9196" y2="205.1765" stroke="#999" stroke-width="1.6955" stroke-dasharray="8.4775 5.0865" marker-end="url(#arrowhead-dash)" />
+  <ns0:line x1="542.5638" y1="244.7059" x2="449.3107" y2="316.2353" stroke="#4a90e2" stroke-width="2.5433" marker-end="url(#arrow)" />
+  <ns0:line x1="678.2049" y1="244.7059" x2="796.8906" y2="316.2353" stroke="#4a90e2" stroke-width="2.5433" marker-end="url(#arrow)" />
+  <ns0:line x1="746.0253" y1="399.0588" x2="720.5926" y2="438.5883" stroke="#28a745" stroke-width="1.6955" marker-end="url(#arrow)" />
+  <ns0:line x1="847.756" y1="399.0588" x2="881.6663" y2="438.5883" stroke="#9c27b0" stroke-width="1.6955" marker-end="url(#arrow)" />
+  <ns0:line x1="288.237" y1="207.0589" x2="445.9196" y2="205.1765" stroke="#999" stroke-width="1.6955" stroke-dasharray="8.4775 5.0865" marker-end="url(#arrow)" />
   <ns0:text x="356.0575" y="193.8824" font-size="16.9552" fill="#999">Global Info</ns0:text>
-  <ns0:line x1="237.3717" y1="291.7647" x2="356.0575" y2="348.2353" stroke="#999" stroke-width="1.6955" stroke-dasharray="8.4775 5.0865" marker-end="url(#arrowhead-dash)" />
+  <ns0:line x1="237.3717" y1="291.7647" x2="356.0575" y2="348.2353" stroke="#999" stroke-width="1.6955" stroke-dasharray="8.4775 5.0865" marker-end="url(#arrow)" />
   <ns0:text x="254.3268" y="338.8235" font-size="16.9552" fill="#999">Variables</ns0:text>
   <ns0:text x="635.817" y="602.353" text-anchor="middle" font-size="18.6506" fill="#888" font-style="italic">Interpreter pattern defines a grammar and builds an AST to evaluate expressions.</ns0:text>
   <ns0:text x="635.817" y="640" text-anchor="middle" font-size="18.6506" fill="#888" font-style="italic">Terminal nodes hold values; non-terminal nodes hold operations.</ns0:text>

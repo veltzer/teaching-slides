@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="62.9508" y="50.5855" width="335.7377" height="177.0492" fill="#e3f2fd" stroke="#1976d2" stroke-width="4.1968" />
   <ns0:text x="230.8197" y="113.8173" text-anchor="middle" font-size="27.2787" font-weight="bold">Element</ns0:text>
   <ns0:text x="230.8197" y="164.4029" text-anchor="middle" font-size="23.082" font-style="italic">+ accept(Visitor&amp;)</ns0:text>
@@ -10,9 +71,9 @@
   <ns0:text x="125.9016" y="467.9157" text-anchor="middle" font-size="20.9836">ElementA</ns0:text>
   <ns0:rect x="272.7869" y="404.6839" width="209.836" height="101.1709" fill="#e1f5fe" stroke="#0277bd" stroke-width="4.1968" />
   <ns0:text x="377.7049" y="467.9157" text-anchor="middle" font-size="20.9836">ElementB</ns0:text>
-  <ns0:rect x="734.4263" y="404.6839" width="251.8033" height="101.1709" fill="#f1f8e9" stroke="#689f38" stroke-width="4.1968" />
+  <ns0:rect x="734.4263" y="404.6839" width="251.8033" height="101.1709" fill="#e8f5e9" stroke="#43a047" stroke-width="4.1968" />
   <ns0:text x="860.3279" y="467.9157" text-anchor="middle" font-size="20.9836">ConcreteVisitor1</ns0:text>
-  <ns0:rect x="1028.1967" y="404.6839" width="251.8033" height="101.1709" fill="#f1f8e9" stroke="#689f38" stroke-width="4.1968" />
+  <ns0:rect x="1028.1967" y="404.6839" width="251.8033" height="101.1709" fill="#e8f5e9" stroke="#43a047" stroke-width="4.1968" />
   <ns0:text x="1154.0984" y="467.9157" text-anchor="middle" font-size="20.9836">ConcreteVisitor2</ns0:text>
   <ns0:line x1="125.9016" y1="404.6839" x2="188.8525" y2="227.6347" stroke="#333" stroke-width="3.1475" stroke-dasharray="10.4918 10.4918" />
   <ns0:line x1="377.7049" y1="404.6839" x2="272.7869" y2="227.6347" stroke="#333" stroke-width="3.1475" stroke-dasharray="10.4918 10.4918" />

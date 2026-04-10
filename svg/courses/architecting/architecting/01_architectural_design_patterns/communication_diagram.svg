@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="12.073">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="14.4" refX="16" refY="7.2" orient="auto">
       <ns0:polygon points="0,20.5714 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -18,18 +78,18 @@
   <ns0:text x="609.2206" y="286.5672" text-anchor="middle" font-weight="bold" fill="#333">Server</ns0:text>
   <ns0:rect x="921.2604" y="238.806" width="208.0266" height="76.4179" rx="7.4295" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9718" />
   <ns0:text x="1025.2737" y="286.5672" text-anchor="middle" fill="#333">Database</ns0:text>
-  <ns0:line x1="222.8856" y1="152.8358" x2="502.2355" y2="252.1792" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrowhead)" />
+  <ns0:line x1="222.8856" y1="152.8358" x2="502.2355" y2="252.1792" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrow)" />
   <ns0:text x="341.7579" y="183.403" text-anchor="middle" font-size="16.3449" fill="#4a90e2">Request</ns0:text>
-  <ns0:line x1="222.8856" y1="305.6717" x2="502.2355" y2="282.7463" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrowhead)" />
+  <ns0:line x1="222.8856" y1="305.6717" x2="502.2355" y2="282.7463" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrow)" />
   <ns0:text x="341.7579" y="282.7463" text-anchor="middle" font-size="16.3449" fill="#4a90e2">Request</ns0:text>
-  <ns0:line x1="222.8856" y1="458.5075" x2="502.2355" y2="305.6717" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrowhead)" />
+  <ns0:line x1="222.8856" y1="458.5075" x2="502.2355" y2="305.6717" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrow)" />
   <ns0:text x="341.7579" y="401.1941" text-anchor="middle" font-size="16.3449" fill="#4a90e2">Request</ns0:text>
-  <ns0:line x1="505.2073" y1="263.6418" x2="225.8574" y2="168.1194" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="505.2073" y1="263.6418" x2="225.8574" y2="168.1194" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
   <ns0:text x="386.335" y="229.2537" text-anchor="middle" font-size="16.3449" fill="#28a745">Response</ns0:text>
-  <ns0:line x1="505.2073" y1="290.3881" x2="225.8574" y2="320.9553" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="505.2073" y1="309.4925" x2="225.8574" y2="443.2239" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="713.2339" y1="277.0149" x2="918.2886" y2="277.0149" stroke="#ffc107" stroke-width="2.9718" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrowhead)" />
-  <ns0:text x="817.2472" y="263.6418" text-anchor="middle" font-size="16.3449" fill="#996600">Manages</ns0:text>
+  <ns0:line x1="505.2073" y1="290.3881" x2="225.8574" y2="320.9553" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="505.2073" y1="309.4925" x2="225.8574" y2="443.2239" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="713.2339" y1="277.0149" x2="918.2886" y2="277.0149" stroke="#ffc107" stroke-width="2.9718" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow)" />
+  <ns0:text x="817.2472" y="263.6418" text-anchor="middle" font-size="16.3449" fill="#bf360c">Manages</ns0:text>
   <ns0:rect x="44.5771" y="554.0299" width="1099.5689" height="85.9701" rx="7.4295" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4859" />
   <ns0:text x="594.3616" y="607.5224" text-anchor="middle" font-size="17.8308" fill="#555">Multiple clients send requests to a central server, which manages a database and returns responses.</ns0:text>
 </ns0:svg>

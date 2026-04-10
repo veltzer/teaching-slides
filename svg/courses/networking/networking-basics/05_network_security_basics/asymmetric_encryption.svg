@@ -28,11 +28,71 @@
   <line x1="1117.8667" y1="368.5714" x2="1117.8667" y2="420" stroke="#28a745" stroke-width="3.4133" marker-end="url(#aG)" />
   <rect x="1006.9333" y="428.5714" width="221.8667" height="85.7143" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="2.56" />
   <text x="1117.8667" y="480" text-anchor="middle" font-size="22.1867" fill="#333">Signed Data</text>
-  <line x1="1006.9333" y1="471.4286" x2="887.4667" y2="471.4286" stroke="#4a90e2" stroke-width="3.4133" marker-end="url(#aB2)" />
+  <line x1="1006.9333" y1="471.4286" x2="887.4667" y2="471.4286" stroke="#4a90e2" stroke-width="3.4133" marker-end="url(#f39c12)" />
   <text x="947.2" y="454.2857" text-anchor="middle" font-size="17.0667" fill="#4a90e2">Public Key</text>
   <rect x="699.7333" y="428.5714" width="187.7333" height="85.7143" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="2.56" />
   <text x="793.6" y="480" text-anchor="middle" font-size="22.1867" fill="#333">Valid?</text>
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="aB" markerWidth="17.0667" markerHeight="12" refX="17.0667" refY="6" orient="auto">
       <polygon points="0,17.1429 5.9733,0" fill="#4a90e2" />
     </marker>

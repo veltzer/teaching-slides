@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow2" markerWidth="18.2857" markerHeight="24" refX="16.4571" refY="7.2" orient="auto">
       <ns0:polygon points="0,24 5.4857,0" fill="#333" />
     </ns0:marker>
@@ -11,8 +71,8 @@
   <ns0:text x="99.3103" y="253.4483" text-anchor="middle" font-size="13.2414">Service A</ns0:text>
   <ns0:rect x="187.5862" y="217.2414" width="132.4138" height="57.931" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.1035" rx="4.4138" />
   <ns0:text x="253.7931" y="253.4483" text-anchor="middle" font-size="13.2414">Service B</ns0:text>
-  <ns0:path d="M 165.5172 144.8276 L 99.3103 217.2414" stroke="#1565c0" stroke-width="2.2069" marker-end="url(#arrow2)" />
-  <ns0:path d="M 220.6897 144.8276 L 253.7931 217.2414" stroke="#1565c0" stroke-width="2.2069" marker-end="url(#arrow2)" />
+  <ns0:path d="M 165.5172 144.8276 L 99.3103 217.2414" stroke="#1565c0" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <ns0:path d="M 220.6897 144.8276 L 253.7931 217.2414" stroke="#1565c0" stroke-width="2.2069" marker-end="url(#arrow)" />
   <ns0:text x="77.2414" y="188.2759" font-size="11.0345" fill="#1565c0">scrape</ns0:text>
   <ns0:text x="253.7931" y="188.2759" font-size="11.0345" fill="#1565c0">scrape</ns0:text>
   <ns0:text x="579.3104" y="43.4483" text-anchor="middle" font-size="17.6551" font-weight="bold" fill="#2e7d32">Push Model</ns0:text>
@@ -22,8 +82,8 @@
   <ns0:text x="485.5172" y="253.4483" text-anchor="middle" font-size="13.2414">Service A</ns0:text>
   <ns0:rect x="573.7931" y="217.2414" width="132.4138" height="57.931" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.1035" rx="4.4138" />
   <ns0:text x="640" y="253.4483" text-anchor="middle" font-size="13.2414">Service B</ns0:text>
-  <ns0:path d="M 485.5172 217.2414 L 540.6897 144.8276" stroke="#2e7d32" stroke-width="2.2069" marker-end="url(#arrow2)" />
-  <ns0:path d="M 640 217.2414 L 617.9311 144.8276" stroke="#2e7d32" stroke-width="2.2069" marker-end="url(#arrow2)" />
+  <ns0:path d="M 485.5172 217.2414 L 540.6897 144.8276" stroke="#2e7d32" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <ns0:path d="M 640 217.2414 L 617.9311 144.8276" stroke="#2e7d32" stroke-width="2.2069" marker-end="url(#arrow)" />
   <ns0:text x="485.5172" y="188.2759" font-size="11.0345" fill="#2e7d32">push</ns0:text>
   <ns0:text x="640" y="188.2759" font-size="11.0345" fill="#2e7d32">push</ns0:text>
   <ns0:line x1="386.2069" y1="28.9655" x2="386.2069" y2="376.5517" stroke="#999" stroke-width="1.1035" stroke-dasharray="5.5173 5.5173" />

@@ -1,32 +1,82 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="803.1373" height="451.7647" fill="#ffffff" />
-  <ns0:rect x="37.6471" y="50.1961" width="188.2353" height="81.5686" rx="7.5294" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="37.6471" y="50.1961" width="188.2353" height="81.5686" rx="7.5294" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="131.7647" y="95.3725" text-anchor="middle" fill="white" font-size="13.8039" font-weight="bold" font-family="Arial, sans-serif">Requirements</ns0:text>
   <ns0:text x="131.7647" y="114.1961" text-anchor="middle" fill="#bbdefb" font-size="10" font-family="Arial, sans-serif">Clarify &amp; document</ns0:text>
-  <ns0:line x1="225.8824" y1="90.9804" x2="269.8039" y2="90.9804" stroke="#1565c0" stroke-width="1.8824" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="225.8824" y1="90.9804" x2="269.8039" y2="90.9804" stroke="#1565c0" stroke-width="1.8824" marker-end="url(#arrow-primary)" />
   <ns0:rect x="276.0784" y="50.1961" width="188.2353" height="81.5686" rx="7.5294" fill="#43a047" filter="url(#shadow)" />
   <ns0:text x="370.1961" y="95.3725" text-anchor="middle" fill="white" font-size="13.8039" font-weight="bold" font-family="Arial, sans-serif">Design</ns0:text>
   <ns0:text x="370.1961" y="114.1961" text-anchor="middle" fill="#c8e6c9" font-size="10" font-family="Arial, sans-serif">Architecture &amp; API</ns0:text>
-  <ns0:line x1="464.3137" y1="90.9804" x2="508.2353" y2="90.9804" stroke="#1565c0" stroke-width="1.8824" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="464.3137" y1="90.9804" x2="508.2353" y2="90.9804" stroke="#1565c0" stroke-width="1.8824" marker-end="url(#arrow-primary)" />
   <ns0:rect x="514.5098" y="50.1961" width="250.9804" height="81.5686" rx="7.5294" fill="#e53935" filter="url(#shadow)" />
   <ns0:text x="640" y="95.3725" text-anchor="middle" fill="white" font-size="13.8039" font-weight="bold" font-family="Arial, sans-serif">Implement</ns0:text>
   <ns0:text x="640" y="114.1961" text-anchor="middle" fill="#ffcdd2" font-size="10" font-family="Arial, sans-serif">Code with AI assistance</ns0:text>
@@ -36,13 +86,13 @@
   <ns0:rect x="320" y="194.5098" width="163.1373" height="81.5686" rx="7.5294" fill="#8e24aa" filter="url(#shadow)" />
   <ns0:text x="401.5686" y="239.6863" text-anchor="middle" fill="white" font-size="13.8039" font-weight="bold" font-family="Arial, sans-serif">Review</ns0:text>
   <ns0:text x="401.5686" y="258.5098" text-anchor="middle" fill="#e1bee7" font-size="10" font-family="Arial, sans-serif">AI + human PR review</ns0:text>
-  <ns0:rect x="514.5098" y="194.5098" width="163.1373" height="81.5686" rx="7.5294" fill="#00897b" filter="url(#shadow)" />
+  <ns0:rect x="514.5098" y="194.5098" width="163.1373" height="81.5686" rx="7.5294" fill="#27ae60" filter="url(#shadow)" />
   <ns0:text x="596.0784" y="239.6863" text-anchor="middle" fill="white" font-size="13.8039" font-weight="bold" font-family="Arial, sans-serif">Deploy</ns0:text>
-  <ns0:text x="596.0784" y="258.5098" text-anchor="middle" fill="#b2dfdb" font-size="10" font-family="Arial, sans-serif">CI/CD pipeline</ns0:text>
-  <ns0:path d="M 640 131.7647 Q 640 175.6863 596.0784 194.5098" stroke="#1565c0" stroke-width="1.5686" fill="none" marker-end="url(#arrow-accent)" />
-  <ns0:line x1="288.6275" y1="235.2941" x2="320" y2="235.2941" stroke="#1565c0" stroke-width="1.5686" marker-end="url(#arrow-accent)" />
-  <ns0:line x1="483.1373" y1="235.2941" x2="514.5098" y2="235.2941" stroke="#1565c0" stroke-width="1.5686" marker-end="url(#arrow-accent)" />
+  <ns0:text x="596.0784" y="258.5098" text-anchor="middle" fill="#c8e6c9" font-size="10" font-family="Arial, sans-serif">CI/CD pipeline</ns0:text>
+  <ns0:path d="M 640 131.7647 Q 640 175.6863 596.0784 194.5098" stroke="#1565c0" stroke-width="1.5686" fill="none" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="288.6275" y1="235.2941" x2="320" y2="235.2941" stroke="#1565c0" stroke-width="1.5686" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="483.1373" y1="235.2941" x2="514.5098" y2="235.2941" stroke="#1565c0" stroke-width="1.5686" marker-end="url(#arrow-primary)" />
   <ns0:rect x="37.6471" y="301.1765" width="727.8431" height="62.7451" rx="7.5294" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="0.9412" filter="url(#shadow)" />
   <ns0:text x="401.5686" y="326.2745" text-anchor="middle" fill="#1565c0" font-size="12.549" font-weight="bold" font-family="Arial, sans-serif">AI Accelerates Every Stage</ns0:text>
-  <ns0:text x="401.5686" y="348.2353" text-anchor="middle" fill="#444" font-size="10.0392" font-family="Arial, sans-serif">Requirements clarification, boilerplate generation, test creation, review automation</ns0:text>
+  <ns0:text x="401.5686" y="348.2353" text-anchor="middle" fill="#333333" font-size="10.0392" font-family="Arial, sans-serif">Requirements clarification, boilerplate generation, test creation, review automation</ns0:text>
 </ns0:svg>

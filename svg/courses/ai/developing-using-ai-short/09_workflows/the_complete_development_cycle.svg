@@ -1,54 +1,104 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="865.9619" height="487.1036" fill="#ffffff" />
   <ns0:circle cx="432.981" cy="236.7865" r="175.8985" fill="none" stroke="#e0e0e0" stroke-width="2.0296" />
-  <ns0:circle cx="432.981" cy="236.7865" r="60.8879" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:circle cx="432.981" cy="236.7865" r="60.8879" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="432.981" y="228.6681" text-anchor="middle" fill="white" font-size="12.1776" font-weight="bold" font-family="Arial, sans-serif">AI Assists</ns0:text>
   <ns0:text x="432.981" y="247.611" text-anchor="middle" fill="white" font-size="12.1776" font-weight="bold" font-family="Arial, sans-serif">Every Step</ns0:text>
   <ns0:circle cx="432.981" cy="54.1226" r="43.2981" fill="#ffebee" stroke="#e53935" stroke-width="2.0296" filter="url(#shadow)" />
   <ns0:text x="432.981" y="50.74" text-anchor="middle" fill="#b71c1c" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Planning</ns0:text>
-  <ns0:text x="432.981" y="67.6533" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">Requirements</ns0:text>
+  <ns0:text x="432.981" y="67.6533" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">Requirements</ns0:text>
   <ns0:circle cx="602.1142" cy="128.5412" r="43.2981" fill="#fff3e0" stroke="#fb8c00" stroke-width="2.0296" filter="url(#shadow)" />
   <ns0:text x="602.1142" y="125.1586" text-anchor="middle" fill="#e65100" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Design</ns0:text>
-  <ns0:text x="602.1142" y="142.0719" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">Architecture</ns0:text>
+  <ns0:text x="602.1142" y="142.0719" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">Architecture</ns0:text>
   <ns0:circle cx="635.9408" cy="290.9091" r="43.2981" fill="#e8f5e9" stroke="#43a047" stroke-width="2.0296" filter="url(#shadow)" />
   <ns0:text x="635.9408" y="287.5264" text-anchor="middle" fill="#2e7d32" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Develop</ns0:text>
-  <ns0:text x="635.9408" y="304.4397" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">Code + AI</ns0:text>
+  <ns0:text x="635.9408" y="304.4397" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">Code + AI</ns0:text>
   <ns0:circle cx="527.6956" cy="412.685" r="43.2981" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2.0296" filter="url(#shadow)" />
   <ns0:text x="527.6956" y="409.3023" text-anchor="middle" fill="#6a1b9a" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Test</ns0:text>
-  <ns0:text x="527.6956" y="426.2156" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">Automated</ns0:text>
+  <ns0:text x="527.6956" y="426.2156" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">Automated</ns0:text>
   <ns0:circle cx="338.2664" cy="412.685" r="43.2981" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2.0296" filter="url(#shadow)" />
   <ns0:text x="338.2664" y="409.3023" text-anchor="middle" fill="#1565c0" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Deploy</ns0:text>
-  <ns0:text x="338.2664" y="426.2156" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">CI/CD</ns0:text>
-  <ns0:circle cx="230.0211" cy="290.9091" r="43.2981" fill="#e0f2f1" stroke="#00897b" stroke-width="2.0296" filter="url(#shadow)" />
-  <ns0:text x="230.0211" y="287.5264" text-anchor="middle" fill="#00695c" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Monitor</ns0:text>
-  <ns0:text x="230.0211" y="304.4397" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">Observe</ns0:text>
+  <ns0:text x="338.2664" y="426.2156" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">CI/CD</ns0:text>
+  <ns0:circle cx="230.0211" cy="290.9091" r="43.2981" fill="#e8f4f8" stroke="#27ae60" stroke-width="2.0296" filter="url(#shadow)" />
+  <ns0:text x="230.0211" y="287.5264" text-anchor="middle" fill="#2e7d32" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Monitor</ns0:text>
+  <ns0:text x="230.0211" y="304.4397" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">Observe</ns0:text>
   <ns0:circle cx="263.8478" cy="128.5412" r="43.2981" fill="#fff8e1" stroke="#f9a825" stroke-width="2.0296" filter="url(#shadow)" />
-  <ns0:text x="263.8478" y="125.1586" text-anchor="middle" fill="#f57f17" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Iterate</ns0:text>
-  <ns0:text x="263.8478" y="142.0719" text-anchor="middle" fill="#444" font-size="10" font-family="Arial, sans-serif">Improve</ns0:text>
-  <ns0:path d="M 473.5729 79.8309 Q 547.9915 100.1268 569.6406 102.833" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
-  <ns0:path d="M 625.1163 174.5455 Q 640 236.7865 629.1755 257.0825" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
-  <ns0:path d="M 612.2622 330.148 Q 581.8182 384.2706 568.2875 376.1522" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
-  <ns0:path d="M 487.1036 435.6871 Q 420.8034 442.4524 378.8584 435.6871" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
-  <ns0:path d="M 297.6744 392.389 Q 238.1395 359.9154 221.9027 331.5011" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
-  <ns0:path d="M 236.7865 250.3171 Q 248.9641 181.3108 284.1438 156.9556" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
-  <ns0:path d="M 303.0867 101.4799 Q 365.3277 74.4186 392.389 66.3002" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-accent)" />
+  <ns0:text x="263.8478" y="125.1586" text-anchor="middle" fill="#f57c00" font-size="10.8245" font-weight="bold" font-family="Arial, sans-serif">Iterate</ns0:text>
+  <ns0:text x="263.8478" y="142.0719" text-anchor="middle" fill="#333333" font-size="10" font-family="Arial, sans-serif">Improve</ns0:text>
+  <ns0:path d="M 473.5729 79.8309 Q 547.9915 100.1268 569.6406 102.833" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
+  <ns0:path d="M 625.1163 174.5455 Q 640 236.7865 629.1755 257.0825" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
+  <ns0:path d="M 612.2622 330.148 Q 581.8182 384.2706 568.2875 376.1522" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
+  <ns0:path d="M 487.1036 435.6871 Q 420.8034 442.4524 378.8584 435.6871" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
+  <ns0:path d="M 297.6744 392.389 Q 238.1395 359.9154 221.9027 331.5011" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
+  <ns0:path d="M 236.7865 250.3171 Q 248.9641 181.3108 284.1438 156.9556" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
+  <ns0:path d="M 303.0867 101.4799 Q 365.3277 74.4186 392.389 66.3002" fill="none" stroke="#1565c0" stroke-width="1.6913" marker-end="url(#arrow-primary)" />
 </ns0:svg>

@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <ns0:polygon points="0,16 5.6,0" fill="#555" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="581.8182" y="40.7273" text-anchor="middle" font-family="Arial" font-size="26.1818" font-weight="bold" fill="#1565c0">Production Deployment Considerations</ns0:text>
   <ns0:rect x="43.6364" y="72.7273" width="189.0909" height="72.7273" rx="8.7273" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.9091" />
@@ -59,15 +116,15 @@
   <ns0:text x="443.6364" y="484.3636" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#283593">YARN (Cluster)</ns0:text>
   <ns0:text x="443.6364" y="509.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Driver on cluster node</ns0:text>
   <ns0:text x="443.6364" y="532.3636" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Production batch jobs</ns0:text>
-  <ns0:rect x="596.3636" y="450.9091" width="261.8182" height="101.8182" rx="8.7273" fill="#e0f2f1" stroke="#00695c" stroke-width="2.1818" />
-  <ns0:text x="727.2727" y="484.3636" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#00695c">Kubernetes</ns0:text>
+  <ns0:rect x="596.3636" y="450.9091" width="261.8182" height="101.8182" rx="8.7273" fill="#e8f4f8" stroke="#2e7d32" stroke-width="2.1818" />
+  <ns0:text x="727.2727" y="484.3636" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#2e7d32">Kubernetes</ns0:text>
   <ns0:text x="727.2727" y="509.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Containerized executors</ns0:text>
   <ns0:text x="727.2727" y="532.3636" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Cloud-native scaling</ns0:text>
   <ns0:rect x="880" y="450.9091" width="261.8182" height="101.8182" rx="8.7273" fill="#fce4ec" stroke="#c62828" stroke-width="2.1818" />
   <ns0:text x="1010.9091" y="484.3636" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#c62828">Standalone</ns0:text>
   <ns0:text x="1010.9091" y="509.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Built-in cluster manager</ns0:text>
   <ns0:text x="1010.9091" y="532.3636" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Simple setup / testing</ns0:text>
-  <ns0:rect x="145.4545" y="581.8182" width="872.7273" height="58.1818" rx="8.7273" fill="#f5f5f5" stroke="#757575" stroke-width="2.1818" />
+  <ns0:rect x="145.4545" y="581.8182" width="872.7273" height="58.1818" rx="8.7273" fill="#f5f5f5" stroke="#777777" stroke-width="2.1818" />
   <ns0:text x="581.8182" y="608" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#333">CI/CD: spark-submit with versioned JARs/wheels + config management (Airflow, Oozie, or Dagster)</ns0:text>
   <ns0:text x="581.8182" y="631.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="#555">Test with sample data locally, validate on staging, deploy to production</ns0:text>
 </ns0:svg>

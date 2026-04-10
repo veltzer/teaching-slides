@@ -1,11 +1,71 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow-md" markerWidth="16" markerHeight="12" refX="14.4" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.6,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
   <ns0:text x="582.7643" y="39.0244" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.3106" font-weight="bold" fill="#333">Monitoring Dashboard Layout</ns0:text>
-  <ns0:rect x="29.1382" y="62.439" width="1107.2521" height="577.561" rx="14.5691" fill="#fafafa" stroke="#ccc" stroke-width="2.9138" />
+  <ns0:rect x="29.1382" y="62.439" width="1107.2521" height="577.561" rx="14.5691" fill="#f9f9f9" stroke="#ccc" stroke-width="2.9138" />
   <ns0:rect x="58.2764" y="93.6585" width="502.6342" height="202.9268" rx="8.7415" fill="#fff" stroke="#0277bd" stroke-width="2.1854" />
   <ns0:text x="308.8651" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#0277bd">Throughput (rows/sec)</ns0:text>
   <ns0:polyline points="87.4146,249.7561 145.6911,226.3415 203.9675,234.1464 262.2439,202.9268 320.5203,187.3171 378.7968,210.7317 437.0732,171.7073 495.3496,163.9024 524.4878,179.5122" fill="none" stroke="#0277bd" stroke-width="2.9138" />
@@ -20,7 +80,7 @@
   <ns0:rect x="786.7318" y="163.9024" width="36.4228" height="101.4634" rx="2.9138" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4569" />
   <ns0:rect x="837.7236" y="179.5122" width="36.4228" height="85.8537" rx="2.9138" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4569" />
   <ns0:rect x="888.7155" y="195.122" width="36.4228" height="70.2439" rx="2.9138" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4569" />
-  <ns0:rect x="939.7074" y="156.0976" width="36.4228" height="109.2683" rx="2.9138" fill="#ffab91" stroke="#d32f2f" stroke-width="1.4569" />
+  <ns0:rect x="939.7074" y="156.0976" width="36.4228" height="109.2683" rx="2.9138" fill="#ffcc80" stroke="#d32f2f" stroke-width="1.4569" />
   <ns0:rect x="990.6992" y="171.7073" width="36.4228" height="93.6585" rx="2.9138" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4569" />
   <ns0:text x="847.922" y="280.9756" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#888">Batch #  (red = exceeded trigger)</ns0:text>
   <ns0:rect x="58.2764" y="312.1951" width="335.0895" height="156.0976" rx="8.7415" fill="#fff" stroke="#2e7d32" stroke-width="2.1854" />

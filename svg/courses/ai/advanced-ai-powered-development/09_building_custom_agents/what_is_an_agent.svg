@@ -1,23 +1,80 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="45.511" markerHeight="252" refX="40.96" refY="126" orient="auto">
-      <ns0:polygon points="0,360 15.929,0" fill="#333" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
-  <ns0:rect width="161.8173" height="640" fill="#f8f9fa" />
+  <ns0:rect width="161.8173" height="640" fill="#f9f9f9" />
   <ns0:text x="80.9086" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">What Is an Agent? The Core Loop</ns0:text>
   <ns0:text x="80.9086" y="91.2" text-anchor="middle" font-size="10" fill="#555">An LLM-powered system that plans, acts, and observes until the task is done</ns0:text>
-  <ns0:rect x="6.0681" y="160" width="34.3862" height="144" rx="2.4273" fill="#4A90D9" stroke="#1565C0" stroke-width="0.4045" />
+  <ns0:rect x="6.0681" y="160" width="34.3862" height="144" rx="2.4273" fill="#4a90e2" stroke="#1565C0" stroke-width="0.4045" />
   <ns0:text x="23.2612" y="212.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Observe</ns0:text>
-  <ns0:text x="23.2612" y="251.2" text-anchor="middle" fill="#D6EAF8" font-size="10">read tool output</ns0:text>
-  <ns0:text x="23.2612" y="284.8" text-anchor="middle" fill="#D6EAF8" font-size="10">current state</ns0:text>
+  <ns0:text x="23.2612" y="251.2" text-anchor="middle" fill="#e3f2fd" font-size="10">read tool output</ns0:text>
+  <ns0:text x="23.2612" y="284.8" text-anchor="middle" fill="#e3f2fd" font-size="10">current state</ns0:text>
   <ns0:line x1="40.4543" y1="232" x2="48.5452" y2="232" stroke="#333" stroke-width="0.4045" marker-end="url(#arrow)" />
-  <ns0:rect x="48.5452" y="160" width="34.3862" height="144" rx="2.4273" fill="#7B68EE" stroke="#6A1B9A" stroke-width="0.4045" />
+  <ns0:rect x="48.5452" y="160" width="34.3862" height="144" rx="2.4273" fill="#4285f4" stroke="#6A1B9A" stroke-width="0.4045" />
   <ns0:text x="65.7383" y="212.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Think</ns0:text>
-  <ns0:text x="65.7383" y="251.2" text-anchor="middle" fill="#E9D8FD" font-size="10">reason + plan</ns0:text>
-  <ns0:text x="65.7383" y="284.8" text-anchor="middle" fill="#E9D8FD" font-size="10">choose tool</ns0:text>
+  <ns0:text x="65.7383" y="251.2" text-anchor="middle" fill="#f3e5f5" font-size="10">reason + plan</ns0:text>
+  <ns0:text x="65.7383" y="284.8" text-anchor="middle" fill="#f3e5f5" font-size="10">choose tool</ns0:text>
   <ns0:line x1="82.9314" y1="232" x2="91.0222" y2="232" stroke="#333" stroke-width="0.4045" marker-end="url(#arrow)" />
-  <ns0:rect x="91.0222" y="160" width="34.3862" height="144" rx="2.4273" fill="#50C878" stroke="#2E7D32" stroke-width="0.4045" />
+  <ns0:rect x="91.0222" y="160" width="34.3862" height="144" rx="2.4273" fill="#2ecc71" stroke="#2E7D32" stroke-width="0.4045" />
   <ns0:text x="108.2153" y="212.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Act</ns0:text>
   <ns0:text x="108.2153" y="251.2" text-anchor="middle" fill="#E8F5E9" font-size="10">execute tool</ns0:text>
   <ns0:text x="108.2153" y="284.8" text-anchor="middle" fill="#E8F5E9" font-size="10">file / shell / web</ns0:text>

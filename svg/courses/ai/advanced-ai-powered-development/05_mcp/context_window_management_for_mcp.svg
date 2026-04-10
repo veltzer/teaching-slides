@@ -1,5 +1,66 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <ns0:rect width="330.2394" height="640" fill="#f8f9fa" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect width="330.2394" height="640" fill="#f9f9f9" />
   <ns0:text x="165.1197" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Context Window Management for MCP Tools</ns0:text>
   <ns0:rect x="12.384" y="112" width="305.4714" height="112" rx="3.3024" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.8256" />
   <ns0:text x="165.1197" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Context Window: 200K tokens</ns0:text>
@@ -17,19 +78,19 @@
   <ns0:text x="283.593" y="361.6" text-anchor="middle" font-size="10" fill="#E65100">~48K tokens</ns0:text>
   <ns0:rect x="12.384" y="416" width="305.4714" height="200" rx="4.128" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.6192" />
   <ns0:text x="165.1197" y="464" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Strategies to Manage Tool Schema Cost</ns0:text>
-  <ns0:rect x="20.64" y="488" width="66.0479" height="104" rx="3.3024" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="20.64" y="488" width="66.0479" height="104" rx="3.3024" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="53.6639" y="528" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Dynamic Reg.</ns0:text>
   <ns0:text x="53.6639" y="560" text-anchor="middle" font-size="10" fill="#333">only register tools</ns0:text>
   <ns0:text x="53.6639" y="587.2" text-anchor="middle" font-size="10" fill="#333">for current task</ns0:text>
-  <ns0:rect x="92.8798" y="488" width="66.0479" height="104" rx="3.3024" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="92.8798" y="488" width="66.0479" height="104" rx="3.3024" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="125.9038" y="528" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Tool Grouping</ns0:text>
   <ns0:text x="125.9038" y="560" text-anchor="middle" font-size="10" fill="#333">combine fine-grained</ns0:text>
   <ns0:text x="125.9038" y="587.2" text-anchor="middle" font-size="10" fill="#333">tools into one</ns0:text>
-  <ns0:rect x="165.1197" y="488" width="66.0479" height="104" rx="3.3024" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="165.1197" y="488" width="66.0479" height="104" rx="3.3024" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="198.1436" y="528" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Min. Descriptions</ns0:text>
   <ns0:text x="198.1436" y="560" text-anchor="middle" font-size="10" fill="#333">keep descriptions</ns0:text>
   <ns0:text x="198.1436" y="587.2" text-anchor="middle" font-size="10" fill="#333">concise</ns0:text>
-  <ns0:rect x="237.3595" y="488" width="72.2399" height="104" rx="3.3024" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="237.3595" y="488" width="72.2399" height="104" rx="3.3024" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="273.2731" y="528" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Lazy Loading</ns0:text>
   <ns0:text x="273.2731" y="560" text-anchor="middle" font-size="10" fill="#333">connect MCP servers</ns0:text>
   <ns0:text x="273.2731" y="587.2" text-anchor="middle" font-size="10" fill="#333">on demand only</ns0:text>

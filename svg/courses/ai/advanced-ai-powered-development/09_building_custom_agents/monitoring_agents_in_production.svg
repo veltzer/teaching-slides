@@ -1,27 +1,87 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="45.511" markerHeight="185.1429" refX="40.96" refY="92.5714" orient="auto">
       <ns0:polygon points="0,264.4899 15.929,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="220.2513" height="640" fill="#f8f9fa" />
+  <ns0:rect width="220.2513" height="640" fill="#f9f9f9" />
   <ns0:text x="110.1256" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Monitoring Agents in Production</ns0:text>
-  <ns0:rect x="5.5063" y="128" width="42.6737" height="144" rx="2.7531" fill="#4A90D9" stroke="#1565C0" stroke-width="0.5506" />
+  <ns0:rect x="5.5063" y="128" width="42.6737" height="144" rx="2.7531" fill="#4a90e2" stroke="#1565C0" stroke-width="0.5506" />
   <ns0:text x="26.7055" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Agent Runs</ns0:text>
-  <ns0:text x="26.7055" y="219.2" text-anchor="middle" fill="#D6EAF8" font-size="10">tool calls</ns0:text>
-  <ns0:text x="26.7055" y="251.2" text-anchor="middle" fill="#D6EAF8" font-size="10">completions</ns0:text>
+  <ns0:text x="26.7055" y="219.2" text-anchor="middle" fill="#e3f2fd" font-size="10">tool calls</ns0:text>
+  <ns0:text x="26.7055" y="251.2" text-anchor="middle" fill="#e3f2fd" font-size="10">completions</ns0:text>
   <ns0:line x1="48.18" y1="200" x2="57.816" y2="200" stroke="#333" stroke-width="0.5506" marker-end="url(#arr)" />
-  <ns0:rect x="57.816" y="128" width="42.6737" height="144" rx="2.7531" fill="#7B68EE" stroke="#6A1B9A" stroke-width="0.5506" />
+  <ns0:rect x="57.816" y="128" width="42.6737" height="144" rx="2.7531" fill="#4285f4" stroke="#6A1B9A" stroke-width="0.5506" />
   <ns0:text x="79.0152" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Log + Trace</ns0:text>
-  <ns0:text x="79.0152" y="219.2" text-anchor="middle" fill="#E9D8FD" font-size="10">inputs / outputs</ns0:text>
-  <ns0:text x="79.0152" y="251.2" text-anchor="middle" fill="#E9D8FD" font-size="10">latency / tokens</ns0:text>
+  <ns0:text x="79.0152" y="219.2" text-anchor="middle" fill="#f3e5f5" font-size="10">inputs / outputs</ns0:text>
+  <ns0:text x="79.0152" y="251.2" text-anchor="middle" fill="#f3e5f5" font-size="10">latency / tokens</ns0:text>
   <ns0:line x1="100.4897" y1="200" x2="110.1256" y2="200" stroke="#333" stroke-width="0.5506" marker-end="url(#arr)" />
-  <ns0:rect x="110.1256" y="128" width="42.6737" height="144" rx="2.7531" fill="#E8A838" stroke="#E65100" stroke-width="0.5506" />
+  <ns0:rect x="110.1256" y="128" width="42.6737" height="144" rx="2.7531" fill="#f9a825" stroke="#E65100" stroke-width="0.5506" />
   <ns0:text x="131.3248" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Dashboard</ns0:text>
-  <ns0:text x="131.3248" y="219.2" text-anchor="middle" fill="#FDE68A" font-size="10">success rates</ns0:text>
-  <ns0:text x="131.3248" y="251.2" text-anchor="middle" fill="#FDE68A" font-size="10">cost per task</ns0:text>
+  <ns0:text x="131.3248" y="219.2" text-anchor="middle" fill="#ffcc80" font-size="10">success rates</ns0:text>
+  <ns0:text x="131.3248" y="251.2" text-anchor="middle" fill="#ffcc80" font-size="10">cost per task</ns0:text>
   <ns0:line x1="152.7993" y1="200" x2="162.4353" y2="200" stroke="#333" stroke-width="0.5506" marker-end="url(#arr)" />
-  <ns0:rect x="162.4353" y="128" width="52.3097" height="144" rx="2.7531" fill="#E05555" stroke="#C62828" stroke-width="0.5506" />
+  <ns0:rect x="162.4353" y="128" width="52.3097" height="144" rx="2.7531" fill="#e74c3c" stroke="#C62828" stroke-width="0.5506" />
   <ns0:text x="188.5902" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Alerts</ns0:text>
   <ns0:text x="188.5902" y="219.2" text-anchor="middle" fill="#FFCDD2" font-size="10">cost spikes</ns0:text>
   <ns0:text x="188.5902" y="251.2" text-anchor="middle" fill="#FFCDD2" font-size="10">quality drift</ns0:text>

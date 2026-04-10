@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#333" />
     </ns0:marker>
@@ -7,15 +67,15 @@
   <ns0:text x="591.0534" y="49.8701" text-anchor="middle" font-family="Arial" font-size="29.5527" font-weight="bold" fill="#1a237e">Runtime Statistics Collection</ns0:text>
   <ns0:rect x="44.329" y="91.4286" width="206.8687" height="74.8052" rx="11.8211" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.9553" />
   <ns0:text x="147.7633" y="137.974" text-anchor="middle" font-family="Arial" font-size="19.2092" font-weight="bold" fill="#1a237e">Query Start</ns0:text>
-  <ns0:line x1="251.1977" y1="128" x2="310.303" y2="128" stroke="#333" stroke-width="2.9553" marker-end="url(#arrowhead)" />
+  <ns0:line x1="251.1977" y1="128" x2="310.303" y2="128" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow)" />
   <ns0:rect x="317.6912" y="91.4286" width="221.645" height="74.8052" rx="11.8211" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9553" />
   <ns0:text x="428.5137" y="124.6753" text-anchor="middle" font-family="Arial" font-size="17.7316" font-weight="bold" fill="#1b5e20">Collect Runtime</ns0:text>
   <ns0:text x="428.5137" y="151.2727" text-anchor="middle" font-family="Arial" font-size="17.7316" font-weight="bold" fill="#1b5e20">Statistics</ns0:text>
-  <ns0:line x1="539.3362" y1="128" x2="598.4416" y2="128" stroke="#333" stroke-width="2.9553" marker-end="url(#arrowhead)" />
+  <ns0:line x1="539.3362" y1="128" x2="598.4416" y2="128" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow)" />
   <ns0:rect x="605.8297" y="91.4286" width="221.645" height="74.8052" rx="11.8211" fill="#fff3e0" stroke="#e65100" stroke-width="2.9553" />
   <ns0:text x="716.6522" y="124.6753" text-anchor="middle" font-family="Arial" font-size="17.7316" font-weight="bold" fill="#e65100">AQE Re-optimize</ns0:text>
   <ns0:text x="716.6522" y="151.2727" text-anchor="middle" font-family="Arial" font-size="17.7316" font-weight="bold" fill="#e65100">Plan</ns0:text>
-  <ns0:line x1="827.4747" y1="128" x2="886.5801" y2="128" stroke="#333" stroke-width="2.9553" marker-end="url(#arrowhead)" />
+  <ns0:line x1="827.4747" y1="128" x2="886.5801" y2="128" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow)" />
   <ns0:rect x="893.9683" y="91.4286" width="236.4214" height="74.8052" rx="11.8211" fill="#1565c0" stroke="#0d47a1" stroke-width="2.9553" />
   <ns0:text x="1012.1789" y="137.974" text-anchor="middle" font-family="Arial" font-size="19.2092" font-weight="bold" fill="#fff">Optimized Execution</ns0:text>
   <ns0:text x="591.0534" y="224.4156" text-anchor="middle" font-family="Arial" font-size="22.1645" font-weight="bold" fill="#333">Statistics Collected at Runtime</ns0:text>
@@ -34,8 +94,8 @@
   <ns0:rect x="421.1255" y="382.3377" width="339.8557" height="99.7403" rx="8.8658" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.2165" />
   <ns0:text x="591.0534" y="420.5714" text-anchor="middle" font-family="Arial" font-size="19.2092" font-weight="bold" fill="#6a1b9a">Filter Selectivity</ns0:text>
   <ns0:text x="591.0534" y="453.8182" text-anchor="middle" font-family="Arial" font-size="16.254" fill="#333">Actual filter pass rate</ns0:text>
-  <ns0:rect x="797.9221" y="382.3377" width="339.8557" height="99.7403" rx="8.8658" fill="#e0f7fa" stroke="#00695c" stroke-width="2.2165" />
-  <ns0:text x="967.8499" y="420.5714" text-anchor="middle" font-family="Arial" font-size="19.2092" font-weight="bold" fill="#00695c">Task Metrics</ns0:text>
+  <ns0:rect x="797.9221" y="382.3377" width="339.8557" height="99.7403" rx="8.8658" fill="#e1f5fe" stroke="#2e7d32" stroke-width="2.2165" />
+  <ns0:text x="967.8499" y="420.5714" text-anchor="middle" font-family="Arial" font-size="19.2092" font-weight="bold" fill="#2e7d32">Task Metrics</ns0:text>
   <ns0:text x="967.8499" y="453.8182" text-anchor="middle" font-family="Arial" font-size="16.254" fill="#333">Duration, GC time, spill</ns0:text>
   <ns0:text x="591.0534" y="531.9481" text-anchor="middle" font-family="Arial" font-size="22.1645" font-weight="bold" fill="#333">AQE Actions Based on Statistics</ns0:text>
   <ns0:rect x="44.329" y="556.8831" width="258.5859" height="83.1169" rx="8.8658" fill="#e8eaf6" stroke="#3949ab" stroke-width="2.2165" />

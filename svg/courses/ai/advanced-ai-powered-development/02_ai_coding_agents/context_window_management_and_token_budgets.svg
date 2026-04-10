@@ -1,34 +1,95 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="252.8395" height="640" fill="#1a1a2e" />
   <ns0:text x="126.4198" y="56" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Context Window Management and Token Budgets</ns0:text>
-  <ns0:rect x="9.4815" y="96" width="233.8765" height="96" fill="#4A5568" rx="2.5284" />
+  <ns0:rect x="9.4815" y="96" width="233.8765" height="96" fill="#555555" rx="2.5284" />
   <ns0:text x="126.4198" y="155.2" text-anchor="middle" fill="white" font-size="10">Total Context Window (e.g., 200K tokens)</ns0:text>
-  <ns0:rect x="9.4815" y="224" width="58.4691" height="88" fill="#2B6CB0" rx="1.8963" />
+  <ns0:rect x="9.4815" y="224" width="58.4691" height="88" fill="#1565c0" rx="1.8963" />
   <ns0:text x="38.558" y="260.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">System Prompt</ns0:text>
-  <ns0:text x="38.558" y="291.2" text-anchor="middle" fill="#BEE3F8" font-size="10">~5K tokens (2.5%)</ns0:text>
-  <ns0:rect x="67.9506" y="224" width="101.1358" height="88" fill="#2F855A" rx="1.8963" />
+  <ns0:text x="38.558" y="291.2" text-anchor="middle" fill="#bbdefb" font-size="10">~5K tokens (2.5%)</ns0:text>
+  <ns0:rect x="67.9506" y="224" width="101.1358" height="88" fill="#388e3c" rx="1.8963" />
   <ns0:text x="118.5185" y="260.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Conversation + Tool Results</ns0:text>
-  <ns0:text x="118.5185" y="291.2" text-anchor="middle" fill="#C6F6D5" font-size="10">~120K tokens (60%)</ns0:text>
-  <ns0:rect x="169.0864" y="224" width="74.2716" height="88" fill="#C05621" rx="1.8963" />
+  <ns0:text x="118.5185" y="291.2" text-anchor="middle" fill="#d4edda" font-size="10">~120K tokens (60%)</ns0:text>
+  <ns0:rect x="169.0864" y="224" width="74.2716" height="88" fill="#bf360c" rx="1.8963" />
   <ns0:text x="206.0642" y="260.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Available for Response</ns0:text>
-  <ns0:text x="206.0642" y="291.2" text-anchor="middle" fill="#FBD38D" font-size="10">~75K tokens (37.5%)</ns0:text>
-  <ns0:rect x="9.4815" y="360" width="233.8765" height="248" rx="3.1605" fill="#2D3748" stroke="#718096" stroke-width="0.316" />
+  <ns0:text x="206.0642" y="291.2" text-anchor="middle" fill="#ffcc80" font-size="10">~75K tokens (37.5%)</ns0:text>
+  <ns0:rect x="9.4815" y="360" width="233.8765" height="248" rx="3.1605" fill="#333333" stroke="#888888" stroke-width="0.316" />
   <ns0:text x="126.4198" y="408" text-anchor="middle" fill="#F9A825" font-size="10" font-weight="bold">Strategies Agents Use to Stay Within Budget</ns0:text>
-  <ns0:rect x="15.8025" y="432" width="52.1481" height="144" rx="2.5284" fill="#2B6CB0" fill-opacity="0.7" />
+  <ns0:rect x="15.8025" y="432" width="52.1481" height="144" rx="2.5284" fill="#1565c0" fill-opacity="0.7" />
   <ns0:text x="41.7185" y="472" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Repo Maps</ns0:text>
-  <ns0:text x="41.7185" y="504" text-anchor="middle" fill="#BEE3F8" font-size="10">compact outline</ns0:text>
-  <ns0:text x="41.7185" y="532.8" text-anchor="middle" fill="#BEE3F8" font-size="10">of files + symbols</ns0:text>
-  <ns0:text x="41.7185" y="561.6" text-anchor="middle" fill="#BEE3F8" font-size="10">(Aider approach)</ns0:text>
-  <ns0:rect x="72.6914" y="432" width="52.1481" height="144" rx="2.5284" fill="#2F855A" fill-opacity="0.7" />
+  <ns0:text x="41.7185" y="504" text-anchor="middle" fill="#bbdefb" font-size="10">compact outline</ns0:text>
+  <ns0:text x="41.7185" y="532.8" text-anchor="middle" fill="#bbdefb" font-size="10">of files + symbols</ns0:text>
+  <ns0:text x="41.7185" y="561.6" text-anchor="middle" fill="#bbdefb" font-size="10">(Aider approach)</ns0:text>
+  <ns0:rect x="72.6914" y="432" width="52.1481" height="144" rx="2.5284" fill="#388e3c" fill-opacity="0.7" />
   <ns0:text x="98.6074" y="472" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Selective Read</ns0:text>
-  <ns0:text x="98.6074" y="504" text-anchor="middle" fill="#C6F6D5" font-size="10">load only files</ns0:text>
-  <ns0:text x="98.6074" y="532.8" text-anchor="middle" fill="#C6F6D5" font-size="10">relevant to step</ns0:text>
-  <ns0:rect x="129.5802" y="432" width="52.1481" height="144" rx="2.5284" fill="#6B46C1" fill-opacity="0.7" />
+  <ns0:text x="98.6074" y="504" text-anchor="middle" fill="#d4edda" font-size="10">load only files</ns0:text>
+  <ns0:text x="98.6074" y="532.8" text-anchor="middle" fill="#d4edda" font-size="10">relevant to step</ns0:text>
+  <ns0:rect x="129.5802" y="432" width="52.1481" height="144" rx="2.5284" fill="#673ab7" fill-opacity="0.7" />
   <ns0:text x="155.4963" y="472" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Summarization</ns0:text>
-  <ns0:text x="155.4963" y="504" text-anchor="middle" fill="#E9D8FD" font-size="10">compress older</ns0:text>
-  <ns0:text x="155.4963" y="532.8" text-anchor="middle" fill="#E9D8FD" font-size="10">conversation turns</ns0:text>
-  <ns0:rect x="186.4691" y="432" width="52.1481" height="144" rx="2.5284" fill="#C05621" fill-opacity="0.7" />
+  <ns0:text x="155.4963" y="504" text-anchor="middle" fill="#f3e5f5" font-size="10">compress older</ns0:text>
+  <ns0:text x="155.4963" y="532.8" text-anchor="middle" fill="#f3e5f5" font-size="10">conversation turns</ns0:text>
+  <ns0:rect x="186.4691" y="432" width="52.1481" height="144" rx="2.5284" fill="#bf360c" fill-opacity="0.7" />
   <ns0:text x="212.3852" y="472" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Truncation</ns0:text>
-  <ns0:text x="212.3852" y="504" text-anchor="middle" fill="#FBD38D" font-size="10">drop oldest ctx</ns0:text>
-  <ns0:text x="212.3852" y="532.8" text-anchor="middle" fill="#FBD38D" font-size="10">when window fills</ns0:text>
+  <ns0:text x="212.3852" y="504" text-anchor="middle" fill="#ffcc80" font-size="10">drop oldest ctx</ns0:text>
+  <ns0:text x="212.3852" y="532.8" text-anchor="middle" fill="#ffcc80" font-size="10">when window fills</ns0:text>
 </ns0:svg>

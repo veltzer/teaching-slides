@@ -1,11 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
       <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
   <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Queue Monitoring Dashboard</text>
-  <rect x="48" y="85.7143" width="368" height="377.1429" rx="12.8" fill="#f0f4ff" stroke="#4a90e2" stroke-width="2.4" />
+  <rect x="48" y="85.7143" width="368" height="377.1429" rx="12.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
   <text x="232" y="128.5714" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#4a90e2">Queue Metrics</text>
   <rect x="80" y="154.2857" width="304" height="48" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
   <text x="232" y="186.8571" text-anchor="middle" font-size="17.6" fill="#333">Queue Length</text>
@@ -17,7 +77,7 @@
   <text x="232" y="366.8571" text-anchor="middle" font-size="17.6" fill="#333">Error Rate</text>
   <rect x="80" y="394.2857" width="304" height="48" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
   <text x="232" y="426.8571" text-anchor="middle" font-size="17.6" fill="#333">Throughput</text>
-  <rect x="560" y="85.7143" width="400" height="257.1429" rx="12.8" fill="#fff5f5" stroke="#dc3545" stroke-width="2.4" />
+  <rect x="560" y="85.7143" width="400" height="257.1429" rx="12.8" fill="#f9f9f9" stroke="#dc3545" stroke-width="2.4" />
   <text x="760" y="128.5714" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#dc3545">Alert Rules</text>
   <rect x="592" y="154.2857" width="336" height="48" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
   <text x="760" y="186.8571" text-anchor="middle" font-size="17.6" fill="#333">Queue Length &gt; 1000</text>
@@ -29,10 +89,10 @@
   <text x="720" y="474.8571" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Notification</text>
   <rect x="928" y="428.5714" width="224" height="77.1429" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
   <text x="1040" y="474.8571" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Team Alert</text>
-  <line x1="384" y1="178.2857" x2="588.8" y2="178.2857" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="384" y1="238.2857" x2="588.8" y2="238.2857" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="384" y1="358.2857" x2="588.8" y2="298.2857" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="760" y1="325.7143" x2="720" y2="425.1429" stroke="#ffc107" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="832" y1="466.2857" x2="924.8" y2="466.2857" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="384" y1="178.2857" x2="588.8" y2="178.2857" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="384" y1="238.2857" x2="588.8" y2="238.2857" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="384" y1="358.2857" x2="588.8" y2="298.2857" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="760" y1="325.7143" x2="720" y2="425.1429" stroke="#ffc107" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="832" y1="466.2857" x2="924.8" y2="466.2857" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrow)" />
   <text x="640" y="582.8571" text-anchor="middle" font-size="17.6" fill="#888" font-style="italic">Monitor key queue metrics; trigger alerts when thresholds are breached.</text>
 </svg>

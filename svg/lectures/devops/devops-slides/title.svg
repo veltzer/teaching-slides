@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#1a1a2e" />
       <ns0:stop offset="100%" style="stop-color:#16213e" />
@@ -7,36 +67,36 @@
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
   <ns0:g transform="translate(400,160)">
-    <ns0:path d="M -85.3333 0 C -85.3333 -80 -28.4444 -80 0 -40 C 28.4444 -80 85.3333 -80 85.3333 0 C 85.3333 80 28.4444 80 0 40 C -28.4444 80 -85.3333 80 -85.3333 0 Z" fill="none" stroke="#e94560" stroke-width="5.6889" />
-    <ns0:text x="-56.8889" y="8" fill="#00d2ff" font-family="Arial,sans-serif" font-size="22.7556" font-weight="bold">Dev</ns0:text>
-    <ns0:text x="17.0667" y="8" fill="#0f3460" font-family="Arial,sans-serif" font-size="22.7556" font-weight="bold">Ops</ns0:text>
+    <ns0:path d="M -85.3333 0 C -85.3333 -80 -28.4444 -80 0 -40 C 28.4444 -80 85.3333 -80 85.3333 0 C 85.3333 80 28.4444 80 0 40 C -28.4444 80 -85.3333 80 -85.3333 0 Z" fill="none" stroke="#dc3545" stroke-width="5.6889" />
+    <ns0:text x="-56.8889" y="8" fill="#2196f3" font-family="Arial,sans-serif" font-size="22.7556" font-weight="bold">Dev</ns0:text>
+    <ns0:text x="17.0667" y="8" fill="#1a237e" font-family="Arial,sans-serif" font-size="22.7556" font-weight="bold">Ops</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(130,100)">
-    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#533483" stroke-width="2.8444" />
-    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#533483" font-family="Arial,sans-serif" font-size="15.6444">Plan</ns0:text>
+    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#4a148c" stroke-width="2.8444" />
+    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#4a148c" font-family="Arial,sans-serif" font-size="15.6444">Plan</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(130,160)">
-    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#533483" stroke-width="2.8444" />
-    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#533483" font-family="Arial,sans-serif" font-size="15.6444">Code</ns0:text>
+    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#4a148c" stroke-width="2.8444" />
+    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#4a148c" font-family="Arial,sans-serif" font-size="15.6444">Code</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(130,220)">
-    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#533483" stroke-width="2.8444" />
-    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#533483" font-family="Arial,sans-serif" font-size="15.6444">Build</ns0:text>
+    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#4a148c" stroke-width="2.8444" />
+    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#4a148c" font-family="Arial,sans-serif" font-size="15.6444">Build</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(610,100)">
-    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#0f3460" stroke-width="2.8444" />
-    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#0f3460" font-family="Arial,sans-serif" font-size="15.6444">Deploy</ns0:text>
+    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#1a237e" stroke-width="2.8444" />
+    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#1a237e" font-family="Arial,sans-serif" font-size="15.6444">Deploy</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(610,160)">
-    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#0f3460" stroke-width="2.8444" />
-    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#0f3460" font-family="Arial,sans-serif" font-size="15.6444">Monitor</ns0:text>
+    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#1a237e" stroke-width="2.8444" />
+    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#1a237e" font-family="Arial,sans-serif" font-size="15.6444">Monitor</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(610,220)">
-    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#0f3460" stroke-width="2.8444" />
-    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#0f3460" font-family="Arial,sans-serif" font-size="15.6444">Operate</ns0:text>
+    <ns0:rect x="0" y="0" width="85.3333" height="48" rx="7.1111" fill="none" stroke="#1a237e" stroke-width="2.8444" />
+    <ns0:text x="42.6667" y="32" text-anchor="middle" fill="#1a237e" font-family="Arial,sans-serif" font-size="15.6444">Operate</ns0:text>
   </ns0:g>
-  <ns0:circle cx="568.8889" cy="144" r="28.4444" fill="none" stroke="#444" stroke-width="2.8444" />
-  <ns0:circle cx="568.8889" cy="144" r="11.3778" fill="#444" />
+  <ns0:circle cx="568.8889" cy="144" r="28.4444" fill="none" stroke="#333333" stroke-width="2.8444" />
+  <ns0:circle cx="568.8889" cy="144" r="11.3778" fill="#333333" />
   <ns0:text x="568.8889" y="512" text-anchor="middle" fill="#eee" font-family="Arial,sans-serif" font-size="45.5111" font-weight="bold">DevOps Practices</ns0:text>
   <ns0:text x="568.8889" y="568" text-anchor="middle" fill="#888" font-family="Arial,sans-serif" font-size="22.7556">Bridging Development and Operations</ns0:text>
 </ns0:svg>

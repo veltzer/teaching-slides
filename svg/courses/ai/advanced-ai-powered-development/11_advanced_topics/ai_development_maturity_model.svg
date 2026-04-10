@@ -5,20 +5,80 @@
   <ns0:rect x="177.0464" y="344.6154" width="144.26" height="295.3846" rx="7.8687" fill="#ffe0b2" stroke="#e65100" stroke-width="2.6229" />
   <ns0:text x="249.1764" y="467.6923" text-anchor="middle" font-size="14.426" fill="#e65100">Level 2</ns0:text>
   <ns0:text x="249.1764" y="566.1538" text-anchor="middle" font-size="13.1146" fill="#e65100">Team-Adopted</ns0:text>
-  <ns0:rect x="340.9782" y="344.6154" width="144.26" height="295.3846" rx="7.8687" fill="#fff9c4" stroke="#f57f17" stroke-width="2.6229" />
-  <ns0:text x="413.1082" y="467.6923" text-anchor="middle" font-size="14.426" fill="#f57f17">Level 3</ns0:text>
-  <ns0:text x="413.1082" y="566.1538" text-anchor="middle" font-size="13.1146" fill="#f57f17">Standardized</ns0:text>
+  <ns0:rect x="340.9782" y="344.6154" width="144.26" height="295.3846" rx="7.8687" fill="#fff9c4" stroke="#f57c00" stroke-width="2.6229" />
+  <ns0:text x="413.1082" y="467.6923" text-anchor="middle" font-size="14.426" fill="#f57c00">Level 3</ns0:text>
+  <ns0:text x="413.1082" y="566.1538" text-anchor="middle" font-size="13.1146" fill="#f57c00">Standardized</ns0:text>
   <ns0:rect x="504.9099" y="344.6154" width="144.26" height="295.3846" rx="7.8687" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.6229" />
   <ns0:text x="577.0399" y="467.6923" text-anchor="middle" font-size="14.426" fill="#2e7d32">Level 4</ns0:text>
   <ns0:text x="577.0399" y="566.1538" text-anchor="middle" font-size="13.1146" fill="#2e7d32">Measured</ns0:text>
-  <ns0:rect x="668.8417" y="344.6154" width="144.26" height="295.3846" rx="7.8687" fill="#b2dfdb" stroke="#00695c" stroke-width="2.6229" />
-  <ns0:text x="740.9717" y="467.6923" text-anchor="middle" font-size="14.426" fill="#00695c">Level 5</ns0:text>
-  <ns0:text x="740.9717" y="566.1538" text-anchor="middle" font-size="13.1146" fill="#00695c">Platform-Level</ns0:text>
+  <ns0:rect x="668.8417" y="344.6154" width="144.26" height="295.3846" rx="7.8687" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.6229" />
+  <ns0:text x="740.9717" y="467.6923" text-anchor="middle" font-size="14.426" fill="#2e7d32">Level 5</ns0:text>
+  <ns0:text x="740.9717" y="566.1538" text-anchor="middle" font-size="13.1146" fill="#2e7d32">Platform-Level</ns0:text>
   <ns0:line x1="157.3745" y1="492.3077" x2="177.0464" y2="492.3077" stroke="#333" stroke-width="1.9672" marker-end="url(#arr)" />
   <ns0:line x1="321.3064" y1="492.3077" x2="340.9782" y2="492.3077" stroke="#333" stroke-width="1.9672" marker-end="url(#arr)" />
   <ns0:line x1="485.2382" y1="492.3077" x2="504.9099" y2="492.3077" stroke="#333" stroke-width="1.9672" marker-end="url(#arr)" />
   <ns0:line x1="649.1699" y1="492.3077" x2="668.8417" y2="492.3077" stroke="#333" stroke-width="1.9672" marker-end="url(#arr)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" viewBox="0 0 10 10" refX="38.3599" refY="80" markerWidth="25.5734" markerHeight="96" orient="auto">
       <ns0:path d="M 0 0 L 42.6223 80 L 0 160 z" fill="#333" />
     </ns0:marker>

@@ -1,5 +1,66 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="76.8769" y="86.4865" width="1076.2763" height="553.5135" fill="#ECF0F1" stroke="#333" stroke-width="3.0751" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="76.8769" y="86.4865" width="1076.2763" height="553.5135" fill="#eeeeee" stroke="#333" stroke-width="3.0751" />
   <ns0:text x="615.015" y="51.8919" text-anchor="middle" font-size="24.6006" font-weight="bold">Linux Signals Categories</ns0:text>
   <ns0:rect x="107.6276" y="121.0811" width="307.5075" height="103.7838" fill="#E74C3C" stroke="#333" stroke-width="3.0751" />
   <ns0:text x="261.3814" y="181.6216" text-anchor="middle" fill="white" font-size="18.4505">Terminal Signals</ns0:text>
@@ -16,10 +77,10 @@
   <ns0:rect x="445.8859" y="259.4595" width="307.5075" height="103.7838" fill="#9B59B6" stroke="#333" stroke-width="3.0751" />
   <ns0:text x="599.6396" y="320" text-anchor="middle" fill="white" font-size="18.4505">Timer Signals</ns0:text>
   <ns0:text x="599.6396" y="345.9459" text-anchor="middle" fill="white" font-size="15.3754">SIGALRM, SIGVTALRM, SIGPROF</ns0:text>
-  <ns0:rect x="784.1441" y="259.4595" width="307.5075" height="103.7838" fill="#34495E" stroke="#333" stroke-width="3.0751" />
+  <ns0:rect x="784.1441" y="259.4595" width="307.5075" height="103.7838" fill="#555555" stroke="#333" stroke-width="3.0751" />
   <ns0:text x="937.8979" y="320" text-anchor="middle" fill="white" font-size="18.4505">User Defined</ns0:text>
   <ns0:text x="937.8979" y="345.9459" text-anchor="middle" fill="white" font-size="15.3754">SIGUSR1, SIGUSR2</ns0:text>
-  <ns0:rect x="107.6276" y="397.8378" width="984.024" height="207.5676" fill="#95A5A6" stroke="#333" stroke-width="3.0751" />
+  <ns0:rect x="107.6276" y="397.8378" width="984.024" height="207.5676" fill="#9e9e9e" stroke="#333" stroke-width="3.0751" />
   <ns0:text x="599.6396" y="441.0811" text-anchor="middle" fill="white" font-size="18.4505">Real-Time Signals</ns0:text>
   <ns0:text x="599.6396" y="475.6757" text-anchor="middle" fill="white" font-size="15.3754">SIGRTMIN to SIGRTMAX (34-64)</ns0:text>
   <ns0:text x="599.6396" y="510.2703" text-anchor="middle" fill="white" font-size="15.3754">• Queued delivery</ns0:text>

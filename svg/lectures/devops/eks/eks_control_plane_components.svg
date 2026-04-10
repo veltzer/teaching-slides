@@ -1,25 +1,85 @@
 <svg viewBox="0 0 1280 720">
-  <rect x="106.6667" y="90" width="1066.6667" height="540" fill="#232F3E" stroke="#FF9900" stroke-width="5.4" rx="18" />
-  <text x="640" y="144" font-family="Arial" font-size="32.4" font-weight="bold" text-anchor="middle" fill="#FF9900">EKS Control Plane (Managed by AWS)</text>
-  <rect x="170.6667" y="198" width="426.6667" height="108" fill="#4A90E2" stroke="#2C5F8A" stroke-width="3.6" rx="9" />
+  <rect x="106.6667" y="90" width="1066.6667" height="540" fill="#333333" stroke="#ff9800" stroke-width="5.4" rx="18" />
+  <text x="640" y="144" font-family="Arial" font-size="32.4" font-weight="bold" text-anchor="middle" fill="#ff9800">EKS Control Plane (Managed by AWS)</text>
+  <rect x="170.6667" y="198" width="426.6667" height="108" fill="#4A90E2" stroke="#3949ab" stroke-width="3.6" rx="9" />
   <text x="384" y="243" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">Kubernetes API Server</text>
   <text x="384" y="279" font-family="Arial" font-size="18" text-anchor="middle" fill="white">RESTful API, Authentication, Authorization</text>
-  <rect x="682.6667" y="198" width="426.6667" height="108" fill="#FF6B6B" stroke="#C44D4D" stroke-width="3.6" rx="9" />
+  <rect x="682.6667" y="198" width="426.6667" height="108" fill="#e74c3c" stroke="#dc3545" stroke-width="3.6" rx="9" />
   <text x="896" y="243" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">etcd Database</text>
   <text x="896" y="279" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Distributed key-value store</text>
-  <rect x="170.6667" y="360" width="426.6667" height="108" fill="#4ECDC4" stroke="#35A29B" stroke-width="3.6" rx="9" />
+  <rect x="170.6667" y="360" width="426.6667" height="108" fill="#3498db" stroke="#2ecc71" stroke-width="3.6" rx="9" />
   <text x="384" y="405" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">Controller Manager</text>
   <text x="384" y="441" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Watches cluster state, makes changes</text>
-  <rect x="682.6667" y="360" width="426.6667" height="108" fill="#95E1D3" stroke="#6BB8AB" stroke-width="3.6" rx="9" />
+  <rect x="682.6667" y="360" width="426.6667" height="108" fill="#90caf9" stroke="#999999" stroke-width="3.6" rx="9" />
   <text x="896" y="405" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">Scheduler</text>
   <text x="896" y="441" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Assigns pods to nodes</text>
-  <line x1="384" y1="306" x2="384" y2="360" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
-  <line x1="896" y1="306" x2="896" y2="360" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
-  <line x1="597.3333" y1="252" x2="682.6667" y2="252" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
-  <line x1="597.3333" y1="414" x2="682.6667" y2="414" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
+  <line x1="384" y1="306" x2="384" y2="360" stroke="#f9a825" stroke-width="3.6" marker-end="url(#arrow)" />
+  <line x1="896" y1="306" x2="896" y2="360" stroke="#f9a825" stroke-width="3.6" marker-end="url(#arrow)" />
+  <line x1="597.3333" y1="252" x2="682.6667" y2="252" stroke="#f9a825" stroke-width="3.6" marker-end="url(#arrow)" />
+  <line x1="597.3333" y1="414" x2="682.6667" y2="414" stroke="#f9a825" stroke-width="3.6" marker-end="url(#arrow)" />
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="21.3333" markerHeight="12.6" refX="19.2" refY="6.3" orient="auto">
-      <polygon points="0,18 7.4667,0" fill="#FFD93D" />
+      <polygon points="0,18 7.4667,0" fill="#f9a825" />
     </marker>
   </defs>
   <rect x="213.3333" y="522" width="853.3333" height="72" fill="#E8F5E8" stroke="#4CAF50" stroke-width="1.8" rx="9" />

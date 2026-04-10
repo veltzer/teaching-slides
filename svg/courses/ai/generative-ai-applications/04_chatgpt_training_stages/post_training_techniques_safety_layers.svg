@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="ard" markerWidth="18.2857" markerHeight="9.6923" refX="9.1429" refY="9.6923" orient="auto">
       <ns0:polygon points="0,13.8462 0,6.9231" fill="#4a90e2" />
     </ns0:marker>
@@ -23,15 +83,15 @@
   <ns0:line x1="582.3271" y1="332.5984" x2="582.3271" y2="355.2755" stroke="#4a90e2" stroke-width="1.8897" marker-end="url(#ard)" />
   <ns0:text x="582.3271" y="372.9134" text-anchor="middle" font-size="15.1181" font-weight="bold" fill="#4a90e2">OUTPUT LAYER</ns0:text>
   <ns0:rect x="249.5688" y="382.9921" width="665.5168" height="50.3937" rx="6.2992" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8897" />
-  <ns0:text x="582.3271" y="405.6693" text-anchor="middle" font-size="13.8583" font-weight="bold" fill="#856404">Output Moderation</ns0:text>
+  <ns0:text x="582.3271" y="405.6693" text-anchor="middle" font-size="13.8583" font-weight="bold" fill="#bf360c">Output Moderation</ns0:text>
   <ns0:text x="582.3271" y="425.8267" text-anchor="middle" font-size="12.5985" fill="#555">Classify output content</ns0:text>
   <ns0:line x1="582.3271" y1="433.3858" x2="582.3271" y2="452.2834" stroke="#4a90e2" stroke-width="1.8897" marker-end="url(#ard)" />
   <ns0:rect x="249.5688" y="454.8031" width="665.5168" height="50.3937" rx="6.2992" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8897" />
-  <ns0:text x="582.3271" y="477.4802" text-anchor="middle" font-size="13.8583" font-weight="bold" fill="#856404">PII Detection &amp; Redaction</ns0:text>
+  <ns0:text x="582.3271" y="477.4802" text-anchor="middle" font-size="13.8583" font-weight="bold" fill="#bf360c">PII Detection &amp; Redaction</ns0:text>
   <ns0:text x="582.3271" y="497.6378" text-anchor="middle" font-size="12.5985" fill="#555">Remove personal information</ns0:text>
   <ns0:line x1="582.3271" y1="505.1968" x2="582.3271" y2="524.0944" stroke="#4a90e2" stroke-width="1.8897" marker-end="url(#ard)" />
   <ns0:rect x="249.5688" y="526.6141" width="665.5168" height="50.3937" rx="6.2992" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8897" />
-  <ns0:text x="582.3271" y="549.2913" text-anchor="middle" font-size="13.8583" font-weight="bold" fill="#856404">Factuality Check (optional)</ns0:text>
+  <ns0:text x="582.3271" y="549.2913" text-anchor="middle" font-size="13.8583" font-weight="bold" fill="#bf360c">Factuality Check (optional)</ns0:text>
   <ns0:text x="582.3271" y="569.4488" text-anchor="middle" font-size="12.5985" fill="#555">Verify claims against sources</ns0:text>
   <ns0:line x1="582.3271" y1="577.0078" x2="582.3271" y2="598.4251" stroke="#4a90e2" stroke-width="1.8897" marker-end="url(#ard)" />
   <ns0:rect x="366.0342" y="602.2047" width="432.5859" height="37.7953" rx="6.2992" fill="#d4edda" stroke="#28a745" stroke-width="2.5197" />

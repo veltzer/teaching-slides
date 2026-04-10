@@ -60,19 +60,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#f8f9fa"/>
+  <rect width="1280" height="640" fill="#f9f9f9"/>
 
   <!-- Declaration banner -->
-  <rect x="40" y="18" width="1200" height="52" rx="10" fill="#1e1e2e" filter="url(#shadow)"/>
-  <text x="70" y="50" font-family="monospace" font-size="20" fill="#a6e3a1">declare</text>
-  <text x="148" y="50" font-family="monospace" font-size="20" fill="#cdd6f4"> -A</text>
-  <text x="186" y="50" font-family="monospace" font-size="20" fill="#89dceb"> user</text>
-  <text x="280" y="50" font-family="monospace" font-size="14" fill="#585b70">    ← MUST use declare -A (without it, becomes an indexed array!)</text>
+  <rect x="40" y="18" width="1200" height="52" rx="10" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="70" y="50" font-family="monospace" font-size="20" fill="#a5d6a7">declare</text>
+  <text x="148" y="50" font-family="monospace" font-size="20" fill="#bbdefb"> -A</text>
+  <text x="186" y="50" font-family="monospace" font-size="20" fill="#90caf9"> user</text>
+  <text x="280" y="50" font-family="monospace" font-size="14" fill="#666666">    ← MUST use declare -A (without it, becomes an indexed array!)</text>
 
   <!-- Hash map visual -->
   <!-- Hash table container -->
@@ -125,48 +137,48 @@
   <rect x="590" y="126" width="650" height="12" fill="#2e7d32"/>
   <text x="915" y="122" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Syntax Reference</text>
 
-  <rect x="610" y="152" width="610" height="80" rx="8" fill="#1e1e2e"/>
-  <text x="630" y="174" font-family="monospace" font-size="12" fill="#585b70"># Declaration and initialization</text>
-  <text x="630" y="193" font-family="monospace" font-size="13" fill="#a6e3a1">declare</text>
-  <text x="689" y="193" font-family="monospace" font-size="13" fill="#cdd6f4"> -A user=([name]="Alice" [age]="30")</text>
-  <text x="630" y="213" font-family="monospace" font-size="13" fill="#cdd6f4">user[email]="alice@example.com"</text>
+  <rect x="610" y="152" width="610" height="80" rx="8" fill="#1a1a2e"/>
+  <text x="630" y="174" font-family="monospace" font-size="12" fill="#666666"># Declaration and initialization</text>
+  <text x="630" y="193" font-family="monospace" font-size="13" fill="#a5d6a7">declare</text>
+  <text x="689" y="193" font-family="monospace" font-size="13" fill="#bbdefb"> -A user=([name]="Alice" [age]="30")</text>
+  <text x="630" y="213" font-family="monospace" font-size="13" fill="#bbdefb">user[email]="alice@example.com"</text>
 
-  <rect x="610" y="248" width="610" height="80" rx="8" fill="#1e1e2e"/>
-  <text x="630" y="270" font-family="monospace" font-size="12" fill="#585b70"># Access and default value</text>
-  <text x="630" y="289" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
-  <text x="669" y="289" font-family="monospace" font-size="13" fill="#cdd6f4"> "${user[name]}"</text>
-  <text x="820" y="289" font-family="monospace" font-size="12" fill="#585b70">       # Alice</text>
-  <text x="630" y="309" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
-  <text x="669" y="309" font-family="monospace" font-size="13" fill="#cdd6f4"> "${user[phone]:-N/A}"</text>
-  <text x="820" y="309" font-family="monospace" font-size="12" fill="#585b70">  # N/A (missing key)</text>
+  <rect x="610" y="248" width="610" height="80" rx="8" fill="#1a1a2e"/>
+  <text x="630" y="270" font-family="monospace" font-size="12" fill="#666666"># Access and default value</text>
+  <text x="630" y="289" font-family="monospace" font-size="13" fill="#a5d6a7">echo</text>
+  <text x="669" y="289" font-family="monospace" font-size="13" fill="#bbdefb"> "${user[name]}"</text>
+  <text x="820" y="289" font-family="monospace" font-size="12" fill="#666666">       # Alice</text>
+  <text x="630" y="309" font-family="monospace" font-size="13" fill="#a5d6a7">echo</text>
+  <text x="669" y="309" font-family="monospace" font-size="13" fill="#bbdefb"> "${user[phone]:-N/A}"</text>
+  <text x="820" y="309" font-family="monospace" font-size="12" fill="#666666">  # N/A (missing key)</text>
 
-  <rect x="610" y="344" width="610" height="96" rx="8" fill="#1e1e2e"/>
-  <text x="630" y="366" font-family="monospace" font-size="12" fill="#585b70"># Iterate over keys and values</text>
-  <text x="630" y="385" font-family="monospace" font-size="13" fill="#a6e3a1">for</text>
-  <text x="655" y="385" font-family="monospace" font-size="13" fill="#cdd6f4"> key in "${!user[@]}"; </text>
-  <text x="800" y="385" font-family="monospace" font-size="13" fill="#a6e3a1">do</text>
-  <text x="630" y="405" font-family="monospace" font-size="13" fill="#cdd6f4">  echo "$key = ${user[$key]}"</text>
-  <text x="630" y="425" font-family="monospace" font-size="13" fill="#a6e3a1">done</text>
-  <text x="630" y="430" font-family="monospace" font-size="12" fill="#585b70">       # all keys</text>
+  <rect x="610" y="344" width="610" height="96" rx="8" fill="#1a1a2e"/>
+  <text x="630" y="366" font-family="monospace" font-size="12" fill="#666666"># Iterate over keys and values</text>
+  <text x="630" y="385" font-family="monospace" font-size="13" fill="#a5d6a7">for</text>
+  <text x="655" y="385" font-family="monospace" font-size="13" fill="#bbdefb"> key in "${!user[@]}"; </text>
+  <text x="800" y="385" font-family="monospace" font-size="13" fill="#a5d6a7">do</text>
+  <text x="630" y="405" font-family="monospace" font-size="13" fill="#bbdefb">  echo "$key = ${user[$key]}"</text>
+  <text x="630" y="425" font-family="monospace" font-size="13" fill="#a5d6a7">done</text>
+  <text x="630" y="430" font-family="monospace" font-size="12" fill="#666666">       # all keys</text>
 
-  <rect x="610" y="456" width="610" height="96" rx="8" fill="#1e1e2e"/>
-  <text x="630" y="478" font-family="monospace" font-size="12" fill="#585b70"># Check key / count / delete</text>
-  <text x="630" y="497" font-family="monospace" font-size="13" fill="#a6e3a1">if</text>
-  <text x="650" y="497" font-family="monospace" font-size="13" fill="#cdd6f4"> [[ -v user[name] ]]; </text>
-  <text x="780" y="497" font-family="monospace" font-size="13" fill="#a6e3a1">then</text>
-  <text x="813" y="497" font-family="monospace" font-size="13" fill="#585b70"> echo "has name"</text>
-  <text x="630" y="517" font-family="monospace" font-size="13" fill="#a6e3a1">fi</text>
-  <text x="630" y="537" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
-  <text x="669" y="537" font-family="monospace" font-size="13" fill="#cdd6f4"> "${#user[@]}"</text>
-  <text x="790" y="537" font-family="monospace" font-size="12" fill="#585b70">          # count pairs</text>
-  <text x="630" y="537" font-family="monospace" font-size="12" fill="#585b70">           # count pairs</text>
-  <text x="630" y="540" font-family="monospace" font-size="13" fill="#a6e3a1">unset</text>
-  <text x="676" y="540" font-family="monospace" font-size="13" fill="#cdd6f4"> 'user[age]'</text>
-  <text x="800" y="540" font-family="monospace" font-size="12" fill="#585b70">       # delete key</text>
+  <rect x="610" y="456" width="610" height="96" rx="8" fill="#1a1a2e"/>
+  <text x="630" y="478" font-family="monospace" font-size="12" fill="#666666"># Check key / count / delete</text>
+  <text x="630" y="497" font-family="monospace" font-size="13" fill="#a5d6a7">if</text>
+  <text x="650" y="497" font-family="monospace" font-size="13" fill="#bbdefb"> [[ -v user[name] ]]; </text>
+  <text x="780" y="497" font-family="monospace" font-size="13" fill="#a5d6a7">then</text>
+  <text x="813" y="497" font-family="monospace" font-size="13" fill="#666666"> echo "has name"</text>
+  <text x="630" y="517" font-family="monospace" font-size="13" fill="#a5d6a7">fi</text>
+  <text x="630" y="537" font-family="monospace" font-size="13" fill="#a5d6a7">echo</text>
+  <text x="669" y="537" font-family="monospace" font-size="13" fill="#bbdefb"> "${#user[@]}"</text>
+  <text x="790" y="537" font-family="monospace" font-size="12" fill="#666666">          # count pairs</text>
+  <text x="630" y="537" font-family="monospace" font-size="12" fill="#666666">           # count pairs</text>
+  <text x="630" y="540" font-family="monospace" font-size="13" fill="#a5d6a7">unset</text>
+  <text x="676" y="540" font-family="monospace" font-size="13" fill="#bbdefb"> 'user[age]'</text>
+  <text x="800" y="540" font-family="monospace" font-size="12" fill="#666666">       # delete key</text>
 
   <!-- vs indexed array note -->
   <rect x="610" y="562" width="610" height="16" rx="4" fill="transparent"/>
-  <text x="630" y="574" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
-  <text x="669" y="574" font-family="monospace" font-size="13" fill="#cdd6f4"> "${!user[@]}"</text>
-  <text x="800" y="574" font-family="monospace" font-size="12" fill="#585b70">           # all keys</text>
+  <text x="630" y="574" font-family="monospace" font-size="13" fill="#a5d6a7">echo</text>
+  <text x="669" y="574" font-family="monospace" font-size="13" fill="#bbdefb"> "${!user[@]}"</text>
+  <text x="800" y="574" font-family="monospace" font-size="12" fill="#666666">           # all keys</text>
 </svg>

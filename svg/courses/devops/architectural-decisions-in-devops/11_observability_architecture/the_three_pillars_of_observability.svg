@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="18.2857" markerHeight="18.9474" refX="16.4571" refY="5.6842" orient="auto">
       <ns0:polygon points="0,18.9474 5.4857,0" fill="#333" />
     </ns0:marker>
@@ -23,8 +83,8 @@
   <ns0:line x1="799.3128" y1="338.8235" x2="853.8115" y2="338.8235" stroke="#555" stroke-width="3.6332" stroke-dasharray="9.0831 5.4498" />
   <ns0:rect x="326.9917" y="451.7647" width="617.6508" height="112.9412" fill="#e1bee7" stroke="#7b1fa2" stroke-width="3.6332" rx="14.533" />
   <ns0:text x="635.817" y="517.647" text-anchor="middle" font-size="29.0659" font-weight="bold" fill="#7b1fa2">Correlation Layer</ns0:text>
-  <ns0:line x1="254.3268" y1="338.8235" x2="490.4874" y2="451.7647" stroke="#7b1fa2" stroke-width="3.6332" marker-end="url(#arrowhead)" />
-  <ns0:line x1="635.817" y1="338.8235" x2="635.817" y2="451.7647" stroke="#7b1fa2" stroke-width="3.6332" marker-end="url(#arrowhead)" />
-  <ns0:line x1="1017.3072" y1="338.8235" x2="781.1466" y2="451.7647" stroke="#7b1fa2" stroke-width="3.6332" marker-end="url(#arrowhead)" />
+  <ns0:line x1="254.3268" y1="338.8235" x2="490.4874" y2="451.7647" stroke="#7b1fa2" stroke-width="3.6332" marker-end="url(#arrow)" />
+  <ns0:line x1="635.817" y1="338.8235" x2="635.817" y2="451.7647" stroke="#7b1fa2" stroke-width="3.6332" marker-end="url(#arrow)" />
+  <ns0:line x1="1017.3072" y1="338.8235" x2="781.1466" y2="451.7647" stroke="#7b1fa2" stroke-width="3.6332" marker-end="url(#arrow)" />
   <ns0:text x="635.817" y="640" text-anchor="middle" font-size="23.616" fill="#555">Each pillar answers different questions about system behavior</ns0:text>
 </ns0:svg>

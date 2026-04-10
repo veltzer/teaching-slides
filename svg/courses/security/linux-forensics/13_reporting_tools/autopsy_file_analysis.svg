@@ -1,17 +1,78 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <ns0:rect x="17.9968" y="17.5824" width="395.93" height="457.1429" rx="7.0329" fill="#f0f4f8" stroke="#333333" stroke-width="2.6374" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="17.9968" y="17.5824" width="395.93" height="457.1429" rx="7.0329" fill="#f5f5f5" stroke="#333333" stroke-width="2.6374" />
   <ns0:text x="215.9618" y="56.2638" text-anchor="middle" font-size="22.8572" font-weight="bold" fill="#222222">Directory Tree</ns0:text>
   <ns0:line x1="17.9968" y1="70.3297" x2="413.9268" y2="70.3297" stroke="#333333" stroke-width="1.7582" />
-  <ns0:text x="39.593" y="105.4945" font-size="21.0989" fill="#444444" font-family="monospace">/</ns0:text>
-  <ns0:text x="39.593" y="137.1429" font-size="21.0989" fill="#444444" font-family="monospace">├── etc/</ns0:text>
-  <ns0:text x="39.593" y="168.7912" font-size="21.0989" fill="#444444" font-family="monospace">├── home/</ns0:text>
-  <ns0:text x="39.593" y="200.4396" font-size="21.0989" fill="#444444" font-family="monospace">│   └── user/</ns0:text>
-  <ns0:text x="39.593" y="232.0879" font-size="21.0989" fill="#444444" font-family="monospace">├── tmp/</ns0:text>
-  <ns0:text x="39.593" y="263.7362" font-size="21.0989" fill="#444444" font-family="monospace">│   └── .hidden/</ns0:text>
-  <ns0:text x="39.593" y="295.3846" font-size="21.0989" fill="#444444" font-family="monospace">├── var/</ns0:text>
-  <ns0:text x="39.593" y="327.033" font-size="21.0989" fill="#444444" font-family="monospace">│   └── log/</ns0:text>
-  <ns0:text x="39.593" y="358.6813" font-size="21.0989" fill="#444444" font-family="monospace">└── ...</ns0:text>
-  <ns0:rect x="431.9236" y="17.5824" width="737.8695" height="457.1429" rx="7.0329" fill="#f0f4f8" stroke="#333333" stroke-width="2.6374" />
+  <ns0:text x="39.593" y="105.4945" font-size="21.0989" fill="#333333" font-family="monospace">/</ns0:text>
+  <ns0:text x="39.593" y="137.1429" font-size="21.0989" fill="#333333" font-family="monospace">├── etc/</ns0:text>
+  <ns0:text x="39.593" y="168.7912" font-size="21.0989" fill="#333333" font-family="monospace">├── home/</ns0:text>
+  <ns0:text x="39.593" y="200.4396" font-size="21.0989" fill="#333333" font-family="monospace">│   └── user/</ns0:text>
+  <ns0:text x="39.593" y="232.0879" font-size="21.0989" fill="#333333" font-family="monospace">├── tmp/</ns0:text>
+  <ns0:text x="39.593" y="263.7362" font-size="21.0989" fill="#333333" font-family="monospace">│   └── .hidden/</ns0:text>
+  <ns0:text x="39.593" y="295.3846" font-size="21.0989" fill="#333333" font-family="monospace">├── var/</ns0:text>
+  <ns0:text x="39.593" y="327.033" font-size="21.0989" fill="#333333" font-family="monospace">│   └── log/</ns0:text>
+  <ns0:text x="39.593" y="358.6813" font-size="21.0989" fill="#333333" font-family="monospace">└── ...</ns0:text>
+  <ns0:rect x="431.9236" y="17.5824" width="737.8695" height="457.1429" rx="7.0329" fill="#f5f5f5" stroke="#333333" stroke-width="2.6374" />
   <ns0:text x="800.8584" y="56.2638" text-anchor="middle" font-size="22.8572" font-weight="bold" fill="#222222">File Listing</ns0:text>
   <ns0:line x1="431.9236" y1="70.3297" x2="1169.7932" y2="70.3297" stroke="#333333" stroke-width="1.7582" />
   <ns0:text x="458.9189" y="101.978" font-size="21.0989" font-weight="bold" fill="#222222">Name</ns0:text>
@@ -19,30 +80,30 @@
   <ns0:text x="764.8648" y="101.978" font-size="21.0989" font-weight="bold" fill="#222222">Modified</ns0:text>
   <ns0:text x="953.8314" y="101.978" font-size="21.0989" font-weight="bold" fill="#222222">Type</ns0:text>
   <ns0:line x1="431.9236" y1="112.5275" x2="1169.7932" y2="112.5275" stroke="#aaaaaa" stroke-width="1.7582" />
-  <ns0:text x="458.9189" y="144.1758" font-size="21.0989" fill="#444444">passwd</ns0:text>
-  <ns0:text x="665.8823" y="144.1758" font-size="21.0989" fill="#444444">2345</ns0:text>
-  <ns0:text x="764.8648" y="144.1758" font-size="21.0989" fill="#444444">Jan 10</ns0:text>
-  <ns0:text x="953.8314" y="144.1758" font-size="21.0989" fill="#444444">text</ns0:text>
-  <ns0:text x="458.9189" y="175.8242" font-size="21.0989" fill="#444444">shadow</ns0:text>
-  <ns0:text x="665.8823" y="175.8242" font-size="21.0989" fill="#444444">1890</ns0:text>
-  <ns0:text x="764.8648" y="175.8242" font-size="21.0989" fill="#444444">Jan 10</ns0:text>
-  <ns0:text x="953.8314" y="175.8242" font-size="21.0989" fill="#444444">text</ns0:text>
-  <ns0:text x="458.9189" y="207.4725" font-size="21.0989" fill="#444444">hostname</ns0:text>
-  <ns0:text x="665.8823" y="207.4725" font-size="21.0989" fill="#444444">15</ns0:text>
-  <ns0:text x="764.8648" y="207.4725" font-size="21.0989" fill="#444444">Jun 01</ns0:text>
-  <ns0:text x="953.8314" y="207.4725" font-size="21.0989" fill="#444444">text</ns0:text>
+  <ns0:text x="458.9189" y="144.1758" font-size="21.0989" fill="#333333">passwd</ns0:text>
+  <ns0:text x="665.8823" y="144.1758" font-size="21.0989" fill="#333333">2345</ns0:text>
+  <ns0:text x="764.8648" y="144.1758" font-size="21.0989" fill="#333333">Jan 10</ns0:text>
+  <ns0:text x="953.8314" y="144.1758" font-size="21.0989" fill="#333333">text</ns0:text>
+  <ns0:text x="458.9189" y="175.8242" font-size="21.0989" fill="#333333">shadow</ns0:text>
+  <ns0:text x="665.8823" y="175.8242" font-size="21.0989" fill="#333333">1890</ns0:text>
+  <ns0:text x="764.8648" y="175.8242" font-size="21.0989" fill="#333333">Jan 10</ns0:text>
+  <ns0:text x="953.8314" y="175.8242" font-size="21.0989" fill="#333333">text</ns0:text>
+  <ns0:text x="458.9189" y="207.4725" font-size="21.0989" fill="#333333">hostname</ns0:text>
+  <ns0:text x="665.8823" y="207.4725" font-size="21.0989" fill="#333333">15</ns0:text>
+  <ns0:text x="764.8648" y="207.4725" font-size="21.0989" fill="#333333">Jun 01</ns0:text>
+  <ns0:text x="953.8314" y="207.4725" font-size="21.0989" fill="#333333">text</ns0:text>
   <ns0:line x1="431.9236" y1="225.0549" x2="1169.7932" y2="225.0549" stroke="#aaaaaa" stroke-width="1.7582" stroke-dasharray="7.0329 5.2747" />
-  <ns0:text x="458.9189" y="258.4615" font-size="21.0989" font-weight="bold" fill="#cc0000">Deleted Files:</ns0:text>
-  <ns0:text x="458.9189" y="290.1099" font-size="21.0989" fill="#cc4444">toolkit.tar.gz (deleted)</ns0:text>
-  <ns0:text x="458.9189" y="321.7582" font-size="21.0989" fill="#cc4444">recon.sh (deleted)</ns0:text>
+  <ns0:text x="458.9189" y="258.4615" font-size="21.0989" font-weight="bold" fill="#b71c1c">Deleted Files:</ns0:text>
+  <ns0:text x="458.9189" y="290.1099" font-size="21.0989" fill="#dc3545">toolkit.tar.gz (deleted)</ns0:text>
+  <ns0:text x="458.9189" y="321.7582" font-size="21.0989" fill="#dc3545">recon.sh (deleted)</ns0:text>
   <ns0:rect x="17.9968" y="492.3077" width="1151.7963" height="147.6923" rx="7.0329" fill="#fff3e0" stroke="#333333" stroke-width="2.6374" />
   <ns0:text x="593.895" y="527.4726" text-anchor="middle" font-size="22.8572" font-weight="bold" fill="#222222">File Content Viewer</ns0:text>
   <ns0:rect x="50.3911" y="545.0549" width="93.5835" height="42.1978" rx="5.2747" fill="#e3f2fd" stroke="#555555" stroke-width="1.7582" />
   <ns0:text x="97.1828" y="574.945" text-anchor="middle" font-size="21.0989" fill="#222222">Hex</ns0:text>
-  <ns0:rect x="161.9714" y="545.0549" width="93.5835" height="42.1978" rx="5.2747" fill="#f0f4f8" stroke="#555555" stroke-width="1.7582" />
+  <ns0:rect x="161.9714" y="545.0549" width="93.5835" height="42.1978" rx="5.2747" fill="#f5f5f5" stroke="#555555" stroke-width="1.7582" />
   <ns0:text x="208.7631" y="574.945" text-anchor="middle" font-size="21.0989" fill="#222222">Text</ns0:text>
-  <ns0:rect x="273.5517" y="545.0549" width="165.5707" height="42.1978" rx="5.2747" fill="#f0f4f8" stroke="#555555" stroke-width="1.7582" />
+  <ns0:rect x="273.5517" y="545.0549" width="165.5707" height="42.1978" rx="5.2747" fill="#f5f5f5" stroke="#555555" stroke-width="1.7582" />
   <ns0:text x="356.337" y="574.945" text-anchor="middle" font-size="21.0989" fill="#222222">Application</ns0:text>
-  <ns0:rect x="457.1192" y="545.0549" width="143.9745" height="42.1978" rx="5.2747" fill="#f0f4f8" stroke="#555555" stroke-width="1.7582" />
+  <ns0:rect x="457.1192" y="545.0549" width="143.9745" height="42.1978" rx="5.2747" fill="#f5f5f5" stroke="#555555" stroke-width="1.7582" />
   <ns0:text x="529.1064" y="574.945" text-anchor="middle" font-size="21.0989" fill="#222222">Metadata</ns0:text>
 </ns0:svg>

@@ -1,6 +1,66 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:text x="598.8304" y="74.1053" text-anchor="middle" font-size="25.9493" font-weight="bold" fill="#333">File Access Decision Flow</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowaccess" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
       <ns0:path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </ns0:marker>
@@ -11,19 +71,19 @@
   <ns0:rect x="379.2592" y="134.7368" width="259.4931" height="117.8947" fill="#fff3e0" stroke="#333" stroke-width="3.9922" rx="29.9415" />
   <ns0:text x="509.0058" y="208.8421" text-anchor="middle" font-size="19.961">Is owner?</ns0:text>
   <ns0:line x1="509.0058" y1="252.6316" x2="509.0058" y2="336.8421" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowaccess)" />
-  <ns0:text x="485.0526" y="309.8947" font-size="19.961" fill="#c00">No</ns0:text>
+  <ns0:text x="485.0526" y="309.8947" font-size="19.961" fill="#b71c1c">No</ns0:text>
   <ns0:rect x="379.2592" y="336.8421" width="259.4931" height="117.8947" fill="#fff3e0" stroke="#333" stroke-width="3.9922" rx="29.9415" />
   <ns0:text x="509.0058" y="410.9474" text-anchor="middle" font-size="19.961">In group?</ns0:text>
   <ns0:line x1="509.0058" y1="454.7368" x2="509.0058" y2="538.9474" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowaccess)" />
-  <ns0:text x="485.0526" y="512" font-size="19.961" fill="#c00">No</ns0:text>
+  <ns0:text x="485.0526" y="512" font-size="19.961" fill="#b71c1c">No</ns0:text>
   <ns0:rect x="379.2592" y="538.9474" width="259.4931" height="101.0526" fill="#f3e5f5" stroke="#333" stroke-width="3.9922" rx="9.9805" />
   <ns0:text x="509.0058" y="606.3158" text-anchor="middle" font-size="19.961">Use "other" perms</ns0:text>
   <ns0:line x1="638.7525" y1="192" x2="778.4795" y2="192" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowaccess)" />
-  <ns0:text x="698.6355" y="168.4211" font-size="19.961" fill="#090">Yes</ns0:text>
+  <ns0:text x="698.6355" y="168.4211" font-size="19.961" fill="#1b5e20">Yes</ns0:text>
   <ns0:rect x="778.4795" y="134.7368" width="339.3373" height="117.8947" fill="#e8f5e9" stroke="#333" stroke-width="3.9922" rx="9.9805" />
   <ns0:text x="948.1481" y="208.8421" text-anchor="middle" font-size="19.961">Use "owner" perms</ns0:text>
   <ns0:line x1="638.7525" y1="394.1053" x2="778.4795" y2="394.1053" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowaccess)" />
-  <ns0:text x="698.6355" y="370.5263" font-size="19.961" fill="#090">Yes</ns0:text>
+  <ns0:text x="698.6355" y="370.5263" font-size="19.961" fill="#1b5e20">Yes</ns0:text>
   <ns0:rect x="778.4795" y="336.8421" width="339.3373" height="117.8947" fill="#e8f5e9" stroke="#333" stroke-width="3.9922" rx="9.9805" />
   <ns0:text x="948.1481" y="410.9474" text-anchor="middle" font-size="19.961">Use "group" perms</ns0:text>
 </ns0:svg>

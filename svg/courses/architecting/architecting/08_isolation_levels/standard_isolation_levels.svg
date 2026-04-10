@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
       <ns0:polygon points="0,16.3636 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,18 +76,18 @@
   <ns0:text x="439.3003" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">No dirty reads</ns0:text>
   <ns0:text x="439.3003" y="210.8235" text-anchor="middle" font-size="13.858" fill="#4a90e2">PostgreSQL default</ns0:text>
   <ns0:rect x="595.8963" y="90.3529" width="242.5159" height="135.5294" rx="6.929" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7716" />
-  <ns0:text x="716.4614" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#996600">Repeatable Read</ns0:text>
+  <ns0:text x="716.4614" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#bf360c">Repeatable Read</ns0:text>
   <ns0:text x="716.4614" y="158.1177" text-anchor="middle" font-size="13.858" fill="#333">Consistent reads</ns0:text>
   <ns0:text x="716.4614" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">No non-repeatable reads</ns0:text>
-  <ns0:text x="716.4614" y="210.8235" text-anchor="middle" font-size="13.858" fill="#996600">MySQL default</ns0:text>
+  <ns0:text x="716.4614" y="210.8235" text-anchor="middle" font-size="13.858" fill="#bf360c">MySQL default</ns0:text>
   <ns0:rect x="873.0574" y="90.3529" width="242.5159" height="135.5294" rx="6.929" fill="#d4edda" stroke="#28a745" stroke-width="2.7716" />
   <ns0:text x="993.6224" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#28a745">Serializable</ns0:text>
   <ns0:text x="993.6224" y="158.1177" text-anchor="middle" font-size="13.858" fill="#333">Highest isolation</ns0:text>
   <ns0:text x="993.6224" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">No phantom reads</ns0:text>
   <ns0:text x="993.6224" y="210.8235" text-anchor="middle" font-size="13.858" fill="#28a745">Full ACID</ns0:text>
-  <ns0:line x1="284.0901" y1="158.1177" x2="315.9636" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrowhead)" />
-  <ns0:line x1="561.2512" y1="158.1177" x2="593.1246" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrowhead)" />
-  <ns0:line x1="838.4122" y1="158.1177" x2="870.2857" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrowhead)" />
+  <ns0:line x1="284.0901" y1="158.1177" x2="315.9636" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrow)" />
+  <ns0:line x1="561.2512" y1="158.1177" x2="593.1246" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrow)" />
+  <ns0:line x1="838.4122" y1="158.1177" x2="870.2857" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrow)" />
   <ns0:text x="588.9673" y="263.5294" text-anchor="middle" font-size="16.6297" fill="#4a90e2">More Isolation ---&gt;</ns0:text>
   <ns0:rect x="41.5742" y="301.1764" width="512.748" height="105.4118" rx="6.929" fill="#d4edda" stroke="#28a745" stroke-width="2.7716" />
   <ns0:text x="297.9481" y="338.8235" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#28a745">High Performance</ns0:text>

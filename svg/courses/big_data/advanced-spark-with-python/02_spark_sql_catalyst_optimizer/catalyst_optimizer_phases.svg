@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#333" />
     </ns0:marker>
@@ -8,39 +68,39 @@
   <ns0:rect x="29.9415" y="117.8947" width="194.6199" height="92.6316" rx="11.9766" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.9942" />
   <ns0:text x="127.2515" y="156.6316" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#1a237e">SQL Query /</ns0:text>
   <ns0:text x="127.2515" y="186.9474" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#1a237e">DataFrame</ns0:text>
-  <ns0:line x1="224.5614" y1="163.3684" x2="261.9883" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="224.5614" y1="163.3684" x2="261.9883" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="269.4737" y="117.8947" width="179.6491" height="92.6316" rx="11.9766" fill="#fff3e0" stroke="#e65100" stroke-width="2.9942" />
   <ns0:text x="359.2982" y="156.6316" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Unresolved</ns0:text>
   <ns0:text x="359.2982" y="186.9474" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Logical Plan</ns0:text>
-  <ns0:line x1="449.1228" y1="163.3684" x2="486.5497" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="449.1228" y1="163.3684" x2="486.5497" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="494.0351" y="117.8947" width="179.6491" height="92.6316" rx="11.9766" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9942" />
   <ns0:text x="583.8596" y="156.6316" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#1b5e20">Analyzer</ns0:text>
   <ns0:text x="583.8596" y="186.9474" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#333">Resolve references</ns0:text>
-  <ns0:line x1="673.6842" y1="163.3684" x2="711.1111" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="673.6842" y1="163.3684" x2="711.1111" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="718.5965" y="117.8947" width="179.6491" height="92.6316" rx="11.9766" fill="#fff3e0" stroke="#e65100" stroke-width="2.9942" />
   <ns0:text x="808.4211" y="156.6316" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Resolved</ns0:text>
   <ns0:text x="808.4211" y="186.9474" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Logical Plan</ns0:text>
-  <ns0:line x1="898.2456" y1="163.3684" x2="935.6725" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="898.2456" y1="163.3684" x2="935.6725" y2="163.3684" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="943.1579" y="117.8947" width="209.5906" height="92.6316" rx="11.9766" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9942" />
   <ns0:text x="1047.9532" y="156.6316" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#1b5e20">Optimizer</ns0:text>
   <ns0:text x="1047.9532" y="186.9474" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#333">Rule-based + CBO</ns0:text>
-  <ns0:line x1="1047.9532" y1="210.5263" x2="1047.9532" y2="277.8947" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="1047.9532" y1="210.5263" x2="1047.9532" y2="277.8947" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="943.1579" y="286.3158" width="209.5906" height="92.6316" rx="11.9766" fill="#fff3e0" stroke="#e65100" stroke-width="2.9942" />
   <ns0:text x="1047.9532" y="325.0526" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Optimized</ns0:text>
   <ns0:text x="1047.9532" y="355.3684" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Logical Plan</ns0:text>
-  <ns0:line x1="943.1579" y1="331.7895" x2="793.4503" y2="331.7895" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="943.1579" y1="331.7895" x2="793.4503" y2="331.7895" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="568.8889" y="286.3158" width="217.076" height="92.6316" rx="11.9766" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9942" />
   <ns0:text x="676.6784" y="325.0526" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#1b5e20">Physical Planner</ns0:text>
   <ns0:text x="676.6784" y="355.3684" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#333">Strategy selection</ns0:text>
-  <ns0:line x1="568.8889" y1="331.7895" x2="456.6082" y2="331.7895" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="568.8889" y1="331.7895" x2="456.6082" y2="331.7895" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="232.0468" y="286.3158" width="217.076" height="92.6316" rx="11.9766" fill="#fff3e0" stroke="#e65100" stroke-width="2.9942" />
   <ns0:text x="339.8363" y="325.0526" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#e65100">Physical Plans</ns0:text>
   <ns0:text x="339.8363" y="355.3684" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#333">Cost model selection</ns0:text>
-  <ns0:line x1="232.0468" y1="331.7895" x2="194.6199" y2="331.7895" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="232.0468" y1="331.7895" x2="194.6199" y2="331.7895" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="29.9415" y="286.3158" width="157.193" height="92.6316" rx="11.9766" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9942" />
   <ns0:text x="107.7895" y="320" text-anchor="middle" font-family="Arial" font-size="17.9649" font-weight="bold" fill="#1b5e20">Code Gen</ns0:text>
   <ns0:text x="107.7895" y="350.3158" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#333">Whole-stage</ns0:text>
-  <ns0:line x1="107.7895" y1="378.9474" x2="107.7895" y2="446.3158" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="107.7895" y1="378.9474" x2="107.7895" y2="446.3158" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
   <ns0:rect x="29.9415" y="454.7368" width="157.193" height="92.6316" rx="11.9766" fill="#1565c0" stroke="#0d47a1" stroke-width="2.9942" />
   <ns0:text x="107.7895" y="493.4737" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#fff">RDDs</ns0:text>
   <ns0:text x="107.7895" y="523.7895" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#fff">Execution</ns0:text>
@@ -51,5 +111,5 @@
   <ns0:text x="868.3041" y="538.9474" text-anchor="middle" font-family="Arial" font-size="17.9649" fill="#e65100">Column Pruning</ns0:text>
   <ns0:text x="464.0936" y="589.4737" text-anchor="middle" font-family="Arial" font-size="17.9649" fill="#6a1b9a">Join Reordering</ns0:text>
   <ns0:text x="748.538" y="589.4737" text-anchor="middle" font-family="Arial" font-size="17.9649" fill="#c62828">Boolean Simplification</ns0:text>
-  <ns0:text x="1018.0117" y="589.4737" text-anchor="middle" font-family="Arial" font-size="17.9649" fill="#00695c">Null Propagation</ns0:text>
+  <ns0:text x="1018.0117" y="589.4737" text-anchor="middle" font-family="Arial" font-size="17.9649" fill="#2e7d32">Null Propagation</ns0:text>
 </ns0:svg>

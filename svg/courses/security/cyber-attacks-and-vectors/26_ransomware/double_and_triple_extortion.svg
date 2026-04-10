@@ -1,14 +1,75 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="1.7298" y="2.1695" width="1138.1752" height="637.8305" rx="6.919" fill="#fff" stroke="#333" stroke-width="2.5946" />
   <ns0:rect x="1.7298" y="2.1695" width="1138.1752" height="73.7627" rx="6.919" fill="#e3f2fd" stroke="#333" stroke-width="2.5946" />
   <ns0:text x="570.8174" y="49.8983" font-size="25.9462" font-weight="bold" fill="#222" text-anchor="middle">Extortion Models</ns0:text>
-  <ns0:rect x="24.2165" y="95.4576" width="1089.7423" height="125.8305" rx="6.919" fill="#f0f4f8" stroke="#555" stroke-width="1.7298" />
+  <ns0:rect x="24.2165" y="95.4576" width="1089.7423" height="125.8305" rx="6.919" fill="#f5f5f5" stroke="#555" stroke-width="1.7298" />
   <ns0:text x="44.9735" y="134.5085" font-size="22.4867" font-weight="bold" fill="#222">Single Extortion</ns0:text>
   <ns0:text x="44.9735" y="173.5593" font-size="22.4867" fill="#333">Encrypt files → demand payment for decryption key   |   Defense: Backups</ns0:text>
   <ns0:rect x="24.2165" y="238.6441" width="1089.7423" height="125.8305" rx="6.919" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5946" />
   <ns0:text x="44.9735" y="277.695" font-size="22.4867" font-weight="bold" fill="#e65100">Double Extortion</ns0:text>
   <ns0:text x="44.9735" y="316.7458" font-size="22.4867" fill="#333">Exfiltrate data + encrypt → Pay or we leak your data   |   Defense: Backups + data protection</ns0:text>
-  <ns0:rect x="24.2165" y="381.8305" width="1089.7423" height="125.8305" rx="6.919" fill="#ffccbc" stroke="#bf360c" stroke-width="2.5946" />
+  <ns0:rect x="24.2165" y="381.8305" width="1089.7423" height="125.8305" rx="6.919" fill="#ffcdd2" stroke="#bf360c" stroke-width="2.5946" />
   <ns0:text x="44.9735" y="420.8814" font-size="22.4867" font-weight="bold" fill="#bf360c">Triple Extortion</ns0:text>
   <ns0:text x="44.9735" y="459.9323" font-size="22.4867" fill="#333">Exfiltrate + encrypt + DDoS + contact customers   |   Defense: Comprehensive security program</ns0:text>
   <ns0:rect x="24.2165" y="525.017" width="1089.7423" height="95.4576" rx="6.919" fill="#ffcdd2" stroke="#c62828" stroke-width="3.4595" />

@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#333" />
     </ns0:marker>
@@ -20,14 +80,14 @@
   <ns0:text x="491.5783" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#c62828">P5</ns0:text>
   <ns0:text x="277.151" y="434.8718" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="#c62828">All 5 partitions scanned</ns0:text>
   <ns0:text x="277.151" y="467.6923" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="#c62828">Slow: reads unnecessary data</ns0:text>
-  <ns0:line x1="554.302" y1="295.3846" x2="612.6496" y2="295.3846" stroke="#1565c0" stroke-width="4.3761" marker-end="url(#arrowhead)" />
+  <ns0:line x1="554.302" y1="295.3846" x2="612.6496" y2="295.3846" stroke="#1565c0" stroke-width="4.3761" marker-end="url(#arrow)" />
   <ns0:text x="583.4758" y="278.9744" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="#1565c0">DPP</ns0:text>
   <ns0:text x="889.8006" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="#2e7d32">With DPP</ns0:text>
   <ns0:rect x="641.8234" y="123.0769" width="291.7379" height="57.4359" rx="8.7521" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4587" />
   <ns0:text x="787.6923" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="#2e7d32">dim filter: region = 'North'</ns0:text>
-  <ns0:line x1="787.6923" y1="180.5128" x2="787.6923" y2="213.3333" stroke="#2e7d32" stroke-width="2.9174" marker-end="url(#arrowhead)" />
+  <ns0:line x1="787.6923" y1="180.5128" x2="787.6923" y2="213.3333" stroke="#2e7d32" stroke-width="2.9174" marker-end="url(#arrow)" />
   <ns0:rect x="670.9972" y="213.3333" width="233.3903" height="49.2308" rx="8.7521" fill="#fff9c4" stroke="#f9a825" stroke-width="2.188" />
-  <ns0:text x="787.6923" y="246.1538" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="#f57f17">Broadcast filter values</ns0:text>
+  <ns0:text x="787.6923" y="246.1538" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="#f57c00">Broadcast filter values</ns0:text>
   <ns0:rect x="641.8234" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
   <ns0:text x="681.208" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#9e9e9e">P1</ns0:text>
   <ns0:line x1="641.8234" y1="295.3846" x2="722.0513" y2="475.8974" stroke="#c62828" stroke-width="2.188" />

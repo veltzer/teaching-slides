@@ -2,27 +2,87 @@
   <text x="640" y="54" text-anchor="middle" font-weight="bold">PIO vs DMA Transfer</text>
   <g id="pio">
     <text x="320" y="126">PIO:</text>
-    <rect x="160" y="162" width="128" height="108" fill="#FFE6E6" stroke="black" />
+    <rect x="160" y="162" width="128" height="108" fill="#fce4ec" stroke="black" />
     <text x="224" y="225" text-anchor="middle">CPU</text>
-    <rect x="160" y="360" width="128" height="108" fill="#E6F2FF" stroke="black" />
+    <rect x="160" y="360" width="128" height="108" fill="#e3f2fd" stroke="black" />
     <text x="224" y="423" text-anchor="middle">Memory</text>
-    <rect x="400" y="360" width="128" height="108" fill="#E6FFE6" stroke="black" />
+    <rect x="400" y="360" width="128" height="108" fill="#e8f5e8" stroke="black" />
     <text x="464" y="423" text-anchor="middle">Device</text>
     <line x1="224" y1="270" x2="224" y2="360" stroke="red" stroke-width="3.2" marker-end="url(#redarrow)" />
     <line x1="224" y1="270" x2="464" y2="360" stroke="red" stroke-width="3.2" marker-end="url(#redarrow)" />
   </g>
   <g id="dma">
     <text x="800" y="126">DMA:</text>
-    <rect x="720" y="162" width="128" height="108" fill="#FFE6E6" stroke="black" />
+    <rect x="720" y="162" width="128" height="108" fill="#fce4ec" stroke="black" />
     <text x="784" y="225" text-anchor="middle">CPU</text>
-    <rect x="640" y="360" width="128" height="108" fill="#E6F2FF" stroke="black" />
+    <rect x="640" y="360" width="128" height="108" fill="#e3f2fd" stroke="black" />
     <text x="704" y="423" text-anchor="middle">Memory</text>
-    <rect x="880" y="360" width="128" height="108" fill="#E6FFE6" stroke="black" />
+    <rect x="880" y="360" width="128" height="108" fill="#e8f5e8" stroke="black" />
     <text x="944" y="423" text-anchor="middle">Device</text>
     <line x1="768" y1="414" x2="880" y2="414" stroke="green" stroke-width="4.8" marker-end="url(#greenarrow)" />
     <text x="784" y="306" fill="gray">CPU Idle</text>
   </g>
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="redarrow" markerWidth="16" markerHeight="18" refX="14.4" refY="5.4" orient="auto">
       <polygon points="0,18 4.8,0" fill="red" />
     </marker>

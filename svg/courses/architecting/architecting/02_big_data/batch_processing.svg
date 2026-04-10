@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="12.6389">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="14.2222" markerHeight="14.4" refX="14.2222" refY="7.2" orient="auto">
       <ns0:polygon points="0,20.5714 4.9778,0" fill="#4a90e2" />
     </ns0:marker>
@@ -27,13 +87,13 @@
   <ns0:text x="1023.2099" y="610" text-anchor="middle" fill="#333">Reports</ns0:text>
   <ns0:rect x="594.568" y="420" width="138.2716" height="70" rx="6.9136" fill="#f9f9f9" stroke="#999" stroke-width="2.074" />
   <ns0:text x="663.7038" y="464" text-anchor="middle" fill="#666">Scheduler</ns0:text>
-  <ns0:line x1="179.7531" y1="260" x2="218.4691" y2="260" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="359.5062" y1="260" x2="398.2222" y2="260" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="553.0864" y1="260" x2="591.8025" y2="260" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="732.8395" y1="260" x2="771.5556" y2="260" stroke="#28a745" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="912.5926" y1="260" x2="951.3087" y2="260" stroke="#28a745" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="1023.2099" y1="300" x2="1023.2099" y2="396" stroke="#ffc107" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="1023.2099" y1="480" x2="1023.2099" y2="556" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrowhead)" />
-  <ns0:line x1="663.7038" y1="300" x2="663.7038" y2="416" stroke="#999" stroke-width="2.074" stroke-dasharray="6.9136 4.1482" marker-end="url(#arrowhead-gray)" />
+  <ns0:line x1="179.7531" y1="260" x2="218.4691" y2="260" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="359.5062" y1="260" x2="398.2222" y2="260" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="553.0864" y1="260" x2="591.8025" y2="260" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="732.8395" y1="260" x2="771.5556" y2="260" stroke="#28a745" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="912.5926" y1="260" x2="951.3087" y2="260" stroke="#28a745" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="1023.2099" y1="300" x2="1023.2099" y2="396" stroke="#ffc107" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="1023.2099" y1="480" x2="1023.2099" y2="556" stroke="#4a90e2" stroke-width="2.7654" marker-end="url(#arrow)" />
+  <ns0:line x1="663.7038" y1="300" x2="663.7038" y2="416" stroke="#999" stroke-width="2.074" stroke-dasharray="6.9136 4.1482" marker-end="url(#arrow)" />
   <ns0:text x="688.5926" y="370" text-anchor="start" font-size="13.8271" fill="#999">Schedule</ns0:text>
 </ns0:svg>

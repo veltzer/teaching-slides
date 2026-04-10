@@ -1,57 +1,117 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
-      <ns0:stop offset="0%" style="stop-color:#0d1117" />
-      <ns0:stop offset="100%" style="stop-color:#121d33" />
+      <ns0:stop offset="0%" style="stop-color:#212121" />
+      <ns0:stop offset="100%" style="stop-color:#1a1a2e" />
     </ns0:linearGradient>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
   <ns0:g transform="translate(400,180)">
-    <ns0:circle cx="0" cy="0" r="142.2222" fill="none" stroke="#326ce5" stroke-width="5.6889" opacity="0.7" />
-    <ns0:circle cx="0" cy="0" r="42.6667" fill="#326ce5" opacity="0.85" />
+    <ns0:circle cx="0" cy="0" r="142.2222" fill="none" stroke="#1976d2" stroke-width="5.6889" opacity="0.7" />
+    <ns0:circle cx="0" cy="0" r="42.6667" fill="#1976d2" opacity="0.85" />
     <ns0:circle cx="0" cy="0" r="25.6" fill="#fff" opacity="0.9" />
-    <ns0:line x1="0" y1="-48" x2="0" y2="-152" stroke="#326ce5" stroke-width="7.1111" stroke-linecap="round" />
-    <ns0:line x1="36.9778" y1="-24" x2="118.0444" y2="-76.8" stroke="#326ce5" stroke-width="7.1111" stroke-linecap="round" />
-    <ns0:line x1="36.9778" y1="24" x2="118.0444" y2="76.8" stroke="#326ce5" stroke-width="7.1111" stroke-linecap="round" />
-    <ns0:line x1="0" y1="48" x2="0" y2="152" stroke="#326ce5" stroke-width="7.1111" stroke-linecap="round" />
-    <ns0:line x1="-36.9778" y1="24" x2="-118.0444" y2="76.8" stroke="#326ce5" stroke-width="7.1111" stroke-linecap="round" />
-    <ns0:line x1="-36.9778" y1="-24" x2="-118.0444" y2="-76.8" stroke="#326ce5" stroke-width="7.1111" stroke-linecap="round" />
-    <ns0:circle cx="0" cy="-160" r="14.2222" fill="#326ce5" opacity="0.6" />
-    <ns0:circle cx="123.7333" cy="-80" r="14.2222" fill="#326ce5" opacity="0.6" />
-    <ns0:circle cx="123.7333" cy="80" r="14.2222" fill="#326ce5" opacity="0.6" />
-    <ns0:circle cx="0" cy="160" r="14.2222" fill="#326ce5" opacity="0.6" />
-    <ns0:circle cx="-123.7333" cy="80" r="14.2222" fill="#326ce5" opacity="0.6" />
-    <ns0:circle cx="-123.7333" cy="-80" r="14.2222" fill="#326ce5" opacity="0.6" />
+    <ns0:line x1="0" y1="-48" x2="0" y2="-152" stroke="#1976d2" stroke-width="7.1111" stroke-linecap="round" />
+    <ns0:line x1="36.9778" y1="-24" x2="118.0444" y2="-76.8" stroke="#1976d2" stroke-width="7.1111" stroke-linecap="round" />
+    <ns0:line x1="36.9778" y1="24" x2="118.0444" y2="76.8" stroke="#1976d2" stroke-width="7.1111" stroke-linecap="round" />
+    <ns0:line x1="0" y1="48" x2="0" y2="152" stroke="#1976d2" stroke-width="7.1111" stroke-linecap="round" />
+    <ns0:line x1="-36.9778" y1="24" x2="-118.0444" y2="76.8" stroke="#1976d2" stroke-width="7.1111" stroke-linecap="round" />
+    <ns0:line x1="-36.9778" y1="-24" x2="-118.0444" y2="-76.8" stroke="#1976d2" stroke-width="7.1111" stroke-linecap="round" />
+    <ns0:circle cx="0" cy="-160" r="14.2222" fill="#1976d2" opacity="0.6" />
+    <ns0:circle cx="123.7333" cy="-80" r="14.2222" fill="#1976d2" opacity="0.6" />
+    <ns0:circle cx="123.7333" cy="80" r="14.2222" fill="#1976d2" opacity="0.6" />
+    <ns0:circle cx="0" cy="160" r="14.2222" fill="#1976d2" opacity="0.6" />
+    <ns0:circle cx="-123.7333" cy="80" r="14.2222" fill="#1976d2" opacity="0.6" />
+    <ns0:circle cx="-123.7333" cy="-80" r="14.2222" fill="#1976d2" opacity="0.6" />
   </ns0:g>
   <ns0:g opacity="0.5">
-    <ns0:rect x="113.7778" y="192" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#326ce5" stroke-width="2.1333" />
-    <ns0:rect x="125.1556" y="204.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="125.1556" y="228.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="113.7778" y="296" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#326ce5" stroke-width="2.1333" />
-    <ns0:rect x="125.1556" y="308.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="125.1556" y="332.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="938.6667" y="192" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#326ce5" stroke-width="2.1333" />
-    <ns0:rect x="950.0444" y="204.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="950.0444" y="228.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="938.6667" y="296" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#326ce5" stroke-width="2.1333" />
-    <ns0:rect x="950.0444" y="308.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
-    <ns0:rect x="950.0444" y="332.8" width="62.5778" height="16" rx="2.8444" fill="#326ce5" opacity="0.3" />
+    <ns0:rect x="113.7778" y="192" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#1976d2" stroke-width="2.1333" />
+    <ns0:rect x="125.1556" y="204.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="125.1556" y="228.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="113.7778" y="296" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#1976d2" stroke-width="2.1333" />
+    <ns0:rect x="125.1556" y="308.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="125.1556" y="332.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="938.6667" y="192" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#1976d2" stroke-width="2.1333" />
+    <ns0:rect x="950.0444" y="204.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="950.0444" y="228.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="938.6667" y="296" width="85.3333" height="72" rx="5.6889" fill="none" stroke="#1976d2" stroke-width="2.1333" />
+    <ns0:rect x="950.0444" y="308.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
+    <ns0:rect x="950.0444" y="332.8" width="62.5778" height="16" rx="2.8444" fill="#1976d2" opacity="0.3" />
   </ns0:g>
-  <ns0:line x1="206.2222" y1="232" x2="419.5556" y2="272" stroke="#326ce5" stroke-width="1.4222" opacity="0.3" />
-  <ns0:line x1="206.2222" y1="336" x2="419.5556" y2="312" stroke="#326ce5" stroke-width="1.4222" opacity="0.3" />
-  <ns0:line x1="931.5556" y1="232" x2="718.2222" y2="272" stroke="#326ce5" stroke-width="1.4222" opacity="0.3" />
-  <ns0:line x1="931.5556" y1="336" x2="718.2222" y2="312" stroke="#326ce5" stroke-width="1.4222" opacity="0.3" />
+  <ns0:line x1="206.2222" y1="232" x2="419.5556" y2="272" stroke="#1976d2" stroke-width="1.4222" opacity="0.3" />
+  <ns0:line x1="206.2222" y1="336" x2="419.5556" y2="312" stroke="#1976d2" stroke-width="1.4222" opacity="0.3" />
+  <ns0:line x1="931.5556" y1="232" x2="718.2222" y2="272" stroke="#1976d2" stroke-width="1.4222" opacity="0.3" />
+  <ns0:line x1="931.5556" y1="336" x2="718.2222" y2="312" stroke="#1976d2" stroke-width="1.4222" opacity="0.3" />
   <ns0:g transform="translate(400,340)" opacity="0.3">
-    <ns0:rect x="-42.6667" y="-12.8" width="17.0667" height="16" rx="1.4222" fill="#2496ed" />
-    <ns0:rect x="-21.3333" y="-12.8" width="17.0667" height="16" rx="1.4222" fill="#2496ed" />
-    <ns0:rect x="0" y="-12.8" width="17.0667" height="16" rx="1.4222" fill="#2496ed" />
-    <ns0:rect x="-21.3333" y="-32" width="17.0667" height="16" rx="1.4222" fill="#2496ed" />
-    <ns0:rect x="0" y="-32" width="17.0667" height="16" rx="1.4222" fill="#2496ed" />
-    <ns0:path d="M -56.8889 8 Q -28.4444 24 56.8889 8" fill="none" stroke="#2496ed" stroke-width="4.2667" />
+    <ns0:rect x="-42.6667" y="-12.8" width="17.0667" height="16" rx="1.4222" fill="#2196f3" />
+    <ns0:rect x="-21.3333" y="-12.8" width="17.0667" height="16" rx="1.4222" fill="#2196f3" />
+    <ns0:rect x="0" y="-12.8" width="17.0667" height="16" rx="1.4222" fill="#2196f3" />
+    <ns0:rect x="-21.3333" y="-32" width="17.0667" height="16" rx="1.4222" fill="#2196f3" />
+    <ns0:rect x="0" y="-32" width="17.0667" height="16" rx="1.4222" fill="#2196f3" />
+    <ns0:path d="M -56.8889 8 Q -28.4444 24 56.8889 8" fill="none" stroke="#2196f3" stroke-width="4.2667" />
   </ns0:g>
-  <ns0:circle cx="85.3333" cy="96" r="2.8444" fill="#326ce5" opacity="0.3" />
-  <ns0:circle cx="1052.4444" cy="112" r="4.2667" fill="#326ce5" opacity="0.25" />
-  <ns0:circle cx="142.2222" cy="592" r="2.8444" fill="#326ce5" opacity="0.3" />
-  <ns0:circle cx="995.5556" cy="608" r="2.8444" fill="#326ce5" opacity="0.25" />
-  <ns0:rect x="426.6667" y="608" width="284.4444" height="4.8" rx="2.1333" fill="#326ce5" opacity="0.4" />
+  <ns0:circle cx="85.3333" cy="96" r="2.8444" fill="#1976d2" opacity="0.3" />
+  <ns0:circle cx="1052.4444" cy="112" r="4.2667" fill="#1976d2" opacity="0.25" />
+  <ns0:circle cx="142.2222" cy="592" r="2.8444" fill="#1976d2" opacity="0.3" />
+  <ns0:circle cx="995.5556" cy="608" r="2.8444" fill="#1976d2" opacity="0.25" />
+  <ns0:rect x="426.6667" y="608" width="284.4444" height="4.8" rx="2.1333" fill="#1976d2" opacity="0.4" />
 </ns0:svg>

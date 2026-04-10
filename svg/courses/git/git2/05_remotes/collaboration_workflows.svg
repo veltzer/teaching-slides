@@ -1,12 +1,73 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="632.0988" y="71.1111" text-anchor="middle" font-size="37.9259" font-weight="bold">Common Collaboration Workflows</ns0:text>
   <ns0:rect x="79.0123" y="142.2222" width="268.642" height="497.7778" fill="#E8F5E9" stroke="#388E3C" stroke-width="3.1605" rx="7.9012" />
   <ns0:text x="213.3333" y="195.5556" text-anchor="middle" font-size="25.284" font-weight="bold">Centralized</ns0:text>
   <ns0:circle cx="213.3333" cy="266.6667" r="31.6049" fill="#4CAF50" />
   <ns0:text x="213.3333" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">main</ns0:text>
-  <ns0:circle cx="142.2222" cy="391.1111" r="23.7037" fill="#81C784" />
-  <ns0:circle cx="213.3333" cy="391.1111" r="23.7037" fill="#81C784" />
-  <ns0:circle cx="284.4444" cy="391.1111" r="23.7037" fill="#81C784" />
+  <ns0:circle cx="142.2222" cy="391.1111" r="23.7037" fill="#a5d6a7" />
+  <ns0:circle cx="213.3333" cy="391.1111" r="23.7037" fill="#a5d6a7" />
+  <ns0:circle cx="284.4444" cy="391.1111" r="23.7037" fill="#a5d6a7" />
   <ns0:line x1="142.2222" y1="364.4444" x2="197.5309" y2="302.2222" stroke="#333" stroke-width="3.1605" />
   <ns0:line x1="213.3333" y1="364.4444" x2="213.3333" y2="302.2222" stroke="#333" stroke-width="3.1605" />
   <ns0:line x1="284.4444" y1="364.4444" x2="229.1358" y2="302.2222" stroke="#333" stroke-width="3.1605" />
@@ -18,8 +79,8 @@
   <ns0:text x="513.5802" y="195.5556" text-anchor="middle" font-size="25.284" font-weight="bold">Feature Branch</ns0:text>
   <ns0:circle cx="513.5802" cy="266.6667" r="31.6049" fill="#2196F3" />
   <ns0:text x="513.5802" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">main</ns0:text>
-  <ns0:circle cx="442.4691" cy="355.5556" r="23.7037" fill="#64B5F6" />
-  <ns0:circle cx="584.6914" cy="355.5556" r="23.7037" fill="#64B5F6" />
+  <ns0:circle cx="442.4691" cy="355.5556" r="23.7037" fill="#90caf9" />
+  <ns0:circle cx="584.6914" cy="355.5556" r="23.7037" fill="#90caf9" />
   <ns0:line x1="497.7778" y1="302.2222" x2="458.2716" y2="328.8889" stroke="#333" stroke-width="3.1605" />
   <ns0:line x1="529.3827" y1="302.2222" x2="568.8889" y2="328.8889" stroke="#333" stroke-width="3.1605" />
   <ns0:text x="442.4691" y="400" text-anchor="middle" font-size="15.8025">feat-1</ns0:text>
@@ -32,7 +93,7 @@
   <ns0:text x="813.8272" y="195.5556" text-anchor="middle" font-size="25.284" font-weight="bold">Gitflow</ns0:text>
   <ns0:circle cx="813.8272" cy="266.6667" r="23.7037" fill="#FF9800" />
   <ns0:text x="813.8272" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">main</ns0:text>
-  <ns0:circle cx="813.8272" cy="337.7778" r="23.7037" fill="#FFB74D" />
+  <ns0:circle cx="813.8272" cy="337.7778" r="23.7037" fill="#f9a825" />
   <ns0:text x="813.8272" y="346.6667" text-anchor="middle" font-size="15.8025">develop</ns0:text>
   <ns0:circle cx="742.716" cy="408.8889" r="18.963" fill="#FFE0B2" />
   <ns0:circle cx="884.9383" cy="408.8889" r="18.963" fill="#FFE0B2" />
@@ -44,8 +105,8 @@
   <ns0:text x="1082.4691" y="195.5556" text-anchor="middle" font-size="25.284" font-weight="bold">Forking</ns0:text>
   <ns0:circle cx="1082.4691" cy="266.6667" r="23.7037" fill="#F44336" />
   <ns0:text x="1082.4691" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">upstream</ns0:text>
-  <ns0:circle cx="1027.1605" cy="355.5556" r="18.963" fill="#EF5350" />
-  <ns0:circle cx="1137.7778" cy="355.5556" r="18.963" fill="#EF5350" />
+  <ns0:circle cx="1027.1605" cy="355.5556" r="18.963" fill="#e74c3c" />
+  <ns0:circle cx="1137.7778" cy="355.5556" r="18.963" fill="#e74c3c" />
   <ns0:text x="1027.1605" y="400" text-anchor="middle" font-size="15.8025">fork1</ns0:text>
   <ns0:text x="1137.7778" y="400" text-anchor="middle" font-size="15.8025">fork2</ns0:text>
   <ns0:text x="1082.4691" y="471.1111" text-anchor="middle" font-size="17.3827">Personal</ns0:text>

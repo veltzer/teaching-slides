@@ -1,27 +1,88 @@
 <svg viewBox="0 0 1280 720">
-  <rect width="1133.6101" height="623.5897" x="16.6707" y="16.4103" fill="#F0F8FF" stroke="#4A90E2" stroke-width="3.2821" rx="16.4103" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <rect width="1133.6101" height="623.5897" x="16.6707" y="16.4103" fill="#f9f9f9" stroke="#4A90E2" stroke-width="3.2821" rx="16.4103" />
   <text x="583.4758" y="57.4359" font-family="Arial" font-size="26.2564" font-weight="bold" text-anchor="middle" fill="#4A90E2">AWS Cloud</text>
-  <rect x="83.3537" y="98.4615" width="333.4147" height="196.9231" fill="#232F3E" stroke="#FF9900" stroke-width="3.2821" rx="8.2051" />
-  <text x="250.061" y="139.4872" font-family="Arial" font-size="22.9744" font-weight="bold" text-anchor="middle" fill="#FF9900">EKS Control Plane</text>
+  <rect x="83.3537" y="98.4615" width="333.4147" height="196.9231" fill="#333333" stroke="#ff9800" stroke-width="3.2821" rx="8.2051" />
+  <text x="250.061" y="139.4872" font-family="Arial" font-size="22.9744" font-weight="bold" text-anchor="middle" fill="#ff9800">EKS Control Plane</text>
   <text x="250.061" y="172.3077" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="white">• API Server</text>
   <text x="250.061" y="196.9231" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="white">• etcd</text>
   <text x="250.061" y="221.5385" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="white">• Controller Manager</text>
   <text x="250.061" y="246.1538" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="white">• Scheduler</text>
   <g>
-    <rect x="500.1221" y="131.2821" width="166.7073" height="131.2821" fill="#E8F4FD" stroke="#0073BB" stroke-width="3.2821" rx="8.2051" />
-    <text x="583.4758" y="164.1026" font-family="Arial" font-size="19.6923" font-weight="bold" text-anchor="middle" fill="#0073BB">Worker Node 1</text>
+    <rect x="500.1221" y="131.2821" width="166.7073" height="131.2821" fill="#e8f4f8" stroke="#0277bd" stroke-width="3.2821" rx="8.2051" />
+    <text x="583.4758" y="164.1026" font-family="Arial" font-size="19.6923" font-weight="bold" text-anchor="middle" fill="#0277bd">Worker Node 1</text>
     <circle cx="550.1343" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <circle cx="583.4758" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <circle cx="616.8172" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <text x="583.4758" y="246.1538" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="#666">Pods</text>
-    <rect x="700.1709" y="131.2821" width="166.7073" height="131.2821" fill="#E8F4FD" stroke="#0073BB" stroke-width="3.2821" rx="8.2051" />
-    <text x="783.5246" y="164.1026" font-family="Arial" font-size="19.6923" font-weight="bold" text-anchor="middle" fill="#0073BB">Worker Node 2</text>
+    <rect x="700.1709" y="131.2821" width="166.7073" height="131.2821" fill="#e8f4f8" stroke="#0277bd" stroke-width="3.2821" rx="8.2051" />
+    <text x="783.5246" y="164.1026" font-family="Arial" font-size="19.6923" font-weight="bold" text-anchor="middle" fill="#0277bd">Worker Node 2</text>
     <circle cx="750.1831" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <circle cx="783.5246" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <circle cx="816.8661" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <text x="783.5246" y="246.1538" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="#666">Pods</text>
-    <rect x="900.2198" y="131.2821" width="166.7073" height="131.2821" fill="#E8F4FD" stroke="#0073BB" stroke-width="3.2821" rx="8.2051" />
-    <text x="983.5734" y="164.1026" font-family="Arial" font-size="19.6923" font-weight="bold" text-anchor="middle" fill="#0073BB">Worker Node 3</text>
+    <rect x="900.2198" y="131.2821" width="166.7073" height="131.2821" fill="#e8f4f8" stroke="#0277bd" stroke-width="3.2821" rx="8.2051" />
+    <text x="983.5734" y="164.1026" font-family="Arial" font-size="19.6923" font-weight="bold" text-anchor="middle" fill="#0277bd">Worker Node 3</text>
     <circle cx="950.232" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <circle cx="983.5734" cy="205.1282" r="16.4103" fill="#4CAF50" />
     <circle cx="1016.915" cy="205.1282" r="16.4103" fill="#4CAF50" />
@@ -30,8 +91,8 @@
   <line x1="416.7685" y1="196.9231" x2="500.1221" y2="196.9231" stroke="#666" stroke-width="3.2821" />
   <line x1="416.7685" y1="196.9231" x2="700.1709" y2="196.9231" stroke="#666" stroke-width="3.2821" />
   <line x1="416.7685" y1="196.9231" x2="900.2198" y2="196.9231" stroke="#666" stroke-width="3.2821" />
-  <rect x="466.7806" y="328.2051" width="633.488" height="246.1538" fill="none" stroke="#FF6B35" stroke-width="3.2821" stroke-dasharray="8.2051 8.2051" rx="8.2051" />
-  <text x="783.5246" y="361.0256" font-family="Arial" font-size="22.9744" font-weight="bold" text-anchor="middle" fill="#FF6B35">Amazon VPC</text>
+  <rect x="466.7806" y="328.2051" width="633.488" height="246.1538" fill="none" stroke="#e74c3c" stroke-width="3.2821" stroke-dasharray="8.2051 8.2051" rx="8.2051" />
+  <text x="783.5246" y="361.0256" font-family="Arial" font-size="22.9744" font-weight="bold" text-anchor="middle" fill="#e74c3c">Amazon VPC</text>
   <rect x="500.1221" y="393.8462" width="166.7073" height="82.0513" fill="#FFF8E1" stroke="#FFC107" stroke-width="1.641" rx="4.9231" />
   <text x="583.4758" y="426.6667" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="#F57C00">Subnet A</text>
   <text x="583.4758" y="451.2821" font-family="Arial" font-size="16.4103" text-anchor="middle" fill="#F57C00">AZ-1a</text>

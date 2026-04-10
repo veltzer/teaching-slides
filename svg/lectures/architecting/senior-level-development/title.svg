@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#1a1a2e" />
       <ns0:stop offset="100%" style="stop-color:#16213e" />
@@ -10,13 +70,13 @@
     </ns0:linearGradient>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
-  <ns0:rect x="113.7778" y="416" width="398.2222" height="80" rx="8.5333" fill="#2c3e50" stroke="#3498db" stroke-width="2.8444" />
+  <ns0:rect x="113.7778" y="416" width="398.2222" height="80" rx="8.5333" fill="#333333" stroke="#3498db" stroke-width="2.8444" />
   <ns0:text x="312.8889" y="464" text-anchor="middle" fill="#3498db" font-family="Arial" font-size="18.4889">Infrastructure</ns0:text>
-  <ns0:rect x="113.7778" y="312" width="398.2222" height="80" rx="8.5333" fill="#2c3e50" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:rect x="113.7778" y="312" width="398.2222" height="80" rx="8.5333" fill="#333333" stroke="#2ecc71" stroke-width="2.8444" />
   <ns0:text x="312.8889" y="360" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="18.4889">Services</ns0:text>
-  <ns0:rect x="113.7778" y="208" width="398.2222" height="80" rx="8.5333" fill="#2c3e50" stroke="#e74c3c" stroke-width="2.8444" />
+  <ns0:rect x="113.7778" y="208" width="398.2222" height="80" rx="8.5333" fill="#333333" stroke="#e74c3c" stroke-width="2.8444" />
   <ns0:text x="312.8889" y="256" text-anchor="middle" fill="#e74c3c" font-family="Arial" font-size="18.4889">Business Logic</ns0:text>
-  <ns0:rect x="113.7778" y="104" width="398.2222" height="80" rx="8.5333" fill="#2c3e50" stroke="#9b59b6" stroke-width="2.8444" />
+  <ns0:rect x="113.7778" y="104" width="398.2222" height="80" rx="8.5333" fill="#333333" stroke="#9b59b6" stroke-width="2.8444" />
   <ns0:text x="312.8889" y="152" text-anchor="middle" fill="#9b59b6" font-family="Arial" font-size="18.4889">Presentation</ns0:text>
   <ns0:polygon points="782.2222,96 799.2889,152 853.3333,152 810.6667,188.8 824.8889,248 782.2222,212.8 739.5556,248 753.7778,188.8 711.1111,152 765.1556,152" fill="url(#gold)" />
   <ns0:circle cx="711.1111" cy="384" r="28.4444" fill="none" stroke="#3498db" stroke-width="2.8444" />
@@ -31,6 +91,6 @@
   <ns0:line x1="810.6667" y1="352" x2="810.6667" y2="416" stroke="#555" stroke-width="1.4222" />
   <ns0:text x="782.2222" y="528" text-anchor="middle" fill="#888" font-family="Arial" font-size="17.0667">Leadership &amp; Architecture</ns0:text>
   <ns0:rect x="967.1111" y="128" width="128" height="144" rx="64" fill="none" stroke="url(#gold)" stroke-width="4.2667" />
-  <ns0:text x="1031.1111" y="195.2" text-anchor="middle" fill="#f1c40f" font-family="Arial" font-size="15.6444" font-weight="bold">SENIOR</ns0:text>
-  <ns0:text x="1031.1111" y="220.8" text-anchor="middle" fill="#f1c40f" font-family="Arial" font-size="14.2222">LEVEL</ns0:text>
+  <ns0:text x="1031.1111" y="195.2" text-anchor="middle" fill="#ffc107" font-family="Arial" font-size="15.6444" font-weight="bold">SENIOR</ns0:text>
+  <ns0:text x="1031.1111" y="220.8" text-anchor="middle" fill="#ffc107" font-family="Arial" font-size="14.2222">LEVEL</ns0:text>
 </ns0:svg>

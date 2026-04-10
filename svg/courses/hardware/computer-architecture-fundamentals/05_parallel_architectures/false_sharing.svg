@@ -1,5 +1,5 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <ns0:rect x="16.856" y="23.7037" width="1146.2058" height="616.2963" rx="8.428" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6856" />
+  <ns0:rect x="16.856" y="23.7037" width="1146.2058" height="616.2963" rx="8.428" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6856" />
   <ns0:text x="589.9589" y="94.8148" text-anchor="middle" font-size="26.9695" font-weight="bold" fill="#333">False Sharing - Cache Line Contention</ns0:text>
   <ns0:text x="589.9589" y="154.0741" text-anchor="middle" font-size="20.2272" fill="#666">Cache line (64 bytes)</ns0:text>
   <ns0:rect x="101.1358" y="189.6296" width="977.6461" height="142.2222" rx="8.428" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3712" />
@@ -20,6 +20,66 @@
   <ns0:text x="589.9589" y="533.3333" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="#dc3545">Both in the SAME cache line!</ns0:text>
   <ns0:text x="589.9589" y="576" text-anchor="middle" font-size="18.5416" fill="#666">Every write by one core invalidates the line in the other core's cache.</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowGreen" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
       <ns0:path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#28a745" />
     </ns0:marker>

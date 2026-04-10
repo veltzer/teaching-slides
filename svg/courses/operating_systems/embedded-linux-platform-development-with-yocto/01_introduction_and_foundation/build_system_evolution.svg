@@ -1,16 +1,76 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="60.9524" y="68.5714" width="182.8571" height="109.7143" fill="#ffcccc" stroke="#000" stroke-width="2.4381" />
+  <ns0:rect x="60.9524" y="68.5714" width="182.8571" height="109.7143" fill="#ffcdd2" stroke="#000" stroke-width="2.4381" />
   <ns0:text x="152.381" y="130.2857" text-anchor="middle" font-size="17.0667">Manual Build</ns0:text>
-  <ns0:rect x="304.7619" y="68.5714" width="182.8571" height="109.7143" fill="#ccffcc" stroke="#000" stroke-width="2.4381" />
+  <ns0:rect x="304.7619" y="68.5714" width="182.8571" height="109.7143" fill="#bbdefbfcc" stroke="#000" stroke-width="2.4381" />
   <ns0:text x="396.1905" y="130.2857" text-anchor="middle" font-size="17.0667">Build Scripts</ns0:text>
-  <ns0:rect x="548.5714" y="68.5714" width="182.8571" height="109.7143" fill="#ccccff" stroke="#000" stroke-width="2.4381" />
+  <ns0:rect x="548.5714" y="68.5714" width="182.8571" height="109.7143" fill="#bbdefb" stroke="#000" stroke-width="2.4381" />
   <ns0:text x="640" y="130.2857" text-anchor="middle" font-size="17.0667">Buildroot</ns0:text>
-  <ns0:rect x="365.7143" y="274.2857" width="243.8095" height="137.1429" fill="#ffff99" stroke="#000" stroke-width="2.4381" />
+  <ns0:rect x="365.7143" y="274.2857" width="243.8095" height="137.1429" fill="#ffe0b2" stroke="#000" stroke-width="2.4381" />
   <ns0:text x="487.619" y="349.7143" text-anchor="middle" font-size="19.5048" font-weight="bold">Yocto Project</ns0:text>
-  <ns0:path d="M 152.381 178.2857 L 396.1905 274.2857" stroke="#000" stroke-width="2.4381" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 396.1905 178.2857 L 487.619 274.2857" stroke="#000" stroke-width="2.4381" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 640 178.2857 L 487.619 274.2857" stroke="#000" stroke-width="2.4381" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 152.381 178.2857 L 396.1905 274.2857" stroke="#000" stroke-width="2.4381" marker-end="url(#arrow)" />
+  <ns0:path d="M 396.1905 178.2857 L 487.619 274.2857" stroke="#000" stroke-width="2.4381" marker-end="url(#arrow)" />
+  <ns0:path d="M 640 178.2857 L 487.619 274.2857" stroke="#000" stroke-width="2.4381" marker-end="url(#arrow)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="18" refX="14.4" refY="5.4" orient="auto">
       <ns0:polygon points="0,18 4.8,0" fill="#000" />
     </ns0:marker>

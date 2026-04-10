@@ -1,46 +1,106 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="65.536" markerHeight="185.1429" refX="58.9824" refY="92.5714" orient="auto">
-      <ns0:polygon points="0,264.4899 22.9376,0" fill="#2c3e50" />
+      <ns0:polygon points="0,264.4899 22.9376,0" fill="#333333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="317.1619" height="640" fill="#f8f9fa" />
+  <ns0:rect width="317.1619" height="640" fill="#f9f9f9" />
   <ns0:text x="158.5809" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Strangler Fig: Microservice Extraction Pattern</ns0:text>
   <ns0:text x="51.5388" y="108.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Phase 1: Before</ns0:text>
   <ns0:text x="158.5809" y="108.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Phase 2: Transition</ns0:text>
   <ns0:text x="265.6231" y="108.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Phase 3: After</ns0:text>
-  <ns0:rect x="11.8936" y="128" width="79.2905" height="320" rx="3.9645" fill="#e74c3c" fill-opacity="0.8" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:rect x="11.8936" y="128" width="79.2905" height="320" rx="3.9645" fill="#e74c3c" fill-opacity="0.8" stroke="#333333" stroke-width="0.7929" />
   <ns0:text x="51.5388" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Monolith</ns0:text>
-  <ns0:text x="51.5388" y="248" text-anchor="middle" fill="#FADBD8" font-size="10">auth module</ns0:text>
-  <ns0:text x="51.5388" y="280" text-anchor="middle" fill="#FADBD8" font-size="10">payments module</ns0:text>
-  <ns0:text x="51.5388" y="312" text-anchor="middle" fill="#FADBD8" font-size="10">billing module</ns0:text>
-  <ns0:text x="51.5388" y="344" text-anchor="middle" fill="#FADBD8" font-size="10">notifications</ns0:text>
-  <ns0:text x="51.5388" y="384" text-anchor="middle" fill="#FADBD8" font-size="10">2M LOC</ns0:text>
+  <ns0:text x="51.5388" y="248" text-anchor="middle" fill="#f8d7da" font-size="10">auth module</ns0:text>
+  <ns0:text x="51.5388" y="280" text-anchor="middle" fill="#f8d7da" font-size="10">payments module</ns0:text>
+  <ns0:text x="51.5388" y="312" text-anchor="middle" fill="#f8d7da" font-size="10">billing module</ns0:text>
+  <ns0:text x="51.5388" y="344" text-anchor="middle" fill="#f8d7da" font-size="10">notifications</ns0:text>
+  <ns0:text x="51.5388" y="384" text-anchor="middle" fill="#f8d7da" font-size="10">2M LOC</ns0:text>
   <ns0:line x1="91.184" y1="288" x2="107.0421" y2="288" stroke="#333" stroke-width="0.7929" marker-end="url(#arr)" />
-  <ns0:rect x="107.0421" y="128" width="51.5388" height="320" rx="3.9645" fill="#e74c3c" fill-opacity="0.5" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:rect x="107.0421" y="128" width="51.5388" height="320" rx="3.9645" fill="#e74c3c" fill-opacity="0.5" stroke="#333333" stroke-width="0.7929" />
   <ns0:text x="132.8115" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Monolith</ns0:text>
-  <ns0:text x="132.8115" y="243.2" text-anchor="middle" fill="#FADBD8" font-size="10">(shrinking)</ns0:text>
-  <ns0:text x="132.8115" y="280" text-anchor="middle" fill="#FADBD8" font-size="10">payments</ns0:text>
-  <ns0:text x="132.8115" y="312" text-anchor="middle" fill="#FADBD8" font-size="10">billing</ns0:text>
-  <ns0:text x="132.8115" y="344" text-anchor="middle" fill="#FADBD8" font-size="10">notifications</ns0:text>
-  <ns0:rect x="130.8293" y="336" width="55.5033" height="80" rx="3.1716" fill="#f39c12" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="132.8115" y="243.2" text-anchor="middle" fill="#f8d7da" font-size="10">(shrinking)</ns0:text>
+  <ns0:text x="132.8115" y="280" text-anchor="middle" fill="#f8d7da" font-size="10">payments</ns0:text>
+  <ns0:text x="132.8115" y="312" text-anchor="middle" fill="#f8d7da" font-size="10">billing</ns0:text>
+  <ns0:text x="132.8115" y="344" text-anchor="middle" fill="#f8d7da" font-size="10">notifications</ns0:text>
+  <ns0:rect x="130.8293" y="336" width="55.5033" height="80" rx="3.1716" fill="#f39c12" stroke="#333333" stroke-width="0.7929" />
   <ns0:text x="158.5809" y="372.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Proxy / Facade</ns0:text>
-  <ns0:text x="158.5809" y="401.6" text-anchor="middle" fill="#FDE68A" font-size="10">AI-generated adapter</ns0:text>
-  <ns0:rect x="162.5455" y="128" width="51.5388" height="192" rx="3.9645" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="158.5809" y="401.6" text-anchor="middle" fill="#ffcc80" font-size="10">AI-generated adapter</ns0:text>
+  <ns0:rect x="162.5455" y="128" width="51.5388" height="192" rx="3.9645" fill="#27ae60" stroke="#333333" stroke-width="0.7929" />
   <ns0:text x="188.3149" y="188.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">New Service</ns0:text>
-  <ns0:text x="188.3149" y="224" text-anchor="middle" fill="#D5F5E3" font-size="10">auth module</ns0:text>
-  <ns0:text x="188.3149" y="259.2" text-anchor="middle" fill="#D5F5E3" font-size="10">(extracted)</ns0:text>
-  <ns0:text x="188.3149" y="294.4" text-anchor="middle" fill="#D5F5E3" font-size="10">own deploy</ns0:text>
+  <ns0:text x="188.3149" y="224" text-anchor="middle" fill="#d4edda" font-size="10">auth module</ns0:text>
+  <ns0:text x="188.3149" y="259.2" text-anchor="middle" fill="#d4edda" font-size="10">(extracted)</ns0:text>
+  <ns0:text x="188.3149" y="294.4" text-anchor="middle" fill="#d4edda" font-size="10">own deploy</ns0:text>
   <ns0:line x1="158.5809" y1="320" x2="158.5809" y2="336" stroke="#E65100" stroke-width="0.5947" marker-end="url(#arr)" />
   <ns0:line x1="186.3326" y1="320" x2="158.5809" y2="336" stroke="#E65100" stroke-width="0.5947" />
   <ns0:line x1="214.0843" y1="288" x2="229.9424" y2="288" stroke="#333" stroke-width="0.7929" marker-end="url(#arr)" />
-  <ns0:rect x="229.9424" y="128" width="51.5388" height="120" rx="3.9645" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:rect x="229.9424" y="128" width="51.5388" height="120" rx="3.9645" fill="#27ae60" stroke="#333333" stroke-width="0.7929" />
   <ns0:text x="255.7118" y="179.2" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Auth Service</ns0:text>
-  <ns0:text x="255.7118" y="211.2" text-anchor="middle" fill="#D5F5E3" font-size="10">independent</ns0:text>
-  <ns0:rect x="229.9424" y="264" width="51.5388" height="120" rx="3.9645" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="255.7118" y="211.2" text-anchor="middle" fill="#d4edda" font-size="10">independent</ns0:text>
+  <ns0:rect x="229.9424" y="264" width="51.5388" height="120" rx="3.9645" fill="#27ae60" stroke="#333333" stroke-width="0.7929" />
   <ns0:text x="255.7118" y="315.2" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Pay Service</ns0:text>
-  <ns0:text x="255.7118" y="347.2" text-anchor="middle" fill="#D5F5E3" font-size="10">independent</ns0:text>
-  <ns0:rect x="229.9424" y="400" width="51.5388" height="64" rx="3.1716" fill="#e74c3c" fill-opacity="0.3" stroke="#2c3e50" stroke-width="0.5947" />
+  <ns0:text x="255.7118" y="347.2" text-anchor="middle" fill="#d4edda" font-size="10">independent</ns0:text>
+  <ns0:rect x="229.9424" y="400" width="51.5388" height="64" rx="3.1716" fill="#e74c3c" fill-opacity="0.3" stroke="#333333" stroke-width="0.5947" />
   <ns0:text x="255.7118" y="441.6" text-anchor="middle" fill="#555" font-size="10">Remaining...</ns0:text>
   <ns0:rect x="11.8936" y="496" width="293.3747" height="120" rx="3.9645" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.5947" />
   <ns0:text x="158.5809" y="540.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">AI-Assisted Strangler Fig Steps</ns0:text>

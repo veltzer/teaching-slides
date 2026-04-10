@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="23.5402" font-weight="bold" fill="#333">Training Infrastructure: The Hardware Stack</ns0:text>
   <ns0:rect x="88.2759" y="88.2759" width="411.954" height="191.2644" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9425" />
   <ns0:text x="294.2529" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#4a90e2">GPU Node 1</ns0:text>
@@ -20,10 +81,10 @@
   <ns0:line x1="411.954" y1="397.2414" x2="411.954" y2="441.3793" stroke="#28a745" stroke-width="2.9425" />
   <ns0:line x1="765.0575" y1="397.2414" x2="765.0575" y2="441.3793" stroke="#28a745" stroke-width="2.9425" />
   <ns0:rect x="205.977" y="441.3793" width="411.954" height="73.5632" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2069" />
-  <ns0:text x="411.954" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#856404">Storage Cluster</ns0:text>
+  <ns0:text x="411.954" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#bf360c">Storage Cluster</ns0:text>
   <ns0:text x="411.954" y="500.2299" text-anchor="middle" font-size="16.1839" fill="#666">(Petabytes)</ns0:text>
   <ns0:rect x="676.7816" y="441.3793" width="353.1034" height="73.5632" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2069" />
-  <ns0:text x="853.3333" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#856404">Parameter Server</ns0:text>
+  <ns0:text x="853.3333" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#bf360c">Parameter Server</ns0:text>
   <ns0:text x="853.3333" y="500.2299" text-anchor="middle" font-size="16.1839" fill="#666">(distributed)</ns0:text>
   <ns0:rect x="147.1264" y="551.7241" width="882.7586" height="88.2759" rx="7.3563" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2069" />
   <ns0:text x="588.5057" y="584.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#dc3545">Cost Estimates for GPT-4-Scale Training</ns0:text>

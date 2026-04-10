@@ -1,4 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="640" y="43.2" text-anchor="middle" font-size="25.92" font-weight="bold" fill="#333">The Ethics of Generative AI</text>
   <text x="640" y="74.88" text-anchor="middle" font-size="17.28" fill="#666">Key ethical questions for practitioners</text>
   <rect x="54.8571" y="100.8" width="566.8571" height="115.2" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
@@ -10,7 +71,7 @@
   <text x="694.8571" y="165.6" font-size="15.84" fill="#333">Who owns AI-generated content?</text>
   <text x="694.8571" y="190.08" font-size="15.84" fill="#333">Legal frameworks still evolving.</text>
   <rect x="54.8571" y="237.6" width="566.8571" height="115.2" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="91.4286" y="273.6" font-size="18.72" font-weight="bold" fill="#856404">3. CONSENT</text>
+  <text x="91.4286" y="273.6" font-size="18.72" font-weight="bold" fill="#bf360c">3. CONSENT</text>
   <text x="91.4286" y="302.4" font-size="15.84" fill="#333">Was training data collected with consent?</text>
   <text x="91.4286" y="326.88" font-size="15.84" fill="#333">Major ongoing legal battles.</text>
   <rect x="658.2857" y="237.6" width="566.8571" height="115.2" rx="7.2" fill="#f8d7da" stroke="#dc3545" stroke-width="2.88" />
@@ -22,7 +83,7 @@
   <text x="91.4286" y="439.2" font-size="15.84" fill="#333">Should powerful AI be open source</text>
   <text x="91.4286" y="463.68" font-size="15.84" fill="#333">or controlled? Strong arguments on both sides.</text>
   <rect x="658.2857" y="374.4" width="566.8571" height="115.2" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="694.8571" y="410.4" font-size="18.72" font-weight="bold" fill="#856404">6. DUAL USE</text>
+  <text x="694.8571" y="410.4" font-size="18.72" font-weight="bold" fill="#bf360c">6. DUAL USE</text>
   <text x="694.8571" y="439.2" font-size="15.84" fill="#333">The same model can help or harm.</text>
   <text x="694.8571" y="463.68" font-size="15.84" fill="#333">How to enable beneficial use while preventing harm?</text>
   <rect x="146.2857" y="525.6" width="987.4286" height="64.8" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.88" />

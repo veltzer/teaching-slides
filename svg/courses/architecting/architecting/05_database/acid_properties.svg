@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -12,25 +72,25 @@
   <ns0:rect x="44.8" y="384" width="283.7333" height="72" rx="7.4667" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4933" />
   <ns0:text x="186.6667" y="412.8" text-anchor="middle" font-size="16.4267" fill="#333">All or Nothing</ns0:text>
   <ns0:text x="186.6667" y="440" text-anchor="middle" font-size="16.4267" fill="#555">Complete or Rollback</ns0:text>
-  <ns0:line x1="507.7333" y1="176" x2="253.8667" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="507.7333" y1="176" x2="253.8667" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:rect x="358.4" y="272" width="224" height="80" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
   <ns0:text x="470.4" y="312" text-anchor="middle" font-size="20.9067" font-weight="bold" fill="#4a90e2">C - Consistency</ns0:text>
   <ns0:rect x="328.5333" y="384" width="283.7333" height="72" rx="7.4667" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4933" />
   <ns0:text x="470.4" y="412.8" text-anchor="middle" font-size="16.4267" fill="#333">Valid State</ns0:text>
   <ns0:text x="470.4" y="440" text-anchor="middle" font-size="16.4267" fill="#555">Rules Enforced</ns0:text>
-  <ns0:line x1="567.4667" y1="176" x2="492.8" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="567.4667" y1="176" x2="492.8" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:rect x="642.1333" y="272" width="224" height="80" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9867" />
-  <ns0:text x="754.1333" y="312" text-anchor="middle" font-size="20.9067" font-weight="bold" fill="#996600">I - Isolation</ns0:text>
+  <ns0:text x="754.1333" y="312" text-anchor="middle" font-size="20.9067" font-weight="bold" fill="#bf360c">I - Isolation</ns0:text>
   <ns0:rect x="612.2667" y="384" width="283.7333" height="72" rx="7.4667" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4933" />
   <ns0:text x="754.1333" y="412.8" text-anchor="middle" font-size="16.4267" fill="#333">No Interference</ns0:text>
   <ns0:text x="754.1333" y="440" text-anchor="middle" font-size="16.4267" fill="#555">Concurrent Safety</ns0:text>
-  <ns0:line x1="627.2" y1="176" x2="731.7333" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="627.2" y1="176" x2="731.7333" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:rect x="925.8666" y="272" width="224" height="80" rx="7.4667" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9867" />
   <ns0:text x="1037.8666" y="312" text-anchor="middle" font-size="20.9067" font-weight="bold" fill="#dc3545">D - Durability</ns0:text>
   <ns0:rect x="896" y="384" width="283.7333" height="72" rx="7.4667" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4933" />
   <ns0:text x="1037.8666" y="412.8" text-anchor="middle" font-size="16.4267" fill="#333">Permanent</ns0:text>
   <ns0:text x="1037.8666" y="440" text-anchor="middle" font-size="16.4267" fill="#555">Survives Failures</ns0:text>
-  <ns0:line x1="686.9333" y1="176" x2="970.6666" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="686.9333" y1="176" x2="970.6666" y2="268.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:rect x="74.6667" y="512" width="1045.3333" height="128" rx="7.4667" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4933" />
   <ns0:text x="597.3333" y="552" text-anchor="middle" font-size="17.92" font-weight="bold" fill="#333">ACID guarantees reliable database transactions</ns0:text>
   <ns0:text x="597.3333" y="588.7999" text-anchor="middle" font-size="16.4267" fill="#555">Every transaction either fully completes or fully rolls back, maintaining data integrity</ns0:text>

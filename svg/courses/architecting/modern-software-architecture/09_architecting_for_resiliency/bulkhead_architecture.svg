@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="14.4" refX="16" refY="7.2" orient="auto">
       <ns0:polygon points="0,20.5714 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -19,11 +79,11 @@
   <ns0:rect x="844.7139" y="446.0607" width="211.1785" height="87.2727" rx="7.5421" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0168" />
   <ns0:text x="950.3031" y="488.7273" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.101">Service C</ns0:text>
   <ns0:text x="950.3031" y="519.7576" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0842" fill="#dc3545">(Slow)</ns0:text>
-  <ns0:line x1="256.431" y1="290.9091" x2="374.0876" y2="106.6667" stroke="#4a90e2" stroke-width="3.0168" marker-end="url(#arrowhead)" />
-  <ns0:line x1="256.431" y1="314.1818" x2="374.0876" y2="300.606" stroke="#4a90e2" stroke-width="3.0168" marker-end="url(#arrowhead)" />
-  <ns0:line x1="256.431" y1="339.394" x2="374.0876" y2="488.7273" stroke="#4a90e2" stroke-width="3.0168" marker-end="url(#arrowhead)" />
-  <ns0:line x1="708.9563" y1="100.8485" x2="841.697" y2="100.8485" stroke="#28a745" stroke-width="3.0168" marker-end="url(#arrowhead)" />
-  <ns0:line x1="708.9563" y1="294.7879" x2="841.697" y2="294.7879" stroke="#28a745" stroke-width="3.0168" marker-end="url(#arrowhead)" />
-  <ns0:line x1="708.9563" y1="488.7273" x2="841.697" y2="488.7273" stroke="#dc3545" stroke-width="3.0168" marker-end="url(#arrowhead)" />
+  <ns0:line x1="256.431" y1="290.9091" x2="374.0876" y2="106.6667" stroke="#4a90e2" stroke-width="3.0168" marker-end="url(#arrow)" />
+  <ns0:line x1="256.431" y1="314.1818" x2="374.0876" y2="300.606" stroke="#4a90e2" stroke-width="3.0168" marker-end="url(#arrow)" />
+  <ns0:line x1="256.431" y1="339.394" x2="374.0876" y2="488.7273" stroke="#4a90e2" stroke-width="3.0168" marker-end="url(#arrow)" />
+  <ns0:line x1="708.9563" y1="100.8485" x2="841.697" y2="100.8485" stroke="#28a745" stroke-width="3.0168" marker-end="url(#arrow)" />
+  <ns0:line x1="708.9563" y1="294.7879" x2="841.697" y2="294.7879" stroke="#28a745" stroke-width="3.0168" marker-end="url(#arrow)" />
+  <ns0:line x1="708.9563" y1="488.7273" x2="841.697" y2="488.7273" stroke="#dc3545" stroke-width="3.0168" marker-end="url(#arrow)" />
   <ns0:text x="603.367" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5926" fill="#666">Service C failure only exhausts its own pool - Services A and B unaffected</ns0:text>
 </ns0:svg>

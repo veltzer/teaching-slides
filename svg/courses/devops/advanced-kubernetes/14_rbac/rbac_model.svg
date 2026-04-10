@@ -1,21 +1,71 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
@@ -27,18 +77,18 @@
   <ns0:rect x="35.5556" y="170.6667" width="248.8889" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="160" y="202.6667" text-anchor="middle" font-family="monospace" font-size="16" fill="#212121">ServiceAccount</ns0:text>
   <ns0:text x="497.7778" y="23.1111" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Binding</ns0:text>
-  <ns0:line x1="286.2222" y1="65.7778" x2="371.5556" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
-  <ns0:line x1="286.2222" y1="131.5556" x2="371.5556" y2="112" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
-  <ns0:line x1="286.2222" y1="197.3333" x2="371.5556" y2="126.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
-  <ns0:rect x="373.3333" y="71.1111" width="248.8889" height="71.1111" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:line x1="286.2222" y1="65.7778" x2="371.5556" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="286.2222" y1="131.5556" x2="371.5556" y2="112" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="286.2222" y1="197.3333" x2="371.5556" y2="126.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:rect x="373.3333" y="71.1111" width="248.8889" height="71.1111" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="497.7778" y="103.1111" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">RoleBinding</ns0:text>
   <ns0:text x="497.7778" y="126.2222" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#bbdefb">namespaced</ns0:text>
   <ns0:rect x="373.3333" y="177.7778" width="248.8889" height="71.1111" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="497.7778" y="209.7778" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#212121">ClusterRoleBinding</ns0:text>
   <ns0:text x="497.7778" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#555555">cluster-wide</ns0:text>
   <ns0:text x="817.7778" y="23.1111" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Role (defines permissions)</ns0:text>
-  <ns0:line x1="624" y1="106.6667" x2="709.3333" y2="106.6667" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
-  <ns0:line x1="624" y1="213.3333" x2="709.3333" y2="266.6667" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="624" y1="106.6667" x2="709.3333" y2="106.6667" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="624" y1="213.3333" x2="709.3333" y2="266.6667" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="711.1111" y="53.3333" width="391.1111" height="106.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="906.6667" y="81.7778" text-anchor="middle" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#212121">Role (namespace-scoped)</ns0:text>
   <ns0:text x="728.8889" y="103.1111" font-family="monospace" font-size="12.4444" fill="#555555">rules:</ns0:text>
@@ -49,7 +99,7 @@
   <ns0:text x="728.8889" y="263.1111" font-family="monospace" font-size="12.4444" fill="#555555">rules:</ns0:text>
   <ns0:text x="728.8889" y="280.8889" font-family="monospace" font-size="12.4444" fill="#1565c0">- resources: [nodes, namespaces]</ns0:text>
   <ns0:text x="728.8889" y="298.6667" font-family="monospace" font-size="12.4444" fill="#1565c0">  verbs: [get, list]</ns0:text>
-  <ns0:rect x="35.5556" y="346.6667" width="497.7778" height="195.5556" rx="5.3333" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:rect x="35.5556" y="346.6667" width="497.7778" height="195.5556" rx="5.3333" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1.3333" />
   <ns0:text x="284.4444" y="373.3333" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Common Verbs</ns0:text>
   <ns0:text x="53.3333" y="398.2222" font-family="monospace" font-size="13.3333" fill="#1565c0">get list watch</ns0:text>
   <ns0:text x="213.3333" y="398.2222" font-family="sans-serif" font-size="12.4444" fill="#555555">— read only</ns0:text>

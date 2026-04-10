@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="585.7866" y="38.0198" text-anchor="middle" font-size="22.8119" font-weight="bold" fill="#333">Interpreting MTR Results</ns0:text>
   <ns0:rect x="33.4735" y="57.0297" width="1104.6262" height="120.3961" rx="6.3367" fill="#d4edda" stroke="#28a745" stroke-width="2.5346" />
   <ns0:text x="66.9471" y="88.7129" font-size="17.7426" font-weight="bold" fill="#28a745">Case 1: Loss at one hop but not later</ns0:text>
@@ -11,10 +72,10 @@
   <ns0:text x="66.9471" y="272.4753" font-size="15.2079" fill="#555">Real packet loss starting at hop 4</ns0:text>
   <ns0:text x="66.9471" y="297.8218" font-size="13.9406" fill="#dc3545" font-weight="bold">Verdict: Problem at or between hop 3 and hop 4</ns0:text>
   <ns0:rect x="33.4735" y="323.1683" width="1104.6262" height="120.3961" rx="6.3367" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="354.8515" font-size="17.7426" font-weight="bold" fill="#856404">Case 3: Latency spike at one hop</ns0:text>
+  <ns0:text x="66.9471" y="354.8515" font-size="17.7426" font-weight="bold" fill="#bf360c">Case 3: Latency spike at one hop</ns0:text>
   <ns0:text x="66.9471" y="380.198" font-size="15.2079" fill="#333">Hop 3: avg 5ms | Hop 4: avg 150ms (large jump) | Hop 5: avg 152ms</ns0:text>
   <ns0:text x="66.9471" y="405.5446" font-size="15.2079" fill="#555">Link between hop 3 and 4 has high latency</ns0:text>
-  <ns0:text x="66.9471" y="430.8911" font-size="13.9406" fill="#856404" font-weight="bold">Verdict: Congestion, distance, or poor peering</ns0:text>
+  <ns0:text x="66.9471" y="430.8911" font-size="13.9406" fill="#bf360c" font-weight="bold">Verdict: Congestion, distance, or poor peering</ns0:text>
   <ns0:rect x="33.4735" y="456.2376" width="1104.6262" height="120.3961" rx="6.3367" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5346" />
   <ns0:text x="66.9471" y="487.9208" font-size="17.7426" font-weight="bold" fill="#4a90e2">Case 4: High jitter (StDev)</ns0:text>
   <ns0:text x="66.9471" y="513.2673" font-size="15.2079" fill="#333">Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms</ns0:text>

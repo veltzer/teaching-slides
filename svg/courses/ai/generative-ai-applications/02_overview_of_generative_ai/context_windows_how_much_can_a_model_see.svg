@@ -1,10 +1,67 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <ns0:polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
-  <ns0:rect x="59.7333" y="32" width="1075.2" height="608" rx="11.9467" fill="#f0f7ff" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:rect x="59.7333" y="32" width="1075.2" height="608" rx="11.9467" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.9867" />
   <ns0:text x="597.3333" y="88" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#333">CONTEXT WINDOW (128K tokens)</ns0:text>
   <ns0:rect x="119.4667" y="128" width="448" height="160" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.24" />
   <ns0:text x="343.4667" y="184" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#333">System Prompt</ns0:text>
@@ -19,5 +76,5 @@
   <ns0:text x="851.2" y="392" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#333">User Query</ns0:text>
   <ns0:text x="851.2" y="432" text-anchor="middle" font-size="17.92" fill="#666">200 tokens</ns0:text>
   <ns0:rect x="119.4667" y="543.9999" width="955.7333" height="64" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.24" />
-  <ns0:text x="597.3333" y="585.6" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#856404">Remaining for generation: ~7.3K tokens</ns0:text>
+  <ns0:text x="597.3333" y="585.6" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#bf360c">Remaining for generation: ~7.3K tokens</ns0:text>
 </ns0:svg>

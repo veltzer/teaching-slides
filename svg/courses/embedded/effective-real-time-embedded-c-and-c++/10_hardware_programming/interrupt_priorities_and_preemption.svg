@@ -1,28 +1,75 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
-    <ns0:marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="142.2222" y="8.8889" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="142.2222" y="8.8889" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="426.6667" y="55.1111" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="#ffffff">0x00 – 0x0F  (Highest)</ns0:text>
   <ns0:text x="853.3333" y="49.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#bbdefb">Preempts everything</ns0:text>
   <ns0:text x="853.3333" y="69.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="#bbdefb">Safety-critical ISRs</ns0:text>
@@ -34,11 +81,11 @@
   <ns0:text x="426.6667" y="250.6667" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="#212121">0x20 – 0x3F</ns0:text>
   <ns0:text x="853.3333" y="245.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#555555">Normal peripherals</ns0:text>
   <ns0:text x="853.3333" y="264.8889" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="#9e9e9e">e.g. UART, SPI</ns0:text>
-  <ns0:rect x="142.2222" y="302.2222" width="853.3333" height="88.8889" rx="5.3333" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="142.2222" y="302.2222" width="853.3333" height="88.8889" rx="5.3333" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="426.6667" y="348.4444" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="#9e9e9e">0x40 – 0xFF  (Lowest)</ns0:text>
   <ns0:text x="853.3333" y="343.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#9e9e9e">Background tasks</ns0:text>
   <ns0:text x="853.3333" y="362.6667" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="#9e9e9e">e.g. logging, telemetry</ns0:text>
-  <ns0:line x1="97.7778" y1="400" x2="97.7778" y2="8.8889" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="97.7778" y1="400" x2="97.7778" y2="8.8889" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
   <ns0:text x="53.3333" y="213.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#1565c0" transform="rotate(-90 60 340)">Priority</ns0:text>
   <ns0:rect x="177.7778" y="424.8889" width="782.2222" height="49.7778" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
   <ns0:text x="568.8889" y="449.7778" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Preemption only occurs between groups, not between sub-priorities</ns0:text>

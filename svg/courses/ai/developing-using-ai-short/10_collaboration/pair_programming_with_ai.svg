@@ -1,19 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
@@ -27,7 +77,7 @@
   <ns0:text x="200" y="284.4444" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Writes the code</ns0:text>
   <ns0:text x="200" y="312.8889" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Implements logic</ns0:text>
   <ns0:text x="200" y="341.3333" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Makes decisions</ns0:text>
-  <ns0:line x1="346.6667" y1="266.6667" x2="400" y2="266.6667" stroke="#1565c0" stroke-width="3.5556" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="346.6667" y1="266.6667" x2="400" y2="266.6667" stroke="#1565c0" stroke-width="3.5556" marker-end="url(#arrow-primary)" />
   <ns0:rect x="408.8889" y="160" width="320" height="213.3333" rx="12.4444" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="408.8889" y="160" width="320" height="44.4444" rx="12.4444" fill="#8e24aa" />
   <ns0:rect x="408.8889" y="192" width="320" height="12.4444" fill="#8e24aa" />
@@ -36,7 +86,7 @@
   <ns0:text x="568.8889" y="273.7778" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Suggests completions</ns0:text>
   <ns0:text x="568.8889" y="302.2222" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Explains patterns</ns0:text>
   <ns0:text x="568.8889" y="330.6667" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Spots bugs early</ns0:text>
-  <ns0:line x1="728.8889" y1="266.6667" x2="782.2222" y2="266.6667" stroke="#1565c0" stroke-width="3.5556" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="728.8889" y1="266.6667" x2="782.2222" y2="266.6667" stroke="#1565c0" stroke-width="3.5556" marker-end="url(#arrow-primary)" />
   <ns0:rect x="791.1111" y="160" width="293.3333" height="213.3333" rx="12.4444" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="791.1111" y="160" width="293.3333" height="44.4444" rx="12.4444" fill="#43a047" />
   <ns0:rect x="791.1111" y="192" width="293.3333" height="12.4444" fill="#43a047" />
@@ -45,9 +95,9 @@
   <ns0:text x="937.7778" y="284.4444" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Reviews direction</ns0:text>
   <ns0:text x="937.7778" y="312.8889" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Guides architecture</ns0:text>
   <ns0:text x="937.7778" y="341.3333" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Ensures quality</ns0:text>
-  <ns0:rect x="71.1111" y="417.7778" width="995.5556" height="71.1111" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="71.1111" y="417.7778" width="995.5556" height="71.1111" rx="8.8889" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="460.4444" text-anchor="middle" fill="white" font-size="23.1111" font-weight="bold" font-family="Arial, sans-serif">AI-Augmented Pair Programming</ns0:text>
   <ns0:rect x="71.1111" y="515.5556" width="995.5556" height="88.8889" rx="8.8889" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="549.3333" text-anchor="middle" fill="#1565c0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Benefits over traditional pairing</ns0:text>
-  <ns0:text x="568.8889" y="579.5556" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">AI never tires, knows every API, and accelerates both driver and navigator simultaneously</ns0:text>
+  <ns0:text x="568.8889" y="579.5556" text-anchor="middle" fill="#333333" font-size="13.3333" font-family="Arial, sans-serif">AI never tires, knows every API, and accelerates both driver and navigator simultaneously</ns0:text>
 </ns0:svg>

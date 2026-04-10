@@ -1,14 +1,75 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="577.9189" y="73.1429" text-anchor="middle" font-size="26.0063" font-weight="bold">Cross-Platform Development Options</ns0:text>
-  <ns0:rect x="72.2399" y="128" width="317.8554" height="512" fill="#61DAFB" rx="14.448" />
-  <ns0:text x="231.1675" y="182.8571" text-anchor="middle" fill="#282C34" font-size="23.1168" font-weight="bold">React Native</ns0:text>
+  <ns0:rect x="72.2399" y="128" width="317.8554" height="512" fill="#90caf9" rx="14.448" />
+  <ns0:text x="231.1675" y="182.8571" text-anchor="middle" fill="#333333" font-size="23.1168" font-weight="bold">React Native</ns0:text>
   <ns0:text x="231.1675" y="237.7143" text-anchor="middle" font-size="17.3376">Performance: ⭐⭐⭐⭐</ns0:text>
   <ns0:text x="231.1675" y="283.4286" text-anchor="middle" font-size="17.3376">Learning: ⭐⭐⭐</ns0:text>
   <ns0:text x="231.1675" y="329.1429" text-anchor="middle" font-size="17.3376">• JavaScript/React</ns0:text>
   <ns0:text x="231.1675" y="374.8571" text-anchor="middle" font-size="17.3376">• Native modules</ns0:text>
   <ns0:text x="231.1675" y="420.5714" text-anchor="middle" font-size="17.3376">• Hot reload</ns0:text>
   <ns0:text x="231.1675" y="466.2857" text-anchor="middle" font-size="17.3376">• Large ecosystem</ns0:text>
-  <ns0:rect x="418.9912" y="128" width="317.8554" height="512" fill="#02569B" rx="14.448" />
+  <ns0:rect x="418.9912" y="128" width="317.8554" height="512" fill="#0d47a1" rx="14.448" />
   <ns0:text x="577.9189" y="182.8571" text-anchor="middle" fill="white" font-size="23.1168" font-weight="bold">Flutter</ns0:text>
   <ns0:text x="577.9189" y="237.7143" text-anchor="middle" fill="white" font-size="17.3376">Performance: ⭐⭐⭐⭐⭐</ns0:text>
   <ns0:text x="577.9189" y="283.4286" text-anchor="middle" fill="white" font-size="17.3376">Learning: ⭐⭐⭐⭐</ns0:text>
@@ -16,7 +77,7 @@
   <ns0:text x="577.9189" y="374.8571" text-anchor="middle" fill="white" font-size="17.3376">• Custom rendering</ns0:text>
   <ns0:text x="577.9189" y="420.5714" text-anchor="middle" fill="white" font-size="17.3376">• Rich widgets</ns0:text>
   <ns0:text x="577.9189" y="466.2857" text-anchor="middle" fill="white" font-size="17.3376">• Fast performance</ns0:text>
-  <ns0:rect x="765.7425" y="128" width="317.8554" height="512" fill="#007ACC" rx="14.448" />
+  <ns0:rect x="765.7425" y="128" width="317.8554" height="512" fill="#0277bd" rx="14.448" />
   <ns0:text x="924.6702" y="182.8571" text-anchor="middle" fill="white" font-size="23.1168" font-weight="bold">Ionic</ns0:text>
   <ns0:text x="924.6702" y="237.7143" text-anchor="middle" fill="white" font-size="17.3376">Performance: ⭐⭐⭐</ns0:text>
   <ns0:text x="924.6702" y="283.4286" text-anchor="middle" fill="white" font-size="17.3376">Learning: ⭐⭐</ns0:text>

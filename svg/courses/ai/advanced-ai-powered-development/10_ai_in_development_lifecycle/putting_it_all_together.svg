@@ -1,10 +1,70 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="25.6" markerHeight="53.6804" refX="23.04" refY="26.8402" orient="auto">
       <ns0:polygon points="0,76.6864 8.96,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="427.2988" height="640" fill="#f8f9fa" />
+  <ns0:rect width="427.2988" height="640" fill="#f9f9f9" />
   <ns0:text x="213.6494" y="56" text-anchor="middle" font-size="10.6825" font-weight="bold" fill="#1a237e">AI Across the Full Development Lifecycle</ns0:text>
   <ns0:rect x="10.6825" y="104" width="90.801" height="88" rx="5.3412" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.0682" />
   <ns0:text x="56.083" y="155.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Plan &amp; Design</ns0:text>
@@ -17,7 +77,7 @@
   <ns0:line x1="309.7916" y1="147.2" x2="323.1447" y2="147.2" stroke="#333" stroke-width="1.0682" marker-end="url(#arr)" />
   <ns0:rect x="323.1447" y="104" width="93.4716" height="88" rx="5.3412" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1.0682" />
   <ns0:text x="369.6134" y="155.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#7B1FA2">Deploy &amp; Run</ns0:text>
-  <ns0:rect x="10.6825" y="240" width="405.9338" height="320" rx="5.3412" fill="#FAFAFA" stroke="#999" stroke-width="0.8012" stroke-dasharray="3.2047 1.6024" />
+  <ns0:rect x="10.6825" y="240" width="405.9338" height="320" rx="5.3412" fill="#f9f9f9" stroke="#999" stroke-width="0.8012" stroke-dasharray="3.2047 1.6024" />
   <ns0:text x="213.6494" y="288" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">AI Layer (transparent to the team)</ns0:text>
   <ns0:rect x="18.6943" y="312" width="93.4716" height="232" rx="4.273" fill="#E3F2FD" stroke="#1565C0" />
   <ns0:text x="65.1631" y="355.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Plan &amp; Design AI</ns0:text>

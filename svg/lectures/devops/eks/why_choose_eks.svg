@@ -1,9 +1,70 @@
 <svg viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <g>
-    <rect x="42.6667" y="41.1429" width="256" height="164.5714" fill="#E8F8F5" stroke="#00D4AA" stroke-width="4.1143" rx="10.2857" />
-    <text x="170.6667" y="92.5714" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#00695C">Managed</text>
-    <text x="170.6667" y="123.4286" font-family="Arial" font-size="24.6857" text-anchor="middle" fill="#00695C">Control Plane</text>
-    <circle cx="170.6667" cy="164.5714" r="16.4571" fill="#00D4AA" />
+    <rect x="42.6667" y="41.1429" width="256" height="164.5714" fill="#e8f4f8" stroke="#2ecc71" stroke-width="4.1143" rx="10.2857" />
+    <text x="170.6667" y="92.5714" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#2e7d32">Managed</text>
+    <text x="170.6667" y="123.4286" font-family="Arial" font-size="24.6857" text-anchor="middle" fill="#2e7d32">Control Plane</text>
+    <circle cx="170.6667" cy="164.5714" r="16.4571" fill="#2ecc71" />
     <rect x="341.3333" y="41.1429" width="256" height="164.5714" fill="#FFF3E0" stroke="#FF9800" stroke-width="4.1143" rx="10.2857" />
     <text x="469.3333" y="92.5714" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#E65100">AWS</text>
     <text x="469.3333" y="123.4286" font-family="Arial" font-size="24.6857" text-anchor="middle" fill="#E65100">Integration</text>
@@ -12,10 +73,10 @@
     <text x="768" y="92.5714" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#0D47A1">High</text>
     <text x="768" y="123.4286" font-family="Arial" font-size="24.6857" text-anchor="middle" fill="#0D47A1">Availability</text>
     <rect x="746.6667" y="144" width="42.6667" height="20.5714" fill="#2196F3" />
-    <rect x="42.6667" y="246.8571" width="256" height="164.5714" fill="#FCE4EC" stroke="#E91E63" stroke-width="4.1143" rx="10.2857" />
-    <text x="170.6667" y="298.2857" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#880E4F">Security</text>
-    <text x="170.6667" y="329.1429" font-family="Arial" font-size="24.6857" text-anchor="middle" fill="#880E4F">&amp; Compliance</text>
-    <circle cx="170.6667" cy="370.2857" r="16.4571" fill="#E91E63" />
+    <rect x="42.6667" y="246.8571" width="256" height="164.5714" fill="#FCE4EC" stroke="#dc3545" stroke-width="4.1143" rx="10.2857" />
+    <text x="170.6667" y="298.2857" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#c2185b">Security</text>
+    <text x="170.6667" y="329.1429" font-family="Arial" font-size="24.6857" text-anchor="middle" fill="#c2185b">&amp; Compliance</text>
+    <circle cx="170.6667" cy="370.2857" r="16.4571" fill="#dc3545" />
     <text x="170.6667" y="380.5714" font-family="Arial" font-size="20.5714" text-anchor="middle" fill="white">🔒</text>
     <rect x="341.3333" y="246.8571" width="256" height="164.5714" fill="#F3E5F5" stroke="#9C27B0" stroke-width="4.1143" rx="10.2857" />
     <text x="469.3333" y="298.2857" font-family="Arial" font-size="24.6857" font-weight="bold" text-anchor="middle" fill="#4A148C">Auto</text>

@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="71.1111" y="192" width="170.6667" height="96" fill="#e3f2fd" stroke="#1976d2" />
   <ns0:text x="156.4445" y="252" text-anchor="middle" font-size="17.0667">Load Balancer</ns0:text>
   <ns0:rect x="355.5555" y="120" width="142.2222" height="72" fill="#fff3e0" stroke="#f57c00" />
@@ -9,8 +70,8 @@
   <ns0:text x="426.6667" y="360" text-anchor="middle" font-size="14.2222">Logstash Node 3</ns0:text>
   <ns0:rect x="640" y="216" width="142.2222" height="96" fill="#e8f5e8" stroke="#388e3c" />
   <ns0:text x="711.1111" y="276" text-anchor="middle" font-size="17.0667">Elasticsearch</ns0:text>
-  <ns0:path d="M 241.7778 240 L 355.5555 156" stroke="#333" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 241.7778 240 L 355.5555 252" stroke="#333" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 241.7778 240 L 355.5555 348" stroke="#333" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 497.7778 252 L 640 264" stroke="#333" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 241.7778 240 L 355.5555 156" stroke="#333" marker-end="url(#arrow)" />
+  <ns0:path d="M 241.7778 240 L 355.5555 252" stroke="#333" marker-end="url(#arrow)" />
+  <ns0:path d="M 241.7778 240 L 355.5555 348" stroke="#333" marker-end="url(#arrow)" />
+  <ns0:path d="M 497.7778 252 L 640 264" stroke="#333" marker-end="url(#arrow)" />
 </ns0:svg>

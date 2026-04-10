@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#1a1a2e" />
       <ns0:stop offset="100%" style="stop-color:#16213e" />
@@ -30,37 +90,37 @@
     <ns0:polygon points="54.8571,0 18.2857,92.5714 45.7143,92.5714 27.4286,164.5714 91.4286,61.7143 59.4286,61.7143 82.2857,0" fill="url(#spark)" opacity="0.9" />
   </ns0:g>
   <ns0:g transform="translate(560, 100)">
-    <ns0:rect x="0" y="0" width="73.1429" height="20.5714" rx="1.8286" fill="#dc322f" opacity="0.85" />
-    <ns0:rect x="0" y="25.7143" width="73.1429" height="20.5714" rx="1.8286" fill="#dc322f" opacity="0.7" />
-    <ns0:rect x="0" y="51.4286" width="73.1429" height="20.5714" rx="1.8286" fill="#dc322f" opacity="0.55" />
-    <ns0:path d="M 0 0 L 73.1429 10.2857 L 73.1429 20.5714 L 0 20.5714 Z" fill="#dc322f" opacity="0.3" />
-    <ns0:path d="M 0 25.7143 L 73.1429 36 L 73.1429 46.2857 L 0 46.2857 Z" fill="#dc322f" opacity="0.2" />
-    <ns0:path d="M 0 51.4286 L 73.1429 61.7143 L 73.1429 72 L 0 72 Z" fill="#dc322f" opacity="0.15" />
+    <ns0:rect x="0" y="0" width="73.1429" height="20.5714" rx="1.8286" fill="#d32f2f" opacity="0.85" />
+    <ns0:rect x="0" y="25.7143" width="73.1429" height="20.5714" rx="1.8286" fill="#d32f2f" opacity="0.7" />
+    <ns0:rect x="0" y="51.4286" width="73.1429" height="20.5714" rx="1.8286" fill="#d32f2f" opacity="0.55" />
+    <ns0:path d="M 0 0 L 73.1429 10.2857 L 73.1429 20.5714 L 0 20.5714 Z" fill="#d32f2f" opacity="0.3" />
+    <ns0:path d="M 0 25.7143 L 73.1429 36 L 73.1429 46.2857 L 0 46.2857 Z" fill="#d32f2f" opacity="0.2" />
+    <ns0:path d="M 0 51.4286 L 73.1429 61.7143 L 73.1429 72 L 0 72 Z" fill="#d32f2f" opacity="0.15" />
   </ns0:g>
   <ns0:g transform="translate(350, 120)">
-    <ns0:path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 45.7143 0" fill="none" stroke="#444" stroke-width="7.3143" stroke-linecap="round" />
-    <ns0:path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 32 -37.0286" fill="none" stroke="#4ecca3" stroke-width="7.3143" stroke-linecap="round" />
-    <ns0:line x1="0" y1="0" x2="22.8571" y2="-41.1429" stroke="#e25822" stroke-width="2.7429" stroke-linecap="round" />
-    <ns0:circle cx="0" cy="0" r="4.5714" fill="#e25822" />
+    <ns0:path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 45.7143 0" fill="none" stroke="#333333" stroke-width="7.3143" stroke-linecap="round" />
+    <ns0:path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 32 -37.0286" fill="none" stroke="#2ecc71" stroke-width="7.3143" stroke-linecap="round" />
+    <ns0:line x1="0" y1="0" x2="22.8571" y2="-41.1429" stroke="#e74c3c" stroke-width="2.7429" stroke-linecap="round" />
+    <ns0:circle cx="0" cy="0" r="4.5714" fill="#e74c3c" />
   </ns0:g>
   <ns0:g transform="translate(250, 250)" opacity="0.6">
-    <ns0:circle cx="0" cy="0" r="10.9714" fill="#4ecca3" />
-    <ns0:circle cx="73.1429" cy="-20.5714" r="10.9714" fill="#4ecca3" />
-    <ns0:circle cx="73.1429" cy="20.5714" r="10.9714" fill="#4ecca3" />
-    <ns0:circle cx="146.2857" cy="0" r="10.9714" fill="#f5a623" />
-    <ns0:circle cx="219.4286" cy="0" r="10.9714" fill="#e25822" />
-    <ns0:line x1="10.9714" y1="-4.1143" x2="62.1714" y2="-18.5143" stroke="#4ecca3" stroke-width="1.8286" />
-    <ns0:line x1="10.9714" y1="4.1143" x2="62.1714" y2="18.5143" stroke="#4ecca3" stroke-width="1.8286" />
-    <ns0:line x1="84.1143" y1="-16.4571" x2="135.3143" y2="-4.1143" stroke="#4ecca3" stroke-width="1.8286" />
-    <ns0:line x1="84.1143" y1="16.4571" x2="135.3143" y2="4.1143" stroke="#4ecca3" stroke-width="1.8286" />
-    <ns0:line x1="157.2571" y1="0" x2="208.4571" y2="0" stroke="#f5a623" stroke-width="1.8286" />
+    <ns0:circle cx="0" cy="0" r="10.9714" fill="#2ecc71" />
+    <ns0:circle cx="73.1429" cy="-20.5714" r="10.9714" fill="#2ecc71" />
+    <ns0:circle cx="73.1429" cy="20.5714" r="10.9714" fill="#2ecc71" />
+    <ns0:circle cx="146.2857" cy="0" r="10.9714" fill="#f9a825" />
+    <ns0:circle cx="219.4286" cy="0" r="10.9714" fill="#e74c3c" />
+    <ns0:line x1="10.9714" y1="-4.1143" x2="62.1714" y2="-18.5143" stroke="#2ecc71" stroke-width="1.8286" />
+    <ns0:line x1="10.9714" y1="4.1143" x2="62.1714" y2="18.5143" stroke="#2ecc71" stroke-width="1.8286" />
+    <ns0:line x1="84.1143" y1="-16.4571" x2="135.3143" y2="-4.1143" stroke="#2ecc71" stroke-width="1.8286" />
+    <ns0:line x1="84.1143" y1="16.4571" x2="135.3143" y2="4.1143" stroke="#2ecc71" stroke-width="1.8286" />
+    <ns0:line x1="157.2571" y1="0" x2="208.4571" y2="0" stroke="#f9a825" stroke-width="1.8286" />
   </ns0:g>
   <ns0:g opacity="0.25">
-    <ns0:path d="M 91.4286 339.4286 Q 182.8571 318.8571 274.2857 339.4286 Q 365.7143 360 457.1429 339.4286 Q 548.5714 318.8571 640 339.4286" fill="none" stroke="#4ecca3" stroke-width="1.8286" />
-    <ns0:path d="M 91.4286 360 Q 182.8571 339.4286 274.2857 360 Q 365.7143 380.5714 457.1429 360 Q 548.5714 339.4286 640 360" fill="none" stroke="#e25822" stroke-width="1.8286" />
+    <ns0:path d="M 91.4286 339.4286 Q 182.8571 318.8571 274.2857 339.4286 Q 365.7143 360 457.1429 339.4286 Q 548.5714 318.8571 640 339.4286" fill="none" stroke="#2ecc71" stroke-width="1.8286" />
+    <ns0:path d="M 91.4286 360 Q 182.8571 339.4286 274.2857 360 Q 365.7143 380.5714 457.1429 360 Q 548.5714 339.4286 640 360" fill="none" stroke="#e74c3c" stroke-width="1.8286" />
   </ns0:g>
-  <ns0:circle cx="45.7143" cy="51.4286" r="2.7429" fill="#4ecca3" opacity="0.4" />
-  <ns0:circle cx="685.7143" cy="51.4286" r="2.7429" fill="#e25822" opacity="0.4" />
-  <ns0:circle cx="45.7143" cy="360" r="2.7429" fill="#dc322f" opacity="0.4" />
-  <ns0:circle cx="685.7143" cy="360" r="2.7429" fill="#f5a623" opacity="0.4" />
+  <ns0:circle cx="45.7143" cy="51.4286" r="2.7429" fill="#2ecc71" opacity="0.4" />
+  <ns0:circle cx="685.7143" cy="51.4286" r="2.7429" fill="#e74c3c" opacity="0.4" />
+  <ns0:circle cx="45.7143" cy="360" r="2.7429" fill="#d32f2f" opacity="0.4" />
+  <ns0:circle cx="685.7143" cy="360" r="2.7429" fill="#f9a825" opacity="0.4" />
 </ns0:svg>

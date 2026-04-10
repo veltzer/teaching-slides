@@ -1,18 +1,78 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:rect x="49.4686" y="55.6522" width="1137.7778" height="584.3478" fill="#f5f5f5" stroke="#ccc" rx="24.7343" />
   <ns0:text x="618.3575" y="125.2174" text-anchor="middle" font-size="39.5749" font-weight="bold">AI-Enhanced Code Review Process</ns0:text>
-  <ns0:rect x="98.9372" y="194.7826" width="247.343" height="83.4783" fill="#ffecb3" stroke="#f57f17" rx="12.3671" />
+  <ns0:rect x="98.9372" y="194.7826" width="247.343" height="83.4783" fill="#ffe0b2" stroke="#f57c00" rx="12.3671" />
   <ns0:text x="222.6087" y="250.4348" text-anchor="middle" font-size="24.7343">Pre-Review AI Check</ns0:text>
   <ns0:rect x="395.7488" y="194.7826" width="247.343" height="83.4783" fill="#c8e6c9" stroke="#388e3c" rx="12.3671" />
   <ns0:text x="519.4203" y="250.4348" text-anchor="middle" font-size="24.7343">Human Review</ns0:text>
   <ns0:rect x="692.5604" y="194.7826" width="247.343" height="83.4783" fill="#bbdefb" stroke="#1976d2" rx="12.3671" />
   <ns0:text x="816.2319" y="250.4348" text-anchor="middle" font-size="24.7343">AI Suggestions</ns0:text>
-  <ns0:rect x="989.372" y="194.7826" width="148.4058" height="83.4783" fill="#f8bbd9" stroke="#c2185b" rx="12.3671" />
+  <ns0:rect x="989.372" y="194.7826" width="148.4058" height="83.4783" fill="#ffcdd2" stroke="#c2185b" rx="12.3671" />
   <ns0:text x="1063.5749" y="250.4348" text-anchor="middle" font-size="24.7343">Merge</ns0:text>
-  <ns0:line x1="346.2802" y1="236.5217" x2="395.7488" y2="236.5217" stroke="#666" stroke-width="4.9469" marker-end="url(#arrowhead)" />
-  <ns0:line x1="643.0918" y1="236.5217" x2="692.5604" y2="236.5217" stroke="#666" stroke-width="4.9469" marker-end="url(#arrowhead)" />
-  <ns0:line x1="939.9034" y1="236.5217" x2="989.372" y2="236.5217" stroke="#666" stroke-width="4.9469" marker-end="url(#arrowhead)" />
+  <ns0:line x1="346.2802" y1="236.5217" x2="395.7488" y2="236.5217" stroke="#666" stroke-width="4.9469" marker-end="url(#arrow)" />
+  <ns0:line x1="643.0918" y1="236.5217" x2="692.5604" y2="236.5217" stroke="#666" stroke-width="4.9469" marker-end="url(#arrow)" />
+  <ns0:line x1="939.9034" y1="236.5217" x2="989.372" y2="236.5217" stroke="#666" stroke-width="4.9469" marker-end="url(#arrow)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="25.6" markerHeight="20.16" refX="23.04" refY="10.08" orient="auto">
       <ns0:polygon points="0,28.8 8.96,0" fill="#666" />
     </ns0:marker>

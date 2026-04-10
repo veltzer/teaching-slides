@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="18.2857" markerHeight="14.8235" refX="16.4571" refY="7.4118" orient="auto">
       <ns0:polygon points="0,21.1765 6.4,0" fill="#555" />
     </ns0:marker>
@@ -13,13 +73,13 @@
   <ns0:text x="535.8885" y="124.1212" text-anchor="middle" font-size="20.0959" fill="#1565c0" font-weight="bold">(Nginx/HAProxy)</ns0:text>
   <ns0:text x="937.8048" y="93.091" text-anchor="middle" font-size="20.0959" fill="#2e7d32" font-weight="bold">Backend</ns0:text>
   <ns0:text x="937.8048" y="124.1212" text-anchor="middle" font-size="20.0959" fill="#2e7d32" font-weight="bold">(Apache)</ns0:text>
-  <ns0:rect x="33.493" y="155.1516" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2.512" rx="6.6986" />
+  <ns0:rect x="33.493" y="155.1516" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ffcc80" stroke-width="2.512" rx="6.6986" />
   <ns0:text x="83.7326" y="193.9394" text-anchor="middle" font-size="20.0959" fill="#b71c1c" font-weight="bold">A1</ns0:text>
   <ns0:line x1="133.9721" y1="188.1213" x2="334.9303" y2="188.1213" stroke="#c62828" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
-  <ns0:rect x="33.493" y="252.1212" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2.512" rx="6.6986" />
+  <ns0:rect x="33.493" y="252.1212" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ffcc80" stroke-width="2.512" rx="6.6986" />
   <ns0:text x="83.7326" y="290.9091" text-anchor="middle" font-size="20.0959" fill="#b71c1c" font-weight="bold">A2</ns0:text>
   <ns0:line x1="133.9721" y1="285.0909" x2="334.9303" y2="285.0909" stroke="#c62828" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
-  <ns0:rect x="33.493" y="349.091" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2.512" rx="6.6986" />
+  <ns0:rect x="33.493" y="349.091" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ffcc80" stroke-width="2.512" rx="6.6986" />
   <ns0:text x="83.7326" y="387.8788" text-anchor="middle" font-size="20.0959" fill="#b71c1c" font-weight="bold">A3</ns0:text>
   <ns0:line x1="133.9721" y1="382.0606" x2="334.9303" y2="382.0606" stroke="#c62828" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
   <ns0:rect x="334.9303" y="135.7576" width="385.1698" height="349.091" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.512" rx="6.6986" />
@@ -37,6 +97,6 @@
   <ns0:line x1="720.1001" y1="300.6061" x2="803.8327" y2="300.6061" stroke="#555" stroke-width="2.512" marker-end="url(#arr)" />
   <ns0:text x="761.9664" y="287.0303" text-anchor="middle" font-size="16.7465" fill="#555">complete
 reqs only</ns0:text>
-  <ns0:rect x="16.7465" y="574.0606" width="1138.7629" height="65.9394" fill="#f1f8e9" stroke="#aed581" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="586.128" y="616.7273" text-anchor="middle" font-size="18.4212" fill="#33691e">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</ns0:text>
+  <ns0:rect x="16.7465" y="574.0606" width="1138.7629" height="65.9394" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="586.128" y="616.7273" text-anchor="middle" font-size="18.4212" fill="#1b5e20">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</ns0:text>
 </ns0:svg>

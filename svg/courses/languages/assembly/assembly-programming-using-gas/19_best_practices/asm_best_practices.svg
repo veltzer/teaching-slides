@@ -60,6 +60,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -84,10 +96,10 @@
   <rect x="30" y="75" width="370" height="40" rx="8" fill="url(#grad-primary)"/>
   <text x="215" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Documentation</text>
   <text x="50" y="130" font-family="Arial, sans-serif" font-size="13" fill="#333333">Comment every instruction:</text>
-  <rect x="40" y="140" width="340" height="80" rx="4" fill="#1e1e2e"/>
-  <text x="55" y="162" font-family="monospace" font-size="12" fill="#cdd6f4">movl $4, %eax   <tspan fill="#6c7086"># sys_write</tspan></text>
-  <text x="55" y="182" font-family="monospace" font-size="12" fill="#cdd6f4">movl $1, %ebx   <tspan fill="#6c7086"># fd=stdout</tspan></text>
-  <text x="55" y="202" font-family="monospace" font-size="12" fill="#cdd6f4">int  $0x80      <tspan fill="#6c7086"># kernel call</tspan></text>
+  <rect x="40" y="140" width="340" height="80" rx="4" fill="#1a1a2e"/>
+  <text x="55" y="162" font-family="monospace" font-size="12" fill="#bbdefb">movl $4, %eax   <tspan fill="#777777"># sys_write</tspan></text>
+  <text x="55" y="182" font-family="monospace" font-size="12" fill="#bbdefb">movl $1, %ebx   <tspan fill="#777777"># fd=stdout</tspan></text>
+  <text x="55" y="202" font-family="monospace" font-size="12" fill="#bbdefb">int  $0x80      <tspan fill="#777777"># kernel call</tspan></text>
   <text x="50" y="240" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Document register usage at function start</text>
   <text x="50" y="260" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Describe ABI: caller/callee saved regs</text>
   <text x="50" y="280" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Note side effects and clobbered flags</text>
@@ -126,10 +138,10 @@
   <rect x="860" y="75" width="390" height="40" rx="8" fill="url(#grad-warn)"/>
   <text x="1055" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Testing Assembly Code</text>
   <text x="880" y="130" font-family="Arial, sans-serif" font-size="13" fill="#333333">Test from C harness:</text>
-  <rect x="870" y="138" width="360" height="80" rx="4" fill="#1e1e2e"/>
-  <text x="885" y="160" font-family="monospace" font-size="12" fill="#cba6f7">// C test harness</text>
-  <text x="885" y="178" font-family="monospace" font-size="12" fill="#cdd6f4">extern int asm_add(int a, int b);</text>
-  <text x="885" y="196" font-family="monospace" font-size="12" fill="#a6e3a1">assert(asm_add(2,3) == 5);</text>
+  <rect x="870" y="138" width="360" height="80" rx="4" fill="#1a1a2e"/>
+  <text x="885" y="160" font-family="monospace" font-size="12" fill="#e1bee7">// C test harness</text>
+  <text x="885" y="178" font-family="monospace" font-size="12" fill="#bbdefb">extern int asm_add(int a, int b);</text>
+  <text x="885" y="196" font-family="monospace" font-size="12" fill="#a5d6a7">assert(asm_add(2,3) == 5);</text>
   <text x="880" y="238" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Use gdb / rr to step through instructions</text>
   <text x="880" y="258" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Valgrind for memory errors</text>
   <text x="880" y="278" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Perf / VTune for cycle-level profiling</text>
@@ -138,7 +150,7 @@
 
   <!-- Bottom row: when to use assembly -->
   <rect x="30" y="365" width="1220" height="245" rx="8" fill="url(#grad-surface)" filter="url(#shadow)"/>
-  <rect x="30" y="365" width="1220" height="40" rx="8" fill="#455a64"/>
+  <rect x="30" y="365" width="1220" height="40" rx="8" fill="#555555"/>
   <text x="640" y="391" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">When to Use Assembly vs. C -- Decision Framework</text>
 
   <!-- Prefer C -->

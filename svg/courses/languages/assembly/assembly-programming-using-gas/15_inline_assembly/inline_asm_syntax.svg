@@ -60,6 +60,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -79,33 +91,33 @@
   <text x="380" y="48" font-family="Arial, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">GCC Inline Assembly Syntax</text>
 
   <!-- Full syntax template -->
-  <rect x="50" y="76" width="660" height="220" rx="6" fill="#1e1e2e" filter="url(#shadow)"/>
-  <text x="65" y="102" font-family="monospace" font-size="14" fill="#cba6f7">__asm__ volatile</text>
-  <text x="65" y="122" font-family="monospace" font-size="14" fill="#cdd6f4">(</text>
-  <text x="80" y="142" font-family="monospace" font-size="14" fill="#a6e3a1">"assembly template"</text>
-  <text x="65" y="162" font-family="monospace" font-size="14" fill="#89dceb">: output operands</text>
-  <text x="65" y="182" font-family="monospace" font-size="14" fill="#f9e2af">: input operands</text>
-  <text x="65" y="202" font-family="monospace" font-size="14" fill="#f38ba8">: clobbers</text>
-  <text x="65" y="222" font-family="monospace" font-size="14" fill="#cdd6f4">);</text>
-  <text x="65" y="256" font-family="monospace" font-size="13" fill="#6c7086">/* Each section separated by colons */</text>
-  <text x="65" y="276" font-family="monospace" font-size="13" fill="#6c7086">/* volatile = prevent reordering/removal */</text>
+  <rect x="50" y="76" width="660" height="220" rx="6" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="65" y="102" font-family="monospace" font-size="14" fill="#e1bee7">__asm__ volatile</text>
+  <text x="65" y="122" font-family="monospace" font-size="14" fill="#bbdefb">(</text>
+  <text x="80" y="142" font-family="monospace" font-size="14" fill="#a5d6a7">"assembly template"</text>
+  <text x="65" y="162" font-family="monospace" font-size="14" fill="#90caf9">: output operands</text>
+  <text x="65" y="182" font-family="monospace" font-size="14" fill="#ffe0b2">: input operands</text>
+  <text x="65" y="202" font-family="monospace" font-size="14" fill="#ce93d8">: clobbers</text>
+  <text x="65" y="222" font-family="monospace" font-size="14" fill="#bbdefb">);</text>
+  <text x="65" y="256" font-family="monospace" font-size="13" fill="#777777">/* Each section separated by colons */</text>
+  <text x="65" y="276" font-family="monospace" font-size="13" fill="#777777">/* volatile = prevent reordering/removal */</text>
 
   <!-- Annotated real example -->
-  <rect x="50" y="310" width="660" height="260" rx="6" fill="#1e1e2e" filter="url(#shadow)"/>
-  <text x="380" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#cdd6f4" text-anchor="middle">Example: add two integers</text>
-  <text x="65" y="362" font-family="monospace" font-size="13" fill="#cba6f7">__asm__ volatile</text>
-  <text x="65" y="382" font-family="monospace" font-size="13" fill="#cdd6f4">(</text>
-  <text x="80" y="402" font-family="monospace" font-size="13" fill="#a6e3a1">"addl %2, %0\n\t"</text>
-  <text x="550" y="402" font-family="Arial, sans-serif" font-size="12" fill="#6c7086">template</text>
-  <text x="65" y="426" font-family="monospace" font-size="13" fill="#89dceb">: "=r"(result)</text>
-  <text x="550" y="426" font-family="Arial, sans-serif" font-size="12" fill="#89dceb">output</text>
-  <text x="65" y="450" font-family="monospace" font-size="13" fill="#f9e2af">: "0"(a), "r"(b)</text>
-  <text x="550" y="450" font-family="Arial, sans-serif" font-size="12" fill="#f9e2af">inputs</text>
-  <text x="65" y="474" font-family="monospace" font-size="13" fill="#f38ba8">: "cc"</text>
-  <text x="550" y="474" font-family="Arial, sans-serif" font-size="12" fill="#f38ba8">clobbers</text>
-  <text x="65" y="494" font-family="monospace" font-size="13" fill="#cdd6f4">);</text>
-  <text x="65" y="524" font-family="monospace" font-size="12" fill="#6c7086">/* %0=result, %1=a (same reg as result), %2=b */</text>
-  <text x="65" y="542" font-family="monospace" font-size="12" fill="#6c7086">/* "=r" write-only reg; "0" tied to operand 0 */</text>
+  <rect x="50" y="310" width="660" height="260" rx="6" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="380" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#bbdefb" text-anchor="middle">Example: add two integers</text>
+  <text x="65" y="362" font-family="monospace" font-size="13" fill="#e1bee7">__asm__ volatile</text>
+  <text x="65" y="382" font-family="monospace" font-size="13" fill="#bbdefb">(</text>
+  <text x="80" y="402" font-family="monospace" font-size="13" fill="#a5d6a7">"addl %2, %0\n\t"</text>
+  <text x="550" y="402" font-family="Arial, sans-serif" font-size="12" fill="#777777">template</text>
+  <text x="65" y="426" font-family="monospace" font-size="13" fill="#90caf9">: "=r"(result)</text>
+  <text x="550" y="426" font-family="Arial, sans-serif" font-size="12" fill="#90caf9">output</text>
+  <text x="65" y="450" font-family="monospace" font-size="13" fill="#ffe0b2">: "0"(a), "r"(b)</text>
+  <text x="550" y="450" font-family="Arial, sans-serif" font-size="12" fill="#ffe0b2">inputs</text>
+  <text x="65" y="474" font-family="monospace" font-size="13" fill="#ce93d8">: "cc"</text>
+  <text x="550" y="474" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8">clobbers</text>
+  <text x="65" y="494" font-family="monospace" font-size="13" fill="#bbdefb">);</text>
+  <text x="65" y="524" font-family="monospace" font-size="12" fill="#777777">/* %0=result, %1=a (same reg as result), %2=b */</text>
+  <text x="65" y="542" font-family="monospace" font-size="12" fill="#777777">/* "=r" write-only reg; "0" tied to operand 0 */</text>
 
   <!-- Right panel: constraints and clobbers -->
   <rect x="750" y="20" width="500" height="590" rx="8" fill="url(#grad-surface)" filter="url(#shadow)"/>

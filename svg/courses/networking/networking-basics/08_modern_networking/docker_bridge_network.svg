@@ -1,6 +1,6 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:text x="582.1189" y="37.2093" text-anchor="middle" font-size="23.8139" font-weight="bold" fill="#333">Docker Bridge Network</ns0:text>
-  <ns0:rect x="41.5799" y="59.5348" width="1081.078" height="580.4652" rx="7.4418" fill="#f8f9fa" stroke="#4a90e2" stroke-width="2.9767" />
+  <ns0:rect x="41.5799" y="59.5348" width="1081.078" height="580.4652" rx="7.4418" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.9767" />
   <ns0:text x="582.1189" y="96.7442" text-anchor="middle" font-size="20.8372" font-weight="bold" fill="#4a90e2">Host Machine</ns0:text>
   <ns0:rect x="103.9498" y="126.5116" width="270.2695" height="119.0698" rx="7.4418" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2325" />
   <ns0:text x="239.0845" y="163.7209" text-anchor="middle" font-size="17.8605" font-weight="bold" fill="#333">Container</ns0:text>
@@ -23,11 +23,71 @@
   <ns0:line x1="582.1189" y1="372.093" x2="582.1189" y2="424.1861" stroke="#333" stroke-width="2.9767" />
   <ns0:text x="706.8587" y="409.3024" font-size="14.8837" fill="#555">iptables NAT</ns0:text>
   <ns0:rect x="103.9498" y="424.1861" width="956.3382" height="66.9768" rx="7.4418" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9767" />
-  <ns0:text x="582.1189" y="453.9535" text-anchor="middle" font-size="19.3488" font-weight="bold" fill="#856404">eth0 (host interface)</ns0:text>
+  <ns0:text x="582.1189" y="453.9535" text-anchor="middle" font-size="19.3488" font-weight="bold" fill="#bf360c">eth0 (host interface)</ns0:text>
   <ns0:text x="582.1189" y="479.2559" text-anchor="middle" font-size="16.3721" fill="#555">10.0.0.5</ns0:text>
   <ns0:line x1="582.1189" y1="491.1628" x2="582.1189" y2="550.6977" stroke="#333" stroke-width="2.9767" marker-end="url(#arrowBlack)" />
   <ns0:text x="582.1189" y="580.4652" text-anchor="middle" font-size="17.8605" fill="#555">External Network</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowBlack" markerWidth="22.8571" markerHeight="11.4545" refX="20.5714" refY="5.7273" orient="auto">
       <ns0:polygon points="0,16.3636 8,0" fill="#333" />
     </ns0:marker>

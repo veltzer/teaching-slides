@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow-os" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#333" />
     </ns0:marker>
@@ -24,16 +84,16 @@
   <ns0:rect x="466.7806" y="451.2821" width="291.7379" height="90.2564" rx="11.6695" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.9174" />
   <ns0:text x="612.6496" y="489.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="#7b1fa2">foreachBatch</ns0:text>
   <ns0:text x="612.6496" y="520.2051" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">Custom batch processing</ns0:text>
-  <ns0:rect x="816.8661" y="73.8462" width="306.3248" height="90.2564" rx="8.7521" fill="#fafafa" stroke="#ccc" stroke-width="1.4587" />
+  <ns0:rect x="816.8661" y="73.8462" width="306.3248" height="90.2564" rx="8.7521" fill="#f9f9f9" stroke="#ccc" stroke-width="1.4587" />
   <ns0:text x="970.0285" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">Append mode only</ns0:text>
   <ns0:text x="970.0285" y="134.5641" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">Exactly-once with idempotent</ns0:text>
-  <ns0:rect x="816.8661" y="196.9231" width="306.3248" height="90.2564" rx="8.7521" fill="#fafafa" stroke="#ccc" stroke-width="1.4587" />
+  <ns0:rect x="816.8661" y="196.9231" width="306.3248" height="90.2564" rx="8.7521" fill="#f9f9f9" stroke="#ccc" stroke-width="1.4587" />
   <ns0:text x="970.0285" y="229.7436" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">Append mode, partitionBy</ns0:text>
   <ns0:text x="970.0285" y="257.641" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">ACID with Delta Lake</ns0:text>
-  <ns0:rect x="816.8661" y="328.2051" width="306.3248" height="90.2564" rx="8.7521" fill="#fafafa" stroke="#ccc" stroke-width="1.4587" />
+  <ns0:rect x="816.8661" y="328.2051" width="306.3248" height="90.2564" rx="8.7521" fill="#f9f9f9" stroke="#ccc" stroke-width="1.4587" />
   <ns0:text x="970.0285" y="361.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">All output modes</ns0:text>
   <ns0:text x="970.0285" y="388.9231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#888">Development/debug only</ns0:text>
-  <ns0:rect x="816.8661" y="451.2821" width="306.3248" height="90.2564" rx="8.7521" fill="#fafafa" stroke="#ccc" stroke-width="1.4587" />
+  <ns0:rect x="816.8661" y="451.2821" width="306.3248" height="90.2564" rx="8.7521" fill="#f9f9f9" stroke="#ccc" stroke-width="1.4587" />
   <ns0:text x="970.0285" y="484.1026" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">Write to any system</ns0:text>
   <ns0:text x="970.0285" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="#555">Make writes idempotent!</ns0:text>
   <ns0:rect x="72.9345" y="582.5641" width="1050.2564" height="57.4359" rx="8.7521" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4587" />

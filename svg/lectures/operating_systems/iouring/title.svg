@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#1a1a2e" />
       <ns0:stop offset="100%" style="stop-color:#16213e" />
@@ -7,30 +67,30 @@
   </ns0:defs>
   <ns0:rect width="1113.0435" height="626.087" fill="url(#bg)" />
   <ns0:g transform="translate(300,155)">
-    <ns0:circle cx="0" cy="0" r="97.3913" fill="none" stroke="#e94560" stroke-width="5.5652" />
-    <ns0:circle cx="0" cy="0" r="69.5652" fill="none" stroke="#e94560" stroke-width="2.7826" opacity="0.4" />
-    <ns0:text x="0" y="-7.8261" text-anchor="middle" fill="#e94560" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Submission</ns0:text>
-    <ns0:text x="0" y="18.7826" text-anchor="middle" fill="#e94560" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Queue</ns0:text>
-    <ns0:circle cx="0" cy="-109.5652" r="6.9565" fill="#e94560" />
-    <ns0:circle cx="83.4783" cy="-54.7826" r="6.9565" fill="#e94560" />
-    <ns0:circle cx="83.4783" cy="54.7826" r="6.9565" fill="#e94560" />
-    <ns0:circle cx="-83.4783" cy="-54.7826" r="6.9565" fill="#e94560" />
-    <ns0:circle cx="-83.4783" cy="54.7826" r="6.9565" fill="#e94560" />
+    <ns0:circle cx="0" cy="0" r="97.3913" fill="none" stroke="#dc3545" stroke-width="5.5652" />
+    <ns0:circle cx="0" cy="0" r="69.5652" fill="none" stroke="#dc3545" stroke-width="2.7826" opacity="0.4" />
+    <ns0:text x="0" y="-7.8261" text-anchor="middle" fill="#dc3545" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Submission</ns0:text>
+    <ns0:text x="0" y="18.7826" text-anchor="middle" fill="#dc3545" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Queue</ns0:text>
+    <ns0:circle cx="0" cy="-109.5652" r="6.9565" fill="#dc3545" />
+    <ns0:circle cx="83.4783" cy="-54.7826" r="6.9565" fill="#dc3545" />
+    <ns0:circle cx="83.4783" cy="54.7826" r="6.9565" fill="#dc3545" />
+    <ns0:circle cx="-83.4783" cy="-54.7826" r="6.9565" fill="#dc3545" />
+    <ns0:circle cx="-83.4783" cy="54.7826" r="6.9565" fill="#dc3545" />
   </ns0:g>
   <ns0:g transform="translate(530,155)">
-    <ns0:circle cx="0" cy="0" r="97.3913" fill="none" stroke="#00d2ff" stroke-width="5.5652" />
-    <ns0:circle cx="0" cy="0" r="69.5652" fill="none" stroke="#00d2ff" stroke-width="2.7826" opacity="0.4" />
-    <ns0:text x="0" y="-7.8261" text-anchor="middle" fill="#00d2ff" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Completion</ns0:text>
-    <ns0:text x="0" y="18.7826" text-anchor="middle" fill="#00d2ff" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Queue</ns0:text>
-    <ns0:circle cx="0" cy="-109.5652" r="6.9565" fill="#00d2ff" />
-    <ns0:circle cx="83.4783" cy="-54.7826" r="6.9565" fill="#00d2ff" />
-    <ns0:circle cx="83.4783" cy="54.7826" r="6.9565" fill="#00d2ff" />
-    <ns0:circle cx="-83.4783" cy="-54.7826" r="6.9565" fill="#00d2ff" />
+    <ns0:circle cx="0" cy="0" r="97.3913" fill="none" stroke="#2196f3" stroke-width="5.5652" />
+    <ns0:circle cx="0" cy="0" r="69.5652" fill="none" stroke="#2196f3" stroke-width="2.7826" opacity="0.4" />
+    <ns0:text x="0" y="-7.8261" text-anchor="middle" fill="#2196f3" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Completion</ns0:text>
+    <ns0:text x="0" y="18.7826" text-anchor="middle" fill="#2196f3" font-family="Arial,sans-serif" font-size="18.087" font-weight="bold">Queue</ns0:text>
+    <ns0:circle cx="0" cy="-109.5652" r="6.9565" fill="#2196f3" />
+    <ns0:circle cx="83.4783" cy="-54.7826" r="6.9565" fill="#2196f3" />
+    <ns0:circle cx="83.4783" cy="54.7826" r="6.9565" fill="#2196f3" />
+    <ns0:circle cx="-83.4783" cy="-54.7826" r="6.9565" fill="#2196f3" />
   </ns0:g>
   <ns0:path d="M 514.7826 242.6087 L 640 242.6087" stroke="#888" stroke-width="2.7826" stroke-dasharray="8.3478" />
   <ns0:text x="577.3913" y="226.9565" text-anchor="middle" fill="#666" font-family="Arial,sans-serif" font-size="13.913">shared</ns0:text>
-  <ns0:rect x="486.9565" y="93.913" width="180.8696" height="39.1304" rx="6.9565" fill="none" stroke="#533483" stroke-width="2.087" />
-  <ns0:text x="577.3913" y="120.5217" text-anchor="middle" fill="#533483" font-family="Arial,sans-serif" font-size="16.6957">Linux Kernel 5.1+</ns0:text>
+  <ns0:rect x="486.9565" y="93.913" width="180.8696" height="39.1304" rx="6.9565" fill="none" stroke="#4a148c" stroke-width="2.087" />
+  <ns0:text x="577.3913" y="120.5217" text-anchor="middle" fill="#4a148c" font-family="Arial,sans-serif" font-size="16.6957">Linux Kernel 5.1+</ns0:text>
   <ns0:text x="556.5217" y="469.5652" text-anchor="middle" fill="#eee" font-family="Arial,sans-serif" font-size="44.5217" font-weight="bold">io_uring</ns0:text>
   <ns0:text x="556.5217" y="524.3478" text-anchor="middle" fill="#888" font-family="Arial,sans-serif" font-size="22.2609">High-Performance Asynchronous I/O for Linux</ns0:text>
 </ns0:svg>

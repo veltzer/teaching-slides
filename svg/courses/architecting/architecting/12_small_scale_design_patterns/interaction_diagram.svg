@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="18.2857" markerHeight="13.2632" refX="18.2857" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 6.4,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,17 +76,17 @@
   <ns0:rect x="477.7465" y="149.444" width="135.2113" height="56.0415" rx="4.5071" fill="#d4edda" stroke="#28a745" stroke-width="1.8028" />
   <ns0:text x="545.3521" y="175.5967" text-anchor="middle" font-size="12.6197" font-weight="bold" fill="#28a745">Model</ns0:text>
   <ns0:text x="545.3521" y="194.2773" text-anchor="middle" font-size="10" fill="#666">Data &amp; Business Logic</ns0:text>
-  <ns0:line x1="261.4084" y1="84.0623" x2="162.2535" y2="147.576" stroke="#ffc107" stroke-width="1.3521" marker-end="url(#arrowhead)" />
+  <ns0:line x1="261.4084" y1="84.0623" x2="162.2535" y2="147.576" stroke="#ffc107" stroke-width="1.3521" marker-end="url(#arrow)" />
   <ns0:text x="193.8028" y="107.4129" font-size="10" fill="#ffc107">Input</ns0:text>
-  <ns0:line x1="207.3239" y1="168.1245" x2="277.6338" y2="168.1245" stroke="#4a90e2" stroke-width="1.3521" marker-end="url(#arrowhead)" />
+  <ns0:line x1="207.3239" y1="168.1245" x2="277.6338" y2="168.1245" stroke="#4a90e2" stroke-width="1.3521" marker-end="url(#arrow)" />
   <ns0:text x="243.3803" y="161.5864" font-size="10" fill="#4a90e2">User Events</ns0:text>
-  <ns0:line x1="414.6479" y1="172.7947" x2="475.9437" y2="172.7947" stroke="#9c27b0" stroke-width="1.3521" marker-end="url(#arrowhead)" />
+  <ns0:line x1="414.6479" y1="172.7947" x2="475.9437" y2="172.7947" stroke="#9c27b0" stroke-width="1.3521" marker-end="url(#arrow)" />
   <ns0:text x="446.1972" y="166.2565" font-size="10" fill="#9c27b0">Update</ns0:text>
-  <ns0:path d="M 477.7465 186.8051 Q 315.493 261.5271 139.7183 207.3536" stroke="#28a745" stroke-width="1.3521" fill="none" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 477.7465 186.8051 Q 315.493 261.5271 139.7183 207.3536" stroke="#28a745" stroke-width="1.3521" fill="none" marker-end="url(#arrow)" />
   <ns0:text x="315.493" y="250.3188" text-anchor="middle" font-size="10" fill="#28a745">Notify Changes</ns0:text>
-  <ns0:line x1="306.4789" y1="149.444" x2="189.2958" y2="149.444" stroke="#9c27b0" stroke-width="0.9014" stroke-dasharray="4.5071 2.7042" marker-end="url(#arrowhead)" />
+  <ns0:line x1="306.4789" y1="149.444" x2="189.2958" y2="149.444" stroke="#9c27b0" stroke-width="0.9014" stroke-dasharray="4.5071 2.7042" marker-end="url(#arrow)" />
   <ns0:text x="247.8873" y="144.7739" font-size="10" fill="#999">Select View</ns0:text>
-  <ns0:path d="M 612.9578 168.1245 Q 640 168.1245 640 186.8051 Q 640 205.4855 612.9578 205.4855" stroke="#28a745" stroke-width="0.9014" fill="none" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 612.9578 168.1245 Q 640 168.1245 640 186.8051 Q 640 205.4855 612.9578 205.4855" stroke="#28a745" stroke-width="0.9014" fill="none" marker-end="url(#arrow)" />
   <ns0:text x="644.5071" y="191.4752" font-size="10" fill="#28a745">Business</ns0:text>
   <ns0:text x="644.5071" y="202.6835" font-size="10" fill="#28a745">Logic</ns0:text>
   <ns0:text x="315.493" y="308.2283" text-anchor="middle" font-size="10" fill="#888" font-style="italic">Model-View-Controller: separates data, presentation, and input handling.</ns0:text>

@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1280 720">
-  <rect x="87.8593" y="86.4865" width="1054.3115" height="553.5135" fill="#FFF8E1" stroke="#FF6F00" stroke-width="5.1892" rx="17.2973" />
+  <rect x="87.8593" y="86.4865" width="1054.3115" height="553.5135" fill="#FFF8E1" stroke="#ef6c00" stroke-width="5.1892" rx="17.2973" />
   <text x="615.015" y="138.3784" font-family="Arial" font-size="31.1351" font-weight="bold" text-anchor="middle" fill="#E65100">Amazon VPC</text>
   <rect x="140.5748" y="172.973" width="439.2965" height="207.5676" fill="#E8F5E8" stroke="#4CAF50" stroke-width="3.4595" rx="8.6486" />
   <text x="360.223" y="216.2162" font-family="Arial" font-size="20.7568" font-weight="bold" text-anchor="middle" fill="#2E7D32">Private Subnet A</text>
@@ -22,9 +22,9 @@
   <circle cx="483.226" cy="320" r="13.8378" fill="#4CAF50" />
   <text x="483.226" y="326.9189" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">Pod4</text>
   <text x="483.226" y="345.9459" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="#333">10.0.1.23</text>
-  <rect x="650.1587" y="172.973" width="439.2965" height="207.5676" fill="#FCE4EC" stroke="#E91E63" stroke-width="3.4595" rx="8.6486" />
-  <text x="869.807" y="216.2162" font-family="Arial" font-size="20.7568" font-weight="bold" text-anchor="middle" fill="#880E4F">Private Subnet B</text>
-  <text x="869.807" y="242.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="#880E4F">10.0.2.0/24</text>
+  <rect x="650.1587" y="172.973" width="439.2965" height="207.5676" fill="#FCE4EC" stroke="#dc3545" stroke-width="3.4595" rx="8.6486" />
+  <text x="869.807" y="216.2162" font-family="Arial" font-size="20.7568" font-weight="bold" text-anchor="middle" fill="#c2185b">Private Subnet B</text>
+  <text x="869.807" y="242.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="#c2185b">10.0.2.0/24</text>
   <rect x="685.3025" y="268.1081" width="158.1467" height="86.4865" fill="#9C27B0" stroke="#7B1FA2" stroke-width="3.4595" rx="5.1892" />
   <text x="764.3758" y="302.7027" font-family="Arial" font-size="17.2973" font-weight="bold" text-anchor="middle" fill="white">Worker Node</text>
   <text x="764.3758" y="328.6486" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">10.0.2.10</text>
@@ -42,11 +42,68 @@
   <text x="702.8743" y="492.973" font-family="Arial" font-size="19.027" fill="#1565C0">✓ Network policies support</text>
   <text x="702.8743" y="518.9189" font-family="Arial" font-size="19.027" fill="#1565C0">✓ Multiple ENIs per node</text>
   <text x="702.8743" y="544.8649" font-family="Arial" font-size="19.027" fill="#1565C0">✓ SNAT/Source NAT control</text>
-  <line x1="527.1557" y1="311.3514" x2="650.1587" y2="311.3514" stroke="#FF6F00" stroke-width="5.1892" marker-end="url(#arrow)" />
+  <line x1="527.1557" y1="311.3514" x2="650.1587" y2="311.3514" stroke="#ef6c00" stroke-width="5.1892" marker-end="url(#arrow)" />
   <text x="588.6572" y="302.7027" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="#E65100">Pod-to-Pod</text>
   <defs>
-    <marker id="arrow" markerWidth="18.2857" markerHeight="12.6" refX="16.4571" refY="6.3" orient="auto">
-      <polygon points="0,18 6.4,0" fill="#FF6F00" />
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </defs>
 </svg>

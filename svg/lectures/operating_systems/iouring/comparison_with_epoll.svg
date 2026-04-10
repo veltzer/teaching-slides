@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -9,25 +69,25 @@
   <ns0:text x="189.1253" y="153.1915" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695" font-weight="bold" fill="#333">epoll</ns0:text>
   <ns0:rect x="423.6407" y="93.617" width="302.6005" height="61.2766" rx="7.565" fill="#fff3cd" stroke="#ffc107" stroke-width="3.026" />
   <ns0:text x="574.9409" y="132.766" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.156" fill="#333">Network I/O Only</ns0:text>
-  <ns0:line x1="302.6005" y1="127.6596" x2="416.0757" y2="124.2553" stroke="#4a90e2" stroke-width="3.026" marker-end="url(#arrowhead)" />
+  <ns0:line x1="302.6005" y1="127.6596" x2="416.0757" y2="124.2553" stroke="#4a90e2" stroke-width="3.026" marker-end="url(#arrow)" />
   <ns0:rect x="423.6407" y="178.7234" width="302.6005" height="61.2766" rx="7.565" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.026" />
   <ns0:text x="574.9409" y="217.8723" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.156" fill="#333">Level/Edge Triggered</ns0:text>
-  <ns0:line x1="302.6005" y1="144.6809" x2="416.0757" y2="200.8511" stroke="#4a90e2" stroke-width="3.026" marker-end="url(#arrowhead)" />
+  <ns0:line x1="302.6005" y1="144.6809" x2="416.0757" y2="200.8511" stroke="#4a90e2" stroke-width="3.026" marker-end="url(#arrow)" />
   <ns0:rect x="423.6407" y="263.8298" width="302.6005" height="61.2766" rx="7.565" fill="#f8d7da" stroke="#dc3545" stroke-width="3.026" />
   <ns0:text x="574.9409" y="302.9787" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.156" fill="#333">System Call Per Operation</ns0:text>
-  <ns0:line x1="302.6005" y1="161.7021" x2="416.0757" y2="285.9574" stroke="#4a90e2" stroke-width="3.026" marker-end="url(#arrowhead)" />
+  <ns0:line x1="302.6005" y1="161.7021" x2="416.0757" y2="285.9574" stroke="#4a90e2" stroke-width="3.026" marker-end="url(#arrow)" />
   <ns0:line x1="75.6501" y1="374.4681" x2="1134.7518" y2="374.4681" stroke="#ccc" stroke-width="1.513" stroke-dasharray="7.565 7.565" />
   <ns0:rect x="75.6501" y="425.5319" width="226.9504" height="85.1064" rx="7.565" fill="#d4edda" stroke="#28a745" stroke-width="3.026" />
   <ns0:text x="189.1253" y="476.5957" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695" font-weight="bold" fill="#333">io_uring</ns0:text>
   <ns0:rect x="423.6407" y="408.5106" width="302.6005" height="61.2766" rx="7.565" fill="#d4edda" stroke="#28a745" stroke-width="3.026" />
   <ns0:text x="574.9409" y="447.6596" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.156" fill="#333">All I/O Types (Universal)</ns0:text>
-  <ns0:line x1="302.6005" y1="451.0638" x2="416.0757" y2="439.1489" stroke="#28a745" stroke-width="3.026" marker-end="url(#arrowhead)" />
+  <ns0:line x1="302.6005" y1="451.0638" x2="416.0757" y2="439.1489" stroke="#28a745" stroke-width="3.026" marker-end="url(#arrow)" />
   <ns0:rect x="423.6407" y="493.617" width="302.6005" height="61.2766" rx="7.565" fill="#d4edda" stroke="#28a745" stroke-width="3.026" />
   <ns0:text x="574.9409" y="532.766" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.156" fill="#333">Ring Buffer (Efficient)</ns0:text>
-  <ns0:line x1="302.6005" y1="468.0851" x2="416.0757" y2="519.1489" stroke="#28a745" stroke-width="3.026" marker-end="url(#arrowhead)" />
+  <ns0:line x1="302.6005" y1="468.0851" x2="416.0757" y2="519.1489" stroke="#28a745" stroke-width="3.026" marker-end="url(#arrow)" />
   <ns0:rect x="423.6407" y="578.7234" width="302.6005" height="61.2766" rx="7.565" fill="#d4edda" stroke="#28a745" stroke-width="3.026" />
   <ns0:text x="574.9409" y="617.8723" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.156" fill="#333">Batching (High Perf)</ns0:text>
-  <ns0:line x1="302.6005" y1="485.1064" x2="416.0757" y2="604.2553" stroke="#28a745" stroke-width="3.026" marker-end="url(#arrowhead)" />
+  <ns0:line x1="302.6005" y1="485.1064" x2="416.0757" y2="604.2553" stroke="#28a745" stroke-width="3.026" marker-end="url(#arrow)" />
   <ns0:text x="801.8913" y="132.766" font-family="Arial, sans-serif" font-size="18.156" fill="#ffc107" font-weight="bold">Limited Scope</ns0:text>
   <ns0:text x="801.8913" y="217.8723" font-family="Arial, sans-serif" font-size="18.156" fill="#4a90e2" font-weight="bold">Flexibility</ns0:text>
   <ns0:text x="801.8913" y="302.9787" font-family="Arial, sans-serif" font-size="18.156" fill="#dc3545" font-weight="bold">Overhead</ns0:text>

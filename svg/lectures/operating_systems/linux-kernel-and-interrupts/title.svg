@@ -1,27 +1,88 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:rect x="455.1111" y="192" width="227.5556" height="256" rx="17.0667" fill="#0f3460" stroke="#e94560" stroke-width="4.2667" />
-  <ns0:text x="568.8889" y="336" text-anchor="middle" font-family="monospace" font-size="39.8222" font-weight="bold" fill="#e94560">CPU</ns0:text>
-  <ns0:line x1="113.7778" y1="256" x2="440.8889" y2="288" stroke="#16c79a" stroke-width="3.5556" stroke-dasharray="11.3778 5.6889" />
-  <ns0:line x1="113.7778" y1="320" x2="440.8889" y2="320" stroke="#16c79a" stroke-width="3.5556" stroke-dasharray="11.3778 5.6889" />
-  <ns0:line x1="113.7778" y1="384" x2="440.8889" y2="352" stroke="#16c79a" stroke-width="3.5556" stroke-dasharray="11.3778 5.6889" />
-  <ns0:text x="56.8889" y="264" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#16c79a">IRQ0</ns0:text>
-  <ns0:text x="56.8889" y="328" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#16c79a">IRQ1</ns0:text>
-  <ns0:text x="56.8889" y="392" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#16c79a">IRQ2</ns0:text>
-  <ns0:polygon points="696.8889,240 753.7778,296 725.3333,296 768,368 711.1111,312 739.5556,312" fill="#e94560" opacity="0.9" />
-  <ns0:polygon points="810.6667,224 867.5556,280 839.1111,280 881.7778,352 824.8889,296 853.3333,296" fill="#e94560" opacity="0.7" />
-  <ns0:circle cx="967.1111" cy="320" r="64" fill="#0f3460" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:text x="967.1111" y="312" text-anchor="middle" font-family="serif" font-size="56.8889" fill="#16c79a">🐧</ns0:text>
-  <ns0:rect x="490.6667" y="172.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="526.2222" y="172.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="561.7778" y="172.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="597.3333" y="172.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="632.8889" y="172.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="490.6667" y="444.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="526.2222" y="444.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="561.7778" y="444.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="597.3333" y="444.8" width="17.0667" height="22.4" fill="#e94560" />
-  <ns0:rect x="632.8889" y="444.8" width="17.0667" height="22.4" fill="#e94560" />
+  <ns0:rect x="455.1111" y="192" width="227.5556" height="256" rx="17.0667" fill="#1a237e" stroke="#dc3545" stroke-width="4.2667" />
+  <ns0:text x="568.8889" y="336" text-anchor="middle" font-family="monospace" font-size="39.8222" font-weight="bold" fill="#dc3545">CPU</ns0:text>
+  <ns0:line x1="113.7778" y1="256" x2="440.8889" y2="288" stroke="#2ecc71" stroke-width="3.5556" stroke-dasharray="11.3778 5.6889" />
+  <ns0:line x1="113.7778" y1="320" x2="440.8889" y2="320" stroke="#2ecc71" stroke-width="3.5556" stroke-dasharray="11.3778 5.6889" />
+  <ns0:line x1="113.7778" y1="384" x2="440.8889" y2="352" stroke="#2ecc71" stroke-width="3.5556" stroke-dasharray="11.3778 5.6889" />
+  <ns0:text x="56.8889" y="264" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#2ecc71">IRQ0</ns0:text>
+  <ns0:text x="56.8889" y="328" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#2ecc71">IRQ1</ns0:text>
+  <ns0:text x="56.8889" y="392" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#2ecc71">IRQ2</ns0:text>
+  <ns0:polygon points="696.8889,240 753.7778,296 725.3333,296 768,368 711.1111,312 739.5556,312" fill="#dc3545" opacity="0.9" />
+  <ns0:polygon points="810.6667,224 867.5556,280 839.1111,280 881.7778,352 824.8889,296 853.3333,296" fill="#dc3545" opacity="0.7" />
+  <ns0:circle cx="967.1111" cy="320" r="64" fill="#1a237e" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:text x="967.1111" y="312" text-anchor="middle" font-family="serif" font-size="56.8889" fill="#2ecc71">🐧</ns0:text>
+  <ns0:rect x="490.6667" y="172.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="526.2222" y="172.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="561.7778" y="172.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="597.3333" y="172.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="632.8889" y="172.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="490.6667" y="444.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="526.2222" y="444.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="561.7778" y="444.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="597.3333" y="444.8" width="17.0667" height="22.4" fill="#dc3545" />
+  <ns0:rect x="632.8889" y="444.8" width="17.0667" height="22.4" fill="#dc3545" />
   <ns0:text x="568.8889" y="80" text-anchor="middle" font-family="sans-serif" font-size="36.9778" font-weight="bold" fill="#eee">Linux Kernel &amp; Interrupts</ns0:text>
   <ns0:text x="568.8889" y="592" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#888">interrupt handling | IRQ mapping | driver development</ns0:text>
 </ns0:svg>

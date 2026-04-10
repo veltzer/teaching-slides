@@ -1,13 +1,74 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="1.7298" y="2.1994" width="1138.2279" height="637.8006" rx="6.9193" fill="#fff" stroke="#333" stroke-width="2.5948" />
   <ns0:rect x="1.7298" y="2.1994" width="1138.2279" height="74.7766" rx="6.9193" fill="#e3f2fd" stroke="#333" stroke-width="2.5948" />
   <ns0:text x="570.8438" y="50.5842" font-size="25.9474" font-weight="bold" fill="#222" text-anchor="middle">PCI DSS 4.0 Requirements (effective March 2025)</ns0:text>
-  <ns0:rect x="24.2176" y="96.7698" width="1089.7927" height="193.5395" rx="6.9193" fill="#f0f4f8" stroke="#555" stroke-width="1.7298" />
+  <ns0:rect x="24.2176" y="96.7698" width="1089.7927" height="193.5395" rx="6.9193" fill="#f5f5f5" stroke="#555" stroke-width="1.7298" />
   <ns0:text x="44.9755" y="140.756" font-size="22.4878" font-weight="bold" fill="#1565c0">Requirement 6.4.3 — All payment page scripts must be:</ns0:text>
   <ns0:text x="44.9755" y="184.7423" font-size="22.4878" fill="#333">• Inventoried and authorized</ns0:text>
   <ns0:text x="44.9755" y="224.3298" font-size="22.4878" fill="#333">• Integrity verified (SRI or equivalent)</ns0:text>
   <ns0:text x="44.9755" y="263.9175" font-size="22.4878" fill="#333">• Script behavior documented and justified</ns0:text>
-  <ns0:rect x="24.2176" y="312.3024" width="1089.7927" height="233.1272" rx="6.9193" fill="#f0f4f8" stroke="#555" stroke-width="1.7298" />
+  <ns0:rect x="24.2176" y="312.3024" width="1089.7927" height="233.1272" rx="6.9193" fill="#f5f5f5" stroke="#555" stroke-width="1.7298" />
   <ns0:text x="44.9755" y="356.2887" font-size="22.4878" font-weight="bold" fill="#1565c0">Requirement 11.6.1 — Implement change/tamper detection for:</ns0:text>
   <ns0:text x="44.9755" y="400.2749" font-size="22.4878" fill="#333">• HTTP headers (CSP, etc.)</ns0:text>
   <ns0:text x="44.9755" y="439.8625" font-size="22.4878" fill="#333">• Payment page script content</ns0:text>

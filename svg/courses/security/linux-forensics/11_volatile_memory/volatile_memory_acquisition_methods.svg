@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="17.7778" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
-      <ns0:polygon points="0,18.9474 6.2222,0" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="600.4938" y="53.3333" text-anchor="middle" font-size="26.6886" font-weight="bold" fill="#333">Volatile Memory Acquisition Methods</ns0:text>
   <ns0:rect x="433.6899" y="88.8888" width="333.6077" height="80" rx="8.3402" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3361" />
@@ -19,18 +76,18 @@
   <ns0:text x="600.4938" y="325.3333" text-anchor="middle" font-size="16.6804" fill="#4a90e2">Easy but incomplete</ns0:text>
   <ns0:line x1="600.4938" y1="231.1111" x2="600.4938" y2="174.2222" stroke="#4a90e2" stroke-width="2.5021" marker-end="url(#arrow)" />
   <ns0:rect x="817.3388" y="231.1111" width="333.6077" height="106.6667" rx="8.3402" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5021" />
-  <ns0:text x="984.1426" y="272" text-anchor="middle" font-size="18.3485" font-weight="bold" fill="#e6a800">/dev/mem</ns0:text>
+  <ns0:text x="984.1426" y="272" text-anchor="middle" font-size="18.3485" font-weight="bold" fill="#f39c12">/dev/mem</ns0:text>
   <ns0:text x="984.1426" y="302.2222" text-anchor="middle" font-size="16.6804" fill="#666">Physical memory device</ns0:text>
-  <ns0:text x="984.1426" y="325.3333" text-anchor="middle" font-size="16.6804" fill="#e6a800">Restricted on modern kernels</ns0:text>
+  <ns0:text x="984.1426" y="325.3333" text-anchor="middle" font-size="16.6804" fill="#f39c12">Restricted on modern kernels</ns0:text>
   <ns0:line x1="817.3388" y1="257.7777" x2="767.2976" y2="168.8889" stroke="#ffc107" stroke-width="2.5021" marker-end="url(#arrow)" />
   <ns0:rect x="50.0411" y="391.1111" width="333.6077" height="106.6667" rx="8.3402" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5021" />
   <ns0:text x="216.845" y="432" text-anchor="middle" font-size="18.3485" font-weight="bold" fill="#dc3545">Crash Dump</ns0:text>
   <ns0:text x="216.845" y="462.2222" text-anchor="middle" font-size="16.6804" fill="#666">Forced kernel crash</ns0:text>
   <ns0:text x="216.845" y="485.3333" text-anchor="middle" font-size="16.6804" fill="#dc3545">Disruptive, limited</ns0:text>
   <ns0:rect x="433.6899" y="391.1111" width="333.6077" height="106.6667" rx="8.3402" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5021" />
-  <ns0:text x="600.4938" y="432" text-anchor="middle" font-size="18.3485" font-weight="bold" fill="#e6a800">Firewire / DMA</ns0:text>
+  <ns0:text x="600.4938" y="432" text-anchor="middle" font-size="18.3485" font-weight="bold" fill="#f39c12">Firewire / DMA</ns0:text>
   <ns0:text x="600.4938" y="462.2222" text-anchor="middle" font-size="16.6804" fill="#666">Hardware-based access</ns0:text>
-  <ns0:text x="600.4938" y="485.3333" text-anchor="middle" font-size="16.6804" fill="#e6a800">No OS involvement</ns0:text>
+  <ns0:text x="600.4938" y="485.3333" text-anchor="middle" font-size="16.6804" fill="#f39c12">No OS involvement</ns0:text>
   <ns0:rect x="817.3388" y="391.1111" width="333.6077" height="106.6667" rx="8.3402" fill="#d4edda" stroke="#28a745" stroke-width="2.5021" />
   <ns0:text x="984.1426" y="432" text-anchor="middle" font-size="18.3485" font-weight="bold" fill="#28a745">Hypervisor Snapshot</ns0:text>
   <ns0:text x="984.1426" y="462.2222" text-anchor="middle" font-size="16.6804" fill="#666">VM memory snapshot</ns0:text>

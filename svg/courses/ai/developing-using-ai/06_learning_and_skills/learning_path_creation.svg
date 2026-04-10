@@ -3,33 +3,93 @@
   <ns0:rect x="60.3774" y="106.9811" width="144.9057" height="91.6981" fill="#3498DB" rx="6.0377" />
   <ns0:text x="132.8302" y="160.4717" text-anchor="middle" fill="white" font-size="14.4906">Month 1</ns0:text>
   <ns0:text x="132.8302" y="183.3962" text-anchor="middle" fill="white" font-size="12.0755">TypeScript</ns0:text>
-  <ns0:path d="M 205.283 152.8302 L 253.5849 152.8302" stroke="#34495E" stroke-width="2.4151" marker-end="url(#p1)" />
+  <ns0:path d="M 205.283 152.8302 L 253.5849 152.8302" stroke="#555555" stroke-width="2.4151" marker-end="url(#p1)" />
   <ns0:rect x="253.5849" y="106.9811" width="144.9057" height="91.6981" fill="#2ECC71" rx="6.0377" />
   <ns0:text x="326.0377" y="160.4717" text-anchor="middle" fill="white" font-size="14.4906">Month 2</ns0:text>
   <ns0:text x="326.0377" y="183.3962" text-anchor="middle" fill="white" font-size="12.0755">Testing</ns0:text>
-  <ns0:path d="M 398.4906 152.8302 L 446.7925 152.8302" stroke="#34495E" stroke-width="2.4151" marker-end="url(#p2)" />
+  <ns0:path d="M 398.4906 152.8302 L 446.7925 152.8302" stroke="#555555" stroke-width="2.4151" marker-end="url(#p2)" />
   <ns0:rect x="446.7925" y="106.9811" width="144.9057" height="91.6981" fill="#E74C3C" rx="6.0377" />
   <ns0:text x="519.2453" y="160.4717" text-anchor="middle" fill="white" font-size="14.4906">Month 3</ns0:text>
   <ns0:text x="519.2453" y="183.3962" text-anchor="middle" fill="white" font-size="12.0755">Docker</ns0:text>
-  <ns0:path d="M 591.6981 152.8302 L 640 152.8302" stroke="#34495E" stroke-width="2.4151" marker-end="url(#p3)" />
+  <ns0:path d="M 591.6981 152.8302 L 640 152.8302" stroke="#555555" stroke-width="2.4151" marker-end="url(#p3)" />
   <ns0:rect x="640" y="106.9811" width="144.9057" height="91.6981" fill="#F39C12" rx="6.0377" />
   <ns0:text x="712.4528" y="160.4717" text-anchor="middle" fill="white" font-size="14.4906">Month 4</ns0:text>
   <ns0:text x="712.4528" y="183.3962" text-anchor="middle" fill="white" font-size="12.0755">CI/CD</ns0:text>
   <ns0:rect x="156.9811" y="244.5283" width="144.9057" height="91.6981" fill="#9B59B6" rx="6.0377" />
   <ns0:text x="229.434" y="298.0189" text-anchor="middle" fill="white" font-size="14.4906">Month 5</ns0:text>
   <ns0:text x="229.434" y="320.9434" text-anchor="middle" fill="white" font-size="12.0755">Microservices</ns0:text>
-  <ns0:rect x="350.1887" y="244.5283" width="144.9057" height="91.6981" fill="#1ABC9C" rx="6.0377" />
+  <ns0:rect x="350.1887" y="244.5283" width="144.9057" height="91.6981" fill="#2ecc71" rx="6.0377" />
   <ns0:text x="422.6415" y="298.0189" text-anchor="middle" fill="white" font-size="14.4906">Month 6</ns0:text>
   <ns0:text x="422.6415" y="320.9434" text-anchor="middle" fill="white" font-size="12.0755">Project</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="p1" markerWidth="25.6" markerHeight="32.4" refX="12.8" refY="16.2" orient="auto">
-      <ns0:polygon points="0,32.4 12.8,0" fill="#34495E" />
+      <ns0:polygon points="0,32.4 12.8,0" fill="#555555" />
     </ns0:marker>
     <ns0:marker id="p2" markerWidth="25.6" markerHeight="32.4" refX="12.8" refY="16.2" orient="auto">
-      <ns0:polygon points="0,32.4 12.8,0" fill="#34495E" />
+      <ns0:polygon points="0,32.4 12.8,0" fill="#555555" />
     </ns0:marker>
     <ns0:marker id="p3" markerWidth="25.6" markerHeight="32.4" refX="12.8" refY="16.2" orient="auto">
-      <ns0:polygon points="0,32.4 12.8,0" fill="#34495E" />
+      <ns0:polygon points="0,32.4 12.8,0" fill="#555555" />
     </ns0:marker>
   </ns0:defs>
 </ns0:svg>

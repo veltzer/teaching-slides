@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,38 +76,38 @@
   <ns0:text x="159.636" y="323.9507" text-anchor="middle" font-size="16.6577" fill="#333">Slave 1</ns0:text>
   <ns0:rect x="347.0346" y="284.4444" width="152.6953" height="63.2099" rx="6.9407" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7763" />
   <ns0:text x="423.3822" y="323.9507" text-anchor="middle" font-size="16.6577" fill="#333">Slave 2</ns0:text>
-  <ns0:line x1="249.8649" y1="205.4321" x2="180.458" y2="281.284" stroke="#4a90e2" stroke-width="2.0822" marker-end="url(#arrowhead)" />
+  <ns0:line x1="249.8649" y1="205.4321" x2="180.458" y2="281.284" stroke="#4a90e2" stroke-width="2.0822" marker-end="url(#arrow)" />
   <ns0:text x="180.458" y="244.9383" font-size="13.8814" fill="#4a90e2">Write</ns0:text>
-  <ns0:line x1="333.1533" y1="205.4321" x2="402.5602" y2="281.284" stroke="#4a90e2" stroke-width="2.0822" marker-end="url(#arrowhead)" />
+  <ns0:line x1="333.1533" y1="205.4321" x2="402.5602" y2="281.284" stroke="#4a90e2" stroke-width="2.0822" marker-end="url(#arrow)" />
   <ns0:text x="388.6788" y="244.9383" font-size="13.8814" fill="#4a90e2">Write</ns0:text>
   <ns0:rect x="76.3476" y="410.8642" width="97.1697" height="47.4074" rx="6.9407" fill="#d4edda" stroke="#28a745" stroke-width="2.0822" />
   <ns0:text x="124.9325" y="442.4691" text-anchor="middle" font-size="13.8814" fill="#333">Client</ns0:text>
-  <ns0:line x1="124.9325" y1="410.8642" x2="138.8138" y2="350.8148" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="124.9325" y1="410.8642" x2="138.8138" y2="350.8148" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrow-ok)" />
   <ns0:text x="83.2883" y="391.9013" font-size="13.8814" fill="#28a745">Read</ns0:text>
   <ns0:rect x="340.094" y="410.8642" width="97.1697" height="47.4074" rx="6.9407" fill="#d4edda" stroke="#28a745" stroke-width="2.0822" />
   <ns0:text x="388.6788" y="442.4691" text-anchor="middle" font-size="13.8814" fill="#333">Client</ns0:text>
-  <ns0:line x1="388.6788" y1="410.8642" x2="402.5602" y2="350.8148" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="388.6788" y1="410.8642" x2="402.5602" y2="350.8148" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrow-ok)" />
   <ns0:text x="353.9753" y="391.9013" font-size="13.8814" fill="#28a745">Read</ns0:text>
   <ns0:rect x="208.2208" y="410.8642" width="97.1697" height="47.4074" rx="6.9407" fill="#d4edda" stroke="#28a745" stroke-width="2.0822" />
   <ns0:text x="256.8056" y="442.4691" text-anchor="middle" font-size="13.8814" fill="#333">Client</ns0:text>
-  <ns0:line x1="256.8056" y1="410.8642" x2="277.6277" y2="208.5926" stroke="#ffc107" stroke-width="2.0822" marker-end="url(#arrowhead)" />
-  <ns0:text x="229.0429" y="316.0493" font-size="13.8814" fill="#996600">Write</ns0:text>
+  <ns0:line x1="256.8056" y1="410.8642" x2="277.6277" y2="208.5926" stroke="#ffc107" stroke-width="2.0822" marker-end="url(#arrow)" />
+  <ns0:text x="229.0429" y="316.0493" font-size="13.8814" fill="#bf360c">Write</ns0:text>
   <ns0:rect x="624.6624" y="71.1112" width="513.6113" height="489.8766" rx="6.9407" fill="none" stroke="#28a745" stroke-width="2.7763" stroke-dasharray="11.1051 5.5525" />
   <ns0:text x="881.4679" y="107.4568" text-anchor="middle" font-size="18.0458" font-weight="bold" fill="#28a745">Master-Master Replication</ns0:text>
   <ns0:rect x="680.1879" y="173.8271" width="166.5766" height="71.1112" rx="6.9407" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7763" />
   <ns0:text x="763.4762" y="216.4938" text-anchor="middle" font-size="16.6577" font-weight="bold" fill="#333">Master 1</ns0:text>
   <ns0:rect x="943.9342" y="173.8271" width="166.5766" height="71.1112" rx="6.9407" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7763" />
   <ns0:text x="1027.2224" y="216.4938" text-anchor="middle" font-size="16.6577" font-weight="bold" fill="#333">Master 2</ns0:text>
-  <ns0:line x1="846.7644" y1="197.5309" x2="941.1579" y2="197.5309" stroke="#4a90e2" stroke-width="2.7763" marker-end="url(#arrowhead)" />
-  <ns0:line x1="941.1579" y1="221.2346" x2="849.5408" y2="221.2346" stroke="#4a90e2" stroke-width="2.7763" marker-end="url(#arrowhead)" />
+  <ns0:line x1="846.7644" y1="197.5309" x2="941.1579" y2="197.5309" stroke="#4a90e2" stroke-width="2.7763" marker-end="url(#arrow)" />
+  <ns0:line x1="941.1579" y1="221.2346" x2="849.5408" y2="221.2346" stroke="#4a90e2" stroke-width="2.7763" marker-end="url(#arrow)" />
   <ns0:text x="895.3493" y="186.4691" text-anchor="middle" font-size="13.8814" fill="#4a90e2">Sync</ns0:text>
   <ns0:rect x="701.01" y="331.8519" width="111.0511" height="47.4074" rx="6.9407" fill="#d4edda" stroke="#28a745" stroke-width="2.0822" />
   <ns0:text x="756.5355" y="363.4568" text-anchor="middle" font-size="13.8814" fill="#333">Client</ns0:text>
-  <ns0:line x1="756.5355" y1="331.8519" x2="756.5355" y2="248.0988" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="756.5355" y1="331.8519" x2="756.5355" y2="248.0988" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrow-ok)" />
   <ns0:text x="777.3575" y="300.2469" font-size="13.8814" fill="#28a745">R/W</ns0:text>
   <ns0:rect x="971.6969" y="331.8519" width="111.0511" height="47.4074" rx="6.9407" fill="#d4edda" stroke="#28a745" stroke-width="2.0822" />
   <ns0:text x="1027.2224" y="363.4568" text-anchor="middle" font-size="13.8814" fill="#333">Client</ns0:text>
-  <ns0:line x1="1027.2224" y1="331.8519" x2="1027.2224" y2="248.0988" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="1027.2224" y1="331.8519" x2="1027.2224" y2="248.0988" stroke="#28a745" stroke-width="2.0822" marker-end="url(#arrow-ok)" />
   <ns0:text x="1048.0446" y="300.2469" font-size="13.8814" fill="#28a745">R/W</ns0:text>
   <ns0:rect x="41.6442" y="584.6914" width="1096.6294" height="55.3086" rx="6.9407" fill="#f5f5f5" stroke="#ddd" stroke-width="1.3882" />
   <ns0:text x="589.9589" y="621.0371" text-anchor="middle" font-size="15.2695" fill="#555">Master-Slave: reads scale, writes go to master. Master-Master: both nodes accept reads and writes with bi-directional sync.</ns0:text>

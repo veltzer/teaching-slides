@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -8,7 +68,7 @@
     </ns0:marker>
   </ns0:defs>
   <ns0:text x="600.335" y="40.201" text-anchor="middle" font-size="24.0134" font-weight="bold" fill="#333">Amazon SQS Architecture</ns0:text>
-  <ns0:rect x="30.0168" y="64.3216" width="1050.5863" height="482.4121" rx="15.0084" fill="#fafafa" stroke="#ccc" stroke-width="1.5008" stroke-dasharray="12.0067 6.0034" />
+  <ns0:rect x="30.0168" y="64.3216" width="1050.5863" height="482.4121" rx="15.0084" fill="#f9f9f9" stroke="#ccc" stroke-width="1.5008" stroke-dasharray="12.0067 6.0034" />
   <ns0:text x="75.0419" y="96.4824" font-size="16.5092" fill="#999">AWS Region</ns0:text>
   <ns0:rect x="60.0335" y="209.0452" width="195.1089" height="88.4422" rx="7.5042" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2513" />
   <ns0:text x="157.5879" y="244.4221" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="#333">Producer</ns0:text>
@@ -27,19 +87,19 @@
   <ns0:text x="502.7806" y="442.2111" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="#dc3545">DLQ (Standard)</ns0:text>
   <ns0:rect x="675.3769" y="402.01" width="225.1256" height="64.3216" rx="7.5042" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2513" />
   <ns0:text x="787.9397" y="442.2111" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="#dc3545">DLQ (FIFO)</ns0:text>
-  <ns0:line x1="255.1424" y1="233.1658" x2="387.2161" y2="164.0201" stroke="#4a90e2" stroke-width="2.2513" marker-end="url(#arrowhead)" />
-  <ns0:line x1="255.1424" y1="265.3266" x2="387.2161" y2="292.6633" stroke="#4a90e2" stroke-width="2.2513" marker-end="url(#arrowhead)" />
-  <ns0:line x1="615.3434" y1="152.7638" x2="762.4255" y2="136.6834" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrowhead)" />
-  <ns0:line x1="615.3434" y1="168.8442" x2="762.4255" y2="201.005" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrowhead)" />
-  <ns0:line x1="615.3434" y1="292.6633" x2="762.4255" y2="297.4875" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrowhead)" />
-  <ns0:line x1="480.268" y1="201.005" x2="480.268" y2="398.794" stroke="#dc3545" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrowhead-dash)" />
+  <ns0:line x1="255.1424" y1="233.1658" x2="387.2161" y2="164.0201" stroke="#4a90e2" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="255.1424" y1="265.3266" x2="387.2161" y2="292.6633" stroke="#4a90e2" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="615.3434" y1="152.7638" x2="762.4255" y2="136.6834" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="615.3434" y1="168.8442" x2="762.4255" y2="201.005" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="615.3434" y1="292.6633" x2="762.4255" y2="297.4875" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="480.268" y1="201.005" x2="480.268" y2="398.794" stroke="#dc3545" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
   <ns0:text x="420.2345" y="321.608" font-size="15.0084" fill="#dc3545">Failed</ns0:text>
-  <ns0:line x1="555.3099" y1="329.6483" x2="765.4272" y2="398.794" stroke="#dc3545" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrowhead-dash)" />
+  <ns0:line x1="555.3099" y1="329.6483" x2="765.4272" y2="398.794" stroke="#dc3545" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
   <ns0:text x="675.3769" y="361.8091" font-size="15.0084" fill="#dc3545">Failed</ns0:text>
   <ns0:rect x="60.0335" y="466.3317" width="210.1173" height="64.3216" rx="7.5042" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2513" />
   <ns0:text x="165.0921" y="498.4925" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="#333">CloudWatch</ns0:text>
   <ns0:text x="165.0921" y="522.6131" text-anchor="middle" font-size="15.0084" fill="#666">Monitoring</ns0:text>
-  <ns0:line x1="270.1508" y1="498.4925" x2="387.2161" y2="434.1708" stroke="#999" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrowhead-dash)" />
+  <ns0:line x1="270.1508" y1="498.4925" x2="387.2161" y2="434.1708" stroke="#999" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
   <ns0:text x="600.335" y="611.0553" text-anchor="middle" font-size="16.5092" fill="#888" font-style="italic">Standard queues offer best-effort ordering; FIFO queues guarantee exactly-once processing.</ns0:text>
   <ns0:text x="600.335" y="640" text-anchor="middle" font-size="16.5092" fill="#888" font-style="italic">Failed messages route to Dead Letter Queues for later inspection.</ns0:text>
 </ns0:svg>

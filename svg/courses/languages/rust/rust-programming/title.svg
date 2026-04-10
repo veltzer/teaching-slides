@@ -1,38 +1,99 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:circle cx="568.8889" cy="320" r="142.2222" fill="none" stroke="#e94560" stroke-width="5.6889" opacity="0.4" />
-  <ns0:rect x="551.8222" y="147.2" width="34.1333" height="28.8" rx="4.2667" fill="#e94560" opacity="0.4" />
-  <ns0:rect x="551.8222" y="464" width="34.1333" height="28.8" rx="4.2667" fill="#e94560" opacity="0.4" />
-  <ns0:rect x="415.2889" y="300.8" width="25.6" height="38.4" rx="4.2667" fill="#e94560" opacity="0.4" />
-  <ns0:rect x="696.8889" y="300.8" width="25.6" height="38.4" rx="4.2667" fill="#e94560" opacity="0.4" />
-  <ns0:text x="519.1111" y="352" font-family="serif" font-size="99.5556" fill="#e94560" font-weight="bold" opacity="0.5">R</ns0:text>
-  <ns0:rect x="85.3333" y="96" width="199.1111" height="160" rx="8.5333" fill="#16213e" stroke="#53d8fb" stroke-width="2.1333" />
-  <ns0:text x="113.7778" y="140.8" font-family="monospace" font-size="18.4889" fill="#e94560">let</ns0:text>
+  <ns0:circle cx="568.8889" cy="320" r="142.2222" fill="none" stroke="#dc3545" stroke-width="5.6889" opacity="0.4" />
+  <ns0:rect x="551.8222" y="147.2" width="34.1333" height="28.8" rx="4.2667" fill="#dc3545" opacity="0.4" />
+  <ns0:rect x="551.8222" y="464" width="34.1333" height="28.8" rx="4.2667" fill="#dc3545" opacity="0.4" />
+  <ns0:rect x="415.2889" y="300.8" width="25.6" height="38.4" rx="4.2667" fill="#dc3545" opacity="0.4" />
+  <ns0:rect x="696.8889" y="300.8" width="25.6" height="38.4" rx="4.2667" fill="#dc3545" opacity="0.4" />
+  <ns0:text x="519.1111" y="352" font-family="serif" font-size="99.5556" fill="#dc3545" font-weight="bold" opacity="0.5">R</ns0:text>
+  <ns0:rect x="85.3333" y="96" width="199.1111" height="160" rx="8.5333" fill="#1a1a2e" stroke="#90caf9" stroke-width="2.1333" />
+  <ns0:text x="113.7778" y="140.8" font-family="monospace" font-size="18.4889" fill="#dc3545">let</ns0:text>
   <ns0:text x="153.6" y="140.8" font-family="monospace" font-size="18.4889" fill="white">s =</ns0:text>
-  <ns0:text x="192" y="140.8" font-family="monospace" font-size="18.4889" fill="#00b894">String</ns0:text>
-  <ns0:text x="113.7778" y="176" font-family="monospace" font-size="18.4889" fill="#e94560">let</ns0:text>
+  <ns0:text x="192" y="140.8" font-family="monospace" font-size="18.4889" fill="#2ecc71">String</ns0:text>
+  <ns0:text x="113.7778" y="176" font-family="monospace" font-size="18.4889" fill="#dc3545">let</ns0:text>
   <ns0:text x="153.6" y="176" font-family="monospace" font-size="18.4889" fill="white">t = s;</ns0:text>
-  <ns0:text x="113.7778" y="224" font-family="monospace" font-size="14.2222" fill="#53d8fb">// s is moved to t</ns0:text>
-  <ns0:rect x="853.3333" y="96" width="213.3333" height="160" rx="8.5333" fill="#16213e" stroke="#00b894" stroke-width="2.1333" />
-  <ns0:text x="874.6667" y="140.8" font-family="monospace" font-size="18.4889" fill="#e94560">fn</ns0:text>
-  <ns0:text x="903.1111" y="140.8" font-family="monospace" font-size="18.4889" fill="#ffd93d">greet</ns0:text>
+  <ns0:text x="113.7778" y="224" font-family="monospace" font-size="14.2222" fill="#90caf9">// s is moved to t</ns0:text>
+  <ns0:rect x="853.3333" y="96" width="213.3333" height="160" rx="8.5333" fill="#1a1a2e" stroke="#2ecc71" stroke-width="2.1333" />
+  <ns0:text x="874.6667" y="140.8" font-family="monospace" font-size="18.4889" fill="#dc3545">fn</ns0:text>
+  <ns0:text x="903.1111" y="140.8" font-family="monospace" font-size="18.4889" fill="#f9a825">greet</ns0:text>
   <ns0:text x="960" y="140.8" font-family="monospace" font-size="18.4889" fill="white">(</ns0:text>
   <ns0:text x="888.8889" y="172.8" font-family="monospace" font-size="18.4889" fill="white">s: </ns0:text>
-  <ns0:text x="917.3333" y="172.8" font-family="monospace" font-size="18.4889" fill="#53d8fb">&amp;str</ns0:text>
-  <ns0:text x="888.8889" y="224" font-family="monospace" font-size="14.2222" fill="#00b894">// borrowing</ns0:text>
-  <ns0:rect x="85.3333" y="432" width="241.7778" height="160" rx="8.5333" fill="#16213e" stroke="#ffd93d" stroke-width="2.1333" />
-  <ns0:text x="106.6667" y="476.8" font-family="monospace" font-size="18.4889" fill="#e94560">match</ns0:text>
+  <ns0:text x="917.3333" y="172.8" font-family="monospace" font-size="18.4889" fill="#90caf9">&amp;str</ns0:text>
+  <ns0:text x="888.8889" y="224" font-family="monospace" font-size="14.2222" fill="#2ecc71">// borrowing</ns0:text>
+  <ns0:rect x="85.3333" y="432" width="241.7778" height="160" rx="8.5333" fill="#1a1a2e" stroke="#f9a825" stroke-width="2.1333" />
+  <ns0:text x="106.6667" y="476.8" font-family="monospace" font-size="18.4889" fill="#dc3545">match</ns0:text>
   <ns0:text x="170.6667" y="476.8" font-family="monospace" font-size="18.4889" fill="white">value {</ns0:text>
-  <ns0:text x="128" y="508.8" font-family="monospace" font-size="18.4889" fill="#ffd93d">Some</ns0:text>
+  <ns0:text x="128" y="508.8" font-family="monospace" font-size="18.4889" fill="#f9a825">Some</ns0:text>
   <ns0:text x="184.8889" y="508.8" font-family="monospace" font-size="18.4889" fill="white">(x) =&gt; x,</ns0:text>
-  <ns0:text x="128" y="540.8" font-family="monospace" font-size="18.4889" fill="#ffd93d">None</ns0:text>
+  <ns0:text x="128" y="540.8" font-family="monospace" font-size="18.4889" fill="#f9a825">None</ns0:text>
   <ns0:text x="184.8889" y="540.8" font-family="monospace" font-size="18.4889" fill="white">=&gt; 0,</ns0:text>
   <ns0:text x="106.6667" y="572.8" font-family="monospace" font-size="18.4889" fill="white">}</ns0:text>
-  <ns0:rect x="853.3333" y="432" width="227.5556" height="128" rx="8.5333" fill="#16213e" stroke="#e94560" stroke-width="2.1333" />
-  <ns0:text x="874.6667" y="476.8" font-family="monospace" font-size="18.4889" fill="#53d8fb">Result</ns0:text>
+  <ns0:rect x="853.3333" y="432" width="227.5556" height="128" rx="8.5333" fill="#1a1a2e" stroke="#dc3545" stroke-width="2.1333" />
+  <ns0:text x="874.6667" y="476.8" font-family="monospace" font-size="18.4889" fill="#90caf9">Result</ns0:text>
   <ns0:text x="950.0444" y="476.8" font-family="monospace" font-size="18.4889" fill="white">&lt;T, E&gt;</ns0:text>
-  <ns0:text x="874.6667" y="516.8" font-family="monospace" font-size="18.4889" fill="#53d8fb">Option</ns0:text>
+  <ns0:text x="874.6667" y="516.8" font-family="monospace" font-size="18.4889" fill="#90caf9">Option</ns0:text>
   <ns0:text x="957.1556" y="516.8" font-family="monospace" font-size="18.4889" fill="white">&lt;T&gt;</ns0:text>
-  <ns0:text x="874.6667" y="548.8" font-family="monospace" font-size="14.2222" fill="#e94560">// no null values</ns0:text>
-  <ns0:text x="355.5556" y="608" font-family="monospace" font-size="19.9111" fill="#0f3460">memory safety - zero cost abstractions - fearless concurrency</ns0:text>
+  <ns0:text x="874.6667" y="548.8" font-family="monospace" font-size="14.2222" fill="#dc3545">// no null values</ns0:text>
+  <ns0:text x="355.5556" y="608" font-family="monospace" font-size="19.9111" fill="#1a237e">memory safety - zero cost abstractions - fearless concurrency</ns0:text>
 </ns0:svg>

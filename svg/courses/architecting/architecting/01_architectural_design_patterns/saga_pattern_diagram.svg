@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="12.1637">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="14.2222" markerHeight="12.6" refX="14.2222" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 4.9778,0" fill="#4a90e2" />
     </ns0:marker>
@@ -22,12 +82,12 @@
   <ns0:text x="791.7869" y="176.8421" text-anchor="middle" fill="#333">Service C Txn</ns0:text>
   <ns0:ellipse cx="984.7433" cy="168.4211" rx="66.5367" ry="26.6146" fill="#d4edda" stroke="#28a745" stroke-width="2.6614" />
   <ns0:text x="984.7433" y="176.8421" text-anchor="middle" font-size="15.9688" fill="#333">Complete</ns0:text>
-  <ns0:line x1="139.7271" y1="168.4211" x2="196.9487" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="372.6056" y1="168.4211" x2="449.7882" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="139.7271" y1="168.4211" x2="196.9487" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="372.6056" y1="168.4211" x2="449.7882" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrow-ok)" />
   <ns0:text x="412.5276" y="156.6316" text-anchor="middle" font-size="13.3073" fill="#28a745">Success</ns0:text>
-  <ns0:line x1="625.4451" y1="168.4211" x2="702.6276" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="625.4451" y1="168.4211" x2="702.6276" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrow-ok)" />
   <ns0:text x="665.3671" y="156.6316" text-anchor="middle" font-size="13.3073" fill="#28a745">Success</ns0:text>
-  <ns0:line x1="878.2846" y1="168.4211" x2="915.5452" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="878.2846" y1="168.4211" x2="915.5452" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrow-ok)" />
   <ns0:text x="898.2456" y="156.6316" text-anchor="middle" font-size="13.3073" fill="#28a745">Success</ns0:text>
   <ns0:text x="598.8304" y="320" text-anchor="middle" font-size="17.2996" fill="#dc3545" font-weight="bold">Compensation Path (on failure)</ns0:text>
   <ns0:rect x="705.2892" y="353.6842" width="172.9955" height="67.3684" rx="6.6537" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6614" />
@@ -38,11 +98,11 @@
   <ns0:text x="286.1079" y="395.7895" text-anchor="middle" fill="#333">Compensate A</ns0:text>
   <ns0:ellipse cx="79.844" cy="387.3684" rx="59.883" ry="26.6146" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6614" />
   <ns0:text x="79.844" y="395.7895" text-anchor="middle" font-size="15.9688" fill="#333">Failed</ns0:text>
-  <ns0:line x1="791.7869" y1="202.1053" x2="791.7869" y2="350.3158" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="791.7869" y1="202.1053" x2="791.7869" y2="350.3158" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrow-danger)" />
   <ns0:text x="811.7479" y="286.3158" text-anchor="start" font-size="13.3073" fill="#dc3545">Failure</ns0:text>
-  <ns0:line x1="705.2892" y1="387.3684" x2="628.1066" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
-  <ns0:line x1="452.4497" y1="387.3684" x2="375.2671" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
-  <ns0:line x1="199.6101" y1="387.3684" x2="142.3886" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="705.2892" y1="387.3684" x2="628.1066" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrow-danger)" />
+  <ns0:line x1="452.4497" y1="387.3684" x2="375.2671" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrow-danger)" />
+  <ns0:line x1="199.6101" y1="387.3684" x2="142.3886" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrow-danger)" />
   <ns0:rect x="39.9221" y="488.4211" width="1117.8168" height="151.5789" rx="6.6537" fill="#f9f9f9" stroke="#ddd" stroke-width="1.3307" />
   <ns0:text x="598.8304" y="530.5263" text-anchor="middle" font-size="15.9688" fill="#555">The Saga pattern manages distributed transactions across multiple services.</ns0:text>
   <ns0:text x="598.8304" y="564.2105" text-anchor="middle" font-size="15.9688" fill="#555">Each service executes its local transaction. On success, the next service is triggered.</ns0:text>

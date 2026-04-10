@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <ns0:polygon points="0,16 5.6,0" fill="#555" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="588.5057" y="41.1954" text-anchor="middle" font-family="Arial" font-size="26.4828" font-weight="bold" fill="#1565c0">Spark Persistence / Cache Options</ns0:text>
   <ns0:rect x="44.1379" y="66.2069" width="220.6897" height="44.1379" rx="5.8851" fill="#333" stroke="#333" stroke-width="1.4713" />
@@ -77,16 +134,16 @@
   <ns0:text x="706.2069" y="385.4713" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#333">1</ns0:text>
   <ns0:rect x="772.4138" y="353.1034" width="360.4598" height="51.4943" rx="4.4138" fill="#f5f5f5" stroke="#999" stroke-width="1.4713" />
   <ns0:text x="951.908" y="385.4713" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Recompute is expensive, no RAM</ns0:text>
-  <ns0:rect x="44.1379" y="411.954" width="220.6897" height="51.4943" rx="4.4138" fill="#e0f2f1" stroke="#00695c" stroke-width="1.4713" />
-  <ns0:text x="154.4828" y="444.3218" text-anchor="middle" font-family="Arial" font-size="14.7126" font-weight="bold" fill="#00695c">MEMORY_ONLY_2</ns0:text>
+  <ns0:rect x="44.1379" y="411.954" width="220.6897" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="154.4828" y="444.3218" text-anchor="middle" font-family="Arial" font-size="14.7126" font-weight="bold" fill="#2e7d32">MEMORY_ONLY_2</ns0:text>
   <ns0:rect x="272.1839" y="411.954" width="117.7011" height="51.4943" rx="4.4138" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
   <ns0:text x="331.0345" y="444.3218" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#2e7d32">Yes</ns0:text>
   <ns0:rect x="397.2414" y="411.954" width="117.7011" height="51.4943" rx="4.4138" fill="#ffcdd2" stroke="#c62828" stroke-width="1.4713" />
   <ns0:text x="456.092" y="444.3218" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#c62828">No</ns0:text>
   <ns0:rect x="522.2989" y="411.954" width="117.7011" height="51.4943" rx="4.4138" fill="#ffcdd2" stroke="#c62828" stroke-width="1.4713" />
   <ns0:text x="581.1494" y="444.3218" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#c62828">No</ns0:text>
-  <ns0:rect x="647.3563" y="411.954" width="117.7011" height="51.4943" rx="4.4138" fill="#e0f2f1" stroke="#00695c" stroke-width="1.4713" />
-  <ns0:text x="706.2069" y="444.3218" text-anchor="middle" font-family="Arial" font-size="16.1839" font-weight="bold" fill="#00695c">2</ns0:text>
+  <ns0:rect x="647.3563" y="411.954" width="117.7011" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="706.2069" y="444.3218" text-anchor="middle" font-family="Arial" font-size="16.1839" font-weight="bold" fill="#2e7d32">2</ns0:text>
   <ns0:rect x="772.4138" y="411.954" width="360.4598" height="51.4943" rx="4.4138" fill="#f5f5f5" stroke="#999" stroke-width="1.4713" />
   <ns0:text x="951.908" y="444.3218" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Critical data, fault tolerance</ns0:text>
   <ns0:text x="588.5057" y="507.5862" text-anchor="middle" font-family="Arial" font-size="20.5977" font-weight="bold" fill="#333">Decision Guide</ns0:text>
@@ -102,8 +159,8 @@
   <ns0:text x="757.7011" y="551.7241" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Memory tight?</ns0:text>
   <ns0:text x="757.7011" y="576.7356" text-anchor="middle" font-family="Arial" font-size="14.7126" font-weight="bold" fill="#e65100">*_SER variants</ns0:text>
   <ns0:line x1="882.7586" y1="559.0805" x2="919.5402" y2="559.0805" stroke="#555" stroke-width="2.2069" marker-end="url(#arrow)" />
-  <ns0:rect x="926.8966" y="529.6552" width="205.977" height="58.8506" rx="7.3563" fill="#e0f2f1" stroke="#00695c" stroke-width="2.2069" />
+  <ns0:rect x="926.8966" y="529.6552" width="205.977" height="58.8506" rx="7.3563" fill="#e8f4f8" stroke="#2e7d32" stroke-width="2.2069" />
   <ns0:text x="1029.8851" y="551.7241" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Need replication?</ns0:text>
-  <ns0:text x="1029.8851" y="576.7356" text-anchor="middle" font-family="Arial" font-size="14.7126" font-weight="bold" fill="#00695c">*_2 variants</ns0:text>
+  <ns0:text x="1029.8851" y="576.7356" text-anchor="middle" font-family="Arial" font-size="14.7126" font-weight="bold" fill="#2e7d32">*_2 variants</ns0:text>
   <ns0:text x="588.5057" y="640" text-anchor="middle" font-family="Arial" font-size="17.6552" fill="#555">cache() is equivalent to persist(MEMORY_AND_DISK) -- always call unpersist() when done</ns0:text>
 </ns0:svg>

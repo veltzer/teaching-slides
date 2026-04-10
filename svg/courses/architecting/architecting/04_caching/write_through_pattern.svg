@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="13.6216" refX="17.0667" refY="6.8108" orient="auto">
       <ns0:polygon points="0,19.4595 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -14,13 +74,13 @@
   <ns0:text x="577.3409" y="274.2857" text-anchor="middle" font-size="20.8485" fill="#333">Cache</ns0:text>
   <ns0:rect x="882.0487" y="219.4286" width="192.447" height="91.4286" rx="8.0186" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2074" />
   <ns0:text x="978.2722" y="274.2857" text-anchor="middle" font-size="20.8485" fill="#333">Database</ns0:text>
-  <ns0:line x1="272.6332" y1="252.3428" x2="477.91" y2="252.3428" stroke="#4a90e2" stroke-width="3.2074" marker-end="url(#arrowhead)" />
+  <ns0:line x1="272.6332" y1="252.3428" x2="477.91" y2="252.3428" stroke="#4a90e2" stroke-width="3.2074" marker-end="url(#arrow)" />
   <ns0:text x="375.2716" y="237.7143" text-anchor="middle" font-size="17.6409" fill="#4a90e2">1. Write data</ns0:text>
-  <ns0:line x1="673.5644" y1="252.3428" x2="878.8412" y2="252.3428" stroke="#4a90e2" stroke-width="3.2074" marker-end="url(#arrowhead)" />
+  <ns0:line x1="673.5644" y1="252.3428" x2="878.8412" y2="252.3428" stroke="#4a90e2" stroke-width="3.2074" marker-end="url(#arrow)" />
   <ns0:text x="776.2028" y="237.7143" text-anchor="middle" font-size="17.6409" fill="#4a90e2">2. Write to DB</ns0:text>
-  <ns0:line x1="878.8412" y1="288.9143" x2="676.7718" y2="288.9143" stroke="#28a745" stroke-width="3.2074" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="878.8412" y1="288.9143" x2="676.7718" y2="288.9143" stroke="#28a745" stroke-width="3.2074" marker-end="url(#arrow-ok)" />
   <ns0:text x="776.2028" y="325.4857" text-anchor="middle" font-size="17.6409" fill="#28a745">Confirm</ns0:text>
-  <ns0:line x1="477.91" y1="288.9143" x2="275.8407" y2="288.9143" stroke="#28a745" stroke-width="3.2074" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="477.91" y1="288.9143" x2="275.8407" y2="288.9143" stroke="#28a745" stroke-width="3.2074" marker-end="url(#arrow-ok)" />
   <ns0:text x="375.2716" y="325.4857" text-anchor="middle" font-size="17.6409" fill="#28a745">3. Confirm write</ns0:text>
   <ns0:rect x="352.8195" y="109.7143" width="449.043" height="64" rx="8.0186" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4056" />
   <ns0:text x="577.3409" y="149.9429" text-anchor="middle" font-size="19.2447" fill="#4a90e2">Synchronous: both written before confirm</ns0:text>

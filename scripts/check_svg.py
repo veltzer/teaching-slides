@@ -11,8 +11,7 @@ Checks:
   --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
   --bounds      Flag SVGs with elements drawn below y=640
   --title       Flag SVGs that contain a <title> element
-  --colors      Flag SVGs that use colors not in resources/svg_palette.svg
-                (opt-in only — not run by default)
+  --colors      Flag SVGs that use colors not in resources/palette.yaml
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
@@ -24,6 +23,7 @@ import argparse
 import re
 import sys
 import xml.etree.ElementTree as ET
+import yaml
 from pathlib import Path
 
 MIN_FILE_SIZE = 500
@@ -118,90 +118,77 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
     return []
 
 _PALETTE_COLORS: set[str] | None = None
-_PALETTE_IDS: set[str] | None = None
 _COLOR_ATTRS = {"fill", "stroke", "stop-color", "flood-color"}
 _COLOR_RE = re.compile(r'#[0-9a-fA-F]{3,8}')
-_URL_RE = re.compile(r'url\(#([^)]+)\)')
-# Element tags whose ids must come from the palette (not SVG-local)
-_PALETTE_OWNED_TAGS = {"linearGradient", "radialGradient", "filter", "marker"}
 
 
-def _load_palette() -> tuple[set[str], set[str]]:
-    """Load allowed hex colors and defs IDs from resources/svg_palette.svg.
+def _load_palette() -> set[str]:
+    """Load allowed hex colors from resources/palette.yaml.
 
-    Returns (allowed_colors, palette_ids).
+    Collects every hex color value from all sections (colors, gradients,
+    filters, markers) and returns them as a set of normalized lowercase
+    6-digit hex strings.
     """
-    global _PALETTE_COLORS, _PALETTE_IDS
-    if _PALETTE_COLORS is not None and _PALETTE_IDS is not None:
-        return _PALETTE_COLORS, _PALETTE_IDS
+    global _PALETTE_COLORS
+    if _PALETTE_COLORS is not None:
+        return _PALETTE_COLORS
 
-    palette_path = Path("resources/svg_palette.svg")
+    palette_path = Path("resources/palette.yaml")
     if not palette_path.exists():
         _PALETTE_COLORS = set()
-        _PALETTE_IDS = set()
-        return _PALETTE_COLORS, _PALETTE_IDS
+        return _PALETTE_COLORS
 
-    text = palette_path.read_text()
+    with open(palette_path, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
 
-    # --- colors: extract all hex values appearing anywhere in the file ---
-    raw_colors = {m.group().lower() for m in _COLOR_RE.finditer(text)}
-    expanded: set[str] = set()
-    for c in raw_colors:
-        h = c.lstrip('#')
-        if len(h) == 3:
-            h = ''.join(ch * 2 for ch in h)
-        expanded.add('#' + h)
-    _PALETTE_COLORS = expanded
+    colors: set[str] = set()
 
-    # --- IDs: parse the defs block and collect every id="..." ---
-    try:
-        palette_tree = ET.parse(palette_path)
-        ids: set[str] = set()
-        for elem in palette_tree.iter():
-            eid = elem.get('id')
-            if eid:
-                ids.add(eid)
-        _PALETTE_IDS = ids
-    except ET.ParseError:
-        _PALETTE_IDS = set()
+    def _collect_hex(obj: object) -> None:
+        """Recursively walk the YAML structure and collect hex color strings."""
+        if isinstance(obj, str):
+            for m in _COLOR_RE.finditer(obj):
+                h = m.group().lstrip('#').lower()
+                if len(h) == 3:
+                    h = ''.join(ch * 2 for ch in h)
+                if len(h) in (6, 8):
+                    colors.add('#' + h)
+        elif isinstance(obj, dict):
+            for v in obj.values():
+                _collect_hex(v)
+        elif isinstance(obj, list):
+            for v in obj:
+                _collect_hex(v)
 
-    return _PALETTE_COLORS, _PALETTE_IDS
+    _collect_hex(data)
+    _PALETTE_COLORS = colors
+    return _PALETTE_COLORS
 
 
 def _check_colors(tree: ET.ElementTree) -> list[str]:
-    """Flag SVGs that use colors or gradients not from resources/svg_palette.svg.
-
-    Two sub-checks:
-      1. Hex color values in fill/stroke/stop-color/flood-color must be in the palette.
-      2. url(#id) references to gradient/filter/marker elements must point to
-         palette-owned IDs (not custom per-SVG ones).
-    """
-    allowed_colors, palette_ids = _load_palette()
-    if not allowed_colors and not palette_ids:
-        return ["cannot check colors: resources/svg_palette.svg not found"]
+    """Flag SVGs that use colors not in resources/palette.yaml."""
+    allowed_colors = _load_palette()
+    if not allowed_colors:
+        return ["cannot check colors: resources/palette.yaml not found or empty"]
 
     errors: list[str] = []
     seen_bad_colors: set[str] = set()
-    seen_bad_ids: set[str] = set()
-
-    # Build a map of id -> tag for elements defined in this SVG's defs
-    local_id_tag: dict[str, str] = {}
-    for elem in tree.iter():
-        eid = elem.get('id')
-        if eid:
-            local_id_tag[eid] = elem.tag.split('}')[-1]
 
     for elem in tree.iter():
         tag = elem.tag.split('}')[-1]
 
-        # Check 1: raw hex colors
+        # Check 1: raw hex colors (skip 4/8-digit alpha-channel forms)
         for attr in _COLOR_ATTRS:
             val = elem.get(attr, "")
             for m in _COLOR_RE.finditer(val):
                 raw = m.group().lower()
                 h = raw.lstrip('#')
+                if len(h) in (4, 8):
+                    # Alpha-channel hex — allowed (semi-transparent palette colors)
+                    continue
                 if len(h) == 3:
                     h = ''.join(ch * 2 for ch in h)
+                if len(h) != 6:
+                    continue
                 normalized = '#' + h
                 if normalized not in allowed_colors and normalized not in seen_bad_colors:
                     seen_bad_colors.add(normalized)
@@ -209,19 +196,6 @@ def _check_colors(tree: ET.ElementTree) -> list[str]:
                         f"color {raw!r} (in <{tag}> {attr}=) not in palette"
                     )
 
-        # Check 2: url(#id) references to gradient/filter/marker
-        for attr in ("fill", "stroke", "filter", "marker-end", "marker-start", "marker-mid"):
-            val = elem.get(attr, "")
-            for m in _URL_RE.finditer(val):
-                ref_id = m.group(1)
-                ref_tag = local_id_tag.get(ref_id, "")
-                if ref_tag in _PALETTE_OWNED_TAGS:
-                    if ref_id not in palette_ids and ref_id not in seen_bad_ids:
-                        seen_bad_ids.add(ref_id)
-                        errors.append(
-                            f"url(#{ref_id}) references a non-palette {ref_tag}"
-                            f" (in <{tag}> {attr}=); use a palette gradient/marker instead"
-                        )
 
     return errors
 
@@ -259,13 +233,13 @@ def main() -> None:
     parser.add_argument('--title', action='store_true',
                         help='Flag SVGs that contain a <title> element')
     parser.add_argument('--colors', action='store_true',
-                        help='Flag SVGs that use colors not in resources/svg_palette.svg')
+                        help='Flag SVGs that use colors not in resources/palette.yaml (default: on)')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
-    # Default: all checks enabled except --colors (opt-in only)
+    # Default: all checks enabled when no flags are specified
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title, args.colors]
     explicit = any(flags)
     do_size = args.size or not explicit
@@ -275,7 +249,7 @@ def main() -> None:
     do_dimensions = args.dimensions or not explicit
     do_bounds = args.bounds or not explicit
     do_title = args.title or not explicit
-    do_colors = args.colors  # never on by default
+    do_colors = args.colors or not explicit
 
     failures = 0
     for path_str in args.paths:

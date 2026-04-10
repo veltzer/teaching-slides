@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-    <ns0:marker id="arrow" viewBox="0 0 10 10" refX="11.0345" refY="6.9231" markerWidth="13.2414" markerHeight="8.3077" orient="auto-start-auto">
-      <ns0:path d="M 0 0 L 22.069 6.9231 L 0 13.8462 z" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:rect x="20.0015" y="12.5491" width="1120.0841" height="627.4509" rx="6.2745" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.5098" />
   <ns0:text x="580.0435" y="47.6863" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="#4a90e2">Spark Metrics to Prometheus</ns0:text>
@@ -29,7 +86,7 @@
   <ns0:rect x="840.0631" y="389.0196" width="240.018" height="56.4706" rx="6.2745" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5098" />
   <ns0:text x="960.072" y="424.1568" text-anchor="middle" font-size="16.3137" fill="#333">Alerts</ns0:text>
   <ns0:rect x="60.0045" y="470.5882" width="1040.078" height="150.5882" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8823" />
-  <ns0:text x="100.0075" y="499.4509" font-size="16.3137" font-weight="bold" fill="#856404">Key alerts to set up:</ns0:text>
+  <ns0:text x="100.0075" y="499.4509" font-size="16.3137" font-weight="bold" fill="#bf360c">Key alerts to set up:</ns0:text>
   <ns0:text x="120.009" y="524.549" font-size="15.0588" fill="#333">• Job duration &gt; 2x historical average</ns0:text>
   <ns0:text x="120.009" y="547.1372" font-size="15.0588" fill="#333">• Failed tasks &gt; 5% of total</ns0:text>
   <ns0:text x="120.009" y="569.7255" font-size="15.0588" fill="#333">• Executor memory &gt; 90% usage</ns0:text>

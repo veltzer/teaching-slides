@@ -1,4 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="640" y="43.2" text-anchor="middle" font-size="25.92" font-weight="bold" fill="#333">Useful Wireshark Features</text>
   <rect x="36.5714" y="64.8" width="585.1429" height="72" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
   <text x="64" y="96.48" font-size="18.72" font-weight="bold" fill="#4a90e2">1. Capture Filters</text>
@@ -7,7 +68,7 @@
   <text x="685.7143" y="96.48" font-size="18.72" font-weight="bold" fill="#28a745">2. Display Filters</text>
   <text x="685.7143" y="122.4" font-size="15.84" fill="#555">http.request.method == "POST"</text>
   <rect x="36.5714" y="151.2" width="585.1429" height="72" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="64" y="182.88" font-size="18.72" font-weight="bold" fill="#856404">3. Statistics -&gt; Conversations</text>
+  <text x="64" y="182.88" font-size="18.72" font-weight="bold" fill="#bf360c">3. Statistics -&gt; Conversations</text>
   <text x="64" y="208.8" font-size="15.84" fill="#555">All connections with byte/packet counts</text>
   <rect x="658.2857" y="151.2" width="585.1429" height="72" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
   <text x="685.7143" y="182.88" font-size="18.72" font-weight="bold" fill="#4a90e2">4. Protocol Hierarchy</text>
@@ -16,7 +77,7 @@
   <text x="64" y="269.28" font-size="18.72" font-weight="bold" fill="#28a745">5. Follow TCP Stream</text>
   <text x="64" y="295.2" font-size="15.84" fill="#555">Reassembles complete TCP conversation</text>
   <rect x="658.2857" y="237.6" width="585.1429" height="72" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="685.7143" y="269.28" font-size="18.72" font-weight="bold" fill="#856404">6. Expert Information</text>
+  <text x="685.7143" y="269.28" font-size="18.72" font-weight="bold" fill="#bf360c">6. Expert Information</text>
   <text x="685.7143" y="295.2" font-size="15.84" fill="#555">Highlights retransmissions, resets, etc.</text>
   <rect x="36.5714" y="324" width="585.1429" height="72" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
   <text x="64" y="355.68" font-size="18.72" font-weight="bold" fill="#4a90e2">7. IO Graphs</text>

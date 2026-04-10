@@ -1,10 +1,70 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="25.6" markerHeight="112" refX="23.04" refY="56" orient="auto">
       <ns0:polygon points="0,160 8.96,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="204.8" height="640" fill="#f8f9fa" />
+  <ns0:rect width="204.8" height="640" fill="#f9f9f9" />
   <ns0:text x="102.4" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">AI-Powered Automated PR Checks</ns0:text>
   <ns0:rect x="3.84" y="144" width="32" height="144" rx="2.56" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.512" />
   <ns0:text x="19.712" y="195.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">PR Opened</ns0:text>
@@ -32,17 +92,17 @@
   <ns0:text x="184.32" y="256" text-anchor="middle" font-size="10" fill="#555">merge / block</ns0:text>
   <ns0:rect x="3.84" y="352" width="194.56" height="264" rx="2.56" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.384" />
   <ns0:text x="102.4" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">How AI Assigns Risk Scores to PRs</ns0:text>
-  <ns0:rect x="8.96" y="428.8" width="56.32" height="160" rx="2.048" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="8.96" y="428.8" width="56.32" height="160" rx="2.048" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="37.12" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">High Risk Files</ns0:text>
   <ns0:text x="37.12" y="508.8" text-anchor="middle" font-size="10" fill="#333">auth/, payments/</ns0:text>
   <ns0:text x="37.12" y="540.8" text-anchor="middle" font-size="10" fill="#333">config/, crypto/</ns0:text>
   <ns0:text x="37.12" y="569.6" text-anchor="middle" font-size="10" fill="#555">require extra reviewers</ns0:text>
-  <ns0:rect x="71.68" y="428.8" width="56.32" height="160" rx="2.048" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="71.68" y="428.8" width="56.32" height="160" rx="2.048" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="99.84" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Complexity Delta</ns0:text>
   <ns0:text x="99.84" y="508.8" text-anchor="middle" font-size="10" fill="#333">cyclomatic complexity</ns0:text>
   <ns0:text x="99.84" y="540.8" text-anchor="middle" font-size="10" fill="#333">change magnitude</ns0:text>
   <ns0:text x="99.84" y="569.6" text-anchor="middle" font-size="10" fill="#555">coverage delta tracked</ns0:text>
-  <ns0:rect x="134.4" y="428.8" width="58.88" height="160" rx="2.048" fill="#C5CAE9" stroke="#3949AB" />
+  <ns0:rect x="134.4" y="428.8" width="58.88" height="160" rx="2.048" fill="#bbdefb" stroke="#3949AB" />
   <ns0:text x="163.84" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Historical Defect Rate</ns0:text>
   <ns0:text x="163.84" y="508.8" text-anchor="middle" font-size="10" fill="#333">past bug frequency</ns0:text>
   <ns0:text x="163.84" y="540.8" text-anchor="middle" font-size="10" fill="#333">in changed modules</ns0:text>

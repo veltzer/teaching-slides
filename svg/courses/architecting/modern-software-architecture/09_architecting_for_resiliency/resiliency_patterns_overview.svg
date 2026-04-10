@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="17.0667" markerHeight="15.75" refX="17.0667" refY="7.875" orient="auto">
       <polygon points="0,22.5 5.9733,0" fill="#4a90e2" />
     </marker>
@@ -20,11 +80,11 @@
   <text x="1092.2667" y="348.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Fallbacks</text>
   <rect x="972.8" y="472.5" width="238.9333" height="90" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
   <text x="1092.2667" y="528.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Hedging</text>
-  <line x1="477.8667" y1="303.75" x2="293.5467" y2="101.25" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="477.8667" y1="315" x2="293.5467" y2="225" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="477.8667" y1="326.25" x2="293.5467" y2="360" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="477.8667" y1="348.75" x2="293.5467" y2="495" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="785.0667" y1="303.75" x2="969.3867" y2="157.5" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="785.0667" y1="326.25" x2="969.3867" y2="337.5" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="785.0667" y1="348.75" x2="969.3867" y2="517.5" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrowhead)" />
+  <line x1="477.8667" y1="303.75" x2="293.5467" y2="101.25" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="477.8667" y1="315" x2="293.5467" y2="225" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="477.8667" y1="326.25" x2="293.5467" y2="360" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="477.8667" y1="348.75" x2="293.5467" y2="495" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="785.0667" y1="303.75" x2="969.3867" y2="157.5" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="785.0667" y1="326.25" x2="969.3867" y2="337.5" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="785.0667" y1="348.75" x2="969.3867" y2="517.5" stroke="#4a90e2" stroke-width="2.56" marker-end="url(#arrow)" />
 </svg>

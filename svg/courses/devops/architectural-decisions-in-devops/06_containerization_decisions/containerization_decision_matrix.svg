@@ -1,14 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="640" y="51.4286" text-anchor="middle" font-size="29.2571" font-weight="bold">Should You Containerize?</text>
-  <rect x="457.1429" y="82.2857" width="365.7143" height="82.2857" fill="#ffd54f" stroke="#333" stroke-width="3.6571" rx="9.1429" />
+  <rect x="457.1429" y="82.2857" width="365.7143" height="82.2857" fill="#ffcc80" stroke="#333" stroke-width="3.6571" rx="9.1429" />
   <text x="640" y="133.7143" text-anchor="middle" font-size="21.9429">New workload?</text>
   <line x1="548.5714" y1="164.5714" x2="274.2857" y2="246.8571" stroke="#333" stroke-width="3.6571" />
   <line x1="731.4286" y1="164.5714" x2="1005.7143" y2="246.8571" stroke="#333" stroke-width="3.6571" />
   <text x="384" y="205.7143" font-size="20.1143" fill="#333">No</text>
   <text x="859.4286" y="205.7143" font-size="20.1143" fill="#333">Yes</text>
-  <rect x="91.4286" y="246.8571" width="365.7143" height="82.2857" fill="#ffd54f" stroke="#333" stroke-width="3.6571" rx="9.1429" />
+  <rect x="91.4286" y="246.8571" width="365.7143" height="82.2857" fill="#ffcc80" stroke="#333" stroke-width="3.6571" rx="9.1429" />
   <text x="274.2857" y="298.2857" text-anchor="middle" font-size="21.9429">Worth refactoring?</text>
-  <rect x="822.8571" y="246.8571" width="365.7143" height="82.2857" fill="#ffd54f" stroke="#333" stroke-width="3.6571" rx="9.1429" />
+  <rect x="822.8571" y="246.8571" width="365.7143" height="82.2857" fill="#ffcc80" stroke="#333" stroke-width="3.6571" rx="9.1429" />
   <text x="1005.7143" y="298.2857" text-anchor="middle" font-size="21.9429">Needs bare metal?</text>
   <line x1="182.8571" y1="329.1429" x2="109.7143" y2="411.4286" stroke="#333" stroke-width="3.6571" />
   <line x1="365.7143" y1="329.1429" x2="438.8571" y2="411.4286" stroke="#333" stroke-width="3.6571" />
@@ -18,12 +79,12 @@
   <line x1="1097.1429" y1="329.1429" x2="1170.2857" y2="411.4286" stroke="#333" stroke-width="3.6571" />
   <text x="850.2857" y="380.5714" font-size="20.1143" fill="#333">No</text>
   <text x="1133.7143" y="380.5714" font-size="20.1143" fill="#333">Yes</text>
-  <rect x="18.2857" y="411.4286" width="182.8571" height="72" fill="#ef5350" stroke="#333" stroke-width="1.8286" rx="9.1429" />
+  <rect x="18.2857" y="411.4286" width="182.8571" height="72" fill="#e74c3c" stroke="#333" stroke-width="1.8286" rx="9.1429" />
   <text x="109.7143" y="456.6857" text-anchor="middle" font-size="20.1143" fill="white">Keep as-is</text>
-  <rect x="347.4286" y="411.4286" width="182.8571" height="72" fill="#66bb6a" stroke="#333" stroke-width="1.8286" rx="9.1429" />
+  <rect x="347.4286" y="411.4286" width="182.8571" height="72" fill="#4caf50" stroke="#333" stroke-width="1.8286" rx="9.1429" />
   <text x="438.8571" y="456.6857" text-anchor="middle" font-size="20.1143" fill="white">Containerize</text>
-  <rect x="749.7143" y="411.4286" width="182.8571" height="72" fill="#66bb6a" stroke="#333" stroke-width="1.8286" rx="9.1429" />
+  <rect x="749.7143" y="411.4286" width="182.8571" height="72" fill="#4caf50" stroke="#333" stroke-width="1.8286" rx="9.1429" />
   <text x="841.1429" y="456.6857" text-anchor="middle" font-size="20.1143" fill="white">Containerize</text>
-  <rect x="1078.8571" y="411.4286" width="182.8571" height="72" fill="#ef5350" stroke="#333" stroke-width="1.8286" rx="9.1429" />
+  <rect x="1078.8571" y="411.4286" width="182.8571" height="72" fill="#e74c3c" stroke="#333" stroke-width="1.8286" rx="9.1429" />
   <text x="1170.2857" y="456.6857" text-anchor="middle" font-size="20.1143" fill="white">Run on host</text>
 </svg>

@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrD" markerWidth="16" markerHeight="10.5" refX="8" refY="10.5" orient="auto">
       <ns0:polygon points="0,15 0,7.5" fill="#4a90e2" />
     </ns0:marker>
@@ -16,36 +76,36 @@
   <ns0:line x1="792.7742" y1="158.2796" x2="778.0932" y2="206.4516" stroke="#28a745" stroke-width="2.7527" />
   <ns0:line x1="851.4982" y1="158.2796" x2="910.2222" y2="206.4516" stroke="#ccc" stroke-width="1.3763" />
   <ns0:line x1="924.9032" y1="158.2796" x2="1042.3513" y2="206.4516" stroke="#ccc" stroke-width="1.3763" />
-  <ns0:rect x="66.0645" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="66.0645" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="117.448" y="254.6237" text-anchor="middle" font-size="16.5161" fill="#999">E1</ns0:text>
   <ns0:rect x="198.1935" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#d4edda" stroke="#28a745" stroke-width="2.7527" />
   <ns0:text x="249.5771" y="247.7419" text-anchor="middle" font-size="16.5161" font-weight="bold" fill="#28a745">E2</ns0:text>
   <ns0:text x="249.5771" y="275.2688" text-anchor="middle" font-size="19.2688" fill="#28a745">★</ns0:text>
-  <ns0:rect x="330.3226" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="330.3226" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="381.7061" y="254.6237" text-anchor="middle" font-size="16.5161" fill="#999">E3</ns0:text>
-  <ns0:rect x="462.4516" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="462.4516" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="513.8351" y="254.6237" text-anchor="middle" font-size="16.5161" fill="#999">E4</ns0:text>
   <ns0:rect x="594.5806" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#d4edda" stroke="#28a745" stroke-width="2.7527" />
   <ns0:text x="645.9642" y="247.7419" text-anchor="middle" font-size="16.5161" font-weight="bold" fill="#28a745">E5</ns0:text>
   <ns0:text x="645.9642" y="275.2688" text-anchor="middle" font-size="19.2688" fill="#28a745">★</ns0:text>
-  <ns0:rect x="726.7097" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="726.7097" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="778.0932" y="254.6237" text-anchor="middle" font-size="16.5161" fill="#999">E6</ns0:text>
-  <ns0:rect x="858.8387" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="858.8387" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="910.2222" y="254.6237" text-anchor="middle" font-size="16.5161" fill="#999">E7</ns0:text>
-  <ns0:rect x="990.9677" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="990.9677" y="206.4516" width="102.767" height="82.5806" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="1042.3513" y="254.6237" text-anchor="middle" font-size="16.5161" fill="#999">E8</ns0:text>
   <ns0:text x="851.4982" y="323.4409" text-anchor="middle" font-size="15.1398" fill="#28a745">★ = selected (Top-K=2)</ns0:text>
   <ns0:line x1="249.5771" y1="289.0323" x2="513.8351" y2="371.6129" stroke="#28a745" stroke-width="2.7527" />
   <ns0:line x1="645.9642" y1="289.0323" x2="513.8351" y2="371.6129" stroke="#28a745" stroke-width="2.7527" />
   <ns0:rect x="411.0681" y="371.6129" width="205.5341" height="55.0538" rx="6.8817" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7527" />
   <ns0:text x="513.8351" y="406.0215" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Combine</ns0:text>
-  <ns0:rect x="88.086" y="467.957" width="469.7921" height="68.8172" rx="6.8817" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.0645" />
+  <ns0:rect x="88.086" y="467.957" width="469.7921" height="68.8172" rx="6.8817" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.0645" />
   <ns0:text x="322.9821" y="495.4839" text-anchor="middle" font-size="15.1398" font-weight="bold" fill="#333">Standard Transformer FFN</ns0:text>
   <ns0:text x="322.9821" y="520.2581" text-anchor="middle" font-size="15.1398" fill="#666">Every token uses ALL parameters</ns0:text>
   <ns0:rect x="616.6022" y="467.957" width="469.7921" height="68.8172" rx="6.8817" fill="#d4edda" stroke="#28a745" stroke-width="2.0645" />
   <ns0:text x="851.4982" y="495.4839" text-anchor="middle" font-size="15.1398" font-weight="bold" fill="#28a745">MoE FFN</ns0:text>
   <ns0:text x="851.4982" y="520.2581" text-anchor="middle" font-size="15.1398" fill="#666">Each token routed to Top-K experts</ns0:text>
   <ns0:rect x="146.81" y="564.3011" width="880.8602" height="75.6989" rx="6.8817" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0645" />
-  <ns0:text x="587.2401" y="594.5806" text-anchor="middle" font-size="16.5161" font-weight="bold" fill="#856404">Mixtral 8x7B: 8 experts x 7B = 47B total params</ns0:text>
-  <ns0:text x="587.2401" y="622.1075" text-anchor="middle" font-size="15.1398" fill="#856404">Only 2 experts active = ~13B params per token. Speed of 13B, quality of 47B!</ns0:text>
+  <ns0:text x="587.2401" y="594.5806" text-anchor="middle" font-size="16.5161" font-weight="bold" fill="#bf360c">Mixtral 8x7B: 8 experts x 7B = 47B total params</ns0:text>
+  <ns0:text x="587.2401" y="622.1075" text-anchor="middle" font-size="15.1398" fill="#bf360c">Only 2 experts active = ~13B params per token. Speed of 13B, quality of 47B!</ns0:text>
 </ns0:svg>

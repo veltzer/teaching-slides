@@ -1,10 +1,71 @@
 <svg viewBox="0 0 1280 720">
-  <rect x="102.5025" y="86.4865" width="1025.0251" height="553.5135" fill="#E8F4FD" stroke="#0073BB" stroke-width="5.1892" rx="17.2973" />
-  <text x="615.015" y="138.3784" font-family="Arial" font-size="31.1351" font-weight="bold" text-anchor="middle" fill="#0073BB">EKS Worker Node (Your Responsibility)</text>
-  <rect x="164.004" y="190.2703" width="369.009" height="103.7838" fill="#326CE5" stroke="#1E4A73" stroke-width="3.4595" rx="8.6486" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <rect x="102.5025" y="86.4865" width="1025.0251" height="553.5135" fill="#e8f4f8" stroke="#0277bd" stroke-width="5.1892" rx="17.2973" />
+  <text x="615.015" y="138.3784" font-family="Arial" font-size="31.1351" font-weight="bold" text-anchor="middle" fill="#0277bd">EKS Worker Node (Your Responsibility)</text>
+  <rect x="164.004" y="190.2703" width="369.009" height="103.7838" fill="#1976d2" stroke="#283593" stroke-width="3.4595" rx="8.6486" />
   <text x="348.5085" y="233.5135" font-family="Arial" font-size="24.2162" font-weight="bold" text-anchor="middle" fill="white">kubelet</text>
   <text x="348.5085" y="268.1081" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">Pod lifecycle management</text>
-  <rect x="697.017" y="190.2703" width="369.009" height="103.7838" fill="#FF7043" stroke="#D84315" stroke-width="3.4595" rx="8.6486" />
+  <rect x="697.017" y="190.2703" width="369.009" height="103.7838" fill="#e74c3c" stroke="#e65100" stroke-width="3.4595" rx="8.6486" />
   <text x="881.5215" y="233.5135" font-family="Arial" font-size="24.2162" font-weight="bold" text-anchor="middle" fill="white">kube-proxy</text>
   <text x="881.5215" y="268.1081" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">Network proxy &amp; load balancing</text>
   <rect x="164.004" y="328.6486" width="369.009" height="103.7838" fill="#4CAF50" stroke="#2E7D32" stroke-width="3.4595" rx="8.6486" />
@@ -15,14 +76,14 @@
   <text x="881.5215" y="406.4865" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">Native VPC networking</text>
   <rect x="164.004" y="467.027" width="902.0221" height="138.3784" fill="#F3E5F5" stroke="#9C27B0" stroke-width="3.4595" rx="8.6486" />
   <text x="615.015" y="510.2703" font-family="Arial" font-size="24.2162" font-weight="bold" text-anchor="middle" fill="#7B1FA2">Application Pods</text>
-  <circle cx="307.5075" cy="553.5135" r="25.9459" fill="#E91E63" />
+  <circle cx="307.5075" cy="553.5135" r="25.9459" fill="#dc3545" />
   <text x="307.5075" y="562.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">App1</text>
   <circle cx="451.011" cy="553.5135" r="25.9459" fill="#3F51B5" />
   <text x="451.011" y="562.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">App2</text>
-  <circle cx="594.5145" cy="553.5135" r="25.9459" fill="#009688" />
+  <circle cx="594.5145" cy="553.5135" r="25.9459" fill="#27ae60" />
   <text x="594.5145" y="562.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">DB</text>
-  <circle cx="738.018" cy="553.5135" r="25.9459" fill="#FF5722" />
+  <circle cx="738.018" cy="553.5135" r="25.9459" fill="#f44336" />
   <text x="738.018" y="562.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">Cache</text>
-  <circle cx="881.5215" cy="553.5135" r="25.9459" fill="#795548" />
+  <circle cx="881.5215" cy="553.5135" r="25.9459" fill="#555555" />
   <text x="881.5215" y="562.1622" font-family="Arial" font-size="17.2973" text-anchor="middle" fill="white">Nginx</text>
 </svg>

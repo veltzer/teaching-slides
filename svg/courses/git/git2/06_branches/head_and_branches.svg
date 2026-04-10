@@ -13,16 +13,76 @@
   <ns0:line x1="661.1411" y1="345.9459" x2="722.6426" y2="345.9459" stroke="#333" stroke-width="3.0751" />
   <ns0:rect x="707.2673" y="207.5676" width="123.003" height="51.8919" fill="#2196F3" rx="4.6126" />
   <ns0:text x="768.7688" y="242.1622" text-anchor="middle" font-size="18.4505" fill="white">main</ns0:text>
-  <ns0:line x1="768.7688" y1="259.4595" x2="768.7688" y2="294.0541" stroke="#2196F3" stroke-width="3.0751" marker-end="url(#arrow3)" />
+  <ns0:line x1="768.7688" y1="259.4595" x2="768.7688" y2="294.0541" stroke="#2196F3" stroke-width="3.0751" marker-end="url(#arrow)" />
   <ns0:rect x="553.5135" y="484.3243" width="123.003" height="51.8919" fill="#FF9800" rx="4.6126" />
   <ns0:text x="615.015" y="518.9189" text-anchor="middle" font-size="18.4505" fill="white">feature</ns0:text>
-  <ns0:line x1="615.015" y1="484.3243" x2="615.015" y2="397.8378" stroke="#FF9800" stroke-width="3.0751" marker-end="url(#arrow3)" />
+  <ns0:line x1="615.015" y1="484.3243" x2="615.015" y2="397.8378" stroke="#FF9800" stroke-width="3.0751" marker-end="url(#arrow)" />
   <ns0:rect x="492.012" y="138.3784" width="123.003" height="51.8919" fill="#9C27B0" rx="4.6126" />
   <ns0:text x="553.5135" y="172.973" text-anchor="middle" font-size="21.5255" fill="white">HEAD</ns0:text>
-  <ns0:line x1="553.5135" y1="190.2703" x2="615.015" y2="484.3243" stroke="#9C27B0" stroke-width="4.6126" marker-end="url(#arrow3)" />
+  <ns0:line x1="553.5135" y1="190.2703" x2="615.015" y2="484.3243" stroke="#9C27B0" stroke-width="4.6126" marker-end="url(#arrow)" />
   <ns0:text x="615.015" y="605.4054" text-anchor="middle" font-size="21.5255">HEAD → feature → Commit C</ns0:text>
   <ns0:text x="615.015" y="640" text-anchor="middle" font-size="18.4505" font-style="italic">HEAD points to current branch, branch points to commit</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow3" markerWidth="16" markerHeight="18" refX="12.8" refY="5.4" orient="auto">
       <ns0:polygon points="0,18 4.8,0" />
     </ns0:marker>

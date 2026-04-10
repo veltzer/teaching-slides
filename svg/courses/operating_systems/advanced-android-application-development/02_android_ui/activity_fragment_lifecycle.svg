@@ -1,36 +1,86 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
   <ns0:text x="248.8889" y="21.3333" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Activity Lifecycle</ns0:text>
-  <ns0:rect x="142.2222" y="32" width="213.3333" height="39.1111" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="142.2222" y="32" width="213.3333" height="39.1111" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="248.8889" y="56.8889" text-anchor="middle" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#ffffff">onCreate()</ns0:text>
-  <ns0:line x1="248.8889" y1="72.8889" x2="248.8889" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="248.8889" y1="72.8889" x2="248.8889" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="142.2222" y="99.5556" width="213.3333" height="39.1111" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="248.8889" y="124.4444" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#212121">onStart()</ns0:text>
-  <ns0:line x1="248.8889" y1="140.4444" x2="248.8889" y2="165.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="248.8889" y1="140.4444" x2="248.8889" y2="165.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="142.2222" y="167.1111" width="213.3333" height="39.1111" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="248.8889" y="192" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#212121">onResume()</ns0:text>
   <ns0:rect x="115.5556" y="218.6667" width="266.6667" height="39.1111" rx="5.3333" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="248.8889" y="243.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#1b5e20">RUNNING (visible + interactive)</ns0:text>
-  <ns0:line x1="248.8889" y1="208" x2="248.8889" y2="220.4444" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="248.8889" y1="208" x2="248.8889" y2="220.4444" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:line x1="248.8889" y1="259.5556" x2="248.8889" y2="280.8889" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
   <ns0:rect x="142.2222" y="282.6667" width="213.3333" height="39.1111" rx="5.3333" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="248.8889" y="307.5556" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">onPause()</ns0:text>
@@ -40,18 +90,18 @@
   <ns0:line x1="248.8889" y1="391.1111" x2="248.8889" y2="416" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
   <ns0:rect x="142.2222" y="417.7778" width="213.3333" height="39.1111" rx="5.3333" fill="#ffcdd2" stroke="#c62828" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="248.8889" y="442.6667" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#c62828">onDestroy()</ns0:text>
-  <ns0:path d="M 142.2222 371.5556 Q 53.3333 391.1111 53.3333 302.2222 Q 53.3333 151.1111 142.2222 142.2222" stroke="#1565c0" stroke-width="1.3333" fill="none" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:path d="M 142.2222 371.5556 Q 53.3333 391.1111 53.3333 302.2222 Q 53.3333 151.1111 142.2222 142.2222" stroke="#1565c0" stroke-width="1.3333" fill="none" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-primary)" />
   <ns0:text x="26.6667" y="275.5556" font-family="monospace" font-size="10.6667" fill="#1565c0" transform="rotate(-90 30 310)">onRestart()</ns0:text>
   <ns0:text x="800" y="21.3333" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Fragment Lifecycle (extra callbacks)</ns0:text>
-  <ns0:rect x="657.7778" y="32" width="284.4444" height="39.1111" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="657.7778" y="32" width="284.4444" height="39.1111" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="800" y="56.8889" text-anchor="middle" font-family="monospace" font-size="13.3333" font-weight="bold" fill="#ffffff">onAttach() → onCreate()</ns0:text>
-  <ns0:line x1="800" y1="72.8889" x2="800" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="800" y1="72.8889" x2="800" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="657.7778" y="99.5556" width="284.4444" height="39.1111" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="800" y="124.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">onCreateView()</ns0:text>
-  <ns0:line x1="800" y1="140.4444" x2="800" y2="165.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="800" y1="140.4444" x2="800" y2="165.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="657.7778" y="167.1111" width="284.4444" height="39.1111" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="800" y="192" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">onViewCreated()</ns0:text>
-  <ns0:line x1="800" y1="208" x2="800" y2="220.4444" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="800" y1="208" x2="800" y2="220.4444" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="631.1111" y="220.4444" width="337.7778" height="39.1111" rx="5.3333" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="800" y="245.3333" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#1b5e20">onStart() → onResume() [same as Activity]</ns0:text>
   <ns0:line x1="800" y1="261.3333" x2="800" y2="282.6667" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />

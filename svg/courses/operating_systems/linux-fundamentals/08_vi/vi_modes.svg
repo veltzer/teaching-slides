@@ -1,19 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
@@ -24,11 +74,11 @@
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </ns0:marker>
     <ns0:marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#4527a0" />
+      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#4a148c" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="844.5361" height="475.0515" fill="#ffffff" />
-  <ns0:circle cx="422.268" cy="191.3402" r="65.9794" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:circle cx="422.268" cy="191.3402" r="65.9794" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="422.268" y="186.0619" text-anchor="middle" font-family="sans-serif" font-size="14.5155" font-weight="bold" fill="#ffffff">NORMAL</ns0:text>
   <ns0:text x="422.268" y="201.2371" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bbdefb">MODE</ns0:text>
   <ns0:text x="422.268" y="213.1134" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#90caf9">Default / hub</ns0:text>
@@ -38,32 +88,32 @@
   <ns0:text x="145.1546" y="199.2577" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c8e6c9">MODE</ns0:text>
   <ns0:text x="145.1546" y="212.4536" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a5d6a7">Type text freely</ns0:text>
   <ns0:text x="145.1546" y="225.6495" text-anchor="middle" font-family="monospace" font-size="10" fill="#a5d6a7">-- INSERT --</ns0:text>
-  <ns0:circle cx="699.3814" cy="191.3402" r="59.3814" fill="#4527a0" filter="url(#shadow)" />
+  <ns0:circle cx="699.3814" cy="191.3402" r="59.3814" fill="#4a148c" filter="url(#shadow)" />
   <ns0:text x="699.3814" y="186.0619" text-anchor="middle" font-family="sans-serif" font-size="13.1959" font-weight="bold" fill="#ffffff">VISUAL</ns0:text>
-  <ns0:text x="699.3814" y="199.2577" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#d1c4e9">MODE</ns0:text>
-  <ns0:text x="699.3814" y="212.4536" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#b39ddb">Select text ranges</ns0:text>
-  <ns0:text x="699.3814" y="225.6495" text-anchor="middle" font-family="monospace" font-size="10" fill="#b39ddb">-- VISUAL --</ns0:text>
+  <ns0:text x="699.3814" y="199.2577" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e1bee7">MODE</ns0:text>
+  <ns0:text x="699.3814" y="212.4536" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ce93d8">Select text ranges</ns0:text>
+  <ns0:text x="699.3814" y="225.6495" text-anchor="middle" font-family="monospace" font-size="10" fill="#ce93d8">-- VISUAL --</ns0:text>
   <ns0:circle cx="422.268" cy="376.0825" r="59.3814" fill="#bf360c" filter="url(#shadow)" />
   <ns0:text x="422.268" y="370.8041" text-anchor="middle" font-family="sans-serif" font-size="11.8763" font-weight="bold" fill="#ffffff">COMMAND</ns0:text>
-  <ns0:text x="422.268" y="384" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ffccbc">MODE</ns0:text>
-  <ns0:text x="422.268" y="397.1959" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ffab91">:w  :q  :s  :%s</ns0:text>
-  <ns0:text x="422.268" y="410.3918" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffab91">Colon prompt at bottom</ns0:text>
-  <ns0:path d="M 356.2887 168.2474 Q 250.7216 131.9588 204.5361 171.5464" stroke="#2e7d32" stroke-width="1.9794" fill="none" marker-end="url(#arrow-green)" />
+  <ns0:text x="422.268" y="384" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ffcdd2">MODE</ns0:text>
+  <ns0:text x="422.268" y="397.1959" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ffcc80">:w  :q  :s  :%s</ns0:text>
+  <ns0:text x="422.268" y="410.3918" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffcc80">Colon prompt at bottom</ns0:text>
+  <ns0:path d="M 356.2887 168.2474 Q 250.7216 131.9588 204.5361 171.5464" stroke="#2e7d32" stroke-width="1.9794" fill="none" marker-end="url(#arrow-ok)" />
   <ns0:text x="267.2165" y="141.8557" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#2e7d32">i  a  I  A  o  O</ns0:text>
   <ns0:text x="267.2165" y="153.0722" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">enter insert before/after</ns0:text>
-  <ns0:path d="M 204.5361 211.134 Q 250.7216 250.7216 356.2887 214.433" stroke="#1565c0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-accent)" />
+  <ns0:path d="M 204.5361 211.134 Q 250.7216 250.7216 356.2887 214.433" stroke="#1565c0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-primary)" />
   <ns0:text x="267.2165" y="254.0206" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#1565c0">Esc</ns0:text>
   <ns0:text x="267.2165" y="265.2371" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">return to normal</ns0:text>
-  <ns0:path d="M 488.2474 168.2474 Q 593.8144 131.9588 640 171.5464" stroke="#4527a0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-purple)" />
-  <ns0:text x="580.6186" y="141.8557" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#4527a0">v  V  Ctrl+v</ns0:text>
+  <ns0:path d="M 488.2474 168.2474 Q 593.8144 131.9588 640 171.5464" stroke="#4a148c" stroke-width="1.9794" fill="none" marker-end="url(#arrow-purple)" />
+  <ns0:text x="580.6186" y="141.8557" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#4a148c">v  V  Ctrl+v</ns0:text>
   <ns0:text x="580.6186" y="153.0722" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">char / line / block select</ns0:text>
-  <ns0:path d="M 640 211.134 Q 593.8144 250.7216 488.2474 214.433" stroke="#1565c0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-accent)" />
+  <ns0:path d="M 640 211.134 Q 593.8144 250.7216 488.2474 214.433" stroke="#1565c0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-primary)" />
   <ns0:text x="580.6186" y="254.0206" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#1565c0">Esc</ns0:text>
   <ns0:text x="580.6186" y="265.2371" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">cancel selection</ns0:text>
-  <ns0:path d="M 389.2784 254.0206 Q 356.2887 306.8041 389.2784 316.701" stroke="#bf360c" stroke-width="1.9794" fill="none" marker-end="url(#arrow-orange)" />
+  <ns0:path d="M 389.2784 254.0206 Q 356.2887 306.8041 389.2784 316.701" stroke="#bf360c" stroke-width="1.9794" fill="none" marker-end="url(#arrow-warn)" />
   <ns0:text x="323.299" y="293.6082" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#bf360c">:  /  ?  !</ns0:text>
   <ns0:text x="323.299" y="304.8247" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">colon / search / shell</ns0:text>
-  <ns0:path d="M 455.2577 316.701 Q 488.2474 306.8041 455.2577 254.0206" stroke="#1565c0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-accent)" />
+  <ns0:path d="M 455.2577 316.701 Q 488.2474 306.8041 455.2577 254.0206" stroke="#1565c0" stroke-width="1.9794" fill="none" marker-end="url(#arrow-primary)" />
   <ns0:text x="521.2371" y="293.6082" text-anchor="middle" font-family="monospace" font-size="10.5567" font-weight="bold" fill="#1565c0">Enter / Esc</ns0:text>
   <ns0:text x="521.2371" y="304.8247" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">execute or cancel</ns0:text>
   <ns0:rect x="16.4948" y="277.1134" width="122.0619" height="181.4433" rx="5.2784" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.9897" filter="url(#shadow)" />
@@ -80,7 +130,7 @@
   <ns0:text x="32.9897" y="413.6907" font-family="monospace" font-size="10" fill="#212121">cw   change word</ns0:text>
   <ns0:text x="32.9897" y="428.866" font-family="sans-serif" font-size="10" fill="#555555">All enter Insert mode</ns0:text>
   <ns0:text x="32.9897" y="440.0825" font-family="sans-serif" font-size="10" fill="#555555">Esc to return</ns0:text>
-  <ns0:rect x="705.9794" y="277.1134" width="122.0619" height="181.4433" rx="5.2784" fill="#fbe9e7" stroke="#bf360c" stroke-width="0.9897" filter="url(#shadow)" />
+  <ns0:rect x="705.9794" y="277.1134" width="122.0619" height="181.4433" rx="5.2784" fill="#fce4ec" stroke="#bf360c" stroke-width="0.9897" filter="url(#shadow)" />
   <ns0:text x="766.6804" y="292.2887" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#bf360c">Command Mode</ns0:text>
   <ns0:text x="719.1753" y="306.8041" font-family="monospace" font-size="10" fill="#212121">:w       save</ns0:text>
   <ns0:text x="719.1753" y="318.6804" font-family="monospace" font-size="10" fill="#212121">:q!      quit</ns0:text>

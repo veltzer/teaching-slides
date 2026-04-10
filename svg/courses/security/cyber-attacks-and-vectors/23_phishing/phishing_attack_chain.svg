@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="17.7778" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 6.2222,0" fill="#dc3545" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="615.015" y="51.8919" text-anchor="middle" font-size="27.334" font-weight="bold" fill="#333">Phishing Attack Chain</ns0:text>
   <ns0:rect x="51.2512" y="95.1351" width="256.2563" height="86.4865" rx="8.5419" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4168" />
@@ -14,11 +71,11 @@
   <ns0:text x="478.345" y="159.1351" text-anchor="middle" font-size="17.0838" fill="#666">Convincing lure</ns0:text>
   <ns0:line x1="606.4731" y1="138.3784" x2="637.2239" y2="138.3784" stroke="#dc3545" stroke-width="3.4168" marker-end="url(#arrow)" />
   <ns0:rect x="649.1826" y="95.1351" width="256.2563" height="86.4865" rx="8.5419" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4168" />
-  <ns0:text x="777.3107" y="129.7297" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="#e6a800">3. Infrastructure</ns0:text>
+  <ns0:text x="777.3107" y="129.7297" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="#f39c12">3. Infrastructure</ns0:text>
   <ns0:text x="777.3107" y="159.1351" text-anchor="middle" font-size="17.0838" fill="#666">Fake sites/domains</ns0:text>
   <ns0:line x1="905.4388" y1="138.3784" x2="936.1895" y2="138.3784" stroke="#dc3545" stroke-width="3.4168" marker-end="url(#arrow)" />
   <ns0:rect x="948.1482" y="95.1351" width="239.1725" height="86.4865" rx="8.5419" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4168" />
-  <ns0:text x="1067.7344" y="129.7297" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="#e6a800">4. Deliver</ns0:text>
+  <ns0:text x="1067.7344" y="129.7297" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="#f39c12">4. Deliver</ns0:text>
   <ns0:text x="1067.7344" y="159.1351" text-anchor="middle" font-size="17.0838" fill="#666">Send phishing email</ns0:text>
   <ns0:line x1="1067.7344" y1="181.6216" x2="1067.7344" y2="268.1081" stroke="#dc3545" stroke-width="3.4168" marker-end="url(#arrow)" />
   <ns0:rect x="862.7294" y="276.7568" width="290.4237" height="86.4865" rx="8.5419" fill="#f8d7da" stroke="#dc3545" stroke-width="3.4168" />

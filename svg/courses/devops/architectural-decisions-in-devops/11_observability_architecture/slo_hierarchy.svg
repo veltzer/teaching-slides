@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrow4" markerWidth="18.2857" markerHeight="21.1765" refX="16.4571" refY="6.3529" orient="auto">
       <ns0:polygon points="0,21.1765 5.4857,0" fill="#333" />
     </ns0:marker>
@@ -13,13 +73,13 @@
   <ns0:rect x="350.8793" y="365.7143" width="526.319" height="111.746" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.5088" rx="14.0352" />
   <ns0:text x="614.0388" y="410.4127" text-anchor="middle" font-size="24.5616" font-weight="bold" fill="#2e7d32">SLI (Service Level Indicator)</ns0:text>
   <ns0:text x="614.0388" y="451.0476" text-anchor="middle" font-size="19.2984" fill="#555">The actual metric being measured</ns0:text>
-  <ns0:line x1="614.0388" y1="152.3809" x2="614.0388" y2="203.1746" stroke="#333" stroke-width="3.5088" marker-end="url(#arrow4)" />
-  <ns0:line x1="614.0388" y1="314.9207" x2="614.0388" y2="365.7143" stroke="#333" stroke-width="3.5088" marker-end="url(#arrow4)" />
+  <ns0:line x1="614.0388" y1="152.3809" x2="614.0388" y2="203.1746" stroke="#333" stroke-width="3.5088" marker-end="url(#arrow)" />
+  <ns0:line x1="614.0388" y1="314.9207" x2="614.0388" y2="365.7143" stroke="#333" stroke-width="3.5088" marker-end="url(#arrow)" />
   <ns0:text x="982.4621" y="91.4286" font-size="19.2984" fill="#c62828">99.9% availability/month</ns0:text>
   <ns0:text x="982.4621" y="253.9683" font-size="19.2984" fill="#f9a825">99.95% availability/month</ns0:text>
   <ns0:text x="982.4621" y="416.5079" font-size="19.2984" fill="#2e7d32">successful_requests / total</ns0:text>
   <ns0:rect x="350.8793" y="528.254" width="526.319" height="111.746" fill="#bbdefb" stroke="#1565c0" stroke-width="3.5088" rx="14.0352" />
   <ns0:text x="614.0388" y="572.9524" text-anchor="middle" font-size="24.5616" font-weight="bold" fill="#1565c0">Error Budget</ns0:text>
   <ns0:text x="614.0388" y="613.5873" text-anchor="middle" font-size="19.2984" fill="#555">Allowed failures = 1 - SLO target</ns0:text>
-  <ns0:line x1="614.0388" y1="477.4604" x2="614.0388" y2="528.254" stroke="#333" stroke-width="3.5088" marker-end="url(#arrow4)" />
+  <ns0:line x1="614.0388" y1="477.4604" x2="614.0388" y2="528.254" stroke="#333" stroke-width="3.5088" marker-end="url(#arrow)" />
 </ns0:svg>

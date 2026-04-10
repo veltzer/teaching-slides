@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="14.4" refX="17.0667" refY="7.2" orient="auto">
       <ns0:polygon points="0,20.5714 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -19,14 +79,14 @@
   <ns0:circle cx="428.5714" cy="413.2653" r="74.2857" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2857" />
   <ns0:text x="428.5714" y="406.3775" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Half-Open</ns0:text>
   <ns0:text x="428.5714" y="433.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4286" fill="#666">(Testing)</ns0:text>
-  <ns0:path d="M 245.7143 213.5204 Q 428.5714 110.2041 611.4286 213.5204" fill="none" stroke="#dc3545" stroke-width="2.2857" marker-end="url(#arrowred)" />
+  <ns0:path d="M 245.7143 213.5204 Q 428.5714 110.2041 611.4286 213.5204" fill="none" stroke="#dc3545" stroke-width="2.2857" marker-end="url(#arrow-danger)" />
   <ns0:text x="428.5714" y="137.7551" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.5714" fill="#dc3545">Failure threshold exceeded</ns0:text>
-  <ns0:path d="M 640 303.0612 Q 594.2858 399.4898 502.8571 413.2653" fill="none" stroke="#ffc107" stroke-width="2.2857" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 640 303.0612 Q 594.2858 399.4898 502.8571 413.2653" fill="none" stroke="#ffc107" stroke-width="2.2857" marker-end="url(#arrow)" />
   <ns0:text x="617.1429" y="378.8266" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.5714" fill="#ffc107">Timeout expires</ns0:text>
-  <ns0:path d="M 354.2857 399.4898 Q 240 358.1632 188.5714 323.7245" fill="none" stroke="#28a745" stroke-width="2.2857" marker-end="url(#arrowgreen)" />
+  <ns0:path d="M 354.2857 399.4898 Q 240 358.1632 188.5714 323.7245" fill="none" stroke="#28a745" stroke-width="2.2857" marker-end="url(#arrow-ok)" />
   <ns0:text x="228.5714" y="385.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.5714" fill="#28a745">Probe succeeds</ns0:text>
-  <ns0:path d="M 502.8571 406.3775 Q 605.7143 385.7143 634.2857 316.8368" fill="none" stroke="#dc3545" stroke-width="2.2857" marker-end="url(#arrowred)" />
+  <ns0:path d="M 502.8571 406.3775 Q 605.7143 385.7143 634.2857 316.8368" fill="none" stroke="#dc3545" stroke-width="2.2857" marker-end="url(#arrow-danger)" />
   <ns0:text x="605.7143" y="427.0408" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.5714" fill="#dc3545">Probe fails</ns0:text>
-  <ns0:line x1="57.1428" y1="234.1837" x2="94.8571" y2="234.1837" stroke="#333" stroke-width="2.2857" marker-end="url(#arrowhead)" />
+  <ns0:line x1="57.1428" y1="234.1837" x2="94.8571" y2="234.1837" stroke="#333" stroke-width="2.2857" marker-end="url(#arrow)" />
   <ns0:circle cx="45.7143" cy="234.1837" r="9.1428" fill="#333" />
 </ns0:svg>

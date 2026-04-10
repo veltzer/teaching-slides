@@ -1,26 +1,86 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#1a1a2e" />
       <ns0:stop offset="100%" style="stop-color:#16213e" />
     </ns0:linearGradient>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
-  <ns0:polygon points="497.7778,96 440.8889,288 512,288 455.1111,480 597.3333,240 526.2222,240 568.8889,96" fill="#e94560" opacity="0.9" />
+  <ns0:polygon points="497.7778,96 440.8889,288 512,288 455.1111,480 597.3333,240 526.2222,240 568.8889,96" fill="#dc3545" opacity="0.9" />
   <ns0:g transform="translate(550,100)">
-    <ns0:path d="M 0 -64 Q 0 -80 14.2222 -80 L 42.6667 -80 Q 56.8889 -80 56.8889 -64 L 56.8889 -16 Q 56.8889 0 42.6667 0 L 14.2222 0 Q 0 0 0 16 L 0 64 Q 0 80 14.2222 80 L 42.6667 80 Q 56.8889 80 56.8889 64 L 56.8889 16 Q 56.8889 0 42.6667 0" fill="none" stroke="#3776ab" stroke-width="5.6889" />
-    <ns0:circle cx="17.0667" cy="-56" r="5.6889" fill="#ffd43b" />
-    <ns0:circle cx="39.8222" cy="56" r="5.6889" fill="#3776ab" />
+    <ns0:path d="M 0 -64 Q 0 -80 14.2222 -80 L 42.6667 -80 Q 56.8889 -80 56.8889 -64 L 56.8889 -16 Q 56.8889 0 42.6667 0 L 14.2222 0 Q 0 0 0 16 L 0 64 Q 0 80 14.2222 80 L 42.6667 80 Q 56.8889 80 56.8889 64 L 56.8889 16 Q 56.8889 0 42.6667 0" fill="none" stroke="#3f51b5" stroke-width="5.6889" />
+    <ns0:circle cx="17.0667" cy="-56" r="5.6889" fill="#f9a825" />
+    <ns0:circle cx="39.8222" cy="56" r="5.6889" fill="#3f51b5" />
   </ns0:g>
-  <ns0:circle cx="213.3333" cy="240" r="42.6667" fill="none" stroke="#00d2ff" stroke-width="2.8444" />
-  <ns0:text x="213.3333" y="248" text-anchor="middle" fill="#00d2ff" font-family="Arial,sans-serif" font-size="14.2222">Delta</ns0:text>
-  <ns0:circle cx="142.2222" cy="400" r="42.6667" fill="none" stroke="#0f3460" stroke-width="2.8444" />
-  <ns0:text x="142.2222" y="408" text-anchor="middle" fill="#0f3460" font-family="Arial,sans-serif" font-size="14.2222">K8s</ns0:text>
-  <ns0:circle cx="312.8889" cy="432" r="42.6667" fill="none" stroke="#533483" stroke-width="2.8444" />
-  <ns0:text x="312.8889" y="440" text-anchor="middle" fill="#533483" font-family="Arial,sans-serif" font-size="14.2222">MLflow</ns0:text>
-  <ns0:line x1="241.7778" y1="272" x2="440.8889" y2="288" stroke="#444" stroke-width="1.4222" stroke-dasharray="5.6889" />
-  <ns0:line x1="170.6667" y1="424" x2="440.8889" y2="320" stroke="#444" stroke-width="1.4222" stroke-dasharray="5.6889" />
-  <ns0:line x1="341.3333" y1="416" x2="455.1111" y2="336" stroke="#444" stroke-width="1.4222" stroke-dasharray="5.6889" />
+  <ns0:circle cx="213.3333" cy="240" r="42.6667" fill="none" stroke="#2196f3" stroke-width="2.8444" />
+  <ns0:text x="213.3333" y="248" text-anchor="middle" fill="#2196f3" font-family="Arial,sans-serif" font-size="14.2222">Delta</ns0:text>
+  <ns0:circle cx="142.2222" cy="400" r="42.6667" fill="none" stroke="#1a237e" stroke-width="2.8444" />
+  <ns0:text x="142.2222" y="408" text-anchor="middle" fill="#1a237e" font-family="Arial,sans-serif" font-size="14.2222">K8s</ns0:text>
+  <ns0:circle cx="312.8889" cy="432" r="42.6667" fill="none" stroke="#4a148c" stroke-width="2.8444" />
+  <ns0:text x="312.8889" y="440" text-anchor="middle" fill="#4a148c" font-family="Arial,sans-serif" font-size="14.2222">MLflow</ns0:text>
+  <ns0:line x1="241.7778" y1="272" x2="440.8889" y2="288" stroke="#333333" stroke-width="1.4222" stroke-dasharray="5.6889" />
+  <ns0:line x1="170.6667" y1="424" x2="440.8889" y2="320" stroke="#333333" stroke-width="1.4222" stroke-dasharray="5.6889" />
+  <ns0:line x1="341.3333" y1="416" x2="455.1111" y2="336" stroke="#333333" stroke-width="1.4222" stroke-dasharray="5.6889" />
   <ns0:text x="568.8889" y="560" text-anchor="middle" fill="#eee" font-family="Arial,sans-serif" font-size="36.9778" font-weight="bold">Advanced Spark Ecosystem</ns0:text>
-  <ns0:text x="568.8889" y="608" text-anchor="middle" fill="#ffd43b" font-family="Arial,sans-serif" font-size="25.6">Best Practices with Python</ns0:text>
+  <ns0:text x="568.8889" y="608" text-anchor="middle" fill="#f9a825" font-family="Arial,sans-serif" font-size="25.6">Best Practices with Python</ns0:text>
 </ns0:svg>

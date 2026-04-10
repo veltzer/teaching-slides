@@ -1,25 +1,86 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="374.269" y="84.2105" width="449.1228" height="336.8421" fill="#f0f4f8" stroke="#2563eb" stroke-width="2.9942" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="374.269" y="84.2105" width="449.1228" height="336.8421" fill="#f5f5f5" stroke="#1976d2" stroke-width="2.9942" />
   <ns0:text x="598.8304" y="134.7368" text-anchor="middle" font-family="Arial" font-size="23.9532" font-weight="bold">Employee</ns0:text>
-  <ns0:line x1="374.269" y1="151.5789" x2="823.3918" y2="151.5789" stroke="#2563eb" stroke-width="1.4971" />
+  <ns0:line x1="374.269" y1="151.5789" x2="823.3918" y2="151.5789" stroke="#1976d2" stroke-width="1.4971" />
   <ns0:text x="389.2398" y="185.2632" font-family="Arial" font-size="17.9649">- name: String</ns0:text>
   <ns0:text x="389.2398" y="218.9474" font-family="Arial" font-size="17.9649">- salary: double</ns0:text>
-  <ns0:line x1="374.269" y1="235.7895" x2="823.3918" y2="235.7895" stroke="#2563eb" stroke-width="1.4971" />
+  <ns0:line x1="374.269" y1="235.7895" x2="823.3918" y2="235.7895" stroke="#1976d2" stroke-width="1.4971" />
   <ns0:text x="389.2398" y="269.4737" font-family="Arial" font-size="17.9649">+ calculatePay()</ns0:text>
   <ns0:text x="389.2398" y="303.1579" font-family="Arial" font-size="17.9649">+ saveToDatabase()</ns0:text>
   <ns0:text x="389.2398" y="336.8421" font-family="Arial" font-size="17.9649">+ generateReport()</ns0:text>
   <ns0:text x="389.2398" y="370.5263" font-family="Arial" font-size="17.9649">+ sendEmail()</ns0:text>
-  <ns0:rect x="74.8538" y="505.2632" width="179.6491" height="67.3684" fill="#fee2e2" stroke="#dc2626" stroke-width="2.9942" />
+  <ns0:rect x="74.8538" y="505.2632" width="179.6491" height="67.3684" fill="#fce4ec" stroke="#d32f2f" stroke-width="2.9942" />
   <ns0:text x="164.6784" y="547.3684" text-anchor="middle" font-family="Arial" font-size="17.9649">PayrollDepartment</ns0:text>
-  <ns0:rect x="374.269" y="505.2632" width="119.7661" height="67.3684" fill="#fee2e2" stroke="#dc2626" stroke-width="2.9942" />
+  <ns0:rect x="374.269" y="505.2632" width="119.7661" height="67.3684" fill="#fce4ec" stroke="#d32f2f" stroke-width="2.9942" />
   <ns0:text x="434.152" y="547.3684" text-anchor="middle" font-family="Arial" font-size="17.9649">HR</ns0:text>
-  <ns0:rect x="613.8012" y="505.2632" width="149.7076" height="67.3684" fill="#fee2e2" stroke="#dc2626" stroke-width="2.9942" />
+  <ns0:rect x="613.8012" y="505.2632" width="149.7076" height="67.3684" fill="#fce4ec" stroke="#d32f2f" stroke-width="2.9942" />
   <ns0:text x="688.655" y="547.3684" text-anchor="middle" font-family="Arial" font-size="17.9649">Reporting</ns0:text>
-  <ns0:rect x="883.2749" y="505.2632" width="119.7661" height="67.3684" fill="#fee2e2" stroke="#dc2626" stroke-width="2.9942" />
+  <ns0:rect x="883.2749" y="505.2632" width="119.7661" height="67.3684" fill="#fce4ec" stroke="#d32f2f" stroke-width="2.9942" />
   <ns0:text x="943.1579" y="547.3684" text-anchor="middle" font-family="Arial" font-size="17.9649">IT</ns0:text>
-  <ns0:line x1="254.5029" y1="505.2632" x2="523.9766" y2="421.0526" stroke="#dc2626" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
-  <ns0:line x1="434.152" y1="505.2632" x2="568.8889" y2="421.0526" stroke="#dc2626" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
-  <ns0:line x1="688.655" y1="505.2632" x2="643.7427" y2="421.0526" stroke="#dc2626" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
-  <ns0:line x1="883.2749" y1="538.9474" x2="718.5965" y2="421.0526" stroke="#dc2626" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
-  <ns0:text x="598.8304" y="640" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#dc2626">Multiple responsibilities = Violation of SRP</ns0:text>
+  <ns0:line x1="254.5029" y1="505.2632" x2="523.9766" y2="421.0526" stroke="#d32f2f" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
+  <ns0:line x1="434.152" y1="505.2632" x2="568.8889" y2="421.0526" stroke="#d32f2f" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
+  <ns0:line x1="688.655" y1="505.2632" x2="643.7427" y2="421.0526" stroke="#d32f2f" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
+  <ns0:line x1="883.2749" y1="538.9474" x2="718.5965" y2="421.0526" stroke="#d32f2f" stroke-width="1.4971" stroke-dasharray="7.4854 7.4854" />
+  <ns0:text x="598.8304" y="640" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#d32f2f">Multiple responsibilities = Violation of SRP</ns0:text>
 </ns0:svg>

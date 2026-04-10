@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="19.6923" markerHeight="22.9091" refX="17.7231" refY="11.4545" orient="auto">
       <ns0:polygon points="0,32.7273 6.8923,0" fill="#555" />
     </ns0:marker>
@@ -7,18 +67,18 @@
       <ns0:polygon points="0,32.7273 6.8923,0" fill="#555" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect x="18.3378" y="30.4762" width="1155.2819" height="609.5238" rx="7.3351" fill="#f8f9fa" stroke="#333" stroke-width="2.7506" />
+  <ns0:rect x="18.3378" y="30.4762" width="1155.2819" height="609.5238" rx="7.3351" fill="#f9f9f9" stroke="#333" stroke-width="2.7506" />
   <ns0:text x="595.9788" y="103.619" text-anchor="middle" font-size="29.3405" fill="#222" font-weight="bold">Observability</ns0:text>
   <ns0:rect x="55.0134" y="152.381" width="320.9117" height="426.6666" rx="7.3351" fill="#e3f2fd" stroke="#333" stroke-width="2.7506" />
   <ns0:text x="214.5524" y="231.619" text-anchor="middle" font-size="27.5067" fill="#222" font-weight="bold">Metrics</ns0:text>
-  <ns0:text x="214.5524" y="304.7618" text-anchor="middle" font-size="20.1716" fill="#444">Numbers over time</ns0:text>
+  <ns0:text x="214.5524" y="304.7618" text-anchor="middle" font-size="20.1716" fill="#333333">Numbers over time</ns0:text>
   <ns0:text x="214.5524" y="493.7142" text-anchor="middle" font-size="20.1716" fill="#666">Prometheus / Datadog</ns0:text>
   <ns0:rect x="421.7696" y="152.381" width="320.9117" height="426.6666" rx="7.3351" fill="#e8f5e9" stroke="#333" stroke-width="2.7506" />
   <ns0:text x="581.3086" y="231.619" text-anchor="middle" font-size="27.5067" fill="#222" font-weight="bold">Logs</ns0:text>
-  <ns0:text x="581.3086" y="304.7618" text-anchor="middle" font-size="20.1716" fill="#444">Events with context</ns0:text>
+  <ns0:text x="581.3086" y="304.7618" text-anchor="middle" font-size="20.1716" fill="#333333">Events with context</ns0:text>
   <ns0:text x="581.3086" y="493.7142" text-anchor="middle" font-size="20.1716" fill="#666">Loki / EFK</ns0:text>
   <ns0:rect x="788.5257" y="152.381" width="320.9117" height="426.6666" rx="7.3351" fill="#fff3e0" stroke="#333" stroke-width="2.7506" />
   <ns0:text x="948.0647" y="231.619" text-anchor="middle" font-size="27.5067" fill="#222" font-weight="bold">Traces</ns0:text>
-  <ns0:text x="948.0647" y="304.7618" text-anchor="middle" font-size="20.1716" fill="#444">Request flow across services</ns0:text>
+  <ns0:text x="948.0647" y="304.7618" text-anchor="middle" font-size="20.1716" fill="#333333">Request flow across services</ns0:text>
   <ns0:text x="948.0647" y="493.7142" text-anchor="middle" font-size="20.1716" fill="#666">Jaeger / Tempo</ns0:text>
 </ns0:svg>

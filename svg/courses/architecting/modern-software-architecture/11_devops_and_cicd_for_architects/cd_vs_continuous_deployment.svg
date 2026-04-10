@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="15.0588" markerHeight="18" refX="15.0588" refY="9" orient="auto">
       <polygon points="0,25.7143 5.2706,0" fill="#4a90e2" />
     </marker>
@@ -16,10 +76,10 @@
   <text x="768" y="185.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" font-weight="bold">Manual Approval</text>
   <rect x="933.6471" y="128.5714" width="180.7059" height="90" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
   <text x="1024" y="185.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Production</text>
-  <line x1="210.8235" y1="172.2857" x2="252.9882" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="406.5882" y1="172.2857" x2="448.7529" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="602.3529" y1="172.2857" x2="659.5765" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="873.4118" y1="172.2857" x2="930.6353" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="210.8235" y1="172.2857" x2="252.9882" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="406.5882" y1="172.2857" x2="448.7529" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="602.3529" y1="172.2857" x2="659.5765" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="873.4118" y1="172.2857" x2="930.6353" y2="172.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
   <rect x="30.1176" y="372.8571" width="1219.7647" height="257.1429" rx="7.5294" fill="none" stroke="#28a745" stroke-width="2.2588" stroke-dasharray="7.5294" />
   <text x="632.4706" y="424.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" fill="#28a745" font-weight="bold">Continuous Deployment</text>
   <rect x="60.2353" y="462.8571" width="150.5882" height="90" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
@@ -30,7 +90,7 @@
   <text x="617.4118" y="519.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Stage</text>
   <rect x="798.1176" y="462.8571" width="301.1765" height="90" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
   <text x="948.7059" y="519.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" font-weight="bold">Auto Deploy to Prod</text>
-  <line x1="210.8235" y1="506.5714" x2="298.1647" y2="506.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="451.7647" y1="506.5714" x2="539.1059" y2="506.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="692.7059" y1="506.5714" x2="795.1059" y2="506.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="210.8235" y1="506.5714" x2="298.1647" y2="506.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="451.7647" y1="506.5714" x2="539.1059" y2="506.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="692.7059" y1="506.5714" x2="795.1059" y2="506.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
 </svg>

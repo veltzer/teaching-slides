@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -10,7 +70,7 @@
   <ns0:rect x="76.3476" y="150.1234" width="194.3394" height="63.2099" rx="6.9407" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7763" />
   <ns0:text x="173.5173" y="176.9877" text-anchor="middle" font-size="15.2695" font-weight="bold" fill="#333">Raw Data</ns0:text>
   <ns0:text x="173.5173" y="199.1111" text-anchor="middle" font-size="13.8814" fill="#555">All Formats</ns0:text>
-  <ns0:line x1="270.687" y1="181.7284" x2="316.4956" y2="181.7284" stroke="#4a90e2" stroke-width="2.0822" marker-end="url(#arrowhead)" />
+  <ns0:line x1="270.687" y1="181.7284" x2="316.4956" y2="181.7284" stroke="#4a90e2" stroke-width="2.0822" marker-end="url(#arrow)" />
   <ns0:rect x="319.2718" y="150.1234" width="180.458" height="63.2099" rx="6.9407" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0822" />
   <ns0:text x="409.5009" y="186.4691" text-anchor="middle" font-size="15.2695" fill="#333">Schema on Read</ns0:text>
   <ns0:rect x="76.3476" y="244.9383" width="194.3394" height="63.2099" rx="6.9407" fill="#d4edda" stroke="#28a745" stroke-width="2.0822" />
@@ -19,11 +79,11 @@
   <ns0:text x="173.5173" y="366.6173" text-anchor="middle" font-size="15.2695" font-weight="bold" fill="#333">Users:</ns0:text>
   <ns0:text x="173.5173" y="391.9013" text-anchor="middle" font-size="13.8814" fill="#555">Data Scientists</ns0:text>
   <ns0:rect x="652.4251" y="79.0124" width="485.8485" height="379.2593" rx="6.9407" fill="none" stroke="#ffc107" stroke-width="2.7763" stroke-dasharray="11.1051 5.5525" />
-  <ns0:text x="895.3493" y="118.5185" text-anchor="middle" font-size="19.434" font-weight="bold" fill="#996600">Data Warehouse</ns0:text>
+  <ns0:text x="895.3493" y="118.5185" text-anchor="middle" font-size="19.434" font-weight="bold" fill="#bf360c">Data Warehouse</ns0:text>
   <ns0:rect x="687.1286" y="150.1234" width="194.3394" height="63.2099" rx="6.9407" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7763" />
   <ns0:text x="784.2982" y="176.9877" text-anchor="middle" font-size="15.2695" font-weight="bold" fill="#333">Structured Data</ns0:text>
   <ns0:text x="784.2982" y="199.1111" text-anchor="middle" font-size="13.8814" fill="#555">Tables/Schemas</ns0:text>
-  <ns0:line x1="881.4679" y1="181.7284" x2="927.2765" y2="181.7284" stroke="#ffc107" stroke-width="2.0822" marker-end="url(#arrowhead)" />
+  <ns0:line x1="881.4679" y1="181.7284" x2="927.2765" y2="181.7284" stroke="#ffc107" stroke-width="2.0822" marker-end="url(#arrow)" />
   <ns0:rect x="930.0528" y="150.1234" width="180.458" height="63.2099" rx="6.9407" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0822" />
   <ns0:text x="1020.2818" y="186.4691" text-anchor="middle" font-size="15.2695" fill="#333">Schema on Write</ns0:text>
   <ns0:rect x="687.1286" y="244.9383" width="194.3394" height="63.2099" rx="6.9407" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0822" />
@@ -31,13 +91,13 @@
   <ns0:rect x="687.1286" y="339.7531" width="194.3394" height="63.2099" rx="6.9407" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0822" />
   <ns0:text x="784.2982" y="366.6173" text-anchor="middle" font-size="15.2695" font-weight="bold" fill="#333">Users:</ns0:text>
   <ns0:text x="784.2982" y="391.9013" text-anchor="middle" font-size="13.8814" fill="#555">Business Users</ns0:text>
-  <ns0:line x1="527.4926" y1="181.7284" x2="649.6488" y2="181.7284" stroke="#dc3545" stroke-width="2.7763" stroke-dasharray="6.9407 4.1644" marker-end="url(#arrowhead)" />
+  <ns0:line x1="527.4926" y1="181.7284" x2="649.6488" y2="181.7284" stroke="#dc3545" stroke-width="2.7763" stroke-dasharray="6.9407 4.1644" marker-end="url(#arrow)" />
   <ns0:text x="588.5707" y="170.6667" text-anchor="middle" font-size="13.8814" fill="#dc3545">ETL Process</ns0:text>
   <ns0:rect x="41.6442" y="489.8766" width="1096.6294" height="150.1234" rx="6.9407" fill="#f5f5f5" stroke="#ddd" stroke-width="1.3882" />
   <ns0:text x="589.9589" y="524.642" text-anchor="middle" font-size="16.6577" font-weight="bold" fill="#333">Key Differences</ns0:text>
   <ns0:text x="277.6277" y="559.4074" text-anchor="middle" font-size="15.2695" fill="#4a90e2">Data Lake: Schema on read, all formats</ns0:text>
   <ns0:text x="277.6277" y="587.8519" text-anchor="middle" font-size="15.2695" fill="#4a90e2">Low cost, flexible, for exploration</ns0:text>
-  <ns0:text x="867.5866" y="559.4074" text-anchor="middle" font-size="15.2695" fill="#996600">Warehouse: Schema on write, structured</ns0:text>
-  <ns0:text x="867.5866" y="587.8519" text-anchor="middle" font-size="15.2695" fill="#996600">Optimized, fast queries, for reporting</ns0:text>
+  <ns0:text x="867.5866" y="559.4074" text-anchor="middle" font-size="15.2695" fill="#bf360c">Warehouse: Schema on write, structured</ns0:text>
+  <ns0:text x="867.5866" y="587.8519" text-anchor="middle" font-size="15.2695" fill="#bf360c">Optimized, fast queries, for reporting</ns0:text>
   <ns0:line x1="589.9589" y1="537.2839" x2="589.9589" y2="624.1976" stroke="#ddd" stroke-width="1.3882" />
 </ns0:svg>

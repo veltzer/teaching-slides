@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="15.0588" markerHeight="14.4" refX="15.0588" refY="7.2" orient="auto">
       <polygon points="0,20.5714 5.2706,0" fill="#4a90e2" />
     </marker>
@@ -29,19 +89,19 @@
   <text x="933.6471" y="524.5714" text-anchor="middle" font-size="18.0706" fill="#333">Manual Review</text>
   <rect x="512" y="473.1429" width="195.7647" height="82.2857" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
   <text x="609.8824" y="524.5714" text-anchor="middle" font-size="18.0706" fill="#333">Reprocess</text>
-  <line x1="210.8235" y1="205.7143" x2="290.6353" y2="199.5429" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="489.4118" y1="199.5429" x2="576.7529" y2="205.7143" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="745.4118" y1="185.1429" x2="840.2824" y2="119.3143" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="210.8235" y1="205.7143" x2="290.6353" y2="199.5429" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="489.4118" y1="199.5429" x2="576.7529" y2="205.7143" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="745.4118" y1="185.1429" x2="840.2824" y2="119.3143" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
   <text x="798.1176" y="139.8857" font-size="15.0588" fill="#28a745">Success</text>
-  <line x1="745.4118" y1="216" x2="840.2824" y2="216" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrowhead-red)" />
+  <line x1="745.4118" y1="216" x2="840.2824" y2="216" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrow-danger)" />
   <text x="795.1059" y="205.7143" font-size="15.0588" fill="#dc3545">Fail</text>
-  <line x1="963.7647" y1="216" x2="990.8706" y2="216" stroke="#dc3545" stroke-width="1.5059" marker-end="url(#arrowhead-red)" />
-  <line x1="1114.3529" y1="216" x2="1141.4588" y2="216" stroke="#dc3545" stroke-width="1.5059" marker-end="url(#arrowhead-red)" />
-  <line x1="1204.7059" y1="246.8571" x2="1182.1176" y2="325.0286" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrowhead-red)" />
+  <line x1="963.7647" y1="216" x2="990.8706" y2="216" stroke="#dc3545" stroke-width="1.5059" marker-end="url(#arrow-danger)" />
+  <line x1="1114.3529" y1="216" x2="1141.4588" y2="216" stroke="#dc3545" stroke-width="1.5059" marker-end="url(#arrow-danger)" />
+  <line x1="1204.7059" y1="246.8571" x2="1182.1176" y2="325.0286" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrow-danger)" />
   <text x="1227.2941" y="288" font-size="15.0588" fill="#dc3545">Max retries</text>
-  <line x1="1054.1176" y1="401.1429" x2="1042.0706" y2="493.7143" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="828.2353" y1="514.2857" x2="710.7765" y2="514.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="564.7059" y1="473.1429" x2="421.6471" y2="261.2571" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="1054.1176" y1="401.1429" x2="1042.0706" y2="493.7143" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="828.2353" y1="514.2857" x2="710.7765" y2="514.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="564.7059" y1="473.1429" x2="421.6471" y2="261.2571" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
   <text x="466.8235" y="360" font-size="15.0588" fill="#4a90e2">Re-enqueue</text>
   <text x="640" y="637.7143" text-anchor="middle" font-size="16.5647" fill="#888" font-style="italic">Messages that fail repeatedly are moved to the DLQ for manual inspection and reprocessing.</text>
 </svg>

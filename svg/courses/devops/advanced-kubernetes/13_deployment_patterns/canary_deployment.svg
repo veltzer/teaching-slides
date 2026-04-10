@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="588.9673" y="37.6471" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Canary Deployment Phases</ns0:text>
   <ns0:rect x="47.1174" y="60.2352" width="1083.6998" height="112.9412" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
   <ns0:text x="70.6761" y="90.3529" font-size="19.5764" font-weight="bold" fill="#333">Phase 1: 5% canary</ns0:text>
@@ -22,7 +83,7 @@
   <ns0:text x="70.6761" y="474.3529" font-size="19.5764" font-weight="bold" fill="#333">Phase 4: 100% new version</ns0:text>
   <ns0:rect x="70.6761" y="489.4117" width="942.3476" height="24.0941" rx="4.5177" fill="#28a745" />
   <ns0:text x="989.465" y="508.9882" font-size="16.5647" fill="#555">100% v2</ns0:text>
-  <ns0:rect x="47.1174" y="564.7059" width="471.1738" height="75.2941" rx="7.5294" fill="#f8f9fa" stroke="#ccc" stroke-width="1.5059" />
+  <ns0:rect x="47.1174" y="564.7059" width="471.1738" height="75.2941" rx="7.5294" fill="#f9f9f9" stroke="#ccc" stroke-width="1.5059" />
   <ns0:rect x="70.6761" y="579.7647" width="35.338" height="18.0706" rx="3.0117" fill="#4a90e2" />
   <ns0:text x="117.7935" y="596.3294" font-size="16.5647" fill="#555">v1 (current)</ns0:text>
   <ns0:rect x="70.6761" y="606.8705" width="35.338" height="18.0706" rx="3.0117" fill="#28a745" />

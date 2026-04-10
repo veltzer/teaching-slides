@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="15.75" refX="17.0667" refY="7.875" orient="auto">
       <ns0:polygon points="0,22.5 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -12,8 +72,8 @@
   <ns0:text x="296.2079" y="147.5254" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3928" font-weight="bold" fill="#4a90e2">Single Leader</ns0:text>
   <ns0:rect x="181.0159" y="184.4068" width="230.3839" height="97.6271" rx="8.228" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2912" />
   <ns0:text x="296.2079" y="245.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7472" font-weight="bold">Primary</ns0:text>
-  <ns0:line x1="238.612" y1="282.0339" x2="164.56" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrowhead)" />
-  <ns0:line x1="353.8039" y1="282.0339" x2="427.8558" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrowhead)" />
+  <ns0:line x1="238.612" y1="282.0339" x2="164.56" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrow)" />
+  <ns0:line x1="353.8039" y1="282.0339" x2="427.8558" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrow)" />
   <ns0:rect x="65.824" y="412.2034" width="197.4719" height="86.7797" rx="8.228" fill="#d4edda" stroke="#28a745" stroke-width="3.2912" />
   <ns0:text x="164.56" y="466.4407" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7472">Replica 1</ns0:text>
   <ns0:rect x="329.1199" y="412.2034" width="197.4719" height="86.7797" rx="8.228" fill="#d4edda" stroke="#28a745" stroke-width="3.2912" />
@@ -24,10 +84,10 @@
   <ns0:text x="798.1157" y="245.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7472" font-weight="bold">Leader 1</ns0:text>
   <ns0:rect x="970.9037" y="184.4068" width="213.928" height="97.6271" rx="8.228" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2912" />
   <ns0:text x="1077.8677" y="245.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7472" font-weight="bold">Leader 2</ns0:text>
-  <ns0:line x1="905.0798" y1="223.4576" x2="962.6757" y2="223.4576" stroke="#28a745" stroke-width="3.2912" marker-end="url(#arrowhead)" />
-  <ns0:line x1="970.9037" y1="245.1525" x2="913.3077" y2="245.1525" stroke="#28a745" stroke-width="3.2912" marker-end="url(#arrowhead)" />
-  <ns0:line x1="798.1157" y1="282.0339" x2="773.4317" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrowhead)" />
-  <ns0:line x1="1077.8677" y1="282.0339" x2="1077.8677" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrowhead)" />
+  <ns0:line x1="905.0798" y1="223.4576" x2="962.6757" y2="223.4576" stroke="#28a745" stroke-width="3.2912" marker-end="url(#arrow)" />
+  <ns0:line x1="970.9037" y1="245.1525" x2="913.3077" y2="245.1525" stroke="#28a745" stroke-width="3.2912" marker-end="url(#arrow)" />
+  <ns0:line x1="798.1157" y1="282.0339" x2="773.4317" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrow)" />
+  <ns0:line x1="1077.8677" y1="282.0339" x2="1077.8677" y2="401.3559" stroke="#4a90e2" stroke-width="3.2912" marker-end="url(#arrow)" />
   <ns0:rect x="682.9238" y="412.2034" width="181.0159" height="86.7797" rx="8.228" fill="#d4edda" stroke="#28a745" stroke-width="3.2912" />
   <ns0:text x="773.4317" y="466.4407" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7472">Replica</ns0:text>
   <ns0:rect x="987.3597" y="412.2034" width="181.0159" height="86.7797" rx="8.228" fill="#d4edda" stroke="#28a745" stroke-width="3.2912" />

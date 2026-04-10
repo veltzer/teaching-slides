@@ -1,14 +1,71 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#0d1117" />
       <ns0:stop offset="100%" style="stop-color:#1a1a2e" />
     </ns0:linearGradient>
-    <ns0:marker id="arrow" markerWidth="12.8" markerHeight="10.8" refX="12.8" refY="5.4" orient="auto">
-      <ns0:polygon points="0,0 12.8,5.4 0,10.8" fill="#e06c75" />
-    </ns0:marker>
     <ns0:marker id="arrowB" markerWidth="12.8" markerHeight="10.8" refX="12.8" refY="5.4" orient="auto">
-      <ns0:polygon points="0,0 12.8,5.4 0,10.8" fill="#61afef" />
+      <ns0:polygon points="0,0 12.8,5.4 0,10.8" fill="#4a90e2" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
@@ -24,48 +81,48 @@
   </ns0:g>
   <ns0:line x1="85.3333" y1="320" x2="1052.4444" y2="320" stroke="#333" stroke-width="4.2667" opacity="0.5" />
   <ns0:g opacity="0.7">
-    <ns0:rect x="113.7778" y="300.8" width="49.7778" height="38.4" rx="5.6889" fill="none" stroke="#61afef" stroke-width="2.1333" />
-    <ns0:rect x="119.4667" y="307.2" width="14.2222" height="9.6" rx="1.4222" fill="#61afef" opacity="0.5" />
-    <ns0:rect x="136.5333" y="307.2" width="21.3333" height="25.6" rx="1.4222" fill="#61afef" opacity="0.3" />
+    <ns0:rect x="113.7778" y="300.8" width="49.7778" height="38.4" rx="5.6889" fill="none" stroke="#4a90e2" stroke-width="2.1333" />
+    <ns0:rect x="119.4667" y="307.2" width="14.2222" height="9.6" rx="1.4222" fill="#4a90e2" opacity="0.5" />
+    <ns0:rect x="136.5333" y="307.2" width="21.3333" height="25.6" rx="1.4222" fill="#4a90e2" opacity="0.3" />
   </ns0:g>
   <ns0:g transform="translate(200, 200)">
-    <ns0:circle r="22.7556" fill="#e06c75" opacity="0.2" stroke="#e06c75" stroke-width="2.8444" />
-    <ns0:text y="64" text-anchor="middle" fill="#e06c75" font-family="monospace" font-size="14.2222" opacity="0.7">PRE_ROUTING</ns0:text>
-    <ns0:line x1="0" y1="-25.6" x2="0" y2="-80" stroke="#e06c75" stroke-width="2.1333" stroke-dasharray="5.6889 4.2667" />
-    <ns0:rect x="-35.5556" y="-120" width="71.1111" height="32" rx="5.6889" fill="#e06c75" opacity="0.15" stroke="#e06c75" stroke-width="1.4222" />
-    <ns0:text y="-97.6" text-anchor="middle" fill="#e06c75" font-family="monospace" font-size="14.2222" opacity="0.7">hook fn</ns0:text>
+    <ns0:circle r="22.7556" fill="#e74c3c" opacity="0.2" stroke="#e74c3c" stroke-width="2.8444" />
+    <ns0:text y="64" text-anchor="middle" fill="#e74c3c" font-family="monospace" font-size="14.2222" opacity="0.7">PRE_ROUTING</ns0:text>
+    <ns0:line x1="0" y1="-25.6" x2="0" y2="-80" stroke="#e74c3c" stroke-width="2.1333" stroke-dasharray="5.6889 4.2667" />
+    <ns0:rect x="-35.5556" y="-120" width="71.1111" height="32" rx="5.6889" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.4222" />
+    <ns0:text y="-97.6" text-anchor="middle" fill="#e74c3c" font-family="monospace" font-size="14.2222" opacity="0.7">hook fn</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(400, 200)">
-    <ns0:circle r="22.7556" fill="#e5c07b" opacity="0.2" stroke="#e5c07b" stroke-width="2.8444" />
-    <ns0:text y="64" text-anchor="middle" fill="#e5c07b" font-family="monospace" font-size="14.2222" opacity="0.7">FORWARD</ns0:text>
-    <ns0:line x1="0" y1="-25.6" x2="0" y2="-80" stroke="#e5c07b" stroke-width="2.1333" stroke-dasharray="5.6889 4.2667" />
-    <ns0:rect x="-35.5556" y="-120" width="71.1111" height="32" rx="5.6889" fill="#e5c07b" opacity="0.15" stroke="#e5c07b" stroke-width="1.4222" />
-    <ns0:text y="-97.6" text-anchor="middle" fill="#e5c07b" font-family="monospace" font-size="14.2222" opacity="0.7">hook fn</ns0:text>
+    <ns0:circle r="22.7556" fill="#ffcc80" opacity="0.2" stroke="#ffcc80" stroke-width="2.8444" />
+    <ns0:text y="64" text-anchor="middle" fill="#ffcc80" font-family="monospace" font-size="14.2222" opacity="0.7">FORWARD</ns0:text>
+    <ns0:line x1="0" y1="-25.6" x2="0" y2="-80" stroke="#ffcc80" stroke-width="2.1333" stroke-dasharray="5.6889 4.2667" />
+    <ns0:rect x="-35.5556" y="-120" width="71.1111" height="32" rx="5.6889" fill="#ffcc80" opacity="0.15" stroke="#ffcc80" stroke-width="1.4222" />
+    <ns0:text y="-97.6" text-anchor="middle" fill="#ffcc80" font-family="monospace" font-size="14.2222" opacity="0.7">hook fn</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(600, 200)">
-    <ns0:circle r="22.7556" fill="#98c379" opacity="0.2" stroke="#98c379" stroke-width="2.8444" />
-    <ns0:text y="64" text-anchor="middle" fill="#98c379" font-family="monospace" font-size="14.2222" opacity="0.7">POST_ROUTING</ns0:text>
-    <ns0:line x1="0" y1="-25.6" x2="0" y2="-80" stroke="#98c379" stroke-width="2.1333" stroke-dasharray="5.6889 4.2667" />
-    <ns0:rect x="-35.5556" y="-120" width="71.1111" height="32" rx="5.6889" fill="#98c379" opacity="0.15" stroke="#98c379" stroke-width="1.4222" />
-    <ns0:text y="-97.6" text-anchor="middle" fill="#98c379" font-family="monospace" font-size="14.2222" opacity="0.7">hook fn</ns0:text>
+    <ns0:circle r="22.7556" fill="#a5d6a7" opacity="0.2" stroke="#a5d6a7" stroke-width="2.8444" />
+    <ns0:text y="64" text-anchor="middle" fill="#a5d6a7" font-family="monospace" font-size="14.2222" opacity="0.7">POST_ROUTING</ns0:text>
+    <ns0:line x1="0" y1="-25.6" x2="0" y2="-80" stroke="#a5d6a7" stroke-width="2.1333" stroke-dasharray="5.6889 4.2667" />
+    <ns0:rect x="-35.5556" y="-120" width="71.1111" height="32" rx="5.6889" fill="#a5d6a7" opacity="0.15" stroke="#a5d6a7" stroke-width="1.4222" />
+    <ns0:text y="-97.6" text-anchor="middle" fill="#a5d6a7" font-family="monospace" font-size="14.2222" opacity="0.7">hook fn</ns0:text>
   </ns0:g>
-  <ns0:polygon points="220.4444,310.4 234.6667,320 220.4444,329.6" fill="#61afef" opacity="0.5" />
-  <ns0:polygon points="455.1111,310.4 469.3333,320 455.1111,329.6" fill="#61afef" opacity="0.5" />
-  <ns0:polygon points="725.3333,310.4 739.5556,320 725.3333,329.6" fill="#61afef" opacity="0.5" />
-  <ns0:polygon points="981.3333,310.4 995.5556,320 981.3333,329.6" fill="#61afef" opacity="0.5" />
+  <ns0:polygon points="220.4444,310.4 234.6667,320 220.4444,329.6" fill="#4a90e2" opacity="0.5" />
+  <ns0:polygon points="455.1111,310.4 469.3333,320 455.1111,329.6" fill="#4a90e2" opacity="0.5" />
+  <ns0:polygon points="725.3333,310.4 739.5556,320 725.3333,329.6" fill="#4a90e2" opacity="0.5" />
+  <ns0:polygon points="981.3333,310.4 995.5556,320 981.3333,329.6" fill="#4a90e2" opacity="0.5" />
   <ns0:g transform="translate(150, 290)" opacity="0.35">
-    <ns0:rect x="0" y="0" width="711.1111" height="112" rx="8.5333" fill="#1e2030" stroke="#333" stroke-width="1.4222" />
-    <ns0:text x="21.3333" y="32" fill="#c678dd" font-family="monospace" font-size="15.6444">static unsigned int</ns0:text>
-    <ns0:text x="21.3333" y="57.6" fill="#61afef" font-family="monospace" font-size="15.6444">hook_func(void *priv, struct sk_buff *skb,</ns0:text>
-    <ns0:text x="21.3333" y="83.2" fill="#e5c07b" font-family="monospace" font-size="15.6444">  const struct nf_hook_state *state)</ns0:text>
+    <ns0:rect x="0" y="0" width="711.1111" height="112" rx="8.5333" fill="#1a1a2e" stroke="#333" stroke-width="1.4222" />
+    <ns0:text x="21.3333" y="32" fill="#ce93d8" font-family="monospace" font-size="15.6444">static unsigned int</ns0:text>
+    <ns0:text x="21.3333" y="57.6" fill="#4a90e2" font-family="monospace" font-size="15.6444">hook_func(void *priv, struct sk_buff *skb,</ns0:text>
+    <ns0:text x="21.3333" y="83.2" fill="#ffcc80" font-family="monospace" font-size="15.6444">  const struct nf_hook_state *state)</ns0:text>
   </ns0:g>
   <ns0:g transform="translate(690, 60)" opacity="0.4">
-    <ns0:path d="M 0 -48 L 35.5556 -28.8 L 35.5556 16 Q 35.5556 48 0 64 Q -35.5556 48 -35.5556 16 L -35.5556 -28.8 Z" fill="none" stroke="#e06c75" stroke-width="2.8444" />
-    <ns0:line x1="-14.2222" y1="0" x2="14.2222" y2="0" stroke="#e06c75" stroke-width="2.8444" />
-    <ns0:line x1="0" y1="-16" x2="0" y2="16" stroke="#e06c75" stroke-width="2.8444" />
+    <ns0:path d="M 0 -48 L 35.5556 -28.8 L 35.5556 16 Q 35.5556 48 0 64 Q -35.5556 48 -35.5556 16 L -35.5556 -28.8 Z" fill="none" stroke="#e74c3c" stroke-width="2.8444" />
+    <ns0:line x1="-14.2222" y1="0" x2="14.2222" y2="0" stroke="#e74c3c" stroke-width="2.8444" />
+    <ns0:line x1="0" y1="-16" x2="0" y2="16" stroke="#e74c3c" stroke-width="2.8444" />
   </ns0:g>
-  <ns0:circle cx="42.6667" cy="48" r="4.2667" fill="#e06c75" opacity="0.3" />
-  <ns0:circle cx="1095.1111" cy="48" r="4.2667" fill="#98c379" opacity="0.3" />
-  <ns0:circle cx="42.6667" cy="592" r="4.2667" fill="#61afef" opacity="0.3" />
-  <ns0:circle cx="1095.1111" cy="592" r="4.2667" fill="#e5c07b" opacity="0.3" />
+  <ns0:circle cx="42.6667" cy="48" r="4.2667" fill="#e74c3c" opacity="0.3" />
+  <ns0:circle cx="1095.1111" cy="48" r="4.2667" fill="#a5d6a7" opacity="0.3" />
+  <ns0:circle cx="42.6667" cy="592" r="4.2667" fill="#4a90e2" opacity="0.3" />
+  <ns0:circle cx="1095.1111" cy="592" r="4.2667" fill="#ffcc80" opacity="0.3" />
 </ns0:svg>

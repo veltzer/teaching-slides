@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="371.0145" y="27.8261" text-anchor="middle" font-size="14.8406" font-weight="bold" fill="#333">Scaling Laws</ns0:text>
   <ns0:line x1="92.7536" y1="46.3768" x2="92.7536" y2="296.8116" stroke="#333" stroke-width="1.8551" />
   <ns0:line x1="92.7536" y1="296.8116" x2="649.2754" y2="296.8116" stroke="#333" stroke-width="1.8551" />
@@ -12,7 +73,7 @@
   <ns0:text x="602.8986" y="315.3623" text-anchor="middle" font-size="10" fill="#666">100B</ns0:text>
   <ns0:path d="M 111.3043 64.9275 Q 166.9565 92.7536 204.058 139.1304 Q 259.7101 194.7826 324.6377 231.8841 Q 417.3913 268.9855 510.1449 282.8986 Q 575.0725 289.3913 640 292.1739" fill="none" stroke="#4a90e2" stroke-width="2.7826" />
   <ns0:rect x="185.5072" y="120.5797" width="241.1594" height="27.8261" rx="4.6377" fill="#fff3cd" stroke="#ffc107" stroke-width="0.9275" />
-  <ns0:text x="306.087" y="139.1304" text-anchor="middle" font-size="10.2029" fill="#856404">Power law: L(N) = (Nc / N)^a</ns0:text>
+  <ns0:text x="306.087" y="139.1304" text-anchor="middle" font-size="10.2029" fill="#bf360c">Power law: L(N) = (Nc / N)^a</ns0:text>
   <ns0:line x1="222.6087" y1="148.4058" x2="204.058" y2="162.3188" stroke="#ffc107" stroke-width="0.9275" />
   <ns0:rect x="92.7536" y="352.4638" width="166.9565" height="46.3768" rx="4.6377" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.3913" />
   <ns0:text x="176.2319" y="371.0145" text-anchor="middle" font-size="10.2029" font-weight="bold" fill="#333">1. Model Size</ns0:text>

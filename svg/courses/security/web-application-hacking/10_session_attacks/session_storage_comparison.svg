@@ -1,5 +1,66 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect width="1137.7778" height="640" fill="#f0f4f8" rx="6.8956" stroke="#333" stroke-width="2.5859" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect width="1137.7778" height="640" fill="#f5f5f5" rx="6.8956" stroke="#333" stroke-width="2.5859" />
   <ns0:text x="568.8889" y="59.0769" font-family="sans-serif" font-size="25.8586" font-weight="bold" fill="#222" text-anchor="middle">Session Storage Options</ns0:text>
   <ns0:rect x="34.4781" y="93.5385" width="172.3906" height="64" fill="#333" rx="3.4478" />
   <ns0:text x="120.6734" y="135.3846" font-family="sans-serif" font-size="20.6868" font-weight="bold" fill="#fff" text-anchor="middle">Storage</ns0:text>
@@ -19,15 +80,15 @@
   <ns0:text x="877.468" y="199.3846" font-family="sans-serif" font-size="20.6868" fill="#555" text-anchor="middle">Lost on restart</ns0:text>
   <ns0:rect x="34.4781" y="221.5385" width="1068.8215" height="64" fill="#f5f5f5" rx="1.7239" stroke="#ddd" stroke-width="1.7239" />
   <ns0:text x="120.6734" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#222" text-anchor="middle">File</ns0:text>
-  <ns0:text x="287.8923" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#ff8f00" text-anchor="middle">Moderate</ns0:text>
+  <ns0:text x="287.8923" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#fb8c00" text-anchor="middle">Moderate</ns0:text>
   <ns0:text x="437.8721" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#c62828" text-anchor="middle">Poor</ns0:text>
-  <ns0:text x="579.2324" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#ff8f00" text-anchor="middle">Moderate</ns0:text>
+  <ns0:text x="579.2324" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#fb8c00" text-anchor="middle">Moderate</ns0:text>
   <ns0:text x="877.468" y="263.3846" font-family="sans-serif" font-size="20.6868" fill="#555" text-anchor="middle">Disk I/O overhead</ns0:text>
   <ns0:rect x="34.4781" y="285.5385" width="1068.8215" height="64" fill="#fff" rx="1.7239" stroke="#ddd" stroke-width="1.7239" />
   <ns0:text x="120.6734" y="327.3846" font-family="sans-serif" font-size="20.6868" fill="#222" text-anchor="middle">Database</ns0:text>
   <ns0:text x="287.8923" y="327.3846" font-family="sans-serif" font-size="20.6868" fill="#2e7d32" text-anchor="middle">Good</ns0:text>
   <ns0:text x="437.8721" y="327.3846" font-family="sans-serif" font-size="20.6868" fill="#2e7d32" text-anchor="middle">Good</ns0:text>
-  <ns0:text x="579.2324" y="327.3846" font-family="sans-serif" font-size="20.6868" fill="#ff8f00" text-anchor="middle">Moderate</ns0:text>
+  <ns0:text x="579.2324" y="327.3846" font-family="sans-serif" font-size="20.6868" fill="#fb8c00" text-anchor="middle">Moderate</ns0:text>
   <ns0:text x="877.468" y="327.3846" font-family="sans-serif" font-size="20.6868" fill="#555" text-anchor="middle">SQL query overhead</ns0:text>
   <ns0:rect x="34.4781" y="349.5385" width="1068.8215" height="64" fill="#e8f5e9" rx="1.7239" stroke="#2e7d32" stroke-width="2.5859" />
   <ns0:text x="120.6734" y="391.3846" font-family="sans-serif" font-size="20.6868" font-weight="bold" fill="#2e7d32" text-anchor="middle">Redis</ns0:text>
@@ -37,13 +98,13 @@
   <ns0:text x="877.468" y="391.3846" font-family="sans-serif" font-size="20.6868" font-weight="bold" fill="#2e7d32" text-anchor="middle">★ Best option</ns0:text>
   <ns0:rect x="34.4781" y="413.5385" width="1068.8215" height="64" fill="#f5f5f5" rx="1.7239" stroke="#ddd" stroke-width="1.7239" />
   <ns0:text x="120.6734" y="455.3846" font-family="sans-serif" font-size="20.6868" fill="#222" text-anchor="middle">Memcached</ns0:text>
-  <ns0:text x="287.8923" y="455.3846" font-family="sans-serif" font-size="20.6868" fill="#ff8f00" text-anchor="middle">Moderate</ns0:text>
+  <ns0:text x="287.8923" y="455.3846" font-family="sans-serif" font-size="20.6868" fill="#fb8c00" text-anchor="middle">Moderate</ns0:text>
   <ns0:text x="437.8721" y="455.3846" font-family="sans-serif" font-size="20.6868" fill="#2e7d32" text-anchor="middle">Great</ns0:text>
   <ns0:text x="579.2324" y="455.3846" font-family="sans-serif" font-size="20.6868" fill="#2e7d32" text-anchor="middle">Fast</ns0:text>
   <ns0:text x="877.468" y="455.3846" font-family="sans-serif" font-size="20.6868" fill="#555" text-anchor="middle">No persistence</ns0:text>
   <ns0:rect x="34.4781" y="477.5385" width="1068.8215" height="64" fill="#fff" rx="1.7239" stroke="#ddd" stroke-width="1.7239" />
   <ns0:text x="120.6734" y="519.3846" font-family="sans-serif" font-size="20.6868" fill="#222" text-anchor="middle">JWT</ns0:text>
-  <ns0:text x="287.8923" y="519.3846" font-family="sans-serif" font-size="20.6868" fill="#ff8f00" text-anchor="middle">Varies</ns0:text>
+  <ns0:text x="287.8923" y="519.3846" font-family="sans-serif" font-size="20.6868" fill="#fb8c00" text-anchor="middle">Varies</ns0:text>
   <ns0:text x="437.8721" y="519.3846" font-family="sans-serif" font-size="20.6868" fill="#2e7d32" text-anchor="middle">Great</ns0:text>
   <ns0:text x="579.2324" y="519.3846" font-family="sans-serif" font-size="20.6868" fill="#2e7d32" text-anchor="middle">Fast</ns0:text>
   <ns0:text x="877.468" y="519.3846" font-family="sans-serif" font-size="20.6868" fill="#555" text-anchor="middle">Stateless</ns0:text>

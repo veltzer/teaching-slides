@@ -1,33 +1,83 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
   <ns0:rect x="53.3333" y="71.1111" width="311.1111" height="177.7778" rx="10.6667" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="53.3333" y="71.1111" width="311.1111" height="40.8889" rx="10.6667" fill="url(#grad-accent)" />
-  <ns0:rect x="53.3333" y="99.5556" width="311.1111" height="12.4444" fill="url(#grad-accent)" />
+  <ns0:rect x="53.3333" y="71.1111" width="311.1111" height="40.8889" rx="10.6667" fill="url(#grad-primary)" />
+  <ns0:rect x="53.3333" y="99.5556" width="311.1111" height="12.4444" fill="url(#grad-primary)" />
   <ns0:text x="208.8889" y="102.2222" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Tool Selection</ns0:text>
   <ns0:text x="208.8889" y="149.3333" text-anchor="middle" fill="#1565c0" font-size="14.2222" font-family="Arial, sans-serif">Evaluate fit for team</ns0:text>
   <ns0:text x="208.8889" y="176" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Security &amp; privacy</ns0:text>
   <ns0:text x="208.8889" y="199.1111" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Cost per seat</ns0:text>
   <ns0:text x="208.8889" y="222.2222" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Integration support</ns0:text>
-  <ns0:line x1="364.4444" y1="160" x2="413.3333" y2="160" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="364.4444" y1="160" x2="413.3333" y2="160" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-primary)" />
   <ns0:rect x="422.2222" y="71.1111" width="293.3333" height="177.7778" rx="10.6667" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="422.2222" y="71.1111" width="293.3333" height="40.8889" rx="10.6667" fill="#8e24aa" />
   <ns0:rect x="422.2222" y="99.5556" width="293.3333" height="12.4444" fill="#8e24aa" />
@@ -36,7 +86,7 @@
   <ns0:text x="568.8889" y="176" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Prompt templates</ns0:text>
   <ns0:text x="568.8889" y="199.1111" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Shared context files</ns0:text>
   <ns0:text x="568.8889" y="222.2222" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">IDE plugin settings</ns0:text>
-  <ns0:line x1="715.5556" y1="160" x2="764.4444" y2="160" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="715.5556" y1="160" x2="764.4444" y2="160" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-primary)" />
   <ns0:rect x="773.3333" y="71.1111" width="311.1111" height="177.7778" rx="10.6667" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="773.3333" y="71.1111" width="311.1111" height="40.8889" rx="10.6667" fill="#43a047" />
   <ns0:rect x="773.3333" y="99.5556" width="311.1111" height="12.4444" fill="#43a047" />
@@ -47,10 +97,10 @@
   <ns0:text x="928.8889" y="222.2222" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Audit logging</ns0:text>
   <ns0:rect x="213.3333" y="293.3333" width="711.1111" height="160" rx="12.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="337.7778" text-anchor="middle" fill="#1565c0" font-size="21.3333" font-weight="bold" font-family="Arial, sans-serif">Team AI Strategy</ns0:text>
-  <ns0:text x="568.8889" y="373.3333" text-anchor="middle" fill="#444" font-size="15.1111" font-family="Arial, sans-serif">Unified approach across all projects</ns0:text>
+  <ns0:text x="568.8889" y="373.3333" text-anchor="middle" fill="#333333" font-size="15.1111" font-family="Arial, sans-serif">Unified approach across all projects</ns0:text>
   <ns0:text x="568.8889" y="405.3333" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Consistent prompting patterns — shared knowledge base</ns0:text>
   <ns0:text x="568.8889" y="433.7778" text-anchor="middle" fill="#555" font-size="13.3333" font-family="Arial, sans-serif">Regular review cadence — adopt new capabilities as team</ns0:text>
-  <ns0:rect x="71.1111" y="488.8889" width="995.5556" height="115.5556" rx="10.6667" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="71.1111" y="488.8889" width="995.5556" height="115.5556" rx="10.6667" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="526.2222" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Why Governance Matters</ns0:text>
   <ns0:text x="568.8889" y="558.2222" text-anchor="middle" fill="#bbdefb" font-size="14.2222" font-family="Arial, sans-serif">Without standards: 10 devs use 10 different prompts — unpredictable output quality</ns0:text>
   <ns0:text x="568.8889" y="586.6667" text-anchor="middle" fill="#bbdefb" font-size="14.2222" font-family="Arial, sans-serif">With standards: multiplied productivity, consistent code, shared learning</ns0:text>

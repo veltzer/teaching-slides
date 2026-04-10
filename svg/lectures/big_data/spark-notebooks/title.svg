@@ -1,6 +1,67 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:rect x="355.5556" y="144" width="426.6667" height="352" rx="11.3778" fill="#0f3460" stroke="#16c79a" stroke-width="2.8444" />
+  <ns0:rect x="355.5556" y="144" width="426.6667" height="352" rx="11.3778" fill="#1a237e" stroke="#2ecc71" stroke-width="2.8444" />
   <ns0:circle cx="376.8889" cy="176" r="8.5333" fill="none" stroke="#888" stroke-width="2.1333" />
   <ns0:circle cx="376.8889" cy="224" r="8.5333" fill="none" stroke="#888" stroke-width="2.1333" />
   <ns0:circle cx="376.8889" cy="272" r="8.5333" fill="none" stroke="#888" stroke-width="2.1333" />
@@ -8,19 +69,19 @@
   <ns0:circle cx="376.8889" cy="368" r="8.5333" fill="none" stroke="#888" stroke-width="2.1333" />
   <ns0:circle cx="376.8889" cy="416" r="8.5333" fill="none" stroke="#888" stroke-width="2.1333" />
   <ns0:circle cx="376.8889" cy="464" r="8.5333" fill="none" stroke="#888" stroke-width="2.1333" />
-  <ns0:rect x="405.3333" y="168" width="355.5556" height="80" rx="5.6889" fill="#1a1a2e" stroke="#e94560" stroke-width="1.4222" />
-  <ns0:text x="419.5556" y="200" font-family="monospace" font-size="14.2222" fill="#e94560">In [1]:</ns0:text>
-  <ns0:text x="419.5556" y="227.2" font-family="monospace" font-size="14.2222" fill="#16c79a">df.groupBy("col").count()</ns0:text>
-  <ns0:rect x="405.3333" y="264" width="355.5556" height="64" rx="5.6889" fill="#16c79a" opacity="0.1" stroke="#16c79a" stroke-width="1.4222" />
-  <ns0:text x="419.5556" y="291.2" font-family="monospace" font-size="14.2222" fill="#16c79a">Out[1]: DataFrame[col, count]</ns0:text>
-  <ns0:rect x="405.3333" y="344" width="355.5556" height="128" rx="5.6889" fill="#1a1a2e" stroke="#f5a623" stroke-width="1.4222" />
-  <ns0:rect x="433.7778" y="384" width="25.6" height="64" fill="#e94560" opacity="0.6" />
-  <ns0:rect x="469.3333" y="400" width="25.6" height="48" fill="#16c79a" opacity="0.6" />
-  <ns0:rect x="504.8889" y="368" width="25.6" height="80" fill="#f5a623" opacity="0.6" />
-  <ns0:rect x="540.4444" y="408" width="25.6" height="40" fill="#a855f7" opacity="0.6" />
-  <ns0:rect x="576" y="376" width="25.6" height="72" fill="#3b82f6" opacity="0.6" />
-  <ns0:polygon points="910.2222,272 938.6667,240 967.1111,272 938.6667,304" fill="#e94560" opacity="0.5" />
-  <ns0:polygon points="924.4444,288 952.8889,256 981.3333,288 952.8889,320" fill="#f5a623" opacity="0.4" />
+  <ns0:rect x="405.3333" y="168" width="355.5556" height="80" rx="5.6889" fill="#1a1a2e" stroke="#dc3545" stroke-width="1.4222" />
+  <ns0:text x="419.5556" y="200" font-family="monospace" font-size="14.2222" fill="#dc3545">In [1]:</ns0:text>
+  <ns0:text x="419.5556" y="227.2" font-family="monospace" font-size="14.2222" fill="#2ecc71">df.groupBy("col").count()</ns0:text>
+  <ns0:rect x="405.3333" y="264" width="355.5556" height="64" rx="5.6889" fill="#2ecc71" opacity="0.1" stroke="#2ecc71" stroke-width="1.4222" />
+  <ns0:text x="419.5556" y="291.2" font-family="monospace" font-size="14.2222" fill="#2ecc71">Out[1]: DataFrame[col, count]</ns0:text>
+  <ns0:rect x="405.3333" y="344" width="355.5556" height="128" rx="5.6889" fill="#1a1a2e" stroke="#f9a825" stroke-width="1.4222" />
+  <ns0:rect x="433.7778" y="384" width="25.6" height="64" fill="#dc3545" opacity="0.6" />
+  <ns0:rect x="469.3333" y="400" width="25.6" height="48" fill="#2ecc71" opacity="0.6" />
+  <ns0:rect x="504.8889" y="368" width="25.6" height="80" fill="#f9a825" opacity="0.6" />
+  <ns0:rect x="540.4444" y="408" width="25.6" height="40" fill="#9b59b6" opacity="0.6" />
+  <ns0:rect x="576" y="376" width="25.6" height="72" fill="#4285f4" opacity="0.6" />
+  <ns0:polygon points="910.2222,272 938.6667,240 967.1111,272 938.6667,304" fill="#dc3545" opacity="0.5" />
+  <ns0:polygon points="924.4444,288 952.8889,256 981.3333,288 952.8889,320" fill="#f9a825" opacity="0.4" />
   <ns0:text x="568.8889" y="80" text-anchor="middle" font-family="sans-serif" font-size="39.8222" font-weight="bold" fill="#eee">Spark Notebooks</ns0:text>
   <ns0:text x="568.8889" y="592" text-anchor="middle" font-family="monospace" font-size="18.4889" fill="#666">interactive | exploratory | data analysis</ns0:text>
 </ns0:svg>

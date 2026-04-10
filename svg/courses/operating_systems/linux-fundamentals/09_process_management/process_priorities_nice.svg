@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="632.0988" y="78.2222" text-anchor="middle" font-size="27.3909" font-weight="bold" fill="#333">Process Priority (nice values)</ns0:text>
   <ns0:rect x="63.2099" y="142.2222" width="1137.7778" height="124.4444" fill="#e3f2fd" stroke="#333" stroke-width="2.107" rx="10.535" />
   <ns0:text x="84.2798" y="220.4444" font-size="21.0699" font-weight="bold">-20</ns0:text>
@@ -10,9 +71,9 @@
   <ns0:rect x="821.7284" y="284.4444" width="379.2593" height="53.3333" fill="#e8f5e9" stroke="none" rx="6.321" />
   <ns0:text x="252.8395" y="323.5556" text-anchor="middle" font-size="21.0699" fill="#333">Higher priority</ns0:text>
   <ns0:text x="1011.358" y="323.5556" text-anchor="middle" font-size="21.0699" fill="#333">Lower priority</ns0:text>
-  <ns0:text x="252.8395" y="408.8889" text-anchor="middle" font-size="21.0699" fill="#c00">root only</ns0:text>
+  <ns0:text x="252.8395" y="408.8889" text-anchor="middle" font-size="21.0699" fill="#b71c1c">root only</ns0:text>
   <ns0:text x="632.0988" y="408.8889" text-anchor="middle" font-size="21.0699">default</ns0:text>
-  <ns0:text x="1011.358" y="408.8889" text-anchor="middle" font-size="21.0699" fill="#090">any user</ns0:text>
+  <ns0:text x="1011.358" y="408.8889" text-anchor="middle" font-size="21.0699" fill="#1b5e20">any user</ns0:text>
   <ns0:rect x="63.2099" y="480" width="547.819" height="160" fill="#e3f2fd" stroke="#333" stroke-width="2.107" rx="8.428" />
   <ns0:text x="337.1193" y="544" text-anchor="middle" font-size="21.0699" font-family="monospace">nice -n 10 command</ns0:text>
   <ns0:text x="337.1193" y="604.4444" text-anchor="middle" font-size="21.0699">start with lower priority</ns0:text>

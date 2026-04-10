@@ -1,28 +1,89 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="326.5306" y="64.2857" width="195.9184" height="141.4286" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5714" rx="6.4286" stroke-dasharray="6.4286 6.4286" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="326.5306" y="64.2857" width="195.9184" height="141.4286" fill="#fce4ec" stroke="#d32f2f" stroke-width="2.5714" rx="6.4286" stroke-dasharray="6.4286 6.4286" />
   <ns0:text x="424.4898" y="96.4286" text-anchor="middle" font-family="Arial" font-size="15.4286" font-style="italic">«interface»</ns0:text>
   <ns0:text x="424.4898" y="122.1429" text-anchor="middle" font-family="Arial" font-size="20.5714" font-weight="bold">Worker</ns0:text>
-  <ns0:line x1="326.5306" y1="135" x2="522.449" y2="135" stroke="#dc2626" stroke-width="1.2857" />
+  <ns0:line x1="326.5306" y1="135" x2="522.449" y2="135" stroke="#d32f2f" stroke-width="1.2857" />
   <ns0:text x="424.4898" y="154.2857" text-anchor="middle" font-family="Arial" font-size="15.4286">+ work()</ns0:text>
   <ns0:text x="424.4898" y="173.5714" text-anchor="middle" font-family="Arial" font-size="15.4286">+ eat()</ns0:text>
   <ns0:text x="424.4898" y="192.8571" text-anchor="middle" font-family="Arial" font-size="15.4286">+ sleep()</ns0:text>
-  <ns0:rect x="130.6122" y="308.5714" width="195.9184" height="141.4286" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5714" />
+  <ns0:rect x="130.6122" y="308.5714" width="195.9184" height="141.4286" fill="#e8f5e8" stroke="#28a745" stroke-width="2.5714" />
   <ns0:text x="228.5714" y="340.7143" text-anchor="middle" font-family="Arial" font-size="20.5714" font-weight="bold">Human</ns0:text>
-  <ns0:line x1="130.6122" y1="353.5714" x2="326.5306" y2="353.5714" stroke="#16a34a" stroke-width="1.2857" />
+  <ns0:line x1="130.6122" y1="353.5714" x2="326.5306" y2="353.5714" stroke="#28a745" stroke-width="1.2857" />
   <ns0:text x="228.5714" y="379.2857" text-anchor="middle" font-family="Arial" font-size="15.4286">+ work()</ns0:text>
   <ns0:text x="228.5714" y="398.5714" text-anchor="middle" font-family="Arial" font-size="15.4286">+ eat()</ns0:text>
   <ns0:text x="228.5714" y="417.8571" text-anchor="middle" font-family="Arial" font-size="15.4286">+ sleep()</ns0:text>
-  <ns0:rect x="522.449" y="308.5714" width="235.1021" height="141.4286" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5714" />
+  <ns0:rect x="522.449" y="308.5714" width="235.1021" height="141.4286" fill="#fff3cd" stroke="#f39c12" stroke-width="2.5714" />
   <ns0:text x="640" y="340.7143" text-anchor="middle" font-family="Arial" font-size="20.5714" font-weight="bold">Robot</ns0:text>
-  <ns0:line x1="522.449" y1="353.5714" x2="757.551" y2="353.5714" stroke="#f59e0b" stroke-width="1.2857" />
+  <ns0:line x1="522.449" y1="353.5714" x2="757.551" y2="353.5714" stroke="#f39c12" stroke-width="1.2857" />
   <ns0:text x="640" y="379.2857" text-anchor="middle" font-family="Arial" font-size="15.4286">+ work()</ns0:text>
   <ns0:text x="548.5714" y="398.5714" font-family="Arial" font-size="15.4286">+ eat()</ns0:text>
-  <ns0:text x="692.2449" y="398.5714" font-family="Arial" font-size="15.4286" fill="#dc2626">✗ Exception</ns0:text>
+  <ns0:text x="692.2449" y="398.5714" font-family="Arial" font-size="15.4286" fill="#d32f2f">✗ Exception</ns0:text>
   <ns0:text x="548.5714" y="417.8571" font-family="Arial" font-size="15.4286">+ sleep()</ns0:text>
-  <ns0:text x="692.2449" y="417.8571" font-family="Arial" font-size="15.4286" fill="#dc2626">✗ Exception</ns0:text>
-  <ns0:path d="M 228.5714 308.5714 L 378.7755 205.7143" stroke="#16a34a" stroke-width="2.5714" stroke-dasharray="6.4286 6.4286" />
-  <ns0:polygon points="378.7755,205.7143 372.2449,218.5714 385.3061,218.5714" fill="none" stroke="#16a34a" stroke-width="2.5714" />
-  <ns0:path d="M 640 308.5714 L 470.2041 205.7143" stroke="#f59e0b" stroke-width="2.5714" stroke-dasharray="6.4286 6.4286" />
-  <ns0:polygon points="470.2041,205.7143 463.6735,218.5714 476.7347,218.5714" fill="none" stroke="#f59e0b" stroke-width="2.5714" />
-  <ns0:text x="424.4898" y="488.5714" text-anchor="middle" font-family="Arial" font-size="14.1429" fill="#dc2626">Robot forced to implement unnecessary methods - ISP Violation</ns0:text>
+  <ns0:text x="692.2449" y="417.8571" font-family="Arial" font-size="15.4286" fill="#d32f2f">✗ Exception</ns0:text>
+  <ns0:path d="M 228.5714 308.5714 L 378.7755 205.7143" stroke="#28a745" stroke-width="2.5714" stroke-dasharray="6.4286 6.4286" />
+  <ns0:polygon points="378.7755,205.7143 372.2449,218.5714 385.3061,218.5714" fill="none" stroke="#28a745" stroke-width="2.5714" />
+  <ns0:path d="M 640 308.5714 L 470.2041 205.7143" stroke="#f39c12" stroke-width="2.5714" stroke-dasharray="6.4286 6.4286" />
+  <ns0:polygon points="470.2041,205.7143 463.6735,218.5714 476.7347,218.5714" fill="none" stroke="#f39c12" stroke-width="2.5714" />
+  <ns0:text x="424.4898" y="488.5714" text-anchor="middle" font-family="Arial" font-size="14.1429" fill="#d32f2f">Robot forced to implement unnecessary methods - ISP Violation</ns0:text>
 </ns0:svg>

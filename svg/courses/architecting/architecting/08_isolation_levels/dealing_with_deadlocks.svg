@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="11.7209" refX="16" refY="5.8605" orient="auto">
       <ns0:polygon points="0,16.7442 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,15 +76,15 @@
   <ns0:text x="972.5944" y="131.0844" text-anchor="middle" font-size="19.1572" font-weight="bold" fill="#dc3545">Transaction 2</ns0:text>
   <ns0:text x="972.5944" y="166.5542" text-anchor="middle" font-size="16.2099" fill="#333">Holds: Resource B</ns0:text>
   <ns0:text x="972.5944" y="197.3976" text-anchor="middle" font-size="16.2099" fill="#333">Wants: Resource A</ns0:text>
-  <ns0:line x1="338.9344" y1="146.5061" x2="837.0206" y2="146.5061" stroke="#dc3545" stroke-width="2.9473" stroke-dasharray="8.8418 4.4209" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="338.9344" y1="146.5061" x2="837.0206" y2="146.5061" stroke="#dc3545" stroke-width="2.9473" stroke-dasharray="8.8418 4.4209" marker-end="url(#arrow-danger)" />
   <ns0:text x="589.4512" y="135.7108" text-anchor="middle" font-size="16.2099" fill="#dc3545">Waiting for B...</ns0:text>
-  <ns0:line x1="839.9679" y1="208.1928" x2="341.8817" y2="208.1928" stroke="#dc3545" stroke-width="2.9473" stroke-dasharray="8.8418 4.4209" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="839.9679" y1="208.1928" x2="341.8817" y2="208.1928" stroke="#dc3545" stroke-width="2.9473" stroke-dasharray="8.8418 4.4209" marker-end="url(#arrow-danger)" />
   <ns0:text x="589.4512" y="234.4096" text-anchor="middle" font-size="16.2099" fill="#dc3545">Waiting for A...</ns0:text>
   <ns0:rect x="456.8246" y="293.012" width="265.253" height="77.1084" rx="7.3681" fill="#dc3545" stroke="#dc3545" stroke-width="2.9473" />
   <ns0:text x="589.4512" y="339.2771" text-anchor="middle" font-size="26.5253" font-weight="bold" fill="#fff">DEADLOCK!</ns0:text>
-  <ns0:line x1="206.3079" y1="246.747" x2="464.1928" y2="316.1446" stroke="#dc3545" stroke-width="2.2104" marker-end="url(#arrowhead-red)" />
-  <ns0:line x1="972.5944" y1="246.747" x2="714.7095" y2="316.1446" stroke="#dc3545" stroke-width="2.2104" marker-end="url(#arrowhead-red)" />
-  <ns0:line x1="589.4512" y1="370.1205" x2="589.4512" y2="416.3855" stroke="#4a90e2" stroke-width="2.9473" marker-end="url(#arrowhead)" />
+  <ns0:line x1="206.3079" y1="246.747" x2="464.1928" y2="316.1446" stroke="#dc3545" stroke-width="2.2104" marker-end="url(#arrow-danger)" />
+  <ns0:line x1="972.5944" y1="246.747" x2="714.7095" y2="316.1446" stroke="#dc3545" stroke-width="2.2104" marker-end="url(#arrow-danger)" />
+  <ns0:line x1="589.4512" y1="370.1205" x2="589.4512" y2="416.3855" stroke="#4a90e2" stroke-width="2.9473" marker-end="url(#arrow)" />
   <ns0:rect x="368.407" y="424.0964" width="442.0884" height="69.3976" rx="7.3681" fill="#d4edda" stroke="#28a745" stroke-width="2.9473" />
   <ns0:text x="589.4512" y="454.9398" text-anchor="middle" font-size="17.6835" font-weight="bold" fill="#28a745">Resolution:</ns0:text>
   <ns0:text x="589.4512" y="481.1566" text-anchor="middle" font-size="16.2099" fill="#333">Rollback one transaction</ns0:text>

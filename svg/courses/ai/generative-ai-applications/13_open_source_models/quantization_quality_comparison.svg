@@ -1,5 +1,66 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <ns0:rect x="0" y="0" width="1137.7778" height="640" fill="#f0f4f8" rx="10.1052" stroke="#333" stroke-width="2.5263" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="0" y="0" width="1137.7778" height="640" fill="#f5f5f5" rx="10.1052" stroke="#333" stroke-width="2.5263" />
   <ns0:text x="568.8889" y="37.0526" text-anchor="middle" font-size="23.5789" font-weight="bold" fill="#1565c0">Performance Retention at Different Quantization Levels</ns0:text>
   <ns0:text x="568.8889" y="67.3684" text-anchor="middle" font-size="20.2105" fill="#555">(Measured on MMLU benchmark, LLaMA 3.1 70B)</ns0:text>
   <ns0:rect x="17.7778" y="80.8421" width="248.8889" height="47.1579" fill="#bbdefb" stroke="#333" stroke-width="1.6842" />
@@ -34,18 +95,18 @@
   <ns0:text x="288" y="245.8948" font-size="21.8948" fill="#222">35 GB</ns0:text>
   <ns0:text x="465.7778" y="245.8948" font-size="21.8948" fill="#222">80.5%</ns0:text>
   <ns0:text x="643.5556" y="245.8948" font-size="21.8948" fill="#e65100" font-weight="bold">98.2% ⭐</ns0:text>
-  <ns0:rect x="17.7778" y="259.3684" width="248.8889" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
-  <ns0:rect x="266.6667" y="259.3684" width="177.7778" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
-  <ns0:rect x="444.4444" y="259.3684" width="177.7778" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
-  <ns0:rect x="622.2222" y="259.3684" width="497.7778" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="17.7778" y="259.3684" width="248.8889" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="266.6667" y="259.3684" width="177.7778" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="444.4444" y="259.3684" width="177.7778" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="622.2222" y="259.3684" width="497.7778" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
   <ns0:text x="39.1111" y="289.6842" font-size="21.8948" fill="#222">INT4 (AWQ)</ns0:text>
   <ns0:text x="288" y="289.6842" font-size="21.8948" fill="#222">35 GB</ns0:text>
   <ns0:text x="465.7778" y="289.6842" font-size="21.8948" fill="#222">81.0%</ns0:text>
   <ns0:text x="643.5556" y="289.6842" font-size="21.8948" fill="#e65100" font-weight="bold">98.8% ⭐</ns0:text>
-  <ns0:rect x="17.7778" y="303.1579" width="248.8889" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
-  <ns0:rect x="266.6667" y="303.1579" width="177.7778" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
-  <ns0:rect x="444.4444" y="303.1579" width="177.7778" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
-  <ns0:rect x="622.2222" y="303.1579" width="497.7778" height="43.7895" fill="#fff8f0" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="17.7778" y="303.1579" width="248.8889" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="266.6667" y="303.1579" width="177.7778" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="444.4444" y="303.1579" width="177.7778" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
+  <ns0:rect x="622.2222" y="303.1579" width="497.7778" height="43.7895" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6842" />
   <ns0:text x="39.1111" y="333.4737" font-size="21.8948" fill="#222">INT4 (NF4)</ns0:text>
   <ns0:text x="288" y="333.4737" font-size="21.8948" fill="#222">35 GB</ns0:text>
   <ns0:text x="465.7778" y="333.4737" font-size="21.8948" fill="#222">81.2%</ns0:text>

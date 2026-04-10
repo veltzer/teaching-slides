@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="609.5238" y="60.9524" text-anchor="middle" font-size="36.5714" font-weight="bold">Choose Your Undo Strategy</ns0:text>
   <ns0:rect x="76.1905" y="106.6667" width="533.3333" height="121.9048" fill="#E8F5E9" stroke="#388E3C" stroke-width="3.0476" rx="7.619" />
   <ns0:text x="342.8571" y="144.7619" text-anchor="middle" font-size="21.3333" font-weight="bold">Scenario: Typo in last commit message</ns0:text>
@@ -20,7 +81,7 @@
   <ns0:text x="342.8571" y="419.0476" text-anchor="middle" font-size="21.3333" font-weight="bold">Scenario: Messy commit history</ns0:text>
   <ns0:text x="342.8571" y="449.5238" text-anchor="middle" font-size="18.2857">Solution: git rebase -i</ns0:text>
   <ns0:text x="342.8571" y="480" text-anchor="middle" font-size="16.7619" font-style="italic">Squash, reorder, edit</ns0:text>
-  <ns0:rect x="640" y="380.9524" width="502.8571" height="121.9048" fill="#E0F2F1" stroke="#00796B" stroke-width="3.0476" rx="7.619" />
+  <ns0:rect x="640" y="380.9524" width="502.8571" height="121.9048" fill="#e8f4f8" stroke="#27ae60" stroke-width="3.0476" rx="7.619" />
   <ns0:text x="891.4286" y="419.0476" text-anchor="middle" font-size="21.3333" font-weight="bold">Scenario: Need specific fix from branch</ns0:text>
   <ns0:text x="891.4286" y="449.5238" text-anchor="middle" font-size="18.2857">Solution: git cherry-pick</ns0:text>
   <ns0:text x="891.4286" y="480" text-anchor="middle" font-size="16.7619" font-style="italic">Apply single commit</ns0:text>

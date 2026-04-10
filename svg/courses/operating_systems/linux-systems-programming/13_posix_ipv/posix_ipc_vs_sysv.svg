@@ -1,96 +1,146 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="26.6667" y="17.7778" width="1084.4444" height="44.4444" rx="7.1111" fill="#37474f" />
+  <ns0:rect x="26.6667" y="17.7778" width="1084.4444" height="44.4444" rx="7.1111" fill="#555555" />
   <ns0:text x="568.8889" y="46.2222" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">POSIX IPC vs System V IPC — Comparison</ns0:text>
-  <ns0:rect x="26.6667" y="78.2222" width="177.7778" height="37.3333" rx="5.3333" fill="#546e7a" />
+  <ns0:rect x="26.6667" y="78.2222" width="177.7778" height="37.3333" rx="5.3333" fill="#666666" />
   <ns0:text x="115.5556" y="101.3333" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#fff" text-anchor="middle">Feature</ns0:text>
-  <ns0:rect x="213.3333" y="78.2222" width="435.5556" height="37.3333" rx="5.3333" fill="url(#grad-accent)" />
+  <ns0:rect x="213.3333" y="78.2222" width="435.5556" height="37.3333" rx="5.3333" fill="url(#grad-primary)" />
   <ns0:text x="431.1111" y="101.3333" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#fff" text-anchor="middle">POSIX IPC</ns0:text>
-  <ns0:rect x="657.7778" y="78.2222" width="453.3333" height="37.3333" rx="5.3333" fill="#455a64" />
+  <ns0:rect x="657.7778" y="78.2222" width="453.3333" height="37.3333" rx="5.3333" fill="#555555" />
   <ns0:text x="884.4444" y="101.3333" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#fff" text-anchor="middle">System V IPC</ns0:text>
-  <ns0:rect x="26.6667" y="122.6667" width="177.7778" height="46.2222" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="115.5556" y="150.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Naming</ns0:text>
+  <ns0:rect x="26.6667" y="122.6667" width="177.7778" height="46.2222" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="115.5556" y="150.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Naming</ns0:text>
   <ns0:rect x="213.3333" y="122.6667" width="435.5556" height="46.2222" rx="3.5556" fill="#e3f2fd" />
   <ns0:text x="431.1111" y="141.3333" font-family="monospace" font-size="11.5556" fill="#1565c0" text-anchor="middle">/name  (e.g., /myqueue)</ns0:text>
   <ns0:text x="431.1111" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">Filesystem-like path in /dev/shm or mqueue</ns0:text>
-  <ns0:rect x="657.7778" y="122.6667" width="453.3333" height="46.2222" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="884.4444" y="141.3333" font-family="monospace" font-size="11.5556" fill="#455a64" text-anchor="middle">Integer key (ftok() or IPC_PRIVATE)</ns0:text>
+  <ns0:rect x="657.7778" y="122.6667" width="453.3333" height="46.2222" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="884.4444" y="141.3333" font-family="monospace" font-size="11.5556" fill="#555555" text-anchor="middle">Integer key (ftok() or IPC_PRIVATE)</ns0:text>
   <ns0:text x="884.4444" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">Opaque numeric ID, not human-readable</ns0:text>
   <ns0:rect x="26.6667" y="174.2222" width="177.7778" height="46.2222" rx="3.5556" fill="#f5f5f5" />
-  <ns0:text x="115.5556" y="201.7778" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Access model</ns0:text>
+  <ns0:text x="115.5556" y="201.7778" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Access model</ns0:text>
   <ns0:rect x="213.3333" y="174.2222" width="435.5556" height="46.2222" rx="3.5556" fill="#e8f5e9" />
   <ns0:text x="431.1111" y="192.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="#2e7d32" text-anchor="middle">File descriptor (fd-based)</ns0:text>
   <ns0:text x="431.1111" y="211.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">Works with select(), poll(), epoll()</ns0:text>
   <ns0:rect x="657.7778" y="174.2222" width="453.3333" height="46.2222" rx="3.5556" fill="#f5f5f5" />
-  <ns0:text x="884.4444" y="192.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="#455a64" text-anchor="middle">Integer IPC identifier</ns0:text>
+  <ns0:text x="884.4444" y="192.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555" text-anchor="middle">Integer IPC identifier</ns0:text>
   <ns0:text x="884.4444" y="211.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">Cannot use with select/poll/epoll</ns0:text>
-  <ns0:rect x="26.6667" y="225.7778" width="177.7778" height="60.4444" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="115.5556" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Message</ns0:text>
-  <ns0:text x="115.5556" y="264.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Queue API</ns0:text>
+  <ns0:rect x="26.6667" y="225.7778" width="177.7778" height="60.4444" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="115.5556" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Message</ns0:text>
+  <ns0:text x="115.5556" y="264.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Queue API</ns0:text>
   <ns0:rect x="213.3333" y="225.7778" width="435.5556" height="60.4444" rx="3.5556" fill="#e3f2fd" />
   <ns0:text x="231.1111" y="246.2222" font-family="monospace" font-size="10.6667" fill="#1565c0">mq_open("/q", O_RDWR|O_CREAT, 0666, &amp;attr)</ns0:text>
   <ns0:text x="231.1111" y="264" font-family="monospace" font-size="10.6667" fill="#555">mq_send(fd, buf, len, prio)</ns0:text>
   <ns0:text x="231.1111" y="280" font-family="monospace" font-size="10.6667" fill="#555">mq_receive(fd, buf, maxlen, &amp;prio)</ns0:text>
-  <ns0:rect x="657.7778" y="225.7778" width="453.3333" height="60.4444" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="675.5556" y="246.2222" font-family="monospace" font-size="10.6667" fill="#455a64">msgget(key, IPC_CREAT|0666)</ns0:text>
+  <ns0:rect x="657.7778" y="225.7778" width="453.3333" height="60.4444" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="675.5556" y="246.2222" font-family="monospace" font-size="10.6667" fill="#555555">msgget(key, IPC_CREAT|0666)</ns0:text>
   <ns0:text x="675.5556" y="264" font-family="monospace" font-size="10.6667" fill="#555">msgsnd(id, &amp;msg, size, flags)</ns0:text>
   <ns0:text x="675.5556" y="280" font-family="monospace" font-size="10.6667" fill="#555">msgrcv(id, &amp;msg, size, type, flags)</ns0:text>
   <ns0:rect x="26.6667" y="291.5556" width="177.7778" height="60.4444" rx="3.5556" fill="#f5f5f5" />
-  <ns0:text x="115.5556" y="314.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Semaphore</ns0:text>
-  <ns0:text x="115.5556" y="330.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">API</ns0:text>
+  <ns0:text x="115.5556" y="314.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Semaphore</ns0:text>
+  <ns0:text x="115.5556" y="330.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">API</ns0:text>
   <ns0:rect x="213.3333" y="291.5556" width="435.5556" height="60.4444" rx="3.5556" fill="#e8f5e9" />
   <ns0:text x="231.1111" y="311.1111" font-family="monospace" font-size="10.6667" fill="#2e7d32">sem_open("/sem", O_CREAT, 0666, 1)</ns0:text>
   <ns0:text x="231.1111" y="328.8889" font-family="monospace" font-size="10.6667" fill="#555">sem_wait(sem)  /  sem_post(sem)</ns0:text>
   <ns0:text x="231.1111" y="344.8889" font-family="monospace" font-size="10.6667" fill="#555">sem_init(&amp;sem, shared, value)  (unnamed)</ns0:text>
   <ns0:rect x="657.7778" y="291.5556" width="453.3333" height="60.4444" rx="3.5556" fill="#f5f5f5" />
-  <ns0:text x="675.5556" y="311.1111" font-family="monospace" font-size="10.6667" fill="#455a64">semget(key, nsems, IPC_CREAT|0666)</ns0:text>
+  <ns0:text x="675.5556" y="311.1111" font-family="monospace" font-size="10.6667" fill="#555555">semget(key, nsems, IPC_CREAT|0666)</ns0:text>
   <ns0:text x="675.5556" y="328.8889" font-family="monospace" font-size="10.6667" fill="#555">semop(id, &amp;sops, nsops)</ns0:text>
   <ns0:text x="675.5556" y="344.8889" font-family="monospace" font-size="10.6667" fill="#555">semctl(id, num, SETVAL, 1)</ns0:text>
-  <ns0:rect x="26.6667" y="357.3333" width="177.7778" height="60.4444" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="115.5556" y="380.4444" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Shared</ns0:text>
-  <ns0:text x="115.5556" y="396.4444" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Memory API</ns0:text>
+  <ns0:rect x="26.6667" y="357.3333" width="177.7778" height="60.4444" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="115.5556" y="380.4444" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Shared</ns0:text>
+  <ns0:text x="115.5556" y="396.4444" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Memory API</ns0:text>
   <ns0:rect x="213.3333" y="357.3333" width="435.5556" height="60.4444" rx="3.5556" fill="#e3f2fd" />
   <ns0:text x="231.1111" y="376.8889" font-family="monospace" font-size="10.6667" fill="#1565c0">shm_open("/shm", O_RDWR|O_CREAT, 0666)</ns0:text>
   <ns0:text x="231.1111" y="394.6667" font-family="monospace" font-size="10.6667" fill="#555">ftruncate(fd, size)</ns0:text>
   <ns0:text x="231.1111" y="412.4444" font-family="monospace" font-size="10.6667" fill="#555">mmap(NULL, size, PROT_RW, MAP_SHARED, fd, 0)</ns0:text>
-  <ns0:rect x="657.7778" y="357.3333" width="453.3333" height="60.4444" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="675.5556" y="376.8889" font-family="monospace" font-size="10.6667" fill="#455a64">shmget(key, size, IPC_CREAT|0666)</ns0:text>
+  <ns0:rect x="657.7778" y="357.3333" width="453.3333" height="60.4444" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="675.5556" y="376.8889" font-family="monospace" font-size="10.6667" fill="#555555">shmget(key, size, IPC_CREAT|0666)</ns0:text>
   <ns0:text x="675.5556" y="394.6667" font-family="monospace" font-size="10.6667" fill="#555">shmat(id, NULL, 0)  →  ptr</ns0:text>
   <ns0:text x="675.5556" y="412.4444" font-family="monospace" font-size="10.6667" fill="#555">shmdt(ptr)</ns0:text>
   <ns0:rect x="26.6667" y="423.1111" width="177.7778" height="46.2222" rx="3.5556" fill="#f5f5f5" />
-  <ns0:text x="115.5556" y="450.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Cleanup</ns0:text>
+  <ns0:text x="115.5556" y="450.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Cleanup</ns0:text>
   <ns0:rect x="213.3333" y="423.1111" width="435.5556" height="46.2222" rx="3.5556" fill="#e8f5e9" />
   <ns0:text x="231.1111" y="442.6667" font-family="monospace" font-size="10.6667" fill="#2e7d32">mq_unlink("/q")   sem_unlink("/sem")</ns0:text>
   <ns0:text x="231.1111" y="460.4444" font-family="monospace" font-size="10.6667" fill="#555">shm_unlink("/shm")   munmap(ptr, size)</ns0:text>
   <ns0:rect x="657.7778" y="423.1111" width="453.3333" height="46.2222" rx="3.5556" fill="#f5f5f5" />
-  <ns0:text x="675.5556" y="442.6667" font-family="monospace" font-size="10.6667" fill="#455a64">msgctl / semctl / shmctl with IPC_RMID</ns0:text>
+  <ns0:text x="675.5556" y="442.6667" font-family="monospace" font-size="10.6667" fill="#555555">msgctl / semctl / shmctl with IPC_RMID</ns0:text>
   <ns0:text x="675.5556" y="460.4444" font-family="monospace" font-size="10.6667" fill="#555">ipcrm -q / -s / -m  or  ipcrm --all</ns0:text>
-  <ns0:rect x="26.6667" y="474.6667" width="177.7778" height="46.2222" rx="3.5556" fill="#eceff1" />
-  <ns0:text x="115.5556" y="502.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#37474f" text-anchor="middle">Verdict</ns0:text>
+  <ns0:rect x="26.6667" y="474.6667" width="177.7778" height="46.2222" rx="3.5556" fill="#eeeeee" />
+  <ns0:text x="115.5556" y="502.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#555555" text-anchor="middle">Verdict</ns0:text>
   <ns0:rect x="213.3333" y="474.6667" width="435.5556" height="46.2222" rx="3.5556" fill="#c8e6c9" stroke="#2e7d32" stroke-width="0.8889" />
   <ns0:text x="431.1111" y="493.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#1b5e20" text-anchor="middle">Preferred for new code</ns0:text>
   <ns0:text x="431.1111" y="511.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#333" text-anchor="middle">POSIX.1-2001 standard, cleaner API, fd-based</ns0:text>
   <ns0:rect x="657.7778" y="474.6667" width="453.3333" height="46.2222" rx="3.5556" fill="#fff9c4" stroke="#f9a825" stroke-width="0.8889" />
-  <ns0:text x="884.4444" y="493.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#f57f17" text-anchor="middle">Legacy (pre-POSIX)</ns0:text>
+  <ns0:text x="884.4444" y="493.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#f57c00" text-anchor="middle">Legacy (pre-POSIX)</ns0:text>
   <ns0:text x="884.4444" y="511.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#333" text-anchor="middle">Still widely used, complex semaphore API</ns0:text>
   <ns0:rect x="26.6667" y="540.4444" width="1084.4444" height="60.4444" rx="7.1111" fill="#e8eaf6" filter="url(#shadow)" stroke="#3949ab" stroke-width="0.8889" />
   <ns0:text x="568.8889" y="560" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#1a237e" text-anchor="middle">Practical notes for Linux systems programming:</ns0:text>

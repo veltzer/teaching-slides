@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="31.5" refX="15.0588" refY="15.75" orient="auto">
       <ns0:polygon points="0,45 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -10,22 +70,22 @@
   <ns0:text x="615.015" y="95.1351" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.2594" font-weight="bold" fill="#333">Dead Letter Queue Flow</ns0:text>
   <ns0:rect x="21.7064" y="237.8378" width="159.1804" height="194.5946" rx="7.2355" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8942" />
   <ns0:text x="101.2966" y="358.9189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3651" font-weight="bold">Producer</ns0:text>
-  <ns0:line x1="180.8868" y1="337.2973" x2="231.5351" y2="337.2973" stroke="#4a90e2" stroke-width="2.8942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="180.8868" y1="337.2973" x2="231.5351" y2="337.2973" stroke="#4a90e2" stroke-width="2.8942" marker-end="url(#arrow)" />
   <ns0:rect x="238.7705" y="237.8378" width="188.1222" height="194.5946" rx="7.2355" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8942" />
   <ns0:text x="332.8316" y="358.9189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3651" font-weight="bold">Main Queue</ns0:text>
-  <ns0:line x1="426.8928" y1="337.2973" x2="492.012" y2="337.2973" stroke="#4a90e2" stroke-width="2.8942" marker-end="url(#arrowhead)" />
+  <ns0:line x1="426.8928" y1="337.2973" x2="492.012" y2="337.2973" stroke="#4a90e2" stroke-width="2.8942" marker-end="url(#arrow)" />
   <ns0:rect x="499.2475" y="237.8378" width="159.1804" height="194.5946" rx="7.2355" fill="#d4edda" stroke="#28a745" stroke-width="2.8942" />
   <ns0:text x="578.8376" y="358.9189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3651" font-weight="bold">Consumer</ns0:text>
-  <ns0:path d="M 578.8376 432.4324 Q 578.8376 583.7838 419.6573 583.7838 Q 332.8316 583.7838 332.8316 454.0541" fill="none" stroke="#dc3545" stroke-width="2.1706" stroke-dasharray="7.2355 4.3412" marker-end="url(#arrowhead-red)" />
+  <ns0:path d="M 578.8376 432.4324 Q 578.8376 583.7838 419.6573 583.7838 Q 332.8316 583.7838 332.8316 454.0541" fill="none" stroke="#dc3545" stroke-width="2.1706" stroke-dasharray="7.2355 4.3412" marker-end="url(#arrow-danger)" />
   <ns0:text x="492.012" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4709" fill="#dc3545">Processing Failed (retry)</ns0:text>
   <ns0:line x1="332.8316" y1="237.8378" x2="332.8316" y2="86.4865" stroke="#dc3545" stroke-width="2.8942" />
   <ns0:line x1="332.8316" y1="86.4865" x2="839.3146" y2="86.4865" stroke="#dc3545" stroke-width="2.8942" />
-  <ns0:line x1="839.3146" y1="86.4865" x2="839.3146" y2="216.2162" stroke="#dc3545" stroke-width="2.8942" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="839.3146" y1="86.4865" x2="839.3146" y2="216.2162" stroke="#dc3545" stroke-width="2.8942" marker-end="url(#arrow-danger)" />
   <ns0:text x="586.0732" y="64.8649" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4709" fill="#dc3545">Max Retries Exceeded</ns0:text>
   <ns0:rect x="738.018" y="237.8378" width="202.5932" height="194.5946" rx="7.2355" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8942" />
   <ns0:text x="839.3146" y="324.3243" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.918" font-weight="bold">Dead Letter</ns0:text>
   <ns0:text x="839.3146" y="389.1892" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.918" font-weight="bold">Queue</ns0:text>
-  <ns0:line x1="940.6112" y1="337.2973" x2="998.4949" y2="337.2973" stroke="#dc3545" stroke-width="2.8942" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="940.6112" y1="337.2973" x2="998.4949" y2="337.2973" stroke="#dc3545" stroke-width="2.8942" marker-end="url(#arrow-danger)" />
   <ns0:rect x="1005.7304" y="237.8378" width="202.5932" height="194.5946" rx="7.2355" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8942" />
   <ns0:text x="1107.027" y="324.3243" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.918" font-weight="bold">Manual Review /</ns0:text>
   <ns0:text x="1107.027" y="389.1892" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.918" font-weight="bold">Alerting</ns0:text>

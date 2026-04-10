@@ -1,78 +1,128 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="22.2222" y="22.2222" width="506.6667" height="586.6667" rx="10.6667" fill="#1e1e1e" filter="url(#shadow)" />
-  <ns0:text x="44.4444" y="55.1111" font-family="monospace" font-size="13.3333" fill="#e06c75">#!/usr/bin/env bash</ns0:text>
-  <ns0:text x="44.4444" y="73.7778" font-family="monospace" font-size="12.4444" fill="#5c6370"># ===================================</ns0:text>
-  <ns0:text x="44.4444" y="91.5556" font-family="monospace" font-size="12.4444" fill="#5c6370"># backup.sh — daily backup script</ns0:text>
-  <ns0:text x="44.4444" y="109.3333" font-family="monospace" font-size="12.4444" fill="#5c6370"># ===================================</ns0:text>
-  <ns0:text x="44.4444" y="134.2222" font-family="monospace" font-size="12.4444" fill="#5c6370"># Constants</ns0:text>
-  <ns0:text x="44.4444" y="152" font-family="monospace" font-size="12.4444" fill="#e06c75">readonly</ns0:text>
-  <ns0:text x="120" y="152" font-family="monospace" font-size="12.4444" fill="#e5c07b">BACKUP_DIR</ns0:text>
+  <ns0:rect x="22.2222" y="22.2222" width="506.6667" height="586.6667" rx="10.6667" fill="#212121" filter="url(#shadow)" />
+  <ns0:text x="44.4444" y="55.1111" font-family="monospace" font-size="13.3333" fill="#e74c3c">#!/usr/bin/env bash</ns0:text>
+  <ns0:text x="44.4444" y="73.7778" font-family="monospace" font-size="12.4444" fill="#666666"># ===================================</ns0:text>
+  <ns0:text x="44.4444" y="91.5556" font-family="monospace" font-size="12.4444" fill="#666666"># backup.sh — daily backup script</ns0:text>
+  <ns0:text x="44.4444" y="109.3333" font-family="monospace" font-size="12.4444" fill="#666666"># ===================================</ns0:text>
+  <ns0:text x="44.4444" y="134.2222" font-family="monospace" font-size="12.4444" fill="#666666"># Constants</ns0:text>
+  <ns0:text x="44.4444" y="152" font-family="monospace" font-size="12.4444" fill="#e74c3c">readonly</ns0:text>
+  <ns0:text x="120" y="152" font-family="monospace" font-size="12.4444" fill="#ffcc80">BACKUP_DIR</ns0:text>
   <ns0:text x="240" y="152" font-family="monospace" font-size="12.4444" fill="#ffffff">="/var/backup"</ns0:text>
-  <ns0:text x="44.4444" y="169.7778" font-family="monospace" font-size="12.4444" fill="#e06c75">readonly</ns0:text>
-  <ns0:text x="120" y="169.7778" font-family="monospace" font-size="12.4444" fill="#e5c07b">MAX_KEEP</ns0:text>
+  <ns0:text x="44.4444" y="169.7778" font-family="monospace" font-size="12.4444" fill="#e74c3c">readonly</ns0:text>
+  <ns0:text x="120" y="169.7778" font-family="monospace" font-size="12.4444" fill="#ffcc80">MAX_KEEP</ns0:text>
   <ns0:text x="231.1111" y="169.7778" font-family="monospace" font-size="12.4444" fill="#ffffff">=7</ns0:text>
-  <ns0:text x="44.4444" y="194.6667" font-family="monospace" font-size="12.4444" fill="#5c6370"># Variables</ns0:text>
-  <ns0:text x="44.4444" y="212.4444" font-family="monospace" font-size="12.4444" fill="#e5c07b">SOURCE</ns0:text>
+  <ns0:text x="44.4444" y="194.6667" font-family="monospace" font-size="12.4444" fill="#666666"># Variables</ns0:text>
+  <ns0:text x="44.4444" y="212.4444" font-family="monospace" font-size="12.4444" fill="#ffcc80">SOURCE</ns0:text>
   <ns0:text x="115.5556" y="212.4444" font-family="monospace" font-size="12.4444" fill="#ffffff">="${1:-/home}"</ns0:text>
-  <ns0:text x="44.4444" y="230.2222" font-family="monospace" font-size="12.4444" fill="#e5c07b">TIMESTAMP</ns0:text>
+  <ns0:text x="44.4444" y="230.2222" font-family="monospace" font-size="12.4444" fill="#ffcc80">TIMESTAMP</ns0:text>
   <ns0:text x="151.1111" y="230.2222" font-family="monospace" font-size="12.4444" fill="#ffffff">=$(</ns0:text>
-  <ns0:text x="186.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="#61afef">date</ns0:text>
+  <ns0:text x="186.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="#4a90e2">date</ns0:text>
   <ns0:text x="226.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="#ffffff">+%Y%m%d)</ns0:text>
-  <ns0:text x="44.4444" y="255.1111" font-family="monospace" font-size="12.4444" fill="#5c6370"># Function</ns0:text>
-  <ns0:text x="44.4444" y="272.8889" font-family="monospace" font-size="12.4444" fill="#61afef">do_backup</ns0:text>
+  <ns0:text x="44.4444" y="255.1111" font-family="monospace" font-size="12.4444" fill="#666666"># Function</ns0:text>
+  <ns0:text x="44.4444" y="272.8889" font-family="monospace" font-size="12.4444" fill="#4a90e2">do_backup</ns0:text>
   <ns0:text x="146.6667" y="272.8889" font-family="monospace" font-size="12.4444" fill="#ffffff">() {</ns0:text>
-  <ns0:text x="62.2222" y="290.6667" font-family="monospace" font-size="12.4444" fill="#e06c75">  local</ns0:text>
-  <ns0:text x="115.5556" y="290.6667" font-family="monospace" font-size="12.4444" fill="#e5c07b">src</ns0:text>
+  <ns0:text x="62.2222" y="290.6667" font-family="monospace" font-size="12.4444" fill="#e74c3c">  local</ns0:text>
+  <ns0:text x="115.5556" y="290.6667" font-family="monospace" font-size="12.4444" fill="#ffcc80">src</ns0:text>
   <ns0:text x="146.6667" y="290.6667" font-family="monospace" font-size="12.4444" fill="#ffffff">="$1"</ns0:text>
-  <ns0:text x="62.2222" y="308.4444" font-family="monospace" font-size="12.4444" fill="#e06c75">  if</ns0:text>
+  <ns0:text x="62.2222" y="308.4444" font-family="monospace" font-size="12.4444" fill="#e74c3c">  if</ns0:text>
   <ns0:text x="88.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="#ffffff">[ ! -d "$src" ]; </ns0:text>
-  <ns0:text x="248.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="#e06c75">then</ns0:text>
-  <ns0:text x="62.2222" y="326.2222" font-family="monospace" font-size="12.4444" fill="#61afef">    echo</ns0:text>
-  <ns0:text x="115.5556" y="326.2222" font-family="monospace" font-size="12.4444" fill="#98c379">"Error: $src not found"</ns0:text>
-  <ns0:text x="62.2222" y="344" font-family="monospace" font-size="12.4444" fill="#e06c75">    return</ns0:text>
-  <ns0:text x="137.7778" y="344" font-family="monospace" font-size="12.4444" fill="#d19a66">1</ns0:text>
-  <ns0:text x="44.4444" y="361.7778" font-family="monospace" font-size="12.4444" fill="#e06c75">  fi</ns0:text>
-  <ns0:text x="62.2222" y="379.5556" font-family="monospace" font-size="12.4444" fill="#61afef">  tar</ns0:text>
+  <ns0:text x="248.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="#e74c3c">then</ns0:text>
+  <ns0:text x="62.2222" y="326.2222" font-family="monospace" font-size="12.4444" fill="#4a90e2">    echo</ns0:text>
+  <ns0:text x="115.5556" y="326.2222" font-family="monospace" font-size="12.4444" fill="#a5d6a7">"Error: $src not found"</ns0:text>
+  <ns0:text x="62.2222" y="344" font-family="monospace" font-size="12.4444" fill="#e74c3c">    return</ns0:text>
+  <ns0:text x="137.7778" y="344" font-family="monospace" font-size="12.4444" fill="#ffcc80">1</ns0:text>
+  <ns0:text x="44.4444" y="361.7778" font-family="monospace" font-size="12.4444" fill="#e74c3c">  fi</ns0:text>
+  <ns0:text x="62.2222" y="379.5556" font-family="monospace" font-size="12.4444" fill="#4a90e2">  tar</ns0:text>
   <ns0:text x="97.7778" y="379.5556" font-family="monospace" font-size="12.4444" fill="#ffffff">-czf "${BACKUP_DIR}/backup_${TIMESTAMP}.tgz" "$src"</ns0:text>
   <ns0:text x="44.4444" y="397.3333" font-family="monospace" font-size="12.4444" fill="#ffffff">}</ns0:text>
-  <ns0:text x="44.4444" y="422.2222" font-family="monospace" font-size="12.4444" fill="#5c6370"># Control flow</ns0:text>
-  <ns0:text x="44.4444" y="440" font-family="monospace" font-size="12.4444" fill="#e06c75">for</ns0:text>
-  <ns0:text x="75.5556" y="440" font-family="monospace" font-size="12.4444" fill="#e5c07b">dir</ns0:text>
-  <ns0:text x="102.2222" y="440" font-family="monospace" font-size="12.4444" fill="#e06c75">in</ns0:text>
+  <ns0:text x="44.4444" y="422.2222" font-family="monospace" font-size="12.4444" fill="#666666"># Control flow</ns0:text>
+  <ns0:text x="44.4444" y="440" font-family="monospace" font-size="12.4444" fill="#e74c3c">for</ns0:text>
+  <ns0:text x="75.5556" y="440" font-family="monospace" font-size="12.4444" fill="#ffcc80">dir</ns0:text>
+  <ns0:text x="102.2222" y="440" font-family="monospace" font-size="12.4444" fill="#e74c3c">in</ns0:text>
   <ns0:text x="124.4444" y="440" font-family="monospace" font-size="12.4444" fill="#ffffff">/home /etc /var; </ns0:text>
-  <ns0:text x="248.8889" y="440" font-family="monospace" font-size="12.4444" fill="#e06c75">do</ns0:text>
-  <ns0:text x="62.2222" y="457.7778" font-family="monospace" font-size="12.4444" fill="#61afef">  do_backup</ns0:text>
-  <ns0:text x="177.7778" y="457.7778" font-family="monospace" font-size="12.4444" fill="#e5c07b">"$dir"</ns0:text>
-  <ns0:text x="44.4444" y="475.5556" font-family="monospace" font-size="12.4444" fill="#e06c75">done</ns0:text>
-  <ns0:text x="44.4444" y="500.4444" font-family="monospace" font-size="12.4444" fill="#5c6370"># Exit code</ns0:text>
-  <ns0:text x="44.4444" y="518.2222" font-family="monospace" font-size="12.4444" fill="#e06c75">exit</ns0:text>
-  <ns0:text x="80" y="518.2222" font-family="monospace" font-size="12.4444" fill="#d19a66">0</ns0:text>
-  <ns0:line x1="528.8889" y1="55.1111" x2="577.7778" y2="71.1111" stroke="#e06c75" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="160" x2="577.7778" y2="173.3333" stroke="#e5c07b" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:text x="248.8889" y="440" font-family="monospace" font-size="12.4444" fill="#e74c3c">do</ns0:text>
+  <ns0:text x="62.2222" y="457.7778" font-family="monospace" font-size="12.4444" fill="#4a90e2">  do_backup</ns0:text>
+  <ns0:text x="177.7778" y="457.7778" font-family="monospace" font-size="12.4444" fill="#ffcc80">"$dir"</ns0:text>
+  <ns0:text x="44.4444" y="475.5556" font-family="monospace" font-size="12.4444" fill="#e74c3c">done</ns0:text>
+  <ns0:text x="44.4444" y="500.4444" font-family="monospace" font-size="12.4444" fill="#666666"># Exit code</ns0:text>
+  <ns0:text x="44.4444" y="518.2222" font-family="monospace" font-size="12.4444" fill="#e74c3c">exit</ns0:text>
+  <ns0:text x="80" y="518.2222" font-family="monospace" font-size="12.4444" fill="#ffcc80">0</ns0:text>
+  <ns0:line x1="528.8889" y1="55.1111" x2="577.7778" y2="71.1111" stroke="#e74c3c" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="528.8889" y1="160" x2="577.7778" y2="173.3333" stroke="#ffcc80" stroke-width="1.3333" marker-end="url(#arrow)" />
   <ns0:line x1="528.8889" y1="222.2222" x2="577.7778" y2="284.4444" stroke="#ffffff" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="328.8889" x2="577.7778" y2="382.2222" stroke="#61afef" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="453.3333" x2="577.7778" y2="480" stroke="#e06c75" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="518.2222" x2="577.7778" y2="552.8889" stroke="#d19a66" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="528.8889" y1="328.8889" x2="577.7778" y2="382.2222" stroke="#4a90e2" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="528.8889" y1="453.3333" x2="577.7778" y2="480" stroke="#e74c3c" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="528.8889" y1="518.2222" x2="577.7778" y2="552.8889" stroke="#ffcc80" stroke-width="1.3333" marker-end="url(#arrow)" />
   <ns0:rect x="577.7778" y="28.4444" width="533.3333" height="97.7778" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="595.5556" y="50.6667" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Shebang line</ns0:text>
   <ns0:text x="595.5556" y="69.3333" font-family="monospace" font-size="11.5556" fill="#212121">#!/usr/bin/env bash</ns0:text>
@@ -97,13 +147,13 @@
   <ns0:text x="595.5556" y="414.2222" font-family="monospace" font-size="11.5556" fill="#212121">return 0  — success (return N for error)</ns0:text>
   <ns0:text x="595.5556" y="431.1111" font-family="sans-serif" font-size="11.5556" fill="#555555">Functions must be defined before use.</ns0:text>
   <ns0:text x="595.5556" y="447.1111" font-family="sans-serif" font-size="11.5556" fill="#555555">Use local to avoid variable collisions.</ns0:text>
-  <ns0:rect x="577.7778" y="472.8889" width="533.3333" height="93.3333" rx="7.1111" fill="#fce4ec" stroke="#880e4f" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="595.5556" y="493.3333" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#880e4f">Control Flow</ns0:text>
+  <ns0:rect x="577.7778" y="472.8889" width="533.3333" height="93.3333" rx="7.1111" fill="#fce4ec" stroke="#c2185b" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="595.5556" y="493.3333" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#c2185b">Control Flow</ns0:text>
   <ns0:text x="595.5556" y="511.1111" font-family="monospace" font-size="11.5556" fill="#212121">if [ cond ]; then ... fi</ns0:text>
   <ns0:text x="595.5556" y="528" font-family="monospace" font-size="11.5556" fill="#212121">for x in list; do ... done</ns0:text>
   <ns0:text x="595.5556" y="544.8889" font-family="monospace" font-size="11.5556" fill="#212121">while [ cond ]; do ... done</ns0:text>
   <ns0:text x="595.5556" y="560.8889" font-family="monospace" font-size="11.5556" fill="#212121">case "$x" in pattern) ... ;; esac</ns0:text>
-  <ns0:rect x="577.7778" y="581.3333" width="533.3333" height="46.2222" rx="7.1111" fill="#f2f2f2" stroke="#555555" stroke-width="1.3333" />
+  <ns0:rect x="577.7778" y="581.3333" width="533.3333" height="46.2222" rx="7.1111" fill="#f0f0f0" stroke="#555555" stroke-width="1.3333" />
   <ns0:text x="595.5556" y="600.8889" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#555555">Exit codes:</ns0:text>
   <ns0:text x="702.2222" y="600.8889" font-family="monospace" font-size="11.5556" fill="#212121">0 = success  ·  1-255 = error  ·  $? gets last code  ·  set -e exits on any error</ns0:text>
   <ns0:text x="595.5556" y="618.6667" font-family="sans-serif" font-size="10.6667" fill="#888888">Use exit 0 at script end to be explicit. Trap signals with: trap cleanup EXIT INT TERM</ns0:text>

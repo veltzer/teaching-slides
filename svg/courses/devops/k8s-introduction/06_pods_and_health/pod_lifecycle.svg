@@ -1,28 +1,78 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
   <ns0:rect x="53.3333" y="88.8889" width="160" height="88.8889" rx="12.4444" fill="#eeeeee" stroke="#9e9e9e" stroke-width="2.2222" filter="url(#shadow)" />
-  <ns0:text x="133.3333" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#616161">Pending</ns0:text>
-  <ns0:text x="133.3333" y="144" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#757575">accepted by API server</ns0:text>
-  <ns0:text x="133.3333" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#757575">waiting to be scheduled</ns0:text>
+  <ns0:text x="133.3333" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#666666">Pending</ns0:text>
+  <ns0:text x="133.3333" y="144" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#777777">accepted by API server</ns0:text>
+  <ns0:text x="133.3333" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#777777">waiting to be scheduled</ns0:text>
   <ns0:line x1="213.3333" y1="133.3333" x2="302.2222" y2="133.3333" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
   <ns0:text x="257.7778" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555">scheduled</ns0:text>
   <ns0:rect x="302.2222" y="88.8889" width="160" height="88.8889" rx="12.4444" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
@@ -48,23 +98,23 @@
   <ns0:text x="382.2222" y="262.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#ef6c00">node communication lost</ns0:text>
   <ns0:line x1="382.2222" y1="177.7778" x2="382.2222" y2="213.3333" stroke="#f9a825" stroke-width="1.7778" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
   <ns0:rect x="782.2222" y="53.3333" width="320" height="275.5556" rx="10.6667" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="782.2222" y="53.3333" width="320" height="40.8889" rx="10.6667" fill="#546e7a" />
-  <ns0:rect x="782.2222" y="83.5556" width="320" height="10.6667" fill="#546e7a" />
+  <ns0:rect x="782.2222" y="53.3333" width="320" height="40.8889" rx="10.6667" fill="#666666" />
+  <ns0:rect x="782.2222" y="83.5556" width="320" height="10.6667" fill="#666666" />
   <ns0:text x="942.2222" y="81.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Container States</ns0:text>
   <ns0:rect x="800" y="106.6667" width="275.5556" height="53.3333" rx="7.1111" fill="#eeeeee" stroke="#9e9e9e" stroke-width="1.3333" />
-  <ns0:text x="937.7778" y="128.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#616161">Waiting</ns0:text>
-  <ns0:text x="937.7778" y="149.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#757575">pulling image, initializing</ns0:text>
+  <ns0:text x="937.7778" y="128.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#666666">Waiting</ns0:text>
+  <ns0:text x="937.7778" y="149.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#777777">pulling image, initializing</ns0:text>
   <ns0:line x1="942.2222" y1="160" x2="942.2222" y2="177.7778" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
   <ns0:rect x="800" y="177.7778" width="275.5556" height="53.3333" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
   <ns0:text x="937.7778" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#1565c0">Running</ns0:text>
   <ns0:text x="937.7778" y="220.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#1565c0">process executing</ns0:text>
   <ns0:line x1="942.2222" y1="231.1111" x2="942.2222" y2="248.8889" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:rect x="800" y="248.8889" width="275.5556" height="60.4444" rx="7.1111" fill="#fce4ec" stroke="#e91e63" stroke-width="1.3333" />
-  <ns0:text x="937.7778" y="273.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#880e4f">Terminated</ns0:text>
+  <ns0:rect x="800" y="248.8889" width="275.5556" height="60.4444" rx="7.1111" fill="#fce4ec" stroke="#dc3545" stroke-width="1.3333" />
+  <ns0:text x="937.7778" y="273.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#c2185b">Terminated</ns0:text>
   <ns0:text x="937.7778" y="291.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#c2185b">exit code 0 (ok) or non-0 (err)</ns0:text>
   <ns0:text x="937.7778" y="305.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#c2185b">reason, message, startedAt, finishedAt</ns0:text>
-  <ns0:rect x="35.5556" y="337.7778" width="693.3333" height="106.6667" rx="10.6667" fill="#ede7f6" stroke="#7e57c2" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="44.4444" y="360.8889" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#4527a0">Restart Policy (restartPolicy on Pod spec)</ns0:text>
+  <ns0:rect x="35.5556" y="337.7778" width="693.3333" height="106.6667" rx="10.6667" fill="#e8eaf6" stroke="#9b59b6" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="44.4444" y="360.8889" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#4a148c">Restart Policy (restartPolicy on Pod spec)</ns0:text>
   <ns0:text x="71.1111" y="385.7778" font-family="Arial,sans-serif" font-size="12.4444" fill="#555">Always (default)   — restart container on any exit (good for services)</ns0:text>
   <ns0:text x="71.1111" y="407.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="#555">OnFailure            — restart only on non-zero exit (good for jobs)</ns0:text>
   <ns0:text x="71.1111" y="428.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="#555">Never                   — never restart (one-shot tasks)</ns0:text>

@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="17.7778" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 6.2222,0" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="591.0534" y="49.8701" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.5527" font-weight="bold" fill="#333">GraphX Edge Operations</ns0:text>
   <ns0:circle cx="197.0178" cy="199.4805" r="57.4635" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2837" />
@@ -26,19 +83,19 @@
   <ns0:text x="164.1815" y="523.6364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">Filter edges by property</ns0:text>
   <ns0:text x="164.1815" y="551.8961" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">or triplet condition</ns0:text>
   <ns0:text x="164.1815" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4182" fill="#4a90e2">e.attr &gt; 3</ns0:text>
-  <ns0:rect x="320.154" y="448.8312" width="279.1085" height="191.1688" fill="#fff3e0" stroke="#f5a623" stroke-width="3.2837" rx="8.2091" />
+  <ns0:rect x="320.154" y="448.8312" width="279.1085" height="191.1688" fill="#fff3e0" stroke="#f9a825" stroke-width="3.2837" rx="8.2091" />
   <ns0:text x="459.7082" y="490.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3436" font-weight="bold" fill="#333">edges.map</ns0:text>
   <ns0:text x="459.7082" y="523.6364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">Transform edge attributes</ns0:text>
   <ns0:text x="459.7082" y="551.8961" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">using a function</ns0:text>
-  <ns0:text x="459.7082" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4182" fill="#f5a623">e =&gt; e.attr * 2</ns0:text>
+  <ns0:text x="459.7082" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4182" fill="#f9a825">e =&gt; e.attr * 2</ns0:text>
   <ns0:rect x="615.6806" y="448.8312" width="279.1085" height="191.1688" fill="#e8f5e9" stroke="#4caf50" stroke-width="3.2837" rx="8.2091" />
   <ns0:text x="755.2349" y="490.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3436" font-weight="bold" fill="#333">groupEdges</ns0:text>
   <ns0:text x="755.2349" y="523.6364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">Merge parallel edges</ns0:text>
   <ns0:text x="755.2349" y="551.8961" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">between same vertices</ns0:text>
   <ns0:text x="755.2349" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4182" fill="#4caf50">(a, b) =&gt; a + b</ns0:text>
-  <ns0:rect x="911.2073" y="448.8312" width="254.4814" height="191.1688" fill="#fce4ec" stroke="#e91e63" stroke-width="3.2837" rx="8.2091" />
+  <ns0:rect x="911.2073" y="448.8312" width="254.4814" height="191.1688" fill="#fce4ec" stroke="#dc3545" stroke-width="3.2837" rx="8.2091" />
   <ns0:text x="1037.6271" y="490.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3436" font-weight="bold" fill="#333">reverse</ns0:text>
   <ns0:text x="1037.6271" y="523.6364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">Reverse all edge</ns0:text>
   <ns0:text x="1037.6271" y="551.8961" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.06" fill="#555">directions in graph</ns0:text>
-  <ns0:text x="1037.6271" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4182" fill="#e91e63">src ↔ dst</ns0:text>
+  <ns0:text x="1037.6271" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4182" fill="#dc3545">src ↔ dst</ns0:text>
 </ns0:svg>

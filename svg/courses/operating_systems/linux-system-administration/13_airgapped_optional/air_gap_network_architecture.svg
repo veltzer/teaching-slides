@@ -1,34 +1,84 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
   <ns0:rect x="17.7778" y="26.6667" width="328.8889" height="257.7778" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="17.7778" y="26.6667" width="328.8889" height="48.8889" fill="url(#grad-accent)" rx="10.6667" />
-  <ns0:rect x="17.7778" y="66.6667" width="328.8889" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="17.7778" y="26.6667" width="328.8889" height="48.8889" fill="url(#grad-primary)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="66.6667" width="328.8889" height="8.8889" fill="url(#grad-primary)" />
   <ns0:text x="182.2222" y="57.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Internet Zone</ns0:text>
   <ns0:text x="182.2222" y="120" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Download station</ns0:text>
   <ns0:text x="182.2222" y="146.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Patch staging</ns0:text>
   <ns0:text x="182.2222" y="173.3333" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">CVE monitoring</ns0:text>
   <ns0:text x="182.2222" y="208.8889" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Connected to internet</ns0:text>
   <ns0:text x="182.2222" y="257.7778" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Highest risk zone</ns0:text>
-  <ns0:line x1="346.6667" y1="160" x2="416" y2="160" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="346.6667" y1="160" x2="416" y2="160" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
   <ns0:rect x="417.7778" y="26.6667" width="302.2222" height="257.7778" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
   <ns0:rect x="417.7778" y="26.6667" width="302.2222" height="48.8889" fill="#e65100" rx="10.6667" />
   <ns0:rect x="417.7778" y="66.6667" width="302.2222" height="8.8889" fill="#e65100" />
@@ -38,7 +88,7 @@
   <ns0:text x="568.8889" y="173.3333" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Integrity checks</ns0:text>
   <ns0:text x="568.8889" y="208.8889" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">One-way data flow</ns0:text>
   <ns0:text x="568.8889" y="257.7778" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Isolation enforced</ns0:text>
-  <ns0:line x1="720" y1="160" x2="789.3333" y2="160" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="720" y1="160" x2="789.3333" y2="160" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
   <ns0:rect x="791.1111" y="26.6667" width="328.8889" height="257.7778" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
   <ns0:rect x="791.1111" y="26.6667" width="328.8889" height="48.8889" fill="#2e7d32" rx="10.6667" />
   <ns0:rect x="791.1111" y="66.6667" width="328.8889" height="8.8889" fill="#2e7d32" />
@@ -49,8 +99,8 @@
   <ns0:text x="955.5556" y="208.8889" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">No internet access</ns0:text>
   <ns0:text x="955.5556" y="257.7778" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Classified network</ns0:text>
   <ns0:rect x="17.7778" y="346.6667" width="1102.2222" height="240" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="17.7778" y="346.6667" width="1102.2222" height="44.4444" fill="url(#grad-accent)" rx="10.6667" />
-  <ns0:rect x="17.7778" y="382.2222" width="1102.2222" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="17.7778" y="346.6667" width="1102.2222" height="44.4444" fill="url(#grad-primary)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="382.2222" width="1102.2222" height="8.8889" fill="url(#grad-primary)" />
   <ns0:text x="568.8889" y="375.1111" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Key Design Principles</ns0:text>
   <ns0:text x="568.8889" y="435.5556" text-anchor="middle" font-size="14.2222" fill="#333333" font-family="sans-serif">One-way data flow only | No bidirectional network links</ns0:text>
   <ns0:text x="568.8889" y="466.6667" text-anchor="middle" font-size="14.2222" fill="#333333" font-family="sans-serif">All transfers logged and audited | Media sanitized after use</ns0:text>

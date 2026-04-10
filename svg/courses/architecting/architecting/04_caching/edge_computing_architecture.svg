@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="12.6" refX="15.0588" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -15,9 +75,9 @@
   <ns0:text x="415.6588" y="235.7895" text-anchor="middle" font-size="16.9082" fill="#333">Edge Compute</ns0:text>
   <ns0:rect x="324.0729" y="353.6842" width="183.1716" height="84.2105" rx="7.0451" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8181" />
   <ns0:text x="415.6588" y="404.2105" text-anchor="middle" font-size="16.9082" fill="#333">Edge Gateway</ns0:text>
-  <ns0:line x1="239.5322" y1="185.2632" x2="321.2549" y2="215.5789" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrowhead)" />
-  <ns0:line x1="239.5322" y1="286.3158" x2="321.2549" y2="239.1579" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrowhead)" />
-  <ns0:line x1="415.6588" y1="269.4737" x2="415.6588" y2="350.3158" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrowhead)" />
+  <ns0:line x1="239.5322" y1="185.2632" x2="321.2549" y2="215.5789" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrow)" />
+  <ns0:line x1="239.5322" y1="286.3158" x2="321.2549" y2="239.1579" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrow)" />
+  <ns0:line x1="415.6588" y1="269.4737" x2="415.6588" y2="350.3158" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrow)" />
   <ns0:rect x="70.4506" y="421.0526" width="197.2618" height="67.3684" rx="7.0451" fill="#d4edda" stroke="#28a745" stroke-width="2.8181" />
   <ns0:text x="169.0815" y="463.1579" text-anchor="middle" font-size="15.4991" fill="#333">Low Latency</ns0:text>
   <ns0:line x1="324.0729" y1="244.2105" x2="270.5304" y2="429.4737" stroke="#28a745" stroke-width="2.1135" stroke-dasharray="7.0451 4.227" />
@@ -32,10 +92,10 @@
   <ns0:text x="1042.6694" y="370.5263" text-anchor="middle" font-size="16.9082" fill="#333">Storage</ns0:text>
   <ns0:rect x="718.5965" y="421.0526" width="197.2618" height="67.3684" rx="7.0451" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8181" />
   <ns0:text x="817.2274" y="463.1579" text-anchor="middle" font-size="15.4991" fill="#333">High Compute</ns0:text>
-  <ns0:line x1="901.7681" y1="202.1053" x2="955.3106" y2="202.1053" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrowhead)" />
-  <ns0:line x1="901.7681" y1="227.3684" x2="955.3106" y2="336.8421" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrowhead)" />
+  <ns0:line x1="901.7681" y1="202.1053" x2="955.3106" y2="202.1053" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrow)" />
+  <ns0:line x1="901.7681" y1="227.3684" x2="955.3106" y2="336.8421" stroke="#4a90e2" stroke-width="2.1135" marker-end="url(#arrow)" />
   <ns0:line x1="810.1824" y1="252.6316" x2="810.1824" y2="417.6842" stroke="#dc3545" stroke-width="2.1135" stroke-dasharray="7.0451 4.227" />
-  <ns0:line x1="507.2445" y1="395.7895" x2="715.7784" y2="218.9474" stroke="#4a90e2" stroke-width="2.8181" marker-end="url(#arrowhead)" />
+  <ns0:line x1="507.2445" y1="395.7895" x2="715.7784" y2="218.9474" stroke="#4a90e2" stroke-width="2.8181" marker-end="url(#arrow)" />
   <ns0:text x="591.7854" y="286.3158" font-size="15.4991" fill="#4a90e2">Network</ns0:text>
   <ns0:rect x="42.2704" y="572.6316" width="1113.1201" height="67.3684" rx="7.0451" fill="#f5f5f5" stroke="#ddd" stroke-width="1.409" />
   <ns0:text x="598.8304" y="614.7368" text-anchor="middle" font-size="15.4991" fill="#555">Edge layer processes data locally for low latency. Heavy compute and storage are offloaded to the cloud layer.</ns0:text>

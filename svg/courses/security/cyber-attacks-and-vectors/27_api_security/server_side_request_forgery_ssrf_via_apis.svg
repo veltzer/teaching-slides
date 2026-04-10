@@ -2,6 +2,66 @@
   <ns0:rect x="17.9531" y="16.4103" width="1131.0454" height="623.5897" rx="8.2051" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2821" />
   <ns0:text x="583.4758" y="65.641" text-anchor="middle" font-size="29.5385" font-weight="bold" fill="#333">SSRF via API</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="19.6923" markerHeight="12.6" refX="19.6923" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 6.8923,0" fill="#4a90e2" />
     </ns0:marker>
@@ -18,7 +78,7 @@
   <ns0:rect x="71.8124" y="213.3333" width="233.3903" height="98.4615" rx="8.2051" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2821" />
   <ns0:text x="188.5075" y="270.7692" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#dc3545">Attacker</ns0:text>
   <ns0:rect x="448.8275" y="213.3333" width="233.3903" height="98.4615" rx="8.2051" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2821" />
-  <ns0:text x="565.5227" y="259.2821" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#856404">API</ns0:text>
+  <ns0:text x="565.5227" y="259.2821" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#bf360c">API</ns0:text>
   <ns0:text x="565.5227" y="287.1795" text-anchor="middle" font-size="19.6923" fill="#666">Server</ns0:text>
   <ns0:rect x="825.8427" y="196.9231" width="278.2731" height="131.2821" rx="8.2051" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2821" />
   <ns0:text x="964.0815" y="242.8718" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#dc3545">AWS IMDS</ns0:text>

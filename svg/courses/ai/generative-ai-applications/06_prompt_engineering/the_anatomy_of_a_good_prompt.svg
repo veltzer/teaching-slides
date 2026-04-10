@@ -1,6 +1,67 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="582.7642" y="46.8293" text-anchor="middle" font-size="24.9756" font-weight="bold" fill="#333">The Anatomy of a Good Prompt</ns0:text>
-  <ns0:rect x="166.504" y="78.0488" width="832.5202" height="561.9512" rx="12.4878" fill="#f0f7ff" stroke="#4a90e2" stroke-width="3.122" />
+  <ns0:rect x="166.504" y="78.0488" width="832.5202" height="561.9512" rx="12.4878" fill="#f9f9f9" stroke="#4a90e2" stroke-width="3.122" />
   <ns0:text x="582.7642" y="117.0731" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="#4a90e2">PROMPT STRUCTURE</ns0:text>
   <ns0:rect x="216.4553" y="140.4878" width="732.6178" height="62.439" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3414" />
   <ns0:text x="266.4065" y="179.5122" font-size="18.7317" font-weight="bold" fill="#4a90e2">1. ROLE / PERSONA</ns0:text>
@@ -9,7 +70,7 @@
   <ns0:text x="266.4065" y="257.5609" font-size="18.7317" font-weight="bold" fill="#28a745">2. CONTEXT</ns0:text>
   <ns0:text x="516.1625" y="257.5609" font-size="15.6098" fill="#555">"We are building a REST API for..."</ns0:text>
   <ns0:rect x="216.4553" y="296.5854" width="732.6178" height="62.439" rx="7.8049" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3414" />
-  <ns0:text x="266.4065" y="335.6097" font-size="18.7317" font-weight="bold" fill="#856404">3. TASK</ns0:text>
+  <ns0:text x="266.4065" y="335.6097" font-size="18.7317" font-weight="bold" fill="#bf360c">3. TASK</ns0:text>
   <ns0:text x="466.2113" y="335.6097" font-size="15.6098" fill="#555">"Write a function that..."</ns0:text>
   <ns0:rect x="216.4553" y="374.6341" width="732.6178" height="62.439" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3414" />
   <ns0:text x="266.4065" y="413.6585" font-size="18.7317" font-weight="bold" fill="#4a90e2">4. CONSTRAINTS</ns0:text>
@@ -17,7 +78,7 @@
   <ns0:rect x="216.4553" y="452.6829" width="732.6178" height="62.439" rx="7.8049" fill="#d4edda" stroke="#28a745" stroke-width="2.3414" />
   <ns0:text x="266.4065" y="491.7073" font-size="18.7317" font-weight="bold" fill="#28a745">5. OUTPUT FORMAT</ns0:text>
   <ns0:text x="616.065" y="491.7073" font-size="15.6098" fill="#555">"Return as JSON with keys..."</ns0:text>
-  <ns0:rect x="216.4553" y="530.7316" width="732.6178" height="62.439" rx="7.8049" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.3414" />
+  <ns0:rect x="216.4553" y="530.7316" width="732.6178" height="62.439" rx="7.8049" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="2.3414" />
   <ns0:text x="266.4065" y="569.7561" font-size="18.7317" font-weight="bold" fill="#666">6. EXAMPLES (optional)</ns0:text>
   <ns0:text x="649.3658" y="569.7561" font-size="15.6098" fill="#555">"Input: X -&gt; Output: Y"</ns0:text>
 </ns0:svg>

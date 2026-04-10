@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="20.16" refX="16" refY="10.08" orient="auto">
       <ns0:polygon points="0,28.8 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,15 +76,15 @@
   <ns0:rect x="927.5362" y="250.4348" width="216.4251" height="125.2174" rx="7.7295" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0918" />
   <ns0:text x="1035.7488" y="311.6522" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507">Service C</ns0:text>
   <ns0:text x="1035.7488" y="356.1739" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.4589" fill="#dc3545" font-weight="bold">DOWN</ns0:text>
-  <ns0:line x1="409.6618" y1="244.8696" x2="718.8406" y2="180.8696" stroke="#4a90e2" stroke-width="3.0918" marker-end="url(#arrowhead)" />
+  <ns0:line x1="409.6618" y1="244.8696" x2="718.8406" y2="180.8696" stroke="#4a90e2" stroke-width="3.0918" marker-end="url(#arrow)" />
   <ns0:text x="564.2512" y="166.9565" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.4589" fill="#666">Calls</ns0:text>
-  <ns0:line x1="819.3237" y1="278.2609" x2="924.4444" y2="292.1739" stroke="#4a90e2" stroke-width="3.0918" marker-end="url(#arrowhead)" />
+  <ns0:line x1="819.3237" y1="278.2609" x2="924.4444" y2="292.1739" stroke="#4a90e2" stroke-width="3.0918" marker-end="url(#arrow)" />
   <ns0:text x="871.8841" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.4589" fill="#666">Calls</ns0:text>
-  <ns0:line x1="927.5362" y1="347.8261" x2="822.4155" y2="347.8261" stroke="#dc3545" stroke-width="3.0918" stroke-dasharray="7.7295" marker-end="url(#arrowred)" />
+  <ns0:line x1="927.5362" y1="347.8261" x2="822.4155" y2="347.8261" stroke="#dc3545" stroke-width="3.0918" stroke-dasharray="7.7295" marker-end="url(#arrow-danger)" />
   <ns0:text x="874.9758" y="403.4783" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.4589" fill="#dc3545">Timeout</ns0:text>
-  <ns0:line x1="618.3575" y1="347.8261" x2="513.2367" y2="347.8261" stroke="#dc3545" stroke-width="3.0918" stroke-dasharray="7.7295" marker-end="url(#arrowred)" />
+  <ns0:line x1="618.3575" y1="347.8261" x2="513.2367" y2="347.8261" stroke="#dc3545" stroke-width="3.0918" stroke-dasharray="7.7295" marker-end="url(#arrow-danger)" />
   <ns0:text x="565.7971" y="417.3913" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.4589" fill="#dc3545">Threads exhausted</ns0:text>
-  <ns0:line x1="309.1787" y1="347.8261" x2="219.5169" y2="347.8261" stroke="#dc3545" stroke-width="3.0918" stroke-dasharray="7.7295" marker-end="url(#arrowred)" />
+  <ns0:line x1="309.1787" y1="347.8261" x2="219.5169" y2="347.8261" stroke="#dc3545" stroke-width="3.0918" stroke-dasharray="7.7295" marker-end="url(#arrow-danger)" />
   <ns0:text x="264.3478" y="417.3913" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.4589" fill="#dc3545">Unresponsive</ns0:text>
   <ns0:text x="618.3575" y="584.3478" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#dc3545" font-weight="bold">Cascade Effect: One service failure propagates upstream</ns0:text>
   <ns0:text x="618.3575" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0048" fill="#666">Circuit breakers and bulkheads prevent this propagation</ns0:text>

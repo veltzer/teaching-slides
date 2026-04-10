@@ -1,19 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
@@ -25,12 +75,12 @@
   <ns0:rect x="215.1111" y="71.1111" width="137.7778" height="106.6667" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="284.4444" y="131.5556" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#2e7d32">LLM</ns0:text>
   <ns0:line x1="352.8889" y1="124.4444" x2="408.8889" y2="124.4444" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
-  <ns0:rect x="412.4444" y="44.4444" width="248.8889" height="164.4444" rx="7.1111" fill="#fff8e1" stroke="#f57f17" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:rect x="412.4444" y="44.4444" width="248.8889" height="164.4444" rx="7.1111" fill="#fff8e1" stroke="#f57c00" stroke-width="2.2222" filter="url(#shadow)" />
   <ns0:text x="536.8889" y="100.4444" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#e65100">Plugin Selection</ns0:text>
   <ns0:text x="536.8889" y="140.4444" text-anchor="middle" font-size="15.1111" fill="#555555">Which plugin to call?</ns0:text>
   <ns0:text x="536.8889" y="176" text-anchor="middle" font-size="15.1111" fill="#555555">With what parameters?</ns0:text>
   <ns0:line x1="661.3333" y1="124.4444" x2="718.2222" y2="124.4444" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
-  <ns0:rect x="721.7778" y="44.4444" width="248.8889" height="164.4444" rx="7.1111" fill="#fdecea" stroke="#e53935" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:rect x="721.7778" y="44.4444" width="248.8889" height="164.4444" rx="7.1111" fill="#ffebee" stroke="#e53935" stroke-width="2.2222" filter="url(#shadow)" />
   <ns0:text x="846.2222" y="100.4444" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#c62828">Plugin Execution</ns0:text>
   <ns0:text x="846.2222" y="140.4444" text-anchor="middle" font-size="15.1111" fill="#555555">Real action taken</ns0:text>
   <ns0:text x="846.2222" y="176" text-anchor="middle" font-size="15.1111" fill="#555555">with real effects</ns0:text>
@@ -42,6 +92,6 @@
   <ns0:text x="648.8889" y="466.6667" font-size="16.8889" fill="#333333">• External API calls</ns0:text>
   <ns0:text x="648.8889" y="506.6667" font-size="16.8889" fill="#333333">• Email / messaging</ns0:text>
   <ns0:text x="648.8889" y="546.6667" font-size="16.8889" fill="#333333">• Code execution</ns0:text>
-  <ns0:rect x="26.6667" y="311.1111" width="533.3333" height="71.1111" rx="7.1111" fill="#fdecea" stroke="#e53935" stroke-width="1.3333" />
+  <ns0:rect x="26.6667" y="311.1111" width="533.3333" height="71.1111" rx="7.1111" fill="#ffebee" stroke="#e53935" stroke-width="1.3333" />
   <ns0:text x="293.3333" y="355.5556" text-anchor="middle" font-size="16" fill="#c62828" font-weight="bold">Trust problem: LLM controls which plugins run and how</ns0:text>
 </ns0:svg>

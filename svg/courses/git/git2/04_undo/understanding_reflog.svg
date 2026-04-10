@@ -1,14 +1,75 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="640" y="72" text-anchor="middle" font-size="38.4" font-weight="bold">Reflog Tracks Everything</text>
-  <rect x="160" y="144" width="960" height="450" fill="#263238" stroke="#37474F" stroke-width="3.2" rx="8" />
+  <rect x="160" y="144" width="960" height="450" fill="#333333" stroke="#555555" stroke-width="3.2" rx="8" />
   <text x="192" y="198" font-family="monospace" font-size="19.2" fill="#4CAF50">$ git reflog</text>
-  <text x="192" y="243" font-family="monospace" font-size="17.6" fill="#FFD54F">a3f8d9c HEAD@{0}: reset: moving to HEAD~2</text>
-  <text x="192" y="279" font-family="monospace" font-size="17.6" fill="#81C784">b8e7a2d HEAD@{1}: commit: Add feature</text>
-  <text x="192" y="315" font-family="monospace" font-size="17.6" fill="#81C784">c9d6b3e HEAD@{2}: commit: Fix bug</text>
-  <text x="192" y="351" font-family="monospace" font-size="17.6" fill="#64B5F6">d7a5c1f HEAD@{3}: checkout: from main to feature</text>
-  <text x="192" y="387" font-family="monospace" font-size="17.6" fill="#81C784">e8b4a2c HEAD@{4}: commit: Update README</text>
-  <text x="192" y="423" font-family="monospace" font-size="17.6" fill="#FFB74D">f9c3b1d HEAD@{5}: rebase: Add tests</text>
-  <text x="192" y="459" font-family="monospace" font-size="17.6" fill="#E57373">g0d4e5f HEAD@{6}: merge: Merge branch 'hotfix'</text>
-  <text x="192" y="495" font-family="monospace" font-size="17.6" fill="#A1887F">h1e5f6g HEAD@{7}: clone: from origin</text>
+  <text x="192" y="243" font-family="monospace" font-size="17.6" fill="#ffcc80">a3f8d9c HEAD@{0}: reset: moving to HEAD~2</text>
+  <text x="192" y="279" font-family="monospace" font-size="17.6" fill="#a5d6a7">b8e7a2d HEAD@{1}: commit: Add feature</text>
+  <text x="192" y="315" font-family="monospace" font-size="17.6" fill="#a5d6a7">c9d6b3e HEAD@{2}: commit: Fix bug</text>
+  <text x="192" y="351" font-family="monospace" font-size="17.6" fill="#90caf9">d7a5c1f HEAD@{3}: checkout: from main to feature</text>
+  <text x="192" y="387" font-family="monospace" font-size="17.6" fill="#a5d6a7">e8b4a2c HEAD@{4}: commit: Update README</text>
+  <text x="192" y="423" font-family="monospace" font-size="17.6" fill="#f9a825">f9c3b1d HEAD@{5}: rebase: Add tests</text>
+  <text x="192" y="459" font-family="monospace" font-size="17.6" fill="#e74c3c">g0d4e5f HEAD@{6}: merge: Merge branch 'hotfix'</text>
+  <text x="192" y="495" font-family="monospace" font-size="17.6" fill="#888888">h1e5f6g HEAD@{7}: clone: from origin</text>
   <text x="640" y="639" text-anchor="middle" font-size="22.4" font-style="italic">Every HEAD movement is recorded for 90 days!</text>
 </svg>

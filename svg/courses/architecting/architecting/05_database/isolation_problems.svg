@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -14,23 +74,23 @@
   <ns0:text x="179.6491" y="303.1579" text-anchor="middle" font-size="19.462" fill="#333">Transaction 2</ns0:text>
   <ns0:rect x="449.1228" y="176.8421" width="149.7076" height="84.2105" rx="7.4854" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9942" />
   <ns0:text x="523.9766" y="227.3684" text-anchor="middle" font-size="19.462" fill="#333">Data</ns0:text>
-  <ns0:line x1="284.4444" y1="134.7368" x2="446.1287" y2="198.7368" stroke="#4a90e2" stroke-width="2.2456" marker-end="url(#arrowhead)" />
+  <ns0:line x1="284.4444" y1="134.7368" x2="446.1287" y2="198.7368" stroke="#4a90e2" stroke-width="2.2456" marker-end="url(#arrow)" />
   <ns0:text x="351.8129" y="148.2105" font-size="14.9708" fill="#4a90e2">Read</ns0:text>
-  <ns0:line x1="284.4444" y1="294.7368" x2="446.1287" y2="239.1579" stroke="#4a90e2" stroke-width="2.2456" marker-end="url(#arrowhead)" />
+  <ns0:line x1="284.4444" y1="294.7368" x2="446.1287" y2="239.1579" stroke="#4a90e2" stroke-width="2.2456" marker-end="url(#arrow)" />
   <ns0:text x="351.8129" y="289.6842" font-size="14.9708" fill="#4a90e2">Read</ns0:text>
   <ns0:rect x="703.6257" y="101.0526" width="149.7076" height="67.3684" rx="7.4854" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9942" />
   <ns0:text x="778.4795" y="143.1579" text-anchor="middle" font-size="17.9649" fill="#333">Data'</ns0:text>
   <ns0:rect x="703.6257" y="252.6316" width="149.7076" height="67.3684" rx="7.4854" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9942" />
   <ns0:text x="778.4795" y="294.7368" text-anchor="middle" font-size="17.9649" fill="#333">Data''</ns0:text>
-  <ns0:line x1="598.8304" y1="193.6842" x2="700.6316" y2="134.7368" stroke="#dc3545" stroke-width="2.2456" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="598.8304" y1="193.6842" x2="700.6316" y2="134.7368" stroke="#dc3545" stroke-width="2.2456" marker-end="url(#arrow-danger)" />
   <ns0:text x="651.2281" y="143.1579" font-size="14.9708" fill="#dc3545">Modify</ns0:text>
-  <ns0:line x1="598.8304" y1="235.7895" x2="700.6316" y2="277.8947" stroke="#dc3545" stroke-width="2.2456" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="598.8304" y1="235.7895" x2="700.6316" y2="277.8947" stroke="#dc3545" stroke-width="2.2456" marker-end="url(#arrow-danger)" />
   <ns0:text x="651.2281" y="277.8947" font-size="14.9708" fill="#dc3545">Modify</ns0:text>
   <ns0:rect x="958.1287" y="168.4211" width="194.6199" height="84.2105" rx="7.4854" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9942" />
   <ns0:text x="1055.4386" y="205.4737" text-anchor="middle" font-size="17.9649" font-weight="bold" fill="#dc3545">Race Condition</ns0:text>
   <ns0:text x="1055.4386" y="235.7895" text-anchor="middle" font-size="16.4678" fill="#333">Conflict!</ns0:text>
-  <ns0:line x1="853.3333" y1="134.7368" x2="955.1345" y2="193.6842" stroke="#dc3545" stroke-width="2.2456" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrowhead-red)" />
-  <ns0:line x1="853.3333" y1="286.3158" x2="955.1345" y2="227.3684" stroke="#dc3545" stroke-width="2.2456" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="853.3333" y1="134.7368" x2="955.1345" y2="193.6842" stroke="#dc3545" stroke-width="2.2456" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrow-danger)" />
+  <ns0:line x1="853.3333" y1="286.3158" x2="955.1345" y2="227.3684" stroke="#dc3545" stroke-width="2.2456" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrow-danger)" />
   <ns0:rect x="74.8538" y="404.2105" width="1047.9532" height="235.7895" rx="7.4854" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4971" />
   <ns0:text x="598.8304" y="446.3158" text-anchor="middle" font-size="19.462" font-weight="bold" fill="#333">Common Problems</ns0:text>
   <ns0:rect x="104.7953" y="471.5789" width="284.4444" height="67.3684" rx="7.4854" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2456" />

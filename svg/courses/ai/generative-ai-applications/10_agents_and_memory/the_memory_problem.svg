@@ -1,39 +1,100 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <ns0:rect x="10.8999" y="9.9071" width="1133.5906" height="630.0929" rx="7.9257" fill="#f0f4f8" stroke="#333" stroke-width="2.9722" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="10.8999" y="9.9071" width="1133.5906" height="630.0929" rx="7.9257" fill="#f5f5f5" stroke="#333" stroke-width="2.9722" />
   <ns0:text x="577.6952" y="59.4428" font-size="27.7399" fill="#222" text-anchor="middle" font-weight="bold">MEMORY STRATEGIES</ns0:text>
   <ns0:line x1="10.8999" y1="75.2941" x2="1144.4905" y2="75.2941" stroke="#333" stroke-width="1.9814" />
   <ns0:line x1="337.8972" y1="9.9071" x2="337.8972" y2="640" stroke="#333" stroke-width="1.9814" />
   <ns0:rect x="13.0799" y="77.2756" width="322.6374" height="108.9783" fill="#e3f2fd" stroke="none" />
   <ns0:rect x="340.0772" y="77.2756" width="802.2333" height="108.9783" fill="#e3f2fd" stroke="none" />
-  <ns0:line x1="10.8999" y1="186.2539" x2="1144.4905" y2="186.2539" stroke="#bbb" stroke-width="1.9814" />
+  <ns0:line x1="10.8999" y1="186.2539" x2="1144.4905" y2="186.2539" stroke="#bdbdbd" stroke-width="1.9814" />
   <ns0:text x="30.5197" y="126.8111" font-size="25.7585" fill="#222" font-weight="bold">Conversation</ns0:text>
   <ns0:text x="30.5197" y="158.514" font-size="25.7585" fill="#222" font-weight="bold">Buffer</ns0:text>
   <ns0:text x="361.877" y="126.8111" font-size="23.7771" fill="#555">Pass full history in context</ns0:text>
   <ns0:text x="361.877" y="158.514" font-size="23.7771" fill="#555">Simple but limited by context window</ns0:text>
   <ns0:rect x="13.0799" y="188.2353" width="322.6374" height="108.9783" fill="#e8f5e9" stroke="none" />
   <ns0:rect x="340.0772" y="188.2353" width="802.2333" height="108.9783" fill="#e8f5e9" stroke="none" />
-  <ns0:line x1="10.8999" y1="297.2136" x2="1144.4905" y2="297.2136" stroke="#bbb" stroke-width="1.9814" />
+  <ns0:line x1="10.8999" y1="297.2136" x2="1144.4905" y2="297.2136" stroke="#bdbdbd" stroke-width="1.9814" />
   <ns0:text x="30.5197" y="237.7709" font-size="25.7585" fill="#222" font-weight="bold">Summary</ns0:text>
   <ns0:text x="30.5197" y="269.4737" font-size="25.7585" fill="#222" font-weight="bold">Memory</ns0:text>
   <ns0:text x="361.877" y="237.7709" font-size="23.7771" fill="#555">Summarize old messages</ns0:text>
   <ns0:text x="361.877" y="269.4737" font-size="23.7771" fill="#555">Saves tokens, loses some detail</ns0:text>
   <ns0:rect x="13.0799" y="299.195" width="322.6374" height="108.9783" fill="#e3f2fd" stroke="none" />
   <ns0:rect x="340.0772" y="299.195" width="802.2333" height="108.9783" fill="#e3f2fd" stroke="none" />
-  <ns0:line x1="10.8999" y1="408.1733" x2="1144.4905" y2="408.1733" stroke="#bbb" stroke-width="1.9814" />
+  <ns0:line x1="10.8999" y1="408.1733" x2="1144.4905" y2="408.1733" stroke="#bdbdbd" stroke-width="1.9814" />
   <ns0:text x="30.5197" y="348.7307" font-size="25.7585" fill="#222" font-weight="bold">Window</ns0:text>
   <ns0:text x="30.5197" y="380.4334" font-size="25.7585" fill="#222" font-weight="bold">Memory</ns0:text>
   <ns0:text x="361.877" y="348.7307" font-size="23.7771" fill="#555">Keep last N messages</ns0:text>
   <ns0:text x="361.877" y="380.4334" font-size="23.7771" fill="#555">Fixed token budget</ns0:text>
   <ns0:rect x="13.0799" y="410.1548" width="322.6374" height="108.9783" fill="#e8f5e9" stroke="none" />
   <ns0:rect x="340.0772" y="410.1548" width="802.2333" height="108.9783" fill="#e8f5e9" stroke="none" />
-  <ns0:line x1="10.8999" y1="519.1332" x2="1144.4905" y2="519.1332" stroke="#bbb" stroke-width="1.9814" />
+  <ns0:line x1="10.8999" y1="519.1332" x2="1144.4905" y2="519.1332" stroke="#bdbdbd" stroke-width="1.9814" />
   <ns0:text x="30.5197" y="459.6904" font-size="25.7585" fill="#222" font-weight="bold">Vector Store</ns0:text>
   <ns0:text x="30.5197" y="491.3931" font-size="25.7585" fill="#222" font-weight="bold">Memory</ns0:text>
   <ns0:text x="361.877" y="459.6904" font-size="23.7771" fill="#555">Embed and retrieve relevant memories</ns0:text>
   <ns0:text x="361.877" y="491.3931" font-size="23.7771" fill="#555">Semantic retrieval</ns0:text>
   <ns0:rect x="13.0799" y="521.1146" width="322.6374" height="108.9783" fill="#e3f2fd" stroke="none" />
   <ns0:rect x="340.0772" y="521.1146" width="802.2333" height="108.9783" fill="#e3f2fd" stroke="none" />
-  <ns0:line x1="10.8999" y1="630.0929" x2="1144.4905" y2="630.0929" stroke="#bbb" stroke-width="1.9814" />
+  <ns0:line x1="10.8999" y1="630.0929" x2="1144.4905" y2="630.0929" stroke="#bdbdbd" stroke-width="1.9814" />
   <ns0:text x="30.5197" y="570.6501" font-size="25.7585" fill="#222" font-weight="bold">Entity</ns0:text>
   <ns0:text x="30.5197" y="602.353" font-size="25.7585" fill="#222" font-weight="bold">Memory</ns0:text>
   <ns0:text x="361.877" y="570.6501" font-size="23.7771" fill="#555">Track key entities and facts</ns0:text>

@@ -8,11 +8,71 @@
   <ns0:text x="691.8919" y="137.8378" font-size="16.2162" text-anchor="middle">WRITING</ns0:text>
   <ns0:circle cx="432.4324" cy="324.3243" r="48.6486" fill="lightcoral" stroke="black" />
   <ns0:text x="432.4324" y="332.4324" font-size="16.2162" text-anchor="middle">CLOSING</ns0:text>
-  <ns0:path d="M 224.8649 129.7297 L 380.5405 129.7297" stroke="black" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 484.3243 129.7297 L 640 129.7297" stroke="black" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 640 162.1622 L 484.3243 162.1622" stroke="black" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 432.4324 178.3784 L 432.4324 275.6757" stroke="black" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 224.8649 129.7297 L 380.5405 129.7297" stroke="black" marker-end="url(#arrow)" />
+  <ns0:path d="M 484.3243 129.7297 L 640 129.7297" stroke="black" marker-end="url(#arrow)" />
+  <ns0:path d="M 640 162.1622 L 484.3243 162.1622" stroke="black" marker-end="url(#arrow)" />
+  <ns0:path d="M 432.4324 178.3784 L 432.4324 275.6757" stroke="black" marker-end="url(#arrow)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="25.6" markerHeight="16.8" refX="0" refY="8.4" orient="auto">
       <ns0:polygon points="0,24 8.96,0" fill="black" />
     </ns0:marker>

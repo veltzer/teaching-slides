@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="14.2222" markerHeight="12.6" refX="14.2222" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 4.9778,0" fill="#4a90e2" />
     </ns0:marker>
@@ -17,7 +77,7 @@
   <ns0:rect x="33.2468" y="205.1299" width="132.987" height="36.8182" rx="4.1558" fill="#d4edda" stroke="#28a745" stroke-width="1.2467" />
   <ns0:text x="99.7403" y="228.2727" text-anchor="middle" font-size="10" fill="#333">Model Registry</ns0:text>
   <ns0:rect x="224.4156" y="52.5974" width="290.9091" height="147.2727" rx="4.1558" fill="none" stroke="#ffc107" stroke-width="1.6623" stroke-dasharray="6.6494 3.3247" />
-  <ns0:text x="369.8701" y="75.7403" text-anchor="middle" font-size="10" font-weight="bold" fill="#996600">ML Pipeline</ns0:text>
+  <ns0:text x="369.8701" y="75.7403" text-anchor="middle" font-size="10" font-weight="bold" fill="#bf360c">ML Pipeline</ns0:text>
   <ns0:rect x="236.8831" y="94.6753" width="83.1169" height="36.8182" rx="4.1558" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.2467" />
   <ns0:text x="278.4415" y="117.8182" text-anchor="middle" font-size="10" fill="#333">Data Prep</ns0:text>
   <ns0:rect x="332.4675" y="94.6753" width="83.1169" height="36.8182" rx="4.1558" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.2467" />
@@ -28,22 +88,22 @@
   <ns0:rect x="332.4675" y="147.2727" width="83.1169" height="36.8182" rx="4.1558" fill="#fff3cd" stroke="#ffc107" stroke-width="1.2467" />
   <ns0:text x="374.026" y="164.1039" text-anchor="middle" font-size="10" fill="#333">Model</ns0:text>
   <ns0:text x="374.026" y="176.7273" text-anchor="middle" font-size="10" fill="#333">Evaluation</ns0:text>
-  <ns0:line x1="320" y1="112.5584" x2="330.8052" y2="112.5584" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrowhead)" />
-  <ns0:line x1="278.4415" y1="131.4935" x2="278.4415" y2="145.1688" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrowhead)" />
-  <ns0:line x1="320" y1="165.1558" x2="330.8052" y2="165.1558" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrowhead)" />
+  <ns0:line x1="320" y1="112.5584" x2="330.8052" y2="112.5584" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrow)" />
+  <ns0:line x1="278.4415" y1="131.4935" x2="278.4415" y2="145.1688" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrow)" />
+  <ns0:line x1="320" y1="165.1558" x2="330.8052" y2="165.1558" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrow)" />
   <ns0:rect x="556.8831" y="52.5974" width="166.2337" height="147.2727" rx="4.1558" fill="none" stroke="#28a745" stroke-width="1.6623" stroke-dasharray="6.6494 3.3247" />
   <ns0:text x="640" y="75.7403" text-anchor="middle" font-size="10" font-weight="bold" fill="#28a745">Deployment</ns0:text>
   <ns0:rect x="577.6623" y="94.6753" width="124.6753" height="36.8182" rx="4.1558" fill="#d4edda" stroke="#28a745" stroke-width="1.2467" />
   <ns0:text x="640" y="117.8182" text-anchor="middle" font-size="10" fill="#333">Model Serving</ns0:text>
   <ns0:rect x="577.6623" y="147.2727" width="124.6753" height="36.8182" rx="4.1558" fill="#d4edda" stroke="#28a745" stroke-width="1.2467" />
   <ns0:text x="640" y="170.4156" text-anchor="middle" font-size="10" fill="#333">Predictions</ns0:text>
-  <ns0:line x1="640" y1="131.4935" x2="640" y2="145.1688" stroke="#28a745" stroke-width="1.2467" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="166.2337" y1="107.2987" x2="235.2208" y2="107.2987" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 374.026 131.4935 Q 357.4026 142.013 166.2337 165.1558" fill="none" stroke="#ffc107" stroke-width="1.2467" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 166.2337 165.1558 Q 232.7273 163.0519 235.2208 163.0519" fill="none" stroke="#ffc107" stroke-width="1.2467" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 415.5844 165.1558 Q 457.1428 210.3896 166.2337 223.013" fill="none" stroke="#28a745" stroke-width="1.2467" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="166.2337" y1="223.013" x2="576" y2="112.5584" stroke="#28a745" stroke-width="1.2467" marker-end="url(#arrowhead-green)" />
-  <ns0:path d="M 640 184.0909 Q 640 273.5065 99.7403 262.987 Q 49.8701 262.987 49.8701 115.7143" fill="none" stroke="#dc3545" stroke-width="1.2467" stroke-dasharray="4.1558 2.4935" marker-end="url(#arrowhead)" />
+  <ns0:line x1="640" y1="131.4935" x2="640" y2="145.1688" stroke="#28a745" stroke-width="1.2467" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="166.2337" y1="107.2987" x2="235.2208" y2="107.2987" stroke="#4a90e2" stroke-width="1.2467" marker-end="url(#arrow)" />
+  <ns0:path d="M 374.026 131.4935 Q 357.4026 142.013 166.2337 165.1558" fill="none" stroke="#ffc107" stroke-width="1.2467" marker-end="url(#arrow)" />
+  <ns0:path d="M 166.2337 165.1558 Q 232.7273 163.0519 235.2208 163.0519" fill="none" stroke="#ffc107" stroke-width="1.2467" marker-end="url(#arrow)" />
+  <ns0:path d="M 415.5844 165.1558 Q 457.1428 210.3896 166.2337 223.013" fill="none" stroke="#28a745" stroke-width="1.2467" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="166.2337" y1="223.013" x2="576" y2="112.5584" stroke="#28a745" stroke-width="1.2467" marker-end="url(#arrow-ok)" />
+  <ns0:path d="M 640 184.0909 Q 640 273.5065 99.7403 262.987 Q 49.8701 262.987 49.8701 115.7143" fill="none" stroke="#dc3545" stroke-width="1.2467" stroke-dasharray="4.1558 2.4935" marker-end="url(#arrow)" />
   <ns0:text x="332.4675" y="284.026" text-anchor="middle" font-size="10" fill="#dc3545">Feedback Loop</ns0:text>
   <ns0:rect x="16.6234" y="326.1039" width="714.8052" height="73.6364" rx="4.1558" fill="#f5f5f5" stroke="#ddd" stroke-width="0.8312" />
   <ns0:text x="374.026" y="349.2468" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">ML Pipeline Flow</ns0:text>

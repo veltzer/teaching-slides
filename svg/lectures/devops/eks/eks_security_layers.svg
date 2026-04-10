@@ -1,12 +1,73 @@
 <svg viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <text x="640" y="48" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle" fill="#333">EKS Security Layers</text>
-  <polygon points="274.2857,608 1005.7143,608 914.2857,512 365.7143,512" fill="#FF5722" stroke="#D84315" stroke-width="3.2" />
+  <polygon points="274.2857,608 1005.7143,608 914.2857,512 365.7143,512" fill="#f44336" stroke="#e65100" stroke-width="3.2" />
   <text x="640" y="568" font-family="Arial" font-size="22.4" font-weight="bold" text-anchor="middle" fill="white">Infrastructure Security</text>
   <text x="640" y="592" font-family="Arial" font-size="16" text-anchor="middle" fill="white">VPC, Security Groups, NACLs, IAM</text>
   <polygon points="365.7143,512 914.2857,512 822.8571,416 457.1429,416" fill="#FF9800" stroke="#F57C00" stroke-width="3.2" />
   <text x="640" y="472" font-family="Arial" font-size="22.4" font-weight="bold" text-anchor="middle" fill="white">Cluster Security</text>
   <text x="640" y="496" font-family="Arial" font-size="16" text-anchor="middle" fill="white">RBAC, Pod Security, Network Policies</text>
-  <polygon points="457.1429,416 822.8571,416 731.4286,320 548.5714,320" fill="#FFC107" stroke="#FF8F00" stroke-width="3.2" />
+  <polygon points="457.1429,416 822.8571,416 731.4286,320 548.5714,320" fill="#FFC107" stroke="#fb8c00" stroke-width="3.2" />
   <text x="640" y="376" font-family="Arial" font-size="22.4" font-weight="bold" text-anchor="middle" fill="white">Workload Security</text>
   <text x="640" y="400" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Image Scanning, Admission Controllers</text>
   <polygon points="548.5714,320 731.4286,320 685.7143,224 594.2857,224" fill="#4CAF50" stroke="#388E3C" stroke-width="3.2" />
@@ -14,9 +75,9 @@
   <text x="640" y="304" font-family="Arial" font-size="16" text-anchor="middle" fill="white">Secrets, Encryption</text>
   <polygon points="594.2857,224 685.7143,224 640,128 640,128" fill="#2196F3" stroke="#1976D2" stroke-width="3.2" />
   <text x="640" y="184" font-family="Arial" font-size="22.4" font-weight="bold" text-anchor="middle" fill="white">Data</text>
-  <rect x="1042.2857" y="128" width="219.4286" height="480" fill="#F8F9FA" stroke="#DEE2E6" stroke-width="1.6" rx="8" />
+  <rect x="1042.2857" y="128" width="219.4286" height="480" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6" rx="8" />
   <text x="1152" y="168" font-family="Arial" font-size="19.2" font-weight="bold" text-anchor="middle" fill="#333">Security Features</text>
-  <circle cx="1078.8571" cy="208" r="12.8" fill="#FF5722" />
+  <circle cx="1078.8571" cy="208" r="12.8" fill="#f44336" />
   <text x="1115.4286" y="216" font-family="Arial" font-size="16" fill="#333">IAM Roles</text>
   <circle cx="1078.8571" cy="240" r="12.8" fill="#FF9800" />
   <text x="1115.4286" y="248" font-family="Arial" font-size="16" fill="#333">RBAC</text>

@@ -1,6 +1,67 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="592.2678" y="52.6027" text-anchor="middle" font-size="30.4595" font-weight="bold" fill="#333">Network Segmentation with VLANs</ns0:text>
-  <ns0:rect x="33.8439" y="78.9041" width="1116.8479" height="561.0959" rx="8.461" fill="#f8f9fa" stroke="#4a90e2" stroke-width="3.3843" />
+  <ns0:rect x="33.8439" y="78.9041" width="1116.8479" height="561.0959" rx="8.461" fill="#f9f9f9" stroke="#4a90e2" stroke-width="3.3843" />
   <ns0:text x="592.2678" y="122.7397" text-anchor="middle" font-size="23.6907" font-weight="bold" fill="#4a90e2">Corporate Network</ns0:text>
   <ns0:rect x="84.6097" y="149.0411" width="304.5949" height="175.3425" rx="8.461" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3843" />
   <ns0:text x="236.9071" y="192.8767" text-anchor="middle" font-size="21.9985" font-weight="bold" fill="#4a90e2">VLAN 10</ns0:text>
@@ -11,7 +72,7 @@
   <ns0:text x="592.2678" y="227.9452" text-anchor="middle" font-size="20.3064" fill="#333">Development</ns0:text>
   <ns0:text x="592.2678" y="263.0137" text-anchor="middle" font-size="18.6141" fill="#555">10.20.0.0/24</ns0:text>
   <ns0:rect x="795.3311" y="149.0411" width="304.5949" height="175.3425" rx="8.461" fill="#fff3cd" stroke="#ffc107" stroke-width="3.3843" />
-  <ns0:text x="947.6285" y="192.8767" text-anchor="middle" font-size="21.9985" font-weight="bold" fill="#856404">VLAN 30</ns0:text>
+  <ns0:text x="947.6285" y="192.8767" text-anchor="middle" font-size="21.9985" font-weight="bold" fill="#bf360c">VLAN 30</ns0:text>
   <ns0:text x="947.6285" y="227.9452" text-anchor="middle" font-size="20.3064" fill="#333">Production</ns0:text>
   <ns0:text x="947.6285" y="263.0137" text-anchor="middle" font-size="18.6141" fill="#555">10.30.0.0/24</ns0:text>
   <ns0:line x1="236.9071" y1="324.3835" x2="236.9071" y2="403.2877" stroke="#4a90e2" stroke-width="2.5383" />

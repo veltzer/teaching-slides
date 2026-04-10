@@ -1,30 +1,91 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:rect x="113.7778" y="208" width="170.6667" height="144" rx="11.3778" fill="#0f3460" stroke="#e94560" stroke-width="2.8444" />
-  <ns0:text x="199.1111" y="264" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#e94560">{ "key":</ns0:text>
-  <ns0:text x="199.1111" y="291.2" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#e94560">  "value" }</ns0:text>
+  <ns0:rect x="113.7778" y="208" width="170.6667" height="144" rx="11.3778" fill="#1a237e" stroke="#dc3545" stroke-width="2.8444" />
+  <ns0:text x="199.1111" y="264" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#dc3545">{ "key":</ns0:text>
+  <ns0:text x="199.1111" y="291.2" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#dc3545">  "value" }</ns0:text>
   <ns0:text x="199.1111" y="384" text-anchor="middle" font-family="sans-serif" font-size="17.0667" fill="#888">Document</ns0:text>
-  <ns0:rect x="341.3333" y="208" width="170.6667" height="144" rx="11.3778" fill="#0f3460" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:text x="426.6667" y="256" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#16c79a">K -&gt; V</ns0:text>
-  <ns0:text x="426.6667" y="288" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#16c79a">K -&gt; V</ns0:text>
-  <ns0:text x="426.6667" y="320" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#16c79a">K -&gt; V</ns0:text>
+  <ns0:rect x="341.3333" y="208" width="170.6667" height="144" rx="11.3778" fill="#1a237e" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:text x="426.6667" y="256" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#2ecc71">K -&gt; V</ns0:text>
+  <ns0:text x="426.6667" y="288" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#2ecc71">K -&gt; V</ns0:text>
+  <ns0:text x="426.6667" y="320" text-anchor="middle" font-family="monospace" font-size="15.6444" fill="#2ecc71">K -&gt; V</ns0:text>
   <ns0:text x="426.6667" y="384" text-anchor="middle" font-family="sans-serif" font-size="17.0667" fill="#888">Key-Value</ns0:text>
-  <ns0:rect x="625.7778" y="208" width="170.6667" height="144" rx="11.3778" fill="#0f3460" stroke="#f5a623" stroke-width="2.8444" />
-  <ns0:rect x="647.1111" y="232" width="35.5556" height="96" rx="2.8444" fill="#f5a623" opacity="0.3" />
-  <ns0:rect x="689.7778" y="232" width="35.5556" height="96" rx="2.8444" fill="#f5a623" opacity="0.2" />
-  <ns0:rect x="732.4444" y="232" width="35.5556" height="96" rx="2.8444" fill="#f5a623" opacity="0.15" />
+  <ns0:rect x="625.7778" y="208" width="170.6667" height="144" rx="11.3778" fill="#1a237e" stroke="#f9a825" stroke-width="2.8444" />
+  <ns0:rect x="647.1111" y="232" width="35.5556" height="96" rx="2.8444" fill="#f9a825" opacity="0.3" />
+  <ns0:rect x="689.7778" y="232" width="35.5556" height="96" rx="2.8444" fill="#f9a825" opacity="0.2" />
+  <ns0:rect x="732.4444" y="232" width="35.5556" height="96" rx="2.8444" fill="#f9a825" opacity="0.15" />
   <ns0:text x="711.1111" y="384" text-anchor="middle" font-family="sans-serif" font-size="17.0667" fill="#888">Column</ns0:text>
-  <ns0:rect x="853.3333" y="208" width="170.6667" height="144" rx="11.3778" fill="#0f3460" stroke="#a855f7" stroke-width="2.8444" />
-  <ns0:circle cx="910.2222" cy="256" r="14.2222" fill="none" stroke="#a855f7" stroke-width="2.1333" />
-  <ns0:circle cx="981.3333" cy="248" r="14.2222" fill="none" stroke="#a855f7" stroke-width="2.1333" />
-  <ns0:circle cx="938.6667" cy="312" r="14.2222" fill="none" stroke="#a855f7" stroke-width="2.1333" />
-  <ns0:line x1="921.6" y1="260.8" x2="969.9556" y2="252.8" stroke="#a855f7" stroke-width="1.4222" />
-  <ns0:line x1="915.9111" y1="268.8" x2="931.5556" y2="299.2" stroke="#a855f7" stroke-width="1.4222" />
-  <ns0:line x1="950.0444" y1="307.2" x2="974.2222" y2="260.8" stroke="#a855f7" stroke-width="1.4222" />
+  <ns0:rect x="853.3333" y="208" width="170.6667" height="144" rx="11.3778" fill="#1a237e" stroke="#9b59b6" stroke-width="2.8444" />
+  <ns0:circle cx="910.2222" cy="256" r="14.2222" fill="none" stroke="#9b59b6" stroke-width="2.1333" />
+  <ns0:circle cx="981.3333" cy="248" r="14.2222" fill="none" stroke="#9b59b6" stroke-width="2.1333" />
+  <ns0:circle cx="938.6667" cy="312" r="14.2222" fill="none" stroke="#9b59b6" stroke-width="2.1333" />
+  <ns0:line x1="921.6" y1="260.8" x2="969.9556" y2="252.8" stroke="#9b59b6" stroke-width="1.4222" />
+  <ns0:line x1="915.9111" y1="268.8" x2="931.5556" y2="299.2" stroke="#9b59b6" stroke-width="1.4222" />
+  <ns0:line x1="950.0444" y1="307.2" x2="974.2222" y2="260.8" stroke="#9b59b6" stroke-width="1.4222" />
   <ns0:text x="938.6667" y="384" text-anchor="middle" font-family="sans-serif" font-size="17.0667" fill="#888">Graph</ns0:text>
-  <ns0:line x1="284.4444" y1="480" x2="853.3333" y2="480" stroke="#16c79a" stroke-width="2.1333" opacity="0.4" />
-  <ns0:polygon points="853.3333,473.6 870.4,480 853.3333,486.4" fill="#16c79a" opacity="0.5" />
-  <ns0:text x="568.8889" y="512" text-anchor="middle" font-family="sans-serif" font-size="17.0667" fill="#16c79a" opacity="0.6">horizontal scalability</ns0:text>
+  <ns0:line x1="284.4444" y1="480" x2="853.3333" y2="480" stroke="#2ecc71" stroke-width="2.1333" opacity="0.4" />
+  <ns0:polygon points="853.3333,473.6 870.4,480 853.3333,486.4" fill="#2ecc71" opacity="0.5" />
+  <ns0:text x="568.8889" y="512" text-anchor="middle" font-family="sans-serif" font-size="17.0667" fill="#2ecc71" opacity="0.6">horizontal scalability</ns0:text>
   <ns0:text x="568.8889" y="80" text-anchor="middle" font-family="sans-serif" font-size="39.8222" font-weight="bold" fill="#eee">NoSQL Database Fundamentals</ns0:text>
   <ns0:text x="568.8889" y="128" text-anchor="middle" font-family="monospace" font-size="19.9111" fill="#888">flexible schemas | distributed | scalable</ns0:text>
   <ns0:text x="568.8889" y="600" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#555">document | key-value | column | graph</ns0:text>

@@ -60,6 +60,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -88,13 +100,13 @@
   <rect x="30" y="75" width="370" height="38" rx="8" fill="url(#grad-primary)"/>
   <text x="215" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">ctypes (stdlib)</text>
   <text x="50" y="128" font-family="Arial, sans-serif" font-size="13" fill="#333333">Load shared libraries directly:</text>
-  <rect x="40" y="136" width="350" height="155" rx="4" fill="#1e1e2e"/>
-  <text x="55" y="158" font-family="monospace" font-size="12" fill="#cba6f7">from ctypes import cdll, c_int</text>
-  <text x="55" y="178" font-family="monospace" font-size="12" fill="#cdd6f4">lib = cdll.LoadLibrary("./mylib.so")</text>
-  <text x="55" y="198" font-family="monospace" font-size="12" fill="#cdd6f4">lib.add.restype = c_int</text>
-  <text x="55" y="218" font-family="monospace" font-size="12" fill="#cdd6f4">lib.add.argtypes = [c_int, c_int]</text>
-  <text x="55" y="242" font-family="monospace" font-size="12" fill="#a6e3a1">result = lib.add(3, 4)  # 7</text>
-  <text x="55" y="275" font-family="monospace" font-size="12" fill="#6c7086"># No compilation step required</text>
+  <rect x="40" y="136" width="350" height="155" rx="4" fill="#1a1a2e"/>
+  <text x="55" y="158" font-family="monospace" font-size="12" fill="#e1bee7">from ctypes import cdll, c_int</text>
+  <text x="55" y="178" font-family="monospace" font-size="12" fill="#bbdefb">lib = cdll.LoadLibrary("./mylib.so")</text>
+  <text x="55" y="198" font-family="monospace" font-size="12" fill="#bbdefb">lib.add.restype = c_int</text>
+  <text x="55" y="218" font-family="monospace" font-size="12" fill="#bbdefb">lib.add.argtypes = [c_int, c_int]</text>
+  <text x="55" y="242" font-family="monospace" font-size="12" fill="#a5d6a7">result = lib.add(3, 4)  # 7</text>
+  <text x="55" y="275" font-family="monospace" font-size="12" fill="#777777"># No compilation step required</text>
   <text x="50" y="305" font-family="Arial, sans-serif" font-size="13" fill="#333333">Pros: no compile, stdlib, works with any .so</text>
   <text x="50" y="325" font-family="Arial, sans-serif" font-size="13" fill="#333333">Cons: manual type mapping, error-prone</text>
   <text x="50" y="345" font-family="Arial, sans-serif" font-size="13" fill="#333333">Best for: quick .so calls, legacy libraries</text>
@@ -105,13 +117,13 @@
   <rect x="420" y="75" width="370" height="38" rx="8" fill="url(#grad-ok)"/>
   <text x="605" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">cffi (C Foreign Function Interface)</text>
   <text x="440" y="128" font-family="Arial, sans-serif" font-size="13" fill="#333333">Declare C API in Python:</text>
-  <rect x="430" y="136" width="350" height="155" rx="4" fill="#1e1e2e"/>
-  <text x="445" y="158" font-family="monospace" font-size="12" fill="#cba6f7">from cffi import FFI</text>
-  <text x="445" y="178" font-family="monospace" font-size="12" fill="#cdd6f4">ffi = FFI()</text>
-  <text x="445" y="198" font-family="monospace" font-size="12" fill="#cdd6f4">ffi.cdef("int add(int a, int b);")</text>
-  <text x="445" y="218" font-family="monospace" font-size="12" fill="#cdd6f4">lib = ffi.dlopen("./mylib.so")</text>
-  <text x="445" y="242" font-family="monospace" font-size="12" fill="#a6e3a1">result = lib.add(3, 4)</text>
-  <text x="445" y="266" font-family="monospace" font-size="12" fill="#6c7086"># Also: ffi.verify() for inline C</text>
+  <rect x="430" y="136" width="350" height="155" rx="4" fill="#1a1a2e"/>
+  <text x="445" y="158" font-family="monospace" font-size="12" fill="#e1bee7">from cffi import FFI</text>
+  <text x="445" y="178" font-family="monospace" font-size="12" fill="#bbdefb">ffi = FFI()</text>
+  <text x="445" y="198" font-family="monospace" font-size="12" fill="#bbdefb">ffi.cdef("int add(int a, int b);")</text>
+  <text x="445" y="218" font-family="monospace" font-size="12" fill="#bbdefb">lib = ffi.dlopen("./mylib.so")</text>
+  <text x="445" y="242" font-family="monospace" font-size="12" fill="#a5d6a7">result = lib.add(3, 4)</text>
+  <text x="445" y="266" font-family="monospace" font-size="12" fill="#777777"># Also: ffi.verify() for inline C</text>
   <text x="440" y="305" font-family="Arial, sans-serif" font-size="13" fill="#333333">Pros: cleaner API, ABI + API modes</text>
   <text x="440" y="325" font-family="Arial, sans-serif" font-size="13" fill="#333333">Cons: external dependency</text>
   <text x="440" y="345" font-family="Arial, sans-serif" font-size="13" fill="#333333">Best for: wrapping C libraries cleanly</text>
@@ -122,13 +134,13 @@
   <rect x="810" y="75" width="440" height="38" rx="8" fill="url(#grad-warn)"/>
   <text x="1030" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Cython</text>
   <text x="830" y="128" font-family="Arial, sans-serif" font-size="13" fill="#333333">Python superset compiled to C:</text>
-  <rect x="820" y="136" width="420" height="155" rx="4" fill="#1e1e2e"/>
-  <text x="835" y="158" font-family="monospace" font-size="12" fill="#6c7086"># hello.pyx</text>
-  <text x="835" y="178" font-family="monospace" font-size="12" fill="#cba6f7">def add(int a, int b):</text>
-  <text x="835" y="198" font-family="monospace" font-size="12" fill="#a6e3a1">    return a + b</text>
-  <text x="835" y="222" font-family="monospace" font-size="12" fill="#6c7086"># cdef for pure C speed:</text>
-  <text x="835" y="242" font-family="monospace" font-size="12" fill="#cba6f7">cdef int fast_add(int a, int b):</text>
-  <text x="835" y="262" font-family="monospace" font-size="12" fill="#a6e3a1">    return a + b</text>
+  <rect x="820" y="136" width="420" height="155" rx="4" fill="#1a1a2e"/>
+  <text x="835" y="158" font-family="monospace" font-size="12" fill="#777777"># hello.pyx</text>
+  <text x="835" y="178" font-family="monospace" font-size="12" fill="#e1bee7">def add(int a, int b):</text>
+  <text x="835" y="198" font-family="monospace" font-size="12" fill="#a5d6a7">    return a + b</text>
+  <text x="835" y="222" font-family="monospace" font-size="12" fill="#777777"># cdef for pure C speed:</text>
+  <text x="835" y="242" font-family="monospace" font-size="12" fill="#e1bee7">cdef int fast_add(int a, int b):</text>
+  <text x="835" y="262" font-family="monospace" font-size="12" fill="#a5d6a7">    return a + b</text>
   <text x="830" y="305" font-family="Arial, sans-serif" font-size="13" fill="#333333">Pros: near-C speed, Python-compatible</text>
   <text x="830" y="325" font-family="Arial, sans-serif" font-size="13" fill="#333333">Cons: compile step, new syntax to learn</text>
   <text x="830" y="345" font-family="Arial, sans-serif" font-size="13" fill="#333333">Best for: speed-critical numerical code</text>
@@ -138,21 +150,21 @@
   <rect x="30" y="390" width="600" height="220" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
   <rect x="30" y="390" width="600" height="38" rx="8" fill="url(#grad-info)"/>
   <text x="330" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">C Extension Module (Python/C API)</text>
-  <rect x="40" y="435" width="580" height="165" rx="4" fill="#1e1e2e"/>
-  <text x="55" y="456" font-family="monospace" font-size="12" fill="#6c7086">// mymodule.c</text>
-  <text x="55" y="474" font-family="monospace" font-size="12" fill="#89b4fa">#include &lt;Python.h&gt;</text>
-  <text x="55" y="492" font-family="monospace" font-size="12" fill="#cdd6f4">static PyObject* py_add(PyObject* self, PyObject* args) {</text>
-  <text x="55" y="510" font-family="monospace" font-size="12" fill="#cdd6f4">    int a, b;</text>
-  <text x="55" y="528" font-family="monospace" font-size="12" fill="#a6e3a1">    PyArg_ParseTuple(args, "ii", &amp;a, &amp;b);</text>
-  <text x="55" y="546" font-family="monospace" font-size="12" fill="#a6e3a1">    return PyLong_FromLong(a + b);</text>
-  <text x="55" y="564" font-family="monospace" font-size="12" fill="#cdd6f4">}</text>
+  <rect x="40" y="435" width="580" height="165" rx="4" fill="#1a1a2e"/>
+  <text x="55" y="456" font-family="monospace" font-size="12" fill="#777777">// mymodule.c</text>
+  <text x="55" y="474" font-family="monospace" font-size="12" fill="#90caf9">#include &lt;Python.h&gt;</text>
+  <text x="55" y="492" font-family="monospace" font-size="12" fill="#bbdefb">static PyObject* py_add(PyObject* self, PyObject* args) {</text>
+  <text x="55" y="510" font-family="monospace" font-size="12" fill="#bbdefb">    int a, b;</text>
+  <text x="55" y="528" font-family="monospace" font-size="12" fill="#a5d6a7">    PyArg_ParseTuple(args, "ii", &amp;a, &amp;b);</text>
+  <text x="55" y="546" font-family="monospace" font-size="12" fill="#a5d6a7">    return PyLong_FromLong(a + b);</text>
+  <text x="55" y="564" font-family="monospace" font-size="12" fill="#bbdefb">}</text>
   <text x="55" y="584" font-family="Arial, sans-serif" font-size="12" fill="#888888">Pros: maximum control  Cons: verbose, reference counting manual</text>
 
   <!-- Comparison table -->
   <rect x="650" y="390" width="600" height="220" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="650" y="390" width="600" height="38" rx="8" fill="#455a64"/>
+  <rect x="650" y="390" width="600" height="38" rx="8" fill="#555555"/>
   <text x="950" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Comparison</text>
-  <rect x="660" y="432" width="580" height="28" rx="3" fill="#eceff1"/>
+  <rect x="660" y="432" width="580" height="28" rx="3" fill="#eeeeee"/>
   <text x="670" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">Method</text>
   <text x="790" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">Compile?</text>
   <text x="890" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">Speed</text>

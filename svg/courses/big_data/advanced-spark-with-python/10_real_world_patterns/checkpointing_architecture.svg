@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-    <ns0:marker id="arrow" viewBox="0 0 10 10" refX="11.4286" refY="7.2" markerWidth="13.7143" markerHeight="8.64" orient="auto-start-auto">
-      <ns0:path d="M 0 0 L 22.8571 7.2 L 0 14.4 z" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:rect x="20.7321" y="13.0612" width="1119.5335" height="626.9388" rx="6.5306" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6122" />
   <ns0:text x="580.4989" y="52.2449" text-anchor="middle" font-size="20.898" font-weight="bold" fill="#4a90e2">Exactly-Once Guarantee Flow (Micro-batch N)</ns0:text>
@@ -22,7 +79,7 @@
   <ns0:text x="114.0266" y="398.3673" font-size="16.9796" font-weight="bold" fill="#28a745">Step 4: Commit offsets to checkpoint</ns0:text>
   <ns0:text x="114.0266" y="424.4898" font-size="15.6735" fill="#333">Update: offset=1500 (atomic)</ns0:text>
   <ns0:rect x="82.9284" y="470.2041" width="995.141" height="143.6735" rx="6.5306" fill="#fff3cd" stroke="#ffc107" stroke-width="1.9592" />
-  <ns0:text x="114.0266" y="502.8571" font-size="15.6735" font-weight="bold" fill="#856404">Failure Recovery:</ns0:text>
+  <ns0:text x="114.0266" y="502.8571" font-size="15.6735" font-weight="bold" fill="#bf360c">Failure Recovery:</ns0:text>
   <ns0:text x="114.0266" y="528.9796" font-size="15.6735" fill="#333">• If failure at Step 3: restart replays from 1001</ns0:text>
   <ns0:text x="114.0266" y="555.102" font-size="15.6735" fill="#333">• If failure at Step 4: restart replays from 1001</ns0:text>
   <ns0:text x="114.0266" y="581.2245" font-size="15.6735" fill="#333">• Idempotent sink prevents duplicates</ns0:text>

@@ -1,44 +1,91 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
-    <ns0:marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="17.7778" y="17.7778" width="391.1111" height="497.7778" fill="#e8f0fe" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="17.7778" y="17.7778" width="391.1111" height="40.8889" fill="url(#grad-accent)" rx="10.6667" />
-  <ns0:rect x="17.7778" y="44.4444" width="391.1111" height="14.2222" fill="url(#grad-accent)" />
+  <ns0:rect x="17.7778" y="17.7778" width="391.1111" height="497.7778" fill="#e3f2fd" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="17.7778" width="391.1111" height="40.8889" fill="url(#grad-primary)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="44.4444" width="391.1111" height="14.2222" fill="url(#grad-primary)" />
   <ns0:text x="213.3333" y="44.4444" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="#ffffff" text-anchor="middle">Rust Side</ns0:text>
   <ns0:rect x="35.5556" y="74.6667" width="355.5556" height="71.1111" fill="#ffffff" rx="7.1111" filter="url(#shadow)" />
   <ns0:text x="53.3333" y="96" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#1565c0">Safe Rust code</ns0:text>
   <ns0:text x="53.3333" y="113.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">fn compute(x: i32) -&gt; i32 {</ns0:text>
   <ns0:text x="53.3333" y="129.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">    x * 2 }</ns0:text>
-  <ns0:line x1="213.3333" y1="145.7778" x2="213.3333" y2="174.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="213.3333" y1="145.7778" x2="213.3333" y2="174.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="35.5556" y="174.2222" width="355.5556" height="88.8889" fill="#c8e6c9" rx="7.1111" filter="url(#shadow)" />
   <ns0:text x="53.3333" y="195.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#2e7d32">extern "C" export</ns0:text>
   <ns0:text x="53.3333" y="213.3333" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">#[no_mangle]</ns0:text>
   <ns0:text x="53.3333" y="229.3333" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">pub extern "C" fn compute(x: i32)</ns0:text>
   <ns0:text x="53.3333" y="245.3333" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">    -&gt; i32 { ... }</ns0:text>
-  <ns0:line x1="213.3333" y1="263.1111" x2="213.3333" y2="291.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="213.3333" y1="263.1111" x2="213.3333" y2="291.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="35.5556" y="291.5556" width="355.5556" height="97.7778" fill="#fff9c4" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="53.3333" y="312.8889" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#f57f17">unsafe block (when calling C)</ns0:text>
+  <ns0:text x="53.3333" y="312.8889" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#f57c00">unsafe block (when calling C)</ns0:text>
   <ns0:text x="53.3333" y="330.6667" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">extern "C" {</ns0:text>
   <ns0:text x="53.3333" y="346.6667" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">    fn c_func(n: i32) -&gt; i32;</ns0:text>
   <ns0:text x="53.3333" y="362.6667" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">}</ns0:text>
@@ -49,7 +96,7 @@
   <ns0:text x="53.3333" y="455.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#333333">Rust *const T    ↔   C const T*</ns0:text>
   <ns0:text x="53.3333" y="469.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="#333333">Rust *mut T      ↔   C T*</ns0:text>
   <ns0:text x="53.3333" y="483.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#333333">Rust c_char      ↔   C char  (libc)</ns0:text>
-  <ns0:rect x="426.6667" y="17.7778" width="177.7778" height="497.7778" fill="#424242" rx="0" filter="url(#shadow)" />
+  <ns0:rect x="426.6667" y="17.7778" width="177.7778" height="497.7778" fill="#333333" rx="0" filter="url(#shadow)" />
   <ns0:text x="515.5556" y="257.7778" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff" text-anchor="middle" transform="rotate(-90 580 300)">C  ABI  Boundary</ns0:text>
   <ns0:line x1="426.6667" y1="177.7778" x2="604.4444" y2="177.7778" stroke="#ffffff" stroke-width="2.2222" marker-end="url(#arrow-white)" />
   <ns0:text x="513.7778" y="173.3333" font-family="Arial,sans-serif" font-size="10" fill="#aaaaaa" text-anchor="middle">call</ns0:text>
@@ -69,14 +116,14 @@
   <ns0:text x="657.7778" y="129.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">int compute(int x);</ns0:text>
   <ns0:text x="657.7778" y="145.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">void free_string(char* s);</ns0:text>
   <ns0:line x1="817.7778" y1="163.5556" x2="817.7778" y2="188.4444" stroke="#e65100" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:rect x="640" y="188.4444" width="355.5556" height="106.6667" fill="#ffecb3" rx="7.1111" filter="url(#shadow)" />
+  <ns0:rect x="640" y="188.4444" width="355.5556" height="106.6667" fill="#ffe0b2" rx="7.1111" filter="url(#shadow)" />
   <ns0:text x="657.7778" y="209.7778" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100">C code using Rust library</ns0:text>
   <ns0:text x="657.7778" y="227.5556" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">#include "compute.h"</ns0:text>
   <ns0:text x="657.7778" y="243.5556" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">int main() {</ns0:text>
   <ns0:text x="657.7778" y="259.5556" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">    int r = compute(21);</ns0:text>
   <ns0:text x="657.7778" y="275.5556" font-family="Courier New,monospace" font-size="10.6667" fill="#333333">    // r == 42 }</ns0:text>
   <ns0:line x1="817.7778" y1="295.1111" x2="817.7778" y2="320" stroke="#e65100" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:rect x="640" y="320" width="355.5556" height="88.8889" fill="#ffccbc" rx="7.1111" filter="url(#shadow)" />
+  <ns0:rect x="640" y="320" width="355.5556" height="88.8889" fill="#ffcdd2" rx="7.1111" filter="url(#shadow)" />
   <ns0:text x="657.7778" y="341.3333" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#bf360c">Ownership at boundary</ns0:text>
   <ns0:text x="657.7778" y="359.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#333333">Memory allocated in Rust → free in Rust</ns0:text>
   <ns0:text x="657.7778" y="375.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#333333">Memory allocated in C   → free in C</ns0:text>
@@ -85,16 +132,16 @@
   <ns0:text x="568.8889" y="556.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0" text-anchor="middle">bindgen Workflow (C → Rust)</ns0:text>
   <ns0:rect x="44.4444" y="567.1111" width="160" height="35.5556" fill="#1565c0" rx="7.1111" />
   <ns0:text x="124.4444" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#ffffff" text-anchor="middle">C header (.h)</ns0:text>
-  <ns0:line x1="204.4444" y1="584.8889" x2="248.8889" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="204.4444" y1="584.8889" x2="248.8889" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="250.6667" y="567.1111" width="160" height="35.5556" fill="#1565c0" rx="7.1111" />
   <ns0:text x="330.6667" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#ffffff" text-anchor="middle">bindgen (build.rs)</ns0:text>
-  <ns0:line x1="412.4444" y1="584.8889" x2="456.8889" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="412.4444" y1="584.8889" x2="456.8889" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="458.6667" y="567.1111" width="177.7778" height="35.5556" fill="#1565c0" rx="7.1111" />
   <ns0:text x="547.5556" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#ffffff" text-anchor="middle">bindings.rs (auto)</ns0:text>
-  <ns0:line x1="638.2222" y1="584.8889" x2="682.6667" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="638.2222" y1="584.8889" x2="682.6667" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="684.4444" y="567.1111" width="177.7778" height="35.5556" fill="#1565c0" rx="7.1111" />
   <ns0:text x="773.3333" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#ffffff" text-anchor="middle">unsafe Rust wrappers</ns0:text>
-  <ns0:line x1="864" y1="584.8889" x2="908.4444" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="864" y1="584.8889" x2="908.4444" y2="584.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <ns0:rect x="910.2222" y="567.1111" width="174.2222" height="35.5556" fill="#1565c0" rx="7.1111" />
   <ns0:text x="997.3333" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#ffffff" text-anchor="middle">Safe Rust API</ns0:text>
 </ns0:svg>

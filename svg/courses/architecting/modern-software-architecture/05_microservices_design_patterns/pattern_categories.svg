@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
       <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </marker>
@@ -14,29 +74,29 @@
   <text x="805.6471" y="248.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" font-weight="bold">Communication Patterns</text>
   <rect x="1024" y="205.7143" width="225.8824" height="68.5714" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0118" />
   <text x="1136.9412" y="248.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" font-weight="bold">Transaction Patterns</text>
-  <line x1="542.1176" y1="111.4286" x2="210.8235" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="602.3529" y1="111.4286" x2="474.3529" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="677.6471" y1="111.4286" x2="805.6471" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="737.8824" y1="111.4286" x2="1099.2941" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="542.1176" y1="111.4286" x2="210.8235" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="602.3529" y1="111.4286" x2="474.3529" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="677.6471" y1="111.4286" x2="805.6471" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="737.8824" y1="111.4286" x2="1099.2941" y2="202.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrow)" />
   <rect x="15.0588" y="360" width="210.8235" height="60" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
   <text x="120.4706" y="397.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">API Gateway</text>
   <rect x="15.0588" y="445.7143" width="210.8235" height="60" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
   <text x="120.4706" y="483.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Backend for Frontend</text>
   <rect x="15.0588" y="531.4286" width="210.8235" height="60" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
   <text x="120.4706" y="569.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Service Discovery</text>
-  <line x1="165.6471" y1="274.2857" x2="135.5294" y2="356.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="165.6471" y1="274.2857" x2="128" y2="442.2857" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="165.6471" y1="274.2857" x2="120.4706" y2="528" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="165.6471" y1="274.2857" x2="135.5294" y2="356.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="165.6471" y1="274.2857" x2="128" y2="442.2857" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="165.6471" y1="274.2857" x2="120.4706" y2="528" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrow)" />
   <rect x="316.2353" y="360" width="240.9412" height="60" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
   <text x="436.7059" y="397.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Database per Service</text>
   <rect x="316.2353" y="445.7143" width="240.9412" height="60" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
   <text x="436.7059" y="483.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">CQRS</text>
   <rect x="316.2353" y="531.4286" width="240.9412" height="60" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
   <text x="436.7059" y="569.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Event Sourcing</text>
-  <line x1="474.3529" y1="274.2857" x2="451.7647" y2="356.5714" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="474.3529" y1="274.2857" x2="444.2353" y2="442.2857" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <line x1="474.3529" y1="274.2857" x2="436.7059" y2="528" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="474.3529" y1="274.2857" x2="451.7647" y2="356.5714" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="474.3529" y1="274.2857" x2="444.2353" y2="442.2857" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrow)" />
+  <line x1="474.3529" y1="274.2857" x2="436.7059" y2="528" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrow)" />
   <rect x="1024" y="360" width="180.7059" height="60" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2588" />
   <text x="1114.3529" y="397.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647">Saga</text>
-  <line x1="1136.9412" y1="274.2857" x2="1121.8824" y2="356.5714" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="1136.9412" y1="274.2857" x2="1121.8824" y2="356.5714" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrow)" />
 </svg>

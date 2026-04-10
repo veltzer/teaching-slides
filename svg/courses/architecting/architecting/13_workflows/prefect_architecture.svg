@@ -1,28 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="17.0667" markerHeight="13.2632" refX="15.36" refY="6.6316" orient="auto">
       <polygon points="0,18.9474 5.9733,0" fill="#666" />
     </marker>
   </defs>
-  <rect x="34.1333" y="37.8947" width="375.4667" height="284.2105" rx="13.6533" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2.56" />
+  <rect x="34.1333" y="37.8947" width="375.4667" height="284.2105" rx="13.6533" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.56" />
   <text x="221.8667" y="85.2632" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.1867" font-weight="bold" fill="#4a90e2">Prefect Core</text>
   <rect x="68.2667" y="113.6842" width="307.2" height="56.8421" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.56" />
   <text x="221.8667" y="151.5789" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Flows</text>
-  <line x1="221.8667" y1="170.5263" x2="221.8667" y2="189.4737" stroke="#666" stroke-width="2.56" marker-end="url(#arrowhead)" />
+  <line x1="221.8667" y1="170.5263" x2="221.8667" y2="189.4737" stroke="#666" stroke-width="2.56" marker-end="url(#arrow)" />
   <rect x="68.2667" y="198.9474" width="307.2" height="56.8421" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.56" />
   <text x="221.8667" y="236.8421" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Tasks</text>
   <line x1="221.8667" y1="255.7895" x2="221.8667" y2="274.7368" stroke="#666" stroke-width="2.56" />
   <text x="221.8667" y="306.9474" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733" fill="#666">State Management</text>
-  <line x1="409.6" y1="189.4737" x2="494.9333" y2="189.4737" stroke="#666" stroke-width="3.4133" marker-end="url(#arrowhead)" />
-  <rect x="494.9333" y="37.8947" width="341.3333" height="284.2105" rx="13.6533" fill="#fdf0ff" stroke="#7b1fa2" stroke-width="2.56" />
+  <line x1="409.6" y1="189.4737" x2="494.9333" y2="189.4737" stroke="#666" stroke-width="3.4133" marker-end="url(#arrow)" />
+  <rect x="494.9333" y="37.8947" width="341.3333" height="284.2105" rx="13.6533" fill="#f9f9f9" stroke="#7b1fa2" stroke-width="2.56" />
   <text x="665.6" y="85.2632" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.1867" font-weight="bold" fill="#7b1fa2">Prefect Server</text>
-  <rect x="529.0667" y="113.6842" width="273.0667" height="56.8421" rx="8.5333" fill="#e8d5f5" stroke="#7b1fa2" stroke-width="2.56" />
+  <rect x="529.0667" y="113.6842" width="273.0667" height="56.8421" rx="8.5333" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.56" />
   <text x="665.6" y="151.5789" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">API Server</text>
-  <rect x="529.0667" y="189.4737" width="273.0667" height="56.8421" rx="8.5333" fill="#e8d5f5" stroke="#7b1fa2" stroke-width="2.56" />
+  <rect x="529.0667" y="189.4737" width="273.0667" height="56.8421" rx="8.5333" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.56" />
   <text x="665.6" y="227.3684" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">UI Dashboard</text>
-  <rect x="529.0667" y="265.2632" width="273.0667" height="56.8421" rx="8.5333" fill="#e8d5f5" stroke="#7b1fa2" stroke-width="2.56" />
+  <rect x="529.0667" y="265.2632" width="273.0667" height="56.8421" rx="8.5333" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.56" />
   <text x="665.6" y="303.1579" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">PostgreSQL</text>
-  <rect x="921.6" y="37.8947" width="307.2" height="284.2105" rx="13.6533" fill="#f0fff0" stroke="#28a745" stroke-width="2.56" />
+  <rect x="921.6" y="37.8947" width="307.2" height="284.2105" rx="13.6533" fill="#f5f5f5" stroke="#28a745" stroke-width="2.56" />
   <text x="1075.2" y="85.2632" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.1867" font-weight="bold" fill="#28a745">Agents</text>
   <rect x="955.7333" y="113.6842" width="238.9333" height="56.8421" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="2.56" />
   <text x="1075.2" y="151.5789" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Agent 1</text>
@@ -30,7 +90,7 @@
   <text x="1075.2" y="227.3684" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Agent 2</text>
   <rect x="955.7333" y="265.2632" width="238.9333" height="56.8421" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="2.56" />
   <text x="1075.2" y="303.1579" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48">Agent N</text>
-  <line x1="921.6" y1="142.1053" x2="836.2667" y2="142.1053" stroke="#666" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="921.6" y1="217.8947" x2="836.2667" y2="217.8947" stroke="#666" stroke-width="2.56" marker-end="url(#arrowhead)" />
-  <line x1="921.6" y1="293.6842" x2="836.2667" y2="293.6842" stroke="#666" stroke-width="2.56" marker-end="url(#arrowhead)" />
+  <line x1="921.6" y1="142.1053" x2="836.2667" y2="142.1053" stroke="#666" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="921.6" y1="217.8947" x2="836.2667" y2="217.8947" stroke="#666" stroke-width="2.56" marker-end="url(#arrow)" />
+  <line x1="921.6" y1="293.6842" x2="836.2667" y2="293.6842" stroke="#666" stroke-width="2.56" marker-end="url(#arrow)" />
 </svg>

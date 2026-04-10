@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="12.1333">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -19,25 +79,25 @@
   <ns0:text x="627.2" y="360" text-anchor="middle" fill="#333">DataNode 2</ns0:text>
   <ns0:rect x="806.4" y="320" width="179.2" height="64" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
   <ns0:text x="896" y="360" text-anchor="middle" fill="#333">DataNode 3</ns0:text>
-  <ns0:line x1="209.0667" y1="104" x2="474.88" y2="104" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:line x1="209.0667" y1="104" x2="474.88" y2="104" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrow)" />
   <ns0:text x="343.4667" y="92.8" text-anchor="middle" font-size="16.4267" fill="#4a90e2">Metadata Query</ns0:text>
   <ns0:line x1="126.9333" y1="144" x2="126.9333" y2="272" stroke="#4a90e2" stroke-width="2.24" />
   <ns0:line x1="126.9333" y1="272" x2="358.4" y2="272" stroke="#4a90e2" stroke-width="2.24" />
-  <ns0:line x1="358.4" y1="272" x2="358.4" y2="316.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="358.4" y1="272" x2="358.4" y2="316.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:line x1="126.9333" y1="272" x2="627.2" y2="272" stroke="#4a90e2" stroke-width="2.24" />
-  <ns0:line x1="627.2" y1="272" x2="627.2" y2="316.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="627.2" y1="272" x2="627.2" y2="316.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:line x1="126.9333" y1="272" x2="896" y2="272" stroke="#4a90e2" stroke-width="2.24" />
-  <ns0:line x1="896" y1="272" x2="896" y2="316.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrowhead)" />
+  <ns0:line x1="896" y1="272" x2="896" y2="316.8" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
   <ns0:text x="522.6667" y="262.4" text-anchor="middle" font-size="16.4267" fill="#4a90e2">Read/Write Data Blocks</ns0:text>
-  <ns0:line x1="448" y1="360" x2="534.6133" y2="360" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" marker-end="url(#arrowhead)" />
-  <ns0:line x1="716.8" y1="360" x2="803.4133" y2="360" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" marker-end="url(#arrowhead)" />
+  <ns0:line x1="448" y1="360" x2="534.6133" y2="360" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" marker-end="url(#arrow)" />
+  <ns0:line x1="716.8" y1="360" x2="803.4133" y2="360" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" marker-end="url(#arrow)" />
   <ns0:line x1="896" y1="384" x2="896" y2="432" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" />
-  <ns0:line x1="896" y1="432" x2="358.4" y2="432" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" marker-end="url(#arrowhead)" />
+  <ns0:line x1="896" y1="432" x2="358.4" y2="432" stroke="#28a745" stroke-width="2.24" stroke-dasharray="7.4667 4.48" marker-end="url(#arrow)" />
   <ns0:line x1="358.4" y1="432" x2="358.4" y2="387.2" stroke="#28a745" stroke-width="2.24" stroke-dasharray="0" />
   <ns0:text x="627.2" y="416" text-anchor="middle" font-size="16.4267" fill="#28a745">Replication</ns0:text>
-  <ns0:line x1="552.5333" y1="152" x2="373.3333" y2="316.8" stroke="#999" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrowhead-gray)" />
-  <ns0:line x1="582.4" y1="152" x2="627.2" y2="316.8" stroke="#999" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrowhead-gray)" />
-  <ns0:line x1="612.2667" y1="152" x2="881.0666" y2="316.8" stroke="#999" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrowhead-gray)" />
+  <ns0:line x1="552.5333" y1="152" x2="373.3333" y2="316.8" stroke="#999" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrow)" />
+  <ns0:line x1="582.4" y1="152" x2="627.2" y2="316.8" stroke="#999" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrow)" />
+  <ns0:line x1="612.2667" y1="152" x2="881.0666" y2="316.8" stroke="#999" stroke-width="1.4933" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrow)" />
   <ns0:text x="746.6667" y="224" text-anchor="middle" font-size="14.9333" fill="#999">Heartbeat</ns0:text>
   <ns0:rect x="44.8" y="512" width="1105.0666" height="128" rx="7.4667" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4933" />
   <ns0:text x="597.3333" y="552" text-anchor="middle" font-size="17.92" fill="#555">HDFS splits files into blocks distributed across DataNodes with automatic replication.</ns0:text>

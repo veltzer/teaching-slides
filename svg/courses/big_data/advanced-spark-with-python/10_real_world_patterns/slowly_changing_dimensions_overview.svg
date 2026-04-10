@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="579.6226" y="30.1886" text-anchor="middle" font-size="19.3207" font-weight="bold" fill="#333">Slowly Changing Dimensions (SCD Types)</ns0:text>
   <ns0:rect x="20.7008" y="48.3019" width="1117.8436" height="175.0943" rx="6.0378" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4151" />
   <ns0:text x="62.1024" y="78.4906" font-size="16.9057" font-weight="bold" fill="#4a90e2">Type 1: Overwrite (no history)</ns0:text>
@@ -15,7 +76,7 @@
   <ns0:text x="103.504" y="398.4905" font-size="14.4906" font-family="monospace" fill="#333">id=1, city="Boston", current=true, start_date="2024-06-15"</ns0:text>
   <ns0:text x="82.8033" y="434.717" font-size="13.283" fill="#666">Use when: full audit trail needed</ns0:text>
   <ns0:rect x="20.7008" y="476.9811" width="1117.8436" height="163.0189" rx="6.0378" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4151" />
-  <ns0:text x="62.1024" y="507.1698" font-size="16.9057" font-weight="bold" fill="#856404">Type 3: Add new column (limited history)</ns0:text>
+  <ns0:text x="62.1024" y="507.1698" font-size="16.9057" font-weight="bold" fill="#bf360c">Type 3: Add new column (limited history)</ns0:text>
   <ns0:text x="82.8033" y="537.3584" font-size="14.4906" fill="#333">Before:</ns0:text>
   <ns0:text x="103.504" y="561.5094" font-size="14.4906" font-family="monospace" fill="#333">id=1, city="New York", prev_city=null</ns0:text>
   <ns0:text x="82.8033" y="589.283" font-size="14.4906" fill="#333">After:</ns0:text>

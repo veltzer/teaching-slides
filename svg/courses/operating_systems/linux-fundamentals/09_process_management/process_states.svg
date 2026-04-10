@@ -1,19 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
@@ -36,7 +86,7 @@
   <ns0:text x="247.343" y="119.9614" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#2e7d32">READY</ns0:text>
   <ns0:text x="247.343" y="132.3285" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">Waiting for CPU</ns0:text>
   <ns0:text x="247.343" y="142.2222" text-anchor="middle" font-family="monospace" font-size="10" fill="#2e7d32">R state</ns0:text>
-  <ns0:circle cx="420.4831" cy="123.6715" r="52.5604" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:circle cx="420.4831" cy="123.6715" r="52.5604" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="420.4831" y="118.7246" text-anchor="middle" font-family="sans-serif" font-size="11.1304" font-weight="bold" fill="#ffffff">RUNNING</ns0:text>
   <ns0:text x="420.4831" y="132.3285" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#bbdefb">On CPU</ns0:text>
   <ns0:text x="420.4831" y="143.4589" text-anchor="middle" font-family="monospace" font-size="10" fill="#90caf9">R state</ns0:text>
@@ -54,35 +104,35 @@
   <ns0:text x="593.6232" y="311.6522" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">Terminated,</ns0:text>
   <ns0:text x="593.6232" y="321.5459" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">not reaped</ns0:text>
   <ns0:text x="593.6232" y="332.6763" text-anchor="middle" font-family="monospace" font-size="10" fill="#b71c1c">Z state</ns0:text>
-  <ns0:rect x="692.5604" y="284.4444" width="80.3865" height="37.1014" rx="6.1836" fill="#f2f2f2" stroke="#555555" stroke-width="1.2367" />
+  <ns0:rect x="692.5604" y="284.4444" width="80.3865" height="37.1014" rx="6.1836" fill="#f0f0f0" stroke="#555555" stroke-width="1.2367" />
   <ns0:text x="732.7536" y="301.1401" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#555555">DEAD</ns0:text>
   <ns0:text x="732.7536" y="313.5072" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888888">Resources freed</ns0:text>
-  <ns0:line x1="120.5797" y1="123.6715" x2="200.9662" y2="123.6715" stroke="#2e7d32" stroke-width="1.5459" marker-end="url(#arrow-green)" />
+  <ns0:line x1="120.5797" y1="123.6715" x2="200.9662" y2="123.6715" stroke="#2e7d32" stroke-width="1.5459" marker-end="url(#arrow-ok)" />
   <ns0:text x="160.7729" y="117.4879" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2e7d32">admitted</ns0:text>
-  <ns0:line x1="293.7198" y1="123.6715" x2="367.9227" y2="123.6715" stroke="#1565c0" stroke-width="1.5459" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="293.7198" y1="123.6715" x2="367.9227" y2="123.6715" stroke="#1565c0" stroke-width="1.5459" marker-end="url(#arrow-primary)" />
   <ns0:text x="330.8213" y="116.2512" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#1565c0">scheduled</ns0:text>
-  <ns0:path d="M 383.3816 102.029 Q 330.8213 80.3865 296.8116 102.029" stroke="#e65100" stroke-width="1.2367" fill="none" marker-end="url(#arrow-orange)" />
+  <ns0:path d="M 383.3816 102.029 Q 330.8213 80.3865 296.8116 102.029" stroke="#e65100" stroke-width="1.2367" fill="none" marker-end="url(#arrow-warn)" />
   <ns0:text x="340.0966" y="81.6232" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e65100">preempted</ns0:text>
-  <ns0:line x1="473.0435" y1="123.6715" x2="544.1546" y2="123.6715" stroke="#e65100" stroke-width="1.5459" marker-end="url(#arrow-orange)" />
+  <ns0:line x1="473.0435" y1="123.6715" x2="544.1546" y2="123.6715" stroke="#e65100" stroke-width="1.5459" marker-end="url(#arrow-warn)" />
   <ns0:text x="508.2899" y="116.2512" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e65100">I/O wait</ns0:text>
-  <ns0:path d="M 556.5217 160.7729 Q 507.0531 204.058 309.1787 166.9565" stroke="#2e7d32" stroke-width="1.2367" fill="none" marker-end="url(#arrow-green)" />
+  <ns0:path d="M 556.5217 160.7729 Q 507.0531 204.058 309.1787 166.9565" stroke="#2e7d32" stroke-width="1.2367" fill="none" marker-end="url(#arrow-ok)" />
   <ns0:text x="432.8502" y="207.1498" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2e7d32">I/O complete / event</ns0:text>
   <ns0:path d="M 395.7488 173.1401 Q 346.2802 234.9758 296.8116 265.8937" stroke="#6a1b9a" stroke-width="1.2367" fill="none" marker-end="url(#arrow-purple)" />
   <ns0:text x="324.6377" y="228.7923" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6a1b9a">SIGSTOP</ns0:text>
-  <ns0:path d="M 210.2415 272.0773 Q 185.5072 191.6908 204.058 166.9565" stroke="#2e7d32" stroke-width="1.2367" fill="none" marker-end="url(#arrow-green)" />
+  <ns0:path d="M 210.2415 272.0773 Q 185.5072 191.6908 204.058 166.9565" stroke="#2e7d32" stroke-width="1.2367" fill="none" marker-end="url(#arrow-ok)" />
   <ns0:text x="171.9034" y="222.6087" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#2e7d32">SIGCONT</ns0:text>
-  <ns0:path d="M 460.6763 166.9565 Q 531.7874 234.9758 550.3382 265.8937" stroke="#b71c1c" stroke-width="1.2367" fill="none" marker-end="url(#arrow-red)" />
+  <ns0:path d="M 460.6763 166.9565 Q 531.7874 234.9758 550.3382 265.8937" stroke="#b71c1c" stroke-width="1.2367" fill="none" marker-end="url(#arrow-danger)" />
   <ns0:text x="519.4203" y="227.5556" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#b71c1c">exit()</ns0:text>
   <ns0:line x1="640" y1="302.9952" x2="692.5604" y2="302.9952" stroke="#555555" stroke-width="1.2367" marker-end="url(#arrow)" />
   <ns0:text x="665.971" y="296.8116" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555555">parent wait()</ns0:text>
-  <ns0:path d="M 469.9517 92.7536 Q 593.6232 30.9179 640 256.6184" stroke="#b71c1c" stroke-width="1.2367" stroke-dasharray="3.7101 1.8551" fill="none" marker-end="url(#arrow-red)" />
+  <ns0:path d="M 469.9517 92.7536 Q 593.6232 30.9179 640 256.6184" stroke="#b71c1c" stroke-width="1.2367" stroke-dasharray="3.7101 1.8551" fill="none" marker-end="url(#arrow-danger)" />
   <ns0:text x="593.6232" y="49.4686" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#b71c1c">SIGKILL (kill -9)</ns0:text>
   <ns0:defs>
     <ns0:marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#4527a0" />
+      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#4a148c" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect x="15.4589" y="364.8309" width="760.5797" height="68.0193" rx="6.1836" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="0.9275" filter="url(#shadow)" />
+  <ns0:rect x="15.4589" y="364.8309" width="760.5797" height="68.0193" rx="6.1836" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="0.9275" filter="url(#shadow)" />
   <ns0:text x="30.9179" y="382.1449" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1565c0">Key Signals</ns0:text>
   <ns0:text x="30.9179" y="396.3671" font-family="monospace" font-size="10" fill="#212121">SIGTERM (15)</ns0:text>
   <ns0:text x="111.3043" y="396.3671" font-family="sans-serif" font-size="10" fill="#555555">Graceful terminate (default kill)</ns0:text>

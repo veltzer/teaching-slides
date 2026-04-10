@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arr6" markerWidth="18.2857" markerHeight="25.7143" refX="16.4571" refY="7.7143" orient="auto">
       <polygon points="0,25.7143 5.4857,0" fill="#333" />
     </marker>
@@ -15,10 +75,10 @@
   <text x="1051.4286" y="231.4286" text-anchor="middle" font-size="20.1143" fill="#388e3c">90% traffic</text>
   <rect x="914.2857" y="437.1429" width="274.2857" height="128.5714" fill="#fff9c4" stroke="#f9a825" stroke-width="3.6571" rx="9.1429" />
   <text x="1051.4286" y="493.7143" text-anchor="middle" font-size="21.9429" font-weight="bold">v2 (canary)</text>
-  <text x="1051.4286" y="540" text-anchor="middle" font-size="20.1143" fill="#f57f17">10% traffic</text>
+  <text x="1051.4286" y="540" text-anchor="middle" font-size="20.1143" fill="#f57c00">10% traffic</text>
   <line x1="310.8571" y1="321.4286" x2="453.4857" y2="321.4286" stroke="#333" stroke-width="3.6571" marker-end="url(#arr6)" />
   <line x1="676.5714" y1="282.8571" x2="910.6286" y2="205.7143" stroke="#388e3c" stroke-width="5.4857" marker-end="url(#arr6)" />
   <line x1="676.5714" y1="360" x2="910.6286" y2="488.5714" stroke="#f9a825" stroke-width="3.6571" marker-end="url(#arr6)" />
   <text x="804.5714" y="205.7143" text-anchor="middle" font-size="20.1143" fill="#388e3c">90%</text>
-  <text x="804.5714" y="450" text-anchor="middle" font-size="20.1143" fill="#f57f17">10%</text>
+  <text x="804.5714" y="450" text-anchor="middle" font-size="20.1143" fill="#f57c00">10%</text>
 </svg>

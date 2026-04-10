@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="11.7209" refX="16" refY="5.8605" orient="auto">
       <ns0:polygon points="0,16.7442 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -19,19 +79,19 @@
   <ns0:line x1="440.0217" y1="93.6585" x2="440.0217" y2="640" stroke="#999" stroke-width="1.4916" stroke-dasharray="7.458 7.458" />
   <ns0:line x1="745.7995" y1="93.6585" x2="745.7995" y2="640" stroke="#999" stroke-width="1.4916" stroke-dasharray="7.458 7.458" />
   <ns0:line x1="1029.2033" y1="93.6585" x2="1029.2033" y2="640" stroke="#999" stroke-width="1.4916" stroke-dasharray="7.458 7.458" />
-  <ns0:line x1="134.2439" y1="156.0976" x2="437.0385" y2="156.0976" stroke="#4a90e2" stroke-width="2.9832" marker-end="url(#arrowhead)" />
+  <ns0:line x1="134.2439" y1="156.0976" x2="437.0385" y2="156.0976" stroke="#4a90e2" stroke-width="2.9832" marker-end="url(#arrow)" />
   <ns0:text x="286.387" y="145.1707" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4076">Request for Service X</ns0:text>
-  <ns0:line x1="440.0217" y1="234.1464" x2="742.8163" y2="234.1464" stroke="#4a90e2" stroke-width="2.9832" marker-end="url(#arrowhead)" />
+  <ns0:line x1="440.0217" y1="234.1464" x2="742.8163" y2="234.1464" stroke="#4a90e2" stroke-width="2.9832" marker-end="url(#arrow)" />
   <ns0:text x="592.1648" y="223.2196" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4076">Lookup Service X</ns0:text>
    LB: instances --&gt;
-  <ns0:line x1="745.7995" y1="296.5853" x2="443.0049" y2="296.5853" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="8.9496 4.4748" marker-end="url(#arrowdash)" />
+  <ns0:line x1="745.7995" y1="296.5853" x2="443.0049" y2="296.5853" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="8.9496 4.4748" marker-end="url(#arrow)" />
   <ns0:text x="592.1648" y="285.6585" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4076" fill="#28a745">[instances]</ns0:text>
-  <ns0:line x1="440.0217" y1="374.6342" x2="1026.2201" y2="374.6342" stroke="#4a90e2" stroke-width="2.9832" marker-end="url(#arrowhead)" />
+  <ns0:line x1="440.0217" y1="374.6342" x2="1026.2201" y2="374.6342" stroke="#4a90e2" stroke-width="2.9832" marker-end="url(#arrow)" />
   <ns0:text x="730.8835" y="363.7073" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4076">Forward request</ns0:text>
    LB: Response --&gt;
-  <ns0:line x1="1029.2033" y1="452.6829" x2="443.0049" y2="452.6829" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="8.9496 4.4748" marker-end="url(#arrowdash)" />
+  <ns0:line x1="1029.2033" y1="452.6829" x2="443.0049" y2="452.6829" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="8.9496 4.4748" marker-end="url(#arrow)" />
   <ns0:text x="730.8835" y="441.7561" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4076" fill="#28a745">Response</ns0:text>
    Client: Response --&gt;
-  <ns0:line x1="440.0217" y1="530.7317" x2="137.2271" y2="530.7317" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="8.9496 4.4748" marker-end="url(#arrowdash)" />
+  <ns0:line x1="440.0217" y1="530.7317" x2="137.2271" y2="530.7317" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="8.9496 4.4748" marker-end="url(#arrow)" />
   <ns0:text x="286.387" y="519.8049" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.4076" fill="#28a745">Response</ns0:text>
 </ns0:svg>

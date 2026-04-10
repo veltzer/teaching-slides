@@ -1,39 +1,86 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
-    <ns0:marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="337.7778" y="8.8889" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="337.7778" y="8.8889" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="51.5556" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="#ffffff">Constructor</ns0:text>
   <ns0:text x="568.8889" y="78.2222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">Acquires the resource</ns0:text>
-  <ns0:line x1="568.8889" y1="99.5556" x2="568.8889" y2="140.4444" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="568.8889" y1="99.5556" x2="568.8889" y2="140.4444" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
   <ns0:rect x="337.7778" y="142.2222" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="184.8889" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="#212121">Object Lifetime</ns0:text>
   <ns0:text x="568.8889" y="211.5556" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Resource is valid and usable</ns0:text>
-  <ns0:line x1="568.8889" y1="232.8889" x2="568.8889" y2="273.7778" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
-  <ns0:rect x="337.7778" y="275.5556" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:line x1="568.8889" y1="232.8889" x2="568.8889" y2="273.7778" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
+  <ns0:rect x="337.7778" y="275.5556" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="318.2222" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="#ffffff">Destructor</ns0:text>
   <ns0:text x="568.8889" y="344.8889" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">Releases the resource — always, even on exception</ns0:text>
-  <ns0:rect x="71.1111" y="391.1111" width="462.2222" height="155.5556" rx="5.3333" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:rect x="71.1111" y="391.1111" width="462.2222" height="155.5556" rx="5.3333" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1.3333" />
   <ns0:text x="88.8889" y="417.7778" font-family="monospace" font-size="15.1111" fill="#212121">class MutexGuard {</ns0:text>
   <ns0:text x="106.6667" y="440.8889" font-family="monospace" font-size="15.1111" fill="#1565c0">  MutexGuard(Mutex&amp; m) {</ns0:text>
   <ns0:text x="124.4444" y="462.2222" font-family="monospace" font-size="15.1111" fill="#555555">    m.lock();   // acquire</ns0:text>

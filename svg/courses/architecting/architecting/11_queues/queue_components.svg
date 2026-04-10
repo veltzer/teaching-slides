@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -17,7 +77,7 @@
   <ns0:text x="594.4889" y="259.6571" text-anchor="middle" font-size="15.4413" fill="#333">Tail</ns0:text>
   <ns0:rect x="787.5048" y="201.1429" width="185.2952" height="91.4285" rx="7.7206" fill="#d4edda" stroke="#28a745" stroke-width="2.3162" />
   <ns0:text x="880.1524" y="256" text-anchor="middle" font-size="20.0737" font-weight="bold" fill="#333">Consumer</ns0:text>
-  <ns0:rect x="308.8254" y="420.5715" width="617.6508" height="219.4285" rx="12.353" fill="#fffdf0" stroke="#ffc107" stroke-width="2.3162" stroke-dasharray="9.2648 4.6324" />
+  <ns0:rect x="308.8254" y="420.5715" width="617.6508" height="219.4285" rx="12.353" fill="#f9f9f9" stroke="#ffc107" stroke-width="2.3162" stroke-dasharray="9.2648 4.6324" />
   <ns0:text x="617.6508" y="462.6285" text-anchor="middle" font-size="18.5295" font-weight="bold" fill="#ffc107">Queue Features</ns0:text>
   <ns0:rect x="339.7079" y="490.0572" width="169.854" height="54.8571" rx="7.7206" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5441" />
   <ns0:text x="424.6349" y="526.6286" text-anchor="middle" font-size="16.9854" fill="#333">Persistence</ns0:text>
@@ -26,9 +86,9 @@
   <ns0:rect x="725.7397" y="490.0572" width="169.854" height="54.8571" rx="7.7206" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5441" />
   <ns0:text x="810.6667" y="526.6286" text-anchor="middle" font-size="16.9854" fill="#333">Dead Letter</ns0:text>
   <ns0:text x="617.6508" y="607.0857" text-anchor="middle" font-size="16.9854" fill="#666">Guarantees delivery, handles failures, isolates poison messages</ns0:text>
-  <ns0:line x1="231.619" y1="246.8572" x2="352.0609" y2="241.3715" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrowhead)" />
-  <ns0:line x1="633.0921" y1="241.3715" x2="784.4165" y2="246.8572" stroke="#28a745" stroke-width="2.3162" marker-end="url(#arrowhead)" />
-  <ns0:line x1="494.1206" y1="320" x2="494.1206" y2="416.9143" stroke="#ffc107" stroke-width="1.5441" stroke-dasharray="6.1765 4.6324" marker-end="url(#arrowhead)" />
+  <ns0:line x1="231.619" y1="246.8572" x2="352.0609" y2="241.3715" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrow)" />
+  <ns0:line x1="633.0921" y1="241.3715" x2="784.4165" y2="246.8572" stroke="#28a745" stroke-width="2.3162" marker-end="url(#arrow)" />
+  <ns0:line x1="494.1206" y1="320" x2="494.1206" y2="416.9143" stroke="#ffc107" stroke-width="1.5441" stroke-dasharray="6.1765 4.6324" marker-end="url(#arrow)" />
   <ns0:text x="277.9429" y="219.4285" font-size="15.4413" fill="#4a90e2">Enqueue</ns0:text>
   <ns0:text x="710.2984" y="219.4285" font-size="15.4413" fill="#28a745">Dequeue</ns0:text>
 </ns0:svg>

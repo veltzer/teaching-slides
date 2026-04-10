@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="12.6" refX="17.0667" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -9,7 +69,7 @@
   <ns0:text x="143.7193" y="151.5789" text-anchor="middle" font-size="20.7595" fill="#333">Database</ns0:text>
   <ns0:rect x="47.9064" y="252.6316" width="191.6257" height="84.2105" rx="7.9844" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.1937" />
   <ns0:text x="143.7193" y="289.6842" text-anchor="middle" font-size="19.1626" fill="#333">Metrics Collector</ns0:text>
-  <ns0:line x1="143.7193" y1="185.2632" x2="143.7193" y2="249.2632" stroke="#4a90e2" stroke-width="3.1937" marker-end="url(#arrowhead)" />
+  <ns0:line x1="143.7193" y1="185.2632" x2="143.7193" y2="249.2632" stroke="#4a90e2" stroke-width="3.1937" marker-end="url(#arrow)" />
   <ns0:rect x="351.3139" y="84.2105" width="207.5946" height="67.3684" rx="7.9844" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1937" />
   <ns0:text x="455.1111" y="126.3158" text-anchor="middle" font-size="19.1626" fill="#333">CPU Usage</ns0:text>
   <ns0:rect x="351.3139" y="185.2632" width="207.5946" height="67.3684" rx="7.9844" fill="#fff3cd" stroke="#ffc107" stroke-width="3.1937" />
@@ -18,23 +78,23 @@
   <ns0:text x="455.1111" y="325.0526" text-anchor="middle" font-size="17.5657" fill="#333">Query Performance</ns0:text>
   <ns0:rect x="351.3139" y="387.3684" width="207.5946" height="67.3684" rx="7.9844" fill="#d4edda" stroke="#28a745" stroke-width="3.1937" />
   <ns0:text x="455.1111" y="429.4737" text-anchor="middle" font-size="19.1626" fill="#333">Connections</ns0:text>
-  <ns0:line x1="239.5322" y1="277.8947" x2="348.12" y2="121.2632" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="239.5322" y1="289.6842" x2="348.12" y2="222.3158" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="239.5322" y1="299.7895" x2="348.12" y2="323.3684" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="239.5322" y1="311.5789" x2="348.12" y2="424.4211" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
+  <ns0:line x1="239.5322" y1="277.8947" x2="348.12" y2="121.2632" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="239.5322" y1="289.6842" x2="348.12" y2="222.3158" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="239.5322" y1="299.7895" x2="348.12" y2="323.3684" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="239.5322" y1="311.5789" x2="348.12" y2="424.4211" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
   <ns0:rect x="702.6276" y="202.1053" width="207.5946" height="101.0526" rx="7.9844" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.1937" />
   <ns0:text x="806.425" y="249.2632" text-anchor="middle" font-size="22.3563" font-weight="bold" fill="#4a90e2">Dashboard</ns0:text>
   <ns0:text x="806.425" y="282.9474" text-anchor="middle" font-size="17.5657" fill="#333">Visualization</ns0:text>
-  <ns0:line x1="558.9084" y1="121.2632" x2="699.4339" y2="227.3684" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="558.9084" y1="222.3158" x2="699.4339" y2="244.2105" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="558.9084" y1="323.3684" x2="699.4339" y2="261.0526" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="558.9084" y1="424.4211" x2="699.4339" y2="277.8947" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
+  <ns0:line x1="558.9084" y1="121.2632" x2="699.4339" y2="227.3684" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="558.9084" y1="222.3158" x2="699.4339" y2="244.2105" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="558.9084" y1="323.3684" x2="699.4339" y2="261.0526" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="558.9084" y1="424.4211" x2="699.4339" y2="277.8947" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
   <ns0:rect x="1022.0039" y="151.5789" width="143.7193" height="67.3684" rx="7.9844" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1937" />
   <ns0:text x="1093.8636" y="193.6842" text-anchor="middle" font-size="19.1626" fill="#333">Alerts</ns0:text>
   <ns0:rect x="1022.0039" y="286.3158" width="143.7193" height="67.3684" rx="7.9844" fill="#d4edda" stroke="#28a745" stroke-width="3.1937" />
   <ns0:text x="1093.8636" y="328.4211" text-anchor="middle" font-size="19.1626" fill="#333">Reports</ns0:text>
-  <ns0:line x1="910.2222" y1="235.7895" x2="1018.8101" y2="188.6316" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
-  <ns0:line x1="910.2222" y1="277.8947" x2="1018.8101" y2="320" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrowhead)" />
+  <ns0:line x1="910.2222" y1="235.7895" x2="1018.8101" y2="188.6316" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
+  <ns0:line x1="910.2222" y1="277.8947" x2="1018.8101" y2="320" stroke="#4a90e2" stroke-width="2.3953" marker-end="url(#arrow)" />
   <ns0:rect x="47.9064" y="538.9474" width="1101.848" height="101.0526" rx="7.9844" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5969" />
   <ns0:text x="598.8304" y="581.0526" text-anchor="middle" font-size="19.1626" font-weight="bold" fill="#333">Key Database Metrics</ns0:text>
   <ns0:text x="598.8304" y="614.7368" text-anchor="middle" font-size="17.5657" fill="#555">Monitor CPU, memory, query performance, and connections. Alert on thresholds for proactive management.</ns0:text>

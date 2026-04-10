@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <ns0:polygon points="0,16 5.6,0" fill="#555" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="588.5057" y="41.1954" text-anchor="middle" font-family="Arial" font-size="26.4828" font-weight="bold" fill="#1565c0">Data Skew: Problem and Solutions</ns0:text>
   <ns0:text x="294.2529" y="85.3333" text-anchor="middle" font-family="Arial" font-size="20.5977" font-weight="bold" fill="#c62828">Problem: Skewed Data</ns0:text>
@@ -55,7 +112,7 @@
   <ns0:text x="971.0345" y="461.977" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Automatically splits skewed</ns0:text>
   <ns0:text x="971.0345" y="485.5172" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">partitions at runtime</ns0:text>
   <ns0:text x="971.0345" y="509.0575" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#e65100">Spark 3.0+ recommended</ns0:text>
-  <ns0:rect x="147.1264" y="551.7241" width="882.7586" height="88.2759" rx="8.8276" fill="#f5f5f5" stroke="#757575" stroke-width="2.2069" />
+  <ns0:rect x="147.1264" y="551.7241" width="882.7586" height="88.2759" rx="8.8276" fill="#f5f5f5" stroke="#777777" stroke-width="2.2069" />
   <ns0:text x="588.5057" y="584.092" text-anchor="middle" font-family="Arial" font-size="19.1264" font-weight="bold" fill="#333">Detection: skew_ratio = max(partition_size) / avg(partition_size)</ns0:text>
   <ns0:text x="588.5057" y="613.5172" text-anchor="middle" font-family="Arial" font-size="17.6552" fill="#555">Ratio &gt; 3.0 indicates significant skew -- check with spark_partition_id()</ns0:text>
 </ns0:svg>

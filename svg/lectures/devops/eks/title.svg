@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <ns0:stop offset="0%" style="stop-color:#1a1a2e" />
       <ns0:stop offset="100%" style="stop-color:#16213e" />
@@ -7,28 +67,28 @@
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="url(#bg)" />
   <ns0:g transform="translate(300,160)">
-    <ns0:circle cx="0" cy="0" r="78.2222" fill="none" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:circle cx="0" cy="0" r="21.3333" fill="#326ce5" opacity="0.4" />
-    <ns0:line x1="0" y1="-88" x2="0" y2="-32" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:line x1="0" y1="32" x2="0" y2="88" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:line x1="-68.2667" y1="-44.8" x2="-24.1778" y2="-16" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:line x1="24.1778" y1="16" x2="68.2667" y2="44.8" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:line x1="-68.2667" y1="44.8" x2="-24.1778" y2="16" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:line x1="24.1778" y1="-16" x2="68.2667" y2="-44.8" stroke="#326ce5" stroke-width="4.2667" />
-    <ns0:circle cx="0" cy="-88" r="8.5333" fill="#326ce5" />
-    <ns0:circle cx="0" cy="88" r="8.5333" fill="#326ce5" />
-    <ns0:circle cx="-68.2667" cy="-44.8" r="8.5333" fill="#326ce5" />
-    <ns0:circle cx="68.2667" cy="44.8" r="8.5333" fill="#326ce5" />
-    <ns0:circle cx="-68.2667" cy="44.8" r="8.5333" fill="#326ce5" />
-    <ns0:circle cx="68.2667" cy="-44.8" r="8.5333" fill="#326ce5" />
+    <ns0:circle cx="0" cy="0" r="78.2222" fill="none" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:circle cx="0" cy="0" r="21.3333" fill="#1976d2" opacity="0.4" />
+    <ns0:line x1="0" y1="-88" x2="0" y2="-32" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:line x1="0" y1="32" x2="0" y2="88" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:line x1="-68.2667" y1="-44.8" x2="-24.1778" y2="-16" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:line x1="24.1778" y1="16" x2="68.2667" y2="44.8" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:line x1="-68.2667" y1="44.8" x2="-24.1778" y2="16" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:line x1="24.1778" y1="-16" x2="68.2667" y2="-44.8" stroke="#1976d2" stroke-width="4.2667" />
+    <ns0:circle cx="0" cy="-88" r="8.5333" fill="#1976d2" />
+    <ns0:circle cx="0" cy="88" r="8.5333" fill="#1976d2" />
+    <ns0:circle cx="-68.2667" cy="-44.8" r="8.5333" fill="#1976d2" />
+    <ns0:circle cx="68.2667" cy="44.8" r="8.5333" fill="#1976d2" />
+    <ns0:circle cx="-68.2667" cy="44.8" r="8.5333" fill="#1976d2" />
+    <ns0:circle cx="68.2667" cy="-44.8" r="8.5333" fill="#1976d2" />
   </ns0:g>
   <ns0:g transform="translate(530,130)">
-    <ns0:path d="M -56.8889 32 a 42.6667 42.6667 0 0 1 7.1111 -64 a 49.7778 49.7778 0 0 1 85.3333 -8 a 35.5556 35.5556 0 0 1 28.4444 48 a 28.4444 28.4444 0 0 1 -21.3333 32 z" fill="none" stroke="#ff9900" stroke-width="4.2667" />
-    <ns0:text x="14.2222" y="24" text-anchor="middle" fill="#ff9900" font-family="Arial,sans-serif" font-size="25.6" font-weight="bold">AWS</ns0:text>
+    <ns0:path d="M -56.8889 32 a 42.6667 42.6667 0 0 1 7.1111 -64 a 49.7778 49.7778 0 0 1 85.3333 -8 a 35.5556 35.5556 0 0 1 28.4444 48 a 28.4444 28.4444 0 0 1 -21.3333 32 z" fill="none" stroke="#ff9800" stroke-width="4.2667" />
+    <ns0:text x="14.2222" y="24" text-anchor="middle" fill="#ff9800" font-family="Arial,sans-serif" font-size="25.6" font-weight="bold">AWS</ns0:text>
   </ns0:g>
   <ns0:line x1="512" y1="256" x2="682.6667" y2="232" stroke="#888" stroke-width="2.8444" stroke-dasharray="8.5333" />
-  <ns0:rect x="668.4444" y="304" width="142.2222" height="64" rx="11.3778" fill="#ff9900" opacity="0.2" stroke="#ff9900" stroke-width="2.8444" />
-  <ns0:text x="739.5556" y="344" text-anchor="middle" fill="#ff9900" font-family="Arial,sans-serif" font-size="28.4444" font-weight="bold">EKS</ns0:text>
+  <ns0:rect x="668.4444" y="304" width="142.2222" height="64" rx="11.3778" fill="#ff9800" opacity="0.2" stroke="#ff9800" stroke-width="2.8444" />
+  <ns0:text x="739.5556" y="344" text-anchor="middle" fill="#ff9800" font-family="Arial,sans-serif" font-size="28.4444" font-weight="bold">EKS</ns0:text>
   <ns0:text x="568.8889" y="496" text-anchor="middle" fill="#eee" font-family="Arial,sans-serif" font-size="42.6667" font-weight="bold">Amazon EKS Deep Dive</ns0:text>
   <ns0:text x="568.8889" y="552" text-anchor="middle" fill="#888" font-family="Arial,sans-serif" font-size="22.7556">Elastic Kubernetes Service on AWS</ns0:text>
 </ns0:svg>

@@ -65,12 +65,12 @@
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-tool" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5e35b1"/>
-      <stop offset="100%" stop-color="#4527a0"/>
+      <stop offset="0%" stop-color="#673ab7"/>
+      <stop offset="100%" stop-color="#4a148c"/>
     </linearGradient>
     <linearGradient id="grad-file" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00897b"/>
-      <stop offset="100%" stop-color="#00695c"/>
+      <stop offset="0%" stop-color="#27ae60"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
   </defs>
   <rect width="1280" height="640" fill="#ffffff"/>
@@ -81,13 +81,13 @@
 
   <!-- ====== Stage 1: Source file ====== -->
   <!-- File box -->
-  <rect x="40" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
   <rect x="40" y="120" width="155" height="30" rx="8" fill="url(#grad-file)"/>
   <rect x="40" y="140" width="155" height="10" fill="url(#grad-file)"/>
   <text x="117" y="142" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">source.c</text>
-  <text x="117" y="172" font-family="monospace" font-size="13" fill="#004d40" text-anchor="middle">#include ...</text>
-  <text x="117" y="191" font-family="monospace" font-size="13" fill="#004d40" text-anchor="middle">#define ...</text>
-  <text x="117" y="210" font-family="monospace" font-size="13" fill="#004d40" text-anchor="middle">int main() {...}</text>
+  <text x="117" y="172" font-family="monospace" font-size="13" fill="#1b5e20" text-anchor="middle">#include ...</text>
+  <text x="117" y="191" font-family="monospace" font-size="13" fill="#1b5e20" text-anchor="middle">#define ...</text>
+  <text x="117" y="210" font-family="monospace" font-size="13" fill="#1b5e20" text-anchor="middle">int main() {...}</text>
 
   <!-- Arrow -->
   <line x1="195" y1="170" x2="245" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
@@ -95,20 +95,20 @@
   <!-- Tool: Preprocessor (cpp) -->
   <rect x="246" y="135" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
   <text x="323" y="163" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Preprocessor</text>
-  <text x="323" y="182" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">cpp / gcc -E</text>
+  <text x="323" y="182" font-family="monospace" font-size="13" fill="#e1bee7" text-anchor="middle">cpp / gcc -E</text>
   <text x="323" y="199" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">macro expand · #include</text>
 
   <!-- Arrow -->
   <line x1="401" y1="170" x2="451" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- File: preprocessed.i -->
-  <rect x="452" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="452" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
   <rect x="452" y="120" width="155" height="30" rx="8" fill="url(#grad-file)"/>
   <rect x="452" y="140" width="155" height="10" fill="url(#grad-file)"/>
   <text x="529" y="142" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">preprocessed.i</text>
-  <text x="529" y="172" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">// no directives</text>
-  <text x="529" y="191" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">int printf(...);</text>
-  <text x="529" y="210" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">int main() {...}</text>
+  <text x="529" y="172" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">// no directives</text>
+  <text x="529" y="191" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">int printf(...);</text>
+  <text x="529" y="210" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">int main() {...}</text>
 
   <!-- Arrow -->
   <line x1="607" y1="170" x2="657" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
@@ -116,20 +116,20 @@
   <!-- Tool: Compiler (cc1) -->
   <rect x="658" y="135" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
   <text x="735" y="163" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Compiler</text>
-  <text x="735" y="182" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">cc1 / gcc -S</text>
+  <text x="735" y="182" font-family="monospace" font-size="13" fill="#e1bee7" text-anchor="middle">cc1 / gcc -S</text>
   <text x="735" y="199" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">parse · optimize · codegen</text>
 
   <!-- Arrow -->
   <line x1="813" y1="170" x2="863" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- File: assembly.s -->
-  <rect x="864" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="864" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
   <rect x="864" y="120" width="155" height="30" rx="8" fill="url(#grad-file)"/>
   <rect x="864" y="140" width="155" height="10" fill="url(#grad-file)"/>
   <text x="941" y="142" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">assembly.s</text>
-  <text x="941" y="172" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">movl $0, %eax</text>
-  <text x="941" y="191" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">call printf</text>
-  <text x="941" y="210" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">ret</text>
+  <text x="941" y="172" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">movl $0, %eax</text>
+  <text x="941" y="191" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">call printf</text>
+  <text x="941" y="210" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">ret</text>
 
   <!-- Arrow -->
   <line x1="1019" y1="170" x2="1069" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
@@ -137,7 +137,7 @@
   <!-- Tool: Assembler (as) -->
   <rect x="1070" y="135" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
   <text x="1147" y="163" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Assembler</text>
-  <text x="1147" y="182" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">as / gcc -c</text>
+  <text x="1147" y="182" font-family="monospace" font-size="13" fill="#e1bee7" text-anchor="middle">as / gcc -c</text>
   <text x="1147" y="199" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">asm → machine code</text>
 
   <!-- ====== Second row ====== -->
@@ -145,13 +145,13 @@
   <line x1="1147" y1="205" x2="1147" y2="280" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- File: object.o -->
-  <rect x="1070" y="282" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1070" y="282" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
   <rect x="1070" y="282" width="155" height="30" rx="8" fill="url(#grad-file)"/>
   <rect x="1070" y="302" width="155" height="10" fill="url(#grad-file)"/>
   <text x="1147" y="304" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">object.o</text>
-  <text x="1147" y="334" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">ELF binary</text>
-  <text x="1147" y="353" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">symbols: extern</text>
-  <text x="1147" y="372" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">unresolved refs</text>
+  <text x="1147" y="334" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">ELF binary</text>
+  <text x="1147" y="353" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">symbols: extern</text>
+  <text x="1147" y="372" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">unresolved refs</text>
 
   <!-- Arrow left from object.o -->
   <line x1="1070" y1="332" x2="1020" y2="332" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
@@ -159,7 +159,7 @@
   <!-- Tool: Linker (ld) -->
   <rect x="864" y="297" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
   <text x="941" y="325" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Linker</text>
-  <text x="941" y="344" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">ld / gcc (link)</text>
+  <text x="941" y="344" font-family="monospace" font-size="13" fill="#e1bee7" text-anchor="middle">ld / gcc (link)</text>
   <text x="941" y="361" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">resolve symbols</text>
 
   <!-- Libraries input -->
@@ -175,8 +175,8 @@
   <rect x="628" y="282" width="185" height="30" rx="8" fill="url(#grad-file)"/>
   <rect x="628" y="302" width="185" height="10" fill="url(#grad-file)"/>
   <text x="720" y="304" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">./program</text>
-  <text x="720" y="334" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">ELF executable</text>
-  <text x="720" y="353" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">fully linked</text>
+  <text x="720" y="334" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">ELF executable</text>
+  <text x="720" y="353" font-family="monospace" font-size="12" fill="#1b5e20" text-anchor="middle">fully linked</text>
   <text x="720" y="372" font-family="monospace" font-size="12" fill="#1b5e20" font-weight="bold" text-anchor="middle">ready to run!</text>
 
   <!-- Commands reference panel -->

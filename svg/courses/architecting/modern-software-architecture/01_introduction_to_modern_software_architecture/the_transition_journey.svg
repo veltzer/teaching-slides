@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="14.2222" markerHeight="42" refX="14.2222" refY="21" orient="auto">
       <polygon points="0,60 4.9778,0" fill="#4a90e2" />
     </marker>
@@ -7,18 +67,18 @@
   <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.9111" font-weight="bold" fill="#333">The Transition Journey</text>
   <rect x="14.2222" y="240" width="184.8889" height="300" rx="7.1111" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
   <text x="106.6667" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Monolith</text>
-  <line x1="199.1111" y1="390" x2="234.6667" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrowhead)" />
+  <line x1="199.1111" y1="390" x2="234.6667" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrow)" />
   <rect x="241.7778" y="240" width="199.1111" height="300" rx="7.1111" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8444" />
   <text x="341.3333" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Modular</text>
   <text x="341.3333" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Monolith</text>
-  <line x1="440.8889" y1="390" x2="476.4444" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrowhead)" />
+  <line x1="440.8889" y1="390" x2="476.4444" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrow)" />
   <rect x="483.5556" y="240" width="199.1111" height="300" rx="7.1111" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8444" />
   <text x="583.1111" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Service-Oriented</text>
   <text x="583.1111" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Architecture</text>
-  <line x1="682.6667" y1="390" x2="718.2222" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrowhead)" />
+  <line x1="682.6667" y1="390" x2="718.2222" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrow)" />
   <rect x="725.3333" y="240" width="199.1111" height="300" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
   <text x="824.8889" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Microservices</text>
-  <line x1="924.4444" y1="390" x2="960" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrowhead)" />
+  <line x1="924.4444" y1="390" x2="960" y2="390" stroke="#4a90e2" stroke-width="2.8444" marker-end="url(#arrow)" />
   <rect x="967.1111" y="240" width="213.3333" height="300" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
   <text x="1073.7778" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Serverless /</text>
   <text x="1073.7778" y="468" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">Mesh</text>

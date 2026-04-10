@@ -1,19 +1,69 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
@@ -25,9 +75,9 @@
   <ns0:line x1="137.7778" y1="93.3333" x2="137.7778" y2="146.6667" stroke="#1565c0" stroke-width="1.7778" />
   <ns0:line x1="302.2222" y1="93.3333" x2="302.2222" y2="191.1111" stroke="#2e7d32" stroke-width="1.7778" />
   <ns0:line x1="391.1111" y1="93.3333" x2="391.1111" y2="235.5556" stroke="#e65100" stroke-width="1.7778" />
-  <ns0:line x1="480" y1="93.3333" x2="480" y2="280" stroke="#880e4f" stroke-width="1.7778" />
-  <ns0:line x1="604.4444" y1="93.3333" x2="604.4444" y2="324.4444" stroke="#006064" stroke-width="1.7778" />
-  <ns0:line x1="728.8889" y1="93.3333" x2="728.8889" y2="368.8889" stroke="#4527a0" stroke-width="1.7778" />
+  <ns0:line x1="480" y1="93.3333" x2="480" y2="280" stroke="#c2185b" stroke-width="1.7778" />
+  <ns0:line x1="604.4444" y1="93.3333" x2="604.4444" y2="324.4444" stroke="#0d47a1" stroke-width="1.7778" />
+  <ns0:line x1="728.8889" y1="93.3333" x2="728.8889" y2="368.8889" stroke="#4a148c" stroke-width="1.7778" />
   <ns0:line x1="915.5556" y1="93.3333" x2="915.5556" y2="413.3333" stroke="#555555" stroke-width="1.7778" />
   <ns0:rect x="22.2222" y="149.3333" width="346.6667" height="142.2222" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="44.4444" y="171.5556" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1565c0">-rw-r--r--</ns0:text>
@@ -48,28 +98,28 @@
   <ns0:text x="302.2222" y="280" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#212121">Owner (user)</ns0:text>
   <ns0:text x="302.2222" y="297.7778" font-family="sans-serif" font-size="10.6667" fill="#555555">Checked first for access</ns0:text>
   <ns0:text x="302.2222" y="313.7778" font-family="sans-serif" font-size="10.6667" fill="#555555">chown user file</ns0:text>
-  <ns0:rect x="368.8889" y="282.6667" width="195.5556" height="88.8889" rx="8.8889" fill="#fce4ec" stroke="#880e4f" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="391.1111" y="304.8889" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#880e4f">staff</ns0:text>
+  <ns0:rect x="368.8889" y="282.6667" width="195.5556" height="88.8889" rx="8.8889" fill="#fce4ec" stroke="#c2185b" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="391.1111" y="304.8889" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#c2185b">staff</ns0:text>
   <ns0:text x="391.1111" y="324.4444" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#212121">Owning group</ns0:text>
   <ns0:text x="391.1111" y="342.2222" font-family="sans-serif" font-size="10.6667" fill="#555555">Group permission applies to</ns0:text>
   <ns0:text x="391.1111" y="358.2222" font-family="sans-serif" font-size="10.6667" fill="#555555">all members of "staff"</ns0:text>
-  <ns0:rect x="497.7778" y="327.1111" width="204.4444" height="88.8889" rx="8.8889" fill="#e0f7fa" stroke="#006064" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="520" y="349.3333" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#006064">4096</ns0:text>
+  <ns0:rect x="497.7778" y="327.1111" width="204.4444" height="88.8889" rx="8.8889" fill="#e1f5fe" stroke="#0d47a1" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="520" y="349.3333" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#0d47a1">4096</ns0:text>
   <ns0:text x="520" y="368.8889" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#212121">Size in bytes</ns0:text>
   <ns0:text x="520" y="386.6667" font-family="sans-serif" font-size="10.6667" fill="#555555">ls -lh shows human units</ns0:text>
   <ns0:text x="520" y="402.6667" font-family="sans-serif" font-size="10.6667" fill="#555555">(KB, MB, GB)</ns0:text>
-  <ns0:rect x="604.4444" y="371.5556" width="240" height="88.8889" rx="8.8889" fill="#ede7f6" stroke="#4527a0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="626.6667" y="393.7778" font-family="monospace" font-size="13.3333" font-weight="bold" fill="#4527a0">Nov 19 14:30</ns0:text>
+  <ns0:rect x="604.4444" y="371.5556" width="240" height="88.8889" rx="8.8889" fill="#e8eaf6" stroke="#4a148c" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="626.6667" y="393.7778" font-family="monospace" font-size="13.3333" font-weight="bold" fill="#4a148c">Nov 19 14:30</ns0:text>
   <ns0:text x="626.6667" y="413.3333" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#212121">Modification time (mtime)</ns0:text>
   <ns0:text x="626.6667" y="431.1111" font-family="sans-serif" font-size="10.6667" fill="#555555">Three timestamps per file:</ns0:text>
   <ns0:text x="626.6667" y="447.1111" font-family="sans-serif" font-size="10.6667" fill="#555555">atime (access) · mtime · ctime</ns0:text>
-  <ns0:rect x="755.5556" y="416" width="204.4444" height="88.8889" rx="8.8889" fill="#f2f2f2" stroke="#555555" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="755.5556" y="416" width="204.4444" height="88.8889" rx="8.8889" fill="#f0f0f0" stroke="#555555" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:text x="777.7778" y="438.2222" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#212121">report.txt</ns0:text>
   <ns0:text x="777.7778" y="457.7778" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#212121">Filename</ns0:text>
   <ns0:text x="777.7778" y="475.5556" font-family="sans-serif" font-size="10.6667" fill="#555555">Stored in directory entry</ns0:text>
   <ns0:text x="777.7778" y="491.5556" font-family="sans-serif" font-size="10.6667" fill="#555555">not in the inode itself</ns0:text>
   <ns0:rect x="22.2222" y="524.4444" width="1093.3333" height="97.7778" rx="8.8889" fill="#212121" filter="url(#shadow)" />
-  <ns0:text x="44.4444" y="549.3333" font-family="monospace" font-size="12.4444" fill="#80cbc4">Permission bits:   r=4   w=2   x=1</ns0:text>
+  <ns0:text x="44.4444" y="549.3333" font-family="monospace" font-size="12.4444" fill="#a5d6a7">Permission bits:   r=4   w=2   x=1</ns0:text>
   <ns0:text x="44.4444" y="570.6667" font-family="monospace" font-size="12.4444" fill="#ffffff">chmod 644 file  →  rw-r--r--   (owner: 6=r+w, group: 4=r, others: 4=r)</ns0:text>
   <ns0:text x="44.4444" y="592" font-family="monospace" font-size="12.4444" fill="#ffffff">chmod 755 file  →  rwxr-xr-x   (owner: 7=r+w+x, group: 5=r+x, others: 5=r+x)</ns0:text>
   <ns0:text x="44.4444" y="613.3333" font-family="monospace" font-size="12.4444" fill="#ffffff">chmod 700 file  →  rwx------   (owner only, group and others: no access)</ns0:text>

@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrow5" markerWidth="18.2857" markerHeight="48" refX="16.4571" refY="14.4" orient="auto">
       <path d="M 0 0 L 0 28.8 L 16.4571 14.4 z" fill="#333" />
     </marker>
@@ -7,15 +67,15 @@
   <rect x="18.2857" y="216" width="219.4286" height="240" fill="#ffcdd2" stroke="#c62828" stroke-width="3.6571" rx="9.1429" />
   <text x="128" y="312" text-anchor="middle" font-size="20.1143" font-weight="bold">Prod DB</text>
   <text x="128" y="384" text-anchor="middle" font-size="18.2857" fill="#555">Real PII</text>
-  <line x1="237.7143" y1="336" x2="320" y2="336" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow5)" />
+  <line x1="237.7143" y1="336" x2="320" y2="336" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="329.1429" y="216" width="219.4286" height="240" fill="#fff3e0" stroke="#e65100" stroke-width="3.6571" rx="9.1429" />
   <text x="438.8571" y="312" text-anchor="middle" font-size="20.1143" font-weight="bold">Export</text>
   <text x="438.8571" y="384" text-anchor="middle" font-size="18.2857" fill="#555">Snapshot</text>
-  <line x1="548.5714" y1="336" x2="630.8571" y2="336" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow5)" />
+  <line x1="548.5714" y1="336" x2="630.8571" y2="336" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="640" y="216" width="219.4286" height="240" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.6571" rx="9.1429" />
   <text x="749.7143" y="312" text-anchor="middle" font-size="20.1143" font-weight="bold">Anonymize</text>
   <text x="749.7143" y="384" text-anchor="middle" font-size="18.2857" fill="#555">Mask/Hash PII</text>
-  <line x1="859.4286" y1="336" x2="941.7143" y2="336" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow5)" />
+  <line x1="859.4286" y1="336" x2="941.7143" y2="336" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="950.8571" y="216" width="219.4286" height="240" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.6571" rx="9.1429" />
   <text x="1060.5714" y="312" text-anchor="middle" font-size="20.1143" font-weight="bold">Non-prod DB</text>
   <text x="1060.5714" y="384" text-anchor="middle" font-size="18.2857" fill="#555">Safe data</text>

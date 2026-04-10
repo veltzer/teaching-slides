@@ -1,22 +1,82 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="209.8361" y="47.2131" width="419.6721" height="75.541" fill="#e6f3ff" stroke="#0066cc" stroke-width="1.8885" rx="4.7213" />
+  <ns0:rect x="209.8361" y="47.2131" width="419.6721" height="75.541" fill="#e3f2fd" stroke="#0277bd" stroke-width="1.8885" rx="4.7213" />
   <ns0:text x="419.6721" y="89.7049" text-anchor="middle" font-size="13.2197" font-weight="bold">AGL Platform</ns0:text>
-  <ns0:rect x="104.918" y="169.9672" width="188.8525" height="56.6557" fill="#ffcccc" stroke="#000" stroke-width="1.8885" rx="2.8328" />
+  <ns0:rect x="104.918" y="169.9672" width="188.8525" height="56.6557" fill="#ffcdd2" stroke="#000" stroke-width="1.8885" rx="2.8328" />
   <ns0:text x="199.3443" y="203.0164" text-anchor="middle" font-size="10.3869">IVI</ns0:text>
-  <ns0:rect x="325.2459" y="169.9672" width="188.8525" height="56.6557" fill="#ccffcc" stroke="#000" stroke-width="1.8885" rx="2.8328" />
+  <ns0:rect x="325.2459" y="169.9672" width="188.8525" height="56.6557" fill="#bbdefbfcc" stroke="#000" stroke-width="1.8885" rx="2.8328" />
   <ns0:text x="419.6721" y="203.0164" text-anchor="middle" font-size="10.3869">Telematics</ns0:text>
-  <ns0:rect x="545.5738" y="169.9672" width="188.8525" height="56.6557" fill="#ccccff" stroke="#000" stroke-width="1.8885" rx="2.8328" />
+  <ns0:rect x="545.5738" y="169.9672" width="188.8525" height="56.6557" fill="#bbdefb" stroke="#000" stroke-width="1.8885" rx="2.8328" />
   <ns0:text x="640" y="203.0164" text-anchor="middle" font-size="10.3869">Instrument Cluster</ns0:text>
-  <ns0:rect x="104.918" y="264.3934" width="188.8525" height="56.6557" fill="#ffeecc" stroke="#000" stroke-width="1.8885" rx="2.8328" />
+  <ns0:rect x="104.918" y="264.3934" width="188.8525" height="56.6557" fill="#fff3cd" stroke="#000" stroke-width="1.8885" rx="2.8328" />
   <ns0:text x="199.3443" y="297.4426" text-anchor="middle" font-size="10.3869">ADAS</ns0:text>
-  <ns0:rect x="325.2459" y="264.3934" width="188.8525" height="56.6557" fill="#eeccff" stroke="#000" stroke-width="1.8885" rx="2.8328" />
+  <ns0:rect x="325.2459" y="264.3934" width="188.8525" height="56.6557" fill="#f3e5f5" stroke="#000" stroke-width="1.8885" rx="2.8328" />
   <ns0:text x="419.6721" y="297.4426" text-anchor="middle" font-size="10.3869">Gateway</ns0:text>
-  <ns0:rect x="545.5738" y="264.3934" width="188.8525" height="56.6557" fill="#ccffff" stroke="#000" stroke-width="1.8885" rx="2.8328" />
+  <ns0:rect x="545.5738" y="264.3934" width="188.8525" height="56.6557" fill="#bbdefbfff" stroke="#000" stroke-width="1.8885" rx="2.8328" />
   <ns0:text x="640" y="297.4426" text-anchor="middle" font-size="10.3869">HUD</ns0:text>
   <ns0:path d="M 419.6721 122.7541 L 199.3443 169.9672" stroke="#333" stroke-width="1.4164" marker-end="url(#e3)" />
   <ns0:path d="M 419.6721 122.7541 L 419.6721 169.9672" stroke="#333" stroke-width="1.4164" marker-end="url(#e3)" />
   <ns0:path d="M 419.6721 122.7541 L 640 169.9672" stroke="#333" stroke-width="1.4164" marker-end="url(#e3)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="e3" markerWidth="16" markerHeight="14.4" refX="14.4" refY="4.32" orient="auto">
       <ns0:polygon points="0,14.4 4.8,0" fill="#333" />
     </ns0:marker>

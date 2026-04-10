@@ -1,23 +1,84 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-size="20.9591" font-weight="bold">Fork Creates Exact Copy</ns0:text>
   <ns0:rect x="74.8538" y="101.0526" width="374.269" height="505.2632" fill="#3498DB" stroke="#333" stroke-width="2.9942" />
   <ns0:text x="261.9883" y="84.2105" text-anchor="middle" font-size="17.9649">Before fork()</ns0:text>
-  <ns0:rect x="104.7953" y="134.7368" width="314.386" height="50.5263" fill="#2980B9" />
+  <ns0:rect x="104.7953" y="134.7368" width="314.386" height="50.5263" fill="#1976d2" />
   <ns0:text x="261.9883" y="168.4211" text-anchor="middle" fill="white" font-size="14.9708">PID: 1234</ns0:text>
-  <ns0:rect x="104.7953" y="202.1053" width="314.386" height="50.5263" fill="#2980B9" />
+  <ns0:rect x="104.7953" y="202.1053" width="314.386" height="50.5263" fill="#1976d2" />
   <ns0:text x="261.9883" y="235.7895" text-anchor="middle" fill="white" font-size="14.9708">Memory: Stack, Heap</ns0:text>
-  <ns0:rect x="104.7953" y="269.4737" width="314.386" height="50.5263" fill="#2980B9" />
+  <ns0:rect x="104.7953" y="269.4737" width="314.386" height="50.5263" fill="#1976d2" />
   <ns0:text x="261.9883" y="303.1579" text-anchor="middle" fill="white" font-size="14.9708">Files: 0,1,2,...</ns0:text>
-  <ns0:rect x="104.7953" y="336.8421" width="314.386" height="50.5263" fill="#2980B9" />
+  <ns0:rect x="104.7953" y="336.8421" width="314.386" height="50.5263" fill="#1976d2" />
   <ns0:text x="261.9883" y="370.5263" text-anchor="middle" fill="white" font-size="14.9708">Signals: Handlers</ns0:text>
   <ns0:text x="523.9766" y="336.8421" text-anchor="middle" font-size="29.9415">→</ns0:text>
   <ns0:rect x="673.6842" y="101.0526" width="224.5614" height="252.6316" fill="#E74C3C" stroke="#333" stroke-width="2.9942" />
   <ns0:text x="785.9649" y="84.2105" text-anchor="middle" font-size="17.9649">Parent After</ns0:text>
-  <ns0:rect x="688.655" y="134.7368" width="194.6199" height="42.1053" fill="#C0392B" />
+  <ns0:rect x="688.655" y="134.7368" width="194.6199" height="42.1053" fill="#c62828" />
   <ns0:text x="785.9649" y="165.0526" text-anchor="middle" fill="white" font-size="14.9708">PID: 1234</ns0:text>
-  <ns0:rect x="688.655" y="185.2632" width="194.6199" height="42.1053" fill="#C0392B" />
+  <ns0:rect x="688.655" y="185.2632" width="194.6199" height="42.1053" fill="#c62828" />
   <ns0:text x="785.9649" y="215.5789" text-anchor="middle" fill="white" font-size="14.9708">fork() returns: 1235</ns0:text>
-  <ns0:rect x="688.655" y="235.7895" width="194.6199" height="42.1053" fill="#C0392B" />
+  <ns0:rect x="688.655" y="235.7895" width="194.6199" height="42.1053" fill="#c62828" />
   <ns0:text x="785.9649" y="266.1053" text-anchor="middle" fill="white" font-size="14.9708">COW Memory</ns0:text>
   <ns0:rect x="673.6842" y="387.3684" width="224.5614" height="252.6316" fill="#2ECC71" stroke="#333" stroke-width="2.9942" />
   <ns0:text x="785.9649" y="370.5263" text-anchor="middle" font-size="17.9649">Child After</ns0:text>

@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#333" />
     </ns0:marker>
@@ -9,17 +69,17 @@
   <ns0:text x="158.4248" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#1a237e">Statistics</ns0:text>
   <ns0:text x="158.4248" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Row count, data size</ns0:text>
   <ns0:text x="158.4248" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Column min/max/nulls</ns0:text>
-  <ns0:line x1="273.6428" y1="153.9241" x2="345.654" y2="153.9241" stroke="#333" stroke-width="2.8805" marker-end="url(#arrowhead)" />
+  <ns0:line x1="273.6428" y1="153.9241" x2="345.654" y2="153.9241" stroke="#333" stroke-width="2.8805" marker-end="url(#arrow)" />
   <ns0:rect x="352.8551" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.8805" />
   <ns0:text x="468.0731" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#1b5e20">Cost Model</ns0:text>
   <ns0:text x="468.0731" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Estimate I/O cost</ns0:text>
   <ns0:text x="468.0731" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Estimate CPU cost</ns0:text>
-  <ns0:line x1="583.2911" y1="153.9241" x2="655.3024" y2="153.9241" stroke="#333" stroke-width="2.8805" marker-end="url(#arrowhead)" />
+  <ns0:line x1="583.2911" y1="153.9241" x2="655.3024" y2="153.9241" stroke="#333" stroke-width="2.8805" marker-end="url(#arrow)" />
   <ns0:rect x="662.5035" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="#fff3e0" stroke="#e65100" stroke-width="2.8805" />
   <ns0:text x="777.7215" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#e65100">Plan Comparison</ns0:text>
   <ns0:text x="777.7215" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Evaluate alternatives</ns0:text>
   <ns0:text x="777.7215" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Pick lowest cost</ns0:text>
-  <ns0:line x1="892.9395" y1="153.9241" x2="936.1463" y2="153.9241" stroke="#333" stroke-width="2.8805" marker-end="url(#arrowhead)" />
+  <ns0:line x1="892.9395" y1="153.9241" x2="936.1463" y2="153.9241" stroke="#333" stroke-width="2.8805" marker-end="url(#arrow)" />
   <ns0:rect x="943.3474" y="97.2152" width="172.827" height="113.4177" rx="11.5218" fill="#1565c0" stroke="#0d47a1" stroke-width="2.8805" />
   <ns0:text x="1029.7609" y="145.8228" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#fff">Best Plan</ns0:text>
   <ns0:text x="1029.7609" y="178.2278" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#e3f2fd">Optimal execution</ns0:text>

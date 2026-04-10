@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="20" markerHeight="13.7705" refX="18" refY="6.8852" orient="auto">
       <ns0:polygon points="0,19.6721 7,0" fill="#555" />
     </ns0:marker>
@@ -9,40 +69,40 @@
   </ns0:defs>
   <ns0:rect x="18.2772" y="17.9775" width="1133.1836" height="61.1236" fill="#1565c0" stroke="#1565c0" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="584.869" y="57.5281" text-anchor="middle" font-size="25.1686" fill="white" font-weight="bold">Async Programming Cheatsheet</ns0:text>
-  <ns0:rect x="18.2772" y="79.1012" width="1133.1836" height="46.7415" fill="#f0f4f8" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="79.1012" width="1133.1836" height="46.7415" fill="#f5f5f5" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="109.6629" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">Future::poll()</ns0:text>
   <ns0:text x="438.6517" y="109.6629" text-anchor="start" font-size="21.5731" fill="#222222">returns Pending or Ready(T)</ns0:text>
-  <ns0:rect x="18.2772" y="125.8427" width="1133.1836" height="46.7415" fill="#e8edf2" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="125.8427" width="1133.1836" height="46.7415" fill="#e8eaf6" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="156.4045" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">async fn</ns0:text>
   <ns0:text x="438.6517" y="156.4045" text-anchor="start" font-size="21.5731" fill="#222222">generates a state machine</ns0:text>
-  <ns0:rect x="18.2772" y="172.5843" width="1133.1836" height="46.7415" fill="#f0f4f8" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="172.5843" width="1133.1836" height="46.7415" fill="#f5f5f5" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="203.1461" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">.await</ns0:text>
   <ns0:text x="438.6517" y="203.1461" text-anchor="start" font-size="21.5731" fill="#222222">yield point (state transition)</ns0:text>
-  <ns0:rect x="18.2772" y="219.3259" width="1133.1836" height="46.7415" fill="#e8edf2" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="219.3259" width="1133.1836" height="46.7415" fill="#e8eaf6" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="249.8876" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">Pin&lt;&amp;mut F&gt;</ns0:text>
   <ns0:text x="438.6517" y="249.8876" text-anchor="start" font-size="21.5731" fill="#222222">prevents moving self-referential futures</ns0:text>
-  <ns0:rect x="18.2772" y="266.0674" width="1133.1836" height="46.7415" fill="#f0f4f8" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="266.0674" width="1133.1836" height="46.7415" fill="#f5f5f5" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="296.6293" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">Unpin</ns0:text>
   <ns0:text x="438.6517" y="296.6293" text-anchor="start" font-size="21.5731" fill="#222222">opt-out of pinning restrictions</ns0:text>
-  <ns0:rect x="18.2772" y="312.809" width="1133.1836" height="46.7415" fill="#e8edf2" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="312.809" width="1133.1836" height="46.7415" fill="#e8eaf6" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="343.3708" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">tokio::spawn</ns0:text>
   <ns0:text x="438.6517" y="343.3708" text-anchor="start" font-size="21.5731" fill="#222222">run a Send + 'static future</ns0:text>
-  <ns0:rect x="18.2772" y="359.5506" width="1133.1836" height="46.7415" fill="#f0f4f8" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="359.5506" width="1133.1836" height="46.7415" fill="#f5f5f5" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="390.1124" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">spawn_blocking</ns0:text>
   <ns0:text x="438.6517" y="390.1124" text-anchor="start" font-size="21.5731" fill="#222222">run blocking code off the async runtime</ns0:text>
-  <ns0:rect x="18.2772" y="406.2922" width="1133.1836" height="46.7415" fill="#e8edf2" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="406.2922" width="1133.1836" height="46.7415" fill="#e8eaf6" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="436.854" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">join!</ns0:text>
   <ns0:text x="438.6517" y="436.854" text-anchor="start" font-size="21.5731" fill="#222222">run all futures concurrently</ns0:text>
-  <ns0:rect x="18.2772" y="453.0337" width="1133.1836" height="46.7415" fill="#f0f4f8" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="453.0337" width="1133.1836" height="46.7415" fill="#f5f5f5" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="483.5955" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">select!</ns0:text>
   <ns0:text x="438.6517" y="483.5955" text-anchor="start" font-size="21.5731" fill="#222222">race futures, first one wins</ns0:text>
-  <ns0:rect x="18.2772" y="499.7753" width="1133.1836" height="46.7415" fill="#e8edf2" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="499.7753" width="1133.1836" height="46.7415" fill="#e8eaf6" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="530.3372" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">Stream</ns0:text>
   <ns0:text x="438.6517" y="530.3372" text-anchor="start" font-size="21.5731" fill="#222222">async iterator</ns0:text>
-  <ns0:rect x="18.2772" y="546.5169" width="1133.1836" height="46.7415" fill="#f0f4f8" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="546.5169" width="1133.1836" height="46.7415" fill="#f5f5f5" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="577.0787" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">Cancellation-safe</ns0:text>
   <ns0:text x="438.6517" y="577.0787" text-anchor="start" font-size="21.5731" fill="#222222">no partial state lost on cancel</ns0:text>
-  <ns0:rect x="18.2772" y="593.2585" width="1133.1836" height="46.7415" fill="#e8edf2" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
+  <ns0:rect x="18.2772" y="593.2585" width="1133.1836" height="46.7415" fill="#e8eaf6" stroke="#ccc" stroke-width="2.6966" rx="7.1911" />
   <ns0:text x="36.5543" y="623.8203" text-anchor="start" font-size="21.5731" fill="#1565c0" font-weight="bold">async_trait</ns0:text>
   <ns0:text x="438.6517" y="623.8203" text-anchor="start" font-size="21.5731" fill="#222222">async fn in dyn trait objects</ns0:text>
 </ns0:svg>

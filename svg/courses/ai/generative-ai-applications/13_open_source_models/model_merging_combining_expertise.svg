@@ -1,8 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#4a90e2" />
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </defs>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">Model Merging: Combining Expertise</text>
   <rect x="48" y="80" width="256" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
@@ -27,11 +84,11 @@
   <text x="664" y="331.2" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Spherical Linear Interpolation</text>
   <text x="664" y="352" font-family="Arial, sans-serif" font-size="16" fill="#777">Interpolate on the hypersphere; best for 2-model merges</text>
   <rect x="48" y="384" width="560" height="88" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
-  <text x="72" y="416" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#856404">3. TIES (Trim, Elect Sign, Merge)</text>
+  <text x="72" y="416" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#bf360c">3. TIES (Trim, Elect Sign, Merge)</text>
   <text x="72" y="443.2" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Only merge significant changes</text>
   <text x="72" y="464" font-family="Arial, sans-serif" font-size="16" fill="#777">Reduces interference between models</text>
   <rect x="640" y="384" width="592" height="88" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
-  <text x="664" y="416" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#856404">4. DARE (Drop And REscale)</text>
+  <text x="664" y="416" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#bf360c">4. DARE (Drop And REscale)</text>
   <text x="664" y="443.2" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Randomly drop changes, rescale rest</text>
   <text x="664" y="464" font-family="Arial, sans-serif" font-size="16" fill="#777">Works well with 3+ models</text>
   <line x1="640" y1="488" x2="640" y2="544" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />

@@ -2,6 +2,66 @@
   <rect x="560" y="36" width="160" height="60" rx="9.6" fill="#4CAF50" stroke="#2E7D32" stroke-width="2.4" />
   <text x="640" y="72" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Android App</text>
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowNet" markerWidth="16" markerHeight="8.4" refX="16" refY="4.2" orient="auto">
       <polygon points="0,12 5.6,0" fill="#666" />
     </marker>
@@ -16,16 +76,16 @@
   <rect x="560" y="396" width="160" height="60" rx="9.6" fill="#9C27B0" stroke="#6A1B9A" stroke-width="2.4" />
   <text x="640" y="432" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">OkHttp Client</text>
   <line x1="640" y1="456" x2="640" y2="504" stroke="#666" stroke-width="2.4" marker-end="url(#arrowNet)" />
-  <ellipse cx="640" cy="552" rx="72" ry="36" fill="#00BCD4" stroke="#006064" stroke-width="2.4" />
+  <ellipse cx="640" cy="552" rx="72" ry="36" fill="#2196f3" stroke="#0d47a1" stroke-width="2.4" />
   <text x="640" y="558" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Internet</text>
   <line x1="560" y1="186" x2="400" y2="186" stroke="#666" stroke-width="2.4" marker-end="url(#arrowNet)" />
   <rect x="240" y="156" width="144" height="60" rx="9.6" fill="#F44336" stroke="#C62828" stroke-width="2.4" />
   <text x="312" y="192" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">WebSocket</text>
   <line x1="720" y1="186" x2="880" y2="186" stroke="#666" stroke-width="2.4" marker-end="url(#arrowNet)" />
-  <rect x="896" y="156" width="160" height="60" rx="9.6" fill="#795548" stroke="#4E342E" stroke-width="2.4" />
+  <rect x="896" y="156" width="160" height="60" rx="9.6" fill="#555555" stroke="#333333" stroke-width="2.4" />
   <text x="976" y="192" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Image Loading</text>
   <line x1="560" y1="426" x2="400" y2="426" stroke="#666" stroke-width="2.4" marker-end="url(#arrowNet)" />
-  <rect x="240" y="396" width="144" height="60" rx="9.6" fill="#607D8B" stroke="#37474F" stroke-width="2.4" />
+  <rect x="240" y="396" width="144" height="60" rx="9.6" fill="#777777" stroke="#555555" stroke-width="2.4" />
   <text x="312" y="432" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">Interceptors</text>
   <line x1="240" y1="426" x2="128" y2="360" stroke="#666" stroke-width="2.4" marker-end="url(#arrowNet)" />
   <rect x="32" y="324" width="160" height="48" rx="7.2" fill="#FFC107" stroke="#F57C00" stroke-width="1.2" />

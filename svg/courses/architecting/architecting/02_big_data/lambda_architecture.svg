@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="12.1637">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -24,14 +84,14 @@
   <ns0:text x="1040.4678" y="441.2632" text-anchor="middle" fill="#333">Queries</ns0:text>
   <ns0:rect x="374.269" y="235.7895" width="194.6199" height="58.9474" rx="7.4854" fill="#f9f9f9" stroke="#999" stroke-width="2.2456" />
   <ns0:text x="471.5789" y="272.8421" text-anchor="middle" fill="#666">Master Dataset</ns0:text>
-  <ns0:line x1="224.5614" y1="266.1053" x2="371.2749" y2="160" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="224.5614" y1="303.1579" x2="371.2749" y2="412.6316" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="568.8889" y1="151.5789" x2="700.6316" y2="151.5789" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="568.8889" y1="421.0526" x2="700.6316" y2="421.0526" stroke="#dc3545" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="883.2749" y1="151.5789" x2="1040.4678" y2="240.8421" stroke="#ffc107" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="898.2456" y1="421.0526" x2="1040.4678" y2="323.3684" stroke="#ffc107" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="1040.4678" y1="320" x2="1040.4678" y2="400.8421" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrowhead)" />
-  <ns0:line x1="471.5789" y1="185.2632" x2="471.5789" y2="232.4211" stroke="#999" stroke-width="2.2456" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrowhead-gray)" />
+  <ns0:line x1="224.5614" y1="266.1053" x2="371.2749" y2="160" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="224.5614" y1="303.1579" x2="371.2749" y2="412.6316" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="568.8889" y1="151.5789" x2="700.6316" y2="151.5789" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="568.8889" y1="421.0526" x2="700.6316" y2="421.0526" stroke="#dc3545" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="883.2749" y1="151.5789" x2="1040.4678" y2="240.8421" stroke="#ffc107" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="898.2456" y1="421.0526" x2="1040.4678" y2="323.3684" stroke="#ffc107" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="1040.4678" y1="320" x2="1040.4678" y2="400.8421" stroke="#4a90e2" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:line x1="471.5789" y1="185.2632" x2="471.5789" y2="232.4211" stroke="#999" stroke-width="2.2456" stroke-dasharray="7.4854 4.4912" marker-end="url(#arrow)" />
   <ns0:rect x="44.9123" y="522.1053" width="1107.8363" height="117.8947" rx="7.4854" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4971" />
   <ns0:text x="598.8304" y="564.2105" text-anchor="middle" font-size="17.9649" fill="#555">Lambda Architecture processes data through two parallel paths:</ns0:text>
   <ns0:text x="598.8304" y="597.8947" text-anchor="middle" font-size="17.9649" fill="#555">Batch Layer (high latency, complete accuracy) and Speed Layer (low latency, approximate).</ns0:text>

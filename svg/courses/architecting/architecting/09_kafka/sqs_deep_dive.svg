@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -21,15 +81,15 @@
   <ns0:text x="525.7143" y="187.2" text-anchor="middle" font-size="10.9714" fill="#333">Consumer N</ns0:text>
   <ns0:rect x="228.5714" y="267.4286" width="164.5714" height="51.4286" rx="4.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="1.3714" />
   <ns0:text x="310.8571" y="298.2857" text-anchor="middle" font-size="10.9714" font-weight="bold" fill="#dc3545">Dead Letter Queue</ns0:text>
-  <ns0:line x1="137.1429" y1="146.0571" x2="208.4571" y2="144" stroke="#4a90e2" stroke-width="1.3714" marker-end="url(#arrowhead)" />
-  <ns0:line x1="374.8571" y1="123.4286" x2="464.4571" y2="80.2286" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrowhead)" />
-  <ns0:line x1="374.8571" y1="144" x2="464.4571" y2="130.6286" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrowhead)" />
-  <ns0:line x1="374.8571" y1="164.5714" x2="464.4571" y2="182.0571" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 525.7143 97.7143 Q 640 97.7143 640 144 Q 640 205.7143 365.7143 205.7143 Q 320 205.7143 320 187.2" stroke="#999" stroke-width="0.9143" stroke-dasharray="4.5714 2.7429" fill="none" marker-end="url(#arrowhead-dash)" />
+  <ns0:line x1="137.1429" y1="146.0571" x2="208.4571" y2="144" stroke="#4a90e2" stroke-width="1.3714" marker-end="url(#arrow)" />
+  <ns0:line x1="374.8571" y1="123.4286" x2="464.4571" y2="80.2286" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrow)" />
+  <ns0:line x1="374.8571" y1="144" x2="464.4571" y2="130.6286" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrow)" />
+  <ns0:line x1="374.8571" y1="164.5714" x2="464.4571" y2="182.0571" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrow)" />
+  <ns0:path d="M 525.7143 97.7143 Q 640 97.7143 640 144 Q 640 205.7143 365.7143 205.7143 Q 320 205.7143 320 187.2" stroke="#999" stroke-width="0.9143" stroke-dasharray="4.5714 2.7429" fill="none" marker-end="url(#arrow)" />
   <ns0:text x="640" y="164.5714" font-size="10" fill="#999">Visibility Timeout</ns0:text>
   <ns0:path d="M 525.7143 149.1429 Q 621.7143 149.1429 621.7143 164.5714 Q 621.7143 216 356.5714 216 Q 324.5714 216 324.5714 187.2" stroke="#28a745" stroke-width="0.9143" stroke-dasharray="4.5714 2.7429" fill="none" />
   <ns0:text x="621.7143" y="216" font-size="10" fill="#28a745">Delete Message</ns0:text>
-  <ns0:line x1="292.5714" y1="185.1429" x2="310.8571" y2="265.3714" stroke="#dc3545" stroke-width="1.3714" marker-end="url(#arrowhead)" />
+  <ns0:line x1="292.5714" y1="185.1429" x2="310.8571" y2="265.3714" stroke="#dc3545" stroke-width="1.3714" marker-end="url(#arrow)" />
   <ns0:text x="256" y="236.5714" font-size="10" fill="#dc3545">Failed messages</ns0:text>
   <ns0:text x="365.7143" y="360" text-anchor="middle" font-size="10.0571" fill="#888" font-style="italic">SQS uses visibility timeout to prevent duplicate processing.</ns0:text>
   <ns0:text x="365.7143" y="378.5143" text-anchor="middle" font-size="10.0571" fill="#888" font-style="italic">Failed messages move to the Dead Letter Queue after max retries.</ns0:text>

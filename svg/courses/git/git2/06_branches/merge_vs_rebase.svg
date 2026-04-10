@@ -1,12 +1,73 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="632.0988" y="71.1111" text-anchor="middle" font-size="37.9259" font-weight="bold">Merge vs Rebase</ns0:text>
   <ns0:rect x="79.0123" y="142.2222" width="553.0864" height="497.7778" fill="#E8F5E9" stroke="#388E3C" stroke-width="3.1605" rx="7.9012" />
   <ns0:text x="355.5556" y="195.5556" text-anchor="middle" font-size="28.4444" font-weight="bold">Merge</ns0:text>
   <ns0:circle cx="189.6296" cy="284.4444" r="23.7037" fill="#4CAF50" />
   <ns0:circle cx="284.4444" cy="284.4444" r="23.7037" fill="#4CAF50" />
-  <ns0:circle cx="284.4444" cy="373.3333" r="23.7037" fill="#81C784" />
-  <ns0:circle cx="379.2593" cy="373.3333" r="23.7037" fill="#81C784" />
-  <ns0:circle cx="474.0741" cy="284.4444" r="23.7037" fill="#66BB6A" />
+  <ns0:circle cx="284.4444" cy="373.3333" r="23.7037" fill="#a5d6a7" />
+  <ns0:circle cx="379.2593" cy="373.3333" r="23.7037" fill="#a5d6a7" />
+  <ns0:circle cx="474.0741" cy="284.4444" r="23.7037" fill="#4caf50" />
   <ns0:text x="474.0741" y="293.3333" text-anchor="middle" font-size="15.8025" fill="white">M</ns0:text>
   <ns0:line x1="213.3333" y1="284.4444" x2="260.7407" y2="284.4444" stroke="#333" stroke-width="3.1605" />
   <ns0:line x1="284.4444" y1="311.1111" x2="284.4444" y2="346.6667" stroke="#333" stroke-width="3.1605" />
@@ -21,8 +82,8 @@
   <ns0:text x="924.4444" y="195.5556" text-anchor="middle" font-size="28.4444" font-weight="bold">Rebase</ns0:text>
   <ns0:circle cx="758.5185" cy="284.4444" r="23.7037" fill="#2196F3" />
   <ns0:circle cx="853.3333" cy="284.4444" r="23.7037" fill="#2196F3" />
-  <ns0:circle cx="948.1481" cy="284.4444" r="23.7037" fill="#64B5F6" />
-  <ns0:circle cx="1042.963" cy="284.4444" r="23.7037" fill="#64B5F6" />
+  <ns0:circle cx="948.1481" cy="284.4444" r="23.7037" fill="#90caf9" />
+  <ns0:circle cx="1042.963" cy="284.4444" r="23.7037" fill="#90caf9" />
   <ns0:line x1="782.2222" y1="284.4444" x2="829.6296" y2="284.4444" stroke="#333" stroke-width="3.1605" />
   <ns0:line x1="877.037" y1="284.4444" x2="924.4444" y2="284.4444" stroke="#333" stroke-width="3.1605" />
   <ns0:line x1="971.8519" y1="284.4444" x2="1019.2593" y2="284.4444" stroke="#333" stroke-width="3.1605" />

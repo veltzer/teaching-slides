@@ -1,44 +1,94 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="71.1111" y="44.4444" width="995.5556" height="48.8889" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="71.1111" y="44.4444" width="995.5556" height="48.8889" rx="8.8889" fill="url(#grad-primary)" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="77.3333" text-anchor="middle" fill="white" font-size="21.3333" font-weight="bold" font-family="Arial, sans-serif">Bug Investigation Process</ns0:text>
   <ns0:rect x="71.1111" y="124.4444" width="995.5556" height="93.3333" rx="8.8889" fill="#ffebee" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="71.1111" y="124.4444" width="49.7778" height="93.3333" rx="8.8889" fill="#e53935" />
   <ns0:text x="96" y="177.7778" text-anchor="middle" fill="white" font-size="24.8889" font-weight="bold" font-family="Arial, sans-serif">1</ns0:text>
   <ns0:text x="142.2222" y="161.7778" font-size="17.7778" font-weight="bold" fill="#b71c1c" font-family="Arial, sans-serif">Symptom</ns0:text>
-  <ns0:text x="142.2222" y="193.7778" font-size="15.1111" fill="#444" font-family="Arial, sans-serif">Notifications fail silently — users report no emails received</ns0:text>
+  <ns0:text x="142.2222" y="193.7778" font-size="15.1111" fill="#333333" font-family="Arial, sans-serif">Notifications fail silently — users report no emails received</ns0:text>
   <ns0:rect x="71.1111" y="233.7778" width="995.5556" height="93.3333" rx="8.8889" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="71.1111" y="233.7778" width="49.7778" height="93.3333" rx="8.8889" fill="#fb8c00" />
   <ns0:text x="96" y="287.1111" text-anchor="middle" fill="white" font-size="24.8889" font-weight="bold" font-family="Arial, sans-serif">2</ns0:text>
   <ns0:text x="142.2222" y="271.1111" font-size="17.7778" font-weight="bold" fill="#e65100" font-family="Arial, sans-serif">Investigation</ns0:text>
-  <ns0:text x="142.2222" y="303.1111" font-size="15.1111" fill="#444" font-family="Arial, sans-serif">Queue logs show "rate limit exceeded" — 429 errors in provider API</ns0:text>
+  <ns0:text x="142.2222" y="303.1111" font-size="15.1111" fill="#333333" font-family="Arial, sans-serif">Queue logs show "rate limit exceeded" — 429 errors in provider API</ns0:text>
   <ns0:rect x="71.1111" y="343.1111" width="995.5556" height="93.3333" rx="8.8889" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="71.1111" y="343.1111" width="49.7778" height="93.3333" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="71.1111" y="343.1111" width="49.7778" height="93.3333" rx="8.8889" fill="url(#grad-primary)" />
   <ns0:text x="96" y="396.4444" text-anchor="middle" fill="white" font-size="24.8889" font-weight="bold" font-family="Arial, sans-serif">3</ns0:text>
   <ns0:text x="142.2222" y="380.4444" font-size="17.7778" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">Root Cause</ns0:text>
-  <ns0:text x="142.2222" y="412.4444" font-size="15.1111" fill="#444" font-family="Arial, sans-serif">Email provider rate limiting — burst of 1000/hr, limit is 500/hr</ns0:text>
+  <ns0:text x="142.2222" y="412.4444" font-size="15.1111" fill="#333333" font-family="Arial, sans-serif">Email provider rate limiting — burst of 1000/hr, limit is 500/hr</ns0:text>
   <ns0:rect x="71.1111" y="452.4444" width="995.5556" height="93.3333" rx="8.8889" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
   <ns0:rect x="71.1111" y="452.4444" width="49.7778" height="93.3333" rx="8.8889" fill="#43a047" />
   <ns0:text x="96" y="505.7778" text-anchor="middle" fill="white" font-size="24.8889" font-weight="bold" font-family="Arial, sans-serif">4</ns0:text>
   <ns0:text x="142.2222" y="489.7778" font-size="17.7778" font-weight="bold" fill="#2e7d32" font-family="Arial, sans-serif">Solution</ns0:text>
-  <ns0:text x="142.2222" y="521.7778" font-size="15.1111" fill="#444" font-family="Arial, sans-serif">Implement exponential backoff + queue batching with jitter</ns0:text>
+  <ns0:text x="142.2222" y="521.7778" font-size="15.1111" fill="#333333" font-family="Arial, sans-serif">Implement exponential backoff + queue batching with jitter</ns0:text>
 </ns0:svg>

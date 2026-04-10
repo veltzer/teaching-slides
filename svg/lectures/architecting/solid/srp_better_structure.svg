@@ -1,32 +1,92 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="497.7778" y="72" width="284.4444" height="144" fill="#dcfce7" stroke="#16a34a" stroke-width="2.8444" />
+  <rect x="497.7778" y="72" width="284.4444" height="144" fill="#e8f5e8" stroke="#28a745" stroke-width="2.8444" />
   <text x="640" y="115.2" text-anchor="middle" font-family="Arial" font-size="22.7556" font-weight="bold">Employee</text>
-  <line x1="497.7778" y1="129.6" x2="782.2222" y2="129.6" stroke="#16a34a" stroke-width="1.4222" />
+  <line x1="497.7778" y1="129.6" x2="782.2222" y2="129.6" stroke="#28a745" stroke-width="1.4222" />
   <text x="512" y="158.4" font-family="Arial" font-size="17.0667">- name: String</text>
   <text x="512" y="187.2" font-family="Arial" font-size="17.0667">- salary: double</text>
-  <rect x="71.1111" y="360" width="227.5556" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" />
+  <rect x="71.1111" y="360" width="227.5556" height="115.2" fill="#e1f5fe" stroke="#0277bd" stroke-width="2.8444" />
   <text x="184.8889" y="403.2" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">PayrollCalculator</text>
-  <line x1="71.1111" y1="417.6" x2="298.6667" y2="417.6" stroke="#0284c7" stroke-width="1.4222" />
+  <line x1="71.1111" y1="417.6" x2="298.6667" y2="417.6" stroke="#0277bd" stroke-width="1.4222" />
   <text x="85.3333" y="446.4" font-family="Arial" font-size="17.0667">+ calculatePay(Employee)</text>
-  <rect x="355.5556" y="360" width="227.5556" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" />
+  <rect x="355.5556" y="360" width="227.5556" height="115.2" fill="#e1f5fe" stroke="#0277bd" stroke-width="2.8444" />
   <text x="469.3333" y="403.2" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">EmployeeRepository</text>
-  <line x1="355.5556" y1="417.6" x2="583.1111" y2="417.6" stroke="#0284c7" stroke-width="1.4222" />
+  <line x1="355.5556" y1="417.6" x2="583.1111" y2="417.6" stroke="#0277bd" stroke-width="1.4222" />
   <text x="369.7778" y="446.4" font-family="Arial" font-size="17.0667">+ save(Employee)</text>
-  <rect x="640" y="360" width="227.5556" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" />
+  <rect x="640" y="360" width="227.5556" height="115.2" fill="#e1f5fe" stroke="#0277bd" stroke-width="2.8444" />
   <text x="753.7778" y="403.2" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">ReportGenerator</text>
-  <line x1="640" y1="417.6" x2="867.5556" y2="417.6" stroke="#0284c7" stroke-width="1.4222" />
+  <line x1="640" y1="417.6" x2="867.5556" y2="417.6" stroke="#0277bd" stroke-width="1.4222" />
   <text x="654.2222" y="446.4" font-family="Arial" font-size="17.0667">+ generateReport(Employee)</text>
-  <rect x="924.4444" y="360" width="256" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" />
+  <rect x="924.4444" y="360" width="256" height="115.2" fill="#e1f5fe" stroke="#0277bd" stroke-width="2.8444" />
   <text x="1052.4444" y="403.2" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">EmailService</text>
-  <line x1="924.4444" y1="417.6" x2="1180.4444" y2="417.6" stroke="#0284c7" stroke-width="1.4222" />
+  <line x1="924.4444" y1="417.6" x2="1180.4444" y2="417.6" stroke="#0277bd" stroke-width="1.4222" />
   <text x="938.6667" y="446.4" font-family="Arial" font-size="17.0667">+ sendEmail(String, String)</text>
-  <line x1="184.8889" y1="360" x2="568.8889" y2="216" stroke="#16a34a" stroke-width="1.4222" marker-end="url(#arrowhead)" />
-  <line x1="469.3333" y1="360" x2="611.5556" y2="216" stroke="#16a34a" stroke-width="1.4222" marker-end="url(#arrowhead)" />
-  <line x1="753.7778" y1="360" x2="668.4444" y2="216" stroke="#16a34a" stroke-width="1.4222" marker-end="url(#arrowhead)" />
+  <line x1="184.8889" y1="360" x2="568.8889" y2="216" stroke="#28a745" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <line x1="469.3333" y1="360" x2="611.5556" y2="216" stroke="#28a745" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <line x1="753.7778" y1="360" x2="668.4444" y2="216" stroke="#28a745" stroke-width="1.4222" marker-end="url(#arrow)" />
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="14.2222" markerHeight="14.4" refX="12.8" refY="4.32" orient="auto">
-      <polygon points="0,14.4 4.2667,0" fill="#16a34a" />
+      <polygon points="0,14.4 4.2667,0" fill="#28a745" />
     </marker>
   </defs>
-  <text x="640" y="576" text-anchor="middle" font-family="Arial" font-size="15.6444" fill="#16a34a">Single Responsibility: Each class has one job</text>
+  <text x="640" y="576" text-anchor="middle" font-family="Arial" font-size="15.6444" fill="#28a745">Single Responsibility: Each class has one job</text>
 </svg>

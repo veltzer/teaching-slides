@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="11.7209" refX="16" refY="5.8605" orient="auto">
       <ns0:polygon points="0,16.7442 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,8 +76,8 @@
   <ns0:rect x="119.3279" y="320" width="357.9837" height="62.439" rx="7.458" fill="#d4edda" stroke="#28a745" stroke-width="2.9832" />
   <ns0:text x="298.3198" y="348.0975" text-anchor="middle" font-size="17.8992" font-weight="bold" fill="#333">Version 3</ns0:text>
   <ns0:text x="298.3198" y="371.5121" text-anchor="middle" font-size="14.916" fill="#555">Created by T3</ns0:text>
-  <ns0:line x1="298.3198" y1="210.7317" x2="298.3198" y2="231.0244" stroke="#4a90e2" stroke-width="2.2374" marker-end="url(#arrowhead)" />
-  <ns0:line x1="298.3198" y1="296.5853" x2="298.3198" y2="316.878" stroke="#4a90e2" stroke-width="2.2374" marker-end="url(#arrowhead)" />
+  <ns0:line x1="298.3198" y1="210.7317" x2="298.3198" y2="231.0244" stroke="#4a90e2" stroke-width="2.2374" marker-end="url(#arrow)" />
+  <ns0:line x1="298.3198" y1="296.5853" x2="298.3198" y2="316.878" stroke="#4a90e2" stroke-width="2.2374" marker-end="url(#arrow)" />
   <ns0:rect x="671.2194" y="85.8536" width="447.4796" height="343.4146" rx="7.458" fill="none" stroke="#28a745" stroke-width="2.9832" stroke-dasharray="11.9328 5.9664" />
   <ns0:text x="894.9593" y="121.7561" text-anchor="middle" font-size="19.3908" font-weight="bold" fill="#28a745">Snapshot Readers</ns0:text>
   <ns0:rect x="715.9674" y="148.2927" width="357.9837" height="62.439" rx="7.458" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9832" />
@@ -29,11 +89,11 @@
   <ns0:rect x="715.9674" y="320" width="357.9837" height="62.439" rx="7.458" fill="#d4edda" stroke="#28a745" stroke-width="2.9832" />
   <ns0:text x="894.9593" y="348.0975" text-anchor="middle" font-size="17.8992" font-weight="bold" fill="#333">Transaction C</ns0:text>
   <ns0:text x="894.9593" y="371.5121" text-anchor="middle" font-size="14.916" fill="#555">Sees Version 3</ns0:text>
-  <ns0:line x1="477.3116" y1="179.5121" x2="712.9842" y2="179.5121" stroke="#4a90e2" stroke-width="2.2374" stroke-dasharray="7.458 4.4748" marker-end="url(#arrowhead)" />
+  <ns0:line x1="477.3116" y1="179.5121" x2="712.9842" y2="179.5121" stroke="#4a90e2" stroke-width="2.2374" stroke-dasharray="7.458 4.4748" marker-end="url(#arrow)" />
   <ns0:text x="596.6395" y="168.5853" text-anchor="middle" font-size="14.916" fill="#4a90e2">Snapshot</ns0:text>
-  <ns0:line x1="477.3116" y1="265.3659" x2="712.9842" y2="265.3659" stroke="#ffc107" stroke-width="2.2374" stroke-dasharray="7.458 4.4748" marker-end="url(#arrowhead)" />
-  <ns0:text x="596.6395" y="254.439" text-anchor="middle" font-size="14.916" fill="#996600">Snapshot</ns0:text>
-  <ns0:line x1="477.3116" y1="351.2195" x2="712.9842" y2="351.2195" stroke="#28a745" stroke-width="2.2374" stroke-dasharray="7.458 4.4748" marker-end="url(#arrowhead)" />
+  <ns0:line x1="477.3116" y1="265.3659" x2="712.9842" y2="265.3659" stroke="#ffc107" stroke-width="2.2374" stroke-dasharray="7.458 4.4748" marker-end="url(#arrow)" />
+  <ns0:text x="596.6395" y="254.439" text-anchor="middle" font-size="14.916" fill="#bf360c">Snapshot</ns0:text>
+  <ns0:line x1="477.3116" y1="351.2195" x2="712.9842" y2="351.2195" stroke="#28a745" stroke-width="2.2374" stroke-dasharray="7.458 4.4748" marker-end="url(#arrow)" />
   <ns0:text x="596.6395" y="340.2927" text-anchor="middle" font-size="14.916" fill="#28a745">Snapshot</ns0:text>
   <ns0:rect x="74.5799" y="483.9024" width="1044.1191" height="156.0976" rx="7.458" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4916" />
   <ns0:text x="596.6395" y="522.9267" text-anchor="middle" font-size="19.3908" font-weight="bold" fill="#333">How MVCC Works</ns0:text>

@@ -1,46 +1,96 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="731.4286" height="411.4286" fill="#1a1a2e" />
-  <ns0:path d="M 91.4286 308.5714 Q 137.1429 205.7143 228.5714 226.2857 Q 320 246.8571 365.7143 185.1429 Q 411.4286 123.4286 502.8571 144 Q 594.2857 164.5714 640 102.8571" fill="none" stroke="#ffd93d" stroke-width="7.3143" stroke-linecap="round" />
-  <ns0:path d="M 91.4286 329.1429 Q 137.1429 226.2857 228.5714 246.8571 Q 320 267.4286 365.7143 205.7143 Q 411.4286 144 502.8571 164.5714 Q 594.2857 185.1429 640 123.4286" fill="none" stroke="#53d8fb" stroke-width="7.3143" stroke-linecap="round" />
-  <ns0:circle cx="640" cy="102.8571" r="13.7143" fill="#ffd93d" />
+  <ns0:path d="M 91.4286 308.5714 Q 137.1429 205.7143 228.5714 226.2857 Q 320 246.8571 365.7143 185.1429 Q 411.4286 123.4286 502.8571 144 Q 594.2857 164.5714 640 102.8571" fill="none" stroke="#f9a825" stroke-width="7.3143" stroke-linecap="round" />
+  <ns0:path d="M 91.4286 329.1429 Q 137.1429 226.2857 228.5714 246.8571 Q 320 267.4286 365.7143 205.7143 Q 411.4286 144 502.8571 164.5714 Q 594.2857 185.1429 640 123.4286" fill="none" stroke="#90caf9" stroke-width="7.3143" stroke-linecap="round" />
+  <ns0:circle cx="640" cy="102.8571" r="13.7143" fill="#f9a825" />
   <ns0:circle cx="646.4" cy="97.7143" r="2.7429" fill="#1a1a2e" />
-  <ns0:text x="91.4286" y="102.8571" font-family="monospace" font-size="32.9143" fill="#e94560" font-weight="bold">@</ns0:text>
-  <ns0:rect x="164.5714" y="61.7143" width="100.5714" height="36" rx="4.5714" fill="#16213e" stroke="#00b894" stroke-width="1.3714" />
-  <ns0:text x="178.2857" y="85.3714" font-family="monospace" font-size="12.8" fill="#00b894">yield</ns0:text>
-  <ns0:rect x="292.5714" y="41.1429" width="109.7143" height="36" rx="4.5714" fill="#16213e" stroke="#53d8fb" stroke-width="1.3714" />
-  <ns0:text x="306.2857" y="64.8" font-family="monospace" font-size="12.8" fill="#53d8fb">async/await</ns0:text>
-  <ns0:rect x="438.8571" y="61.7143" width="118.8571" height="36" rx="4.5714" fill="#16213e" stroke="#e94560" stroke-width="1.3714" />
-  <ns0:text x="452.5714" y="85.3714" font-family="monospace" font-size="12.8" fill="#e94560">metaclass</ns0:text>
-  <ns0:line x1="137.1429" y1="360" x2="137.1429" y2="380.5714" stroke="#53d8fb" stroke-width="1.8286" />
-  <ns0:line x1="137.1429" y1="360" x2="182.8571" y2="349.7143" stroke="#53d8fb" stroke-width="1.8286" />
-  <ns0:line x1="137.1429" y1="360" x2="182.8571" y2="370.2857" stroke="#53d8fb" stroke-width="1.8286" />
-  <ns0:line x1="137.1429" y1="360" x2="182.8571" y2="390.8571" stroke="#53d8fb" stroke-width="1.8286" />
-  <ns0:circle cx="182.8571" cy="349.7143" r="3.6571" fill="#53d8fb" />
-  <ns0:circle cx="182.8571" cy="370.2857" r="3.6571" fill="#53d8fb" />
-  <ns0:circle cx="182.8571" cy="390.8571" r="3.6571" fill="#53d8fb" />
-  <ns0:text x="196.5714" y="375.4286" font-family="monospace" font-size="10.0571" fill="#53d8fb">threads</ns0:text>
-  <ns0:rect x="320" y="339.4286" width="128" height="41.1429" rx="4.5714" fill="#16213e" stroke="#ffd93d" stroke-width="1.3714" />
-  <ns0:text x="333.7143" y="360" font-family="monospace" font-size="10.0571" fill="#ffd93d">with open(f)</ns0:text>
-  <ns0:text x="347.4286" y="375.4286" font-family="monospace" font-size="10.0571" fill="#ffd93d">as fp:</ns0:text>
-  <ns0:rect x="502.8571" y="339.4286" width="164.5714" height="41.1429" rx="4.5714" fill="#16213e" stroke="#00b894" stroke-width="1.3714" />
-  <ns0:text x="516.5714" y="365.1429" font-family="monospace" font-size="10.9714" fill="#00b894">def f(x: int) -&gt; str</ns0:text>
+  <ns0:text x="91.4286" y="102.8571" font-family="monospace" font-size="32.9143" fill="#dc3545" font-weight="bold">@</ns0:text>
+  <ns0:rect x="164.5714" y="61.7143" width="100.5714" height="36" rx="4.5714" fill="#1a1a2e" stroke="#2ecc71" stroke-width="1.3714" />
+  <ns0:text x="178.2857" y="85.3714" font-family="monospace" font-size="12.8" fill="#2ecc71">yield</ns0:text>
+  <ns0:rect x="292.5714" y="41.1429" width="109.7143" height="36" rx="4.5714" fill="#1a1a2e" stroke="#90caf9" stroke-width="1.3714" />
+  <ns0:text x="306.2857" y="64.8" font-family="monospace" font-size="12.8" fill="#90caf9">async/await</ns0:text>
+  <ns0:rect x="438.8571" y="61.7143" width="118.8571" height="36" rx="4.5714" fill="#1a1a2e" stroke="#dc3545" stroke-width="1.3714" />
+  <ns0:text x="452.5714" y="85.3714" font-family="monospace" font-size="12.8" fill="#dc3545">metaclass</ns0:text>
+  <ns0:line x1="137.1429" y1="360" x2="137.1429" y2="380.5714" stroke="#90caf9" stroke-width="1.8286" />
+  <ns0:line x1="137.1429" y1="360" x2="182.8571" y2="349.7143" stroke="#90caf9" stroke-width="1.8286" />
+  <ns0:line x1="137.1429" y1="360" x2="182.8571" y2="370.2857" stroke="#90caf9" stroke-width="1.8286" />
+  <ns0:line x1="137.1429" y1="360" x2="182.8571" y2="390.8571" stroke="#90caf9" stroke-width="1.8286" />
+  <ns0:circle cx="182.8571" cy="349.7143" r="3.6571" fill="#90caf9" />
+  <ns0:circle cx="182.8571" cy="370.2857" r="3.6571" fill="#90caf9" />
+  <ns0:circle cx="182.8571" cy="390.8571" r="3.6571" fill="#90caf9" />
+  <ns0:text x="196.5714" y="375.4286" font-family="monospace" font-size="10.0571" fill="#90caf9">threads</ns0:text>
+  <ns0:rect x="320" y="339.4286" width="128" height="41.1429" rx="4.5714" fill="#1a1a2e" stroke="#f9a825" stroke-width="1.3714" />
+  <ns0:text x="333.7143" y="360" font-family="monospace" font-size="10.0571" fill="#f9a825">with open(f)</ns0:text>
+  <ns0:text x="347.4286" y="375.4286" font-family="monospace" font-size="10.0571" fill="#f9a825">as fp:</ns0:text>
+  <ns0:rect x="502.8571" y="339.4286" width="164.5714" height="41.1429" rx="4.5714" fill="#1a1a2e" stroke="#2ecc71" stroke-width="1.3714" />
+  <ns0:text x="516.5714" y="365.1429" font-family="monospace" font-size="10.9714" fill="#2ecc71">def f(x: int) -&gt; str</ns0:text>
 </ns0:svg>

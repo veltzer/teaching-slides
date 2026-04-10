@@ -1,25 +1,75 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f2f2f2" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="426.6667" y="17.7778" width="284.4444" height="80" fill="url(#grad-accent)" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="426.6667" y="17.7778" width="284.4444" height="80" fill="url(#grad-primary)" rx="10.6667" filter="url(#shadow)" />
   <ns0:text x="568.8889" y="64" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff" font-family="monospace">/</ns0:text>
   <ns0:rect x="26.6667" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
   <ns0:text x="102.2222" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/bin</ns0:text>
@@ -45,22 +95,22 @@
   <ns0:line x1="568.8889" y1="97.7778" x2="608.8889" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
   <ns0:line x1="568.8889" y1="97.7778" x2="777.7778" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
   <ns0:line x1="568.8889" y1="97.7778" x2="946.6667" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
-  <ns0:rect x="26.6667" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:rect x="26.6667" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#90caf9" stroke-width="1.3333" rx="7.1111" />
   <ns0:text x="102.2222" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/proc</ns0:text>
   <ns0:text x="102.2222" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Kernel info</ns0:text>
-  <ns0:rect x="195.5556" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:rect x="195.5556" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#90caf9" stroke-width="1.3333" rx="7.1111" />
   <ns0:text x="271.1111" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/sys</ns0:text>
   <ns0:text x="271.1111" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Devices</ns0:text>
-  <ns0:rect x="364.4444" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:rect x="364.4444" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#90caf9" stroke-width="1.3333" rx="7.1111" />
   <ns0:text x="440" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/dev</ns0:text>
   <ns0:text x="440" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Device files</ns0:text>
-  <ns0:rect x="533.3333" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:rect x="533.3333" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#90caf9" stroke-width="1.3333" rx="7.1111" />
   <ns0:text x="608.8889" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/boot</ns0:text>
   <ns0:text x="608.8889" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Boot files</ns0:text>
-  <ns0:rect x="702.2222" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:rect x="702.2222" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#90caf9" stroke-width="1.3333" rx="7.1111" />
   <ns0:text x="777.7778" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/lib</ns0:text>
   <ns0:text x="777.7778" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Libraries</ns0:text>
-  <ns0:rect x="871.1111" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:rect x="871.1111" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#90caf9" stroke-width="1.3333" rx="7.1111" />
   <ns0:text x="946.6667" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/opt</ns0:text>
   <ns0:text x="946.6667" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Optional pkgs</ns0:text>
 </ns0:svg>

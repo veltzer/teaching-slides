@@ -1,20 +1,80 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:rect x="116.3636" y="52.3636" width="698.1818" height="418.9091" fill="#f5f5f5" stroke="#333" stroke-width="2.0945" />
-  <ns0:rect x="174.5455" y="104.7273" width="232.7273" height="62.8364" fill="#ffcccc" stroke="#000" stroke-width="2.0945" rx="5.2364" />
+  <ns0:rect x="174.5455" y="104.7273" width="232.7273" height="62.8364" fill="#fff9c4dd2" stroke="#000" stroke-width="2.0945" rx="5.2364" />
   <ns0:text x="290.9091" y="141.3818" text-anchor="middle" font-size="13.6145" font-weight="bold">Kernel Recipe</ns0:text>
-  <ns0:rect x="523.6364" y="104.7273" width="232.7273" height="62.8364" fill="#ccffcc" stroke="#000" stroke-width="2.0945" rx="5.2364" />
+  <ns0:rect x="523.6364" y="104.7273" width="232.7273" height="62.8364" fill="#bbdefbfcc" stroke="#000" stroke-width="2.0945" rx="5.2364" />
   <ns0:text x="640" y="141.3818" text-anchor="middle" font-size="13.6145" font-weight="bold">Kernel Config</ns0:text>
-  <ns0:rect x="174.5455" y="209.4545" width="232.7273" height="62.8364" fill="#ccccff" stroke="#000" stroke-width="2.0945" rx="5.2364" />
+  <ns0:rect x="174.5455" y="209.4545" width="232.7273" height="62.8364" fill="#bbdefb" stroke="#000" stroke-width="2.0945" rx="5.2364" />
   <ns0:text x="290.9091" y="246.1091" text-anchor="middle" font-size="13.6145" font-weight="bold">Device Trees</ns0:text>
-  <ns0:rect x="523.6364" y="209.4545" width="232.7273" height="62.8364" fill="#ffeecc" stroke="#000" stroke-width="2.0945" rx="5.2364" />
+  <ns0:rect x="523.6364" y="209.4545" width="232.7273" height="62.8364" fill="#fff3cd" stroke="#000" stroke-width="2.0945" rx="5.2364" />
   <ns0:text x="640" y="246.1091" text-anchor="middle" font-size="13.6145" font-weight="bold">BSP Layer</ns0:text>
-  <ns0:rect x="290.9091" y="335.1273" width="349.0909" height="62.8364" fill="#ffffcc" stroke="#000" stroke-width="3.1418" rx="5.2364" />
+  <ns0:rect x="290.9091" y="335.1273" width="349.0909" height="62.8364" fill="#fff9c4" stroke="#000" stroke-width="3.1418" rx="5.2364" />
   <ns0:text x="465.4545" y="371.7818" text-anchor="middle" font-size="14.6618" font-weight="bold">Bootable Kernel Image</ns0:text>
   <ns0:path d="M 290.9091 167.5636 L 465.4545 335.1273" stroke="#333" stroke-width="2.0945" marker-end="url(#k1)" />
   <ns0:path d="M 640 167.5636 L 465.4545 335.1273" stroke="#333" stroke-width="2.0945" marker-end="url(#k1)" />
   <ns0:path d="M 290.9091 272.2909 L 407.2727 335.1273" stroke="#333" stroke-width="2.0945" marker-end="url(#k1)" />
   <ns0:path d="M 640 272.2909 L 523.6364 335.1273" stroke="#333" stroke-width="2.0945" marker-end="url(#k1)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="k1" markerWidth="16" markerHeight="14.4" refX="14.4" refY="4.32" orient="auto">
       <ns0:polygon points="0,14.4 4.8,0" fill="#333" />
     </ns0:marker>

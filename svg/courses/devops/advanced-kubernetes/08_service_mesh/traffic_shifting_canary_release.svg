@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="20" markerHeight="16.2581" refX="18" refY="8.129" orient="auto">
       <ns0:polygon points="0,23.2258 7,0" fill="#555" />
     </ns0:marker>
@@ -9,36 +69,36 @@
   </ns0:defs>
   <ns0:text x="38.5392" y="85.035" text-anchor="start" font-size="25.0505" fill="#333" font-weight="bold">Step 1: 100% v1</ns0:text>
   <ns0:text x="144.5221" y="129.7902" text-anchor="start" font-size="23.1235" fill="#1976d2">v1</ns0:text>
-  <ns0:rect x="192.6962" y="102.937" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="102.937" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:rect x="192.6962" y="102.937" width="578.0885" height="35.8042" rx="3.8539" fill="#1976d2" stroke="#1976d2" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="132.028" text-anchor="start" font-size="23.1235" fill="#1976d2">100%</ns0:text>
   <ns0:text x="144.5221" y="174.5455" text-anchor="start" font-size="23.1235" fill="#43a047">v2</ns0:text>
-  <ns0:rect x="192.6962" y="147.6923" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="147.6923" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="176.7832" text-anchor="start" font-size="23.1235" fill="#43a047">0%</ns0:text>
   <ns0:text x="38.5392" y="237.2027" text-anchor="start" font-size="25.0505" fill="#333">Step 2: 90/10 split</ns0:text>
   <ns0:text x="144.5221" y="281.9581" text-anchor="start" font-size="23.1235" fill="#1976d2">v1</ns0:text>
-  <ns0:rect x="192.6962" y="255.1049" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="255.1049" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:rect x="192.6962" y="255.1049" width="520.2797" height="35.8042" rx="3.8539" fill="#1976d2" stroke="#1976d2" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="284.1957" text-anchor="start" font-size="23.1235" fill="#1976d2">90%</ns0:text>
   <ns0:text x="144.5221" y="326.7133" text-anchor="start" font-size="23.1235" fill="#43a047">v2</ns0:text>
-  <ns0:rect x="192.6962" y="299.8601" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="299.8601" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:rect x="192.6962" y="299.8601" width="57.8089" height="35.8042" rx="3.8539" fill="#43a047" stroke="#43a047" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="328.9511" text-anchor="start" font-size="23.1235" fill="#43a047">10%</ns0:text>
   <ns0:text x="38.5392" y="389.3706" text-anchor="start" font-size="25.0505" fill="#333">Step 3: 50/50 split</ns0:text>
   <ns0:text x="144.5221" y="434.1258" text-anchor="start" font-size="23.1235" fill="#1976d2">v1</ns0:text>
-  <ns0:rect x="192.6962" y="407.2727" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="407.2727" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:rect x="192.6962" y="407.2727" width="289.0443" height="35.8042" rx="3.8539" fill="#1976d2" stroke="#1976d2" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="436.3636" text-anchor="start" font-size="23.1235" fill="#1976d2">50%</ns0:text>
   <ns0:text x="144.5221" y="478.8811" text-anchor="start" font-size="23.1235" fill="#43a047">v2</ns0:text>
-  <ns0:rect x="192.6962" y="452.028" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="452.028" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:rect x="192.6962" y="452.028" width="289.0443" height="35.8042" rx="3.8539" fill="#43a047" stroke="#43a047" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="481.1188" text-anchor="start" font-size="23.1235" fill="#43a047">50%</ns0:text>
   <ns0:text x="38.5392" y="541.5384" text-anchor="start" font-size="25.0505" fill="#333" font-weight="bold">Step 4: 100% v2</ns0:text>
   <ns0:text x="144.5221" y="586.2936" text-anchor="start" font-size="23.1235" fill="#1976d2">v1</ns0:text>
-  <ns0:rect x="192.6962" y="559.4406" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="559.4406" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="588.5314" text-anchor="start" font-size="23.1235" fill="#1976d2">0%</ns0:text>
   <ns0:text x="144.5221" y="631.0489" text-anchor="start" font-size="23.1235" fill="#43a047">v2</ns0:text>
-  <ns0:rect x="192.6962" y="604.1958" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bbb" stroke-width="2.8904" />
+  <ns0:rect x="192.6962" y="604.1958" width="578.0885" height="35.8042" rx="3.8539" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2.8904" />
   <ns0:rect x="192.6962" y="604.1958" width="578.0885" height="35.8042" rx="3.8539" fill="#43a047" stroke="#43a047" stroke-width="2.8904" />
   <ns0:text x="790.0543" y="633.2867" text-anchor="start" font-size="23.1235" fill="#43a047">100%</ns0:text>
 </ns0:svg>

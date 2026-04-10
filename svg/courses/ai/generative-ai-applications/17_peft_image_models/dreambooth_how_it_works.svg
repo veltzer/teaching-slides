@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
-      <ns0:polygon points="0,16 5.6,0" fill="#4a90e2" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="588.5057" y="36.7816" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.5402" font-weight="bold" fill="#333">DreamBooth: How It Works</ns0:text>
   <ns0:text x="588.5057" y="80.9195" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1264" font-weight="bold" fill="#4a90e2">Step 1: Provide 3-5 images of your subject</ns0:text>
@@ -19,7 +76,7 @@
   <ns0:text x="588.5057" y="191.2644" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1839" fill="#555">Your dog in different poses/lighting</ns0:text>
   <ns0:line x1="588.5057" y1="205.977" x2="588.5057" y2="235.4023" stroke="#4a90e2" stroke-width="2.2069" marker-end="url(#arrow)" />
   <ns0:rect x="264.8276" y="235.4023" width="647.3563" height="73.5632" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2069" />
-  <ns0:text x="588.5057" y="269.2414" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1264" font-weight="bold" fill="#856404">Step 2: Choose unique identifier: "sks dog"</ns0:text>
+  <ns0:text x="588.5057" y="269.2414" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1264" font-weight="bold" fill="#bf360c">Step 2: Choose unique identifier: "sks dog"</ns0:text>
   <ns0:text x="588.5057" y="294.2529" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1839" fill="#555">(rare token + class word)</ns0:text>
   <ns0:line x1="588.5057" y1="308.9655" x2="588.5057" y2="345.7471" stroke="#4a90e2" stroke-width="2.2069" marker-end="url(#arrow)" />
   <ns0:rect x="147.1264" y="345.7471" width="882.7586" height="117.7011" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.2069" />

@@ -1,17 +1,78 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="27.735" y="15.2381" width="1109.3978" height="624.7619" rx="6.0953" fill="#e8f5e9" stroke="#333333" stroke-width="2.2857" />
   <ns0:text x="582.4339" y="54.8572" text-anchor="middle" font-size="22.8572" font-weight="bold" fill="#222222">Dradis Web Interface</ns0:text>
-  <ns0:rect x="110.9398" y="76.1905" width="942.9882" height="118.8572" rx="6.0953" fill="#f0f4f8" stroke="#333333" stroke-width="2.2857" />
+  <ns0:rect x="110.9398" y="76.1905" width="942.9882" height="118.8572" rx="6.0953" fill="#f5f5f5" stroke="#333333" stroke-width="2.2857" />
   <ns0:text x="582.4339" y="106.6667" text-anchor="middle" font-size="19.8095" font-weight="bold" fill="#222222">Project Management</ns0:text>
-  <ns0:text x="582.4339" y="135.6191" text-anchor="middle" font-size="18.2857" fill="#444444">Nodes (evidence items) · Notes (findings)</ns0:text>
-  <ns0:text x="582.4339" y="163.0476" text-anchor="middle" font-size="18.2857" fill="#444444">Issues (vulnerabilities)</ns0:text>
-  <ns0:rect x="110.9398" y="210.2857" width="942.9882" height="97.5238" rx="6.0953" fill="#f0f4f8" stroke="#333333" stroke-width="2.2857" />
+  <ns0:text x="582.4339" y="135.6191" text-anchor="middle" font-size="18.2857" fill="#333333">Nodes (evidence items) · Notes (findings)</ns0:text>
+  <ns0:text x="582.4339" y="163.0476" text-anchor="middle" font-size="18.2857" fill="#333333">Issues (vulnerabilities)</ns0:text>
+  <ns0:rect x="110.9398" y="210.2857" width="942.9882" height="97.5238" rx="6.0953" fill="#f5f5f5" stroke="#333333" stroke-width="2.2857" />
   <ns0:text x="582.4339" y="240.7619" text-anchor="middle" font-size="19.8095" font-weight="bold" fill="#222222">Import Plugins</ns0:text>
-  <ns0:text x="582.4339" y="269.7143" text-anchor="middle" font-size="18.2857" fill="#444444">Nmap, Nessus, Burp · Custom importers</ns0:text>
-  <ns0:rect x="110.9398" y="323.0476" width="942.9882" height="97.5238" rx="6.0953" fill="#f0f4f8" stroke="#333333" stroke-width="2.2857" />
+  <ns0:text x="582.4339" y="269.7143" text-anchor="middle" font-size="18.2857" fill="#333333">Nmap, Nessus, Burp · Custom importers</ns0:text>
+  <ns0:rect x="110.9398" y="323.0476" width="942.9882" height="97.5238" rx="6.0953" fill="#f5f5f5" stroke="#333333" stroke-width="2.2857" />
   <ns0:text x="582.4339" y="353.5238" text-anchor="middle" font-size="19.8095" font-weight="bold" fill="#222222">Export Plugins</ns0:text>
-  <ns0:text x="582.4339" y="382.4762" text-anchor="middle" font-size="18.2857" fill="#444444">Word, PDF, HTML, CSV</ns0:text>
-  <ns0:rect x="110.9398" y="435.8095" width="942.9882" height="97.5238" rx="6.0953" fill="#f0f4f8" stroke="#333333" stroke-width="2.2857" />
+  <ns0:text x="582.4339" y="382.4762" text-anchor="middle" font-size="18.2857" fill="#333333">Word, PDF, HTML, CSV</ns0:text>
+  <ns0:rect x="110.9398" y="435.8095" width="942.9882" height="97.5238" rx="6.0953" fill="#f5f5f5" stroke="#333333" stroke-width="2.2857" />
   <ns0:text x="582.4339" y="466.2857" text-anchor="middle" font-size="19.8095" font-weight="bold" fill="#222222">Collaboration</ns0:text>
-  <ns0:text x="582.4339" y="495.2381" text-anchor="middle" font-size="18.2857" fill="#444444">Multi-user support · Activity log</ns0:text>
+  <ns0:text x="582.4339" y="495.2381" text-anchor="middle" font-size="18.2857" fill="#333333">Multi-user support · Activity log</ns0:text>
 </ns0:svg>

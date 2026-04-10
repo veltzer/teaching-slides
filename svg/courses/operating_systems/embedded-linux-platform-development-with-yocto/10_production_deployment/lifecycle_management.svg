@@ -1,9 +1,9 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="128" y="144" width="192" height="86.4" fill="#ccffcc" stroke="#000" stroke-width="2.56" />
+  <ns0:rect x="128" y="144" width="192" height="86.4" fill="#d4edda" stroke="#000" stroke-width="2.56" />
   <ns0:text x="224" y="194.4" text-anchor="middle" font-size="15.36">Active Support</ns0:text>
-  <ns0:rect x="384" y="144" width="192" height="86.4" fill="#ffffcc" stroke="#000" stroke-width="2.56" />
+  <ns0:rect x="384" y="144" width="192" height="86.4" fill="#fff9c4" stroke="#000" stroke-width="2.56" />
   <ns0:text x="480" y="194.4" text-anchor="middle" font-size="15.36">Maintenance</ns0:text>
-  <ns0:rect x="640" y="144" width="192" height="86.4" fill="#ffcccc" stroke="#000" stroke-width="2.56" />
+  <ns0:rect x="640" y="144" width="192" height="86.4" fill="#fff9c4dd2" stroke="#000" stroke-width="2.56" />
   <ns0:text x="736" y="194.4" text-anchor="middle" font-size="15.36">End of Life</ns0:text>
   <ns0:path d="M 320 187.2 L 384 187.2" stroke="#333" stroke-width="2.56" marker-end="url(#d4)" />
   <ns0:path d="M 576 187.2 L 640 187.2" stroke="#333" stroke-width="2.56" marker-end="url(#d4)" />
@@ -11,6 +11,66 @@
   <ns0:text x="480" y="122.4" text-anchor="middle" font-size="12.8">Years 3-5</ns0:text>
   <ns0:text x="736" y="122.4" text-anchor="middle" font-size="12.8">Year 5+</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="d4" markerWidth="16" markerHeight="18" refX="14.4" refY="5.4" orient="auto">
       <ns0:polygon points="0,18 4.8,0" fill="#333" />
     </ns0:marker>

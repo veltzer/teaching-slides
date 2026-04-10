@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrR" markerWidth="17.0667" markerHeight="13.2632" refX="17.0667" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.9733,0" fill="#4a90e2" />
     </ns0:marker>
@@ -7,25 +67,25 @@
   <ns0:text x="635.8169" y="56.4706" text-anchor="middle" font-size="27.1282" font-weight="bold" fill="#333">BPE Tokenization - Learning Merges</ns0:text>
   <ns0:rect x="67.8205" y="112.9412" width="169.5512" height="75.2941" rx="8.4775" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5433" />
   <ns0:text x="152.5961" y="160" text-anchor="middle" font-size="20.3461" font-weight="bold" fill="#333">Step 0</ns0:text>
-  <ns0:rect x="271.2819" y="112.9412" width="678.2047" height="75.2941" rx="8.4775" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6955" />
+  <ns0:rect x="271.2819" y="112.9412" width="678.2047" height="75.2941" rx="8.4775" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6955" />
   <ns0:text x="406.9228" y="154.3529" font-size="22.0417" fill="#333">'l'  'o'  'w'  'e'  'r'</ns0:text>
   <ns0:text x="779.9355" y="154.3529" font-size="18.6506" fill="#666">frequency analysis</ns0:text>
   <ns0:line x1="610.3842" y1="188.2353" x2="610.3842" y2="225.8823" stroke="#4a90e2" stroke-width="1.6955" />
   <ns0:rect x="67.8205" y="225.8823" width="169.5512" height="75.2941" rx="8.4775" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5433" />
   <ns0:text x="152.5961" y="272.9411" text-anchor="middle" font-size="20.3461" font-weight="bold" fill="#333">Step 1</ns0:text>
-  <ns0:rect x="271.2819" y="225.8823" width="678.2047" height="75.2941" rx="8.4775" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6955" />
+  <ns0:rect x="271.2819" y="225.8823" width="678.2047" height="75.2941" rx="8.4775" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6955" />
   <ns0:text x="406.9228" y="267.2941" font-size="22.0417" fill="#333">'lo'  'w'  'e'  'r'</ns0:text>
   <ns0:text x="779.9355" y="267.2941" font-size="18.6506" fill="#28a745">merge 'l'+'o'</ns0:text>
   <ns0:line x1="610.3842" y1="301.1764" x2="610.3842" y2="338.8235" stroke="#4a90e2" stroke-width="1.6955" />
   <ns0:rect x="67.8205" y="338.8235" width="169.5512" height="75.2941" rx="8.4775" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5433" />
   <ns0:text x="152.5961" y="385.8824" text-anchor="middle" font-size="20.3461" font-weight="bold" fill="#333">Step 2</ns0:text>
-  <ns0:rect x="271.2819" y="338.8235" width="678.2047" height="75.2941" rx="8.4775" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6955" />
+  <ns0:rect x="271.2819" y="338.8235" width="678.2047" height="75.2941" rx="8.4775" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6955" />
   <ns0:text x="406.9228" y="380.2352" font-size="22.0417" fill="#333">'low'  'e'  'r'</ns0:text>
   <ns0:text x="779.9355" y="380.2352" font-size="18.6506" fill="#28a745">merge 'lo'+'w'</ns0:text>
   <ns0:line x1="610.3842" y1="414.1176" x2="610.3842" y2="451.7646" stroke="#4a90e2" stroke-width="1.6955" />
   <ns0:rect x="67.8205" y="451.7646" width="169.5512" height="75.2941" rx="8.4775" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5433" />
   <ns0:text x="152.5961" y="498.8235" text-anchor="middle" font-size="20.3461" font-weight="bold" fill="#333">Step 3</ns0:text>
-  <ns0:rect x="271.2819" y="451.7646" width="678.2047" height="75.2941" rx="8.4775" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6955" />
+  <ns0:rect x="271.2819" y="451.7646" width="678.2047" height="75.2941" rx="8.4775" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.6955" />
   <ns0:text x="406.9228" y="493.1765" font-size="22.0417" fill="#333">'low'  'er'</ns0:text>
   <ns0:text x="779.9355" y="493.1765" font-size="18.6506" fill="#28a745">merge 'e'+'r'</ns0:text>
   <ns0:line x1="610.3842" y1="527.0587" x2="610.3842" y2="564.7059" stroke="#4a90e2" stroke-width="1.6955" />

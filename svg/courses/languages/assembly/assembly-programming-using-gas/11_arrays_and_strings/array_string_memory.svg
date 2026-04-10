@@ -60,6 +60,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   
+
+    <!-- Gradients -->
+
+
+
+
+
+
+    <!-- Drop shadow -->
+
+    <!-- Arrow markers -->
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -76,9 +88,9 @@
   <text x="320" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Integer Array Memory Layout</text>
 
   <!-- Array declaration -->
-  <rect x="30" y="75" width="580" height="36" rx="4" fill="#1e1e2e"/>
-  <text x="45" y="98" font-family="monospace" font-size="14" fill="#89b4fa">int_array: .long 10, 20, 30, 40, 50</text>
-  <text x="435" y="98" font-family="monospace" font-size="13" fill="#6c7086">; 5 x 4 bytes</text>
+  <rect x="30" y="75" width="580" height="36" rx="4" fill="#1a1a2e"/>
+  <text x="45" y="98" font-family="monospace" font-size="14" fill="#90caf9">int_array: .long 10, 20, 30, 40, 50</text>
+  <text x="435" y="98" font-family="monospace" font-size="13" fill="#777777">; 5 x 4 bytes</text>
 
   <!-- Memory cells for int array -->
   <!-- Cell labels -->
@@ -109,8 +121,8 @@
   <text x="30" y="207" font-family="Arial, sans-serif" font-size="11" fill="#888888">bytes:</text>
 
   <!-- Indexed addressing -->
-  <rect x="30" y="220" width="580" height="70" rx="6" fill="#f9fbe7" stroke="#afb42b" stroke-width="1.5"/>
-  <text x="45" y="244" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#827717">Indexed Addressing:</text>
+  <rect x="30" y="220" width="580" height="70" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="45" y="244" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#555555">Indexed Addressing:</text>
   <text x="45" y="267" font-family="monospace" font-size="14" fill="#333333">movl int_array(,%ecx,4), %eax</text>
   <text x="390" y="267" font-family="Arial, sans-serif" font-size="13" fill="#666666">; addr = int_array + ecx * 4</text>
   <text x="45" y="284" font-family="Arial, sans-serif" font-size="12" fill="#888888">base(offset, index, scale) -- scale = element size in bytes</text>
@@ -120,9 +132,9 @@
   <text x="320" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">String Memory and Null Termination</text>
 
   <!-- String declaration -->
-  <rect x="30" y="364" width="580" height="36" rx="4" fill="#1e1e2e"/>
-  <text x="45" y="387" font-family="monospace" font-size="14" fill="#89b4fa">str: .asciz "Hi!"</text>
-  <text x="220" y="387" font-family="monospace" font-size="13" fill="#6c7086">; null-terminated (same as .ascii "Hi!\0")</text>
+  <rect x="30" y="364" width="580" height="36" rx="4" fill="#1a1a2e"/>
+  <text x="45" y="387" font-family="monospace" font-size="14" fill="#90caf9">str: .asciz "Hi!"</text>
+  <text x="220" y="387" font-family="monospace" font-size="13" fill="#777777">; null-terminated (same as .ascii "Hi!\0")</text>
 
   <!-- String memory cells: H i ! \0 -->
   <rect x="30" y="410" width="80" height="50" rx="4" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>
@@ -178,11 +190,11 @@
   <text x="675" y="438" font-family="Arial, sans-serif" font-size="12" fill="#666666">Scale: 1 (byte), 2 (word), 4 (dword), 8 (qword)</text>
 
   <!-- Loop pattern -->
-  <rect x="660" y="462" width="570" height="130" rx="6" fill="#1e1e2e" filter="url(#shadow)"/>
-  <text x="675" y="486" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#cdd6f4">Array traversal loop:</text>
-  <text x="675" y="508" font-family="monospace" font-size="13" fill="#cdd6f4">  xorl %ecx, %ecx         <tspan fill="#6c7086">; index = 0</tspan></text>
-  <text x="675" y="528" font-family="monospace" font-size="13" fill="#f38ba8">loop:</text>
-  <text x="675" y="548" font-family="monospace" font-size="13" fill="#cdd6f4">  movl arr(,%ecx,4), %eax</text>
-  <text x="675" y="568" font-family="monospace" font-size="13" fill="#cdd6f4">  incl %ecx</text>
-  <text x="675" y="583" font-family="monospace" font-size="13" fill="#cdd6f4">  cmpl $5, %ecx  <tspan fill="#6c7086">; 5 elements</tspan></text>
+  <rect x="660" y="462" width="570" height="130" rx="6" fill="#1a1a2e" filter="url(#shadow)"/>
+  <text x="675" y="486" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#bbdefb">Array traversal loop:</text>
+  <text x="675" y="508" font-family="monospace" font-size="13" fill="#bbdefb">  xorl %ecx, %ecx         <tspan fill="#777777">; index = 0</tspan></text>
+  <text x="675" y="528" font-family="monospace" font-size="13" fill="#ce93d8">loop:</text>
+  <text x="675" y="548" font-family="monospace" font-size="13" fill="#bbdefb">  movl arr(,%ecx,4), %eax</text>
+  <text x="675" y="568" font-family="monospace" font-size="13" fill="#bbdefb">  incl %ecx</text>
+  <text x="675" y="583" font-family="monospace" font-size="13" fill="#bbdefb">  cmpl $5, %ecx  <tspan fill="#777777">; 5 elements</tspan></text>
 </svg>

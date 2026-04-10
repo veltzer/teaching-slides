@@ -1,8 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-    <ns0:marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 5.6,0" fill="#333" />
-    </ns0:marker>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
   </ns0:defs>
   <ns0:text x="615.015" y="51.8919" text-anchor="middle" font-family="Arial" font-size="27.6757" font-weight="bold" fill="#1a237e">Graph Data Formats</ns0:text>
   <ns0:rect x="46.1261" y="95.1351" width="338.2583" height="259.4595" rx="12.3003" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.0751" />
@@ -35,8 +92,8 @@
   <ns0:text x="215.2553" y="532.7568" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">edges.parquet</ns0:text>
   <ns0:text x="215.2553" y="570.8108" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#2e7d32">Best for Spark!</ns0:text>
   <ns0:text x="215.2553" y="601.9459" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Compressed, fast reads</ns0:text>
-  <ns0:rect x="445.8859" y="415.1351" width="338.2583" height="224.8649" rx="12.3003" fill="#e0f2f1" stroke="#00695c" stroke-width="3.0751" />
-  <ns0:text x="615.015" y="458.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#00695c">CSV / TSV</ns0:text>
+  <ns0:rect x="445.8859" y="415.1351" width="338.2583" height="224.8649" rx="12.3003" fill="#e8f4f8" stroke="#2e7d32" stroke-width="3.0751" />
+  <ns0:text x="615.015" y="458.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#2e7d32">CSV / TSV</ns0:text>
   <ns0:text x="615.015" y="501.6216" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Simple text format</ns0:text>
   <ns0:text x="615.015" y="532.7568" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Easy to produce/consume</ns0:text>
   <ns0:text x="615.015" y="563.8919" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">No schema enforcement</ns0:text>

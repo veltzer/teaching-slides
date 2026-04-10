@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="14.4" refX="16" refY="7.2" orient="auto">
       <ns0:polygon points="0,20.5714 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -24,11 +84,11 @@
   <ns0:text x="570.9804" y="611.7647" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1046">Increase: 25%, 50%, 100%</ns0:text>
   <ns0:rect x="907.7124" y="564.7059" width="190.3268" height="75.2941" rx="7.3203" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9281" />
   <ns0:text x="1002.8758" y="611.7647" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5686">Rollback</ns0:text>
-  <ns0:line x1="497.7778" y1="122.3529" x2="307.451" y2="222.1177" stroke="#4a90e2" stroke-width="2.9281" marker-end="url(#arrowhead)" />
-  <ns0:line x1="614.9019" y1="122.3529" x2="805.2287" y2="222.1177" stroke="#4a90e2" stroke-width="2.9281" marker-end="url(#arrowhead)" />
-  <ns0:line x1="849.1503" y1="320" x2="797.9085" y2="410.3529" stroke="#4a90e2" stroke-width="2.9281" marker-end="url(#arrowhead)" />
-  <ns0:line x1="717.3856" y1="498.8235" x2="600.2614" y2="560.9412" stroke="#28a745" stroke-width="2.9281" marker-end="url(#arrowgreen)" />
+  <ns0:line x1="497.7778" y1="122.3529" x2="307.451" y2="222.1177" stroke="#4a90e2" stroke-width="2.9281" marker-end="url(#arrow)" />
+  <ns0:line x1="614.9019" y1="122.3529" x2="805.2287" y2="222.1177" stroke="#4a90e2" stroke-width="2.9281" marker-end="url(#arrow)" />
+  <ns0:line x1="849.1503" y1="320" x2="797.9085" y2="410.3529" stroke="#4a90e2" stroke-width="2.9281" marker-end="url(#arrow)" />
+  <ns0:line x1="717.3856" y1="498.8235" x2="600.2614" y2="560.9412" stroke="#28a745" stroke-width="2.9281" marker-end="url(#arrow-ok)" />
   <ns0:text x="636.8627" y="527.0588" font-family="Arial, sans-serif" font-size="14.6405" fill="#28a745">Healthy</ns0:text>
-  <ns0:line x1="834.5098" y1="498.8235" x2="973.5947" y2="560.9412" stroke="#dc3545" stroke-width="2.9281" marker-end="url(#arrowred)" />
+  <ns0:line x1="834.5098" y1="498.8235" x2="973.5947" y2="560.9412" stroke="#dc3545" stroke-width="2.9281" marker-end="url(#arrow-danger)" />
   <ns0:text x="936.9934" y="527.0588" font-family="Arial, sans-serif" font-size="14.6405" fill="#dc3545">Unhealthy</ns0:text>
 </ns0:svg>

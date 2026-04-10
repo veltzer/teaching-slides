@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="18.2857" markerHeight="14.4" refX="18.2857" refY="7.2" orient="auto">
       <polygon points="0,20.5714 6.4,0" fill="#4a90e2" />
     </marker>
@@ -7,21 +67,21 @@
   <text x="640" y="51.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">Active-Active Architecture</text>
   <rect x="475.4286" y="92.5714" width="329.1429" height="92.5714" rx="9.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6571" />
   <text x="640" y="150.1714" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.7714" font-weight="bold">Load Balancer</text>
-  <line x1="548.5714" y1="185.1429" x2="237.7143" y2="288" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowhead)" />
-  <line x1="640" y1="185.1429" x2="640" y2="288" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowhead)" />
-  <line x1="731.4286" y1="185.1429" x2="1042.2857" y2="288" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowhead)" />
+  <line x1="548.5714" y1="185.1429" x2="237.7143" y2="288" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="640" y1="185.1429" x2="640" y2="288" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="731.4286" y1="185.1429" x2="1042.2857" y2="288" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="91.4286" y="298.2857" width="292.5714" height="92.5714" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="3.6571" />
   <text x="237.7143" y="355.8857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold">Node 1 - Active</text>
   <rect x="493.7143" y="298.2857" width="292.5714" height="92.5714" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="3.6571" />
   <text x="640" y="355.8857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold">Node 2 - Active</text>
   <rect x="896" y="298.2857" width="292.5714" height="92.5714" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="3.6571" />
   <text x="1042.2857" y="355.8857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold">Node 3 - Active</text>
-  <line x1="237.7143" y1="390.8571" x2="548.5714" y2="514.2857" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowhead)" />
-  <line x1="640" y1="390.8571" x2="621.7143" y2="514.2857" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowhead)" />
-  <line x1="1042.2857" y1="390.8571" x2="694.8571" y2="514.2857" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowhead)" />
+  <line x1="237.7143" y1="390.8571" x2="548.5714" y2="514.2857" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="640" y1="390.8571" x2="621.7143" y2="514.2857" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="1042.2857" y1="390.8571" x2="694.8571" y2="514.2857" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrow)" />
   <ellipse cx="621.7143" cy="565.7143" rx="128" ry="45.7143" fill="#fff3cd" stroke="#ffc107" stroke-width="3.6571" />
   <text x="621.7143" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.1143" font-weight="bold">DB Primary</text>
-  <line x1="749.7143" y1="565.7143" x2="914.2857" y2="565.7143" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#arrowhead)" />
+  <line x1="749.7143" y1="565.7143" x2="914.2857" y2="565.7143" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#arrow)" />
   <text x="832" y="551.3143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2857" fill="#dc3545">Replication</text>
   <ellipse cx="1042.2857" cy="565.7143" rx="118.8571" ry="45.7143" fill="#f8d7da" stroke="#dc3545" stroke-width="3.6571" />
   <text x="1042.2857" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.1143" font-weight="bold">DB Replica</text>

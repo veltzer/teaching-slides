@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrow2" markerWidth="18.2857" markerHeight="20.16" refX="18.2857" refY="10.08" orient="auto">
       <polygon points="0,28.8 6.4,0" fill="#333" />
     </marker>
@@ -7,19 +67,19 @@
   <rect x="36.5714" y="230.4" width="201.1429" height="144" fill="#fff9c4" stroke="#f9a825" stroke-width="3.6571" rx="9.1429" />
   <text x="137.1429" y="288" text-anchor="middle" font-size="21.9429" font-weight="bold">Write</text>
   <text x="137.1429" y="339.84" text-anchor="middle" font-size="20.1143">.tf files</text>
-  <line x1="237.7143" y1="302.4" x2="310.8571" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
+  <line x1="237.7143" y1="302.4" x2="310.8571" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="310.8571" y="230.4" width="201.1429" height="144" fill="#e1bee7" stroke="#7b1fa2" stroke-width="3.6571" rx="9.1429" />
   <text x="411.4286" y="288" text-anchor="middle" font-size="21.9429" font-weight="bold">Init</text>
   <text x="411.4286" y="339.84" text-anchor="middle" font-size="20.1143">providers</text>
-  <line x1="512" y1="302.4" x2="585.1429" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
+  <line x1="512" y1="302.4" x2="585.1429" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="585.1429" y="230.4" width="201.1429" height="144" fill="#bbdefb" stroke="#1565c0" stroke-width="3.6571" rx="9.1429" />
   <text x="685.7143" y="288" text-anchor="middle" font-size="21.9429" font-weight="bold">Plan</text>
   <text x="685.7143" y="339.84" text-anchor="middle" font-size="20.1143">diff state</text>
-  <line x1="786.2857" y1="302.4" x2="859.4286" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
-  <rect x="859.4286" y="230.4" width="201.1429" height="144" fill="#ffccbc" stroke="#d84315" stroke-width="3.6571" rx="9.1429" />
+  <line x1="786.2857" y1="302.4" x2="859.4286" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <rect x="859.4286" y="230.4" width="201.1429" height="144" fill="#ffcdd2" stroke="#e65100" stroke-width="3.6571" rx="9.1429" />
   <text x="960" y="288" text-anchor="middle" font-size="21.9429" font-weight="bold">Apply</text>
   <text x="960" y="339.84" text-anchor="middle" font-size="20.1143">execute</text>
-  <line x1="1060.5714" y1="302.4" x2="1133.7143" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow2)" />
+  <line x1="1060.5714" y1="302.4" x2="1133.7143" y2="302.4" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
   <rect x="1133.7143" y="230.4" width="109.7143" height="144" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.6571" rx="9.1429" />
   <text x="1188.5714" y="316.8" text-anchor="middle" font-size="21.9429" font-weight="bold">Done</text>
   <text x="685.7143" y="518.4" text-anchor="middle" font-size="23.7714" fill="#555">State file updated after successful apply</text>

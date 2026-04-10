@@ -2,6 +2,66 @@
   <ns0:rect x="47.0588" y="176.4706" width="75.2941" height="35.2941" rx="5.6471" fill="#4CAF50" stroke="#2E7D32" stroke-width="1.4118" />
   <ns0:text x="84.7059" y="197.6471" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Request</ns0:text>
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowCache" markerWidth="16" markerHeight="8.4" refX="16" refY="4.2" orient="auto">
       <ns0:polygon points="0,12 5.6,0" fill="#666" />
     </ns0:marker>
@@ -27,6 +87,6 @@
   <ns0:text x="592.9412" y="112.9412" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Update Cache</ns0:text>
   <ns0:line x1="592.9412" y1="211.7647" x2="592.9412" y2="261.1765" stroke="#666" stroke-width="1.4118" marker-end="url(#arrowCache)" />
   <ns0:text x="611.7647" y="236.4706" font-family="Arial, sans-serif" font-size="10" fill="#F44336">No</ns0:text>
-  <ns0:rect x="536.4706" y="268.2353" width="112.9412" height="35.2941" rx="5.6471" fill="#795548" stroke="#4E342E" stroke-width="1.4118" />
+  <ns0:rect x="536.4706" y="268.2353" width="112.9412" height="35.2941" rx="5.6471" fill="#555555" stroke="#333333" stroke-width="1.4118" />
   <ns0:text x="592.9412" y="289.4118" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Use Stale Cache</ns0:text>
 </ns0:svg>

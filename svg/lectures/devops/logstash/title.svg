@@ -1,32 +1,93 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:rect x="85.3333" y="208" width="142.2222" height="64" rx="8.5333" fill="#0f3460" stroke="#e94560" stroke-width="2.8444" />
-  <ns0:text x="156.4444" y="248" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#e94560">logs</ns0:text>
-  <ns0:rect x="85.3333" y="296" width="142.2222" height="64" rx="8.5333" fill="#0f3460" stroke="#e94560" stroke-width="2.8444" />
-  <ns0:text x="156.4444" y="336" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#e94560">metrics</ns0:text>
-  <ns0:rect x="85.3333" y="384" width="142.2222" height="64" rx="8.5333" fill="#0f3460" stroke="#e94560" stroke-width="2.8444" />
-  <ns0:text x="156.4444" y="424" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#e94560">events</ns0:text>
-  <ns0:line x1="241.7778" y1="240" x2="369.7778" y2="320" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:line x1="241.7778" y1="328" x2="369.7778" y2="320" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:line x1="241.7778" y1="416" x2="369.7778" y2="320" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:rect x="369.7778" y="256" width="170.6667" height="128" rx="14.2222" fill="#16c79a" opacity="0.2" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:text x="455.1111" y="312" text-anchor="middle" font-family="sans-serif" font-size="19.9111" font-weight="bold" fill="#16c79a">INPUT</ns0:text>
-  <ns0:text x="455.1111" y="344" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#16c79a">collect</ns0:text>
-  <ns0:line x1="554.6667" y1="320" x2="597.3333" y2="320" stroke="#f5a623" stroke-width="4.2667" marker-end="url(#arrow)" />
-  <ns0:rect x="597.3333" y="240" width="170.6667" height="160" rx="14.2222" fill="#f5a623" opacity="0.15" stroke="#f5a623" stroke-width="2.8444" />
-  <ns0:text x="682.6667" y="304" text-anchor="middle" font-family="sans-serif" font-size="19.9111" font-weight="bold" fill="#f5a623">FILTER</ns0:text>
-  <ns0:text x="682.6667" y="336" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#f5a623">grok | mutate</ns0:text>
-  <ns0:text x="682.6667" y="364.8" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#f5a623">date | geoip</ns0:text>
-  <ns0:line x1="782.2222" y1="320" x2="824.8889" y2="320" stroke="#e94560" stroke-width="4.2667" />
-  <ns0:rect x="824.8889" y="256" width="170.6667" height="128" rx="14.2222" fill="#e94560" opacity="0.15" stroke="#e94560" stroke-width="2.8444" />
-  <ns0:text x="910.2222" y="312" text-anchor="middle" font-family="sans-serif" font-size="19.9111" font-weight="bold" fill="#e94560">OUTPUT</ns0:text>
-  <ns0:text x="910.2222" y="344" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#e94560">elasticsearch</ns0:text>
-  <ns0:line x1="1009.7778" y1="304" x2="1080.8889" y2="272" stroke="#e94560" stroke-width="2.1333" />
-  <ns0:line x1="1009.7778" y1="320" x2="1080.8889" y2="320" stroke="#e94560" stroke-width="2.1333" />
-  <ns0:line x1="1009.7778" y1="336" x2="1080.8889" y2="368" stroke="#e94560" stroke-width="2.1333" />
-  <ns0:circle cx="1095.1111" cy="272" r="11.3778" fill="#e94560" opacity="0.5" />
-  <ns0:circle cx="1095.1111" cy="320" r="11.3778" fill="#e94560" opacity="0.5" />
-  <ns0:circle cx="1095.1111" cy="368" r="11.3778" fill="#e94560" opacity="0.5" />
+  <ns0:rect x="85.3333" y="208" width="142.2222" height="64" rx="8.5333" fill="#1a237e" stroke="#dc3545" stroke-width="2.8444" />
+  <ns0:text x="156.4444" y="248" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#dc3545">logs</ns0:text>
+  <ns0:rect x="85.3333" y="296" width="142.2222" height="64" rx="8.5333" fill="#1a237e" stroke="#dc3545" stroke-width="2.8444" />
+  <ns0:text x="156.4444" y="336" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#dc3545">metrics</ns0:text>
+  <ns0:rect x="85.3333" y="384" width="142.2222" height="64" rx="8.5333" fill="#1a237e" stroke="#dc3545" stroke-width="2.8444" />
+  <ns0:text x="156.4444" y="424" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#dc3545">events</ns0:text>
+  <ns0:line x1="241.7778" y1="240" x2="369.7778" y2="320" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:line x1="241.7778" y1="328" x2="369.7778" y2="320" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:line x1="241.7778" y1="416" x2="369.7778" y2="320" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:rect x="369.7778" y="256" width="170.6667" height="128" rx="14.2222" fill="#2ecc71" opacity="0.2" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:text x="455.1111" y="312" text-anchor="middle" font-family="sans-serif" font-size="19.9111" font-weight="bold" fill="#2ecc71">INPUT</ns0:text>
+  <ns0:text x="455.1111" y="344" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#2ecc71">collect</ns0:text>
+  <ns0:line x1="554.6667" y1="320" x2="597.3333" y2="320" stroke="#f9a825" stroke-width="4.2667" marker-end="url(#arrow)" />
+  <ns0:rect x="597.3333" y="240" width="170.6667" height="160" rx="14.2222" fill="#f9a825" opacity="0.15" stroke="#f9a825" stroke-width="2.8444" />
+  <ns0:text x="682.6667" y="304" text-anchor="middle" font-family="sans-serif" font-size="19.9111" font-weight="bold" fill="#f9a825">FILTER</ns0:text>
+  <ns0:text x="682.6667" y="336" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#f9a825">grok | mutate</ns0:text>
+  <ns0:text x="682.6667" y="364.8" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#f9a825">date | geoip</ns0:text>
+  <ns0:line x1="782.2222" y1="320" x2="824.8889" y2="320" stroke="#dc3545" stroke-width="4.2667" />
+  <ns0:rect x="824.8889" y="256" width="170.6667" height="128" rx="14.2222" fill="#dc3545" opacity="0.15" stroke="#dc3545" stroke-width="2.8444" />
+  <ns0:text x="910.2222" y="312" text-anchor="middle" font-family="sans-serif" font-size="19.9111" font-weight="bold" fill="#dc3545">OUTPUT</ns0:text>
+  <ns0:text x="910.2222" y="344" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#dc3545">elasticsearch</ns0:text>
+  <ns0:line x1="1009.7778" y1="304" x2="1080.8889" y2="272" stroke="#dc3545" stroke-width="2.1333" />
+  <ns0:line x1="1009.7778" y1="320" x2="1080.8889" y2="320" stroke="#dc3545" stroke-width="2.1333" />
+  <ns0:line x1="1009.7778" y1="336" x2="1080.8889" y2="368" stroke="#dc3545" stroke-width="2.1333" />
+  <ns0:circle cx="1095.1111" cy="272" r="11.3778" fill="#dc3545" opacity="0.5" />
+  <ns0:circle cx="1095.1111" cy="320" r="11.3778" fill="#dc3545" opacity="0.5" />
+  <ns0:circle cx="1095.1111" cy="368" r="11.3778" fill="#dc3545" opacity="0.5" />
   <ns0:text x="568.8889" y="88" text-anchor="middle" font-family="sans-serif" font-size="42.6667" font-weight="bold" fill="#eee">Logstash</ns0:text>
   <ns0:text x="568.8889" y="136" text-anchor="middle" font-family="sans-serif" font-size="22.7556" fill="#888">Data Processing Pipeline</ns0:text>
   <ns0:text x="568.8889" y="592" text-anchor="middle" font-family="monospace" font-size="18.4889" fill="#666">input | filter | output</ns0:text>

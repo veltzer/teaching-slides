@@ -1,32 +1,92 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:#1a1a2e">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr" markerWidth="45.511" markerHeight="252" refX="40.96" refY="126" orient="auto">
-      <ns0:polygon points="0,360 15.929,0" fill="#e94560" />
+      <ns0:polygon points="0,360 15.929,0" fill="#dc3545" />
     </ns0:marker>
   </ns0:defs>
   <ns0:text x="82.9832" y="62.359" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Building a Prompt Evaluation Loop</ns0:text>
-  <ns0:rect x="4.1492" y="123.0769" width="34.2306" height="147.6923" rx="2.0746" fill="#16213e" stroke="#0f3460" stroke-width="0.4149" />
+  <ns0:rect x="4.1492" y="123.0769" width="34.2306" height="147.6923" rx="2.0746" fill="#1a1a2e" stroke="#1a237e" stroke-width="0.4149" />
   <ns0:text x="21.1607" y="177.2308" text-anchor="middle" fill="#90CAF9" font-size="10" font-weight="bold">Write Prompt</ns0:text>
   <ns0:text x="21.1607" y="213.3333" text-anchor="middle" fill="#e0e0e0" font-size="10">draft template</ns0:text>
   <ns0:text x="21.1607" y="249.4359" text-anchor="middle" fill="#666" font-size="10">version in git</ns0:text>
-  <ns0:line x1="38.3797" y1="196.9231" x2="44.6035" y2="196.9231" stroke="#e94560" stroke-width="0.4149" marker-end="url(#arr)" />
-  <ns0:rect x="44.6035" y="123.0769" width="34.2306" height="147.6923" rx="2.0746" fill="#16213e" stroke="#533483" stroke-width="0.4149" />
+  <ns0:line x1="38.3797" y1="196.9231" x2="44.6035" y2="196.9231" stroke="#dc3545" stroke-width="0.4149" marker-end="url(#arr)" />
+  <ns0:rect x="44.6035" y="123.0769" width="34.2306" height="147.6923" rx="2.0746" fill="#1a1a2e" stroke="#4a148c" stroke-width="0.4149" />
   <ns0:text x="61.615" y="177.2308" text-anchor="middle" fill="#CE93D8" font-size="10" font-weight="bold">Run Test Suite</ns0:text>
   <ns0:text x="61.615" y="213.3333" text-anchor="middle" fill="#e0e0e0" font-size="10">20-50 test cases</ns0:text>
   <ns0:text x="61.615" y="249.4359" text-anchor="middle" fill="#666" font-size="10">representative inputs</ns0:text>
-  <ns0:line x1="78.8341" y1="196.9231" x2="85.0578" y2="196.9231" stroke="#e94560" stroke-width="0.4149" marker-end="url(#arr)" />
-  <ns0:rect x="85.0578" y="123.0769" width="34.2306" height="147.6923" rx="2.0746" fill="#16213e" stroke="#2E7D32" stroke-width="0.4149" />
-  <ns0:text x="102.0694" y="177.2308" text-anchor="middle" fill="#80CBC4" font-size="10" font-weight="bold">Score Results</ns0:text>
+  <ns0:line x1="78.8341" y1="196.9231" x2="85.0578" y2="196.9231" stroke="#dc3545" stroke-width="0.4149" marker-end="url(#arr)" />
+  <ns0:rect x="85.0578" y="123.0769" width="34.2306" height="147.6923" rx="2.0746" fill="#1a1a2e" stroke="#2E7D32" stroke-width="0.4149" />
+  <ns0:text x="102.0694" y="177.2308" text-anchor="middle" fill="#a5d6a7" font-size="10" font-weight="bold">Score Results</ns0:text>
   <ns0:text x="102.0694" y="213.3333" text-anchor="middle" fill="#e0e0e0" font-size="10">LLM-as-judge</ns0:text>
   <ns0:text x="102.0694" y="249.4359" text-anchor="middle" fill="#666" font-size="10">or exact match</ns0:text>
-  <ns0:line x1="119.2884" y1="196.9231" x2="125.5121" y2="196.9231" stroke="#e94560" stroke-width="0.4149" marker-end="url(#arr)" />
-  <ns0:rect x="125.5121" y="123.0769" width="36.3052" height="147.6923" rx="2.0746" fill="#16213e" stroke="#e94560" stroke-width="0.4149" />
-  <ns0:text x="143.561" y="177.2308" text-anchor="middle" fill="#EF9A9A" font-size="10" font-weight="bold">Refine Prompt</ns0:text>
+  <ns0:line x1="119.2884" y1="196.9231" x2="125.5121" y2="196.9231" stroke="#dc3545" stroke-width="0.4149" marker-end="url(#arr)" />
+  <ns0:rect x="125.5121" y="123.0769" width="36.3052" height="147.6923" rx="2.0746" fill="#1a1a2e" stroke="#dc3545" stroke-width="0.4149" />
+  <ns0:text x="143.561" y="177.2308" text-anchor="middle" fill="#ffcc80" font-size="10" font-weight="bold">Refine Prompt</ns0:text>
   <ns0:text x="143.561" y="213.3333" text-anchor="middle" fill="#e0e0e0" font-size="10">fix failures</ns0:text>
   <ns0:text x="143.561" y="249.4359" text-anchor="middle" fill="#666" font-size="10">iterate</ns0:text>
-  <ns0:path d="M 143.561 270.7692 Q 143.561 328.2051 82.9832 328.2051 Q 20.7458 328.2051 20.7458 270.7692" fill="none" stroke="#e94560" stroke-width="0.4149" stroke-dasharray="1.2447 0.6224" marker-end="url(#arr)" />
-  <ns0:text x="82.9832" y="361.0256" text-anchor="middle" fill="#EF9A9A" font-size="10">iterate until quality threshold met</ns0:text>
-  <ns0:rect x="4.1492" y="402.0513" width="157.6681" height="237.9487" rx="2.0746" fill="#0d1b2a" stroke="#F9A825" stroke-width="0.3112" />
+  <ns0:path d="M 143.561 270.7692 Q 143.561 328.2051 82.9832 328.2051 Q 20.7458 328.2051 20.7458 270.7692" fill="none" stroke="#dc3545" stroke-width="0.4149" stroke-dasharray="1.2447 0.6224" marker-end="url(#arr)" />
+  <ns0:text x="82.9832" y="361.0256" text-anchor="middle" fill="#ffcc80" font-size="10">iterate until quality threshold met</ns0:text>
+  <ns0:rect x="4.1492" y="402.0513" width="157.6681" height="237.9487" rx="2.0746" fill="#1a1a2e" stroke="#F9A825" stroke-width="0.3112" />
   <ns0:text x="82.9832" y="451.2821" text-anchor="middle" fill="#F9A825" font-size="10" font-weight="bold">Prompt Evaluation Best Practices</ns0:text>
   <ns0:text x="8.2983" y="495.5897" fill="#E0E0E0" font-size="10">▶ Build a test set of 20-50 representative inputs with expected outputs</ns0:text>
   <ns0:text x="8.2983" y="533.3333" fill="#E0E0E0" font-size="10">▶ Track prompt versions in git alongside their evaluation scores</ns0:text>

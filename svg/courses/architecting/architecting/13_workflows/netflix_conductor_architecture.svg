@@ -1,23 +1,83 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="17.0667" markerHeight="13.2632" refX="15.36" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.9733,0" fill="#666" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect x="32.9413" y="256" width="197.6483" height="73.1429" rx="8.2353" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2941" />
   <ns0:text x="131.7655" y="301.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.4119" font-weight="bold">Client API</ns0:text>
-  <ns0:line x1="230.5896" y1="292.5714" x2="312.9431" y2="292.5714" stroke="#666" stroke-width="3.2941" marker-end="url(#arrowhead)" />
-  <ns0:rect x="312.9431" y="54.8571" width="395.2965" height="365.7143" rx="13.1765" fill="#fdf0ff" stroke="#7b1fa2" stroke-width="2.4706" />
+  <ns0:line x1="230.5896" y1="292.5714" x2="312.9431" y2="292.5714" stroke="#666" stroke-width="3.2941" marker-end="url(#arrow)" />
+  <ns0:rect x="312.9431" y="54.8571" width="395.2965" height="365.7143" rx="13.1765" fill="#f9f9f9" stroke="#7b1fa2" stroke-width="2.4706" />
   <ns0:text x="510.5914" y="100.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.4119" font-weight="bold" fill="#7b1fa2">Conductor Server</ns0:text>
-  <ns0:rect x="345.8844" y="128" width="329.4137" height="64" rx="8.2353" fill="#e8d5f5" stroke="#7b1fa2" stroke-width="2.4706" />
+  <ns0:rect x="345.8844" y="128" width="329.4137" height="64" rx="8.2353" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.4706" />
   <ns0:text x="510.5914" y="170.0571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Workflow Engine</ns0:text>
-  <ns0:line x1="510.5914" y1="192" x2="510.5914" y2="219.4285" stroke="#666" stroke-width="2.4706" marker-end="url(#arrowhead)" />
-  <ns0:rect x="345.8844" y="228.5714" width="329.4137" height="64" rx="8.2353" fill="#e8d5f5" stroke="#7b1fa2" stroke-width="2.4706" />
+  <ns0:line x1="510.5914" y1="192" x2="510.5914" y2="219.4285" stroke="#666" stroke-width="2.4706" marker-end="url(#arrow)" />
+  <ns0:rect x="345.8844" y="228.5714" width="329.4137" height="64" rx="8.2353" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.4706" />
   <ns0:text x="510.5914" y="270.6286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Task Queues</ns0:text>
-  <ns0:line x1="510.5914" y1="292.5714" x2="510.5914" y2="320" stroke="#666" stroke-width="2.4706" marker-end="url(#arrowhead)" />
-  <ns0:rect x="345.8844" y="329.1428" width="329.4137" height="64" rx="8.2353" fill="#e8d5f5" stroke="#7b1fa2" stroke-width="2.4706" />
+  <ns0:line x1="510.5914" y1="292.5714" x2="510.5914" y2="320" stroke="#666" stroke-width="2.4706" marker-end="url(#arrow)" />
+  <ns0:rect x="345.8844" y="329.1428" width="329.4137" height="64" rx="8.2353" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.4706" />
   <ns0:text x="510.5914" y="371.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Metadata Store</ns0:text>
-  <ns0:rect x="807.0637" y="54.8571" width="362.3552" height="292.5714" rx="13.1765" fill="#f0fff0" stroke="#28a745" stroke-width="2.4706" />
+  <ns0:rect x="807.0637" y="54.8571" width="362.3552" height="292.5714" rx="13.1765" fill="#f5f5f5" stroke="#28a745" stroke-width="2.4706" />
   <ns0:text x="988.2413" y="100.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.4119" font-weight="bold" fill="#28a745">Workers</ns0:text>
   <ns0:rect x="840.0051" y="128" width="296.4724" height="54.8571" rx="8.2353" fill="#d4edda" stroke="#28a745" stroke-width="2.4706" />
   <ns0:text x="988.2413" y="164.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Worker Pool 1</ns0:text>
@@ -25,14 +85,14 @@
   <ns0:text x="988.2413" y="237.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Worker Pool 2</ns0:text>
   <ns0:rect x="840.0051" y="274.2857" width="296.4724" height="54.8571" rx="8.2353" fill="#d4edda" stroke="#28a745" stroke-width="2.4706" />
   <ns0:text x="988.2413" y="310.8572" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Worker Pool N</ns0:text>
-  <ns0:line x1="708.2396" y1="256" x2="831.7698" y2="155.4285" stroke="#666" stroke-width="2.4706" marker-end="url(#arrowhead)" />
-  <ns0:line x1="708.2396" y1="256" x2="831.7698" y2="228.5714" stroke="#666" stroke-width="2.4706" marker-end="url(#arrowhead)" />
-  <ns0:line x1="708.2396" y1="256" x2="831.7698" y2="301.7143" stroke="#666" stroke-width="2.4706" marker-end="url(#arrowhead)" />
-  <ns0:rect x="807.0637" y="438.8571" width="362.3552" height="201.1429" rx="13.1765" fill="#fff8f0" stroke="#e65100" stroke-width="2.4706" />
+  <ns0:line x1="708.2396" y1="256" x2="831.7698" y2="155.4285" stroke="#666" stroke-width="2.4706" marker-end="url(#arrow)" />
+  <ns0:line x1="708.2396" y1="256" x2="831.7698" y2="228.5714" stroke="#666" stroke-width="2.4706" marker-end="url(#arrow)" />
+  <ns0:line x1="708.2396" y1="256" x2="831.7698" y2="301.7143" stroke="#666" stroke-width="2.4706" marker-end="url(#arrow)" />
+  <ns0:rect x="807.0637" y="438.8571" width="362.3552" height="201.1429" rx="13.1765" fill="#f9f9f9" stroke="#e65100" stroke-width="2.4706" />
   <ns0:text x="988.2413" y="484.5715" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.4119" font-weight="bold" fill="#e65100">Storage</ns0:text>
   <ns0:rect x="840.0051" y="512" width="296.4724" height="51.2" rx="8.2353" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4706" />
   <ns0:text x="988.2413" y="546.7428" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Elasticsearch</ns0:text>
   <ns0:rect x="840.0051" y="576" width="296.4724" height="51.2" rx="8.2353" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4706" />
   <ns0:text x="988.2413" y="610.7428" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.7648">Database</ns0:text>
-  <ns0:line x1="675.2982" y1="365.7143" x2="831.7698" y2="530.2857" stroke="#666" stroke-width="2.4706" marker-end="url(#arrowhead)" />
+  <ns0:line x1="675.2982" y1="365.7143" x2="831.7698" y2="530.2857" stroke="#666" stroke-width="2.4706" marker-end="url(#arrow)" />
 </ns0:svg>

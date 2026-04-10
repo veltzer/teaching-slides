@@ -1,6 +1,67 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="584.6914" y="44.4444" text-anchor="middle" font-size="28.4444" font-weight="bold" fill="#333">Macros Cheatsheet</ns0:text>
-  <ns0:rect x="53.9715" y="71.1111" width="1061.4398" height="560.0001" rx="8.8889" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.7777" />
+  <ns0:rect x="53.9715" y="71.1111" width="1061.4398" height="560.0001" rx="8.8889" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.7777" />
   <ns0:rect x="89.9525" y="97.7778" width="305.8385" height="46.2222" rx="5.3333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7777" />
   <ns0:text x="242.8719" y="129.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#4a90e2">macro_rules!</ns0:text>
   <ns0:text x="431.7721" y="129.7778" font-size="19.5556" fill="#333">pattern-based, hygienic</ns0:text>
@@ -23,12 +84,12 @@
   <ns0:text x="242.8719" y="460.4445" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#4a90e2">fn_like!(...)</ns0:text>
   <ns0:text x="431.7721" y="460.4445" font-size="19.5556" fill="#333">arbitrary token transformation</ns0:text>
   <ns0:rect x="89.9525" y="483.5556" width="305.8385" height="46.2222" rx="5.3333" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7777" />
-  <ns0:text x="242.8719" y="515.5556" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#856404">syn</ns0:text>
+  <ns0:text x="242.8719" y="515.5556" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#bf360c">syn</ns0:text>
   <ns0:text x="431.7721" y="515.5556" font-size="19.5556" fill="#333">parse TokenStream into AST</ns0:text>
   <ns0:rect x="89.9525" y="538.6667" width="305.8385" height="46.2222" rx="5.3333" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7777" />
-  <ns0:text x="242.8719" y="570.6667" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#856404">quote</ns0:text>
+  <ns0:text x="242.8719" y="570.6667" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#bf360c">quote</ns0:text>
   <ns0:text x="431.7721" y="570.6667" font-size="19.5556" fill="#333">generate TokenStream from template</ns0:text>
   <ns0:rect x="89.9525" y="593.7778" width="305.8385" height="46.2222" rx="5.3333" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7777" />
-  <ns0:text x="242.8719" y="625.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#856404">cargo expand</ns0:text>
+  <ns0:text x="242.8719" y="625.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#bf360c">cargo expand</ns0:text>
   <ns0:text x="431.7721" y="625.7778" font-size="19.5556" fill="#333">view expanded macro output</ns0:text>
 </ns0:svg>

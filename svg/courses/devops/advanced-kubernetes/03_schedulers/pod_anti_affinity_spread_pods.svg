@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arr" markerWidth="19.3939" markerHeight="31.5" refX="17.4545" refY="15.75" orient="auto">
       <polygon points="0,45 6.7879,0" fill="#555" />
     </marker>
@@ -7,17 +67,17 @@
       <polygon points="0,45 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <rect x="38.7879" y="90" width="378.1818" height="427.5" rx="7.7576" fill="#f0f4f8" stroke="#333" stroke-width="2.9091" />
+  <rect x="38.7879" y="90" width="378.1818" height="427.5" rx="7.7576" fill="#f5f5f5" stroke="#333" stroke-width="2.9091" />
   <text x="226.9091" y="63" text-anchor="middle" font-size="23.2727" fill="#555">Node 1</text>
   <rect x="96.9697" y="171" width="252.1212" height="225" rx="7.7576" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
   <text x="223.0303" y="306" text-anchor="middle" font-size="25.2121" fill="#222">Web-1</text>
-  <rect x="455.7576" y="90" width="378.1818" height="427.5" rx="7.7576" fill="#f0f4f8" stroke="#333" stroke-width="2.9091" />
+  <rect x="455.7576" y="90" width="378.1818" height="427.5" rx="7.7576" fill="#f5f5f5" stroke="#333" stroke-width="2.9091" />
   <text x="643.8788" y="63" text-anchor="middle" font-size="23.2727" fill="#555">Node 2</text>
   <rect x="513.9394" y="171" width="252.1212" height="225" rx="7.7576" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
   <text x="640" y="306" text-anchor="middle" font-size="25.2121" fill="#222">Web-2</text>
-  <rect x="872.7273" y="90" width="378.1818" height="427.5" rx="7.7576" fill="#f0f4f8" stroke="#333" stroke-width="2.9091" />
+  <rect x="872.7273" y="90" width="378.1818" height="427.5" rx="7.7576" fill="#f5f5f5" stroke="#333" stroke-width="2.9091" />
   <text x="1060.8485" y="63" text-anchor="middle" font-size="23.2727" fill="#555">Node 3</text>
   <rect x="930.9091" y="171" width="252.1212" height="225" rx="7.7576" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
   <text x="1056.9697" y="306" text-anchor="middle" font-size="25.2121" fill="#222">Web-3</text>
-  <text x="640" y="630" text-anchor="middle" font-size="23.2727" fill="#444">One web pod per node (anti-affinity on hostname)</text>
+  <text x="640" y="630" text-anchor="middle" font-size="23.2727" fill="#333333">One web pod per node (anti-affinity on hostname)</text>
 </svg>

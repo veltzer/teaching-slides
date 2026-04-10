@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="19.4039" y="14.8837" width="1125.4299" height="625.1163" rx="7.4418" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9767" />
   <ns0:text x="582.1189" y="59.5348" text-anchor="middle" font-size="26.7907" font-weight="bold" fill="#333">Defense Layers Against SQL Injection</ns0:text>
   <ns0:rect x="58.2119" y="81.8605" width="1047.814" height="74.4186" rx="7.4418" fill="#d4edda" stroke="#28a745" stroke-width="2.9767" />
@@ -11,7 +72,7 @@
   <ns0:text x="97.0198" y="290.2326" font-size="19.3488" font-weight="bold" fill="#28a745">Layer 3: Stored Procedures</ns0:text>
   <ns0:text x="97.0198" y="317.0233" font-size="16.3721" fill="#666">Encapsulate SQL logic, reduce direct query construction</ns0:text>
   <ns0:rect x="58.2119" y="349.7675" width="1047.814" height="74.4186" rx="7.4418" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9767" />
-  <ns0:text x="97.0198" y="379.5349" font-size="19.3488" font-weight="bold" fill="#856404">Layer 4: Least Privilege</ns0:text>
+  <ns0:text x="97.0198" y="379.5349" font-size="19.3488" font-weight="bold" fill="#bf360c">Layer 4: Least Privilege</ns0:text>
   <ns0:text x="97.0198" y="406.3256" font-size="16.3721" fill="#666">DB user has minimal permissions - no FILE, no PROCESS, no SUPER</ns0:text>
   <ns0:rect x="58.2119" y="439.0698" width="1047.814" height="74.4186" rx="7.4418" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9767" />
   <ns0:text x="97.0198" y="468.8372" font-size="19.3488" font-weight="bold" fill="#4a90e2">Layer 5: WAF (Web Application Firewall)</ns0:text>

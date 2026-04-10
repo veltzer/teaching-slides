@@ -1,24 +1,84 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="garrow" markerWidth="33.4367" markerHeight="58.0608" refX="30.093" refY="29.0304" orient="auto">
       <ns0:polygon points="0,82.944 11.7029,0" fill="#666" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="515.999" height="640" fill="#f8f9fa" />
+  <ns0:rect width="515.999" height="640" fill="#f9f9f9" />
   <ns0:text x="257.9995" y="56" text-anchor="middle" font-size="12.9" font-weight="bold" fill="#1a237e">Graph RAG: Dependency-Aware Retrieval</ns0:text>
   <ns0:text x="257.9995" y="91.2" text-anchor="middle" font-size="10" fill="#555">When a query matches UserService, also retrieve its dependencies</ns0:text>
-  <ns0:circle cx="257.9995" cy="280" r="32.2499" fill="#4a90d9" stroke="#1565C0" stroke-width="1.29" />
+  <ns0:circle cx="257.9995" cy="280" r="32.2499" fill="#4a90e2" stroke="#1565C0" stroke-width="1.29" />
   <ns0:text x="257.9995" y="272" text-anchor="middle" fill="white" font-size="10" font-weight="bold">UserService</ns0:text>
-  <ns0:text x="257.9995" y="300.8" text-anchor="middle" fill="#D6EAF8" font-size="10">(query match)</ns0:text>
+  <ns0:text x="257.9995" y="300.8" text-anchor="middle" fill="#e3f2fd" font-size="10">(query match)</ns0:text>
   <ns0:circle cx="109.6498" cy="280" r="29.0249" fill="#27ae60" stroke="#2E7D32" stroke-width="1.29" />
   <ns0:text x="109.6498" y="272" text-anchor="middle" fill="white" font-size="10" font-weight="bold">AuthModule</ns0:text>
-  <ns0:text x="109.6498" y="300.8" text-anchor="middle" fill="#D5F5E3" font-size="10">dependency</ns0:text>
+  <ns0:text x="109.6498" y="300.8" text-anchor="middle" fill="#d4edda" font-size="10">dependency</ns0:text>
   <ns0:circle cx="257.9995" cy="480" r="29.0249" fill="#27ae60" stroke="#2E7D32" stroke-width="1.29" />
   <ns0:text x="257.9995" y="472" text-anchor="middle" fill="white" font-size="10" font-weight="bold">UserRepo</ns0:text>
-  <ns0:text x="257.9995" y="500.8" text-anchor="middle" fill="#D5F5E3" font-size="10">dependency</ns0:text>
+  <ns0:text x="257.9995" y="500.8" text-anchor="middle" fill="#d4edda" font-size="10">dependency</ns0:text>
   <ns0:circle cx="406.3492" cy="280" r="29.0249" fill="#27ae60" stroke="#2E7D32" stroke-width="1.29" />
   <ns0:text x="406.3492" y="272" text-anchor="middle" fill="white" font-size="10" font-weight="bold">EmailSvc</ns0:text>
-  <ns0:text x="406.3492" y="300.8" text-anchor="middle" fill="#D5F5E3" font-size="10">dependency</ns0:text>
+  <ns0:text x="406.3492" y="300.8" text-anchor="middle" fill="#d4edda" font-size="10">dependency</ns0:text>
   <ns0:line x1="227.0395" y1="251.2" x2="137.3847" y2="251.2" stroke="#666" stroke-width="1.29" marker-end="url(#garrow)" />
   <ns0:line x1="257.9995" y1="360" x2="257.9995" y2="408" stroke="#666" stroke-width="1.29" marker-end="url(#garrow)" />
   <ns0:line x1="288.9594" y1="251.2" x2="378.6143" y2="251.2" stroke="#666" stroke-width="1.29" marker-end="url(#garrow)" />

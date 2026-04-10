@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -16,24 +76,24 @@
   <ns0:polygon points="369.2308,182.1862 455.3846,131.1741 541.5385,182.1862 455.3846,233.1984" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4615" />
   <ns0:text x="455.3846" y="177.8138" text-anchor="middle" font-size="13.5385" fill="#333">Query</ns0:text>
   <ns0:text x="455.3846" y="198.2186" text-anchor="middle" font-size="13.5385" fill="#333">Cache?</ns0:text>
-  <ns0:line x1="209.2308" y1="182.1862" x2="366.7692" y2="182.1862" stroke="#4a90e2" stroke-width="2.4615" marker-end="url(#arrowhead)" />
+  <ns0:line x1="209.2308" y1="182.1862" x2="366.7692" y2="182.1862" stroke="#4a90e2" stroke-width="2.4615" marker-end="url(#arrow)" />
   <ns0:rect x="640" y="80.1619" width="172.3077" height="65.5871" rx="6.1538" fill="#d4edda" stroke="#28a745" stroke-width="2.4615" />
   <ns0:text x="726.1538" y="119.5142" text-anchor="middle" font-size="14.7692" fill="#333">Return Cached</ns0:text>
-  <ns0:line x1="541.5385" y1="157.4089" x2="637.5385" y2="116.5992" stroke="#28a745" stroke-width="2.4615" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="541.5385" y1="157.4089" x2="637.5385" y2="116.5992" stroke="#28a745" stroke-width="2.4615" marker-end="url(#arrow-ok)" />
   <ns0:text x="578.4615" y="119.5142" font-size="13.5385" fill="#28a745">Hit</ns0:text>
   <ns0:rect x="640" y="196.7612" width="172.3077" height="65.5871" rx="6.1538" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4615" />
   <ns0:text x="726.1538" y="236.1134" text-anchor="middle" font-size="14.7692" fill="#333">Database</ns0:text>
-  <ns0:line x1="541.5385" y1="196.7612" x2="637.5385" y2="225.9109" stroke="#dc3545" stroke-width="2.4615" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="541.5385" y1="196.7612" x2="637.5385" y2="225.9109" stroke="#dc3545" stroke-width="2.4615" marker-end="url(#arrow-danger)" />
   <ns0:text x="578.4615" y="225.9109" font-size="13.5385" fill="#dc3545">Miss</ns0:text>
   <ns0:rect x="640" y="306.0728" width="172.3077" height="65.5871" rx="6.1538" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4615" />
   <ns0:text x="726.1538" y="345.4251" text-anchor="middle" font-size="14.7692" fill="#333">Update Cache</ns0:text>
-  <ns0:line x1="726.1538" y1="262.3482" x2="726.1538" y2="303.1579" stroke="#4a90e2" stroke-width="1.8462" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 640 338.1376 Q 455.3846 378.9474 455.3846 236.1134" fill="none" stroke="#ffc107" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrowhead)" />
+  <ns0:line x1="726.1538" y1="262.3482" x2="726.1538" y2="303.1579" stroke="#4a90e2" stroke-width="1.8462" marker-end="url(#arrow)" />
+  <ns0:path d="M 640 338.1376 Q 455.3846 378.9474 455.3846 236.1134" fill="none" stroke="#ffc107" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrow)" />
   <ns0:rect x="123.0769" y="320.6478" width="172.3077" height="65.5871" rx="6.1538" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4615" />
   <ns0:text x="209.2308" y="349.7975" text-anchor="middle" font-size="13.5385" fill="#333">Cache</ns0:text>
   <ns0:text x="209.2308" y="371.6599" text-anchor="middle" font-size="13.5385" fill="#333">Invalidation</ns0:text>
-  <ns0:line x1="135.3846" y1="218.6235" x2="178.4615" y2="317.7328" stroke="#dc3545" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrowhead-red)" />
-  <ns0:path d="M 295.3846 349.7975 Q 356.9231 349.7975 369.2308 233.1984" fill="none" stroke="#dc3545" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="135.3846" y1="218.6235" x2="178.4615" y2="317.7328" stroke="#dc3545" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrow-danger)" />
+  <ns0:path d="M 295.3846 349.7975 Q 356.9231 349.7975 369.2308 233.1984" fill="none" stroke="#dc3545" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrow-danger)" />
   <ns0:rect x="61.5385" y="437.247" width="861.5385" height="87.4494" rx="6.1538" fill="#f5f5f5" stroke="#ddd" stroke-width="1.2308" />
   <ns0:text x="492.3077" y="469.3118" text-anchor="middle" font-size="14.7692" font-weight="bold" fill="#333">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</ns0:text>
   <ns0:text x="492.3077" y="498.4615" text-anchor="middle" font-size="13.5385" fill="#555">Cache invalidation ensures stale data is removed when underlying data changes.</ns0:text>

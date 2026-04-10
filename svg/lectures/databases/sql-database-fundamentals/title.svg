@@ -1,18 +1,79 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
-  <ns0:ellipse cx="568.8889" cy="208" rx="170.6667" ry="42.6667" fill="#0f3460" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:rect x="398.2222" y="208" width="341.3333" height="224" fill="#0f3460" />
-  <ns0:line x1="398.2222" y1="208" x2="398.2222" y2="432" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:line x1="739.5556" y1="208" x2="739.5556" y2="432" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:ellipse cx="568.8889" cy="432" rx="170.6667" ry="42.6667" fill="#0f3460" stroke="#16c79a" stroke-width="2.8444" />
-  <ns0:ellipse cx="568.8889" cy="280" rx="156.4444" ry="21.3333" fill="none" stroke="#16c79a" stroke-width="1.1378" opacity="0.4" />
-  <ns0:ellipse cx="568.8889" cy="352" rx="156.4444" ry="21.3333" fill="none" stroke="#16c79a" stroke-width="1.1378" opacity="0.3" />
-  <ns0:rect x="824.8889" y="192" width="227.5556" height="176" rx="5.6889" fill="#0f3460" stroke="#e94560" stroke-width="2.1333" />
-  <ns0:rect x="824.8889" y="192" width="227.5556" height="35.2" rx="5.6889" fill="#e94560" opacity="0.2" />
-  <ns0:text x="867.5556" y="217.6" font-family="monospace" font-size="14.2222" fill="#e94560">id</ns0:text>
-  <ns0:text x="917.3333" y="217.6" font-family="monospace" font-size="14.2222" fill="#e94560">name</ns0:text>
-  <ns0:text x="995.5556" y="217.6" font-family="monospace" font-size="14.2222" fill="#e94560">dept</ns0:text>
-  <ns0:line x1="824.8889" y1="227.2" x2="1052.4444" y2="227.2" stroke="#e94560" stroke-width="0.7111" opacity="0.5" />
+  <ns0:ellipse cx="568.8889" cy="208" rx="170.6667" ry="42.6667" fill="#1a237e" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:rect x="398.2222" y="208" width="341.3333" height="224" fill="#1a237e" />
+  <ns0:line x1="398.2222" y1="208" x2="398.2222" y2="432" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:line x1="739.5556" y1="208" x2="739.5556" y2="432" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:ellipse cx="568.8889" cy="432" rx="170.6667" ry="42.6667" fill="#1a237e" stroke="#2ecc71" stroke-width="2.8444" />
+  <ns0:ellipse cx="568.8889" cy="280" rx="156.4444" ry="21.3333" fill="none" stroke="#2ecc71" stroke-width="1.1378" opacity="0.4" />
+  <ns0:ellipse cx="568.8889" cy="352" rx="156.4444" ry="21.3333" fill="none" stroke="#2ecc71" stroke-width="1.1378" opacity="0.3" />
+  <ns0:rect x="824.8889" y="192" width="227.5556" height="176" rx="5.6889" fill="#1a237e" stroke="#dc3545" stroke-width="2.1333" />
+  <ns0:rect x="824.8889" y="192" width="227.5556" height="35.2" rx="5.6889" fill="#dc3545" opacity="0.2" />
+  <ns0:text x="867.5556" y="217.6" font-family="monospace" font-size="14.2222" fill="#dc3545">id</ns0:text>
+  <ns0:text x="917.3333" y="217.6" font-family="monospace" font-size="14.2222" fill="#dc3545">name</ns0:text>
+  <ns0:text x="995.5556" y="217.6" font-family="monospace" font-size="14.2222" fill="#dc3545">dept</ns0:text>
+  <ns0:line x1="824.8889" y1="227.2" x2="1052.4444" y2="227.2" stroke="#dc3545" stroke-width="0.7111" opacity="0.5" />
   <ns0:text x="867.5556" y="252.8" font-family="monospace" font-size="14.2222" fill="#888">1</ns0:text>
   <ns0:text x="917.3333" y="252.8" font-family="monospace" font-size="14.2222" fill="#888">Alice</ns0:text>
   <ns0:text x="995.5556" y="252.8" font-family="monospace" font-size="14.2222" fill="#888">Eng</ns0:text>
@@ -22,14 +83,14 @@
   <ns0:text x="867.5556" y="307.2" font-family="monospace" font-size="14.2222" fill="#888">3</ns0:text>
   <ns0:text x="917.3333" y="307.2" font-family="monospace" font-size="14.2222" fill="#888">Eve</ns0:text>
   <ns0:text x="995.5556" y="307.2" font-family="monospace" font-size="14.2222" fill="#888">Eng</ns0:text>
-  <ns0:text x="170.6667" y="280" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#f5a623">SELECT *</ns0:text>
-  <ns0:text x="170.6667" y="312" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#f5a623">FROM users</ns0:text>
-  <ns0:text x="170.6667" y="344" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#f5a623">WHERE ...</ns0:text>
-  <ns0:line x1="839.1111" y1="400" x2="896" y2="448" stroke="#a855f7" stroke-width="2.1333" />
-  <ns0:line x1="995.5556" y1="400" x2="938.6667" y2="448" stroke="#a855f7" stroke-width="2.1333" />
-  <ns0:text x="938.6667" y="480" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#a855f7">JOIN</ns0:text>
-  <ns0:rect x="469.3333" y="496" width="199.1111" height="44.8" rx="19.9111" fill="#16c79a" opacity="0.15" stroke="#16c79a" stroke-width="1.4222" />
-  <ns0:text x="568.8889" y="526.4" text-anchor="middle" font-family="monospace" font-size="17.0667" font-weight="bold" fill="#16c79a">A C I D</ns0:text>
+  <ns0:text x="170.6667" y="280" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#f9a825">SELECT *</ns0:text>
+  <ns0:text x="170.6667" y="312" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#f9a825">FROM users</ns0:text>
+  <ns0:text x="170.6667" y="344" text-anchor="middle" font-family="monospace" font-size="17.0667" fill="#f9a825">WHERE ...</ns0:text>
+  <ns0:line x1="839.1111" y1="400" x2="896" y2="448" stroke="#9b59b6" stroke-width="2.1333" />
+  <ns0:line x1="995.5556" y1="400" x2="938.6667" y2="448" stroke="#9b59b6" stroke-width="2.1333" />
+  <ns0:text x="938.6667" y="480" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#9b59b6">JOIN</ns0:text>
+  <ns0:rect x="469.3333" y="496" width="199.1111" height="44.8" rx="19.9111" fill="#2ecc71" opacity="0.15" stroke="#2ecc71" stroke-width="1.4222" />
+  <ns0:text x="568.8889" y="526.4" text-anchor="middle" font-family="monospace" font-size="17.0667" font-weight="bold" fill="#2ecc71">A C I D</ns0:text>
   <ns0:text x="568.8889" y="80" text-anchor="middle" font-family="sans-serif" font-size="39.8222" font-weight="bold" fill="#eee">SQL Database Fundamentals</ns0:text>
   <ns0:text x="568.8889" y="608" text-anchor="middle" font-family="monospace" font-size="18.4889" fill="#666">relational | structured | ACID | normalized</ns0:text>
 </ns0:svg>

@@ -1,5 +1,66 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <ns0:rect x="18.685" y="11.6363" width="1121.0949" height="628.3637" rx="6.9818" fill="#f0f4f8" stroke="#333" stroke-width="2.3272" />
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
+  <ns0:rect x="18.685" y="11.6363" width="1121.0949" height="628.3637" rx="6.9818" fill="#f5f5f5" stroke="#333" stroke-width="2.3272" />
   <ns0:rect x="18.685" y="11.6363" width="1121.0949" height="40.7273" rx="6.9818" fill="#333" />
   <ns0:text x="579.2324" y="38.4" text-anchor="middle" font-size="16.2909" fill="#fff" font-weight="bold">BIAS AUDIT REPORT</ns0:text>
   <ns0:rect x="56.0548" y="64" width="1046.3552" height="104.7273" rx="4.6546" fill="#e3f2fd" stroke="#555" stroke-width="1.7455" />
@@ -18,7 +79,7 @@
   <ns0:text x="93.4246" y="368.8727" font-size="13.9637" fill="#222">- Racial bias: [score and examples]</ns0:text>
   <ns0:text x="93.4246" y="389.8182" font-size="13.9637" fill="#222">- Age bias: [score and examples]</ns0:text>
   <ns0:text x="93.4246" y="410.7636" font-size="13.9637" fill="#222">- Other: [as applicable]</ns0:text>
-  <ns0:rect x="56.0548" y="439.8546" width="1046.3552" height="87.2728" rx="4.6546" fill="#f0f4f8" stroke="#555" stroke-width="1.7455" />
+  <ns0:rect x="56.0548" y="439.8546" width="1046.3552" height="87.2728" rx="4.6546" fill="#f5f5f5" stroke="#555" stroke-width="1.7455" />
   <ns0:text x="93.4246" y="461.9637" font-size="15.1273" fill="#222" font-weight="bold">4. MITIGATION ACTIONS</ns0:text>
   <ns0:text x="93.4246" y="484.0727" font-size="13.9637" fill="#222">- [Specific steps taken]</ns0:text>
   <ns0:text x="93.4246" y="505.0182" font-size="13.9637" fill="#222">- [Residual risks]</ns0:text>

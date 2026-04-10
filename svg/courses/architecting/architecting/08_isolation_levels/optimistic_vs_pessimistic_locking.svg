@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
       <ns0:polygon points="0,16.3636 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
@@ -13,10 +73,10 @@
   <ns0:rect x="93.1646" y="83.6306" width="162.0253" height="35.2129" rx="4.0506" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6203" />
   <ns0:text x="174.1772" y="101.237" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">1. Lock First</ns0:text>
   <ns0:text x="174.1772" y="112.6812" text-anchor="middle" font-size="10" fill="#555">Acquire exclusive lock</ns0:text>
-  <ns0:line x1="174.1772" y1="118.8435" x2="174.1772" y2="130.2877" stroke="#dc3545" stroke-width="1.2152" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="174.1772" y1="118.8435" x2="174.1772" y2="130.2877" stroke="#dc3545" stroke-width="1.2152" marker-end="url(#arrow-danger)" />
   <ns0:rect x="93.1646" y="132.0483" width="162.0253" height="35.2129" rx="4.0506" fill="#fff3cd" stroke="#ffc107" stroke-width="1.2152" />
   <ns0:text x="174.1772" y="154.0564" text-anchor="middle" font-size="10" fill="#333">2. Perform Operation</ns0:text>
-  <ns0:line x1="174.1772" y1="167.2612" x2="174.1772" y2="178.7054" stroke="#dc3545" stroke-width="1.2152" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="174.1772" y1="167.2612" x2="174.1772" y2="178.7054" stroke="#dc3545" stroke-width="1.2152" marker-end="url(#arrow-danger)" />
   <ns0:rect x="93.1646" y="180.466" width="162.0253" height="35.2129" rx="4.0506" fill="#f8d7da" stroke="#dc3545" stroke-width="1.2152" />
   <ns0:text x="174.1772" y="202.4741" text-anchor="middle" font-size="10" fill="#333">3. Release Lock</ns0:text>
   <ns0:rect x="64.8101" y="233.2854" width="218.7342" height="30.8113" rx="4.0506" fill="#f8d7da" stroke="#dc3545" stroke-width="1.2152" />
@@ -26,13 +86,13 @@
   <ns0:rect x="433.4177" y="83.6306" width="162.0253" height="35.2129" rx="4.0506" fill="#d4edda" stroke="#28a745" stroke-width="1.6203" />
   <ns0:text x="514.4304" y="101.237" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">1. Read Version</ns0:text>
   <ns0:text x="514.4304" y="112.6812" text-anchor="middle" font-size="10" fill="#555">No lock acquired</ns0:text>
-  <ns0:line x1="514.4304" y1="118.8435" x2="514.4304" y2="130.2877" stroke="#28a745" stroke-width="1.2152" marker-end="url(#arrowhead)" />
+  <ns0:line x1="514.4304" y1="118.8435" x2="514.4304" y2="130.2877" stroke="#28a745" stroke-width="1.2152" marker-end="url(#arrow)" />
   <ns0:rect x="433.4177" y="132.0483" width="162.0253" height="35.2129" rx="4.0506" fill="#fff3cd" stroke="#ffc107" stroke-width="1.2152" />
   <ns0:text x="514.4304" y="154.0564" text-anchor="middle" font-size="10" fill="#333">2. Perform Operation</ns0:text>
-  <ns0:line x1="514.4304" y1="167.2612" x2="514.4304" y2="178.7054" stroke="#28a745" stroke-width="1.2152" marker-end="url(#arrowhead)" />
+  <ns0:line x1="514.4304" y1="167.2612" x2="514.4304" y2="178.7054" stroke="#28a745" stroke-width="1.2152" marker-end="url(#arrow)" />
   <ns0:rect x="433.4177" y="180.466" width="162.0253" height="35.2129" rx="4.0506" fill="#d4edda" stroke="#28a745" stroke-width="1.6203" />
   <ns0:text x="514.4304" y="198.0725" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">3. Check Version + Update</ns0:text>
-  <ns0:path d="M 595.443 198.0725 Q 640 198.0725 640 101.237 Q 640 83.6306 597.0633 83.6306" fill="none" stroke="#dc3545" stroke-width="1.2152" stroke-dasharray="4.0506 2.4304" marker-end="url(#arrowhead-red)" />
+  <ns0:path d="M 595.443 198.0725 Q 640 198.0725 640 101.237 Q 640 83.6306 597.0633 83.6306" fill="none" stroke="#dc3545" stroke-width="1.2152" stroke-dasharray="4.0506 2.4304" marker-end="url(#arrow-danger)" />
   <ns0:text x="654.5822" y="145.2532" font-size="10" fill="#dc3545">Retry on</ns0:text>
   <ns0:text x="654.5822" y="156.6973" font-size="10" fill="#dc3545">mismatch</ns0:text>
   <ns0:rect x="405.0633" y="233.2854" width="218.7342" height="30.8113" rx="4.0506" fill="#d4edda" stroke="#28a745" stroke-width="1.2152" />

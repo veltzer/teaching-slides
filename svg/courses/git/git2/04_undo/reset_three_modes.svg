@@ -1,14 +1,75 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="632.0988" y="71.1111" text-anchor="middle" font-size="37.9259" font-weight="bold">Git Reset Modes</ns0:text>
   <ns0:rect x="79.0123" y="142.2222" width="347.6543" height="497.7778" fill="#E8F5E9" stroke="#388E3C" stroke-width="3.1605" rx="7.9012" />
   <ns0:text x="252.8395" y="204.4444" text-anchor="middle" font-size="28.4444" font-weight="bold">--soft</ns0:text>
   <ns0:circle cx="158.0247" cy="266.6667" r="31.6049" fill="#4CAF50" />
   <ns0:text x="158.0247" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">HEAD</ns0:text>
   <ns0:text x="221.2346" y="275.5556" font-size="22.1235">✓ Moves</ns0:text>
-  <ns0:rect x="126.4198" y="320" width="63.2099" height="53.3333" fill="#81C784" />
+  <ns0:rect x="126.4198" y="320" width="63.2099" height="53.3333" fill="#a5d6a7" />
   <ns0:text x="158.0247" y="355.5556" text-anchor="middle" font-size="15.8025" fill="white">Index</ns0:text>
   <ns0:text x="221.2346" y="346.6667" font-size="22.1235">✗ Unchanged</ns0:text>
-  <ns0:rect x="126.4198" y="391.1111" width="63.2099" height="53.3333" fill="#81C784" />
+  <ns0:rect x="126.4198" y="391.1111" width="63.2099" height="53.3333" fill="#a5d6a7" />
   <ns0:text x="158.0247" y="426.6667" text-anchor="middle" font-size="15.8025" fill="white">Work</ns0:text>
   <ns0:text x="221.2346" y="417.7778" font-size="22.1235">✗ Unchanged</ns0:text>
   <ns0:text x="252.8395" y="497.7778" text-anchor="middle" font-size="18.963" font-style="italic">Changes stay staged</ns0:text>
@@ -18,10 +79,10 @@
   <ns0:circle cx="537.284" cy="266.6667" r="31.6049" fill="#FF9800" />
   <ns0:text x="537.284" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">HEAD</ns0:text>
   <ns0:text x="600.4938" y="275.5556" font-size="22.1235">✓ Moves</ns0:text>
-  <ns0:rect x="505.679" y="320" width="63.2099" height="53.3333" fill="#FFB74D" />
+  <ns0:rect x="505.679" y="320" width="63.2099" height="53.3333" fill="#f9a825" />
   <ns0:text x="537.284" y="355.5556" text-anchor="middle" font-size="15.8025" fill="white">Index</ns0:text>
   <ns0:text x="600.4938" y="346.6667" font-size="22.1235">✓ Updates</ns0:text>
-  <ns0:rect x="505.679" y="391.1111" width="63.2099" height="53.3333" fill="#81C784" />
+  <ns0:rect x="505.679" y="391.1111" width="63.2099" height="53.3333" fill="#a5d6a7" />
   <ns0:text x="537.284" y="426.6667" text-anchor="middle" font-size="15.8025" fill="white">Work</ns0:text>
   <ns0:text x="600.4938" y="417.7778" font-size="22.1235">✗ Unchanged</ns0:text>
   <ns0:text x="632.0988" y="497.7778" text-anchor="middle" font-size="18.963" font-style="italic">Changes unstaged</ns0:text>
@@ -31,10 +92,10 @@
   <ns0:circle cx="916.5432" cy="266.6667" r="31.6049" fill="#F44336" />
   <ns0:text x="916.5432" y="275.5556" text-anchor="middle" font-size="15.8025" fill="white">HEAD</ns0:text>
   <ns0:text x="979.7531" y="275.5556" font-size="22.1235">✓ Moves</ns0:text>
-  <ns0:rect x="884.9383" y="320" width="63.2099" height="53.3333" fill="#EF5350" />
+  <ns0:rect x="884.9383" y="320" width="63.2099" height="53.3333" fill="#e74c3c" />
   <ns0:text x="916.5432" y="355.5556" text-anchor="middle" font-size="15.8025" fill="white">Index</ns0:text>
   <ns0:text x="979.7531" y="346.6667" font-size="22.1235">✓ Updates</ns0:text>
-  <ns0:rect x="884.9383" y="391.1111" width="63.2099" height="53.3333" fill="#EF5350" />
+  <ns0:rect x="884.9383" y="391.1111" width="63.2099" height="53.3333" fill="#e74c3c" />
   <ns0:text x="916.5432" y="426.6667" text-anchor="middle" font-size="15.8025" fill="white">Work</ns0:text>
   <ns0:text x="979.7531" y="417.7778" font-size="22.1235">✓ Updates</ns0:text>
   <ns0:text x="1011.358" y="497.7778" text-anchor="middle" font-size="18.963" font-style="italic">⚠️ Loses changes!</ns0:text>

@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -8,7 +68,7 @@
     </ns0:marker>
   </ns0:defs>
   <ns0:text x="617.6508" y="45.7143" text-anchor="middle" font-size="24.706" font-weight="bold" fill="#333">Point-to-Point vs Publish/Subscribe</ns0:text>
-  <ns0:rect x="46.3238" y="100.5714" width="525.0032" height="237.7143" rx="12.353" fill="#f0f4ff" stroke="#4a90e2" stroke-width="2.3162" stroke-dasharray="9.2648 4.6324" />
+  <ns0:rect x="46.3238" y="100.5714" width="525.0032" height="237.7143" rx="12.353" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3162" stroke-dasharray="9.2648 4.6324" />
   <ns0:text x="308.8254" y="142.6286" text-anchor="middle" font-size="20.0737" font-weight="bold" fill="#4a90e2">Point-to-Point</ns0:text>
   <ns0:rect x="77.2063" y="182.8572" width="154.4127" height="73.1429" rx="7.7206" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3162" />
   <ns0:text x="154.4127" y="228.5714" text-anchor="middle" font-size="18.5295" fill="#333">Producer</ns0:text>
@@ -16,10 +76,10 @@
   <ns0:text x="347.4286" y="228.5714" text-anchor="middle" font-size="18.5295" fill="#333">Queue</ns0:text>
   <ns0:rect x="463.2381" y="182.8572" width="154.4127" height="73.1429" rx="7.7206" fill="#d4edda" stroke="#28a745" stroke-width="2.3162" />
   <ns0:text x="540.4444" y="228.5714" text-anchor="middle" font-size="18.5295" fill="#333">Consumer 1</ns0:text>
-  <ns0:line x1="231.619" y1="219.4285" x2="282.5752" y2="219.4285" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrowhead)" />
-  <ns0:line x1="409.1936" y1="219.4285" x2="460.1498" y2="219.4285" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrowhead)" />
+  <ns0:line x1="231.619" y1="219.4285" x2="282.5752" y2="219.4285" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrow)" />
+  <ns0:line x1="409.1936" y1="219.4285" x2="460.1498" y2="219.4285" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrow)" />
   <ns0:text x="308.8254" y="310.8572" text-anchor="middle" font-size="15.4413" fill="#666">One message -&gt; One consumer</ns0:text>
-  <ns0:rect x="663.9746" y="100.5714" width="525.0032" height="365.7143" rx="12.353" fill="#f0fff0" stroke="#28a745" stroke-width="2.3162" stroke-dasharray="9.2648 4.6324" />
+  <ns0:rect x="663.9746" y="100.5714" width="525.0032" height="365.7143" rx="12.353" fill="#f5f5f5" stroke="#28a745" stroke-width="2.3162" stroke-dasharray="9.2648 4.6324" />
   <ns0:text x="926.4762" y="142.6286" text-anchor="middle" font-size="20.0737" font-weight="bold" fill="#28a745">Publish / Subscribe</ns0:text>
   <ns0:rect x="694.8571" y="219.4285" width="154.4127" height="73.1429" rx="7.7206" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3162" />
   <ns0:text x="772.0635" y="265.1428" text-anchor="middle" font-size="18.5295" fill="#333">Publisher</ns0:text>
@@ -31,12 +91,12 @@
   <ns0:text x="1158.0952" y="254.1714" text-anchor="middle" font-size="15.4413" fill="#333">Subscriber 2</ns0:text>
   <ns0:rect x="1080.8889" y="283.4286" width="154.4127" height="51.2" rx="7.7206" fill="#d4edda" stroke="#28a745" stroke-width="1.5441" />
   <ns0:text x="1158.0952" y="318.1714" text-anchor="middle" font-size="15.4413" fill="#333">Subscriber 3</ns0:text>
-  <ns0:line x1="849.2698" y1="256" x2="907.9467" y2="204.8" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrowhead)" />
-  <ns0:line x1="1034.5651" y1="182.8572" x2="1077.8006" y2="182.8572" stroke="#28a745" stroke-width="1.853" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="1034.5651" y1="201.1429" x2="1077.8006" y2="245.0285" stroke="#28a745" stroke-width="1.853" marker-end="url(#arrowhead-green)" />
-  <ns0:line x1="1034.5651" y1="210.2857" x2="1077.8006" y2="307.2" stroke="#28a745" stroke-width="1.853" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="849.2698" y1="256" x2="907.9467" y2="204.8" stroke="#4a90e2" stroke-width="2.3162" marker-end="url(#arrow)" />
+  <ns0:line x1="1034.5651" y1="182.8572" x2="1077.8006" y2="182.8572" stroke="#28a745" stroke-width="1.853" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="1034.5651" y1="201.1429" x2="1077.8006" y2="245.0285" stroke="#28a745" stroke-width="1.853" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="1034.5651" y1="210.2857" x2="1077.8006" y2="307.2" stroke="#28a745" stroke-width="1.853" marker-end="url(#arrow-ok)" />
   <ns0:text x="926.4762" y="429.7143" text-anchor="middle" font-size="15.4413" fill="#666">One message -&gt; All subscribers</ns0:text>
-  <ns0:rect x="154.4127" y="530.2857" width="926.4762" height="109.7143" rx="7.7206" fill="#fafafa" stroke="#ccc" stroke-width="1.5441" />
+  <ns0:rect x="154.4127" y="530.2857" width="926.4762" height="109.7143" rx="7.7206" fill="#f9f9f9" stroke="#ccc" stroke-width="1.5441" />
   <ns0:line x1="617.6508" y1="530.2857" x2="617.6508" y2="640" stroke="#ccc" stroke-width="1.5441" />
   <ns0:text x="386.0317" y="576" text-anchor="middle" font-size="18.5295" font-weight="bold" fill="#4a90e2">Point-to-Point</ns0:text>
   <ns0:text x="386.0317" y="618.0572" text-anchor="middle" font-size="16.9854" fill="#666">Competing consumers, load balanced</ns0:text>

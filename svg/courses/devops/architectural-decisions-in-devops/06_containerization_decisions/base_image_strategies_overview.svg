@@ -1,21 +1,82 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:text x="578.5311" y="54.2373" text-anchor="middle" font-size="26.4471" font-weight="bold">Base Image Size Comparison</ns0:text>
   <ns0:text x="74.3826" y="184.4068" text-anchor="end" font-size="19.8354">Scratch</ns0:text>
   <ns0:rect x="82.6473" y="151.8644" width="16.5294" height="54.2373" fill="#4caf50" stroke="#333" stroke-width="1.653" />
   <ns0:text x="115.7062" y="190.9153" font-size="18.1824">0 MB</ns0:text>
   <ns0:text x="74.3826" y="271.1864" text-anchor="end" font-size="19.8354">Distroless</ns0:text>
-  <ns0:rect x="82.6473" y="238.6441" width="49.5883" height="54.2373" fill="#66bb6a" stroke="#333" stroke-width="1.653" />
+  <ns0:rect x="82.6473" y="238.6441" width="49.5883" height="54.2373" fill="#4caf50" stroke="#333" stroke-width="1.653" />
   <ns0:text x="148.7651" y="277.6949" font-size="18.1824">~2 MB</ns0:text>
   <ns0:text x="74.3826" y="357.9661" text-anchor="end" font-size="19.8354">Alpine</ns0:text>
-  <ns0:rect x="82.6473" y="325.4237" width="66.1179" height="54.2373" fill="#81c784" stroke="#333" stroke-width="1.653" />
+  <ns0:rect x="82.6473" y="325.4237" width="66.1179" height="54.2373" fill="#a5d6a7" stroke="#333" stroke-width="1.653" />
   <ns0:text x="165.2946" y="364.4746" font-size="18.1824">~7 MB</ns0:text>
   <ns0:text x="74.3826" y="444.7458" text-anchor="end" font-size="19.8354">Debian slim</ns0:text>
-  <ns0:rect x="82.6473" y="412.2034" width="214.883" height="54.2373" fill="#ffd54f" stroke="#333" stroke-width="1.653" />
+  <ns0:rect x="82.6473" y="412.2034" width="214.883" height="54.2373" fill="#ffcc80" stroke="#333" stroke-width="1.653" />
   <ns0:text x="314.0598" y="451.2542" font-size="18.1824">~80 MB</ns0:text>
   <ns0:text x="74.3826" y="531.5254" text-anchor="end" font-size="19.8354">Ubuntu</ns0:text>
   <ns0:rect x="82.6473" y="498.9831" width="297.5303" height="54.2373" fill="#ff9800" stroke="#333" stroke-width="1.653" />
   <ns0:text x="396.707" y="538.0339" font-size="18.1824">~120 MB</ns0:text>
   <ns0:text x="74.3826" y="618.3051" text-anchor="end" font-size="19.8354">Full Debian</ns0:text>
-  <ns0:rect x="82.6473" y="585.7627" width="413.2365" height="54.2373" fill="#ef5350" stroke="#333" stroke-width="1.653" />
+  <ns0:rect x="82.6473" y="585.7627" width="413.2365" height="54.2373" fill="#e74c3c" stroke="#333" stroke-width="1.653" />
   <ns0:text x="512.4132" y="624.8136" font-size="18.1824">~180 MB</ns0:text>
 </ns0:svg>

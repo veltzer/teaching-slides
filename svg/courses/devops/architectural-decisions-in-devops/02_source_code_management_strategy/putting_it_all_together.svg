@@ -3,7 +3,7 @@
   <ns0:text x="213.6494" y="133.3333" text-anchor="middle" font-weight="bold" font-size="21.365">Repository Structure</ns0:text>
   <ns0:text x="213.6494" y="213.3334" text-anchor="middle" font-size="18.078">Monorepo / Polyrepo</ns0:text>
   <ns0:text x="213.6494" y="266.6667" text-anchor="middle" font-size="18.078">Hybrid</ns0:text>
-  <ns0:rect x="443.7333" y="53.3333" width="361.5605" height="586.6667" rx="16.4346" fill="#fdf2e9" stroke="#333" stroke-width="3.2869" />
+  <ns0:rect x="443.7333" y="53.3333" width="361.5605" height="586.6667" rx="16.4346" fill="#ffebee" stroke="#333" stroke-width="3.2869" />
   <ns0:text x="624.5135" y="133.3333" text-anchor="middle" font-weight="bold" font-size="21.365">Branching Model</ns0:text>
   <ns0:text x="624.5135" y="213.3334" text-anchor="middle" font-size="18.078">Trunk-based</ns0:text>
   <ns0:text x="624.5135" y="266.6667" text-anchor="middle" font-size="18.078">Feature branching</ns0:text>
@@ -16,6 +16,66 @@
   <ns0:line x1="394.4296" y1="346.6667" x2="443.7333" y2="346.6667" stroke="#333" stroke-width="3.2869" marker-end="url(#arr2)" />
   <ns0:line x1="805.2938" y1="346.6667" x2="854.5975" y2="346.6667" stroke="#333" stroke-width="3.2869" marker-end="url(#arr2)" />
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr2" viewBox="0 0 10 10" refX="15.36" refY="13.8462" markerWidth="10.24" markerHeight="16.6154" orient="auto-start-reverse">
       <ns0:path d="M 0 0 L 17.0667 13.8462 L 0 27.6923 z" fill="#333" />
     </ns0:marker>

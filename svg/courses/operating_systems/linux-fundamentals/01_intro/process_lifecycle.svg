@@ -1,5 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arrowhead" markerWidth="14.2222" markerHeight="15.2727" refX="12.8" refY="7.6364" orient="auto">
       <ns0:polygon points="0,21.8182 4.9778,0" fill="#666" />
     </ns0:marker>
@@ -7,31 +67,31 @@
   <ns0:rect x="41.7186" y="234.6667" width="166.8741" height="106.6667" rx="6.9531" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7812" />
   <ns0:text x="125.1556" y="298.6666" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6874" font-weight="bold">Created</ns0:text>
   <ns0:text x="125.1556" y="384.0001" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">fork()</ns0:text>
-  <ns0:line x1="208.5926" y1="288.0001" x2="292.0297" y2="288.0001" stroke="#666" stroke-width="2.7812" marker-end="url(#arrowhead)" />
+  <ns0:line x1="208.5926" y1="288.0001" x2="292.0297" y2="288.0001" stroke="#666" stroke-width="2.7812" marker-end="url(#arrow)" />
   <ns0:rect x="305.9358" y="234.6667" width="166.8741" height="106.6667" rx="6.9531" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7812" />
   <ns0:text x="389.3729" y="298.6666" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6874" font-weight="bold">Ready</ns0:text>
-  <ns0:line x1="472.81" y1="266.6667" x2="584.0593" y2="266.6667" stroke="#666" stroke-width="2.7812" marker-end="url(#arrowhead)" />
+  <ns0:line x1="472.81" y1="266.6667" x2="584.0593" y2="266.6667" stroke="#666" stroke-width="2.7812" marker-end="url(#arrow)" />
   <ns0:text x="528.4346" y="249.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">scheduled</ns0:text>
   <ns0:rect x="597.9655" y="234.6667" width="166.8741" height="106.6667" rx="6.9531" fill="#d4edda" stroke="#28a745" stroke-width="2.7812" />
   <ns0:text x="681.4025" y="298.6666" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6874" font-weight="bold">Running</ns0:text>
   <ns0:line x1="681.4025" y1="341.3334" x2="681.4025" y2="416" stroke="#666" stroke-width="2.0859" />
   <ns0:line x1="681.4025" y1="416" x2="389.3729" y2="416" stroke="#666" stroke-width="2.0859" />
-  <ns0:line x1="389.3729" y1="416" x2="389.3729" y2="352" stroke="#666" stroke-width="2.0859" marker-end="url(#arrowhead)" />
+  <ns0:line x1="389.3729" y1="416" x2="389.3729" y2="352" stroke="#666" stroke-width="2.0859" marker-end="url(#arrow)" />
   <ns0:text x="535.3877" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">preempted</ns0:text>
-  <ns0:line x1="764.8395" y1="288.0001" x2="848.2767" y2="288.0001" stroke="#666" stroke-width="2.7812" marker-end="url(#arrowhead)" />
+  <ns0:line x1="764.8395" y1="288.0001" x2="848.2767" y2="288.0001" stroke="#666" stroke-width="2.7812" marker-end="url(#arrow)" />
   <ns0:text x="806.5581" y="270.9333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">I/O wait</ns0:text>
   <ns0:rect x="862.1828" y="234.6667" width="166.8741" height="106.6667" rx="6.9531" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7812" />
   <ns0:text x="945.6198" y="298.6666" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6874" font-weight="bold">Blocked</ns0:text>
   <ns0:line x1="945.6198" y1="234.6667" x2="945.6198" y2="128" stroke="#666" stroke-width="2.0859" />
   <ns0:line x1="945.6198" y1="128" x2="389.3729" y2="128" stroke="#666" stroke-width="2.0859" />
-  <ns0:line x1="389.3729" y1="128" x2="389.3729" y2="224" stroke="#666" stroke-width="2.0859" marker-end="url(#arrowhead)" />
+  <ns0:line x1="389.3729" y1="128" x2="389.3729" y2="224" stroke="#666" stroke-width="2.0859" marker-end="url(#arrow)" />
   <ns0:text x="667.4964" y="110.9333" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">I/O complete</ns0:text>
-  <ns0:line x1="681.4025" y1="341.3334" x2="681.4025" y2="522.6668" stroke="#666" stroke-width="2.7812" marker-end="url(#arrowhead)" />
+  <ns0:line x1="681.4025" y1="341.3334" x2="681.4025" y2="522.6668" stroke="#666" stroke-width="2.7812" marker-end="url(#arrow)" />
   <ns0:text x="709.2148" y="490.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">exit()</ns0:text>
-  <ns0:rect x="597.9655" y="533.3333" width="166.8741" height="106.6667" rx="6.9531" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.7812" />
+  <ns0:rect x="597.9655" y="533.3333" width="166.8741" height="106.6667" rx="6.9531" fill="#e0e0e0" stroke="#777777" stroke-width="2.7812" />
   <ns0:text x="681.4025" y="597.3334" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6874" font-weight="bold">Zombie</ns0:text>
-  <ns0:line x1="764.8395" y1="586.6667" x2="848.2767" y2="586.6667" stroke="#666" stroke-width="2.7812" marker-end="url(#arrowhead)" />
+  <ns0:line x1="764.8395" y1="586.6667" x2="848.2767" y2="586.6667" stroke="#666" stroke-width="2.7812" marker-end="url(#arrow)" />
   <ns0:text x="806.5581" y="569.6001" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.9062" fill="#888">wait()</ns0:text>
-  <ns0:rect x="862.1828" y="533.3333" width="166.8741" height="106.6667" rx="6.9531" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.7812" />
+  <ns0:rect x="862.1828" y="533.3333" width="166.8741" height="106.6667" rx="6.9531" fill="#e0e0e0" stroke="#777777" stroke-width="2.7812" />
   <ns0:text x="945.6198" y="597.3334" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6874" font-weight="bold">Terminated</ns0:text>
 </ns0:svg>

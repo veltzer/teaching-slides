@@ -1,24 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <line x1="85.3333" y1="327.2727" x2="1194.6667" y2="327.2727" stroke="#28a745" stroke-width="6.8267" />
   <text x="51.2" y="343.6364" text-anchor="end" font-size="20.48" font-weight="bold" fill="#28a745">main</text>
   <circle cx="170.6667" cy="327.2727" r="11.9467" fill="#28a745" />
   <circle cx="512" cy="327.2727" r="11.9467" fill="#28a745" />
   <circle cx="853.3333" cy="327.2727" r="11.9467" fill="#28a745" />
   <circle cx="1160.5333" cy="327.2727" r="11.9467" fill="#28a745" />
-  <line x1="170.6667" y1="327.2727" x2="238.9333" y2="130.9091" stroke="#4a9eff" stroke-width="3.4133" />
-  <line x1="238.9333" y1="130.9091" x2="341.3333" y2="130.9091" stroke="#4a9eff" stroke-width="3.4133" />
-  <line x1="341.3333" y1="130.9091" x2="443.7333" y2="130.9091" stroke="#4a9eff" stroke-width="3.4133" />
-  <line x1="443.7333" y1="130.9091" x2="512" y2="327.2727" stroke="#4a9eff" stroke-width="3.4133" />
-  <circle cx="238.9333" cy="130.9091" r="8.5333" fill="#4a9eff" />
-  <circle cx="341.3333" cy="130.9091" r="8.5333" fill="#4a9eff" />
-  <circle cx="443.7333" cy="130.9091" r="8.5333" fill="#4a9eff" />
-  <text x="341.3333" y="91.6364" text-anchor="middle" font-size="17.0667" fill="#4a9eff">feature/login</text>
-  <line x1="512" y1="327.2727" x2="614.4" y2="556.3636" stroke="#e36209" stroke-width="3.4133" />
-  <line x1="614.4" y1="556.3636" x2="750.9333" y2="556.3636" stroke="#e36209" stroke-width="3.4133" />
-  <line x1="750.9333" y1="556.3636" x2="853.3333" y2="327.2727" stroke="#e36209" stroke-width="3.4133" />
-  <circle cx="614.4" cy="556.3636" r="8.5333" fill="#e36209" />
-  <circle cx="750.9333" cy="556.3636" r="8.5333" fill="#e36209" />
-  <text x="682.6667" y="638.1818" text-anchor="middle" font-size="17.0667" fill="#e36209">feature/search</text>
+  <line x1="170.6667" y1="327.2727" x2="238.9333" y2="130.9091" stroke="#4285f4" stroke-width="3.4133" />
+  <line x1="238.9333" y1="130.9091" x2="341.3333" y2="130.9091" stroke="#4285f4" stroke-width="3.4133" />
+  <line x1="341.3333" y1="130.9091" x2="443.7333" y2="130.9091" stroke="#4285f4" stroke-width="3.4133" />
+  <line x1="443.7333" y1="130.9091" x2="512" y2="327.2727" stroke="#4285f4" stroke-width="3.4133" />
+  <circle cx="238.9333" cy="130.9091" r="8.5333" fill="#4285f4" />
+  <circle cx="341.3333" cy="130.9091" r="8.5333" fill="#4285f4" />
+  <circle cx="443.7333" cy="130.9091" r="8.5333" fill="#4285f4" />
+  <text x="341.3333" y="91.6364" text-anchor="middle" font-size="17.0667" fill="#4285f4">feature/login</text>
+  <line x1="512" y1="327.2727" x2="614.4" y2="556.3636" stroke="#ef6c00" stroke-width="3.4133" />
+  <line x1="614.4" y1="556.3636" x2="750.9333" y2="556.3636" stroke="#ef6c00" stroke-width="3.4133" />
+  <line x1="750.9333" y1="556.3636" x2="853.3333" y2="327.2727" stroke="#ef6c00" stroke-width="3.4133" />
+  <circle cx="614.4" cy="556.3636" r="8.5333" fill="#ef6c00" />
+  <circle cx="750.9333" cy="556.3636" r="8.5333" fill="#ef6c00" />
+  <text x="682.6667" y="638.1818" text-anchor="middle" font-size="17.0667" fill="#ef6c00">feature/search</text>
   <text x="494.9333" y="278.1818" font-size="17.0667" fill="#28a745">PR merge</text>
   <text x="836.2667" y="278.1818" font-size="17.0667" fill="#28a745">PR merge</text>
 </svg>

@@ -1,19 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="320" y="90" width="640" height="108" fill="#FFE6E6" stroke="black" />
+  <rect x="320" y="90" width="640" height="108" fill="#fce4ec" stroke="black" />
   <text x="640" y="153" text-anchor="middle">Idle Loop</text>
-  <rect x="320" y="270" width="640" height="108" fill="#E6F2FF" stroke="black" />
+  <rect x="320" y="270" width="640" height="108" fill="#e3f2fd" stroke="black" />
   <text x="640" y="333" text-anchor="middle">CPUIdle Governor</text>
-  <rect x="240" y="450" width="240" height="108" fill="#E6FFE6" stroke="black" />
+  <rect x="240" y="450" width="240" height="108" fill="#e8f5e8" stroke="black" />
   <text x="360" y="513" text-anchor="middle">Menu</text>
-  <rect x="520" y="450" width="240" height="108" fill="#FFFFE6" stroke="black" />
+  <rect x="520" y="450" width="240" height="108" fill="#fff8e1" stroke="black" />
   <text x="640" y="513" text-anchor="middle">Ladder</text>
-  <rect x="800" y="450" width="240" height="108" fill="#FFE6FF" stroke="black" />
+  <rect x="800" y="450" width="240" height="108" fill="#f3e5f5" stroke="black" />
   <text x="920" y="513" text-anchor="middle">TEO</text>
-  <line x1="640" y1="198" x2="640" y2="270" stroke="black" marker-end="url(#arrowhead)" />
-  <line x1="640" y1="378" x2="360" y2="450" stroke="black" marker-end="url(#arrowhead)" />
-  <line x1="640" y1="378" x2="640" y2="450" stroke="black" marker-end="url(#arrowhead)" />
-  <line x1="640" y1="378" x2="920" y2="450" stroke="black" marker-end="url(#arrowhead)" />
+  <line x1="640" y1="198" x2="640" y2="270" stroke="black" marker-end="url(#arrow)" />
+  <line x1="640" y1="378" x2="360" y2="450" stroke="black" marker-end="url(#arrow)" />
+  <line x1="640" y1="378" x2="640" y2="450" stroke="black" marker-end="url(#arrow)" />
+  <line x1="640" y1="378" x2="920" y2="450" stroke="black" marker-end="url(#arrow)" />
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrowhead" markerWidth="16" markerHeight="18" refX="14.4" refY="5.4" orient="auto">
       <polygon points="0,18 4.8,0" />
     </marker>

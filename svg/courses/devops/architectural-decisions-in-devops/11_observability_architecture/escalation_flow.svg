@@ -1,5 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <marker id="arrow5" markerWidth="18.2857" markerHeight="24" refX="16.4571" refY="7.2" orient="auto">
       <polygon points="0,24 5.4857,0" fill="#333" />
     </marker>
@@ -15,14 +75,14 @@
   <rect x="896" y="288" width="292.5714" height="120" fill="#e1bee7" stroke="#7b1fa2" stroke-width="3.6571" rx="10.9714" />
   <text x="1042.2857" y="336" text-anchor="middle" font-size="23.7714" font-weight="bold">Engineering Lead</text>
   <text x="1042.2857" y="379.2" text-anchor="middle" font-size="20.1143">Ack within 15 min</text>
-  <line x1="237.7143" y1="192" x2="237.7143" y2="288" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow5)" />
-  <line x1="384" y1="348" x2="493.7143" y2="348" stroke="#e65100" stroke-width="3.6571" marker-end="url(#arrow5)" />
+  <line x1="237.7143" y1="192" x2="237.7143" y2="288" stroke="#333" stroke-width="3.6571" marker-end="url(#arrow)" />
+  <line x1="384" y1="348" x2="493.7143" y2="348" stroke="#e65100" stroke-width="3.6571" marker-end="url(#arrow)" />
   <text x="438.8571" y="331.2" font-size="18.2857" fill="#e65100">no ack</text>
-  <line x1="786.2857" y1="348" x2="896" y2="348" stroke="#7b1fa2" stroke-width="3.6571" marker-end="url(#arrow5)" />
+  <line x1="786.2857" y1="348" x2="896" y2="348" stroke="#7b1fa2" stroke-width="3.6571" marker-end="url(#arrow)" />
   <text x="841.1429" y="331.2" font-size="18.2857" fill="#7b1fa2">no ack</text>
   <rect x="91.4286" y="504" width="1097.1429" height="120" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.6571" rx="10.9714" />
   <text x="640" y="552" text-anchor="middle" font-size="23.7714" font-weight="bold" fill="#2e7d32">Incident Response</text>
   <text x="640" y="595.2" text-anchor="middle" font-size="20.1143" fill="#555">Follow runbook, communicate status, resolve or escalate</text>
-  <line x1="237.7143" y1="408" x2="237.7143" y2="504" stroke="#2e7d32" stroke-width="3.6571" marker-end="url(#arrow5)" />
+  <line x1="237.7143" y1="408" x2="237.7143" y2="504" stroke="#2e7d32" stroke-width="3.6571" marker-end="url(#arrow)" />
   <text x="265.1429" y="468" font-size="18.2857" fill="#2e7d32">ack</text>
 </svg>

@@ -1,4 +1,65 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+    </defs>
   <ns0:rect x="78.0488" y="65.8537" width="187.3171" height="65.8537" fill="#e3f2fd" stroke="#1976d2" />
   <ns0:text x="171.7073" y="105.3658" text-anchor="middle" font-size="18.439">Parse</ns0:text>
   <ns0:rect x="312.1951" y="65.8537" width="187.3171" height="65.8537" fill="#f3e5f5" stroke="#7b1fa2" />
@@ -9,22 +70,22 @@
   <ns0:text x="171.7073" y="210.7317" text-anchor="middle" font-size="18.439">Patch</ns0:text>
   <ns0:rect x="312.1951" y="171.2195" width="187.3171" height="65.8537" fill="#fce4ec" stroke="#c2185b" />
   <ns0:text x="405.8537" y="210.7317" text-anchor="middle" font-size="18.439">Configure</ns0:text>
-  <ns0:rect x="546.3415" y="171.2195" width="187.3171" height="65.8537" fill="#e0f2f1" stroke="#00796b" />
+  <ns0:rect x="546.3415" y="171.2195" width="187.3171" height="65.8537" fill="#e8f4f8" stroke="#27ae60" />
   <ns0:text x="640" y="210.7317" text-anchor="middle" font-size="18.439">Compile</ns0:text>
-  <ns0:rect x="195.122" y="276.5854" width="187.3171" height="65.8537" fill="#f1f8e9" stroke="#689f38" />
+  <ns0:rect x="195.122" y="276.5854" width="187.3171" height="65.8537" fill="#e8f5e9" stroke="#43a047" />
   <ns0:text x="288.7805" y="316.0975" text-anchor="middle" font-size="18.439">Install</ns0:text>
-  <ns0:rect x="429.2683" y="276.5854" width="187.3171" height="65.8537" fill="#efebe9" stroke="#5d4037" />
+  <ns0:rect x="429.2683" y="276.5854" width="187.3171" height="65.8537" fill="#eeeeee" stroke="#555555" />
   <ns0:text x="522.9268" y="316.0975" text-anchor="middle" font-size="18.439">Package</ns0:text>
   <ns0:rect x="312.1951" y="381.9512" width="187.3171" height="65.8537" fill="#e8eaf6" stroke="#3f51b5" />
   <ns0:text x="405.8537" y="421.4634" text-anchor="middle" font-size="18.439">Image</ns0:text>
-  <ns0:path d="M 265.3659 98.7805 L 312.1951 98.7805" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 499.5122 98.7805 L 546.3415 98.7805" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 171.7073 131.7073 L 171.7073 171.2195" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 265.3659 204.1463 L 312.1951 204.1463" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 499.5122 204.1463 L 546.3415 204.1463" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 640 237.0732 L 522.9268 276.5854" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 171.7073 237.0732 L 288.7805 276.5854" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 382.439 309.5122 L 429.2683 309.5122" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 522.9268 342.439 L 405.8537 381.9512" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
-  <ns0:path d="M 288.7805 342.439 L 405.8537 381.9512" stroke="#666" stroke-width="2.6341" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 265.3659 98.7805 L 312.1951 98.7805" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 499.5122 98.7805 L 546.3415 98.7805" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 171.7073 131.7073 L 171.7073 171.2195" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 265.3659 204.1463 L 312.1951 204.1463" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 499.5122 204.1463 L 546.3415 204.1463" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 640 237.0732 L 522.9268 276.5854" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 171.7073 237.0732 L 288.7805 276.5854" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 382.439 309.5122 L 429.2683 309.5122" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 522.9268 342.439 L 405.8537 381.9512" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
+  <ns0:path d="M 288.7805 342.439 L 405.8537 381.9512" stroke="#666" stroke-width="2.6341" marker-end="url(#arrow)" />
 </ns0:svg>

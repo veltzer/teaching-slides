@@ -1,18 +1,78 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <ns0:marker id="arr0" markerWidth="16" markerHeight="14.4" refX="14" refY="5.4" orient="auto">
       <ns0:path d="M 0 0 L 0 10.8 L 16 5.4 Z" fill="#555" />
     </ns0:marker>
   </ns0:defs>
   <ns0:rect x="18.0944" y="16.285" width="1121.8547" height="537.4046" rx="6.514" fill="#e3f2fd" stroke="#333333" stroke-width="2.4427" />
   <ns0:text x="579.0218" y="55.369" text-anchor="middle" font-size="26.056" font-weight="bold" fill="#222222">CPU</ns0:text>
-  <ns0:rect x="63.3305" y="81.4249" width="208.0859" height="113.9949" rx="6.514" fill="#f0f4f8" stroke="#333333" stroke-width="2.4427" />
+  <ns0:rect x="63.3305" y="81.4249" width="208.0859" height="113.9949" rx="6.514" fill="#f5f5f5" stroke="#333333" stroke-width="2.4427" />
   <ns0:text x="168.2782" y="127.0229" text-anchor="middle" font-size="21.1705" fill="#222222">Control Unit</ns0:text>
   <ns0:text x="168.2782" y="157.9644" text-anchor="middle" font-size="19.542" fill="#555">(CU)</ns0:text>
-  <ns0:rect x="385.4114" y="81.4249" width="262.3692" height="113.9949" rx="6.514" fill="#f0f4f8" stroke="#333333" stroke-width="2.4427" />
+  <ns0:rect x="385.4114" y="81.4249" width="262.3692" height="113.9949" rx="6.514" fill="#f5f5f5" stroke="#333333" stroke-width="2.4427" />
   <ns0:text x="517.5007" y="127.0229" text-anchor="middle" font-size="21.1705" fill="#222222">ALU</ns0:text>
   <ns0:text x="517.5007" y="154.7074" text-anchor="middle" font-size="19.542" fill="#555">(Arithmetic Logic Unit)</ns0:text>
-  <ns0:rect x="769.0133" y="81.4249" width="271.4165" height="113.9949" rx="6.514" fill="#f0f4f8" stroke="#333333" stroke-width="2.4427" />
+  <ns0:rect x="769.0133" y="81.4249" width="271.4165" height="113.9949" rx="6.514" fill="#f5f5f5" stroke="#333333" stroke-width="2.4427" />
   <ns0:text x="904.7215" y="127.0229" text-anchor="middle" font-size="21.1705" fill="#222222">Registers</ns0:text>
   <ns0:text x="904.7215" y="154.7074" text-anchor="middle" font-size="19.542" fill="#555">(Fast local storage)</ns0:text>
   <ns0:line x1="271.4165" y1="138.4224" x2="385.4114" y2="138.4224" stroke="#555" stroke-width="2.4427" marker-end="url(#arr0)" />
