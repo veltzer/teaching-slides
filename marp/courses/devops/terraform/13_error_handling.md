@@ -1,5 +1,7 @@
 # Error Handling and Debugging
 
+---
+
 ## Common Error Categories
 
 ![common_error_categories](svg/courses/devops/terraform/13_error_handling/common_error_categories.svg)

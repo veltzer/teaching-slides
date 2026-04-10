@@ -1,5 +1,7 @@
 # Azure Compute Services
 
+---
+
 ## Types of Compute Services
 
 ![types_of_compute_services](svg/courses/cloud/introduction-to-azure/04_compute/types_of_compute_services.svg)

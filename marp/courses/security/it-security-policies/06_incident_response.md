@@ -68,8 +68,6 @@ Trust your instincts - **if something feels wrong, report it**
 
 ---
 
-## How to Report a Security Incident
-
 ## Your Reporting Channels
 
 ![your_reporting_channels](svg/courses/security/it-security-policies/06_incident_response/your_reporting_channels.svg)

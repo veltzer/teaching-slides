@@ -193,14 +193,22 @@ def _check_svg_content(path: Path, text: str, text_no_code: str, lines: list[str
         numbered = list(enumerate(slide_lines, line_cursor))
         has_svg = any(_SVG_IMAGE_RE.search(ln.strip()) for _, ln in numbered)
         if has_svg:
-            real = [
+            headings = [(i, ln) for i, ln in numbered if ln.strip() and _HEADING_RE.match(ln)]
+            non_heading_non_svg = [
                 (i, ln) for i, ln in numbered
                 if ln.strip()
                 and not _HEADING_RE.match(ln)
                 and not _SVG_IMAGE_RE.search(ln.strip())
             ]
-            if real:
-                first_lineno, first_line = real[0]
+            # More than one heading on an SVG slide is not allowed
+            if len(headings) > 1:
+                first_lineno, first_line = headings[1]
+                errors.append(
+                    f"{path}:{first_lineno}: slide with SVG image has multiple headings: {first_line.strip()!r}"
+                )
+            # Any non-heading, non-SVG content is not allowed
+            if non_heading_non_svg:
+                first_lineno, first_line = non_heading_non_svg[0]
                 errors.append(
                     f"{path}:{first_lineno}: slide with SVG image contains other content: {first_line.strip()!r}"
                 )

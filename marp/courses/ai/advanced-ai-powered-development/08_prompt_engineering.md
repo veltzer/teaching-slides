@@ -131,8 +131,6 @@ Error: KeyError: 'users'
 
 ---
 
-## Temperature, Top-p, and Sampling Parameters
-
 ## How Sampling Affects Output
 
 ![how_sampling_affects_output](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
@@ -282,8 +280,6 @@ review = client.chat.completions.create(
 
 ---
 
-## Prompt Chaining and Multi-Stage Pipelines
-
 ## Breaking Complex Tasks into Stages
 
 ![breaking_complex_tasks_into_stages](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
@@ -425,8 +421,6 @@ prompt = REVIEW_TEMPLATE.render(
 
 ---
 
-## Context Management: Priority-Based Assembly
-
 ## Fitting the Right Context into Limited Windows
 
 ![fitting_the_right_context_into_limited_windows](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/fitting_the_right_context_into_limited_windows.svg)
@@ -528,8 +522,6 @@ response = client.messages.create(
 1. Monitor per-prompt cost with token logging middleware
 
 ---
-
-## Evaluating and Iterating on Prompts
 
 ## Building a Prompt Evaluation Loop
 

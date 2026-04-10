@@ -1,5 +1,7 @@
 # Azure Networking Services
 
+---
+
 ## Core Networking Components
 
 ![core_networking_components](svg/courses/cloud/introduction-to-azure/06_networking/core_networking_components.svg)

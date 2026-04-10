@@ -540,8 +540,6 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
 ![gitflow_workflow](svg/courses/git/git2/06_branches/gitflow_workflow.svg)
 
 ---
-## Gitflow Workflow
-
 ## GitHub Flow
 
 ![github_flow](svg/courses/git/git2/06_branches/github_flow.svg)

@@ -213,8 +213,6 @@ result = spark.sql("SELECT * FROM hive_table")
 ```
 
 ---
-## Performance Optimization
-
 ## Catalyst Optimizer
 ![catalyst_optimizer](svg/courses/big_data/apache-spark-with-python/04_sql/catalyst_optimizer.svg)
 

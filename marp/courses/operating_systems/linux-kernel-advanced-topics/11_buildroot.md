@@ -210,9 +210,7 @@ BR2_INIT_SYSTEMD=y
 
 ---
 
-## Package Infrastructure
-
-### Package Types
+## Package Types
 
 ![package_types](svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/package_types.svg)
 

@@ -1,5 +1,7 @@
 # Azure Security Services
 
+---
+
 ## Security Components
 
 ![security_components](svg/courses/cloud/introduction-to-azure/08_security/security_components.svg)

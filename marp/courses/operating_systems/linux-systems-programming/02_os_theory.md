@@ -45,8 +45,6 @@ Without protection: DOS, early Windows, embedded systems
 
 ---
 
-## CPU Privilege Levels
-
 ## x86/x64 Protection Rings
 
 ![x86_x64_protection_rings](svg/courses/operating_systems/linux-systems-programming/02_os_theory/x86_x64_protection_rings.svg)
@@ -86,8 +84,6 @@ if (current_privilege_level > required_privilege) {
 
 ---
 
-## Current Privilege Level (CPL)
-
 ## Stored in CS register (Code Segment):
 
 ![stored_in_cs_register_code_segment](svg/courses/operating_systems/linux-systems-programming/02_os_theory/stored_in_cs_register_code_segment.svg)
@@ -118,15 +114,11 @@ if (current_privilege_level > required_privilege) {
 
 ---
 
-## Page Table Structure
-
 ## 4-Level Paging (x86_64):
 
 ![4_level_paging_x8664](svg/courses/operating_systems/linux-systems-programming/02_os_theory/4_level_paging_x8664.svg)
 
 ---
-
-## Page Table Entry (PTE)
 
 ## Protection Bits:
 
@@ -321,8 +313,6 @@ bpftrace -e 'syscall:sys_enter_* { @[probe] = count(); }'
 
 ---
 
-## Interrupt Descriptor Table (IDT)
-
 ## Hardware/Software Interrupts:
 
 ![hardware_software_interrupts](svg/courses/operating_systems/linux-systems-programming/02_os_theory/hardware_software_interrupts.svg)
@@ -388,8 +378,6 @@ jmp rax         // Must land on ENDBR instruction
 - Deprecated but influential
 
 ---
-
-## Kernel vs User Space
 
 ## Memory Layout:
 

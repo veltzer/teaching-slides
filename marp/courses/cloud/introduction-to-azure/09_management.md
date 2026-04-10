@@ -1,5 +1,7 @@
 # Azure Management and Cost Optimization
 
+---
+
 ## Management Components
 
 ![management_components](svg/courses/cloud/introduction-to-azure/09_management/management_components.svg)

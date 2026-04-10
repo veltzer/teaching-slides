@@ -12,8 +12,7 @@
 
 ---
 
-## Java 8+ Features in Android
-### Key Improvements
+## Key Improvements
 
 ![key_improvements](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/key_improvements.svg)
 
@@ -115,8 +114,7 @@ public class UserProcessor {
 
 ---
 
-## Threading Fundamentals
-### Android Threading Model
+## Android Threading Model
 
 ![android_threading_model](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/android_threading_model.svg)
 

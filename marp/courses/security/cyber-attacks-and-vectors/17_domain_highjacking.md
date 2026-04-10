@@ -250,9 +250,7 @@ dig DS example.com @a.gtld-servers.net +short
 ![registrar_security_measures](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_security_measures.svg)
 
 ---
-## Defending Against Domain Hijacking
-
-### Registrar Security Checklist
+## Registrar Security Checklist
 
 ![registrar_security_checklist](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_security_checklist.svg)
 

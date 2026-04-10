@@ -1,5 +1,7 @@
 # Next Steps and Azure Certifications
 
+---
+
 ## Azure Learning Path
 
 ![azure_learning_path](svg/courses/cloud/introduction-to-azure/10_next_steps/azure_learning_path.svg)

@@ -1,5 +1,7 @@
 # Working with the Azure Portal
 
+---
+
 ## Portal Components
 
 ![portal_components](svg/courses/cloud/introduction-to-azure/03_portal/portal_components.svg)

@@ -1,5 +1,7 @@
 # Azure Storage Services
 
+---
+
 ## Storage Service Types
 
 ![storage_service_types](svg/courses/cloud/introduction-to-azure/05_storage/storage_service_types.svg)

@@ -18,8 +18,6 @@
 
 ---
 
-## The Tool-Use Pattern
-
 ## Why Tools?
 
 ![why_tools](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/why_tools.svg)
@@ -107,8 +105,6 @@
 
 ---
 
-## Multi-Turn Tool Conversations
-
 ## Chaining Multiple Calls
 
 ![chaining_multiple_calls](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_multiple_calls.svg)
@@ -163,8 +159,6 @@
 - Common patterns: read-transform-write, search-analyze-act
 
 ---
-
-## Tool Composition Patterns
 
 ## Chaining Tools into Pipelines
 
@@ -473,8 +467,6 @@ async def stream_shell(command: str):
 
 ---
 
-## Production Architecture for Tool-Use Systems
-
 ## System Components
 
 ![system_components](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/system_components.svg)
@@ -572,8 +564,6 @@ class ToolAdapter:
 - Monitor tool call success rates and latency
 
 ---
-
-## Versioning and Maintaining Tools
 
 ## Evolution Without Breaking Agents
 

@@ -1,5 +1,7 @@
 # Azure Database Services
 
+---
+
 ## Database Service Types
 
 ![database_service_types](svg/courses/cloud/introduction-to-azure/07_databases/database_service_types.svg)

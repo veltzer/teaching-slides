@@ -315,8 +315,6 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ---
 
-## Secure Boot Overview
-
 ## Chain of Trust
 
 ![chain_of_trust](svg/courses/operating_systems/linux-systems-programming/01_boot/chain_of_trust.svg)

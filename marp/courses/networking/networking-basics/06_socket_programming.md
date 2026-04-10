@@ -31,9 +31,7 @@
 
 ---
 
-## Socket API: System Call Flow
-
-### UDP Communication (no connection)
+## UDP Communication (no connection)
 ![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
 
 ---
