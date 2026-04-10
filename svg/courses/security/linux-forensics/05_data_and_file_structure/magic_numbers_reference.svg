@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
@@ -68,60 +165,60 @@
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
   <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="48.8889" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="213.3333" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">File Type</ns0:text>
-  <ns0:text x="622.2222" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">Magic Bytes (Hex)</ns0:text>
-  <ns0:text x="977.7778" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">ASCII</ns0:text>
-  <ns0:rect x="17.7778" y="66.6667" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="94.2222" text-anchor="middle" font-size="17.7778" fill="#333333">ELF binary</ns0:text>
-  <ns0:text x="622.2222" y="94.2222" text-anchor="middle" font-size="17.7778" fill="#333333">7F 45 4C 46</ns0:text>
-  <ns0:text x="977.7778" y="94.2222" text-anchor="middle" font-size="17.7778" fill="#333333">.ELF</ns0:text>
-  <ns0:rect x="17.7778" y="107.5556" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="135.1111" text-anchor="middle" font-size="17.7778" fill="#333333">PDF</ns0:text>
-  <ns0:text x="622.2222" y="135.1111" text-anchor="middle" font-size="17.7778" fill="#333333">25 50 44 46</ns0:text>
-  <ns0:text x="977.7778" y="135.1111" text-anchor="middle" font-size="17.7778" fill="#333333">%PDF</ns0:text>
-  <ns0:rect x="17.7778" y="148.4444" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="176" text-anchor="middle" font-size="17.7778" fill="#333333">ZIP/DOCX/XLSX</ns0:text>
-  <ns0:text x="622.2222" y="176" text-anchor="middle" font-size="17.7778" fill="#333333">50 4B 03 04</ns0:text>
-  <ns0:text x="977.7778" y="176" text-anchor="middle" font-size="17.7778" fill="#333333">PK..</ns0:text>
-  <ns0:rect x="17.7778" y="189.3333" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="216.8889" text-anchor="middle" font-size="17.7778" fill="#333333">JPEG</ns0:text>
-  <ns0:text x="622.2222" y="216.8889" text-anchor="middle" font-size="17.7778" fill="#333333">FF D8 FF E0/E1</ns0:text>
-  <ns0:text x="977.7778" y="216.8889" text-anchor="middle" font-size="17.7778" fill="#333333">-</ns0:text>
-  <ns0:rect x="17.7778" y="230.2222" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#333333">PNG</ns0:text>
-  <ns0:text x="622.2222" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#333333">89 50 4E 47 0D 0A 1A 0A</ns0:text>
-  <ns0:text x="977.7778" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#333333">.PNG....</ns0:text>
-  <ns0:rect x="17.7778" y="271.1111" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="298.6667" text-anchor="middle" font-size="17.7778" fill="#333333">GIF</ns0:text>
-  <ns0:text x="622.2222" y="298.6667" text-anchor="middle" font-size="17.7778" fill="#333333">47 49 46 38</ns0:text>
-  <ns0:text x="977.7778" y="298.6667" text-anchor="middle" font-size="17.7778" fill="#333333">GIF8</ns0:text>
-  <ns0:rect x="17.7778" y="312" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="339.5556" text-anchor="middle" font-size="17.7778" fill="#333333">gzip</ns0:text>
-  <ns0:text x="622.2222" y="339.5556" text-anchor="middle" font-size="17.7778" fill="#333333">1F 8B</ns0:text>
-  <ns0:text x="977.7778" y="339.5556" text-anchor="middle" font-size="17.7778" fill="#333333">-</ns0:text>
-  <ns0:rect x="17.7778" y="352.8889" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="380.4444" text-anchor="middle" font-size="17.7778" fill="#333333">bzip2</ns0:text>
-  <ns0:text x="622.2222" y="380.4444" text-anchor="middle" font-size="17.7778" fill="#333333">42 5A 68</ns0:text>
-  <ns0:text x="977.7778" y="380.4444" text-anchor="middle" font-size="17.7778" fill="#333333">BZh</ns0:text>
-  <ns0:rect x="17.7778" y="393.7778" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="421.3333" text-anchor="middle" font-size="17.7778" fill="#333333">7-Zip</ns0:text>
-  <ns0:text x="622.2222" y="421.3333" text-anchor="middle" font-size="17.7778" fill="#333333">37 7A BC AF 27 1C</ns0:text>
-  <ns0:text x="977.7778" y="421.3333" text-anchor="middle" font-size="17.7778" fill="#333333">7z..'.</ns0:text>
-  <ns0:rect x="17.7778" y="434.6667" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="462.2222" text-anchor="middle" font-size="17.7778" fill="#333333">tar</ns0:text>
-  <ns0:text x="622.2222" y="462.2222" text-anchor="middle" font-size="17.7778" fill="#333333">75 73 74 61 72 (at 257)</ns0:text>
-  <ns0:text x="977.7778" y="462.2222" text-anchor="middle" font-size="17.7778" fill="#333333">ustar</ns0:text>
-  <ns0:rect x="17.7778" y="475.5556" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">RAR</ns0:text>
-  <ns0:text x="622.2222" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">52 61 72 21 1A 07</ns0:text>
-  <ns0:text x="977.7778" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">Rar!..</ns0:text>
-  <ns0:rect x="17.7778" y="516.4444" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
-  <ns0:text x="213.3333" y="544" text-anchor="middle" font-size="17.7778" fill="#333333">SQLite</ns0:text>
-  <ns0:text x="622.2222" y="544" text-anchor="middle" font-size="17.7778" fill="#333333">53 51 4C 69 74 65</ns0:text>
-  <ns0:text x="977.7778" y="544" text-anchor="middle" font-size="17.7778" fill="#333333">SQLite</ns0:text>
-  <ns0:line x1="346.6667" y1="17.7778" x2="346.6667" y2="557.3333" stroke="#888888" stroke-width="0.8889" />
-  <ns0:line x1="728.8889" y1="17.7778" x2="728.8889" y2="557.3333" stroke="#888888" stroke-width="0.8889" />
-  <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="539.5556" fill="none" stroke="#333333" stroke-width="1.7778" rx="7.1111" />
+  <ns0:text x="213.3333" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="var(--bg)">File Type</ns0:text>
+  <ns0:text x="622.2222" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="var(--bg)">Magic Bytes (Hex)</ns0:text>
+  <ns0:text x="977.7778" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="var(--bg)">ASCII</ns0:text>
+  <ns0:rect x="17.7778" y="66.6667" width="1102.2222" height="40.8889" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="94.2222" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">ELF binary</ns0:text>
+  <ns0:text x="622.2222" y="94.2222" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">7F 45 4C 46</ns0:text>
+  <ns0:text x="977.7778" y="94.2222" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">.ELF</ns0:text>
+  <ns0:rect x="17.7778" y="107.5556" width="1102.2222" height="40.8889" fill="var(--bg)" stroke="var(--primary)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="135.1111" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">PDF</ns0:text>
+  <ns0:text x="622.2222" y="135.1111" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">25 50 44 46</ns0:text>
+  <ns0:text x="977.7778" y="135.1111" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">%PDF</ns0:text>
+  <ns0:rect x="17.7778" y="148.4444" width="1102.2222" height="40.8889" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="176" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">ZIP/DOCX/XLSX</ns0:text>
+  <ns0:text x="622.2222" y="176" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">50 4B 03 04</ns0:text>
+  <ns0:text x="977.7778" y="176" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">PK..</ns0:text>
+  <ns0:rect x="17.7778" y="189.3333" width="1102.2222" height="40.8889" fill="var(--bg)" stroke="var(--primary)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="216.8889" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">JPEG</ns0:text>
+  <ns0:text x="622.2222" y="216.8889" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">FF D8 FF E0/E1</ns0:text>
+  <ns0:text x="977.7778" y="216.8889" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">-</ns0:text>
+  <ns0:rect x="17.7778" y="230.2222" width="1102.2222" height="40.8889" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="257.7778" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">PNG</ns0:text>
+  <ns0:text x="622.2222" y="257.7778" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">89 50 4E 47 0D 0A 1A 0A</ns0:text>
+  <ns0:text x="977.7778" y="257.7778" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">.PNG....</ns0:text>
+  <ns0:rect x="17.7778" y="271.1111" width="1102.2222" height="40.8889" fill="var(--bg)" stroke="var(--primary)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="298.6667" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">GIF</ns0:text>
+  <ns0:text x="622.2222" y="298.6667" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">47 49 46 38</ns0:text>
+  <ns0:text x="977.7778" y="298.6667" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">GIF8</ns0:text>
+  <ns0:rect x="17.7778" y="312" width="1102.2222" height="40.8889" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="339.5556" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">gzip</ns0:text>
+  <ns0:text x="622.2222" y="339.5556" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">1F 8B</ns0:text>
+  <ns0:text x="977.7778" y="339.5556" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">-</ns0:text>
+  <ns0:rect x="17.7778" y="352.8889" width="1102.2222" height="40.8889" fill="var(--bg)" stroke="var(--primary)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="380.4444" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">bzip2</ns0:text>
+  <ns0:text x="622.2222" y="380.4444" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">42 5A 68</ns0:text>
+  <ns0:text x="977.7778" y="380.4444" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">BZh</ns0:text>
+  <ns0:rect x="17.7778" y="393.7778" width="1102.2222" height="40.8889" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="421.3333" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">7-Zip</ns0:text>
+  <ns0:text x="622.2222" y="421.3333" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">37 7A BC AF 27 1C</ns0:text>
+  <ns0:text x="977.7778" y="421.3333" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">7z..'.</ns0:text>
+  <ns0:rect x="17.7778" y="434.6667" width="1102.2222" height="40.8889" fill="var(--bg)" stroke="var(--primary)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="462.2222" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">tar</ns0:text>
+  <ns0:text x="622.2222" y="462.2222" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">75 73 74 61 72 (at 257)</ns0:text>
+  <ns0:text x="977.7778" y="462.2222" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">ustar</ns0:text>
+  <ns0:rect x="17.7778" y="475.5556" width="1102.2222" height="40.8889" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="503.1111" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">RAR</ns0:text>
+  <ns0:text x="622.2222" y="503.1111" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">52 61 72 21 1A 07</ns0:text>
+  <ns0:text x="977.7778" y="503.1111" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">Rar!..</ns0:text>
+  <ns0:rect x="17.7778" y="516.4444" width="1102.2222" height="40.8889" fill="var(--bg)" stroke="var(--primary)" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="544" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">SQLite</ns0:text>
+  <ns0:text x="622.2222" y="544" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">53 51 4C 69 74 65</ns0:text>
+  <ns0:text x="977.7778" y="544" text-anchor="middle" font-size="17.7778" fill="var(--text-dark)">SQLite</ns0:text>
+  <ns0:line x1="346.6667" y1="17.7778" x2="346.6667" y2="557.3333" stroke="var(--text-faint)" stroke-width="0.8889" />
+  <ns0:line x1="728.8889" y1="17.7778" x2="728.8889" y2="557.3333" stroke="var(--text-faint)" stroke-width="0.8889" />
+  <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="539.5556" fill="none" stroke="var(--text-dark)" stroke-width="1.7778" rx="7.1111" />
 </ns0:svg>

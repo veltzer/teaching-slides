@@ -1,37 +1,22 @@
 #!/usr/bin/env python
 
 """
-Install the canonical palette defs block into every SVG under svg/.
+Install the canonical palette into every SVG under svg/.
 
-What it does:
-  1. Reads the <defs> block from resources/svg_palette.svg.
-  2. For each SVG file under svg/:
-     a. Renames old palette gradient / marker IDs to their canonical
-        equivalents throughout the file (e.g. grad-accent -> grad-primary).
-     b. Removes any palette-managed entries that are already present in
-        the SVG's <defs> block (to avoid duplicates).
-     c. Inserts the canonical palette entries at the top of the SVG's
-        existing <defs> block, or creates a new <defs> block if none exists.
-     Custom SVG-specific entries (unique gradients, custom markers, etc.)
-     are left untouched.
+Reads resources/palette.yaml and for each SVG:
+  1. Injects a <style> block with CSS custom properties (--bg, --primary, etc.)
+  2. Injects gradient, filter, and marker <defs> entries
+  3. Converts raw hex color values in attributes to var(--name) references
+  4. Converts named CSS colors (white, black, red, etc.) to var(--name)
+  5. Renames old gradient/marker IDs to canonical ones
 
-ID renames applied:
-  grad-accent   -> grad-primary
-  grad-green    -> grad-ok
-  grad-orange   -> grad-warn
-  grad-red      -> grad-danger
-  grad-purple   -> grad-info
-  arrow-accent  -> arrow-primary
-  arrow-blue    -> arrow-primary
-  arrow-green   -> arrow-ok
-  arrow-red     -> arrow-danger
-  arrow-orange  -> arrow-warn
-  arrowhead     -> arrow        (and numbered / colour variants)
+The <style> block and defs entries are placed inside a <defs> block
+at the top of the SVG. Custom SVG-specific defs are preserved.
 
 Usage:
-    scripts/install_palette.py                  # dry-run: report what would change
-    scripts/install_palette.py --apply          # write changes to disk
-    scripts/install_palette.py --apply svg/...  # apply to specific files only
+    scripts/install_palette.py                  # dry-run
+    scripts/install_palette.py --apply          # write changes
+    scripts/install_palette.py --apply svg/...  # specific files only
 """
 
 import argparse
@@ -39,15 +24,17 @@ import re
 import sys
 from pathlib import Path
 
-PALETTE_PATH = Path("resources/svg_palette.svg")
+import yaml
+
+PALETTE_PATH = Path("resources/palette.yaml")
 SVG_ROOT = Path("svg")
 
-# Canonical IDs that the palette owns — anything with one of these IDs in an
-# existing <defs> block will be removed and re-inserted from the palette.
+# Canonical IDs that the palette owns
 PALETTE_IDS: set[str] = {
     "grad-primary", "grad-surface", "grad-ok", "grad-warn", "grad-danger", "grad-info",
     "shadow",
     "arrow", "arrow-primary", "arrow-ok", "arrow-warn", "arrow-danger", "arrow-info", "arrow-white",
+    "palette-vars",
 }
 
 # Old ID -> canonical ID renames (longer/more-specific first).
@@ -78,26 +65,111 @@ ID_RENAMES: list[tuple[str, str]] = [
     ("grad-purple",      "grad-info"),
 ]
 
-# Matches any namespace-prefixed or plain defs block
+# Color attributes to convert from hex to var()
+_COLOR_ATTRS = {"fill", "stroke", "stop-color", "flood-color"}
+
+# Named CSS colors -> palette semantic name (direct mapping)
+_CSS_TO_PALETTE_NAME: dict[str, str] = {
+    "white": "bg",
+    "black": "black",
+    "red": "danger",
+    "green": "ok",
+    "blue": "primary",
+    "yellow": "warn-yellow",
+    "orange": "warn-orange",
+    "gray": "text-faint",
+    "grey": "text-faint",
+    "lightblue": "primary-lt",
+    "lightgreen": "ok-lt",
+    "lightcoral": "danger-lt",
+    "lightyellow": "warn-pale",
+    "lightpink": "danger-pale3",
+}
+
+# Regex patterns
 _DEFS_OPEN_RE  = re.compile(r'<(?:[a-zA-Z0-9_]+:)?defs(?:\s[^>]*)?>')
 _DEFS_CLOSE_RE = re.compile(r'</(?:[a-zA-Z0-9_]+:)?defs>')
-
-# Opening <svg …> tag
 _SVG_OPEN_RE = re.compile(r'(<(?:[a-zA-Z0-9_]+:)?svg\b[^>]*>)')
-
-# One XML element (non-recursive, for top-level defs children)
-_ELEMENT_RE = re.compile(r'<[^>]+(?:/>|>.*?</[^>]+>)', re.DOTALL)
-
-# id="..." anywhere
 _ID_ATTR_RE = re.compile(r'\bid="([^"]+)"')
+_COLOR_RE = re.compile(r'#[0-9a-fA-F]{3,8}')
+_STYLE_BLOCK_RE = re.compile(
+    r'<style\b[^>]*id="palette-vars"[^>]*>.*?</style>',
+    re.DOTALL,
+)
 
 
-def _extract_palette_defs_block(palette_text: str) -> str:
-    """Return the indented content between <defs> and </defs> in the palette."""
-    m = re.search(r'<defs>(.*?)</defs>', palette_text, re.DOTALL)
-    if not m:
-        raise RuntimeError(f"No <defs> block found in {PALETTE_PATH}")
-    return m.group(1)   # the inner content, not the tags themselves
+def _load_palette() -> dict:
+    """Load and return the palette data from YAML."""
+    with open(PALETTE_PATH, encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def _build_hex_to_name(data: dict) -> dict[str, str]:
+    """Build a mapping from normalized hex -> semantic name."""
+    mapping: dict[str, str] = {}
+    for group in data["colors"].values():
+        for name, hexval in group.items():
+            h = hexval.strip().lower()
+            # Normalize 3-digit to 6-digit
+            digits = h.lstrip('#')
+            if len(digits) == 3:
+                digits = ''.join(ch * 2 for ch in digits)
+                h = '#' + digits
+            if h not in mapping:
+                mapping[h] = name
+    return mapping
+
+
+def _generate_style_block(data: dict) -> str:
+    """Generate a <style> block with CSS custom properties."""
+    lines = ['    <style id="palette-vars">']
+    lines.append('      :root, svg {')
+    for group_name, group in data["colors"].items():
+        for name, hexval in group.items():
+            lines.append(f'        --{name}: {hexval};')
+    lines.append('      }')
+    lines.append('    </style>')
+    return '\n'.join(lines)
+
+
+def _generate_defs_content(data: dict) -> str:
+    """Generate the gradient, filter, and marker defs from YAML."""
+    lines = []
+
+    # Gradients
+    lines.append('    <!-- Gradients -->')
+    for gid, gdata in data.get("gradients", {}).items():
+        lines.append(f'    <linearGradient id="{gid}" x1="0" y1="0" x2="0" y2="1">')
+        for stop in gdata["stops"]:
+            lines.append(f'      <stop offset="{stop["offset"]}" stop-color="{stop["color"]}"/>')
+        lines.append('    </linearGradient>')
+        lines.append('')
+
+    # Filters
+    lines.append('    <!-- Drop shadow -->')
+    for fid, fdata in data.get("filters", {}).items():
+        lines.append(
+            f'    <filter id="{fid}" x="-4%" y="-8%" width="108%" height="124%">'
+        )
+        lines.append(
+            f'      <feDropShadow dx="{fdata["dx"]}" dy="{fdata["dy"]}"'
+            f' stdDeviation="{fdata["stdDeviation"]}"'
+            f' flood-color="{fdata["flood-color"]}"/>'
+        )
+        lines.append('    </filter>')
+        lines.append('')
+
+    # Markers
+    lines.append('    <!-- Arrow markers -->')
+    for mid, mdata in data.get("markers", {}).items():
+        lines.append(
+            f'    <marker id="{mid}" markerWidth="10" markerHeight="10"'
+            f' refX="9" refY="5" orient="auto">'
+        )
+        lines.append(f'      <path d="M1,2 L9,5 L1,8 Z" fill="{mdata["fill"]}"/>')
+        lines.append('    </marker>')
+
+    return '\n'.join(lines)
 
 
 def _apply_renames(text: str) -> str:
@@ -111,78 +183,170 @@ def _apply_renames(text: str) -> str:
     return text
 
 
-def _merge_defs(svg_text: str, palette_inner: str) -> str:
-    """Merge palette entries into the SVG's <defs> block.
+def _convert_colors_to_vars(text: str, hex_to_name: dict[str, str]) -> str:
+    """Convert raw hex colors and named CSS colors in color attributes to var(--name).
 
-    - If the SVG has a <defs> block: remove any existing palette-owned entries
-      (by id) and prepend the canonical palette content.
-    - If no <defs> block: insert a new one right after the opening <svg> tag.
+    Only converts colors in fill/stroke/stop-color/flood-color attributes.
+    Does NOT convert colors inside <defs> blocks (gradients, markers, filters
+    need raw hex for their stop-color/fill values).
     """
+    # Find defs region to exclude it from conversion
+    defs_open = _DEFS_OPEN_RE.search(text)
+    defs_close = _DEFS_CLOSE_RE.search(text)
+    defs_start = defs_open.start() if defs_open else -1
+    defs_end = defs_close.end() if defs_close else -1
+
+    def _in_defs(pos: int) -> bool:
+        return defs_start <= pos <= defs_end if defs_start >= 0 else False
+
+    # Build regex for color attributes
+    # Matches: fill="..." stroke="..." stop-color="..." flood-color="..."
+    attr_re = re.compile(
+        r'(?P<attr>(?:fill|stroke|stop-color|flood-color))\s*=\s*"(?P<val>[^"]*)"'
+    )
+
+    def _replace_attr(m: re.Match) -> str:
+        if _in_defs(m.start()):
+            return m.group()
+
+        attr_name = m.group('attr')
+        val = m.group('val').strip()
+        val_lower = val.lower()
+
+        # Skip non-color values and url() references and var() references
+        if val_lower in ('none', 'currentcolor', 'inherit', 'transparent'):
+            return m.group()
+        if val_lower.startswith('url(') or val_lower.startswith('var('):
+            return m.group()
+
+        # Handle named CSS colors
+        if val_lower in _CSS_TO_PALETTE_NAME:
+            return f'{attr_name}="var(--{_CSS_TO_PALETTE_NAME[val_lower]})"'
+
+        # Handle hex colors
+        new_val = val
+        for hex_m in reversed(list(_COLOR_RE.finditer(val))):
+            raw = hex_m.group().lower()
+            h = raw.lstrip('#')
+            if len(h) == 3:
+                h = ''.join(ch * 2 for ch in h)
+            if len(h) == 6:
+                normalized = '#' + h
+                if normalized in hex_to_name:
+                    start, end = hex_m.span()
+                    new_val = new_val[:start] + f'var(--{hex_to_name[normalized]})' + new_val[end:]
+            elif len(h) == 8:
+                # Alpha hex: convert base color, keep alpha
+                base = '#' + h[:6]
+                if base in hex_to_name:
+                    start, end = hex_m.span()
+                    # Can't easily use var() with alpha, leave as-is
+                    pass
+
+        return f'{attr_name}="{new_val}"'
+
+    return attr_re.sub(_replace_attr, text)
+
+
+# Comments injected by the palette that should be stripped on re-install
+_PALETTE_COMMENTS = {
+    '<!-- Gradients -->',
+    '<!-- Drop shadow -->',
+    '<!-- Arrow markers -->',
+}
+
+
+def _strip_palette_elements(inner_text: str) -> str:
+    """Remove palette-managed elements from a defs block."""
+    lines = inner_text.split('\n')
+    result = []
+    skip_until_close: str | None = None
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if skip_until_close:
+            if skip_until_close in line:
+                skip_until_close = None
+            i += 1
+            continue
+        id_m = _ID_ATTR_RE.search(line)
+        if id_m and id_m.group(1) in PALETTE_IDS:
+            if '/>' in line:
+                i += 1
+                continue
+            tag_m = re.match(r'\s*<([A-Za-z0-9_:]+)', line)
+            if tag_m:
+                skip_until_close = f'</{tag_m.group(1)}>'
+            i += 1
+            continue
+        # Strip <style id="palette-vars"> blocks
+        if 'id="palette-vars"' in line:
+            if '</style>' in line:
+                i += 1
+                continue
+            skip_until_close = '</style>'
+            i += 1
+            continue
+        # Strip palette-injected comments
+        stripped = line.strip()
+        if stripped in _PALETTE_COMMENTS:
+            i += 1
+            continue
+        result.append(line)
+        i += 1
+    # Collapse runs of blank lines into at most one
+    collapsed = []
+    prev_blank = False
+    for line in result:
+        is_blank = line.strip() == ''
+        if is_blank and prev_blank:
+            continue
+        collapsed.append(line)
+        prev_blank = is_blank
+    return '\n'.join(collapsed)
+
+
+def _merge_defs(svg_text: str, palette_block: str) -> str:
+    """Merge palette defs (style + gradients + markers) into the SVG."""
     open_m = _DEFS_OPEN_RE.search(svg_text)
     close_m = _DEFS_CLOSE_RE.search(svg_text)
 
     if open_m and close_m and open_m.start() < close_m.start():
-        # There is an existing <defs> block.
         defs_start = open_m.start()
         defs_end   = close_m.end()
-        open_tag   = open_m.group()      # e.g. <defs> or <ns0:defs>
-        close_tag  = close_m.group()     # e.g. </defs> or </ns0:defs>
-        inner      = svg_text[open_m.end():close_m.start()]
+        open_tag   = open_m.group()
+        close_tag  = close_m.group()
 
-        # Remove any element whose id= is a palette-managed ID
-        def _strip_palette_elements(inner_text: str) -> str:
-            # Walk through removing top-level elements with palette IDs.
-            # We do this line-by-line on the raw text to avoid re-parsing.
-            lines = inner_text.split('\n')
-            result = []
-            skip_until_close: str | None = None
-            i = 0
-            while i < len(lines):
-                line = lines[i]
-                if skip_until_close:
-                    if skip_until_close in line:
-                        skip_until_close = None
-                    i += 1
-                    continue
-                # Check if this line opens an element with a palette ID
-                id_m = _ID_ATTR_RE.search(line)
-                if id_m and id_m.group(1) in PALETTE_IDS:
-                    # Self-closing or multi-line?
-                    if '/>' in line:
-                        i += 1
-                        continue   # skip just this line
-                    # Find the closing tag
-                    tag_m = re.match(r'\s*<([A-Za-z0-9_:]+)', line)
-                    if tag_m:
-                        tag_name = tag_m.group(1)
-                        skip_until_close = f'</{tag_name}>'
-                    i += 1
-                    continue
-                result.append(line)
-                i += 1
-            return '\n'.join(result)
+        cleaned_inner = _strip_palette_elements(
+            svg_text[open_m.end():close_m.start()]
+        )
 
-        cleaned_inner = _strip_palette_elements(inner)
-
-        new_defs = open_tag + '\n' + palette_inner + cleaned_inner + close_tag
+        new_defs = open_tag + '\n' + palette_block + '\n' + cleaned_inner + close_tag
         svg_text = svg_text[:defs_start] + new_defs + svg_text[defs_end:]
     else:
-        # No <defs> block — insert one after the opening <svg> tag.
-        new_defs_block = '\n  <defs>\n' + palette_inner + '  </defs>'
+        new_defs_block = '\n  <defs>\n' + palette_block + '\n  </defs>'
         svg_text = _SVG_OPEN_RE.sub(r'\1' + new_defs_block, svg_text, count=1)
 
     return svg_text
 
 
-def process_file(path: Path, palette_inner: str, apply: bool) -> bool:
+def process_file(
+    path: Path,
+    palette_block: str,
+    hex_to_name: dict[str, str],
+    apply: bool,
+) -> bool:
     """Process one SVG. Returns True if the file would/did change."""
     original = path.read_text(encoding="utf-8")
 
     # Step 1: rename old IDs
     updated = _apply_renames(original)
 
-    # Step 2: merge palette defs
-    updated = _merge_defs(updated, palette_inner)
+    # Step 2: convert hex colors to var() references
+    updated = _convert_colors_to_vars(updated, hex_to_name)
+
+    # Step 3: merge palette defs (style block + gradients + markers)
+    updated = _merge_defs(updated, palette_block)
 
     if updated == original:
         return False
@@ -211,8 +375,11 @@ def main() -> None:
         print(f"Error: {PALETTE_PATH} not found", file=sys.stderr)
         sys.exit(1)
 
-    palette_text = PALETTE_PATH.read_text(encoding="utf-8")
-    palette_inner = _extract_palette_defs_block(palette_text)
+    data = _load_palette()
+    hex_to_name = _build_hex_to_name(data)
+    style_block = _generate_style_block(data)
+    defs_content = _generate_defs_content(data)
+    palette_block = style_block + '\n' + defs_content
 
     svg_files = [Path(p) for p in args.paths] if args.paths \
         else sorted(SVG_ROOT.rglob("*.svg"))
@@ -222,7 +389,7 @@ def main() -> None:
 
     for path in svg_files:
         try:
-            if process_file(path, palette_inner, args.apply):
+            if process_file(path, palette_block, hex_to_name, args.apply):
                 changed.append(path)
         except Exception as exc:
             errors.append((path, exc))

@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -89,165 +174,165 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Header -->
   <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
-  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Ansible Module Categories</text>
+  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Module Categories</text>
 
   <!-- Category grid: 3 cols x 2 rows -->
 
   <!-- System Modules -->
-  <rect x="25" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="25" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="25" y="65" width="240" height="30" rx="8" fill="url(#grad-primary)"/>
   <rect x="25" y="83" width="240" height="12" fill="url(#grad-primary)"/>
-  <text x="145" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">System</text>
-  <text x="40" y="114" font-family="monospace" font-size="12" fill="#1565c0">service</text>
-  <text x="150" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">Manage services</text>
-  <text x="40" y="131" font-family="monospace" font-size="12" fill="#1565c0">user</text>
-  <text x="150" y="131" font-family="Arial, sans-serif" font-size="11" fill="#555555">Manage users</text>
-  <text x="40" y="148" font-family="monospace" font-size="12" fill="#1565c0">cron</text>
-  <text x="150" y="148" font-family="Arial, sans-serif" font-size="11" fill="#555555">Cron jobs</text>
-  <text x="40" y="165" font-family="monospace" font-size="12" fill="#1565c0">sysctl</text>
-  <text x="150" y="165" font-family="Arial, sans-serif" font-size="11" fill="#555555">Kernel params</text>
-  <text x="40" y="182" font-family="monospace" font-size="12" fill="#1565c0">systemd</text>
-  <text x="150" y="182" font-family="Arial, sans-serif" font-size="11" fill="#555555">Systemd units</text>
-  <text x="40" y="199" font-family="monospace" font-size="12" fill="#1565c0">mount</text>
-  <text x="150" y="199" font-family="Arial, sans-serif" font-size="11" fill="#555555">Filesystems</text>
+  <text x="145" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">System</text>
+  <text x="40" y="114" font-family="monospace" font-size="12" fill="var(--primary-dk)">service</text>
+  <text x="150" y="114" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Manage services</text>
+  <text x="40" y="131" font-family="monospace" font-size="12" fill="var(--primary-dk)">user</text>
+  <text x="150" y="131" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Manage users</text>
+  <text x="40" y="148" font-family="monospace" font-size="12" fill="var(--primary-dk)">cron</text>
+  <text x="150" y="148" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Cron jobs</text>
+  <text x="40" y="165" font-family="monospace" font-size="12" fill="var(--primary-dk)">sysctl</text>
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Kernel params</text>
+  <text x="40" y="182" font-family="monospace" font-size="12" fill="var(--primary-dk)">systemd</text>
+  <text x="150" y="182" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Systemd units</text>
+  <text x="40" y="199" font-family="monospace" font-size="12" fill="var(--primary-dk)">mount</text>
+  <text x="150" y="199" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Filesystems</text>
 
   <!-- Files Modules -->
-  <rect x="280" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="280" y="65" width="240" height="30" rx="8" fill="url(#grad-ok)"/>
   <rect x="280" y="83" width="240" height="12" fill="url(#grad-ok)"/>
-  <text x="400" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Files</text>
-  <text x="295" y="114" font-family="monospace" font-size="12" fill="#2e7d32">copy</text>
-  <text x="385" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">Copy files to remote</text>
-  <text x="295" y="131" font-family="monospace" font-size="12" fill="#2e7d32">template</text>
-  <text x="385" y="131" font-family="Arial, sans-serif" font-size="11" fill="#555555">Jinja2 templates</text>
-  <text x="295" y="148" font-family="monospace" font-size="12" fill="#2e7d32">file</text>
-  <text x="385" y="148" font-family="Arial, sans-serif" font-size="11" fill="#555555">File attributes</text>
-  <text x="295" y="165" font-family="monospace" font-size="12" fill="#2e7d32">lineinfile</text>
-  <text x="385" y="165" font-family="Arial, sans-serif" font-size="11" fill="#555555">Manage lines</text>
-  <text x="295" y="182" font-family="monospace" font-size="12" fill="#2e7d32">blockinfile</text>
-  <text x="385" y="182" font-family="Arial, sans-serif" font-size="11" fill="#555555">Manage blocks</text>
-  <text x="295" y="199" font-family="monospace" font-size="12" fill="#2e7d32">fetch</text>
-  <text x="385" y="199" font-family="Arial, sans-serif" font-size="11" fill="#555555">Fetch from remote</text>
+  <text x="400" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Files</text>
+  <text x="295" y="114" font-family="monospace" font-size="12" fill="var(--ok-dk)">copy</text>
+  <text x="385" y="114" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Copy files to remote</text>
+  <text x="295" y="131" font-family="monospace" font-size="12" fill="var(--ok-dk)">template</text>
+  <text x="385" y="131" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Jinja2 templates</text>
+  <text x="295" y="148" font-family="monospace" font-size="12" fill="var(--ok-dk)">file</text>
+  <text x="385" y="148" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">File attributes</text>
+  <text x="295" y="165" font-family="monospace" font-size="12" fill="var(--ok-dk)">lineinfile</text>
+  <text x="385" y="165" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Manage lines</text>
+  <text x="295" y="182" font-family="monospace" font-size="12" fill="var(--ok-dk)">blockinfile</text>
+  <text x="385" y="182" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Manage blocks</text>
+  <text x="295" y="199" font-family="monospace" font-size="12" fill="var(--ok-dk)">fetch</text>
+  <text x="385" y="199" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Fetch from remote</text>
 
   <!-- Network/net_tools Modules -->
-  <rect x="535" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="535" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="535" y="65" width="240" height="30" rx="8" fill="url(#grad-warn)"/>
   <rect x="535" y="83" width="240" height="12" fill="url(#grad-warn)"/>
-  <text x="655" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Net Tools</text>
-  <text x="550" y="114" font-family="monospace" font-size="12" fill="#e65100">uri</text>
-  <text x="635" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">HTTP requests</text>
-  <text x="550" y="131" font-family="monospace" font-size="12" fill="#e65100">get_url</text>
-  <text x="635" y="131" font-family="Arial, sans-serif" font-size="11" fill="#555555">Download files</text>
-  <text x="550" y="148" font-family="monospace" font-size="12" fill="#e65100">wait_for</text>
-  <text x="635" y="148" font-family="Arial, sans-serif" font-size="11" fill="#555555">Wait for port/file</text>
-  <text x="550" y="165" font-family="monospace" font-size="12" fill="#e65100">nmcli</text>
-  <text x="635" y="165" font-family="Arial, sans-serif" font-size="11" fill="#555555">Network mgr</text>
-  <text x="550" y="182" font-family="monospace" font-size="12" fill="#e65100">firewalld</text>
-  <text x="635" y="182" font-family="Arial, sans-serif" font-size="11" fill="#555555">Firewall rules</text>
-  <text x="550" y="199" font-family="monospace" font-size="12" fill="#e65100">iptables</text>
-  <text x="635" y="199" font-family="Arial, sans-serif" font-size="11" fill="#555555">IP tables</text>
+  <text x="655" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Net Tools</text>
+  <text x="550" y="114" font-family="monospace" font-size="12" fill="var(--warn-dk)">uri</text>
+  <text x="635" y="114" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">HTTP requests</text>
+  <text x="550" y="131" font-family="monospace" font-size="12" fill="var(--warn-dk)">get_url</text>
+  <text x="635" y="131" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Download files</text>
+  <text x="550" y="148" font-family="monospace" font-size="12" fill="var(--warn-dk)">wait_for</text>
+  <text x="635" y="148" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Wait for port/file</text>
+  <text x="550" y="165" font-family="monospace" font-size="12" fill="var(--warn-dk)">nmcli</text>
+  <text x="635" y="165" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Network mgr</text>
+  <text x="550" y="182" font-family="monospace" font-size="12" fill="var(--warn-dk)">firewalld</text>
+  <text x="635" y="182" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Firewall rules</text>
+  <text x="550" y="199" font-family="monospace" font-size="12" fill="var(--warn-dk)">iptables</text>
+  <text x="635" y="199" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">IP tables</text>
 
   <!-- Cloud Modules -->
-  <rect x="790" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="790" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="790" y="65" width="240" height="30" rx="8" fill="url(#grad-info)"/>
   <rect x="790" y="83" width="240" height="12" fill="url(#grad-info)"/>
-  <text x="910" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Cloud</text>
-  <text x="805" y="114" font-family="monospace" font-size="12" fill="#6a1b9a">ec2_instance</text>
-  <text x="920" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">AWS EC2</text>
-  <text x="805" y="131" font-family="monospace" font-size="12" fill="#6a1b9a">s3_bucket</text>
-  <text x="920" y="131" font-family="Arial, sans-serif" font-size="11" fill="#555555">AWS S3</text>
-  <text x="805" y="148" font-family="monospace" font-size="12" fill="#6a1b9a">azure_rm_vm</text>
-  <text x="920" y="148" font-family="Arial, sans-serif" font-size="11" fill="#555555">Azure VMs</text>
-  <text x="805" y="165" font-family="monospace" font-size="12" fill="#6a1b9a">gcp_compute</text>
-  <text x="920" y="165" font-family="Arial, sans-serif" font-size="11" fill="#555555">GCP Compute</text>
-  <text x="805" y="182" font-family="monospace" font-size="12" fill="#6a1b9a">docker_container</text>
-  <text x="920" y="182" font-family="Arial, sans-serif" font-size="11" fill="#555555">Docker</text>
-  <text x="805" y="199" font-family="monospace" font-size="12" fill="#6a1b9a">k8s</text>
-  <text x="920" y="199" font-family="Arial, sans-serif" font-size="11" fill="#555555">Kubernetes</text>
+  <text x="910" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cloud</text>
+  <text x="805" y="114" font-family="monospace" font-size="12" fill="var(--info-dk)">ec2_instance</text>
+  <text x="920" y="114" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">AWS EC2</text>
+  <text x="805" y="131" font-family="monospace" font-size="12" fill="var(--info-dk)">s3_bucket</text>
+  <text x="920" y="131" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">AWS S3</text>
+  <text x="805" y="148" font-family="monospace" font-size="12" fill="var(--info-dk)">azure_rm_vm</text>
+  <text x="920" y="148" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Azure VMs</text>
+  <text x="805" y="165" font-family="monospace" font-size="12" fill="var(--info-dk)">gcp_compute</text>
+  <text x="920" y="165" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">GCP Compute</text>
+  <text x="805" y="182" font-family="monospace" font-size="12" fill="var(--info-dk)">docker_container</text>
+  <text x="920" y="182" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Docker</text>
+  <text x="805" y="199" font-family="monospace" font-size="12" fill="var(--info-dk)">k8s</text>
+  <text x="920" y="199" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Kubernetes</text>
 
   <!-- Database Modules -->
-  <rect x="25" y="225" width="240" height="115" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="25" y="225" width="240" height="115" rx="8" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="25" y="225" width="240" height="30" rx="8" fill="url(#grad-primary)"/>
   <rect x="25" y="243" width="240" height="12" fill="url(#grad-primary)"/>
-  <text x="145" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Database</text>
-  <text x="40" y="274" font-family="monospace" font-size="12" fill="#1565c0">mysql_db</text>
-  <text x="145" y="274" font-family="Arial, sans-serif" font-size="11" fill="#555555">MySQL databases</text>
-  <text x="40" y="291" font-family="monospace" font-size="12" fill="#1565c0">postgresql_db</text>
-  <text x="145" y="291" font-family="Arial, sans-serif" font-size="11" fill="#555555">PostgreSQL</text>
-  <text x="40" y="308" font-family="monospace" font-size="12" fill="#1565c0">redis</text>
-  <text x="145" y="308" font-family="Arial, sans-serif" font-size="11" fill="#555555">Redis commands</text>
-  <text x="40" y="325" font-family="monospace" font-size="12" fill="#1565c0">mongodb_user</text>
-  <text x="145" y="325" font-family="Arial, sans-serif" font-size="11" fill="#555555">MongoDB</text>
+  <text x="145" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Database</text>
+  <text x="40" y="274" font-family="monospace" font-size="12" fill="var(--primary-dk)">mysql_db</text>
+  <text x="145" y="274" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">MySQL databases</text>
+  <text x="40" y="291" font-family="monospace" font-size="12" fill="var(--primary-dk)">postgresql_db</text>
+  <text x="145" y="291" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">PostgreSQL</text>
+  <text x="40" y="308" font-family="monospace" font-size="12" fill="var(--primary-dk)">redis</text>
+  <text x="145" y="308" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Redis commands</text>
+  <text x="40" y="325" font-family="monospace" font-size="12" fill="var(--primary-dk)">mongodb_user</text>
+  <text x="145" y="325" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">MongoDB</text>
 
   <!-- Messaging Modules -->
-  <rect x="280" y="225" width="240" height="115" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="280" y="225" width="240" height="115" rx="8" fill="url(#grad-surface)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="280" y="225" width="240" height="30" rx="8" fill="url(#grad-ok)"/>
   <rect x="280" y="243" width="240" height="12" fill="url(#grad-ok)"/>
-  <text x="400" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Messaging / Notify</text>
-  <text x="295" y="274" font-family="monospace" font-size="12" fill="#2e7d32">slack</text>
-  <text x="375" y="274" font-family="Arial, sans-serif" font-size="11" fill="#555555">Slack notification</text>
-  <text x="295" y="291" font-family="monospace" font-size="12" fill="#2e7d32">mail</text>
-  <text x="375" y="291" font-family="Arial, sans-serif" font-size="11" fill="#555555">Email alerts</text>
-  <text x="295" y="308" font-family="monospace" font-size="12" fill="#2e7d32">hipchat</text>
-  <text x="375" y="308" font-family="Arial, sans-serif" font-size="11" fill="#555555">HipChat</text>
-  <text x="295" y="325" font-family="monospace" font-size="12" fill="#2e7d32">rabbitmq_queue</text>
-  <text x="375" y="325" font-family="Arial, sans-serif" font-size="11" fill="#555555">RabbitMQ</text>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Messaging / Notify</text>
+  <text x="295" y="274" font-family="monospace" font-size="12" fill="var(--ok-dk)">slack</text>
+  <text x="375" y="274" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Slack notification</text>
+  <text x="295" y="291" font-family="monospace" font-size="12" fill="var(--ok-dk)">mail</text>
+  <text x="375" y="291" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Email alerts</text>
+  <text x="295" y="308" font-family="monospace" font-size="12" fill="var(--ok-dk)">hipchat</text>
+  <text x="375" y="308" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">HipChat</text>
+  <text x="295" y="325" font-family="monospace" font-size="12" fill="var(--ok-dk)">rabbitmq_queue</text>
+  <text x="375" y="325" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">RabbitMQ</text>
 
   <!-- Ad-Hoc Command Structure -->
-  <rect x="535" y="225" width="495" height="115" rx="8" fill="#fff8e1" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="535" y="225" width="495" height="115" rx="8" fill="var(--warn-pale3)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="535" y="225" width="495" height="30" rx="8" fill="url(#grad-warn)"/>
   <rect x="535" y="243" width="495" height="12" fill="url(#grad-warn)"/>
-  <text x="782" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Ad-Hoc Command Structure</text>
-  <text x="550" y="278" font-family="monospace" font-size="13" fill="#1565c0">ansible</text>
-  <text x="610" y="278" font-family="monospace" font-size="13" fill="#2e7d32">all</text>
-  <text x="640" y="278" font-family="monospace" font-size="13" fill="#e65100">-m ping</text>
-  <text x="710" y="278" font-family="monospace" font-size="13" fill="#6a1b9a">-a "data=hello"</text>
-  <text x="870" y="278" font-family="monospace" font-size="13" fill="#555555">-i inventory/</text>
-  <text x="550" y="296" font-family="Arial, sans-serif" font-size="11" fill="#888888">command</text>
-  <text x="610" y="296" font-family="Arial, sans-serif" font-size="11" fill="#888888">pattern</text>
-  <text x="640" y="296" font-family="Arial, sans-serif" font-size="11" fill="#888888">module</text>
-  <text x="720" y="296" font-family="Arial, sans-serif" font-size="11" fill="#888888">arguments</text>
-  <text x="870" y="296" font-family="Arial, sans-serif" font-size="11" fill="#888888">inventory</text>
-  <text x="550" y="320" font-family="monospace" font-size="12" fill="#333333">ansible webservers -m copy -a "src=app.conf dest=/etc/app.conf" --become</text>
-  <text x="550" y="337" font-family="monospace" font-size="12" fill="#333333">ansible-doc -l                  # list all modules</text>
+  <text x="782" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ad-Hoc Command Structure</text>
+  <text x="550" y="278" font-family="monospace" font-size="13" fill="var(--primary-dk)">ansible</text>
+  <text x="610" y="278" font-family="monospace" font-size="13" fill="var(--ok-dk)">all</text>
+  <text x="640" y="278" font-family="monospace" font-size="13" fill="var(--warn-dk)">-m ping</text>
+  <text x="710" y="278" font-family="monospace" font-size="13" fill="var(--info-dk)">-a "data=hello"</text>
+  <text x="870" y="278" font-family="monospace" font-size="13" fill="var(--text-muted)">-i inventory/</text>
+  <text x="550" y="296" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">command</text>
+  <text x="610" y="296" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">pattern</text>
+  <text x="640" y="296" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">module</text>
+  <text x="720" y="296" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">arguments</text>
+  <text x="870" y="296" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">inventory</text>
+  <text x="550" y="320" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible webservers -m copy -a "src=app.conf dest=/etc/app.conf" --become</text>
+  <text x="550" y="337" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible-doc -l                  # list all modules</text>
 
   <!-- Module Documentation -->
-  <rect x="25" y="358" width="1005" height="88" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="40" y="381" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Module Documentation Lookup</text>
-  <text x="40" y="402" font-family="monospace" font-size="12" fill="#333333">ansible-doc copy</text>
-  <text x="250" y="402" font-family="Arial, sans-serif" font-size="11" fill="#555555"># full module docs in terminal</text>
-  <text x="40" y="420" font-family="monospace" font-size="12" fill="#333333">ansible-doc -s copy</text>
-  <text x="250" y="420" font-family="Arial, sans-serif" font-size="11" fill="#555555"># short synopsis/snippet</text>
-  <text x="550" y="402" font-family="monospace" font-size="12" fill="#333333">ansible-doc community.general.json_query</text>
-  <text x="550" y="420" font-family="monospace" font-size="12" fill="#333333">ansible-doc -t filter ansible.builtin.items2dict</text>
+  <rect x="25" y="358" width="1005" height="88" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="40" y="381" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Module Documentation Lookup</text>
+  <text x="40" y="402" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible-doc copy</text>
+  <text x="250" y="402" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)"># full module docs in terminal</text>
+  <text x="40" y="420" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible-doc -s copy</text>
+  <text x="250" y="420" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)"># short synopsis/snippet</text>
+  <text x="550" y="402" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible-doc community.general.json_query</text>
+  <text x="550" y="420" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible-doc -t filter ansible.builtin.items2dict</text>
 
   <!-- Key stats box -->
-  <rect x="1045" y="65" width="210" height="380" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1045" y="65" width="210" height="380" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5" filter="url(#shadow)"/>
   <rect x="1045" y="65" width="210" height="30" rx="8" fill="url(#grad-primary)"/>
   <rect x="1045" y="83" width="210" height="12" fill="url(#grad-primary)"/>
-  <text x="1150" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Quick Facts</text>
-  <text x="1060" y="115" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">7,000+ modules</text>
-  <text x="1060" y="133" font-family="Arial, sans-serif" font-size="11" fill="#555555">in Ansible collections</text>
-  <line x1="1060" y1="145" x2="1240" y2="145" stroke="#bbdefb" stroke-width="1"/>
-  <text x="1060" y="163" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Idempotent</text>
-  <text x="1060" y="181" font-family="Arial, sans-serif" font-size="11" fill="#555555">Most modules check</text>
-  <text x="1060" y="197" font-family="Arial, sans-serif" font-size="11" fill="#555555">state before acting</text>
-  <line x1="1060" y1="209" x2="1240" y2="209" stroke="#bbdefb" stroke-width="1"/>
-  <text x="1060" y="227" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Return Values</text>
-  <text x="1060" y="245" font-family="Arial, sans-serif" font-size="11" fill="#555555">changed: true/false</text>
-  <text x="1060" y="263" font-family="Arial, sans-serif" font-size="11" fill="#555555">failed: true/false</text>
-  <text x="1060" y="281" font-family="Arial, sans-serif" font-size="11" fill="#555555">rc: return code</text>
-  <text x="1060" y="299" font-family="Arial, sans-serif" font-size="11" fill="#555555">stdout / stderr</text>
-  <line x1="1060" y1="311" x2="1240" y2="311" stroke="#bbdefb" stroke-width="1"/>
-  <text x="1060" y="329" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Common Flags</text>
-  <text x="1060" y="347" font-family="monospace" font-size="11" fill="#333333">-b / --become</text>
-  <text x="1060" y="363" font-family="monospace" font-size="11" fill="#333333">-k (ask pass)</text>
-  <text x="1060" y="379" font-family="monospace" font-size="11" fill="#333333">-K (ask sudo)</text>
-  <text x="1060" y="395" font-family="monospace" font-size="11" fill="#333333">-v / -vvv</text>
-  <text x="1060" y="411" font-family="monospace" font-size="11" fill="#333333">--check (dry run)</text>
-  <text x="1060" y="427" font-family="monospace" font-size="11" fill="#333333">--diff</text>
+  <text x="1150" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Quick Facts</text>
+  <text x="1060" y="115" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">7,000+ modules</text>
+  <text x="1060" y="133" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">in Ansible collections</text>
+  <line x1="1060" y1="145" x2="1240" y2="145" stroke="var(--primary-lt)" stroke-width="1"/>
+  <text x="1060" y="163" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Idempotent</text>
+  <text x="1060" y="181" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Most modules check</text>
+  <text x="1060" y="197" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">state before acting</text>
+  <line x1="1060" y1="209" x2="1240" y2="209" stroke="var(--primary-lt)" stroke-width="1"/>
+  <text x="1060" y="227" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Return Values</text>
+  <text x="1060" y="245" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">changed: true/false</text>
+  <text x="1060" y="263" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">failed: true/false</text>
+  <text x="1060" y="281" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">rc: return code</text>
+  <text x="1060" y="299" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">stdout / stderr</text>
+  <line x1="1060" y1="311" x2="1240" y2="311" stroke="var(--primary-lt)" stroke-width="1"/>
+  <text x="1060" y="329" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Common Flags</text>
+  <text x="1060" y="347" font-family="monospace" font-size="11" fill="var(--text-dark)">-b / --become</text>
+  <text x="1060" y="363" font-family="monospace" font-size="11" fill="var(--text-dark)">-k (ask pass)</text>
+  <text x="1060" y="379" font-family="monospace" font-size="11" fill="var(--text-dark)">-K (ask sudo)</text>
+  <text x="1060" y="395" font-family="monospace" font-size="11" fill="var(--text-dark)">-v / -vvv</text>
+  <text x="1060" y="411" font-family="monospace" font-size="11" fill="var(--text-dark)">--check (dry run)</text>
+  <text x="1060" y="427" font-family="monospace" font-size="11" fill="var(--text-dark)">--diff</text>
 </svg>

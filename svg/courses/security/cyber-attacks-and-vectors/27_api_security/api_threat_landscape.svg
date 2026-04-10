@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,47 +156,46 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
-  </defs>
-  <text x="640" y="46.9565" text-anchor="middle" font-size="25.0435" font-weight="bold" fill="#333">API Threat Landscape</text>
-  <text x="640" y="81.3913" text-anchor="middle" font-size="18.7826" fill="#4a90e2">OWASP API Security Top 10 (2023)</text>
-  <rect x="53.3333" y="109.5652" width="568.8889" height="59.4783" rx="7.8261" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1304" />
-  <text x="80" y="145.5652" font-size="15.6522" font-weight="bold" fill="#dc3545">1.</text>
-  <text x="110.2222" y="145.5652" font-size="15.6522" fill="#333">Broken Object Level Authorization</text>
-  <rect x="53.3333" y="178.4348" width="568.8889" height="59.4783" rx="7.8261" fill="#f8d7da" stroke="#dc3545" stroke-width="2.3478" />
-  <text x="80" y="214.4348" font-size="15.6522" font-weight="bold" fill="#dc3545">2.</text>
-  <text x="110.2222" y="214.4348" font-size="15.6522" fill="#333">Broken Authentication</text>
-  <rect x="53.3333" y="247.3043" width="568.8889" height="59.4783" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3478" />
-  <text x="80" y="283.3043" font-size="15.6522" font-weight="bold" fill="#f39c12">3.</text>
-  <text x="110.2222" y="283.3043" font-size="15.6522" fill="#333">Broken Object Property Level Auth</text>
-  <rect x="53.3333" y="316.1739" width="568.8889" height="59.4783" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3478" />
-  <text x="80" y="352.1739" font-size="15.6522" font-weight="bold" fill="#f39c12">4.</text>
-  <text x="110.2222" y="352.1739" font-size="15.6522" fill="#333">Unrestricted Resource Consumption</text>
-  <rect x="53.3333" y="385.0435" width="568.8889" height="59.4783" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3478" />
-  <text x="80" y="421.0435" font-size="15.6522" font-weight="bold" fill="#f39c12">5.</text>
-  <text x="110.2222" y="421.0435" font-size="15.6522" fill="#333">Broken Function Level Authorization</text>
-  <rect x="657.7778" y="109.5652" width="568.8889" height="59.4783" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3478" />
-  <text x="684.4444" y="145.5652" font-size="15.6522" font-weight="bold" fill="#4a90e2">6.</text>
-  <text x="714.6667" y="145.5652" font-size="15.6522" fill="#333">Server Side Request Forgery (SSRF)</text>
-  <rect x="657.7778" y="178.4348" width="568.8889" height="59.4783" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3478" />
-  <text x="684.4444" y="214.4348" font-size="15.6522" font-weight="bold" fill="#4a90e2">7.</text>
-  <text x="714.6667" y="214.4348" font-size="15.6522" fill="#333">Security Misconfiguration</text>
-  <rect x="657.7778" y="247.3043" width="568.8889" height="59.4783" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.3478" />
-  <text x="684.4444" y="283.3043" font-size="15.6522" font-weight="bold" fill="#4a90e2">8.</text>
-  <text x="714.6667" y="283.3043" font-size="15.6522" fill="#333">Lack of Automated Threat Protection</text>
-  <rect x="657.7778" y="316.1739" width="568.8889" height="59.4783" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="2.3478" />
-  <text x="684.4444" y="352.1739" font-size="15.6522" font-weight="bold" fill="#28a745">9.</text>
-  <text x="714.6667" y="352.1739" font-size="15.6522" fill="#333">Improper Inventory Management</text>
-  <rect x="657.7778" y="385.0435" width="568.8889" height="59.4783" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="2.3478" />
-  <text x="684.4444" y="421.0435" font-size="15.6522" font-weight="bold" fill="#28a745">10.</text>
-  <text x="723.5556" y="421.0435" font-size="15.6522" fill="#333">Unsafe Consumption of APIs</text>
-  <rect x="213.3333" y="500.8696" width="853.3333" height="93.913" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="640" y="535.3043" text-anchor="middle" font-size="17.2174" font-weight="bold" fill="#333">Risk Level</text>
-  <rect x="266.6667" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5652" />
-  <text x="391.1111" y="571.3043" font-size="15.6522" fill="#333">Critical</text>
-  <rect x="497.7778" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5652" />
-  <text x="622.2222" y="571.3043" font-size="15.6522" fill="#333">High</text>
-  <rect x="711.1111" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="835.5556" y="571.3043" font-size="15.6522" fill="#333">Medium</text>
-  <rect x="924.4444" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="#d4edda" stroke="#28a745" stroke-width="1.5652" />
+</defs>
+  <text x="640" y="46.9565" text-anchor="middle" font-size="25.0435" font-weight="bold" fill="var(--text-dark)">API Threat Landscape</text>
+  <text x="640" y="81.3913" text-anchor="middle" font-size="18.7826" fill="var(--primary-bright)">OWASP API Security Top 10 (2023)</text>
+  <rect x="53.3333" y="109.5652" width="568.8889" height="59.4783" rx="7.8261" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.1304" />
+  <text x="80" y="145.5652" font-size="15.6522" font-weight="bold" fill="var(--danger-bright)">1.</text>
+  <text x="110.2222" y="145.5652" font-size="15.6522" fill="var(--text-dark)">Broken Object Level Authorization</text>
+  <rect x="53.3333" y="178.4348" width="568.8889" height="59.4783" rx="7.8261" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.3478" />
+  <text x="80" y="214.4348" font-size="15.6522" font-weight="bold" fill="var(--danger-bright)">2.</text>
+  <text x="110.2222" y="214.4348" font-size="15.6522" fill="var(--text-dark)">Broken Authentication</text>
+  <rect x="53.3333" y="247.3043" width="568.8889" height="59.4783" rx="7.8261" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.3478" />
+  <text x="80" y="283.3043" font-size="15.6522" font-weight="bold" fill="var(--warn-gold)">3.</text>
+  <text x="110.2222" y="283.3043" font-size="15.6522" fill="var(--text-dark)">Broken Object Property Level Auth</text>
+  <rect x="53.3333" y="316.1739" width="568.8889" height="59.4783" rx="7.8261" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.3478" />
+  <text x="80" y="352.1739" font-size="15.6522" font-weight="bold" fill="var(--warn-gold)">4.</text>
+  <text x="110.2222" y="352.1739" font-size="15.6522" fill="var(--text-dark)">Unrestricted Resource Consumption</text>
+  <rect x="53.3333" y="385.0435" width="568.8889" height="59.4783" rx="7.8261" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.3478" />
+  <text x="80" y="421.0435" font-size="15.6522" font-weight="bold" fill="var(--warn-gold)">5.</text>
+  <text x="110.2222" y="421.0435" font-size="15.6522" fill="var(--text-dark)">Broken Function Level Authorization</text>
+  <rect x="657.7778" y="109.5652" width="568.8889" height="59.4783" rx="7.8261" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.3478" />
+  <text x="684.4444" y="145.5652" font-size="15.6522" font-weight="bold" fill="var(--primary-bright)">6.</text>
+  <text x="714.6667" y="145.5652" font-size="15.6522" fill="var(--text-dark)">Server Side Request Forgery (SSRF)</text>
+  <rect x="657.7778" y="178.4348" width="568.8889" height="59.4783" rx="7.8261" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.3478" />
+  <text x="684.4444" y="214.4348" font-size="15.6522" font-weight="bold" fill="var(--primary-bright)">7.</text>
+  <text x="714.6667" y="214.4348" font-size="15.6522" fill="var(--text-dark)">Security Misconfiguration</text>
+  <rect x="657.7778" y="247.3043" width="568.8889" height="59.4783" rx="7.8261" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.3478" />
+  <text x="684.4444" y="283.3043" font-size="15.6522" font-weight="bold" fill="var(--primary-bright)">8.</text>
+  <text x="714.6667" y="283.3043" font-size="15.6522" fill="var(--text-dark)">Lack of Automated Threat Protection</text>
+  <rect x="657.7778" y="316.1739" width="568.8889" height="59.4783" rx="7.8261" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.3478" />
+  <text x="684.4444" y="352.1739" font-size="15.6522" font-weight="bold" fill="var(--ok-bright)">9.</text>
+  <text x="714.6667" y="352.1739" font-size="15.6522" fill="var(--text-dark)">Improper Inventory Management</text>
+  <rect x="657.7778" y="385.0435" width="568.8889" height="59.4783" rx="7.8261" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.3478" />
+  <text x="684.4444" y="421.0435" font-size="15.6522" font-weight="bold" fill="var(--ok-bright)">10.</text>
+  <text x="723.5556" y="421.0435" font-size="15.6522" fill="var(--text-dark)">Unsafe Consumption of APIs</text>
+  <rect x="213.3333" y="500.8696" width="853.3333" height="93.913" rx="7.8261" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5652" />
+  <text x="640" y="535.3043" text-anchor="middle" font-size="17.2174" font-weight="bold" fill="var(--text-dark)">Risk Level</text>
+  <rect x="266.6667" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.5652" />
+  <text x="391.1111" y="571.3043" font-size="15.6522" fill="var(--text-dark)">Critical</text>
+  <rect x="497.7778" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5652" />
+  <text x="622.2222" y="571.3043" font-size="15.6522" fill="var(--text-dark)">High</text>
+  <rect x="711.1111" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5652" />
+  <text x="835.5556" y="571.3043" font-size="15.6522" fill="var(--text-dark)">Medium</text>
+  <rect x="924.4444" y="547.8261" width="106.6667" height="28.1739" rx="4.6957" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5652" />
 </svg>

@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -89,122 +174,122 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Header -->
   <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
-  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Ansible Error Handling Flow</text>
+  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Error Handling Flow</text>
 
   <!-- LEFT: Block/Rescue/Always -->
-  <rect x="20" y="62" width="370" height="375" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="62" width="370" height="375" rx="8" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="20" y="62" width="370" height="30" rx="8" fill="url(#grad-primary)"/>
   <rect x="20" y="80" width="370" height="12" fill="url(#grad-primary)"/>
-  <text x="205" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">block / rescue / always</text>
+  <text x="205" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">block / rescue / always</text>
 
-  <rect x="35" y="100" width="340" height="80" rx="5" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1"/>
-  <text x="50" y="118" font-family="monospace" font-size="11" font-weight="bold" fill="#1565c0">block:                  # try</text>
-  <text x="50" y="136" font-family="monospace" font-size="11" fill="#333333">  - name: Risky deploy</text>
-  <text x="50" y="153" font-family="monospace" font-size="11" fill="#333333">    command: /opt/deploy.sh</text>
-  <text x="50" y="170" font-family="monospace" font-size="11" fill="#333333">  - name: Configure app</text>
+  <rect x="35" y="100" width="340" height="80" rx="5" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="50" y="118" font-family="monospace" font-size="11" font-weight="bold" fill="var(--primary-dk)">block:                  # try</text>
+  <text x="50" y="136" font-family="monospace" font-size="11" fill="var(--text-dark)">  - name: Risky deploy</text>
+  <text x="50" y="153" font-family="monospace" font-size="11" fill="var(--text-dark)">    command: /opt/deploy.sh</text>
+  <text x="50" y="170" font-family="monospace" font-size="11" fill="var(--text-dark)">  - name: Configure app</text>
 
-  <rect x="35" y="186" width="340" height="80" rx="5" fill="#ffebee" stroke="#e53935" stroke-width="1"/>
-  <text x="50" y="204" font-family="monospace" font-size="11" font-weight="bold" fill="#e53935">rescue:                 # catch</text>
-  <text x="50" y="221" font-family="monospace" font-size="11" fill="#333333">  - name: Alert on failure</text>
-  <text x="50" y="238" font-family="monospace" font-size="11" fill="#333333">    slack: msg="Deploy failed"</text>
-  <text x="50" y="255" font-family="monospace" font-size="11" fill="#333333">  - name: Rollback changes</text>
+  <rect x="35" y="186" width="340" height="80" rx="5" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="1"/>
+  <text x="50" y="204" font-family="monospace" font-size="11" font-weight="bold" fill="var(--danger)">rescue:                 # catch</text>
+  <text x="50" y="221" font-family="monospace" font-size="11" fill="var(--text-dark)">  - name: Alert on failure</text>
+  <text x="50" y="238" font-family="monospace" font-size="11" fill="var(--text-dark)">    slack: msg="Deploy failed"</text>
+  <text x="50" y="255" font-family="monospace" font-size="11" fill="var(--text-dark)">  - name: Rollback changes</text>
 
-  <rect x="35" y="272" width="340" height="80" rx="5" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
-  <text x="50" y="290" font-family="monospace" font-size="11" font-weight="bold" fill="#2e7d32">always:                 # finally</text>
-  <text x="50" y="307" font-family="monospace" font-size="11" fill="#333333">  - name: Cleanup temp files</text>
-  <text x="50" y="324" font-family="monospace" font-size="11" fill="#333333">    file: path=/tmp/work state=absent</text>
-  <text x="50" y="341" font-family="monospace" font-size="11" fill="#333333">  - name: Log completion</text>
+  <rect x="35" y="272" width="340" height="80" rx="5" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="50" y="290" font-family="monospace" font-size="11" font-weight="bold" fill="var(--ok-dk)">always:                 # finally</text>
+  <text x="50" y="307" font-family="monospace" font-size="11" fill="var(--text-dark)">  - name: Cleanup temp files</text>
+  <text x="50" y="324" font-family="monospace" font-size="11" fill="var(--text-dark)">    file: path=/tmp/work state=absent</text>
+  <text x="50" y="341" font-family="monospace" font-size="11" fill="var(--text-dark)">  - name: Log completion</text>
 
-  <text x="205" y="374" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">block FAILS -&gt; rescue runs -&gt; always runs</text>
-  <text x="205" y="391" font-family="Arial, sans-serif" font-size="11" fill="#555555" text-anchor="middle">block PASSES -&gt; skip rescue -&gt; always runs</text>
-  <text x="205" y="408" font-family="Arial, sans-serif" font-size="11" fill="#888888" text-anchor="middle">ansible_failed_task / ansible_failed_result available</text>
-  <text x="205" y="425" font-family="Arial, sans-serif" font-size="11" fill="#888888" text-anchor="middle">in rescue scope</text>
+  <text x="205" y="374" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">block FAILS -&gt; rescue runs -&gt; always runs</text>
+  <text x="205" y="391" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">block PASSES -&gt; skip rescue -&gt; always runs</text>
+  <text x="205" y="408" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">ansible_failed_task / ansible_failed_result available</text>
+  <text x="205" y="425" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">in rescue scope</text>
 
   <!-- CENTER TOP: ignore_errors and failed_when -->
-  <rect x="405" y="62" width="340" height="185" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="405" y="62" width="340" height="185" rx="8" fill="url(#grad-surface)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="405" y="62" width="340" height="30" rx="8" fill="url(#grad-warn)"/>
   <rect x="405" y="80" width="340" height="12" fill="url(#grad-warn)"/>
-  <text x="575" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">ignore_errors / failed_when</text>
-  <text x="420" y="112" font-family="monospace" font-size="11" fill="#333333">- name: Check service (may fail)</text>
-  <text x="420" y="129" font-family="monospace" font-size="11" fill="#333333">  command: systemctl status nginx</text>
-  <text x="420" y="146" font-family="monospace" font-size="11" fill="#e65100">  ignore_errors: true</text>
-  <text x="420" y="163" font-family="monospace" font-size="11" fill="#e65100">  register: svc_status</text>
-  <line x1="420" y1="174" x2="730" y2="174" stroke="#dddddd" stroke-width="1"/>
-  <text x="420" y="192" font-family="monospace" font-size="11" fill="#333333">- name: Run migration</text>
-  <text x="420" y="209" font-family="monospace" font-size="11" fill="#333333">  command: ./migrate.sh</text>
-  <text x="420" y="226" font-family="monospace" font-size="11" fill="#e65100">  failed_when:</text>
-  <text x="420" y="243" font-family="monospace" font-size="11" fill="#e65100">    - result.rc not in [0, 2]</text>
+  <text x="575" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">ignore_errors / failed_when</text>
+  <text x="420" y="112" font-family="monospace" font-size="11" fill="var(--text-dark)">- name: Check service (may fail)</text>
+  <text x="420" y="129" font-family="monospace" font-size="11" fill="var(--text-dark)">  command: systemctl status nginx</text>
+  <text x="420" y="146" font-family="monospace" font-size="11" fill="var(--warn-dk)">  ignore_errors: true</text>
+  <text x="420" y="163" font-family="monospace" font-size="11" fill="var(--warn-dk)">  register: svc_status</text>
+  <line x1="420" y1="174" x2="730" y2="174" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="420" y="192" font-family="monospace" font-size="11" fill="var(--text-dark)">- name: Run migration</text>
+  <text x="420" y="209" font-family="monospace" font-size="11" fill="var(--text-dark)">  command: ./migrate.sh</text>
+  <text x="420" y="226" font-family="monospace" font-size="11" fill="var(--warn-dk)">  failed_when:</text>
+  <text x="420" y="243" font-family="monospace" font-size="11" fill="var(--warn-dk)">    - result.rc not in [0, 2]</text>
 
   <!-- CENTER MID: changed_when -->
-  <rect x="405" y="260" width="340" height="105" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="405" y="260" width="340" height="105" rx="8" fill="url(#grad-surface)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="405" y="260" width="340" height="30" rx="8" fill="url(#grad-info)"/>
   <rect x="405" y="278" width="340" height="12" fill="url(#grad-info)"/>
-  <text x="575" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">changed_when</text>
-  <text x="420" y="310" font-family="monospace" font-size="11" fill="#333333">- shell: ./check_and_update.sh</text>
-  <text x="420" y="327" font-family="monospace" font-size="11" fill="#6a1b9a">  register: upd</text>
-  <text x="420" y="344" font-family="monospace" font-size="11" fill="#6a1b9a">  changed_when: "'updated' in upd.stdout"</text>
-  <text x="420" y="361" font-family="monospace" font-size="11" fill="#6a1b9a">  changed_when: false   # never changed</text>
+  <text x="575" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">changed_when</text>
+  <text x="420" y="310" font-family="monospace" font-size="11" fill="var(--text-dark)">- shell: ./check_and_update.sh</text>
+  <text x="420" y="327" font-family="monospace" font-size="11" fill="var(--info-dk)">  register: upd</text>
+  <text x="420" y="344" font-family="monospace" font-size="11" fill="var(--info-dk)">  changed_when: "'updated' in upd.stdout"</text>
+  <text x="420" y="361" font-family="monospace" font-size="11" fill="var(--info-dk)">  changed_when: false   # never changed</text>
 
   <!-- CENTER BOT: any_errors_fatal -->
-  <rect x="405" y="378" width="340" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="420" y="400" font-family="monospace" font-size="12" font-weight="bold" fill="#f57c00">any_errors_fatal: true</text>
-  <text x="420" y="420" font-family="Arial, sans-serif" font-size="11" fill="#555555">Halt ALL hosts if ANY host fails this play</text>
-  <text x="420" y="432" font-family="Arial, sans-serif" font-size="11" fill="#555555">max_fail_percentage: 20  # allow 20%</text>
+  <rect x="405" y="378" width="340" height="60" rx="8" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.5"/>
+  <text x="420" y="400" font-family="monospace" font-size="12" font-weight="bold" fill="var(--warn-mid)">any_errors_fatal: true</text>
+  <text x="420" y="420" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Halt ALL hosts if ANY host fails this play</text>
+  <text x="420" y="432" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">max_fail_percentage: 20  # allow 20%</text>
 
   <!-- RIGHT: Debugging -->
-  <rect x="760" y="62" width="500" height="375" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="760" y="62" width="500" height="375" rx="8" fill="url(#grad-surface)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="760" y="62" width="500" height="30" rx="8" fill="url(#grad-ok)"/>
   <rect x="760" y="80" width="500" height="12" fill="url(#grad-ok)"/>
-  <text x="1010" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Debugging Techniques</text>
+  <text x="1010" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Debugging Techniques</text>
 
-  <text x="775" y="112" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">debug module:</text>
-  <text x="775" y="130" font-family="monospace" font-size="11" fill="#333333">- debug: msg="Value is {{ my_var }}"</text>
-  <text x="775" y="147" font-family="monospace" font-size="11" fill="#333333">- debug: var=ansible_facts</text>
-  <text x="775" y="164" font-family="monospace" font-size="11" fill="#333333">- debug: var=result  verbosity=2</text>
+  <text x="775" y="112" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">debug module:</text>
+  <text x="775" y="130" font-family="monospace" font-size="11" fill="var(--text-dark)">- debug: msg="Value is {{ my_var }}"</text>
+  <text x="775" y="147" font-family="monospace" font-size="11" fill="var(--text-dark)">- debug: var=ansible_facts</text>
+  <text x="775" y="164" font-family="monospace" font-size="11" fill="var(--text-dark)">- debug: var=result  verbosity=2</text>
 
-  <line x1="775" y1="176" x2="1245" y2="176" stroke="#dddddd" stroke-width="1"/>
-  <text x="775" y="196" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Verbose modes:</text>
-  <text x="775" y="214" font-family="monospace" font-size="11" fill="#333333">-v</text>
-  <text x="825" y="214" font-family="Arial, sans-serif" font-size="11" fill="#555555">task results</text>
-  <text x="1020" y="214" font-family="monospace" font-size="11" fill="#333333">-vvv</text>
-  <text x="1065" y="214" font-family="Arial, sans-serif" font-size="11" fill="#555555">full connection debug</text>
-  <text x="775" y="231" font-family="monospace" font-size="11" fill="#333333">-vv</text>
-  <text x="825" y="231" font-family="Arial, sans-serif" font-size="11" fill="#555555">file + line info</text>
-  <text x="1020" y="231" font-family="monospace" font-size="11" fill="#333333">-vvvv</text>
-  <text x="1075" y="231" font-family="Arial, sans-serif" font-size="11" fill="#555555">winrm / SSH debug</text>
+  <line x1="775" y1="176" x2="1245" y2="176" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="775" y="196" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Verbose modes:</text>
+  <text x="775" y="214" font-family="monospace" font-size="11" fill="var(--text-dark)">-v</text>
+  <text x="825" y="214" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">task results</text>
+  <text x="1020" y="214" font-family="monospace" font-size="11" fill="var(--text-dark)">-vvv</text>
+  <text x="1065" y="214" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">full connection debug</text>
+  <text x="775" y="231" font-family="monospace" font-size="11" fill="var(--text-dark)">-vv</text>
+  <text x="825" y="231" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">file + line info</text>
+  <text x="1020" y="231" font-family="monospace" font-size="11" fill="var(--text-dark)">-vvvv</text>
+  <text x="1075" y="231" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">winrm / SSH debug</text>
 
-  <line x1="775" y1="245" x2="1245" y2="245" stroke="#dddddd" stroke-width="1"/>
-  <text x="775" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">ansible-lint:</text>
-  <text x="775" y="283" font-family="monospace" font-size="11" fill="#333333">ansible-lint playbook.yml</text>
-  <text x="775" y="300" font-family="monospace" font-size="11" fill="#333333">ansible-lint --list-rules</text>
-  <text x="775" y="317" font-family="monospace" font-size="11" fill="#333333">ansible-lint --profile production</text>
-  <text x="1020" y="283" font-family="Arial, sans-serif" font-size="11" fill="#555555">Checks best practices</text>
-  <text x="1020" y="300" font-family="Arial, sans-serif" font-size="11" fill="#555555">Show all rules</text>
-  <text x="1020" y="317" font-family="Arial, sans-serif" font-size="11" fill="#555555">Strict enforcement</text>
+  <line x1="775" y1="245" x2="1245" y2="245" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="775" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">ansible-lint:</text>
+  <text x="775" y="283" font-family="monospace" font-size="11" fill="var(--text-dark)">ansible-lint playbook.yml</text>
+  <text x="775" y="300" font-family="monospace" font-size="11" fill="var(--text-dark)">ansible-lint --list-rules</text>
+  <text x="775" y="317" font-family="monospace" font-size="11" fill="var(--text-dark)">ansible-lint --profile production</text>
+  <text x="1020" y="283" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Checks best practices</text>
+  <text x="1020" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Show all rules</text>
+  <text x="1020" y="317" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Strict enforcement</text>
 
-  <line x1="775" y1="330" x2="1245" y2="330" stroke="#dddddd" stroke-width="1"/>
-  <text x="775" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Useful debugging tasks:</text>
-  <text x="775" y="368" font-family="monospace" font-size="11" fill="#333333">- name: Gather all facts first</text>
-  <text x="775" y="385" font-family="monospace" font-size="11" fill="#333333">  setup:    # explicit fact gather</text>
-  <text x="775" y="402" font-family="monospace" font-size="11" fill="#333333">- name: Print all vars</text>
-  <text x="775" y="419" font-family="monospace" font-size="11" fill="#333333">  debug: var=vars  verbosity=3</text>
+  <line x1="775" y1="330" x2="1245" y2="330" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="775" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Useful debugging tasks:</text>
+  <text x="775" y="368" font-family="monospace" font-size="11" fill="var(--text-dark)">- name: Gather all facts first</text>
+  <text x="775" y="385" font-family="monospace" font-size="11" fill="var(--text-dark)">  setup:    # explicit fact gather</text>
+  <text x="775" y="402" font-family="monospace" font-size="11" fill="var(--text-dark)">- name: Print all vars</text>
+  <text x="775" y="419" font-family="monospace" font-size="11" fill="var(--text-dark)">  debug: var=vars  verbosity=3</text>
 
   <!-- Bottom bar -->
-  <rect x="20" y="455" width="1240" height="50" rx="6" fill="#f5f5f5" stroke="#dddddd" stroke-width="1"/>
-  <text x="35" y="473" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">Error Handling Decision:</text>
-  <text x="220" y="473" font-family="Arial, sans-serif" font-size="12" fill="#555555">Task may fail safely?</text>
-  <text x="420" y="473" font-family="Arial, sans-serif" font-size="12" fill="#e65100">-&gt; ignore_errors</text>
-  <text x="570" y="473" font-family="Arial, sans-serif" font-size="12" fill="#555555">|  Need custom fail logic?</text>
-  <text x="790" y="473" font-family="Arial, sans-serif" font-size="12" fill="#e65100">-&gt; failed_when</text>
-  <text x="920" y="473" font-family="Arial, sans-serif" font-size="12" fill="#555555">|  Need try/catch?</text>
-  <text x="1080" y="473" font-family="Arial, sans-serif" font-size="12" fill="#1565c0">-&gt; block/rescue</text>
-  <text x="35" y="496" font-family="Arial, sans-serif" font-size="12" fill="#555555">Always use</text>
-  <text x="120" y="496" font-family="monospace" font-size="12" fill="#2e7d32">ansible-lint</text>
-  <text x="215" y="496" font-family="Arial, sans-serif" font-size="12" fill="#555555">in CI pipelines to catch issues before production. Enable</text>
-  <text x="685" y="496" font-family="monospace" font-size="12" fill="#2e7d32">ANSIBLE_STDOUT_CALLBACK=yaml</text>
-  <text x="970" y="496" font-family="Arial, sans-serif" font-size="12" fill="#555555">for readable output.</text>
+  <rect x="20" y="455" width="1240" height="50" rx="6" fill="var(--surface)" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="35" y="473" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text-dark)">Error Handling Decision:</text>
+  <text x="220" y="473" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Task may fail safely?</text>
+  <text x="420" y="473" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)">-&gt; ignore_errors</text>
+  <text x="570" y="473" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">|  Need custom fail logic?</text>
+  <text x="790" y="473" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)">-&gt; failed_when</text>
+  <text x="920" y="473" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">|  Need try/catch?</text>
+  <text x="1080" y="473" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)">-&gt; block/rescue</text>
+  <text x="35" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Always use</text>
+  <text x="120" y="496" font-family="monospace" font-size="12" fill="var(--ok-dk)">ansible-lint</text>
+  <text x="215" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">in CI pipelines to catch issues before production. Enable</text>
+  <text x="685" y="496" font-family="monospace" font-size="12" fill="var(--ok-dk)">ANSIBLE_STDOUT_CALLBACK=yaml</text>
+  <text x="970" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">for readable output.</text>
 </svg>

@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arr" markerWidth="19.3939" markerHeight="13.2632" refX="17.4545" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 6.7879,0" fill="#555" />
     </ns0:marker>
@@ -67,32 +164,32 @@
       <ns0:polygon points="0,18.9474 6.7879,0" fill="#c62828" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect x="8.7345" y="8.5333" width="1135.4793" height="631.4667" fill="#fff8e1" stroke="#c62828" stroke-width="3.4134" rx="10.24" />
-  <ns0:text x="567.7396" y="47.7866" font-size="25.6" font-weight="bold" fill="#c62828" text-anchor="middle">CSRF Attack Flow</ns0:text>
-  <ns0:text x="26.2034" y="85.3333" font-size="22.1867" font-weight="bold" fill="#222">1. Victim logs into bank.com (session cookie set)</ns0:text>
-  <ns0:rect x="26.2034" y="98.9866" width="192.158" height="61.44" fill="#e3f2fd" stroke="#333" stroke-width="2.56" rx="5.12" />
-  <ns0:text x="122.2824" y="138.24" font-size="20.48" fill="#222" text-anchor="middle">Victim Browser</ns0:text>
-  <ns0:line x1="218.3614" y1="129.7067" x2="246.3116" y2="129.7067" stroke="#555" stroke-width="2.56" marker-end="url(#arr)" />
-  <ns0:rect x="249.8054" y="98.9866" width="209.627" height="61.44" fill="#e8f5e9" stroke="#333" stroke-width="2.56" rx="5.12" />
-  <ns0:text x="354.6189" y="138.24" font-size="20.48" fill="#222" text-anchor="middle">bank.com</ns0:text>
-  <ns0:line x1="459.4324" y1="129.7067" x2="487.3826" y2="129.7067" stroke="#555" stroke-width="2.56" marker-end="url(#arr)" />
-  <ns0:rect x="490.8764" y="98.9866" width="349.3782" height="61.44" fill="#e8f5e9" stroke="#333" stroke-width="2.56" rx="5.12" />
-  <ns0:text x="665.5655" y="128" font-size="20.48" fill="#222" text-anchor="middle">Set-Cookie: sid=abc</ns0:text>
-  <ns0:text x="665.5655" y="150.1866" font-size="18.7733" fill="#2e7d32" text-anchor="middle">(session established)</ns0:text>
-  <ns0:text x="26.2034" y="204.8" font-size="22.1867" font-weight="bold" fill="#222">2. Victim visits evil.com (attacker's site)</ns0:text>
-  <ns0:rect x="26.2034" y="218.4533" width="192.158" height="61.44" fill="#e3f2fd" stroke="#333" stroke-width="2.56" rx="5.12" />
-  <ns0:text x="122.2824" y="257.7067" font-size="20.48" fill="#222" text-anchor="middle">Victim Browser</ns0:text>
-  <ns0:line x1="218.3614" y1="249.1734" x2="246.3116" y2="249.1734" stroke="#555" stroke-width="2.56" marker-end="url(#arr)" />
-  <ns0:rect x="249.8054" y="218.4533" width="244.5648" height="61.44" fill="#ffebee" stroke="#c62828" stroke-width="2.56" rx="5.12" />
-  <ns0:text x="372.0878" y="249.1734" font-size="20.48" fill="#c62828" text-anchor="middle">evil.com</ns0:text>
-  <ns0:text x="372.0878" y="269.6533" font-size="18.7733" fill="#c62828" text-anchor="middle">(serves hidden form)</ns0:text>
-  <ns0:text x="26.2034" y="324.2667" font-size="22.1867" font-weight="bold" fill="#222">3. Hidden form auto-submits to bank.com</ns0:text>
-  <ns0:rect x="26.2034" y="337.92" width="1083.0725" height="85.3333" fill="#fff3e0" stroke="#e65100" stroke-width="2.56" rx="6.8266" />
-  <ns0:text x="43.6722" y="372.0533" font-size="20.48" fill="#222" font-family="monospace">POST /transfer?to=attacker&amp;amount=10000</ns0:text>
-  <ns0:text x="43.6722" y="406.1867" font-size="20.48" fill="#e65100" font-family="monospace">Cookie: sid=abc  ← browser auto-attaches!</ns0:text>
-  <ns0:line x1="567.7396" y1="423.2533" x2="567.7396" y2="447.1467" stroke="#c62828" stroke-width="3.4134" marker-end="url(#arrd)" />
-  <ns0:rect x="26.2034" y="450.56" width="1083.0725" height="153.6" fill="#ffcdd2" stroke="#c62828" stroke-width="3.4134" rx="6.8266" />
-  <ns0:text x="567.7396" y="494.9334" font-size="23.8933" font-weight="bold" fill="#c62828" text-anchor="middle">bank.com processes request!</ns0:text>
-  <ns0:text x="567.7396" y="532.48" font-size="22.1867" fill="#555" text-anchor="middle">Sees valid session cookie → Transfers money to attacker!</ns0:text>
-  <ns0:text x="567.7396" y="566.6133" font-size="20.48" fill="#777" text-anchor="middle">Fix: Use CSRF tokens, SameSite cookies, or re-authentication for sensitive actions</ns0:text>
+  <ns0:rect x="8.7345" y="8.5333" width="1135.4793" height="631.4667" fill="var(--warn-pale3)" stroke="var(--danger-dk)" stroke-width="3.4134" rx="10.24" />
+  <ns0:text x="567.7396" y="47.7866" font-size="25.6" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">CSRF Attack Flow</ns0:text>
+  <ns0:text x="26.2034" y="85.3333" font-size="22.1867" font-weight="bold" fill="var(--text-darker)">1. Victim logs into bank.com (session cookie set)</ns0:text>
+  <ns0:rect x="26.2034" y="98.9866" width="192.158" height="61.44" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.56" rx="5.12" />
+  <ns0:text x="122.2824" y="138.24" font-size="20.48" fill="var(--text-darker)" text-anchor="middle">Victim Browser</ns0:text>
+  <ns0:line x1="218.3614" y1="129.7067" x2="246.3116" y2="129.7067" stroke="var(--text-muted)" stroke-width="2.56" marker-end="url(#arr)" />
+  <ns0:rect x="249.8054" y="98.9866" width="209.627" height="61.44" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.56" rx="5.12" />
+  <ns0:text x="354.6189" y="138.24" font-size="20.48" fill="var(--text-darker)" text-anchor="middle">bank.com</ns0:text>
+  <ns0:line x1="459.4324" y1="129.7067" x2="487.3826" y2="129.7067" stroke="var(--text-muted)" stroke-width="2.56" marker-end="url(#arr)" />
+  <ns0:rect x="490.8764" y="98.9866" width="349.3782" height="61.44" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.56" rx="5.12" />
+  <ns0:text x="665.5655" y="128" font-size="20.48" fill="var(--text-darker)" text-anchor="middle">Set-Cookie: sid=abc</ns0:text>
+  <ns0:text x="665.5655" y="150.1866" font-size="18.7733" fill="var(--ok-dk)" text-anchor="middle">(session established)</ns0:text>
+  <ns0:text x="26.2034" y="204.8" font-size="22.1867" font-weight="bold" fill="var(--text-darker)">2. Victim visits evil.com (attacker's site)</ns0:text>
+  <ns0:rect x="26.2034" y="218.4533" width="192.158" height="61.44" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.56" rx="5.12" />
+  <ns0:text x="122.2824" y="257.7067" font-size="20.48" fill="var(--text-darker)" text-anchor="middle">Victim Browser</ns0:text>
+  <ns0:line x1="218.3614" y1="249.1734" x2="246.3116" y2="249.1734" stroke="var(--text-muted)" stroke-width="2.56" marker-end="url(#arr)" />
+  <ns0:rect x="249.8054" y="218.4533" width="244.5648" height="61.44" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.56" rx="5.12" />
+  <ns0:text x="372.0878" y="249.1734" font-size="20.48" fill="var(--danger-dk)" text-anchor="middle">evil.com</ns0:text>
+  <ns0:text x="372.0878" y="269.6533" font-size="18.7733" fill="var(--danger-dk)" text-anchor="middle">(serves hidden form)</ns0:text>
+  <ns0:text x="26.2034" y="324.2667" font-size="22.1867" font-weight="bold" fill="var(--text-darker)">3. Hidden form auto-submits to bank.com</ns0:text>
+  <ns0:rect x="26.2034" y="337.92" width="1083.0725" height="85.3333" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.56" rx="6.8266" />
+  <ns0:text x="43.6722" y="372.0533" font-size="20.48" fill="var(--text-darker)" font-family="monospace">POST /transfer?to=attacker&amp;amount=10000</ns0:text>
+  <ns0:text x="43.6722" y="406.1867" font-size="20.48" fill="var(--warn-dk)" font-family="monospace">Cookie: sid=abc  ← browser auto-attaches!</ns0:text>
+  <ns0:line x1="567.7396" y1="423.2533" x2="567.7396" y2="447.1467" stroke="var(--danger-dk)" stroke-width="3.4134" marker-end="url(#arrd)" />
+  <ns0:rect x="26.2034" y="450.56" width="1083.0725" height="153.6" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="3.4134" rx="6.8266" />
+  <ns0:text x="567.7396" y="494.9334" font-size="23.8933" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">bank.com processes request!</ns0:text>
+  <ns0:text x="567.7396" y="532.48" font-size="22.1867" fill="var(--text-muted)" text-anchor="middle">Sees valid session cookie → Transfers money to attacker!</ns0:text>
+  <ns0:text x="567.7396" y="566.6133" font-size="20.48" fill="var(--text-lighter)" text-anchor="middle">Fix: Use CSRF tokens, SameSite cookies, or re-authentication for sensitive actions</ns0:text>
 </ns0:svg>

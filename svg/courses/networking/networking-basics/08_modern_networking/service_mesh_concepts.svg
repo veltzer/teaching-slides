@@ -1,29 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="287.1795" y="52.9412" text-anchor="middle" font-size="24.6154" font-weight="bold" fill="#333">Without Service Mesh</text>
-  <text x="951.7949" y="52.9412" text-anchor="middle" font-size="24.6154" font-weight="bold" fill="#333">With Service Mesh</text>
-  <rect x="65.641" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2821" />
-  <text x="172.3077" y="148.2353" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#333">Service A</text>
-  <text x="172.3077" y="190.5882" text-anchor="middle" font-size="18.0513" fill="#555">(retry, timeout,</text>
-  <text x="172.3077" y="222.3529" text-anchor="middle" font-size="18.0513" fill="#555">circuit breaker,</text>
-  <text x="172.3077" y="254.1176" text-anchor="middle" font-size="18.0513" fill="#555">in code)</text>
-  <rect x="377.4359" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2821" />
-  <text x="484.1026" y="222.3529" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#333">Service B</text>
-  <line x1="278.9744" y1="222.3529" x2="377.4359" y2="222.3529" stroke="#333" stroke-width="3.2821" marker-end="url(#arrow)" />
-  <rect x="722.0513" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="#d4edda" stroke="#28a745" stroke-width="3.2821" />
-  <text x="828.7179" y="148.2353" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#333">Service A</text>
-  <rect x="771.2821" y="211.7647" width="98.4615" height="63.5294" rx="8.2051" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4615" />
-  <text x="820.5128" y="254.1176" text-anchor="middle" font-size="18.0513" fill="#333">Proxy</text>
-  <rect x="1033.8462" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="#d4edda" stroke="#28a745" stroke-width="3.2821" />
-  <text x="1140.5128" y="148.2353" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="#333">Service B</text>
-  <rect x="1083.0769" y="211.7647" width="98.4615" height="63.5294" rx="8.2051" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4615" />
-  <text x="1132.3077" y="254.1176" text-anchor="middle" font-size="18.0513" fill="#333">Proxy</text>
-  <line x1="869.7436" y1="243.5294" x2="1083.0769" y2="243.5294" stroke="#4a90e2" stroke-width="3.2821" marker-end="url(#arrow)" />
-  <text x="828.7179" y="402.3529" text-anchor="middle" font-size="19.6923" fill="#555">Sidecar</text>
-  <text x="1140.5128" y="402.3529" text-anchor="middle" font-size="19.6923" fill="#555">Sidecar</text>
-  <text x="951.7949" y="465.8824" text-anchor="middle" font-size="21.3333" fill="#333">Proxies handle:</text>
-  <text x="951.7949" y="508.2353" text-anchor="middle" font-size="19.6923" fill="#555">mTLS | Retries | Circuit breaking | Observability</text>
+  <text x="287.1795" y="52.9412" text-anchor="middle" font-size="24.6154" font-weight="bold" fill="var(--text-dark)">Without Service Mesh</text>
+  <text x="951.7949" y="52.9412" text-anchor="middle" font-size="24.6154" font-weight="bold" fill="var(--text-dark)">With Service Mesh</text>
+  <rect x="65.641" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.2821" />
+  <text x="172.3077" y="148.2353" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--text-dark)">Service A</text>
+  <text x="172.3077" y="190.5882" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">(retry, timeout,</text>
+  <text x="172.3077" y="222.3529" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">circuit breaker,</text>
+  <text x="172.3077" y="254.1176" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">in code)</text>
+  <rect x="377.4359" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2821" />
+  <text x="484.1026" y="222.3529" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--text-dark)">Service B</text>
+  <line x1="278.9744" y1="222.3529" x2="377.4359" y2="222.3529" stroke="var(--text-dark)" stroke-width="3.2821" marker-end="url(#arrow)" />
+  <rect x="722.0513" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.2821" />
+  <text x="828.7179" y="148.2353" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--text-dark)">Service A</text>
+  <rect x="771.2821" y="211.7647" width="98.4615" height="63.5294" rx="8.2051" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4615" />
+  <text x="820.5128" y="254.1176" text-anchor="middle" font-size="18.0513" fill="var(--text-dark)">Proxy</text>
+  <rect x="1033.8462" y="95.2941" width="213.3333" height="254.1176" rx="8.2051" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.2821" />
+  <text x="1140.5128" y="148.2353" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--text-dark)">Service B</text>
+  <rect x="1083.0769" y="211.7647" width="98.4615" height="63.5294" rx="8.2051" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4615" />
+  <text x="1132.3077" y="254.1176" text-anchor="middle" font-size="18.0513" fill="var(--text-dark)">Proxy</text>
+  <line x1="869.7436" y1="243.5294" x2="1083.0769" y2="243.5294" stroke="var(--primary-bright)" stroke-width="3.2821" marker-end="url(#arrow)" />
+  <text x="828.7179" y="402.3529" text-anchor="middle" font-size="19.6923" fill="var(--text-muted)">Sidecar</text>
+  <text x="1140.5128" y="402.3529" text-anchor="middle" font-size="19.6923" fill="var(--text-muted)">Sidecar</text>
+  <text x="951.7949" y="465.8824" text-anchor="middle" font-size="21.3333" fill="var(--text-dark)">Proxies handle:</text>
+  <text x="951.7949" y="508.2353" text-anchor="middle" font-size="19.6923" fill="var(--text-muted)">mTLS | Retries | Circuit breaking | Observability</text>
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -82,6 +179,5 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
-  </defs>
+</defs>
 </svg>

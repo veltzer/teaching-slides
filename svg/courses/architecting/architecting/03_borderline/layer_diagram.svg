@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="11.6948">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="18.2857" markerHeight="12" refX="18.2857" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 6.4,0" fill="#4a90e2" />
     </ns0:marker>
@@ -67,32 +164,32 @@
       <ns0:polygon points="0,17.1429 6.4,0" fill="#999" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="575.743" y="38.5542" text-anchor="middle" font-size="24.6747" font-weight="bold" fill="#333">Layered Architecture</ns0:text>
-  <ns0:rect x="822.49" y="77.1085" width="164.498" height="53.9759" rx="7.7108" fill="#f9f9f9" stroke="#999" stroke-width="2.3132" />
-  <ns0:text x="904.7391" y="111.0362" text-anchor="middle" fill="#666">Users</ns0:text>
-  <ns0:rect x="246.747" y="77.1085" width="411.2451" height="69.3976" rx="7.7108" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0844" />
-  <ns0:text x="452.3695" y="118.747" text-anchor="middle" font-weight="bold" fill="#333">Presentation Layer</ns0:text>
-  <ns0:rect x="246.747" y="185.0603" width="411.2451" height="69.3976" rx="7.7108" fill="#d4edda" stroke="#28a745" stroke-width="3.0844" />
-  <ns0:text x="452.3695" y="226.6988" text-anchor="middle" font-weight="bold" fill="#333">Application Layer</ns0:text>
-  <ns0:rect x="246.747" y="293.0121" width="411.2451" height="69.3976" rx="7.7108" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0844" />
-  <ns0:text x="452.3695" y="334.6506" text-anchor="middle" font-weight="bold" fill="#333">Business Logic Layer</ns0:text>
-  <ns0:rect x="246.747" y="400.9639" width="411.2451" height="69.3976" rx="7.7108" fill="#d4edda" stroke="#28a745" stroke-width="3.0844" />
-  <ns0:text x="452.3695" y="442.6025" text-anchor="middle" font-weight="bold" fill="#333">Data Access Layer</ns0:text>
-  <ns0:rect x="246.747" y="508.9157" width="411.2451" height="69.3976" rx="7.7108" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0844" />
-  <ns0:text x="452.3695" y="550.5543" text-anchor="middle" font-weight="bold" fill="#333">Database</ns0:text>
-  <ns0:line x1="452.3695" y1="146.506" x2="452.3695" y2="181.9759" stroke="#4a90e2" stroke-width="3.0844" marker-end="url(#arrow)" />
-  <ns0:line x1="452.3695" y1="254.4578" x2="452.3695" y2="289.9277" stroke="#28a745" stroke-width="3.0844" marker-end="url(#arrow)" />
-  <ns0:line x1="452.3695" y1="362.4096" x2="452.3695" y2="397.8795" stroke="#ffc107" stroke-width="3.0844" marker-end="url(#arrow)" />
-  <ns0:line x1="452.3695" y1="470.3615" x2="452.3695" y2="505.8314" stroke="#28a745" stroke-width="3.0844" marker-end="url(#arrow)" />
-  <ns0:line x1="822.49" y1="103.3253" x2="661.282" y2="103.3253" stroke="#999" stroke-width="2.3132" stroke-dasharray="7.7108 4.6265" marker-end="url(#arrow)" />
-  <ns0:text x="740.241" y="92.5301" text-anchor="middle" font-size="15.4217" fill="#999">User Input</ns0:text>
-  <ns0:line x1="657.9921" y1="120.2892" x2="819.2001" y2="120.2892" stroke="#999" stroke-width="2.3132" stroke-dasharray="7.7108 4.6265" marker-end="url(#arrow)" />
-  <ns0:text x="740.241" y="141.8795" text-anchor="middle" font-size="15.4217" fill="#999">Display</ns0:text>
-  <ns0:text x="131.5984" y="118.747" text-anchor="middle" font-size="16.9638" fill="#4a90e2">UI / Views</ns0:text>
-  <ns0:text x="131.5984" y="226.6988" text-anchor="middle" font-size="16.9638" fill="#28a745">Controllers</ns0:text>
-  <ns0:text x="131.5984" y="334.6506" text-anchor="middle" font-size="16.9638" fill="#bf360c">Services</ns0:text>
-  <ns0:text x="131.5984" y="442.6025" text-anchor="middle" font-size="16.9638" fill="#28a745">Repositories</ns0:text>
-  <ns0:text x="131.5984" y="550.5543" text-anchor="middle" font-size="16.9638" fill="#4a90e2">Storage</ns0:text>
-  <ns0:rect x="49.3494" y="601.4458" width="1052.7872" height="38.5542" rx="7.7108" fill="#f9f9f9" stroke="#ddd" stroke-width="1.5422" />
-  <ns0:text x="575.743" y="627.6627" text-anchor="middle" font-size="18.506" fill="#555">Each layer only communicates with the layer directly below it, enforcing separation of concerns.</ns0:text>
+  <ns0:text x="575.743" y="38.5542" text-anchor="middle" font-size="24.6747" font-weight="bold" fill="var(--text-dark)">Layered Architecture</ns0:text>
+  <ns0:rect x="822.49" y="77.1085" width="164.498" height="53.9759" rx="7.7108" fill="var(--surface-light)" stroke="var(--text-faintest)" stroke-width="2.3132" />
+  <ns0:text x="904.7391" y="111.0362" text-anchor="middle" fill="var(--text-mid)">Users</ns0:text>
+  <ns0:rect x="246.747" y="77.1085" width="411.2451" height="69.3976" rx="7.7108" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0844" />
+  <ns0:text x="452.3695" y="118.747" text-anchor="middle" font-weight="bold" fill="var(--text-dark)">Presentation Layer</ns0:text>
+  <ns0:rect x="246.747" y="185.0603" width="411.2451" height="69.3976" rx="7.7108" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.0844" />
+  <ns0:text x="452.3695" y="226.6988" text-anchor="middle" font-weight="bold" fill="var(--text-dark)">Application Layer</ns0:text>
+  <ns0:rect x="246.747" y="293.0121" width="411.2451" height="69.3976" rx="7.7108" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.0844" />
+  <ns0:text x="452.3695" y="334.6506" text-anchor="middle" font-weight="bold" fill="var(--text-dark)">Business Logic Layer</ns0:text>
+  <ns0:rect x="246.747" y="400.9639" width="411.2451" height="69.3976" rx="7.7108" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.0844" />
+  <ns0:text x="452.3695" y="442.6025" text-anchor="middle" font-weight="bold" fill="var(--text-dark)">Data Access Layer</ns0:text>
+  <ns0:rect x="246.747" y="508.9157" width="411.2451" height="69.3976" rx="7.7108" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0844" />
+  <ns0:text x="452.3695" y="550.5543" text-anchor="middle" font-weight="bold" fill="var(--text-dark)">Database</ns0:text>
+  <ns0:line x1="452.3695" y1="146.506" x2="452.3695" y2="181.9759" stroke="var(--primary-bright)" stroke-width="3.0844" marker-end="url(#arrow)" />
+  <ns0:line x1="452.3695" y1="254.4578" x2="452.3695" y2="289.9277" stroke="var(--ok-bright)" stroke-width="3.0844" marker-end="url(#arrow)" />
+  <ns0:line x1="452.3695" y1="362.4096" x2="452.3695" y2="397.8795" stroke="var(--warn-yellow)" stroke-width="3.0844" marker-end="url(#arrow)" />
+  <ns0:line x1="452.3695" y1="470.3615" x2="452.3695" y2="505.8314" stroke="var(--ok-bright)" stroke-width="3.0844" marker-end="url(#arrow)" />
+  <ns0:line x1="822.49" y1="103.3253" x2="661.282" y2="103.3253" stroke="var(--text-faintest)" stroke-width="2.3132" stroke-dasharray="7.7108 4.6265" marker-end="url(#arrow)" />
+  <ns0:text x="740.241" y="92.5301" text-anchor="middle" font-size="15.4217" fill="var(--text-faintest)">User Input</ns0:text>
+  <ns0:line x1="657.9921" y1="120.2892" x2="819.2001" y2="120.2892" stroke="var(--text-faintest)" stroke-width="2.3132" stroke-dasharray="7.7108 4.6265" marker-end="url(#arrow)" />
+  <ns0:text x="740.241" y="141.8795" text-anchor="middle" font-size="15.4217" fill="var(--text-faintest)">Display</ns0:text>
+  <ns0:text x="131.5984" y="118.747" text-anchor="middle" font-size="16.9638" fill="var(--primary-bright)">UI / Views</ns0:text>
+  <ns0:text x="131.5984" y="226.6988" text-anchor="middle" font-size="16.9638" fill="var(--ok-bright)">Controllers</ns0:text>
+  <ns0:text x="131.5984" y="334.6506" text-anchor="middle" font-size="16.9638" fill="var(--danger-deeper)">Services</ns0:text>
+  <ns0:text x="131.5984" y="442.6025" text-anchor="middle" font-size="16.9638" fill="var(--ok-bright)">Repositories</ns0:text>
+  <ns0:text x="131.5984" y="550.5543" text-anchor="middle" font-size="16.9638" fill="var(--primary-bright)">Storage</ns0:text>
+  <ns0:rect x="49.3494" y="601.4458" width="1052.7872" height="38.5542" rx="7.7108" fill="var(--surface-light)" stroke="var(--border-softer)" stroke-width="1.5422" />
+  <ns0:text x="575.743" y="627.6627" text-anchor="middle" font-size="18.506" fill="var(--text-muted)">Each layer only communicates with the layer directly below it, enforcing separation of concerns.</ns0:text>
 </ns0:svg>

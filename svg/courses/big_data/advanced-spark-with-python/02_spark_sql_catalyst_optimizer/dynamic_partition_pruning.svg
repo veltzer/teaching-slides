@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,53 +156,53 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
       <ns0:polygon points="0,18 5.6,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="583.4758" y="49.2308" text-anchor="middle" font-family="Arial" font-size="29.1738" font-weight="bold" fill="#1a237e">Dynamic Partition Pruning</ns0:text>
-  <ns0:text x="277.151" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="#c62828">Without DPP</ns0:text>
-  <ns0:rect x="131.2821" y="123.0769" width="291.7379" height="57.4359" rx="8.7521" fill="#f5f5f5" stroke="#333" stroke-width="1.4587" />
-  <ns0:text x="277.151" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="#333">SELECT * FROM fact JOIN dim</ns0:text>
-  <ns0:rect x="72.9345" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="#ffcdd2" stroke="#c62828" stroke-width="2.188" />
-  <ns0:text x="112.3191" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#c62828">P1</ns0:text>
-  <ns0:rect x="167.7493" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="#ffcdd2" stroke="#c62828" stroke-width="2.188" />
-  <ns0:text x="207.1339" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#c62828">P2</ns0:text>
-  <ns0:rect x="262.5641" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="#ffcdd2" stroke="#c62828" stroke-width="2.188" />
-  <ns0:text x="301.9487" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#c62828">P3</ns0:text>
-  <ns0:rect x="357.3789" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="#ffcdd2" stroke="#c62828" stroke-width="2.188" />
-  <ns0:text x="396.7635" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#c62828">P4</ns0:text>
-  <ns0:rect x="452.1937" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="#ffcdd2" stroke="#c62828" stroke-width="2.188" />
-  <ns0:text x="491.5783" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#c62828">P5</ns0:text>
-  <ns0:text x="277.151" y="434.8718" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="#c62828">All 5 partitions scanned</ns0:text>
-  <ns0:text x="277.151" y="467.6923" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="#c62828">Slow: reads unnecessary data</ns0:text>
-  <ns0:line x1="554.302" y1="295.3846" x2="612.6496" y2="295.3846" stroke="#1565c0" stroke-width="4.3761" marker-end="url(#arrow)" />
-  <ns0:text x="583.4758" y="278.9744" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="#1565c0">DPP</ns0:text>
-  <ns0:text x="889.8006" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="#2e7d32">With DPP</ns0:text>
-  <ns0:rect x="641.8234" y="123.0769" width="291.7379" height="57.4359" rx="8.7521" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4587" />
-  <ns0:text x="787.6923" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="#2e7d32">dim filter: region = 'North'</ns0:text>
-  <ns0:line x1="787.6923" y1="180.5128" x2="787.6923" y2="213.3333" stroke="#2e7d32" stroke-width="2.9174" marker-end="url(#arrow)" />
-  <ns0:rect x="670.9972" y="213.3333" width="233.3903" height="49.2308" rx="8.7521" fill="#fff9c4" stroke="#f9a825" stroke-width="2.188" />
-  <ns0:text x="787.6923" y="246.1538" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="#f57c00">Broadcast filter values</ns0:text>
-  <ns0:rect x="641.8234" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
-  <ns0:text x="681.208" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#9e9e9e">P1</ns0:text>
-  <ns0:line x1="641.8234" y1="295.3846" x2="722.0513" y2="475.8974" stroke="#c62828" stroke-width="2.188" />
-  <ns0:line x1="722.0513" y1="295.3846" x2="641.8234" y2="475.8974" stroke="#c62828" stroke-width="2.188" />
-  <ns0:rect x="736.6382" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.9174" />
-  <ns0:text x="776.0228" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" font-weight="bold" fill="#2e7d32">P2</ns0:text>
-  <ns0:rect x="831.453" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
-  <ns0:text x="870.8376" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#9e9e9e">P3</ns0:text>
-  <ns0:line x1="831.453" y1="295.3846" x2="911.6809" y2="475.8974" stroke="#c62828" stroke-width="2.188" />
-  <ns0:line x1="911.6809" y1="295.3846" x2="831.453" y2="475.8974" stroke="#c62828" stroke-width="2.188" />
-  <ns0:rect x="926.2678" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.9174" />
-  <ns0:text x="965.6524" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" font-weight="bold" fill="#2e7d32">P4</ns0:text>
-  <ns0:rect x="1021.0826" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
-  <ns0:text x="1060.4672" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="#9e9e9e">P5</ns0:text>
-  <ns0:line x1="1021.0826" y1="295.3846" x2="1101.3105" y2="475.8974" stroke="#c62828" stroke-width="2.188" />
-  <ns0:line x1="1101.3105" y1="295.3846" x2="1021.0826" y2="475.8974" stroke="#c62828" stroke-width="2.188" />
-  <ns0:text x="889.8006" y="516.9231" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="#2e7d32">Only 2 of 5 partitions scanned</ns0:text>
-  <ns0:text x="889.8006" y="549.7436" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="#2e7d32">Fast: skips irrelevant partitions</ns0:text>
-  <ns0:rect x="145.8689" y="590.7692" width="875.2137" height="49.2308" rx="8.7521" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.4587" />
-  <ns0:text x="583.4758" y="623.5897" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="#1a237e">DPP uses dimension-side filter results to prune fact-table partitions at runtime</ns0:text>
+  <ns0:text x="583.4758" y="49.2308" text-anchor="middle" font-family="Arial" font-size="29.1738" font-weight="bold" fill="var(--primary-deeper)">Dynamic Partition Pruning</ns0:text>
+  <ns0:text x="277.151" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="var(--danger-dk)">Without DPP</ns0:text>
+  <ns0:rect x="131.2821" y="123.0769" width="291.7379" height="57.4359" rx="8.7521" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="1.4587" />
+  <ns0:text x="277.151" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="var(--text-dark)">SELECT * FROM fact JOIN dim</ns0:text>
+  <ns0:rect x="72.9345" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:text x="112.3191" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-dk)">P1</ns0:text>
+  <ns0:rect x="167.7493" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:text x="207.1339" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-dk)">P2</ns0:text>
+  <ns0:rect x="262.5641" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:text x="301.9487" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-dk)">P3</ns0:text>
+  <ns0:rect x="357.3789" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:text x="396.7635" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-dk)">P4</ns0:text>
+  <ns0:rect x="452.1937" y="213.3333" width="80.2279" height="180.5128" rx="5.8348" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:text x="491.5783" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-dk)">P5</ns0:text>
+  <ns0:text x="277.151" y="434.8718" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="var(--danger-dk)">All 5 partitions scanned</ns0:text>
+  <ns0:text x="277.151" y="467.6923" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="var(--danger-dk)">Slow: reads unnecessary data</ns0:text>
+  <ns0:line x1="554.302" y1="295.3846" x2="612.6496" y2="295.3846" stroke="var(--primary-dk)" stroke-width="4.3761" marker-end="url(#arrow)" />
+  <ns0:text x="583.4758" y="278.9744" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="var(--primary-dk)">DPP</ns0:text>
+  <ns0:text x="889.8006" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="var(--ok-dk)">With DPP</ns0:text>
+  <ns0:rect x="641.8234" y="123.0769" width="291.7379" height="57.4359" rx="8.7521" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.4587" />
+  <ns0:text x="787.6923" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="var(--ok-dk)">dim filter: region = 'North'</ns0:text>
+  <ns0:line x1="787.6923" y1="180.5128" x2="787.6923" y2="213.3333" stroke="var(--ok-dk)" stroke-width="2.9174" marker-end="url(#arrow)" />
+  <ns0:rect x="670.9972" y="213.3333" width="233.3903" height="49.2308" rx="8.7521" fill="var(--warn-pale4)" stroke="var(--warn-amber)" stroke-width="2.188" />
+  <ns0:text x="787.6923" y="246.1538" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="var(--warn-mid)">Broadcast filter values</ns0:text>
+  <ns0:rect x="641.8234" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="var(--border)" stroke="var(--text-disabled)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
+  <ns0:text x="681.208" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--text-disabled)">P1</ns0:text>
+  <ns0:line x1="641.8234" y1="295.3846" x2="722.0513" y2="475.8974" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:line x1="722.0513" y1="295.3846" x2="641.8234" y2="475.8974" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:rect x="736.6382" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="2.9174" />
+  <ns0:text x="776.0228" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" font-weight="bold" fill="var(--ok-dk)">P2</ns0:text>
+  <ns0:rect x="831.453" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="var(--border)" stroke="var(--text-disabled)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
+  <ns0:text x="870.8376" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--text-disabled)">P3</ns0:text>
+  <ns0:line x1="831.453" y1="295.3846" x2="911.6809" y2="475.8974" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:line x1="911.6809" y1="295.3846" x2="831.453" y2="475.8974" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:rect x="926.2678" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="2.9174" />
+  <ns0:text x="965.6524" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" font-weight="bold" fill="var(--ok-dk)">P4</ns0:text>
+  <ns0:rect x="1021.0826" y="295.3846" width="80.2279" height="180.5128" rx="5.8348" fill="var(--border)" stroke="var(--text-disabled)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
+  <ns0:text x="1060.4672" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--text-disabled)">P5</ns0:text>
+  <ns0:line x1="1021.0826" y1="295.3846" x2="1101.3105" y2="475.8974" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:line x1="1101.3105" y1="295.3846" x2="1021.0826" y2="475.8974" stroke="var(--danger-dk)" stroke-width="2.188" />
+  <ns0:text x="889.8006" y="516.9231" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="var(--ok-dk)">Only 2 of 5 partitions scanned</ns0:text>
+  <ns0:text x="889.8006" y="549.7436" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="var(--ok-dk)">Fast: skips irrelevant partitions</ns0:text>
+  <ns0:rect x="145.8689" y="590.7692" width="875.2137" height="49.2308" rx="8.7521" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="1.4587" />
+  <ns0:text x="583.4758" y="623.5897" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="var(--primary-deeper)">DPP uses dimension-side filter results to prune fact-table partitions at runtime</ns0:text>
 </ns0:svg>

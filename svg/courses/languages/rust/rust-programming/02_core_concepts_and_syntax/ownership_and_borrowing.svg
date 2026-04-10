@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
@@ -71,53 +168,53 @@
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="26.6667" y="17.7778" width="515.5556" height="266.6667" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" />
-  <ns0:text x="284.4444" y="46.2222" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="#1565c0">Ownership</ns0:text>
-  <ns0:rect x="44.4444" y="62.2222" width="480" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="284.4444" y="85.3333" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Move semantics</ns0:text>
-  <ns0:text x="62.2222" y="104.8889" font-family="monospace" font-size="13.3333" fill="#212121">let s1 = String::from("hello");</ns0:text>
-  <ns0:text x="62.2222" y="124.4444" font-family="monospace" font-size="13.3333" fill="#212121">let s2 = s1;  // s1 moved to s2</ns0:text>
-  <ns0:text x="62.2222" y="142.2222" font-family="monospace" font-size="13.3333" fill="#c62828">// s1 is no longer valid here!</ns0:text>
-  <ns0:rect x="44.4444" y="163.5556" width="213.3333" height="103.1111" rx="3.5556" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1.3333" />
-  <ns0:text x="151.1111" y="183.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">Stack: s1 (ptr/len/cap)</ns0:text>
-  <ns0:text x="151.1111" y="202.6667" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#c62828">→ INVALID after move</ns0:text>
-  <ns0:rect x="275.5556" y="163.5556" width="213.3333" height="103.1111" rx="3.5556" fill="#f0f0f0" stroke="#1565c0" stroke-width="1.3333" />
-  <ns0:text x="382.2222" y="183.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">Stack: s2 (ptr/len/cap)</ns0:text>
-  <ns0:text x="382.2222" y="202.6667" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#1565c0">→ owns heap data</ns0:text>
-  <ns0:text x="382.2222" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#555555">Heap: "hello"</ns0:text>
-  <ns0:text x="382.2222" y="250.6667" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#9e9e9e">freed when s2 drops</ns0:text>
-  <ns0:line x1="151.1111" y1="202.6667" x2="275.5556" y2="202.6667" stroke="#c62828" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)" />
-  <ns0:rect x="586.6667" y="17.7778" width="524.4444" height="266.6667" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" />
-  <ns0:text x="848.8889" y="46.2222" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="#2e7d32">Borrowing (&amp;)</ns0:text>
-  <ns0:rect x="604.4444" y="62.2222" width="488.8889" height="80" rx="5.3333" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="848.8889" y="85.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#2e7d32">Immutable borrow — many readers OK</ns0:text>
-  <ns0:text x="622.2222" y="106.6667" font-family="monospace" font-size="12.4444" fill="#212121">let s1 = String::from("hello");</ns0:text>
-  <ns0:text x="622.2222" y="126.2222" font-family="monospace" font-size="12.4444" fill="#2e7d32">let r1 = &amp;s1;  let r2 = &amp;s1;  // OK</ns0:text>
-  <ns0:rect x="604.4444" y="154.6667" width="488.8889" height="80" rx="5.3333" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="848.8889" y="177.7778" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#e65100">Mutable borrow — exactly one writer</ns0:text>
-  <ns0:text x="622.2222" y="199.1111" font-family="monospace" font-size="12.4444" fill="#212121">let mut s = String::from("hello");</ns0:text>
-  <ns0:text x="622.2222" y="218.6667" font-family="monospace" font-size="12.4444" fill="#e65100">let r = &amp;mut s;  // only one &amp;mut allowed</ns0:text>
-  <ns0:rect x="26.6667" y="304" width="1084.4444" height="177.7778" rx="7.1111" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1.3333" />
-  <ns0:text x="568.8889" y="330.6667" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Borrow Checker Rules</ns0:text>
+  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
+  <ns0:rect x="26.6667" y="17.7778" width="515.5556" height="266.6667" rx="7.1111" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" />
+  <ns0:text x="284.4444" y="46.2222" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="var(--primary-dk)">Ownership</ns0:text>
+  <ns0:rect x="44.4444" y="62.2222" width="480" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="85.3333" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="var(--text)">Move semantics</ns0:text>
+  <ns0:text x="62.2222" y="104.8889" font-family="monospace" font-size="13.3333" fill="var(--text)">let s1 = String::from("hello");</ns0:text>
+  <ns0:text x="62.2222" y="124.4444" font-family="monospace" font-size="13.3333" fill="var(--text)">let s2 = s1;  // s1 moved to s2</ns0:text>
+  <ns0:text x="62.2222" y="142.2222" font-family="monospace" font-size="13.3333" fill="var(--danger-dk)">// s1 is no longer valid here!</ns0:text>
+  <ns0:rect x="44.4444" y="163.5556" width="213.3333" height="103.1111" rx="3.5556" fill="var(--surface-dark)" stroke="var(--border)" stroke-width="1.3333" />
+  <ns0:text x="151.1111" y="183.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Stack: s1 (ptr/len/cap)</ns0:text>
+  <ns0:text x="151.1111" y="202.6667" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="var(--danger-dk)">→ INVALID after move</ns0:text>
+  <ns0:rect x="275.5556" y="163.5556" width="213.3333" height="103.1111" rx="3.5556" fill="var(--surface-dark)" stroke="var(--primary-dk)" stroke-width="1.3333" />
+  <ns0:text x="382.2222" y="183.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Stack: s2 (ptr/len/cap)</ns0:text>
+  <ns0:text x="382.2222" y="202.6667" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="var(--primary-dk)">→ owns heap data</ns0:text>
+  <ns0:text x="382.2222" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="var(--text-muted)">Heap: "hello"</ns0:text>
+  <ns0:text x="382.2222" y="250.6667" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="var(--text-disabled)">freed when s2 drops</ns0:text>
+  <ns0:line x1="151.1111" y1="202.6667" x2="275.5556" y2="202.6667" stroke="var(--danger-dk)" stroke-width="1.7778" stroke-dasharray="3.5556 2.6667" marker-end="url(#arrow-danger)" />
+  <ns0:rect x="586.6667" y="17.7778" width="524.4444" height="266.6667" rx="7.1111" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.7778" />
+  <ns0:text x="848.8889" y="46.2222" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="var(--ok-dk)">Borrowing (&amp;)</ns0:text>
+  <ns0:rect x="604.4444" y="62.2222" width="488.8889" height="80" rx="5.3333" fill="url(#grad-surface)" stroke="var(--ok-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="848.8889" y="85.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--ok-dk)">Immutable borrow — many readers OK</ns0:text>
+  <ns0:text x="622.2222" y="106.6667" font-family="monospace" font-size="12.4444" fill="var(--text)">let s1 = String::from("hello");</ns0:text>
+  <ns0:text x="622.2222" y="126.2222" font-family="monospace" font-size="12.4444" fill="var(--ok-dk)">let r1 = &amp;s1;  let r2 = &amp;s1;  // OK</ns0:text>
+  <ns0:rect x="604.4444" y="154.6667" width="488.8889" height="80" rx="5.3333" fill="url(#grad-surface)" stroke="var(--warn-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="848.8889" y="177.7778" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--warn-dk)">Mutable borrow — exactly one writer</ns0:text>
+  <ns0:text x="622.2222" y="199.1111" font-family="monospace" font-size="12.4444" fill="var(--text)">let mut s = String::from("hello");</ns0:text>
+  <ns0:text x="622.2222" y="218.6667" font-family="monospace" font-size="12.4444" fill="var(--warn-dk)">let r = &amp;mut s;  // only one &amp;mut allowed</ns0:text>
+  <ns0:rect x="26.6667" y="304" width="1084.4444" height="177.7778" rx="7.1111" fill="var(--surface-dark)" stroke="var(--border)" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="330.6667" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Borrow Checker Rules</ns0:text>
   <ns0:rect x="44.4444" y="343.1111" width="302.2222" height="115.5556" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="195.5556" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff">Rule 1: Single owner</ns0:text>
-  <ns0:text x="62.2222" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="#bbdefb">Each value has exactly</ns0:text>
-  <ns0:text x="62.2222" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="#bbdefb">one owner at a time.</ns0:text>
-  <ns0:text x="62.2222" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="#bbdefb">When owner drops → value freed.</ns0:text>
-  <ns0:text x="62.2222" y="446.2222" font-family="sans-serif" font-size="12.4444" fill="#90caf9">No double-free, no leaks.</ns0:text>
-  <ns0:rect x="382.2222" y="343.1111" width="302.2222" height="115.5556" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="533.3333" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#212121">Rule 2: Borrows</ns0:text>
-  <ns0:text x="400" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="#555555">Either many &amp;T (read-only),</ns0:text>
-  <ns0:text x="400" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="#555555">OR exactly one &amp;mut T,</ns0:text>
-  <ns0:text x="400" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="#555555">never both at the same time.</ns0:text>
-  <ns0:text x="400" y="446.2222" font-family="sans-serif" font-size="12.4444" fill="#9e9e9e">No data races — enforced at compile time.</ns0:text>
-  <ns0:rect x="720" y="343.1111" width="373.3333" height="115.5556" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="906.6667" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#212121">Rule 3: Lifetimes</ns0:text>
-  <ns0:text x="737.7778" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="#555555">References must not outlive the</ns0:text>
-  <ns0:text x="737.7778" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="#555555">data they point to.</ns0:text>
-  <ns0:text x="737.7778" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="#555555">No dangling pointers.</ns0:text>
-  <ns0:text x="737.7778" y="446.2222" font-family="sans-serif" font-size="12.4444" fill="#9e9e9e">Compiler tracks &amp; rejects violations.</ns0:text>
-  <ns0:rect x="26.6667" y="497.7778" width="1084.4444" height="37.3333" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
-  <ns0:text x="568.8889" y="520.8889" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#1565c0">These three rules eliminate entire classes of bugs: use-after-free, double-free, data races — at zero runtime cost</ns0:text>
+  <ns0:text x="195.5556" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)">Rule 1: Single owner</ns0:text>
+  <ns0:text x="62.2222" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Each value has exactly</ns0:text>
+  <ns0:text x="62.2222" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">one owner at a time.</ns0:text>
+  <ns0:text x="62.2222" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">When owner drops → value freed.</ns0:text>
+  <ns0:text x="62.2222" y="446.2222" font-family="sans-serif" font-size="12.4444" fill="var(--primary-tint)">No double-free, no leaks.</ns0:text>
+  <ns0:rect x="382.2222" y="343.1111" width="302.2222" height="115.5556" rx="5.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="533.3333" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--text)">Rule 2: Borrows</ns0:text>
+  <ns0:text x="400" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Either many &amp;T (read-only),</ns0:text>
+  <ns0:text x="400" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">OR exactly one &amp;mut T,</ns0:text>
+  <ns0:text x="400" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">never both at the same time.</ns0:text>
+  <ns0:text x="400" y="446.2222" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">No data races — enforced at compile time.</ns0:text>
+  <ns0:rect x="720" y="343.1111" width="373.3333" height="115.5556" rx="5.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="906.6667" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--text)">Rule 3: Lifetimes</ns0:text>
+  <ns0:text x="737.7778" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">References must not outlive the</ns0:text>
+  <ns0:text x="737.7778" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">data they point to.</ns0:text>
+  <ns0:text x="737.7778" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">No dangling pointers.</ns0:text>
+  <ns0:text x="737.7778" y="446.2222" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">Compiler tracks &amp; rejects violations.</ns0:text>
+  <ns0:rect x="26.6667" y="497.7778" width="1084.4444" height="37.3333" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="520.8889" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--primary-dk)">These three rules eliminate entire classes of bugs: use-after-free, double-free, data races — at zero runtime cost</ns0:text>
 </ns0:svg>

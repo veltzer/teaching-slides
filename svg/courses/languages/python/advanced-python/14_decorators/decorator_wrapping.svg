@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -94,134 +179,134 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#f57c00"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Title bar -->
   <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
-  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">How @decorator Works: Wrapping and Call Flow</text>
+  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">How @decorator Works: Wrapping and Call Flow</text>
 
   <!-- Three column labels -->
-  <text x="200" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">Syntax Equivalence</text>
-  <text x="640" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100" text-anchor="middle">Decorator Factory Structure</text>
-  <text x="1060" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2e7d32" text-anchor="middle">Runtime Call Flow</text>
+  <text x="200" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Syntax Equivalence</text>
+  <text x="640" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">Decorator Factory Structure</text>
+  <text x="1060" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Runtime Call Flow</text>
 
   <!-- Column dividers -->
-  <line x1="420" y1="60" x2="420" y2="620" stroke="#dddddd" stroke-width="2" stroke-dasharray="5,4"/>
-  <line x1="860" y1="60" x2="860" y2="620" stroke="#dddddd" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="420" y1="60" x2="420" y2="620" stroke="var(--border-softer)" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="860" y1="60" x2="860" y2="620" stroke="var(--border-softer)" stroke-width="2" stroke-dasharray="5,4"/>
 
   <!-- ===== COLUMN 1: Syntax Equivalence ===== -->
 
   <!-- With @ syntax -->
-  <rect x="30" y="90" width="370" height="110" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="215" y="112" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">With @decorator syntax</text>
-  <text x="50" y="132" font-family="monospace" font-size="13" fill="#222222">@my_decorator</text>
-  <text x="50" y="150" font-family="monospace" font-size="13" fill="#222222">def greet(name):</text>
-  <text x="50" y="168" font-family="monospace" font-size="13" fill="#222222">    return f"Hello, {name}"</text>
-  <text x="50" y="186" font-family="monospace" font-size="13" fill="#555555">    # greet is now wrapper</text>
+  <rect x="30" y="90" width="370" height="110" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="215" y="112" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">With @decorator syntax</text>
+  <text x="50" y="132" font-family="monospace" font-size="13" fill="var(--text-darker)">@my_decorator</text>
+  <text x="50" y="150" font-family="monospace" font-size="13" fill="var(--text-darker)">def greet(name):</text>
+  <text x="50" y="168" font-family="monospace" font-size="13" fill="var(--text-darker)">    return f"Hello, {name}"</text>
+  <text x="50" y="186" font-family="monospace" font-size="13" fill="var(--text-muted)">    # greet is now wrapper</text>
 
   <!-- Equals sign -->
-  <text x="215" y="222" font-family="sans-serif" font-size="22" font-weight="bold" fill="#888888" text-anchor="middle">⟺  equivalent to</text>
+  <text x="215" y="222" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--text-faint)" text-anchor="middle">⟺  equivalent to</text>
 
   <!-- Without @ syntax -->
-  <rect x="30" y="232" width="370" height="126" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="215" y="254" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Without @decorator syntax</text>
-  <text x="50" y="274" font-family="monospace" font-size="13" fill="#222222">def greet(name):</text>
-  <text x="50" y="292" font-family="monospace" font-size="13" fill="#222222">    return f"Hello, {name}"</text>
-  <text x="50" y="312" font-family="monospace" font-size="13" fill="#e65100">greet = my_decorator(greet)</text>
-  <text x="50" y="332" font-family="monospace" font-size="11" fill="#888888"># original greet replaced by wrapper</text>
-  <text x="50" y="350" font-family="monospace" font-size="11" fill="#888888"># applied at definition time</text>
+  <rect x="30" y="232" width="370" height="126" rx="8" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="215" y="254" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">Without @decorator syntax</text>
+  <text x="50" y="274" font-family="monospace" font-size="13" fill="var(--text-darker)">def greet(name):</text>
+  <text x="50" y="292" font-family="monospace" font-size="13" fill="var(--text-darker)">    return f"Hello, {name}"</text>
+  <text x="50" y="312" font-family="monospace" font-size="13" fill="var(--warn-dk)">greet = my_decorator(greet)</text>
+  <text x="50" y="332" font-family="monospace" font-size="11" fill="var(--text-faint)"># original greet replaced by wrapper</text>
+  <text x="50" y="350" font-family="monospace" font-size="11" fill="var(--text-faint)"># applied at definition time</text>
 
   <!-- Key points -->
-  <rect x="30" y="380" width="370" height="112" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="215" y="400" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Key Points</text>
-  <text x="50" y="420" font-family="sans-serif" font-size="12" fill="#333333">• Applied at function definition time</text>
-  <text x="50" y="440" font-family="sans-serif" font-size="12" fill="#333333">• greet becomes the wrapper function</text>
-  <text x="50" y="460" font-family="sans-serif" font-size="12" fill="#333333">• Use @functools.wraps to keep __name__</text>
-  <text x="50" y="478" font-family="sans-serif" font-size="12" fill="#333333">• Stacking: @A @B def f() → A(B(f))</text>
+  <rect x="30" y="380" width="370" height="112" rx="8" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.5"/>
+  <text x="215" y="400" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Key Points</text>
+  <text x="50" y="420" font-family="sans-serif" font-size="12" fill="var(--text-dark)">• Applied at function definition time</text>
+  <text x="50" y="440" font-family="sans-serif" font-size="12" fill="var(--text-dark)">• greet becomes the wrapper function</text>
+  <text x="50" y="460" font-family="sans-serif" font-size="12" fill="var(--text-dark)">• Use @functools.wraps to keep __name__</text>
+  <text x="50" y="478" font-family="sans-serif" font-size="12" fill="var(--text-dark)">• Stacking: @A @B def f() → A(B(f))</text>
 
   <!-- ===== COLUMN 2: Decorator Factory Structure ===== -->
 
   <!-- Outer box: decorator factory -->
-  <rect x="440" y="90" width="400" height="400" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="640" y="112" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">decorator factory (optional args)</text>
+  <rect x="440" y="90" width="400" height="400" rx="10" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="112" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">decorator factory (optional args)</text>
 
   <!-- Middle box: decorator -->
-  <rect x="460" y="122" width="360" height="308" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
-  <text x="640" y="142" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">decorator(func)</text>
+  <rect x="460" y="122" width="360" height="308" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="640" y="142" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">decorator(func)</text>
 
   <!-- Inner box: wrapper -->
-  <rect x="480" y="154" width="320" height="230" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="640" y="174" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">wrapper(*args, **kwargs)</text>
+  <rect x="480" y="154" width="320" height="230" rx="6" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2"/>
+  <text x="640" y="174" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">wrapper(*args, **kwargs)</text>
 
   <!-- Wrapper content -->
-  <text x="500" y="198" font-family="monospace" font-size="11" fill="#333333">@functools.wraps(func)</text>
-  <text x="500" y="216" font-family="monospace" font-size="11" fill="#555555">  # pre-processing</text>
-  <text x="500" y="234" font-family="monospace" font-size="11" fill="#555555">  print("before call")</text>
-  <text x="500" y="252" font-family="monospace" font-size="11" fill="#555555">  log_args(*args)</text>
-  <rect x="490" y="260" width="295" height="32" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="637" y="280" font-family="monospace" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="middle">result = func(*args, **kwargs)</text>
-  <text x="500" y="312" font-family="monospace" font-size="11" fill="#555555">  # post-processing</text>
-  <text x="500" y="330" font-family="monospace" font-size="11" fill="#555555">  print("after call")</text>
-  <text x="500" y="348" font-family="monospace" font-size="11" fill="#555555">  return result</text>
-  <text x="500" y="372" font-family="monospace" font-size="11" fill="#1565c0">return wrapper</text>
+  <text x="500" y="198" font-family="monospace" font-size="11" fill="var(--text-dark)">@functools.wraps(func)</text>
+  <text x="500" y="216" font-family="monospace" font-size="11" fill="var(--text-muted)">  # pre-processing</text>
+  <text x="500" y="234" font-family="monospace" font-size="11" fill="var(--text-muted)">  print("before call")</text>
+  <text x="500" y="252" font-family="monospace" font-size="11" fill="var(--text-muted)">  log_args(*args)</text>
+  <rect x="490" y="260" width="295" height="32" rx="4" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1"/>
+  <text x="637" y="280" font-family="monospace" font-size="12" font-weight="bold" fill="var(--ok-deep)" text-anchor="middle">result = func(*args, **kwargs)</text>
+  <text x="500" y="312" font-family="monospace" font-size="11" fill="var(--text-muted)">  # post-processing</text>
+  <text x="500" y="330" font-family="monospace" font-size="11" fill="var(--text-muted)">  print("after call")</text>
+  <text x="500" y="348" font-family="monospace" font-size="11" fill="var(--text-muted)">  return result</text>
+  <text x="500" y="372" font-family="monospace" font-size="11" fill="var(--primary-dk)">return wrapper</text>
 
   <!-- Return arrows between levels -->
-  <text x="640" y="418" font-family="monospace" font-size="11" fill="#e65100" text-anchor="middle">return decorator</text>
-  <text x="640" y="444" font-family="monospace" font-size="12" fill="#888888" text-anchor="middle">usage: @timed(level="DEBUG")</text>
+  <text x="640" y="418" font-family="monospace" font-size="11" fill="var(--warn-dk)" text-anchor="middle">return decorator</text>
+  <text x="640" y="444" font-family="monospace" font-size="12" fill="var(--text-faint)" text-anchor="middle">usage: @timed(level="DEBUG")</text>
 
   <!-- ===== COLUMN 3: Runtime Call Flow ===== -->
 
   <!-- Caller box -->
   <rect x="880" y="90" width="360" height="48" rx="8" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="1060" y="112" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">caller: greet("Alice")</text>
-  <text x="1060" y="130" font-family="sans-serif" font-size="11" fill="#bbdefb" text-anchor="middle">invokes the wrapper, not original</text>
+  <text x="1060" y="112" font-family="monospace" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">caller: greet("Alice")</text>
+  <text x="1060" y="130" font-family="sans-serif" font-size="11" fill="var(--primary-lt)" text-anchor="middle">invokes the wrapper, not original</text>
 
-  <line x1="1060" y1="138" x2="1060" y2="162" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1060" y1="138" x2="1060" y2="162" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Wrapper runs pre -->
-  <rect x="880" y="162" width="360" height="48" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="183" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">wrapper: pre-processing</text>
-  <text x="1060" y="200" font-family="monospace" font-size="11" fill="#555555" text-anchor="middle">start timer / log args / check auth</text>
+  <rect x="880" y="162" width="360" height="48" rx="8" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="183" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">wrapper: pre-processing</text>
+  <text x="1060" y="200" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">start timer / log args / check auth</text>
 
-  <line x1="1060" y1="210" x2="1060" y2="234" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1060" y1="210" x2="1060" y2="234" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Original function -->
   <rect x="880" y="234" width="360" height="48" rx="8" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="1060" y="255" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">original: greet("Alice")</text>
-  <text x="1060" y="273" font-family="sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">→ returns "Hello, Alice"</text>
+  <text x="1060" y="255" font-family="monospace" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">original: greet("Alice")</text>
+  <text x="1060" y="273" font-family="sans-serif" font-size="11" fill="var(--ok-lt)" text-anchor="middle">→ returns "Hello, Alice"</text>
 
-  <line x1="1060" y1="282" x2="1060" y2="306" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1060" y1="282" x2="1060" y2="306" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Wrapper runs post -->
-  <rect x="880" y="306" width="360" height="48" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="327" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">wrapper: post-processing</text>
-  <text x="1060" y="344" font-family="monospace" font-size="11" fill="#555555" text-anchor="middle">stop timer / log result / cache</text>
+  <rect x="880" y="306" width="360" height="48" rx="8" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="327" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">wrapper: post-processing</text>
+  <text x="1060" y="344" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">stop timer / log result / cache</text>
 
-  <line x1="1060" y1="354" x2="1060" y2="378" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1060" y1="354" x2="1060" y2="378" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Return to caller -->
   <rect x="900" y="378" width="320" height="40" rx="20" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="1060" y="402" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">return result to caller</text>
+  <text x="1060" y="402" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">return result to caller</text>
 
   <!-- Common decorator uses -->
-  <rect x="880" y="438" width="360" height="142" rx="8" fill="#f9f9f9" stroke="#aaaaaa" stroke-width="1"/>
-  <text x="1060" y="458" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">Common Decorators</text>
-  <rect x="896" y="465" width="148" height="24" rx="4" fill="#e3f2fd"/>
-  <text x="970" y="481" font-family="monospace" font-size="11" fill="#1565c0" text-anchor="middle">@functools.lru_cache</text>
-  <rect x="1050" y="465" width="175" height="24" rx="4" fill="#e3f2fd"/>
-  <text x="1137" y="481" font-family="monospace" font-size="11" fill="#1565c0" text-anchor="middle">@functools.wraps(f)</text>
-  <rect x="896" y="494" width="130" height="24" rx="4" fill="#e8f5e9"/>
-  <text x="961" y="510" font-family="monospace" font-size="11" fill="#2e7d32" text-anchor="middle">@staticmethod</text>
-  <rect x="1030" y="494" width="120" height="24" rx="4" fill="#e8f5e9"/>
-  <text x="1090" y="510" font-family="monospace" font-size="11" fill="#2e7d32" text-anchor="middle">@classmethod</text>
-  <rect x="1154" y="494" width="80" height="24" rx="4" fill="#e8f5e9"/>
-  <text x="1194" y="510" font-family="monospace" font-size="11" fill="#2e7d32" text-anchor="middle">@property</text>
-  <rect x="896" y="523" width="110" height="24" rx="4" fill="#fff3e0"/>
-  <text x="951" y="539" font-family="monospace" font-size="11" fill="#e65100" text-anchor="middle">@app.route</text>
-  <rect x="1010" y="523" width="150" height="24" rx="4" fill="#fff3e0"/>
-  <text x="1085" y="539" font-family="monospace" font-size="11" fill="#e65100" text-anchor="middle">@login_required</text>
-  <rect x="1165" y="523" width="65" height="24" rx="4" fill="#fff3e0"/>
-  <text x="1197" y="539" font-family="monospace" font-size="11" fill="#e65100" text-anchor="middle">@retry</text>
-  <text x="896" y="570" font-family="monospace" font-size="11" fill="#555555">@A @B @C def f():  →  f = A(B(C(f)))</text>
-  <text x="896" y="588" font-family="sans-serif" font-size="11" fill="#555555">Applied bottom-up; called top-down at runtime</text>
+  <rect x="880" y="438" width="360" height="142" rx="8" fill="var(--surface-light)" stroke="var(--text-placeholder)" stroke-width="1"/>
+  <text x="1060" y="458" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Common Decorators</text>
+  <rect x="896" y="465" width="148" height="24" rx="4" fill="var(--primary-pale)"/>
+  <text x="970" y="481" font-family="monospace" font-size="11" fill="var(--primary-dk)" text-anchor="middle">@functools.lru_cache</text>
+  <rect x="1050" y="465" width="175" height="24" rx="4" fill="var(--primary-pale)"/>
+  <text x="1137" y="481" font-family="monospace" font-size="11" fill="var(--primary-dk)" text-anchor="middle">@functools.wraps(f)</text>
+  <rect x="896" y="494" width="130" height="24" rx="4" fill="var(--ok-pale)"/>
+  <text x="961" y="510" font-family="monospace" font-size="11" fill="var(--ok-dk)" text-anchor="middle">@staticmethod</text>
+  <rect x="1030" y="494" width="120" height="24" rx="4" fill="var(--ok-pale)"/>
+  <text x="1090" y="510" font-family="monospace" font-size="11" fill="var(--ok-dk)" text-anchor="middle">@classmethod</text>
+  <rect x="1154" y="494" width="80" height="24" rx="4" fill="var(--ok-pale)"/>
+  <text x="1194" y="510" font-family="monospace" font-size="11" fill="var(--ok-dk)" text-anchor="middle">@property</text>
+  <rect x="896" y="523" width="110" height="24" rx="4" fill="var(--warn-pale)"/>
+  <text x="951" y="539" font-family="monospace" font-size="11" fill="var(--warn-dk)" text-anchor="middle">@app.route</text>
+  <rect x="1010" y="523" width="150" height="24" rx="4" fill="var(--warn-pale)"/>
+  <text x="1085" y="539" font-family="monospace" font-size="11" fill="var(--warn-dk)" text-anchor="middle">@login_required</text>
+  <rect x="1165" y="523" width="65" height="24" rx="4" fill="var(--warn-pale)"/>
+  <text x="1197" y="539" font-family="monospace" font-size="11" fill="var(--warn-dk)" text-anchor="middle">@retry</text>
+  <text x="896" y="570" font-family="monospace" font-size="11" fill="var(--text-muted)">@A @B @C def f():  →  f = A(B(C(f)))</text>
+  <text x="896" y="588" font-family="sans-serif" font-size="11" fill="var(--text-muted)">Applied bottom-up; called top-down at runtime</text>
 </svg>

@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,101 +156,89 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- == TITLE ROW == -->
   <!-- Three main cycle boxes -->
   <!-- Box 1: Prompt -->
   <rect x="60" y="60" width="240" height="120" rx="12" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="180" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">PROMPT</text>
-  <text x="180" y="138" font-family="Arial, sans-serif" font-size="14" fill="#bbdefb" text-anchor="middle">Describe your problem</text>
-  <text x="180" y="158" font-family="Arial, sans-serif" font-size="14" fill="#bbdefb" text-anchor="middle">or code task</text>
+  <text x="180" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">PROMPT</text>
+  <text x="180" y="138" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-lt)" text-anchor="middle">Describe your problem</text>
+  <text x="180" y="158" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-lt)" text-anchor="middle">or code task</text>
 
   <!-- Arrow 1 to 2 -->
-  <line x1="300" y1="120" x2="380" y2="120" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="120" x2="380" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Box 2: Response -->
-  <rect x="380" y="60" width="240" height="120" rx="12" fill="#43a047" filter="url(#shadow)"/>
-  <text x="500" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">RESPONSE</text>
-  <text x="500" y="138" font-family="Arial, sans-serif" font-size="14" fill="#c8e6c9" text-anchor="middle">AI generates code,</text>
-  <text x="500" y="158" font-family="Arial, sans-serif" font-size="14" fill="#c8e6c9" text-anchor="middle">explanation, or fix</text>
+  <rect x="380" y="60" width="240" height="120" rx="12" fill="var(--ok)" filter="url(#shadow)"/>
+  <text x="500" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">RESPONSE</text>
+  <text x="500" y="138" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-lt)" text-anchor="middle">AI generates code,</text>
+  <text x="500" y="158" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-lt)" text-anchor="middle">explanation, or fix</text>
 
   <!-- Arrow 2 to 3 -->
-  <line x1="620" y1="120" x2="700" y2="120" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="120" x2="700" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Box 3: Refine -->
-  <rect x="700" y="60" width="240" height="120" rx="12" fill="#fb8c00" filter="url(#shadow)"/>
-  <text x="820" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">REFINE</text>
-  <text x="820" y="138" font-family="Arial, sans-serif" font-size="14" fill="#fff3e0" text-anchor="middle">Review, test, and</text>
-  <text x="820" y="158" font-family="Arial, sans-serif" font-size="14" fill="#fff3e0" text-anchor="middle">iterate on output</text>
+  <rect x="700" y="60" width="240" height="120" rx="12" fill="var(--warn)" filter="url(#shadow)"/>
+  <text x="820" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">REFINE</text>
+  <text x="820" y="138" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-pale)" text-anchor="middle">Review, test, and</text>
+  <text x="820" y="158" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-pale)" text-anchor="middle">iterate on output</text>
 
   <!-- Loop arrow back: refine -> prompt (curved arc below) -->
-  <path d="M820,180 Q820,240 500,240 Q180,240 180,180" stroke="#8e24aa" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
-  <text x="500" y="260" font-family="Arial, sans-serif" font-size="13" fill="#8e24aa" text-anchor="middle">iterate until satisfied</text>
+  <path d="M820,180 Q820,240 500,240 Q180,240 180,180" stroke="var(--info)" stroke-width="2" fill="none" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="500" y="260" font-family="Arial, sans-serif" font-size="13" fill="var(--info)" text-anchor="middle">iterate until satisfied</text>
 
   <!-- == WHEN TO USE == -->
-  <text x="64" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">When to Use Chat AI</text>
-  <text x="660" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">When to Use IDE AI</text>
+  <text x="64" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-dk)">When to Use Chat AI</text>
+  <text x="660" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-dk)">When to Use IDE AI</text>
 
   <!-- Chat AI use cases -->
-  <rect x="60" y="335" width="560" height="140" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <text x="80" y="362" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Exploring unfamiliar technologies or APIs</text>
-  <text x="80" y="386" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Designing architecture and brainstorming solutions</text>
-  <text x="80" y="410" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Debugging tricky errors with full context</text>
-  <text x="80" y="434" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Generating boilerplate or scaffold code from scratch</text>
-  <text x="80" y="458" font-family="Arial, sans-serif" font-size="14" fill="#1565c0">&#x2022; Long multi-turn conversations with deep context</text>
+  <rect x="60" y="335" width="560" height="140" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="80" y="362" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)">&#x2022; Exploring unfamiliar technologies or APIs</text>
+  <text x="80" y="386" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)">&#x2022; Designing architecture and brainstorming solutions</text>
+  <text x="80" y="410" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)">&#x2022; Debugging tricky errors with full context</text>
+  <text x="80" y="434" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)">&#x2022; Generating boilerplate or scaffold code from scratch</text>
+  <text x="80" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)">&#x2022; Long multi-turn conversations with deep context</text>
 
   <!-- IDE AI use cases -->
-  <rect x="660" y="335" width="560" height="140" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
-  <text x="680" y="362" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Inline autocomplete while typing code</text>
-  <text x="680" y="386" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Quick refactoring within the editor context</text>
-  <text x="680" y="410" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Real-time suggestions tied to open files</text>
-  <text x="680" y="434" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Test generation for the current function</text>
-  <text x="680" y="458" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32">&#x2022; Navigating and explaining existing code</text>
+  <rect x="660" y="335" width="560" height="140" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="680" y="362" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)">&#x2022; Inline autocomplete while typing code</text>
+  <text x="680" y="386" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)">&#x2022; Quick refactoring within the editor context</text>
+  <text x="680" y="410" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)">&#x2022; Real-time suggestions tied to open files</text>
+  <text x="680" y="434" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)">&#x2022; Test generation for the current function</text>
+  <text x="680" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)">&#x2022; Navigating and explaining existing code</text>
 
   <!-- == PROMPTING STRATEGIES == -->
-  <text x="64" y="510" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#555555">Prompting Strategies for Code Generation</text>
+  <text x="64" y="510" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-muted)">Prompting Strategies for Code Generation</text>
 
   <!-- Strategy boxes -->
-  <rect x="60" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="195" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Be Specific</text>
-  <text x="195" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Language, version, framework,</text>
-  <text x="195" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">style guide, and constraints</text>
-  <text x="195" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">must all be stated explicitly</text>
+  <rect x="60" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="195" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Be Specific</text>
+  <text x="195" y="570" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">Language, version, framework,</text>
+  <text x="195" y="588" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">style guide, and constraints</text>
+  <text x="195" y="606" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">must all be stated explicitly</text>
 
-  <rect x="350" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="485" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Provide Context</text>
-  <text x="485" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Paste relevant code snippets,</text>
-  <text x="485" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">error messages, or data</text>
-  <text x="485" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">samples before asking</text>
+  <rect x="350" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="485" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Provide Context</text>
+  <text x="485" y="570" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">Paste relevant code snippets,</text>
+  <text x="485" y="588" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">error messages, or data</text>
+  <text x="485" y="606" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">samples before asking</text>
 
-  <rect x="640" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="775" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f57c00" text-anchor="middle">Iterate Quickly</text>
-  <text x="775" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Accept partial output, test it,</text>
-  <text x="775" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">then ask for fixes or changes</text>
-  <text x="775" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">in the same conversation</text>
+  <rect x="640" y="525" width="270" height="90" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="775" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-mid)" text-anchor="middle">Iterate Quickly</text>
+  <text x="775" y="570" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">Accept partial output, test it,</text>
+  <text x="775" y="588" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">then ask for fixes or changes</text>
+  <text x="775" y="606" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">in the same conversation</text>
 
-  <rect x="930" y="525" width="290" height="90" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="1075" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Verify Output</text>
-  <text x="1075" y="570" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">Run tests, check logic, and</text>
-  <text x="1075" y="588" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">review security implications</text>
-  <text x="1075" y="606" font-family="Arial, sans-serif" font-size="13" fill="#333333" text-anchor="middle">before using in production</text>
+  <rect x="930" y="525" width="290" height="90" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="1075" y="549" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Verify Output</text>
+  <text x="1075" y="570" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">Run tests, check logic, and</text>
+  <text x="1075" y="588" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">review security implications</text>
+  <text x="1075" y="606" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle">before using in production</text>
 </svg>

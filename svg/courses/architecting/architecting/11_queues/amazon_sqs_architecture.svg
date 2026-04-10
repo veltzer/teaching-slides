@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
       <ns0:polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -67,39 +164,39 @@
       <ns0:polygon points="0,17.1429 5.6,0" fill="#999" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="600.335" y="40.201" text-anchor="middle" font-size="24.0134" font-weight="bold" fill="#333">Amazon SQS Architecture</ns0:text>
-  <ns0:rect x="30.0168" y="64.3216" width="1050.5863" height="482.4121" rx="15.0084" fill="#f9f9f9" stroke="#ccc" stroke-width="1.5008" stroke-dasharray="12.0067 6.0034" />
-  <ns0:text x="75.0419" y="96.4824" font-size="16.5092" fill="#999">AWS Region</ns0:text>
-  <ns0:rect x="60.0335" y="209.0452" width="195.1089" height="88.4422" rx="7.5042" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2513" />
-  <ns0:text x="157.5879" y="244.4221" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="#333">Producer</ns0:text>
-  <ns0:text x="157.5879" y="273.3669" text-anchor="middle" font-size="15.0084" fill="#666">Lambda / EC2</ns0:text>
-  <ns0:rect x="390.2178" y="128.6433" width="225.1256" height="72.3619" rx="7.5042" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.2513" />
-  <ns0:text x="502.7806" y="172.0603" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="#333">Standard Queue</ns0:text>
-  <ns0:rect x="390.2178" y="257.2864" width="225.1256" height="72.3619" rx="7.5042" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.2513" />
-  <ns0:text x="502.7806" y="300.7035" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="#333">FIFO Queue</ns0:text>
-  <ns0:rect x="765.4272" y="112.5628" width="165.0921" height="48.2412" rx="7.5042" fill="#d4edda" stroke="#28a745" stroke-width="1.5008" />
-  <ns0:text x="847.9732" y="144.7236" text-anchor="middle" font-size="16.5092" fill="#333">Consumer 1</ns0:text>
-  <ns0:rect x="765.4272" y="176.8844" width="165.0921" height="48.2412" rx="7.5042" fill="#d4edda" stroke="#28a745" stroke-width="1.5008" />
-  <ns0:text x="847.9732" y="209.0452" text-anchor="middle" font-size="16.5092" fill="#333">Consumer 2</ns0:text>
-  <ns0:rect x="765.4272" y="273.3669" width="165.0921" height="48.2412" rx="7.5042" fill="#d4edda" stroke="#28a745" stroke-width="1.5008" />
-  <ns0:text x="847.9732" y="305.5277" text-anchor="middle" font-size="16.5092" fill="#333">Consumer 3</ns0:text>
-  <ns0:rect x="390.2178" y="402.01" width="225.1256" height="64.3216" rx="7.5042" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2513" />
-  <ns0:text x="502.7806" y="442.2111" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="#dc3545">DLQ (Standard)</ns0:text>
-  <ns0:rect x="675.3769" y="402.01" width="225.1256" height="64.3216" rx="7.5042" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2513" />
-  <ns0:text x="787.9397" y="442.2111" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="#dc3545">DLQ (FIFO)</ns0:text>
-  <ns0:line x1="255.1424" y1="233.1658" x2="387.2161" y2="164.0201" stroke="#4a90e2" stroke-width="2.2513" marker-end="url(#arrow)" />
-  <ns0:line x1="255.1424" y1="265.3266" x2="387.2161" y2="292.6633" stroke="#4a90e2" stroke-width="2.2513" marker-end="url(#arrow)" />
-  <ns0:line x1="615.3434" y1="152.7638" x2="762.4255" y2="136.6834" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrow)" />
-  <ns0:line x1="615.3434" y1="168.8442" x2="762.4255" y2="201.005" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrow)" />
-  <ns0:line x1="615.3434" y1="292.6633" x2="762.4255" y2="297.4875" stroke="#28a745" stroke-width="2.2513" marker-end="url(#arrow)" />
-  <ns0:line x1="480.268" y1="201.005" x2="480.268" y2="398.794" stroke="#dc3545" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
-  <ns0:text x="420.2345" y="321.608" font-size="15.0084" fill="#dc3545">Failed</ns0:text>
-  <ns0:line x1="555.3099" y1="329.6483" x2="765.4272" y2="398.794" stroke="#dc3545" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
-  <ns0:text x="675.3769" y="361.8091" font-size="15.0084" fill="#dc3545">Failed</ns0:text>
-  <ns0:rect x="60.0335" y="466.3317" width="210.1173" height="64.3216" rx="7.5042" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2513" />
-  <ns0:text x="165.0921" y="498.4925" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="#333">CloudWatch</ns0:text>
-  <ns0:text x="165.0921" y="522.6131" text-anchor="middle" font-size="15.0084" fill="#666">Monitoring</ns0:text>
-  <ns0:line x1="270.1508" y1="498.4925" x2="387.2161" y2="434.1708" stroke="#999" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
-  <ns0:text x="600.335" y="611.0553" text-anchor="middle" font-size="16.5092" fill="#888" font-style="italic">Standard queues offer best-effort ordering; FIFO queues guarantee exactly-once processing.</ns0:text>
-  <ns0:text x="600.335" y="640" text-anchor="middle" font-size="16.5092" fill="#888" font-style="italic">Failed messages route to Dead Letter Queues for later inspection.</ns0:text>
+  <ns0:text x="600.335" y="40.201" text-anchor="middle" font-size="24.0134" font-weight="bold" fill="var(--text-dark)">Amazon SQS Architecture</ns0:text>
+  <ns0:rect x="30.0168" y="64.3216" width="1050.5863" height="482.4121" rx="15.0084" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.5008" stroke-dasharray="12.0067 6.0034" />
+  <ns0:text x="75.0419" y="96.4824" font-size="16.5092" fill="var(--text-faintest)">AWS Region</ns0:text>
+  <ns0:rect x="60.0335" y="209.0452" width="195.1089" height="88.4422" rx="7.5042" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2513" />
+  <ns0:text x="157.5879" y="244.4221" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="var(--text-dark)">Producer</ns0:text>
+  <ns0:text x="157.5879" y="273.3669" text-anchor="middle" font-size="15.0084" fill="var(--text-mid)">Lambda / EC2</ns0:text>
+  <ns0:rect x="390.2178" y="128.6433" width="225.1256" height="72.3619" rx="7.5042" fill="var(--info-pale)" stroke="var(--info-light)" stroke-width="2.2513" />
+  <ns0:text x="502.7806" y="172.0603" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="var(--text-dark)">Standard Queue</ns0:text>
+  <ns0:rect x="390.2178" y="257.2864" width="225.1256" height="72.3619" rx="7.5042" fill="var(--info-pale)" stroke="var(--info-light)" stroke-width="2.2513" />
+  <ns0:text x="502.7806" y="300.7035" text-anchor="middle" font-size="18.0101" font-weight="bold" fill="var(--text-dark)">FIFO Queue</ns0:text>
+  <ns0:rect x="765.4272" y="112.5628" width="165.0921" height="48.2412" rx="7.5042" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5008" />
+  <ns0:text x="847.9732" y="144.7236" text-anchor="middle" font-size="16.5092" fill="var(--text-dark)">Consumer 1</ns0:text>
+  <ns0:rect x="765.4272" y="176.8844" width="165.0921" height="48.2412" rx="7.5042" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5008" />
+  <ns0:text x="847.9732" y="209.0452" text-anchor="middle" font-size="16.5092" fill="var(--text-dark)">Consumer 2</ns0:text>
+  <ns0:rect x="765.4272" y="273.3669" width="165.0921" height="48.2412" rx="7.5042" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5008" />
+  <ns0:text x="847.9732" y="305.5277" text-anchor="middle" font-size="16.5092" fill="var(--text-dark)">Consumer 3</ns0:text>
+  <ns0:rect x="390.2178" y="402.01" width="225.1256" height="64.3216" rx="7.5042" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.2513" />
+  <ns0:text x="502.7806" y="442.2111" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="var(--danger-bright)">DLQ (Standard)</ns0:text>
+  <ns0:rect x="675.3769" y="402.01" width="225.1256" height="64.3216" rx="7.5042" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.2513" />
+  <ns0:text x="787.9397" y="442.2111" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="var(--danger-bright)">DLQ (FIFO)</ns0:text>
+  <ns0:line x1="255.1424" y1="233.1658" x2="387.2161" y2="164.0201" stroke="var(--primary-bright)" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="255.1424" y1="265.3266" x2="387.2161" y2="292.6633" stroke="var(--primary-bright)" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="615.3434" y1="152.7638" x2="762.4255" y2="136.6834" stroke="var(--ok-bright)" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="615.3434" y1="168.8442" x2="762.4255" y2="201.005" stroke="var(--ok-bright)" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="615.3434" y1="292.6633" x2="762.4255" y2="297.4875" stroke="var(--ok-bright)" stroke-width="2.2513" marker-end="url(#arrow)" />
+  <ns0:line x1="480.268" y1="201.005" x2="480.268" y2="398.794" stroke="var(--danger-bright)" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
+  <ns0:text x="420.2345" y="321.608" font-size="15.0084" fill="var(--danger-bright)">Failed</ns0:text>
+  <ns0:line x1="555.3099" y1="329.6483" x2="765.4272" y2="398.794" stroke="var(--danger-bright)" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
+  <ns0:text x="675.3769" y="361.8091" font-size="15.0084" fill="var(--danger-bright)">Failed</ns0:text>
+  <ns0:rect x="60.0335" y="466.3317" width="210.1173" height="64.3216" rx="7.5042" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.2513" />
+  <ns0:text x="165.0921" y="498.4925" text-anchor="middle" font-size="16.5092" font-weight="bold" fill="var(--text-dark)">CloudWatch</ns0:text>
+  <ns0:text x="165.0921" y="522.6131" text-anchor="middle" font-size="15.0084" fill="var(--text-mid)">Monitoring</ns0:text>
+  <ns0:line x1="270.1508" y1="498.4925" x2="387.2161" y2="434.1708" stroke="var(--text-faintest)" stroke-width="1.5008" stroke-dasharray="7.5042 4.5025" marker-end="url(#arrow)" />
+  <ns0:text x="600.335" y="611.0553" text-anchor="middle" font-size="16.5092" fill="var(--text-faint)" font-style="italic">Standard queues offer best-effort ordering; FIFO queues guarantee exactly-once processing.</ns0:text>
+  <ns0:text x="600.335" y="640" text-anchor="middle" font-size="16.5092" fill="var(--text-faint)" font-style="italic">Failed messages route to Dead Letter Queues for later inspection.</ns0:text>
 </ns0:svg>

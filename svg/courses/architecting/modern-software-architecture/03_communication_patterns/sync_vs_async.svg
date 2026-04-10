@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
@@ -68,82 +165,82 @@
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:line x1="568.8889" y1="26.6667" x2="568.8889" y2="586.6667" stroke="#e0e0e0" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
-  <ns0:text x="284.4444" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#1565c0">Synchronous (REST / gRPC)</ns0:text>
+  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
+  <ns0:line x1="568.8889" y1="26.6667" x2="568.8889" y2="586.6667" stroke="var(--border)" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
+  <ns0:text x="284.4444" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="var(--primary-dk)">Synchronous (REST / gRPC)</ns0:text>
   <ns0:rect x="53.3333" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="120" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff">Client</ns0:text>
-  <ns0:rect x="391.1111" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="457.7778" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Server</ns0:text>
-  <ns0:line x1="186.6667" y1="87.1111" x2="389.3333" y2="87.1111" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:text x="288" y="80.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#1565c0">HTTP GET /orders</ns0:text>
-  <ns0:line x1="389.3333" y1="104.8889" x2="186.6667" y2="104.8889" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:text x="288" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">200 OK { data }</ns0:text>
-  <ns0:rect x="53.3333" y="137.7778" width="133.3333" height="26.6667" rx="3.5556" fill="#fff3e0" stroke="#ff9800" stroke-width="1.3333" />
-  <ns0:text x="120" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#e65100">⏳ Waiting…</ns0:text>
-  <ns0:rect x="53.3333" y="191.1111" width="471.1111" height="71.1111" rx="7.1111" fill="#f0f0f0" stroke="#555555" stroke-width="1.3333" />
-  <ns0:text x="80" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">gRPC (binary, typed)</ns0:text>
-  <ns0:text x="80" y="231.1111" font-family="monospace" font-size="11.5556" fill="#1565c0">stub.GetOrder(GetOrderRequest{id: 1})</ns0:text>
-  <ns0:text x="80" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">← Blocks until server responds</ns0:text>
-  <ns0:rect x="53.3333" y="284.4444" width="471.1111" height="142.2222" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
-  <ns0:text x="288.8889" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Characteristics</ns0:text>
-  <ns0:text x="71.1111" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Simple request/response model</ns0:text>
-  <ns0:text x="71.1111" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Easy to debug and trace</ns0:text>
-  <ns0:text x="71.1111" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Immediate error feedback</ns0:text>
-  <ns0:text x="71.1111" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− Temporal coupling (both must be up)</ns0:text>
-  <ns0:text x="71.1111" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− Caller blocked while waiting</ns0:text>
-  <ns0:rect x="53.3333" y="444.4444" width="142.2222" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="124.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">REST / HTTP</ns0:text>
-  <ns0:rect x="208.8889" y="444.4444" width="142.2222" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="280" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">gRPC</ns0:text>
-  <ns0:rect x="364.4444" y="444.4444" width="160" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="444.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">GraphQL</ns0:text>
-  <ns0:text x="853.3333" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#1565c0">Asynchronous (Queue / Event Bus)</ns0:text>
+  <ns0:text x="120" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)">Client</ns0:text>
+  <ns0:rect x="391.1111" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="457.7778" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--text)">Server</ns0:text>
+  <ns0:line x1="186.6667" y1="87.1111" x2="389.3333" y2="87.1111" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:text x="288" y="80.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--primary-dk)">HTTP GET /orders</ns0:text>
+  <ns0:line x1="389.3333" y1="104.8889" x2="186.6667" y2="104.8889" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="288" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">200 OK { data }</ns0:text>
+  <ns0:rect x="53.3333" y="137.7778" width="133.3333" height="26.6667" rx="3.5556" fill="var(--warn-pale)" stroke="var(--warn-orange)" stroke-width="1.3333" />
+  <ns0:text x="120" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--warn-dk)">⏳ Waiting…</ns0:text>
+  <ns0:rect x="53.3333" y="191.1111" width="471.1111" height="71.1111" rx="7.1111" fill="var(--surface-dark)" stroke="var(--text-muted)" stroke-width="1.3333" />
+  <ns0:text x="80" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text)">gRPC (binary, typed)</ns0:text>
+  <ns0:text x="80" y="231.1111" font-family="monospace" font-size="11.5556" fill="var(--primary-dk)">stub.GetOrder(GetOrderRequest{id: 1})</ns0:text>
+  <ns0:text x="80" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">← Blocks until server responds</ns0:text>
+  <ns0:rect x="53.3333" y="284.4444" width="471.1111" height="142.2222" rx="7.1111" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
+  <ns0:text x="288.8889" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-dk)">Characteristics</ns0:text>
+  <ns0:text x="71.1111" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Simple request/response model</ns0:text>
+  <ns0:text x="71.1111" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Easy to debug and trace</ns0:text>
+  <ns0:text x="71.1111" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Immediate error feedback</ns0:text>
+  <ns0:text x="71.1111" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− Temporal coupling (both must be up)</ns0:text>
+  <ns0:text x="71.1111" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− Caller blocked while waiting</ns0:text>
+  <ns0:rect x="53.3333" y="444.4444" width="142.2222" height="39.1111" rx="5.3333" fill="var(--bg)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="124.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">REST / HTTP</ns0:text>
+  <ns0:rect x="208.8889" y="444.4444" width="142.2222" height="39.1111" rx="5.3333" fill="var(--bg)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="280" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">gRPC</ns0:text>
+  <ns0:rect x="364.4444" y="444.4444" width="160" height="39.1111" rx="5.3333" fill="var(--bg)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="444.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">GraphQL</ns0:text>
+  <ns0:text x="853.3333" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="var(--primary-dk)">Asynchronous (Queue / Event Bus)</ns0:text>
   <ns0:rect x="586.6667" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="653.3333" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff">Producer</ns0:text>
-  <ns0:rect x="760" y="62.2222" width="177.7778" height="62.2222" rx="7.1111" fill="#fff9c4" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="848.8889" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#f57c00">Message Queue</ns0:text>
-  <ns0:rect x="771.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#f9a825" />
-  <ns0:rect x="803.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#f9a825" />
-  <ns0:rect x="835.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#f9a825" />
-  <ns0:rect x="867.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#ffcc80" />
-  <ns0:rect x="977.7778" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="1044.4444" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Consumer</ns0:text>
-  <ns0:line x1="720" y1="93.3333" x2="758.2222" y2="93.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:text x="738.6667" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#1565c0">publish</ns0:text>
-  <ns0:line x1="937.7778" y1="93.3333" x2="976" y2="93.3333" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:text x="956.4444" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#555555">consume</ns0:text>
-  <ns0:rect x="586.6667" y="137.7778" width="133.3333" height="26.6667" rx="3.5556" fill="#e8f5e9" stroke="#43a047" stroke-width="1.3333" />
-  <ns0:text x="653.3333" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#2e7d32">✓ Free to continue</ns0:text>
-  <ns0:rect x="586.6667" y="191.1111" width="515.5556" height="71.1111" rx="7.1111" fill="#f0f0f0" stroke="#555555" stroke-width="1.3333" />
-  <ns0:text x="613.3333" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">Event Bus (Pub/Sub)</ns0:text>
-  <ns0:rect x="622.2222" y="224" width="106.6667" height="26.6667" rx="3.5556" fill="#e3f2fd" />
-  <ns0:text x="675.5556" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Publisher</ns0:text>
-  <ns0:rect x="764.4444" y="217.7778" width="115.5556" height="39.1111" rx="3.5556" fill="#fff9c4" stroke="#f9a825" stroke-width="1.3333" />
-  <ns0:text x="822.2222" y="233.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#f57c00">Kafka / SNS</ns0:text>
-  <ns0:text x="822.2222" y="248.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555555">Event Bus</ns0:text>
-  <ns0:rect x="915.5556" y="224" width="88.8889" height="26.6667" rx="3.5556" fill="#e8f5e9" />
-  <ns0:text x="960" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Subscriber</ns0:text>
-  <ns0:rect x="1013.3333" y="224" width="88.8889" height="26.6667" rx="3.5556" fill="#e8f5e9" />
-  <ns0:text x="1057.7778" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Subscriber</ns0:text>
-  <ns0:line x1="728.8889" y1="237.3333" x2="762.6667" y2="237.3333" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
-  <ns0:line x1="880" y1="237.3333" x2="913.7778" y2="237.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="880" y1="237.3333" x2="1011.5556" y2="237.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:rect x="586.6667" y="284.4444" width="515.5556" height="142.2222" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.3333" />
-  <ns0:text x="844.4444" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#2e7d32">Characteristics</ns0:text>
-  <ns0:text x="604.4444" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Temporal decoupling (sender not blocked)</ns0:text>
-  <ns0:text x="604.4444" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Resilience (messages buffered)</ns0:text>
-  <ns0:text x="604.4444" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Fan-out / broadcast to many consumers</ns0:text>
-  <ns0:text x="604.4444" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− No immediate response / harder to debug</ns0:text>
-  <ns0:text x="604.4444" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− Eventual consistency challenges</ns0:text>
-  <ns0:rect x="586.6667" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="662.2222" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">RabbitMQ</ns0:text>
-  <ns0:rect x="749.3333" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="824.8889" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">Kafka</ns0:text>
-  <ns0:rect x="912" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="987.5556" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">AWS SQS/SNS</ns0:text>
-  <ns0:rect x="53.3333" y="515.5556" width="1031.1111" height="40.8889" rx="5.3333" fill="#f0f0f0" />
-  <ns0:text x="568.8889" y="531.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">When to choose?</ns0:text>
-  <ns0:text x="284.4444" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">Sync: real-time query, user-facing, simple flows</ns0:text>
-  <ns0:text x="853.3333" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">Async: background jobs, fan-out, decoupled services</ns0:text>
+  <ns0:text x="653.3333" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)">Producer</ns0:text>
+  <ns0:rect x="760" y="62.2222" width="177.7778" height="62.2222" rx="7.1111" fill="var(--warn-pale4)" stroke="var(--warn-amber)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="848.8889" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-mid)">Message Queue</ns0:text>
+  <ns0:rect x="771.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="var(--warn-amber)" />
+  <ns0:rect x="803.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="var(--warn-amber)" />
+  <ns0:rect x="835.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="var(--warn-amber)" />
+  <ns0:rect x="867.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="var(--warn-tint)" />
+  <ns0:rect x="977.7778" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="1044.4444" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--text)">Consumer</ns0:text>
+  <ns0:line x1="720" y1="93.3333" x2="758.2222" y2="93.3333" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:text x="738.6667" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--primary-dk)">publish</ns0:text>
+  <ns0:line x1="937.7778" y1="93.3333" x2="976" y2="93.3333" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="956.4444" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">consume</ns0:text>
+  <ns0:rect x="586.6667" y="137.7778" width="133.3333" height="26.6667" rx="3.5556" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.3333" />
+  <ns0:text x="653.3333" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--ok-dk)">✓ Free to continue</ns0:text>
+  <ns0:rect x="586.6667" y="191.1111" width="515.5556" height="71.1111" rx="7.1111" fill="var(--surface-dark)" stroke="var(--text-muted)" stroke-width="1.3333" />
+  <ns0:text x="613.3333" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text)">Event Bus (Pub/Sub)</ns0:text>
+  <ns0:rect x="622.2222" y="224" width="106.6667" height="26.6667" rx="3.5556" fill="var(--primary-pale)" />
+  <ns0:text x="675.5556" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text)">Publisher</ns0:text>
+  <ns0:rect x="764.4444" y="217.7778" width="115.5556" height="39.1111" rx="3.5556" fill="var(--warn-pale4)" stroke="var(--warn-amber)" stroke-width="1.3333" />
+  <ns0:text x="822.2222" y="233.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--warn-mid)">Kafka / SNS</ns0:text>
+  <ns0:text x="822.2222" y="248.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">Event Bus</ns0:text>
+  <ns0:rect x="915.5556" y="224" width="88.8889" height="26.6667" rx="3.5556" fill="var(--ok-pale)" />
+  <ns0:text x="960" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text)">Subscriber</ns0:text>
+  <ns0:rect x="1013.3333" y="224" width="88.8889" height="26.6667" rx="3.5556" fill="var(--ok-pale)" />
+  <ns0:text x="1057.7778" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text)">Subscriber</ns0:text>
+  <ns0:line x1="728.8889" y1="237.3333" x2="762.6667" y2="237.3333" stroke="var(--primary-dk)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="880" y1="237.3333" x2="913.7778" y2="237.3333" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="880" y1="237.3333" x2="1011.5556" y2="237.3333" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:rect x="586.6667" y="284.4444" width="515.5556" height="142.2222" rx="7.1111" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.3333" />
+  <ns0:text x="844.4444" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--ok-dk)">Characteristics</ns0:text>
+  <ns0:text x="604.4444" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Temporal decoupling (sender not blocked)</ns0:text>
+  <ns0:text x="604.4444" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Resilience (messages buffered)</ns0:text>
+  <ns0:text x="604.4444" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Fan-out / broadcast to many consumers</ns0:text>
+  <ns0:text x="604.4444" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− No immediate response / harder to debug</ns0:text>
+  <ns0:text x="604.4444" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− Eventual consistency challenges</ns0:text>
+  <ns0:rect x="586.6667" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="var(--bg)" stroke="var(--ok)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="662.2222" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">RabbitMQ</ns0:text>
+  <ns0:rect x="749.3333" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="var(--bg)" stroke="var(--ok)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="824.8889" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">Kafka</ns0:text>
+  <ns0:rect x="912" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="var(--bg)" stroke="var(--ok)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="987.5556" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">AWS SQS/SNS</ns0:text>
+  <ns0:rect x="53.3333" y="515.5556" width="1031.1111" height="40.8889" rx="5.3333" fill="var(--surface-dark)" />
+  <ns0:text x="568.8889" y="531.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text)">When to choose?</ns0:text>
+  <ns0:text x="284.4444" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">Sync: real-time query, user-facing, simple flows</ns0:text>
+  <ns0:text x="853.3333" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">Async: background jobs, fan-out, decoupled services</ns0:text>
 </ns0:svg>

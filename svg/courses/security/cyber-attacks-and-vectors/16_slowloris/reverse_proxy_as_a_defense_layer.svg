@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arr" markerWidth="18.2857" markerHeight="14.8235" refX="16.4571" refY="7.4118" orient="auto">
       <ns0:polygon points="0,21.1765 6.4,0" fill="#555" />
     </ns0:marker>
@@ -67,36 +164,36 @@
       <ns0:polygon points="0,0 6.4,21.1765" fill="#555" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="586.128" y="42.6666" text-anchor="middle" font-size="23.4451" fill="#222222" font-weight="bold">Reverse Proxy Protection Architecture</ns0:text>
-  <ns0:text x="100.4791" y="93.091" text-anchor="middle" font-size="20.0959" fill="#c62828" font-weight="bold">Attackers</ns0:text>
-  <ns0:text x="535.8885" y="93.091" text-anchor="middle" font-size="20.0959" fill="#1565c0" font-weight="bold">Reverse Proxy</ns0:text>
-  <ns0:text x="535.8885" y="124.1212" text-anchor="middle" font-size="20.0959" fill="#1565c0" font-weight="bold">(Nginx/HAProxy)</ns0:text>
-  <ns0:text x="937.8048" y="93.091" text-anchor="middle" font-size="20.0959" fill="#2e7d32" font-weight="bold">Backend</ns0:text>
-  <ns0:text x="937.8048" y="124.1212" text-anchor="middle" font-size="20.0959" fill="#2e7d32" font-weight="bold">(Apache)</ns0:text>
-  <ns0:rect x="33.493" y="155.1516" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ffcc80" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="83.7326" y="193.9394" text-anchor="middle" font-size="20.0959" fill="#b71c1c" font-weight="bold">A1</ns0:text>
-  <ns0:line x1="133.9721" y1="188.1213" x2="334.9303" y2="188.1213" stroke="#c62828" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
-  <ns0:rect x="33.493" y="252.1212" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ffcc80" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="83.7326" y="290.9091" text-anchor="middle" font-size="20.0959" fill="#b71c1c" font-weight="bold">A2</ns0:text>
-  <ns0:line x1="133.9721" y1="285.0909" x2="334.9303" y2="285.0909" stroke="#c62828" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
-  <ns0:rect x="33.493" y="349.091" width="100.4791" height="65.9394" fill="#ffcdd2" stroke="#ffcc80" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="83.7326" y="387.8788" text-anchor="middle" font-size="20.0959" fill="#b71c1c" font-weight="bold">A3</ns0:text>
-  <ns0:line x1="133.9721" y1="382.0606" x2="334.9303" y2="382.0606" stroke="#c62828" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
-  <ns0:rect x="334.9303" y="135.7576" width="385.1698" height="349.091" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="527.5152" y="182.303" text-anchor="middle" font-size="20.0959" fill="#1565c0" font-weight="bold">Event-driven proxy</ns0:text>
-  <ns0:text x="351.6768" y="223.0303" text-anchor="start" font-size="18.4212" fill="#1a1a2e">• Connection timeouts</ns0:text>
-  <ns0:text x="351.6768" y="265.6969" text-anchor="start" font-size="18.4212" fill="#1a1a2e">• Rate limiting</ns0:text>
-  <ns0:text x="351.6768" y="308.3637" text-anchor="start" font-size="18.4212" fill="#1a1a2e">• Connection limits</ns0:text>
-  <ns0:text x="351.6768" y="351.0303" text-anchor="start" font-size="18.4212" fill="#1a1a2e">• Full request buffering</ns0:text>
-  <ns0:text x="527.5152" y="449.9394" text-anchor="middle" font-size="18.4212" fill="#c62828" font-weight="bold">Slow conns blocked here</ns0:text>
-  <ns0:rect x="803.8327" y="135.7576" width="318.1838" height="349.091" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="962.9245" y="182.303" text-anchor="middle" font-size="20.0959" fill="#2e7d32" font-weight="bold">Backend server</ns0:text>
-  <ns0:text x="962.9245" y="224.9697" text-anchor="middle" font-size="18.4212" fill="#1b5e20">Only sees</ns0:text>
-  <ns0:text x="962.9245" y="267.6364" text-anchor="middle" font-size="18.4212" fill="#1b5e20">complete requests</ns0:text>
-  <ns0:text x="962.9245" y="310.303" text-anchor="middle" font-size="18.4212" fill="#1b5e20">→ not vulnerable</ns0:text>
-  <ns0:line x1="720.1001" y1="300.6061" x2="803.8327" y2="300.6061" stroke="#555" stroke-width="2.512" marker-end="url(#arr)" />
-  <ns0:text x="761.9664" y="287.0303" text-anchor="middle" font-size="16.7465" fill="#555">complete
+  <ns0:text x="586.128" y="42.6666" text-anchor="middle" font-size="23.4451" fill="var(--text-darker)" font-weight="bold">Reverse Proxy Protection Architecture</ns0:text>
+  <ns0:text x="100.4791" y="93.091" text-anchor="middle" font-size="20.0959" fill="var(--danger-dk)" font-weight="bold">Attackers</ns0:text>
+  <ns0:text x="535.8885" y="93.091" text-anchor="middle" font-size="20.0959" fill="var(--primary-dk)" font-weight="bold">Reverse Proxy</ns0:text>
+  <ns0:text x="535.8885" y="124.1212" text-anchor="middle" font-size="20.0959" fill="var(--primary-dk)" font-weight="bold">(Nginx/HAProxy)</ns0:text>
+  <ns0:text x="937.8048" y="93.091" text-anchor="middle" font-size="20.0959" fill="var(--ok-dk)" font-weight="bold">Backend</ns0:text>
+  <ns0:text x="937.8048" y="124.1212" text-anchor="middle" font-size="20.0959" fill="var(--ok-dk)" font-weight="bold">(Apache)</ns0:text>
+  <ns0:rect x="33.493" y="155.1516" width="100.4791" height="65.9394" fill="var(--danger-lt)" stroke="var(--warn-tint)" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="83.7326" y="193.9394" text-anchor="middle" font-size="20.0959" fill="var(--danger-deep)" font-weight="bold">A1</ns0:text>
+  <ns0:line x1="133.9721" y1="188.1213" x2="334.9303" y2="188.1213" stroke="var(--danger-dk)" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
+  <ns0:rect x="33.493" y="252.1212" width="100.4791" height="65.9394" fill="var(--danger-lt)" stroke="var(--warn-tint)" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="83.7326" y="290.9091" text-anchor="middle" font-size="20.0959" fill="var(--danger-deep)" font-weight="bold">A2</ns0:text>
+  <ns0:line x1="133.9721" y1="285.0909" x2="334.9303" y2="285.0909" stroke="var(--danger-dk)" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
+  <ns0:rect x="33.493" y="349.091" width="100.4791" height="65.9394" fill="var(--danger-lt)" stroke="var(--warn-tint)" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="83.7326" y="387.8788" text-anchor="middle" font-size="20.0959" fill="var(--danger-deep)" font-weight="bold">A3</ns0:text>
+  <ns0:line x1="133.9721" y1="382.0606" x2="334.9303" y2="382.0606" stroke="var(--danger-dk)" stroke-width="2.512" marker-end="url(#arr)" stroke-dasharray="8.3733 5.0239" />
+  <ns0:rect x="334.9303" y="135.7576" width="385.1698" height="349.091" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="527.5152" y="182.303" text-anchor="middle" font-size="20.0959" fill="var(--primary-dk)" font-weight="bold">Event-driven proxy</ns0:text>
+  <ns0:text x="351.6768" y="223.0303" text-anchor="start" font-size="18.4212" fill="var(--code-bg)">• Connection timeouts</ns0:text>
+  <ns0:text x="351.6768" y="265.6969" text-anchor="start" font-size="18.4212" fill="var(--code-bg)">• Rate limiting</ns0:text>
+  <ns0:text x="351.6768" y="308.3637" text-anchor="start" font-size="18.4212" fill="var(--code-bg)">• Connection limits</ns0:text>
+  <ns0:text x="351.6768" y="351.0303" text-anchor="start" font-size="18.4212" fill="var(--code-bg)">• Full request buffering</ns0:text>
+  <ns0:text x="527.5152" y="449.9394" text-anchor="middle" font-size="18.4212" fill="var(--danger-dk)" font-weight="bold">Slow conns blocked here</ns0:text>
+  <ns0:rect x="803.8327" y="135.7576" width="318.1838" height="349.091" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="962.9245" y="182.303" text-anchor="middle" font-size="20.0959" fill="var(--ok-dk)" font-weight="bold">Backend server</ns0:text>
+  <ns0:text x="962.9245" y="224.9697" text-anchor="middle" font-size="18.4212" fill="var(--ok-deep)">Only sees</ns0:text>
+  <ns0:text x="962.9245" y="267.6364" text-anchor="middle" font-size="18.4212" fill="var(--ok-deep)">complete requests</ns0:text>
+  <ns0:text x="962.9245" y="310.303" text-anchor="middle" font-size="18.4212" fill="var(--ok-deep)">→ not vulnerable</ns0:text>
+  <ns0:line x1="720.1001" y1="300.6061" x2="803.8327" y2="300.6061" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
+  <ns0:text x="761.9664" y="287.0303" text-anchor="middle" font-size="16.7465" fill="var(--text-muted)">complete
 reqs only</ns0:text>
-  <ns0:rect x="16.7465" y="574.0606" width="1138.7629" height="65.9394" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="586.128" y="616.7273" text-anchor="middle" font-size="18.4212" fill="#1b5e20">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</ns0:text>
+  <ns0:rect x="16.7465" y="574.0606" width="1138.7629" height="65.9394" fill="var(--ok-pale)" stroke="var(--ok-tint)" stroke-width="2.512" rx="6.6986" />
+  <ns0:text x="586.128" y="616.7273" text-anchor="middle" font-size="18.4212" fill="var(--ok-deep)">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</ns0:text>
 </ns0:svg>

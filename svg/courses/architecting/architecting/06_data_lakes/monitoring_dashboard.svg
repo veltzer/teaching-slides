@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,50 +156,50 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="11.7209" refX="15.0588" refY="5.8605" orient="auto">
       <ns0:polygon points="0,16.7442 5.2706,0" fill="#4a90e2" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="596.6396" y="39.0244" text-anchor="middle" font-size="22.4617" font-weight="bold" fill="#333">Data Lake Monitoring Dashboard</ns0:text>
-  <ns0:rect x="42.1158" y="78.0488" width="280.7716" height="405.8536" rx="7.0193" fill="none" stroke="#4a90e2" stroke-width="2.8077" stroke-dasharray="11.2309 5.6154" />
-  <ns0:text x="182.5015" y="112.3902" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="#4a90e2">Data Lake Metrics</ns0:text>
-  <ns0:rect x="70.1929" y="137.3658" width="224.6173" height="49.9512" rx="7.0193" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1058" />
-  <ns0:text x="182.5015" y="170.1463" text-anchor="middle" font-size="15.4424" fill="#333">Storage Usage</ns0:text>
-  <ns0:rect x="70.1929" y="202.9268" width="224.6173" height="49.9512" rx="7.0193" fill="#fff3cd" stroke="#ffc107" stroke-width="2.1058" />
-  <ns0:text x="182.5015" y="235.7073" text-anchor="middle" font-size="15.4424" fill="#333">Processing Jobs</ns0:text>
-  <ns0:rect x="70.1929" y="268.4878" width="224.6173" height="49.9512" rx="7.0193" fill="#d4edda" stroke="#28a745" stroke-width="2.1058" />
-  <ns0:text x="182.5015" y="301.2683" text-anchor="middle" font-size="15.4424" fill="#333">Query Performance</ns0:text>
-  <ns0:rect x="70.1929" y="334.0488" width="224.6173" height="49.9512" rx="7.0193" fill="#f8d7da" stroke="#dc3545" stroke-width="2.1058" />
-  <ns0:text x="182.5015" y="366.8293" text-anchor="middle" font-size="15.4424" fill="#333">Data Quality</ns0:text>
-  <ns0:rect x="70.1929" y="399.6098" width="224.6173" height="49.9512" rx="7.0193" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1058" />
-  <ns0:text x="182.5015" y="432.3903" text-anchor="middle" font-size="15.4424" fill="#333">Cost Metrics</ns0:text>
-  <ns0:rect x="435.1959" y="78.0488" width="308.8487" height="405.8536" rx="7.0193" fill="none" stroke="#ffc107" stroke-width="2.8077" stroke-dasharray="11.2309 5.6154" />
-  <ns0:text x="589.6203" y="112.3902" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="#bf360c">Monitoring Tools</ns0:text>
-  <ns0:rect x="463.2731" y="156.0976" width="252.6944" height="62.439" rx="7.0193" fill="#fff3cd" stroke="#ffc107" stroke-width="2.1058" />
-  <ns0:text x="589.6203" y="187.3171" text-anchor="middle" font-size="15.4424" fill="#333">CloudWatch /</ns0:text>
-  <ns0:text x="589.6203" y="209.1707" text-anchor="middle" font-size="15.4424" fill="#333">Azure Monitor</ns0:text>
-  <ns0:rect x="463.2731" y="249.7561" width="252.6944" height="62.439" rx="7.0193" fill="#fff3cd" stroke="#ffc107" stroke-width="2.1058" />
-  <ns0:text x="589.6203" y="288.7805" text-anchor="middle" font-size="15.4424" fill="#333">Datadog</ns0:text>
-  <ns0:rect x="463.2731" y="343.4147" width="252.6944" height="62.439" rx="7.0193" fill="#fff3cd" stroke="#ffc107" stroke-width="2.1058" />
-  <ns0:text x="589.6203" y="382.4391" text-anchor="middle" font-size="15.4424" fill="#333">Grafana</ns0:text>
-  <ns0:line x1="294.8102" y1="162.3414" x2="460.4654" y2="179.5122" stroke="#4a90e2" stroke-width="1.6847" marker-end="url(#arrow)" />
-  <ns0:line x1="294.8102" y1="227.9024" x2="460.4654" y2="273.1708" stroke="#4a90e2" stroke-width="1.6847" marker-end="url(#arrow)" />
-  <ns0:line x1="294.8102" y1="293.4634" x2="460.4654" y2="366.8293" stroke="#4a90e2" stroke-width="1.6847" marker-end="url(#arrow)" />
-  <ns0:line x1="294.8102" y1="359.0244" x2="460.4654" y2="273.1708" stroke="#4a90e2" stroke-width="1.6847" marker-end="url(#arrow)" />
-  <ns0:line x1="294.8102" y1="424.5854" x2="460.4654" y2="179.5122" stroke="#4a90e2" stroke-width="1.6847" marker-end="url(#arrow)" />
-  <ns0:rect x="856.3533" y="78.0488" width="294.8102" height="405.8536" rx="7.0193" fill="none" stroke="#28a745" stroke-width="2.8077" stroke-dasharray="11.2309 5.6154" />
-  <ns0:text x="1003.7584" y="112.3902" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="#28a745">Alerts and Actions</ns0:text>
-  <ns0:rect x="884.4305" y="156.0976" width="238.6558" height="62.439" rx="7.0193" fill="#f8d7da" stroke="#dc3545" stroke-width="2.1058" />
-  <ns0:text x="1003.7584" y="195.1219" text-anchor="middle" font-size="15.4424" fill="#333">Threshold Alerts</ns0:text>
-  <ns0:rect x="884.4305" y="249.7561" width="238.6558" height="62.439" rx="7.0193" fill="#d4edda" stroke="#28a745" stroke-width="2.1058" />
-  <ns0:text x="1003.7584" y="288.7805" text-anchor="middle" font-size="15.4424" fill="#333">Auto-scaling</ns0:text>
-  <ns0:rect x="884.4305" y="343.4147" width="238.6558" height="62.439" rx="7.0193" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1058" />
-  <ns0:text x="1003.7584" y="382.4391" text-anchor="middle" font-size="15.4424" fill="#333">Notifications</ns0:text>
-  <ns0:line x1="715.9675" y1="187.3171" x2="881.6227" y2="187.3171" stroke="#ffc107" stroke-width="2.1058" marker-end="url(#arrow)" />
-  <ns0:line x1="715.9675" y1="280.9756" x2="881.6227" y2="280.9756" stroke="#ffc107" stroke-width="2.1058" marker-end="url(#arrow)" />
-  <ns0:line x1="715.9675" y1="374.6342" x2="881.6227" y2="374.6342" stroke="#ffc107" stroke-width="2.1058" marker-end="url(#arrow)" />
-  <ns0:rect x="42.1158" y="530.7317" width="1109.0477" height="109.2683" rx="7.0193" fill="#f5f5f5" stroke="#ddd" stroke-width="1.4039" />
-  <ns0:text x="596.6396" y="569.7561" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="#333">Monitoring Flow</ns0:text>
-  <ns0:text x="596.6396" y="605.6585" text-anchor="middle" font-size="15.4424" fill="#555">Data lake metrics feed into monitoring tools, which trigger alerts, auto-scaling, and notifications based on thresholds.</ns0:text>
+  <ns0:text x="596.6396" y="39.0244" text-anchor="middle" font-size="22.4617" font-weight="bold" fill="var(--text-dark)">Data Lake Monitoring Dashboard</ns0:text>
+  <ns0:rect x="42.1158" y="78.0488" width="280.7716" height="405.8536" rx="7.0193" fill="none" stroke="var(--primary-bright)" stroke-width="2.8077" stroke-dasharray="11.2309 5.6154" />
+  <ns0:text x="182.5015" y="112.3902" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="var(--primary-bright)">Data Lake Metrics</ns0:text>
+  <ns0:rect x="70.1929" y="137.3658" width="224.6173" height="49.9512" rx="7.0193" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1058" />
+  <ns0:text x="182.5015" y="170.1463" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Storage Usage</ns0:text>
+  <ns0:rect x="70.1929" y="202.9268" width="224.6173" height="49.9512" rx="7.0193" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.1058" />
+  <ns0:text x="182.5015" y="235.7073" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Processing Jobs</ns0:text>
+  <ns0:rect x="70.1929" y="268.4878" width="224.6173" height="49.9512" rx="7.0193" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.1058" />
+  <ns0:text x="182.5015" y="301.2683" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Query Performance</ns0:text>
+  <ns0:rect x="70.1929" y="334.0488" width="224.6173" height="49.9512" rx="7.0193" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.1058" />
+  <ns0:text x="182.5015" y="366.8293" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Data Quality</ns0:text>
+  <ns0:rect x="70.1929" y="399.6098" width="224.6173" height="49.9512" rx="7.0193" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1058" />
+  <ns0:text x="182.5015" y="432.3903" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Cost Metrics</ns0:text>
+  <ns0:rect x="435.1959" y="78.0488" width="308.8487" height="405.8536" rx="7.0193" fill="none" stroke="var(--warn-yellow)" stroke-width="2.8077" stroke-dasharray="11.2309 5.6154" />
+  <ns0:text x="589.6203" y="112.3902" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="var(--danger-deeper)">Monitoring Tools</ns0:text>
+  <ns0:rect x="463.2731" y="156.0976" width="252.6944" height="62.439" rx="7.0193" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.1058" />
+  <ns0:text x="589.6203" y="187.3171" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">CloudWatch /</ns0:text>
+  <ns0:text x="589.6203" y="209.1707" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Azure Monitor</ns0:text>
+  <ns0:rect x="463.2731" y="249.7561" width="252.6944" height="62.439" rx="7.0193" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.1058" />
+  <ns0:text x="589.6203" y="288.7805" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Datadog</ns0:text>
+  <ns0:rect x="463.2731" y="343.4147" width="252.6944" height="62.439" rx="7.0193" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.1058" />
+  <ns0:text x="589.6203" y="382.4391" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Grafana</ns0:text>
+  <ns0:line x1="294.8102" y1="162.3414" x2="460.4654" y2="179.5122" stroke="var(--primary-bright)" stroke-width="1.6847" marker-end="url(#arrow)" />
+  <ns0:line x1="294.8102" y1="227.9024" x2="460.4654" y2="273.1708" stroke="var(--primary-bright)" stroke-width="1.6847" marker-end="url(#arrow)" />
+  <ns0:line x1="294.8102" y1="293.4634" x2="460.4654" y2="366.8293" stroke="var(--primary-bright)" stroke-width="1.6847" marker-end="url(#arrow)" />
+  <ns0:line x1="294.8102" y1="359.0244" x2="460.4654" y2="273.1708" stroke="var(--primary-bright)" stroke-width="1.6847" marker-end="url(#arrow)" />
+  <ns0:line x1="294.8102" y1="424.5854" x2="460.4654" y2="179.5122" stroke="var(--primary-bright)" stroke-width="1.6847" marker-end="url(#arrow)" />
+  <ns0:rect x="856.3533" y="78.0488" width="294.8102" height="405.8536" rx="7.0193" fill="none" stroke="var(--ok-bright)" stroke-width="2.8077" stroke-dasharray="11.2309 5.6154" />
+  <ns0:text x="1003.7584" y="112.3902" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="var(--ok-bright)">Alerts and Actions</ns0:text>
+  <ns0:rect x="884.4305" y="156.0976" width="238.6558" height="62.439" rx="7.0193" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.1058" />
+  <ns0:text x="1003.7584" y="195.1219" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Threshold Alerts</ns0:text>
+  <ns0:rect x="884.4305" y="249.7561" width="238.6558" height="62.439" rx="7.0193" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.1058" />
+  <ns0:text x="1003.7584" y="288.7805" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Auto-scaling</ns0:text>
+  <ns0:rect x="884.4305" y="343.4147" width="238.6558" height="62.439" rx="7.0193" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1058" />
+  <ns0:text x="1003.7584" y="382.4391" text-anchor="middle" font-size="15.4424" fill="var(--text-dark)">Notifications</ns0:text>
+  <ns0:line x1="715.9675" y1="187.3171" x2="881.6227" y2="187.3171" stroke="var(--warn-yellow)" stroke-width="2.1058" marker-end="url(#arrow)" />
+  <ns0:line x1="715.9675" y1="280.9756" x2="881.6227" y2="280.9756" stroke="var(--warn-yellow)" stroke-width="2.1058" marker-end="url(#arrow)" />
+  <ns0:line x1="715.9675" y1="374.6342" x2="881.6227" y2="374.6342" stroke="var(--warn-yellow)" stroke-width="2.1058" marker-end="url(#arrow)" />
+  <ns0:rect x="42.1158" y="530.7317" width="1109.0477" height="109.2683" rx="7.0193" fill="var(--surface)" stroke="var(--border-softer)" stroke-width="1.4039" />
+  <ns0:text x="596.6396" y="569.7561" text-anchor="middle" font-size="16.8463" font-weight="bold" fill="var(--text-dark)">Monitoring Flow</ns0:text>
+  <ns0:text x="596.6396" y="605.6585" text-anchor="middle" font-size="15.4424" fill="var(--text-muted)">Data lake metrics feed into monitoring tools, which trigger alerts, auto-scaling, and notifications based on thresholds.</ns0:text>
 </ns0:svg>

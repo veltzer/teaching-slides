@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -67,29 +164,29 @@
       <ns0:polygon points="0,18.9474 5.6,0" fill="#28a745" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="600.4939" y="44.4444" text-anchor="middle" font-size="24.0198" font-weight="bold" fill="#333">Write-Behind (Write-Back) Pattern</ns0:text>
-  <ns0:rect x="75.0617" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0025" />
-  <ns0:text x="165.1358" y="284.4445" text-anchor="middle" font-size="19.5161" fill="#333">Application</ns0:text>
-  <ns0:rect x="375.3087" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="#d4edda" stroke="#28a745" stroke-width="3.0025" />
-  <ns0:text x="465.3828" y="284.4445" text-anchor="middle" font-size="19.5161" fill="#333">Cache</ns0:text>
-  <ns0:rect x="675.5556" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0025" />
-  <ns0:text x="765.6297" y="284.4445" text-anchor="middle" font-size="19.5161" fill="#333">Queue</ns0:text>
-  <ns0:rect x="975.8026" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0025" />
-  <ns0:text x="1065.8766" y="284.4445" text-anchor="middle" font-size="19.5161" fill="#333">Database</ns0:text>
-  <ns0:line x1="255.2099" y1="263.1112" x2="372.3062" y2="263.1112" stroke="#4a90e2" stroke-width="3.0025" marker-end="url(#arrow)" />
-  <ns0:text x="315.2593" y="248.889" text-anchor="middle" font-size="16.5136" fill="#4a90e2">1. Write</ns0:text>
-  <ns0:line x1="372.3062" y1="298.6667" x2="258.2124" y2="298.6667" stroke="#28a745" stroke-width="3.0025" marker-end="url(#arrow-ok)" />
-  <ns0:text x="315.2593" y="334.2222" text-anchor="middle" font-size="16.5136" fill="#28a745">2. Confirm</ns0:text>
-  <ns0:line x1="555.4568" y1="275.5556" x2="672.5531" y2="275.5556" stroke="#ffc107" stroke-width="3.0025" marker-end="url(#arrow)" />
-  <ns0:text x="615.5062" y="257.7778" text-anchor="middle" font-size="16.5136" fill="#bf360c">3. Queue</ns0:text>
-  <ns0:rect x="660.5433" y="373.3333" width="210.1729" height="62.2222" rx="7.5062" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2519" />
-  <ns0:text x="765.6297" y="412.4444" text-anchor="middle" font-size="16.5136" fill="#333">Async processing</ns0:text>
-  <ns0:line x1="765.6297" y1="320" x2="765.6297" y2="369.7778" stroke="#ffc107" stroke-width="2.2519" stroke-dasharray="6.0049 4.5037" />
-  <ns0:line x1="855.7038" y1="275.5556" x2="972.8001" y2="275.5556" stroke="#4a90e2" stroke-width="3.0025" marker-end="url(#arrow)" />
-  <ns0:text x="915.7532" y="257.7778" text-anchor="middle" font-size="16.5136" fill="#4a90e2">4. Write (later)</ns0:text>
-  <ns0:rect x="75.0617" y="497.7778" width="1080.889" height="142.2222" rx="7.5062" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5012" />
-  <ns0:text x="600.4939" y="533.3334" text-anchor="middle" font-size="18.0148" font-weight="bold" fill="#333">Key Characteristics</ns0:text>
-  <ns0:text x="112.5926" y="568.889" font-size="16.5136" fill="#555">- Immediate response to app (write confirmed at cache level)</ns0:text>
-  <ns0:text x="112.5926" y="600.889" font-size="16.5136" fill="#555">- Database updated asynchronously via queue (eventual consistency)</ns0:text>
-  <ns0:text x="112.5926" y="631.1112" font-size="16.5136" fill="#dc3545">- Risk: data loss if cache/queue fails before DB write</ns0:text>
+  <ns0:text x="600.4939" y="44.4444" text-anchor="middle" font-size="24.0198" font-weight="bold" fill="var(--text-dark)">Write-Behind (Write-Back) Pattern</ns0:text>
+  <ns0:rect x="75.0617" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0025" />
+  <ns0:text x="165.1358" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text-dark)">Application</ns0:text>
+  <ns0:rect x="375.3087" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.0025" />
+  <ns0:text x="465.3828" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text-dark)">Cache</ns0:text>
+  <ns0:rect x="675.5556" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.0025" />
+  <ns0:text x="765.6297" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text-dark)">Queue</ns0:text>
+  <ns0:rect x="975.8026" y="231.1111" width="180.1482" height="88.8889" rx="7.5062" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0025" />
+  <ns0:text x="1065.8766" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text-dark)">Database</ns0:text>
+  <ns0:line x1="255.2099" y1="263.1112" x2="372.3062" y2="263.1112" stroke="var(--primary-bright)" stroke-width="3.0025" marker-end="url(#arrow)" />
+  <ns0:text x="315.2593" y="248.889" text-anchor="middle" font-size="16.5136" fill="var(--primary-bright)">1. Write</ns0:text>
+  <ns0:line x1="372.3062" y1="298.6667" x2="258.2124" y2="298.6667" stroke="var(--ok-bright)" stroke-width="3.0025" marker-end="url(#arrow-ok)" />
+  <ns0:text x="315.2593" y="334.2222" text-anchor="middle" font-size="16.5136" fill="var(--ok-bright)">2. Confirm</ns0:text>
+  <ns0:line x1="555.4568" y1="275.5556" x2="672.5531" y2="275.5556" stroke="var(--warn-yellow)" stroke-width="3.0025" marker-end="url(#arrow)" />
+  <ns0:text x="615.5062" y="257.7778" text-anchor="middle" font-size="16.5136" fill="var(--danger-deeper)">3. Queue</ns0:text>
+  <ns0:rect x="660.5433" y="373.3333" width="210.1729" height="62.2222" rx="7.5062" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.2519" />
+  <ns0:text x="765.6297" y="412.4444" text-anchor="middle" font-size="16.5136" fill="var(--text-dark)">Async processing</ns0:text>
+  <ns0:line x1="765.6297" y1="320" x2="765.6297" y2="369.7778" stroke="var(--warn-yellow)" stroke-width="2.2519" stroke-dasharray="6.0049 4.5037" />
+  <ns0:line x1="855.7038" y1="275.5556" x2="972.8001" y2="275.5556" stroke="var(--primary-bright)" stroke-width="3.0025" marker-end="url(#arrow)" />
+  <ns0:text x="915.7532" y="257.7778" text-anchor="middle" font-size="16.5136" fill="var(--primary-bright)">4. Write (later)</ns0:text>
+  <ns0:rect x="75.0617" y="497.7778" width="1080.889" height="142.2222" rx="7.5062" fill="var(--surface)" stroke="var(--border-softer)" stroke-width="1.5012" />
+  <ns0:text x="600.4939" y="533.3334" text-anchor="middle" font-size="18.0148" font-weight="bold" fill="var(--text-dark)">Key Characteristics</ns0:text>
+  <ns0:text x="112.5926" y="568.889" font-size="16.5136" fill="var(--text-muted)">- Immediate response to app (write confirmed at cache level)</ns0:text>
+  <ns0:text x="112.5926" y="600.889" font-size="16.5136" fill="var(--text-muted)">- Database updated asynchronously via queue (eventual consistency)</ns0:text>
+  <ns0:text x="112.5926" y="631.1112" font-size="16.5136" fill="var(--danger-bright)">- Risk: data loss if cache/queue fails before DB write</ns0:text>
 </ns0:svg>

@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,51 +156,51 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:text x="604.8946" y="40.5063" text-anchor="middle" font-size="25.9241" font-weight="bold" fill="#333">Vector Processing: Scalar vs Vector</ns0:text>
-  <ns0:rect x="55.8364" y="72.9114" width="1098.1163" height="162.0254" rx="8.1012" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4304" />
-  <ns0:text x="93.0607" y="110.1772" font-size="21.0633" font-weight="bold" fill="#dc3545">Scalar operation (one element at a time):</ns0:text>
-  <ns0:text x="111.6728" y="145.8228" font-size="17.8227" fill="#333" font-family="monospace">A[0] = B[0] + C[0]  cycle 1</ns0:text>
-  <ns0:text x="111.6728" y="171.7469" font-size="17.8227" fill="#333" font-family="monospace">A[1] = B[1] + C[1]  cycle 2</ns0:text>
-  <ns0:text x="576.9763" y="145.8228" font-size="17.8227" fill="#333" font-family="monospace">A[2] = B[2] + C[2]  cycle 3</ns0:text>
-  <ns0:text x="576.9763" y="171.7469" font-size="17.8227" fill="#333" font-family="monospace">A[3] = B[3] + C[3]  cycle 4</ns0:text>
-  <ns0:text x="986.4434" y="158.7848" font-size="19.443" font-weight="bold" fill="#dc3545">Total: 4 cycles</ns0:text>
-  <ns0:rect x="55.8364" y="267.3418" width="1098.1163" height="372.6582" rx="8.1012" fill="#d4edda" stroke="#28a745" stroke-width="2.4304" />
-  <ns0:text x="93.0607" y="304.6076" font-size="21.0633" font-weight="bold" fill="#28a745">Vector operation (multiple elements at once):</ns0:text>
-  <ns0:rect x="148.8972" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="260.57" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">B[0]</ns0:text>
-  <ns0:rect x="372.2429" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="483.9157" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">B[1]</ns0:text>
-  <ns0:rect x="595.5885" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="707.2613" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">B[2]</ns0:text>
-  <ns0:rect x="818.9341" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="930.607" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">B[3]</ns0:text>
-  <ns0:text x="1079.5041" y="359.6962" font-size="16.2026" fill="#666">Vector Reg 1</ns0:text>
-  <ns0:text x="260.57" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">+</ns0:text>
-  <ns0:text x="483.9157" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">+</ns0:text>
-  <ns0:text x="707.2613" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">+</ns0:text>
-  <ns0:text x="930.607" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">+</ns0:text>
-  <ns0:rect x="148.8972" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="260.57" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">C[0]</ns0:text>
-  <ns0:rect x="372.2429" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="483.9157" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">C[1]</ns0:text>
-  <ns0:rect x="595.5885" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="707.2613" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">C[2]</ns0:text>
-  <ns0:rect x="818.9341" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4304" />
-  <ns0:text x="930.607" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#333">C[3]</ns0:text>
-  <ns0:text x="1079.5041" y="453.6709" font-size="16.2026" fill="#666">Vector Reg 2</ns0:text>
-  <ns0:text x="260.57" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">=</ns0:text>
-  <ns0:text x="483.9157" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">=</ns0:text>
-  <ns0:text x="707.2613" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">=</ns0:text>
-  <ns0:text x="930.607" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="#333">=</ns0:text>
-  <ns0:rect x="148.8972" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="#d4edda" stroke="#28a745" stroke-width="2.4304" />
-  <ns0:text x="260.57" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#28a745">A[0]</ns0:text>
-  <ns0:rect x="372.2429" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="#d4edda" stroke="#28a745" stroke-width="2.4304" />
-  <ns0:text x="483.9157" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#28a745">A[1]</ns0:text>
-  <ns0:rect x="595.5885" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="#d4edda" stroke="#28a745" stroke-width="2.4304" />
-  <ns0:text x="707.2613" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#28a745">A[2]</ns0:text>
-  <ns0:rect x="818.9341" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="#d4edda" stroke="#28a745" stroke-width="2.4304" />
-  <ns0:text x="930.607" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="#28a745">A[3]</ns0:text>
-  <ns0:text x="1079.5041" y="547.6456" font-size="16.2026" fill="#666">Vector Reg 3</ns0:text>
-  <ns0:text x="604.8946" y="607.5949" text-anchor="middle" font-size="21.0633" font-weight="bold" fill="#28a745">Total: 1 cycle (4x speedup!)</ns0:text>
+</defs>
+  <ns0:text x="604.8946" y="40.5063" text-anchor="middle" font-size="25.9241" font-weight="bold" fill="var(--text-dark)">Vector Processing: Scalar vs Vector</ns0:text>
+  <ns0:rect x="55.8364" y="72.9114" width="1098.1163" height="162.0254" rx="8.1012" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.4304" />
+  <ns0:text x="93.0607" y="110.1772" font-size="21.0633" font-weight="bold" fill="var(--danger-bright)">Scalar operation (one element at a time):</ns0:text>
+  <ns0:text x="111.6728" y="145.8228" font-size="17.8227" fill="var(--text-dark)" font-family="monospace">A[0] = B[0] + C[0]  cycle 1</ns0:text>
+  <ns0:text x="111.6728" y="171.7469" font-size="17.8227" fill="var(--text-dark)" font-family="monospace">A[1] = B[1] + C[1]  cycle 2</ns0:text>
+  <ns0:text x="576.9763" y="145.8228" font-size="17.8227" fill="var(--text-dark)" font-family="monospace">A[2] = B[2] + C[2]  cycle 3</ns0:text>
+  <ns0:text x="576.9763" y="171.7469" font-size="17.8227" fill="var(--text-dark)" font-family="monospace">A[3] = B[3] + C[3]  cycle 4</ns0:text>
+  <ns0:text x="986.4434" y="158.7848" font-size="19.443" font-weight="bold" fill="var(--danger-bright)">Total: 4 cycles</ns0:text>
+  <ns0:rect x="55.8364" y="267.3418" width="1098.1163" height="372.6582" rx="8.1012" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4304" />
+  <ns0:text x="93.0607" y="304.6076" font-size="21.0633" font-weight="bold" fill="var(--ok-bright)">Vector operation (multiple elements at once):</ns0:text>
+  <ns0:rect x="148.8972" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="260.57" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">B[0]</ns0:text>
+  <ns0:rect x="372.2429" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="483.9157" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">B[1]</ns0:text>
+  <ns0:rect x="595.5885" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="707.2613" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">B[2]</ns0:text>
+  <ns0:rect x="818.9341" y="324.0506" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="930.607" y="359.6962" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">B[3]</ns0:text>
+  <ns0:text x="1079.5041" y="359.6962" font-size="16.2026" fill="var(--text-mid)">Vector Reg 1</ns0:text>
+  <ns0:text x="260.57" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">+</ns0:text>
+  <ns0:text x="483.9157" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">+</ns0:text>
+  <ns0:text x="707.2613" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">+</ns0:text>
+  <ns0:text x="930.607" y="405.0633" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">+</ns0:text>
+  <ns0:rect x="148.8972" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="260.57" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">C[0]</ns0:text>
+  <ns0:rect x="372.2429" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="483.9157" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">C[1]</ns0:text>
+  <ns0:rect x="595.5885" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="707.2613" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">C[2]</ns0:text>
+  <ns0:rect x="818.9341" y="418.0253" width="223.3457" height="56.7089" rx="4.8608" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4304" />
+  <ns0:text x="930.607" y="453.6709" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--text-dark)">C[3]</ns0:text>
+  <ns0:text x="1079.5041" y="453.6709" font-size="16.2026" fill="var(--text-mid)">Vector Reg 2</ns0:text>
+  <ns0:text x="260.57" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">=</ns0:text>
+  <ns0:text x="483.9157" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">=</ns0:text>
+  <ns0:text x="707.2613" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">=</ns0:text>
+  <ns0:text x="930.607" y="499.038" text-anchor="middle" font-size="22.6835" font-weight="bold" fill="var(--text-dark)">=</ns0:text>
+  <ns0:rect x="148.8972" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4304" />
+  <ns0:text x="260.57" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--ok-bright)">A[0]</ns0:text>
+  <ns0:rect x="372.2429" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4304" />
+  <ns0:text x="483.9157" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--ok-bright)">A[1]</ns0:text>
+  <ns0:rect x="595.5885" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4304" />
+  <ns0:text x="707.2613" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--ok-bright)">A[2]</ns0:text>
+  <ns0:rect x="818.9341" y="512.0001" width="223.3457" height="56.7089" rx="4.8608" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4304" />
+  <ns0:text x="930.607" y="547.6456" text-anchor="middle" font-size="16.2026" font-weight="bold" fill="var(--ok-bright)">A[3]</ns0:text>
+  <ns0:text x="1079.5041" y="547.6456" font-size="16.2026" fill="var(--text-mid)">Vector Reg 3</ns0:text>
+  <ns0:text x="604.8946" y="607.5949" text-anchor="middle" font-size="21.0633" font-weight="bold" fill="var(--ok-bright)">Total: 1 cycle (4x speedup!)</ns0:text>
 </ns0:svg>

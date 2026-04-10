@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -85,210 +170,210 @@
       <stop offset="100%" stop-color="#1b5e20"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Header -->
   <rect x="20" y="12" width="1240" height="42" rx="8" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">x86 vs ARM: Register Comparison  (CISC vs RISC)</text>
+  <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">x86 vs ARM: Register Comparison  (CISC vs RISC)</text>
 
   <!-- x86 column -->
-  <rect x="20" y="68" width="590" height="548" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="68" width="590" height="548" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="20" y="68" width="590" height="42" rx="10" fill="url(#grad-x86)"/>
   <rect x="20" y="96" width="590" height="14" fill="url(#grad-x86)"/>
-  <text x="225" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">x86 (32-bit)  —  CISC</text>
-  <text x="450" y="96" text-anchor="middle" font-family="monospace" font-size="12" fill="#bbdefb">Intel / AMD</text>
+  <text x="225" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">x86 (32-bit)  —  CISC</text>
+  <text x="450" y="96" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--primary-lt)">Intel / AMD</text>
 
   <!-- x86 table header -->
-  <rect x="35" y="118" width="560" height="28" rx="4" fill="#1e88e5"/>
-  <text x="110" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff">Register</text>
-  <text x="260" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff">Alt Name</text>
-  <text x="440" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff">Purpose</text>
+  <rect x="35" y="118" width="560" height="28" rx="4" fill="var(--primary)"/>
+  <text x="110" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--bg)">Register</text>
+  <text x="260" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--bg)">Alt Name</text>
+  <text x="440" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--bg)">Purpose</text>
 
   <!-- x86 rows -->
   <!-- General Purpose -->
-  <rect x="35" y="146" width="560" height="20" fill="#bbdefb"/>
-  <text x="315" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1565c0">GENERAL PURPOSE (caller-saved)</text>
+  <rect x="35" y="146" width="560" height="20" fill="var(--primary-lt)"/>
+  <text x="315" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">GENERAL PURPOSE (caller-saved)</text>
 
   <!-- eax -->
-  <rect x="35" y="166" width="560" height="26" fill="#ffffff"/>
-  <text x="110" y="183" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">eax</text>
-  <text x="260" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">accumulator</text>
-  <text x="440" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">arithmetic, return value, syscall#</text>
+  <rect x="35" y="166" width="560" height="26" fill="var(--bg)"/>
+  <text x="110" y="183" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">eax</text>
+  <text x="260" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">accumulator</text>
+  <text x="440" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">arithmetic, return value, syscall#</text>
 
   <!-- ebx -->
-  <rect x="35" y="192" width="560" height="26" fill="#e3f2fd"/>
-  <text x="110" y="209" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0">ebx</text>
-  <text x="260" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">base</text>
-  <text x="440" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">base addr, syscall arg1</text>
+  <rect x="35" y="192" width="560" height="26" fill="var(--primary-pale)"/>
+  <text x="110" y="209" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-dk)">ebx</text>
+  <text x="260" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">base</text>
+  <text x="440" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">base addr, syscall arg1</text>
 
   <!-- ecx -->
-  <rect x="35" y="218" width="560" height="26" fill="#ffffff"/>
-  <text x="110" y="235" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0">ecx</text>
-  <text x="260" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">counter</text>
-  <text x="440" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">loop counter, syscall arg2</text>
+  <rect x="35" y="218" width="560" height="26" fill="var(--bg)"/>
+  <text x="110" y="235" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-dk)">ecx</text>
+  <text x="260" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">counter</text>
+  <text x="440" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">loop counter, syscall arg2</text>
 
   <!-- edx -->
-  <rect x="35" y="244" width="560" height="26" fill="#e3f2fd"/>
-  <text x="110" y="261" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0">edx</text>
-  <text x="260" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">data</text>
-  <text x="440" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">data, mul/div hi, syscall arg3</text>
+  <rect x="35" y="244" width="560" height="26" fill="var(--primary-pale)"/>
+  <text x="110" y="261" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-dk)">edx</text>
+  <text x="260" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">data</text>
+  <text x="440" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">data, mul/div hi, syscall arg3</text>
 
   <!-- Index/Pointer section -->
-  <rect x="35" y="270" width="560" height="20" fill="#bbdefb"/>
-  <text x="315" y="284" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1565c0">INDEX &amp; POINTER</text>
+  <rect x="35" y="270" width="560" height="20" fill="var(--primary-lt)"/>
+  <text x="315" y="284" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">INDEX &amp; POINTER</text>
 
   <!-- esi -->
-  <rect x="35" y="290" width="560" height="26" fill="#ffffff"/>
-  <text x="110" y="307" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0">esi</text>
-  <text x="260" y="307" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">source index</text>
-  <text x="440" y="307" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">string/array source, syscall arg4</text>
+  <rect x="35" y="290" width="560" height="26" fill="var(--bg)"/>
+  <text x="110" y="307" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-dk)">esi</text>
+  <text x="260" y="307" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">source index</text>
+  <text x="440" y="307" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">string/array source, syscall arg4</text>
 
   <!-- edi -->
-  <rect x="35" y="316" width="560" height="26" fill="#e3f2fd"/>
-  <text x="110" y="333" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0">edi</text>
-  <text x="260" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">dest index</text>
-  <text x="440" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">string/array destination, syscall arg5</text>
+  <rect x="35" y="316" width="560" height="26" fill="var(--primary-pale)"/>
+  <text x="110" y="333" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-dk)">edi</text>
+  <text x="260" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">dest index</text>
+  <text x="440" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">string/array destination, syscall arg5</text>
 
   <!-- Stack section -->
-  <rect x="35" y="342" width="560" height="20" fill="#bbdefb"/>
-  <text x="315" y="356" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1565c0">STACK &amp; FRAME POINTERS</text>
+  <rect x="35" y="342" width="560" height="20" fill="var(--primary-lt)"/>
+  <text x="315" y="356" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">STACK &amp; FRAME POINTERS</text>
 
   <!-- esp -->
-  <rect x="35" y="362" width="560" height="26" fill="#fff3e0"/>
-  <text x="110" y="379" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">esp</text>
-  <text x="260" y="379" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">stack pointer</text>
-  <text x="440" y="379" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">top of stack (grows downward)</text>
+  <rect x="35" y="362" width="560" height="26" fill="var(--warn-pale)"/>
+  <text x="110" y="379" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">esp</text>
+  <text x="260" y="379" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">stack pointer</text>
+  <text x="440" y="379" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">top of stack (grows downward)</text>
 
   <!-- ebp -->
-  <rect x="35" y="388" width="560" height="26" fill="#fff8e1"/>
-  <text x="110" y="405" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#f57c00">ebp</text>
-  <text x="260" y="405" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">base pointer</text>
-  <text x="440" y="405" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">frame base for local variable access</text>
+  <rect x="35" y="388" width="560" height="26" fill="var(--warn-pale3)"/>
+  <text x="110" y="405" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--warn-mid)">ebp</text>
+  <text x="260" y="405" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">base pointer</text>
+  <text x="440" y="405" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">frame base for local variable access</text>
 
   <!-- Special section -->
-  <rect x="35" y="414" width="560" height="20" fill="#bbdefb"/>
-  <text x="315" y="428" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1565c0">SPECIAL PURPOSE</text>
+  <rect x="35" y="414" width="560" height="20" fill="var(--primary-lt)"/>
+  <text x="315" y="428" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">SPECIAL PURPOSE</text>
 
   <!-- eip -->
-  <rect x="35" y="434" width="560" height="26" fill="#ffebee"/>
-  <text x="110" y="451" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">eip</text>
-  <text x="260" y="451" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">instr pointer</text>
-  <text x="440" y="451" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">next instruction address (read-only)</text>
+  <rect x="35" y="434" width="560" height="26" fill="var(--danger-pale)"/>
+  <text x="110" y="451" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">eip</text>
+  <text x="260" y="451" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">instr pointer</text>
+  <text x="440" y="451" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">next instruction address (read-only)</text>
 
   <!-- eflags -->
-  <rect x="35" y="460" width="560" height="26" fill="#e3f2fd"/>
-  <text x="110" y="477" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0">eflags</text>
-  <text x="260" y="477" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">flags</text>
-  <text x="440" y="477" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">ZF, CF, SF, OF, PF, DF…</text>
+  <rect x="35" y="460" width="560" height="26" fill="var(--primary-pale)"/>
+  <text x="110" y="477" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-dk)">eflags</text>
+  <text x="260" y="477" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">flags</text>
+  <text x="440" y="477" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">ZF, CF, SF, OF, PF, DF…</text>
 
   <!-- x86 CISC notes -->
-  <rect x="35" y="496" width="560" height="105" rx="6" fill="#1e88e5" filter="url(#shadow)"/>
-  <text x="315" y="516" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">CISC Characteristics</text>
-  <text x="50" y="534" font-family="sans-serif" font-size="11" fill="#e3f2fd">• Variable instruction length (1–17 bytes)</text>
-  <text x="50" y="550" font-family="sans-serif" font-size="11" fill="#e3f2fd">• Memory-to-memory ops (e.g. add [ecx], edx)</text>
-  <text x="50" y="566" font-family="sans-serif" font-size="11" fill="#e3f2fd">• Many addressing modes: base+index×scale+disp</text>
-  <text x="50" y="582" font-family="sans-serif" font-size="11" fill="#e3f2fd">• 8 general-purpose registers (limited!)</text>
-  <text x="50" y="598" font-family="sans-serif" font-size="11" fill="#e3f2fd">• Backward compatible from 8086 (1978)</text>
+  <rect x="35" y="496" width="560" height="105" rx="6" fill="var(--primary)" filter="url(#shadow)"/>
+  <text x="315" y="516" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">CISC Characteristics</text>
+  <text x="50" y="534" font-family="sans-serif" font-size="11" fill="var(--primary-pale)">• Variable instruction length (1–17 bytes)</text>
+  <text x="50" y="550" font-family="sans-serif" font-size="11" fill="var(--primary-pale)">• Memory-to-memory ops (e.g. add [ecx], edx)</text>
+  <text x="50" y="566" font-family="sans-serif" font-size="11" fill="var(--primary-pale)">• Many addressing modes: base+index×scale+disp</text>
+  <text x="50" y="582" font-family="sans-serif" font-size="11" fill="var(--primary-pale)">• 8 general-purpose registers (limited!)</text>
+  <text x="50" y="598" font-family="sans-serif" font-size="11" fill="var(--primary-pale)">• Backward compatible from 8086 (1978)</text>
 
   <!-- Column dividers inside x86 table -->
-  <line x1="165" y1="118" x2="165" y2="486" stroke="#90caf9" stroke-width="1"/>
-  <line x1="340" y1="118" x2="340" y2="486" stroke="#90caf9" stroke-width="1"/>
+  <line x1="165" y1="118" x2="165" y2="486" stroke="var(--primary-tint)" stroke-width="1"/>
+  <line x1="340" y1="118" x2="340" y2="486" stroke="var(--primary-tint)" stroke-width="1"/>
 
   <!-- ARM column -->
-  <rect x="630" y="68" width="630" height="548" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="630" y="68" width="630" height="548" rx="10" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="630" y="68" width="630" height="42" rx="10" fill="url(#grad-arm)"/>
   <rect x="630" y="96" width="630" height="14" fill="url(#grad-arm)"/>
-  <text x="840" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">ARM (32-bit)  —  RISC</text>
-  <text x="1090" y="96" text-anchor="middle" font-family="monospace" font-size="12" fill="#a5d6a7">Cortex / ARMv7</text>
+  <text x="840" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">ARM (32-bit)  —  RISC</text>
+  <text x="1090" y="96" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--ok-tint)">Cortex / ARMv7</text>
 
   <!-- ARM table header -->
-  <rect x="645" y="118" width="600" height="28" rx="4" fill="#2e7d32"/>
-  <text x="720" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff">Register</text>
-  <text x="860" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff">Alias</text>
-  <text x="1045" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff">Purpose</text>
+  <rect x="645" y="118" width="600" height="28" rx="4" fill="var(--ok-dk)"/>
+  <text x="720" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--bg)">Register</text>
+  <text x="860" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--bg)">Alias</text>
+  <text x="1045" y="136" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--bg)">Purpose</text>
 
   <!-- ARM rows: general purpose r0-r12 -->
-  <rect x="645" y="146" width="600" height="20" fill="#a5d6a7"/>
-  <text x="945" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1b5e20">GENERAL PURPOSE (r0–r12)</text>
+  <rect x="645" y="146" width="600" height="20" fill="var(--ok-tint)"/>
+  <text x="945" y="160" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--ok-deep)">GENERAL PURPOSE (r0–r12)</text>
 
   <!-- r0–r3 (argument/result regs) -->
-  <rect x="645" y="166" width="600" height="26" fill="#ffffff"/>
-  <text x="720" y="183" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">r0–r3</text>
-  <text x="860" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">a1–a4</text>
-  <text x="1045" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">args / return values (caller-saved)</text>
+  <rect x="645" y="166" width="600" height="26" fill="var(--bg)"/>
+  <text x="720" y="183" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">r0–r3</text>
+  <text x="860" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">a1–a4</text>
+  <text x="1045" y="183" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">args / return values (caller-saved)</text>
 
   <!-- r4-r7 -->
-  <rect x="645" y="192" width="600" height="26" fill="#e8f5e9"/>
-  <text x="720" y="209" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2e7d32">r4–r7</text>
-  <text x="860" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">v1–v4</text>
-  <text x="1045" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">variable registers (callee-saved)</text>
+  <rect x="645" y="192" width="600" height="26" fill="var(--ok-pale)"/>
+  <text x="720" y="209" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--ok-dk)">r4–r7</text>
+  <text x="860" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">v1–v4</text>
+  <text x="1045" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">variable registers (callee-saved)</text>
 
   <!-- r8-r10 -->
-  <rect x="645" y="218" width="600" height="26" fill="#ffffff"/>
-  <text x="720" y="235" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2e7d32">r8–r10</text>
-  <text x="860" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">v5–v7</text>
-  <text x="1045" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">general purpose (callee-saved)</text>
+  <rect x="645" y="218" width="600" height="26" fill="var(--bg)"/>
+  <text x="720" y="235" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--ok-dk)">r8–r10</text>
+  <text x="860" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">v5–v7</text>
+  <text x="1045" y="235" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">general purpose (callee-saved)</text>
 
   <!-- r11 -->
-  <rect x="645" y="244" width="600" height="26" fill="#e8f5e9"/>
-  <text x="720" y="261" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2e7d32">r11</text>
-  <text x="860" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">fp / v8</text>
-  <text x="1045" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">frame pointer (optional)</text>
+  <rect x="645" y="244" width="600" height="26" fill="var(--ok-pale)"/>
+  <text x="720" y="261" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--ok-dk)">r11</text>
+  <text x="860" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">fp / v8</text>
+  <text x="1045" y="261" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">frame pointer (optional)</text>
 
   <!-- r12 -->
-  <rect x="645" y="270" width="600" height="26" fill="#ffffff"/>
-  <text x="720" y="287" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2e7d32">r12</text>
-  <text x="860" y="287" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">ip</text>
-  <text x="1045" y="287" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">intra-procedure scratch (caller-saved)</text>
+  <rect x="645" y="270" width="600" height="26" fill="var(--bg)"/>
+  <text x="720" y="287" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--ok-dk)">r12</text>
+  <text x="860" y="287" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">ip</text>
+  <text x="1045" y="287" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">intra-procedure scratch (caller-saved)</text>
 
   <!-- Special section ARM -->
-  <rect x="645" y="296" width="600" height="20" fill="#a5d6a7"/>
-  <text x="945" y="310" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1b5e20">SPECIAL PURPOSE (r13–r15)</text>
+  <rect x="645" y="296" width="600" height="20" fill="var(--ok-tint)"/>
+  <text x="945" y="310" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--ok-deep)">SPECIAL PURPOSE (r13–r15)</text>
 
   <!-- r13 / sp -->
-  <rect x="645" y="316" width="600" height="26" fill="#fff3e0"/>
-  <text x="720" y="333" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">r13</text>
-  <text x="860" y="333" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#f57c00">sp</text>
-  <text x="1045" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">stack pointer (grows downward)</text>
+  <rect x="645" y="316" width="600" height="26" fill="var(--warn-pale)"/>
+  <text x="720" y="333" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">r13</text>
+  <text x="860" y="333" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--warn-mid)">sp</text>
+  <text x="1045" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">stack pointer (grows downward)</text>
 
   <!-- r14 / lr -->
-  <rect x="645" y="342" width="600" height="26" fill="#fff8e1"/>
-  <text x="720" y="359" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">r14</text>
-  <text x="860" y="359" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#f57c00">lr</text>
-  <text x="1045" y="359" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">link register — holds return address from BL</text>
+  <rect x="645" y="342" width="600" height="26" fill="var(--warn-pale3)"/>
+  <text x="720" y="359" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">r14</text>
+  <text x="860" y="359" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--warn-mid)">lr</text>
+  <text x="1045" y="359" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">link register — holds return address from BL</text>
 
   <!-- r15 / pc -->
-  <rect x="645" y="368" width="600" height="26" fill="#ffebee"/>
-  <text x="720" y="385" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#e53935">r15</text>
-  <text x="860" y="385" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#e53935">pc</text>
-  <text x="1045" y="385" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">program counter (readable + writable!)</text>
+  <rect x="645" y="368" width="600" height="26" fill="var(--danger-pale)"/>
+  <text x="720" y="385" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger)">r15</text>
+  <text x="860" y="385" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--danger)">pc</text>
+  <text x="1045" y="385" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">program counter (readable + writable!)</text>
 
   <!-- CPSR -->
-  <rect x="645" y="394" width="600" height="26" fill="#e8f5e9"/>
-  <text x="720" y="411" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#2e7d32">CPSR</text>
-  <text x="860" y="411" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">flags</text>
-  <text x="1045" y="411" text-anchor="middle" font-family="monospace" font-size="11" fill="#333">N, Z, C, V flags + mode bits</text>
+  <rect x="645" y="394" width="600" height="26" fill="var(--ok-pale)"/>
+  <text x="720" y="411" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--ok-dk)">CPSR</text>
+  <text x="860" y="411" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">flags</text>
+  <text x="1045" y="411" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-dark)">N, Z, C, V flags + mode bits</text>
 
   <!-- Column dividers -->
-  <line x1="790" y1="118" x2="790" y2="420" stroke="#a5d6a7" stroke-width="1"/>
-  <line x1="930" y1="118" x2="930" y2="420" stroke="#a5d6a7" stroke-width="1"/>
+  <line x1="790" y1="118" x2="790" y2="420" stroke="var(--ok-tint)" stroke-width="1"/>
+  <line x1="930" y1="118" x2="930" y2="420" stroke="var(--ok-tint)" stroke-width="1"/>
 
   <!-- ARM RISC notes -->
-  <rect x="645" y="430" width="600" height="105" rx="6" fill="#2e7d32" filter="url(#shadow)"/>
-  <text x="945" y="450" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">RISC Characteristics</text>
-  <text x="660" y="468" font-family="sans-serif" font-size="11" fill="#e8f5e9">• Fixed 32-bit instruction length (uniform decode)</text>
-  <text x="660" y="484" font-family="sans-serif" font-size="11" fill="#e8f5e9">• Load-store only: all ops on registers, not memory</text>
-  <text x="660" y="500" font-family="sans-serif" font-size="11" fill="#e8f5e9">• 16 general-purpose registers (2× more than x86)</text>
-  <text x="660" y="516" font-family="sans-serif" font-size="11" fill="#e8f5e9">• Condition codes on most instructions</text>
-  <text x="660" y="532" font-family="sans-serif" font-size="11" fill="#e8f5e9">• Lower power consumption → mobile &amp; embedded</text>
+  <rect x="645" y="430" width="600" height="105" rx="6" fill="var(--ok-dk)" filter="url(#shadow)"/>
+  <text x="945" y="450" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">RISC Characteristics</text>
+  <text x="660" y="468" font-family="sans-serif" font-size="11" fill="var(--ok-pale)">• Fixed 32-bit instruction length (uniform decode)</text>
+  <text x="660" y="484" font-family="sans-serif" font-size="11" fill="var(--ok-pale)">• Load-store only: all ops on registers, not memory</text>
+  <text x="660" y="500" font-family="sans-serif" font-size="11" fill="var(--ok-pale)">• 16 general-purpose registers (2× more than x86)</text>
+  <text x="660" y="516" font-family="sans-serif" font-size="11" fill="var(--ok-pale)">• Condition codes on most instructions</text>
+  <text x="660" y="532" font-family="sans-serif" font-size="11" fill="var(--ok-pale)">• Lower power consumption → mobile &amp; embedded</text>
 
   <!-- Bottom comparison bar -->
-  <rect x="20" y="550" width="1240" height="66" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="569" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1a237e">Key Differences</text>
-  <text x="35" y="588" font-family="sans-serif" font-size="11" fill="#333">Register count:  x86 = 8   vs   ARM = 16</text>
-  <text x="35" y="606" font-family="sans-serif" font-size="11" fill="#333">Syscall mechanism:  x86 → int $0x80   |   ARM → swi 0  (r7=syscall#)</text>
-  <text x="530" y="588" font-family="sans-serif" font-size="11" fill="#333">Instr length:  x86 variable (1-17B)   vs   ARM fixed (4B)</text>
-  <text x="530" y="606" font-family="sans-serif" font-size="11" fill="#333">Return addr:  x86 → on stack (esp)   |   ARM → in r14 (lr)</text>
-  <text x="980" y="588" font-family="sans-serif" font-size="11" fill="#333">Stack:  both grow downward</text>
-  <text x="980" y="606" font-family="sans-serif" font-size="11" fill="#333">Endian:  x86 little   |   ARM bi-endian</text>
+  <rect x="20" y="550" width="1240" height="66" rx="8" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="569" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-deeper)">Key Differences</text>
+  <text x="35" y="588" font-family="sans-serif" font-size="11" fill="var(--text-dark)">Register count:  x86 = 8   vs   ARM = 16</text>
+  <text x="35" y="606" font-family="sans-serif" font-size="11" fill="var(--text-dark)">Syscall mechanism:  x86 → int $0x80   |   ARM → swi 0  (r7=syscall#)</text>
+  <text x="530" y="588" font-family="sans-serif" font-size="11" fill="var(--text-dark)">Instr length:  x86 variable (1-17B)   vs   ARM fixed (4B)</text>
+  <text x="530" y="606" font-family="sans-serif" font-size="11" fill="var(--text-dark)">Return addr:  x86 → on stack (esp)   |   ARM → in r14 (lr)</text>
+  <text x="980" y="588" font-family="sans-serif" font-size="11" fill="var(--text-dark)">Stack:  both grow downward</text>
+  <text x="980" y="606" font-family="sans-serif" font-size="11" fill="var(--text-dark)">Endian:  x86 little   |   ARM bi-endian</text>
 </svg>

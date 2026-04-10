@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,52 +156,52 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arr" markerWidth="45.511" markerHeight="185.1429" refX="40.96" refY="92.5714" orient="auto">
       <ns0:polygon points="0,264.4899 15.929,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="220.2513" height="640" fill="#f9f9f9" />
-  <ns0:text x="110.1256" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Monitoring Agents in Production</ns0:text>
-  <ns0:rect x="5.5063" y="128" width="42.6737" height="144" rx="2.7531" fill="#4a90e2" stroke="#1565C0" stroke-width="0.5506" />
-  <ns0:text x="26.7055" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Agent Runs</ns0:text>
-  <ns0:text x="26.7055" y="219.2" text-anchor="middle" fill="#e3f2fd" font-size="10">tool calls</ns0:text>
-  <ns0:text x="26.7055" y="251.2" text-anchor="middle" fill="#e3f2fd" font-size="10">completions</ns0:text>
-  <ns0:line x1="48.18" y1="200" x2="57.816" y2="200" stroke="#333" stroke-width="0.5506" marker-end="url(#arr)" />
-  <ns0:rect x="57.816" y="128" width="42.6737" height="144" rx="2.7531" fill="#4285f4" stroke="#6A1B9A" stroke-width="0.5506" />
-  <ns0:text x="79.0152" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Log + Trace</ns0:text>
-  <ns0:text x="79.0152" y="219.2" text-anchor="middle" fill="#f3e5f5" font-size="10">inputs / outputs</ns0:text>
-  <ns0:text x="79.0152" y="251.2" text-anchor="middle" fill="#f3e5f5" font-size="10">latency / tokens</ns0:text>
-  <ns0:line x1="100.4897" y1="200" x2="110.1256" y2="200" stroke="#333" stroke-width="0.5506" marker-end="url(#arr)" />
-  <ns0:rect x="110.1256" y="128" width="42.6737" height="144" rx="2.7531" fill="#f9a825" stroke="#E65100" stroke-width="0.5506" />
-  <ns0:text x="131.3248" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Dashboard</ns0:text>
-  <ns0:text x="131.3248" y="219.2" text-anchor="middle" fill="#ffcc80" font-size="10">success rates</ns0:text>
-  <ns0:text x="131.3248" y="251.2" text-anchor="middle" fill="#ffcc80" font-size="10">cost per task</ns0:text>
-  <ns0:line x1="152.7993" y1="200" x2="162.4353" y2="200" stroke="#333" stroke-width="0.5506" marker-end="url(#arr)" />
-  <ns0:rect x="162.4353" y="128" width="52.3097" height="144" rx="2.7531" fill="#e74c3c" stroke="#C62828" stroke-width="0.5506" />
-  <ns0:text x="188.5902" y="184" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Alerts</ns0:text>
-  <ns0:text x="188.5902" y="219.2" text-anchor="middle" fill="#FFCDD2" font-size="10">cost spikes</ns0:text>
-  <ns0:text x="188.5902" y="251.2" text-anchor="middle" fill="#FFCDD2" font-size="10">quality drift</ns0:text>
-  <ns0:rect x="5.5063" y="336" width="209.2387" height="280" rx="2.7531" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.413" />
-  <ns0:text x="110.1256" y="384" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Key Metrics to Track</ns0:text>
-  <ns0:rect x="11.0126" y="412.8" width="45.4268" height="176" rx="2.2025" fill="#BBDEFB" stroke="#1565C0" />
-  <ns0:text x="33.5883" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Tool Calls</ns0:text>
-  <ns0:text x="33.5883" y="492.8" text-anchor="middle" font-size="10" fill="#333">inputs + outputs</ns0:text>
-  <ns0:text x="33.5883" y="524.8" text-anchor="middle" font-size="10" fill="#333">latency per call</ns0:text>
-  <ns0:text x="33.5883" y="556.8" text-anchor="middle" font-size="10" fill="#333">error rate</ns0:text>
-  <ns0:rect x="60.5691" y="412.8" width="45.4268" height="176" rx="2.2025" fill="#E1BEE7" stroke="#6A1B9A" />
-  <ns0:text x="83.1449" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="#6A1B9A">Tracing</ns0:text>
-  <ns0:text x="83.1449" y="492.8" text-anchor="middle" font-size="10" fill="#333">trace ID per run</ns0:text>
-  <ns0:text x="83.1449" y="524.8" text-anchor="middle" font-size="10" fill="#333">link tool calls</ns0:text>
-  <ns0:text x="83.1449" y="556.8" text-anchor="middle" font-size="10" fill="#333">multi-turn flows</ns0:text>
-  <ns0:rect x="110.1256" y="412.8" width="45.4268" height="176" rx="2.2025" fill="#FFF9C4" stroke="#F9A825" />
-  <ns0:text x="132.7014" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Cost</ns0:text>
-  <ns0:text x="132.7014" y="492.8" text-anchor="middle" font-size="10" fill="#333">tokens per task</ns0:text>
-  <ns0:text x="132.7014" y="524.8" text-anchor="middle" font-size="10" fill="#333">cost per agent</ns0:text>
-  <ns0:text x="132.7014" y="556.8" text-anchor="middle" font-size="10" fill="#333">budget alerts</ns0:text>
-  <ns0:rect x="159.6822" y="412.8" width="48.18" height="176" rx="2.2025" fill="#FFCDD2" stroke="#C62828" />
-  <ns0:text x="183.6345" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Guardrails</ns0:text>
-  <ns0:text x="183.6345" y="492.8" text-anchor="middle" font-size="10" fill="#333">max iterations</ns0:text>
-  <ns0:text x="183.6345" y="524.8" text-anchor="middle" font-size="10" fill="#333">timeout limits</ns0:text>
-  <ns0:text x="183.6345" y="556.8" text-anchor="middle" font-size="10" fill="#333">quality drift flag</ns0:text>
+  <ns0:rect width="220.2513" height="640" fill="var(--surface-light)" />
+  <ns0:text x="110.1256" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Monitoring Agents in Production</ns0:text>
+  <ns0:rect x="5.5063" y="128" width="42.6737" height="144" rx="2.7531" fill="var(--primary-bright)" stroke="var(--primary-dk)" stroke-width="0.5506" />
+  <ns0:text x="26.7055" y="184" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Agent Runs</ns0:text>
+  <ns0:text x="26.7055" y="219.2" text-anchor="middle" fill="var(--primary-pale)" font-size="10">tool calls</ns0:text>
+  <ns0:text x="26.7055" y="251.2" text-anchor="middle" fill="var(--primary-pale)" font-size="10">completions</ns0:text>
+  <ns0:line x1="48.18" y1="200" x2="57.816" y2="200" stroke="var(--text-dark)" stroke-width="0.5506" marker-end="url(#arr)" />
+  <ns0:rect x="57.816" y="128" width="42.6737" height="144" rx="2.7531" fill="var(--primary-google)" stroke="var(--info-dk)" stroke-width="0.5506" />
+  <ns0:text x="79.0152" y="184" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Log + Trace</ns0:text>
+  <ns0:text x="79.0152" y="219.2" text-anchor="middle" fill="var(--info-pale)" font-size="10">inputs / outputs</ns0:text>
+  <ns0:text x="79.0152" y="251.2" text-anchor="middle" fill="var(--info-pale)" font-size="10">latency / tokens</ns0:text>
+  <ns0:line x1="100.4897" y1="200" x2="110.1256" y2="200" stroke="var(--text-dark)" stroke-width="0.5506" marker-end="url(#arr)" />
+  <ns0:rect x="110.1256" y="128" width="42.6737" height="144" rx="2.7531" fill="var(--warn-amber)" stroke="var(--warn-dk)" stroke-width="0.5506" />
+  <ns0:text x="131.3248" y="184" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Dashboard</ns0:text>
+  <ns0:text x="131.3248" y="219.2" text-anchor="middle" fill="var(--warn-tint)" font-size="10">success rates</ns0:text>
+  <ns0:text x="131.3248" y="251.2" text-anchor="middle" fill="var(--warn-tint)" font-size="10">cost per task</ns0:text>
+  <ns0:line x1="152.7993" y1="200" x2="162.4353" y2="200" stroke="var(--text-dark)" stroke-width="0.5506" marker-end="url(#arr)" />
+  <ns0:rect x="162.4353" y="128" width="52.3097" height="144" rx="2.7531" fill="var(--danger-light)" stroke="var(--danger-dk)" stroke-width="0.5506" />
+  <ns0:text x="188.5902" y="184" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Alerts</ns0:text>
+  <ns0:text x="188.5902" y="219.2" text-anchor="middle" fill="var(--danger-lt)" font-size="10">cost spikes</ns0:text>
+  <ns0:text x="188.5902" y="251.2" text-anchor="middle" fill="var(--danger-lt)" font-size="10">quality drift</ns0:text>
+  <ns0:rect x="5.5063" y="336" width="209.2387" height="280" rx="2.7531" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.413" />
+  <ns0:text x="110.1256" y="384" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Key Metrics to Track</ns0:text>
+  <ns0:rect x="11.0126" y="412.8" width="45.4268" height="176" rx="2.2025" fill="var(--primary-lt)" stroke="var(--primary-dk)" />
+  <ns0:text x="33.5883" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Tool Calls</ns0:text>
+  <ns0:text x="33.5883" y="492.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">inputs + outputs</ns0:text>
+  <ns0:text x="33.5883" y="524.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">latency per call</ns0:text>
+  <ns0:text x="33.5883" y="556.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">error rate</ns0:text>
+  <ns0:rect x="60.5691" y="412.8" width="45.4268" height="176" rx="2.2025" fill="var(--info-tint)" stroke="var(--info-dk)" />
+  <ns0:text x="83.1449" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-dk)">Tracing</ns0:text>
+  <ns0:text x="83.1449" y="492.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">trace ID per run</ns0:text>
+  <ns0:text x="83.1449" y="524.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">link tool calls</ns0:text>
+  <ns0:text x="83.1449" y="556.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">multi-turn flows</ns0:text>
+  <ns0:rect x="110.1256" y="412.8" width="45.4268" height="176" rx="2.2025" fill="var(--warn-pale4)" stroke="var(--warn-amber)" />
+  <ns0:text x="132.7014" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Cost</ns0:text>
+  <ns0:text x="132.7014" y="492.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">tokens per task</ns0:text>
+  <ns0:text x="132.7014" y="524.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">cost per agent</ns0:text>
+  <ns0:text x="132.7014" y="556.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">budget alerts</ns0:text>
+  <ns0:rect x="159.6822" y="412.8" width="48.18" height="176" rx="2.2025" fill="var(--danger-lt)" stroke="var(--danger-dk)" />
+  <ns0:text x="183.6345" y="456" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Guardrails</ns0:text>
+  <ns0:text x="183.6345" y="492.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">max iterations</ns0:text>
+  <ns0:text x="183.6345" y="524.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">timeout limits</ns0:text>
+  <ns0:text x="183.6345" y="556.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">quality drift flag</ns0:text>
 </ns0:svg>

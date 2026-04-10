@@ -117,85 +117,103 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
             return [f"element <{tag}> extends below y={MAX_Y_BOUND} (found bottom y={y_max})"]
     return []
 
-_PALETTE_COLORS: set[str] | None = None
+_PALETTE_NAMES: set[str] | None = None
 _COLOR_ATTRS = {"fill", "stroke", "stop-color", "flood-color"}
 _COLOR_RE = re.compile(r'#[0-9a-fA-F]{3,8}')
+_VAR_RE = re.compile(r'^var\(--([a-zA-Z0-9_-]+)\)$')
+# Values that are not colors — always allowed
+_NON_COLOR_VALUES = {"none", "currentcolor", "inherit", "transparent"}
+# Tags inside <defs> where raw hex is allowed (gradient stops, marker fills, filter colors)
+_DEFS_TAGS = {"stop", "feDropShadow"}
 
 
-def _load_palette() -> set[str]:
-    """Load allowed hex colors from resources/palette.yaml.
+def _load_palette_names() -> set[str]:
+    """Load allowed semantic color names from resources/palette.yaml.
 
-    Collects every hex color value from all sections (colors, gradients,
-    filters, markers) and returns them as a set of normalized lowercase
-    6-digit hex strings.
+    Returns a set of names like {"bg", "primary", "danger-lt", ...}.
     """
-    global _PALETTE_COLORS
-    if _PALETTE_COLORS is not None:
-        return _PALETTE_COLORS
+    global _PALETTE_NAMES
+    if _PALETTE_NAMES is not None:
+        return _PALETTE_NAMES
 
     palette_path = Path("resources/palette.yaml")
     if not palette_path.exists():
-        _PALETTE_COLORS = set()
-        return _PALETTE_COLORS
+        _PALETTE_NAMES = set()
+        return _PALETTE_NAMES
 
     with open(palette_path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
-    colors: set[str] = set()
+    names: set[str] = set()
+    for group in data.get("colors", {}).values():
+        for name in group:
+            names.add(name)
 
-    def _collect_hex(obj: object) -> None:
-        """Recursively walk the YAML structure and collect hex color strings."""
-        if isinstance(obj, str):
-            for m in _COLOR_RE.finditer(obj):
-                h = m.group().lstrip('#').lower()
-                if len(h) == 3:
-                    h = ''.join(ch * 2 for ch in h)
-                if len(h) in (6, 8):
-                    colors.add('#' + h)
-        elif isinstance(obj, dict):
-            for v in obj.values():
-                _collect_hex(v)
-        elif isinstance(obj, list):
-            for v in obj:
-                _collect_hex(v)
-
-    _collect_hex(data)
-    _PALETTE_COLORS = colors
-    return _PALETTE_COLORS
+    _PALETTE_NAMES = names
+    return _PALETTE_NAMES
 
 
 def _check_colors(tree: ET.ElementTree) -> list[str]:
-    """Flag SVGs that use colors not in resources/palette.yaml."""
-    allowed_colors = _load_palette()
-    if not allowed_colors:
+    """Flag SVGs that use colors not expressed as var(--name) from the palette.
+
+    Color attributes must use var(--semantic-name) where name is defined in
+    resources/palette.yaml. Raw hex values and named CSS colors are rejected.
+
+    Exception: elements inside <defs> (gradient stops, marker paths, filter
+    params) may use raw hex since CSS var() doesn't work reliably there.
+    """
+    palette_names = _load_palette_names()
+    if not palette_names:
         return ["cannot check colors: resources/palette.yaml not found or empty"]
 
     errors: list[str] = []
-    seen_bad_colors: set[str] = set()
+    seen_bad: set[str] = set()
+
+    # Track whether we're inside a <defs> block
+    in_defs = False
 
     for elem in tree.iter():
         tag = elem.tag.split('}')[-1]
 
-        # Check 1: raw hex colors (skip 4/8-digit alpha-channel forms)
+        if tag == 'defs':
+            in_defs = True
+            continue
+
         for attr in _COLOR_ATTRS:
             val = elem.get(attr, "")
-            for m in _COLOR_RE.finditer(val):
-                raw = m.group().lower()
-                h = raw.lstrip('#')
-                if len(h) in (4, 8):
-                    # Alpha-channel hex — allowed (semi-transparent palette colors)
-                    continue
-                if len(h) == 3:
-                    h = ''.join(ch * 2 for ch in h)
-                if len(h) != 6:
-                    continue
-                normalized = '#' + h
-                if normalized not in allowed_colors and normalized not in seen_bad_colors:
-                    seen_bad_colors.add(normalized)
-                    errors.append(
-                        f"color {raw!r} (in <{tag}> {attr}=) not in palette"
-                    )
+            if not val:
+                continue
 
+            stripped = val.strip().lower()
+
+            # Skip non-color values and url() references
+            if stripped in _NON_COLOR_VALUES or stripped.startswith("url("):
+                continue
+
+            # Inside defs, raw hex is allowed (for gradient stops, marker fills, etc.)
+            if in_defs:
+                continue
+
+            # Check for var(--name)
+            var_m = _VAR_RE.match(stripped)
+            if var_m:
+                name = var_m.group(1)
+                if name not in palette_names and name not in seen_bad:
+                    seen_bad.add(name)
+                    errors.append(
+                        f"var(--{name}) (in <{tag}> {attr}=)"
+                        f" — name not in palette"
+                    )
+                continue
+
+            # Anything else is not allowed
+            key = f"{attr}:{stripped}"
+            if key not in seen_bad:
+                seen_bad.add(key)
+                errors.append(
+                    f"raw color {val!r} (in <{tag}> {attr}=)"
+                    f" — use var(--name) from the palette"
+                )
 
     return errors
 

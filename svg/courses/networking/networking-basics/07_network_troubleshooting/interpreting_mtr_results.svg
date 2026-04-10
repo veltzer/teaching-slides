@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,28 +156,28 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:text x="585.7866" y="38.0198" text-anchor="middle" font-size="22.8119" font-weight="bold" fill="#333">Interpreting MTR Results</ns0:text>
-  <ns0:rect x="33.4735" y="57.0297" width="1104.6262" height="120.3961" rx="6.3367" fill="#d4edda" stroke="#28a745" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="88.7129" font-size="17.7426" font-weight="bold" fill="#28a745">Case 1: Loss at one hop but not later</ns0:text>
-  <ns0:text x="66.9471" y="114.0594" font-size="15.2079" fill="#333">Hop 3: 30% loss | Hop 4: 0% loss | Hop 5: 0% loss</ns0:text>
-  <ns0:text x="66.9471" y="139.406" font-size="15.2079" fill="#555">Router at hop 3 is rate-limiting ICMP responses - NOT an actual problem</ns0:text>
-  <ns0:text x="66.9471" y="164.7525" font-size="13.9406" fill="#28a745" font-weight="bold">Verdict: False alarm (ICMP deprioritized)</ns0:text>
-  <ns0:rect x="33.4735" y="190.099" width="1104.6262" height="120.3961" rx="6.3367" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="221.7822" font-size="17.7426" font-weight="bold" fill="#dc3545">Case 2: Loss starts at one hop and continues</ns0:text>
-  <ns0:text x="66.9471" y="247.1287" font-size="15.2079" fill="#333">Hop 3: 0% loss | Hop 4: 20% loss | Hop 5: 20% loss | Hop 6: 20% loss</ns0:text>
-  <ns0:text x="66.9471" y="272.4753" font-size="15.2079" fill="#555">Real packet loss starting at hop 4</ns0:text>
-  <ns0:text x="66.9471" y="297.8218" font-size="13.9406" fill="#dc3545" font-weight="bold">Verdict: Problem at or between hop 3 and hop 4</ns0:text>
-  <ns0:rect x="33.4735" y="323.1683" width="1104.6262" height="120.3961" rx="6.3367" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="354.8515" font-size="17.7426" font-weight="bold" fill="#bf360c">Case 3: Latency spike at one hop</ns0:text>
-  <ns0:text x="66.9471" y="380.198" font-size="15.2079" fill="#333">Hop 3: avg 5ms | Hop 4: avg 150ms (large jump) | Hop 5: avg 152ms</ns0:text>
-  <ns0:text x="66.9471" y="405.5446" font-size="15.2079" fill="#555">Link between hop 3 and 4 has high latency</ns0:text>
-  <ns0:text x="66.9471" y="430.8911" font-size="13.9406" fill="#bf360c" font-weight="bold">Verdict: Congestion, distance, or poor peering</ns0:text>
-  <ns0:rect x="33.4735" y="456.2376" width="1104.6262" height="120.3961" rx="6.3367" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5346" />
-  <ns0:text x="66.9471" y="487.9208" font-size="17.7426" font-weight="bold" fill="#4a90e2">Case 4: High jitter (StDev)</ns0:text>
-  <ns0:text x="66.9471" y="513.2673" font-size="15.2079" fill="#333">Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms</ns0:text>
-  <ns0:text x="66.9471" y="538.6139" font-size="15.2079" fill="#555">Inconsistent performance</ns0:text>
-  <ns0:text x="66.9471" y="563.9604" font-size="13.9406" fill="#4a90e2" font-weight="bold">Verdict: Possible congestion, bufferbloat, or wireless issues</ns0:text>
-  <ns0:rect x="167.3676" y="595.6436" width="836.838" height="44.3564" rx="6.3367" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.901" />
-  <ns0:text x="585.7866" y="623.5248" text-anchor="middle" font-size="15.2079" fill="#333" font-weight="bold">Key: Look for patterns that persist across subsequent hops</ns0:text>
+</defs>
+  <ns0:text x="585.7866" y="38.0198" text-anchor="middle" font-size="22.8119" font-weight="bold" fill="var(--text-dark)">Interpreting MTR Results</ns0:text>
+  <ns0:rect x="33.4735" y="57.0297" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5346" />
+  <ns0:text x="66.9471" y="88.7129" font-size="17.7426" font-weight="bold" fill="var(--ok-bright)">Case 1: Loss at one hop but not later</ns0:text>
+  <ns0:text x="66.9471" y="114.0594" font-size="15.2079" fill="var(--text-dark)">Hop 3: 30% loss | Hop 4: 0% loss | Hop 5: 0% loss</ns0:text>
+  <ns0:text x="66.9471" y="139.406" font-size="15.2079" fill="var(--text-muted)">Router at hop 3 is rate-limiting ICMP responses - NOT an actual problem</ns0:text>
+  <ns0:text x="66.9471" y="164.7525" font-size="13.9406" fill="var(--ok-bright)" font-weight="bold">Verdict: False alarm (ICMP deprioritized)</ns0:text>
+  <ns0:rect x="33.4735" y="190.099" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5346" />
+  <ns0:text x="66.9471" y="221.7822" font-size="17.7426" font-weight="bold" fill="var(--danger-bright)">Case 2: Loss starts at one hop and continues</ns0:text>
+  <ns0:text x="66.9471" y="247.1287" font-size="15.2079" fill="var(--text-dark)">Hop 3: 0% loss | Hop 4: 20% loss | Hop 5: 20% loss | Hop 6: 20% loss</ns0:text>
+  <ns0:text x="66.9471" y="272.4753" font-size="15.2079" fill="var(--text-muted)">Real packet loss starting at hop 4</ns0:text>
+  <ns0:text x="66.9471" y="297.8218" font-size="13.9406" fill="var(--danger-bright)" font-weight="bold">Verdict: Problem at or between hop 3 and hop 4</ns0:text>
+  <ns0:rect x="33.4735" y="323.1683" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.5346" />
+  <ns0:text x="66.9471" y="354.8515" font-size="17.7426" font-weight="bold" fill="var(--danger-deeper)">Case 3: Latency spike at one hop</ns0:text>
+  <ns0:text x="66.9471" y="380.198" font-size="15.2079" fill="var(--text-dark)">Hop 3: avg 5ms | Hop 4: avg 150ms (large jump) | Hop 5: avg 152ms</ns0:text>
+  <ns0:text x="66.9471" y="405.5446" font-size="15.2079" fill="var(--text-muted)">Link between hop 3 and 4 has high latency</ns0:text>
+  <ns0:text x="66.9471" y="430.8911" font-size="13.9406" fill="var(--danger-deeper)" font-weight="bold">Verdict: Congestion, distance, or poor peering</ns0:text>
+  <ns0:rect x="33.4735" y="456.2376" width="1104.6262" height="120.3961" rx="6.3367" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5346" />
+  <ns0:text x="66.9471" y="487.9208" font-size="17.7426" font-weight="bold" fill="var(--primary-bright)">Case 4: High jitter (StDev)</ns0:text>
+  <ns0:text x="66.9471" y="513.2673" font-size="15.2079" fill="var(--text-dark)">Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms</ns0:text>
+  <ns0:text x="66.9471" y="538.6139" font-size="15.2079" fill="var(--text-muted)">Inconsistent performance</ns0:text>
+  <ns0:text x="66.9471" y="563.9604" font-size="13.9406" fill="var(--primary-bright)" font-weight="bold">Verdict: Possible congestion, bufferbloat, or wireless issues</ns0:text>
+  <ns0:rect x="167.3676" y="595.6436" width="836.838" height="44.3564" rx="6.3367" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.901" />
+  <ns0:text x="585.7866" y="623.5248" text-anchor="middle" font-size="15.2079" fill="var(--text-dark)" font-weight="bold">Key: Look for patterns that persist across subsequent hops</ns0:text>
 </ns0:svg>

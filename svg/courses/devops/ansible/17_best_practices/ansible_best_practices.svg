@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -89,137 +174,137 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Header -->
   <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
-  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Ansible Best Practices</text>
+  <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Best Practices</text>
 
   <!-- COL 1: Project Structure -->
-  <rect x="20" y="62" width="250" height="380" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="62" width="250" height="380" rx="8" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="20" y="62" width="250" height="30" rx="8" fill="url(#grad-primary)"/>
   <rect x="20" y="80" width="250" height="12" fill="url(#grad-primary)"/>
-  <text x="145" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Project Structure</text>
-  <text x="35" y="110" font-family="monospace" font-size="10" fill="#333333">project/</text>
-  <text x="35" y="126" font-family="monospace" font-size="10" fill="#333333">  ansible.cfg</text>
-  <text x="35" y="142" font-family="monospace" font-size="10" fill="#333333">  requirements.yml</text>
-  <text x="35" y="158" font-family="monospace" font-size="10" fill="#333333">  site.yml</text>
-  <text x="35" y="174" font-family="monospace" font-size="10" fill="#1565c0">  inventories/</text>
-  <text x="35" y="190" font-family="monospace" font-size="10" fill="#333333">    production/</text>
-  <text x="35" y="206" font-family="monospace" font-size="10" fill="#333333">      hosts.yml</text>
-  <text x="35" y="222" font-family="monospace" font-size="10" fill="#333333">      group_vars/</text>
-  <text x="35" y="238" font-family="monospace" font-size="10" fill="#2e7d32">        all/vars.yml</text>
-  <text x="35" y="254" font-family="monospace" font-size="10" fill="#e53935">        all/vault.yml</text>
-  <text x="35" y="270" font-family="monospace" font-size="10" fill="#1565c0">  roles/</text>
-  <text x="35" y="286" font-family="monospace" font-size="10" fill="#333333">    webserver/</text>
-  <text x="35" y="302" font-family="monospace" font-size="10" fill="#333333">      tasks/main.yml</text>
-  <text x="35" y="318" font-family="monospace" font-size="10" fill="#333333">      handlers/main.yml</text>
-  <text x="35" y="334" font-family="monospace" font-size="10" fill="#333333">      defaults/main.yml</text>
-  <text x="35" y="350" font-family="monospace" font-size="10" fill="#333333">      vars/main.yml</text>
-  <text x="35" y="366" font-family="monospace" font-size="10" fill="#333333">      templates/</text>
-  <text x="35" y="382" font-family="monospace" font-size="10" fill="#333333">      files/</text>
-  <text x="35" y="398" font-family="monospace" font-size="10" fill="#333333">      meta/main.yml</text>
-  <text x="35" y="414" font-family="monospace" font-size="10" fill="#555555">      molecule/</text>
-  <text x="35" y="430" font-family="monospace" font-size="10" fill="#555555">        default/</text>
+  <text x="145" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Project Structure</text>
+  <text x="35" y="110" font-family="monospace" font-size="10" fill="var(--text-dark)">project/</text>
+  <text x="35" y="126" font-family="monospace" font-size="10" fill="var(--text-dark)">  ansible.cfg</text>
+  <text x="35" y="142" font-family="monospace" font-size="10" fill="var(--text-dark)">  requirements.yml</text>
+  <text x="35" y="158" font-family="monospace" font-size="10" fill="var(--text-dark)">  site.yml</text>
+  <text x="35" y="174" font-family="monospace" font-size="10" fill="var(--primary-dk)">  inventories/</text>
+  <text x="35" y="190" font-family="monospace" font-size="10" fill="var(--text-dark)">    production/</text>
+  <text x="35" y="206" font-family="monospace" font-size="10" fill="var(--text-dark)">      hosts.yml</text>
+  <text x="35" y="222" font-family="monospace" font-size="10" fill="var(--text-dark)">      group_vars/</text>
+  <text x="35" y="238" font-family="monospace" font-size="10" fill="var(--ok-dk)">        all/vars.yml</text>
+  <text x="35" y="254" font-family="monospace" font-size="10" fill="var(--danger)">        all/vault.yml</text>
+  <text x="35" y="270" font-family="monospace" font-size="10" fill="var(--primary-dk)">  roles/</text>
+  <text x="35" y="286" font-family="monospace" font-size="10" fill="var(--text-dark)">    webserver/</text>
+  <text x="35" y="302" font-family="monospace" font-size="10" fill="var(--text-dark)">      tasks/main.yml</text>
+  <text x="35" y="318" font-family="monospace" font-size="10" fill="var(--text-dark)">      handlers/main.yml</text>
+  <text x="35" y="334" font-family="monospace" font-size="10" fill="var(--text-dark)">      defaults/main.yml</text>
+  <text x="35" y="350" font-family="monospace" font-size="10" fill="var(--text-dark)">      vars/main.yml</text>
+  <text x="35" y="366" font-family="monospace" font-size="10" fill="var(--text-dark)">      templates/</text>
+  <text x="35" y="382" font-family="monospace" font-size="10" fill="var(--text-dark)">      files/</text>
+  <text x="35" y="398" font-family="monospace" font-size="10" fill="var(--text-dark)">      meta/main.yml</text>
+  <text x="35" y="414" font-family="monospace" font-size="10" fill="var(--text-muted)">      molecule/</text>
+  <text x="35" y="430" font-family="monospace" font-size="10" fill="var(--text-muted)">        default/</text>
 
   <!-- COL 2: Naming Conventions -->
-  <rect x="285" y="62" width="270" height="190" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="285" y="62" width="270" height="190" rx="8" fill="url(#grad-surface)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="285" y="62" width="270" height="30" rx="8" fill="url(#grad-ok)"/>
   <rect x="285" y="80" width="270" height="12" fill="url(#grad-ok)"/>
-  <text x="420" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Naming Conventions</text>
-  <text x="300" y="112" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Tasks: verb + noun + detail</text>
-  <text x="300" y="130" font-family="monospace" font-size="11" fill="#555555">- name: Install nginx package</text>
-  <text x="300" y="148" font-family="monospace" font-size="11" fill="#555555">- name: Configure nginx vhosts</text>
-  <text x="300" y="166" font-family="monospace" font-size="11" fill="#555555">- name: Enable nginx service</text>
-  <line x1="300" y1="178" x2="540" y2="178" stroke="#dddddd" stroke-width="1"/>
-  <text x="300" y="196" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Variables: lowercase_with_underscores</text>
-  <text x="300" y="214" font-family="monospace" font-size="11" fill="#333333">nginx_port: 80</text>
-  <text x="300" y="231" font-family="monospace" font-size="11" fill="#333333">app_db_password: !vault |</text>
-  <text x="300" y="248" font-family="Arial, sans-serif" font-size="11" fill="#888888">Prefix with role name to avoid collisions</text>
+  <text x="420" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Naming Conventions</text>
+  <text x="300" y="112" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--ok-dk)">Tasks: verb + noun + detail</text>
+  <text x="300" y="130" font-family="monospace" font-size="11" fill="var(--text-muted)">- name: Install nginx package</text>
+  <text x="300" y="148" font-family="monospace" font-size="11" fill="var(--text-muted)">- name: Configure nginx vhosts</text>
+  <text x="300" y="166" font-family="monospace" font-size="11" fill="var(--text-muted)">- name: Enable nginx service</text>
+  <line x1="300" y1="178" x2="540" y2="178" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="300" y="196" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--ok-dk)">Variables: lowercase_with_underscores</text>
+  <text x="300" y="214" font-family="monospace" font-size="11" fill="var(--text-dark)">nginx_port: 80</text>
+  <text x="300" y="231" font-family="monospace" font-size="11" fill="var(--text-dark)">app_db_password: !vault |</text>
+  <text x="300" y="248" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Prefix with role name to avoid collisions</text>
 
   <!-- COL 2: Idempotency -->
-  <rect x="285" y="265" width="270" height="180" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="285" y="265" width="270" height="180" rx="8" fill="url(#grad-surface)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="285" y="265" width="270" height="30" rx="8" fill="url(#grad-info)"/>
   <rect x="285" y="283" width="270" height="12" fill="url(#grad-info)"/>
-  <text x="420" y="285" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Idempotency Rules</text>
-  <text x="300" y="316" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Prefer declarative modules over shell/command</text>
-  <text x="300" y="334" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Use state: present/absent explicitly</text>
-  <text x="300" y="352" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Use creates:/removes: with shell/command</text>
-  <text x="300" y="370" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Add changed_when: false to read-only cmds</text>
-  <text x="300" y="388" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Test with --check --diff before applying</text>
-  <text x="300" y="406" font-family="Arial, sans-serif" font-size="11" fill="#e53935">- Never use shell: for tasks modules can do</text>
-  <text x="300" y="424" font-family="Arial, sans-serif" font-size="11" fill="#e53935">- Never ignore idempotency errors silently</text>
+  <text x="420" y="285" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Idempotency Rules</text>
+  <text x="300" y="316" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Prefer declarative modules over shell/command</text>
+  <text x="300" y="334" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Use state: present/absent explicitly</text>
+  <text x="300" y="352" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Use creates:/removes: with shell/command</text>
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Add changed_when: false to read-only cmds</text>
+  <text x="300" y="388" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Test with --check --diff before applying</text>
+  <text x="300" y="406" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">- Never use shell: for tasks modules can do</text>
+  <text x="300" y="424" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">- Never ignore idempotency errors silently</text>
 
   <!-- COL 3: Vault Usage -->
-  <rect x="570" y="62" width="280" height="175" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="570" y="62" width="280" height="30" rx="8" fill="#e53935"/>
-  <rect x="570" y="80" width="280" height="12" fill="#e53935"/>
-  <text x="710" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Vault Usage</text>
-  <text x="585" y="112" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ ALL secrets in vault-encrypted files</text>
-  <text x="585" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Separate vars from vault (vars ref vault)</text>
-  <text x="585" y="148" font-family="monospace" font-size="11" fill="#333333">  db_pass: "{{ vault_db_pass }}"</text>
-  <text x="585" y="166" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Use vault-id per environment</text>
-  <text x="585" y="184" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Rotate vault passwords regularly</text>
-  <text x="585" y="202" font-family="Arial, sans-serif" font-size="11" fill="#e53935">- Never commit .vault_pass to Git</text>
-  <text x="585" y="220" font-family="Arial, sans-serif" font-size="11" fill="#e53935">- Never use plaintext for any credential</text>
-  <text x="585" y="235" font-family="Arial, sans-serif" font-size="11" fill="#888888">Add to .gitignore: .vault_pass, *.key</text>
+  <rect x="570" y="62" width="280" height="175" rx="8" fill="url(#grad-surface)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="570" y="62" width="280" height="30" rx="8" fill="var(--danger)"/>
+  <rect x="570" y="80" width="280" height="12" fill="var(--danger)"/>
+  <text x="710" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Vault Usage</text>
+  <text x="585" y="112" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ ALL secrets in vault-encrypted files</text>
+  <text x="585" y="130" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Separate vars from vault (vars ref vault)</text>
+  <text x="585" y="148" font-family="monospace" font-size="11" fill="var(--text-dark)">  db_pass: "{{ vault_db_pass }}"</text>
+  <text x="585" y="166" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Use vault-id per environment</text>
+  <text x="585" y="184" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Rotate vault passwords regularly</text>
+  <text x="585" y="202" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">- Never commit .vault_pass to Git</text>
+  <text x="585" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">- Never use plaintext for any credential</text>
+  <text x="585" y="235" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Add to .gitignore: .vault_pass, *.key</text>
 
   <!-- COL 3: Testing with Molecule -->
-  <rect x="570" y="250" width="280" height="198" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="570" y="250" width="280" height="198" rx="8" fill="url(#grad-surface)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="570" y="250" width="280" height="30" rx="8" fill="url(#grad-warn)"/>
   <rect x="570" y="268" width="280" height="12" fill="url(#grad-warn)"/>
-  <text x="710" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Testing with Molecule</text>
-  <text x="585" y="302" font-family="monospace" font-size="11" fill="#333333">molecule init role myrole</text>
-  <text x="585" y="319" font-family="monospace" font-size="11" fill="#333333">molecule test      # full test cycle</text>
-  <text x="585" y="336" font-family="monospace" font-size="11" fill="#333333">molecule converge  # run role</text>
-  <text x="585" y="353" font-family="monospace" font-size="11" fill="#333333">molecule verify    # run tests</text>
-  <text x="585" y="370" font-family="monospace" font-size="11" fill="#333333">molecule lint      # lint checks</text>
-  <line x1="585" y1="382" x2="835" y2="382" stroke="#dddddd" stroke-width="1"/>
-  <text x="585" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e65100">Test cycle order:</text>
-  <text x="585" y="418" font-family="Arial, sans-serif" font-size="11" fill="#333333">lint -&gt; create -&gt; converge -&gt; idempotency</text>
-  <text x="585" y="436" font-family="Arial, sans-serif" font-size="11" fill="#333333">-&gt; verify -&gt; destroy</text>
-  <text x="585" y="453" font-family="Arial, sans-serif" font-size="11" fill="#888888">Drivers: docker, podman, vagrant, delegated</text>
+  <text x="710" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Testing with Molecule</text>
+  <text x="585" y="302" font-family="monospace" font-size="11" fill="var(--text-dark)">molecule init role myrole</text>
+  <text x="585" y="319" font-family="monospace" font-size="11" fill="var(--text-dark)">molecule test      # full test cycle</text>
+  <text x="585" y="336" font-family="monospace" font-size="11" fill="var(--text-dark)">molecule converge  # run role</text>
+  <text x="585" y="353" font-family="monospace" font-size="11" fill="var(--text-dark)">molecule verify    # run tests</text>
+  <text x="585" y="370" font-family="monospace" font-size="11" fill="var(--text-dark)">molecule lint      # lint checks</text>
+  <line x1="585" y1="382" x2="835" y2="382" stroke="var(--border-softer)" stroke-width="1"/>
+  <text x="585" y="400" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--warn-dk)">Test cycle order:</text>
+  <text x="585" y="418" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">lint -&gt; create -&gt; converge -&gt; idempotency</text>
+  <text x="585" y="436" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">-&gt; verify -&gt; destroy</text>
+  <text x="585" y="453" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Drivers: docker, podman, vagrant, delegated</text>
 
   <!-- COL 4: Role Best Practices -->
-  <rect x="865" y="62" width="395" height="195" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="865" y="62" width="395" height="195" rx="8" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="865" y="62" width="395" height="30" rx="8" fill="url(#grad-primary)"/>
   <rect x="865" y="80" width="395" height="12" fill="url(#grad-primary)"/>
-  <text x="1062" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Role Best Practices</text>
-  <text x="880" y="112" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ One role per service/application component</text>
-  <text x="880" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Put overridable defaults in defaults/main.yml</text>
-  <text x="880" y="148" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Prefix all variables with role name: nginx_port</text>
-  <text x="880" y="166" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Use meta/main.yml to declare role dependencies</text>
-  <text x="880" y="184" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Include molecule/ tests in every role</text>
-  <text x="880" y="202" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Pin collection versions in requirements.yml</text>
-  <text x="880" y="220" font-family="Arial, sans-serif" font-size="11" fill="#e53935">- Avoid role-to-role variable coupling (use interfaces)</text>
-  <text x="880" y="238" font-family="Arial, sans-serif" font-size="11" fill="#e53935">- Don't put secrets in roles - pass from inventory</text>
-  <text x="880" y="254" font-family="Arial, sans-serif" font-size="11" fill="#888888">Publish reusable roles to Ansible Galaxy</text>
+  <text x="1062" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Role Best Practices</text>
+  <text x="880" y="112" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ One role per service/application component</text>
+  <text x="880" y="130" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Put overridable defaults in defaults/main.yml</text>
+  <text x="880" y="148" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Prefix all variables with role name: nginx_port</text>
+  <text x="880" y="166" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Use meta/main.yml to declare role dependencies</text>
+  <text x="880" y="184" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Include molecule/ tests in every role</text>
+  <text x="880" y="202" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">+ Pin collection versions in requirements.yml</text>
+  <text x="880" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">- Avoid role-to-role variable coupling (use interfaces)</text>
+  <text x="880" y="238" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">- Don't put secrets in roles - pass from inventory</text>
+  <text x="880" y="254" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Publish reusable roles to Ansible Galaxy</text>
 
   <!-- COL 4: ansible.cfg settings -->
-  <rect x="865" y="270" width="395" height="180" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="865" y="270" width="395" height="180" rx="8" fill="url(#grad-surface)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="865" y="270" width="395" height="30" rx="8" fill="url(#grad-ok)"/>
   <rect x="865" y="288" width="395" height="12" fill="url(#grad-ok)"/>
-  <text x="1062" y="290" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Recommended ansible.cfg</text>
-  <text x="880" y="322" font-family="monospace" font-size="11" fill="#333333">[defaults]</text>
-  <text x="880" y="339" font-family="monospace" font-size="11" fill="#333333">inventory           = inventories/production</text>
-  <text x="880" y="356" font-family="monospace" font-size="11" fill="#333333">roles_path          = roles</text>
-  <text x="880" y="373" font-family="monospace" font-size="11" fill="#333333">stdout_callback     = yaml</text>
-  <text x="880" y="390" font-family="monospace" font-size="11" fill="#333333">callback_whitelist  = profile_tasks</text>
-  <text x="880" y="407" font-family="monospace" font-size="11" fill="#333333">retry_files_enabled = False</text>
-  <text x="880" y="424" font-family="monospace" font-size="11" fill="#333333">[ssh_connection]</text>
-  <text x="880" y="441" font-family="monospace" font-size="11" fill="#333333">pipelining          = True</text>
-  <text x="880" y="458" font-family="monospace" font-size="11" fill="#555555">ssh_args = -o ControlMaster=auto -o ControlPersist=60s</text>
+  <text x="1062" y="290" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">Recommended ansible.cfg</text>
+  <text x="880" y="322" font-family="monospace" font-size="11" fill="var(--text-dark)">[defaults]</text>
+  <text x="880" y="339" font-family="monospace" font-size="11" fill="var(--text-dark)">inventory           = inventories/production</text>
+  <text x="880" y="356" font-family="monospace" font-size="11" fill="var(--text-dark)">roles_path          = roles</text>
+  <text x="880" y="373" font-family="monospace" font-size="11" fill="var(--text-dark)">stdout_callback     = yaml</text>
+  <text x="880" y="390" font-family="monospace" font-size="11" fill="var(--text-dark)">callback_whitelist  = profile_tasks</text>
+  <text x="880" y="407" font-family="monospace" font-size="11" fill="var(--text-dark)">retry_files_enabled = False</text>
+  <text x="880" y="424" font-family="monospace" font-size="11" fill="var(--text-dark)">[ssh_connection]</text>
+  <text x="880" y="441" font-family="monospace" font-size="11" fill="var(--text-dark)">pipelining          = True</text>
+  <text x="880" y="458" font-family="monospace" font-size="11" fill="var(--text-muted)">ssh_args = -o ControlMaster=auto -o ControlPersist=60s</text>
 
   <!-- Bottom bar -->
-  <rect x="20" y="460" width="1240" height="50" rx="6" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
-  <text x="35" y="479" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e65100">CI/CD Integration:</text>
-  <text x="180" y="479" font-family="monospace" font-size="12" fill="#333333">ansible-lint site.yml</text>
-  <text x="360" y="479" font-family="Arial, sans-serif" font-size="12" fill="#555555">in every PR check |</text>
-  <text x="520" y="479" font-family="monospace" font-size="12" fill="#333333">yamllint</text>
-  <text x="610" y="479" font-family="Arial, sans-serif" font-size="12" fill="#555555">for YAML style |</text>
-  <text x="730" y="479" font-family="monospace" font-size="12" fill="#333333">molecule test</text>
-  <text x="855" y="479" font-family="Arial, sans-serif" font-size="12" fill="#555555">per role |</text>
-  <text x="930" y="479" font-family="monospace" font-size="12" fill="#333333">--check --diff</text>
-  <text x="1060" y="479" font-family="Arial, sans-serif" font-size="12" fill="#555555">dry-run in staging</text>
-  <text x="35" y="501" font-family="Arial, sans-serif" font-size="12" fill="#555555">Golden rule: if it is not tested it is broken. Run molecule in CI. Use --check in staging pipeline before production apply.</text>
+  <rect x="20" y="460" width="1240" height="50" rx="6" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <text x="35" y="479" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">CI/CD Integration:</text>
+  <text x="180" y="479" font-family="monospace" font-size="12" fill="var(--text-dark)">ansible-lint site.yml</text>
+  <text x="360" y="479" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">in every PR check |</text>
+  <text x="520" y="479" font-family="monospace" font-size="12" fill="var(--text-dark)">yamllint</text>
+  <text x="610" y="479" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">for YAML style |</text>
+  <text x="730" y="479" font-family="monospace" font-size="12" fill="var(--text-dark)">molecule test</text>
+  <text x="855" y="479" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">per role |</text>
+  <text x="930" y="479" font-family="monospace" font-size="12" fill="var(--text-dark)">--check --diff</text>
+  <text x="1060" y="479" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">dry-run in staging</text>
+  <text x="35" y="501" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Golden rule: if it is not tested it is broken. Run molecule in CI. Use --check in staging pipeline before production apply.</text>
 </svg>

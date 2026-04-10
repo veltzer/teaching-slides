@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,27 +156,27 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:text x="593.6232" y="33.3913" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.971" font-weight="bold" fill="#333">Executor Memory Layout (spark.executor.memory = 8g)</ns0:text>
-  <ns0:rect x="38.2982" y="46.3768" width="1110.6499" height="593.6232" rx="14.8406" fill="#f5f5f5" stroke="#333" stroke-width="3.7101" />
-  <ns0:text x="593.6232" y="83.4783" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" fill="#555">Total Container: 8g + max(384m, 0.1*8g) = 8.8 GB</ns0:text>
-  <ns0:rect x="76.5965" y="102.029" width="1034.0533" height="445.2174" rx="14.8406" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.7101" />
-  <ns0:text x="593.6232" y="139.1304" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.1159" font-weight="bold" fill="#0277bd">JVM Heap (8 GB)</ns0:text>
-  <ns0:rect x="114.8948" y="157.6812" width="957.4568" height="46.3768" rx="7.4203" fill="#fce4ec" stroke="#c62828" stroke-width="2.7826" />
-  <ns0:text x="593.6232" y="189.2174" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#333">Reserved Memory (300 MB)</ns0:text>
-  <ns0:rect x="114.8948" y="218.8986" width="957.4568" height="185.5072" rx="11.1304" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.7826" />
-  <ns0:text x="593.6232" y="252.2899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="#333">Spark Memory (0.6 * 8g = 4.8 GB)</ns0:text>
-  <ns0:rect x="153.1931" y="268.9855" width="440.4301" height="111.3043" rx="11.1304" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.7826" />
-  <ns0:text x="373.4081" y="306.087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="#333">Execution (60%)</ns0:text>
-  <ns0:text x="373.4081" y="333.913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#555">Shuffles, sorts, joins, aggs</ns0:text>
-  <ns0:text x="373.4081" y="361.7391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#555">2.88 GB</ns0:text>
-  <ns0:rect x="612.7724" y="268.9855" width="440.4301" height="111.3043" rx="11.1304" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.7826" />
-  <ns0:text x="832.9874" y="306.087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="#333">Storage (40%)</ns0:text>
-  <ns0:text x="832.9874" y="333.913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#555">Cached data, broadcast vars</ns0:text>
-  <ns0:text x="832.9874" y="361.7391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#555">1.92 GB</ns0:text>
-  <ns0:rect x="114.8948" y="417.3913" width="957.4568" height="102.029" rx="11.1304" fill="#e1f5fe" stroke="#0277bd" stroke-width="1.8551" />
-  <ns0:text x="593.6232" y="460.058" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="#333">User Memory (0.4 * 8g = 3.2 GB)</ns0:text>
-  <ns0:text x="593.6232" y="497.1594" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="#555">UDF data, internal metadata</ns0:text>
-  <ns0:rect x="76.5965" y="556.5217" width="1034.0533" height="64.9275" rx="11.1304" fill="#fce4ec" stroke="#c62828" stroke-width="2.7826" />
-  <ns0:text x="593.6232" y="597.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" fill="#333">Off-Heap / Overhead (800 MB) - OS overhead, Python processes</ns0:text>
+</defs>
+  <ns0:text x="593.6232" y="33.3913" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.971" font-weight="bold" fill="var(--text-dark)">Executor Memory Layout (spark.executor.memory = 8g)</ns0:text>
+  <ns0:rect x="38.2982" y="46.3768" width="1110.6499" height="593.6232" rx="14.8406" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="3.7101" />
+  <ns0:text x="593.6232" y="83.4783" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" fill="var(--text-muted)">Total Container: 8g + max(384m, 0.1*8g) = 8.8 GB</ns0:text>
+  <ns0:rect x="76.5965" y="102.029" width="1034.0533" height="445.2174" rx="14.8406" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="3.7101" />
+  <ns0:text x="593.6232" y="139.1304" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.1159" font-weight="bold" fill="var(--primary-strong)">JVM Heap (8 GB)</ns0:text>
+  <ns0:rect x="114.8948" y="157.6812" width="957.4568" height="46.3768" rx="7.4203" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="2.7826" />
+  <ns0:text x="593.6232" y="189.2174" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-dark)">Reserved Memory (300 MB)</ns0:text>
+  <ns0:rect x="114.8948" y="218.8986" width="957.4568" height="185.5072" rx="11.1304" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.7826" />
+  <ns0:text x="593.6232" y="252.2899" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="var(--text-dark)">Spark Memory (0.6 * 8g = 4.8 GB)</ns0:text>
+  <ns0:rect x="153.1931" y="268.9855" width="440.4301" height="111.3043" rx="11.1304" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.7826" />
+  <ns0:text x="373.4081" y="306.087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="var(--text-dark)">Execution (60%)</ns0:text>
+  <ns0:text x="373.4081" y="333.913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)">Shuffles, sorts, joins, aggs</ns0:text>
+  <ns0:text x="373.4081" y="361.7391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)">2.88 GB</ns0:text>
+  <ns0:rect x="612.7724" y="268.9855" width="440.4301" height="111.3043" rx="11.1304" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.7826" />
+  <ns0:text x="832.9874" y="306.087" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="var(--text-dark)">Storage (40%)</ns0:text>
+  <ns0:text x="832.9874" y="333.913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)">Cached data, broadcast vars</ns0:text>
+  <ns0:text x="832.9874" y="361.7391" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)">1.92 GB</ns0:text>
+  <ns0:rect x="114.8948" y="417.3913" width="957.4568" height="102.029" rx="11.1304" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="1.8551" />
+  <ns0:text x="593.6232" y="460.058" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" font-weight="bold" fill="var(--text-dark)">User Memory (0.4 * 8g = 3.2 GB)</ns0:text>
+  <ns0:text x="593.6232" y="497.1594" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)">UDF data, internal metadata</ns0:text>
+  <ns0:rect x="76.5965" y="556.5217" width="1034.0533" height="64.9275" rx="11.1304" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="2.7826" />
+  <ns0:text x="593.6232" y="597.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.4058" fill="var(--text-dark)">Off-Heap / Overhead (800 MB) - OS overhead, Python processes</ns0:text>
 </ns0:svg>

@@ -1,50 +1,147 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect width="1003.9216" height="564.7059" fill="#f9f9f9" stroke="#ddd" stroke-width="1.2549" />
-  <ns0:text x="501.9608" y="37.6471" font-family="Arial, sans-serif" font-size="20.0784" font-weight="bold" fill="#333" text-anchor="middle">Durability: Surviving System Failures</ns0:text>
-  <ns0:text x="188.2353" y="75.2941" font-family="Arial, sans-serif" font-size="17.5686" font-weight="bold" fill="#2196F3">Normal Operation</ns0:text>
-  <ns0:rect x="62.7451" y="100.3922" width="150.5882" height="50.1961" rx="6.2745" fill="#2196F3" stroke="#1976D2" stroke-width="2.5098" />
-  <ns0:text x="138.0392" y="131.7647" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Client: COMMIT</ns0:text>
-  <ns0:path d="M 213.3333 125.4902 L 288.6275 125.4902" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="288.6275" y="100.3922" width="225.8824" height="50.1961" rx="6.2745" fill="#4CAF50" stroke="#388E3C" stroke-width="2.5098" />
-  <ns0:text x="401.5686" y="131.7647" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Write to Transaction Log</ns0:text>
-  <ns0:path d="M 514.5098 125.4902 L 589.8039 125.4902" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="589.8039" y="100.3922" width="200.7843" height="50.1961" rx="6.2745" fill="#4CAF50" stroke="#388E3C" stroke-width="2.5098" />
-  <ns0:text x="690.1961" y="131.7647" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">ACK to Client</ns0:text>
-  <ns0:path d="M 401.5686 150.5882 L 401.5686 188.2353" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="263.5294" y="188.2353" width="276.0784" height="50.1961" rx="6.2745" fill="#FF9800" stroke="#F57C00" stroke-width="2.5098" />
-  <ns0:text x="401.5686" y="219.6078" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137">Async Write to Data Files</ns0:text>
-  <ns0:line x1="62.7451" y1="276.0784" x2="941.1765" y2="276.0784" stroke="#666" stroke-width="1.2549" stroke-dasharray="6.2745 6.2745" />
-  <ns0:text x="188.2353" y="313.7255" font-family="Arial, sans-serif" font-size="17.5686" font-weight="bold" fill="#F44336">Crash Recovery</ns0:text>
+  <ns0:rect width="1003.9216" height="564.7059" fill="var(--surface-light)" stroke="var(--border-softer)" stroke-width="1.2549" />
+  <ns0:text x="501.9608" y="37.6471" font-family="Arial, sans-serif" font-size="20.0784" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Durability: Surviving System Failures</ns0:text>
+  <ns0:text x="188.2353" y="75.2941" font-family="Arial, sans-serif" font-size="17.5686" font-weight="bold" fill="var(--primary-vivid)">Normal Operation</ns0:text>
+  <ns0:rect x="62.7451" y="100.3922" width="150.5882" height="50.1961" rx="6.2745" fill="var(--primary-vivid)" stroke="var(--primary-mid)" stroke-width="2.5098" />
+  <ns0:text x="138.0392" y="131.7647" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Client: COMMIT</ns0:text>
+  <ns0:path d="M 213.3333 125.4902 L 288.6275 125.4902" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="288.6275" y="100.3922" width="225.8824" height="50.1961" rx="6.2745" fill="var(--ok-light)" stroke="var(--ok-mid)" stroke-width="2.5098" />
+  <ns0:text x="401.5686" y="131.7647" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Write to Transaction Log</ns0:text>
+  <ns0:path d="M 514.5098 125.4902 L 589.8039 125.4902" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="589.8039" y="100.3922" width="200.7843" height="50.1961" rx="6.2745" fill="var(--ok-light)" stroke="var(--ok-mid)" stroke-width="2.5098" />
+  <ns0:text x="690.1961" y="131.7647" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">ACK to Client</ns0:text>
+  <ns0:path d="M 401.5686 150.5882 L 401.5686 188.2353" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="263.5294" y="188.2353" width="276.0784" height="50.1961" rx="6.2745" fill="var(--warn-orange)" stroke="var(--warn-mid)" stroke-width="2.5098" />
+  <ns0:text x="401.5686" y="219.6078" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137">Async Write to Data Files</ns0:text>
+  <ns0:line x1="62.7451" y1="276.0784" x2="941.1765" y2="276.0784" stroke="var(--text-mid)" stroke-width="1.2549" stroke-dasharray="6.2745 6.2745" />
+  <ns0:text x="188.2353" y="313.7255" font-family="Arial, sans-serif" font-size="17.5686" font-weight="bold" fill="var(--danger-vivid)">Crash Recovery</ns0:text>
   <ns0:g transform="translate(50, 270)">
-    <ns0:rect width="150.5882" height="50.1961" rx="6.2745" fill="#F44336" stroke="#D32F2F" stroke-width="2.5098" />
-    <ns0:text x="75.2941" y="31.3725" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">System Crash</ns0:text>
-    <ns0:path d="M 50.1961 6.2745 L 62.7451 18.8235 L 56.4706 18.8235 L 69.0196 31.3725 L 56.4706 18.8235 L 62.7451 18.8235" fill="yellow" stroke="none" />
-    <ns0:path d="M 87.8431 6.2745 L 100.3922 18.8235 L 94.1176 18.8235 L 106.6667 31.3725 L 94.1176 18.8235 L 100.3922 18.8235" fill="yellow" stroke="none" />
+    <ns0:rect width="150.5882" height="50.1961" rx="6.2745" fill="var(--danger-vivid)" stroke="var(--danger-mid)" stroke-width="2.5098" />
+    <ns0:text x="75.2941" y="31.3725" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">System Crash</ns0:text>
+    <ns0:path d="M 50.1961 6.2745 L 62.7451 18.8235 L 56.4706 18.8235 L 69.0196 31.3725 L 56.4706 18.8235 L 62.7451 18.8235" fill="var(--warn-yellow)" stroke="none" />
+    <ns0:path d="M 87.8431 6.2745 L 100.3922 18.8235 L 94.1176 18.8235 L 106.6667 31.3725 L 94.1176 18.8235 L 100.3922 18.8235" fill="var(--warn-yellow)" stroke="none" />
   </ns0:g>
-  <ns0:path d="M 213.3333 363.9216 L 288.6275 363.9216" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="288.6275" y="338.8235" width="175.6863" height="50.1961" rx="6.2745" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2.5098" />
-  <ns0:text x="376.4706" y="370.1961" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Recovery Process</ns0:text>
-  <ns0:path d="M 464.3137 363.9216 L 539.6078 363.9216" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="539.6078" y="338.8235" width="200.7843" height="50.1961" rx="6.2745" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2.5098" />
-  <ns0:text x="640" y="370.1961" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Read Transaction Log</ns0:text>
-  <ns0:path d="M 640 389.0196 L 640 426.6667" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="514.5098" y="426.6667" width="250.9804" height="50.1961" rx="6.2745" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2.5098" />
-  <ns0:text x="640" y="458.0392" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Replay Committed Transactions</ns0:text>
-  <ns0:path d="M 514.5098 451.7647 L 439.2157 451.7647" stroke="#333" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
-  <ns0:rect x="188.2353" y="426.6667" width="250.9804" height="50.1961" rx="6.2745" fill="#4CAF50" stroke="#388E3C" stroke-width="2.5098" />
-  <ns0:text x="313.7255" y="451.7647" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="15.0588" font-weight="bold">Database Restored to</ns0:text>
-  <ns0:text x="313.7255" y="470.5882" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="15.0588" font-weight="bold">Consistent State</ns0:text>
-  <ns0:rect x="815.6863" y="100.3922" width="163.1373" height="138.0392" rx="6.2745" fill="#E3F2FD" stroke="#1976D2" stroke-width="1.2549" />
-  <ns0:text x="897.2549" y="125.4902" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8039" font-weight="bold" fill="#1976D2">Key Points:</ns0:text>
-  <ns0:text x="821.9608" y="150.5882" font-family="Arial, sans-serif" font-size="12.549" fill="#666">• Log written first</ns0:text>
-  <ns0:text x="821.9608" y="169.4118" font-family="Arial, sans-serif" font-size="12.549" fill="#666">• Then ACK sent</ns0:text>
-  <ns0:text x="821.9608" y="188.2353" font-family="Arial, sans-serif" font-size="12.549" fill="#666">• Data files later</ns0:text>
-  <ns0:text x="821.9608" y="207.0588" font-family="Arial, sans-serif" font-size="12.549" fill="#666">• Log enables</ns0:text>
-  <ns0:text x="834.5098" y="225.8824" font-family="Arial, sans-serif" font-size="12.549" fill="#666">recovery</ns0:text>
-  <ns0:rect x="62.7451" y="501.9608" width="878.4314" height="50.1961" rx="6.2745" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2.5098" />
-  <ns0:text x="501.9608" y="533.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0588" font-weight="bold" fill="#2E7D32">Durability Guarantee: All committed transactions survive system failures through Write-Ahead Logging (WAL)</ns0:text>
+  <ns0:path d="M 213.3333 363.9216 L 288.6275 363.9216" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="288.6275" y="338.8235" width="175.6863" height="50.1961" rx="6.2745" fill="var(--info-light)" stroke="var(--info-mid)" stroke-width="2.5098" />
+  <ns0:text x="376.4706" y="370.1961" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Recovery Process</ns0:text>
+  <ns0:path d="M 464.3137 363.9216 L 539.6078 363.9216" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="539.6078" y="338.8235" width="200.7843" height="50.1961" rx="6.2745" fill="var(--info-light)" stroke="var(--info-mid)" stroke-width="2.5098" />
+  <ns0:text x="640" y="370.1961" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Read Transaction Log</ns0:text>
+  <ns0:path d="M 640 389.0196 L 640 426.6667" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="514.5098" y="426.6667" width="250.9804" height="50.1961" rx="6.2745" fill="var(--info-light)" stroke="var(--info-mid)" stroke-width="2.5098" />
+  <ns0:text x="640" y="458.0392" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16.3137" font-weight="bold">Replay Committed Transactions</ns0:text>
+  <ns0:path d="M 514.5098 451.7647 L 439.2157 451.7647" stroke="var(--text-dark)" stroke-width="2.5098" fill="none" marker-end="url(#arrow)" />
+  <ns0:rect x="188.2353" y="426.6667" width="250.9804" height="50.1961" rx="6.2745" fill="var(--ok-light)" stroke="var(--ok-mid)" stroke-width="2.5098" />
+  <ns0:text x="313.7255" y="451.7647" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="15.0588" font-weight="bold">Database Restored to</ns0:text>
+  <ns0:text x="313.7255" y="470.5882" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="15.0588" font-weight="bold">Consistent State</ns0:text>
+  <ns0:rect x="815.6863" y="100.3922" width="163.1373" height="138.0392" rx="6.2745" fill="var(--primary-pale)" stroke="var(--primary-mid)" stroke-width="1.2549" />
+  <ns0:text x="897.2549" y="125.4902" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8039" font-weight="bold" fill="var(--primary-mid)">Key Points:</ns0:text>
+  <ns0:text x="821.9608" y="150.5882" font-family="Arial, sans-serif" font-size="12.549" fill="var(--text-mid)">• Log written first</ns0:text>
+  <ns0:text x="821.9608" y="169.4118" font-family="Arial, sans-serif" font-size="12.549" fill="var(--text-mid)">• Then ACK sent</ns0:text>
+  <ns0:text x="821.9608" y="188.2353" font-family="Arial, sans-serif" font-size="12.549" fill="var(--text-mid)">• Data files later</ns0:text>
+  <ns0:text x="821.9608" y="207.0588" font-family="Arial, sans-serif" font-size="12.549" fill="var(--text-mid)">• Log enables</ns0:text>
+  <ns0:text x="834.5098" y="225.8824" font-family="Arial, sans-serif" font-size="12.549" fill="var(--text-mid)">recovery</ns0:text>
+  <ns0:rect x="62.7451" y="501.9608" width="878.4314" height="50.1961" rx="6.2745" fill="var(--ok-pale)" stroke="var(--ok-light)" stroke-width="2.5098" />
+  <ns0:text x="501.9608" y="533.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0588" font-weight="bold" fill="var(--ok-dk)">Durability Guarantee: All committed transactions survive system failures through Write-Ahead Logging (WAL)</ns0:text>
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -103,7 +200,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrow5" markerWidth="16" markerHeight="16" refX="14.4" refY="8" orient="auto">
       <ns0:polygon points="0,16 8,0" fill="#333" />
     </ns0:marker>

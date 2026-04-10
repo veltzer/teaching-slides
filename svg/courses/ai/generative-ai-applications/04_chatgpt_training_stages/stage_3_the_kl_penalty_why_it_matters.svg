@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,33 +156,33 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:text x="628.7719" y="50.5263" text-anchor="middle" font-size="25.1509" font-weight="bold" fill="#333">The KL Penalty: Why It Matters</ns0:text>
-  <ns0:rect x="47.1579" y="92.6316" width="565.8947" height="320" rx="7.8596" fill="#f8d7da" stroke="#dc3545" stroke-width="3.1439" />
-  <ns0:text x="330.1052" y="134.7369" text-anchor="middle" font-size="22.007" font-weight="bold" fill="#dc3545">Without KL Penalty</ns0:text>
-  <ns0:text x="330.1052" y="176.8421" text-anchor="middle" font-size="17.2912" fill="#555">Model exploits reward model weaknesses</ns0:text>
-  <ns0:rect x="78.5965" y="202.1053" width="503.0175" height="117.8947" rx="7.8596" fill="#fff" stroke="#dc3545" stroke-width="1.5719" />
-  <ns0:text x="330.1052" y="235.7895" text-anchor="middle" font-size="15.7193" fill="#333">Prompt: "Write a poem about nature"</ns0:text>
-  <ns0:text x="330.1052" y="266.1052" text-anchor="middle" font-size="15.7193" fill="#dc3545">"AMAZING INCREDIBLE WONDERFUL</ns0:text>
-  <ns0:text x="330.1052" y="289.6842" text-anchor="middle" font-size="15.7193" fill="#dc3545">NATURE IS THE BEST!!!!"</ns0:text>
-  <ns0:rect x="78.5965" y="336.842" width="503.0175" height="50.5263" rx="4.7158" fill="#f8d7da" stroke="#dc3545" />
-  <ns0:text x="330.1052" y="370.5263" text-anchor="middle" font-size="15.7193" fill="#dc3545">High reward score but garbage output</ns0:text>
-  <ns0:rect x="644.4912" y="92.6316" width="565.8947" height="320" rx="7.8596" fill="#d4edda" stroke="#28a745" stroke-width="3.1439" />
-  <ns0:text x="927.4386" y="134.7369" text-anchor="middle" font-size="22.007" font-weight="bold" fill="#28a745">With KL Penalty</ns0:text>
-  <ns0:text x="927.4386" y="176.8421" text-anchor="middle" font-size="17.2912" fill="#555">Model stays close to SFT model</ns0:text>
-  <ns0:text x="927.4386" y="218.9473" text-anchor="middle" font-size="17.2912" fill="#555">while improving on preferences</ns0:text>
-  <ns0:rect x="675.9298" y="252.6316" width="503.0175" height="134.7369" rx="7.8596" fill="#fff" stroke="#28a745" stroke-width="1.5719" />
-  <ns0:text x="927.4386" y="294.7368" text-anchor="middle" font-size="15.7193" fill="#333">KL = policy(x) * log(policy(x)/ref(x))</ns0:text>
-  <ns0:text x="927.4386" y="336.842" text-anchor="middle" font-size="15.7193" fill="#28a745">Sweet spot: KL ~ 5-15 nats</ns0:text>
-  <ns0:text x="927.4386" y="370.5263" text-anchor="middle" font-size="15.7193" fill="#555">Balance learning and stability</ns0:text>
-  <ns0:rect x="157.193" y="454.7368" width="943.1579" height="101.0526" rx="7.8596" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3579" />
-  <ns0:text x="628.7719" y="496.8421" text-anchor="middle" font-size="18.8632" fill="#bf360c">KL too high: model is drifting -&gt; increase penalty</ns0:text>
-  <ns0:text x="628.7719" y="530.5263" text-anchor="middle" font-size="18.8632" fill="#bf360c">KL too low: model isn't learning -&gt; decrease penalty</ns0:text>
-  <ns0:rect x="314.386" y="589.4737" width="628.7719" height="50.5263" rx="23.5789" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.5719" />
-  <ns0:rect x="314.386" y="589.4737" width="209.0667" height="50.5263" rx="23.5789" fill="#dc3545" opacity="0.3" />
-  <ns0:rect x="523.4526" y="589.4737" width="210.6386" height="50.5263" fill="#28a745" opacity="0.3" />
-  <ns0:rect x="734.0912" y="589.4737" width="209.0667" height="50.5263" rx="23.5789" fill="#dc3545" opacity="0.3" />
-  <ns0:text x="418.1333" y="623.1579" text-anchor="middle" font-size="15.7193" fill="#dc3545">Too low</ns0:text>
-  <ns0:text x="628.7719" y="623.1579" text-anchor="middle" font-size="15.7193" font-weight="bold" fill="#28a745">Sweet spot</ns0:text>
-  <ns0:text x="839.4105" y="623.1579" text-anchor="middle" font-size="15.7193" fill="#dc3545">Too high</ns0:text>
+</defs>
+  <ns0:text x="628.7719" y="50.5263" text-anchor="middle" font-size="25.1509" font-weight="bold" fill="var(--text-dark)">The KL Penalty: Why It Matters</ns0:text>
+  <ns0:rect x="47.1579" y="92.6316" width="565.8947" height="320" rx="7.8596" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.1439" />
+  <ns0:text x="330.1052" y="134.7369" text-anchor="middle" font-size="22.007" font-weight="bold" fill="var(--danger-bright)">Without KL Penalty</ns0:text>
+  <ns0:text x="330.1052" y="176.8421" text-anchor="middle" font-size="17.2912" fill="var(--text-muted)">Model exploits reward model weaknesses</ns0:text>
+  <ns0:rect x="78.5965" y="202.1053" width="503.0175" height="117.8947" rx="7.8596" fill="var(--bg)" stroke="var(--danger-bright)" stroke-width="1.5719" />
+  <ns0:text x="330.1052" y="235.7895" text-anchor="middle" font-size="15.7193" fill="var(--text-dark)">Prompt: "Write a poem about nature"</ns0:text>
+  <ns0:text x="330.1052" y="266.1052" text-anchor="middle" font-size="15.7193" fill="var(--danger-bright)">"AMAZING INCREDIBLE WONDERFUL</ns0:text>
+  <ns0:text x="330.1052" y="289.6842" text-anchor="middle" font-size="15.7193" fill="var(--danger-bright)">NATURE IS THE BEST!!!!"</ns0:text>
+  <ns0:rect x="78.5965" y="336.842" width="503.0175" height="50.5263" rx="4.7158" fill="var(--danger-pale2)" stroke="var(--danger-bright)" />
+  <ns0:text x="330.1052" y="370.5263" text-anchor="middle" font-size="15.7193" fill="var(--danger-bright)">High reward score but garbage output</ns0:text>
+  <ns0:rect x="644.4912" y="92.6316" width="565.8947" height="320" rx="7.8596" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.1439" />
+  <ns0:text x="927.4386" y="134.7369" text-anchor="middle" font-size="22.007" font-weight="bold" fill="var(--ok-bright)">With KL Penalty</ns0:text>
+  <ns0:text x="927.4386" y="176.8421" text-anchor="middle" font-size="17.2912" fill="var(--text-muted)">Model stays close to SFT model</ns0:text>
+  <ns0:text x="927.4386" y="218.9473" text-anchor="middle" font-size="17.2912" fill="var(--text-muted)">while improving on preferences</ns0:text>
+  <ns0:rect x="675.9298" y="252.6316" width="503.0175" height="134.7369" rx="7.8596" fill="var(--bg)" stroke="var(--ok-bright)" stroke-width="1.5719" />
+  <ns0:text x="927.4386" y="294.7368" text-anchor="middle" font-size="15.7193" fill="var(--text-dark)">KL = policy(x) * log(policy(x)/ref(x))</ns0:text>
+  <ns0:text x="927.4386" y="336.842" text-anchor="middle" font-size="15.7193" fill="var(--ok-bright)">Sweet spot: KL ~ 5-15 nats</ns0:text>
+  <ns0:text x="927.4386" y="370.5263" text-anchor="middle" font-size="15.7193" fill="var(--text-muted)">Balance learning and stability</ns0:text>
+  <ns0:rect x="157.193" y="454.7368" width="943.1579" height="101.0526" rx="7.8596" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.3579" />
+  <ns0:text x="628.7719" y="496.8421" text-anchor="middle" font-size="18.8632" fill="var(--danger-deeper)">KL too high: model is drifting -&gt; increase penalty</ns0:text>
+  <ns0:text x="628.7719" y="530.5263" text-anchor="middle" font-size="18.8632" fill="var(--danger-deeper)">KL too low: model isn't learning -&gt; decrease penalty</ns0:text>
+  <ns0:rect x="314.386" y="589.4737" width="628.7719" height="50.5263" rx="23.5789" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.5719" />
+  <ns0:rect x="314.386" y="589.4737" width="209.0667" height="50.5263" rx="23.5789" fill="var(--danger-bright)" opacity="0.3" />
+  <ns0:rect x="523.4526" y="589.4737" width="210.6386" height="50.5263" fill="var(--ok-bright)" opacity="0.3" />
+  <ns0:rect x="734.0912" y="589.4737" width="209.0667" height="50.5263" rx="23.5789" fill="var(--danger-bright)" opacity="0.3" />
+  <ns0:text x="418.1333" y="623.1579" text-anchor="middle" font-size="15.7193" fill="var(--danger-bright)">Too low</ns0:text>
+  <ns0:text x="628.7719" y="623.1579" text-anchor="middle" font-size="15.7193" font-weight="bold" fill="var(--ok-bright)">Sweet spot</ns0:text>
+  <ns0:text x="839.4105" y="623.1579" text-anchor="middle" font-size="15.7193" fill="var(--danger-bright)">Too high</ns0:text>
 </ns0:svg>

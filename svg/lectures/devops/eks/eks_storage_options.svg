@@ -1,6 +1,103 @@
 <svg viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,47 +156,47 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <text x="598.8304" y="50.5263" font-family="Arial" font-size="33.6842" font-weight="bold" text-anchor="middle" fill="#333">EKS Storage Solutions</text>
-  <rect x="85.5472" y="101.0526" width="256.6416" height="202.1053" fill="#ff9800" stroke="#f57c00" stroke-width="3.3684" rx="13.4737" />
-  <text x="213.868" y="143.1579" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="white">Amazon EBS</text>
-  <text x="213.868" y="176.8421" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">Block Storage</text>
-  <rect x="171.0944" y="193.6842" width="85.5472" height="50.5263" fill="#333333" stroke="#1a1a2e" stroke-width="1.6842" rx="5.0526" />
-  <circle cx="213.868" cy="218.9474" r="13.4737" fill="#ff9800" />
-  <text x="213.868" y="269.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">• Single AZ</text>
-  <text x="213.868" y="294.7368" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">• High IOPS</text>
-  <rect x="384.9624" y="101.0526" width="256.6416" height="202.1053" fill="#4CAF50" stroke="#2E7D32" stroke-width="3.3684" rx="13.4737" />
-  <text x="513.2832" y="143.1579" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="white">Amazon EFS</text>
-  <text x="513.2832" y="176.8421" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">File Storage</text>
-  <circle cx="470.5096" cy="218.9474" r="13.4737" fill="white" />
-  <circle cx="513.2832" cy="218.9474" r="13.4737" fill="white" />
-  <circle cx="556.0568" cy="218.9474" r="13.4737" fill="white" />
-  <line x1="470.5096" y1="218.9474" x2="556.0568" y2="218.9474" stroke="white" stroke-width="3.3684" />
-  <text x="513.2832" y="269.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">• Multi-AZ</text>
-  <text x="513.2832" y="294.7368" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">• Shared access</text>
-  <rect x="684.3776" y="101.0526" width="256.6416" height="202.1053" fill="#9C27B0" stroke="#7B1FA2" stroke-width="3.3684" rx="13.4737" />
-  <text x="812.6984" y="143.1579" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="white">Amazon FSx</text>
-  <text x="812.6984" y="176.8421" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">High Performance</text>
-  <polygon points="769.9248,202.1053 812.6984,227.3684 855.472,202.1053 812.6984,244.2105" fill="white" />
-  <text x="812.6984" y="227.3684" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="#9C27B0">⚡</text>
-  <text x="812.6984" y="269.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">• Lustre/NetApp</text>
-  <text x="812.6984" y="294.7368" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">• HPC workloads</text>
-  <rect x="85.5472" y="336.8421" width="855.472" height="134.7368" fill="#E3F2FD" stroke="#1976D2" stroke-width="3.3684" rx="13.4737" />
-  <text x="513.2832" y="378.9474" font-family="Arial" font-size="26.9474" font-weight="bold" text-anchor="middle" fill="#0D47A1">Container Storage Interface (CSI) Drivers</text>
-  <rect x="136.8755" y="404.2105" width="171.0944" height="42.1053" fill="#2196F3" stroke="#1565C0" stroke-width="1.6842" rx="5.0526" />
-  <text x="222.4227" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">EBS CSI Driver</text>
-  <rect x="342.1888" y="404.2105" width="171.0944" height="42.1053" fill="#4CAF50" stroke="#2E7D32" stroke-width="1.6842" rx="5.0526" />
-  <text x="427.736" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">EFS CSI Driver</text>
-  <rect x="547.5021" y="404.2105" width="171.0944" height="42.1053" fill="#9C27B0" stroke="#7B1FA2" stroke-width="1.6842" rx="5.0526" />
-  <text x="633.0493" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">FSx CSI Driver</text>
-  <rect x="752.8153" y="404.2105" width="171.0944" height="42.1053" fill="#f44336" stroke="#e65100" stroke-width="1.6842" rx="5.0526" />
-  <text x="838.3626" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="white">Snapshot CSI</text>
-  <rect x="85.5472" y="505.2632" width="1026.5665" height="134.7368" fill="#F5F5F5" stroke="#BDBDBD" stroke-width="1.6842" rx="8.4211" />
-  <text x="598.8304" y="538.9474" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="#333">Storage Class Examples</text>
-  <text x="119.7661" y="572.6316" font-family="monospace" font-size="16.8421" fill="#1976D2">apiVersion: storage.k8s.io/v1</text>
-  <text x="119.7661" y="597.8947" font-family="monospace" font-size="16.8421" fill="#1976D2">kind: StorageClass</text>
-  <text x="119.7661" y="623.1579" font-family="monospace" font-size="16.8421" fill="#1976D2">provisioner: ebs.csi.aws.com</text>
-  <text x="598.8304" y="572.6316" font-family="monospace" font-size="16.8421" fill="#4CAF50">apiVersion: storage.k8s.io/v1</text>
-  <text x="598.8304" y="597.8947" font-family="monospace" font-size="16.8421" fill="#4CAF50">kind: StorageClass</text>
-  <text x="598.8304" y="623.1579" font-family="monospace" font-size="16.8421" fill="#4CAF50">provisioner: efs.csi.aws.com</text>
+</defs>
+  <text x="598.8304" y="50.5263" font-family="Arial" font-size="33.6842" font-weight="bold" text-anchor="middle" fill="var(--text-dark)">EKS Storage Solutions</text>
+  <rect x="85.5472" y="101.0526" width="256.6416" height="202.1053" fill="var(--warn-orange)" stroke="var(--warn-mid)" stroke-width="3.3684" rx="13.4737" />
+  <text x="213.868" y="143.1579" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="var(--bg)">Amazon EBS</text>
+  <text x="213.868" y="176.8421" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">Block Storage</text>
+  <rect x="171.0944" y="193.6842" width="85.5472" height="50.5263" fill="var(--text-dark)" stroke="var(--code-bg)" stroke-width="1.6842" rx="5.0526" />
+  <circle cx="213.868" cy="218.9474" r="13.4737" fill="var(--warn-orange)" />
+  <text x="213.868" y="269.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">• Single AZ</text>
+  <text x="213.868" y="294.7368" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">• High IOPS</text>
+  <rect x="384.9624" y="101.0526" width="256.6416" height="202.1053" fill="var(--ok-light)" stroke="var(--ok-dk)" stroke-width="3.3684" rx="13.4737" />
+  <text x="513.2832" y="143.1579" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="var(--bg)">Amazon EFS</text>
+  <text x="513.2832" y="176.8421" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">File Storage</text>
+  <circle cx="470.5096" cy="218.9474" r="13.4737" fill="var(--bg)" />
+  <circle cx="513.2832" cy="218.9474" r="13.4737" fill="var(--bg)" />
+  <circle cx="556.0568" cy="218.9474" r="13.4737" fill="var(--bg)" />
+  <line x1="470.5096" y1="218.9474" x2="556.0568" y2="218.9474" stroke="var(--bg)" stroke-width="3.3684" />
+  <text x="513.2832" y="269.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">• Multi-AZ</text>
+  <text x="513.2832" y="294.7368" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">• Shared access</text>
+  <rect x="684.3776" y="101.0526" width="256.6416" height="202.1053" fill="var(--info-light)" stroke="var(--info-mid)" stroke-width="3.3684" rx="13.4737" />
+  <text x="812.6984" y="143.1579" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="var(--bg)">Amazon FSx</text>
+  <text x="812.6984" y="176.8421" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">High Performance</text>
+  <polygon points="769.9248,202.1053 812.6984,227.3684 855.472,202.1053 812.6984,244.2105" fill="var(--bg)" />
+  <text x="812.6984" y="227.3684" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--info-light)">⚡</text>
+  <text x="812.6984" y="269.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">• Lustre/NetApp</text>
+  <text x="812.6984" y="294.7368" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">• HPC workloads</text>
+  <rect x="85.5472" y="336.8421" width="855.472" height="134.7368" fill="var(--primary-pale)" stroke="var(--primary-mid)" stroke-width="3.3684" rx="13.4737" />
+  <text x="513.2832" y="378.9474" font-family="Arial" font-size="26.9474" font-weight="bold" text-anchor="middle" fill="var(--primary-deep)">Container Storage Interface (CSI) Drivers</text>
+  <rect x="136.8755" y="404.2105" width="171.0944" height="42.1053" fill="var(--primary-vivid)" stroke="var(--primary-dk)" stroke-width="1.6842" rx="5.0526" />
+  <text x="222.4227" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">EBS CSI Driver</text>
+  <rect x="342.1888" y="404.2105" width="171.0944" height="42.1053" fill="var(--ok-light)" stroke="var(--ok-dk)" stroke-width="1.6842" rx="5.0526" />
+  <text x="427.736" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">EFS CSI Driver</text>
+  <rect x="547.5021" y="404.2105" width="171.0944" height="42.1053" fill="var(--info-light)" stroke="var(--info-mid)" stroke-width="1.6842" rx="5.0526" />
+  <text x="633.0493" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">FSx CSI Driver</text>
+  <rect x="752.8153" y="404.2105" width="171.0944" height="42.1053" fill="var(--danger-vivid)" stroke="var(--warn-dk)" stroke-width="1.6842" rx="5.0526" />
+  <text x="838.3626" y="429.4737" font-family="Arial" font-size="16.8421" text-anchor="middle" fill="var(--bg)">Snapshot CSI</text>
+  <rect x="85.5472" y="505.2632" width="1026.5665" height="134.7368" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.6842" rx="8.4211" />
+  <text x="598.8304" y="538.9474" font-family="Arial" font-size="23.5789" font-weight="bold" text-anchor="middle" fill="var(--text-dark)">Storage Class Examples</text>
+  <text x="119.7661" y="572.6316" font-family="monospace" font-size="16.8421" fill="var(--primary-mid)">apiVersion: storage.k8s.io/v1</text>
+  <text x="119.7661" y="597.8947" font-family="monospace" font-size="16.8421" fill="var(--primary-mid)">kind: StorageClass</text>
+  <text x="119.7661" y="623.1579" font-family="monospace" font-size="16.8421" fill="var(--primary-mid)">provisioner: ebs.csi.aws.com</text>
+  <text x="598.8304" y="572.6316" font-family="monospace" font-size="16.8421" fill="var(--ok-light)">apiVersion: storage.k8s.io/v1</text>
+  <text x="598.8304" y="597.8947" font-family="monospace" font-size="16.8421" fill="var(--ok-light)">kind: StorageClass</text>
+  <text x="598.8304" y="623.1579" font-family="monospace" font-size="16.8421" fill="var(--ok-light)">provisioner: efs.csi.aws.com</text>
 </svg>

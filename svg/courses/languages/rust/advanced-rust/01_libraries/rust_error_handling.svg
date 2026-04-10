@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
@@ -68,65 +165,65 @@
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
   <ns0:rect x="391.1111" y="21.3333" width="355.5556" height="71.1111" fill="url(#grad-primary)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="50.6667" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="#ffffff" text-anchor="middle">std::error::Error</ns0:text>
-  <ns0:text x="568.8889" y="69.3333" font-family="Arial,sans-serif" font-size="11.5556" fill="#bbdefb" text-anchor="middle">trait Error: Debug + Display</ns0:text>
-  <ns0:text x="568.8889" y="85.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="#bbdefb" text-anchor="middle">fn source(&amp;self) → Option&lt;&amp;dyn Error&gt;</ns0:text>
-  <ns0:line x1="497.7778" y1="92.4444" x2="293.3333" y2="186.6667" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
-  <ns0:line x1="640" y1="92.4444" x2="844.4444" y2="186.6667" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="53.3333" y="186.6667" width="462.2222" height="302.2222" fill="#e8f5e9" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="53.3333" y="186.6667" width="462.2222" height="40.8889" fill="#388e3c" rx="10.6667" />
-  <ns0:rect x="53.3333" y="213.3333" width="462.2222" height="14.2222" fill="#388e3c" />
-  <ns0:text x="97.7778" y="213.3333" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#ffffff">anyhow</ns0:text>
-  <ns0:text x="435.5556" y="211.5556" font-family="Arial,sans-serif" font-size="11.5556" fill="#c8e6c9" text-anchor="end">crate: anyhow = "1.0"</ns0:text>
-  <ns0:text x="78.2222" y="250.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#2e7d32">Target: Applications</ns0:text>
-  <ns0:text x="78.2222" y="270.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Single opaque type: anyhow::Error</ns0:text>
-  <ns0:text x="78.2222" y="286.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Wraps any error implementing std::error::Error</ns0:text>
-  <ns0:text x="78.2222" y="302.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Automatic conversion via ? operator</ns0:text>
-  <ns0:text x="78.2222" y="318.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Context: .context("reading config file")</ns0:text>
-  <ns0:text x="78.2222" y="334.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Backtraces with RUST_BACKTRACE=1</ns0:text>
-  <ns0:rect x="72.8889" y="350.2222" width="423.1111" height="120.8889" fill="#222222" rx="7.1111" />
-  <ns0:text x="88.8889" y="369.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#a5d6a7">use anyhow::{Result, Context};</ns0:text>
-  <ns0:text x="88.8889" y="385.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff"> </ns0:text>
-  <ns0:text x="88.8889" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#a5d6a7">fn</ns0:text>
-  <ns0:text x="110.2222" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff"> read_config(path: &amp;</ns0:text>
-  <ns0:text x="110.2222" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#a5d6a7"> </ns0:text>
-  <ns0:text x="88.8889" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">fn read_config(path: &amp;str) -&gt; Result&lt;Config&gt; {</ns0:text>
-  <ns0:text x="88.8889" y="417.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">    let s = fs::read_to_string(path)</ns0:text>
-  <ns0:text x="88.8889" y="433.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">        .context("reading config file")?;</ns0:text>
-  <ns0:text x="88.8889" y="449.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#a5d6a7">    // ? converts any error to anyhow::Error</ns0:text>
-  <ns0:text x="88.8889" y="465.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">    Ok(toml::from_str(&amp;s)?) }</ns0:text>
-  <ns0:rect x="622.2222" y="186.6667" width="462.2222" height="302.2222" fill="#fff3e0" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="622.2222" y="186.6667" width="462.2222" height="40.8889" fill="#e65100" rx="10.6667" />
-  <ns0:rect x="622.2222" y="213.3333" width="462.2222" height="14.2222" fill="#e65100" />
-  <ns0:text x="664.8889" y="213.3333" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#ffffff">thiserror</ns0:text>
-  <ns0:text x="1002.6667" y="211.5556" font-family="Arial,sans-serif" font-size="11.5556" fill="#ffe0b2" text-anchor="end">crate: thiserror = "1.0"</ns0:text>
-  <ns0:text x="643.5556" y="250.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#bf360c">Target: Libraries</ns0:text>
-  <ns0:text x="643.5556" y="270.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Derive macro: #[derive(Error)]</ns0:text>
-  <ns0:text x="643.5556" y="286.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Generates std::error::Error impl</ns0:text>
-  <ns0:text x="643.5556" y="302.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">Custom error enums with variants</ns0:text>
-  <ns0:text x="643.5556" y="318.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">#[error("...")] — Display format</ns0:text>
-  <ns0:text x="643.5556" y="334.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333">#[from] — auto From conversion</ns0:text>
-  <ns0:rect x="641.7778" y="350.2222" width="423.1111" height="120.8889" fill="#212121" rx="7.1111" />
-  <ns0:text x="657.7778" y="369.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffcc80">use thiserror::Error;</ns0:text>
-  <ns0:text x="657.7778" y="385.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff"> </ns0:text>
-  <ns0:text x="657.7778" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffcc80">#[derive(Debug, Error)]</ns0:text>
-  <ns0:text x="657.7778" y="417.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">pub enum MyError {</ns0:text>
-  <ns0:text x="657.7778" y="433.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffcc80">    #[error("io error: {0}")]</ns0:text>
-  <ns0:text x="657.7778" y="449.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">    Io(#[from] std::io::Error),</ns0:text>
-  <ns0:text x="657.7778" y="465.7778" font-family="Courier New,monospace" font-size="10.6667" fill="#ffffff">    #[error("parse failed")] Parse, }</ns0:text>
-  <ns0:rect x="177.7778" y="513.7778" width="782.2222" height="88.8889" fill="#e3f2fd" rx="10.6667" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="536.8889" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0" text-anchor="middle">? Operator Flow</ns0:text>
-  <ns0:text x="248.8889" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">call returns</ns0:text>
-  <ns0:text x="248.8889" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">Result&lt;T, E&gt;</ns0:text>
-  <ns0:line x1="320" y1="567.1111" x2="391.1111" y2="567.1111" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:text x="435.5556" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">Ok(v)</ns0:text>
-  <ns0:text x="435.5556" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">→ unwrap v</ns0:text>
-  <ns0:line x1="480" y1="567.1111" x2="551.1111" y2="567.1111" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:text x="604.4444" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="#e53935" text-anchor="middle">Err(e)</ns0:text>
-  <ns0:text x="604.4444" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">→ From::from(e)</ns0:text>
-  <ns0:line x1="664.8889" y1="567.1111" x2="736" y2="567.1111" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:text x="817.7778" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">early return</ns0:text>
-  <ns0:text x="817.7778" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="#333333" text-anchor="middle">Err(converted)</ns0:text>
+  <ns0:text x="568.8889" y="50.6667" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="var(--bg)" text-anchor="middle">std::error::Error</ns0:text>
+  <ns0:text x="568.8889" y="69.3333" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--primary-lt)" text-anchor="middle">trait Error: Debug + Display</ns0:text>
+  <ns0:text x="568.8889" y="85.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--primary-lt)" text-anchor="middle">fn source(&amp;self) → Option&lt;&amp;dyn Error&gt;</ns0:text>
+  <ns0:line x1="497.7778" y1="92.4444" x2="293.3333" y2="186.6667" stroke="var(--primary-dk)" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
+  <ns0:line x1="640" y1="92.4444" x2="844.4444" y2="186.6667" stroke="var(--primary-dk)" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
+  <ns0:rect x="53.3333" y="186.6667" width="462.2222" height="302.2222" fill="var(--ok-pale)" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="53.3333" y="186.6667" width="462.2222" height="40.8889" fill="var(--ok-mid)" rx="10.6667" />
+  <ns0:rect x="53.3333" y="213.3333" width="462.2222" height="14.2222" fill="var(--ok-mid)" />
+  <ns0:text x="97.7778" y="213.3333" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="var(--bg)">anyhow</ns0:text>
+  <ns0:text x="435.5556" y="211.5556" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--ok-lt)" text-anchor="end">crate: anyhow = "1.0"</ns0:text>
+  <ns0:text x="78.2222" y="250.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--ok-dk)">Target: Applications</ns0:text>
+  <ns0:text x="78.2222" y="270.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Single opaque type: anyhow::Error</ns0:text>
+  <ns0:text x="78.2222" y="286.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Wraps any error implementing std::error::Error</ns0:text>
+  <ns0:text x="78.2222" y="302.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Automatic conversion via ? operator</ns0:text>
+  <ns0:text x="78.2222" y="318.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Context: .context("reading config file")</ns0:text>
+  <ns0:text x="78.2222" y="334.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Backtraces with RUST_BACKTRACE=1</ns0:text>
+  <ns0:rect x="72.8889" y="350.2222" width="423.1111" height="120.8889" fill="var(--text-darker)" rx="7.1111" />
+  <ns0:text x="88.8889" y="369.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--ok-tint)">use anyhow::{Result, Context};</ns0:text>
+  <ns0:text x="88.8889" y="385.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)"> </ns0:text>
+  <ns0:text x="88.8889" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--ok-tint)">fn</ns0:text>
+  <ns0:text x="110.2222" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)"> read_config(path: &amp;</ns0:text>
+  <ns0:text x="110.2222" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--ok-tint)"> </ns0:text>
+  <ns0:text x="88.8889" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">fn read_config(path: &amp;str) -&gt; Result&lt;Config&gt; {</ns0:text>
+  <ns0:text x="88.8889" y="417.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">    let s = fs::read_to_string(path)</ns0:text>
+  <ns0:text x="88.8889" y="433.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">        .context("reading config file")?;</ns0:text>
+  <ns0:text x="88.8889" y="449.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--ok-tint)">    // ? converts any error to anyhow::Error</ns0:text>
+  <ns0:text x="88.8889" y="465.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">    Ok(toml::from_str(&amp;s)?) }</ns0:text>
+  <ns0:rect x="622.2222" y="186.6667" width="462.2222" height="302.2222" fill="var(--warn-pale)" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="622.2222" y="186.6667" width="462.2222" height="40.8889" fill="var(--warn-dk)" rx="10.6667" />
+  <ns0:rect x="622.2222" y="213.3333" width="462.2222" height="14.2222" fill="var(--warn-dk)" />
+  <ns0:text x="664.8889" y="213.3333" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="var(--bg)">thiserror</ns0:text>
+  <ns0:text x="1002.6667" y="211.5556" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--warn-lt)" text-anchor="end">crate: thiserror = "1.0"</ns0:text>
+  <ns0:text x="643.5556" y="250.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--danger-deeper)">Target: Libraries</ns0:text>
+  <ns0:text x="643.5556" y="270.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Derive macro: #[derive(Error)]</ns0:text>
+  <ns0:text x="643.5556" y="286.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Generates std::error::Error impl</ns0:text>
+  <ns0:text x="643.5556" y="302.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">Custom error enums with variants</ns0:text>
+  <ns0:text x="643.5556" y="318.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">#[error("...")] — Display format</ns0:text>
+  <ns0:text x="643.5556" y="334.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">#[from] — auto From conversion</ns0:text>
+  <ns0:rect x="641.7778" y="350.2222" width="423.1111" height="120.8889" fill="var(--text)" rx="7.1111" />
+  <ns0:text x="657.7778" y="369.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--warn-tint)">use thiserror::Error;</ns0:text>
+  <ns0:text x="657.7778" y="385.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)"> </ns0:text>
+  <ns0:text x="657.7778" y="401.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--warn-tint)">#[derive(Debug, Error)]</ns0:text>
+  <ns0:text x="657.7778" y="417.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">pub enum MyError {</ns0:text>
+  <ns0:text x="657.7778" y="433.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--warn-tint)">    #[error("io error: {0}")]</ns0:text>
+  <ns0:text x="657.7778" y="449.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">    Io(#[from] std::io::Error),</ns0:text>
+  <ns0:text x="657.7778" y="465.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--bg)">    #[error("parse failed")] Parse, }</ns0:text>
+  <ns0:rect x="177.7778" y="513.7778" width="782.2222" height="88.8889" fill="var(--primary-pale)" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="536.8889" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">? Operator Flow</ns0:text>
+  <ns0:text x="248.8889" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">call returns</ns0:text>
+  <ns0:text x="248.8889" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Result&lt;T, E&gt;</ns0:text>
+  <ns0:line x1="320" y1="567.1111" x2="391.1111" y2="567.1111" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:text x="435.5556" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Ok(v)</ns0:text>
+  <ns0:text x="435.5556" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">→ unwrap v</ns0:text>
+  <ns0:line x1="480" y1="567.1111" x2="551.1111" y2="567.1111" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:text x="604.4444" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--danger)" text-anchor="middle">Err(e)</ns0:text>
+  <ns0:text x="604.4444" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">→ From::from(e)</ns0:text>
+  <ns0:line x1="664.8889" y1="567.1111" x2="736" y2="567.1111" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <ns0:text x="817.7778" y="560" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">early return</ns0:text>
+  <ns0:text x="817.7778" y="576" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Err(converted)</ns0:text>
 </ns0:svg>

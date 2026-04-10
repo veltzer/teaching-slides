@@ -1,29 +1,126 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="19.961" y="33.6842" width="349.3177" height="269.4737" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="193.6218" y="101.0526" text-anchor="middle" font-size="21.9571" fill="#1565c0" font-weight="bold">Database Storage</ns0:text>
-  <ns0:text x="193.6218" y="161.6842" text-anchor="middle" font-size="19.961" fill="#555">postgres_data volume</ns0:text>
-  <ns0:text x="193.6218" y="215.5789" text-anchor="middle" font-size="19.961" fill="#888">-v pgdata:/var/lib/postgresql</ns0:text>
-  <ns0:text x="193.6218" y="269.4737" text-anchor="middle" font-size="19.961" fill="#888">Named volume for durability</ns0:text>
-  <ns0:rect x="419.1813" y="33.6842" width="349.3177" height="269.4737" fill="#fff3e0" stroke="#e65100" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="592.8421" y="101.0526" text-anchor="middle" font-size="21.9571" fill="#e65100" font-weight="bold">Config Injection</ns0:text>
-  <ns0:text x="592.8421" y="161.6842" text-anchor="middle" font-size="19.961" fill="#555">Bind mount config files</ns0:text>
-  <ns0:text x="592.8421" y="215.5789" text-anchor="middle" font-size="19.961" fill="#888">-v ./nginx.conf:/etc/nginx.conf</ns0:text>
-  <ns0:text x="592.8421" y="269.4737" text-anchor="middle" font-size="19.961" fill="#888">Host file into container</ns0:text>
-  <ns0:rect x="818.4016" y="33.6842" width="349.3177" height="269.4737" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="992.0624" y="101.0526" text-anchor="middle" font-size="21.9571" fill="#2e7d32" font-weight="bold">Shared App Data</ns0:text>
-  <ns0:text x="992.0624" y="161.6842" text-anchor="middle" font-size="19.961" fill="#555">Multi-container sharing</ns0:text>
-  <ns0:text x="992.0624" y="215.5789" text-anchor="middle" font-size="19.961" fill="#888">App + Sidecar share volume</ns0:text>
-  <ns0:text x="992.0624" y="269.4737" text-anchor="middle" font-size="19.961" fill="#888">logs, uploads, cache</ns0:text>
-  <ns0:rect x="239.5322" y="370.5263" width="159.6881" height="117.8947" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.9942" rx="5.9883" />
-  <ns0:text x="319.3762" y="444.6316" text-anchor="middle" font-size="19.961" fill="#7b1fa2">App</ns0:text>
-  <ns0:rect x="638.7525" y="370.5263" width="159.6881" height="117.8947" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.9942" rx="5.9883" />
-  <ns0:text x="718.5965" y="444.6316" text-anchor="middle" font-size="19.961" fill="#7b1fa2">Sidecar</ns0:text>
-  <ns0:rect x="399.2203" y="538.9474" width="399.2203" height="101.0526" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961" fill="#2e7d32">Shared Volume: /app/logs</ns0:text>
-  <ns0:line x1="319.3762" y1="488.4211" x2="499.0253" y2="538.9474" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
-  <ns0:line x1="718.5965" y1="488.4211" x2="698.6355" y2="538.9474" stroke="#333" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
+  <ns0:rect x="19.961" y="33.6842" width="349.3177" height="269.4737" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="193.6218" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--primary-dk)" font-weight="bold">Database Storage</ns0:text>
+  <ns0:text x="193.6218" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">postgres_data volume</ns0:text>
+  <ns0:text x="193.6218" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v pgdata:/var/lib/postgresql</ns0:text>
+  <ns0:text x="193.6218" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Named volume for durability</ns0:text>
+  <ns0:rect x="419.1813" y="33.6842" width="349.3177" height="269.4737" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="592.8421" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--warn-dk)" font-weight="bold">Config Injection</ns0:text>
+  <ns0:text x="592.8421" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Bind mount config files</ns0:text>
+  <ns0:text x="592.8421" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v ./nginx.conf:/etc/nginx.conf</ns0:text>
+  <ns0:text x="592.8421" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Host file into container</ns0:text>
+  <ns0:rect x="818.4016" y="33.6842" width="349.3177" height="269.4737" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="992.0624" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--ok-dk)" font-weight="bold">Shared App Data</ns0:text>
+  <ns0:text x="992.0624" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Multi-container sharing</ns0:text>
+  <ns0:text x="992.0624" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">App + Sidecar share volume</ns0:text>
+  <ns0:text x="992.0624" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">logs, uploads, cache</ns0:text>
+  <ns0:rect x="239.5322" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" rx="5.9883" />
+  <ns0:text x="319.3762" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-mid)">App</ns0:text>
+  <ns0:rect x="638.7525" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" rx="5.9883" />
+  <ns0:text x="718.5965" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-mid)">Sidecar</ns0:text>
+  <ns0:rect x="399.2203" y="538.9474" width="399.2203" height="101.0526" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">Shared Volume: /app/logs</ns0:text>
+  <ns0:line x1="319.3762" y1="488.4211" x2="499.0253" y2="538.9474" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
+  <ns0:line x1="718.5965" y1="488.4211" x2="698.6355" y2="538.9474" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -82,7 +179,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowd7_08_volumes" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
       <ns0:path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </ns0:marker>

@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,34 +156,34 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="23.5402" font-weight="bold" fill="#333">Training Infrastructure: The Hardware Stack</ns0:text>
-  <ns0:rect x="88.2759" y="88.2759" width="411.954" height="191.2644" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9425" />
-  <ns0:text x="294.2529" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#4a90e2">GPU Node 1</ns0:text>
-  <ns0:text x="294.2529" y="158.8966" text-anchor="middle" font-size="16.1839" fill="#555">8x A100 80GB</ns0:text>
-  <ns0:text x="294.2529" y="188.3218" text-anchor="middle" font-size="16.1839" fill="#555">NVLink (600GB/s)</ns0:text>
-  <ns0:text x="294.2529" y="217.7471" text-anchor="middle" font-size="16.1839" fill="#555">2x AMD EPYC CPU</ns0:text>
-  <ns0:text x="294.2529" y="247.1724" text-anchor="middle" font-size="16.1839" fill="#555">2TB RAM</ns0:text>
-  <ns0:rect x="676.7816" y="88.2759" width="411.954" height="191.2644" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9425" />
-  <ns0:text x="882.7586" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#4a90e2">GPU Node 2</ns0:text>
-  <ns0:text x="882.7586" y="158.8966" text-anchor="middle" font-size="16.1839" fill="#555">8x A100 80GB</ns0:text>
-  <ns0:text x="882.7586" y="188.3218" text-anchor="middle" font-size="16.1839" fill="#555">NVLink (600GB/s)</ns0:text>
-  <ns0:text x="882.7586" y="217.7471" text-anchor="middle" font-size="16.1839" fill="#555">2x AMD EPYC CPU</ns0:text>
-  <ns0:text x="882.7586" y="247.1724" text-anchor="middle" font-size="16.1839" fill="#555">2TB RAM</ns0:text>
-  <ns0:line x1="294.2529" y1="279.5402" x2="294.2529" y2="338.3908" stroke="#4a90e2" stroke-width="2.9425" />
-  <ns0:line x1="882.7586" y1="279.5402" x2="882.7586" y2="338.3908" stroke="#4a90e2" stroke-width="2.9425" />
-  <ns0:text x="588.5057" y="316.3218" text-anchor="middle" font-size="14.7126" fill="#4a90e2">InfiniBand 400Gb/s</ns0:text>
-  <ns0:rect x="176.5517" y="338.3908" width="823.908" height="58.8506" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.9425" />
-  <ns0:text x="588.5057" y="375.1724" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#28a745">High-Speed Network Fabric</ns0:text>
-  <ns0:line x1="411.954" y1="397.2414" x2="411.954" y2="441.3793" stroke="#28a745" stroke-width="2.9425" />
-  <ns0:line x1="765.0575" y1="397.2414" x2="765.0575" y2="441.3793" stroke="#28a745" stroke-width="2.9425" />
-  <ns0:rect x="205.977" y="441.3793" width="411.954" height="73.5632" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2069" />
-  <ns0:text x="411.954" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#bf360c">Storage Cluster</ns0:text>
-  <ns0:text x="411.954" y="500.2299" text-anchor="middle" font-size="16.1839" fill="#666">(Petabytes)</ns0:text>
-  <ns0:rect x="676.7816" y="441.3793" width="353.1034" height="73.5632" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2069" />
-  <ns0:text x="853.3333" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#bf360c">Parameter Server</ns0:text>
-  <ns0:text x="853.3333" y="500.2299" text-anchor="middle" font-size="16.1839" fill="#666">(distributed)</ns0:text>
-  <ns0:rect x="147.1264" y="551.7241" width="882.7586" height="88.2759" rx="7.3563" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2069" />
-  <ns0:text x="588.5057" y="584.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#dc3545">Cost Estimates for GPT-4-Scale Training</ns0:text>
-  <ns0:text x="588.5057" y="614.9885" text-anchor="middle" font-size="16.1839" fill="#555">Hardware: ~$500M (25,000 A100s) | Electricity: ~$10M/run | Total: ~$100M+</ns0:text>
+</defs>
+  <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="23.5402" font-weight="bold" fill="var(--text-dark)">Training Infrastructure: The Hardware Stack</ns0:text>
+  <ns0:rect x="88.2759" y="88.2759" width="411.954" height="191.2644" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9425" />
+  <ns0:text x="294.2529" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--primary-bright)">GPU Node 1</ns0:text>
+  <ns0:text x="294.2529" y="158.8966" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">8x A100 80GB</ns0:text>
+  <ns0:text x="294.2529" y="188.3218" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">NVLink (600GB/s)</ns0:text>
+  <ns0:text x="294.2529" y="217.7471" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">2x AMD EPYC CPU</ns0:text>
+  <ns0:text x="294.2529" y="247.1724" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">2TB RAM</ns0:text>
+  <ns0:rect x="676.7816" y="88.2759" width="411.954" height="191.2644" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9425" />
+  <ns0:text x="882.7586" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--primary-bright)">GPU Node 2</ns0:text>
+  <ns0:text x="882.7586" y="158.8966" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">8x A100 80GB</ns0:text>
+  <ns0:text x="882.7586" y="188.3218" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">NVLink (600GB/s)</ns0:text>
+  <ns0:text x="882.7586" y="217.7471" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">2x AMD EPYC CPU</ns0:text>
+  <ns0:text x="882.7586" y="247.1724" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">2TB RAM</ns0:text>
+  <ns0:line x1="294.2529" y1="279.5402" x2="294.2529" y2="338.3908" stroke="var(--primary-bright)" stroke-width="2.9425" />
+  <ns0:line x1="882.7586" y1="279.5402" x2="882.7586" y2="338.3908" stroke="var(--primary-bright)" stroke-width="2.9425" />
+  <ns0:text x="588.5057" y="316.3218" text-anchor="middle" font-size="14.7126" fill="var(--primary-bright)">InfiniBand 400Gb/s</ns0:text>
+  <ns0:rect x="176.5517" y="338.3908" width="823.908" height="58.8506" rx="7.3563" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.9425" />
+  <ns0:text x="588.5057" y="375.1724" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--ok-bright)">High-Speed Network Fabric</ns0:text>
+  <ns0:line x1="411.954" y1="397.2414" x2="411.954" y2="441.3793" stroke="var(--ok-bright)" stroke-width="2.9425" />
+  <ns0:line x1="765.0575" y1="397.2414" x2="765.0575" y2="441.3793" stroke="var(--ok-bright)" stroke-width="2.9425" />
+  <ns0:rect x="205.977" y="441.3793" width="411.954" height="73.5632" rx="7.3563" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.2069" />
+  <ns0:text x="411.954" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--danger-deeper)">Storage Cluster</ns0:text>
+  <ns0:text x="411.954" y="500.2299" text-anchor="middle" font-size="16.1839" fill="var(--text-mid)">(Petabytes)</ns0:text>
+  <ns0:rect x="676.7816" y="441.3793" width="353.1034" height="73.5632" rx="7.3563" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.2069" />
+  <ns0:text x="853.3333" y="473.7471" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--danger-deeper)">Parameter Server</ns0:text>
+  <ns0:text x="853.3333" y="500.2299" text-anchor="middle" font-size="16.1839" fill="var(--text-mid)">(distributed)</ns0:text>
+  <ns0:rect x="147.1264" y="551.7241" width="882.7586" height="88.2759" rx="7.3563" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.2069" />
+  <ns0:text x="588.5057" y="584.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--danger-bright)">Cost Estimates for GPT-4-Scale Training</ns0:text>
+  <ns0:text x="588.5057" y="614.9885" text-anchor="middle" font-size="16.1839" fill="var(--text-muted)">Hardware: ~$500M (25,000 A100s) | Electricity: ~$10M/run | Total: ~$100M+</ns0:text>
 </ns0:svg>

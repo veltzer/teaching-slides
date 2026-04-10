@@ -1,22 +1,119 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <ns0:rect x="68.0851" y="57.4468" width="680.8511" height="68.9362" fill="#e3f2fd" stroke="#1976d2" stroke-width="2.2979" />
+  <ns0:rect x="68.0851" y="57.4468" width="680.8511" height="68.9362" fill="var(--primary-pale)" stroke="var(--primary-mid)" stroke-width="2.2979" />
   <ns0:text x="408.5106" y="97.6596" text-anchor="middle" font-size="18.383" font-weight="bold">Configuration Files</ns0:text>
-  <ns0:rect x="68.0851" y="149.3617" width="217.8723" height="68.9362" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.2979" />
+  <ns0:rect x="68.0851" y="149.3617" width="217.8723" height="68.9362" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.2979" />
   <ns0:text x="177.0212" y="189.5745" text-anchor="middle" font-size="16.0851">Metadata</ns0:text>
-  <ns0:rect x="299.5744" y="149.3617" width="217.8723" height="68.9362" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2979" />
+  <ns0:rect x="299.5744" y="149.3617" width="217.8723" height="68.9362" fill="var(--ok-pale)" stroke="var(--ok-mid)" stroke-width="2.2979" />
   <ns0:text x="408.5106" y="189.5745" text-anchor="middle" font-size="16.0851">BitBake</ns0:text>
-  <ns0:rect x="531.0638" y="149.3617" width="217.8723" height="68.9362" fill="#fff3e0" stroke="#f57c00" stroke-width="2.2979" />
+  <ns0:rect x="531.0638" y="149.3617" width="217.8723" height="68.9362" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2.2979" />
   <ns0:text x="640" y="189.5745" text-anchor="middle" font-size="16.0851">Recipes</ns0:text>
-  <ns0:rect x="204.2553" y="252.7659" width="408.5106" height="68.9362" fill="#fce4ec" stroke="#c2185b" stroke-width="2.2979" />
+  <ns0:rect x="204.2553" y="252.7659" width="408.5106" height="68.9362" fill="var(--danger-pale3)" stroke="var(--danger-pink)" stroke-width="2.2979" />
   <ns0:text x="408.5106" y="292.9787" text-anchor="middle" font-size="18.383" font-weight="bold">Build System</ns0:text>
-  <ns0:rect x="204.2553" y="356.1702" width="408.5106" height="68.9362" fill="#e8f4f8" stroke="#27ae60" stroke-width="2.2979" />
+  <ns0:rect x="204.2553" y="356.1702" width="408.5106" height="68.9362" fill="var(--primary-pale2)" stroke="var(--ok-soft)" stroke-width="2.2979" />
   <ns0:text x="408.5106" y="396.383" text-anchor="middle" font-size="18.383" font-weight="bold">Output Images</ns0:text>
-  <ns0:path d="M 177.0212 218.2979 L 408.5106 252.7659" stroke="#666" stroke-width="2.2979" marker-end="url(#arrow)" />
-  <ns0:path d="M 408.5106 218.2979 L 408.5106 252.7659" stroke="#666" stroke-width="2.2979" marker-end="url(#arrow)" />
-  <ns0:path d="M 640 218.2979 L 408.5106 252.7659" stroke="#666" stroke-width="2.2979" marker-end="url(#arrow)" />
-  <ns0:path d="M 408.5106 321.7021 L 408.5106 356.1702" stroke="#666" stroke-width="2.2979" marker-end="url(#arrow)" />
+  <ns0:path d="M 177.0212 218.2979 L 408.5106 252.7659" stroke="var(--text-mid)" stroke-width="2.2979" marker-end="url(#arrow)" />
+  <ns0:path d="M 408.5106 218.2979 L 408.5106 252.7659" stroke="var(--text-mid)" stroke-width="2.2979" marker-end="url(#arrow)" />
+  <ns0:path d="M 640 218.2979 L 408.5106 252.7659" stroke="var(--text-mid)" stroke-width="2.2979" marker-end="url(#arrow)" />
+  <ns0:path d="M 408.5106 321.7021 L 408.5106 356.1702" stroke="var(--text-mid)" stroke-width="2.2979" marker-end="url(#arrow)" />
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -75,7 +172,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="21.3333" markerHeight="18" refX="19.2" refY="5.4" orient="auto">
       <ns0:polygon points="0,18 6.4,0" fill="#666" />
     </ns0:marker>

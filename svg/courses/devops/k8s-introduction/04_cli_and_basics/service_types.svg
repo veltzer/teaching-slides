@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,29 +156,29 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <rect x="80" y="90" width="1120" height="540" fill="#f0f0f0" stroke="#333" stroke-width="3.2" />
+</defs>
+  <rect x="80" y="90" width="1120" height="540" fill="var(--surface-dark)" stroke="var(--text-dark)" stroke-width="3.2" />
   <text x="640" y="54" text-anchor="middle" font-size="28.8" font-weight="bold">Kubernetes Service Types</text>
-  <rect x="160" y="180" width="240" height="360" fill="#4285f4" rx="8" />
-  <text x="280" y="234" text-anchor="middle" fill="white" font-weight="bold">ClusterIP</text>
-  <text x="280" y="279" text-anchor="middle" fill="white" font-size="17.6">Internal only</text>
-  <circle cx="280" cy="360" r="32" fill="white" />
+  <rect x="160" y="180" width="240" height="360" fill="var(--primary-google)" rx="8" />
+  <text x="280" y="234" text-anchor="middle" fill="var(--bg)" font-weight="bold">ClusterIP</text>
+  <text x="280" y="279" text-anchor="middle" fill="var(--bg)" font-size="17.6">Internal only</text>
+  <circle cx="280" cy="360" r="32" fill="var(--bg)" />
   <text x="280" y="369" text-anchor="middle" font-size="16">Pod</text>
-  <circle cx="280" cy="450" r="32" fill="white" />
+  <circle cx="280" cy="450" r="32" fill="var(--bg)" />
   <text x="280" y="459" text-anchor="middle" font-size="16">Pod</text>
-  <rect x="440" y="180" width="240" height="360" fill="#34a853" rx="8" />
-  <text x="560" y="234" text-anchor="middle" fill="white" font-weight="bold">NodePort</text>
-  <text x="560" y="279" text-anchor="middle" fill="white" font-size="17.6">Node IP:Port</text>
-  <rect x="472" y="324" width="176" height="54" fill="white" rx="4.8" />
+  <rect x="440" y="180" width="240" height="360" fill="var(--ok-google)" rx="8" />
+  <text x="560" y="234" text-anchor="middle" fill="var(--bg)" font-weight="bold">NodePort</text>
+  <text x="560" y="279" text-anchor="middle" fill="var(--bg)" font-size="17.6">Node IP:Port</text>
+  <rect x="472" y="324" width="176" height="54" fill="var(--bg)" rx="4.8" />
   <text x="560" y="360" text-anchor="middle" font-size="16">30000-32767</text>
-  <rect x="720" y="180" width="240" height="360" fill="#fbbc04" rx="8" />
+  <rect x="720" y="180" width="240" height="360" fill="var(--warn-bright)" rx="8" />
   <text x="840" y="234" text-anchor="middle" font-weight="bold">LoadBalancer</text>
   <text x="840" y="279" text-anchor="middle" font-size="17.6">External LB</text>
-  <rect x="752" y="324" width="176" height="54" fill="white" rx="4.8" />
+  <rect x="752" y="324" width="176" height="54" fill="var(--bg)" rx="4.8" />
   <text x="840" y="360" text-anchor="middle" font-size="16">Cloud Provider</text>
-  <rect x="1000" y="180" width="200" height="360" fill="#ea4335" rx="8" />
-  <text x="1099.2" y="234" text-anchor="middle" fill="white" font-weight="bold">ExternalName</text>
-  <text x="1099.2" y="279" text-anchor="middle" fill="white" font-size="17.6">DNS CNAME</text>
-  <rect x="1016" y="324" width="168" height="54" fill="white" rx="4.8" />
+  <rect x="1000" y="180" width="200" height="360" fill="var(--danger-google)" rx="8" />
+  <text x="1099.2" y="234" text-anchor="middle" fill="var(--bg)" font-weight="bold">ExternalName</text>
+  <text x="1099.2" y="279" text-anchor="middle" fill="var(--bg)" font-size="17.6">DNS CNAME</text>
+  <rect x="1016" y="324" width="168" height="54" fill="var(--bg)" rx="4.8" />
   <text x="1099.2" y="360" text-anchor="middle" font-size="16">External DNS</text>
 </svg>

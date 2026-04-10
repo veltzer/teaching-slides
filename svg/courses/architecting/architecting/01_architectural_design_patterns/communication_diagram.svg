@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="12.073">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="14.4" refX="16" refY="7.2" orient="auto">
       <ns0:polygon points="0,20.5714 5.6,0" fill="#4a90e2" />
     </ns0:marker>
@@ -67,29 +164,29 @@
       <ns0:polygon points="0,20.5714 5.6,0" fill="#28a745" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:text x="594.3616" y="47.7612" text-anchor="middle" font-size="23.7745" font-weight="bold" fill="#333">Client-Server Communication</ns0:text>
-  <ns0:rect x="44.5771" y="114.6269" width="178.3085" height="76.4179" rx="7.4295" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9718" />
-  <ns0:text x="133.7314" y="162.388" text-anchor="middle" fill="#333">Client 1</ns0:text>
-  <ns0:rect x="44.5771" y="267.4627" width="178.3085" height="76.4179" rx="7.4295" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9718" />
-  <ns0:text x="133.7314" y="315.2239" text-anchor="middle" fill="#333">Client 2</ns0:text>
-  <ns0:rect x="44.5771" y="420.2985" width="178.3085" height="76.4179" rx="7.4295" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9718" />
-  <ns0:text x="133.7314" y="468.0597" text-anchor="middle" fill="#333">Client 3</ns0:text>
-  <ns0:rect x="505.2073" y="229.2537" width="208.0266" height="95.5224" rx="7.4295" fill="#d4edda" stroke="#28a745" stroke-width="2.9718" />
-  <ns0:text x="609.2206" y="286.5672" text-anchor="middle" font-weight="bold" fill="#333">Server</ns0:text>
-  <ns0:rect x="921.2604" y="238.806" width="208.0266" height="76.4179" rx="7.4295" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9718" />
-  <ns0:text x="1025.2737" y="286.5672" text-anchor="middle" fill="#333">Database</ns0:text>
-  <ns0:line x1="222.8856" y1="152.8358" x2="502.2355" y2="252.1792" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrow)" />
-  <ns0:text x="341.7579" y="183.403" text-anchor="middle" font-size="16.3449" fill="#4a90e2">Request</ns0:text>
-  <ns0:line x1="222.8856" y1="305.6717" x2="502.2355" y2="282.7463" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrow)" />
-  <ns0:text x="341.7579" y="282.7463" text-anchor="middle" font-size="16.3449" fill="#4a90e2">Request</ns0:text>
-  <ns0:line x1="222.8856" y1="458.5075" x2="502.2355" y2="305.6717" stroke="#4a90e2" stroke-width="2.9718" marker-end="url(#arrow)" />
-  <ns0:text x="341.7579" y="401.1941" text-anchor="middle" font-size="16.3449" fill="#4a90e2">Request</ns0:text>
-  <ns0:line x1="505.2073" y1="263.6418" x2="225.8574" y2="168.1194" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
-  <ns0:text x="386.335" y="229.2537" text-anchor="middle" font-size="16.3449" fill="#28a745">Response</ns0:text>
-  <ns0:line x1="505.2073" y1="290.3881" x2="225.8574" y2="320.9553" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
-  <ns0:line x1="505.2073" y1="309.4925" x2="225.8574" y2="443.2239" stroke="#28a745" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
-  <ns0:line x1="713.2339" y1="277.0149" x2="918.2886" y2="277.0149" stroke="#ffc107" stroke-width="2.9718" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow)" />
-  <ns0:text x="817.2472" y="263.6418" text-anchor="middle" font-size="16.3449" fill="#bf360c">Manages</ns0:text>
-  <ns0:rect x="44.5771" y="554.0299" width="1099.5689" height="85.9701" rx="7.4295" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4859" />
-  <ns0:text x="594.3616" y="607.5224" text-anchor="middle" font-size="17.8308" fill="#555">Multiple clients send requests to a central server, which manages a database and returns responses.</ns0:text>
+  <ns0:text x="594.3616" y="47.7612" text-anchor="middle" font-size="23.7745" font-weight="bold" fill="var(--text-dark)">Client-Server Communication</ns0:text>
+  <ns0:rect x="44.5771" y="114.6269" width="178.3085" height="76.4179" rx="7.4295" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9718" />
+  <ns0:text x="133.7314" y="162.388" text-anchor="middle" fill="var(--text-dark)">Client 1</ns0:text>
+  <ns0:rect x="44.5771" y="267.4627" width="178.3085" height="76.4179" rx="7.4295" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9718" />
+  <ns0:text x="133.7314" y="315.2239" text-anchor="middle" fill="var(--text-dark)">Client 2</ns0:text>
+  <ns0:rect x="44.5771" y="420.2985" width="178.3085" height="76.4179" rx="7.4295" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9718" />
+  <ns0:text x="133.7314" y="468.0597" text-anchor="middle" fill="var(--text-dark)">Client 3</ns0:text>
+  <ns0:rect x="505.2073" y="229.2537" width="208.0266" height="95.5224" rx="7.4295" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.9718" />
+  <ns0:text x="609.2206" y="286.5672" text-anchor="middle" font-weight="bold" fill="var(--text-dark)">Server</ns0:text>
+  <ns0:rect x="921.2604" y="238.806" width="208.0266" height="76.4179" rx="7.4295" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.9718" />
+  <ns0:text x="1025.2737" y="286.5672" text-anchor="middle" fill="var(--text-dark)">Database</ns0:text>
+  <ns0:line x1="222.8856" y1="152.8358" x2="502.2355" y2="252.1792" stroke="var(--primary-bright)" stroke-width="2.9718" marker-end="url(#arrow)" />
+  <ns0:text x="341.7579" y="183.403" text-anchor="middle" font-size="16.3449" fill="var(--primary-bright)">Request</ns0:text>
+  <ns0:line x1="222.8856" y1="305.6717" x2="502.2355" y2="282.7463" stroke="var(--primary-bright)" stroke-width="2.9718" marker-end="url(#arrow)" />
+  <ns0:text x="341.7579" y="282.7463" text-anchor="middle" font-size="16.3449" fill="var(--primary-bright)">Request</ns0:text>
+  <ns0:line x1="222.8856" y1="458.5075" x2="502.2355" y2="305.6717" stroke="var(--primary-bright)" stroke-width="2.9718" marker-end="url(#arrow)" />
+  <ns0:text x="341.7579" y="401.1941" text-anchor="middle" font-size="16.3449" fill="var(--primary-bright)">Request</ns0:text>
+  <ns0:line x1="505.2073" y1="263.6418" x2="225.8574" y2="168.1194" stroke="var(--ok-bright)" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
+  <ns0:text x="386.335" y="229.2537" text-anchor="middle" font-size="16.3449" fill="var(--ok-bright)">Response</ns0:text>
+  <ns0:line x1="505.2073" y1="290.3881" x2="225.8574" y2="320.9553" stroke="var(--ok-bright)" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="505.2073" y1="309.4925" x2="225.8574" y2="443.2239" stroke="var(--ok-bright)" stroke-width="2.2289" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow-ok)" />
+  <ns0:line x1="713.2339" y1="277.0149" x2="918.2886" y2="277.0149" stroke="var(--warn-yellow)" stroke-width="2.9718" stroke-dasharray="8.9154 4.4577" marker-end="url(#arrow)" />
+  <ns0:text x="817.2472" y="263.6418" text-anchor="middle" font-size="16.3449" fill="var(--danger-deeper)">Manages</ns0:text>
+  <ns0:rect x="44.5771" y="554.0299" width="1099.5689" height="85.9701" rx="7.4295" fill="var(--surface-light)" stroke="var(--border-softer)" stroke-width="1.4859" />
+  <ns0:text x="594.3616" y="607.5224" text-anchor="middle" font-size="17.8308" fill="var(--text-muted)">Multiple clients send requests to a central server, which manages a database and returns responses.</ns0:text>
 </ns0:svg>

@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,31 +156,31 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arw3" markerWidth="19.3939" markerHeight="14.4828" refX="17.4545" refY="7.2414" orient="auto">
       <ns0:polygon points="0,20.6897 6.7879,0" fill="#555" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect x="1.7289" y="1.8444" width="1137.5988" height="638.1556" rx="6.9155" fill="#fff" stroke="#333" stroke-width="2.5933" />
-  <ns0:rect x="1.7289" y="1.8444" width="1137.5988" height="62.7089" rx="6.9155" fill="#e3f2fd" stroke="#333" stroke-width="2.5933" />
-  <ns0:text x="570.5283" y="42.4207" font-size="25.9331" font-weight="bold" fill="#222" text-anchor="middle">Ransomware Encryption Architecture</ns0:text>
-  <ns0:text x="24.2042" y="99.5965" font-size="22.4753" font-weight="bold" fill="#c62828">Attacker has:</ns0:text>
-  <ns0:text x="24.2042" y="132.7954" font-size="22.4753" fill="#333">• Master RSA key pair — private key kept by attacker only</ns0:text>
-  <ns0:text x="24.2042" y="180.7492" font-size="22.4753" font-weight="bold" fill="#1565c0">Per-victim:</ns0:text>
-  <ns0:text x="24.2042" y="213.9481" font-size="22.4753" fill="#333">1. Generate unique RSA key pair for this victim</ns0:text>
-  <ns0:text x="24.2042" y="247.147" font-size="22.4753" fill="#333">2. Encrypt victim RSA private key with master public key (stored in ransom note)</ns0:text>
-  <ns0:text x="24.2042" y="295.1009" font-size="22.4753" font-weight="bold" fill="#e65100">Per-file:</ns0:text>
-  <ns0:text x="24.2042" y="328.2997" font-size="22.4753" fill="#333">3. Generate random AES-256 key</ns0:text>
-  <ns0:text x="24.2042" y="361.4985" font-size="22.4753" fill="#333">4. Encrypt file contents with AES-256 (fast)</ns0:text>
-  <ns0:text x="24.2042" y="394.6974" font-size="22.4753" fill="#333">5. Encrypt AES key with victim RSA public key</ns0:text>
-  <ns0:text x="24.2042" y="427.8962" font-size="22.4753" fill="#333">6. Append encrypted AES key to encrypted file</ns0:text>
-  <ns0:rect x="51.8662" y="464.7838" width="207.4649" height="95.9078" rx="6.9155" fill="#fff3e0" stroke="#e65100" stroke-width="2.5933" />
-  <ns0:text x="155.5987" y="505.3602" font-size="20.7465" font-weight="bold" fill="#333" text-anchor="middle">Original</ns0:text>
-  <ns0:text x="155.5987" y="538.559" font-size="20.7465" fill="#333" text-anchor="middle">File</ns0:text>
-  <ns0:line x1="259.331" y1="512.7377" x2="397.6409" y2="512.7377" stroke="#555" stroke-width="2.5933" marker-end="url(#arw3)" />
-  <ns0:text x="328.4859" y="497.9827" font-size="19.0176" fill="#555" text-anchor="middle">AES-256</ns0:text>
-  <ns0:rect x="397.6409" y="464.7838" width="311.1972" height="95.9078" rx="6.9155" fill="#f5f5f5" stroke="#333" stroke-width="2.5933" />
-  <ns0:text x="553.2396" y="505.3602" font-size="20.7465" font-weight="bold" fill="#333" text-anchor="middle">Encrypted File</ns0:text>
-  <ns0:text x="553.2396" y="538.559" font-size="19.0176" fill="#555" text-anchor="middle">+ Encrypted AES key (RSA)</ns0:text>
-  <ns0:text x="24.2042" y="616.023" font-size="22.4753" fill="#555" font-style="italic">Only the attacker's master private key can start the decryption chain</ns0:text>
+  <ns0:rect x="1.7289" y="1.8444" width="1137.5988" height="638.1556" rx="6.9155" fill="var(--bg)" stroke="var(--text-dark)" stroke-width="2.5933" />
+  <ns0:rect x="1.7289" y="1.8444" width="1137.5988" height="62.7089" rx="6.9155" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.5933" />
+  <ns0:text x="570.5283" y="42.4207" font-size="25.9331" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">Ransomware Encryption Architecture</ns0:text>
+  <ns0:text x="24.2042" y="99.5965" font-size="22.4753" font-weight="bold" fill="var(--danger-dk)">Attacker has:</ns0:text>
+  <ns0:text x="24.2042" y="132.7954" font-size="22.4753" fill="var(--text-dark)">• Master RSA key pair — private key kept by attacker only</ns0:text>
+  <ns0:text x="24.2042" y="180.7492" font-size="22.4753" font-weight="bold" fill="var(--primary-dk)">Per-victim:</ns0:text>
+  <ns0:text x="24.2042" y="213.9481" font-size="22.4753" fill="var(--text-dark)">1. Generate unique RSA key pair for this victim</ns0:text>
+  <ns0:text x="24.2042" y="247.147" font-size="22.4753" fill="var(--text-dark)">2. Encrypt victim RSA private key with master public key (stored in ransom note)</ns0:text>
+  <ns0:text x="24.2042" y="295.1009" font-size="22.4753" font-weight="bold" fill="var(--warn-dk)">Per-file:</ns0:text>
+  <ns0:text x="24.2042" y="328.2997" font-size="22.4753" fill="var(--text-dark)">3. Generate random AES-256 key</ns0:text>
+  <ns0:text x="24.2042" y="361.4985" font-size="22.4753" fill="var(--text-dark)">4. Encrypt file contents with AES-256 (fast)</ns0:text>
+  <ns0:text x="24.2042" y="394.6974" font-size="22.4753" fill="var(--text-dark)">5. Encrypt AES key with victim RSA public key</ns0:text>
+  <ns0:text x="24.2042" y="427.8962" font-size="22.4753" fill="var(--text-dark)">6. Append encrypted AES key to encrypted file</ns0:text>
+  <ns0:rect x="51.8662" y="464.7838" width="207.4649" height="95.9078" rx="6.9155" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.5933" />
+  <ns0:text x="155.5987" y="505.3602" font-size="20.7465" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Original</ns0:text>
+  <ns0:text x="155.5987" y="538.559" font-size="20.7465" fill="var(--text-dark)" text-anchor="middle">File</ns0:text>
+  <ns0:line x1="259.331" y1="512.7377" x2="397.6409" y2="512.7377" stroke="var(--text-muted)" stroke-width="2.5933" marker-end="url(#arw3)" />
+  <ns0:text x="328.4859" y="497.9827" font-size="19.0176" fill="var(--text-muted)" text-anchor="middle">AES-256</ns0:text>
+  <ns0:rect x="397.6409" y="464.7838" width="311.1972" height="95.9078" rx="6.9155" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.5933" />
+  <ns0:text x="553.2396" y="505.3602" font-size="20.7465" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Encrypted File</ns0:text>
+  <ns0:text x="553.2396" y="538.559" font-size="19.0176" fill="var(--text-muted)" text-anchor="middle">+ Encrypted AES key (RSA)</ns0:text>
+  <ns0:text x="24.2042" y="616.023" font-size="22.4753" fill="var(--text-muted)" font-style="italic">Only the attacker's master private key can start the decryption chain</ns0:text>
 </ns0:svg>

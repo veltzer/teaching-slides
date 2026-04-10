@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,35 +156,35 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
       <ns0:polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect x="30.0247" y="26.6667" width="525.4321" height="266.6666" rx="7.5062" fill="none" stroke="#4a90e2" stroke-width="2.2519" stroke-dasharray="7.5062" />
-  <ns0:text x="292.7407" y="62.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0148" fill="#4a90e2" font-weight="bold">Per Service</ns0:text>
-  <ns0:rect x="60.0494" y="88.8888" width="165.1358" height="71.1111" rx="7.5062" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0025" />
+  <ns0:rect x="30.0247" y="26.6667" width="525.4321" height="266.6666" rx="7.5062" fill="none" stroke="var(--primary-bright)" stroke-width="2.2519" stroke-dasharray="7.5062" />
+  <ns0:text x="292.7407" y="62.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0148" fill="var(--primary-bright)" font-weight="bold">Per Service</ns0:text>
+  <ns0:rect x="60.0494" y="88.8888" width="165.1358" height="71.1111" rx="7.5062" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0025" />
   <ns0:text x="142.6173" y="133.3334" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5136">Source Code</ns0:text>
-  <ns0:rect x="60.0494" y="195.5556" width="165.1358" height="71.1111" rx="7.5062" fill="#d4edda" stroke="#28a745" stroke-width="3.0025" />
+  <ns0:rect x="60.0494" y="195.5556" width="165.1358" height="71.1111" rx="7.5062" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.0025" />
   <ns0:text x="142.6173" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5136">CI Pipeline</ns0:text>
-  <ns0:rect x="285.2346" y="195.5556" width="195.1605" height="71.1111" rx="7.5062" fill="#d4edda" stroke="#28a745" stroke-width="3.0025" />
+  <ns0:rect x="285.2346" y="195.5556" width="195.1605" height="71.1111" rx="7.5062" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.0025" />
   <ns0:text x="382.8148" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5136">Container Image</ns0:text>
-  <ns0:line x1="142.6173" y1="160" x2="142.6173" y2="192" stroke="#4a90e2" stroke-width="2.2519" marker-end="url(#arrow)" />
-  <ns0:line x1="225.1852" y1="231.1111" x2="282.2321" y2="231.1111" stroke="#4a90e2" stroke-width="2.2519" marker-end="url(#arrow)" />
-  <ns0:rect x="645.5308" y="195.5556" width="180.1481" height="71.1111" rx="7.5062" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0025" />
+  <ns0:line x1="142.6173" y1="160" x2="142.6173" y2="192" stroke="var(--primary-bright)" stroke-width="2.2519" marker-end="url(#arrow)" />
+  <ns0:line x1="225.1852" y1="231.1111" x2="282.2321" y2="231.1111" stroke="var(--primary-bright)" stroke-width="2.2519" marker-end="url(#arrow)" />
+  <ns0:rect x="645.5308" y="195.5556" width="180.1481" height="71.1111" rx="7.5062" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.0025" />
   <ns0:text x="735.6049" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0148" font-weight="bold">Registry</ns0:text>
-  <ns0:line x1="480.395" y1="231.1111" x2="642.5284" y2="231.1111" stroke="#4a90e2" stroke-width="3.0025" marker-end="url(#arrow)" />
-  <ns0:rect x="570.4691" y="337.7778" width="600.4938" height="302.2222" rx="7.5062" fill="none" stroke="#28a745" stroke-width="2.2519" stroke-dasharray="7.5062" />
-  <ns0:text x="870.716" y="373.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0148" fill="#28a745" font-weight="bold">Shared CD Pipeline</ns0:text>
-  <ns0:rect x="600.4938" y="400" width="180.1481" height="71.1111" rx="7.5062" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0025" />
+  <ns0:line x1="480.395" y1="231.1111" x2="642.5284" y2="231.1111" stroke="var(--primary-bright)" stroke-width="3.0025" marker-end="url(#arrow)" />
+  <ns0:rect x="570.4691" y="337.7778" width="600.4938" height="302.2222" rx="7.5062" fill="none" stroke="var(--ok-bright)" stroke-width="2.2519" stroke-dasharray="7.5062" />
+  <ns0:text x="870.716" y="373.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0148" fill="var(--ok-bright)" font-weight="bold">Shared CD Pipeline</ns0:text>
+  <ns0:rect x="600.4938" y="400" width="180.1481" height="71.1111" rx="7.5062" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0025" />
   <ns0:text x="690.5679" y="444.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5136">Dev Cluster</ns0:text>
-  <ns0:rect x="600.4938" y="515.5555" width="180.1481" height="71.1111" rx="7.5062" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0025" />
+  <ns0:rect x="600.4938" y="515.5555" width="180.1481" height="71.1111" rx="7.5062" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.0025" />
   <ns0:text x="690.5679" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5136">Staging Cluster</ns0:text>
-  <ns0:rect x="930.7654" y="515.5555" width="210.1728" height="71.1111" rx="7.5062" fill="#d4edda" stroke="#28a745" stroke-width="3.0025" />
+  <ns0:rect x="930.7654" y="515.5555" width="210.1728" height="71.1111" rx="7.5062" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.0025" />
   <ns0:text x="1035.8518" y="554.6666" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5136" font-weight="bold">Production</ns0:text>
-  <ns0:line x1="735.6049" y1="266.6666" x2="690.5679" y2="396.4444" stroke="#4a90e2" stroke-width="3.0025" marker-end="url(#arrow)" />
-  <ns0:line x1="690.5679" y1="471.1111" x2="690.5679" y2="512" stroke="#4a90e2" stroke-width="2.2519" marker-end="url(#arrow)" />
-  <ns0:text x="713.0864" y="497.7777" font-family="Arial, sans-serif" font-size="15.0123" fill="#666">Promote</ns0:text>
-  <ns0:line x1="780.6419" y1="551.1111" x2="927.7629" y2="551.1111" stroke="#28a745" stroke-width="3.0025" marker-end="url(#arrow)" />
-  <ns0:text x="854.2024" y="538.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0123" fill="#666">Approve</ns0:text>
+  <ns0:line x1="735.6049" y1="266.6666" x2="690.5679" y2="396.4444" stroke="var(--primary-bright)" stroke-width="3.0025" marker-end="url(#arrow)" />
+  <ns0:line x1="690.5679" y1="471.1111" x2="690.5679" y2="512" stroke="var(--primary-bright)" stroke-width="2.2519" marker-end="url(#arrow)" />
+  <ns0:text x="713.0864" y="497.7777" font-family="Arial, sans-serif" font-size="15.0123" fill="var(--text-mid)">Promote</ns0:text>
+  <ns0:line x1="780.6419" y1="551.1111" x2="927.7629" y2="551.1111" stroke="var(--ok-bright)" stroke-width="3.0025" marker-end="url(#arrow)" />
+  <ns0:text x="854.2024" y="538.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0123" fill="var(--text-mid)">Approve</ns0:text>
 </ns0:svg>

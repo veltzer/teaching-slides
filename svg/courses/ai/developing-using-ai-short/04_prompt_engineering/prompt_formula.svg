@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,132 +156,120 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- == FORMULA HEADER == -->
   <rect x="60" y="30" width="1160" height="50" rx="8" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="640" y="62" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Context + Task + Constraints + Format + Examples = Effective Prompt</text>
+  <text x="640" y="62" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)" text-anchor="middle">Context + Task + Constraints + Format + Examples = Effective Prompt</text>
 
   <!-- == FIVE COMPONENTS == -->
   <!-- Context -->
-  <rect x="60" y="100" width="210" height="130" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="165" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="middle">CONTEXT</text>
-  <text x="165" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Who you are,</text>
-  <text x="165" y="167" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">what project,</text>
-  <text x="165" y="184" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">language/stack,</text>
-  <text x="165" y="201" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">existing codebase</text>
-  <text x="270" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa" text-anchor="middle">+</text>
+  <rect x="60" y="100" width="210" height="130" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="165" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">CONTEXT</text>
+  <text x="165" y="150" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">Who you are,</text>
+  <text x="165" y="167" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">what project,</text>
+  <text x="165" y="184" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">language/stack,</text>
+  <text x="165" y="201" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">existing codebase</text>
+  <text x="270" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-placeholder)" text-anchor="middle">+</text>
 
   <!-- Task -->
-  <rect x="290" y="100" width="210" height="130" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="395" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2e7d32" text-anchor="middle">TASK</text>
-  <text x="395" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Specific action:</text>
-  <text x="395" y="167" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">write, fix, explain,</text>
-  <text x="395" y="184" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">refactor, test,</text>
-  <text x="395" y="201" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">document</text>
-  <text x="500" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa" text-anchor="middle">+</text>
+  <rect x="290" y="100" width="210" height="130" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="395" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">TASK</text>
+  <text x="395" y="150" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">Specific action:</text>
+  <text x="395" y="167" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">write, fix, explain,</text>
+  <text x="395" y="184" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">refactor, test,</text>
+  <text x="395" y="201" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">document</text>
+  <text x="500" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-placeholder)" text-anchor="middle">+</text>
 
   <!-- Constraints -->
-  <rect x="520" y="100" width="210" height="130" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="625" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f57c00" text-anchor="middle">CONSTRAINTS</text>
-  <text x="625" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">No dependencies,</text>
-  <text x="625" y="167" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">max lines, style,</text>
-  <text x="625" y="184" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">performance, or</text>
-  <text x="625" y="201" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">security rules</text>
-  <text x="730" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa" text-anchor="middle">+</text>
+  <rect x="520" y="100" width="210" height="130" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="625" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-mid)" text-anchor="middle">CONSTRAINTS</text>
+  <text x="625" y="150" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">No dependencies,</text>
+  <text x="625" y="167" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">max lines, style,</text>
+  <text x="625" y="184" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">performance, or</text>
+  <text x="625" y="201" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">security rules</text>
+  <text x="730" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-placeholder)" text-anchor="middle">+</text>
 
   <!-- Format -->
-  <rect x="750" y="100" width="210" height="130" rx="10" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <text x="855" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#6a1b9a" text-anchor="middle">FORMAT</text>
-  <text x="855" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Code block, JSON,</text>
-  <text x="855" y="167" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">markdown, step-by-</text>
-  <text x="855" y="184" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">step explanation,</text>
-  <text x="855" y="201" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">inline comments</text>
-  <text x="960" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#aaaaaa" text-anchor="middle">+</text>
+  <rect x="750" y="100" width="210" height="130" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="855" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">FORMAT</text>
+  <text x="855" y="150" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">Code block, JSON,</text>
+  <text x="855" y="167" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">markdown, step-by-</text>
+  <text x="855" y="184" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">step explanation,</text>
+  <text x="855" y="201" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">inline comments</text>
+  <text x="960" y="168" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-placeholder)" text-anchor="middle">+</text>
 
   <!-- Examples -->
-  <rect x="980" y="100" width="260" height="130" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1110" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#c62828" text-anchor="middle">EXAMPLES</text>
-  <text x="1110" y="150" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Sample input/output,</text>
-  <text x="1110" y="167" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">existing code style,</text>
-  <text x="1110" y="184" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">test cases, or data</text>
-  <text x="1110" y="201" font-family="Arial, sans-serif" font-size="12" fill="#333333" text-anchor="middle">to guide the model</text>
+  <rect x="980" y="100" width="260" height="130" rx="10" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1110" y="128" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">EXAMPLES</text>
+  <text x="1110" y="150" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">Sample input/output,</text>
+  <text x="1110" y="167" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">existing code style,</text>
+  <text x="1110" y="184" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">test cases, or data</text>
+  <text x="1110" y="201" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" text-anchor="middle">to guide the model</text>
 
   <!-- == BEFORE / AFTER == -->
-  <text x="60" y="268" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#c62828">BEFORE: Vague Prompt</text>
-  <rect x="60" y="278" width="560" height="120" rx="8" fill="#f9f9f9" stroke="#e74c3c" stroke-width="1.5"/>
-  <text x="80" y="302" font-family="monospace" font-size="13" fill="#555555">"Write a function to sort a list."</text>
-  <text x="80" y="332" font-family="Arial, sans-serif" font-size="13" fill="#c62828">Problems:</text>
-  <text x="80" y="352" font-family="Arial, sans-serif" font-size="13" fill="#777777">&#x2022; No language specified</text>
-  <text x="80" y="370" font-family="Arial, sans-serif" font-size="13" fill="#777777">&#x2022; No constraints (size, type, stability)</text>
-  <text x="80" y="388" font-family="Arial, sans-serif" font-size="13" fill="#777777">&#x2022; No format preference, no examples</text>
+  <text x="60" y="268" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-dk)">BEFORE: Vague Prompt</text>
+  <rect x="60" y="278" width="560" height="120" rx="8" fill="var(--surface-light)" stroke="var(--danger-light)" stroke-width="1.5"/>
+  <text x="80" y="302" font-family="monospace" font-size="13" fill="var(--text-muted)">"Write a function to sort a list."</text>
+  <text x="80" y="332" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-dk)">Problems:</text>
+  <text x="80" y="352" font-family="Arial, sans-serif" font-size="13" fill="var(--text-lighter)">&#x2022; No language specified</text>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-size="13" fill="var(--text-lighter)">&#x2022; No constraints (size, type, stability)</text>
+  <text x="80" y="388" font-family="Arial, sans-serif" font-size="13" fill="var(--text-lighter)">&#x2022; No format preference, no examples</text>
 
-  <text x="660" y="268" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2e7d32">AFTER: Structured Prompt</text>
-  <rect x="660" y="278" width="560" height="120" rx="8" fill="#f5f5f5" stroke="#4caf50" stroke-width="1.5"/>
-  <text x="680" y="302" font-family="monospace" font-size="12" fill="#333333">"In Python 3.11, write a function that sorts</text>
-  <text x="680" y="320" font-family="monospace" font-size="12" fill="#333333">a list of dicts by a given key. Use only</text>
-  <text x="680" y="338" font-family="monospace" font-size="12" fill="#333333">stdlib, add type hints, include docstring.</text>
-  <text x="680" y="356" font-family="monospace" font-size="12" fill="#333333">Example: sort_by_key(data, 'age') -&gt; [...]"</text>
-  <text x="680" y="382" font-family="Arial, sans-serif" font-size="13" fill="#2e7d32">Context + Task + Constraints + Format + Example</text>
+  <text x="660" y="268" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">AFTER: Structured Prompt</text>
+  <rect x="660" y="278" width="560" height="120" rx="8" fill="var(--surface)" stroke="var(--ok-light)" stroke-width="1.5"/>
+  <text x="680" y="302" font-family="monospace" font-size="12" fill="var(--text-dark)">"In Python 3.11, write a function that sorts</text>
+  <text x="680" y="320" font-family="monospace" font-size="12" fill="var(--text-dark)">a list of dicts by a given key. Use only</text>
+  <text x="680" y="338" font-family="monospace" font-size="12" fill="var(--text-dark)">stdlib, add type hints, include docstring.</text>
+  <text x="680" y="356" font-family="monospace" font-size="12" fill="var(--text-dark)">Example: sort_by_key(data, 'age') -&gt; [...]"</text>
+  <text x="680" y="382" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">Context + Task + Constraints + Format + Example</text>
 
   <!-- == TIPS ROW == -->
-  <text x="60" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#555555">Advanced Techniques</text>
+  <text x="60" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-muted)">Advanced Techniques</text>
 
-  <rect x="60" y="445" width="280" height="165" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="200" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Chain of Thought</text>
-  <text x="80" y="492" font-family="Arial, sans-serif" font-size="13" fill="#333333">Ask the model to "think step</text>
-  <text x="80" y="510" font-family="Arial, sans-serif" font-size="13" fill="#333333">by step" before answering.</text>
-  <text x="80" y="528" font-family="Arial, sans-serif" font-size="13" fill="#333333">Surfaces reasoning errors</text>
-  <text x="80" y="546" font-family="Arial, sans-serif" font-size="13" fill="#333333">and produces better results</text>
-  <text x="80" y="564" font-family="Arial, sans-serif" font-size="13" fill="#333333">for complex logic tasks.</text>
-  <text x="80" y="598" font-family="monospace" font-size="12" fill="#666666">"First reason through ...</text>
-  <text x="80" y="614" font-family="monospace" font-size="12" fill="#666666"> then write the code."</text>
+  <rect x="60" y="445" width="280" height="165" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="200" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Chain of Thought</text>
+  <text x="80" y="492" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Ask the model to "think step</text>
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">by step" before answering.</text>
+  <text x="80" y="528" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Surfaces reasoning errors</text>
+  <text x="80" y="546" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">and produces better results</text>
+  <text x="80" y="564" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">for complex logic tasks.</text>
+  <text x="80" y="598" font-family="monospace" font-size="12" fill="var(--text-mid)">"First reason through ...</text>
+  <text x="80" y="614" font-family="monospace" font-size="12" fill="var(--text-mid)"> then write the code."</text>
 
-  <rect x="370" y="445" width="280" height="165" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="510" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Role Priming</text>
-  <text x="390" y="492" font-family="Arial, sans-serif" font-size="13" fill="#333333">Assign an expert role to</text>
-  <text x="390" y="510" font-family="Arial, sans-serif" font-size="13" fill="#333333">guide response style and</text>
-  <text x="390" y="528" font-family="Arial, sans-serif" font-size="13" fill="#333333">depth. Security, performance,</text>
-  <text x="390" y="546" font-family="Arial, sans-serif" font-size="13" fill="#333333">or teaching roles all shift</text>
-  <text x="390" y="564" font-family="Arial, sans-serif" font-size="13" fill="#333333">the output meaningfully.</text>
-  <text x="390" y="598" font-family="monospace" font-size="12" fill="#666666">"You are a senior Go</text>
-  <text x="390" y="614" font-family="monospace" font-size="12" fill="#666666"> security engineer..."</text>
+  <rect x="370" y="445" width="280" height="165" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="510" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Role Priming</text>
+  <text x="390" y="492" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Assign an expert role to</text>
+  <text x="390" y="510" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">guide response style and</text>
+  <text x="390" y="528" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">depth. Security, performance,</text>
+  <text x="390" y="546" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">or teaching roles all shift</text>
+  <text x="390" y="564" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">the output meaningfully.</text>
+  <text x="390" y="598" font-family="monospace" font-size="12" fill="var(--text-mid)">"You are a senior Go</text>
+  <text x="390" y="614" font-family="monospace" font-size="12" fill="var(--text-mid)"> security engineer..."</text>
 
-  <rect x="680" y="445" width="280" height="165" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="820" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f57c00" text-anchor="middle">Iterative Refinement</text>
-  <text x="700" y="492" font-family="Arial, sans-serif" font-size="13" fill="#333333">Start broad, then narrow.</text>
-  <text x="700" y="510" font-family="Arial, sans-serif" font-size="13" fill="#333333">Accept 80% solutions and</text>
-  <text x="700" y="528" font-family="Arial, sans-serif" font-size="13" fill="#333333">refine in follow-up turns.</text>
-  <text x="700" y="546" font-family="Arial, sans-serif" font-size="13" fill="#333333">Use "Now add error handling"</text>
-  <text x="700" y="564" font-family="Arial, sans-serif" font-size="13" fill="#333333">to extend prior output.</text>
-  <text x="700" y="598" font-family="monospace" font-size="12" fill="#666666">"Now add logging and</text>
-  <text x="700" y="614" font-family="monospace" font-size="12" fill="#666666"> unit tests."</text>
+  <rect x="680" y="445" width="280" height="165" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="820" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-mid)" text-anchor="middle">Iterative Refinement</text>
+  <text x="700" y="492" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Start broad, then narrow.</text>
+  <text x="700" y="510" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Accept 80% solutions and</text>
+  <text x="700" y="528" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">refine in follow-up turns.</text>
+  <text x="700" y="546" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Use "Now add error handling"</text>
+  <text x="700" y="564" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">to extend prior output.</text>
+  <text x="700" y="598" font-family="monospace" font-size="12" fill="var(--text-mid)">"Now add logging and</text>
+  <text x="700" y="614" font-family="monospace" font-size="12" fill="var(--text-mid)"> unit tests."</text>
 
-  <rect x="990" y="445" width="250" height="165" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1"/>
-  <text x="1115" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Few-Shot Examples</text>
-  <text x="1010" y="492" font-family="Arial, sans-serif" font-size="13" fill="#333333">Provide 2-3 input/output</text>
-  <text x="1010" y="510" font-family="Arial, sans-serif" font-size="13" fill="#333333">pairs to demonstrate style</text>
-  <text x="1010" y="528" font-family="Arial, sans-serif" font-size="13" fill="#333333">and structure. Extremely</text>
-  <text x="1010" y="546" font-family="Arial, sans-serif" font-size="13" fill="#333333">effective for code style</text>
-  <text x="1010" y="564" font-family="Arial, sans-serif" font-size="13" fill="#333333">matching and templates.</text>
-  <text x="1010" y="598" font-family="monospace" font-size="12" fill="#666666">"Input: 5 -&gt; Output: 25</text>
-  <text x="1010" y="614" font-family="monospace" font-size="12" fill="#666666"> Input: 3 -&gt; ?"</text>
+  <rect x="990" y="445" width="250" height="165" rx="8" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="1"/>
+  <text x="1115" y="470" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Few-Shot Examples</text>
+  <text x="1010" y="492" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Provide 2-3 input/output</text>
+  <text x="1010" y="510" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">pairs to demonstrate style</text>
+  <text x="1010" y="528" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">and structure. Extremely</text>
+  <text x="1010" y="546" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">effective for code style</text>
+  <text x="1010" y="564" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">matching and templates.</text>
+  <text x="1010" y="598" font-family="monospace" font-size="12" fill="var(--text-mid)">"Input: 5 -&gt; Output: 25</text>
+  <text x="1010" y="614" font-family="monospace" font-size="12" fill="var(--text-mid)"> Input: 3 -&gt; ?"</text>
 </svg>

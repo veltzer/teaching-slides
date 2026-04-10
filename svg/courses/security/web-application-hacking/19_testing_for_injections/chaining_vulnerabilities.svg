@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,32 +156,32 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:rect x="17.8475" y="12.5491" width="1124.3921" height="627.4509" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5098" />
-  <ns0:text x="580.0435" y="50.1961" text-anchor="middle" font-size="22.5883" font-weight="bold" fill="#333">Chaining Vulnerabilities</ns0:text>
-  <ns0:text x="580.0435" y="75.2941" text-anchor="middle" font-size="15.0588" fill="#666">Multiple low-severity vulns chain into critical attacks</ns0:text>
-  <ns0:rect x="44.6188" y="94.1177" width="1070.8496" height="112.9412" rx="6.2745" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5098" />
-  <ns0:text x="80.3137" y="119.2157" font-size="16.3137" font-weight="bold" fill="#dc3545">Chain 1: Information Disclosure -&gt; Account Takeover</ns0:text>
-  <ns0:text x="80.3137" y="144.3137" font-size="13.8039" fill="#333">1. Directory listing reveals backup.sql</ns0:text>
-  <ns0:text x="571.1197" y="144.3137" font-size="13.8039" fill="#333">2. backup.sql contains password hashes</ns0:text>
-  <ns0:text x="80.3137" y="169.4118" font-size="13.8039" fill="#333">3. Crack hashes -&gt; admin credentials</ns0:text>
-  <ns0:text x="571.1197" y="169.4118" font-size="13.8039" fill="#333">4. Login as admin</ns0:text>
-  <ns0:rect x="44.6188" y="219.6078" width="1070.8496" height="112.9412" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5098" />
-  <ns0:text x="80.3137" y="244.7059" font-size="16.3137" font-weight="bold" fill="#bf360c">Chain 2: XSS -&gt; Session Hijack -&gt; Admin Access</ns0:text>
-  <ns0:text x="80.3137" y="269.8039" font-size="13.8039" fill="#333">1. Stored XSS in user profile</ns0:text>
-  <ns0:text x="571.1197" y="269.8039" font-size="13.8039" fill="#333">2. Admin views profile, cookie stolen</ns0:text>
-  <ns0:text x="80.3137" y="294.9019" font-size="13.8039" fill="#333">3. Use admin cookie for admin panel</ns0:text>
-  <ns0:text x="571.1197" y="294.9019" font-size="13.8039" fill="#333">4. Upload malicious plugin for RCE</ns0:text>
-  <ns0:rect x="44.6188" y="345.098" width="1070.8496" height="112.9412" rx="6.2745" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5098" />
-  <ns0:text x="80.3137" y="370.196" font-size="16.3137" font-weight="bold" fill="#dc3545">Chain 3: SSRF -&gt; Cloud Metadata -&gt; Full Compromise</ns0:text>
-  <ns0:text x="80.3137" y="395.294" font-size="13.8039" fill="#333">1. SSRF in image fetcher</ns0:text>
-  <ns0:text x="571.1197" y="395.294" font-size="13.8039" fill="#333">2. Access AWS metadata endpoint</ns0:text>
-  <ns0:text x="80.3137" y="420.3922" font-size="13.8039" fill="#333">3. Steal IAM credentials</ns0:text>
-  <ns0:text x="571.1197" y="420.3922" font-size="13.8039" fill="#333">4. Access S3 buckets, EC2 instances</ns0:text>
-  <ns0:rect x="44.6188" y="470.5882" width="1070.8496" height="138.0392" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5098" />
-  <ns0:text x="80.3137" y="495.6863" font-size="16.3137" font-weight="bold" fill="#bf360c">Chain 4: SQL Injection -&gt; File Read -&gt; RCE</ns0:text>
-  <ns0:text x="80.3137" y="520.7843" font-size="13.8039" fill="#333">1. SQLi to read /etc/passwd (LOAD_FILE)</ns0:text>
-  <ns0:text x="571.1197" y="520.7843" font-size="13.8039" fill="#333">2. Identify web root from configuration</ns0:text>
-  <ns0:text x="80.3137" y="545.8823" font-size="13.8039" fill="#333">3. SQLi to write web shell (INTO OUTFILE)</ns0:text>
-  <ns0:text x="571.1197" y="545.8823" font-size="13.8039" fill="#333">4. Execute commands via web shell</ns0:text>
+</defs>
+  <ns0:rect x="17.8475" y="12.5491" width="1124.3921" height="627.4509" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5098" />
+  <ns0:text x="580.0435" y="50.1961" text-anchor="middle" font-size="22.5883" font-weight="bold" fill="var(--text-dark)">Chaining Vulnerabilities</ns0:text>
+  <ns0:text x="580.0435" y="75.2941" text-anchor="middle" font-size="15.0588" fill="var(--text-mid)">Multiple low-severity vulns chain into critical attacks</ns0:text>
+  <ns0:rect x="44.6188" y="94.1177" width="1070.8496" height="112.9412" rx="6.2745" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5098" />
+  <ns0:text x="80.3137" y="119.2157" font-size="16.3137" font-weight="bold" fill="var(--danger-bright)">Chain 1: Information Disclosure -&gt; Account Takeover</ns0:text>
+  <ns0:text x="80.3137" y="144.3137" font-size="13.8039" fill="var(--text-dark)">1. Directory listing reveals backup.sql</ns0:text>
+  <ns0:text x="571.1197" y="144.3137" font-size="13.8039" fill="var(--text-dark)">2. backup.sql contains password hashes</ns0:text>
+  <ns0:text x="80.3137" y="169.4118" font-size="13.8039" fill="var(--text-dark)">3. Crack hashes -&gt; admin credentials</ns0:text>
+  <ns0:text x="571.1197" y="169.4118" font-size="13.8039" fill="var(--text-dark)">4. Login as admin</ns0:text>
+  <ns0:rect x="44.6188" y="219.6078" width="1070.8496" height="112.9412" rx="6.2745" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.5098" />
+  <ns0:text x="80.3137" y="244.7059" font-size="16.3137" font-weight="bold" fill="var(--danger-deeper)">Chain 2: XSS -&gt; Session Hijack -&gt; Admin Access</ns0:text>
+  <ns0:text x="80.3137" y="269.8039" font-size="13.8039" fill="var(--text-dark)">1. Stored XSS in user profile</ns0:text>
+  <ns0:text x="571.1197" y="269.8039" font-size="13.8039" fill="var(--text-dark)">2. Admin views profile, cookie stolen</ns0:text>
+  <ns0:text x="80.3137" y="294.9019" font-size="13.8039" fill="var(--text-dark)">3. Use admin cookie for admin panel</ns0:text>
+  <ns0:text x="571.1197" y="294.9019" font-size="13.8039" fill="var(--text-dark)">4. Upload malicious plugin for RCE</ns0:text>
+  <ns0:rect x="44.6188" y="345.098" width="1070.8496" height="112.9412" rx="6.2745" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5098" />
+  <ns0:text x="80.3137" y="370.196" font-size="16.3137" font-weight="bold" fill="var(--danger-bright)">Chain 3: SSRF -&gt; Cloud Metadata -&gt; Full Compromise</ns0:text>
+  <ns0:text x="80.3137" y="395.294" font-size="13.8039" fill="var(--text-dark)">1. SSRF in image fetcher</ns0:text>
+  <ns0:text x="571.1197" y="395.294" font-size="13.8039" fill="var(--text-dark)">2. Access AWS metadata endpoint</ns0:text>
+  <ns0:text x="80.3137" y="420.3922" font-size="13.8039" fill="var(--text-dark)">3. Steal IAM credentials</ns0:text>
+  <ns0:text x="571.1197" y="420.3922" font-size="13.8039" fill="var(--text-dark)">4. Access S3 buckets, EC2 instances</ns0:text>
+  <ns0:rect x="44.6188" y="470.5882" width="1070.8496" height="138.0392" rx="6.2745" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.5098" />
+  <ns0:text x="80.3137" y="495.6863" font-size="16.3137" font-weight="bold" fill="var(--danger-deeper)">Chain 4: SQL Injection -&gt; File Read -&gt; RCE</ns0:text>
+  <ns0:text x="80.3137" y="520.7843" font-size="13.8039" fill="var(--text-dark)">1. SQLi to read /etc/passwd (LOAD_FILE)</ns0:text>
+  <ns0:text x="571.1197" y="520.7843" font-size="13.8039" fill="var(--text-dark)">2. Identify web root from configuration</ns0:text>
+  <ns0:text x="80.3137" y="545.8823" font-size="13.8039" fill="var(--text-dark)">3. SQLi to write web shell (INTO OUTFILE)</ns0:text>
+  <ns0:text x="571.1197" y="545.8823" font-size="13.8039" fill="var(--text-dark)">4. Execute commands via web shell</ns0:text>
 </ns0:svg>

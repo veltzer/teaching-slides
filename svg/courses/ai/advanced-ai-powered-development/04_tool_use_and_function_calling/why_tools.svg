@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,47 +156,46 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
-  </ns0:defs>
-  <ns0:rect width="71.9188" height="640" fill="#f9f9f9" />
-  <ns0:text x="35.9594" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Why LLMs Need Tools</ns0:text>
-  <ns0:rect x="1.798" y="112" width="31.4645" height="224" rx="0.899" fill="#FCE4EC" stroke="#C62828" stroke-width="0.1798" />
-  <ns0:text x="17.5302" y="160" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Without Tools</ns0:text>
-  <ns0:text x="3.5959" y="204.8" font-size="10" fill="#333">▶ Generates text only</ns0:text>
-  <ns0:text x="3.5959" y="240" font-size="10" fill="#333">▶ Cannot read files or run code</ns0:text>
-  <ns0:text x="3.5959" y="275.2" font-size="10" fill="#333">▶ No access to live data</ns0:text>
-  <ns0:text x="3.5959" y="310.4" font-size="10" fill="#333">▶ Stateless, no external actions</ns0:text>
-  <ns0:rect x="38.6563" y="112" width="31.4645" height="224" rx="0.899" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.1798" />
-  <ns0:text x="54.3886" y="160" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">With Tools</ns0:text>
-  <ns0:text x="40.4543" y="204.8" font-size="10" fill="#333">▶ Reads and edits files</ns0:text>
-  <ns0:text x="40.4543" y="240" font-size="10" fill="#333">▶ Executes shell commands</ns0:text>
-  <ns0:text x="40.4543" y="275.2" font-size="10" fill="#333">▶ Queries databases and APIs</ns0:text>
-  <ns0:text x="40.4543" y="310.4" font-size="10" fill="#333">▶ Acts autonomously on the world</ns0:text>
-  <ns0:text x="35.9594" y="236.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">→</ns0:text>
-  <ns0:rect x="1.798" y="400" width="68.3229" height="208" rx="0.899" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.1348" />
-  <ns0:text x="35.9594" y="444.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Tool-Use Round-Trip</ns0:text>
-  <ns0:rect x="3.5959" y="472" width="11.6868" height="104" rx="0.7192" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.1348" />
-  <ns0:text x="9.4393" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">User Prompt</ns0:text>
-  <ns0:text x="9.4393" y="547.2" text-anchor="middle" font-size="10" fill="#555">task description</ns0:text>
-  <ns0:text x="9.4393" y="572.8" text-anchor="middle" font-size="10" fill="#555">+ context</ns0:text>
-  <ns0:line x1="15.2827" y1="523.2" x2="18.4292" y2="523.2" stroke="#333" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <ns0:rect x="18.4292" y="472" width="11.6868" height="104" rx="0.7192" fill="#FFF3E0" stroke="#E65100" stroke-width="0.1348" />
-  <ns0:text x="24.2726" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">LLM Decides</ns0:text>
-  <ns0:text x="24.2726" y="547.2" text-anchor="middle" font-size="10" fill="#555">which tool</ns0:text>
-  <ns0:text x="24.2726" y="572.8" text-anchor="middle" font-size="10" fill="#555">+ arguments</ns0:text>
-  <ns0:line x1="30.116" y1="523.2" x2="33.2624" y2="523.2" stroke="#333" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <ns0:rect x="33.2624" y="472" width="11.6868" height="104" rx="0.7192" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.1348" />
-  <ns0:text x="39.1058" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Execute Tool</ns0:text>
-  <ns0:text x="39.1058" y="547.2" text-anchor="middle" font-size="10" fill="#555">your code runs</ns0:text>
-  <ns0:text x="39.1058" y="572.8" text-anchor="middle" font-size="10" fill="#555">the function</ns0:text>
-  <ns0:line x1="44.9492" y1="523.2" x2="48.0957" y2="523.2" stroke="#333" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <ns0:rect x="48.0957" y="472" width="11.6868" height="104" rx="0.7192" fill="#FCE4EC" stroke="#C62828" stroke-width="0.1348" />
-  <ns0:text x="53.9391" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Return Result</ns0:text>
-  <ns0:text x="53.9391" y="547.2" text-anchor="middle" font-size="10" fill="#555">structured data</ns0:text>
-  <ns0:text x="53.9391" y="572.8" text-anchor="middle" font-size="10" fill="#555">back to LLM</ns0:text>
-  <ns0:line x1="59.7825" y1="523.2" x2="62.9289" y2="523.2" stroke="#333" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <ns0:rect x="62.9289" y="472" width="6.2929" height="104" rx="0.7192" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="0.1348" />
-  <ns0:text x="66.0754" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#6A1B9A">Reason</ns0:text>
-  <ns0:text x="66.0754" y="547.2" text-anchor="middle" font-size="10" fill="#555">next</ns0:text>
-  <ns0:text x="66.0754" y="572.8" text-anchor="middle" font-size="10" fill="#555">step</ns0:text>
+</ns0:defs>
+  <ns0:rect width="71.9188" height="640" fill="var(--surface-light)" />
+  <ns0:text x="35.9594" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Why LLMs Need Tools</ns0:text>
+  <ns0:rect x="1.798" y="112" width="31.4645" height="224" rx="0.899" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="0.1798" />
+  <ns0:text x="17.5302" y="160" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Without Tools</ns0:text>
+  <ns0:text x="3.5959" y="204.8" font-size="10" fill="var(--text-dark)">▶ Generates text only</ns0:text>
+  <ns0:text x="3.5959" y="240" font-size="10" fill="var(--text-dark)">▶ Cannot read files or run code</ns0:text>
+  <ns0:text x="3.5959" y="275.2" font-size="10" fill="var(--text-dark)">▶ No access to live data</ns0:text>
+  <ns0:text x="3.5959" y="310.4" font-size="10" fill="var(--text-dark)">▶ Stateless, no external actions</ns0:text>
+  <ns0:rect x="38.6563" y="112" width="31.4645" height="224" rx="0.899" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.1798" />
+  <ns0:text x="54.3886" y="160" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">With Tools</ns0:text>
+  <ns0:text x="40.4543" y="204.8" font-size="10" fill="var(--text-dark)">▶ Reads and edits files</ns0:text>
+  <ns0:text x="40.4543" y="240" font-size="10" fill="var(--text-dark)">▶ Executes shell commands</ns0:text>
+  <ns0:text x="40.4543" y="275.2" font-size="10" fill="var(--text-dark)">▶ Queries databases and APIs</ns0:text>
+  <ns0:text x="40.4543" y="310.4" font-size="10" fill="var(--text-dark)">▶ Acts autonomously on the world</ns0:text>
+  <ns0:text x="35.9594" y="236.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">→</ns0:text>
+  <ns0:rect x="1.798" y="400" width="68.3229" height="208" rx="0.899" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.1348" />
+  <ns0:text x="35.9594" y="444.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Tool-Use Round-Trip</ns0:text>
+  <ns0:rect x="3.5959" y="472" width="11.6868" height="104" rx="0.7192" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.1348" />
+  <ns0:text x="9.4393" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">User Prompt</ns0:text>
+  <ns0:text x="9.4393" y="547.2" text-anchor="middle" font-size="10" fill="var(--text-muted)">task description</ns0:text>
+  <ns0:text x="9.4393" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ context</ns0:text>
+  <ns0:line x1="15.2827" y1="523.2" x2="18.4292" y2="523.2" stroke="var(--text-dark)" stroke-width="0.1798" marker-end="url(#arrow)" />
+  <ns0:rect x="18.4292" y="472" width="11.6868" height="104" rx="0.7192" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.1348" />
+  <ns0:text x="24.2726" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">LLM Decides</ns0:text>
+  <ns0:text x="24.2726" y="547.2" text-anchor="middle" font-size="10" fill="var(--text-muted)">which tool</ns0:text>
+  <ns0:text x="24.2726" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ arguments</ns0:text>
+  <ns0:line x1="30.116" y1="523.2" x2="33.2624" y2="523.2" stroke="var(--text-dark)" stroke-width="0.1798" marker-end="url(#arrow)" />
+  <ns0:rect x="33.2624" y="472" width="11.6868" height="104" rx="0.7192" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.1348" />
+  <ns0:text x="39.1058" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Execute Tool</ns0:text>
+  <ns0:text x="39.1058" y="547.2" text-anchor="middle" font-size="10" fill="var(--text-muted)">your code runs</ns0:text>
+  <ns0:text x="39.1058" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">the function</ns0:text>
+  <ns0:line x1="44.9492" y1="523.2" x2="48.0957" y2="523.2" stroke="var(--text-dark)" stroke-width="0.1798" marker-end="url(#arrow)" />
+  <ns0:rect x="48.0957" y="472" width="11.6868" height="104" rx="0.7192" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="0.1348" />
+  <ns0:text x="53.9391" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Return Result</ns0:text>
+  <ns0:text x="53.9391" y="547.2" text-anchor="middle" font-size="10" fill="var(--text-muted)">structured data</ns0:text>
+  <ns0:text x="53.9391" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">back to LLM</ns0:text>
+  <ns0:line x1="59.7825" y1="523.2" x2="62.9289" y2="523.2" stroke="var(--text-dark)" stroke-width="0.1798" marker-end="url(#arrow)" />
+  <ns0:rect x="62.9289" y="472" width="6.2929" height="104" rx="0.7192" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="0.1348" />
+  <ns0:text x="66.0754" y="515.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-dk)">Reason</ns0:text>
+  <ns0:text x="66.0754" y="547.2" text-anchor="middle" font-size="10" fill="var(--text-muted)">next</ns0:text>
+  <ns0:text x="66.0754" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">step</ns0:text>
 </ns0:svg>

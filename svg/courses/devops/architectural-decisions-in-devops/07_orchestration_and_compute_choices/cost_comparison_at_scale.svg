@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,23 +156,23 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:line x1="145.2207" y1="47.4074" x2="145.2207" y2="568.8889" stroke="#333" stroke-width="3.6306" />
-  <ns0:line x1="145.2207" y1="568.8889" x2="1125.46" y2="568.8889" stroke="#333" stroke-width="3.6306" />
-  <ns0:text x="72.6103" y="320" text-anchor="middle" font-size="21.7831" fill="#333" transform="rotate(-90,40,135)">Monthly Cost ($)</ns0:text>
-  <ns0:text x="635.3403" y="640" text-anchor="middle" font-size="21.7831" fill="#333">Request Volume / Traffic</ns0:text>
-  <ns0:text x="272.2887" y="604.4445" font-size="18.1526" fill="#666">Low</ns0:text>
-  <ns0:text x="635.3403" y="604.4445" font-size="18.1526" fill="#666">Medium</ns0:text>
-  <ns0:text x="998.3919" y="604.4445" font-size="18.1526" fill="#666">High</ns0:text>
-  <ns0:polyline points="145.2207,497.7778 363.0516,474.0741 635.3403,391.1111 907.629,308.1481 1089.1549,225.1852" fill="none" stroke="#1565c0" stroke-width="5.4458" />
-  <ns0:polyline points="145.2207,438.5185 363.0516,414.8148 635.3403,343.7037 907.629,284.4444 1089.1549,248.8889" fill="none" stroke="#6a1b9a" stroke-width="5.4458" />
-  <ns0:polyline points="145.2207,545.1852 363.0516,497.7778 635.3403,367.4074 907.629,189.6296 1089.1549,71.1112" fill="none" stroke="#e65100" stroke-width="5.4458" />
-  <ns0:rect x="762.4084" y="47.4074" width="21.7831" height="28.4444" fill="#1565c0" />
-  <ns0:text x="798.7135" y="73.4815" font-size="18.1526" fill="#333">Kubernetes</ns0:text>
-  <ns0:rect x="762.4084" y="94.8148" width="21.7831" height="28.4444" fill="#6a1b9a" />
-  <ns0:text x="798.7135" y="120.8889" font-size="18.1526" fill="#333">Managed Containers</ns0:text>
-  <ns0:rect x="762.4084" y="142.2222" width="21.7831" height="28.4444" fill="#e65100" />
-  <ns0:text x="798.7135" y="168.2963" font-size="18.1526" fill="#333">Serverless</ns0:text>
-  <ns0:text x="544.5774" y="260.7407" font-size="18.1526" fill="#e65100" font-style="italic">Serverless cost rises steeply</ns0:text>
-  <ns0:text x="326.7464" y="462.2223" font-size="18.1526" fill="#1565c0" font-style="italic">K8s base cost is fixed</ns0:text>
+</defs>
+  <ns0:line x1="145.2207" y1="47.4074" x2="145.2207" y2="568.8889" stroke="var(--text-dark)" stroke-width="3.6306" />
+  <ns0:line x1="145.2207" y1="568.8889" x2="1125.46" y2="568.8889" stroke="var(--text-dark)" stroke-width="3.6306" />
+  <ns0:text x="72.6103" y="320" text-anchor="middle" font-size="21.7831" fill="var(--text-dark)" transform="rotate(-90,40,135)">Monthly Cost ($)</ns0:text>
+  <ns0:text x="635.3403" y="640" text-anchor="middle" font-size="21.7831" fill="var(--text-dark)">Request Volume / Traffic</ns0:text>
+  <ns0:text x="272.2887" y="604.4445" font-size="18.1526" fill="var(--text-mid)">Low</ns0:text>
+  <ns0:text x="635.3403" y="604.4445" font-size="18.1526" fill="var(--text-mid)">Medium</ns0:text>
+  <ns0:text x="998.3919" y="604.4445" font-size="18.1526" fill="var(--text-mid)">High</ns0:text>
+  <ns0:polyline points="145.2207,497.7778 363.0516,474.0741 635.3403,391.1111 907.629,308.1481 1089.1549,225.1852" fill="none" stroke="var(--primary-dk)" stroke-width="5.4458" />
+  <ns0:polyline points="145.2207,438.5185 363.0516,414.8148 635.3403,343.7037 907.629,284.4444 1089.1549,248.8889" fill="none" stroke="var(--info-dk)" stroke-width="5.4458" />
+  <ns0:polyline points="145.2207,545.1852 363.0516,497.7778 635.3403,367.4074 907.629,189.6296 1089.1549,71.1112" fill="none" stroke="var(--warn-dk)" stroke-width="5.4458" />
+  <ns0:rect x="762.4084" y="47.4074" width="21.7831" height="28.4444" fill="var(--primary-dk)" />
+  <ns0:text x="798.7135" y="73.4815" font-size="18.1526" fill="var(--text-dark)">Kubernetes</ns0:text>
+  <ns0:rect x="762.4084" y="94.8148" width="21.7831" height="28.4444" fill="var(--info-dk)" />
+  <ns0:text x="798.7135" y="120.8889" font-size="18.1526" fill="var(--text-dark)">Managed Containers</ns0:text>
+  <ns0:rect x="762.4084" y="142.2222" width="21.7831" height="28.4444" fill="var(--warn-dk)" />
+  <ns0:text x="798.7135" y="168.2963" font-size="18.1526" fill="var(--text-dark)">Serverless</ns0:text>
+  <ns0:text x="544.5774" y="260.7407" font-size="18.1526" fill="var(--warn-dk)" font-style="italic">Serverless cost rises steeply</ns0:text>
+  <ns0:text x="326.7464" y="462.2223" font-size="18.1526" fill="var(--primary-dk)" font-style="italic">K8s base cost is fixed</ns0:text>
 </ns0:svg>

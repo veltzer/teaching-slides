@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -81,120 +166,120 @@
       <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Integer Array section -->
   <rect x="30" y="20" width="580" height="44" rx="6" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="320" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Integer Array Memory Layout</text>
+  <text x="320" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Integer Array Memory Layout</text>
 
   <!-- Array declaration -->
-  <rect x="30" y="75" width="580" height="36" rx="4" fill="#1a1a2e"/>
-  <text x="45" y="98" font-family="monospace" font-size="14" fill="#90caf9">int_array: .long 10, 20, 30, 40, 50</text>
-  <text x="435" y="98" font-family="monospace" font-size="13" fill="#777777">; 5 x 4 bytes</text>
+  <rect x="30" y="75" width="580" height="36" rx="4" fill="var(--code-bg)"/>
+  <text x="45" y="98" font-family="monospace" font-size="14" fill="var(--primary-tint)">int_array: .long 10, 20, 30, 40, 50</text>
+  <text x="435" y="98" font-family="monospace" font-size="13" fill="var(--text-lighter)">; 5 x 4 bytes</text>
 
   <!-- Memory cells for int array -->
   <!-- Cell labels -->
-  <text x="56" y="135" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">[0]</text>
-  <text x="162" y="135" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">[1]</text>
-  <text x="268" y="135" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">[2]</text>
-  <text x="374" y="135" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">[3]</text>
-  <text x="480" y="135" font-family="Arial, sans-serif" font-size="12" fill="#888888" text-anchor="middle">[4]</text>
+  <text x="56" y="135" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">[0]</text>
+  <text x="162" y="135" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">[1]</text>
+  <text x="268" y="135" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">[2]</text>
+  <text x="374" y="135" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">[3]</text>
+  <text x="480" y="135" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">[4]</text>
 
   <!-- Int array memory boxes (4 bytes wide each) -->
-  <rect x="30" y="140" width="106" height="50" rx="4" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
-  <text x="83" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">10</text>
-  <rect x="136" y="140" width="106" height="50" rx="4" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
-  <text x="189" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">20</text>
-  <rect x="242" y="140" width="106" height="50" rx="4" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
-  <text x="295" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">30</text>
-  <rect x="348" y="140" width="106" height="50" rx="4" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
-  <text x="401" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">40</text>
-  <rect x="454" y="140" width="106" height="50" rx="4" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
-  <text x="507" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">50</text>
+  <rect x="30" y="140" width="106" height="50" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="83" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">10</text>
+  <rect x="136" y="140" width="106" height="50" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="189" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">20</text>
+  <rect x="242" y="140" width="106" height="50" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="295" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">30</text>
+  <rect x="348" y="140" width="106" height="50" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="401" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">40</text>
+  <rect x="454" y="140" width="106" height="50" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="507" y="171" font-family="monospace" font-size="18" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">50</text>
 
   <!-- Address annotations -->
-  <text x="83" y="207" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">+0</text>
-  <text x="189" y="207" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">+4</text>
-  <text x="295" y="207" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">+8</text>
-  <text x="401" y="207" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">+12</text>
-  <text x="507" y="207" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">+16</text>
-  <text x="30" y="207" font-family="Arial, sans-serif" font-size="11" fill="#888888">bytes:</text>
+  <text x="83" y="207" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">+0</text>
+  <text x="189" y="207" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">+4</text>
+  <text x="295" y="207" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">+8</text>
+  <text x="401" y="207" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">+12</text>
+  <text x="507" y="207" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">+16</text>
+  <text x="30" y="207" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">bytes:</text>
 
   <!-- Indexed addressing -->
-  <rect x="30" y="220" width="580" height="70" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="45" y="244" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#555555">Indexed Addressing:</text>
-  <text x="45" y="267" font-family="monospace" font-size="14" fill="#333333">movl int_array(,%ecx,4), %eax</text>
-  <text x="390" y="267" font-family="Arial, sans-serif" font-size="13" fill="#666666">; addr = int_array + ecx * 4</text>
-  <text x="45" y="284" font-family="Arial, sans-serif" font-size="12" fill="#888888">base(offset, index, scale) -- scale = element size in bytes</text>
+  <rect x="30" y="220" width="580" height="70" rx="6" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.5"/>
+  <text x="45" y="244" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-muted)">Indexed Addressing:</text>
+  <text x="45" y="267" font-family="monospace" font-size="14" fill="var(--text-dark)">movl int_array(,%ecx,4), %eax</text>
+  <text x="390" y="267" font-family="Arial, sans-serif" font-size="13" fill="var(--text-mid)">; addr = int_array + ecx * 4</text>
+  <text x="45" y="284" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">base(offset, index, scale) -- scale = element size in bytes</text>
 
   <!-- String / null-termination section -->
   <rect x="30" y="310" width="580" height="44" rx="6" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="320" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">String Memory and Null Termination</text>
+  <text x="320" y="338" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">String Memory and Null Termination</text>
 
   <!-- String declaration -->
-  <rect x="30" y="364" width="580" height="36" rx="4" fill="#1a1a2e"/>
-  <text x="45" y="387" font-family="monospace" font-size="14" fill="#90caf9">str: .asciz "Hi!"</text>
-  <text x="220" y="387" font-family="monospace" font-size="13" fill="#777777">; null-terminated (same as .ascii "Hi!\0")</text>
+  <rect x="30" y="364" width="580" height="36" rx="4" fill="var(--code-bg)"/>
+  <text x="45" y="387" font-family="monospace" font-size="14" fill="var(--primary-tint)">str: .asciz "Hi!"</text>
+  <text x="220" y="387" font-family="monospace" font-size="13" fill="var(--text-lighter)">; null-terminated (same as .ascii "Hi!\0")</text>
 
   <!-- String memory cells: H i ! \0 -->
-  <rect x="30" y="410" width="80" height="50" rx="4" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>
-  <text x="70" y="441" font-family="monospace" font-size="22" font-weight="bold" fill="#2e7d32" text-anchor="middle">H</text>
-  <rect x="114" y="410" width="80" height="50" rx="4" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>
-  <text x="154" y="441" font-family="monospace" font-size="22" font-weight="bold" fill="#2e7d32" text-anchor="middle">i</text>
-  <rect x="198" y="410" width="80" height="50" rx="4" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>
-  <text x="238" y="441" font-family="monospace" font-size="22" font-weight="bold" fill="#2e7d32" text-anchor="middle">!</text>
-  <rect x="282" y="410" width="80" height="50" rx="4" fill="#ffebee" stroke="#e53935" stroke-width="2"/>
-  <text x="322" y="441" font-family="monospace" font-size="16" font-weight="bold" fill="#c62828" text-anchor="middle">\0</text>
-  <rect x="366" y="410" width="80" height="50" rx="4" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="2"/>
-  <text x="406" y="441" font-family="monospace" font-size="16" fill="#bdbdbd" text-anchor="middle">???</text>
+  <rect x="30" y="410" width="80" height="50" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="70" y="441" font-family="monospace" font-size="22" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">H</text>
+  <rect x="114" y="410" width="80" height="50" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="154" y="441" font-family="monospace" font-size="22" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">i</text>
+  <rect x="198" y="410" width="80" height="50" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="238" y="441" font-family="monospace" font-size="22" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">!</text>
+  <rect x="282" y="410" width="80" height="50" rx="4" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2"/>
+  <text x="322" y="441" font-family="monospace" font-size="16" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">\0</text>
+  <rect x="366" y="410" width="80" height="50" rx="4" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2"/>
+  <text x="406" y="441" font-family="monospace" font-size="16" fill="var(--border-strong)" text-anchor="middle">???</text>
 
   <!-- Byte values -->
-  <text x="70" y="475" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">0x48</text>
-  <text x="154" y="475" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">0x69</text>
-  <text x="238" y="475" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">0x21</text>
-  <text x="322" y="475" font-family="monospace" font-size="11" fill="#c62828" text-anchor="middle">0x00</text>
-  <text x="406" y="475" font-family="monospace" font-size="11" fill="#bdbdbd" text-anchor="middle">uninit</text>
+  <text x="70" y="475" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">0x48</text>
+  <text x="154" y="475" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">0x69</text>
+  <text x="238" y="475" font-family="monospace" font-size="11" fill="var(--text-faint)" text-anchor="middle">0x21</text>
+  <text x="322" y="475" font-family="monospace" font-size="11" fill="var(--danger-dk)" text-anchor="middle">0x00</text>
+  <text x="406" y="475" font-family="monospace" font-size="11" fill="var(--border-strong)" text-anchor="middle">uninit</text>
 
   <!-- Null terminator arrow label -->
-  <line x1="322" y1="480" x2="322" y2="510" stroke="#c62828" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="338" y="502" font-family="Arial, sans-serif" font-size="13" fill="#c62828">Null terminator -- marks end of string</text>
+  <line x1="322" y1="480" x2="322" y2="510" stroke="var(--danger-dk)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="338" y="502" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-dk)">Null terminator -- marks end of string</text>
 
   <!-- Right panel: addressing modes summary -->
   <rect x="640" y="20" width="610" height="590" rx="8" fill="url(#grad-surface)" filter="url(#shadow)"/>
   <rect x="660" y="32" width="570" height="36" rx="6" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="945" y="56" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Addressing Modes Summary</text>
+  <text x="945" y="56" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--bg)" text-anchor="middle">Addressing Modes Summary</text>
 
   <!-- Mode 1: immediate -->
-  <rect x="660" y="82" width="570" height="76" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <text x="675" y="106" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Direct (Immediate)</text>
-  <text x="675" y="128" font-family="monospace" font-size="13" fill="#333333">movl $42, %eax</text>
-  <text x="675" y="148" font-family="Arial, sans-serif" font-size="12" fill="#666666">Literal value embedded in instruction</text>
+  <rect x="660" y="82" width="570" height="76" rx="6" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="675" y="106" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Direct (Immediate)</text>
+  <text x="675" y="128" font-family="monospace" font-size="13" fill="var(--text-dark)">movl $42, %eax</text>
+  <text x="675" y="148" font-family="Arial, sans-serif" font-size="12" fill="var(--text-mid)">Literal value embedded in instruction</text>
 
   <!-- Mode 2: register indirect -->
-  <rect x="660" y="172" width="570" height="76" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
-  <text x="675" y="196" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Register Indirect</text>
-  <text x="675" y="218" font-family="monospace" font-size="13" fill="#333333">movl (%ebx), %eax</text>
-  <text x="675" y="238" font-family="Arial, sans-serif" font-size="12" fill="#666666">Read memory at address held in %ebx</text>
+  <rect x="660" y="172" width="570" height="76" rx="6" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="675" y="196" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Register Indirect</text>
+  <text x="675" y="218" font-family="monospace" font-size="13" fill="var(--text-dark)">movl (%ebx), %eax</text>
+  <text x="675" y="238" font-family="Arial, sans-serif" font-size="12" fill="var(--text-mid)">Read memory at address held in %ebx</text>
 
   <!-- Mode 3: base + displacement -->
-  <rect x="660" y="262" width="570" height="76" rx="6" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5"/>
-  <text x="675" y="286" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f57c00">Base + Displacement</text>
-  <text x="675" y="308" font-family="monospace" font-size="13" fill="#333333">movl 8(%ebx), %eax</text>
-  <text x="675" y="328" font-family="Arial, sans-serif" font-size="12" fill="#666666">Memory at %ebx + 8 (struct field access)</text>
+  <rect x="660" y="262" width="570" height="76" rx="6" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="675" y="286" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-mid)">Base + Displacement</text>
+  <text x="675" y="308" font-family="monospace" font-size="13" fill="var(--text-dark)">movl 8(%ebx), %eax</text>
+  <text x="675" y="328" font-family="Arial, sans-serif" font-size="12" fill="var(--text-mid)">Memory at %ebx + 8 (struct field access)</text>
 
   <!-- Mode 4: indexed -->
-  <rect x="660" y="352" width="570" height="96" rx="6" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.5"/>
-  <text x="675" y="376" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a">Base + Index * Scale + Displacement</text>
-  <text x="675" y="398" font-family="monospace" font-size="13" fill="#333333">movl arr(,%ecx,4), %eax</text>
-  <text x="675" y="420" font-family="Arial, sans-serif" font-size="12" fill="#666666">addr = arr + ecx * 4</text>
-  <text x="675" y="438" font-family="Arial, sans-serif" font-size="12" fill="#666666">Scale: 1 (byte), 2 (word), 4 (dword), 8 (qword)</text>
+  <rect x="660" y="352" width="570" height="96" rx="6" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1.5"/>
+  <text x="675" y="376" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-dk)">Base + Index * Scale + Displacement</text>
+  <text x="675" y="398" font-family="monospace" font-size="13" fill="var(--text-dark)">movl arr(,%ecx,4), %eax</text>
+  <text x="675" y="420" font-family="Arial, sans-serif" font-size="12" fill="var(--text-mid)">addr = arr + ecx * 4</text>
+  <text x="675" y="438" font-family="Arial, sans-serif" font-size="12" fill="var(--text-mid)">Scale: 1 (byte), 2 (word), 4 (dword), 8 (qword)</text>
 
   <!-- Loop pattern -->
-  <rect x="660" y="462" width="570" height="130" rx="6" fill="#1a1a2e" filter="url(#shadow)"/>
-  <text x="675" y="486" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#bbdefb">Array traversal loop:</text>
-  <text x="675" y="508" font-family="monospace" font-size="13" fill="#bbdefb">  xorl %ecx, %ecx         <tspan fill="#777777">; index = 0</tspan></text>
-  <text x="675" y="528" font-family="monospace" font-size="13" fill="#ce93d8">loop:</text>
-  <text x="675" y="548" font-family="monospace" font-size="13" fill="#bbdefb">  movl arr(,%ecx,4), %eax</text>
-  <text x="675" y="568" font-family="monospace" font-size="13" fill="#bbdefb">  incl %ecx</text>
-  <text x="675" y="583" font-family="monospace" font-size="13" fill="#bbdefb">  cmpl $5, %ecx  <tspan fill="#777777">; 5 elements</tspan></text>
+  <rect x="660" y="462" width="570" height="130" rx="6" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <text x="675" y="486" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-lt)">Array traversal loop:</text>
+  <text x="675" y="508" font-family="monospace" font-size="13" fill="var(--primary-lt)">  xorl %ecx, %ecx         <tspan fill="var(--text-lighter)">; index = 0</tspan></text>
+  <text x="675" y="528" font-family="monospace" font-size="13" fill="var(--info-lt)">loop:</text>
+  <text x="675" y="548" font-family="monospace" font-size="13" fill="var(--primary-lt)">  movl arr(,%ecx,4), %eax</text>
+  <text x="675" y="568" font-family="monospace" font-size="13" fill="var(--primary-lt)">  incl %ecx</text>
+  <text x="675" y="583" font-family="monospace" font-size="13" fill="var(--primary-lt)">  cmpl $5, %ecx  <tspan fill="var(--text-lighter)">; 5 elements</tspan></text>
 </svg>

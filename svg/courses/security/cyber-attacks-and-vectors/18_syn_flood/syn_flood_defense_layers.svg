@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,23 +156,22 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
-  </ns0:defs>
-  <ns0:text x="597.3333" y="48" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">SYN Flood Defense Layers</ns0:text>
-  <ns0:rect x="68.2667" y="80" width="1058.1333" height="560" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <ns0:text x="597.3333" y="115.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#4a90e2">Layer 1: Network Edge</ns0:text>
-  <ns0:text x="597.3333" y="139.2" text-anchor="middle" font-size="16" fill="#666">Rate limiting, ACLs, Black hole routing</ns0:text>
-  <ns0:rect x="119.4667" y="160" width="955.7333" height="448" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <ns0:text x="597.3333" y="195.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#28a745">Layer 2: Firewall / IPS</ns0:text>
-  <ns0:text x="597.3333" y="219.2" text-anchor="middle" font-size="16" fill="#666">SYN proxy, Connection limits, Stateful inspection</ns0:text>
-  <ns0:rect x="170.6666" y="240" width="853.3333" height="336" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <ns0:text x="597.3333" y="275.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#f39c12">Layer 3: Load Balancer</ns0:text>
-  <ns0:text x="597.3333" y="299.2" text-anchor="middle" font-size="16" fill="#666">Traffic distribution, SYN cookies</ns0:text>
-  <ns0:rect x="221.8667" y="320" width="750.9333" height="224" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <ns0:text x="597.3333" y="355.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#4a90e2">Layer 4: OS Hardening</ns0:text>
-  <ns0:text x="597.3333" y="379.2" text-anchor="middle" font-size="16" fill="#666">TCP backlog tuning, SYN cookie support</ns0:text>
-  <ns0:rect x="273.0666" y="400" width="648.5333" height="112" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <ns0:text x="597.3333" y="444.8" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#28a745">Layer 5: Application</ns0:text>
-  <ns0:text x="597.3333" y="476.8" text-anchor="middle" font-size="16" fill="#666">Connection timeouts, Queue management</ns0:text>
-  <ns0:text x="34.1333" y="352" font-size="16" fill="#dc3545" font-weight="bold" transform="rotate(-90 20 220)">Attack Traffic</ns0:text>
+</ns0:defs>
+  <ns0:text x="597.3333" y="48" text-anchor="middle" font-size="25.6" font-weight="bold" fill="var(--text-dark)">SYN Flood Defense Layers</ns0:text>
+  <ns0:rect x="68.2667" y="80" width="1058.1333" height="560" rx="8" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2" />
+  <ns0:text x="597.3333" y="115.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--primary-bright)">Layer 1: Network Edge</ns0:text>
+  <ns0:text x="597.3333" y="139.2" text-anchor="middle" font-size="16" fill="var(--text-mid)">Rate limiting, ACLs, Black hole routing</ns0:text>
+  <ns0:rect x="119.4667" y="160" width="955.7333" height="448" rx="8" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.2" />
+  <ns0:text x="597.3333" y="195.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--ok-bright)">Layer 2: Firewall / IPS</ns0:text>
+  <ns0:text x="597.3333" y="219.2" text-anchor="middle" font-size="16" fill="var(--text-mid)">SYN proxy, Connection limits, Stateful inspection</ns0:text>
+  <ns0:rect x="170.6666" y="240" width="853.3333" height="336" rx="8" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.2" />
+  <ns0:text x="597.3333" y="275.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--warn-gold)">Layer 3: Load Balancer</ns0:text>
+  <ns0:text x="597.3333" y="299.2" text-anchor="middle" font-size="16" fill="var(--text-mid)">Traffic distribution, SYN cookies</ns0:text>
+  <ns0:rect x="221.8667" y="320" width="750.9333" height="224" rx="8" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2" />
+  <ns0:text x="597.3333" y="355.2" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--primary-bright)">Layer 4: OS Hardening</ns0:text>
+  <ns0:text x="597.3333" y="379.2" text-anchor="middle" font-size="16" fill="var(--text-mid)">TCP backlog tuning, SYN cookie support</ns0:text>
+  <ns0:rect x="273.0666" y="400" width="648.5333" height="112" rx="8" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="3.2" />
+  <ns0:text x="597.3333" y="444.8" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--ok-bright)">Layer 5: Application</ns0:text>
+  <ns0:text x="597.3333" y="476.8" text-anchor="middle" font-size="16" fill="var(--text-mid)">Connection timeouts, Queue management</ns0:text>
+  <ns0:text x="34.1333" y="352" font-size="16" fill="var(--danger-bright)" font-weight="bold" transform="rotate(-90 20 220)">Attack Traffic</ns0:text>
 </ns0:svg>

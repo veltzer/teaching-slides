@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,70 +156,69 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
-  </ns0:defs>
-  <ns0:text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="#333">Channel Types Comparison</ns0:text>
-  <ns0:rect x="44.1049" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="#d4edda" stroke="#28a745" stroke-width="2.8764" />
-  <ns0:text x="213.1735" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#28a745">mpsc (std / tokio)</ns0:text>
-  <ns0:text x="66.1573" y="143.8202" font-size="14.382" fill="#555">Multiple Producer</ns0:text>
-  <ns0:text x="66.1573" y="169.7079" font-size="14.382" fill="#555">Single Consumer</ns0:text>
-  <ns0:rect x="73.5081" y="186.9663" width="58.8065" height="28.764" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
-  <ns0:text x="102.9114" y="207.1011" text-anchor="middle" font-size="14.382" fill="#333">tx1</ns0:text>
-  <ns0:rect x="147.0162" y="186.9663" width="58.8065" height="28.764" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
-  <ns0:text x="176.4195" y="207.1011" text-anchor="middle" font-size="14.382" fill="#333">tx2</ns0:text>
-  <ns0:line x1="205.8227" y1="201.3483" x2="249.9276" y2="222.9214" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:line x1="132.3146" y1="215.7303" x2="249.9276" y2="222.9214" stroke="#4a90e2" stroke-width="2.1573" />
-  <ns0:rect x="249.9276" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4382" />
-  <ns0:text x="301.3833" y="232.9888" text-anchor="middle" font-size="14.382" fill="#333">rx (one)</ns0:text>
-  <ns0:text x="213.1735" y="268.9439" text-anchor="middle" font-size="14.382" fill="#555">Bounded or unbounded</ns0:text>
-  <ns0:rect x="418.9963" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#4a90e2">oneshot (tokio)</ns0:text>
-  <ns0:text x="441.0487" y="143.8202" font-size="14.382" fill="#555">Single Producer</ns0:text>
-  <ns0:text x="441.0487" y="169.7079" font-size="14.382" fill="#555">Single Consumer</ns0:text>
-  <ns0:text x="441.0487" y="195.5955" font-size="14.382" fill="#555">Exactly ONE message</ns0:text>
-  <ns0:rect x="448.3995" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="#d4edda" stroke="#28a745" stroke-width="1.4382" />
-  <ns0:text x="499.8552" y="232.9888" text-anchor="middle" font-size="14.382" fill="#333">tx</ns0:text>
-  <ns0:line x1="551.3109" y1="225.7977" x2="617.4682" y2="225.7977" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:rect x="624.819" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4382" />
-  <ns0:text x="676.2747" y="232.9888" text-anchor="middle" font-size="14.382" fill="#333">rx</ns0:text>
-  <ns0:text x="588.065" y="268.9439" text-anchor="middle" font-size="14.382" fill="#555">Great for request/response</ns0:text>
-  <ns0:rect x="793.8877" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
-  <ns0:text x="962.9564" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#333">broadcast (tokio)</ns0:text>
-  <ns0:text x="815.9401" y="143.8202" font-size="14.382" fill="#555">Single Producer</ns0:text>
-  <ns0:text x="815.9401" y="169.7079" font-size="14.382" fill="#555">Multiple Consumers</ns0:text>
-  <ns0:rect x="911.5007" y="186.9663" width="73.5081" height="28.764" rx="4.3147" fill="#d4edda" stroke="#28a745" stroke-width="1.4382" />
-  <ns0:text x="948.2547" y="207.1011" text-anchor="middle" font-size="14.382" fill="#333">tx</ns0:text>
-  <ns0:line x1="948.2547" y1="215.7303" x2="852.6942" y2="230.1124" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:line x1="948.2547" y1="215.7303" x2="948.2547" y2="230.1124" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:line x1="948.2547" y1="215.7303" x2="1043.8153" y2="230.1124" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:rect x="823.2909" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
-  <ns0:text x="848.2837" y="251.6854" text-anchor="middle" font-size="14.382" fill="#333">rx1</ns0:text>
-  <ns0:rect x="923.262" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
-  <ns0:text x="948.2547" y="251.6854" text-anchor="middle" font-size="14.382" fill="#333">rx2</ns0:text>
-  <ns0:rect x="1021.7629" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
-  <ns0:text x="1046.7556" y="251.6854" text-anchor="middle" font-size="14.382" fill="#333">rx3</ns0:text>
-  <ns0:text x="962.9564" y="280.4495" text-anchor="middle" font-size="14.382" fill="#555">All receivers get clone</ns0:text>
-  <ns0:rect x="44.1049" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8764" />
-  <ns0:text x="213.1735" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#4a90e2">watch (tokio)</ns0:text>
-  <ns0:text x="66.1573" y="373.9326" font-size="14.382" fill="#555">Single latest value</ns0:text>
-  <ns0:text x="66.1573" y="399.8202" font-size="14.382" fill="#555">Multiple observers</ns0:text>
-  <ns0:text x="66.1573" y="425.7078" font-size="14.382" fill="#555">Only keeps most recent</ns0:text>
-  <ns0:text x="66.1573" y="451.5956" font-size="14.382" fill="#555">Config changes, state updates</ns0:text>
-  <ns0:rect x="418.9963" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="#d4edda" stroke="#28a745" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#28a745">crossbeam-channel</ns0:text>
-  <ns0:text x="441.0487" y="373.9326" font-size="14.382" fill="#555">MPMC support</ns0:text>
-  <ns0:text x="441.0487" y="399.8202" font-size="14.382" fill="#555">select! macro</ns0:text>
-  <ns0:text x="441.0487" y="425.7078" font-size="14.382" fill="#555">Bounded &amp; unbounded</ns0:text>
-  <ns0:text x="441.0487" y="451.5956" font-size="14.382" fill="#555">Faster than std for sync code</ns0:text>
-  <ns0:rect x="793.8877" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
-  <ns0:text x="962.9564" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#333">flume</ns0:text>
-  <ns0:text x="815.9401" y="373.9326" font-size="14.382" fill="#555">MPMC, async + sync</ns0:text>
-  <ns0:text x="815.9401" y="399.8202" font-size="14.382" fill="#555">Drop-in std replacement</ns0:text>
-  <ns0:text x="815.9401" y="425.7078" font-size="14.382" fill="#555">Works in both contexts</ns0:text>
-  <ns0:text x="815.9401" y="451.5956" font-size="14.382" fill="#555">Bridge sync &amp; async code</ns0:text>
-  <ns0:rect x="44.1049" y="496.1798" width="1087.9202" height="143.8202" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="532.1348" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="#333">When to Use What</ns0:text>
-  <ns0:text x="66.1573" y="568.0899" font-size="14.382" fill="#555">Request/Response: oneshot | Fan-out: broadcast | Config/State: watch</ns0:text>
-  <ns0:text x="66.1573" y="596.854" font-size="14.382" fill="#555">Work distribution: mpsc (bounded for backpressure) | Sync MPMC: crossbeam | Mixed: flume</ns0:text>
-  <ns0:text x="66.1573" y="625.618" font-size="14.382" fill="#dc3545">Unbounded channels can cause OOM - prefer bounded with backpressure in production</ns0:text>
+</ns0:defs>
+  <ns0:text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="var(--text-dark)">Channel Types Comparison</ns0:text>
+  <ns0:rect x="44.1049" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <ns0:text x="213.1735" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">mpsc (std / tokio)</ns0:text>
+  <ns0:text x="66.1573" y="143.8202" font-size="14.382" fill="var(--text-muted)">Multiple Producer</ns0:text>
+  <ns0:text x="66.1573" y="169.7079" font-size="14.382" fill="var(--text-muted)">Single Consumer</ns0:text>
+  <ns0:rect x="73.5081" y="186.9663" width="58.8065" height="28.764" rx="4.3147" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.4382" />
+  <ns0:text x="102.9114" y="207.1011" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">tx1</ns0:text>
+  <ns0:rect x="147.0162" y="186.9663" width="58.8065" height="28.764" rx="4.3147" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.4382" />
+  <ns0:text x="176.4195" y="207.1011" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">tx2</ns0:text>
+  <ns0:line x1="205.8227" y1="201.3483" x2="249.9276" y2="222.9214" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:line x1="132.3146" y1="215.7303" x2="249.9276" y2="222.9214" stroke="var(--primary-bright)" stroke-width="2.1573" />
+  <ns0:rect x="249.9276" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.4382" />
+  <ns0:text x="301.3833" y="232.9888" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">rx (one)</ns0:text>
+  <ns0:text x="213.1735" y="268.9439" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">Bounded or unbounded</ns0:text>
+  <ns0:rect x="418.9963" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
+  <ns0:text x="588.065" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">oneshot (tokio)</ns0:text>
+  <ns0:text x="441.0487" y="143.8202" font-size="14.382" fill="var(--text-muted)">Single Producer</ns0:text>
+  <ns0:text x="441.0487" y="169.7079" font-size="14.382" fill="var(--text-muted)">Single Consumer</ns0:text>
+  <ns0:text x="441.0487" y="195.5955" font-size="14.382" fill="var(--text-muted)">Exactly ONE message</ns0:text>
+  <ns0:rect x="448.3995" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.4382" />
+  <ns0:text x="499.8552" y="232.9888" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">tx</ns0:text>
+  <ns0:line x1="551.3109" y1="225.7977" x2="617.4682" y2="225.7977" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:rect x="624.819" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.4382" />
+  <ns0:text x="676.2747" y="232.9888" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">rx</ns0:text>
+  <ns0:text x="588.065" y="268.9439" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">Great for request/response</ns0:text>
+  <ns0:rect x="793.8877" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <ns0:text x="962.9564" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">broadcast (tokio)</ns0:text>
+  <ns0:text x="815.9401" y="143.8202" font-size="14.382" fill="var(--text-muted)">Single Producer</ns0:text>
+  <ns0:text x="815.9401" y="169.7079" font-size="14.382" fill="var(--text-muted)">Multiple Consumers</ns0:text>
+  <ns0:rect x="911.5007" y="186.9663" width="73.5081" height="28.764" rx="4.3147" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.4382" />
+  <ns0:text x="948.2547" y="207.1011" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">tx</ns0:text>
+  <ns0:line x1="948.2547" y1="215.7303" x2="852.6942" y2="230.1124" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:line x1="948.2547" y1="215.7303" x2="948.2547" y2="230.1124" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:line x1="948.2547" y1="215.7303" x2="1043.8153" y2="230.1124" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:rect x="823.2909" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.4382" />
+  <ns0:text x="848.2837" y="251.6854" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">rx1</ns0:text>
+  <ns0:rect x="923.262" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.4382" />
+  <ns0:text x="948.2547" y="251.6854" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">rx2</ns0:text>
+  <ns0:rect x="1021.7629" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.4382" />
+  <ns0:text x="1046.7556" y="251.6854" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">rx3</ns0:text>
+  <ns0:text x="962.9564" y="280.4495" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">All receivers get clone</ns0:text>
+  <ns0:rect x="44.1049" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
+  <ns0:text x="213.1735" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">watch (tokio)</ns0:text>
+  <ns0:text x="66.1573" y="373.9326" font-size="14.382" fill="var(--text-muted)">Single latest value</ns0:text>
+  <ns0:text x="66.1573" y="399.8202" font-size="14.382" fill="var(--text-muted)">Multiple observers</ns0:text>
+  <ns0:text x="66.1573" y="425.7078" font-size="14.382" fill="var(--text-muted)">Only keeps most recent</ns0:text>
+  <ns0:text x="66.1573" y="451.5956" font-size="14.382" fill="var(--text-muted)">Config changes, state updates</ns0:text>
+  <ns0:rect x="418.9963" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <ns0:text x="588.065" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">crossbeam-channel</ns0:text>
+  <ns0:text x="441.0487" y="373.9326" font-size="14.382" fill="var(--text-muted)">MPMC support</ns0:text>
+  <ns0:text x="441.0487" y="399.8202" font-size="14.382" fill="var(--text-muted)">select! macro</ns0:text>
+  <ns0:text x="441.0487" y="425.7078" font-size="14.382" fill="var(--text-muted)">Bounded &amp; unbounded</ns0:text>
+  <ns0:text x="441.0487" y="451.5956" font-size="14.382" fill="var(--text-muted)">Faster than std for sync code</ns0:text>
+  <ns0:rect x="793.8877" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <ns0:text x="962.9564" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">flume</ns0:text>
+  <ns0:text x="815.9401" y="373.9326" font-size="14.382" fill="var(--text-muted)">MPMC, async + sync</ns0:text>
+  <ns0:text x="815.9401" y="399.8202" font-size="14.382" fill="var(--text-muted)">Drop-in std replacement</ns0:text>
+  <ns0:text x="815.9401" y="425.7078" font-size="14.382" fill="var(--text-muted)">Works in both contexts</ns0:text>
+  <ns0:text x="815.9401" y="451.5956" font-size="14.382" fill="var(--text-muted)">Bridge sync &amp; async code</ns0:text>
+  <ns0:rect x="44.1049" y="496.1798" width="1087.9202" height="143.8202" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <ns0:text x="588.065" y="532.1348" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--text-dark)">When to Use What</ns0:text>
+  <ns0:text x="66.1573" y="568.0899" font-size="14.382" fill="var(--text-muted)">Request/Response: oneshot | Fan-out: broadcast | Config/State: watch</ns0:text>
+  <ns0:text x="66.1573" y="596.854" font-size="14.382" fill="var(--text-muted)">Work distribution: mpsc (bounded for backpressure) | Sync MPMC: crossbeam | Mixed: flume</ns0:text>
+  <ns0:text x="66.1573" y="625.618" font-size="14.382" fill="var(--danger-bright)">Unbounded channels can cause OOM - prefer bounded with backpressure in production</ns0:text>
 </ns0:svg>

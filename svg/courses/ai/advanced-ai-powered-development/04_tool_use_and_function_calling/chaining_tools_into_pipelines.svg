@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,51 +156,51 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arr" markerWidth="42.6223" markerHeight="141.75" refX="38.3599" refY="70.875" orient="auto">
       <ns0:polygon points="0,202.5 14.9178,0" fill="#555" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="269.4148" height="640" fill="#f9f9f9" />
-  <ns0:text x="134.7074" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Tool Pipeline: "Find and Fix All Deprecated API Calls"</ns0:text>
-  <ns0:rect x="6.7354" y="128" width="55.5668" height="160" rx="3.3677" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.6735" />
-  <ns0:text x="34.3504" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Step 1</ns0:text>
-  <ns0:text x="34.3504" y="211.2" text-anchor="middle" font-size="10" fill="#333">grep("deprecated")</ns0:text>
-  <ns0:text x="34.3504" y="248" text-anchor="middle" font-size="10" fill="#555">→ list of files</ns0:text>
-  <ns0:text x="34.3504" y="275.2" text-anchor="middle" font-size="10" fill="#888">codebase search</ns0:text>
-  <ns0:line x1="62.3022" y1="208" x2="72.4052" y2="208" stroke="#555" stroke-width="0.6735" marker-end="url(#arr)" />
-  <ns0:rect x="72.4052" y="128" width="55.5668" height="160" rx="3.3677" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.6735" />
-  <ns0:text x="100.0203" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Step 2</ns0:text>
-  <ns0:text x="100.0203" y="211.2" text-anchor="middle" font-size="10" fill="#333">read_file(file)</ns0:text>
-  <ns0:text x="100.0203" y="248" text-anchor="middle" font-size="10" fill="#555">→ source code</ns0:text>
-  <ns0:text x="100.0203" y="275.2" text-anchor="middle" font-size="10" fill="#888">for each match</ns0:text>
-  <ns0:line x1="127.972" y1="208" x2="138.0751" y2="208" stroke="#555" stroke-width="0.6735" marker-end="url(#arr)" />
-  <ns0:rect x="138.0751" y="128" width="55.5668" height="160" rx="3.3677" fill="#FFF3E0" stroke="#E65100" stroke-width="0.6735" />
-  <ns0:text x="165.6901" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Step 3</ns0:text>
-  <ns0:text x="165.6901" y="211.2" text-anchor="middle" font-size="10" fill="#333">edit_file(file)</ns0:text>
-  <ns0:text x="165.6901" y="248" text-anchor="middle" font-size="10" fill="#555">→ patched file</ns0:text>
-  <ns0:text x="165.6901" y="275.2" text-anchor="middle" font-size="10" fill="#888">apply new API</ns0:text>
-  <ns0:line x1="193.6419" y1="208" x2="203.745" y2="208" stroke="#555" stroke-width="0.6735" marker-end="url(#arr)" />
-  <ns0:rect x="203.745" y="128" width="58.9345" height="160" rx="3.3677" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.6735" />
-  <ns0:text x="233.0438" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Step 4</ns0:text>
-  <ns0:text x="233.0438" y="211.2" text-anchor="middle" font-size="10" fill="#333">shell("npm test")</ns0:text>
-  <ns0:text x="233.0438" y="248" text-anchor="middle" font-size="10" fill="#555">→ validation</ns0:text>
-  <ns0:text x="233.0438" y="275.2" text-anchor="middle" font-size="10" fill="#888">all tests green</ns0:text>
-  <ns0:rect x="6.7354" y="352" width="255.9441" height="264" rx="3.3677" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.5052" />
-  <ns0:text x="134.7074" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Orchestration Strategies</ns0:text>
-  <ns0:rect x="13.4707" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#bbdefb" stroke="#3949AB" />
-  <ns0:text x="49.505" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Sequential</ns0:text>
-  <ns0:text x="49.505" y="508.8" text-anchor="middle" font-size="10" fill="#333">each step depends</ns0:text>
-  <ns0:text x="49.505" y="540.8" text-anchor="middle" font-size="10" fill="#333">on previous result</ns0:text>
-  <ns0:text x="49.505" y="572.8" text-anchor="middle" font-size="10" fill="#555">e.g. read → analyze → fix</ns0:text>
-  <ns0:rect x="98.6732" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#bbdefb" stroke="#3949AB" />
-  <ns0:text x="134.7074" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Fan-Out / Fan-In</ns0:text>
-  <ns0:text x="134.7074" y="508.8" text-anchor="middle" font-size="10" fill="#333">parallel reads,</ns0:text>
-  <ns0:text x="134.7074" y="540.8" text-anchor="middle" font-size="10" fill="#333">then aggregate</ns0:text>
-  <ns0:text x="134.7074" y="572.8" text-anchor="middle" font-size="10" fill="#555">e.g. read 5 files at once</ns0:text>
-  <ns0:rect x="183.8756" y="428.8" width="72.4052" height="160" rx="2.6941" fill="#bbdefb" stroke="#3949AB" />
-  <ns0:text x="219.9099" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Conditional</ns0:text>
-  <ns0:text x="219.9099" y="508.8" text-anchor="middle" font-size="10" fill="#333">branch based on</ns0:text>
-  <ns0:text x="219.9099" y="540.8" text-anchor="middle" font-size="10" fill="#333">tool output</ns0:text>
-  <ns0:text x="219.9099" y="572.8" text-anchor="middle" font-size="10" fill="#555">e.g. skip if tests pass</ns0:text>
+  <ns0:rect width="269.4148" height="640" fill="var(--surface-light)" />
+  <ns0:text x="134.7074" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Tool Pipeline: "Find and Fix All Deprecated API Calls"</ns0:text>
+  <ns0:rect x="6.7354" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.6735" />
+  <ns0:text x="34.3504" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Step 1</ns0:text>
+  <ns0:text x="34.3504" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">grep("deprecated")</ns0:text>
+  <ns0:text x="34.3504" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ list of files</ns0:text>
+  <ns0:text x="34.3504" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">codebase search</ns0:text>
+  <ns0:line x1="62.3022" y1="208" x2="72.4052" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
+  <ns0:rect x="72.4052" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.6735" />
+  <ns0:text x="100.0203" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Step 2</ns0:text>
+  <ns0:text x="100.0203" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">read_file(file)</ns0:text>
+  <ns0:text x="100.0203" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ source code</ns0:text>
+  <ns0:text x="100.0203" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">for each match</ns0:text>
+  <ns0:line x1="127.972" y1="208" x2="138.0751" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
+  <ns0:rect x="138.0751" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.6735" />
+  <ns0:text x="165.6901" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Step 3</ns0:text>
+  <ns0:text x="165.6901" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">edit_file(file)</ns0:text>
+  <ns0:text x="165.6901" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ patched file</ns0:text>
+  <ns0:text x="165.6901" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">apply new API</ns0:text>
+  <ns0:line x1="193.6419" y1="208" x2="203.745" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
+  <ns0:rect x="203.745" y="128" width="58.9345" height="160" rx="3.3677" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.6735" />
+  <ns0:text x="233.0438" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Step 4</ns0:text>
+  <ns0:text x="233.0438" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">shell("npm test")</ns0:text>
+  <ns0:text x="233.0438" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ validation</ns0:text>
+  <ns0:text x="233.0438" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">all tests green</ns0:text>
+  <ns0:rect x="6.7354" y="352" width="255.9441" height="264" rx="3.3677" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5052" />
+  <ns0:text x="134.7074" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Orchestration Strategies</ns0:text>
+  <ns0:rect x="13.4707" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <ns0:text x="49.505" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Sequential</ns0:text>
+  <ns0:text x="49.505" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">each step depends</ns0:text>
+  <ns0:text x="49.505" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">on previous result</ns0:text>
+  <ns0:text x="49.505" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. read → analyze → fix</ns0:text>
+  <ns0:rect x="98.6732" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <ns0:text x="134.7074" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Fan-Out / Fan-In</ns0:text>
+  <ns0:text x="134.7074" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">parallel reads,</ns0:text>
+  <ns0:text x="134.7074" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">then aggregate</ns0:text>
+  <ns0:text x="134.7074" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. read 5 files at once</ns0:text>
+  <ns0:rect x="183.8756" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <ns0:text x="219.9099" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Conditional</ns0:text>
+  <ns0:text x="219.9099" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">branch based on</ns0:text>
+  <ns0:text x="219.9099" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">tool output</ns0:text>
+  <ns0:text x="219.9099" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. skip if tests pass</ns0:text>
 </ns0:svg>

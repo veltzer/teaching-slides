@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,28 +156,28 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:rect width="568.8889" height="640" fill="#1a1a2e" />
-  <ns0:text x="284.4444" y="60.8" text-anchor="middle" fill="white" font-size="14.9333" font-weight="bold">Chatbot vs. Agent</ns0:text>
-  <ns0:rect x="21.3333" y="96" width="245.3333" height="480" fill="#555555" rx="8.5333" />
-  <ns0:text x="143.6444" y="160" text-anchor="middle" fill="white" font-size="12.8" font-weight="bold">Chatbot</ns0:text>
-  <ns0:line x1="35.5556" y1="179.2" x2="252.4444" y2="179.2" stroke="#dddddd" stroke-width="0.7111" stroke-opacity="0.4" />
-  <ns0:text x="39.1111" y="224" fill="#dddddd" font-size="10">▶ Single prompt-response cycle</ns0:text>
-  <ns0:text x="39.1111" y="272" fill="#dddddd" font-size="10">▶ No tool access</ns0:text>
-  <ns0:text x="39.1111" y="320" fill="#dddddd" font-size="10">▶ Stateless across turns</ns0:text>
-  <ns0:text x="39.1111" y="368" fill="#dddddd" font-size="10">▶ User drives every step</ns0:text>
-  <ns0:text x="39.1111" y="416" fill="#dddddd" font-size="10">▶ Limited context (what you paste)</ns0:text>
-  <ns0:text x="39.1111" y="464" fill="#dddddd" font-size="10">▶ Examples: ChatGPT, Claude.ai</ns0:text>
-  <ns0:text x="284.4444" y="344" text-anchor="middle" fill="#F9A825" font-size="17.0667" font-weight="bold">VS</ns0:text>
-  <ns0:rect x="302.2222" y="96" width="245.3333" height="480" fill="#1565c0" rx="8.5333" />
-  <ns0:text x="424.5333" y="160" text-anchor="middle" fill="white" font-size="12.8" font-weight="bold">Agent</ns0:text>
-  <ns0:line x1="316.4444" y1="179.2" x2="533.3333" y2="179.2" stroke="#bbdefb" stroke-width="0.7111" stroke-opacity="0.4" />
-  <ns0:text x="320" y="224" fill="#bbdefb" font-size="10">▶ Multi-step autonomous loop</ns0:text>
-  <ns0:text x="320" y="272" fill="#bbdefb" font-size="10">▶ Tool use: files, shell, git, web</ns0:text>
-  <ns0:text x="320" y="320" fill="#bbdefb" font-size="10">▶ Maintains goal across steps</ns0:text>
-  <ns0:text x="320" y="368" fill="#bbdefb" font-size="10">▶ Self-directed execution</ns0:text>
-  <ns0:text x="320" y="416" fill="#bbdefb" font-size="10">▶ Reads entire codebase as needed</ns0:text>
-  <ns0:text x="320" y="464" fill="#bbdefb" font-size="10">▶ Examples: Claude Code, Cursor</ns0:text>
-  <ns0:rect x="21.3333" y="592" width="526.2222" height="35.2" rx="3.5556" fill="#F9A825" fill-opacity="0.2" />
-  <ns0:text x="284.4444" y="617.6" text-anchor="middle" fill="#F9A825" font-size="10">Agent = Observe → Reason → Act → Observe ... (loop until done)</ns0:text>
+</defs>
+  <ns0:rect width="568.8889" height="640" fill="var(--code-bg)" />
+  <ns0:text x="284.4444" y="60.8" text-anchor="middle" fill="var(--bg)" font-size="14.9333" font-weight="bold">Chatbot vs. Agent</ns0:text>
+  <ns0:rect x="21.3333" y="96" width="245.3333" height="480" fill="var(--text-muted)" rx="8.5333" />
+  <ns0:text x="143.6444" y="160" text-anchor="middle" fill="var(--bg)" font-size="12.8" font-weight="bold">Chatbot</ns0:text>
+  <ns0:line x1="35.5556" y1="179.2" x2="252.4444" y2="179.2" stroke="var(--border-softer)" stroke-width="0.7111" stroke-opacity="0.4" />
+  <ns0:text x="39.1111" y="224" fill="var(--border-softer)" font-size="10">▶ Single prompt-response cycle</ns0:text>
+  <ns0:text x="39.1111" y="272" fill="var(--border-softer)" font-size="10">▶ No tool access</ns0:text>
+  <ns0:text x="39.1111" y="320" fill="var(--border-softer)" font-size="10">▶ Stateless across turns</ns0:text>
+  <ns0:text x="39.1111" y="368" fill="var(--border-softer)" font-size="10">▶ User drives every step</ns0:text>
+  <ns0:text x="39.1111" y="416" fill="var(--border-softer)" font-size="10">▶ Limited context (what you paste)</ns0:text>
+  <ns0:text x="39.1111" y="464" fill="var(--border-softer)" font-size="10">▶ Examples: ChatGPT, Claude.ai</ns0:text>
+  <ns0:text x="284.4444" y="344" text-anchor="middle" fill="var(--warn-amber)" font-size="17.0667" font-weight="bold">VS</ns0:text>
+  <ns0:rect x="302.2222" y="96" width="245.3333" height="480" fill="var(--primary-dk)" rx="8.5333" />
+  <ns0:text x="424.5333" y="160" text-anchor="middle" fill="var(--bg)" font-size="12.8" font-weight="bold">Agent</ns0:text>
+  <ns0:line x1="316.4444" y1="179.2" x2="533.3333" y2="179.2" stroke="var(--primary-lt)" stroke-width="0.7111" stroke-opacity="0.4" />
+  <ns0:text x="320" y="224" fill="var(--primary-lt)" font-size="10">▶ Multi-step autonomous loop</ns0:text>
+  <ns0:text x="320" y="272" fill="var(--primary-lt)" font-size="10">▶ Tool use: files, shell, git, web</ns0:text>
+  <ns0:text x="320" y="320" fill="var(--primary-lt)" font-size="10">▶ Maintains goal across steps</ns0:text>
+  <ns0:text x="320" y="368" fill="var(--primary-lt)" font-size="10">▶ Self-directed execution</ns0:text>
+  <ns0:text x="320" y="416" fill="var(--primary-lt)" font-size="10">▶ Reads entire codebase as needed</ns0:text>
+  <ns0:text x="320" y="464" fill="var(--primary-lt)" font-size="10">▶ Examples: Claude Code, Cursor</ns0:text>
+  <ns0:rect x="21.3333" y="592" width="526.2222" height="35.2" rx="3.5556" fill="var(--warn-amber)" fill-opacity="0.2" />
+  <ns0:text x="284.4444" y="617.6" text-anchor="middle" fill="var(--warn-amber)" font-size="10">Agent = Observe → Reason → Act → Observe ... (loop until done)</ns0:text>
 </ns0:svg>

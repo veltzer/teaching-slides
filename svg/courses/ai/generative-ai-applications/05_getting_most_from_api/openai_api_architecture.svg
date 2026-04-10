@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,7 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
@@ -68,77 +165,77 @@
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:rect x="35.5556" y="177.7778" width="177.7778" height="115.5556" rx="8.8889" fill="url(#grad-surface)" filter="url(#shadow)" stroke="#1e88e5" stroke-width="1.7778" />
+  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
+  <ns0:rect x="35.5556" y="177.7778" width="177.7778" height="115.5556" rx="8.8889" fill="url(#grad-surface)" filter="url(#shadow)" stroke="var(--primary)" stroke-width="1.7778" />
   <ns0:rect x="35.5556" y="177.7778" width="177.7778" height="32" rx="8.8889" fill="url(#grad-primary)" />
   <ns0:rect x="35.5556" y="199.1111" width="177.7778" height="10.6667" fill="url(#grad-primary)" />
-  <ns0:text x="124.4444" y="199.1111" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff" text-anchor="middle">Your App</ns0:text>
-  <ns0:text x="124.4444" y="228.4444" font-family="monospace" font-size="10.6667" fill="#333" text-anchor="middle">client = OpenAI()</ns0:text>
-  <ns0:text x="124.4444" y="244.4444" font-family="monospace" font-size="10.6667" fill="#333" text-anchor="middle">client.chat.</ns0:text>
-  <ns0:text x="124.4444" y="260.4444" font-family="monospace" font-size="10.6667" fill="#333" text-anchor="middle">completions.create()</ns0:text>
-  <ns0:line x1="213.3333" y1="235.5556" x2="275.5556" y2="235.5556" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:text x="244.4444" y="226.6667" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">HTTP POST</ns0:text>
-  <ns0:rect x="275.5556" y="160" width="204.4444" height="155.5556" rx="8.8889" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.7778" />
-  <ns0:rect x="275.5556" y="160" width="204.4444" height="32" rx="8.8889" fill="#f9a825" />
-  <ns0:rect x="275.5556" y="181.3333" width="204.4444" height="10.6667" fill="#f9a825" />
-  <ns0:text x="377.7778" y="181.3333" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#fff" text-anchor="middle">HTTP Request</ns0:text>
-  <ns0:text x="284.4444" y="208.8889" font-family="monospace" font-size="10" fill="#555">POST /v1/chat/completions</ns0:text>
-  <ns0:text x="284.4444" y="224.8889" font-family="monospace" font-size="10" fill="#555">Authorization: Bearer sk-...</ns0:text>
-  <ns0:text x="284.4444" y="240.8889" font-family="monospace" font-size="10" fill="#1565c0">model: "gpt-4o"</ns0:text>
-  <ns0:text x="284.4444" y="256.8889" font-family="monospace" font-size="10" fill="#1565c0">messages: [...]</ns0:text>
-  <ns0:text x="284.4444" y="272.8889" font-family="monospace" font-size="10" fill="#c62828">temperature: 0.7</ns0:text>
-  <ns0:text x="284.4444" y="288.8889" font-family="monospace" font-size="10" fill="#c62828">max_tokens: 300</ns0:text>
-  <ns0:line x1="480" y1="235.5556" x2="542.2222" y2="235.5556" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:text x="511.1111" y="226.6667" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">TLS</ns0:text>
-  <ns0:rect x="542.2222" y="151.1111" width="195.5556" height="177.7778" rx="8.8889" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="1.7778" />
-  <ns0:rect x="542.2222" y="151.1111" width="195.5556" height="32" rx="8.8889" fill="#2e7d32" />
-  <ns0:rect x="542.2222" y="172.4444" width="195.5556" height="10.6667" fill="#2e7d32" />
-  <ns0:text x="640" y="172.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff" text-anchor="middle">GPT-4o Model</ns0:text>
-  <ns0:text x="640" y="202.6667" font-family="Arial,sans-serif" font-size="11.5556" fill="#333" text-anchor="middle">Tokenize input</ns0:text>
-  <ns0:line x1="568.8889" y1="209.7778" x2="720" y2="209.7778" stroke="#aaa" stroke-width="0.8889" />
-  <ns0:text x="640" y="226.6667" font-family="Arial,sans-serif" font-size="11.5556" fill="#333" text-anchor="middle">Forward pass</ns0:text>
-  <ns0:line x1="568.8889" y1="233.7778" x2="720" y2="233.7778" stroke="#aaa" stroke-width="0.8889" />
-  <ns0:text x="640" y="251.5556" font-family="Arial,sans-serif" font-size="11.5556" fill="#333" text-anchor="middle">Sample tokens</ns0:text>
-  <ns0:line x1="568.8889" y1="258.6667" x2="720" y2="258.6667" stroke="#aaa" stroke-width="0.8889" />
-  <ns0:text x="640" y="276.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="#333" text-anchor="middle">Decode output</ns0:text>
-  <ns0:line x1="568.8889" y1="282.6667" x2="720" y2="282.6667" stroke="#aaa" stroke-width="0.8889" />
-  <ns0:text x="640" y="312.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="#333" text-anchor="middle">temperature controls</ns0:text>
-  <ns0:text x="640" y="327.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">randomness of sampling</ns0:text>
-  <ns0:line x1="737.7778" y1="235.5556" x2="808.8889" y2="235.5556" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:text x="773.3333" y="226.6667" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">JSON</ns0:text>
-  <ns0:rect x="808.8889" y="142.2222" width="293.3333" height="204.4444" rx="8.8889" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.7778" />
-  <ns0:rect x="808.8889" y="142.2222" width="293.3333" height="32" rx="8.8889" fill="#c62828" />
-  <ns0:rect x="808.8889" y="163.5556" width="293.3333" height="10.6667" fill="#c62828" />
-  <ns0:text x="955.5556" y="163.5556" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff" text-anchor="middle">HTTP Response</ns0:text>
-  <ns0:text x="817.7778" y="191.1111" font-family="monospace" font-size="10" fill="#555">choices[0].message.content</ns0:text>
-  <ns0:text x="817.7778" y="207.1111" font-family="monospace" font-size="10" fill="#555">choices[0].finish_reason</ns0:text>
-  <ns0:text x="817.7778" y="223.1111" font-family="monospace" font-size="10" fill="#1565c0">usage.prompt_tokens</ns0:text>
-  <ns0:text x="817.7778" y="239.1111" font-family="monospace" font-size="10" fill="#1565c0">usage.completion_tokens</ns0:text>
-  <ns0:text x="817.7778" y="255.1111" font-family="monospace" font-size="10" fill="#c62828">usage.total_tokens</ns0:text>
-  <ns0:text x="817.7778" y="271.1111" font-family="monospace" font-size="10" fill="#555">model  (actual version)</ns0:text>
-  <ns0:text x="817.7778" y="287.1111" font-family="monospace" font-size="10" fill="#555">id     (request UUID)</ns0:text>
-  <ns0:text x="817.7778" y="318.2222" font-family="Arial,sans-serif" font-size="10" fill="#c62828" text-anchor="middle">Billed per token used</ns0:text>
-  <ns0:text x="955.5556" y="336" font-family="Arial,sans-serif" font-size="10" fill="#c62828" text-anchor="middle">finish_reason: stop | length | content_filter</ns0:text>
-  <ns0:rect x="35.5556" y="435.5556" width="497.7778" height="142.2222" rx="8.8889" fill="#f5f5f5" filter="url(#shadow)" />
-  <ns0:text x="284.4444" y="458.6667" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#333" text-anchor="middle">Key Parameters</ns0:text>
-  <ns0:rect x="53.3333" y="469.3333" width="10.6667" height="10.6667" rx="1.7778" fill="#1565c0" />
-  <ns0:text x="71.1111" y="479.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">model — which model to use (gpt-4o, gpt-4o-mini, ...)</ns0:text>
-  <ns0:rect x="53.3333" y="490.6667" width="10.6667" height="10.6667" rx="1.7778" fill="#1565c0" />
-  <ns0:text x="71.1111" y="500.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">messages — list of {role, content} objects</ns0:text>
-  <ns0:rect x="53.3333" y="512" width="10.6667" height="10.6667" rx="1.7778" fill="#c62828" />
-  <ns0:text x="71.1111" y="521.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">temperature — 0 (deterministic) to 2 (creative)</ns0:text>
-  <ns0:rect x="53.3333" y="533.3333" width="10.6667" height="10.6667" rx="1.7778" fill="#c62828" />
-  <ns0:text x="71.1111" y="543.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">max_tokens — cap on output tokens (cost control)</ns0:text>
-  <ns0:rect x="53.3333" y="554.6667" width="10.6667" height="10.6667" rx="1.7778" fill="#555" />
-  <ns0:text x="71.1111" y="564.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">stream — return tokens incrementally (true/false)</ns0:text>
-  <ns0:rect x="568.8889" y="435.5556" width="533.3333" height="142.2222" rx="8.8889" fill="#f5f5f5" filter="url(#shadow)" />
-  <ns0:text x="835.5556" y="458.6667" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#333" text-anchor="middle">Message Roles</ns0:text>
-  <ns0:rect x="586.6667" y="469.3333" width="10.6667" height="10.6667" rx="1.7778" fill="#2e7d32" />
-  <ns0:text x="604.4444" y="479.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">system — persona and instructions for the model</ns0:text>
-  <ns0:rect x="586.6667" y="490.6667" width="10.6667" height="10.6667" rx="1.7778" fill="#1565c0" />
-  <ns0:text x="604.4444" y="500.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">user — the human turn input</ns0:text>
-  <ns0:rect x="586.6667" y="512" width="10.6667" height="10.6667" rx="1.7778" fill="#c62828" />
-  <ns0:text x="604.4444" y="521.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">assistant — previous model replies (multi-turn)</ns0:text>
-  <ns0:rect x="586.6667" y="533.3333" width="10.6667" height="10.6667" rx="1.7778" fill="#f9a825" />
-  <ns0:text x="604.4444" y="543.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="#333">tool — results of function calls</ns0:text>
+  <ns0:text x="124.4444" y="199.1111" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle">Your App</ns0:text>
+  <ns0:text x="124.4444" y="228.4444" font-family="monospace" font-size="10.6667" fill="var(--text-dark)" text-anchor="middle">client = OpenAI()</ns0:text>
+  <ns0:text x="124.4444" y="244.4444" font-family="monospace" font-size="10.6667" fill="var(--text-dark)" text-anchor="middle">client.chat.</ns0:text>
+  <ns0:text x="124.4444" y="260.4444" font-family="monospace" font-size="10.6667" fill="var(--text-dark)" text-anchor="middle">completions.create()</ns0:text>
+  <ns0:line x1="213.3333" y1="235.5556" x2="275.5556" y2="235.5556" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="244.4444" y="226.6667" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">HTTP POST</ns0:text>
+  <ns0:rect x="275.5556" y="160" width="204.4444" height="155.5556" rx="8.8889" fill="var(--warn-pale3)" filter="url(#shadow)" stroke="var(--warn-amber)" stroke-width="1.7778" />
+  <ns0:rect x="275.5556" y="160" width="204.4444" height="32" rx="8.8889" fill="var(--warn-amber)" />
+  <ns0:rect x="275.5556" y="181.3333" width="204.4444" height="10.6667" fill="var(--warn-amber)" />
+  <ns0:text x="377.7778" y="181.3333" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)" text-anchor="middle">HTTP Request</ns0:text>
+  <ns0:text x="284.4444" y="208.8889" font-family="monospace" font-size="10" fill="var(--text-muted)">POST /v1/chat/completions</ns0:text>
+  <ns0:text x="284.4444" y="224.8889" font-family="monospace" font-size="10" fill="var(--text-muted)">Authorization: Bearer sk-...</ns0:text>
+  <ns0:text x="284.4444" y="240.8889" font-family="monospace" font-size="10" fill="var(--primary-dk)">model: "gpt-4o"</ns0:text>
+  <ns0:text x="284.4444" y="256.8889" font-family="monospace" font-size="10" fill="var(--primary-dk)">messages: [...]</ns0:text>
+  <ns0:text x="284.4444" y="272.8889" font-family="monospace" font-size="10" fill="var(--danger-dk)">temperature: 0.7</ns0:text>
+  <ns0:text x="284.4444" y="288.8889" font-family="monospace" font-size="10" fill="var(--danger-dk)">max_tokens: 300</ns0:text>
+  <ns0:line x1="480" y1="235.5556" x2="542.2222" y2="235.5556" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="511.1111" y="226.6667" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">TLS</ns0:text>
+  <ns0:rect x="542.2222" y="151.1111" width="195.5556" height="177.7778" rx="8.8889" fill="var(--ok-pale)" filter="url(#shadow)" stroke="var(--ok-dk)" stroke-width="1.7778" />
+  <ns0:rect x="542.2222" y="151.1111" width="195.5556" height="32" rx="8.8889" fill="var(--ok-dk)" />
+  <ns0:rect x="542.2222" y="172.4444" width="195.5556" height="10.6667" fill="var(--ok-dk)" />
+  <ns0:text x="640" y="172.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)" text-anchor="middle">GPT-4o Model</ns0:text>
+  <ns0:text x="640" y="202.6667" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Tokenize input</ns0:text>
+  <ns0:line x1="568.8889" y1="209.7778" x2="720" y2="209.7778" stroke="var(--text-placeholder)" stroke-width="0.8889" />
+  <ns0:text x="640" y="226.6667" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Forward pass</ns0:text>
+  <ns0:line x1="568.8889" y1="233.7778" x2="720" y2="233.7778" stroke="var(--text-placeholder)" stroke-width="0.8889" />
+  <ns0:text x="640" y="251.5556" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Sample tokens</ns0:text>
+  <ns0:line x1="568.8889" y1="258.6667" x2="720" y2="258.6667" stroke="var(--text-placeholder)" stroke-width="0.8889" />
+  <ns0:text x="640" y="276.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">Decode output</ns0:text>
+  <ns0:line x1="568.8889" y1="282.6667" x2="720" y2="282.6667" stroke="var(--text-placeholder)" stroke-width="0.8889" />
+  <ns0:text x="640" y="312.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">temperature controls</ns0:text>
+  <ns0:text x="640" y="327.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)" text-anchor="middle">randomness of sampling</ns0:text>
+  <ns0:line x1="737.7778" y1="235.5556" x2="808.8889" y2="235.5556" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="773.3333" y="226.6667" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">JSON</ns0:text>
+  <ns0:rect x="808.8889" y="142.2222" width="293.3333" height="204.4444" rx="8.8889" fill="var(--danger-pale3)" filter="url(#shadow)" stroke="var(--danger-dk)" stroke-width="1.7778" />
+  <ns0:rect x="808.8889" y="142.2222" width="293.3333" height="32" rx="8.8889" fill="var(--danger-dk)" />
+  <ns0:rect x="808.8889" y="163.5556" width="293.3333" height="10.6667" fill="var(--danger-dk)" />
+  <ns0:text x="955.5556" y="163.5556" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)" text-anchor="middle">HTTP Response</ns0:text>
+  <ns0:text x="817.7778" y="191.1111" font-family="monospace" font-size="10" fill="var(--text-muted)">choices[0].message.content</ns0:text>
+  <ns0:text x="817.7778" y="207.1111" font-family="monospace" font-size="10" fill="var(--text-muted)">choices[0].finish_reason</ns0:text>
+  <ns0:text x="817.7778" y="223.1111" font-family="monospace" font-size="10" fill="var(--primary-dk)">usage.prompt_tokens</ns0:text>
+  <ns0:text x="817.7778" y="239.1111" font-family="monospace" font-size="10" fill="var(--primary-dk)">usage.completion_tokens</ns0:text>
+  <ns0:text x="817.7778" y="255.1111" font-family="monospace" font-size="10" fill="var(--danger-dk)">usage.total_tokens</ns0:text>
+  <ns0:text x="817.7778" y="271.1111" font-family="monospace" font-size="10" fill="var(--text-muted)">model  (actual version)</ns0:text>
+  <ns0:text x="817.7778" y="287.1111" font-family="monospace" font-size="10" fill="var(--text-muted)">id     (request UUID)</ns0:text>
+  <ns0:text x="817.7778" y="318.2222" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle">Billed per token used</ns0:text>
+  <ns0:text x="955.5556" y="336" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle">finish_reason: stop | length | content_filter</ns0:text>
+  <ns0:rect x="35.5556" y="435.5556" width="497.7778" height="142.2222" rx="8.8889" fill="var(--surface)" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="458.6667" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Key Parameters</ns0:text>
+  <ns0:rect x="53.3333" y="469.3333" width="10.6667" height="10.6667" rx="1.7778" fill="var(--primary-dk)" />
+  <ns0:text x="71.1111" y="479.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">model — which model to use (gpt-4o, gpt-4o-mini, ...)</ns0:text>
+  <ns0:rect x="53.3333" y="490.6667" width="10.6667" height="10.6667" rx="1.7778" fill="var(--primary-dk)" />
+  <ns0:text x="71.1111" y="500.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">messages — list of {role, content} objects</ns0:text>
+  <ns0:rect x="53.3333" y="512" width="10.6667" height="10.6667" rx="1.7778" fill="var(--danger-dk)" />
+  <ns0:text x="71.1111" y="521.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">temperature — 0 (deterministic) to 2 (creative)</ns0:text>
+  <ns0:rect x="53.3333" y="533.3333" width="10.6667" height="10.6667" rx="1.7778" fill="var(--danger-dk)" />
+  <ns0:text x="71.1111" y="543.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">max_tokens — cap on output tokens (cost control)</ns0:text>
+  <ns0:rect x="53.3333" y="554.6667" width="10.6667" height="10.6667" rx="1.7778" fill="var(--text-muted)" />
+  <ns0:text x="71.1111" y="564.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">stream — return tokens incrementally (true/false)</ns0:text>
+  <ns0:rect x="568.8889" y="435.5556" width="533.3333" height="142.2222" rx="8.8889" fill="var(--surface)" filter="url(#shadow)" />
+  <ns0:text x="835.5556" y="458.6667" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Message Roles</ns0:text>
+  <ns0:rect x="586.6667" y="469.3333" width="10.6667" height="10.6667" rx="1.7778" fill="var(--ok-dk)" />
+  <ns0:text x="604.4444" y="479.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">system — persona and instructions for the model</ns0:text>
+  <ns0:rect x="586.6667" y="490.6667" width="10.6667" height="10.6667" rx="1.7778" fill="var(--primary-dk)" />
+  <ns0:text x="604.4444" y="500.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">user — the human turn input</ns0:text>
+  <ns0:rect x="586.6667" y="512" width="10.6667" height="10.6667" rx="1.7778" fill="var(--danger-dk)" />
+  <ns0:text x="604.4444" y="521.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">assistant — previous model replies (multi-turn)</ns0:text>
+  <ns0:rect x="586.6667" y="533.3333" width="10.6667" height="10.6667" rx="1.7778" fill="var(--warn-amber)" />
+  <ns0:text x="604.4444" y="543.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)">tool — results of function calls</ns0:text>
 </ns0:svg>

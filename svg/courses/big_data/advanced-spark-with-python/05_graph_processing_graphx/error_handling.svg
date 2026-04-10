@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,39 +156,38 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
-  </ns0:defs>
-  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-family="Arial" font-size="26.9474" font-weight="bold" fill="#1a237e">Graph Error Handling</ns0:text>
-  <ns0:rect x="44.9123" y="101.0526" width="269.4737" height="84.2105" rx="11.9766" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.9942" />
-  <ns0:text x="179.6491" y="151.5789" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#1565c0">Graph Operation</ns0:text>
-  <ns0:line x1="314.386" y1="143.1579" x2="389.2398" y2="143.1579" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
-  <ns0:rect x="404.2105" y="84.2105" width="359.2982" height="117.8947" rx="11.9766" fill="#fce4ec" stroke="#c62828" stroke-width="2.9942" />
-  <ns0:text x="583.8596" y="126.3158" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#c62828">Possible Errors</ns0:text>
-  <ns0:text x="583.8596" y="168.4211" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="#555">OOM / Invalid Data / Convergence</ns0:text>
-  <ns0:line x1="763.5088" y1="143.1579" x2="838.3626" y2="143.1579" stroke="#333" stroke-width="2.9942" marker-end="url(#arrow)" />
-  <ns0:rect x="853.3333" y="101.0526" width="299.4152" height="84.2105" rx="11.9766" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9942" />
-  <ns0:text x="1003.0409" y="151.5789" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#2e7d32">Error Handler</ns0:text>
-  <ns0:rect x="44.9123" y="261.0526" width="344.3275" height="185.2632" rx="11.9766" fill="#fce4ec" stroke="#c62828" stroke-width="2.9942" />
-  <ns0:text x="217.076" y="299.7895" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#c62828">Out of Memory</ns0:text>
-  <ns0:text x="67.3684" y="333.4737" font-family="Arial" font-size="16.4678" fill="#333">- Increase executor memory</ns0:text>
-  <ns0:text x="67.3684" y="363.7895" font-family="Arial" font-size="16.4678" fill="#333">- Repartition the graph</ns0:text>
-  <ns0:text x="67.3684" y="394.1053" font-family="Arial" font-size="16.4678" fill="#333">- Use MEMORY_AND_DISK</ns0:text>
-  <ns0:text x="67.3684" y="424.4211" font-family="Arial" font-size="16.4678" fill="#333">- Enable checkpointing</ns0:text>
-  <ns0:rect x="426.6667" y="261.0526" width="344.3275" height="185.2632" rx="11.9766" fill="#fff3e0" stroke="#e65100" stroke-width="2.9942" />
-  <ns0:text x="598.8304" y="299.7895" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#e65100">Invalid Data</ns0:text>
-  <ns0:text x="449.1228" y="333.4737" font-family="Arial" font-size="16.4678" fill="#333">- Missing vertex references</ns0:text>
-  <ns0:text x="449.1228" y="363.7895" font-family="Arial" font-size="16.4678" fill="#333">- Null properties</ns0:text>
-  <ns0:text x="449.1228" y="394.1053" font-family="Arial" font-size="16.4678" fill="#333">- Validate before creating</ns0:text>
-  <ns0:text x="449.1228" y="424.4211" font-family="Arial" font-size="16.4678" fill="#333">- Use try/except blocks</ns0:text>
-  <ns0:rect x="808.4211" y="261.0526" width="344.3275" height="185.2632" rx="11.9766" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.9942" />
-  <ns0:text x="980.5848" y="299.7895" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#7b1fa2">Non-Convergence</ns0:text>
-  <ns0:text x="830.8772" y="333.4737" font-family="Arial" font-size="16.4678" fill="#333">- Set maxIterations limit</ns0:text>
-  <ns0:text x="830.8772" y="363.7895" font-family="Arial" font-size="16.4678" fill="#333">- Monitor convergence</ns0:text>
-  <ns0:text x="830.8772" y="394.1053" font-family="Arial" font-size="16.4678" fill="#333">- Adjust tolerance (tol)</ns0:text>
-  <ns0:text x="830.8772" y="424.4211" font-family="Arial" font-size="16.4678" fill="#333">- Check for graph cycles</ns0:text>
-  <ns0:rect x="149.7076" y="505.2632" width="898.2456" height="134.7368" rx="11.9766" fill="#e8f4f8" stroke="#2e7d32" stroke-width="2.9942" />
-  <ns0:text x="598.8304" y="547.3684" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="#2e7d32">Recommended Pattern</ns0:text>
-  <ns0:text x="179.6491" y="586.1053" font-family="Courier New" font-size="16.4678" fill="#333">try:</ns0:text>
-  <ns0:text x="209.5906" y="611.3684" font-family="Courier New" font-size="16.4678" fill="#333">result = g.pageRank(maxIter=20, tol=0.01)</ns0:text>
-  <ns0:text x="179.6491" y="636.6316" font-family="Courier New" font-size="16.4678" fill="#333">except Exception as e: log_error(e); fallback()</ns0:text>
+</ns0:defs>
+  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-family="Arial" font-size="26.9474" font-weight="bold" fill="var(--primary-deeper)">Graph Error Handling</ns0:text>
+  <ns0:rect x="44.9123" y="101.0526" width="269.4737" height="84.2105" rx="11.9766" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.9942" />
+  <ns0:text x="179.6491" y="151.5789" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--primary-dk)">Graph Operation</ns0:text>
+  <ns0:line x1="314.386" y1="143.1579" x2="389.2398" y2="143.1579" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:rect x="404.2105" y="84.2105" width="359.2982" height="117.8947" rx="11.9766" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="2.9942" />
+  <ns0:text x="583.8596" y="126.3158" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--danger-dk)">Possible Errors</ns0:text>
+  <ns0:text x="583.8596" y="168.4211" text-anchor="middle" font-family="Arial" font-size="16.4678" fill="var(--text-muted)">OOM / Invalid Data / Convergence</ns0:text>
+  <ns0:line x1="763.5088" y1="143.1579" x2="838.3626" y2="143.1579" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrow)" />
+  <ns0:rect x="853.3333" y="101.0526" width="299.4152" height="84.2105" rx="11.9766" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9942" />
+  <ns0:text x="1003.0409" y="151.5789" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--ok-dk)">Error Handler</ns0:text>
+  <ns0:rect x="44.9123" y="261.0526" width="344.3275" height="185.2632" rx="11.9766" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="2.9942" />
+  <ns0:text x="217.076" y="299.7895" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--danger-dk)">Out of Memory</ns0:text>
+  <ns0:text x="67.3684" y="333.4737" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Increase executor memory</ns0:text>
+  <ns0:text x="67.3684" y="363.7895" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Repartition the graph</ns0:text>
+  <ns0:text x="67.3684" y="394.1053" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Use MEMORY_AND_DISK</ns0:text>
+  <ns0:text x="67.3684" y="424.4211" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Enable checkpointing</ns0:text>
+  <ns0:rect x="426.6667" y="261.0526" width="344.3275" height="185.2632" rx="11.9766" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.9942" />
+  <ns0:text x="598.8304" y="299.7895" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--warn-dk)">Invalid Data</ns0:text>
+  <ns0:text x="449.1228" y="333.4737" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Missing vertex references</ns0:text>
+  <ns0:text x="449.1228" y="363.7895" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Null properties</ns0:text>
+  <ns0:text x="449.1228" y="394.1053" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Validate before creating</ns0:text>
+  <ns0:text x="449.1228" y="424.4211" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Use try/except blocks</ns0:text>
+  <ns0:rect x="808.4211" y="261.0526" width="344.3275" height="185.2632" rx="11.9766" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" />
+  <ns0:text x="980.5848" y="299.7895" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--info-mid)">Non-Convergence</ns0:text>
+  <ns0:text x="830.8772" y="333.4737" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Set maxIterations limit</ns0:text>
+  <ns0:text x="830.8772" y="363.7895" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Monitor convergence</ns0:text>
+  <ns0:text x="830.8772" y="394.1053" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Adjust tolerance (tol)</ns0:text>
+  <ns0:text x="830.8772" y="424.4211" font-family="Arial" font-size="16.4678" fill="var(--text-dark)">- Check for graph cycles</ns0:text>
+  <ns0:rect x="149.7076" y="505.2632" width="898.2456" height="134.7368" rx="11.9766" fill="var(--primary-pale2)" stroke="var(--ok-dk)" stroke-width="2.9942" />
+  <ns0:text x="598.8304" y="547.3684" text-anchor="middle" font-family="Arial" font-size="19.462" font-weight="bold" fill="var(--ok-dk)">Recommended Pattern</ns0:text>
+  <ns0:text x="179.6491" y="586.1053" font-family="Courier New" font-size="16.4678" fill="var(--text-dark)">try:</ns0:text>
+  <ns0:text x="209.5906" y="611.3684" font-family="Courier New" font-size="16.4678" fill="var(--text-dark)">result = g.pageRank(maxIter=20, tol=0.01)</ns0:text>
+  <ns0:text x="179.6491" y="636.6316" font-family="Courier New" font-size="16.4678" fill="var(--text-dark)">except Exception as e: log_error(e); fallback()</ns0:text>
 </ns0:svg>

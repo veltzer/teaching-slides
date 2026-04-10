@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <ns0:defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,52 +156,52 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
+
     <ns0:marker id="arr" markerWidth="25.6" markerHeight="112" refX="23.04" refY="56" orient="auto">
       <ns0:polygon points="0,160 8.96,0" fill="#333" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="204.8" height="640" fill="#f9f9f9" />
-  <ns0:text x="102.4" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">AI-Powered Automated PR Checks</ns0:text>
-  <ns0:rect x="3.84" y="144" width="32" height="144" rx="2.56" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.512" />
-  <ns0:text x="19.712" y="195.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">PR Opened</ns0:text>
-  <ns0:text x="19.712" y="232" text-anchor="middle" font-size="10" fill="#555">diff ready</ns0:text>
-  <ns0:text x="19.712" y="264" text-anchor="middle" font-size="10" fill="#555">CI triggered</ns0:text>
-  <ns0:line x1="35.84" y1="216" x2="44.8" y2="216" stroke="#333" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="44.8" y="144" width="32" height="144" rx="2.56" fill="#FFF3E0" stroke="#E65100" stroke-width="0.512" />
-  <ns0:text x="60.672" y="195.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">AI Review</ns0:text>
-  <ns0:text x="60.672" y="232" text-anchor="middle" font-size="10" fill="#555">security scan</ns0:text>
-  <ns0:text x="60.672" y="264" text-anchor="middle" font-size="10" fill="#555">logic check</ns0:text>
-  <ns0:line x1="76.8" y1="216" x2="85.76" y2="216" stroke="#333" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="85.76" y="144" width="32" height="144" rx="2.56" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="0.512" />
-  <ns0:text x="101.632" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#7B1FA2">AI Test</ns0:text>
-  <ns0:text x="101.632" y="220.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#7B1FA2">Selection</ns0:text>
-  <ns0:text x="101.632" y="256" text-anchor="middle" font-size="10" fill="#555">predict failures</ns0:text>
-  <ns0:line x1="117.76" y1="216" x2="126.72" y2="216" stroke="#333" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="126.72" y="144" width="32" height="144" rx="2.56" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.512" />
-  <ns0:text x="142.592" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Risk</ns0:text>
-  <ns0:text x="142.592" y="220.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Scoring</ns0:text>
-  <ns0:text x="142.592" y="256" text-anchor="middle" font-size="10" fill="#555">files changed</ns0:text>
-  <ns0:line x1="158.72" y1="216" x2="167.68" y2="216" stroke="#333" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="167.68" y="144" width="33.28" height="144" rx="2.56" fill="#FFEBEE" stroke="#C62828" stroke-width="0.512" />
-  <ns0:text x="184.32" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Gate</ns0:text>
-  <ns0:text x="184.32" y="220.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Decision</ns0:text>
-  <ns0:text x="184.32" y="256" text-anchor="middle" font-size="10" fill="#555">merge / block</ns0:text>
-  <ns0:rect x="3.84" y="352" width="194.56" height="264" rx="2.56" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.384" />
-  <ns0:text x="102.4" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">How AI Assigns Risk Scores to PRs</ns0:text>
-  <ns0:rect x="8.96" y="428.8" width="56.32" height="160" rx="2.048" fill="#bbdefb" stroke="#3949AB" />
-  <ns0:text x="37.12" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">High Risk Files</ns0:text>
-  <ns0:text x="37.12" y="508.8" text-anchor="middle" font-size="10" fill="#333">auth/, payments/</ns0:text>
-  <ns0:text x="37.12" y="540.8" text-anchor="middle" font-size="10" fill="#333">config/, crypto/</ns0:text>
-  <ns0:text x="37.12" y="569.6" text-anchor="middle" font-size="10" fill="#555">require extra reviewers</ns0:text>
-  <ns0:rect x="71.68" y="428.8" width="56.32" height="160" rx="2.048" fill="#bbdefb" stroke="#3949AB" />
-  <ns0:text x="99.84" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Complexity Delta</ns0:text>
-  <ns0:text x="99.84" y="508.8" text-anchor="middle" font-size="10" fill="#333">cyclomatic complexity</ns0:text>
-  <ns0:text x="99.84" y="540.8" text-anchor="middle" font-size="10" fill="#333">change magnitude</ns0:text>
-  <ns0:text x="99.84" y="569.6" text-anchor="middle" font-size="10" fill="#555">coverage delta tracked</ns0:text>
-  <ns0:rect x="134.4" y="428.8" width="58.88" height="160" rx="2.048" fill="#bbdefb" stroke="#3949AB" />
-  <ns0:text x="163.84" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Historical Defect Rate</ns0:text>
-  <ns0:text x="163.84" y="508.8" text-anchor="middle" font-size="10" fill="#333">past bug frequency</ns0:text>
-  <ns0:text x="163.84" y="540.8" text-anchor="middle" font-size="10" fill="#333">in changed modules</ns0:text>
-  <ns0:text x="163.84" y="569.6" text-anchor="middle" font-size="10" fill="#555">learned from history</ns0:text>
+  <ns0:rect width="204.8" height="640" fill="var(--surface-light)" />
+  <ns0:text x="102.4" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">AI-Powered Automated PR Checks</ns0:text>
+  <ns0:rect x="3.84" y="144" width="32" height="144" rx="2.56" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.512" />
+  <ns0:text x="19.712" y="195.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">PR Opened</ns0:text>
+  <ns0:text x="19.712" y="232" text-anchor="middle" font-size="10" fill="var(--text-muted)">diff ready</ns0:text>
+  <ns0:text x="19.712" y="264" text-anchor="middle" font-size="10" fill="var(--text-muted)">CI triggered</ns0:text>
+  <ns0:line x1="35.84" y1="216" x2="44.8" y2="216" stroke="var(--text-dark)" stroke-width="0.512" marker-end="url(#arr)" />
+  <ns0:rect x="44.8" y="144" width="32" height="144" rx="2.56" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.512" />
+  <ns0:text x="60.672" y="195.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">AI Review</ns0:text>
+  <ns0:text x="60.672" y="232" text-anchor="middle" font-size="10" fill="var(--text-muted)">security scan</ns0:text>
+  <ns0:text x="60.672" y="264" text-anchor="middle" font-size="10" fill="var(--text-muted)">logic check</ns0:text>
+  <ns0:line x1="76.8" y1="216" x2="85.76" y2="216" stroke="var(--text-dark)" stroke-width="0.512" marker-end="url(#arr)" />
+  <ns0:rect x="85.76" y="144" width="32" height="144" rx="2.56" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="0.512" />
+  <ns0:text x="101.632" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-mid)">AI Test</ns0:text>
+  <ns0:text x="101.632" y="220.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-mid)">Selection</ns0:text>
+  <ns0:text x="101.632" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">predict failures</ns0:text>
+  <ns0:line x1="117.76" y1="216" x2="126.72" y2="216" stroke="var(--text-dark)" stroke-width="0.512" marker-end="url(#arr)" />
+  <ns0:rect x="126.72" y="144" width="32" height="144" rx="2.56" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.512" />
+  <ns0:text x="142.592" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Risk</ns0:text>
+  <ns0:text x="142.592" y="220.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Scoring</ns0:text>
+  <ns0:text x="142.592" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">files changed</ns0:text>
+  <ns0:line x1="158.72" y1="216" x2="167.68" y2="216" stroke="var(--text-dark)" stroke-width="0.512" marker-end="url(#arr)" />
+  <ns0:rect x="167.68" y="144" width="33.28" height="144" rx="2.56" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="0.512" />
+  <ns0:text x="184.32" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Gate</ns0:text>
+  <ns0:text x="184.32" y="220.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Decision</ns0:text>
+  <ns0:text x="184.32" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">merge / block</ns0:text>
+  <ns0:rect x="3.84" y="352" width="194.56" height="264" rx="2.56" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.384" />
+  <ns0:text x="102.4" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">How AI Assigns Risk Scores to PRs</ns0:text>
+  <ns0:rect x="8.96" y="428.8" width="56.32" height="160" rx="2.048" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <ns0:text x="37.12" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">High Risk Files</ns0:text>
+  <ns0:text x="37.12" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">auth/, payments/</ns0:text>
+  <ns0:text x="37.12" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">config/, crypto/</ns0:text>
+  <ns0:text x="37.12" y="569.6" text-anchor="middle" font-size="10" fill="var(--text-muted)">require extra reviewers</ns0:text>
+  <ns0:rect x="71.68" y="428.8" width="56.32" height="160" rx="2.048" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <ns0:text x="99.84" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Complexity Delta</ns0:text>
+  <ns0:text x="99.84" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">cyclomatic complexity</ns0:text>
+  <ns0:text x="99.84" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">change magnitude</ns0:text>
+  <ns0:text x="99.84" y="569.6" text-anchor="middle" font-size="10" fill="var(--text-muted)">coverage delta tracked</ns0:text>
+  <ns0:rect x="134.4" y="428.8" width="58.88" height="160" rx="2.048" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <ns0:text x="163.84" y="472" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Historical Defect Rate</ns0:text>
+  <ns0:text x="163.84" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">past bug frequency</ns0:text>
+  <ns0:text x="163.84" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">in changed modules</ns0:text>
+  <ns0:text x="163.84" y="569.6" text-anchor="middle" font-size="10" fill="var(--text-muted)">learned from history</ns0:text>
 </ns0:svg>

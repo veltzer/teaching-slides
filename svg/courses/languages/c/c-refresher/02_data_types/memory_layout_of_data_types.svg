@@ -1,61 +1,208 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <ns0:defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+
     <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <ns0:stop offset="0%" stop-color="#1e88e5" />
       <ns0:stop offset="100%" stop-color="#1565c0" />
     </ns0:linearGradient>
-    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#ffffff" />
-      <ns0:stop offset="100%" stop-color="#f0f0f0" />
-    </ns0:linearGradient>
-    <ns0:filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </ns0:filter>
-    <ns0:marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </ns0:marker>
     <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </ns0:marker>
   </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
-  <ns0:text x="53.3333" y="80" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">char c = 'A';</ns0:text>
-  <ns0:text x="355.5556" y="80" font-size="14.2222" fill="#666666">(1 byte)</ns0:text>
-  <ns0:rect x="53.3333" y="94.2222" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="85.3333" y="126.2222" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">41</ns0:text>
-  <ns0:text x="128" y="126.2222" font-size="14.2222" fill="#666666">(0x41 = 65 = 'A')</ns0:text>
-  <ns0:text x="53.3333" y="204.4444" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">int x = 0x12345678;</ns0:text>
-  <ns0:text x="435.5556" y="204.4444" font-size="14.2222" fill="#666666">(4 bytes, little-endian)</ns0:text>
-  <ns0:rect x="53.3333" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="85.3333" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">78</ns0:text>
-  <ns0:rect x="120.8889" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="152.8889" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">56</ns0:text>
-  <ns0:rect x="188.4444" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="220.4444" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">34</ns0:text>
-  <ns0:rect x="256" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="288" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">12</ns0:text>
-  <ns0:text x="71.1111" y="289.7778" font-size="13.3333" fill="#888888">addr</ns0:text>
-  <ns0:text x="138.6667" y="289.7778" font-size="13.3333" fill="#888888">+1</ns0:text>
-  <ns0:text x="206.2222" y="289.7778" font-size="13.3333" fill="#888888">+2</ns0:text>
-  <ns0:text x="273.7778" y="289.7778" font-size="13.3333" fill="#888888">+3</ns0:text>
-  <ns0:text x="53.3333" y="355.5556" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">double d = 3.14;</ns0:text>
-  <ns0:text x="355.5556" y="355.5556" font-size="14.2222" fill="#666666">(8 bytes, IEEE 754)</ns0:text>
-  <ns0:rect x="53.3333" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="85.3333" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">1F</ns0:text>
-  <ns0:rect x="120.8889" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="152.8889" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">85</ns0:text>
-  <ns0:rect x="188.4444" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="220.4444" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">EB</ns0:text>
-  <ns0:rect x="256" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="288" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">51</ns0:text>
-  <ns0:rect x="323.5556" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="355.5556" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">B8</ns0:text>
-  <ns0:rect x="391.1111" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="423.1111" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">1E</ns0:text>
-  <ns0:rect x="458.6667" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="490.6667" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">09</ns0:text>
-  <ns0:rect x="526.2222" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="558.2222" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">40</ns0:text>
-  <ns0:rect x="53.3333" y="471.1111" width="800" height="53.3333" rx="5.3333" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
-  <ns0:text x="453.3333" y="504" text-anchor="middle" font-size="16" fill="#555555">All multi-byte values stored in little-endian order on x86</ns0:text>
+  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
+  <ns0:text x="53.3333" y="80" font-size="17.7778" font-weight="bold" fill="var(--text-darker)" font-family="monospace">char c = 'A';</ns0:text>
+  <ns0:text x="355.5556" y="80" font-size="14.2222" fill="var(--text-mid)">(1 byte)</ns0:text>
+  <ns0:rect x="53.3333" y="94.2222" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="85.3333" y="126.2222" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">41</ns0:text>
+  <ns0:text x="128" y="126.2222" font-size="14.2222" fill="var(--text-mid)">(0x41 = 65 = 'A')</ns0:text>
+  <ns0:text x="53.3333" y="204.4444" font-size="17.7778" font-weight="bold" fill="var(--text-darker)" font-family="monospace">int x = 0x12345678;</ns0:text>
+  <ns0:text x="435.5556" y="204.4444" font-size="14.2222" fill="var(--text-mid)">(4 bytes, little-endian)</ns0:text>
+  <ns0:rect x="53.3333" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="85.3333" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">78</ns0:text>
+  <ns0:rect x="120.8889" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="152.8889" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">56</ns0:text>
+  <ns0:rect x="188.4444" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="220.4444" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">34</ns0:text>
+  <ns0:rect x="256" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="288" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">12</ns0:text>
+  <ns0:text x="71.1111" y="289.7778" font-size="13.3333" fill="var(--text-faint)">addr</ns0:text>
+  <ns0:text x="138.6667" y="289.7778" font-size="13.3333" fill="var(--text-faint)">+1</ns0:text>
+  <ns0:text x="206.2222" y="289.7778" font-size="13.3333" fill="var(--text-faint)">+2</ns0:text>
+  <ns0:text x="273.7778" y="289.7778" font-size="13.3333" fill="var(--text-faint)">+3</ns0:text>
+  <ns0:text x="53.3333" y="355.5556" font-size="17.7778" font-weight="bold" fill="var(--text-darker)" font-family="monospace">double d = 3.14;</ns0:text>
+  <ns0:text x="355.5556" y="355.5556" font-size="14.2222" fill="var(--text-mid)">(8 bytes, IEEE 754)</ns0:text>
+  <ns0:rect x="53.3333" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="85.3333" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">1F</ns0:text>
+  <ns0:rect x="120.8889" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="152.8889" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">85</ns0:text>
+  <ns0:rect x="188.4444" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="220.4444" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">EB</ns0:text>
+  <ns0:rect x="256" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="288" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">51</ns0:text>
+  <ns0:rect x="323.5556" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="355.5556" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">B8</ns0:text>
+  <ns0:rect x="391.1111" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="423.1111" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">1E</ns0:text>
+  <ns0:rect x="458.6667" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="490.6667" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">09</ns0:text>
+  <ns0:rect x="526.2222" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="558.2222" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="var(--text-darker)">40</ns0:text>
+  <ns0:rect x="53.3333" y="471.1111" width="800" height="53.3333" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.3333" />
+  <ns0:text x="453.3333" y="504" text-anchor="middle" font-size="16" fill="var(--text-muted)">All multi-byte values stored in little-endian order on x86</ns0:text>
 </ns0:svg>

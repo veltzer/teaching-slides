@@ -1,6 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,19 +156,7 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  
 
-    <!-- Gradients -->
-
-
-
-
-
-
-    <!-- Drop shadow -->
-
-    <!-- Arrow markers -->
-  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
@@ -81,73 +166,73 @@
       <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="var(--bg)"/>
 
   <!-- Title row: two modes -->
   <rect x="30" y="20" width="590" height="44" rx="6" fill="url(#grad-primary)" filter="url(#shadow)"/>
-  <text x="325" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Config Mode (Modern)</text>
+  <text x="325" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Config Mode (Modern)</text>
 
   <rect x="660" y="20" width="590" height="44" rx="6" fill="url(#grad-ok)" filter="url(#shadow)"/>
-  <text x="955" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Module Mode (Legacy)</text>
+  <text x="955" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Module Mode (Legacy)</text>
 
   <!-- Config mode box -->
-  <rect x="30" y="76" width="590" height="200" rx="5" fill="#e3f2fd" filter="url(#shadow)"/>
-  <text x="45" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">find_package(OpenSSL REQUIRED)</text>
-  <text x="45" y="122" font-family="Arial, sans-serif" font-size="12" fill="#333333">Searches for OpenSSLConfig.cmake or openssl-config.cmake</text>
-  <text x="45" y="144" font-family="Arial, sans-serif" font-size="12" fill="#333333">Search order:</text>
-  <text x="65" y="162" font-family="monospace" font-size="12" fill="#333333">1. CMAKE_PREFIX_PATH dirs</text>
-  <text x="65" y="180" font-family="monospace" font-size="12" fill="#333333">2. &lt;Package&gt;_DIR variable</text>
-  <text x="65" y="198" font-family="monospace" font-size="12" fill="#333333">3. System default paths</text>
-  <text x="45" y="222" font-family="Arial, sans-serif" font-size="12" fill="#333333">Result: Imported target OpenSSL::SSL, OpenSSL::Crypto</text>
-  <text x="45" y="244" font-family="monospace" font-size="12" fill="#555555">target_link_libraries(app PRIVATE OpenSSL::SSL)</text>
-  <text x="45" y="264" font-family="Arial, sans-serif" font-size="11" fill="#888888">Includes, link flags, defines handled automatically</text>
+  <rect x="30" y="76" width="590" height="200" rx="5" fill="var(--primary-pale)" filter="url(#shadow)"/>
+  <text x="45" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-dk)">find_package(OpenSSL REQUIRED)</text>
+  <text x="45" y="122" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Searches for OpenSSLConfig.cmake or openssl-config.cmake</text>
+  <text x="45" y="144" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Search order:</text>
+  <text x="65" y="162" font-family="monospace" font-size="12" fill="var(--text-dark)">1. CMAKE_PREFIX_PATH dirs</text>
+  <text x="65" y="180" font-family="monospace" font-size="12" fill="var(--text-dark)">2. &lt;Package&gt;_DIR variable</text>
+  <text x="65" y="198" font-family="monospace" font-size="12" fill="var(--text-dark)">3. System default paths</text>
+  <text x="45" y="222" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Result: Imported target OpenSSL::SSL, OpenSSL::Crypto</text>
+  <text x="45" y="244" font-family="monospace" font-size="12" fill="var(--text-muted)">target_link_libraries(app PRIVATE OpenSSL::SSL)</text>
+  <text x="45" y="264" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Includes, link flags, defines handled automatically</text>
 
   <!-- Module mode box -->
-  <rect x="660" y="76" width="590" height="200" rx="5" fill="#e8f5e9" filter="url(#shadow)"/>
-  <text x="675" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">find_package(ZLIB MODULE REQUIRED)</text>
-  <text x="675" y="122" font-family="Arial, sans-serif" font-size="12" fill="#333333">Searches for FindZLIB.cmake in CMAKE_MODULE_PATH</text>
-  <text x="675" y="144" font-family="Arial, sans-serif" font-size="12" fill="#333333">Sets variables:</text>
-  <text x="695" y="162" font-family="monospace" font-size="12" fill="#333333">ZLIB_FOUND</text>
-  <text x="695" y="180" font-family="monospace" font-size="12" fill="#333333">ZLIB_INCLUDE_DIRS</text>
-  <text x="695" y="198" font-family="monospace" font-size="12" fill="#333333">ZLIB_LIBRARIES</text>
-  <text x="675" y="222" font-family="Arial, sans-serif" font-size="12" fill="#333333">Usage (old style):</text>
-  <text x="675" y="244" font-family="monospace" font-size="12" fill="#555555">target_include_directories(app PRIVATE ${ZLIB_INCLUDE_DIRS})</text>
-  <text x="675" y="264" font-family="monospace" font-size="12" fill="#555555">target_link_libraries(app PRIVATE ${ZLIB_LIBRARIES})</text>
+  <rect x="660" y="76" width="590" height="200" rx="5" fill="var(--ok-pale)" filter="url(#shadow)"/>
+  <text x="675" y="100" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">find_package(ZLIB MODULE REQUIRED)</text>
+  <text x="675" y="122" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Searches for FindZLIB.cmake in CMAKE_MODULE_PATH</text>
+  <text x="675" y="144" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Sets variables:</text>
+  <text x="695" y="162" font-family="monospace" font-size="12" fill="var(--text-dark)">ZLIB_FOUND</text>
+  <text x="695" y="180" font-family="monospace" font-size="12" fill="var(--text-dark)">ZLIB_INCLUDE_DIRS</text>
+  <text x="695" y="198" font-family="monospace" font-size="12" fill="var(--text-dark)">ZLIB_LIBRARIES</text>
+  <text x="675" y="222" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Usage (old style):</text>
+  <text x="675" y="244" font-family="monospace" font-size="12" fill="var(--text-muted)">target_include_directories(app PRIVATE ${ZLIB_INCLUDE_DIRS})</text>
+  <text x="675" y="264" font-family="monospace" font-size="12" fill="var(--text-muted)">target_link_libraries(app PRIVATE ${ZLIB_LIBRARIES})</text>
 
   <!-- FetchContent -->
-  <rect x="30" y="295" width="820" height="170" rx="5" fill="#fff3e0" filter="url(#shadow)"/>
-  <text x="45" y="319" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#e65100">FetchContent Workflow</text>
-  <text x="45" y="341" font-family="monospace" font-size="12" fill="#333333">include(FetchContent)</text>
-  <text x="45" y="359" font-family="monospace" font-size="12" fill="#333333">FetchContent_Declare(</text>
-  <text x="65" y="377" font-family="monospace" font-size="12" fill="#333333">  googletest</text>
-  <text x="65" y="395" font-family="monospace" font-size="12" fill="#333333">  GIT_REPOSITORY https://github.com/google/googletest.git</text>
-  <text x="65" y="413" font-family="monospace" font-size="12" fill="#333333">  GIT_TAG        v1.14.0</text>
-  <text x="45" y="431" font-family="monospace" font-size="12" fill="#333333">)</text>
-  <text x="45" y="449" font-family="monospace" font-size="12" fill="#333333">FetchContent_MakeAvailable(googletest)</text>
+  <rect x="30" y="295" width="820" height="170" rx="5" fill="var(--warn-pale)" filter="url(#shadow)"/>
+  <text x="45" y="319" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)">FetchContent Workflow</text>
+  <text x="45" y="341" font-family="monospace" font-size="12" fill="var(--text-dark)">include(FetchContent)</text>
+  <text x="45" y="359" font-family="monospace" font-size="12" fill="var(--text-dark)">FetchContent_Declare(</text>
+  <text x="65" y="377" font-family="monospace" font-size="12" fill="var(--text-dark)">  googletest</text>
+  <text x="65" y="395" font-family="monospace" font-size="12" fill="var(--text-dark)">  GIT_REPOSITORY https://github.com/google/googletest.git</text>
+  <text x="65" y="413" font-family="monospace" font-size="12" fill="var(--text-dark)">  GIT_TAG        v1.14.0</text>
+  <text x="45" y="431" font-family="monospace" font-size="12" fill="var(--text-dark)">)</text>
+  <text x="45" y="449" font-family="monospace" font-size="12" fill="var(--text-dark)">FetchContent_MakeAvailable(googletest)</text>
 
   <!-- CMAKE_PREFIX_PATH box -->
-  <rect x="870" y="295" width="380" height="170" rx="5" fill="#f3e5f5" filter="url(#shadow)"/>
-  <text x="885" y="319" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#6a1b9a">CMAKE_PREFIX_PATH</text>
-  <text x="885" y="341" font-family="Arial, sans-serif" font-size="12" fill="#333333">Tell CMake where to search:</text>
-  <text x="885" y="361" font-family="monospace" font-size="12" fill="#333333">cmake -DCMAKE_PREFIX_PATH=</text>
-  <text x="905" y="379" font-family="monospace" font-size="12" fill="#333333">"/opt/mylibs;/usr/local"</text>
-  <text x="885" y="401" font-family="Arial, sans-serif" font-size="12" fill="#333333">Or in CMakeLists.txt:</text>
-  <text x="885" y="421" font-family="monospace" font-size="12" fill="#333333">list(APPEND CMAKE_PREFIX_PATH</text>
-  <text x="905" y="439" font-family="monospace" font-size="12" fill="#333333">  "/opt/mylibs")</text>
+  <rect x="870" y="295" width="380" height="170" rx="5" fill="var(--info-pale)" filter="url(#shadow)"/>
+  <text x="885" y="319" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-dk)">CMAKE_PREFIX_PATH</text>
+  <text x="885" y="341" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Tell CMake where to search:</text>
+  <text x="885" y="361" font-family="monospace" font-size="12" fill="var(--text-dark)">cmake -DCMAKE_PREFIX_PATH=</text>
+  <text x="905" y="379" font-family="monospace" font-size="12" fill="var(--text-dark)">"/opt/mylibs;/usr/local"</text>
+  <text x="885" y="401" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Or in CMakeLists.txt:</text>
+  <text x="885" y="421" font-family="monospace" font-size="12" fill="var(--text-dark)">list(APPEND CMAKE_PREFIX_PATH</text>
+  <text x="905" y="439" font-family="monospace" font-size="12" fill="var(--text-dark)">  "/opt/mylibs")</text>
 
   <!-- Bottom summary -->
-  <rect x="30" y="484" width="1220" height="136" rx="6" fill="#f5f5f5" filter="url(#shadow)"/>
-  <text x="640" y="508" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Imported Targets vs Variables</text>
+  <rect x="30" y="484" width="1220" height="136" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="640" y="508" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Imported Targets vs Variables</text>
 
-  <rect x="50" y="520" width="560" height="84" rx="4" fill="#e3f2fd"/>
-  <text x="330" y="540" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Modern: Imported Targets (preferred)</text>
-  <text x="70" y="560" font-family="monospace" font-size="12" fill="#333333">target_link_libraries(myapp PRIVATE Boost::filesystem)</text>
-  <text x="70" y="578" font-family="Arial, sans-serif" font-size="12" fill="#555555">Transitive deps, usage requirements propagated automatically</text>
-  <text x="70" y="596" font-family="Arial, sans-serif" font-size="12" fill="#555555">Includes + defines + link flags all in one target</text>
+  <rect x="50" y="520" width="560" height="84" rx="4" fill="var(--primary-pale)"/>
+  <text x="330" y="540" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Modern: Imported Targets (preferred)</text>
+  <text x="70" y="560" font-family="monospace" font-size="12" fill="var(--text-dark)">target_link_libraries(myapp PRIVATE Boost::filesystem)</text>
+  <text x="70" y="578" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Transitive deps, usage requirements propagated automatically</text>
+  <text x="70" y="596" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Includes + defines + link flags all in one target</text>
 
-  <rect x="640" y="520" width="590" height="84" rx="4" fill="#e8f5e9"/>
-  <text x="935" y="540" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Legacy: Variables (avoid for new code)</text>
-  <text x="660" y="560" font-family="monospace" font-size="12" fill="#333333">target_link_libraries(myapp ${ZLIB_LIBRARIES})</text>
-  <text x="660" y="578" font-family="Arial, sans-serif" font-size="12" fill="#555555">Manual include_directories needed separately</text>
-  <text x="660" y="596" font-family="Arial, sans-serif" font-size="12" fill="#555555">No transitive dependency propagation</text>
+  <rect x="640" y="520" width="590" height="84" rx="4" fill="var(--ok-pale)"/>
+  <text x="935" y="540" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Legacy: Variables (avoid for new code)</text>
+  <text x="660" y="560" font-family="monospace" font-size="12" fill="var(--text-dark)">target_link_libraries(myapp ${ZLIB_LIBRARIES})</text>
+  <text x="660" y="578" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Manual include_directories needed separately</text>
+  <text x="660" y="596" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">No transitive dependency propagation</text>
 </svg>

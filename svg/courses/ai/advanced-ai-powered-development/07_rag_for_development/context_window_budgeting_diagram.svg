@@ -1,6 +1,103 @@
 <ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
@@ -59,35 +156,35 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    </defs>
-  <ns0:rect width="330.2393" height="640" fill="#f9f9f9" />
-  <ns0:text x="165.1197" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Context Window Budget Allocation for RAG</ns0:text>
-  <ns0:rect x="8.256" y="104" width="313.7274" height="120" rx="3.3024" fill="#EEE" stroke="#333" stroke-width="0.6192" />
-  <ns0:rect x="9.0816" y="107.2" width="39.2159" height="113.6" rx="2.4768" fill="#e74c3c" />
-  <ns0:text x="28.8959" y="156.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">System</ns0:text>
-  <ns0:text x="28.8959" y="185.6" text-anchor="middle" fill="#f8d7da" font-size="10">~10-15%</ns0:text>
-  <ns0:rect x="49.1231" y="107.2" width="165.1197" height="113.6" rx="2.4768" fill="#3498db" />
-  <ns0:text x="131.683" y="156.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Retrieved Code Chunks</ns0:text>
-  <ns0:text x="131.683" y="185.6" text-anchor="middle" fill="#e3f2fd" font-size="10">~50-60% of budget</ns0:text>
-  <ns0:rect x="215.0684" y="107.2" width="41.2799" height="113.6" rx="2.4768" fill="#f39c12" />
-  <ns0:text x="235.7083" y="156.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">User</ns0:text>
-  <ns0:text x="235.7083" y="185.6" text-anchor="middle" fill="#ffcc80" font-size="10">~5-10%</ns0:text>
-  <ns0:rect x="257.1739" y="107.2" width="63.9839" height="113.6" rx="2.4768" fill="#27ae60" />
-  <ns0:text x="288.9594" y="156.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Response</ns0:text>
-  <ns0:text x="288.9594" y="185.6" text-anchor="middle" fill="#d4edda" font-size="10">~20-30% reserved</ns0:text>
-  <ns0:text x="165.1197" y="272" text-anchor="middle" font-size="10" fill="#555">Total context window (128K-200K tokens)</ns0:text>
-  <ns0:rect x="8.256" y="312" width="313.7274" height="304" rx="4.128" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.6192" />
-  <ns0:text x="165.1197" y="360" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Budget Allocation Rules</ns0:text>
-  <ns0:rect x="16.512" y="384" width="140.3517" height="88" rx="3.3024" fill="#FFCDD2" stroke="#C62828" />
-  <ns0:text x="86.6878" y="420.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Reserve 10-15% for system prompt</ns0:text>
-  <ns0:text x="86.6878" y="456" text-anchor="middle" font-size="10" fill="#333">instructions, persona, output format</ns0:text>
-  <ns0:rect x="173.3757" y="384" width="140.3517" height="88" rx="3.3024" fill="#BBDEFB" stroke="#1565C0" />
-  <ns0:text x="243.5515" y="420.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Allocate 50-60% for retrieved chunks</ns0:text>
-  <ns0:text x="243.5515" y="456" text-anchor="middle" font-size="10" fill="#333">code files, functions, documentation</ns0:text>
-  <ns0:rect x="16.512" y="488" width="140.3517" height="88" rx="3.3024" fill="#FFF9C4" stroke="#F9A825" />
-  <ns0:text x="86.6878" y="524.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Reserve 5-10% for query + history</ns0:text>
-  <ns0:text x="86.6878" y="556.8" text-anchor="middle" font-size="10" fill="#333">user question, conversation turns</ns0:text>
-  <ns0:rect x="173.3757" y="488" width="140.3517" height="88" rx="3.3024" fill="#C8E6C9" stroke="#2E7D32" />
-  <ns0:text x="243.5515" y="524.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Leave 20-30% for model response</ns0:text>
-  <ns0:text x="243.5515" y="556.8" text-anchor="middle" font-size="10" fill="#333">truncate lowest-ranked chunks first</ns0:text>
+</defs>
+  <ns0:rect width="330.2393" height="640" fill="var(--surface-light)" />
+  <ns0:text x="165.1197" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Context Window Budget Allocation for RAG</ns0:text>
+  <ns0:rect x="8.256" y="104" width="313.7274" height="120" rx="3.3024" fill="var(--surface-alt)" stroke="var(--text-dark)" stroke-width="0.6192" />
+  <ns0:rect x="9.0816" y="107.2" width="39.2159" height="113.6" rx="2.4768" fill="var(--danger-light)" />
+  <ns0:text x="28.8959" y="156.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">System</ns0:text>
+  <ns0:text x="28.8959" y="185.6" text-anchor="middle" fill="var(--danger-pale2)" font-size="10">~10-15%</ns0:text>
+  <ns0:rect x="49.1231" y="107.2" width="165.1197" height="113.6" rx="2.4768" fill="var(--primary-soft)" />
+  <ns0:text x="131.683" y="156.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Retrieved Code Chunks</ns0:text>
+  <ns0:text x="131.683" y="185.6" text-anchor="middle" fill="var(--primary-pale)" font-size="10">~50-60% of budget</ns0:text>
+  <ns0:rect x="215.0684" y="107.2" width="41.2799" height="113.6" rx="2.4768" fill="var(--warn-gold)" />
+  <ns0:text x="235.7083" y="156.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">User</ns0:text>
+  <ns0:text x="235.7083" y="185.6" text-anchor="middle" fill="var(--warn-tint)" font-size="10">~5-10%</ns0:text>
+  <ns0:rect x="257.1739" y="107.2" width="63.9839" height="113.6" rx="2.4768" fill="var(--ok-soft)" />
+  <ns0:text x="288.9594" y="156.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Response</ns0:text>
+  <ns0:text x="288.9594" y="185.6" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">~20-30% reserved</ns0:text>
+  <ns0:text x="165.1197" y="272" text-anchor="middle" font-size="10" fill="var(--text-muted)">Total context window (128K-200K tokens)</ns0:text>
+  <ns0:rect x="8.256" y="312" width="313.7274" height="304" rx="4.128" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.6192" />
+  <ns0:text x="165.1197" y="360" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Budget Allocation Rules</ns0:text>
+  <ns0:rect x="16.512" y="384" width="140.3517" height="88" rx="3.3024" fill="var(--danger-lt)" stroke="var(--danger-dk)" />
+  <ns0:text x="86.6878" y="420.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Reserve 10-15% for system prompt</ns0:text>
+  <ns0:text x="86.6878" y="456" text-anchor="middle" font-size="10" fill="var(--text-dark)">instructions, persona, output format</ns0:text>
+  <ns0:rect x="173.3757" y="384" width="140.3517" height="88" rx="3.3024" fill="var(--primary-lt)" stroke="var(--primary-dk)" />
+  <ns0:text x="243.5515" y="420.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Allocate 50-60% for retrieved chunks</ns0:text>
+  <ns0:text x="243.5515" y="456" text-anchor="middle" font-size="10" fill="var(--text-dark)">code files, functions, documentation</ns0:text>
+  <ns0:rect x="16.512" y="488" width="140.3517" height="88" rx="3.3024" fill="var(--warn-pale4)" stroke="var(--warn-amber)" />
+  <ns0:text x="86.6878" y="524.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Reserve 5-10% for query + history</ns0:text>
+  <ns0:text x="86.6878" y="556.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">user question, conversation turns</ns0:text>
+  <ns0:rect x="173.3757" y="488" width="140.3517" height="88" rx="3.3024" fill="var(--ok-lt)" stroke="var(--ok-dk)" />
+  <ns0:text x="243.5515" y="524.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Leave 20-30% for model response</ns0:text>
+  <ns0:text x="243.5515" y="556.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">truncate lowest-ranked chunks first</ns0:text>
 </ns0:svg>
