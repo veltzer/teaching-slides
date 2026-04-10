@@ -54,7 +54,7 @@ POST /_query
 
 ## ES|QL Pipeline
 
-![esql_pipeline](svg/courses/databases/elasticsearch-for-developers/07_esql/esql_pipeline.svg)
+![pipeline](svg/courses/databases/elasticsearch-for-developers/07_esql/esql_pipeline.svg)
 
 ---
 
