@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Root node -->
+  <rect x="565" y="24" width="150" height="56" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="58" text-anchor="middle" font-family="monospace" font-size="30" font-weight="bold" fill="#ffffff">/</text>
+
+  <!-- FHS directory entries: 10 dirs arranged in two rows -->
+  <!-- Row 1: /bin /etc /home /var /usr -->
+  <!-- Row 2: /tmp /proc /dev /lib /sbin -->
+
+  <!-- Connector lines to row1 -->
+  <line x1="640" y1="80" x2="640" y2="100" stroke="#888" stroke-width="1.5"/>
+  <line x1="80" y1="100" x2="1200" y2="100" stroke="#888" stroke-width="1.5"/>
+  <line x1="80" y1="100" x2="80" y2="155" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="100" x2="300" y2="155" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="520" y1="100" x2="520" y2="155" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="740" y1="100" x2="740" y2="155" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="960" y1="100" x2="960" y2="155" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="1200" y1="100" x2="1200" y2="155" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- /bin -->
+  <rect x="25" y="158" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="181" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/bin</text>
+  <text x="80" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Binaries</text>
+
+  <!-- /sbin -->
+  <rect x="245" y="158" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="181" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/sbin</text>
+  <text x="300" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Sys Binaries</text>
+
+  <!-- /etc -->
+  <rect x="465" y="158" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="520" y="181" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/etc</text>
+  <text x="520" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Config files</text>
+
+  <!-- /home -->
+  <rect x="685" y="158" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="181" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/home</text>
+  <text x="740" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">User homes</text>
+
+  <!-- /var -->
+  <rect x="905" y="158" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="960" y="181" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/var</text>
+  <text x="960" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Variable data</text>
+
+  <!-- /usr -->
+  <rect x="1145" y="158" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1200" y="181" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/usr</text>
+  <text x="1200" y="200" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">User programs</text>
+
+  <!-- Row 2 connector -->
+  <line x1="640" y1="80" x2="640" y2="100" stroke="#888" stroke-width="1.5"/>
+  <line x1="190" y1="280" x2="1090" y2="280" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="190" y1="280" x2="190" y2="335" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="410" y1="280" x2="410" y2="335" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="640" y1="280" x2="640" y2="335" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="860" y1="280" x2="860" y2="335" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="1090" y1="280" x2="1090" y2="335" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Vertical down from root -->
+  <line x1="640" y1="100" x2="640" y2="280" stroke="#bbb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- /lib -->
+  <rect x="135" y="338" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="361" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/lib</text>
+  <text x="190" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Libraries</text>
+
+  <!-- /dev -->
+  <rect x="355" y="338" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="410" y="361" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/dev</text>
+  <text x="410" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Device files</text>
+
+  <!-- /tmp -->
+  <rect x="585" y="338" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="361" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/tmp</text>
+  <text x="640" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Temp files</text>
+
+  <!-- /proc -->
+  <rect x="805" y="338" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="361" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/proc</text>
+  <text x="860" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Process info</text>
+
+  <!-- /root -->
+  <rect x="1035" y="338" width="110" height="52" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="361" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#1565c0">/root</text>
+  <text x="1090" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Root home</text>
+
+  <!-- Detail cards for selected directories -->
+  <!-- /etc detail -->
+  <rect x="30" y="435" width="270" height="180" rx="10" fill="#e3f2fd" stroke="#90caf9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="45" y="462" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">/etc  — Configuration</text>
+  <text x="45" y="485" font-family="monospace" font-size="13" fill="#212121">passwd    user accounts</text>
+  <text x="45" y="503" font-family="monospace" font-size="13" fill="#212121">shadow    password hashes</text>
+  <text x="45" y="521" font-family="monospace" font-size="13" fill="#212121">hosts     hostname mapping</text>
+  <text x="45" y="539" font-family="monospace" font-size="13" fill="#212121">fstab     mount config</text>
+  <text x="45" y="557" font-family="monospace" font-size="13" fill="#212121">crontab   scheduled tasks</text>
+  <text x="45" y="575" font-family="monospace" font-size="13" fill="#212121">ssh/      SSH config</text>
+  <text x="45" y="600" font-family="sans-serif" font-size="11" fill="#888888">Text files, editable by root</text>
+
+  <!-- /var detail -->
+  <rect x="330" y="435" width="270" height="180" rx="10" fill="#fff3e0" stroke="#ffcc80" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="345" y="462" font-family="monospace" font-size="16" font-weight="bold" fill="#e65100">/var  — Variable data</text>
+  <text x="345" y="485" font-family="monospace" font-size="13" fill="#212121">log/      system log files</text>
+  <text x="345" y="503" font-family="monospace" font-size="13" fill="#212121">spool/    queues (mail/print)</text>
+  <text x="345" y="521" font-family="monospace" font-size="13" fill="#212121">cache/    app caches</text>
+  <text x="345" y="539" font-family="monospace" font-size="13" fill="#212121">lib/      persistent state</text>
+  <text x="345" y="557" font-family="monospace" font-size="13" fill="#212121">run/      runtime PID files</text>
+  <text x="345" y="575" font-family="monospace" font-size="13" fill="#212121">www/      web root</text>
+  <text x="345" y="600" font-family="sans-serif" font-size="11" fill="#888888">Changes during normal operation</text>
+
+  <!-- /proc detail -->
+  <rect x="630" y="435" width="270" height="180" rx="10" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="645" y="462" font-family="monospace" font-size="16" font-weight="bold" fill="#2e7d32">/proc  — Kernel virtual FS</text>
+  <text x="645" y="485" font-family="monospace" font-size="13" fill="#212121">cpuinfo   CPU details</text>
+  <text x="645" y="503" font-family="monospace" font-size="13" fill="#212121">meminfo   memory usage</text>
+  <text x="645" y="521" font-family="monospace" font-size="13" fill="#212121">PID/      per-process info</text>
+  <text x="645" y="539" font-family="monospace" font-size="13" fill="#212121">net/      network stats</text>
+  <text x="645" y="557" font-family="monospace" font-size="13" fill="#212121">sys/      kernel params</text>
+  <text x="645" y="575" font-family="monospace" font-size="13" fill="#212121">mounts    mounted filesystems</text>
+  <text x="645" y="600" font-family="sans-serif" font-size="11" fill="#888888">Virtual — exists only in RAM</text>
+
+  <!-- /usr detail -->
+  <rect x="930" y="435" width="320" height="180" rx="10" fill="#f3e5f5" stroke="#ce93d8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="945" y="462" font-family="monospace" font-size="16" font-weight="bold" fill="#6a1b9a">/usr  — User programs</text>
+  <text x="945" y="485" font-family="monospace" font-size="13" fill="#212121">bin/      user commands</text>
+  <text x="945" y="503" font-family="monospace" font-size="13" fill="#212121">sbin/     admin commands</text>
+  <text x="945" y="521" font-family="monospace" font-size="13" fill="#212121">lib/      shared libraries</text>
+  <text x="945" y="539" font-family="monospace" font-size="13" fill="#212121">share/    arch-independent data</text>
+  <text x="945" y="557" font-family="monospace" font-size="13" fill="#212121">local/    locally installed SW</text>
+  <text x="945" y="575" font-family="monospace" font-size="13" fill="#212121">include/  C header files</text>
+  <text x="945" y="600" font-family="sans-serif" font-size="11" fill="#888888">Read-only; shared across network</text>
+
+  <text x="640" y="680" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">FHS (Filesystem Hierarchy Standard) defines the layout — every Linux distribution follows this convention.</text>
+</svg>

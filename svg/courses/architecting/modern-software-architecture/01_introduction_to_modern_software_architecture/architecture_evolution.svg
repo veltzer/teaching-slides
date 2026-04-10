@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Timeline arrow -->
+  <line x1="60" y1="200" x2="1220" y2="200" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="640" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#555555">Evolution of Architecture over Time</text>
+  <!-- Era labels on timeline -->
+  <text x="155" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#555555">1990s</text>
+  <text x="435" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#555555">2000s</text>
+  <text x="730" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#555555">2010s</text>
+  <text x="1030" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#555555">2020s</text>
+  <!-- Tick marks -->
+  <line x1="155" y1="194" x2="155" y2="206" stroke="#555555" stroke-width="2"/>
+  <line x1="435" y1="194" x2="435" y2="206" stroke="#555555" stroke-width="2"/>
+  <line x1="730" y1="194" x2="730" y2="206" stroke="#555555" stroke-width="2"/>
+  <line x1="1030" y1="194" x2="1030" y2="206" stroke="#555555" stroke-width="2"/>
+  <!-- Monolith box -->
+  <rect x="60" y="270" width="230" height="280" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="270" width="230" height="40" rx="8" fill="url(#grad-accent)"/>
+  <rect x="60" y="298" width="230" height="12" fill="url(#grad-accent)"/>
+  <text x="175" y="297" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Monolith</text>
+  <rect x="80" y="325" width="190" height="28" rx="4" fill="#e3f2fd"/>
+  <text x="175" y="344" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">UI Layer</text>
+  <rect x="80" y="360" width="190" height="28" rx="4" fill="#bbdefb"/>
+  <text x="175" y="379" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Business Logic</text>
+  <rect x="80" y="395" width="190" height="28" rx="4" fill="#90caf9"/>
+  <text x="175" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Data Access</text>
+  <rect x="80" y="430" width="190" height="28" rx="4" fill="#64b5f6"/>
+  <text x="175" y="449" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Single Database</text>
+  <text x="175" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Simple to develop</text>
+  <text x="175" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Hard to scale</text>
+  <!-- Arrow 1→2 -->
+  <line x1="295" y1="410" x2="335" y2="410" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- SOA box -->
+  <rect x="340" y="270" width="230" height="280" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="340" y="270" width="230" height="40" rx="8" fill="url(#grad-accent)"/>
+  <rect x="340" y="298" width="230" height="12" fill="url(#grad-accent)"/>
+  <text x="455" y="297" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff">SOA</text>
+  <rect x="360" y="325" width="88" height="55" rx="4" fill="#e3f2fd"/>
+  <text x="404" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Service A</text>
+  <text x="404" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Orders</text>
+  <rect x="460" y="325" width="88" height="55" rx="4" fill="#bbdefb"/>
+  <text x="504" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Service B</text>
+  <text x="504" y="365" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Users</text>
+  <rect x="360" y="390" width="190" height="28" rx="4" fill="#1565c0"/>
+  <text x="455" y="409" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#ffffff">ESB / Message Bus</text>
+  <rect x="360" y="428" width="190" height="28" rx="4" fill="#90caf9"/>
+  <text x="455" y="447" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Shared Database</text>
+  <text x="455" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Reusable services</text>
+  <text x="455" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Complex ESB</text>
+  <!-- Arrow 2→3 -->
+  <line x1="575" y1="410" x2="615" y2="410" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Microservices box -->
+  <rect x="620" y="270" width="230" height="280" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="620" y="270" width="230" height="40" rx="8" fill="url(#grad-accent)"/>
+  <rect x="620" y="298" width="230" height="12" fill="url(#grad-accent)"/>
+  <text x="735" y="297" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Microservices</text>
+  <rect x="635" y="325" width="90" height="38" rx="4" fill="#e3f2fd"/>
+  <text x="680" y="349" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Orders</text>
+  <rect x="735" y="325" width="90" height="38" rx="4" fill="#bbdefb"/>
+  <text x="780" y="349" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Users</text>
+  <rect x="635" y="372" width="90" height="38" rx="4" fill="#90caf9"/>
+  <text x="680" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Payments</text>
+  <rect x="735" y="372" width="90" height="38" rx="4" fill="#64b5f6"/>
+  <text x="780" y="396" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Shipping</text>
+  <rect x="635" y="419" width="90" height="24" rx="4" fill="#e8eaf6"/>
+  <text x="680" y="436" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">DB: Orders</text>
+  <rect x="735" y="419" width="90" height="24" rx="4" fill="#e8eaf6"/>
+  <text x="780" y="436" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">DB: Users</text>
+  <text x="735" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Independent deploy</text>
+  <text x="735" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Own data stores</text>
+  <!-- Arrow 3→4 -->
+  <line x1="855" y1="410" x2="895" y2="410" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Serverless/Event-driven box -->
+  <rect x="900" y="270" width="250" height="280" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="900" y="270" width="250" height="40" rx="8" fill="url(#grad-accent)"/>
+  <rect x="900" y="298" width="250" height="12" fill="url(#grad-accent)"/>
+  <text x="1025" y="297" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Serverless / Event-Driven</text>
+  <rect x="920" y="325" width="100" height="40" rx="4" fill="#fff3e0"/>
+  <text x="970" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Function A</text>
+  <text x="970" y="358" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Lambda</text>
+  <rect x="1030" y="325" width="100" height="40" rx="4" fill="#fff3e0"/>
+  <text x="1080" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Function B</text>
+  <text x="1080" y="358" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Lambda</text>
+  <rect x="920" y="378" width="210" height="30" rx="4" fill="#ff6f00" fill-opacity="0.15" stroke="#ff6f00" stroke-width="1"/>
+  <text x="1025" y="398" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#e65100">Event Bus / Stream</text>
+  <rect x="920" y="418" width="100" height="40" rx="4" fill="#fff3e0"/>
+  <text x="970" y="433" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Function C</text>
+  <text x="970" y="451" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Lambda</text>
+  <rect x="1030" y="418" width="100" height="40" rx="4" fill="#fff3e0"/>
+  <text x="1080" y="433" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Function D</text>
+  <text x="1080" y="451" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Lambda</text>
+  <text x="1025" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Pay-per-use</text>
+  <text x="1025" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">Event-driven scale</text>
+  <!-- Bottom key characteristics bar -->
+  <rect x="60" y="575" width="1160" height="50" rx="6" fill="#e3f2fd"/>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Key Drivers: Scalability · Independent Deployment · Resilience · Developer Velocity · Cost Efficiency</text>
+  <text x="640" y="615" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555555">Each era solves problems of the previous — at the cost of new operational complexity</text>
+</svg>

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Linux kernel root node -->
+  <rect x="515" y="30" width="250" height="60" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="67" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Linux Kernel</text>
+
+  <!-- Branch lines from kernel -->
+  <!-- Debian branch -->
+  <line x1="640" y1="90" x2="190" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Red Hat branch -->
+  <line x1="640" y1="90" x2="510" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arch branch -->
+  <line x1="640" y1="90" x2="770" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- SUSE branch -->
+  <line x1="640" y1="90" x2="1070" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Debian -->
+  <rect x="80" y="175" width="220" height="58" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="200" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Debian</text>
+  <text x="190" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Stable · .deb packages</text>
+
+  <!-- Red Hat -->
+  <rect x="400" y="175" width="220" height="58" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="510" y="200" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Red Hat (RHEL)</text>
+  <text x="510" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Enterprise · .rpm packages</text>
+
+  <!-- Arch -->
+  <rect x="660" y="175" width="220" height="58" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="770" y="200" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Arch Linux</text>
+  <text x="770" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Rolling release · pacman</text>
+
+  <!-- SUSE -->
+  <rect x="960" y="175" width="220" height="58" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="200" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">SUSE / openSUSE</text>
+  <text x="1070" y="222" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Enterprise · YaST · .rpm</text>
+
+  <!-- Children of Debian -->
+  <!-- Ubuntu -->
+  <line x1="150" y1="233" x2="80" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="20" y="335" width="150" height="52" rx="6" fill="#e3f2fd" stroke="#90caf9" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="95" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Ubuntu</text>
+  <text x="95" y="376" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">General purpose</text>
+
+  <!-- Mint from Ubuntu -->
+  <line x1="95" y1="387" x2="95" y2="460" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="20" y="465" width="150" height="52" rx="6" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="95" y="488" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Linux Mint</text>
+  <text x="95" y="506" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">User friendly</text>
+
+  <!-- Kali from Debian -->
+  <line x1="230" y1="233" x2="210" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="145" y="335" width="150" height="52" rx="6" fill="#fce4ec" stroke="#f48fb1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="220" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#880e4f">Kali Linux</text>
+  <text x="220" y="376" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Security / Pen-test</text>
+
+  <!-- Raspberry Pi OS from Debian -->
+  <line x1="190" y1="233" x2="340" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="265" y="335" width="150" height="52" rx="6" fill="#f3e5f5" stroke="#ce93d8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="340" y="355" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a">Raspberry</text>
+  <text x="340" y="372" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a">Pi OS</text>
+  <text x="340" y="388" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">IoT / embedded</text>
+
+  <!-- Children of Red Hat -->
+  <!-- Fedora -->
+  <line x1="470" y1="233" x2="430" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="360" y="335" width="150" height="52" rx="6" fill="#fff3e0" stroke="#ffcc80" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="435" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100">Fedora</text>
+  <text x="435" y="376" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Bleeding edge</text>
+
+  <!-- CentOS / AlmaLinux -->
+  <line x1="550" y1="233" x2="590" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="520" y="335" width="155" height="52" rx="6" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="597" y="358" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#212121">AlmaLinux /</text>
+  <text x="597" y="374" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#212121">Rocky Linux</text>
+
+  <!-- Children of Arch -->
+  <!-- Manjaro -->
+  <line x1="750" y1="233" x2="730" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="655" y="335" width="150" height="52" rx="6" fill="#e0f7fa" stroke="#80deea" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="730" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#006064">Manjaro</text>
+  <text x="730" y="376" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">User friendly Arch</text>
+
+  <!-- EndeavourOS -->
+  <line x1="790" y1="233" x2="870" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="800" y="335" width="150" height="52" rx="6" fill="#fce4ec" stroke="#ef9a9a" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="875" y="358" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#b71c1c">EndeavourOS</text>
+  <text x="875" y="376" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Near-vanilla Arch</text>
+
+  <!-- Children of SUSE -->
+  <!-- openSUSE Leap -->
+  <line x1="1030" y1="233" x2="1000" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="930" y="335" width="150" height="52" rx="6" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1005" y="356" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1b5e20">openSUSE</text>
+  <text x="1005" y="373" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2e7d32">Leap</text>
+  <text x="1005" y="388" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Stable release</text>
+
+  <!-- openSUSE Tumbleweed -->
+  <line x1="1110" y1="233" x2="1155" y2="330" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="1080" y="335" width="165" height="52" rx="6" fill="#e0f2f1" stroke="#80cbc4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1162" y="356" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#004d40">openSUSE</text>
+  <text x="1162" y="373" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#00695c">Tumbleweed</text>
+  <text x="1162" y="388" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Rolling release</text>
+
+  <!-- Ubuntu children: Pop OS, Lubuntu -->
+  <line x1="95" y1="387" x2="200" y2="460" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="130" y="465" width="150" height="52" rx="6" fill="#ede7f6" stroke="#b39ddb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="205" y="488" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#4527a0">Pop!_OS</text>
+  <text x="205" y="506" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Developer focus</text>
+
+  <!-- Legend -->
+  <rect x="30" y="570" width="18" height="18" rx="3" fill="#e3f2fd" stroke="#90caf9" stroke-width="1.5"/>
+  <text x="55" y="584" font-family="sans-serif" font-size="13" fill="#555555">Ubuntu-based</text>
+  <rect x="170" y="570" width="18" height="18" rx="3" fill="#fff3e0" stroke="#ffcc80" stroke-width="1.5"/>
+  <text x="195" y="584" font-family="sans-serif" font-size="13" fill="#555555">RPM-based</text>
+  <rect x="300" y="570" width="18" height="18" rx="3" fill="#e0f7fa" stroke="#80deea" stroke-width="1.5"/>
+  <text x="325" y="584" font-family="sans-serif" font-size="13" fill="#555555">Arch-based</text>
+  <rect x="430" y="570" width="18" height="18" rx="3" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5"/>
+  <text x="455" y="584" font-family="sans-serif" font-size="13" fill="#555555">SUSE-based</text>
+
+  <text x="640" y="650" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">All distributions share the Linux kernel — they differ in package managers, release cycles, and target audiences.</text>
+</svg>

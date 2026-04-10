@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 """Find SVG files that are not referenced in any Markdown slide file."""
 
-import os
 import re
-import sys
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__)
 
 svg_dir = ROOT / "svg"
 marp_dir = ROOT / "marp"
