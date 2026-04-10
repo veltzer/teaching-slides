@@ -169,14 +169,19 @@ def _check_colors(tree: ET.ElementTree) -> list[str]:
     errors: list[str] = []
     seen_bad: set[str] = set()
 
-    # Track whether we're inside a <defs> block
-    in_defs = False
+    # Collect all elements that are descendants of <defs>
+    defs_children: set[ET.Element] = set()
+    root = tree.getroot()
+    for defs_elem in root.iter():
+        if defs_elem.tag.split('}')[-1] == 'defs':
+            for child in defs_elem.iter():
+                defs_children.add(child)
 
     for elem in tree.iter():
         tag = elem.tag.split('}')[-1]
 
-        if tag == 'defs':
-            in_defs = True
+        # Skip defs elements themselves and their children
+        if elem in defs_children or tag == 'defs':
             continue
 
         for attr in _COLOR_ATTRS:
@@ -188,10 +193,6 @@ def _check_colors(tree: ET.ElementTree) -> list[str]:
 
             # Skip non-color values and url() references
             if stripped in _NON_COLOR_VALUES or stripped.startswith("url("):
-                continue
-
-            # Inside defs, raw hex is allowed (for gradient stops, marker fills, etc.)
-            if in_defs:
                 continue
 
             # Check for var(--name)

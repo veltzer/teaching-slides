@@ -156,8 +156,12 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+    <linearGradient id="grad-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#2ecc71"/>
+    </linearGradient>
 </defs>
-  <rect x="106.6667" y="240" width="1066.6667" height="192" fill="linear-gradient(to right, var(--danger-light), var(--ok-vivid))" stroke="var(--text-dark)" stroke-width="4.2667" />
+  <rect x="106.6667" y="240" width="1066.6667" height="192" fill="url(#grad-spectrum)" stroke="var(--text-dark)" stroke-width="4.2667" />
   <text x="106.6667" y="528" text-anchor="start" font-size="25.6">Strong</text>
   <text x="640" y="528" text-anchor="middle" font-size="25.6">Eventual</text>
   <text x="1173.3333" y="528" text-anchor="end" font-size="25.6">Weak</text>
