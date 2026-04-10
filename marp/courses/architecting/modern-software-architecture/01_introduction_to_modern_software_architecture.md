@@ -56,6 +56,11 @@
 - The need for independent scaling drives decomposition
 
 ---
+## Architecture Evolution
+
+![architecture_evolution](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/architecture_evolution.svg)
+
+---
 ## What Are Microservices?
 
 - An architectural style where a system is composed of small, independent services

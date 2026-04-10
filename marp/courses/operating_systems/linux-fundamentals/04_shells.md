@@ -25,6 +25,12 @@ The shell is your interface to the system:
 
 ---
 
+## Shell Types and Family Tree
+
+![shell_types](svg/courses/operating_systems/linux-fundamentals/04_shells/shell_types.svg)
+
+---
+
 ## Shell Variables: Bourne Family (sh/ksh/bash)
 
 ```bash

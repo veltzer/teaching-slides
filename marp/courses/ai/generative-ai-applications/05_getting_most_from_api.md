@@ -14,6 +14,12 @@
 
 ---
 
+## The OpenAI API — Architecture
+
+![openai_api_architecture](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/openai_api_architecture.svg)
+
+---
+
 ## Setting Up the `OpenAI` Client
 
 ```python

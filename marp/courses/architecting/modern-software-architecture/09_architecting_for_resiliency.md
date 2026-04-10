@@ -126,6 +126,11 @@ def retry_with_backoff(func, max_retries=3):
 - Protects both the caller and the failing service
 
 ---
+## Circuit Breaker Pattern
+
+![circuit_breaker_pattern](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_pattern.svg)
+
+---
 ## Circuit Breaker States
 
 ![circuit_breaker_states](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_states.svg)

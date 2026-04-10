@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Step 1: User Question -->
+  <rect x="30" y="80" width="160" height="100" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <text x="110" y="118" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">User</text>
+  <text x="110" y="140" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Question</text>
+  <text x="110" y="162" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">(natural language)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="190" y1="130" x2="260" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="225" y="120" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">NL query</text>
+
+  <!-- Step 2: LLM + Schema -->
+  <rect x="260" y="60" width="200" height="150" rx="10" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="2"/>
+  <rect x="260" y="60" width="200" height="34" rx="10" fill="#7b1fa2"/>
+  <rect x="260" y="82" width="200" height="12" fill="#7b1fa2"/>
+  <text x="360" y="82" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">LLM + Schema</text>
+  <text x="360" y="115" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">GPT-4o / Claude</text>
+  <text x="360" y="133" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">receives table names,</text>
+  <text x="360" y="149" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">columns, sample rows</text>
+  <text x="360" y="167" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">generates SQL query</text>
+  <text x="360" y="185" font-family="Arial,sans-serif" font-size="11" fill="#7b1fa2" text-anchor="middle" font-style="italic">NL → SQL translation</text>
+
+  <!-- Schema feed (from below) -->
+  <rect x="290" y="290" width="140" height="80" rx="7" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="360" y="316" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f57f17" text-anchor="middle">DB Schema</text>
+  <text x="360" y="334" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">tables, columns</text>
+  <text x="360" y="350" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">types, samples</text>
+  <line x1="360" y1="290" x2="360" y2="210" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="375" y="255" font-family="Arial,sans-serif" font-size="10" fill="#f57f17">injects</text>
+
+  <!-- Arrow 2 -->
+  <line x1="460" y1="135" x2="530" y2="135" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="495" y="125" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">SQL text</text>
+
+  <!-- Step 3: SQL -->
+  <rect x="530" y="100" width="180" height="80" rx="10" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="2"/>
+  <text x="620" y="130" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f57f17" text-anchor="middle">Generated</text>
+  <text x="620" y="148" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f57f17" text-anchor="middle">SQL Query</text>
+  <text x="620" y="170" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">SELECT name FROM users</text>
+
+  <!-- Arrow 3 -->
+  <line x1="710" y1="140" x2="780" y2="140" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="745" y="130" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">execute</text>
+
+  <!-- Step 4: Database -->
+  <rect x="780" y="90" width="160" height="110" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="780" y="90" width="160" height="34" rx="10" fill="#2e7d32"/>
+  <rect x="780" y="112" width="160" height="12" fill="#2e7d32"/>
+  <text x="860" y="112" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Database</text>
+  <text x="860" y="145" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">PostgreSQL</text>
+  <text x="860" y="163" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">SQLite / MySQL</text>
+  <text x="860" y="181" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">BigQuery / Snowflake</text>
+
+  <!-- Arrow 4: down from DB -->
+  <line x1="860" y1="200" x2="860" y2="270" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="875" y="240" font-family="Arial,sans-serif" font-size="10" fill="#555">raw rows</text>
+
+  <!-- Step 5: Results -->
+  <rect x="780" y="270" width="160" height="90" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="860" y="302" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Query</text>
+  <text x="860" y="320" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Results</text>
+  <text x="860" y="344" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">[(Alice,), (Bob,)]</text>
+
+  <!-- Arrow 5: results to LLM 2 -->
+  <line x1="780" y1="315" x2="710" y2="315" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="745" y="305" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">rows</text>
+
+  <!-- Arrow 5b from generated SQL down to results (feedback) -->
+  <line x1="620" y1="180" x2="620" y2="315" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="620" y1="315" x2="710" y2="315" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Step 6: LLM 2 -->
+  <rect x="460" y="270" width="200" height="100" rx="10" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="2"/>
+  <rect x="460" y="270" width="200" height="34" rx="10" fill="#7b1fa2"/>
+  <rect x="460" y="292" width="200" height="12" fill="#7b1fa2"/>
+  <text x="560" y="292" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">LLM (answer)</text>
+  <text x="560" y="325" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">interprets raw rows +</text>
+  <text x="560" y="341" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">original question</text>
+  <text x="560" y="357" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">→ natural language answer</text>
+
+  <!-- Arrow 6 to NL answer -->
+  <line x1="460" y1="320" x2="390" y2="320" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 7: NL Answer -->
+  <rect x="190" y="270" width="200" height="100" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <rect x="190" y="270" width="200" height="34" rx="10" fill="url(#grad-accent)"/>
+  <rect x="190" y="292" width="200" height="12" fill="url(#grad-accent)"/>
+  <text x="290" y="292" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">NL Answer</text>
+  <text x="290" y="325" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">"There are 2 users:</text>
+  <text x="290" y="343" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Alice and Bob."</text>
+  <text x="290" y="359" font-family="Arial,sans-serif" font-size="11" fill="#666" text-anchor="middle">(shown to user)</text>
+
+  <!-- Arrow back to user -->
+  <line x1="190" y1="320" x2="110" y2="320" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <line x1="110" y1="320" x2="110" y2="180" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <!-- Safety / validation box -->
+  <rect x="530" y="420" width="200" height="90" rx="8" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.5"/>
+  <text x="630" y="444" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">SQL Validation</text>
+  <text x="550" y="464" font-family="Arial,sans-serif" font-size="11" fill="#555">• Block DROP/DELETE/UPDATE</text>
+  <text x="550" y="482" font-family="Arial,sans-serif" font-size="11" fill="#555">• Limit rows (LIMIT 100)</text>
+  <text x="550" y="500" font-family="Arial,sans-serif" font-size="11" fill="#555">• Whitelist allowed tables</text>
+  <line x1="620" y1="370" x2="620" y2="420" stroke="#c62828" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="635" y="400" font-family="Arial,sans-serif" font-size="10" fill="#c62828">validate</text>
+
+  <!-- Full pipeline summary -->
+  <rect x="30" y="560" width="1220" height="110" rx="10" fill="#f5f5f5" filter="url(#shadow)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="640" y="586" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#333" text-anchor="middle">Full NL→SQL→NL Pipeline</text>
+  <!-- Steps row -->
+  <rect x="50" y="598" width="110" height="30" rx="5" fill="#1565c0"/>
+  <text x="105" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">1. NL question</text>
+  <line x1="160" y1="613" x2="185" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="185" y="598" width="130" height="30" rx="5" fill="#7b1fa2"/>
+  <text x="250" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">2. LLM + schema</text>
+  <line x1="315" y1="613" x2="340" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="340" y="598" width="120" height="30" rx="5" fill="#f9a825"/>
+  <text x="400" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">3. SQL query</text>
+  <line x1="460" y1="613" x2="485" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="485" y="598" width="120" height="30" rx="5" fill="#c62828"/>
+  <text x="545" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">4. Validate SQL</text>
+  <line x1="605" y1="613" x2="630" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="630" y="598" width="130" height="30" rx="5" fill="#2e7d32"/>
+  <text x="695" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">5. DB execution</text>
+  <line x1="760" y1="613" x2="785" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="785" y="598" width="120" height="30" rx="5" fill="#00838f"/>
+  <text x="845" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">6. Raw results</text>
+  <line x1="905" y1="613" x2="930" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="930" y="598" width="130" height="30" rx="5" fill="#7b1fa2"/>
+  <text x="995" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">7. LLM formats</text>
+  <line x1="1060" y1="613" x2="1085" y2="613" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="1085" y="598" width="140" height="30" rx="5" fill="#1565c0"/>
+  <text x="1155" y="618" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">8. NL answer</text>
+  <text x="640" y="655" font-family="Arial,sans-serif" font-size="11" fill="#666" text-anchor="middle">Schema injection is the key: LLM needs table names, column types, and sample values to generate correct SQL</text>
+</svg>

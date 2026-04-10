@@ -46,6 +46,11 @@
 | Scalability | Limited by slowest service | Buffer absorbs spikes |
 
 ---
+## Sync vs Async
+
+![sync_vs_async](svg/courses/architecting/modern-software-architecture/03_communication_patterns/sync_vs_async.svg)
+
+---
 ## When to Use Synchronous
 
 - User-facing requests that need immediate responses

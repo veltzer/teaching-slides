@@ -8,6 +8,12 @@
 
 ---
 
+## Evaluation Metrics Overview
+
+![evaluation_metrics](svg/courses/ai/generative-ai-applications/18_measuring_quality/evaluation_metrics.svg)
+
+---
+
 ## Automatic Metrics — Overview
 
 | Metric | Measures | Best For | Range |

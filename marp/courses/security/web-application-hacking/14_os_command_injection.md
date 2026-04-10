@@ -16,6 +16,12 @@
 
 ---
 
+## Command Injection Flow
+
+![command_injection_flow](svg/courses/security/web-application-hacking/14_os_command_injection/command_injection_flow.svg)
+
+---
+
 ## What is OS Command Injection?
 
 OS command injection occurs when an application passes user input to a system shell command without proper sanitization.

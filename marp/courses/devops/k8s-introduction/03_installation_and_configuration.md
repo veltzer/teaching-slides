@@ -259,6 +259,12 @@ kubectl config set-context --current --namespace=default
 
 ---
 
+## kubeconfig Structure
+
+![kubeconfig_structure](svg/courses/devops/k8s-introduction/03_installation_and_configuration/kubeconfig_structure.svg)
+
+---
+
 ## kubectl Autocomplete
 
 ```bash

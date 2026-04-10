@@ -23,6 +23,12 @@ prw-r--r--  # Named pipe
 ```
 
 ---
+
+## File Attributes Anatomy
+
+![file_attributes](svg/courses/operating_systems/linux-fundamentals/06_file_detail/file_attributes.svg)
+
+---
 ## Regular Files (-)
 
 ```bash

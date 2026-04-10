@@ -3,6 +3,12 @@
 
 ---
 
+## Linux Network Stack
+
+![network_stack](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_stack.svg)
+
+---
+
 ## The Client/Server Model
 
 ![the_client_server_model](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/the_client_server_model.svg)

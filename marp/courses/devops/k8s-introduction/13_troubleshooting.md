@@ -28,6 +28,12 @@
 
 ---
 
+## Pod Troubleshooting Flow
+
+![pod_troubleshooting_flow](svg/courses/devops/k8s-introduction/13_troubleshooting/pod_troubleshooting_flow.svg)
+
+---
+
 ## Pod Stuck in Pending
 
 ```bash

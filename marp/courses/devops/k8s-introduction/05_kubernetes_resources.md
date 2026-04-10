@@ -110,6 +110,12 @@ kubelet:
 
 ---
 
+## Kubernetes Resource Hierarchy
+
+![k8s_resource_hierarchy](svg/courses/devops/k8s-introduction/05_kubernetes_resources/k8s_resource_hierarchy.svg)
+
+---
+
 ## Pods - Fundamental Unit
 
 ```yaml

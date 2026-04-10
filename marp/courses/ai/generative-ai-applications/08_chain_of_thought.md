@@ -33,6 +33,12 @@ Why it matters:
 
 ---
 
+## Standard Prompting vs Chain-of-Thought
+
+![chain_of_thought](svg/courses/ai/generative-ai-applications/08_chain_of_thought/chain_of_thought.svg)
+
+---
+
 ## Zero-Shot CoT — "Let's Think Step by Step"
 
 The simplest CoT technique — just add a magic phrase:

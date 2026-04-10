@@ -68,6 +68,12 @@ mychart/
 
 ---
 
+## Helm Chart Structure Diagram
+
+![helm_chart_structure](svg/courses/devops/k8s-introduction/14_helm_and_gitops/helm_chart_structure.svg)
+
+---
+
 ## Chart.yaml
 
 ```yaml

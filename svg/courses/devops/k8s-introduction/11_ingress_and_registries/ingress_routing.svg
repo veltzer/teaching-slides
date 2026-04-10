@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- External client -->
+  <rect x="40" y="300" width="160" height="60" rx="10" fill="#fff9c4" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="326" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#e65100">Browser</text>
+  <text x="120" y="346" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#bf360c">app.example.com</text>
+
+  <!-- Arrow to Ingress Controller -->
+  <line x1="200" y1="330" x2="270" y2="330" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="235" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">HTTPS :443</text>
+
+  <!-- Ingress Controller -->
+  <rect x="270" y="240" width="220" height="180" rx="12" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="380" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Ingress Controller</text>
+  <text x="380" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#bbdefb">(nginx / traefik)</text>
+  <text x="380" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#e3f2fd">TLS termination</text>
+  <text x="380" y="336" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#e3f2fd">Host matching</text>
+  <text x="380" y="356" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#e3f2fd">Path matching</text>
+  <text x="380" y="376" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#e3f2fd">Header rewriting</text>
+  <text x="380" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#bbdefb">LoadBalancer svc in front</text>
+
+  <!-- Ingress Rules box -->
+  <rect x="560" y="50" width="340" height="260" rx="12" fill="#e8eaf6" stroke="#3949ab" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="560" y="50" width="340" height="44" rx="12" fill="#3949ab"/>
+  <rect x="560" y="82" width="340" height="12" fill="#3949ab"/>
+  <text x="730" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Ingress Rules</text>
+  <text x="575" y="114" font-family="monospace" font-size="12" fill="#1a237e">host: app.example.com</text>
+  <text x="575" y="134" font-family="monospace" font-size="12" fill="#283593">  /          → web-svc:80</text>
+  <text x="575" y="154" font-family="monospace" font-size="12" fill="#283593">  /api       → api-svc:8080</text>
+  <text x="575" y="174" font-family="monospace" font-size="12" fill="#283593">  /static    → cdn-svc:80</text>
+  <line x1="575" y1="184" x2="885" y2="184" stroke="#9fa8da" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="575" y="204" font-family="monospace" font-size="12" fill="#1a237e">host: admin.example.com</text>
+  <text x="575" y="224" font-family="monospace" font-size="12" fill="#283593">  /          → admin-svc:3000</text>
+  <text x="730" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#5c6bc0">TLS: secretName: tls-cert</text>
+
+  <!-- Arrow Controller reads rules -->
+  <line x1="490" y1="280" x2="560" y2="200" stroke="#3949ab" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="525" y="225" font-family="Arial,sans-serif" font-size="11" fill="#3949ab">reads rules</text>
+
+  <!-- Services column -->
+  <!-- web-svc -->
+  <rect x="980" y="60" width="200" height="72" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">web-svc</text>
+  <text x="1080" y="108" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">ClusterIP :80</text>
+  <!-- web pods -->
+  <rect x="1000" y="142" width="70" height="36" rx="5" fill="#1976d2"/>
+  <text x="1035" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fff">Pod</text>
+  <rect x="1090" y="142" width="70" height="36" rx="5" fill="#1976d2"/>
+  <text x="1125" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fff">Pod</text>
+  <line x1="1080" y1="132" x2="1080" y2="142" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- api-svc -->
+  <rect x="980" y="220" width="200" height="72" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#388e3c">api-svc</text>
+  <text x="1080" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">ClusterIP :8080</text>
+  <rect x="1000" y="302" width="70" height="36" rx="5" fill="#43a047"/>
+  <text x="1035" y="324" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fff">Pod</text>
+  <rect x="1090" y="302" width="70" height="36" rx="5" fill="#43a047"/>
+  <text x="1125" y="324" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fff">Pod</text>
+  <line x1="1080" y1="292" x2="1080" y2="302" stroke="#388e3c" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- cdn-svc -->
+  <rect x="980" y="380" width="200" height="72" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="408" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">cdn-svc</text>
+  <text x="1080" y="428" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">ClusterIP :80</text>
+  <rect x="1000" y="462" width="160" height="36" rx="5" fill="#ef6c00"/>
+  <text x="1080" y="484" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fff">Pod (CDN/static)</text>
+  <line x1="1080" y1="452" x2="1080" y2="462" stroke="#f57c00" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- admin-svc -->
+  <rect x="980" y="510" width="200" height="64" rx="10" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="536" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a">admin-svc</text>
+  <text x="1080" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">ClusterIP :3000</text>
+  <rect x="1000" y="584" width="160" height="36" rx="5" fill="#8e24aa"/>
+  <text x="1080" y="606" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fff">Pod (admin UI)</text>
+  <line x1="1080" y1="574" x2="1080" y2="584" stroke="#8e24aa" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Routing arrows from Ingress Controller to Services -->
+  <line x1="490" y1="300" x2="980" y2="96" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <line x1="490" y1="320" x2="980" y2="256" stroke="#388e3c" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="340" x2="980" y2="416" stroke="#f57c00" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="360" x2="980" y2="542" stroke="#8e24aa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Path labels on arrows -->
+  <text x="680" y="156" font-family="Arial,sans-serif" font-size="11" fill="#1565c0">/</text>
+  <text x="680" y="244" font-family="Arial,sans-serif" font-size="11" fill="#388e3c">/api</text>
+  <text x="680" y="390" font-family="Arial,sans-serif" font-size="11" fill="#f57c00">/static</text>
+  <text x="600" y="475" font-family="Arial,sans-serif" font-size="11" fill="#8e24aa">admin.example.com/</text>
+</svg>

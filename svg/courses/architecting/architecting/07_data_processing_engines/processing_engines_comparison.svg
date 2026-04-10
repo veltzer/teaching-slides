@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Header row -->
+  <rect x="20" y="20" width="1240" height="50" fill="url(#grad-accent)" rx="6" filter="url(#shadow)"/>
+  <text x="140" y="52" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Engine</text>
+  <text x="370" y="52" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Batch Processing</text>
+  <text x="570" y="52" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Stream Processing</text>
+  <text x="770" y="52" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Interactive SQL</text>
+  <text x="970" y="52" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">OLAP / Time Series</text>
+  <text x="1160" y="52" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">ML Support</text>
+
+  <!-- Column dividers in header -->
+  <line x1="250" y1="20" x2="250" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <line x1="470" y1="20" x2="470" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <line x1="670" y1="20" x2="670" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <line x1="870" y1="20" x2="870" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <line x1="1070" y1="20" x2="1070" y2="70" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+
+  <!-- Row 1: Spark -->
+  <rect x="20" y="80" width="1240" height="100" fill="url(#grad-surface)" rx="4" filter="url(#shadow)"/>
+  <rect x="20" y="80" width="230" height="100" fill="#e3f2fd" rx="4"/>
+  <text x="135" y="118" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#1565c0" text-anchor="middle">Apache Spark</text>
+  <text x="135" y="140" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Batch &amp; Micro-batch</text>
+  <text x="135" y="157" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Seconds+ latency</text>
+  <!-- Batch: Excellent -->
+  <rect x="270" y="95" width="180" height="28" fill="#43a047" rx="14"/>
+  <text x="360" y="114" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Excellent</text>
+  <text x="360" y="150" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">ETL, ML pipelines</text>
+  <!-- Stream: Good -->
+  <rect x="490" y="95" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="567" y="114" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Good</text>
+  <text x="567" y="150" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Micro-batch only</text>
+  <!-- Interactive SQL: Fair -->
+  <rect x="690" y="95" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="767" y="114" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Fair</text>
+  <text x="767" y="150" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Spark SQL</text>
+  <!-- OLAP: Fair -->
+  <rect x="890" y="95" width="155" height="28" fill="#e53935" rx="14"/>
+  <text x="967" y="114" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Limited</text>
+  <text x="967" y="150" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Not specialized</text>
+  <!-- ML: Excellent -->
+  <rect x="1090" y="95" width="155" height="28" fill="#43a047" rx="14"/>
+  <text x="1167" y="114" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Excellent</text>
+  <text x="1167" y="150" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">MLlib, GraphX</text>
+
+  <!-- Row 2: Flink -->
+  <rect x="20" y="192" width="1240" height="100" fill="url(#grad-surface)" rx="4" filter="url(#shadow)"/>
+  <rect x="20" y="192" width="230" height="100" fill="#e8f5e9" rx="4"/>
+  <text x="135" y="230" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#2e7d32" text-anchor="middle">Apache Flink</text>
+  <text x="135" y="252" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Streaming-first</text>
+  <text x="135" y="269" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Millisecond latency</text>
+  <!-- Batch: Good -->
+  <rect x="270" y="207" width="180" height="28" fill="#fb8c00" rx="14"/>
+  <text x="360" y="226" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Good</text>
+  <text x="360" y="262" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Bounded streams</text>
+  <!-- Stream: Excellent -->
+  <rect x="490" y="207" width="155" height="28" fill="#43a047" rx="14"/>
+  <text x="567" y="226" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Excellent</text>
+  <text x="567" y="262" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Exactly-once CEP</text>
+  <!-- Interactive SQL: Limited -->
+  <rect x="690" y="207" width="155" height="28" fill="#e53935" rx="14"/>
+  <text x="767" y="226" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Limited</text>
+  <text x="767" y="262" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Flink SQL (streaming)</text>
+  <!-- OLAP: Fair -->
+  <rect x="890" y="207" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="967" y="226" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Fair</text>
+  <text x="967" y="262" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Real-time windows</text>
+  <!-- ML: Fair -->
+  <rect x="1090" y="207" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="1167" y="226" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Fair</text>
+  <text x="1167" y="262" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Flink ML (limited)</text>
+
+  <!-- Row 3: Trino -->
+  <rect x="20" y="304" width="1240" height="100" fill="url(#grad-surface)" rx="4" filter="url(#shadow)"/>
+  <rect x="20" y="304" width="230" height="100" fill="#fff3e0" rx="4"/>
+  <text x="135" y="342" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#e65100" text-anchor="middle">Trino</text>
+  <text x="135" y="364" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Interactive SQL</text>
+  <text x="135" y="381" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Sub-second latency</text>
+  <!-- Batch: Fair -->
+  <rect x="270" y="319" width="180" height="28" fill="#fb8c00" rx="14"/>
+  <text x="360" y="338" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Fair</text>
+  <text x="360" y="374" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Large queries only</text>
+  <!-- Stream: None -->
+  <rect x="490" y="319" width="155" height="28" fill="#bdbdbd" rx="14"/>
+  <text x="567" y="338" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">None</text>
+  <text x="567" y="374" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">No streaming</text>
+  <!-- Interactive SQL: Excellent -->
+  <rect x="690" y="319" width="155" height="28" fill="#43a047" rx="14"/>
+  <text x="767" y="338" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Excellent</text>
+  <text x="767" y="374" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Federation, CBO</text>
+  <!-- OLAP: Good -->
+  <rect x="890" y="319" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="967" y="338" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Good</text>
+  <text x="967" y="374" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Ad-hoc analytics</text>
+  <!-- ML: None -->
+  <rect x="1090" y="319" width="155" height="28" fill="#bdbdbd" rx="14"/>
+  <text x="1167" y="338" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">None</text>
+  <text x="1167" y="374" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Query engine only</text>
+
+  <!-- Row 4: Druid -->
+  <rect x="20" y="416" width="1240" height="100" fill="url(#grad-surface)" rx="4" filter="url(#shadow)"/>
+  <rect x="20" y="416" width="230" height="100" fill="#f3e5f5" rx="4"/>
+  <text x="135" y="454" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Apache Druid</text>
+  <text x="135" y="476" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">OLAP / Time Series</text>
+  <text x="135" y="493" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Sub-second latency</text>
+  <!-- Batch: Fair -->
+  <rect x="270" y="431" width="180" height="28" fill="#fb8c00" rx="14"/>
+  <text x="360" y="450" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Fair</text>
+  <text x="360" y="486" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Batch ingestion</text>
+  <!-- Stream: Good -->
+  <rect x="490" y="431" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="567" y="450" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Good</text>
+  <text x="567" y="486" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Real-time ingestion</text>
+  <!-- Interactive SQL: Good -->
+  <rect x="690" y="431" width="155" height="28" fill="#fb8c00" rx="14"/>
+  <text x="767" y="450" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Good</text>
+  <text x="767" y="486" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Druid SQL</text>
+  <!-- OLAP: Excellent -->
+  <rect x="890" y="431" width="155" height="28" fill="#43a047" rx="14"/>
+  <text x="967" y="450" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Excellent</text>
+  <text x="967" y="486" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Click-stream, telemetry</text>
+  <!-- ML: None -->
+  <rect x="1090" y="431" width="155" height="28" fill="#bdbdbd" rx="14"/>
+  <text x="1167" y="450" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">None</text>
+  <text x="1167" y="486" font-family="Arial,sans-serif" font-size="12" fill="#555555" text-anchor="middle">Storage/query only</text>
+
+  <!-- Legend -->
+  <rect x="20" y="535" width="1240" height="80" fill="#f5f5f5" rx="6" filter="url(#shadow)"/>
+  <text x="140" y="560" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="middle">Legend</text>
+  <rect x="175" y="548" width="100" height="22" fill="#43a047" rx="11"/>
+  <text x="225" y="564" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Excellent</text>
+  <rect x="295" y="548" width="80" height="22" fill="#fb8c00" rx="11"/>
+  <text x="335" y="564" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Good</text>
+  <rect x="395" y="548" width="80" height="22" fill="#fb8c00" rx="11"/>
+  <text x="435" y="564" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Fair</text>
+  <rect x="495" y="548" width="100" height="22" fill="#e53935" rx="11"/>
+  <text x="545" y="564" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Limited</text>
+  <rect x="615" y="548" width="80" height="22" fill="#bdbdbd" rx="11"/>
+  <text x="655" y="564" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">None</text>
+  <text x="140" y="598" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">Primary strength</text>
+  <text x="800" y="580" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">Spark: best all-rounder for batch + ML   |   Flink: streaming-first with exactly-once guarantees</text>
+  <text x="800" y="600" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">Trino: fastest interactive SQL federation   |   Druid: sub-second OLAP on time series data</text>
+</svg>

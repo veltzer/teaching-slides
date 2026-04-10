@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Timeline arrow -->
+  <text x="640" y="30" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#888888">Power ON  ——————————————————————————————————————————————  System ready</text>
+  <line x1="60" y1="42" x2="1220" y2="42" stroke="#bdbdbd" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage boxes, arranged horizontally with arrows -->
+  <!-- Colors deepen as we go further into boot -->
+
+  <!-- Stage 1: BIOS/UEFI -->
+  <rect x="25" y="58" width="155" height="120" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="25" y="58" width="155" height="36" rx="10" fill="#1565c0"/>
+  <rect x="25" y="80" width="155" height="14" fill="#1565c0"/>
+  <text x="102" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">BIOS / UEFI</text>
+  <text x="102" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1565c0">POST check</text>
+  <text x="102" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Memory / CPU</text>
+  <text x="102" y="138" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">hardware init</text>
+  <text x="102" y="154" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">Finds bootable</text>
+  <text x="102" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">disk / partition</text>
+
+  <line x1="180" y1="118" x2="210" y2="118" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 2: GRUB -->
+  <rect x="210" y="58" width="155" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="210" y="58" width="155" height="36" rx="10" fill="#2e7d32"/>
+  <rect x="210" y="80" width="155" height="14" fill="#2e7d32"/>
+  <text x="287" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">GRUB2</text>
+  <text x="287" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2e7d32">Bootloader</text>
+  <text x="287" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Menu with</text>
+  <text x="287" y="138" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">kernel entries</text>
+  <text x="287" y="154" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">Loads kernel</text>
+  <text x="287" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">+ initrd image</text>
+
+  <line x1="365" y1="118" x2="395" y2="118" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 3: Kernel -->
+  <rect x="395" y="58" width="155" height="120" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="395" y="58" width="155" height="36" rx="10" fill="#e65100"/>
+  <rect x="395" y="80" width="155" height="14" fill="#e65100"/>
+  <text x="472" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Linux Kernel</text>
+  <text x="472" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e65100">Decompresses</text>
+  <text x="472" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">self into RAM</text>
+  <text x="472" y="138" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Init subsystems</text>
+  <text x="472" y="154" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">CPU, memory,</text>
+  <text x="472" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">scheduler, VFS</text>
+
+  <line x1="550" y1="118" x2="580" y2="118" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 4: initrd/initramfs -->
+  <rect x="580" y="58" width="165" height="120" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="580" y="58" width="165" height="36" rx="10" fill="#6a1b9a"/>
+  <rect x="580" y="80" width="165" height="14" fill="#6a1b9a"/>
+  <text x="662" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">initramfs</text>
+  <text x="662" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6a1b9a">Temp root FS</text>
+  <text x="662" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Load drivers</text>
+  <text x="662" y="138" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Mount real /</text>
+  <text x="662" y="154" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">LUKS decrypt,</text>
+  <text x="662" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">RAID assemble</text>
+
+  <line x1="745" y1="118" x2="775" y2="118" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 5: systemd (PID 1) -->
+  <rect x="775" y="58" width="165" height="120" rx="10" fill="#fce4ec" stroke="#880e4f" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="775" y="58" width="165" height="36" rx="10" fill="#880e4f"/>
+  <rect x="775" y="80" width="165" height="14" fill="#880e4f"/>
+  <text x="857" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">systemd (PID 1)</text>
+  <text x="857" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#880e4f">First process</text>
+  <text x="857" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Reads units</text>
+  <text x="857" y="138" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Parallel start</text>
+  <text x="857" y="154" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">Dep resolution</text>
+  <text x="857" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">cgroups control</text>
+
+  <line x1="940" y1="118" x2="970" y2="118" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 6: Targets -->
+  <rect x="970" y="58" width="155" height="120" rx="10" fill="#e8eaf6" stroke="#283593" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="970" y="58" width="155" height="36" rx="10" fill="#283593"/>
+  <rect x="970" y="80" width="155" height="14" fill="#283593"/>
+  <text x="1047" y="82" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Targets</text>
+  <text x="1047" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#283593">multi-user.target</text>
+  <text x="1047" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">graphical.target</text>
+  <text x="1047" y="138" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Services started</text>
+  <text x="1047" y="154" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">network, logging,</text>
+  <text x="1047" y="168" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">cron, ssh, etc.</text>
+
+  <line x1="1125" y1="118" x2="1155" y2="118" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Stage 7: Login -->
+  <rect x="1155" y="58" width="100" height="120" rx="10" fill="#e0f7fa" stroke="#006064" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="1155" y="58" width="100" height="36" rx="10" fill="#006064"/>
+  <rect x="1155" y="80" width="100" height="14" fill="#006064"/>
+  <text x="1205" y="82" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Login</text>
+  <text x="1205" y="106" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#006064">getty /</text>
+  <text x="1205" y="122" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#006064">GDM/LightDM</text>
+  <text x="1205" y="140" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">User shell</text>
+  <text x="1205" y="158" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">PAM auth</text>
+  <text x="1205" y="174" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">.bashrc etc.</text>
+
+  <!-- Detail section below -->
+  <!-- GRUB config detail -->
+  <rect x="25" y="210" width="380" height="220" rx="10" fill="#212121" filter="url(#shadow)"/>
+  <rect x="25" y="210" width="380" height="36" rx="10" fill="#2e7d32"/>
+  <rect x="25" y="230" width="380" height="16" fill="#2e7d32"/>
+  <text x="215" y="234" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">GRUB config: /etc/grub.d/ + /boot/grub/grub.cfg</text>
+  <text x="45" y="268" font-family="monospace" font-size="13" fill="#888888">menuentry 'Ubuntu' {</text>
+  <text x="45" y="287" font-family="monospace" font-size="13" fill="#a5d6a7">  linux</text>
+  <text x="105" y="287" font-family="monospace" font-size="13" fill="#ffffff">/boot/vmlinuz-6.x root=/dev/sda1</text>
+  <text x="45" y="306" font-family="monospace" font-size="13" fill="#a5d6a7">  initrd</text>
+  <text x="115" y="306" font-family="monospace" font-size="13" fill="#ffffff">/boot/initrd.img-6.x</text>
+  <text x="45" y="325" font-family="monospace" font-size="13" fill="#888888">}</text>
+  <text x="45" y="350" font-family="monospace" font-size="12" fill="#80cbc4">update-grub</text>
+  <text x="170" y="350" font-family="monospace" font-size="12" fill="#888888">  # regenerate grub.cfg</text>
+  <text x="45" y="370" font-family="monospace" font-size="12" fill="#80cbc4">grub-install /dev/sda</text>
+  <text x="265" y="370" font-family="monospace" font-size="12" fill="#888888">  # install GRUB</text>
+  <text x="45" y="390" font-family="monospace" font-size="12" fill="#888888"># Boot params: quiet splash ro</text>
+  <text x="45" y="410" font-family="monospace" font-size="12" fill="#888888"># Edit: /etc/default/grub</text>
+
+  <!-- systemd detail -->
+  <rect x="425" y="210" width="420" height="220" rx="10" fill="#212121" filter="url(#shadow)"/>
+  <rect x="425" y="210" width="420" height="36" rx="10" fill="#880e4f"/>
+  <rect x="425" y="230" width="420" height="16" fill="#880e4f"/>
+  <text x="635" y="234" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">systemd key commands</text>
+  <text x="445" y="268" font-family="monospace" font-size="13" fill="#f48fb1">systemctl</text>
+  <text x="550" y="268" font-family="monospace" font-size="13" fill="#ffffff">status sshd</text>
+  <text x="445" y="288" font-family="monospace" font-size="13" fill="#f48fb1">systemctl</text>
+  <text x="550" y="288" font-family="monospace" font-size="13" fill="#ffffff">enable --now nginx</text>
+  <text x="445" y="308" font-family="monospace" font-size="13" fill="#f48fb1">systemctl</text>
+  <text x="550" y="308" font-family="monospace" font-size="13" fill="#ffffff">list-units --type=service</text>
+  <text x="445" y="328" font-family="monospace" font-size="13" fill="#f48fb1">journalctl</text>
+  <text x="560" y="328" font-family="monospace" font-size="13" fill="#ffffff">-b          # boot logs</text>
+  <text x="445" y="348" font-family="monospace" font-size="13" fill="#f48fb1">journalctl</text>
+  <text x="560" y="348" font-family="monospace" font-size="13" fill="#ffffff">-u sshd -f  # follow</text>
+  <text x="445" y="368" font-family="monospace" font-size="13" fill="#f48fb1">systemctl</text>
+  <text x="550" y="368" font-family="monospace" font-size="13" fill="#ffffff">get-default</text>
+  <text x="445" y="388" font-family="monospace" font-size="13" fill="#f48fb1">systemctl</text>
+  <text x="550" y="388" font-family="monospace" font-size="13" fill="#ffffff">isolate rescue.target</text>
+  <text x="445" y="410" font-family="monospace" font-size="12" fill="#888888">Units: /etc/systemd/system/  /lib/systemd/system/</text>
+
+  <!-- Target hierarchy -->
+  <rect x="865" y="210" width="390" height="220" rx="10" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="865" y="210" width="390" height="36" rx="10" fill="#283593"/>
+  <rect x="865" y="230" width="390" height="16" fill="#283593"/>
+  <text x="1060" y="234" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff">systemd target hierarchy</text>
+  <text x="885" y="268" font-family="monospace" font-size="13" fill="#283593">graphical.target</text>
+  <text x="885" y="290" font-family="sans-serif" font-size="12" fill="#555555">  └─ multi-user.target</text>
+  <text x="885" y="310" font-family="sans-serif" font-size="12" fill="#555555">       └─ network.target</text>
+  <text x="885" y="330" font-family="sans-serif" font-size="12" fill="#555555">            └─ sysinit.target</text>
+  <text x="885" y="350" font-family="sans-serif" font-size="12" fill="#555555">                 └─ local-fs.target</text>
+  <text x="885" y="374" font-family="monospace" font-size="12" fill="#555555">rescue.target    (runlevel 1)</text>
+  <text x="885" y="392" font-family="monospace" font-size="12" fill="#555555">emergency.target (root shell)</text>
+  <text x="885" y="410" font-family="monospace" font-size="12" fill="#555555">reboot.target    shutdown.target</text>
+
+  <!-- journalctl / dmesg tips -->
+  <rect x="25" y="450" width="1230" height="120" rx="10" fill="#e8eaf6" stroke="#283593" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="50" y="475" font-family="sans-serif" font-size="15" font-weight="bold" fill="#283593">Debugging the Boot</text>
+  <text x="50" y="498" font-family="monospace" font-size="13" fill="#212121">dmesg | head -50          </text><text x="290" y="498" font-family="sans-serif" font-size="13" fill="#555555">kernel ring buffer from current boot</text>
+  <text x="50" y="518" font-family="monospace" font-size="13" fill="#212121">journalctl -b -p err      </text><text x="290" y="518" font-family="sans-serif" font-size="13" fill="#555555">errors from this boot (systemd journal)</text>
+  <text x="50" y="538" font-family="monospace" font-size="13" fill="#212121">systemctl --failed         </text><text x="290" y="538" font-family="sans-serif" font-size="13" fill="#555555">list units that failed to start</text>
+  <text x="50" y="558" font-family="monospace" font-size="13" fill="#212121">systemd-analyze blame      </text><text x="290" y="558" font-family="sans-serif" font-size="13" fill="#555555">show services sorted by startup time</text>
+
+  <text x="700" y="498" font-family="monospace" font-size="13" fill="#212121">systemd-analyze            </text><text x="940" y="498" font-family="sans-serif" font-size="13" fill="#555555">total boot time breakdown</text>
+  <text x="700" y="518" font-family="monospace" font-size="13" fill="#212121">cat /proc/cmdline          </text><text x="940" y="518" font-family="sans-serif" font-size="13" fill="#555555">kernel command line used at boot</text>
+  <text x="700" y="538" font-family="monospace" font-size="13" fill="#212121">ls /boot/                  </text><text x="940" y="538" font-family="sans-serif" font-size="13" fill="#555555">vmlinuz, initrd, grub/</text>
+  <text x="700" y="558" font-family="monospace" font-size="13" fill="#212121">uname -r                   </text><text x="940" y="558" font-family="sans-serif" font-size="13" fill="#555555">running kernel version</text>
+
+  <text x="640" y="610" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Modern Linux systems boot in ~5-30 seconds thanks to systemd parallel service activation and readahead optimizations.</text>
+</svg>

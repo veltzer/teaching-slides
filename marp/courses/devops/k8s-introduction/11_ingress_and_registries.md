@@ -145,6 +145,12 @@ spec:
 
 ---
 
+## Ingress Routing
+
+![ingress_routing](svg/courses/devops/k8s-introduction/11_ingress_and_registries/ingress_routing.svg)
+
+---
+
 ## Creating TLS Secret
 
 ```bash

@@ -179,6 +179,12 @@ volumes:
 
 ---
 
+## ConfigMap and Secret Usage
+
+![configmap_secret_usage](svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_secret_usage.svg)
+
+---
+
 ## Secret Types
 
 ```yaml

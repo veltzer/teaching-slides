@@ -17,6 +17,12 @@
 
 ---
 
+## Brute Force Attack Flow
+
+![brute_force_attack_flow](svg/courses/security/web-application-hacking/08_brute_forcing_logins/brute_force_attack_flow.svg)
+
+---
+
 ## Dictionary Attack with Burp Intruder
 
 ```misc

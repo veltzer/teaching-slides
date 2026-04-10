@@ -21,6 +21,11 @@
 * Enforce code quality with linting and type checking
 
 ---
+## Spark Testing Pyramid
+
+![spark_testing_pyramid](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/spark_testing_pyramid.svg)
+
+---
 ## Testing Architecture
 
 ![testing_architecture](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/testing_architecture.svg)

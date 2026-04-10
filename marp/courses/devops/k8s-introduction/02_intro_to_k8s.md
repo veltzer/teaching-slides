@@ -587,6 +587,12 @@ docker system prune -a
 
 ---
 
+## Kubernetes Architecture Overview
+
+![k8s_architecture](svg/courses/devops/k8s-introduction/02_intro_to_k8s/k8s_architecture.svg)
+
+---
+
 ## Troubleshooting Containers
 
 ```bash

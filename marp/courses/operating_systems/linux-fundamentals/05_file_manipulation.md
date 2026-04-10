@@ -114,6 +114,12 @@ du -h | sort -rh | head -n 10
 
 ---
 
+## File Operations Overview
+
+![file_operations_overview](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/file_operations_overview.svg)
+
+---
+
 ## Text Processing Tools
 
 ## tr (translate)

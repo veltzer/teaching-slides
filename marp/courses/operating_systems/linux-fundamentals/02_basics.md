@@ -59,6 +59,12 @@ find /home -name "*.txt"
 ![command_structure](svg/courses/operating_systems/linux-fundamentals/02_basics/command_structure.svg)
 
 ---
+
+## Filesystem Navigation
+
+![filesystem_navigation](svg/courses/operating_systems/linux-fundamentals/02_basics/filesystem_navigation.svg)
+
+---
 ## Simple Commands
 
 Common basic commands:

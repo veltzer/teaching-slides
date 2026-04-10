@@ -44,6 +44,11 @@
 ![ci_pipeline](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/ci_pipeline.svg)
 
 ---
+## CI/CD Pipeline
+
+![cicd_pipeline](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/cicd_pipeline.svg)
+
+---
 ## CI Best Practices
 
 - Keep the build fast (under 10 minutes)

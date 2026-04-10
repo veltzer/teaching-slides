@@ -67,6 +67,11 @@ class Customer:
 ![bounded_context_example](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/bounded_context_example.svg)
 
 ---
+## Bounded Contexts
+
+![bounded_contexts](svg/courses/architecting/modern-software-architecture/04_domain_driven_design/bounded_contexts.svg)
+
+---
 ## Why Bounded Contexts Matter
 
 - Prevent model pollution from trying to create a single universal model

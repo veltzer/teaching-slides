@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Helper: server shape is a rect 38x52 -->
+  <!-- Pattern layout: 4 columns, each 300px wide, starting at x=20, gap=16 -->
+
+  <!-- === N+1 === -->
+  <rect x="20" y="20" width="295" height="580" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="20" width="295" height="46" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="50" width="295" height="16" fill="url(#grad-accent)"/>
+  <text x="167" y="50" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">N+1</text>
+  <!-- Subtitle -->
+  <text x="167" y="88" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">One extra unit beyond minimum</text>
+
+  <!-- Servers: N=3 active (blue), 1 spare (grey) -->
+  <!-- Active servers -->
+  <rect x="55" y="108" width="40" height="56" fill="#1e88e5" rx="4"/>
+  <text x="75" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S1</text>
+  <rect x="105" y="108" width="40" height="56" fill="#1e88e5" rx="4"/>
+  <text x="125" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+  <rect x="155" y="108" width="40" height="56" fill="#1e88e5" rx="4"/>
+  <text x="175" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S3</text>
+  <!-- Spare -->
+  <rect x="215" y="108" width="40" height="56" fill="#90a4ae" rx="4"/>
+  <text x="235" y="133" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">spare</text>
+  <text x="235" y="148" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">+1</text>
+
+  <text x="55" y="186" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">Active (N=3)</text>
+  <text x="210" y="186" font-family="Arial,sans-serif" font-size="12" fill="#607d8b">Spare</text>
+
+  <!-- Failure scenario arrow -->
+  <text x="167" y="215" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#e53935" text-anchor="middle">▼ Failure scenario</text>
+  <!-- S1 fails -->
+  <rect x="55" y="230" width="40" height="56" fill="#e53935" rx="4"/>
+  <text x="75" y="255" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">S1</text>
+  <text x="75" y="270" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="105" y="230" width="40" height="56" fill="#1e88e5" rx="4"/>
+  <text x="125" y="262" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+  <rect x="155" y="230" width="40" height="56" fill="#1e88e5" rx="4"/>
+  <text x="175" y="262" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S3</text>
+  <!-- Spare activates -->
+  <rect x="215" y="230" width="40" height="56" fill="#43a047" rx="4"/>
+  <text x="235" y="255" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">+1</text>
+  <text x="235" y="270" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">active</text>
+  <!-- Arrow from fail to spare -->
+  <line x1="95" y1="258" x2="215" y2="258" stroke="#43a047" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <text x="167" y="310" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">Service continues, spare</text>
+  <text x="167" y="326" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">takes over automatically</text>
+
+  <!-- Stats -->
+  <rect x="40" y="360" width="240" height="90" fill="#e3f2fd" rx="8"/>
+  <text x="160" y="382" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Characteristics</text>
+  <text x="55" y="402" font-family="Arial,sans-serif" font-size="12" fill="#333333">Cost:      moderate (+1 unit)</text>
+  <text x="55" y="420" font-family="Arial,sans-serif" font-size="12" fill="#333333">Survives: 1 failure</text>
+  <text x="55" y="438" font-family="Arial,sans-serif" font-size="12" fill="#333333">Use:      most production systems</text>
+
+  <!-- === N+2 === -->
+  <rect x="330" y="20" width="295" height="580" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="330" y="20" width="295" height="46" fill="#388e3c" rx="12"/>
+  <rect x="330" y="50" width="295" height="16" fill="#388e3c"/>
+  <text x="477" y="50" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">N+2</text>
+  <text x="477" y="88" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">Two extra units — dual fault tolerance</text>
+
+  <!-- Active N=3, spare=2 -->
+  <rect x="355" y="108" width="38" height="56" fill="#388e3c" rx="4"/>
+  <text x="374" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S1</text>
+  <rect x="400" y="108" width="38" height="56" fill="#388e3c" rx="4"/>
+  <text x="419" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+  <rect x="445" y="108" width="38" height="56" fill="#388e3c" rx="4"/>
+  <text x="464" y="140" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S3</text>
+  <rect x="495" y="108" width="38" height="56" fill="#90a4ae" rx="4"/>
+  <text x="514" y="133" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">sp1</text>
+  <text x="514" y="148" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">+1</text>
+  <rect x="540" y="108" width="38" height="56" fill="#90a4ae" rx="4"/>
+  <text x="559" y="133" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">sp2</text>
+  <text x="559" y="148" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">+2</text>
+
+  <text x="355" y="186" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32">Active (N=3)</text>
+  <text x="492" y="186" font-family="Arial,sans-serif" font-size="12" fill="#607d8b">2 Spares</text>
+
+  <text x="477" y="215" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#e53935" text-anchor="middle">▼ Failure scenario</text>
+  <!-- 2 servers fail -->
+  <rect x="355" y="230" width="38" height="56" fill="#e53935" rx="4"/>
+  <text x="374" y="262" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="400" y="230" width="38" height="56" fill="#e53935" rx="4"/>
+  <text x="419" y="262" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="445" y="230" width="38" height="56" fill="#388e3c" rx="4"/>
+  <text x="464" y="262" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S3</text>
+  <rect x="495" y="230" width="38" height="56" fill="#43a047" rx="4"/>
+  <text x="514" y="255" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">sp1</text>
+  <text x="514" y="270" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">up</text>
+  <rect x="540" y="230" width="38" height="56" fill="#43a047" rx="4"/>
+  <text x="559" y="255" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">sp2</text>
+  <text x="559" y="270" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">up</text>
+
+  <text x="477" y="314" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">Survives 2 simultaneous failures</text>
+
+  <rect x="350" y="360" width="250" height="90" fill="#e8f5e9" rx="8"/>
+  <text x="475" y="382" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Characteristics</text>
+  <text x="365" y="402" font-family="Arial,sans-serif" font-size="12" fill="#333333">Cost:      higher (+2 units)</text>
+  <text x="365" y="420" font-family="Arial,sans-serif" font-size="12" fill="#333333">Survives: 2 failures</text>
+  <text x="365" y="438" font-family="Arial,sans-serif" font-size="12" fill="#333333">Use:      critical infrastructure</text>
+
+  <!-- === 2N === -->
+  <rect x="640" y="20" width="295" height="580" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="640" y="20" width="295" height="46" fill="#e65100" rx="12"/>
+  <rect x="640" y="50" width="295" height="16" fill="#e65100"/>
+  <text x="787" y="50" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2N</text>
+  <text x="787" y="88" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">Full duplicate — active/standby</text>
+
+  <!-- Group A active, Group B standby -->
+  <text x="680" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#e65100">Group A (active)</text>
+  <rect x="665" y="122" width="36" height="50" fill="#e65100" rx="4"/>
+  <text x="683" y="151" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S1</text>
+  <rect x="707" y="122" width="36" height="50" fill="#e65100" rx="4"/>
+  <text x="725" y="151" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S2</text>
+  <rect x="749" y="122" width="36" height="50" fill="#e65100" rx="4"/>
+  <text x="767" y="151" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">S3</text>
+
+  <text x="800" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#607d8b">Group B (standby)</text>
+  <rect x="800" y="122" width="36" height="50" fill="#90a4ae" rx="4"/>
+  <text x="818" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B1</text>
+  <rect x="842" y="122" width="36" height="50" fill="#90a4ae" rx="4"/>
+  <text x="860" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B2</text>
+  <rect x="884" y="122" width="36" height="50" fill="#90a4ae" rx="4"/>
+  <text x="902" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B3</text>
+
+  <text x="787" y="200" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#e53935" text-anchor="middle">▼ Group A fails entirely</text>
+
+  <rect x="665" y="212" width="36" height="50" fill="#e53935" rx="4"/>
+  <text x="683" y="240" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="707" y="212" width="36" height="50" fill="#e53935" rx="4"/>
+  <text x="725" y="240" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="749" y="212" width="36" height="50" fill="#e53935" rx="4"/>
+  <text x="767" y="240" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+
+  <rect x="800" y="212" width="36" height="50" fill="#43a047" rx="4"/>
+  <text x="818" y="237" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B1</text>
+  <rect x="842" y="212" width="36" height="50" fill="#43a047" rx="4"/>
+  <text x="860" y="237" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B2</text>
+  <rect x="884" y="212" width="36" height="50" fill="#43a047" rx="4"/>
+  <text x="902" y="237" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B3</text>
+
+  <!-- Failover arrow -->
+  <path d="M 755 240 Q 775 270 800 237" stroke="#43a047" stroke-width="2" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <text x="787" y="285" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">Full standby takes over</text>
+  <text x="787" y="301" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">— no capacity loss</text>
+
+  <rect x="660" y="340" width="250" height="110" fill="#fff3e0" rx="8"/>
+  <text x="785" y="362" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Characteristics</text>
+  <text x="675" y="382" font-family="Arial,sans-serif" font-size="12" fill="#333333">Cost:      2x everything</text>
+  <text x="675" y="400" font-family="Arial,sans-serif" font-size="12" fill="#333333">Survives: full site failure</text>
+  <text x="675" y="418" font-family="Arial,sans-serif" font-size="12" fill="#333333">Use:      DR / high-value systems</text>
+  <text x="675" y="436" font-family="Arial,sans-serif" font-size="12" fill="#333333">Note:     standby may be idle</text>
+
+  <!-- === 2N+1 === -->
+  <rect x="950" y="20" width="310" height="580" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="950" y="20" width="310" height="46" fill="#6a1b9a" rx="12"/>
+  <rect x="950" y="50" width="310" height="16" fill="#6a1b9a"/>
+  <text x="1105" y="50" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">2N+1</text>
+  <text x="1105" y="88" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">Dual redundancy + extra — max resilience</text>
+
+  <!-- Group A active=3, Group B standby=3, +1 extra spare -->
+  <text x="975" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">A (active)</text>
+  <rect x="975" y="122" width="34" height="48" fill="#6a1b9a" rx="4"/>
+  <text x="992" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">A1</text>
+  <rect x="1015" y="122" width="34" height="48" fill="#6a1b9a" rx="4"/>
+  <text x="1032" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">A2</text>
+  <rect x="1055" y="122" width="34" height="48" fill="#6a1b9a" rx="4"/>
+  <text x="1072" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">A3</text>
+
+  <text x="1105" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#607d8b">B (standby)</text>
+  <rect x="1100" y="122" width="34" height="48" fill="#90a4ae" rx="4"/>
+  <text x="1117" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B1</text>
+  <rect x="1140" y="122" width="34" height="48" fill="#90a4ae" rx="4"/>
+  <text x="1157" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B2</text>
+  <rect x="1180" y="122" width="34" height="48" fill="#90a4ae" rx="4"/>
+  <text x="1197" y="150" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B3</text>
+
+  <!-- Extra +1 -->
+  <rect x="1230" y="122" width="20" height="48" fill="#ffd54f" rx="4"/>
+  <text x="1240" y="145" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#333333" text-anchor="middle">+1</text>
+  <text x="1240" y="160" font-family="Arial,sans-serif" font-size="9" fill="#333333" text-anchor="middle">xtr</text>
+
+  <text x="1105" y="195" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#e53935" text-anchor="middle">▼ A fails + 1 standby fails</text>
+
+  <!-- A fails -->
+  <rect x="975" y="208" width="34" height="48" fill="#e53935" rx="4"/>
+  <text x="992" y="236" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="1015" y="208" width="34" height="48" fill="#e53935" rx="4"/>
+  <text x="1032" y="236" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <rect x="1055" y="208" width="34" height="48" fill="#e53935" rx="4"/>
+  <text x="1072" y="236" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <!-- B1 fails -->
+  <rect x="1100" y="208" width="34" height="48" fill="#e53935" rx="4"/>
+  <text x="1117" y="236" font-family="Arial,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">FAIL</text>
+  <!-- B2, B3 and +1 survive -->
+  <rect x="1140" y="208" width="34" height="48" fill="#43a047" rx="4"/>
+  <text x="1157" y="236" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B2</text>
+  <rect x="1180" y="208" width="34" height="48" fill="#43a047" rx="4"/>
+  <text x="1197" y="236" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">B3</text>
+  <rect x="1230" y="208" width="20" height="48" fill="#43a047" rx="4"/>
+  <text x="1240" y="236" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">+1</text>
+
+  <text x="1105" y="278" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">Still operational even after</text>
+  <text x="1105" y="294" font-family="Arial,sans-serif" font-size="12" fill="#333333" text-anchor="middle">N+1 compounded failures</text>
+
+  <rect x="970" y="330" width="270" height="130" fill="#f3e5f5" rx="8"/>
+  <text x="1105" y="352" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Characteristics</text>
+  <text x="985" y="372" font-family="Arial,sans-serif" font-size="12" fill="#333333">Cost:      2x + 1 extra unit</text>
+  <text x="985" y="390" font-family="Arial,sans-serif" font-size="12" fill="#333333">Survives: full group + 1 extra</text>
+  <text x="985" y="408" font-family="Arial,sans-serif" font-size="12" fill="#333333">Use:      tier-1 data centers</text>
+  <text x="985" y="426" font-family="Arial,sans-serif" font-size="12" fill="#333333">         financial systems</text>
+  <text x="985" y="444" font-family="Arial,sans-serif" font-size="12" fill="#333333">         safety-critical systems</text>
+
+  <!-- Legend -->
+  <rect x="20" y="622" width="1240" height="72" fill="#f5f5f5" rx="8" filter="url(#shadow)"/>
+  <rect x="40" y="640" width="22" height="18" fill="#1e88e5" rx="3"/>
+  <text x="70" y="654" font-family="Arial,sans-serif" font-size="13" fill="#333333">Active</text>
+  <rect x="130" y="640" width="22" height="18" fill="#90a4ae" rx="3"/>
+  <text x="160" y="654" font-family="Arial,sans-serif" font-size="13" fill="#333333">Standby</text>
+  <rect x="240" y="640" width="22" height="18" fill="#43a047" rx="3"/>
+  <text x="270" y="654" font-family="Arial,sans-serif" font-size="13" fill="#333333">Takes over</text>
+  <rect x="370" y="640" width="22" height="18" fill="#e53935" rx="3"/>
+  <text x="400" y="654" font-family="Arial,sans-serif" font-size="13" fill="#333333">Failed</text>
+  <rect x="460" y="640" width="22" height="18" fill="#ffd54f" rx="3"/>
+  <text x="490" y="654" font-family="Arial,sans-serif" font-size="13" fill="#333333">Extra spare</text>
+  <text x="760" y="654" font-family="Arial,sans-serif" font-size="13" fill="#555555" text-anchor="middle">N+1 most common · 2N for DR · 2N+1 for maximum availability requirements</text>
+  <text x="760" y="678" font-family="Arial,sans-serif" font-size="12" fill="#888888" text-anchor="middle">Higher redundancy = higher cost — match the pattern to your uptime SLA</text>
+</svg>

@@ -18,6 +18,12 @@
 
 ---
 
+## Git Built-in Tools Overview
+
+![git_tools_overview](svg/courses/git/git2/19_builtin_tools/git_tools_overview.svg)
+
+---
+
 ## Git Instaweb
 
 Quickly start a web interface for your repository:

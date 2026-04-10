@@ -16,6 +16,12 @@
 
 ---
 
+## POSIX IPC vs System V IPC
+
+![posix_ipc_vs_sysv](svg/courses/operating_systems/linux-systems-programming/13_posix_ipv/posix_ipc_vs_sysv.svg)
+
+---
+
 ## POSIX Message Queues
 
 1. A more robust and flexible replacement for Sys V message queues.

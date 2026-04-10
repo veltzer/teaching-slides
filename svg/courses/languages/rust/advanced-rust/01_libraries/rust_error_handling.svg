@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- std::error::Error trait at top-center -->
+  <rect x="440" y="24" width="400" height="80" fill="url(#grad-accent)" rx="12" filter="url(#shadow)"/>
+  <text x="640" y="57" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">std::error::Error</text>
+  <text x="640" y="78" font-family="Arial,sans-serif" font-size="13" fill="#cce5ff" text-anchor="middle">trait Error: Debug + Display</text>
+  <text x="640" y="96" font-family="Arial,sans-serif" font-size="12" fill="#cce5ff" text-anchor="middle">fn source(&amp;self) → Option&lt;&amp;dyn Error&gt;</text>
+
+  <!-- Arrows down to anyhow and thiserror -->
+  <line x1="560" y1="104" x2="330" y2="210" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="720" y1="104" x2="950" y2="210" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- anyhow box -->
+  <rect x="60" y="210" width="520" height="340" fill="#e8f5e9" rx="12" filter="url(#shadow)"/>
+  <rect x="60" y="210" width="520" height="46" fill="#388e3c" rx="12"/>
+  <rect x="60" y="240" width="520" height="16" fill="#388e3c"/>
+  <text x="110" y="240" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#ffffff">anyhow</text>
+  <text x="490" y="238" font-family="Arial,sans-serif" font-size="13" fill="#c8e6c9" text-anchor="end">crate: anyhow = "1.0"</text>
+
+  <text x="88" y="282" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Target: Applications</text>
+  <text x="88" y="304" font-family="Arial,sans-serif" font-size="13" fill="#333333">Single opaque type: anyhow::Error</text>
+  <text x="88" y="322" font-family="Arial,sans-serif" font-size="13" fill="#333333">Wraps any error implementing std::error::Error</text>
+  <text x="88" y="340" font-family="Arial,sans-serif" font-size="13" fill="#333333">Automatic conversion via ? operator</text>
+  <text x="88" y="358" font-family="Arial,sans-serif" font-size="13" fill="#333333">Context: .context("reading config file")</text>
+  <text x="88" y="376" font-family="Arial,sans-serif" font-size="13" fill="#333333">Backtraces with RUST_BACKTRACE=1</text>
+
+  <!-- Code snippet for anyhow -->
+  <rect x="82" y="394" width="476" height="136" fill="#1e2a1e" rx="8"/>
+  <text x="100" y="416" font-family="Courier New,monospace" font-size="12" fill="#a5d6a7">use anyhow::{Result, Context};</text>
+  <text x="100" y="434" font-family="Courier New,monospace" font-size="12" fill="#ffffff"> </text>
+  <text x="100" y="452" font-family="Courier New,monospace" font-size="12" fill="#80cbc4">fn</text>
+  <text x="124" y="452" font-family="Courier New,monospace" font-size="12" fill="#ffffff"> read_config(path: &amp;</text>
+  <text x="124" y="452" font-family="Courier New,monospace" font-size="12" fill="#80cbc4"> </text>
+  <text x="100" y="452" font-family="Courier New,monospace" font-size="12" fill="#ffffff">fn read_config(path: &amp;str) -&gt; Result&lt;Config&gt; &#123;</text>
+  <text x="100" y="470" font-family="Courier New,monospace" font-size="12" fill="#ffffff">    let s = fs::read_to_string(path)</text>
+  <text x="100" y="488" font-family="Courier New,monospace" font-size="12" fill="#ffffff">        .context("reading config file")?;</text>
+  <text x="100" y="506" font-family="Courier New,monospace" font-size="12" fill="#a5d6a7">    // ? converts any error to anyhow::Error</text>
+  <text x="100" y="524" font-family="Courier New,monospace" font-size="12" fill="#ffffff">    Ok(toml::from_str(&amp;s)?) &#125;</text>
+
+  <!-- thiserror box -->
+  <rect x="700" y="210" width="520" height="340" fill="#fff3e0" rx="12" filter="url(#shadow)"/>
+  <rect x="700" y="210" width="520" height="46" fill="#e65100" rx="12"/>
+  <rect x="700" y="240" width="520" height="16" fill="#e65100"/>
+  <text x="748" y="240" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#ffffff">thiserror</text>
+  <text x="1128" y="238" font-family="Arial,sans-serif" font-size="13" fill="#ffe0b2" text-anchor="end">crate: thiserror = "1.0"</text>
+
+  <text x="724" y="282" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#bf360c">Target: Libraries</text>
+  <text x="724" y="304" font-family="Arial,sans-serif" font-size="13" fill="#333333">Derive macro: #[derive(Error)]</text>
+  <text x="724" y="322" font-family="Arial,sans-serif" font-size="13" fill="#333333">Generates std::error::Error impl</text>
+  <text x="724" y="340" font-family="Arial,sans-serif" font-size="13" fill="#333333">Custom error enums with variants</text>
+  <text x="724" y="358" font-family="Arial,sans-serif" font-size="13" fill="#333333">#[error("...")] — Display format</text>
+  <text x="724" y="376" font-family="Arial,sans-serif" font-size="13" fill="#333333">#[from] — auto From conversion</text>
+
+  <!-- Code snippet for thiserror -->
+  <rect x="722" y="394" width="476" height="136" fill="#2a1e1a" rx="8"/>
+  <text x="740" y="416" font-family="Courier New,monospace" font-size="12" fill="#ffcc80">use thiserror::Error;</text>
+  <text x="740" y="434" font-family="Courier New,monospace" font-size="12" fill="#ffffff"> </text>
+  <text x="740" y="452" font-family="Courier New,monospace" font-size="12" fill="#ffcc80">#[derive(Debug, Error)]</text>
+  <text x="740" y="470" font-family="Courier New,monospace" font-size="12" fill="#ffffff">pub enum MyError &#123;</text>
+  <text x="740" y="488" font-family="Courier New,monospace" font-size="12" fill="#ffcc80">    #[error("io error: {0}")]</text>
+  <text x="740" y="506" font-family="Courier New,monospace" font-size="12" fill="#ffffff">    Io(#[from] std::io::Error),</text>
+  <text x="740" y="524" font-family="Courier New,monospace" font-size="12" fill="#ffffff">    #[error("parse failed")] Parse, &#125;</text>
+
+  <!-- ? operator flow at bottom -->
+  <rect x="200" y="578" width="880" height="100" fill="#e3f2fd" rx="12" filter="url(#shadow)"/>
+  <text x="640" y="604" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">? Operator Flow</text>
+  <text x="280" y="630" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">call returns</text>
+  <text x="280" y="648" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">Result&lt;T, E&gt;</text>
+  <!-- Arrow -->
+  <line x1="360" y1="638" x2="440" y2="638" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="490" y="630" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">Ok(v)</text>
+  <text x="490" y="648" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">→ unwrap v</text>
+  <!-- Arrow -->
+  <line x1="540" y1="638" x2="620" y2="638" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="680" y="630" font-family="Arial,sans-serif" font-size="13" fill="#e53935" text-anchor="middle">Err(e)</text>
+  <text x="680" y="648" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">→ From::from(e)</text>
+  <!-- Arrow -->
+  <line x1="748" y1="638" x2="828" y2="638" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="920" y="630" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">early return</text>
+  <text x="920" y="648" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">Err(converted)</text>
+</svg>

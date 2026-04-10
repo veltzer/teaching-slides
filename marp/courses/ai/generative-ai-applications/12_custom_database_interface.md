@@ -14,6 +14,12 @@
 
 ---
 
+## NL to SQL Pipeline
+
+![nl_to_sql_architecture](svg/courses/ai/generative-ai-applications/12_custom_database_interface/nl_to_sql_architecture.svg)
+
+---
+
 ## Setting Up the Database
 
 ```python

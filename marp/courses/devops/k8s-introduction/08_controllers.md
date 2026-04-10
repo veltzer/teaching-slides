@@ -75,6 +75,12 @@ spec:
 
 ---
 
+## Deployment Rolling Update
+
+![deployment_rollout](svg/courses/devops/k8s-introduction/08_controllers/deployment_rollout.svg)
+
+---
+
 ## ReplicaSet
 
 ```yaml

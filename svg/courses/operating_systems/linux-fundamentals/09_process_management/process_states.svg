@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#b71c1c"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- State circles -->
+  <!-- CREATED -->
+  <circle cx="120" cy="200" r="75" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="120" y="194" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">CREATED</text>
+  <text x="120" y="214" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">fork() called</text>
+  <text x="120" y="230" text-anchor="middle" font-family="monospace" font-size="11" fill="#1565c0">S state</text>
+
+  <!-- READY -->
+  <circle cx="400" cy="200" r="75" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="400" y="194" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2e7d32">READY</text>
+  <text x="400" y="214" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Waiting for CPU</text>
+  <text x="400" y="230" text-anchor="middle" font-family="monospace" font-size="11" fill="#2e7d32">R state</text>
+
+  <!-- RUNNING -->
+  <circle cx="680" cy="200" r="85" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="680" y="192" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">RUNNING</text>
+  <text x="680" y="214" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#bbdefb">On CPU</text>
+  <text x="680" y="232" text-anchor="middle" font-family="monospace" font-size="12" fill="#90caf9">R state</text>
+
+  <!-- WAITING / SLEEPING -->
+  <circle cx="960" cy="200" r="80" fill="#fff3e0" stroke="#e65100" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="190" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100">WAITING</text>
+  <text x="960" y="210" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#bf360c">(SLEEPING)</text>
+  <text x="960" y="228" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">I/O or event</text>
+  <text x="960" y="244" text-anchor="middle" font-family="monospace" font-size="11" fill="#e65100">S / D state</text>
+
+  <!-- STOPPED -->
+  <circle cx="400" cy="490" r="75" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3" filter="url(#shadow)"/>
+  <text x="400" y="484" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#6a1b9a">STOPPED</text>
+  <text x="400" y="504" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">SIGSTOP / Ctrl+Z</text>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="11" fill="#6a1b9a">T state</text>
+
+  <!-- ZOMBIE -->
+  <circle cx="960" cy="490" r="75" fill="#fce4ec" stroke="#b71c1c" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="484" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#b71c1c">ZOMBIE</text>
+  <text x="960" y="504" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Terminated,</text>
+  <text x="960" y="520" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">not reaped</text>
+  <text x="960" y="538" text-anchor="middle" font-family="monospace" font-size="11" fill="#b71c1c">Z state</text>
+
+  <!-- DEAD (exit) -->
+  <rect x="1120" y="460" width="130" height="60" rx="10" fill="#f2f2f2" stroke="#555555" stroke-width="2"/>
+  <text x="1185" y="487" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#555555">DEAD</text>
+  <text x="1185" y="507" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#888888">Resources freed</text>
+
+  <!-- Transitions -->
+  <!-- CREATED → READY -->
+  <line x1="195" y1="200" x2="325" y2="200" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="260" y="190" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2e7d32">admitted</text>
+
+  <!-- READY → RUNNING -->
+  <line x1="475" y1="200" x2="595" y2="200" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="535" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#1565c0">scheduled</text>
+
+  <!-- RUNNING → READY (preempted) -->
+  <path d="M 620 165 Q 535 130 480 165" stroke="#e65100" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+  <text x="550" y="132" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e65100">preempted</text>
+
+  <!-- RUNNING → WAITING -->
+  <line x1="765" y1="200" x2="880" y2="200" stroke="#e65100" stroke-width="2.5" marker-end="url(#arrow-orange)"/>
+  <text x="822" y="188" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e65100">I/O wait</text>
+
+  <!-- WAITING → READY (event complete) -->
+  <path d="M 900 260 Q 820 330 500 270" stroke="#2e7d32" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="700" y="335" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2e7d32">I/O complete / event</text>
+
+  <!-- RUNNING → STOPPED (SIGSTOP) -->
+  <path d="M 640 280 Q 560 380 480 430" stroke="#6a1b9a" stroke-width="2" fill="none" marker-end="url(#arrow-purple)"/>
+  <text x="525" y="370" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#6a1b9a">SIGSTOP</text>
+
+  <!-- STOPPED → READY (SIGCONT) -->
+  <path d="M 340 440 Q 300 310 330 270" stroke="#2e7d32" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="278" y="360" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#2e7d32">SIGCONT</text>
+
+  <!-- RUNNING → ZOMBIE (exit) -->
+  <path d="M 745 270 Q 860 380 890 430" stroke="#b71c1c" stroke-width="2" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="840" y="368" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b71c1c">exit()</text>
+
+  <!-- ZOMBIE → DEAD (wait/reap) -->
+  <line x1="1035" y1="490" x2="1120" y2="490" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1077" y="480" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">parent wait()</text>
+
+  <!-- SIGKILL → ZOMBIE shortcut -->
+  <path d="M 760 150 Q 960 50 1035 415" stroke="#b71c1c" stroke-width="2" stroke-dasharray="6,3" fill="none" marker-end="url(#arrow-red)"/>
+  <text x="960" y="80" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#b71c1c">SIGKILL (kill -9)</text>
+
+  <!-- Arrow purple marker fix (define here since SVG doesn't redefine from inside marker) -->
+  <defs>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#4527a0"/>
+    </marker>
+  </defs>
+
+  <!-- Signal legend box -->
+  <rect x="25" y="590" width="1230" height="110" rx="10" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="50" y="618" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Key Signals</text>
+  <text x="50" y="641" font-family="monospace" font-size="13" fill="#212121">SIGTERM (15)</text><text x="180" y="641" font-family="sans-serif" font-size="13" fill="#555555">Graceful terminate (default kill)</text>
+  <text x="50" y="661" font-family="monospace" font-size="13" fill="#212121">SIGKILL  (9)</text><text x="180" y="661" font-family="sans-serif" font-size="13" fill="#555555">Force kill — cannot be caught or ignored</text>
+  <text x="50" y="681" font-family="monospace" font-size="13" fill="#212121">SIGSTOP (19)</text><text x="180" y="681" font-family="sans-serif" font-size="13" fill="#555555">Pause process (cannot be caught)</text>
+
+  <text x="500" y="641" font-family="monospace" font-size="13" fill="#212121">SIGCONT (18)</text><text x="640" y="641" font-family="sans-serif" font-size="13" fill="#555555">Resume stopped process</text>
+  <text x="500" y="661" font-family="monospace" font-size="13" fill="#212121">SIGINT   (2)</text><text x="640" y="661" font-family="sans-serif" font-size="13" fill="#555555">Interrupt (Ctrl+C)</text>
+  <text x="500" y="681" font-family="monospace" font-size="13" fill="#212121">SIGCHLD (17)</text><text x="640" y="681" font-family="sans-serif" font-size="13" fill="#555555">Child state changed — reap zombie with wait()</text>
+
+  <text x="960" y="641" font-family="monospace" font-size="13" fill="#212121">ps STAT codes:</text>
+  <text x="960" y="661" font-family="monospace" font-size="13" fill="#212121">R=running  S=sleeping  D=uninterruptible</text>
+  <text x="960" y="681" font-family="monospace" font-size="13" fill="#212121">T=stopped  Z=zombie  X=dead</text>
+</svg>

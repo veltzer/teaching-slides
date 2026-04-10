@@ -19,6 +19,12 @@ Error Handling, Utilities, HTTP, Web Programming, and Async
 
 ---
 
+## Rust Error Handling Ecosystem
+
+![rust_error_handling](svg/courses/languages/rust/advanced-rust/01_libraries/rust_error_handling.svg)
+
+---
+
 ## Why Error Handling Libraries?
 
 - Rust's `Result<T, E>` is powerful but verbose

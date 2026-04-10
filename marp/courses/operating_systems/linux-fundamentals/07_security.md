@@ -19,6 +19,12 @@ Key components:
 - Default shell
 
 ---
+
+## User Management
+
+![user_management](svg/courses/operating_systems/linux-fundamentals/07_security/user_management.svg)
+
+---
 ## The /etc/passwd File
 
 Structure:

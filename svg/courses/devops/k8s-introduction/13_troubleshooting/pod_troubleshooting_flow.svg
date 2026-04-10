@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Start node -->
+  <rect x="510" y="30" width="260" height="56" rx="28" fill="#37474f" filter="url(#shadow)"/>
+  <text x="640" y="63" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Pod not running as expected</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="86" x2="640" y2="114" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Check Phase diamond -->
+  <polygon points="640,118 760,156 640,194 520,156" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">kubectl get pod</text>
+  <text x="640" y="168" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">What PHASE?</text>
+
+  <!-- Branch: Pending -->
+  <line x1="520" y1="156" x2="120" y2="270" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="280" y="204" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555">Pending</text>
+
+  <!-- Pending box -->
+  <rect x="40" y="270" width="200" height="100" rx="10" fill="#eeeeee" stroke="#9e9e9e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="294" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#616161">Pending</text>
+  <text x="140" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl describe pod</text>
+  <text x="140" y="332" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">→ check Events section</text>
+  <text x="140" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">→ kubectl get nodes</text>
+
+  <!-- Pending causes -->
+  <rect x="260" y="270" width="200" height="100" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+  <text x="360" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#555">Causes</text>
+  <text x="270" y="312" font-family="Arial,sans-serif" font-size="11" fill="#555">• No node with free resources</text>
+  <text x="270" y="330" font-family="Arial,sans-serif" font-size="11" fill="#555">• nodeSelector mismatch</text>
+  <text x="270" y="348" font-family="Arial,sans-serif" font-size="11" fill="#555">• PVC not bound</text>
+  <text x="270" y="366" font-family="Arial,sans-serif" font-size="11" fill="#555">• Taint/toleration missing</text>
+
+  <!-- Branch: Running but unhealthy -->
+  <line x1="640" y1="194" x2="640" y2="270" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="238" font-family="Arial,sans-serif" font-size="12" fill="#555">Running</text>
+
+  <!-- Running check box -->
+  <rect x="510" y="270" width="260" height="100" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="294" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Check readiness/liveness</text>
+  <text x="640" y="314" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl describe pod → Events</text>
+  <text x="640" y="332" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl logs my-pod</text>
+  <text x="640" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl logs --previous (crash)</text>
+
+  <!-- CrashLoopBackOff branch -->
+  <line x1="760" y1="156" x2="1000" y2="270" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="920" y="204" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555">CrashLoop/Error</text>
+
+  <!-- CrashLoopBackOff box -->
+  <rect x="920" y="270" width="320" height="120" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="296" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#b71c1c">CrashLoopBackOff</text>
+  <text x="935" y="318" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl logs my-pod --previous</text>
+  <text x="935" y="336" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl describe pod → Last State</text>
+  <text x="935" y="354" font-family="Arial,sans-serif" font-size="11" fill="#555">→ app crash / bad CMD / OOMKilled</text>
+  <text x="935" y="372" font-family="Arial,sans-serif" font-size="11" fill="#555">→ kubectl get events --sort-by='.lastTimestamp'</text>
+
+  <!-- ImagePullBackOff branch (from side) -->
+  <rect x="920" y="410" width="320" height="100" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="434" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">ImagePullBackOff</text>
+  <text x="935" y="456" font-family="Arial,sans-serif" font-size="11" fill="#555">• Wrong image name/tag</text>
+  <text x="935" y="474" font-family="Arial,sans-serif" font-size="11" fill="#555">• Private registry: missing imagePullSecret</text>
+  <text x="935" y="492" font-family="Arial,sans-serif" font-size="11" fill="#555">• Network policy blocking registry</text>
+
+  <!-- OOMKilled -->
+  <rect x="920" y="530" width="320" height="80" rx="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="554" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#880e4f">OOMKilled</text>
+  <text x="935" y="574" font-family="Arial,sans-serif" font-size="11" fill="#555">Container hit memory limit</text>
+  <text x="935" y="592" font-family="Arial,sans-serif" font-size="11" fill="#555">→ increase resources.limits.memory</text>
+
+  <!-- Check node step -->
+  <rect x="510" y="420" width="260" height="100" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Check Node</text>
+  <text x="640" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl describe node NODE</text>
+  <text x="640" y="482" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">kubectl top node</text>
+  <text x="640" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">journalctl -u kubelet (on node)</text>
+
+  <!-- Arrow running → check node -->
+  <line x1="640" y1="370" x2="640" y2="420" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Commands box bottom -->
+  <rect x="40" y="430" width="440" height="190" rx="10" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.5"/>
+  <text x="50" y="454" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#333">Key Diagnostic Commands</text>
+  <text x="60" y="478" font-family="monospace" font-size="12" fill="#1565c0">kubectl get pods -o wide</text>
+  <text x="60" y="498" font-family="monospace" font-size="12" fill="#1565c0">kubectl describe pod &lt;name&gt;</text>
+  <text x="60" y="518" font-family="monospace" font-size="12" fill="#1565c0">kubectl logs &lt;pod&gt; [-c container]</text>
+  <text x="60" y="538" font-family="monospace" font-size="12" fill="#1565c0">kubectl logs --previous</text>
+  <text x="60" y="558" font-family="monospace" font-size="12" fill="#1565c0">kubectl exec -it &lt;pod&gt; -- /bin/sh</text>
+  <text x="60" y="578" font-family="monospace" font-size="12" fill="#1565c0">kubectl get events --sort-by='.lastTimestamp'</text>
+  <text x="60" y="598" font-family="monospace" font-size="12" fill="#1565c0">kubectl top pods / nodes</text>
+</svg>

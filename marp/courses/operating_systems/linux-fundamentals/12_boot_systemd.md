@@ -3,6 +3,12 @@
 
 ---
 
+## Boot Process: BIOS to Login
+
+![boot_process](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/boot_process.svg)
+
+---
+
 ## Linux Boot Sequence
 
 ![linux_boot_sequence](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/linux_boot_sequence.svg)

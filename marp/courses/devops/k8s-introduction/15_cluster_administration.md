@@ -104,6 +104,12 @@ kubectl taint nodes node-1 key=value:NoSchedule
 
 ---
 
+## Node Lifecycle
+
+![node_lifecycle](svg/courses/devops/k8s-introduction/15_cluster_administration/node_lifecycle.svg)
+
+---
+
 ## etcd Backup
 
 ```bash

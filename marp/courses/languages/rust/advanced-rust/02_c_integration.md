@@ -17,6 +17,12 @@ FFI, Bindgen, and `#![no_std]`
 
 ---
 
+## FFI Boundary: Rust ↔ C
+
+![ffi_boundary](svg/courses/languages/rust/advanced-rust/02_c_integration/ffi_boundary.svg)
+
+---
+
 ## Part 1: Calling Rust from C
 
 Exposing Rust APIs to C code

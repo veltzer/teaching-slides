@@ -39,6 +39,12 @@ output "result" {
 
 ---
 
+## Data Source vs Resource
+
+![data_source_vs_resource](svg/courses/devops/terraform/04_data_sources/data_source_vs_resource.svg)
+
+---
+
 ## AWS AMI Data Source
 
 ```hcl

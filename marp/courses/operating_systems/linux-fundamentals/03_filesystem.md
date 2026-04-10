@@ -20,6 +20,12 @@ Key Directories:
 
 ---
 
+## Linux Directory Structure
+
+![linux_directory_structure](svg/courses/operating_systems/linux-fundamentals/03_filesystem/linux_directory_structure.svg)
+
+---
+
 ## Important System Directories
 
 | Directory | Purpose |

@@ -316,6 +316,12 @@ kubectl exec -n kube-system kube-apiserver-master -- \
 
 ---
 
+## Kubernetes Security Layers
+
+![k8s_security_layers](svg/courses/devops/k8s-introduction/12_security_and_rbac/k8s_security_layers.svg)
+
+---
+
 ## Resource Quotas
 
 ```yaml

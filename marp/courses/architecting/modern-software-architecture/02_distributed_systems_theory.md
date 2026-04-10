@@ -40,6 +40,11 @@
 ![cap_theorem_diagram](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/cap_theorem_diagram.svg)
 
 ---
+## CAP Theorem
+
+![cap_theorem](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/cap_theorem.svg)
+
+---
 ## Consistency in CAP
 
 - Every read receives the most recent write or an error

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Chart directory tree -->
+  <rect x="40" y="40" width="380" height="560" rx="12" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="380" height="46" rx="12" fill="#546e7a"/>
+  <rect x="40" y="74" width="380" height="12" fill="#546e7a"/>
+  <text x="230" y="72" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#fff">my-chart/</text>
+
+  <!-- Chart.yaml -->
+  <rect x="60" y="106" width="340" height="56" rx="8" fill="#ede7f6" stroke="#7e57c2" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="126" font-family="monospace" font-size="15" font-weight="bold" fill="#4527a0">Chart.yaml</text>
+  <text x="80" y="148" font-family="monospace" font-size="12" fill="#555">name, version, description, appVersion</text>
+
+  <!-- values.yaml -->
+  <rect x="60" y="174" width="340" height="72" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="196" font-family="monospace" font-size="15" font-weight="bold" fill="#0d47a1">values.yaml</text>
+  <text x="80" y="216" font-family="monospace" font-size="12" fill="#555">replicaCount: 2</text>
+  <text x="80" y="232" font-family="monospace" font-size="12" fill="#555">image.tag: latest   service.port: 80</text>
+
+  <!-- values-prod.yaml -->
+  <rect x="60" y="258" width="340" height="46" rx="8" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="80" y="278" font-family="monospace" font-size="14" fill="#1565c0">values-prod.yaml  (override)</text>
+  <text x="80" y="296" font-family="monospace" font-size="12" fill="#555">replicaCount: 5</text>
+
+  <!-- templates/ dir -->
+  <rect x="60" y="316" width="340" height="240" rx="8" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="80" y="338" font-family="monospace" font-size="15" font-weight="bold" fill="#2e7d32">templates/</text>
+  <!-- files inside templates -->
+  <rect x="80" y="350" width="300" height="30" rx="5" fill="#c8e6c9"/>
+  <text x="96" y="370" font-family="monospace" font-size="13" fill="#1b5e20">deployment.yaml</text>
+  <rect x="80" y="388" width="300" height="30" rx="5" fill="#c8e6c9"/>
+  <text x="96" y="408" font-family="monospace" font-size="13" fill="#1b5e20">service.yaml</text>
+  <rect x="80" y="426" width="300" height="30" rx="5" fill="#c8e6c9"/>
+  <text x="96" y="446" font-family="monospace" font-size="13" fill="#1b5e20">ingress.yaml</text>
+  <rect x="80" y="464" width="300" height="30" rx="5" fill="#c8e6c9"/>
+  <text x="96" y="484" font-family="monospace" font-size="13" fill="#1b5e20">configmap.yaml</text>
+  <rect x="80" y="502" width="300" height="30" rx="5" fill="#a5d6a7" stroke="#388e3c" stroke-width="1"/>
+  <text x="96" y="522" font-family="monospace" font-size="13" fill="#1b5e20">_helpers.tpl  (named templates)</text>
+
+  <!-- charts/ -->
+  <rect x="60" y="566" width="340" height="26" rx="5" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
+  <text x="80" y="583" font-family="monospace" font-size="13" fill="#e65100">charts/  (sub-chart dependencies)</text>
+
+  <!-- Rendering pipeline -->
+  <!-- values.yaml → template engine -->
+  <line x1="420" y1="210" x2="520" y2="280" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="450" y="240" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">values</text>
+
+  <!-- templates → template engine -->
+  <line x1="420" y1="390" x2="520" y2="310" stroke="#388e3c" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="445" y="360" font-family="Arial,sans-serif" font-size="12" fill="#388e3c">templates</text>
+
+  <!-- Template Engine box -->
+  <rect x="520" y="240" width="220" height="100" rx="12" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="630" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#fff">Template</text>
+  <text x="630" y="294" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#fff">Engine</text>
+  <text x="630" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#bbdefb">Go templates + Sprig</text>
+
+  <!-- Arrow engine → manifests -->
+  <line x1="740" y1="290" x2="820" y2="290" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="780" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555">render</text>
+
+  <!-- Rendered manifests -->
+  <rect x="820" y="200" width="280" height="200" rx="12" fill="#e8eaf6" stroke="#3949ab" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="820" y="200" width="280" height="44" rx="12" fill="#3949ab"/>
+  <rect x="820" y="232" width="280" height="12" fill="#3949ab"/>
+  <text x="960" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Rendered Manifests</text>
+  <text x="838" y="266" font-family="monospace" font-size="12" fill="#1a237e">kind: Deployment</text>
+  <text x="838" y="284" font-family="monospace" font-size="12" fill="#283593">  replicas: 2</text>
+  <text x="838" y="302" font-family="monospace" font-size="12" fill="#283593">  image: nginx:latest</text>
+  <text x="838" y="322" font-family="monospace" font-size="12" fill="#1a237e">kind: Service</text>
+  <text x="838" y="340" font-family="monospace" font-size="12" fill="#283593">  port: 80</text>
+  <text x="838" y="360" font-family="monospace" font-size="12" fill="#283593">  type: ClusterIP</text>
+  <text x="838" y="382" font-family="monospace" font-size="12" fill="#1a237e">...</text>
+
+  <!-- Arrow manifests → kubectl apply -->
+  <line x1="960" y1="400" x2="960" y2="460" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="975" y="435" font-family="Arial,sans-serif" font-size="12" fill="#555">helm install</text>
+
+  <!-- K8s API -->
+  <rect x="820" y="460" width="280" height="80" rx="12" fill="#546e7a" filter="url(#shadow)"/>
+  <text x="960" y="494" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Kubernetes API</text>
+  <text x="960" y="518" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#cfd8dc">applies all resources</text>
+
+  <!-- Helm commands box -->
+  <rect x="520" y="430" width="260" height="220" rx="12" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="454" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#e65100">Helm Commands</text>
+  <text x="535" y="478" font-family="monospace" font-size="12" fill="#555">helm install rel ./chart</text>
+  <text x="535" y="498" font-family="monospace" font-size="12" fill="#555">helm upgrade rel ./chart</text>
+  <text x="535" y="518" font-family="monospace" font-size="12" fill="#555">helm rollback rel 1</text>
+  <text x="535" y="538" font-family="monospace" font-size="12" fill="#555">helm uninstall rel</text>
+  <text x="535" y="558" font-family="monospace" font-size="12" fill="#555">helm list</text>
+  <text x="535" y="578" font-family="monospace" font-size="12" fill="#555">helm repo add bitnami ...</text>
+  <text x="535" y="598" font-family="monospace" font-size="12" fill="#555">helm search repo nginx</text>
+  <text x="535" y="618" font-family="monospace" font-size="12" fill="#555">helm template rel ./chart</text>
+
+  <!-- Template example snippet -->
+  <rect x="820" y="520" width="420" height="100" rx="10" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.5"/>
+  <text x="830" y="540" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#333">Template syntax example</text>
+  <text x="830" y="558" font-family="monospace" font-size="12" fill="#1565c0">replicas: {{ .Values.replicaCount }}</text>
+  <text x="830" y="576" font-family="monospace" font-size="12" fill="#1565c0">image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"</text>
+  <text x="830" y="594" font-family="monospace" font-size="12" fill="#1565c0">{{- if .Values.ingress.enabled }}</text>
+  <text x="830" y="612" font-family="monospace" font-size="12" fill="#388e3c">  # ingress resource only if enabled</text>
+</svg>

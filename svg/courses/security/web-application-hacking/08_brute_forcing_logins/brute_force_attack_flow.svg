@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Attack flow (top half) -->
+
+  <!-- Step 1: Wordlist -->
+  <rect x="30" y="50" width="170" height="120" rx="10" fill="#f5f5f5" filter="url(#shadow)" stroke="#555" stroke-width="1.5"/>
+  <text x="115" y="82" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Wordlist</text>
+  <text x="115" y="102" font-family="monospace" font-size="11" fill="#555" text-anchor="middle">password</text>
+  <text x="115" y="120" font-family="monospace" font-size="11" fill="#555" text-anchor="middle">123456</text>
+  <text x="115" y="138" font-family="monospace" font-size="11" fill="#555" text-anchor="middle">admin</text>
+  <text x="115" y="156" font-family="monospace" font-size="11" fill="#555" text-anchor="middle">rockyou.txt</text>
+
+  <line x1="200" y1="110" x2="260" y2="110" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Tool -->
+  <rect x="260" y="50" width="200" height="120" rx="10" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="2"/>
+  <rect x="260" y="50" width="200" height="36" rx="10" fill="#c62828"/>
+  <rect x="260" y="74" width="200" height="12" fill="#c62828"/>
+  <text x="360" y="74" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Attack Tool</text>
+  <text x="360" y="106" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Hydra</text>
+  <text x="360" y="126" font-family="Arial,sans-serif" font-size="13" fill="#555" text-anchor="middle">Burp Intruder</text>
+  <text x="360" y="144" font-family="Arial,sans-serif" font-size="13" fill="#555" text-anchor="middle">Medusa / wfuzz</text>
+  <text x="360" y="162" font-family="Arial,sans-serif" font-size="11" fill="#888" text-anchor="middle">parallel threading</text>
+
+  <line x1="460" y1="110" x2="520" y2="110" stroke="#c62828" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="100" font-family="Arial,sans-serif" font-size="10" fill="#c62828" text-anchor="middle">HTTP POST</text>
+  <text x="490" y="120" font-family="Arial,sans-serif" font-size="10" fill="#c62828" text-anchor="middle">requests</text>
+
+  <!-- Step 3: Target -->
+  <rect x="520" y="50" width="220" height="120" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <rect x="520" y="50" width="220" height="36" rx="10" fill="url(#grad-accent)"/>
+  <rect x="520" y="74" width="220" height="12" fill="url(#grad-accent)"/>
+  <text x="630" y="74" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Login Form</text>
+  <text x="630" y="108" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">POST /login HTTP/1.1</text>
+  <text x="630" y="126" font-family="monospace" font-size="12" fill="#555" text-anchor="middle">username=admin</text>
+  <text x="630" y="144" font-family="monospace" font-size="12" fill="#555" text-anchor="middle">password=§FUZZ§</text>
+  <text x="630" y="162" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">Content-Type: application/x-www-form...</text>
+
+  <!-- Arrow to outcomes -->
+  <line x1="740" y1="90" x2="800" y2="70" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="740" y1="130" x2="800" y2="150" stroke="#c62828" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Success -->
+  <rect x="800" y="40" width="200" height="70" rx="8" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
+  <text x="900" y="66" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">HTTP 302 / 200</text>
+  <text x="900" y="86" font-family="Arial,sans-serif" font-size="13" fill="#333" text-anchor="middle">Login successful!</text>
+  <text x="900" y="103" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">session cookie set</text>
+
+  <!-- Fail -->
+  <rect x="800" y="120" width="200" height="70" rx="8" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.5"/>
+  <text x="900" y="146" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">HTTP 200 (error)</text>
+  <text x="900" y="166" font-family="Arial,sans-serif" font-size="13" fill="#333" text-anchor="middle">Invalid credentials</text>
+  <text x="900" y="183" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">→ try next password</text>
+
+  <!-- Lockout -->
+  <rect x="800" y="200" width="200" height="60" rx="8" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="900" y="224" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f57f17" text-anchor="middle">HTTP 429 / 403</text>
+  <text x="900" y="244" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">Account locked / rate limited</text>
+  <line x1="740" y1="170" x2="800" y2="225" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+
+  <!-- Hydra command example -->
+  <rect x="1020" y="40" width="240" height="90" rx="8" fill="#263238" filter="url(#shadow)"/>
+  <text x="1140" y="62" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#80cbc4" text-anchor="middle">Hydra example:</text>
+  <text x="1030" y="82" font-family="monospace" font-size="10" fill="#a5d6a7">hydra -l admin \</text>
+  <text x="1030" y="97" font-family="monospace" font-size="10" fill="#a5d6a7">  -P rockyou.txt \</text>
+  <text x="1030" y="112" font-family="monospace" font-size="10" fill="#a5d6a7">  http-post-form \</text>
+  <text x="1030" y="127" font-family="monospace" font-size="10" fill="#a5d6a7">  "/login:u=^U^&amp;p=^P^:Invalid"</text>
+
+  <!-- Defense mechanisms (bottom half) -->
+  <rect x="30" y="300" width="1220" height="360" rx="10" fill="#f5f5f5" filter="url(#shadow)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="640" y="330" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#c62828" text-anchor="middle">Defense Mechanisms</text>
+
+  <!-- Defense 1: Account Lockout -->
+  <rect x="50" y="348" width="260" height="140" rx="8" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="180" y="373" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Account Lockout</text>
+  <text x="70" y="396" font-family="Arial,sans-serif" font-size="12" fill="#333">• Lock after N failed attempts</text>
+  <text x="70" y="416" font-family="Arial,sans-serif" font-size="12" fill="#333">• Require CAPTCHA after 3 fails</text>
+  <text x="70" y="436" font-family="Arial,sans-serif" font-size="12" fill="#333">• Progressive delays (1s, 2s, 4s...)</text>
+  <text x="70" y="460" font-family="Arial,sans-serif" font-size="12" fill="#c62828">Risk: DoS via deliberate lockouts</text>
+  <text x="70" y="478" font-family="Arial,sans-serif" font-size="12" fill="#555">→ Use soft lock + alert</text>
+
+  <!-- Defense 2: Rate Limiting -->
+  <rect x="330" y="348" width="260" height="140" rx="8" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="460" y="373" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Rate Limiting</text>
+  <text x="350" y="396" font-family="Arial,sans-serif" font-size="12" fill="#333">• Limit by IP: 10 req/min</text>
+  <text x="350" y="416" font-family="Arial,sans-serif" font-size="12" fill="#333">• Return 429 Too Many Requests</text>
+  <text x="350" y="436" font-family="Arial,sans-serif" font-size="12" fill="#333">• Retry-After header</text>
+  <text x="350" y="456" font-family="Arial,sans-serif" font-size="12" fill="#555">Nginx: limit_req_zone</text>
+  <text x="350" y="476" font-family="Arial,sans-serif" font-size="12" fill="#c62828">Bypass: rotate IPs, slow scan</text>
+
+  <!-- Defense 3: MFA -->
+  <rect x="610" y="348" width="260" height="140" rx="8" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="740" y="373" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Multi-Factor Auth</text>
+  <text x="630" y="396" font-family="Arial,sans-serif" font-size="12" fill="#333">• TOTP (Google Authenticator)</text>
+  <text x="630" y="416" font-family="Arial,sans-serif" font-size="12" fill="#333">• Hardware key (YubiKey)</text>
+  <text x="630" y="436" font-family="Arial,sans-serif" font-size="12" fill="#333">• SMS OTP (weaker, SIM-swap risk)</text>
+  <text x="630" y="456" font-family="Arial,sans-serif" font-size="12" fill="#333">• Push notifications</text>
+  <text x="630" y="476" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32">Most effective single control</text>
+
+  <!-- Defense 4: Detection -->
+  <rect x="890" y="348" width="330" height="140" rx="8" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="1055" y="373" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f57f17" text-anchor="middle">Detection &amp; Monitoring</text>
+  <text x="910" y="396" font-family="Arial,sans-serif" font-size="12" fill="#333">• Alert on: X failures from same IP</text>
+  <text x="910" y="416" font-family="Arial,sans-serif" font-size="12" fill="#333">• Alert on: sequential username scan</text>
+  <text x="910" y="436" font-family="Arial,sans-serif" font-size="12" fill="#333">• Log all failed login attempts</text>
+  <text x="910" y="456" font-family="Arial,sans-serif" font-size="12" fill="#333">• Geo-anomaly detection</text>
+  <text x="910" y="476" font-family="Arial,sans-serif" font-size="12" fill="#555">SIEM / Splunk / Wazuh</text>
+
+  <!-- Bypass techniques row -->
+  <rect x="50" y="510" width="1180" height="120" rx="8" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.5"/>
+  <text x="640" y="535" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">Common Bypass Techniques (know to defend)</text>
+  <text x="70" y="558" font-family="Arial,sans-serif" font-size="12" fill="#333">IP rotation:</text>
+  <text x="165" y="558" font-family="Arial,sans-serif" font-size="12" fill="#555">Use proxies / Tor to avoid per-IP lockouts</text>
+  <text x="70" y="578" font-family="Arial,sans-serif" font-size="12" fill="#333">Password spraying:</text>
+  <text x="195" y="578" font-family="Arial,sans-serif" font-size="12" fill="#555">Try 1 password across many accounts (avoids lockout per-user)</text>
+  <text x="70" y="598" font-family="Arial,sans-serif" font-size="12" fill="#333">Credential stuffing:</text>
+  <text x="195" y="598" font-family="Arial,sans-serif" font-size="12" fill="#555">Use leaked username:password pairs from other breaches</text>
+  <text x="70" y="618" font-family="Arial,sans-serif" font-size="12" fill="#333">Slow scan:</text>
+  <text x="145" y="618" font-family="Arial,sans-serif" font-size="12" fill="#555">1 attempt per minute stays below rate-limit threshold</text>
+</svg>

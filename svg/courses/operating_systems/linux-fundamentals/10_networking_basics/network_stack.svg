@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-up" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Stack layers centered -->
+  <!-- Layer 5: Application (Socket API) -->
+  <rect x="200" y="30" width="650" height="90" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="525" y="62" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Socket API (Application Layer)</text>
+  <text x="525" y="85" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">socket()  bind()  connect()  send()  recv()  close()</text>
+  <text x="525" y="108" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888888">User-space boundary — programs call these to use the network</text>
+
+  <!-- Arrow down: syscall -->
+  <line x1="525" y1="120" x2="525" y2="155" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="525" y1="120" x2="525" y2="155" stroke="#2e7d32" stroke-width="2.5" stroke-dasharray="0" marker-end="url(#arrow-up)" transform="translate(30,0)"/>
+  <text x="490" y="142" font-family="sans-serif" font-size="11" fill="#888888">syscall</text>
+
+  <!-- Layer 4: TCP / UDP -->
+  <rect x="200" y="158" width="650" height="90" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="525" y="190" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#2e7d32">Transport Layer — TCP / UDP</text>
+  <text x="380" y="213" text-anchor="middle" font-family="monospace" font-size="14" fill="#1b5e20">TCP: reliable, ordered, connection</text>
+  <text x="680" y="213" text-anchor="middle" font-family="monospace" font-size="14" fill="#1b5e20">UDP: fast, stateless, datagram</text>
+  <text x="525" y="235" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888888">Port numbers (0–65535) · Segments/Datagrams</text>
+
+  <!-- Arrow down -->
+  <line x1="525" y1="248" x2="525" y2="283" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="555" y1="283" x2="555" y2="248" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-up)"/>
+
+  <!-- Layer 3: IP -->
+  <rect x="200" y="286" width="650" height="90" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="3" filter="url(#shadow)"/>
+  <text x="525" y="318" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e65100">Network Layer — IP</text>
+  <text x="525" y="341" text-anchor="middle" font-family="monospace" font-size="14" fill="#bf360c">IPv4 (32-bit addr)  ·  IPv6 (128-bit addr)</text>
+  <text x="525" y="362" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888888">Routing · Packets · TTL · Source/Dest IP addresses</text>
+
+  <!-- Arrow down -->
+  <line x1="525" y1="376" x2="525" y2="411" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="555" y1="411" x2="555" y2="376" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-up)"/>
+
+  <!-- Layer 2: Ethernet -->
+  <rect x="200" y="414" width="650" height="90" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3" filter="url(#shadow)"/>
+  <text x="525" y="446" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#6a1b9a">Data Link Layer — Ethernet</text>
+  <text x="525" y="469" text-anchor="middle" font-family="monospace" font-size="14" fill="#4a148c">MAC addresses (48-bit)  ·  Frames  ·  ARP</text>
+  <text x="525" y="490" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888888">eth0 / ens3 / wlan0 — Linux network interface names</text>
+
+  <!-- Arrow down -->
+  <line x1="525" y1="504" x2="525" y2="539" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="555" y1="539" x2="555" y2="504" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-up)"/>
+
+  <!-- Layer 1: NIC / Physical -->
+  <rect x="200" y="542" width="650" height="90" rx="10" fill="#fce4ec" stroke="#880e4f" stroke-width="3" filter="url(#shadow)"/>
+  <text x="525" y="574" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#880e4f">Physical Layer — NIC / Driver</text>
+  <text x="525" y="597" text-anchor="middle" font-family="monospace" font-size="14" fill="#560027">Bits on wire (electrical / optical / radio)</text>
+  <text x="525" y="618" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#888888">Network card driver · sk_buff kernel structure · IRQ</text>
+
+  <!-- Right panel: key tools per layer -->
+  <rect x="880" y="30" width="370" height="602" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="880" y="30" width="370" height="42" rx="12" fill="url(#grad-accent)"/>
+  <rect x="880" y="55" width="370" height="17" fill="url(#grad-accent)"/>
+  <text x="1065" y="58" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Linux Tools per Layer</text>
+
+  <text x="900" y="92" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Application / Socket</text>
+  <text x="900" y="110" font-family="monospace" font-size="13" fill="#212121">nc  curl  wget  ssh  ping</text>
+  <text x="900" y="128" font-family="monospace" font-size="13" fill="#212121">ss -tlnp   netstat -an</text>
+  <line x1="900" y1="140" x2="1230" y2="140" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="900" y="162" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Transport — TCP/UDP</text>
+  <text x="900" y="180" font-family="monospace" font-size="13" fill="#212121">ss -s   netstat -s</text>
+  <text x="900" y="198" font-family="monospace" font-size="13" fill="#212121">iptables  nftables  ufw</text>
+  <line x1="900" y1="210" x2="1230" y2="210" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="900" y="232" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e65100">Network — IP</text>
+  <text x="900" y="250" font-family="monospace" font-size="13" fill="#212121">ip addr   ip route   ping</text>
+  <text x="900" y="268" font-family="monospace" font-size="13" fill="#212121">traceroute  dig  nslookup</text>
+  <line x1="900" y1="280" x2="1230" y2="280" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="900" y="302" font-family="sans-serif" font-size="14" font-weight="bold" fill="#6a1b9a">Data Link — Ethernet</text>
+  <text x="900" y="320" font-family="monospace" font-size="13" fill="#212121">ip link   arp   arping</text>
+  <text x="900" y="338" font-family="monospace" font-size="13" fill="#212121">bridge   ethtool</text>
+  <line x1="900" y1="350" x2="1230" y2="350" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="900" y="372" font-family="sans-serif" font-size="14" font-weight="bold" fill="#880e4f">Physical / Driver</text>
+  <text x="900" y="390" font-family="monospace" font-size="13" fill="#212121">ethtool -i eth0</text>
+  <text x="900" y="408" font-family="monospace" font-size="13" fill="#212121">lspci | grep -i net</text>
+  <text x="900" y="426" font-family="monospace" font-size="13" fill="#212121">dmesg | grep eth</text>
+  <line x1="900" y1="440" x2="1230" y2="440" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="900" y="462" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Capture (any layer)</text>
+  <text x="900" y="480" font-family="monospace" font-size="13" fill="#212121">tcpdump -i eth0</text>
+  <text x="900" y="498" font-family="monospace" font-size="13" fill="#212121">wireshark</text>
+  <text x="900" y="516" font-family="monospace" font-size="13" fill="#212121">tshark -i eth0 -f "tcp"</text>
+  <line x1="900" y1="530" x2="1230" y2="530" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="900" y="552" font-family="sans-serif" font-size="14" font-weight="bold" fill="#555555">Configuration files</text>
+  <text x="900" y="570" font-family="monospace" font-size="12" fill="#212121">/etc/network/interfaces</text>
+  <text x="900" y="588" font-family="monospace" font-size="12" fill="#212121">/etc/netplan/*.yaml</text>
+  <text x="900" y="606" font-family="monospace" font-size="12" fill="#212121">/etc/resolv.conf  (DNS)</text>
+  <text x="900" y="624" font-family="monospace" font-size="12" fill="#212121">/etc/hosts  (static names)</text>
+
+  <!-- Data flow labels -->
+  <text x="85" y="65" font-family="sans-serif" font-size="13" fill="#555555" transform="rotate(-90,85,65)">— User space —</text>
+  <text x="85" y="380" font-family="sans-serif" font-size="13" fill="#555555" transform="rotate(-90,85,380)">— Kernel space —</text>
+
+  <text x="640" y="660" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Data travels DOWN the stack when sending (encapsulation) and UP when receiving (decapsulation).</text>
+</svg>

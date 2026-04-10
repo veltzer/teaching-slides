@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Resource panel (left) -->
+  <rect x="30" y="30" width="560" height="570" rx="12" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="30" y="30" width="560" height="46" rx="12" fill="#2e7d32"/>
+  <rect x="30" y="64" width="560" height="12" fill="#2e7d32"/>
+  <text x="310" y="63" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">resource  — Creates / Manages</text>
+
+  <text x="50" y="104" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">What it does:</text>
+  <text x="50" y="124" font-family="Arial,sans-serif" font-size="13" fill="#333">Terraform creates, updates, and destroys</text>
+  <text x="50" y="142" font-family="Arial,sans-serif" font-size="13" fill="#333">the infrastructure object. It owns the lifecycle.</text>
+
+  <rect x="50" y="156" width="520" height="110" rx="7" fill="#fff" stroke="#a5d6a7" stroke-width="1"/>
+  <text x="70" y="176" font-family="monospace" font-size="12" fill="#2e7d32">resource "aws_instance" "web" {</text>
+  <text x="70" y="194" font-family="monospace" font-size="12" fill="#555">  ami           = "ami-0c55b159cbfafe1f0"</text>
+  <text x="70" y="212" font-family="monospace" font-size="12" fill="#555">  instance_type = "t3.micro"</text>
+  <text x="70" y="230" font-family="monospace" font-size="12" fill="#555">  tags = { Name = "my-web-server" }</text>
+  <text x="70" y="248" font-family="monospace" font-size="12" fill="#2e7d32">}</text>
+
+  <text x="50" y="290" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Terraform State interaction:</text>
+  <rect x="50" y="300" width="520" height="100" rx="7" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="310" y="323" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1b5e20" text-anchor="middle">Stored in terraform.tfstate</text>
+  <text x="70" y="345" font-family="Arial,sans-serif" font-size="12" fill="#333">• ID, ARN, all attributes recorded</text>
+  <text x="70" y="363" font-family="Arial,sans-serif" font-size="12" fill="#333">• terraform plan compares desired vs actual</text>
+  <text x="70" y="381" font-family="Arial,sans-serif" font-size="12" fill="#333">• terraform destroy removes the real resource</text>
+
+  <text x="50" y="424" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Lifecycle:</text>
+  <rect x="50" y="434" width="520" height="80" rx="7" fill="#fff" stroke="#a5d6a7" stroke-width="1"/>
+  <rect x="70" y="448" width="80" height="28" rx="5" fill="#2e7d32"/>
+  <text x="110" y="467" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">create</text>
+  <line x1="150" y1="462" x2="190" y2="462" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="190" y="448" width="80" height="28" rx="5" fill="#1565c0"/>
+  <text x="230" y="467" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">update</text>
+  <line x1="270" y1="462" x2="310" y2="462" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="310" y="448" width="80" height="28" rx="5" fill="#c62828"/>
+  <text x="350" y="467" font-family="Arial,sans-serif" font-size="11" fill="#fff" text-anchor="middle">destroy</text>
+  <text x="70" y="505" font-family="Arial,sans-serif" font-size="12" fill="#555">terraform apply drives all three phases</text>
+
+  <text x="50" y="540" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Use when:</text>
+  <text x="50" y="560" font-family="Arial,sans-serif" font-size="13" fill="#333">• You need to create new infrastructure</text>
+  <text x="50" y="578" font-family="Arial,sans-serif" font-size="13" fill="#333">• You want Terraform to fully own the resource</text>
+
+  <!-- Data Source panel (right) -->
+  <rect x="640" y="30" width="610" height="570" rx="12" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <rect x="640" y="30" width="610" height="46" rx="12" fill="url(#grad-accent)"/>
+  <rect x="640" y="64" width="610" height="12" fill="url(#grad-accent)"/>
+  <text x="945" y="63" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">data  — Reads Existing Infrastructure</text>
+
+  <text x="660" y="104" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">What it does:</text>
+  <text x="660" y="124" font-family="Arial,sans-serif" font-size="13" fill="#333">Terraform queries the provider API to read</text>
+  <text x="660" y="142" font-family="Arial,sans-serif" font-size="13" fill="#333">attributes of existing resources. Read-only.</text>
+
+  <rect x="660" y="156" width="570" height="125" rx="7" fill="#fff" stroke="#90caf9" stroke-width="1"/>
+  <text x="680" y="176" font-family="monospace" font-size="12" fill="#1565c0">data "aws_ami" "amazon_linux" {</text>
+  <text x="680" y="194" font-family="monospace" font-size="12" fill="#555">  most_recent = true</text>
+  <text x="680" y="212" font-family="monospace" font-size="12" fill="#555">  owners      = ["amazon"]</text>
+  <text x="680" y="230" font-family="monospace" font-size="12" fill="#555">  filter {</text>
+  <text x="680" y="248" font-family="monospace" font-size="12" fill="#555">    name   = "name"</text>
+  <text x="680" y="266" font-family="monospace" font-size="12" fill="#555">    values = ["amzn2-ami-hvm-*"]</text>
+  <text x="680" y="284" font-family="monospace" font-size="12" fill="#555">  }</text>
+  <text x="1090" y="271" font-family="monospace" font-size="12" fill="#1565c0">}</text>
+
+  <text x="660" y="307" font-family="monospace" font-size="12" fill="#333">ami = data.aws_ami.amazon_linux.id</text>
+
+  <text x="660" y="340" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Terraform State interaction:</text>
+  <rect x="660" y="350" width="570" height="100" rx="7" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="945" y="373" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#0d47a1" text-anchor="middle">NOT stored in tfstate (read-only)</text>
+  <text x="680" y="395" font-family="Arial,sans-serif" font-size="12" fill="#333">• Fetched fresh on every terraform plan/apply</text>
+  <text x="680" y="413" font-family="Arial,sans-serif" font-size="12" fill="#333">• Never destroyed by terraform destroy</text>
+  <text x="680" y="431" font-family="Arial,sans-serif" font-size="12" fill="#333">• Values exposed as data.TYPE.NAME.ATTR</text>
+
+  <text x="660" y="474" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Common data sources:</text>
+  <rect x="660" y="484" width="570" height="90" rx="7" fill="#fff" stroke="#90caf9" stroke-width="1"/>
+  <text x="680" y="504" font-family="Arial,sans-serif" font-size="12" fill="#333">• aws_ami — find latest AMI by filter</text>
+  <text x="680" y="522" font-family="Arial,sans-serif" font-size="12" fill="#333">• aws_availability_zones — list AZs in region</text>
+  <text x="680" y="540" font-family="Arial,sans-serif" font-size="12" fill="#333">• aws_vpc / aws_subnet — look up existing VPCs</text>
+  <text x="680" y="558" font-family="Arial,sans-serif" font-size="12" fill="#333">• aws_iam_policy_document — build IAM JSON</text>
+
+  <text x="660" y="595" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Use when:</text>
+  <text x="660" y="615" font-family="Arial,sans-serif" font-size="13" fill="#333">• Infrastructure was created outside Terraform</text>
+  <text x="660" y="633" font-family="Arial,sans-serif" font-size="13" fill="#333">• You need dynamic values (latest AMI ID, AZs)</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="626" width="1220" height="64" rx="8" fill="#f5f5f5" filter="url(#shadow)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="640" y="648" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Key Rule: resource owns &amp; mutates • data queries &amp; observes</text>
+  <text x="640" y="672" font-family="Arial,sans-serif" font-size="13" fill="#555" text-anchor="middle">Combine them: use data sources to find existing infra IDs, then pass those IDs into resources</text>
+</svg>

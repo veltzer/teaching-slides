@@ -23,6 +23,11 @@
 ![kubernetes_architecture](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/kubernetes_architecture.svg)
 
 ---
+## K8s Architecture
+
+![k8s_architecture](svg/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/k8s_architecture.svg)
+
+---
 ## Control Plane Components
 
 - `API Server` - the front door to the cluster, handles all REST requests

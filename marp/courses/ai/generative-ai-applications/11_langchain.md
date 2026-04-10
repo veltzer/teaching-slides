@@ -14,6 +14,12 @@ A framework for building `LLM`-powered applications:
 
 ---
 
+## LangChain Architecture
+
+![langchain_architecture](svg/courses/ai/generative-ai-applications/11_langchain/langchain_architecture.svg)
+
+---
+
 ## Installing LangChain
 
 ```python

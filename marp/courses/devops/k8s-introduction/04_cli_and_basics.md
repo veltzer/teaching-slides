@@ -111,6 +111,12 @@ kubectl get replicasets
 
 ---
 
+## kubectl Request Flow
+
+![kubectl_request_flow](svg/courses/devops/k8s-introduction/04_cli_and_basics/kubectl_request_flow.svg)
+
+---
+
 ## Viewing Resources
 
 ```bash

@@ -1,6 +1,12 @@
 # Web Scraping: Extracting Data from the Web
 
 ---
+
+## Scraping Architecture
+
+![scraping_architecture](svg/courses/security/cyber-attacks-and-vectors/24_scraping/scraping_architecture.svg)
+
+---
 ## What is Web Scraping
 
 - Web scraping is the process of extracting data from websites, typically by parsing the HTML content and extracting specific data points

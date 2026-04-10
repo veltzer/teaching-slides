@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Column headers -->
+  <rect x="30" y="30" width="380" height="44" rx="8" fill="#455a64"/>
+  <text x="220" y="58" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">Zero-Shot</text>
+
+  <rect x="450" y="30" width="380" height="44" rx="8" fill="#1565c0"/>
+  <text x="640" y="58" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">One-Shot</text>
+
+  <rect x="870" y="30" width="380" height="44" rx="8" fill="#2e7d32"/>
+  <text x="1060" y="58" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">Few-Shot</text>
+
+  <!-- Zero-shot prompt box -->
+  <rect x="30" y="90" width="380" height="290" rx="8" fill="#eceff1" filter="url(#shadow)"/>
+  <text x="50" y="118" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#455a64">PROMPT:</text>
+  <rect x="50" y="128" width="340" height="56" rx="5" fill="#fff" stroke="#b0bec5" stroke-width="1"/>
+  <text x="220" y="149" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">Classify the sentiment of:</text>
+  <text x="220" y="167" font-family="monospace" font-size="12" fill="#1565c0" text-anchor="middle">"The movie was fantastic!"</text>
+  <text x="50" y="210" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#455a64">NO EXAMPLES — relies on pre-training</text>
+  <rect x="50" y="222" width="340" height="100" rx="5" fill="#fff" stroke="#b0bec5" stroke-width="1"/>
+  <text x="220" y="248" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">Task description only</text>
+  <text x="220" y="268" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">No format examples</text>
+  <text x="220" y="288" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">Model uses general knowledge</text>
+  <text x="220" y="308" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">Fastest, cheapest</text>
+  <text x="50" y="360" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#455a64">MODEL OUTPUT:</text>
+  <rect x="50" y="370" width="340" height="24" rx="5" fill="#cfd8dc"/>
+  <text x="220" y="386" font-family="monospace" font-size="13" fill="#333" text-anchor="middle">Positive</text>
+
+  <!-- One-shot prompt box -->
+  <rect x="450" y="90" width="380" height="290" rx="8" fill="#e3f2fd" filter="url(#shadow)"/>
+  <text x="470" y="118" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">PROMPT:</text>
+  <rect x="470" y="128" width="340" height="100" rx="5" fill="#fff" stroke="#90caf9" stroke-width="1"/>
+  <text x="640" y="150" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">Classify the sentiment:</text>
+  <text x="640" y="170" font-family="monospace" font-size="12" fill="#555" text-anchor="middle">Input: "It was terrible."</text>
+  <text x="640" y="188" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">Label: Negative</text>
+  <text x="640" y="210" font-family="monospace" font-size="12" fill="#1565c0" text-anchor="middle">Input: "The movie was fantastic!"</text>
+  <text x="640" y="228" font-family="monospace" font-size="12" fill="#c62828" text-anchor="middle">Label: ???</text>
+  <text x="470" y="248" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">ONE EXAMPLE provided:</text>
+  <rect x="470" y="258" width="340" height="70" rx="5" fill="#fff" stroke="#90caf9" stroke-width="1"/>
+  <text x="640" y="278" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">Shows desired input/output format</text>
+  <text x="640" y="298" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">Helps model understand task</text>
+  <text x="640" y="318" font-family="Arial,sans-serif" font-size="12" fill="#777" text-anchor="middle">Costs a few extra tokens</text>
+  <text x="470" y="360" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">MODEL OUTPUT:</text>
+  <rect x="470" y="370" width="340" height="24" rx="5" fill="#bbdefb"/>
+  <text x="640" y="386" font-family="monospace" font-size="13" fill="#333" text-anchor="middle">Positive</text>
+
+  <!-- Few-shot prompt box -->
+  <rect x="870" y="90" width="380" height="290" rx="8" fill="#e8f5e9" filter="url(#shadow)"/>
+  <text x="890" y="118" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">PROMPT:</text>
+  <rect x="890" y="128" width="340" height="168" rx="5" fill="#fff" stroke="#a5d6a7" stroke-width="1"/>
+  <text x="1060" y="148" font-family="monospace" font-size="11" fill="#333" text-anchor="middle">Classify the sentiment:</text>
+  <text x="890" y="166" font-family="monospace" font-size="11" fill="#555" dx="10">Input: "Absolutely loved it!"</text>
+  <text x="890" y="182" font-family="monospace" font-size="11" fill="#2e7d32" dx="10">Label: Positive</text>
+  <text x="890" y="200" font-family="monospace" font-size="11" fill="#555" dx="10">Input: "Worst film ever."</text>
+  <text x="890" y="216" font-family="monospace" font-size="11" fill="#c62828" dx="10">Label: Negative</text>
+  <text x="890" y="234" font-family="monospace" font-size="11" fill="#555" dx="10">Input: "It was okay, I guess."</text>
+  <text x="890" y="250" font-family="monospace" font-size="11" fill="#f57f17" dx="10">Label: Neutral</text>
+  <text x="890" y="268" font-family="monospace" font-size="11" fill="#1565c0" dx="10">Input: "The movie was fantastic!"</text>
+  <text x="890" y="284" font-family="monospace" font-size="11" fill="#c62828" dx="10">Label: ???</text>
+  <text x="890" y="315" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">MULTIPLE EXAMPLES (3+):</text>
+  <text x="890" y="333" font-family="Arial,sans-serif" font-size="12" fill="#777">Covers edge cases, consistent format</text>
+  <text x="890" y="350" font-family="Arial,sans-serif" font-size="12" fill="#777">Highest accuracy for complex tasks</text>
+  <text x="890" y="368" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">MODEL OUTPUT:</text>
+  <rect x="890" y="375" width="340" height="24" rx="5" fill="#c8e6c9"/>
+  <text x="1060" y="391" font-family="monospace" font-size="13" fill="#333" text-anchor="middle">Positive</text>
+
+  <!-- Bottom comparison -->
+  <rect x="30" y="435" width="1220" height="180" rx="10" fill="#fafafa" filter="url(#shadow)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="640" y="462" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">When to Use Each Approach</text>
+
+  <!-- Zero-shot when -->
+  <rect x="50" y="475" width="360" height="120" rx="7" fill="#eceff1"/>
+  <text x="230" y="498" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#455a64" text-anchor="middle">Zero-Shot — use when:</text>
+  <text x="70" y="518" font-family="Arial,sans-serif" font-size="12" fill="#555">• Task is well-known (translation, summarize)</text>
+  <text x="70" y="538" font-family="Arial,sans-serif" font-size="12" fill="#555">• Token budget is tight</text>
+  <text x="70" y="558" font-family="Arial,sans-serif" font-size="12" fill="#555">• Rapid prototyping</text>
+  <text x="70" y="578" font-family="Arial,sans-serif" font-size="12" fill="#555">• You have a capable model (GPT-4o)</text>
+
+  <!-- One-shot when -->
+  <rect x="440" y="475" width="380" height="120" rx="7" fill="#e3f2fd"/>
+  <text x="630" y="498" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">One-Shot — use when:</text>
+  <text x="460" y="518" font-family="Arial,sans-serif" font-size="12" fill="#555">• Output format needs to be specific</text>
+  <text x="460" y="538" font-family="Arial,sans-serif" font-size="12" fill="#555">• Zero-shot results are inconsistent</text>
+  <text x="460" y="558" font-family="Arial,sans-serif" font-size="12" fill="#555">• One clear canonical example exists</text>
+
+  <!-- Few-shot when -->
+  <rect x="850" y="475" width="380" height="120" rx="7" fill="#e8f5e9"/>
+  <text x="1040" y="498" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Few-Shot — use when:</text>
+  <text x="870" y="518" font-family="Arial,sans-serif" font-size="12" fill="#555">• Task has unusual output structure</text>
+  <text x="870" y="538" font-family="Arial,sans-serif" font-size="12" fill="#555">• Domain is specialised / technical</text>
+  <text x="870" y="558" font-family="Arial,sans-serif" font-size="12" fill="#555">• Need consistent style/tone</text>
+  <text x="870" y="578" font-family="Arial,sans-serif" font-size="12" fill="#555">• Edge cases must be demonstrated</text>
+
+  <!-- Accuracy bar -->
+  <text x="50" y="636" font-family="Arial,sans-serif" font-size="13" fill="#333">Accuracy (typical):</text>
+  <rect x="200" y="622" width="100" height="18" rx="3" fill="#455a64"/>
+  <text x="310" y="636" font-family="Arial,sans-serif" font-size="12" fill="#555">Zero-shot</text>
+  <rect x="200" y="643" width="160" height="18" rx="3" fill="#1565c0"/>
+  <text x="370" y="657" font-family="Arial,sans-serif" font-size="12" fill="#555">One-shot</text>
+  <rect x="200" y="664" width="220" height="18" rx="3" fill="#2e7d32"/>
+  <text x="430" y="678" font-family="Arial,sans-serif" font-size="12" fill="#555">Few-shot (3-5 examples)</text>
+</svg>

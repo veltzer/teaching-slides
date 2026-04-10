@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- ============ RUST SIDE ============ -->
+  <rect x="20" y="20" width="440" height="560" fill="#e8f0fe" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="20" width="440" height="46" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="50" width="440" height="16" fill="url(#grad-accent)"/>
+  <text x="240" y="50" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">Rust Side</text>
+
+  <!-- Safe Rust code box -->
+  <rect x="40" y="84" width="400" height="80" fill="#ffffff" rx="8" filter="url(#shadow)"/>
+  <text x="60" y="108" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Safe Rust code</text>
+  <text x="60" y="128" font-family="Courier New,monospace" font-size="12" fill="#333333">fn compute(x: i32) -&gt; i32 &#123;</text>
+  <text x="60" y="146" font-family="Courier New,monospace" font-size="12" fill="#333333">    x * 2 &#125;</text>
+
+  <!-- Arrow down -->
+  <line x1="240" y1="164" x2="240" y2="196" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <!-- extern "C" fn box -->
+  <rect x="40" y="196" width="400" height="100" fill="#c8e6c9" rx="8" filter="url(#shadow)"/>
+  <text x="60" y="220" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">extern "C" export</text>
+  <text x="60" y="240" font-family="Courier New,monospace" font-size="12" fill="#333333">#[no_mangle]</text>
+  <text x="60" y="258" font-family="Courier New,monospace" font-size="12" fill="#333333">pub extern "C" fn compute(x: i32)</text>
+  <text x="60" y="276" font-family="Courier New,monospace" font-size="12" fill="#333333">    -&gt; i32 &#123; ... &#125;</text>
+
+  <!-- Arrow down -->
+  <line x1="240" y1="296" x2="240" y2="328" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <!-- unsafe block -->
+  <rect x="40" y="328" width="400" height="110" fill="#fff9c4" rx="8" filter="url(#shadow)"/>
+  <text x="60" y="352" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f57f17">unsafe block (when calling C)</text>
+  <text x="60" y="372" font-family="Courier New,monospace" font-size="12" fill="#333333">extern "C" &#123;</text>
+  <text x="60" y="390" font-family="Courier New,monospace" font-size="12" fill="#333333">    fn c_func(n: i32) -&gt; i32;</text>
+  <text x="60" y="408" font-family="Courier New,monospace" font-size="12" fill="#333333">&#125;</text>
+  <text x="60" y="426" font-family="Courier New,monospace" font-size="12" fill="#e53935">// unsafe &#123; c_func(42) &#125;</text>
+
+  <!-- Type mapping table -->
+  <rect x="40" y="456" width="400" height="104" fill="#ffffff" rx="8" filter="url(#shadow)"/>
+  <text x="60" y="478" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Type Mapping</text>
+  <text x="60" y="496" font-family="Arial,sans-serif" font-size="12" fill="#333333">Rust i32         ↔   C int</text>
+  <text x="60" y="512" font-family="Arial,sans-serif" font-size="12" fill="#333333">Rust *const T    ↔   C const T*</text>
+  <text x="60" y="528" font-family="Arial,sans-serif" font-size="12" fill="#333333">Rust *mut T      ↔   C T*</text>
+  <text x="60" y="544" font-family="Arial,sans-serif" font-size="12" fill="#333333">Rust c_char      ↔   C char  (libc)</text>
+
+  <!-- ============ C ABI BOUNDARY ============ -->
+  <rect x="480" y="20" width="200" height="560" fill="#424242" rx="0" filter="url(#shadow)"/>
+  <text x="580" y="290" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle" transform="rotate(-90 580 300)">C  ABI  Boundary</text>
+  <!-- Arrows crossing boundary -->
+  <line x1="480" y1="200" x2="680" y2="200" stroke="#ffffff" stroke-width="2.5" marker-end="url(#arrow-white)"/>
+  <text x="578" y="195" font-family="Arial,sans-serif" font-size="11" fill="#aaaaaa" text-anchor="middle">call</text>
+  <line x1="680" y1="240" x2="480" y2="240" stroke="#ffffff" stroke-width="2.5" marker-end="url(#arrow-white)"/>
+  <text x="578" y="258" font-family="Arial,sans-serif" font-size="11" fill="#aaaaaa" text-anchor="middle">return</text>
+  <!-- Labels -->
+  <text x="580" y="370" font-family="Arial,sans-serif" font-size="11" fill="#ffcc80" text-anchor="middle">• no RAII</text>
+  <text x="580" y="390" font-family="Arial,sans-serif" font-size="11" fill="#ffcc80" text-anchor="middle">• no panics</text>
+  <text x="580" y="410" font-family="Arial,sans-serif" font-size="11" fill="#ffcc80" text-anchor="middle">• raw ptrs</text>
+  <text x="580" y="430" font-family="Arial,sans-serif" font-size="11" fill="#ffcc80" text-anchor="middle">• C types</text>
+
+  <!-- ============ C SIDE ============ -->
+  <rect x="700" y="20" width="440" height="560" fill="#fff8e1" rx="12" filter="url(#shadow)"/>
+  <rect x="700" y="20" width="440" height="46" fill="#e65100" rx="12"/>
+  <rect x="700" y="50" width="440" height="16" fill="#e65100"/>
+  <text x="920" y="50" font-family="Arial,sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">C Side</text>
+
+  <!-- C header -->
+  <rect x="720" y="84" width="400" height="100" fill="#ffffff" rx="8" filter="url(#shadow)"/>
+  <text x="740" y="108" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#bf360c">C header (generated by cbindgen)</text>
+  <text x="740" y="128" font-family="Courier New,monospace" font-size="12" fill="#333333">/* compute.h */</text>
+  <text x="740" y="146" font-family="Courier New,monospace" font-size="12" fill="#333333">int compute(int x);</text>
+  <text x="740" y="164" font-family="Courier New,monospace" font-size="12" fill="#333333">void free_string(char* s);</text>
+
+  <!-- Arrow down -->
+  <line x1="920" y1="184" x2="920" y2="212" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- C usage -->
+  <rect x="720" y="212" width="400" height="120" fill="#ffecb3" rx="8" filter="url(#shadow)"/>
+  <text x="740" y="236" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">C code using Rust library</text>
+  <text x="740" y="256" font-family="Courier New,monospace" font-size="12" fill="#333333">#include "compute.h"</text>
+  <text x="740" y="274" font-family="Courier New,monospace" font-size="12" fill="#333333">int main() &#123;</text>
+  <text x="740" y="292" font-family="Courier New,monospace" font-size="12" fill="#333333">    int r = compute(21);</text>
+  <text x="740" y="310" font-family="Courier New,monospace" font-size="12" fill="#333333">    // r == 42 &#125;</text>
+
+  <!-- Arrow down -->
+  <line x1="920" y1="332" x2="920" y2="360" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- C ownership rules box -->
+  <rect x="720" y="360" width="400" height="100" fill="#ffccbc" rx="8" filter="url(#shadow)"/>
+  <text x="740" y="384" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#bf360c">Ownership at boundary</text>
+  <text x="740" y="404" font-family="Arial,sans-serif" font-size="12" fill="#333333">Memory allocated in Rust → free in Rust</text>
+  <text x="740" y="422" font-family="Arial,sans-serif" font-size="12" fill="#333333">Memory allocated in C   → free in C</text>
+  <text x="740" y="440" font-family="Arial,sans-serif" font-size="12" fill="#e53935">Never mix allocators!</text>
+
+  <!-- ============ bindgen workflow ============ -->
+  <rect x="20" y="600" width="1240" height="96" fill="#e3f2fd" rx="12" filter="url(#shadow)"/>
+  <text x="640" y="626" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">bindgen Workflow (C → Rust)</text>
+  <!-- Steps -->
+  <rect x="50" y="638" width="180" height="40" fill="#1565c0" rx="8"/>
+  <text x="140" y="663" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">C header (.h)</text>
+  <line x1="230" y1="658" x2="280" y2="658" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="282" y="638" width="180" height="40" fill="#1565c0" rx="8"/>
+  <text x="372" y="663" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">bindgen (build.rs)</text>
+  <line x1="464" y1="658" x2="514" y2="658" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="516" y="638" width="200" height="40" fill="#1565c0" rx="8"/>
+  <text x="616" y="663" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">bindings.rs (auto)</text>
+  <line x1="718" y1="658" x2="768" y2="658" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="770" y="638" width="200" height="40" fill="#1565c0" rx="8"/>
+  <text x="870" y="663" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">unsafe Rust wrappers</text>
+  <line x1="972" y1="658" x2="1022" y2="658" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="1024" y="638" width="196" height="40" fill="#1565c0" rx="8"/>
+  <text x="1122" y="663" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Safe Rust API</text>
+</svg>

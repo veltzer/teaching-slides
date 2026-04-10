@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Central lifecycle flow -->
+  <!-- Step 1: terraform apply -->
+  <rect x="30" y="70" width="180" height="80" rx="10" fill="#f5f5f5" filter="url(#shadow)" stroke="#555" stroke-width="2"/>
+  <text x="120" y="103" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">terraform</text>
+  <text x="120" y="121" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">apply</text>
+  <text x="120" y="140" font-family="Arial,sans-serif" font-size="11" fill="#666" text-anchor="middle">(user runs)</text>
+
+  <line x1="210" y1="110" x2="270" y2="110" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Resource Created -->
+  <rect x="270" y="70" width="180" height="80" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
+  <text x="360" y="103" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Resource</text>
+  <text x="360" y="121" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Created</text>
+  <text x="360" y="140" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">aws_instance, etc.</text>
+
+  <!-- Arrow to local-exec -->
+  <line x1="450" y1="90" x2="550" y2="90" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="500" y="82" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">when = "create"</text>
+
+  <!-- local-exec box -->
+  <rect x="550" y="40" width="300" height="145" rx="10" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="2"/>
+  <rect x="550" y="40" width="300" height="36" rx="10" fill="#f9a825"/>
+  <rect x="550" y="64" width="300" height="12" fill="#f9a825"/>
+  <text x="700" y="63" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">local-exec provisioner</text>
+  <text x="570" y="95" font-family="Arial,sans-serif" font-size="12" fill="#333">Runs on the Terraform machine</text>
+  <text x="570" y="113" font-family="Arial,sans-serif" font-size="12" fill="#555">(where you ran terraform apply)</text>
+  <rect x="570" y="124" width="260" height="46" rx="5" fill="#fff" stroke="#ffe082" stroke-width="1"/>
+  <text x="580" y="142" font-family="monospace" font-size="11" fill="#f57f17">provisioner "local-exec" {</text>
+  <text x="580" y="158" font-family="monospace" font-size="11" fill="#555">  command = "echo ${self.id}"</text>
+  <text x="700" y="174" font-family="monospace" font-size="11" fill="#f57f17">}</text>
+
+  <!-- local-exec diagram -->
+  <rect x="870" y="40" width="390" height="145" rx="10" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="900" y="68" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f57f17">local-exec execution:</text>
+
+  <rect x="890" y="80" width="120" height="50" rx="6" fill="#fff" stroke="#f9a825" stroke-width="1"/>
+  <text x="950" y="101" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Terraform</text>
+  <text x="950" y="119" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">machine</text>
+
+  <line x1="1010" y1="105" x2="1080" y2="105" stroke="#f9a825" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1045" y="96" font-family="Arial,sans-serif" font-size="10" fill="#f57f17" text-anchor="middle">shell exec</text>
+  <text x="1045" y="117" font-family="Arial,sans-serif" font-size="10" fill="#f57f17" text-anchor="middle">(local)</text>
+
+  <rect x="1080" y="80" width="150" height="50" rx="6" fill="#fff" stroke="#f9a825" stroke-width="1"/>
+  <text x="1155" y="101" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Script / cmd</text>
+  <text x="1155" y="119" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">runs locally</text>
+
+  <text x="890" y="162" font-family="Arial,sans-serif" font-size="11" fill="#555">Use: trigger Ansible, notify webhook,</text>
+  <text x="890" y="178" font-family="Arial,sans-serif" font-size="11" fill="#555">write to inventory file, call CI API</text>
+
+  <!-- Arrow to remote-exec -->
+  <line x1="450" y1="130" x2="550" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="490" y="182" font-family="Arial,sans-serif" font-size="10" fill="#555">when = "create"</text>
+
+  <!-- remote-exec box -->
+  <rect x="550" y="220" width="300" height="160" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <rect x="550" y="220" width="300" height="36" rx="10" fill="url(#grad-accent)"/>
+  <rect x="550" y="244" width="300" height="12" fill="url(#grad-accent)"/>
+  <text x="700" y="243" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">remote-exec provisioner</text>
+  <text x="570" y="278" font-family="Arial,sans-serif" font-size="12" fill="#333">SSHes into the new resource</text>
+  <text x="570" y="296" font-family="Arial,sans-serif" font-size="12" fill="#555">and runs commands on it</text>
+  <rect x="570" y="308" width="260" height="60" rx="5" fill="#fff" stroke="#90caf9" stroke-width="1"/>
+  <text x="580" y="326" font-family="monospace" font-size="11" fill="#1565c0">provisioner "remote-exec" {</text>
+  <text x="580" y="342" font-family="monospace" font-size="11" fill="#555">  inline = [</text>
+  <text x="580" y="358" font-family="monospace" font-size="11" fill="#555">    "sudo apt-get update",</text>
+  <text x="700" y="374" font-family="monospace" font-size="11" fill="#1565c0">] }</text>
+
+  <!-- remote-exec diagram -->
+  <rect x="870" y="220" width="390" height="180" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="900" y="248" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">remote-exec execution:</text>
+
+  <rect x="890" y="260" width="110" height="50" rx="6" fill="#fff" stroke="#1565c0" stroke-width="1"/>
+  <text x="945" y="281" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Terraform</text>
+  <text x="945" y="299" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">machine</text>
+
+  <line x1="1000" y1="285" x2="1060" y2="285" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1030" y="276" font-family="Arial,sans-serif" font-size="10" fill="#1565c0" text-anchor="middle">SSH / WinRM</text>
+
+  <rect x="1060" y="260" width="160" height="50" rx="6" fill="#fff" stroke="#1565c0" stroke-width="1"/>
+  <text x="1140" y="281" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Remote host</text>
+  <text x="1140" y="299" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">(new resource)</text>
+
+  <text x="890" y="336" font-family="Arial,sans-serif" font-size="12" fill="#555">Needs: connection block with</text>
+  <text x="890" y="354" font-family="Arial,sans-serif" font-size="12" fill="#555">host, user, private_key</text>
+  <text x="890" y="374" font-family="Arial,sans-serif" font-size="11" fill="#555">Use: bootstrap software, config management</text>
+  <text x="890" y="390" font-family="Arial,sans-serif" font-size="11" fill="#555">before handing off to Ansible/Chef/Puppet</text>
+
+  <!-- Destroy-time provisioner -->
+  <line x1="450" y1="110" x2="550" y2="430" stroke="#c62828" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="506" y="280" font-family="Arial,sans-serif" font-size="10" fill="#c62828">when = "destroy"</text>
+
+  <rect x="550" y="420" width="300" height="130" rx="10" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="2"/>
+  <rect x="550" y="420" width="300" height="36" rx="10" fill="#c62828"/>
+  <rect x="550" y="444" width="300" height="12" fill="#c62828"/>
+  <text x="700" y="444" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">destroy-time provisioner</text>
+  <text x="570" y="478" font-family="Arial,sans-serif" font-size="12" fill="#333">Runs BEFORE the resource is</text>
+  <text x="570" y="496" font-family="Arial,sans-serif" font-size="12" fill="#333">destroyed on terraform destroy</text>
+  <rect x="570" y="508" width="260" height="30" rx="5" fill="#fff" stroke="#ef9a9a" stroke-width="1"/>
+  <text x="580" y="521" font-family="monospace" font-size="11" fill="#c62828">when = destroy   # in provisioner</text>
+  <text x="580" y="538" font-family="Arial,sans-serif" font-size="11" fill="#555">Use: deregister from load balancer,</text>
+
+  <text x="870" y="444" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c62828">destroy-time use cases:</text>
+  <rect x="870" y="454" width="390" height="110" rx="8" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.5"/>
+  <text x="890" y="476" font-family="Arial,sans-serif" font-size="12" fill="#333">• Deregister from service discovery (Consul)</text>
+  <text x="890" y="494" font-family="Arial,sans-serif" font-size="12" fill="#333">• Remove from load balancer before delete</text>
+  <text x="890" y="512" font-family="Arial,sans-serif" font-size="12" fill="#333">• Drain connections gracefully</text>
+  <text x="890" y="530" font-family="Arial,sans-serif" font-size="12" fill="#333">• Backup data before instance termination</text>
+  <text x="890" y="548" font-family="Arial,sans-serif" font-size="12" fill="#c62828">• Note: runs BEFORE resource is deleted</text>
+
+  <!-- Bottom warning -->
+  <rect x="30" y="615" width="1220" height="80" rx="8" fill="#fff3e0" filter="url(#shadow)" stroke="#e65100" stroke-width="1.5"/>
+  <text x="640" y="638" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Provisioners are a last resort — prefer user_data (cloud-init), Packer images, or configuration management tools</text>
+  <text x="640" y="660" font-family="Arial,sans-serif" font-size="13" fill="#555" text-anchor="middle">Provisioner failures mark the resource as tainted — next apply will destroy and recreate it</text>
+  <text x="640" y="680" font-family="Arial,sans-serif" font-size="13" fill="#555" text-anchor="middle">Use on_failure = continue to ignore errors, or on_failure = fail (default) to halt</text>
+</svg>

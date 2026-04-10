@@ -8,6 +8,12 @@
 
 ---
 
+## The HuggingFace Ecosystem
+
+![huggingface_ecosystem](svg/courses/ai/generative-ai-applications/14_huggingface_infrastructure/huggingface_ecosystem.svg)
+
+---
+
 ## HuggingFace Hub — Finding Models
 
 ```python

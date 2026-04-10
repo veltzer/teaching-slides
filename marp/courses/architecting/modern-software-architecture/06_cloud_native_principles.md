@@ -28,6 +28,11 @@
 - Each factor addresses a specific aspect of application design
 
 ---
+## Twelve Factor App
+
+![twelve_factor_app](svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/twelve_factor_app.svg)
+
+---
 ## Factor 1: Codebase
 
 - One codebase tracked in version control, many deploys

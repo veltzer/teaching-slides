@@ -56,6 +56,12 @@ spec:
 
 ---
 
+## Service Types Overview
+
+![service_types](svg/courses/devops/k8s-introduction/09_services_and_networking/service_types.svg)
+
+---
+
 ## ClusterIP Service
 
 ```yaml

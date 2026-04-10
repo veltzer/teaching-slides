@@ -25,6 +25,12 @@ chmod +x script.sh
 
 ---
 
+## Bash Script Anatomy
+
+![script_structure](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/script_structure.svg)
+
+---
+
 ## Script Structure
 
 ```bash

@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- 5 lever cards: x positions -->
+  <!-- Card width 224, gap 16, total = 5*224 + 4*16 = 1184, left margin = 48 -->
+
+  <!-- CARD 1: Partitioning -->
+  <rect x="48" y="30" width="224" height="560" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="48" y="30" width="224" height="52" fill="url(#grad-accent)" rx="12"/>
+  <rect x="48" y="66" width="224" height="16" fill="url(#grad-accent)"/>
+  <text x="160" y="62" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Partitioning</text>
+  <!-- Impact bar: Very High -->
+  <text x="160" y="110" font-family="Arial,sans-serif" font-size="12" fill="#888888" text-anchor="middle">Impact</text>
+  <rect x="68" y="118" width="184" height="16" fill="#e0e0e0" rx="8"/>
+  <rect x="68" y="118" width="184" height="16" fill="#e53935" rx="8"/>
+  <text x="160" y="131" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Very High</text>
+  <!-- Details -->
+  <text x="68" y="160" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Key settings</text>
+  <text x="68" y="180" font-family="Arial,sans-serif" font-size="12" fill="#333333">spark.sql.shuffle</text>
+  <text x="68" y="196" font-family="Arial,sans-serif" font-size="12" fill="#333333">  .partitions</text>
+  <text x="68" y="220" font-family="Arial,sans-serif" font-size="12" fill="#333333">repartition(n)</text>
+  <text x="68" y="240" font-family="Arial,sans-serif" font-size="12" fill="#333333">coalesce(n)</text>
+  <text x="68" y="270" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Best practice</text>
+  <text x="68" y="290" font-family="Arial,sans-serif" font-size="12" fill="#333333">2-4x cores per</text>
+  <text x="68" y="306" font-family="Arial,sans-serif" font-size="12" fill="#333333">partition 128-256 MB</text>
+  <text x="68" y="336" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Warning</text>
+  <text x="68" y="356" font-family="Arial,sans-serif" font-size="12" fill="#e53935">Too few: underuse</text>
+  <text x="68" y="372" font-family="Arial,sans-serif" font-size="12" fill="#e53935">Too many: overhead</text>
+
+  <!-- CARD 2: Caching -->
+  <rect x="288" y="30" width="224" height="560" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="288" y="30" width="224" height="52" fill="#388e3c" rx="12"/>
+  <rect x="288" y="66" width="224" height="16" fill="#388e3c"/>
+  <text x="400" y="62" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Caching</text>
+  <!-- Impact: High -->
+  <text x="400" y="110" font-family="Arial,sans-serif" font-size="12" fill="#888888" text-anchor="middle">Impact</text>
+  <rect x="308" y="118" width="184" height="16" fill="#e0e0e0" rx="8"/>
+  <rect x="308" y="118" width="152" height="16" fill="#fb8c00" rx="8"/>
+  <text x="384" y="131" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">High</text>
+  <!-- Details -->
+  <text x="308" y="160" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Memory levels</text>
+  <text x="308" y="180" font-family="Arial,sans-serif" font-size="12" fill="#333333">MEMORY_ONLY</text>
+  <text x="308" y="198" font-family="Arial,sans-serif" font-size="12" fill="#333333">MEMORY_AND_DISK</text>
+  <text x="308" y="216" font-family="Arial,sans-serif" font-size="12" fill="#333333">MEMORY_ONLY_SER</text>
+  <text x="308" y="234" font-family="Arial,sans-serif" font-size="12" fill="#333333">DISK_ONLY</text>
+  <text x="308" y="254" font-family="Arial,sans-serif" font-size="12" fill="#333333">OFF_HEAP</text>
+  <text x="308" y="280" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">When to cache</text>
+  <text x="308" y="300" font-family="Arial,sans-serif" font-size="12" fill="#333333">Reused &gt; 2x times</text>
+  <text x="308" y="318" font-family="Arial,sans-serif" font-size="12" fill="#333333">Fits in memory</text>
+  <text x="308" y="336" font-family="Arial,sans-serif" font-size="12" fill="#333333">Expensive compute</text>
+  <text x="308" y="362" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">API</text>
+  <text x="308" y="382" font-family="Arial,sans-serif" font-size="12" fill="#333333">df.cache()</text>
+  <text x="308" y="398" font-family="Arial,sans-serif" font-size="12" fill="#333333">df.persist(level)</text>
+
+  <!-- CARD 3: Shuffle Optimization -->
+  <rect x="528" y="30" width="224" height="560" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="528" y="30" width="224" height="52" fill="#e65100" rx="12"/>
+  <rect x="528" y="66" width="224" height="16" fill="#e65100"/>
+  <text x="640" y="62" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Shuffle Opt.</text>
+  <!-- Impact: Very High -->
+  <text x="640" y="110" font-family="Arial,sans-serif" font-size="12" fill="#888888" text-anchor="middle">Impact</text>
+  <rect x="548" y="118" width="184" height="16" fill="#e0e0e0" rx="8"/>
+  <rect x="548" y="118" width="184" height="16" fill="#e53935" rx="8"/>
+  <text x="640" y="131" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Very High</text>
+  <!-- Details -->
+  <text x="548" y="160" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#bf360c">Reduce shuffles</text>
+  <text x="548" y="180" font-family="Arial,sans-serif" font-size="12" fill="#333333">Avoid wide joins</text>
+  <text x="548" y="198" font-family="Arial,sans-serif" font-size="12" fill="#333333">Salting for skew</text>
+  <text x="548" y="216" font-family="Arial,sans-serif" font-size="12" fill="#333333">Push filters early</text>
+  <text x="548" y="244" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#bf360c">AQE features</text>
+  <text x="548" y="264" font-family="Arial,sans-serif" font-size="12" fill="#333333">Auto coalesce</text>
+  <text x="548" y="282" font-family="Arial,sans-serif" font-size="12" fill="#333333">Skew join handling</text>
+  <text x="548" y="300" font-family="Arial,sans-serif" font-size="12" fill="#333333">Plan switching</text>
+  <text x="548" y="328" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#bf360c">Config</text>
+  <text x="548" y="348" font-family="Arial,sans-serif" font-size="12" fill="#333333">spark.sql.adaptive</text>
+  <text x="548" y="364" font-family="Arial,sans-serif" font-size="12" fill="#333333">  .enabled = true</text>
+
+  <!-- CARD 4: Serialization -->
+  <rect x="768" y="30" width="224" height="560" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="768" y="30" width="224" height="52" fill="#6a1b9a" rx="12"/>
+  <rect x="768" y="66" width="224" height="16" fill="#6a1b9a"/>
+  <text x="880" y="62" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Serialization</text>
+  <!-- Impact: Medium -->
+  <text x="880" y="110" font-family="Arial,sans-serif" font-size="12" fill="#888888" text-anchor="middle">Impact</text>
+  <rect x="788" y="118" width="184" height="16" fill="#e0e0e0" rx="8"/>
+  <rect x="788" y="118" width="120" height="16" fill="#fb8c00" rx="8"/>
+  <text x="848" y="131" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Medium</text>
+  <!-- Details -->
+  <text x="788" y="160" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">Kryo (preferred)</text>
+  <text x="788" y="180" font-family="Arial,sans-serif" font-size="12" fill="#333333">spark.serializer</text>
+  <text x="788" y="196" font-family="Arial,sans-serif" font-size="12" fill="#333333">= KryoSerializer</text>
+  <text x="788" y="214" font-family="Arial,sans-serif" font-size="12" fill="#333333">10x faster vs Java</text>
+  <text x="788" y="244" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">Register classes</text>
+  <text x="788" y="264" font-family="Arial,sans-serif" font-size="12" fill="#333333">spark.kryo</text>
+  <text x="788" y="280" font-family="Arial,sans-serif" font-size="12" fill="#333333">  .registrationRequired</text>
+  <text x="788" y="310" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">Format matters</text>
+  <text x="788" y="330" font-family="Arial,sans-serif" font-size="12" fill="#333333">Parquet: columnar</text>
+  <text x="788" y="348" font-family="Arial,sans-serif" font-size="12" fill="#333333">Avro: row-based</text>
+  <text x="788" y="366" font-family="Arial,sans-serif" font-size="12" fill="#333333">ORC: analytics</text>
+
+  <!-- CARD 5: Broadcast Joins -->
+  <rect x="1008" y="30" width="224" height="560" fill="url(#grad-surface)" rx="12" filter="url(#shadow)"/>
+  <rect x="1008" y="30" width="224" height="52" fill="#00838f" rx="12"/>
+  <rect x="1008" y="66" width="224" height="16" fill="#00838f"/>
+  <text x="1120" y="62" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Broadcast Joins</text>
+  <!-- Impact: High -->
+  <text x="1120" y="110" font-family="Arial,sans-serif" font-size="12" fill="#888888" text-anchor="middle">Impact</text>
+  <rect x="1028" y="118" width="184" height="16" fill="#e0e0e0" rx="8"/>
+  <rect x="1028" y="118" width="152" height="16" fill="#fb8c00" rx="8"/>
+  <text x="1104" y="131" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">High</text>
+  <!-- Details -->
+  <text x="1028" y="160" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#006064">How it works</text>
+  <text x="1028" y="180" font-family="Arial,sans-serif" font-size="12" fill="#333333">Small table sent</text>
+  <text x="1028" y="198" font-family="Arial,sans-serif" font-size="12" fill="#333333">to every executor</text>
+  <text x="1028" y="216" font-family="Arial,sans-serif" font-size="12" fill="#333333">No shuffle needed</text>
+  <text x="1028" y="244" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#006064">Threshold</text>
+  <text x="1028" y="264" font-family="Arial,sans-serif" font-size="12" fill="#333333">spark.sql.autoBroad</text>
+  <text x="1028" y="280" font-family="Arial,sans-serif" font-size="12" fill="#333333">castJoinThreshold</text>
+  <text x="1028" y="298" font-family="Arial,sans-serif" font-size="12" fill="#333333">Default: 10 MB</text>
+  <text x="1028" y="326" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#006064">Explicit hint</text>
+  <text x="1028" y="346" font-family="Arial,sans-serif" font-size="12" fill="#333333">broadcast(small_df)</text>
+  <text x="1028" y="374" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#006064">Limit</text>
+  <text x="1028" y="394" font-family="Arial,sans-serif" font-size="12" fill="#e53935">Driver OOM if too big</text>
+
+  <!-- Bottom summary bar -->
+  <rect x="48" y="614" width="1184" height="90" fill="#e3f2fd" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="640" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Tuning Priority Order</text>
+  <text x="640" y="662" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">1. Fix partitioning &amp; shuffle   2. Add broadcast joins for small tables   3. Cache reused DataFrames</text>
+  <text x="640" y="682" font-family="Arial,sans-serif" font-size="13" fill="#333333" text-anchor="middle">4. Switch to Kryo serialization   5. Enable AQE for automatic runtime adaptation</text>
+</svg>

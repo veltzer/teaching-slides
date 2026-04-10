@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="30" y="12" width="1220" height="44" rx="8" fill="url(#grad-accent)"/>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#ffffff">The 12-Factor App — Four Groups of Best Practices</text>
+  <!-- Group colours: Code=#1565c0, Dependencies=#2e7d32, Config=#e65100, Runtime=#6a1b9a -->
+  <!-- Group 1: Code & Source -->
+  <rect x="30" y="75" width="295" height="175" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <rect x="30" y="75" width="295" height="32" rx="8" fill="#1565c0"/>
+  <rect x="30" y="95" width="295" height="12" fill="#1565c0"/>
+  <text x="177" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Code &amp; Source Control</text>
+  <rect x="44" y="115" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="80" y="130" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">I. Codebase</text>
+  <text x="80" y="145" font-family="Arial,sans-serif" font-size="11" fill="#555555">One repo, many deploys</text>
+  <rect x="44" y="155" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="80" y="170" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">II. Dependencies</text>
+  <text x="80" y="185" font-family="Arial,sans-serif" font-size="11" fill="#555555">Explicitly declare &amp; isolate deps</text>
+  <rect x="44" y="195" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="80" y="210" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">III. Config</text>
+  <text x="80" y="225" font-family="Arial,sans-serif" font-size="11" fill="#555555">Store config in environment</text>
+  <!-- Group 2: Services & Build -->
+  <rect x="345" y="75" width="295" height="175" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="345" y="75" width="295" height="32" rx="8" fill="#2e7d32"/>
+  <rect x="345" y="95" width="295" height="12" fill="#2e7d32"/>
+  <text x="492" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Services &amp; Build</text>
+  <rect x="359" y="115" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="395" y="130" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">IV. Backing Services</text>
+  <text x="395" y="145" font-family="Arial,sans-serif" font-size="11" fill="#555555">Treat as attached resources</text>
+  <rect x="359" y="155" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="395" y="170" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">V. Build, Release, Run</text>
+  <text x="395" y="185" font-family="Arial,sans-serif" font-size="11" fill="#555555">Strict stage separation</text>
+  <rect x="359" y="195" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="395" y="210" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">VI. Processes</text>
+  <text x="395" y="225" font-family="Arial,sans-serif" font-size="11" fill="#555555">Execute as stateless processes</text>
+  <!-- Group 3: Runtime -->
+  <rect x="660" y="75" width="295" height="175" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <rect x="660" y="75" width="295" height="32" rx="8" fill="#e65100"/>
+  <rect x="660" y="95" width="295" height="12" fill="#e65100"/>
+  <text x="807" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Runtime &amp; Scaling</text>
+  <rect x="674" y="115" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="710" y="130" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#e65100">VII. Port Binding</text>
+  <text x="710" y="145" font-family="Arial,sans-serif" font-size="11" fill="#555555">Export services via port binding</text>
+  <rect x="674" y="155" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="710" y="170" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#e65100">VIII. Concurrency</text>
+  <text x="710" y="185" font-family="Arial,sans-serif" font-size="11" fill="#555555">Scale out via process model</text>
+  <rect x="674" y="195" width="267" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="710" y="210" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#e65100">IX. Disposability</text>
+  <text x="710" y="225" font-family="Arial,sans-serif" font-size="11" fill="#555555">Fast startup, graceful shutdown</text>
+  <!-- Group 4: Operations -->
+  <rect x="975" y="75" width="275" height="175" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <rect x="975" y="75" width="275" height="32" rx="8" fill="#6a1b9a"/>
+  <rect x="975" y="95" width="275" height="12" fill="#6a1b9a"/>
+  <text x="1112" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Operations</text>
+  <rect x="989" y="115" width="247" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1025" y="130" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">X. Dev/Prod Parity</text>
+  <text x="1025" y="145" font-family="Arial,sans-serif" font-size="11" fill="#555555">Keep dev, staging, prod similar</text>
+  <rect x="989" y="155" width="247" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1025" y="170" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">XI. Logs</text>
+  <text x="1025" y="185" font-family="Arial,sans-serif" font-size="11" fill="#555555">Treat logs as event streams</text>
+  <rect x="989" y="195" width="247" height="34" rx="5" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="1025" y="210" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">XII. Admin Processes</text>
+  <text x="1025" y="225" font-family="Arial,sans-serif" font-size="11" fill="#555555">Run admin tasks as one-off processes</text>
+  <!-- Visual diagram: lifecycle flow showing how factors interact -->
+  <rect x="30" y="272" width="1220" height="270" rx="8" fill="#f9f9f9" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="298" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#212121">How the Factors Fit Together</text>
+  <!-- Dev phase -->
+  <rect x="55" y="315" width="160" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="135" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Develop</text>
+  <text x="135" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">I. Codebase</text>
+  <text x="135" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">II. Dependencies</text>
+  <text x="135" y="382" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">III. Config</text>
+  <!-- Build phase -->
+  <rect x="265" y="315" width="160" height="80" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="345" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Build</text>
+  <text x="345" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">V. Build/Release/Run</text>
+  <text x="345" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">IV. Backing Services</text>
+  <!-- Deploy phase -->
+  <rect x="475" y="315" width="160" height="80" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="555" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#e65100">Deploy</text>
+  <text x="555" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">VII. Port Binding</text>
+  <text x="555" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">X. Dev/Prod Parity</text>
+  <!-- Run phase -->
+  <rect x="685" y="315" width="160" height="80" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="765" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">Run</text>
+  <text x="765" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">VI. Processes</text>
+  <text x="765" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">VIII. Concurrency</text>
+  <text x="765" y="382" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">IX. Disposability</text>
+  <!-- Observe phase -->
+  <rect x="895" y="315" width="160" height="80" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="975" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c62828">Observe</text>
+  <text x="975" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">XI. Logs</text>
+  <text x="975" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">XII. Admin Procs</text>
+  <!-- Maintain phase -->
+  <rect x="1105" y="315" width="120" height="80" rx="6" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
+  <text x="1165" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#555555">Maintain</text>
+  <text x="1165" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">All factors</text>
+  <text x="1165" y="367" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#212121">continuously</text>
+  <!-- Phase arrows -->
+  <line x1="215" y1="355" x2="263" y2="355" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="425" y1="355" x2="473" y2="355" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="635" y1="355" x2="683" y2="355" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="845" y1="355" x2="893" y2="355" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1055" y1="355" x2="1103" y2="355" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Bottom note -->
+  <text x="640" y="435" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555555">Goal: portable, scalable, deployable-anywhere applications — cloud, on-prem, or hybrid</text>
+  <!-- Factor number legend strip -->
+  <rect x="55" y="460" width="1170" height="62" rx="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="80" y="480" font-family="Arial,sans-serif" font-size="11" fill="#1565c0">I Codebase</text>
+  <text x="190" y="480" font-family="Arial,sans-serif" font-size="11" fill="#1565c0">II Dependencies</text>
+  <text x="320" y="480" font-family="Arial,sans-serif" font-size="11" fill="#1565c0">III Config</text>
+  <text x="420" y="480" font-family="Arial,sans-serif" font-size="11" fill="#2e7d32">IV Backing Svc</text>
+  <text x="555" y="480" font-family="Arial,sans-serif" font-size="11" fill="#2e7d32">V Build/Release/Run</text>
+  <text x="710" y="480" font-family="Arial,sans-serif" font-size="11" fill="#2e7d32">VI Processes</text>
+  <text x="810" y="480" font-family="Arial,sans-serif" font-size="11" fill="#e65100">VII Port Bind</text>
+  <text x="910" y="480" font-family="Arial,sans-serif" font-size="11" fill="#e65100">VIII Concurrency</text>
+  <text x="1030" y="480" font-family="Arial,sans-serif" font-size="11" fill="#e65100">IX Disposability</text>
+  <text x="1145" y="480" font-family="Arial,sans-serif" font-size="11" fill="#6a1b9a">X–XII Ops</text>
+</svg>

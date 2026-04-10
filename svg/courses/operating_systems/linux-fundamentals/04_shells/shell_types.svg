@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Thompson sh root -->
+  <rect x="540" y="24" width="200" height="58" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="52" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#ffffff">Thompson sh</text>
+  <text x="640" y="72" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#bbdefb">Original Unix shell (1971)</text>
+
+  <!-- Bourne sh -->
+  <line x1="640" y1="82" x2="300" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="170" y="158" width="260" height="58" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="184" text-anchor="middle" font-family="monospace" font-size="19" font-weight="bold" fill="#1565c0">Bourne sh</text>
+  <text x="300" y="205" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">AT&amp;T Bell Labs (1979)</text>
+
+  <!-- csh -->
+  <line x1="640" y1="82" x2="980" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="850" y="158" width="260" height="58" rx="10" fill="url(#grad-surface)" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
+  <text x="980" y="184" text-anchor="middle" font-family="monospace" font-size="19" font-weight="bold" fill="#e65100">C shell (csh)</text>
+  <text x="980" y="205" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">BSD, C-like syntax (1978)</text>
+
+  <!-- Bourne children: bash, dash, ksh -->
+  <!-- bash -->
+  <line x1="260" y1="216" x2="130" y2="310" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="313" width="210" height="90" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="338" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0">bash</text>
+  <text x="130" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Bourne Again Shell</text>
+  <text x="130" y="375" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">GNU • default on most distros</text>
+  <text x="130" y="392" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">arrays, readline, job control</text>
+
+  <!-- dash -->
+  <line x1="300" y1="216" x2="305" y2="310" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="200" y="313" width="210" height="90" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305" y="338" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#2e7d32">dash</text>
+  <text x="305" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Debian Almquist Shell</text>
+  <text x="305" y="375" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">POSIX-compliant, very fast</text>
+  <text x="305" y="392" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Ubuntu /bin/sh symlink</text>
+
+  <!-- ksh -->
+  <line x1="340" y1="216" x2="480" y2="310" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="375" y="313" width="210" height="90" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="338" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#e65100">ksh</text>
+  <text x="480" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">KornShell</text>
+  <text x="480" y="375" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">AT&amp;T, 1983</text>
+  <text x="480" y="392" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">POSIX basis, powerful scripts</text>
+
+  <!-- csh children: tcsh -->
+  <line x1="930" y1="216" x2="840" y2="310" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="735" y="313" width="210" height="90" rx="8" fill="#fce4ec" stroke="#880e4f" stroke-width="2" filter="url(#shadow)"/>
+  <text x="840" y="338" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#880e4f">tcsh</text>
+  <text x="840" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">TENEX C Shell</text>
+  <text x="840" y="375" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Command-line editing</text>
+  <text x="840" y="392" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">history, completion</text>
+
+  <!-- Independent modern shells: zsh, fish -->
+  <!-- zsh -->
+  <rect x="950" y="313" width="150" height="90" rx="8" fill="#ede7f6" stroke="#4527a0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1025" y="338" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#4527a0">zsh</text>
+  <text x="1025" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Z Shell (1990)</text>
+  <text x="1025" y="375" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">macOS default</text>
+  <text x="1025" y="392" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">Oh My Zsh plugins</text>
+
+  <!-- fish -->
+  <rect x="1120" y="313" width="140" height="90" rx="8" fill="#e0f7fa" stroke="#006064" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1190" y="338" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#006064">fish</text>
+  <text x="1190" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Friendly (2005)</text>
+  <text x="1190" y="375" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">auto-suggest</text>
+  <text x="1190" y="392" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555555">web-based config</text>
+
+  <!-- Feature comparison table -->
+  <rect x="30" y="425" width="1220" height="260" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="425" width="1220" height="42" rx="12" fill="url(#grad-accent)"/>
+  <rect x="30" y="449" width="1220" height="18" fill="url(#grad-accent)"/>
+  <text x="640" y="453" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff">Feature Comparison</text>
+
+  <!-- Table headers -->
+  <text x="120" y="490" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Feature</text>
+  <text x="340" y="490" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#1565c0">bash</text>
+  <text x="500" y="490" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#2e7d32">dash</text>
+  <text x="660" y="490" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#e65100">ksh</text>
+  <text x="820" y="490" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#880e4f">tcsh</text>
+  <text x="980" y="490" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#4527a0">zsh</text>
+  <text x="1140" y="490" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#006064">fish</text>
+  <line x1="50" y1="498" x2="1230" y2="498" stroke="#bdbdbd" stroke-width="1"/>
+
+  <!-- Rows -->
+  <text x="120" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">POSIX compliant</text>
+  <text x="340" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Yes</text>
+  <text x="500" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Yes</text>
+  <text x="660" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Yes</text>
+  <text x="820" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Partial</text>
+  <text x="980" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Yes</text>
+  <text x="1140" y="520" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">No</text>
+  <line x1="50" y1="530" x2="1230" y2="530" stroke="#eeeeee" stroke-width="1"/>
+
+  <text x="120" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Scripting</text>
+  <text x="340" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Excellent</text>
+  <text x="500" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Good</text>
+  <text x="660" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Excellent</text>
+  <text x="820" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Limited</text>
+  <text x="980" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Excellent</text>
+  <text x="1140" y="551" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Limited</text>
+  <line x1="50" y1="561" x2="1230" y2="561" stroke="#eeeeee" stroke-width="1"/>
+
+  <text x="120" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Interactive UX</text>
+  <text x="340" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Good</text>
+  <text x="500" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Minimal</text>
+  <text x="660" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Good</text>
+  <text x="820" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Good</text>
+  <text x="980" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Excellent</text>
+  <text x="1140" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Excellent</text>
+  <line x1="50" y1="592" x2="1230" y2="592" stroke="#eeeeee" stroke-width="1"/>
+
+  <text x="120" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Startup speed</text>
+  <text x="340" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Medium</text>
+  <text x="500" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Fast</text>
+  <text x="660" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Medium</text>
+  <text x="820" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Medium</text>
+  <text x="980" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Medium</text>
+  <text x="1140" y="613" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#212121">Slower</text>
+
+  <text x="640" y="665" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Use bash for scripts (portability), zsh or fish for interactive sessions (productivity).</text>
+</svg>

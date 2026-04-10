@@ -10,6 +10,12 @@
 
 ---
 
+## Provisioner Execution Flow
+
+![provisioner_execution_flow](svg/courses/devops/terraform/12_provisioners/provisioner_execution_flow.svg)
+
+---
+
 ## local-exec Provisioner
 
 ```hcl

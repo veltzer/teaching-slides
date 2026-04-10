@@ -27,6 +27,11 @@
 ![api_gateway_architecture](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_architecture.svg)
 
 ---
+## API Gateway Pattern
+
+![api_gateway_pattern](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_pattern.svg)
+
+---
 ## API Gateway Responsibilities
 
 - Request routing and load balancing

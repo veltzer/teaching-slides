@@ -4,6 +4,12 @@
 ![h:500](jpg/courses/operating_systems/linux-fundamentals/unix.svg) ![h:500,width:50%](jpg/courses/operating_systems/linux-fundamentals/ken_thompson.jpg) ![h:500,width:50%](jpg/courses/operating_systems/linux-fundamentals/linus_torvalds.jpg)
 
 ---
+
+## Linux Distro Landscape
+
+![linux_distro_landscape](svg/courses/operating_systems/linux-fundamentals/01_intro/linux_distro_landscape.svg)
+
+---
 ## What is UNIX?
 
 - Multi-user operating system

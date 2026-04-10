@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Left: annotated script code panel -->
+  <rect x="25" y="25" width="570" height="660" rx="12" fill="#1e1e1e" filter="url(#shadow)"/>
+
+  <!-- Line-by-line script with syntax highlighting -->
+  <text x="50" y="62" font-family="monospace" font-size="15" fill="#e06c75">#!/usr/bin/env bash</text>
+  <text x="50" y="83" font-family="monospace" font-size="14" fill="#5c6370"># ===================================</text>
+  <text x="50" y="103" font-family="monospace" font-size="14" fill="#5c6370"># backup.sh — daily backup script</text>
+  <text x="50" y="123" font-family="monospace" font-size="14" fill="#5c6370"># ===================================</text>
+  <text x="50" y="151" font-family="monospace" font-size="14" fill="#5c6370"># Constants</text>
+  <text x="50" y="171" font-family="monospace" font-size="14" fill="#e06c75">readonly</text>
+  <text x="135" y="171" font-family="monospace" font-size="14" fill="#e5c07b">BACKUP_DIR</text>
+  <text x="270" y="171" font-family="monospace" font-size="14" fill="#ffffff">="/var/backup"</text>
+  <text x="50" y="191" font-family="monospace" font-size="14" fill="#e06c75">readonly</text>
+  <text x="135" y="191" font-family="monospace" font-size="14" fill="#e5c07b">MAX_KEEP</text>
+  <text x="260" y="191" font-family="monospace" font-size="14" fill="#ffffff">=7</text>
+  <text x="50" y="219" font-family="monospace" font-size="14" fill="#5c6370"># Variables</text>
+  <text x="50" y="239" font-family="monospace" font-size="14" fill="#e5c07b">SOURCE</text>
+  <text x="130" y="239" font-family="monospace" font-size="14" fill="#ffffff">="${1:-/home}"</text>
+  <text x="50" y="259" font-family="monospace" font-size="14" fill="#e5c07b">TIMESTAMP</text>
+  <text x="170" y="259" font-family="monospace" font-size="14" fill="#ffffff">=$(</text>
+  <text x="210" y="259" font-family="monospace" font-size="14" fill="#61afef">date</text>
+  <text x="255" y="259" font-family="monospace" font-size="14" fill="#ffffff">+%Y%m%d)</text>
+  <text x="50" y="287" font-family="monospace" font-size="14" fill="#5c6370"># Function</text>
+  <text x="50" y="307" font-family="monospace" font-size="14" fill="#61afef">do_backup</text>
+  <text x="165" y="307" font-family="monospace" font-size="14" fill="#ffffff">() {</text>
+  <text x="70" y="327" font-family="monospace" font-size="14" fill="#e06c75">  local</text>
+  <text x="130" y="327" font-family="monospace" font-size="14" fill="#e5c07b">src</text>
+  <text x="165" y="327" font-family="monospace" font-size="14" fill="#ffffff">="$1"</text>
+  <text x="70" y="347" font-family="monospace" font-size="14" fill="#e06c75">  if</text>
+  <text x="100" y="347" font-family="monospace" font-size="14" fill="#ffffff">[ ! -d "$src" ]; </text>
+  <text x="280" y="347" font-family="monospace" font-size="14" fill="#e06c75">then</text>
+  <text x="70" y="367" font-family="monospace" font-size="14" fill="#61afef">    echo</text>
+  <text x="130" y="367" font-family="monospace" font-size="14" fill="#98c379">"Error: $src not found"</text>
+  <text x="70" y="387" font-family="monospace" font-size="14" fill="#e06c75">    return</text>
+  <text x="155" y="387" font-family="monospace" font-size="14" fill="#d19a66">1</text>
+  <text x="50" y="407" font-family="monospace" font-size="14" fill="#e06c75">  fi</text>
+  <text x="70" y="427" font-family="monospace" font-size="14" fill="#61afef">  tar</text>
+  <text x="110" y="427" font-family="monospace" font-size="14" fill="#ffffff">-czf "${BACKUP_DIR}/backup_${TIMESTAMP}.tgz" "$src"</text>
+  <text x="50" y="447" font-family="monospace" font-size="14" fill="#ffffff">}</text>
+  <text x="50" y="475" font-family="monospace" font-size="14" fill="#5c6370"># Control flow</text>
+  <text x="50" y="495" font-family="monospace" font-size="14" fill="#e06c75">for</text>
+  <text x="85" y="495" font-family="monospace" font-size="14" fill="#e5c07b">dir</text>
+  <text x="115" y="495" font-family="monospace" font-size="14" fill="#e06c75">in</text>
+  <text x="140" y="495" font-family="monospace" font-size="14" fill="#ffffff">/home /etc /var; </text>
+  <text x="280" y="495" font-family="monospace" font-size="14" fill="#e06c75">do</text>
+  <text x="70" y="515" font-family="monospace" font-size="14" fill="#61afef">  do_backup</text>
+  <text x="200" y="515" font-family="monospace" font-size="14" fill="#e5c07b">"$dir"</text>
+  <text x="50" y="535" font-family="monospace" font-size="14" fill="#e06c75">done</text>
+  <text x="50" y="563" font-family="monospace" font-size="14" fill="#5c6370"># Exit code</text>
+  <text x="50" y="583" font-family="monospace" font-size="14" fill="#e06c75">exit</text>
+  <text x="90" y="583" font-family="monospace" font-size="14" fill="#d19a66">0</text>
+
+  <!-- Annotation arrows from code to right -->
+  <!-- Shebang -->
+  <line x1="595" y1="62" x2="650" y2="80" stroke="#e06c75" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Constants -->
+  <line x1="595" y1="180" x2="650" y2="195" stroke="#e5c07b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Variables -->
+  <line x1="595" y1="250" x2="650" y2="320" stroke="#ffffff" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Function -->
+  <line x1="595" y1="370" x2="650" y2="430" stroke="#61afef" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Control flow -->
+  <line x1="595" y1="510" x2="650" y2="540" stroke="#e06c75" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Exit code -->
+  <line x1="595" y1="583" x2="650" y2="622" stroke="#d19a66" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Right: annotation panels -->
+  <!-- Shebang -->
+  <rect x="650" y="32" width="600" height="110" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="57" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Shebang line</text>
+  <text x="670" y="78" font-family="monospace" font-size="13" fill="#212121">#!/usr/bin/env bash</text>
+  <text x="670" y="98" font-family="sans-serif" font-size="13" fill="#555555">Tells the kernel which interpreter to use.</text>
+  <text x="670" y="117" font-family="sans-serif" font-size="13" fill="#555555">env searches PATH — portable across systems.</text>
+  <text x="670" y="133" font-family="sans-serif" font-size="12" fill="#888888">Must be first line, no spaces before #!</text>
+
+  <!-- Constants -->
+  <rect x="650" y="160" width="600" height="105" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="183" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100">Constants (readonly)</text>
+  <text x="670" y="203" font-family="monospace" font-size="13" fill="#212121">readonly NAME="value"</text>
+  <text x="670" y="222" font-family="sans-serif" font-size="13" fill="#555555">Cannot be changed after assignment.</text>
+  <text x="670" y="241" font-family="sans-serif" font-size="13" fill="#555555">Convention: UPPERCASE for constants.</text>
+  <text x="670" y="258" font-family="sans-serif" font-size="12" fill="#888888">Attempting to reassign causes an error.</text>
+
+  <!-- Variables -->
+  <rect x="650" y="282" width="600" height="105" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="305" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Variables &amp; Args</text>
+  <text x="670" y="325" font-family="monospace" font-size="13" fill="#212121">VAR="value"   $VAR   ${VAR:-default}</text>
+  <text x="670" y="344" font-family="monospace" font-size="13" fill="#212121">$1 $2 $@  — positional args</text>
+  <text x="670" y="363" font-family="monospace" font-size="13" fill="#212121">$# — arg count   $? — last exit code</text>
+  <text x="670" y="381" font-family="sans-serif" font-size="12" fill="#888888">local keyword limits scope to function</text>
+
+  <!-- Function -->
+  <rect x="650" y="404" width="600" height="110" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="427" font-family="sans-serif" font-size="15" font-weight="bold" fill="#6a1b9a">Functions</text>
+  <text x="670" y="447" font-family="monospace" font-size="13" fill="#212121">func_name() { ... }</text>
+  <text x="670" y="466" font-family="monospace" font-size="13" fill="#212121">return 0  — success (return N for error)</text>
+  <text x="670" y="485" font-family="sans-serif" font-size="13" fill="#555555">Functions must be defined before use.</text>
+  <text x="670" y="503" font-family="sans-serif" font-size="13" fill="#555555">Use local to avoid variable collisions.</text>
+
+  <!-- Control flow -->
+  <rect x="650" y="532" width="600" height="105" rx="8" fill="#fce4ec" stroke="#880e4f" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="555" font-family="sans-serif" font-size="15" font-weight="bold" fill="#880e4f">Control Flow</text>
+  <text x="670" y="575" font-family="monospace" font-size="13" fill="#212121">if [ cond ]; then ... fi</text>
+  <text x="670" y="594" font-family="monospace" font-size="13" fill="#212121">for x in list; do ... done</text>
+  <text x="670" y="613" font-family="monospace" font-size="13" fill="#212121">while [ cond ]; do ... done</text>
+  <text x="670" y="631" font-family="monospace" font-size="13" fill="#212121">case "$x" in pattern) ... ;; esac</text>
+
+  <!-- Exit codes -->
+  <rect x="650" y="654" width="600" height="52" rx="8" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
+  <text x="670" y="676" font-family="sans-serif" font-size="14" font-weight="bold" fill="#555555">Exit codes:</text>
+  <text x="790" y="676" font-family="monospace" font-size="13" fill="#212121">0 = success  ·  1-255 = error  ·  $? gets last code  ·  set -e exits on any error</text>
+  <text x="670" y="696" font-family="sans-serif" font-size="12" fill="#888888">Use exit 0 at script end to be explicit. Trap signals with: trap cleanup EXIT INT TERM</text>
+</svg>

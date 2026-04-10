@@ -14,6 +14,12 @@
 
 ---
 
+## Zero-Shot vs One-Shot vs Few-Shot
+
+![in_context_learning](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/in_context_learning.svg)
+
+---
+
 ## Zero-Shot Learning
 
 No examples — the model relies entirely on its pre-training knowledge:

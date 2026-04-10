@@ -217,6 +217,12 @@ volumeBindingMode: WaitForFirstConsumer
 
 ---
 
+## PV, PVC and StorageClass Chain
+
+![pv_pvc_storageclass](svg/courses/devops/k8s-introduction/10_volumes_and_storage/pv_pvc_storageclass.svg)
+
+---
+
 ## Dynamic Provisioning
 
 ![dynamic_provisioning](svg/courses/devops/k8s-introduction/10_volumes_and_storage/dynamic_provisioning.svg)

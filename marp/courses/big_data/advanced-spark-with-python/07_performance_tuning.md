@@ -19,6 +19,11 @@
 * Choose the right caching strategy for each workload
 
 ---
+## Spark Performance Levers
+
+![spark_performance_levers](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/spark_performance_levers.svg)
+
+---
 ## The Spark Web UI
 1. Jobs tab: shows all jobs triggered by actions
 1. Stages tab: shows stages within each job

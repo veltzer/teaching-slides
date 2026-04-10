@@ -65,6 +65,12 @@
 
 ---
 
+## Container Image Layers
+
+![container_image_layers](svg/courses/devops/k8s-introduction/01_docker/container_image_layers.svg)
+
+---
+
 ## Container vs Virtual Machine
 
 ![container_vs_virtual_machine](svg/courses/devops/k8s-introduction/01_docker/container_vs_virtual_machine.svg)

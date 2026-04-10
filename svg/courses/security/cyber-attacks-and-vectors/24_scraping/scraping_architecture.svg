@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Pipeline flow - top row -->
+
+  <!-- Step 1: HTTP Request -->
+  <rect x="30" y="60" width="190" height="130" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <rect x="30" y="60" width="190" height="36" rx="10" fill="url(#grad-accent)"/>
+  <rect x="30" y="84" width="190" height="12" fill="url(#grad-accent)"/>
+  <text x="125" y="84" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">HTTP Request</text>
+  <text x="50" y="116" font-family="monospace" font-size="11" fill="#333">import requests</text>
+  <text x="50" y="134" font-family="monospace" font-size="11" fill="#555">r = requests.get(</text>
+  <text x="50" y="152" font-family="monospace" font-size="11" fill="#555">  url, headers={</text>
+  <text x="50" y="170" font-family="monospace" font-size="11" fill="#555">  "User-Agent": ...})</text>
+
+  <line x1="220" y1="125" x2="270" y2="125" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: HTML Response -->
+  <rect x="270" y="60" width="200" height="130" rx="10" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="2"/>
+  <rect x="270" y="60" width="200" height="36" rx="10" fill="#7b1fa2"/>
+  <rect x="270" y="84" width="200" height="12" fill="#7b1fa2"/>
+  <text x="370" y="84" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">HTML Response</text>
+  <text x="290" y="116" font-family="monospace" font-size="11" fill="#333">&lt;html&gt;</text>
+  <text x="290" y="134" font-family="monospace" font-size="11" fill="#555">  &lt;body&gt;</text>
+  <text x="290" y="152" font-family="monospace" font-size="11" fill="#555">    &lt;h1&gt;Title&lt;/h1&gt;</text>
+  <text x="290" y="170" font-family="monospace" font-size="11" fill="#555">    &lt;p&gt;data...&lt;/p&gt;</text>
+  <text x="290" y="184" font-family="monospace" font-size="11" fill="#333">&lt;/html&gt;</text>
+
+  <line x1="470" y1="125" x2="520" y2="125" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Parser -->
+  <rect x="520" y="60" width="230" height="130" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="520" y="60" width="230" height="36" rx="10" fill="#2e7d32"/>
+  <rect x="520" y="84" width="230" height="12" fill="#2e7d32"/>
+  <text x="635" y="84" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Parser</text>
+  <text x="540" y="116" font-family="monospace" font-size="11" fill="#333">from bs4 import BeautifulSoup</text>
+  <text x="540" y="134" font-family="monospace" font-size="11" fill="#555">soup = BeautifulSoup(</text>
+  <text x="540" y="152" font-family="monospace" font-size="11" fill="#555">  r.text, 'html.parser')</text>
+  <text x="540" y="170" font-family="monospace" font-size="11" fill="#2e7d32">soup.find_all('a')</text>
+  <text x="540" y="186" font-family="monospace" font-size="11" fill="#2e7d32">soup.select('div.price')</text>
+
+  <line x1="750" y1="125" x2="810" y2="125" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Structured Data -->
+  <rect x="810" y="60" width="210" height="130" rx="10" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="2"/>
+  <rect x="810" y="60" width="210" height="36" rx="10" fill="#f9a825"/>
+  <rect x="810" y="84" width="210" height="12" fill="#f9a825"/>
+  <text x="915" y="84" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Structured Data</text>
+  <text x="830" y="116" font-family="monospace" font-size="11" fill="#333">{"title": "...",</text>
+  <text x="830" y="134" font-family="monospace" font-size="11" fill="#555"> "price": 99.9,</text>
+  <text x="830" y="152" font-family="monospace" font-size="11" fill="#555"> "url": "https://..."</text>
+  <text x="830" y="170" font-family="Arial,sans-serif" font-size="11" fill="#555">pandas DataFrame</text>
+  <text x="830" y="188" font-family="Arial,sans-serif" font-size="11" fill="#555">list of dicts</text>
+
+  <line x1="1020" y1="125" x2="1070" y2="125" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Storage -->
+  <rect x="1070" y="60" width="180" height="130" rx="10" fill="#e8eaf6" filter="url(#shadow)" stroke="#3949ab" stroke-width="2"/>
+  <rect x="1070" y="60" width="180" height="36" rx="10" fill="#3949ab"/>
+  <rect x="1070" y="84" width="180" height="12" fill="#3949ab"/>
+  <text x="1160" y="84" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Storage</text>
+  <text x="1090" y="116" font-family="Arial,sans-serif" font-size="12" fill="#333">• CSV / JSON files</text>
+  <text x="1090" y="136" font-family="Arial,sans-serif" font-size="12" fill="#555">• SQLite / PostgreSQL</text>
+  <text x="1090" y="156" font-family="Arial,sans-serif" font-size="12" fill="#555">• MongoDB</text>
+  <text x="1090" y="176" font-family="Arial,sans-serif" font-size="12" fill="#555">• Data lake / S3</text>
+
+  <!-- Anti-scraping detection section -->
+  <rect x="30" y="235" width="590" height="280" rx="10" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.5"/>
+  <text x="325" y="263" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#c62828" text-anchor="middle">Anti-Scraping Detection Techniques</text>
+
+  <rect x="50" y="276" width="260" height="220" rx="7" fill="#fff" stroke="#ef9a9a" stroke-width="1"/>
+  <text x="180" y="298" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Server-Side</text>
+  <text x="70" y="320" font-family="Arial,sans-serif" font-size="12" fill="#333">• Rate limiting (429)</text>
+  <text x="70" y="340" font-family="Arial,sans-serif" font-size="12" fill="#333">• IP blacklisting</text>
+  <text x="70" y="360" font-family="Arial,sans-serif" font-size="12" fill="#333">• Honeypot links</text>
+  <text x="70" y="380" font-family="Arial,sans-serif" font-size="12" fill="#333">• User-Agent blocking</text>
+  <text x="70" y="400" font-family="Arial,sans-serif" font-size="12" fill="#333">• CAPTCHA challenges</text>
+  <text x="70" y="420" font-family="Arial,sans-serif" font-size="12" fill="#333">• Login walls</text>
+  <text x="70" y="440" font-family="Arial,sans-serif" font-size="12" fill="#333">• robots.txt (advisory)</text>
+  <text x="70" y="460" font-family="Arial,sans-serif" font-size="12" fill="#333">• Dynamic content (JS)</text>
+  <text x="70" y="480" font-family="Arial,sans-serif" font-size="12" fill="#333">• TLS fingerprinting</text>
+
+  <rect x="340" y="276" width="260" height="220" rx="7" fill="#fff" stroke="#ef9a9a" stroke-width="1"/>
+  <text x="470" y="298" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Evasion Techniques</text>
+  <text x="360" y="320" font-family="Arial,sans-serif" font-size="12" fill="#333">• Rotate User-Agent strings</text>
+  <text x="360" y="340" font-family="Arial,sans-serif" font-size="12" fill="#333">• Add delays between requests</text>
+  <text x="360" y="360" font-family="Arial,sans-serif" font-size="12" fill="#333">• Randomise request timing</text>
+  <text x="360" y="380" font-family="Arial,sans-serif" font-size="12" fill="#333">• Proxy pools / rotating IPs</text>
+  <text x="360" y="400" font-family="Arial,sans-serif" font-size="12" fill="#333">• Browser automation (Playwright)</text>
+  <text x="360" y="420" font-family="Arial,sans-serif" font-size="12" fill="#333">• Headless browser rendering</text>
+  <text x="360" y="440" font-family="Arial,sans-serif" font-size="12" fill="#333">• Residential proxy services</text>
+  <text x="360" y="460" font-family="Arial,sans-serif" font-size="12" fill="#333">• Respect Retry-After header</text>
+  <text x="360" y="480" font-family="Arial,sans-serif" font-size="12" fill="#333">• Session cookies / login</text>
+
+  <!-- Rate limiting code -->
+  <rect x="660" y="235" width="590" height="135" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="955" y="260" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Polite scraping — rate limiting example</text>
+  <text x="680" y="285" font-family="monospace" font-size="12" fill="#333">import time, random</text>
+  <text x="680" y="303" font-family="monospace" font-size="12" fill="#333">for url in urls:</text>
+  <text x="680" y="321" font-family="monospace" font-size="12" fill="#555">    r = requests.get(url, headers=headers)</text>
+  <text x="680" y="339" font-family="monospace" font-size="12" fill="#555">    parse_and_store(r.text)</text>
+  <text x="680" y="357" font-family="monospace" font-size="12" fill="#2e7d32">    time.sleep(random.uniform(1.5, 3.0))</text>
+
+  <!-- Scrapy pipeline -->
+  <rect x="660" y="388" width="590" height="127" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="955" y="413" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Scrapy — production scraping framework</text>
+  <text x="680" y="438" font-family="Arial,sans-serif" font-size="12" fill="#555">• Spider class defines start_urls and parse() method</text>
+  <text x="680" y="458" font-family="Arial,sans-serif" font-size="12" fill="#555">• Built-in middleware: retry, proxy, cache, cookies</text>
+  <text x="680" y="478" font-family="Arial,sans-serif" font-size="12" fill="#555">• AUTOTHROTTLE — adapts speed to server load</text>
+  <text x="680" y="498" font-family="Arial,sans-serif" font-size="12" fill="#555">• Item pipelines: validate, deduplicate, store</text>
+  <text x="680" y="516" font-family="monospace" font-size="12" fill="#2e7d32">scrapy crawl myspider -o output.json</text>
+
+  <!-- Legal / ethical note -->
+  <rect x="30" y="545" width="1220" height="140" rx="10" fill="#fff3e0" filter="url(#shadow)" stroke="#e65100" stroke-width="2"/>
+  <text x="640" y="572" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#e65100" text-anchor="middle">Legal &amp; Ethical Considerations</text>
+  <text x="50" y="598" font-family="Arial,sans-serif" font-size="13" fill="#333">• Check robots.txt  — advisory, not enforceable, but shows intent of site owner</text>
+  <text x="50" y="620" font-family="Arial,sans-serif" font-size="13" fill="#333">• Terms of Service  — many sites prohibit scraping; violating ToS can result in account bans or legal action</text>
+  <text x="50" y="642" font-family="Arial,sans-serif" font-size="13" fill="#333">• GDPR / Privacy   — scraping personal data (names, emails) may violate GDPR / CCPA regulations</text>
+  <text x="50" y="664" font-family="Arial,sans-serif" font-size="13" fill="#333">• Computer Fraud   — aggressive scraping causing server load may violate CFAA (US) or Computer Misuse Act (UK)</text>
+  <text x="50" y="686" font-family="Arial,sans-serif" font-size="13" fill="#e65100">• Prefer official APIs  — always use a public API when one exists instead of scraping</text>
+</svg>

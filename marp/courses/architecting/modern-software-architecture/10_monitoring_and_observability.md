@@ -33,6 +33,11 @@
 ![the_three_pillars_of_observability](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/the_three_pillars_of_observability.svg)
 
 ---
+## Observability Pillars
+
+![observability_pillars](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/observability_pillars.svg)
+
+---
 ## Pillar 1: Metrics
 
 - Numeric measurements collected at regular intervals

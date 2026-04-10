@@ -128,6 +128,11 @@
 
 ---
 ## Redundancy Patterns
+
+![reliability_redundancy_patterns](svg/courses/hardware/computer-architecture-fundamentals/01_basic_to_modern/reliability_redundancy_patterns.svg)
+
+---
+## Redundancy Patterns: Summary
 - N+1
 - N+2
 - 2N

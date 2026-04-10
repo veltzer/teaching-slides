@@ -79,6 +79,12 @@ Unlike **discriminative** models (classify existing data), generative models **p
 
 ---
 
+## The Generative AI Landscape
+
+![generative_ai_landscape](svg/courses/ai/generative-ai-applications/01_overview/generative_ai_landscape.svg)
+
+---
+
 ## Why Generative AI Matters Now
 
 Three converging factors enabled the current explosion:

@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- BLEU -->
+  <rect x="30" y="40" width="290" height="340" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
+  <rect x="30" y="40" width="290" height="44" rx="10" fill="url(#grad-accent)"/>
+  <rect x="30" y="72" width="290" height="12" fill="url(#grad-accent)"/>
+  <text x="175" y="72" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">BLEU</text>
+  <text x="175" y="104" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Bilingual Evaluation Understudy</text>
+  <line x1="50" y1="112" x2="300" y2="112" stroke="#90caf9" stroke-width="1"/>
+  <text x="50" y="132" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Measures: precision</text>
+  <text x="50" y="152" font-family="Arial,sans-serif" font-size="12" fill="#555">How many output n-grams</text>
+  <text x="50" y="170" font-family="Arial,sans-serif" font-size="12" fill="#555">appear in the reference?</text>
+  <line x1="50" y1="182" x2="300" y2="182" stroke="#90caf9" stroke-width="1"/>
+  <text x="50" y="202" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Formula:</text>
+  <rect x="50" y="210" width="250" height="30" rx="5" fill="#fff" stroke="#90caf9" stroke-width="1"/>
+  <text x="175" y="230" font-family="monospace" font-size="12" fill="#1565c0" text-anchor="middle">BP × exp(Σ wₙ log pₙ)</text>
+  <text x="50" y="262" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Range: 0–1 (higher = better)</text>
+  <line x1="50" y1="272" x2="300" y2="272" stroke="#90caf9" stroke-width="1"/>
+  <text x="50" y="292" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Best for:</text>
+  <text x="50" y="312" font-family="Arial,sans-serif" font-size="12" fill="#555">• Machine translation</text>
+  <text x="50" y="330" font-family="Arial,sans-serif" font-size="12" fill="#555">• Text generation tasks with</text>
+  <text x="50" y="348" font-family="Arial,sans-serif" font-size="12" fill="#555">  fixed expected output</text>
+  <line x1="50" y1="358" x2="300" y2="358" stroke="#90caf9" stroke-width="1"/>
+  <text x="50" y="374" font-family="Arial,sans-serif" font-size="12" fill="#c62828">Limitation: ignores recall,</text>
+  <text x="50" y="390" font-family="Arial,sans-serif" font-size="12" fill="#c62828">penalises valid synonyms</text>
+
+  <!-- ROUGE -->
+  <rect x="340" y="40" width="290" height="340" rx="10" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="2"/>
+  <rect x="340" y="40" width="290" height="44" rx="10" fill="#7b1fa2"/>
+  <rect x="340" y="72" width="290" height="12" fill="#7b1fa2"/>
+  <text x="485" y="72" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">ROUGE</text>
+  <text x="485" y="104" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Recall-Oriented Understudy</text>
+  <line x1="360" y1="112" x2="610" y2="112" stroke="#ce93d8" stroke-width="1"/>
+  <text x="360" y="132" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Measures: recall</text>
+  <text x="360" y="152" font-family="Arial,sans-serif" font-size="12" fill="#555">How many reference n-grams</text>
+  <text x="360" y="170" font-family="Arial,sans-serif" font-size="12" fill="#555">appear in the output?</text>
+  <line x1="360" y1="182" x2="610" y2="182" stroke="#ce93d8" stroke-width="1"/>
+  <text x="360" y="202" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Variants:</text>
+  <text x="360" y="222" font-family="Arial,sans-serif" font-size="12" fill="#555">• ROUGE-1  (unigram overlap)</text>
+  <text x="360" y="240" font-family="Arial,sans-serif" font-size="12" fill="#555">• ROUGE-2  (bigram overlap)</text>
+  <text x="360" y="258" font-family="Arial,sans-serif" font-size="12" fill="#555">• ROUGE-L  (longest common subsequence)</text>
+  <line x1="360" y1="270" x2="610" y2="270" stroke="#ce93d8" stroke-width="1"/>
+  <text x="360" y="290" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Best for:</text>
+  <text x="360" y="310" font-family="Arial,sans-serif" font-size="12" fill="#555">• Summarisation</text>
+  <text x="360" y="328" font-family="Arial,sans-serif" font-size="12" fill="#555">• News headline generation</text>
+  <text x="360" y="346" font-family="Arial,sans-serif" font-size="12" fill="#555">• Document Q&amp;A</text>
+  <line x1="360" y1="358" x2="610" y2="358" stroke="#ce93d8" stroke-width="1"/>
+  <text x="360" y="374" font-family="Arial,sans-serif" font-size="12" fill="#c62828">Limitation: surface overlap only,</text>
+  <text x="360" y="390" font-family="Arial,sans-serif" font-size="12" fill="#c62828">ignores meaning</text>
+
+  <!-- BERTScore -->
+  <rect x="650" y="40" width="290" height="340" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
+  <rect x="650" y="40" width="290" height="44" rx="10" fill="#2e7d32"/>
+  <rect x="650" y="72" width="290" height="12" fill="#2e7d32"/>
+  <text x="795" y="72" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">BERTScore</text>
+  <text x="795" y="104" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Semantic Similarity</text>
+  <line x1="670" y1="112" x2="920" y2="112" stroke="#a5d6a7" stroke-width="1"/>
+  <text x="670" y="132" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Measures: semantic similarity</text>
+  <text x="670" y="152" font-family="Arial,sans-serif" font-size="12" fill="#555">Compares contextual embeddings</text>
+  <text x="670" y="170" font-family="Arial,sans-serif" font-size="12" fill="#555">from BERT — captures meaning</text>
+  <line x1="670" y1="182" x2="920" y2="182" stroke="#a5d6a7" stroke-width="1"/>
+  <text x="670" y="202" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Outputs:</text>
+  <text x="670" y="222" font-family="Arial,sans-serif" font-size="12" fill="#555">• Precision (P)</text>
+  <text x="670" y="240" font-family="Arial,sans-serif" font-size="12" fill="#555">• Recall (R)</text>
+  <text x="670" y="258" font-family="Arial,sans-serif" font-size="12" fill="#555">• F1 (harmonic mean of P, R)</text>
+  <line x1="670" y1="270" x2="920" y2="270" stroke="#a5d6a7" stroke-width="1"/>
+  <text x="670" y="290" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Best for:</text>
+  <text x="670" y="310" font-family="Arial,sans-serif" font-size="12" fill="#555">• Open-ended generation</text>
+  <text x="670" y="328" font-family="Arial,sans-serif" font-size="12" fill="#555">• Tasks where synonyms are valid</text>
+  <text x="670" y="346" font-family="Arial,sans-serif" font-size="12" fill="#555">• Dialogue, creative writing</text>
+  <line x1="670" y1="358" x2="920" y2="358" stroke="#a5d6a7" stroke-width="1"/>
+  <text x="670" y="374" font-family="Arial,sans-serif" font-size="12" fill="#c62828">Limitation: requires BERT model,</text>
+  <text x="670" y="390" font-family="Arial,sans-serif" font-size="12" fill="#c62828">slower, needs GPU for large scale</text>
+
+  <!-- Human Eval -->
+  <rect x="960" y="40" width="290" height="340" rx="10" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="2"/>
+  <rect x="960" y="40" width="290" height="44" rx="10" fill="#f9a825"/>
+  <rect x="960" y="72" width="290" height="12" fill="#f9a825"/>
+  <text x="1105" y="72" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Human Evaluation</text>
+  <text x="1105" y="104" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f57f17" text-anchor="middle">Gold Standard</text>
+  <line x1="980" y1="112" x2="1230" y2="112" stroke="#ffe082" stroke-width="1"/>
+  <text x="980" y="132" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Measures: everything</text>
+  <text x="980" y="152" font-family="Arial,sans-serif" font-size="12" fill="#555">Fluency, factuality, coherence,</text>
+  <text x="980" y="170" font-family="Arial,sans-serif" font-size="12" fill="#555">tone, helpfulness</text>
+  <line x1="980" y1="182" x2="1230" y2="182" stroke="#ffe082" stroke-width="1"/>
+  <text x="980" y="202" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Dimensions rated:</text>
+  <text x="980" y="222" font-family="Arial,sans-serif" font-size="12" fill="#555">• Relevance (1–5)</text>
+  <text x="980" y="240" font-family="Arial,sans-serif" font-size="12" fill="#555">• Fluency (1–5)</text>
+  <text x="980" y="258" font-family="Arial,sans-serif" font-size="12" fill="#555">• Faithfulness (0 or 1)</text>
+  <text x="980" y="276" font-family="Arial,sans-serif" font-size="12" fill="#555">• Overall preference (A/B)</text>
+  <line x1="980" y1="288" x2="1230" y2="288" stroke="#ffe082" stroke-width="1"/>
+  <text x="980" y="308" font-family="Arial,sans-serif" font-size="12" fill="#333" font-weight="bold">Best for:</text>
+  <text x="980" y="328" font-family="Arial,sans-serif" font-size="12" fill="#555">• Final model comparison</text>
+  <text x="980" y="346" font-family="Arial,sans-serif" font-size="12" fill="#555">• Safety/alignment checks</text>
+  <line x1="980" y1="358" x2="1230" y2="358" stroke="#ffe082" stroke-width="1"/>
+  <text x="980" y="374" font-family="Arial,sans-serif" font-size="12" fill="#c62828">Limitation: expensive, slow,</text>
+  <text x="980" y="390" font-family="Arial,sans-serif" font-size="12" fill="#c62828">annotator disagreement</text>
+
+  <!-- Summary comparison table -->
+  <rect x="30" y="415" width="1220" height="270" rx="10" fill="#fafafa" filter="url(#shadow)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="640" y="442" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Choosing the Right Metric</text>
+
+  <!-- Table header -->
+  <rect x="50" y="455" width="220" height="28" rx="4" fill="#455a64"/>
+  <text x="160" y="474" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Metric</text>
+  <rect x="280" y="455" width="240" height="28" rx="4" fill="#455a64"/>
+  <text x="400" y="474" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Use case</text>
+  <rect x="530" y="455" width="200" height="28" rx="4" fill="#455a64"/>
+  <text x="630" y="474" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Cost</text>
+  <rect x="740" y="455" width="200" height="28" rx="4" fill="#455a64"/>
+  <text x="840" y="474" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Catches semantics</text>
+  <rect x="950" y="455" width="310" height="28" rx="4" fill="#455a64"/>
+  <text x="1105" y="474" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Notes</text>
+
+  <!-- Rows -->
+  <rect x="50" y="488" width="1200" height="36" rx="3" fill="#e3f2fd"/>
+  <text x="160" y="511" font-family="Arial,sans-serif" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">BLEU</text>
+  <text x="400" y="511" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Translation, code gen</text>
+  <text x="630" y="511" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Very low (CPU)</text>
+  <text x="840" y="511" font-family="Arial,sans-serif" font-size="12" fill="#c62828" text-anchor="middle">No</text>
+  <text x="1105" y="511" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">Multiple references recommended</text>
+
+  <rect x="50" y="528" width="1200" height="36" rx="3" fill="#f3e5f5"/>
+  <text x="160" y="551" font-family="Arial,sans-serif" font-size="13" fill="#7b1fa2" text-anchor="middle" font-weight="bold">ROUGE</text>
+  <text x="400" y="551" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Summarisation, Q&amp;A</text>
+  <text x="630" y="551" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Very low (CPU)</text>
+  <text x="840" y="551" font-family="Arial,sans-serif" font-size="12" fill="#c62828" text-anchor="middle">No</text>
+  <text x="1105" y="551" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">Use ROUGE-L for longer text</text>
+
+  <rect x="50" y="568" width="1200" height="36" rx="3" fill="#e8f5e9"/>
+  <text x="160" y="591" font-family="Arial,sans-serif" font-size="13" fill="#2e7d32" text-anchor="middle" font-weight="bold">BERTScore</text>
+  <text x="400" y="591" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Open-ended generation</text>
+  <text x="630" y="591" font-family="Arial,sans-serif" font-size="12" fill="#f57f17" text-anchor="middle">Medium (GPU helps)</text>
+  <text x="840" y="591" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Yes</text>
+  <text x="1105" y="591" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">Best automatic semantic metric</text>
+
+  <rect x="50" y="608" width="1200" height="36" rx="3" fill="#fff8e1"/>
+  <text x="160" y="631" font-family="Arial,sans-serif" font-size="13" fill="#f57f17" text-anchor="middle" font-weight="bold">Human Eval</text>
+  <text x="400" y="631" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Final model selection</text>
+  <text x="630" y="631" font-family="Arial,sans-serif" font-size="12" fill="#c62828" text-anchor="middle">High ($$$)</text>
+  <text x="840" y="631" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Yes</text>
+  <text x="1105" y="631" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">Use as final arbiter, not daily CI</text>
+
+  <rect x="50" y="648" width="1200" height="36" rx="3" fill="#fce4ec"/>
+  <text x="160" y="671" font-family="Arial,sans-serif" font-size="13" fill="#c62828" text-anchor="middle" font-weight="bold">LLM-as-Judge</text>
+  <text x="400" y="671" font-family="Arial,sans-serif" font-size="12" fill="#333" text-anchor="middle">Scalable quality check</text>
+  <text x="630" y="671" font-family="Arial,sans-serif" font-size="12" fill="#f57f17" text-anchor="middle">Medium (API tokens)</text>
+  <text x="840" y="671" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Yes</text>
+  <text x="1105" y="671" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">GPT-4 judges output vs criteria</text>
+</svg>

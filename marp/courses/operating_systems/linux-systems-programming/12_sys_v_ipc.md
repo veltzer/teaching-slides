@@ -14,6 +14,12 @@
 
 ---
 
+## System V IPC Architecture
+
+![sysv_ipc_architecture](svg/courses/operating_systems/linux-systems-programming/12_sys_v_ipc/sysv_ipc_architecture.svg)
+
+---
+
 ## Common Characteristics of Sys V IPC
 
 1. **Kernel Persistence:** IPC objects exist independently of any process. They remain in the kernel until explicitly removed by a process or a system reboot.

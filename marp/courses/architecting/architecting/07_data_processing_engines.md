@@ -14,6 +14,11 @@
 1. Decision Framework
 
 ---
+## Processing Engines Comparison
+
+![processing_engines_comparison](svg/courses/architecting/architecting/07_data_processing_engines/processing_engines_comparison.svg)
+
+---
 ## Processing Engines Overview
 Current Landscape of Major Players:
 - Apache Spark

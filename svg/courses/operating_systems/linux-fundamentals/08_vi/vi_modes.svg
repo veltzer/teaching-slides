@@ -1,30 +1,121 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="79.2" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">vi Mode Transitions</text>
   <defs>
-    <marker id="arrowmode" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#4527a0"/>
     </marker>
   </defs>
-  <rect x="469.3333" y="126" width="341.3333" height="144" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="216" text-anchor="middle" font-size="25.6" font-weight="bold">NORMAL mode</text>
-  <rect x="64" y="432" width="298.6667" height="144" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="213.3333" y="522" text-anchor="middle" font-size="25.6" font-weight="bold">INSERT mode</text>
-  <rect x="490.6667" y="432" width="298.6667" height="144" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="522" text-anchor="middle" font-size="25.6" font-weight="bold">VISUAL mode</text>
-  <rect x="917.3333" y="432" width="298.6667" height="144" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1066.6667" y="522" text-anchor="middle" font-size="25.6" font-weight="bold">COMMAND mode</text>
-  <line x1="533.3333" y1="270" x2="277.3333" y2="424.8" stroke="#333" stroke-width="3.2" marker-end="url(#arrowmode)" />
-  <text x="362.6667" y="324" font-size="21.3333" fill="#333">i, a, o</text>
-  <line x1="277.3333" y1="424.8" x2="533.3333" y2="270" stroke="#999" stroke-width="2.1333" stroke-dasharray="8.5333 6.4" marker-end="url(#arrowmode)" />
-  <text x="458.6667" y="388.8" font-size="21.3333" fill="#999">Esc</text>
-  <line x1="640" y1="270" x2="640" y2="424.8" stroke="#333" stroke-width="3.2" marker-end="url(#arrowmode)" />
-  <text x="672" y="360" font-size="21.3333" fill="#333">v, V</text>
-  <line x1="618.6667" y1="424.8" x2="618.6667" y2="280.8" stroke="#999" stroke-width="2.1333" stroke-dasharray="8.5333 6.4" marker-end="url(#arrowmode)" />
-  <text x="582.4" y="360" font-size="21.3333" fill="#999">Esc</text>
-  <line x1="746.6667" y1="270" x2="1002.6667" y2="424.8" stroke="#333" stroke-width="3.2" marker-end="url(#arrowmode)" />
-  <text x="896" y="324" font-size="21.3333" fill="#333">:</text>
-  <line x1="1002.6667" y1="424.8" x2="746.6667" y2="270" stroke="#999" stroke-width="2.1333" stroke-dasharray="8.5333 6.4" marker-end="url(#arrowmode)" />
-  <text x="821.3333" y="388.8" font-size="21.3333" fill="#999">Enter/Esc</text>
-  <rect x="170.6667" y="630" width="938.6667" height="72" fill="#ffebee" stroke="none" rx="6.4" opacity="0.5" />
-  <text x="640" y="684" text-anchor="middle" font-size="21.3333" fill="#333">Always return to Normal mode (Esc) before switching modes</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Central: Normal Mode -->
+  <circle cx="640" cy="290" r="100" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="282" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">NORMAL</text>
+  <text x="640" y="305" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#bbdefb">MODE</text>
+  <text x="640" y="323" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#90caf9">Default / hub</text>
+  <text x="640" y="341" text-anchor="middle" font-family="monospace" font-size="12" fill="#bbdefb">h j k l · dd · yy · p</text>
+
+  <!-- Insert Mode (left) -->
+  <circle cx="220" cy="290" r="90" fill="#1b5e20" filter="url(#shadow)"/>
+  <text x="220" y="282" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff">INSERT</text>
+  <text x="220" y="302" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#c8e6c9">MODE</text>
+  <text x="220" y="322" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#a5d6a7">Type text freely</text>
+  <text x="220" y="342" text-anchor="middle" font-family="monospace" font-size="11" fill="#a5d6a7">-- INSERT --</text>
+
+  <!-- Visual Mode (right) -->
+  <circle cx="1060" cy="290" r="90" fill="#4527a0" filter="url(#shadow)"/>
+  <text x="1060" y="282" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff">VISUAL</text>
+  <text x="1060" y="302" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#d1c4e9">MODE</text>
+  <text x="1060" y="322" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#b39ddb">Select text ranges</text>
+  <text x="1060" y="342" text-anchor="middle" font-family="monospace" font-size="11" fill="#b39ddb">-- VISUAL --</text>
+
+  <!-- Command Mode (bottom) -->
+  <circle cx="640" cy="570" r="90" fill="#bf360c" filter="url(#shadow)"/>
+  <text x="640" y="562" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">COMMAND</text>
+  <text x="640" y="582" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#ffccbc">MODE</text>
+  <text x="640" y="602" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#ffab91">:w  :q  :s  :%s</text>
+  <text x="640" y="622" text-anchor="middle" font-family="monospace" font-size="11" fill="#ffab91">Colon prompt at bottom</text>
+
+  <!-- NORMAL to INSERT -->
+  <path d="M 540 255 Q 380 200 310 260" stroke="#2e7d32" stroke-width="3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="405" y="215" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#2e7d32">i  a  I  A  o  O</text>
+  <text x="405" y="232" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">enter insert before/after</text>
+
+  <!-- INSERT to NORMAL -->
+  <path d="M 310 320 Q 380 380 540 325" stroke="#1565c0" stroke-width="3" fill="none" marker-end="url(#arrow-accent)"/>
+  <text x="405" y="385" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">Esc</text>
+  <text x="405" y="402" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">return to normal</text>
+
+  <!-- NORMAL to VISUAL -->
+  <path d="M 740 255 Q 900 200 970 260" stroke="#4527a0" stroke-width="3" fill="none" marker-end="url(#arrow-purple)"/>
+  <text x="880" y="215" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#4527a0">v  V  Ctrl+v</text>
+  <text x="880" y="232" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">char / line / block select</text>
+
+  <!-- VISUAL to NORMAL -->
+  <path d="M 970 320 Q 900 380 740 325" stroke="#1565c0" stroke-width="3" fill="none" marker-end="url(#arrow-accent)"/>
+  <text x="880" y="385" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">Esc</text>
+  <text x="880" y="402" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">cancel selection</text>
+
+  <!-- NORMAL to COMMAND -->
+  <path d="M 590 385 Q 540 465 590 480" stroke="#bf360c" stroke-width="3" fill="none" marker-end="url(#arrow-orange)"/>
+  <text x="490" y="445" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#bf360c">:  /  ?  !</text>
+  <text x="490" y="462" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">colon / search / shell</text>
+
+  <!-- COMMAND to NORMAL -->
+  <path d="M 690 480 Q 740 465 690 385" stroke="#1565c0" stroke-width="3" fill="none" marker-end="url(#arrow-accent)"/>
+  <text x="790" y="445" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">Enter / Esc</text>
+  <text x="790" y="462" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">execute or cancel</text>
+
+  <!-- Insert mode entry keys table -->
+  <rect x="25" y="420" width="185" height="275" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="117" y="443" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1b5e20">Enter Insert</text>
+  <text x="50" y="465" font-family="monospace" font-size="13" fill="#212121">i    before cursor</text>
+  <text x="50" y="483" font-family="monospace" font-size="13" fill="#212121">a    after cursor</text>
+  <text x="50" y="501" font-family="monospace" font-size="13" fill="#212121">I    line start</text>
+  <text x="50" y="519" font-family="monospace" font-size="13" fill="#212121">A    line end</text>
+  <text x="50" y="537" font-family="monospace" font-size="13" fill="#212121">o    new line below</text>
+  <text x="50" y="555" font-family="monospace" font-size="13" fill="#212121">O    new line above</text>
+  <text x="50" y="573" font-family="monospace" font-size="13" fill="#212121">s    sub char</text>
+  <text x="50" y="591" font-family="monospace" font-size="13" fill="#212121">S    sub line</text>
+  <text x="50" y="609" font-family="monospace" font-size="13" fill="#212121">R    replace mode</text>
+  <text x="50" y="627" font-family="monospace" font-size="13" fill="#212121">cw   change word</text>
+  <text x="50" y="650" font-family="sans-serif" font-size="11" fill="#555555">All enter Insert mode</text>
+  <text x="50" y="667" font-family="sans-serif" font-size="11" fill="#555555">Esc to return</text>
+
+  <!-- Command mode keys table -->
+  <rect x="1070" y="420" width="185" height="275" rx="8" fill="#fbe9e7" stroke="#bf360c" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1162" y="443" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#bf360c">Command Mode</text>
+  <text x="1090" y="465" font-family="monospace" font-size="13" fill="#212121">:w       save</text>
+  <text x="1090" y="483" font-family="monospace" font-size="13" fill="#212121">:q!      quit</text>
+  <text x="1090" y="501" font-family="monospace" font-size="13" fill="#212121">:wq      save+quit</text>
+  <text x="1090" y="519" font-family="monospace" font-size="13" fill="#212121">:x       save+quit</text>
+  <text x="1090" y="537" font-family="monospace" font-size="13" fill="#212121">:e file  open</text>
+  <text x="1090" y="555" font-family="monospace" font-size="13" fill="#212121">:set nu  numbers</text>
+  <text x="1090" y="573" font-family="monospace" font-size="13" fill="#212121">:10      goto line</text>
+  <text x="1090" y="591" font-family="monospace" font-size="13" fill="#212121">:%s/a/b  replace</text>
+  <text x="1090" y="609" font-family="monospace" font-size="13" fill="#212121">/pattern search</text>
+  <text x="1090" y="627" font-family="monospace" font-size="13" fill="#212121">n / N    next/prev</text>
+  <text x="1090" y="650" font-family="sans-serif" font-size="11" fill="#555555">Enter to execute</text>
+  <text x="1090" y="667" font-family="sans-serif" font-size="11" fill="#555555">Esc to cancel</text>
 </svg>

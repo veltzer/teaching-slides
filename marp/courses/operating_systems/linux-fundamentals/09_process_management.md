@@ -3,6 +3,12 @@
 
 ---
 
+## Process States
+
+![process_states](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_states.svg)
+
+---
+
 ## The ps Command
 
 ![the_ps_command](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_ps_command.svg)
