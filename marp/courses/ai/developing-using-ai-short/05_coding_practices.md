@@ -2,6 +2,12 @@
 
 ---
 
+## AI-Assisted TDD Workflow
+
+![AI-Assisted TDD Workflow](svg/courses/ai/developing-using-ai-short/05_coding_practices/ai_tdd_workflow.svg)
+
+---
+
 ## Transform Your Development Workflow with AI
 
 Elevate traditional coding practices using AI assistance

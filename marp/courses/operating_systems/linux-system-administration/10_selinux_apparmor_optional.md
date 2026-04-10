@@ -2,6 +2,12 @@
 ## Mandatory Access Control
 
 ---
+
+## MAC: SELinux vs AppArmor
+
+![MAC: SELinux vs AppArmor](svg/courses/operating_systems/linux-system-administration/10_selinux_apparmor_optional/mac_vs_dac.svg)
+
+---
 ## Mandatory Access Control (MAC) Concepts
 
 - Standard `Linux` uses DAC (Discretionary Access Control)

@@ -3,6 +3,12 @@
 
 ---
 
+## LLM Model Theft Attack Vectors
+
+![LLM Model Theft Attack Vectors](svg/courses/security/working-with-llms-securely/11_model_theft/model_theft_attacks.svg)
+
+---
+
 ## What is Model Theft?
 
 - Unauthorized **copying, extraction, or replication** of an `LLM`

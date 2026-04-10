@@ -2,6 +2,12 @@
 
 ---
 
+## AI Chat Development Workflow
+
+![AI Chat Development Workflow](svg/courses/ai/developing-using-ai-short/03_chats/ai_chat_workflow.svg)
+
+---
+
 ## Conversational Coding Revolution
 
 Transform development through natural language interaction

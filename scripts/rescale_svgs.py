@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """
 Rescale all SVG files to natively use viewBox="0 0 1280 720".
 

@@ -2,6 +2,12 @@
 
 ---
 
+## AI-Powered Learning Strategies
+
+![AI-Powered Learning Strategies](svg/courses/ai/developing-using-ai-short/06_learning_and_skills/ai_learning_strategies.svg)
+
+---
+
 ## Accelerate Your Growth with AI
 
 Transform from learner to expert at unprecedented speed

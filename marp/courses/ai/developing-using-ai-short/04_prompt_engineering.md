@@ -2,6 +2,12 @@
 
 ---
 
+## Prompt Engineering Formula
+
+![Prompt Engineering Formula](svg/courses/ai/developing-using-ai-short/04_prompt_engineering/prompt_formula.svg)
+
+---
+
 ## The Art and Science of AI Communication
 
 Master the language that makes AI understand exactly what you need

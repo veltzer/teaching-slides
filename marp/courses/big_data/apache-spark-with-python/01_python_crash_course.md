@@ -1,6 +1,12 @@
 # Python Crash Course for Spark
 
 ---
+
+## Python Fundamentals for Spark
+
+![Python Fundamentals for Spark](svg/courses/big_data/apache-spark-with-python/01_python_crash_course/python_for_spark.svg)
+
+---
 ## Course Introduction
 - Welcome to the Python fundamentals section
 - This crash course is designed for those familiar with programming but new to Python

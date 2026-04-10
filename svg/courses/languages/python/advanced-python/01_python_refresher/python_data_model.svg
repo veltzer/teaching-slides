@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#43a047"/>
@@ -20,21 +76,15 @@
       <stop offset="0%" stop-color="#8e24aa"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
   </defs>
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Title -->
-  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Python Data Model: Everything is an Object</text>
 
   <!-- Center: "Everything is an object" -->
-  <rect x="490" y="80" width="300" height="60" rx="30" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <rect x="490" y="80" width="300" height="60" rx="30" fill="url(#grad-warn)" filter="url(#shadow)"/>
   <text x="640" y="116" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Every value is an object</text>
 
   <!-- Objects radiating out -->
@@ -92,7 +142,7 @@
 
   <!-- Dunder methods table -->
   <rect x="850" y="270" width="400" height="350" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="850" y="270" width="400" height="36" rx="8" fill="url(#grad-purple)"/>
+  <rect x="850" y="270" width="400" height="36" rx="8" fill="url(#grad-info)"/>
   <text x="1050" y="293" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Key Dunder Methods</text>
   <rect x="860" y="310" width="380" height="28" rx="3" fill="#ede7f6"/>
   <text x="870" y="329" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4a148c">Method</text>
@@ -125,13 +175,13 @@
   <rect x="30" y="485" width="800" height="125" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
   <text x="430" y="508" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Type System Hierarchy</text>
   <!-- boxes -->
-  <rect x="50" y="518" width="120" height="36" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="50" y="518" width="120" height="36" rx="6" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="110" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">object</text>
-  <rect x="200" y="518" width="120" height="36" rx="6" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <rect x="200" y="518" width="120" height="36" rx="6" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="260" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">type</text>
-  <rect x="350" y="518" width="120" height="36" rx="6" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <rect x="350" y="518" width="120" height="36" rx="6" fill="url(#grad-warn)" filter="url(#shadow)"/>
   <text x="410" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">int / str / list</text>
-  <rect x="500" y="518" width="140" height="36" rx="6" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <rect x="500" y="518" width="140" height="36" rx="6" fill="url(#grad-info)" filter="url(#shadow)"/>
   <text x="570" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">MyClass (user)</text>
   <text x="50" y="580" font-family="Arial, sans-serif" font-size="13" fill="#333333">type(42) is int; type(int) is type; isinstance(42, object) is True</text>
   <text x="50" y="600" font-family="Arial, sans-serif" font-size="13" fill="#333333">int and type are both instances of object -- everything inherits from object</text>

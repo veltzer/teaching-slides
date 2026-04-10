@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#43a047"/>
@@ -20,20 +76,17 @@
       <stop offset="0%" stop-color="#8e24aa"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
   </defs>
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
   <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Custom Module Structure</text>
 
   <!-- LEFT: Python Module Structure -->
   <rect x="20" y="62" width="470" height="440" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="20" y="62" width="470" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="20" y="80" width="470" height="12" fill="url(#grad-accent)"/>
+  <rect x="20" y="62" width="470" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="20" y="80" width="470" height="12" fill="url(#grad-primary)"/>
   <text x="255" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Python Module Structure</text>
 
   <text x="35" y="112" font-family="monospace" font-size="11" fill="#888888">#!/usr/bin/python</text>
@@ -67,8 +120,8 @@
 
   <!-- CENTER: AnsibleModule class features -->
   <rect x="510" y="62" width="330" height="280" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="510" y="62" width="330" height="30" rx="8" fill="url(#grad-purple)"/>
-  <rect x="510" y="80" width="330" height="12" fill="url(#grad-purple)"/>
+  <rect x="510" y="62" width="330" height="30" rx="8" fill="url(#grad-info)"/>
+  <rect x="510" y="80" width="330" height="12" fill="url(#grad-info)"/>
   <text x="675" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">AnsibleModule Features</text>
 
   <text x="525" y="113" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6a1b9a">Exit methods:</text>
@@ -90,8 +143,8 @@
 
   <!-- CENTER: Return Values -->
   <rect x="510" y="355" width="330" height="148" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="510" y="355" width="330" height="30" rx="8" fill="url(#grad-orange)"/>
-  <rect x="510" y="373" width="330" height="12" fill="url(#grad-orange)"/>
+  <rect x="510" y="355" width="330" height="30" rx="8" fill="url(#grad-warn)"/>
+  <rect x="510" y="373" width="330" height="12" fill="url(#grad-warn)"/>
   <text x="675" y="375" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Standard Return Values</text>
   <text x="525" y="406" font-family="monospace" font-size="11" fill="#333333">changed: true/false</text>
   <text x="680" y="406" font-family="Arial, sans-serif" font-size="10" fill="#555555">was anything changed?</text>
@@ -107,8 +160,8 @@
 
   <!-- RIGHT: Filter Plugins vs Callback Plugins -->
   <rect x="860" y="62" width="400" height="205" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="62" width="400" height="30" rx="8" fill="url(#grad-green)"/>
-  <rect x="860" y="80" width="400" height="12" fill="url(#grad-green)"/>
+  <rect x="860" y="62" width="400" height="30" rx="8" fill="url(#grad-ok)"/>
+  <rect x="860" y="80" width="400" height="12" fill="url(#grad-ok)"/>
   <text x="1060" y="82" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Filter Plugins</text>
   <text x="875" y="112" font-family="monospace" font-size="11" fill="#333333"># filter_plugins/my_filters.py</text>
   <text x="875" y="129" font-family="monospace" font-size="11" fill="#333333">class FilterModule(object):</text>
@@ -122,8 +175,8 @@
 
   <!-- RIGHT: Callback Plugins -->
   <rect x="860" y="280" width="400" height="225" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="860" y="280" width="400" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="860" y="298" width="400" height="12" fill="url(#grad-accent)"/>
+  <rect x="860" y="280" width="400" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="860" y="298" width="400" height="12" fill="url(#grad-primary)"/>
   <text x="1060" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Callback Plugins</text>
   <text x="875" y="332" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">Built-in callbacks:</text>
   <text x="875" y="350" font-family="monospace" font-size="11" fill="#333333">yaml       # pretty YAML output</text>

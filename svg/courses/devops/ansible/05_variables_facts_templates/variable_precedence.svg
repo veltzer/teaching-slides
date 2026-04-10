@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#43a047"/>
@@ -20,12 +76,6 @@
       <stop offset="0%" stop-color="#8e24aa"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
     <marker id="arrow-up" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#e53935"/>
     </marker>
@@ -33,7 +83,7 @@
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
   <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Ansible Variable Precedence</text>
 
   <!-- Pyramid - drawn as trapezoids stacked, lowest at bottom -->
@@ -83,8 +133,8 @@
 
   <!-- Magic Variables panel -->
   <rect x="1040" y="62" width="225" height="210" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1040" y="62" width="225" height="30" rx="8" fill="url(#grad-purple)"/>
-  <rect x="1040" y="80" width="225" height="12" fill="url(#grad-purple)"/>
+  <rect x="1040" y="62" width="225" height="30" rx="8" fill="url(#grad-info)"/>
+  <rect x="1040" y="80" width="225" height="12" fill="url(#grad-info)"/>
   <text x="1152" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Magic Variables</text>
   <text x="1055" y="113" font-family="monospace" font-size="12" fill="#6a1b9a">inventory_hostname</text>
   <text x="1055" y="131" font-family="monospace" font-size="12" fill="#6a1b9a">group_names</text>
@@ -98,8 +148,8 @@
 
   <!-- Jinja2 Filters panel -->
   <rect x="1040" y="285" width="225" height="230" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="1040" y="285" width="225" height="30" rx="8" fill="url(#grad-green)"/>
-  <rect x="1040" y="303" width="225" height="12" fill="url(#grad-green)"/>
+  <rect x="1040" y="285" width="225" height="30" rx="8" fill="url(#grad-ok)"/>
+  <rect x="1040" y="303" width="225" height="12" fill="url(#grad-ok)"/>
   <text x="1152" y="305" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Jinja2 Filters</text>
   <text x="1055" y="335" font-family="monospace" font-size="11" fill="#2e7d32">| default('val')</text>
   <text x="1055" y="353" font-family="monospace" font-size="11" fill="#2e7d32">| upper / lower</text>

@@ -1,19 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
     <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#1e88e5"/>
     </marker>
@@ -24,7 +74,7 @@
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Header -->
-  <rect x="20" y="12" width="1240" height="42" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="20" y="12" width="1240" height="42" rx="8" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">GDB Debugging Workflow for Assembly</text>
 
   <!-- === FLOWCHART (left column) === -->
@@ -71,7 +121,7 @@
   <!-- Feedback loop arrow: back to examine -->
   <line x1="30" y1="522" x2="15" y2="522" stroke="#f57c00" stroke-width="2"/>
   <line x1="15" y1="522" x2="15" y2="430" stroke="#f57c00" stroke-width="2"/>
-  <line x1="15" y1="430" x2="60" y2="430" stroke="#f57c00" stroke-width="2" marker-end="url(#arrow-orange)"/>
+  <line x1="15" y1="430" x2="60" y2="430" stroke="#f57c00" stroke-width="2" marker-end="url(#arrow-warn)"/>
   <text x="10" y="478" font-family="sans-serif" font-size="10" fill="#f57c00" font-weight="bold" transform="rotate(-90 10 478)">loop</text>
 
   <!-- Bug found arrow -->
@@ -83,8 +133,8 @@
 
   <!-- === COMMANDS REFERENCE (right column) === -->
   <rect x="255" y="68" width="1005" height="554" rx="10" fill="#f8f9fa" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="255" y="68" width="1005" height="40" rx="10" fill="url(#grad-accent)"/>
-  <rect x="255" y="94" width="1005" height="14" fill="url(#grad-accent)"/>
+  <rect x="255" y="68" width="1005" height="40" rx="10" fill="url(#grad-primary)"/>
+  <rect x="255" y="94" width="1005" height="14" fill="url(#grad-primary)"/>
   <text x="757" y="98" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Key GDB Commands for Assembly Debugging</text>
 
   <!-- Column headings -->

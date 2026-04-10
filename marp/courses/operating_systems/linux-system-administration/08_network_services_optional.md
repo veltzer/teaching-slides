@@ -2,6 +2,12 @@
 ## nginx, Apache, HAProxy, and Postfix
 
 ---
+
+## Linux Network Services Architecture
+
+![Linux Network Services Architecture](svg/courses/operating_systems/linux-system-administration/08_network_services_optional/web_server_architecture.svg)
+
+---
 ## Web Server: nginx
 
 ```bash

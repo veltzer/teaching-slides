@@ -11,13 +11,17 @@ Checks:
   --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
   --bounds      Flag SVGs with elements drawn below y=640
   --title       Flag SVGs that contain a <title> element
+  --colors      Flag SVGs that use colors not in resources/svg_palette.svg
+                (opt-in only — not run by default)
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
     check_svg_quality.py --fonts --size file1.svg file2.svg ...
+    check_svg_quality.py --colors file1.svg file2.svg ...
 """
 
 import argparse
+import re
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -113,6 +117,115 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
             return [f"element <{tag}> extends below y={MAX_Y_BOUND} (found bottom y={y_max})"]
     return []
 
+_PALETTE_COLORS: set[str] | None = None
+_PALETTE_IDS: set[str] | None = None
+_COLOR_ATTRS = {"fill", "stroke", "stop-color", "flood-color"}
+_COLOR_RE = re.compile(r'#[0-9a-fA-F]{3,8}')
+_URL_RE = re.compile(r'url\(#([^)]+)\)')
+# Element tags whose ids must come from the palette (not SVG-local)
+_PALETTE_OWNED_TAGS = {"linearGradient", "radialGradient", "filter", "marker"}
+
+
+def _load_palette() -> tuple[set[str], set[str]]:
+    """Load allowed hex colors and defs IDs from resources/svg_palette.svg.
+
+    Returns (allowed_colors, palette_ids).
+    """
+    global _PALETTE_COLORS, _PALETTE_IDS
+    if _PALETTE_COLORS is not None and _PALETTE_IDS is not None:
+        return _PALETTE_COLORS, _PALETTE_IDS
+
+    palette_path = Path("resources/svg_palette.svg")
+    if not palette_path.exists():
+        _PALETTE_COLORS = set()
+        _PALETTE_IDS = set()
+        return _PALETTE_COLORS, _PALETTE_IDS
+
+    text = palette_path.read_text()
+
+    # --- colors: extract all hex values appearing anywhere in the file ---
+    raw_colors = {m.group().lower() for m in _COLOR_RE.finditer(text)}
+    expanded: set[str] = set()
+    for c in raw_colors:
+        h = c.lstrip('#')
+        if len(h) == 3:
+            h = ''.join(ch * 2 for ch in h)
+        expanded.add('#' + h)
+    _PALETTE_COLORS = expanded
+
+    # --- IDs: parse the defs block and collect every id="..." ---
+    try:
+        palette_tree = ET.parse(palette_path)
+        ids: set[str] = set()
+        for elem in palette_tree.iter():
+            eid = elem.get('id')
+            if eid:
+                ids.add(eid)
+        _PALETTE_IDS = ids
+    except ET.ParseError:
+        _PALETTE_IDS = set()
+
+    return _PALETTE_COLORS, _PALETTE_IDS
+
+
+def _check_colors(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs that use colors or gradients not from resources/svg_palette.svg.
+
+    Two sub-checks:
+      1. Hex color values in fill/stroke/stop-color/flood-color must be in the palette.
+      2. url(#id) references to gradient/filter/marker elements must point to
+         palette-owned IDs (not custom per-SVG ones).
+    """
+    allowed_colors, palette_ids = _load_palette()
+    if not allowed_colors and not palette_ids:
+        return ["cannot check colors: resources/svg_palette.svg not found"]
+
+    errors: list[str] = []
+    seen_bad_colors: set[str] = set()
+    seen_bad_ids: set[str] = set()
+
+    # Build a map of id -> tag for elements defined in this SVG's defs
+    local_id_tag: dict[str, str] = {}
+    for elem in tree.iter():
+        eid = elem.get('id')
+        if eid:
+            local_id_tag[eid] = elem.tag.split('}')[-1]
+
+    for elem in tree.iter():
+        tag = elem.tag.split('}')[-1]
+
+        # Check 1: raw hex colors
+        for attr in _COLOR_ATTRS:
+            val = elem.get(attr, "")
+            for m in _COLOR_RE.finditer(val):
+                raw = m.group().lower()
+                h = raw.lstrip('#')
+                if len(h) == 3:
+                    h = ''.join(ch * 2 for ch in h)
+                normalized = '#' + h
+                if normalized not in allowed_colors and normalized not in seen_bad_colors:
+                    seen_bad_colors.add(normalized)
+                    errors.append(
+                        f"color {raw!r} (in <{tag}> {attr}=) not in palette"
+                    )
+
+        # Check 2: url(#id) references to gradient/filter/marker
+        for attr in ("fill", "stroke", "filter", "marker-end", "marker-start", "marker-mid"):
+            val = elem.get(attr, "")
+            for m in _URL_RE.finditer(val):
+                ref_id = m.group(1)
+                ref_tag = local_id_tag.get(ref_id, "")
+                if ref_tag in _PALETTE_OWNED_TAGS:
+                    if ref_id not in palette_ids and ref_id not in seen_bad_ids:
+                        seen_bad_ids.add(ref_id)
+                        errors.append(
+                            f"url(#{ref_id}) references a non-palette {ref_tag}"
+                            f" (in <{tag}> {attr}=); use a palette gradient/marker instead"
+                        )
+
+    return errors
+
+
 def _check_title(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that contain a <title> element."""
     for elem in tree.iter():
@@ -145,13 +258,15 @@ def main() -> None:
                         help='Flag SVGs with elements drawn below y=640')
     parser.add_argument('--title', action='store_true',
                         help='Flag SVGs that contain a <title> element')
+    parser.add_argument('--colors', action='store_true',
+                        help='Flag SVGs that use colors not in resources/svg_palette.svg')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
-    # Default: all checks enabled
-    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title]
+    # Default: all checks enabled except --colors (opt-in only)
+    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title, args.colors]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -160,6 +275,7 @@ def main() -> None:
     do_dimensions = args.dimensions or not explicit
     do_bounds = args.bounds or not explicit
     do_title = args.title or not explicit
+    do_colors = args.colors  # never on by default
 
     failures = 0
     for path_str in args.paths:
@@ -171,7 +287,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title or do_colors:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -187,6 +303,8 @@ def main() -> None:
                 errors.extend(_check_bounds(tree))
             if do_title:
                 errors.extend(_check_title(tree))
+            if do_colors:
+                errors.extend(_check_colors(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)

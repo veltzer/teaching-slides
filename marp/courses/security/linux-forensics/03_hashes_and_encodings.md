@@ -8,6 +8,12 @@
 
 ---
 
+## Cryptographic Hash Functions
+
+![Cryptographic Hash Functions](svg/courses/security/linux-forensics/03_hashes_and_encodings/hash_functions_overview.svg)
+
+---
+
 ## What is a Hash Function?
 
 - A hash function maps data of arbitrary size to a fixed-size output

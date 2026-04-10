@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#2e7d32"/>
@@ -20,12 +76,6 @@
       <stop offset="0%" stop-color="#e53935"/>
       <stop offset="100%" stop-color="#b71c1c"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
     <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
@@ -36,7 +86,7 @@
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
   <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Context Manager Protocol</text>
 
   <!-- Column headers -->
@@ -49,7 +99,7 @@
   <!-- === NORMAL PATH (left side) === -->
 
   <!-- Step 1: with statement -->
-  <rect x="80" y="98" width="220" height="46" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="80" y="98" width="220" height="46" rx="8" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="190" y="120" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">with CM() as obj:</text>
   <text x="190" y="137" font-family="sans-serif" font-size="11" fill="#cce5ff" text-anchor="middle">evaluate expression</text>
 
@@ -79,16 +129,16 @@
   <text x="190" y="375" font-family="sans-serif" font-size="10" fill="#555555" text-anchor="middle">exc_type=None → no exception</text>
 
   <!-- Arrow down -->
-  <line x1="190" y1="380" x2="190" y2="410" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="190" y1="380" x2="190" y2="410" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow-ok)"/>
 
   <!-- Step 5: Done -->
-  <rect x="100" y="410" width="180" height="40" rx="20" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <rect x="100" y="410" width="180" height="40" rx="20" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="190" y="435" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Execution continues</text>
 
   <!-- === EXCEPTION PATH (right side) === -->
 
   <!-- Step 1: with statement -->
-  <rect x="660" y="98" width="220" height="46" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="660" y="98" width="220" height="46" rx="8" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="770" y="120" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">with CM() as obj:</text>
   <text x="770" y="137" font-family="sans-serif" font-size="11" fill="#cce5ff" text-anchor="middle">evaluate expression</text>
 
@@ -109,7 +159,7 @@
   <text x="770" y="289" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">exception propagates up</text>
 
   <!-- Arrow down -->
-  <line x1="770" y1="296" x2="770" y2="326" stroke="#e53935" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="770" y1="296" x2="770" y2="326" stroke="#e53935" stroke-width="2" marker-end="url(#arrow-danger)"/>
 
   <!-- Step 4: __exit__ with exc info -->
   <rect x="640" y="326" width="260" height="54" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
@@ -123,15 +173,15 @@
   <text x="770" y="442" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e65100" text-anchor="middle">True?</text>
 
   <!-- Arrow: True → suppress -->
-  <line x1="830" y1="430" x2="1010" y2="430" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="830" y1="430" x2="1010" y2="430" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow-ok)"/>
   <text x="920" y="422" font-family="sans-serif" font-size="11" fill="#2e7d32" text-anchor="middle">True</text>
-  <rect x="1010" y="410" width="180" height="40" rx="20" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <rect x="1010" y="410" width="180" height="40" rx="20" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="1100" y="435" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Exception suppressed</text>
 
   <!-- Arrow: False → re-raise -->
-  <line x1="770" y1="460" x2="770" y2="490" stroke="#e53935" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <line x1="770" y1="460" x2="770" y2="490" stroke="#e53935" stroke-width="2" marker-end="url(#arrow-danger)"/>
   <text x="790" y="480" font-family="sans-serif" font-size="11" fill="#b71c1c">False</text>
-  <rect x="670" y="490" width="200" height="40" rx="20" fill="url(#grad-red)" filter="url(#shadow)"/>
+  <rect x="670" y="490" width="200" height="40" rx="20" fill="url(#grad-danger)" filter="url(#shadow)"/>
   <text x="770" y="515" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Exception re-raised</text>
 
   <!-- Bottom info box: __enter__ note -->

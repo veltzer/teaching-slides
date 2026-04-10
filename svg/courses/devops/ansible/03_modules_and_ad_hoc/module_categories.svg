@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#43a047"/>
@@ -20,22 +76,19 @@
       <stop offset="0%" stop-color="#8e24aa"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
   </defs>
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
   <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Ansible Module Categories</text>
 
   <!-- Category grid: 3 cols x 2 rows -->
 
   <!-- System Modules -->
   <rect x="25" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="25" y="65" width="240" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="25" y="83" width="240" height="12" fill="url(#grad-accent)"/>
+  <rect x="25" y="65" width="240" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="25" y="83" width="240" height="12" fill="url(#grad-primary)"/>
   <text x="145" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">System</text>
   <text x="40" y="114" font-family="monospace" font-size="12" fill="#1565c0">service</text>
   <text x="150" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">Manage services</text>
@@ -52,8 +105,8 @@
 
   <!-- Files Modules -->
   <rect x="280" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="280" y="65" width="240" height="30" rx="8" fill="url(#grad-green)"/>
-  <rect x="280" y="83" width="240" height="12" fill="url(#grad-green)"/>
+  <rect x="280" y="65" width="240" height="30" rx="8" fill="url(#grad-ok)"/>
+  <rect x="280" y="83" width="240" height="12" fill="url(#grad-ok)"/>
   <text x="400" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Files</text>
   <text x="295" y="114" font-family="monospace" font-size="12" fill="#2e7d32">copy</text>
   <text x="385" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">Copy files to remote</text>
@@ -70,8 +123,8 @@
 
   <!-- Network/net_tools Modules -->
   <rect x="535" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="535" y="65" width="240" height="30" rx="8" fill="url(#grad-orange)"/>
-  <rect x="535" y="83" width="240" height="12" fill="url(#grad-orange)"/>
+  <rect x="535" y="65" width="240" height="30" rx="8" fill="url(#grad-warn)"/>
+  <rect x="535" y="83" width="240" height="12" fill="url(#grad-warn)"/>
   <text x="655" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Net Tools</text>
   <text x="550" y="114" font-family="monospace" font-size="12" fill="#e65100">uri</text>
   <text x="635" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">HTTP requests</text>
@@ -88,8 +141,8 @@
 
   <!-- Cloud Modules -->
   <rect x="790" y="65" width="240" height="140" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="790" y="65" width="240" height="30" rx="8" fill="url(#grad-purple)"/>
-  <rect x="790" y="83" width="240" height="12" fill="url(#grad-purple)"/>
+  <rect x="790" y="65" width="240" height="30" rx="8" fill="url(#grad-info)"/>
+  <rect x="790" y="83" width="240" height="12" fill="url(#grad-info)"/>
   <text x="910" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Cloud</text>
   <text x="805" y="114" font-family="monospace" font-size="12" fill="#6a1b9a">ec2_instance</text>
   <text x="920" y="114" font-family="Arial, sans-serif" font-size="11" fill="#555555">AWS EC2</text>
@@ -106,8 +159,8 @@
 
   <!-- Database Modules -->
   <rect x="25" y="225" width="240" height="115" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="25" y="225" width="240" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="25" y="243" width="240" height="12" fill="url(#grad-accent)"/>
+  <rect x="25" y="225" width="240" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="25" y="243" width="240" height="12" fill="url(#grad-primary)"/>
   <text x="145" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Database</text>
   <text x="40" y="274" font-family="monospace" font-size="12" fill="#1565c0">mysql_db</text>
   <text x="145" y="274" font-family="Arial, sans-serif" font-size="11" fill="#555555">MySQL databases</text>
@@ -120,8 +173,8 @@
 
   <!-- Messaging Modules -->
   <rect x="280" y="225" width="240" height="115" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="280" y="225" width="240" height="30" rx="8" fill="url(#grad-green)"/>
-  <rect x="280" y="243" width="240" height="12" fill="url(#grad-green)"/>
+  <rect x="280" y="225" width="240" height="30" rx="8" fill="url(#grad-ok)"/>
+  <rect x="280" y="243" width="240" height="12" fill="url(#grad-ok)"/>
   <text x="400" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Messaging / Notify</text>
   <text x="295" y="274" font-family="monospace" font-size="12" fill="#2e7d32">slack</text>
   <text x="375" y="274" font-family="Arial, sans-serif" font-size="11" fill="#555555">Slack notification</text>
@@ -134,8 +187,8 @@
 
   <!-- Ad-Hoc Command Structure -->
   <rect x="535" y="225" width="495" height="115" rx="8" fill="#fffde7" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="535" y="225" width="495" height="30" rx="8" fill="url(#grad-orange)"/>
-  <rect x="535" y="243" width="495" height="12" fill="url(#grad-orange)"/>
+  <rect x="535" y="225" width="495" height="30" rx="8" fill="url(#grad-warn)"/>
+  <rect x="535" y="243" width="495" height="12" fill="url(#grad-warn)"/>
   <text x="782" y="245" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Ad-Hoc Command Structure</text>
   <text x="550" y="278" font-family="monospace" font-size="13" fill="#1565c0">ansible</text>
   <text x="610" y="278" font-family="monospace" font-size="13" fill="#2e7d32">all</text>
@@ -162,8 +215,8 @@
 
   <!-- Key stats box -->
   <rect x="1045" y="65" width="210" height="380" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="1045" y="65" width="210" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="1045" y="83" width="210" height="12" fill="url(#grad-accent)"/>
+  <rect x="1045" y="65" width="210" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="1045" y="83" width="210" height="12" fill="url(#grad-primary)"/>
   <text x="1150" y="85" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Quick Facts</text>
   <text x="1060" y="115" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565c0">7,000+ modules</text>
   <text x="1060" y="133" font-family="Arial, sans-serif" font-size="11" fill="#555555">in Ansible collections</text>

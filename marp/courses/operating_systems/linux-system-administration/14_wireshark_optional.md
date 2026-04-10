@@ -2,6 +2,12 @@
 ## Packet Capture, Filtering, and Protocol Analysis
 
 ---
+
+## Packet Capture Workflow
+
+![Packet Capture Workflow](svg/courses/operating_systems/linux-system-administration/14_wireshark_optional/packet_capture_workflow.svg)
+
+---
 ## What is Wireshark?
 
 - Graphical network protocol analyzer

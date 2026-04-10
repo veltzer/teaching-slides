@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#43a047"/>
@@ -20,20 +76,17 @@
       <stop offset="0%" stop-color="#8e24aa"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
   </defs>
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-primary)"/>
   <text x="640" y="34" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Ansible Best Practices</text>
 
   <!-- COL 1: Project Structure -->
   <rect x="20" y="62" width="250" height="380" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="20" y="62" width="250" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="20" y="80" width="250" height="12" fill="url(#grad-accent)"/>
+  <rect x="20" y="62" width="250" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="20" y="80" width="250" height="12" fill="url(#grad-primary)"/>
   <text x="145" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Project Structure</text>
   <text x="35" y="110" font-family="monospace" font-size="10" fill="#333333">project/</text>
   <text x="35" y="126" font-family="monospace" font-size="10" fill="#333333">  ansible.cfg</text>
@@ -59,8 +112,8 @@
 
   <!-- COL 2: Naming Conventions -->
   <rect x="285" y="62" width="270" height="190" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="285" y="62" width="270" height="30" rx="8" fill="url(#grad-green)"/>
-  <rect x="285" y="80" width="270" height="12" fill="url(#grad-green)"/>
+  <rect x="285" y="62" width="270" height="30" rx="8" fill="url(#grad-ok)"/>
+  <rect x="285" y="80" width="270" height="12" fill="url(#grad-ok)"/>
   <text x="420" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Naming Conventions</text>
   <text x="300" y="112" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Tasks: verb + noun + detail</text>
   <text x="300" y="130" font-family="monospace" font-size="11" fill="#555555">- name: Install nginx package</text>
@@ -74,8 +127,8 @@
 
   <!-- COL 2: Idempotency -->
   <rect x="285" y="265" width="270" height="180" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="285" y="265" width="270" height="30" rx="8" fill="url(#grad-purple)"/>
-  <rect x="285" y="283" width="270" height="12" fill="url(#grad-purple)"/>
+  <rect x="285" y="265" width="270" height="30" rx="8" fill="url(#grad-info)"/>
+  <rect x="285" y="283" width="270" height="12" fill="url(#grad-info)"/>
   <text x="420" y="285" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Idempotency Rules</text>
   <text x="300" y="316" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Prefer declarative modules over shell/command</text>
   <text x="300" y="334" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Use state: present/absent explicitly</text>
@@ -101,8 +154,8 @@
 
   <!-- COL 3: Testing with Molecule -->
   <rect x="570" y="250" width="280" height="198" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="570" y="250" width="280" height="30" rx="8" fill="url(#grad-orange)"/>
-  <rect x="570" y="268" width="280" height="12" fill="url(#grad-orange)"/>
+  <rect x="570" y="250" width="280" height="30" rx="8" fill="url(#grad-warn)"/>
+  <rect x="570" y="268" width="280" height="12" fill="url(#grad-warn)"/>
   <text x="710" y="270" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Testing with Molecule</text>
   <text x="585" y="302" font-family="monospace" font-size="11" fill="#333333">molecule init role myrole</text>
   <text x="585" y="319" font-family="monospace" font-size="11" fill="#333333">molecule test      # full test cycle</text>
@@ -117,8 +170,8 @@
 
   <!-- COL 4: Role Best Practices -->
   <rect x="865" y="62" width="395" height="195" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="865" y="62" width="395" height="30" rx="8" fill="url(#grad-accent)"/>
-  <rect x="865" y="80" width="395" height="12" fill="url(#grad-accent)"/>
+  <rect x="865" y="62" width="395" height="30" rx="8" fill="url(#grad-primary)"/>
+  <rect x="865" y="80" width="395" height="12" fill="url(#grad-primary)"/>
   <text x="1062" y="82" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Role Best Practices</text>
   <text x="880" y="112" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ One role per service/application component</text>
   <text x="880" y="130" font-family="Arial, sans-serif" font-size="11" fill="#333333">+ Put overridable defaults in defaults/main.yml</text>
@@ -132,8 +185,8 @@
 
   <!-- COL 4: ansible.cfg settings -->
   <rect x="865" y="270" width="395" height="180" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="865" y="270" width="395" height="30" rx="8" fill="url(#grad-green)"/>
-  <rect x="865" y="288" width="395" height="12" fill="url(#grad-green)"/>
+  <rect x="865" y="270" width="395" height="30" rx="8" fill="url(#grad-ok)"/>
+  <rect x="865" y="288" width="395" height="12" fill="url(#grad-ok)"/>
   <text x="1062" y="290" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Recommended ansible.cfg</text>
   <text x="880" y="322" font-family="monospace" font-size="11" fill="#333333">[defaults]</text>
   <text x="880" y="339" font-family="monospace" font-size="11" fill="#333333">inventory           = inventories/production</text>

@@ -1,12 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
     <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#43a047"/>
@@ -20,19 +76,16 @@
       <stop offset="0%" stop-color="#8e24aa"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
   </defs>
   <rect width="1280" height="640" fill="#ffffff"/>
 
   <!-- Title -->
-  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Real-World Assembly Use Cases</text>
 
   <!-- Row 1: Cryptography -->
   <rect x="30" y="75" width="380" height="170" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="75" width="380" height="40" rx="8" fill="url(#grad-accent)"/>
+  <rect x="30" y="75" width="380" height="40" rx="8" fill="url(#grad-primary)"/>
   <text x="220" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Cryptography</text>
   <text x="50" y="132" font-family="Arial, sans-serif" font-size="13" fill="#333333">- AES-NI hardware instructions</text>
   <text x="50" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Constant-time implementations</text>
@@ -43,7 +96,7 @@
 
   <!-- Codecs -->
   <rect x="430" y="75" width="380" height="170" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="430" y="75" width="380" height="40" rx="8" fill="url(#grad-green)"/>
+  <rect x="430" y="75" width="380" height="40" rx="8" fill="url(#grad-ok)"/>
   <text x="620" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Media Codecs</text>
   <text x="450" y="132" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Video encoding (H.264, AV1)</text>
   <text x="450" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Audio DSP (MP3, AAC filters)</text>
@@ -54,7 +107,7 @@
 
   <!-- Kernel -->
   <rect x="830" y="75" width="420" height="170" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="830" y="75" width="420" height="40" rx="8" fill="url(#grad-orange)"/>
+  <rect x="830" y="75" width="420" height="40" rx="8" fill="url(#grad-warn)"/>
   <text x="1040" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">OS Kernel Code</text>
   <text x="850" y="132" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Boot sequence and boot loaders</text>
   <text x="850" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Context switch (save/restore regs)</text>
@@ -65,7 +118,7 @@
 
   <!-- Row 2: Embedded -->
   <rect x="30" y="265" width="380" height="170" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="265" width="380" height="40" rx="8" fill="url(#grad-purple)"/>
+  <rect x="30" y="265" width="380" height="40" rx="8" fill="url(#grad-info)"/>
   <text x="220" y="291" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Embedded Systems</text>
   <text x="50" y="322" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Microcontroller startup code</text>
   <text x="50" y="343" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Real-time interrupt handlers</text>
