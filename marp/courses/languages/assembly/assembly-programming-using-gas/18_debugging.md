@@ -7,6 +7,12 @@
 - Supports both source-level and machine-level debugging
 
 ---
+
+## GDB Debugging Workflow
+
+![GDB debugging workflow flowchart with key assembly-level commands for registers, memory, and stepping](svg/courses/languages/assembly/assembly-programming-using-gas/18_debugging/gdb_debugging_workflow.svg)
+
+---
 ## Compiling for Debugging
 
 ```bash

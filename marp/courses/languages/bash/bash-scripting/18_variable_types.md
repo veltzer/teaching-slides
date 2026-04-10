@@ -1,6 +1,11 @@
 # Variable Types
 
 ---
+## Variable Types Overview
+
+![variable_types_overview](svg/courses/languages/bash/bash-scripting/18_variable_types/variable_types_overview.svg)
+
+---
 ## Everything is a String (by Default)
 
 ```bash

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-while" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-for" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e7d32"/>
+      <stop offset="100%" stop-color="#1b5e20"/>
+    </linearGradient>
+    <linearGradient id="grad-until" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f57c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Column 1: while -->
+  <rect x="40" y="30" width="370" height="580" rx="12" fill="url(#grad-surface)" filter="url(#shadow)"/>
+  <rect x="40" y="30" width="370" height="60" rx="12" fill="url(#grad-while)"/>
+  <rect x="40" y="78" width="370" height="12" fill="url(#grad-while)"/>
+  <text x="225" y="69" font-family="monospace" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">while</text>
+
+  <!-- while: condition label -->
+  <text x="225" y="120" font-family="sans-serif" font-size="16" fill="#555555" text-anchor="middle">Loops WHILE condition is true</text>
+
+  <!-- while: flow diagram -->
+  <rect x="145" y="140" width="160" height="44" rx="22" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
+  <text x="225" y="167" font-family="monospace" font-size="14" fill="#1565c0" text-anchor="middle">condition?</text>
+  <line x1="225" y1="184" x2="225" y2="210" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="240" y="200" font-family="sans-serif" font-size="12" fill="#2e7d32">true</text>
+  <rect x="145" y="210" width="160" height="44" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="225" y="237" font-family="monospace" font-size="14" fill="#2e7d32" text-anchor="middle">do body</text>
+  <!-- loop back arrow -->
+  <path d="M305,232 Q360,232 360,162 Q360,92 225,92" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <!-- false exit -->
+  <line x1="145" y1="162" x2="90" y2="162" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="82" y="158" font-family="sans-serif" font-size="12" fill="#e53935" text-anchor="end">false</text>
+  <rect x="60" y="173" width="80" height="30" rx="6" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="100" y="193" font-family="sans-serif" font-size="12" fill="#e53935" text-anchor="middle">exit loop</text>
+
+  <!-- while: code box -->
+  <rect x="60" y="280" width="330" height="150" rx="8" fill="#1e1e2e" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="80" y="305" font-family="monospace" font-size="13" fill="#89dceb">while</text>
+  <text x="120" y="305" font-family="monospace" font-size="13" fill="#cdd6f4"> [ $count -le 5 ]; </text>
+  <text x="80" y="305" font-family="monospace" font-size="13" fill="#89dceb">while</text>
+  <text x="80" y="325" font-family="monospace" font-size="13" fill="#89dceb">do</text>
+  <text x="100" y="345" font-family="monospace" font-size="13" fill="#cdd6f4">  echo $count</text>
+  <text x="100" y="365" font-family="monospace" font-size="13" fill="#cdd6f4">  ((count++))</text>
+  <text x="80" y="385" font-family="monospace" font-size="13" fill="#89dceb">done</text>
+
+  <!-- while: use cases -->
+  <text x="70" y="450" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Use cases:</text>
+  <text x="70" y="472" font-family="sans-serif" font-size="13" fill="#333333">• Wait for a condition</text>
+  <text x="70" y="492" font-family="sans-serif" font-size="13" fill="#333333">• Read input line by line</text>
+  <text x="70" y="512" font-family="sans-serif" font-size="13" fill="#333333">• Retry until success</text>
+  <text x="70" y="532" font-family="sans-serif" font-size="13" fill="#333333">• Daemon / polling loops</text>
+
+  <!-- Column 2: for -->
+  <rect x="455" y="30" width="370" height="580" rx="12" fill="url(#grad-surface)" filter="url(#shadow)"/>
+  <rect x="455" y="30" width="370" height="60" rx="12" fill="url(#grad-for)"/>
+  <rect x="455" y="78" width="370" height="12" fill="url(#grad-for)"/>
+  <text x="640" y="69" font-family="monospace" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">for</text>
+
+  <text x="640" y="120" font-family="sans-serif" font-size="16" fill="#555555" text-anchor="middle">Iterates over a list or range</text>
+
+  <!-- for: flow -->
+  <rect x="560" y="140" width="160" height="44" rx="22" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="640" y="160" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">more items</text>
+  <text x="640" y="177" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">in list?</text>
+  <line x1="640" y1="184" x2="640" y2="210" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="655" y="200" font-family="sans-serif" font-size="12" fill="#2e7d32">yes</text>
+  <rect x="560" y="210" width="160" height="44" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="640" y="237" font-family="monospace" font-size="14" fill="#2e7d32" text-anchor="middle">do body</text>
+  <path d="M720,232 Q775,232 775,162 Q775,92 640,92" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <line x1="560" y1="162" x2="505" y2="162" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="497" y="158" font-family="sans-serif" font-size="12" fill="#e53935" text-anchor="end">no</text>
+  <rect x="475" y="173" width="80" height="30" rx="6" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="515" y="193" font-family="sans-serif" font-size="12" fill="#e53935" text-anchor="middle">exit loop</text>
+
+  <!-- for: code box -->
+  <rect x="475" y="280" width="330" height="170" rx="8" fill="#1e1e2e" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="495" y="305" font-family="monospace" font-size="12" fill="#a6e3a1">for</text>
+  <text x="522" y="305" font-family="monospace" font-size="12" fill="#cdd6f4"> fruit in apple banana; </text>
+  <text x="495" y="325" font-family="monospace" font-size="12" fill="#a6e3a1">do</text>
+  <text x="495" y="345" font-family="monospace" font-size="12" fill="#cdd6f4">  echo "$fruit"</text>
+  <text x="495" y="365" font-family="monospace" font-size="12" fill="#a6e3a1">done</text>
+  <text x="495" y="390" font-family="monospace" font-size="12" fill="#585b70"># C-style:</text>
+  <text x="495" y="408" font-family="monospace" font-size="12" fill="#a6e3a1">for</text>
+  <text x="522" y="408" font-family="monospace" font-size="12" fill="#cdd6f4"> ((i=0; i&lt;10; i++)); </text>
+  <text x="495" y="426" font-family="monospace" font-size="12" fill="#a6e3a1">do</text>
+  <text x="495" y="444" font-family="monospace" font-size="12" fill="#cdd6f4">  echo $i</text>
+
+  <!-- for: use cases -->
+  <text x="485" y="470" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Use cases:</text>
+  <text x="485" y="492" font-family="sans-serif" font-size="13" fill="#333333">• Process a list of items</text>
+  <text x="485" y="512" font-family="sans-serif" font-size="13" fill="#333333">• Iterate over files (glob)</text>
+  <text x="485" y="532" font-family="sans-serif" font-size="13" fill="#333333">• Counted repetitions</text>
+  <text x="485" y="552" font-family="sans-serif" font-size="13" fill="#333333">• Loop over array elements</text>
+
+  <!-- Column 3: until -->
+  <rect x="870" y="30" width="370" height="580" rx="12" fill="url(#grad-surface)" filter="url(#shadow)"/>
+  <rect x="870" y="30" width="370" height="60" rx="12" fill="url(#grad-until)"/>
+  <rect x="870" y="78" width="370" height="12" fill="url(#grad-until)"/>
+  <text x="1055" y="69" font-family="monospace" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">until</text>
+
+  <text x="1055" y="120" font-family="sans-serif" font-size="16" fill="#555555" text-anchor="middle">Loops UNTIL condition is true</text>
+
+  <!-- until: flow -->
+  <rect x="975" y="140" width="160" height="44" rx="22" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="1055" y="167" font-family="monospace" font-size="14" fill="#e65100" text-anchor="middle">condition?</text>
+  <line x1="1055" y1="184" x2="1055" y2="210" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1070" y="200" font-family="sans-serif" font-size="12" fill="#e53935">false</text>
+  <rect x="975" y="210" width="160" height="44" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
+  <text x="1055" y="237" font-family="monospace" font-size="14" fill="#e65100" text-anchor="middle">do body</text>
+  <path d="M1135,232 Q1190,232 1190,162 Q1190,92 1055,92" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <line x1="975" y1="162" x2="920" y2="162" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="912" y="158" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="end">true</text>
+  <rect x="890" y="173" width="80" height="30" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="930" y="193" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">exit loop</text>
+
+  <!-- until: code box -->
+  <rect x="890" y="280" width="330" height="150" rx="8" fill="#1e1e2e" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="910" y="305" font-family="monospace" font-size="13" fill="#fab387">until</text>
+  <text x="955" y="305" font-family="monospace" font-size="13" fill="#cdd6f4"> [ $count -gt 5 ]; </text>
+  <text x="910" y="325" font-family="monospace" font-size="13" fill="#fab387">do</text>
+  <text x="930" y="345" font-family="monospace" font-size="13" fill="#cdd6f4">  echo $count</text>
+  <text x="930" y="365" font-family="monospace" font-size="13" fill="#cdd6f4">  ((count++))</text>
+  <text x="910" y="385" font-family="monospace" font-size="13" fill="#fab387">done</text>
+
+  <!-- until: use cases -->
+  <text x="900" y="450" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e65100">Use cases:</text>
+  <text x="900" y="472" font-family="sans-serif" font-size="13" fill="#333333">• Wait for service to start</text>
+  <text x="900" y="492" font-family="sans-serif" font-size="13" fill="#333333">• Retry until success</text>
+  <text x="900" y="512" font-family="sans-serif" font-size="13" fill="#333333">• Opposite logic to while</text>
+  <text x="900" y="532" font-family="sans-serif" font-size="13" fill="#333333">• Poll until condition met</text>
+
+  <!-- Bottom comparison bar -->
+  <rect x="40" y="625" width="1200" height="4" rx="2" fill="#e0e0e0"/>
+  <rect x="40" y="625" width="390" height="4" rx="2" fill="#1e88e5"/>
+  <rect x="450" y="625" width="390" height="4" rx="2" fill="#2e7d32"/>
+  <rect x="860" y="625" width="380" height="4" rx="2" fill="#f57c00"/>
+</svg>

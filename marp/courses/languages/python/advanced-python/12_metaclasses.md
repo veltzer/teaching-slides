@@ -39,6 +39,12 @@ print(type(instance))  # <class '__main__.DynamicClass'>
 
 ---
 
+## Class Creation Pipeline
+
+![class_creation_process](svg/courses/languages/python/advanced-python/12_metaclasses/class_creation_process.svg)
+
+---
+
 ## Python's Class System
 
 ## Class Creation Process

@@ -1,6 +1,11 @@
 # Using Arrays
 
 ---
+## Array Memory Layout
+
+![array_memory_layout](svg/courses/languages/bash/bash-scripting/20_arrays/array_memory_layout.svg)
+
+---
 ## Creating Arrays
 
 ```bash

@@ -1,6 +1,11 @@
 # Timing
 
 ---
+## Real vs User vs Sys Time
+
+![real_user_sys_time](svg/courses/languages/bash/bash-scripting/22_timing/real_user_sys_time.svg)
+
+---
 ## The `time` Built-in
 
 ```bash

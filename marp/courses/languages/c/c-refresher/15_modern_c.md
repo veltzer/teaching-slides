@@ -21,6 +21,12 @@
 
 ---
 
+## C Standards Timeline
+
+![C standards evolution from K&R to C23 with key features per standard](svg/courses/languages/c/c-refresher/15_modern_c/c_standards_timeline.svg)
+
+---
+
 ## Designated Initializers (C99)
 
 ```c

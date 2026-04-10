@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Left panel: anatomy blocks -->
+  <!-- Preprocessor Directives -->
+  <rect x="60" y="50" width="520" height="76" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="50" width="8" height="76" rx="3" fill="url(#grad-accent)"/>
+  <text x="86" y="78" font-family="monospace" font-size="17" fill="#0d47a1" font-weight="bold">#include &lt;stdio.h&gt;</text>
+  <text x="86" y="101" font-family="monospace" font-size="17" fill="#0d47a1">#include &lt;stdlib.h&gt;</text>
+  <text x="610" y="92" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" font-weight="bold">Preprocessor Directives</text>
+  <text x="610" y="114" font-family="Arial, sans-serif" font-size="14" fill="#555555">Pull in standard headers</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="126" x2="320" y2="152" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Macro Definitions -->
+  <rect x="60" y="152" width="520" height="58" rx="6" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="152" width="8" height="58" rx="3" fill="url(#grad-orange)"/>
+  <text x="86" y="177" font-family="monospace" font-size="17" fill="#bf360c" font-weight="bold">#define MAX_SIZE 100</text>
+  <text x="86" y="199" font-family="monospace" font-size="17" fill="#bf360c">#define SQUARE(x) ((x)*(x))</text>
+  <text x="610" y="178" font-family="Arial, sans-serif" font-size="16" fill="#e65100" font-weight="bold">Macro Definitions</text>
+  <text x="610" y="200" font-family="Arial, sans-serif" font-size="14" fill="#555555">Constants and function-like macros</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="210" x2="320" y2="236" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Global Declarations -->
+  <rect x="60" y="236" width="520" height="58" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="236" width="8" height="58" rx="3" fill="url(#grad-green)"/>
+  <text x="86" y="261" font-family="monospace" font-size="17" fill="#1b5e20" font-weight="bold">int global_var = 0;</text>
+  <text x="86" y="283" font-family="monospace" font-size="17" fill="#1b5e20">int helper(int a, int b);</text>
+  <text x="610" y="261" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32" font-weight="bold">Global Variables &amp; Prototypes</text>
+  <text x="610" y="283" font-family="Arial, sans-serif" font-size="14" fill="#555555">Forward declarations; file scope</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="294" x2="320" y2="320" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- main() function -->
+  <rect x="60" y="320" width="520" height="166" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="60" y="320" width="8" height="166" rx="3" fill="url(#grad-accent)"/>
+  <text x="86" y="346" font-family="monospace" font-size="17" fill="#0d47a1" font-weight="bold">int main(void) &#123;</text>
+  <text x="86" y="369" font-family="monospace" font-size="17" fill="#0d47a1">    /* local variables */</text>
+  <text x="86" y="392" font-family="monospace" font-size="17" fill="#0d47a1">    int result;</text>
+  <text x="86" y="415" font-family="monospace" font-size="17" fill="#0d47a1">    /* function body */</text>
+  <text x="86" y="438" font-family="monospace" font-size="17" fill="#0d47a1">    result = helper(3, 4);</text>
+  <text x="86" y="461" font-family="monospace" font-size="17" fill="#0d47a1">    return 0;  /* success */</text>
+  <text x="86" y="475" font-family="monospace" font-size="17" fill="#0d47a1">&#125;</text>
+  <text x="610" y="345" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" font-weight="bold">main() — Entry Point</text>
+  <text x="610" y="367" font-family="Arial, sans-serif" font-size="14" fill="#555555">Program execution starts here</text>
+  <text x="610" y="389" font-family="Arial, sans-serif" font-size="14" fill="#555555">• Local variables (block scope)</text>
+  <text x="610" y="411" font-family="Arial, sans-serif" font-size="14" fill="#555555">• Statements &amp; function calls</text>
+  <text x="610" y="433" font-family="Arial, sans-serif" font-size="14" fill="#555555">• return 0 → success (POSIX)</text>
+  <text x="610" y="455" font-family="Arial, sans-serif" font-size="14" fill="#555555">• return 1+ → failure code</text>
+
+  <!-- Arrow -->
+  <line x1="320" y1="486" x2="320" y2="512" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Helper functions -->
+  <rect x="60" y="512" width="520" height="76" rx="6" fill="#fce4ec" stroke="#c2185b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="512" width="8" height="76" rx="3" fill="#c2185b"/>
+  <text x="86" y="537" font-family="monospace" font-size="17" fill="#880e4f" font-weight="bold">int helper(int a, int b) &#123;</text>
+  <text x="86" y="560" font-family="monospace" font-size="17" fill="#880e4f">    return a + b;</text>
+  <text x="86" y="578" font-family="monospace" font-size="17" fill="#880e4f">&#125;</text>
+  <text x="610" y="537" font-family="Arial, sans-serif" font-size="16" fill="#880e4f" font-weight="bold">Helper Functions</text>
+  <text x="610" y="559" font-family="Arial, sans-serif" font-size="14" fill="#555555">Defined after main (or before, if no</text>
+  <text x="610" y="581" font-family="Arial, sans-serif" font-size="14" fill="#555555">prototype declared above)</text>
+
+  <!-- Divider line between panels -->
+  <line x1="595" y1="40" x2="595" y2="610" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Right panel legend: key points summary -->
+  <rect x="610" y="610" width="630" height="2" fill="#e0e0e0"/>
+
+  <!-- Section label top right -->
+  <rect x="870" y="50" width="370" height="44" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1055" y="78" font-family="Arial, sans-serif" font-size="19" fill="#ffffff" font-weight="bold" text-anchor="middle">C Program Anatomy</text>
+
+  <!-- Key rules box -->
+  <rect x="870" y="114" width="370" height="188" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1" filter="url(#shadow)"/>
+  <text x="890" y="140" font-family="Arial, sans-serif" font-size="15" fill="#1565c0" font-weight="bold">Execution Order (runtime)</text>
+  <text x="890" y="162" font-family="Arial, sans-serif" font-size="14" fill="#333333">1. OS calls main()</text>
+  <text x="890" y="184" font-family="Arial, sans-serif" font-size="14" fill="#333333">2. main() calls helper functions</text>
+  <text x="890" y="206" font-family="Arial, sans-serif" font-size="14" fill="#333333">3. Functions return values</text>
+  <text x="890" y="228" font-family="Arial, sans-serif" font-size="14" fill="#333333">4. main() returns exit code</text>
+  <text x="890" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333333">5. OS receives exit code</text>
+  <text x="890" y="285" font-family="Arial, sans-serif" font-size="13" fill="#888888">Preprocessor runs BEFORE compiler</text>
+
+  <!-- Translation order box -->
+  <rect x="870" y="322" width="370" height="188" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1" filter="url(#shadow)"/>
+  <text x="890" y="348" font-family="Arial, sans-serif" font-size="15" fill="#1565c0" font-weight="bold">Compilation Order (build time)</text>
+  <text x="890" y="370" font-family="Arial, sans-serif" font-size="14" fill="#333333">1. Preprocessor expands #include/#define</text>
+  <text x="890" y="392" font-family="Arial, sans-serif" font-size="14" fill="#333333">2. Compiler reads top-to-bottom</text>
+  <text x="890" y="414" font-family="Arial, sans-serif" font-size="14" fill="#333333">3. Functions must be declared before use</text>
+  <text x="890" y="436" font-family="Arial, sans-serif" font-size="14" fill="#333333">   (prototype or full definition)</text>
+  <text x="890" y="458" font-family="Arial, sans-serif" font-size="14" fill="#333333">4. Linker connects object files</text>
+  <text x="890" y="493" font-family="Arial, sans-serif" font-size="13" fill="#888888">Use -Wall -Wextra for strict checking</text>
+
+  <!-- return values box -->
+  <rect x="870" y="530" width="370" height="88" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="1" filter="url(#shadow)"/>
+  <text x="890" y="556" font-family="Arial, sans-serif" font-size="15" fill="#e65100" font-weight="bold">Return Value Convention</text>
+  <text x="890" y="578" font-family="Arial, sans-serif" font-size="14" fill="#333333">return 0  →  EXIT_SUCCESS (OK)</text>
+  <text x="890" y="600" font-family="Arial, sans-serif" font-size="14" fill="#333333">return 1  →  EXIT_FAILURE (error)</text>
+</svg>

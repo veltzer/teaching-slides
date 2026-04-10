@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#1e88e5"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#f8f9fa"/>
+
+  <!-- Top flow: alias expansion pipeline -->
+  <!-- Step 1: User types command -->
+  <rect x="40" y="30" width="210" height="80" rx="10" fill="#1565c0" filter="url(#shadow)"/>
+  <text x="145" y="62" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">User Types</text>
+  <text x="145" y="82" font-family="monospace" font-size="18" fill="#f9e2af" text-anchor="middle">ll</text>
+  <text x="145" y="100" font-family="sans-serif" font-size="11" fill="#bbdefb" text-anchor="middle">interactive shell</text>
+
+  <!-- Arrow 1 -->
+  <line x1="250" y1="70" x2="310" y2="70" stroke="#1e88e5" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Alias table lookup -->
+  <rect x="310" y="30" width="240" height="80" rx="10" fill="#ffffff" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="52" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Alias Table Lookup</text>
+  <text x="430" y="72" font-family="monospace" font-size="12" fill="#333333" text-anchor="middle">ll → ls -la</text>
+  <text x="430" y="90" font-family="monospace" font-size="12" fill="#333333" text-anchor="middle">gs → git status</text>
+  <text x="430" y="105" font-family="monospace" font-size="11" fill="#888888" text-anchor="middle">(hash map in shell memory)</text>
+
+  <!-- Arrow 2 -->
+  <line x1="550" y1="70" x2="620" y2="70" stroke="#1e88e5" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="585" y="62" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">found!</text>
+
+  <!-- Step 3: Substituted text -->
+  <rect x="620" y="30" width="210" height="80" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="725" y="52" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Substituted Text</text>
+  <text x="725" y="75" font-family="monospace" font-size="18" fill="#1b5e20" text-anchor="middle">ls -la</text>
+  <text x="725" y="100" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">+ any trailing args</text>
+
+  <!-- Arrow 3 -->
+  <line x1="830" y1="70" x2="900" y2="70" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <!-- Step 4: Parsed and executed -->
+  <rect x="900" y="30" width="210" height="80" rx="10" fill="#2e7d32" filter="url(#shadow)"/>
+  <text x="1005" y="55" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Parsed and</text>
+  <text x="1005" y="73" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Executed</text>
+  <text x="1005" y="100" font-family="monospace" font-size="11" fill="#c8e6c9" text-anchor="middle">runs /bin/ls -la .</text>
+
+  <!-- NOT FOUND path from alias table -->
+  <line x1="430" y1="110" x2="430" y2="140" stroke="#e53935" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="460" y="130" font-family="sans-serif" font-size="11" fill="#e53935">not found</text>
+  <rect x="350" y="140" width="160" height="36" rx="6" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="430" y="163" font-family="sans-serif" font-size="12" fill="#e53935" text-anchor="middle">use as-is (no expansion)</text>
+
+  <!-- Middle section: alias table visual -->
+  <rect x="40" y="200" width="480" height="280" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="40" y="200" width="480" height="44" rx="12" fill="url(#grad-accent)"/>
+  <rect x="40" y="232" width="480" height="12" fill="#1565c0"/>
+  <text x="280" y="230" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Alias Table (in shell memory)</text>
+
+  <!-- Table header -->
+  <rect x="55" y="256" width="200" height="28" rx="4" fill="#e3f2fd"/>
+  <rect x="275" y="256" width="230" height="28" rx="4" fill="#e3f2fd"/>
+  <text x="155" y="275" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Alias Name</text>
+  <text x="390" y="275" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Expanded Value</text>
+
+  <!-- Table rows -->
+  <line x1="55" y1="284" x2="500" y2="284" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="155" y="304" font-family="monospace" font-size="14" fill="#1e88e5" text-anchor="middle">ll</text>
+  <text x="390" y="304" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">ls -la</text>
+  <line x1="55" y1="312" x2="500" y2="312" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="155" y="332" font-family="monospace" font-size="14" fill="#1e88e5" text-anchor="middle">gs</text>
+  <text x="390" y="332" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">git status</text>
+  <line x1="55" y1="340" x2="500" y2="340" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="155" y="360" font-family="monospace" font-size="14" fill="#1e88e5" text-anchor="middle">..</text>
+  <text x="390" y="360" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">cd ..</text>
+  <line x1="55" y1="368" x2="500" y2="368" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="155" y="388" font-family="monospace" font-size="14" fill="#1e88e5" text-anchor="middle">rm</text>
+  <text x="390" y="388" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">rm -i</text>
+  <line x1="55" y1="396" x2="500" y2="396" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="155" y="416" font-family="monospace" font-size="14" fill="#1e88e5" text-anchor="middle">update</text>
+  <text x="390" y="416" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">sudo apt update &amp;&amp; sudo apt upgrade</text>
+  <line x1="55" y1="424" x2="500" y2="424" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="155" y="444" font-family="monospace" font-size="14" fill="#1e88e5" text-anchor="middle">topcpu</text>
+  <text x="390" y="444" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">ps aux --sort=-%cpu | head -10</text>
+  <line x1="55" y1="452" x2="500" y2="452" stroke="#f0f0f0" stroke-width="1"/>
+  <text x="55" y="472" font-family="sans-serif" font-size="11" fill="#888888">Defined with:  alias name='value'    Removed with:  unalias name</text>
+
+  <!-- Right side: important behaviors -->
+  <rect x="560" y="200" width="680" height="280" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="560" y="200" width="680" height="44" rx="12" fill="#f57c00"/>
+  <rect x="560" y="232" width="680" height="12" fill="#f57c00"/>
+  <text x="900" y="230" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Important Behaviors</text>
+
+  <!-- Behavior 1: Interactive only -->
+  <rect x="575" y="256" width="650" height="68" rx="8" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="595" y="278" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e65100">Interactive shells only (by default)</text>
+  <text x="595" y="298" font-family="sans-serif" font-size="13" fill="#555555">Aliases are NOT expanded in scripts — use functions instead.</text>
+  <text x="595" y="315" font-family="monospace" font-size="12" fill="#555555">shopt -s expand_aliases  ← force in script (not recommended)</text>
+
+  <!-- Behavior 2: Text substitution -->
+  <rect x="575" y="334" width="650" height="68" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="595" y="356" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Pure text substitution — happens before parsing</text>
+  <text x="595" y="376" font-family="sans-serif" font-size="13" fill="#555555">ll -h /tmp   →   ls -la -h /tmp   (args appended after expansion)</text>
+  <text x="595" y="396" font-family="sans-serif" font-size="13" fill="#555555">Cannot inject args in the middle — use a function for that.</text>
+
+  <!-- Behavior 3: Cannot take args in middle -->
+  <rect x="575" y="412" width="650" height="60" rx="8" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="595" y="434" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e53935">No $1, $2 inside alias definitions</text>
+  <text x="595" y="454" font-family="monospace" font-size="12" fill="#555555">alias backup='cp $1 $1.bak'   ← WRONG ($1 is not alias param)</text>
+  <text x="595" y="468" font-family="monospace" font-size="12" fill="#2e7d32">backup() { cp "$1" "$1.bak"; }  ← RIGHT (use a function)</text>
+
+  <!-- Bottom: persistent aliases -->
+  <rect x="40" y="500" width="1200" height="110" rx="12" fill="#1e1e2e" filter="url(#shadow)"/>
+  <rect x="40" y="500" width="1200" height="38" rx="12" fill="#2e7d32"/>
+  <rect x="40" y="526" width="1200" height="12" fill="#2e7d32"/>
+  <text x="640" y="525" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Making Aliases Permanent — add to ~/.bashrc or ~/.bash_aliases</text>
+  <text x="70" y="560" font-family="monospace" font-size="13" fill="#585b70"># ~/.bash_aliases</text>
+  <text x="70" y="578" font-family="monospace" font-size="13" fill="#a6e3a1">alias</text>
+  <text x="108" y="578" font-family="monospace" font-size="13" fill="#cdd6f4"> ll='ls -la'</text>
+  <text x="290" y="578" font-family="monospace" font-size="13" fill="#a6e3a1">   alias</text>
+  <text x="344" y="578" font-family="monospace" font-size="13" fill="#cdd6f4"> gs='git status'</text>
+  <text x="560" y="578" font-family="monospace" font-size="13" fill="#a6e3a1">   alias</text>
+  <text x="614" y="578" font-family="monospace" font-size="13" fill="#cdd6f4"> ..='cd ..'</text>
+  <text x="70" y="598" font-family="monospace" font-size="13" fill="#585b70"># Reload:   </text>
+  <text x="170" y="598" font-family="monospace" font-size="13" fill="#a6e3a1">source</text>
+  <text x="218" y="598" font-family="monospace" font-size="13" fill="#cdd6f4"> ~/.bashrc</text>
+  <text x="390" y="598" font-family="monospace" font-size="12" fill="#585b70">   # Bypass alias:   \ll   or   command ll</text>
+</svg>

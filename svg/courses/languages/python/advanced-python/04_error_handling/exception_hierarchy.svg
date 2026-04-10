@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Helper line drawing macros via paths -->
+
+  <!-- BaseException (root) -->
+  <rect x="490" y="20" width="300" height="48" rx="10" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <text x="640" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">BaseException</text>
+
+  <!-- Lines from BaseException to its children -->
+  <!-- to SystemExit -->
+  <line x1="490" y1="44" x2="155" y2="108" stroke="#9c27b0" stroke-width="1.8"/>
+  <!-- to KeyboardInterrupt -->
+  <line x1="535" y1="68" x2="440" y2="108" stroke="#9c27b0" stroke-width="1.8"/>
+  <!-- to GeneratorExit -->
+  <line x1="705" y1="68" x2="730" y2="108" stroke="#9c27b0" stroke-width="1.8"/>
+  <!-- to Exception -->
+  <line x1="790" y1="44" x2="1060" y2="108" stroke="#9c27b0" stroke-width="1.8"/>
+
+  <!-- SystemExit -->
+  <rect x="60" y="108" width="190" height="40" rx="8" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="155" y="133" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">SystemExit</text>
+
+  <!-- KeyboardInterrupt -->
+  <rect x="310" y="108" width="200" height="40" rx="8" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="410" y="133" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">KeyboardInterrupt</text>
+
+  <!-- GeneratorExit -->
+  <rect x="610" y="108" width="190" height="40" rx="8" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="705" y="133" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">GeneratorExit</text>
+
+  <!-- Exception -->
+  <rect x="910" y="108" width="300" height="48" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1060" y="138" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Exception</text>
+  <text x="1060" y="155" font-family="Arial, sans-serif" font-size="12" fill="#90caf9" text-anchor="middle">(most custom exceptions inherit from here)</text>
+
+  <!-- Lines from Exception to children -->
+  <!-- ArithmeticError -->
+  <line x1="970" y1="156" x2="640" y2="218" stroke="#1e88e5" stroke-width="1.8"/>
+  <!-- LookupError -->
+  <line x1="1000" y1="156" x2="880" y2="218" stroke="#1e88e5" stroke-width="1.8"/>
+  <!-- ValueError -->
+  <line x1="1060" y1="156" x2="1060" y2="218" stroke="#1e88e5" stroke-width="1.8"/>
+  <!-- TypeError -->
+  <line x1="1120" y1="156" x2="1210" y2="218" stroke="#1e88e5" stroke-width="1.8"/>
+  <!-- AttributeError -->
+  <!-- line x1="1130" y1="156" x2="1240" y2="218" stroke="#1e88e5" stroke-width="1.8"/ -->
+
+  <!-- ArithmeticError -->
+  <rect x="515" y="218" width="200" height="40" rx="8" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="615" y="243" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">ArithmeticError</text>
+
+  <!-- LookupError -->
+  <rect x="760" y="218" width="180" height="40" rx="8" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="850" y="243" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">LookupError</text>
+
+  <!-- ValueError -->
+  <rect x="970" y="218" width="170" height="40" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1055" y="243" font-family="Arial, sans-serif" font-size="15" fill="#1565c0" text-anchor="middle" font-weight="bold">ValueError</text>
+
+  <!-- TypeError -->
+  <rect x="1165" y="218" width="90" height="40" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1210" y="243" font-family="Arial, sans-serif" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="bold">TypeError</text>
+
+  <!-- Lines from ArithmeticError to children -->
+  <line x1="560" y1="258" x2="480" y2="318" stroke="#2e7d32" stroke-width="1.5"/>
+  <line x1="615" y1="258" x2="615" y2="318" stroke="#2e7d32" stroke-width="1.5"/>
+  <line x1="680" y1="258" x2="770" y2="318" stroke="#2e7d32" stroke-width="1.5"/>
+
+  <!-- ZeroDivisionError -->
+  <rect x="340" y="318" width="210" height="36" rx="7" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="445" y="341" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" text-anchor="middle">ZeroDivisionError</text>
+
+  <!-- OverflowError -->
+  <rect x="555" y="318" width="130" height="36" rx="7" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="620" y="341" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" text-anchor="middle">OverflowError</text>
+
+  <!-- FloatingPointError -->
+  <rect x="700" y="318" width="175" height="36" rx="7" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="787" y="341" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" text-anchor="middle">FloatingPointError</text>
+
+  <!-- Lines from LookupError to children -->
+  <line x1="820" y1="258" x2="880" y2="318" stroke="#2e7d32" stroke-width="1.5"/>
+  <line x1="880" y1="258" x2="1000" y2="318" stroke="#2e7d32" stroke-width="1.5"/>
+
+  <!-- IndexError -->
+  <rect x="810" y="318" width="130" height="36" rx="7" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="875" y="341" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" text-anchor="middle">IndexError</text>
+
+  <!-- KeyError -->
+  <rect x="950" y="318" width="120" height="36" rx="7" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1010" y="341" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" text-anchor="middle">KeyError</text>
+
+  <!-- Extra direct Exception subclasses -->
+  <!-- ImportError -->
+  <rect x="40" y="218" width="145" height="40" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="112" y="243" font-family="Arial, sans-serif" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="bold">ImportError</text>
+  <line x1="940" y1="156" x2="112" y2="218" stroke="#1e88e5" stroke-width="1.3" stroke-dasharray="5,3"/>
+
+  <!-- AttributeError -->
+  <rect x="200" y="218" width="160" height="40" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="280" y="243" font-family="Arial, sans-serif" font-size="14" fill="#1565c0" text-anchor="middle" font-weight="bold">AttributeError</text>
+  <line x1="945" y1="156" x2="280" y2="218" stroke="#1e88e5" stroke-width="1.3" stroke-dasharray="5,3"/>
+
+  <!-- IOError/OSError -->
+  <rect x="1085" y="318" width="145" height="36" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1157" y="341" font-family="Arial, sans-serif" font-size="14" fill="#1565c0" text-anchor="middle">OSError / IOError</text>
+  <line x1="1060" y1="258" x2="1157" y2="318" stroke="#1e88e5" stroke-width="1.3" stroke-dasharray="5,3"/>
+
+  <!-- FileNotFoundError under OSError -->
+  <line x1="1157" y1="354" x2="1157" y2="404" stroke="#1e88e5" stroke-width="1.3"/>
+  <rect x="1085" y="404" width="175" height="36" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1172" y="427" font-family="Arial, sans-serif" font-size="13" fill="#1565c0" text-anchor="middle">FileNotFoundError</text>
+
+  <!-- Custom exception example -->
+  <rect x="40" y="440" width="880" height="130" rx="10" fill="#fafafa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="480" y="468" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="middle">Building a Custom Exception Hierarchy</text>
+  <text x="80" y="494" font-family="monospace" font-size="14" fill="#1565c0">class AppError(Exception): pass</text>
+  <text x="80" y="516" font-family="monospace" font-size="14" fill="#2e7d32">class DatabaseError(AppError): pass</text>
+  <text x="80" y="538" font-family="monospace" font-size="14" fill="#f57c00">class ConnectionError(DatabaseError): pass</text>
+  <text x="80" y="560" font-family="monospace" font-size="14" fill="#f57c00">class QueryError(DatabaseError): pass</text>
+
+  <!-- Legend -->
+  <rect x="960" y="440" width="280" height="130" rx="10" fill="#fafafa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1100" y="465" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333" text-anchor="middle">Legend</text>
+  <rect x="975" y="478" width="20" height="14" rx="3" fill="url(#grad-purple)"/>
+  <text x="1005" y="491" font-family="Arial, sans-serif" font-size="13" fill="#555">Root — BaseException</text>
+  <rect x="975" y="502" width="20" height="14" rx="3" fill="url(#grad-orange)"/>
+  <text x="1005" y="515" font-family="Arial, sans-serif" font-size="13" fill="#555">System-level signals</text>
+  <rect x="975" y="526" width="20" height="14" rx="3" fill="url(#grad-accent)"/>
+  <text x="1005" y="539" font-family="Arial, sans-serif" font-size="13" fill="#555">Exception (catch-all)</text>
+  <rect x="975" y="550" width="20" height="14" rx="3" fill="url(#grad-green)"/>
+  <text x="1005" y="563" font-family="Arial, sans-serif" font-size="13" fill="#555">Mid-level categories</text>
+</svg>

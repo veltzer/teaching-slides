@@ -13,6 +13,12 @@ Typical memory layout of a program:
 
 ---
 
+## Program Memory Layout
+
+![Program virtual memory layout showing stack, heap, BSS, data, and text segments with addresses and descriptions](svg/courses/languages/assembly/assembly-programming-using-gas/13_memory_managements/program_memory_layout.svg)
+
+---
+
 ## Static Memory Allocation
 
 - Allocated at compile time

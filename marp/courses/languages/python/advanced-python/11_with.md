@@ -98,6 +98,12 @@ finally:
 
 ---
 
+## Context Manager Protocol
+
+![context_manager_protocol](svg/courses/languages/python/advanced-python/11_with/context_manager_protocol.svg)
+
+---
+
 ## Context Managers
 
 ## What are Context Managers?

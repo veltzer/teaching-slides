@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-tool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5e35b1"/>
+      <stop offset="100%" stop-color="#4527a0"/>
+    </linearGradient>
+    <linearGradient id="grad-file" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00897b"/>
+      <stop offset="100%" stop-color="#00695c"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title bar -->
+  <rect x="40" y="30" width="1200" height="48" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="62" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" font-weight="bold" text-anchor="middle">C Compilation Pipeline</text>
+
+  <!-- ====== Stage 1: Source file ====== -->
+  <!-- File box -->
+  <rect x="40" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="120" width="155" height="30" rx="8" fill="url(#grad-file)"/>
+  <rect x="40" y="140" width="155" height="10" fill="url(#grad-file)"/>
+  <text x="117" y="142" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">source.c</text>
+  <text x="117" y="172" font-family="monospace" font-size="13" fill="#004d40" text-anchor="middle">#include ...</text>
+  <text x="117" y="191" font-family="monospace" font-size="13" fill="#004d40" text-anchor="middle">#define ...</text>
+  <text x="117" y="210" font-family="monospace" font-size="13" fill="#004d40" text-anchor="middle">int main() {...}</text>
+
+  <!-- Arrow -->
+  <line x1="195" y1="170" x2="245" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool: Preprocessor (cpp) -->
+  <rect x="246" y="135" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
+  <text x="323" y="163" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Preprocessor</text>
+  <text x="323" y="182" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">cpp / gcc -E</text>
+  <text x="323" y="199" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">macro expand · #include</text>
+
+  <!-- Arrow -->
+  <line x1="401" y1="170" x2="451" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- File: preprocessed.i -->
+  <rect x="452" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="452" y="120" width="155" height="30" rx="8" fill="url(#grad-file)"/>
+  <rect x="452" y="140" width="155" height="10" fill="url(#grad-file)"/>
+  <text x="529" y="142" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">preprocessed.i</text>
+  <text x="529" y="172" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">// no directives</text>
+  <text x="529" y="191" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">int printf(...);</text>
+  <text x="529" y="210" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">int main() {...}</text>
+
+  <!-- Arrow -->
+  <line x1="607" y1="170" x2="657" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool: Compiler (cc1) -->
+  <rect x="658" y="135" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
+  <text x="735" y="163" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Compiler</text>
+  <text x="735" y="182" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">cc1 / gcc -S</text>
+  <text x="735" y="199" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">parse · optimize · codegen</text>
+
+  <!-- Arrow -->
+  <line x1="813" y1="170" x2="863" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- File: assembly.s -->
+  <rect x="864" y="120" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="864" y="120" width="155" height="30" rx="8" fill="url(#grad-file)"/>
+  <rect x="864" y="140" width="155" height="10" fill="url(#grad-file)"/>
+  <text x="941" y="142" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">assembly.s</text>
+  <text x="941" y="172" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">movl $0, %eax</text>
+  <text x="941" y="191" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">call printf</text>
+  <text x="941" y="210" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">ret</text>
+
+  <!-- Arrow -->
+  <line x1="1019" y1="170" x2="1069" y2="170" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool: Assembler (as) -->
+  <rect x="1070" y="135" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
+  <text x="1147" y="163" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Assembler</text>
+  <text x="1147" y="182" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">as / gcc -c</text>
+  <text x="1147" y="199" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">asm → machine code</text>
+
+  <!-- ====== Second row ====== -->
+  <!-- Arrow down from assembler -->
+  <line x1="1147" y1="205" x2="1147" y2="280" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- File: object.o -->
+  <rect x="1070" y="282" width="155" height="100" rx="8" fill="url(#grad-surface)" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1070" y="282" width="155" height="30" rx="8" fill="url(#grad-file)"/>
+  <rect x="1070" y="302" width="155" height="10" fill="url(#grad-file)"/>
+  <text x="1147" y="304" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">object.o</text>
+  <text x="1147" y="334" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">ELF binary</text>
+  <text x="1147" y="353" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">symbols: extern</text>
+  <text x="1147" y="372" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">unresolved refs</text>
+
+  <!-- Arrow left from object.o -->
+  <line x1="1070" y1="332" x2="1020" y2="332" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool: Linker (ld) -->
+  <rect x="864" y="297" width="155" height="70" rx="8" fill="url(#grad-tool)" filter="url(#shadow)"/>
+  <text x="941" y="325" font-family="Arial, sans-serif" font-size="15" fill="#ffffff" font-weight="bold" text-anchor="middle">Linker</text>
+  <text x="941" y="344" font-family="monospace" font-size="13" fill="#d1c4e9" text-anchor="middle">ld / gcc (link)</text>
+  <text x="941" y="361" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle">resolve symbols</text>
+
+  <!-- Libraries input -->
+  <rect x="864" y="390" width="155" height="40" rx="6" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="941" y="415" font-family="Arial, sans-serif" font-size="13" fill="#e65100" text-anchor="middle">libc.a / libc.so</text>
+  <line x1="941" y1="390" x2="941" y2="367" stroke="#f57c00" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <!-- Arrow left from linker -->
+  <line x1="864" y1="332" x2="814" y2="332" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- File: executable -->
+  <rect x="628" y="282" width="185" height="100" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="628" y="282" width="185" height="30" rx="8" fill="url(#grad-file)"/>
+  <rect x="628" y="302" width="185" height="10" fill="url(#grad-file)"/>
+  <text x="720" y="304" font-family="monospace" font-size="14" fill="#ffffff" font-weight="bold" text-anchor="middle">./program</text>
+  <text x="720" y="334" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">ELF executable</text>
+  <text x="720" y="353" font-family="monospace" font-size="12" fill="#004d40" text-anchor="middle">fully linked</text>
+  <text x="720" y="372" font-family="monospace" font-size="12" fill="#1b5e20" font-weight="bold" text-anchor="middle">ready to run!</text>
+
+  <!-- Commands reference panel -->
+  <rect x="40" y="282" width="570" height="160" rx="8" fill="url(#grad-surface)" stroke="#cccccc" stroke-width="1" filter="url(#shadow)"/>
+  <text x="60" y="308" font-family="Arial, sans-serif" font-size="15" fill="#1565c0" font-weight="bold">GCC Flags to Inspect Each Stage</text>
+  <text x="60" y="332" font-family="monospace" font-size="14" fill="#333333">gcc -E source.c -o preprocessed.i</text>
+  <text x="60" y="354" font-family="monospace" font-size="14" fill="#333333">gcc -S source.c -o assembly.s</text>
+  <text x="60" y="376" font-family="monospace" font-size="14" fill="#333333">gcc -c source.c -o object.o</text>
+  <text x="60" y="398" font-family="monospace" font-size="14" fill="#333333">gcc source.c -o program  </text>
+  <text x="358" y="398" font-family="Arial, sans-serif" font-size="13" fill="#888888">(all stages)</text>
+  <text x="60" y="428" font-family="Arial, sans-serif" font-size="13" fill="#888888">Add -v to see each sub-command invoked by gcc</text>
+
+  <!-- Bottom notes -->
+  <rect x="40" y="460" width="1200" height="88" rx="8" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="60" y="484" font-family="Arial, sans-serif" font-size="15" fill="#1565c0" font-weight="bold">Key Points</text>
+  <text x="60" y="506" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Preprocessor runs first: expands macros, includes headers, strips comments — output is plain C text</text>
+  <text x="60" y="526" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Compiler performs type checking, optimization, and code generation — this is where most errors are caught</text>
+  <text x="60" y="546" font-family="Arial, sans-serif" font-size="14" fill="#333333">• Linker resolves extern symbols and pulls in library code — produces the final executable binary</text>
+</svg>

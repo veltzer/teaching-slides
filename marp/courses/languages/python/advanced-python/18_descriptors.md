@@ -78,6 +78,12 @@ del obj.descriptor   # Calls MyDescriptor.__delete__(descriptor, obj)
 
 ---
 
+## Descriptor Protocol: Lookup Chain and Priority
+
+![descriptor_protocol](svg/courses/languages/python/advanced-python/18_descriptors/descriptor_protocol.svg)
+
+---
+
 ## Types of Descriptors
 
 ## Data vs. Non-Data Descriptors

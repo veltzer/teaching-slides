@@ -10,6 +10,12 @@
 
 ---
 
+## Python Web Stack
+
+![python_web_stack](svg/courses/languages/python/advanced-python/19_web/python_web_stack.svg)
+
+---
+
 ## Web Development with Python
 
 ## The Python Web Ecosystem

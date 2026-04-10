@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e7d32"/>
+      <stop offset="100%" stop-color="#1b5e20"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f57c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1e88e5"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#f57c00"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1280" height="52" fill="url(#grad-accent)"/>
+  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Python Class Creation Pipeline</text>
+
+  <!-- Section labels -->
+  <text x="380" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">Class Creation (metaclass.__new__ / __call__)</text>
+  <text x="960" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100" text-anchor="middle">Instance Creation (Foo())</text>
+
+  <!-- Vertical divider -->
+  <line x1="680" y1="60" x2="680" y2="620" stroke="#dddddd" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- ===== CLASS CREATION PIPELINE (left) ===== -->
+
+  <!-- Step 1 -->
+  <rect x="60" y="88" width="300" height="48" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="210" y="108" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">class Foo(Base):</text>
+  <text x="210" y="126" font-family="sans-serif" font-size="12" fill="#cce5ff" text-anchor="middle">Python sees a class statement</text>
+
+  <line x1="210" y1="136" x2="210" y2="162" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="60" y="162" width="300" height="48" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="210" y="183" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Find metaclass</text>
+  <text x="210" y="200" font-family="monospace" font-size="11" fill="#555555" text-anchor="middle">type (default) or custom Meta</text>
+
+  <!-- type label -->
+  <rect x="390" y="170" width="170" height="32" rx="6" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="475" y="186" font-family="monospace" font-size="12" font-weight="bold" fill="#e65100" text-anchor="middle">default: type</text>
+  <text x="475" y="199" font-family="sans-serif" font-size="10" fill="#888888" text-anchor="middle">class Foo(metaclass=Meta)</text>
+  <line x1="390" y1="186" x2="360" y2="186" stroke="#f57c00" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+  <line x1="210" y1="210" x2="210" y2="236" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="60" y="236" width="300" height="48" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="210" y="257" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">metaclass.__prepare__(name, bases)</text>
+  <text x="210" y="274" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">returns namespace dict for class body</text>
+
+  <line x1="210" y1="284" x2="210" y2="310" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="60" y="310" width="300" height="48" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="210" y="331" font-family="monospace" font-size="13" fill="#1565c0" text-anchor="middle">exec(class body)</text>
+  <text x="210" y="348" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">populates namespace dict with attrs/methods</text>
+
+  <line x1="210" y1="358" x2="210" y2="384" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5 -->
+  <rect x="60" y="384" width="300" height="48" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="210" y="405" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">metaclass.__new__(mcs, name,</text>
+  <text x="210" y="422" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">  bases, namespace)</text>
+
+  <line x1="210" y1="432" x2="210" y2="458" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 6 -->
+  <rect x="60" y="458" width="300" height="48" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="210" y="479" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">metaclass.__init__(cls, name,</text>
+  <text x="210" y="496" font-family="monospace" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">  bases, namespace)</text>
+
+  <line x1="210" y1="506" x2="210" y2="532" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Result: class object -->
+  <rect x="80" y="532" width="260" height="44" rx="22" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="210" y="553" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">class object Foo created</text>
+  <text x="210" y="568" font-family="sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">bound to name "Foo" in namespace</text>
+
+  <!-- ===== INSTANCE CREATION PIPELINE (right) ===== -->
+
+  <!-- Step A -->
+  <rect x="720" y="88" width="280" height="48" rx="8" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="860" y="108" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Foo(arg1, arg2)</text>
+  <text x="860" y="126" font-family="sans-serif" font-size="12" fill="#fff8f0" text-anchor="middle">calling the class object</text>
+
+  <line x1="860" y1="136" x2="860" y2="162" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step B -->
+  <rect x="720" y="162" width="280" height="48" rx="8" fill="url(#grad-surface)" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="183" font-family="monospace" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">type.__call__(cls, *args)</text>
+  <text x="860" y="200" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">metaclass __call__ orchestrates creation</text>
+
+  <line x1="860" y1="210" x2="860" y2="236" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step C -->
+  <rect x="720" y="236" width="280" height="48" rx="8" fill="url(#grad-surface)" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="257" font-family="monospace" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Foo.__new__(cls, *args)</text>
+  <text x="860" y="274" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">allocates memory, creates raw instance</text>
+
+  <line x1="860" y1="284" x2="860" y2="310" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step D -->
+  <rect x="720" y="310" width="280" height="48" rx="8" fill="url(#grad-surface)" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="331" font-family="monospace" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Foo.__init__(self, *args)</text>
+  <text x="860" y="348" font-family="sans-serif" font-size="11" fill="#555555" text-anchor="middle">initializes instance attributes</text>
+
+  <line x1="860" y1="358" x2="860" y2="384" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Result: instance -->
+  <rect x="740" y="384" width="240" height="44" rx="22" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="860" y="405" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">instance returned</text>
+  <text x="860" y="420" font-family="sans-serif" font-size="11" fill="#c8e6c9" text-anchor="middle">type(instance) == Foo</text>
+
+  <!-- Type hierarchy diagram -->
+  <rect x="720" y="448" width="500" height="154" rx="8" fill="#f9f9f9" stroke="#aaaaaa" stroke-width="1"/>
+  <text x="970" y="468" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333333" text-anchor="middle">Type Hierarchy</text>
+  <!-- boxes -->
+  <rect x="830" y="478" width="140" height="34" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="900" y="499" font-family="monospace" font-size="12" fill="#1565c0" text-anchor="middle">type</text>
+  <rect x="730" y="530" width="140" height="34" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="800" y="551" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">Foo (class)</text>
+  <rect x="930" y="530" width="140" height="34" rx="6" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="1000" y="551" font-family="monospace" font-size="12" fill="#e65100" text-anchor="middle">instance</text>
+  <!-- connecting lines -->
+  <line x1="870" y1="512" x2="800" y2="530" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="930" y1="512" x2="1000" y2="530" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="790" y="525" font-family="sans-serif" font-size="10" fill="#666666">type(Foo)</text>
+  <text x="935" y="525" font-family="sans-serif" font-size="10" fill="#666666">type(inst)</text>
+  <text x="735" y="580" font-family="monospace" font-size="10" fill="#555555">= type</text>
+  <text x="935" y="580" font-family="monospace" font-size="10" fill="#555555">= Foo</text>
+  <text x="750" y="596" font-family="sans-serif" font-size="10" fill="#555555">type(type) = type</text>
+
+  <!-- Bottom info -->
+  <rect x="60" y="592" width="580" height="30" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="350" y="612" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">class MyMeta(type): ...   class Foo(Base, metaclass=MyMeta): ...</text>
+</svg>

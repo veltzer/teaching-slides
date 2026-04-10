@@ -1,6 +1,11 @@
 # Using Associative Arrays
 
 ---
+## Associative Array Structure
+
+![associative_array_structure](svg/courses/languages/bash/bash-scripting/21_associative_arrays/associative_array_structure.svg)
+
+---
 ## Declaring Associative Arrays
 
 ```bash

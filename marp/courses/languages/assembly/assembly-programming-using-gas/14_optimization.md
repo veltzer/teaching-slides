@@ -53,6 +53,12 @@ After:
 ```
 
 ---
+
+## Loop Unrolling: Before vs After
+
+![Side-by-side comparison of original loop vs 4x unrolled loop showing iteration count reduction from 100 to 25 and instruction analysis](svg/courses/languages/assembly/assembly-programming-using-gas/14_optimization/loop_unrolling_before_after.svg)
+
+---
 ## Function Inlining
 - Replace function call with actual code
 - Eliminates call/return overhead

@@ -1,6 +1,11 @@
 # Aliases
 
 ---
+## Alias Expansion Flow
+
+![alias_expansion](svg/courses/languages/bash/bash-scripting/25_aliases/alias_expansion.svg)
+
+---
 ## What is an Alias?
 - A shortcut for a command or command sequence
 - Text substitution before the shell parses the line

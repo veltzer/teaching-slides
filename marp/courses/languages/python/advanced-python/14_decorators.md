@@ -48,6 +48,12 @@ my_function = my_decorator(my_function)
 
 ---
 
+## Decorator Wrapping and Call Flow
+
+![decorator_wrapping](svg/courses/languages/python/advanced-python/14_decorators/decorator_wrapping.svg)
+
+---
+
 ## How Decorators Work
 
 ## Decorator Fundamentals

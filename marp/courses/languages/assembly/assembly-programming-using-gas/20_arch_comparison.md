@@ -18,6 +18,12 @@ x86:
 - eip (instruction pointer)
 
 ---
+
+## x86 vs ARM Register Comparison
+
+![Side-by-side register comparison of x86 CISC and ARM RISC architectures with roles, aliases, and key philosophy differences](svg/courses/languages/assembly/assembly-programming-using-gas/20_arch_comparison/x86_vs_arm_registers.svg)
+
+---
 ## ARM Assembly Example
 
 ```arm

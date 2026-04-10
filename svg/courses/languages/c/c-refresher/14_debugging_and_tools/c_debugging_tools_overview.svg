@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Table outer border -->
+  <rect x="30" y="20" width="1220" height="600" rx="10" fill="#f8f9fa" stroke="#dddddd" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Column header row background -->
+  <rect x="30" y="20" width="1220" height="52" rx="10" fill="url(#grad-header)"/>
+  <!-- Square off bottom-left and bottom-right corners of header -->
+  <rect x="30" y="52" width="1220" height="20" fill="url(#grad-header)"/>
+
+  <!-- Column headers -->
+  <text x="150" y="52" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Tool</text>
+  <text x="490" y="52" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">What It Detects</text>
+  <text x="875" y="52" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Key Command</text>
+  <text x="1145" y="52" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Speed</text>
+
+  <!-- Column dividers in header -->
+  <line x1="270" y1="20" x2="270" y2="72" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <line x1="710" y1="20" x2="710" y2="72" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <line x1="1040" y1="20" x2="1040" y2="72" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 1: GDB -->
+  <!-- ============================================================ -->
+  <rect x="30" y="72" width="1220" height="83" fill="#e3f2fd"/>
+  <!-- tool badge -->
+  <rect x="50" y="83" width="100" height="34" rx="6" fill="#1565c0" filter="url(#shadow)"/>
+  <text x="100" y="105" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">GDB</text>
+  <text x="175" y="105" font-family="sans-serif" font-size="12" fill="#555555">Interactive</text>
+  <text x="175" y="121" font-family="sans-serif" font-size="12" fill="#555555">debugger</text>
+  <!-- what it detects -->
+  <text x="285" y="98" font-family="sans-serif" font-size="13" fill="#222222">Crashes, segfaults, logic bugs, wrong values</text>
+  <text x="285" y="116" font-family="sans-serif" font-size="13" fill="#222222">Breakpoints, watchpoints, stack traces, memory inspection</text>
+  <text x="285" y="134" font-family="sans-serif" font-size="12" fill="#888888">Post-mortem analysis via core dumps</text>
+  <!-- key command -->
+  <rect x="720" y="83" width="310" height="26" rx="4" fill="#1a237e" opacity="0.08"/>
+  <text x="730" y="100" font-family="monospace" font-size="13" fill="#1a237e">gcc -g -O0 -o prog prog.c</text>
+  <rect x="720" y="114" width="218" height="26" rx="4" fill="#1a237e" opacity="0.08"/>
+  <text x="730" y="131" font-family="monospace" font-size="13" fill="#1a237e">gdb ./prog</text>
+  <!-- speed -->
+  <text x="1145" y="118" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="middle" font-weight="bold">Native</text>
+
+  <!-- ROW divider -->
+  <line x1="30" y1="155" x2="1250" y2="155" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 2: Valgrind -->
+  <!-- ============================================================ -->
+  <rect x="30" y="155" width="1220" height="83" fill="#fafafa"/>
+  <rect x="50" y="166" width="100" height="34" rx="6" fill="#6a1b9a" filter="url(#shadow)"/>
+  <text x="100" y="188" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Valgrind</text>
+  <text x="175" y="188" font-family="sans-serif" font-size="12" fill="#555555">Memory</text>
+  <text x="175" y="204" font-family="sans-serif" font-size="12" fill="#555555">checker</text>
+
+  <text x="285" y="181" font-family="sans-serif" font-size="13" fill="#222222">Memory leaks, invalid reads/writes, use-after-free</text>
+  <text x="285" y="199" font-family="sans-serif" font-size="13" fill="#222222">Uninit value use, double free, overlapping memcpy</text>
+  <text x="285" y="217" font-family="sans-serif" font-size="12" fill="#888888">No recompilation needed  |  Helgrind: data races</text>
+
+  <rect x="720" y="166" width="312" height="26" rx="4" fill="#4a148c" opacity="0.08"/>
+  <text x="730" y="183" font-family="monospace" font-size="12" fill="#4a148c">valgrind --leak-check=full ./prog</text>
+  <rect x="720" y="197" width="310" height="26" rx="4" fill="#4a148c" opacity="0.08"/>
+  <text x="730" y="214" font-family="monospace" font-size="12" fill="#4a148c">valgrind --tool=helgrind ./prog</text>
+  <text x="1145" y="205" font-family="sans-serif" font-size="13" fill="#e53935" text-anchor="middle" font-weight="bold">~10-20x slower</text>
+
+  <line x1="30" y1="238" x2="1250" y2="238" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 3: ASan -->
+  <!-- ============================================================ -->
+  <rect x="30" y="238" width="1220" height="83" fill="#e8f5e9"/>
+  <rect x="50" y="249" width="100" height="34" rx="6" fill="#2e7d32" filter="url(#shadow)"/>
+  <text x="100" y="271" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">ASan</text>
+  <text x="175" y="271" font-family="sans-serif" font-size="12" fill="#555555">Address</text>
+  <text x="175" y="287" font-family="sans-serif" font-size="12" fill="#555555">Sanitizer</text>
+
+  <text x="285" y="264" font-family="sans-serif" font-size="13" fill="#222222">Heap/stack buffer overflows, use-after-free</text>
+  <text x="285" y="282" font-family="sans-serif" font-size="13" fill="#222222">Use-after-return, use-after-scope, global overflows</text>
+  <text x="285" y="300" font-family="sans-serif" font-size="12" fill="#888888">Requires recompilation  |  Cannot combine with TSan</text>
+
+  <rect x="720" y="249" width="312" height="26" rx="4" fill="#1b5e20" opacity="0.08"/>
+  <text x="730" y="266" font-family="monospace" font-size="12" fill="#1b5e20">gcc -fsanitize=address \</text>
+  <rect x="720" y="279" width="312" height="26" rx="4" fill="#1b5e20" opacity="0.08"/>
+  <text x="730" y="296" font-family="monospace" font-size="12" fill="#1b5e20">    -fno-omit-frame-pointer ./prog</text>
+  <text x="1145" y="288" font-family="sans-serif" font-size="13" fill="#f57c00" text-anchor="middle" font-weight="bold">~2x slower</text>
+
+  <line x1="30" y1="321" x2="1250" y2="321" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 4: UBSan -->
+  <!-- ============================================================ -->
+  <rect x="30" y="321" width="1220" height="83" fill="#fafafa"/>
+  <rect x="50" y="332" width="100" height="34" rx="6" fill="#e65100" filter="url(#shadow)"/>
+  <text x="100" y="354" font-family="monospace" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">UBSan</text>
+  <text x="175" y="354" font-family="sans-serif" font-size="12" fill="#555555">Undefined</text>
+  <text x="175" y="370" font-family="sans-serif" font-size="12" fill="#555555">Behavior</text>
+
+  <text x="285" y="347" font-family="sans-serif" font-size="13" fill="#222222">Signed integer overflow, shift overflow, div-by-zero</text>
+  <text x="285" y="365" font-family="sans-serif" font-size="13" fill="#222222">NULL dereference, type-punning violations</text>
+  <text x="285" y="383" font-family="sans-serif" font-size="12" fill="#888888">Combine with ASan for maximum coverage</text>
+
+  <rect x="720" y="332" width="312" height="26" rx="4" fill="#bf360c" opacity="0.08"/>
+  <text x="730" y="349" font-family="monospace" font-size="12" fill="#bf360c">gcc -fsanitize=undefined \</text>
+  <rect x="720" y="362" width="312" height="26" rx="4" fill="#bf360c" opacity="0.08"/>
+  <text x="730" y="379" font-family="monospace" font-size="12" fill="#bf360c">    -fsanitize=address ./prog</text>
+  <text x="1145" y="371" font-family="sans-serif" font-size="13" fill="#f57c00" text-anchor="middle" font-weight="bold">~2x slower</text>
+
+  <line x1="30" y1="404" x2="1250" y2="404" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 5: perf -->
+  <!-- ============================================================ -->
+  <rect x="30" y="404" width="1220" height="83" fill="#fff8e1"/>
+  <rect x="50" y="415" width="100" height="34" rx="6" fill="#f57c00" filter="url(#shadow)"/>
+  <text x="100" y="437" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">perf</text>
+  <text x="175" y="437" font-family="sans-serif" font-size="12" fill="#555555">CPU</text>
+  <text x="175" y="453" font-family="sans-serif" font-size="12" fill="#555555">profiler</text>
+
+  <text x="285" y="430" font-family="sans-serif" font-size="13" fill="#222222">CPU hotspots, cache misses, branch mispredictions</text>
+  <text x="285" y="448" font-family="sans-serif" font-size="13" fill="#222222">IPC (instructions/cycle), page faults, context switches</text>
+  <text x="285" y="466" font-family="sans-serif" font-size="12" fill="#888888">Flamegraph generation  |  Linux kernel profiling</text>
+
+  <rect x="720" y="415" width="218" height="26" rx="4" fill="#e65100" opacity="0.08"/>
+  <text x="730" y="432" font-family="monospace" font-size="13" fill="#e65100">perf stat ./prog</text>
+  <rect x="720" y="447" width="218" height="26" rx="4" fill="#e65100" opacity="0.08"/>
+  <text x="730" y="464" font-family="monospace" font-size="13" fill="#e65100">perf record -g ./prog</text>
+  <text x="1145" y="454" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="middle" font-weight="bold">Near-native</text>
+
+  <line x1="30" y1="487" x2="1250" y2="487" stroke="#cccccc" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 6: clang-tidy -->
+  <!-- ============================================================ -->
+  <rect x="30" y="487" width="1220" height="83" fill="#fce4ec"/>
+  <rect x="50" y="498" width="100" height="34" rx="6" fill="#c62828" filter="url(#shadow)"/>
+  <text x="100" y="516" font-family="monospace" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">clang-tidy</text>
+  <text x="175" y="516" font-family="sans-serif" font-size="12" fill="#555555">Static</text>
+  <text x="175" y="532" font-family="sans-serif" font-size="12" fill="#555555">analysis</text>
+
+  <text x="285" y="513" font-family="sans-serif" font-size="13" fill="#222222">Code quality, bug-prone patterns, cert compliance</text>
+  <text x="285" y="531" font-family="sans-serif" font-size="13" fill="#222222">NULL deref, sizeof misuse, unchecked return values</text>
+  <text x="285" y="549" font-family="sans-serif" font-size="12" fill="#888888">Static — no runtime needed  |  Can auto-fix issues (-fix)</text>
+
+  <rect x="720" y="498" width="312" height="26" rx="4" fill="#b71c1c" opacity="0.08"/>
+  <text x="730" y="515" font-family="monospace" font-size="12" fill="#b71c1c">clang-tidy file.c -- -std=c11</text>
+  <rect x="720" y="530" width="312" height="26" rx="4" fill="#b71c1c" opacity="0.08"/>
+  <text x="730" y="547" font-family="monospace" font-size="12" fill="#b71c1c">clang-tidy -checks='bugprone-*' f.c</text>
+  <text x="1145" y="537" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="middle" font-weight="bold">Compile-time</text>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER BAR: recommended workflow -->
+  <!-- ============================================================ -->
+  <rect x="30" y="578" width="1220" height="42" rx="0" fill="#37474f"/>
+  <rect x="30" y="590" width="1220" height="30" fill="#37474f"/>
+  <rect x="30" y="578" width="1220" height="42" rx="6" fill="#37474f"/>
+  <text x="640" y="591" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Recommended workflow:</text>
+  <text x="640" y="610" font-family="monospace" font-size="12" fill="#80cbc4" text-anchor="middle">Warnings → clang-tidy → ASan+UBSan → Valgrind → GDB (on crash) → perf (on slowness)</text>
+
+  <!-- Column dividers (full height) -->
+  <line x1="270" y1="72" x2="270" y2="578" stroke="#dddddd" stroke-width="1"/>
+  <line x1="710" y1="72" x2="710" y2="578" stroke="#dddddd" stroke-width="1"/>
+  <line x1="1040" y1="72" x2="1040" y2="578" stroke="#dddddd" stroke-width="1"/>
+</svg>

@@ -30,6 +30,12 @@ int main(void) {
 
 ---
 
+## Function Pointer Memory Model
+
+![Function pointer memory model: stack variable, code segment, dispatch table](svg/courses/languages/c/c-refresher/12_function_pointers/function_pointer_memory_model.svg)
+
+---
+
 ## Function Pointer Syntax
 
 ```misc

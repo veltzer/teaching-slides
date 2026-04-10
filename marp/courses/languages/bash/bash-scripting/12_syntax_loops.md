@@ -1,6 +1,11 @@
 # Syntax: Loops
 
 ---
+## Loop Types Overview
+
+![loop_types_overview](svg/courses/languages/bash/bash-scripting/12_syntax_loops/loop_types_overview.svg)
+
+---
 ## `while` Loops
 
 ```bash

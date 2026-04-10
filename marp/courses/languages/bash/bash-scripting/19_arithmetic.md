@@ -1,6 +1,11 @@
 # Doing Arithmetic
 
 ---
+## Arithmetic Operators Reference
+
+![arithmetic_operators](svg/courses/languages/bash/bash-scripting/19_arithmetic/arithmetic_operators.svg)
+
+---
 ## Integer Arithmetic: `$(( ))`
 
 ```bash

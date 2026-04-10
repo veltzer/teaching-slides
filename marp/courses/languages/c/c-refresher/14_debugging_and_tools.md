@@ -21,6 +21,12 @@
 
 ---
 
+## C Debugging Tools Overview
+
+![Overview of C debugging tools: GDB, Valgrind, ASan, UBSan, perf, clang-tidy](svg/courses/languages/c/c-refresher/14_debugging_and_tools/c_debugging_tools_overview.svg)
+
+---
+
 ## Compiler Warnings: Your First Defense
 
 ```bash

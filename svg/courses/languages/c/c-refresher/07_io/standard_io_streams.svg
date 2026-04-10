@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef5350"/>
+      <stop offset="100%" stop-color="#e53935"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1e88e5"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e53935"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Keyboard (stdin source) -->
+  <rect x="40" y="110" width="180" height="100" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="148" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" font-weight="bold" text-anchor="middle">Keyboard</text>
+  <text x="130" y="170" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">⌨  stdin source</text>
+  <text x="130" y="192" font-family="monospace" font-size="13" fill="#1565c0" text-anchor="middle">fd = 0</text>
+
+  <!-- Screen (stdout target) -->
+  <rect x="40" y="320" width="180" height="100" rx="10" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="358" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32" font-weight="bold" text-anchor="middle">Terminal</text>
+  <text x="130" y="380" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">▣  stdout target</text>
+  <text x="130" y="402" font-family="monospace" font-size="13" fill="#2e7d32" text-anchor="middle">fd = 1</text>
+
+  <!-- Screen (stderr target) -->
+  <rect x="40" y="530" width="180" height="100" rx="10" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="130" y="568" font-family="Arial, sans-serif" font-size="16" fill="#e53935" font-weight="bold" text-anchor="middle">Terminal</text>
+  <text x="130" y="590" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">⚠  stderr target</text>
+  <text x="130" y="612" font-family="monospace" font-size="13" fill="#e53935" text-anchor="middle">fd = 2</text>
+
+  <!-- C Program box (center) -->
+  <rect x="430" y="220" width="420" height="290" rx="12" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="430" y="220" width="420" height="44" rx="12" fill="url(#grad-accent)"/>
+  <rect x="430" y="244" width="420" height="20" fill="url(#grad-accent)"/>
+  <text x="640" y="248" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" font-weight="bold" text-anchor="middle">C Program</text>
+
+  <!-- stdin stream label -->
+  <rect x="450" y="278" width="370" height="58" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="470" y="301" font-family="monospace" font-size="15" fill="#0d47a1" font-weight="bold">stdin  (FILE *)</text>
+  <text x="470" y="323" font-family="monospace" font-size="14" fill="#1565c0">scanf(), fgets(), getchar()</text>
+
+  <!-- stdout stream label -->
+  <rect x="450" y="350" width="370" height="58" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="470" y="373" font-family="monospace" font-size="15" fill="#1b5e20" font-weight="bold">stdout  (FILE *)</text>
+  <text x="470" y="395" font-family="monospace" font-size="14" fill="#2e7d32">printf(), puts(), putchar()</text>
+
+  <!-- stderr stream label -->
+  <rect x="450" y="422" width="370" height="58" rx="6" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="470" y="445" font-family="monospace" font-size="15" fill="#b71c1c" font-weight="bold">stderr  (FILE *)</text>
+  <text x="470" y="467" font-family="monospace" font-size="14" fill="#e53935">fprintf(stderr,...), perror()</text>
+
+  <!-- Arrows: keyboard → stdin -->
+  <line x1="220" y1="160" x2="428" y2="305" stroke="#1e88e5" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <text x="295" y="215" font-family="Arial, sans-serif" font-size="14" fill="#1565c0" font-weight="bold" transform="rotate(-22,295,215)">reads input</text>
+
+  <!-- Arrows: stdout → screen -->
+  <line x1="820" y1="378" x2="940" y2="370" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+  <!-- Arrows: stderr → screen-err -->
+  <line x1="820" y1="450" x2="940" y2="580" stroke="#e53935" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+
+  <!-- Right side outputs -->
+  <rect x="945" y="310" width="290" height="100" rx="10" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="348" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32" font-weight="bold" text-anchor="middle">Screen (normal)</text>
+  <text x="1090" y="370" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">Hello, World!</text>
+  <text x="1090" y="392" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">Buffered (line or full)</text>
+
+  <rect x="945" y="530" width="290" height="100" rx="10" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1090" y="568" font-family="Arial, sans-serif" font-size="16" fill="#e53935" font-weight="bold" text-anchor="middle">Screen (error)</text>
+  <text x="1090" y="590" font-family="monospace" font-size="13" fill="#333333" text-anchor="middle">Error: file not found</text>
+  <text x="1090" y="612" font-family="Arial, sans-serif" font-size="13" fill="#555555" text-anchor="middle">Unbuffered (immediate)</text>
+
+  <!-- Redirection note -->
+  <rect x="430" y="522" width="420" height="56" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="450" y="545" font-family="Arial, sans-serif" font-size="14" fill="#f57f17" font-weight="bold">Shell Redirection</text>
+  <text x="450" y="565" font-family="monospace" font-size="13" fill="#555555">./prog &lt;in.txt &gt;out.txt 2&gt;err.txt</text>
+
+  <!-- File I/O side note -->
+  <rect x="40" y="40" width="560" height="52" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="320" y="72" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" font-weight="bold" text-anchor="middle">Standard I/O Streams in C</text>
+
+</svg>

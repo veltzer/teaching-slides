@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e88e5"/>
+      <stop offset="100%" style="stop-color:#1565c0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title banner -->
+  <rect x="30" y="15" width="1220" height="50" rx="10" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="640" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Bash Expansion Order — Applied Left to Right Before Command Execution</text>
+
+  <!-- Input box -->
+  <rect x="30" y="85" width="220" height="60" rx="10" fill="#263238" filter="url(#shadow)"/>
+  <text x="140" y="108" font-family="Arial, sans-serif" font-size="14" fill="#b0bec5" text-anchor="middle">Raw command line</text>
+  <text x="140" y="132" font-family="monospace" font-size="16" font-weight="bold" fill="#80cbc4" text-anchor="middle">echo {a,b}~/*.txt</text>
+
+  <!-- Arrow 0 -->
+  <line x1="250" y1="115" x2="278" y2="115" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step boxes - arranged horizontally with two rows -->
+  <!-- Row 1: steps 1-5 -->
+
+  <!-- Step 1: Brace -->
+  <rect x="280" y="80" width="170" height="70" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="365" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1b5e20" text-anchor="middle">① Brace Expansion</text>
+  <text x="365" y="123" font-family="monospace" font-size="13" fill="#2e7d32" text-anchor="middle">{a,b,c}</text>
+  <text x="365" y="141" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  a  b  c</text>
+
+  <!-- Arrow 1-2 -->
+  <line x1="450" y1="115" x2="478" y2="115" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Tilde -->
+  <rect x="480" y="80" width="165" height="70" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="563" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1b5e20" text-anchor="middle">② Tilde Expansion</text>
+  <text x="563" y="123" font-family="monospace" font-size="13" fill="#2e7d32" text-anchor="middle">~  ~user</text>
+  <text x="563" y="141" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  /home/mark</text>
+
+  <!-- Arrow 2-3 -->
+  <line x1="645" y1="115" x2="673" y2="115" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Parameter -->
+  <rect x="675" y="80" width="175" height="70" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="763" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1" text-anchor="middle">③ Parameter Expansion</text>
+  <text x="763" y="123" font-family="monospace" font-size="13" fill="#1565c0" text-anchor="middle">$var  ${var}</text>
+  <text x="763" y="141" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  value of var</text>
+
+  <!-- Arrow 3-4 -->
+  <line x1="850" y1="115" x2="878" y2="115" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Command subst -->
+  <rect x="880" y="80" width="175" height="70" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="968" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1" text-anchor="middle">④ Command Substitution</text>
+  <text x="968" y="123" font-family="monospace" font-size="13" fill="#1565c0" text-anchor="middle">$(cmd)</text>
+  <text x="968" y="141" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  stdout of cmd</text>
+
+  <!-- Arrow 4-5 -->
+  <line x1="1055" y1="115" x2="1083" y2="115" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Arithmetic -->
+  <rect x="1085" y="80" width="165" height="70" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1168" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1" text-anchor="middle">⑤ Arithmetic Expansion</text>
+  <text x="1168" y="123" font-family="monospace" font-size="13" fill="#1565c0" text-anchor="middle">$((expr))</text>
+  <text x="1168" y="141" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  numeric result</text>
+
+  <!-- Arrow down from step 5 -->
+  <line x1="1168" y1="150" x2="1168" y2="178" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 2 (right to left): steps 6-9 -->
+
+  <!-- Step 6: Process subst -->
+  <rect x="1085" y="180" width="165" height="70" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1168" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">⑥ Process Substitution</text>
+  <text x="1168" y="223" font-family="monospace" font-size="13" fill="#f57c00" text-anchor="middle">&lt;(cmd) &gt;(cmd)</text>
+  <text x="1168" y="241" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  /dev/fd/N</text>
+
+  <!-- Arrow 6-7 -->
+  <line x1="1085" y1="215" x2="1057" y2="215" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 7: Word splitting -->
+  <rect x="880" y="180" width="175" height="70" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="968" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">⑦ Word Splitting</text>
+  <text x="968" y="223" font-family="monospace" font-size="13" fill="#f57c00" text-anchor="middle">$IFS chars</text>
+  <text x="968" y="241" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">splits unquoted results</text>
+
+  <!-- Arrow 7-8 -->
+  <line x1="880" y1="215" x2="852" y2="215" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 8: Filename expansion -->
+  <rect x="675" y="180" width="175" height="70" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="763" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#b71c1c" text-anchor="middle">⑧ Filename Expansion</text>
+  <text x="763" y="223" font-family="monospace" font-size="13" fill="#e53935" text-anchor="middle">*.txt  ?.sh</text>
+  <text x="763" y="241" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">→  matching filenames</text>
+
+  <!-- Arrow 8-9 -->
+  <line x1="675" y1="215" x2="647" y2="215" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 9: Quote removal -->
+  <rect x="480" y="180" width="165" height="70" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="563" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#b71c1c" text-anchor="middle">⑨ Quote Removal</text>
+  <text x="563" y="223" font-family="monospace" font-size="13" fill="#e53935" text-anchor="middle">" ' \</text>
+  <text x="563" y="241" font-family="monospace" font-size="12" fill="#555555" text-anchor="middle">removes quoting chars</text>
+
+  <!-- Arrow 9 → execute -->
+  <line x1="480" y1="215" x2="452" y2="215" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Execute box -->
+  <rect x="280" y="180" width="170" height="70" rx="10" fill="#263238" filter="url(#shadow)"/>
+  <text x="365" y="208" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#80cbc4" text-anchor="middle">Command</text>
+  <text x="365" y="228" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#80cbc4" text-anchor="middle">Execution</text>
+  <text x="365" y="246" font-family="Arial, sans-serif" font-size="12" fill="#b0bec5" text-anchor="middle">fork + exec</text>
+
+  <!-- KEY NOTES section -->
+  <rect x="30" y="275" width="1220" height="325" rx="12" fill="#f8f9fa" filter="url(#shadow)"/>
+  <text x="640" y="302" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">Key Rules &amp; Examples</text>
+
+  <!-- Rule boxes -->
+  <!-- Rule 1 -->
+  <rect x="50" y="315" width="560" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="330" y="338" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1b5e20" text-anchor="middle">Brace expansion BEFORE variable expansion</text>
+  <text x="70" y="362" font-family="monospace" font-size="14" fill="#333333">x=3</text>
+  <text x="70" y="382" font-family="monospace" font-size="14" fill="#e53935">echo {1..$x}    # WRONG: prints literal {1..3}</text>
+  <text x="70" y="402" font-family="monospace" font-size="14" fill="#2e7d32">seq 1 "$x"       # CORRECT: prints 1 2 3</text>
+  <text x="70" y="422" font-family="monospace" font-size="14" fill="#2e7d32">eval "echo {1..$x}"  # also works</text>
+
+  <!-- Rule 2 -->
+  <rect x="650" y="315" width="580" height="120" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="940" y="338" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#0d47a1" text-anchor="middle">Quoting prevents most expansions</text>
+  <text x="670" y="362" font-family="monospace" font-size="14" fill="#333333">var="*.txt"</text>
+  <text x="670" y="382" font-family="monospace" font-size="14" fill="#f57c00">echo $var      # expands glob → file1.txt file2.txt</text>
+  <text x="670" y="402" font-family="monospace" font-size="14" fill="#2e7d32">echo "$var"    # prints literal: *.txt</text>
+  <text x="670" y="422" font-family="monospace" font-size="14" fill="#2e7d32">echo '$var'    # prints literal: $var</text>
+
+  <!-- Rule 3 -->
+  <rect x="50" y="450" width="560" height="130" rx="10" fill="#fff3e0" stroke="#f57c00" stroke-width="1"/>
+  <text x="330" y="472" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#e65100" text-anchor="middle">Word splitting splits on $IFS (default: space, tab, newline)</text>
+  <text x="70" y="496" font-family="monospace" font-size="14" fill="#333333">files=$(ls *.txt)       # one string</text>
+  <text x="70" y="516" font-family="monospace" font-size="14" fill="#e53935">for f in $files; do    # splits on spaces → BUGGY</text>
+  <text x="70" y="536" font-family="monospace" font-size="14" fill="#2e7d32">mapfile -t files &lt; &lt;(ls *.txt)  # SAFE</text>
+  <text x="70" y="556" font-family="monospace" font-size="14" fill="#2e7d32">for f in "${files[@]}"; do         # SAFE</text>
+  <text x="70" y="574" font-family="monospace" font-size="14" fill="#333333">done</text>
+
+  <!-- Rule 4 -->
+  <rect x="650" y="450" width="580" height="130" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="1"/>
+  <text x="940" y="472" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#b71c1c" text-anchor="middle">Filename expansion only matches existing files</text>
+  <text x="670" y="496" font-family="monospace" font-size="14" fill="#333333">echo *.txt   # if no .txt files exist:</text>
+  <text x="670" y="516" font-family="monospace" font-size="14" fill="#e53935">             # prints literal *.txt  (not empty!)</text>
+  <text x="670" y="536" font-family="monospace" font-size="14" fill="#2e7d32">shopt -s nullglob   # → prints nothing</text>
+  <text x="670" y="556" font-family="monospace" font-size="14" fill="#2e7d32">shopt -s failglob   # → error on no match</text>
+</svg>

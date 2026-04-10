@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#f8f9fa"/>
+
+  <!-- Array declaration -->
+  <rect x="40" y="20" width="1200" height="52" rx="10" fill="#1e1e2e" filter="url(#shadow)"/>
+  <text x="70" y="52" font-family="monospace" font-size="22" fill="#a6e3a1">fruits</text>
+  <text x="148" y="52" font-family="monospace" font-size="22" fill="#cdd6f4">=(</text>
+  <text x="178" y="52" font-family="monospace" font-size="22" fill="#f9e2af">"apple"</text>
+  <text x="286" y="52" font-family="monospace" font-size="22" fill="#f9e2af"> "banana"</text>
+  <text x="434" y="52" font-family="monospace" font-size="22" fill="#f9e2af"> "cherry"</text>
+  <text x="584" y="52" font-family="monospace" font-size="22" fill="#f9e2af"> "date"</text>
+  <text x="680" y="52" font-family="monospace" font-size="22" fill="#f9e2af"> "elderberry"</text>
+  <text x="880" y="52" font-family="monospace" font-size="22" fill="#cdd6f4">)</text>
+
+  <!-- Memory layout boxes -->
+  <!-- Index labels -->
+  <text x="130" y="105" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="bold">[0]</text>
+  <text x="370" y="105" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="bold">[1]</text>
+  <text x="610" y="105" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="bold">[2]</text>
+  <text x="850" y="105" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="bold">[3]</text>
+  <text x="1090" y="105" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="bold">[4]</text>
+
+  <!-- Index boxes -->
+  <rect x="50" y="112" width="160" height="80" rx="0" fill="#1e88e5"/>
+  <rect x="53" y="115" width="154" height="74" rx="0" fill="#e3f2fd"/>
+  <text x="130" y="162" font-family="monospace" font-size="20" fill="#1565c0" text-anchor="middle">"apple"</text>
+
+  <rect x="290" y="112" width="160" height="80" rx="0" fill="#1e88e5"/>
+  <rect x="293" y="115" width="154" height="74" rx="0" fill="#e3f2fd"/>
+  <text x="370" y="162" font-family="monospace" font-size="20" fill="#1565c0" text-anchor="middle">"banana"</text>
+
+  <rect x="530" y="112" width="160" height="80" rx="0" fill="#1e88e5"/>
+  <rect x="533" y="115" width="154" height="74" rx="0" fill="#e3f2fd"/>
+  <text x="610" y="162" font-family="monospace" font-size="20" fill="#1565c0" text-anchor="middle">"cherry"</text>
+
+  <rect x="770" y="112" width="160" height="80" rx="0" fill="#1e88e5"/>
+  <rect x="773" y="115" width="154" height="74" rx="0" fill="#e3f2fd"/>
+  <text x="850" y="162" font-family="monospace" font-size="20" fill="#1565c0" text-anchor="middle">"date"</text>
+
+  <rect x="1010" y="112" width="220" height="80" rx="0" fill="#1e88e5"/>
+  <rect x="1013" y="115" width="214" height="74" rx="0" fill="#e3f2fd"/>
+  <text x="1120" y="162" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle">"elderberry"</text>
+
+  <!-- Separator line between boxes -->
+  <line x1="210" y1="112" x2="210" y2="192" stroke="#1e88e5" stroke-width="3"/>
+  <line x1="450" y1="112" x2="450" y2="192" stroke="#1e88e5" stroke-width="3"/>
+  <line x1="690" y1="112" x2="690" y2="192" stroke="#1e88e5" stroke-width="3"/>
+  <line x1="930" y1="112" x2="930" y2="192" stroke="#1e88e5" stroke-width="3"/>
+
+  <!-- Negative index labels -->
+  <text x="130" y="215" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">[-5]</text>
+  <text x="370" y="215" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">[-4]</text>
+  <text x="610" y="215" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">[-3]</text>
+  <text x="850" y="215" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">[-2]</text>
+  <text x="1120" y="215" font-family="monospace" font-size="14" fill="#888888" text-anchor="middle">[-1]  (bash 4.3+)</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="230" x2="1240" y2="230" stroke="#e0e0e0" stroke-width="2"/>
+
+  <!-- Three columns of syntax examples -->
+  <!-- Column 1: Access -->
+  <rect x="40" y="244" width="380" height="340" rx="10" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="40" y="244" width="380" height="40" rx="10" fill="#1565c0"/>
+  <rect x="40" y="270" width="380" height="14" fill="#1565c0"/>
+  <text x="230" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Access Elements</text>
+  <rect x="55" y="294" width="350" height="276" rx="6" fill="#1e1e2e"/>
+  <text x="75" y="318" font-family="monospace" font-size="13" fill="#585b70"># Single element</text>
+  <text x="75" y="337" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="114" y="337" font-family="monospace" font-size="13" fill="#cdd6f4"> "${fruits[0]}"</text>
+  <text x="75" y="352" font-family="monospace" font-size="11" fill="#585b70"># apple</text>
+  <text x="75" y="372" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="114" y="372" font-family="monospace" font-size="13" fill="#cdd6f4"> "${fruits[-1]}"</text>
+  <text x="75" y="387" font-family="monospace" font-size="11" fill="#585b70"># elderberry (last)</text>
+  <text x="75" y="407" font-family="monospace" font-size="13" fill="#585b70"># All elements</text>
+  <text x="75" y="426" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="114" y="426" font-family="monospace" font-size="13" fill="#cdd6f4"> "${fruits[@]}"</text>
+  <text x="75" y="446" font-family="monospace" font-size="13" fill="#585b70"># Count</text>
+  <text x="75" y="465" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="114" y="465" font-family="monospace" font-size="13" fill="#cdd6f4"> "${#fruits[@]}"</text>
+  <text x="75" y="480" font-family="monospace" font-size="11" fill="#585b70"># 5</text>
+  <text x="75" y="500" font-family="monospace" font-size="13" fill="#585b70"># All indices</text>
+  <text x="75" y="519" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="114" y="519" font-family="monospace" font-size="13" fill="#cdd6f4"> "${!fruits[@]}"</text>
+  <text x="75" y="534" font-family="monospace" font-size="11" fill="#585b70"># 0 1 2 3 4</text>
+  <text x="75" y="556" font-family="monospace" font-size="13" fill="#585b70"># Iterate</text>
+  <text x="75" y="556" font-family="monospace" font-size="13" fill="#585b70"># Iterate</text>
+  <text x="75" y="556" font-family="monospace" font-size="13" fill="#a6e3a1">for</text>
+  <text x="100" y="556" font-family="monospace" font-size="11" fill="#585b70"> f in "${fruits[@]}"; do echo $f; done</text>
+
+  <!-- Column 2: Append/Modify -->
+  <rect x="450" y="244" width="380" height="340" rx="10" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="450" y="244" width="380" height="40" rx="10" fill="#2e7d32"/>
+  <rect x="450" y="270" width="380" height="14" fill="#2e7d32"/>
+  <text x="640" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Append and Modify</text>
+  <rect x="465" y="294" width="350" height="276" rx="6" fill="#1e1e2e"/>
+  <text x="485" y="318" font-family="monospace" font-size="13" fill="#585b70"># Append one</text>
+  <text x="485" y="337" font-family="monospace" font-size="13" fill="#cdd6f4">fruits+=("fig")</text>
+  <text x="485" y="357" font-family="monospace" font-size="13" fill="#585b70"># Append multiple</text>
+  <text x="485" y="376" font-family="monospace" font-size="13" fill="#cdd6f4">fruits+=("grape" "kiwi")</text>
+  <text x="485" y="396" font-family="monospace" font-size="13" fill="#585b70"># Modify element</text>
+  <text x="485" y="415" font-family="monospace" font-size="13" fill="#cdd6f4">fruits[2]="CHERRY"</text>
+  <text x="485" y="435" font-family="monospace" font-size="13" fill="#585b70"># Delete element (sparse)</text>
+  <text x="485" y="454" font-family="monospace" font-size="13" fill="#a6e3a1">unset</text>
+  <text x="530" y="454" font-family="monospace" font-size="13" fill="#cdd6f4"> 'fruits[1]'</text>
+  <text x="485" y="474" font-family="monospace" font-size="13" fill="#585b70"># Delete all</text>
+  <text x="485" y="493" font-family="monospace" font-size="13" fill="#a6e3a1">unset</text>
+  <text x="530" y="493" font-family="monospace" font-size="13" fill="#cdd6f4"> fruits</text>
+  <text x="485" y="513" font-family="monospace" font-size="13" fill="#585b70"># Prepend element</text>
+  <text x="485" y="532" font-family="monospace" font-size="13" fill="#cdd6f4">fruits=("avocado" "${fruits[@]}")</text>
+  <text x="485" y="552" font-family="monospace" font-size="13" fill="#585b70"># Sort into new array</text>
+  <text x="485" y="556" font-family="monospace" font-size="11" fill="#cdd6f4">mapfile -t s &lt; &lt;(printf '%s\n' "${fruits[@]}" | sort)</text>
+
+  <!-- Column 3: Slicing -->
+  <rect x="860" y="244" width="380" height="340" rx="10" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="860" y="244" width="380" height="40" rx="10" fill="#f57c00"/>
+  <rect x="860" y="270" width="380" height="14" fill="#f57c00"/>
+  <text x="1050" y="271" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Slicing and Copying</text>
+  <rect x="875" y="294" width="350" height="276" rx="6" fill="#1e1e2e"/>
+  <text x="895" y="318" font-family="monospace" font-size="13" fill="#585b70"># Syntax: ${arr[@]:off:len}</text>
+  <text x="895" y="338" font-family="monospace" font-size="13" fill="#585b70"># From index 1, take 3:</text>
+  <text x="895" y="357" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="934" y="357" font-family="monospace" font-size="13" fill="#cdd6f4"> "${fruits[@]:1:3}"</text>
+  <text x="895" y="372" font-family="monospace" font-size="11" fill="#585b70"># banana cherry date</text>
+  <text x="895" y="392" font-family="monospace" font-size="13" fill="#585b70"># From index 2 to end:</text>
+  <text x="895" y="411" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="934" y="411" font-family="monospace" font-size="13" fill="#cdd6f4"> "${fruits[@]:2}"</text>
+  <text x="895" y="426" font-family="monospace" font-size="11" fill="#585b70"># cherry date elderberry</text>
+  <text x="895" y="446" font-family="monospace" font-size="13" fill="#585b70"># Last 2 elements:</text>
+  <text x="895" y="465" font-family="monospace" font-size="13" fill="#a6e3a1">echo</text>
+  <text x="934" y="465" font-family="monospace" font-size="13" fill="#cdd6f4"> "${fruits[@]:(-2)}"</text>
+  <text x="895" y="480" font-family="monospace" font-size="11" fill="#585b70"># date elderberry</text>
+  <text x="895" y="500" font-family="monospace" font-size="13" fill="#585b70"># Copy entire array:</text>
+  <text x="895" y="519" font-family="monospace" font-size="13" fill="#cdd6f4">copy=("${fruits[@]}")</text>
+  <text x="895" y="539" font-family="monospace" font-size="13" fill="#585b70"># Merge two arrays:</text>
+  <text x="895" y="558" font-family="monospace" font-size="13" fill="#cdd6f4">m=("${a[@]}" "${b[@]}")</text>
+</svg>

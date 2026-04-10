@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-real" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#42a5f5"/>
+    </linearGradient>
+    <linearGradient id="grad-user" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2e7d32"/>
+      <stop offset="100%" stop-color="#66bb6a"/>
+    </linearGradient>
+    <linearGradient id="grad-sys" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f57c00"/>
+      <stop offset="100%" stop-color="#ffa726"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#f8f9fa"/>
+
+  <!-- Title banner -->
+  <rect x="40" y="18" width="1200" height="52" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Understanding time Output: real vs user vs sys</text>
+
+  <!-- Timeline diagram area -->
+  <rect x="40" y="90" width="1200" height="340" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+
+  <!-- Time axis -->
+  <line x1="150" y1="390" x2="1210" y2="390" stroke="#cccccc" stroke-width="1.5"/>
+  <text x="150" y="410" font-family="sans-serif" font-size="13" fill="#888888" text-anchor="middle">t=0</text>
+  <text x="1190" y="410" font-family="sans-serif" font-size="13" fill="#888888" text-anchor="middle">t=end</text>
+  <!-- tick marks -->
+  <line x1="150" y1="385" x2="150" y2="395" stroke="#888888" stroke-width="1.5"/>
+  <line x1="1190" y1="385" x2="1190" y2="395" stroke="#888888" stroke-width="1.5"/>
+
+  <!-- Row label column -->
+  <text x="140" y="152" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="end">real</text>
+  <text x="140" y="240" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2e7d32" text-anchor="end">user</text>
+  <text x="140" y="328" font-family="sans-serif" font-size="16" font-weight="bold" fill="#f57c00" text-anchor="end">sys</text>
+
+  <!-- real time bar: full width -->
+  <rect x="150" y="128" width="1040" height="44" rx="8" fill="url(#grad-real)" opacity="0.85"/>
+  <text x="670" y="155" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Wall clock time (stopwatch from start to finish)</text>
+  <!-- real braces -->
+  <line x1="150" y1="180" x2="1190" y2="180" stroke="#1e88e5" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- user time segments -->
+  <!-- segment 1: 150-480 -->
+  <rect x="150" y="216" width="330" height="44" rx="4" fill="url(#grad-user)" opacity="0.85"/>
+  <text x="315" y="243" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">CPU (user code)</text>
+  <!-- gap: IO wait -->
+  <rect x="480" y="216" width="200" height="44" rx="4" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+  <text x="580" y="243" font-family="sans-serif" font-size="12" fill="#aaaaaa" text-anchor="middle">I/O wait</text>
+  <!-- segment 2: 680-900 -->
+  <rect x="680" y="216" width="220" height="44" rx="4" fill="url(#grad-user)" opacity="0.85"/>
+  <text x="790" y="243" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">CPU (user code)</text>
+  <!-- gap2 -->
+  <rect x="900" y="216" width="130" height="44" rx="4" fill="#f0f0f0" stroke="#dddddd" stroke-width="1"/>
+  <text x="965" y="243" font-family="sans-serif" font-size="12" fill="#aaaaaa" text-anchor="middle">I/O wait</text>
+  <!-- segment 3: 1030-1190 -->
+  <rect x="1030" y="216" width="160" height="44" rx="4" fill="url(#grad-user)" opacity="0.85"/>
+  <text x="1110" y="243" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">CPU (user)</text>
+
+  <!-- sys time segments -->
+  <!-- at 300, brief sys call -->
+  <rect x="300" y="304" width="80" height="44" rx="4" fill="url(#grad-sys)" opacity="0.85"/>
+  <text x="340" y="330" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">kernel</text>
+  <!-- at 560, sys call during io -->
+  <rect x="560" y="304" width="60" height="44" rx="4" fill="url(#grad-sys)" opacity="0.85"/>
+  <text x="590" y="330" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">sys</text>
+  <!-- at 820 -->
+  <rect x="820" y="304" width="100" height="44" rx="4" fill="url(#grad-sys)" opacity="0.85"/>
+  <text x="870" y="330" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">kernel</text>
+  <!-- at 1070 -->
+  <rect x="1070" y="304" width="60" height="44" rx="4" fill="url(#grad-sys)" opacity="0.85"/>
+  <text x="1100" y="330" font-family="sans-serif" font-size="11" fill="#ffffff" text-anchor="middle">sys</text>
+
+  <!-- Relationship notes / legend -->
+  <rect x="40" y="450" width="580" height="160" rx="12" fill="#ffffff" filter="url(#shadow)"/>
+  <rect x="40" y="450" width="580" height="40" rx="12" fill="#1565c0"/>
+  <rect x="40" y="478" width="580" height="12" fill="#1565c0"/>
+  <text x="330" y="476" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Key Relationships</text>
+  <text x="65" y="510" font-family="monospace" font-size="14" fill="#333333">real</text>
+  <text x="120" y="510" font-family="sans-serif" font-size="13" fill="#555555"> = total elapsed wall time (always ≥ user + sys)</text>
+  <text x="65" y="532" font-family="monospace" font-size="14" fill="#333333">user</text>
+  <text x="120" y="532" font-family="sans-serif" font-size="13" fill="#555555"> = time your code ran on CPU in user mode</text>
+  <text x="65" y="554" font-family="monospace" font-size="14" fill="#333333">sys</text>
+  <text x="120" y="554" font-family="sans-serif" font-size="13" fill="#555555">  = time kernel ran on behalf of your code</text>
+  <text x="65" y="576" font-family="monospace" font-size="13" fill="#e53935">I/O wait</text>
+  <text x="135" y="576" font-family="sans-serif" font-size="13" fill="#555555"> = the gap — real - (user + sys)</text>
+  <text x="65" y="596" font-family="sans-serif" font-size="12" fill="#888888">multi-core: real can be &lt; user + sys (parallel execution)</text>
+
+  <!-- Right side: example output and scenarios -->
+  <rect x="650" y="450" width="590" height="160" rx="12" fill="#1e1e2e" filter="url(#shadow)"/>
+  <rect x="650" y="450" width="590" height="40" rx="12" fill="#2e7d32"/>
+  <rect x="650" y="478" width="590" height="12" fill="#2e7d32"/>
+  <text x="945" y="476" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Example Scenarios</text>
+  <text x="675" y="508" font-family="monospace" font-size="12" fill="#585b70"># CPU-bound:   real ≈ user + sys</text>
+  <text x="675" y="526" font-family="monospace" font-size="12" fill="#cdd6f4">real 0m5.2s  user 0m5.1s  sys 0m0.1s</text>
+  <text x="675" y="546" font-family="monospace" font-size="12" fill="#585b70"># I/O-bound:   real >> user + sys</text>
+  <text x="675" y="564" font-family="monospace" font-size="12" fill="#cdd6f4">real 0m8.3s  user 0m0.2s  sys 0m0.3s</text>
+  <text x="675" y="584" font-family="monospace" font-size="12" fill="#585b70"># Parallel:    real &lt; user + sys</text>
+  <text x="675" y="602" font-family="monospace" font-size="12" fill="#cdd6f4">real 0m2.1s  user 0m7.8s  sys 0m0.2s</text>
+</svg>

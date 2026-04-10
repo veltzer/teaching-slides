@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e88e5"/>
+      <stop offset="100%" style="stop-color:#1565c0"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f2f2f2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Panel 1: * -->
+  <rect x="30" y="20" width="370" height="560" rx="12" fill="url(#panelGrad)" filter="url(#shadow)"/>
+  <rect x="30" y="20" width="370" height="56" rx="12" fill="url(#blueGrad)"/>
+  <rect x="30" y="56" width="370" height="20" fill="url(#blueGrad)"/>
+  <text x="215" y="54" font-family="monospace" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">*</text>
+  <text x="215" y="100" font-family="Arial, sans-serif" font-size="16" fill="#555555" text-anchor="middle">Zero or more characters (not /)</text>
+
+  <rect x="50" y="115" width="330" height="38" rx="6" fill="#e3f2fd"/>
+  <text x="215" y="139" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle">*.txt</text>
+
+  <text x="70" y="175" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="70" y="197" font-family="monospace" font-size="15" fill="#333333">file.txt</text>
+  <text x="70" y="217" font-family="monospace" font-size="15" fill="#333333">readme.txt</text>
+  <text x="70" y="237" font-family="monospace" font-size="15" fill="#333333">my_document.txt</text>
+  <text x="70" y="257" font-family="monospace" font-size="15" fill="#333333">a.txt</text>
+  <text x="70" y="285" font-family="Arial, sans-serif" font-size="14" fill="#e53935" font-weight="bold">Does NOT match:</text>
+  <text x="70" y="307" font-family="monospace" font-size="15" fill="#999999">.hidden.txt  (hidden)</text>
+  <text x="70" y="327" font-family="monospace" font-size="15" fill="#999999">dir/file.txt  (slash)</text>
+
+  <line x1="50" y1="345" x2="380" y2="345" stroke="#dee2e6" stroke-width="1"/>
+
+  <rect x="50" y="355" width="330" height="38" rx="6" fill="#e3f2fd"/>
+  <text x="215" y="379" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle">file*</text>
+
+  <text x="70" y="415" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="70" y="437" font-family="monospace" font-size="15" fill="#333333">file</text>
+  <text x="70" y="457" font-family="monospace" font-size="15" fill="#333333">file.txt</text>
+  <text x="70" y="477" font-family="monospace" font-size="15" fill="#333333">file_backup.tar.gz</text>
+  <text x="70" y="497" font-family="monospace" font-size="15" fill="#333333">files_2024</text>
+
+  <line x1="50" y1="515" x2="380" y2="515" stroke="#dee2e6" stroke-width="1"/>
+
+  <rect x="50" y="525" width="330" height="38" rx="6" fill="#e3f2fd"/>
+  <text x="215" y="549" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle">*data*</text>
+
+  <text x="70" y="585" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="70" y="607" font-family="monospace" font-size="15" fill="#333333">data.csv  /  mydata  /  raw_data_2024.txt</text>
+
+  <!-- Panel 2: ? -->
+  <rect x="430" y="20" width="370" height="560" rx="12" fill="url(#panelGrad)" filter="url(#shadow)"/>
+  <rect x="430" y="20" width="370" height="56" rx="12" fill="#f57c00"/>
+  <rect x="430" y="56" width="370" height="20" fill="#f57c00"/>
+  <text x="615" y="54" font-family="monospace" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">?</text>
+  <text x="615" y="100" font-family="Arial, sans-serif" font-size="16" fill="#555555" text-anchor="middle">Exactly one character (any)</text>
+
+  <rect x="450" y="115" width="330" height="38" rx="6" fill="#fff3e0"/>
+  <text x="615" y="139" font-family="monospace" font-size="18" fill="#e65100" text-anchor="middle">file?.txt</text>
+
+  <text x="470" y="175" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="470" y="197" font-family="monospace" font-size="15" fill="#333333">file1.txt</text>
+  <text x="470" y="217" font-family="monospace" font-size="15" fill="#333333">fileA.txt</text>
+  <text x="470" y="237" font-family="monospace" font-size="15" fill="#333333">file_.txt</text>
+  <text x="470" y="257" font-family="monospace" font-size="15" fill="#333333">file .txt  (space counts!)</text>
+  <text x="470" y="285" font-family="Arial, sans-serif" font-size="14" fill="#e53935" font-weight="bold">Does NOT match:</text>
+  <text x="470" y="307" font-family="monospace" font-size="15" fill="#999999">file.txt  (no char)</text>
+  <text x="470" y="327" font-family="monospace" font-size="15" fill="#999999">file10.txt  (two chars)</text>
+
+  <line x1="450" y1="345" x2="780" y2="345" stroke="#dee2e6" stroke-width="1"/>
+
+  <rect x="450" y="355" width="330" height="38" rx="6" fill="#fff3e0"/>
+  <text x="615" y="379" font-family="monospace" font-size="18" fill="#e65100" text-anchor="middle">???</text>
+
+  <text x="470" y="415" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="470" y="437" font-family="monospace" font-size="15" fill="#333333">abc  /  123  /  foo  /  a.b</text>
+  <text x="470" y="457" font-family="Arial, sans-serif" font-size="14" fill="#e53935" font-weight="bold">Not:</text>
+  <text x="470" y="479" font-family="monospace" font-size="15" fill="#999999">ab (2 chars)  /  abcd (4 chars)</text>
+
+  <line x1="450" y1="495" x2="780" y2="495" stroke="#dee2e6" stroke-width="1"/>
+
+  <rect x="450" y="510" width="330" height="38" rx="6" fill="#fff3e0"/>
+  <text x="615" y="534" font-family="monospace" font-size="18" fill="#e65100" text-anchor="middle">file?.*</text>
+
+  <text x="470" y="570" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="470" y="592" font-family="monospace" font-size="15" fill="#333333">file1.txt  /  fileA.md  /  fileZ.sh</text>
+
+  <!-- Panel 3: [...] -->
+  <rect x="830" y="20" width="420" height="560" rx="12" fill="url(#panelGrad)" filter="url(#shadow)"/>
+  <rect x="830" y="20" width="420" height="56" rx="12" fill="#6a1b9a"/>
+  <rect x="830" y="56" width="420" height="20" fill="#6a1b9a"/>
+  <text x="1040" y="54" font-family="monospace" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">[...]</text>
+  <text x="1040" y="100" font-family="Arial, sans-serif" font-size="16" fill="#555555" text-anchor="middle">Match one char from set or range</text>
+
+  <rect x="850" y="115" width="380" height="38" rx="6" fill="#ede7f6"/>
+  <text x="1040" y="139" font-family="monospace" font-size="18" fill="#4a148c" text-anchor="middle">file[123].txt</text>
+  <text x="870" y="175" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="870" y="197" font-family="monospace" font-size="15" fill="#333333">file1.txt  /  file2.txt  /  file3.txt</text>
+
+  <line x1="850" y1="215" x2="1230" y2="215" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="850" y="225" width="380" height="38" rx="6" fill="#ede7f6"/>
+  <text x="1040" y="249" font-family="monospace" font-size="18" fill="#4a148c" text-anchor="middle">file[0-9].txt</text>
+  <text x="870" y="285" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="870" y="307" font-family="monospace" font-size="15" fill="#333333">file0.txt through file9.txt</text>
+
+  <line x1="850" y1="325" x2="1230" y2="325" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="850" y="335" width="380" height="38" rx="6" fill="#ede7f6"/>
+  <text x="1040" y="359" font-family="monospace" font-size="18" fill="#4a148c" text-anchor="middle">file[a-zA-Z].txt</text>
+  <text x="870" y="395" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">Matches:</text>
+  <text x="870" y="417" font-family="monospace" font-size="15" fill="#333333">filea.txt through fileZ.txt</text>
+
+  <line x1="850" y1="435" x2="1230" y2="435" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="850" y="445" width="380" height="38" rx="6" fill="#fce4ec"/>
+  <text x="1040" y="469" font-family="monospace" font-size="18" fill="#b71c1c" text-anchor="middle">file[!0-9].txt  or  [^0-9]</text>
+  <text x="870" y="505" font-family="Arial, sans-serif" font-size="14" fill="#555555" font-weight="bold">Negation — NOT in set:</text>
+  <text x="870" y="527" font-family="monospace" font-size="15" fill="#333333">filea.txt  /  fileX.txt</text>
+  <text x="870" y="547" font-family="monospace" font-size="15" fill="#999999">NOT: file1.txt, file7.txt</text>
+
+  <line x1="850" y1="565" x2="1230" y2="565" stroke="#dee2e6" stroke-width="1"/>
+  <rect x="850" y="575" width="380" height="35" rx="6" fill="#ede7f6"/>
+  <text x="1040" y="598" font-family="monospace" font-size="16" fill="#4a148c" text-anchor="middle">[[:digit:]]  [[:alpha:]]  [[:alnum:]]</text>
+
+</svg>

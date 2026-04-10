@@ -12,6 +12,12 @@
 
 ---
 
+## System Call Mechanism
+
+![System call mechanism: user space to kernel space flow with register assignments and common syscall table](svg/courses/languages/assembly/assembly-programming-using-gas/12_system_calls/system_call_mechanism.svg)
+
+---
+
 ## Common System Calls
 
 | Number | Name | Description |
