@@ -1,15 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="106.6667" y="270" width="213.3333" height="180" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <rect x="533.3333" y="270" width="213.3333" height="180" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <rect x="960" y="270" width="213.3333" height="180" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="213.3333" y="378" text-anchor="middle" font-size="25.6">Start</text>
-  <text x="640" y="378" text-anchor="middle" font-size="25.6">Process</text>
-  <text x="1066.6667" y="378" text-anchor="middle" font-size="25.6">End</text>
-  <line x1="320" y1="360" x2="533.3333" y2="360" stroke="#333" stroke-width="4.2667" marker-end="url(#arrow)" />
-  <line x1="746.6667" y1="360" x2="960" y2="360" stroke="#333" stroke-width="4.2667" marker-end="url(#arrow)" />
   <defs>
-    <marker id="arrow" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#333" />
     </marker>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
   </defs>
+  <rect width="1280" height="640" fill="#ffffff" />
+  <rect x="100" y="250" width="150" height="100" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="175.0" y="306.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">Clients</text>
+  <rect x="350" y="150" width="150" height="300" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="425.0" y="306.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">API Gateway</text>
+  <rect x="600" y="100" width="200" height="80" fill="#e8f5e9" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="700.0" y="146.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">Service A</text>
+  <rect x="850" y="100" width="150" height="80" fill="#f3e5f5" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="925.0" y="146.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">DB A</text>
+  <rect x="600" y="250" width="200" height="80" fill="#e8f5e9" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="700.0" y="296.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">Service B</text>
+  <rect x="850" y="250" width="150" height="80" fill="#f3e5f5" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="925.0" y="296.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">DB B</text>
+  <rect x="600" y="400" width="200" height="80" fill="#e8f5e9" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="700.0" y="446.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">Service C</text>
+  <rect x="850" y="400" width="150" height="80" fill="#f3e5f5" stroke="#1e88e5" stroke-width="4" rx="8" filter="url(#shadow)" />
+  <text x="925.0" y="446.0" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">DB C</text>
+  <line x1="250" y1="300" x2="350" y2="300" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
+  <line x1="500" y1="300" x2="600" y2="140" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
+  <line x1="500" y1="300" x2="600" y2="290" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
+  <line x1="500" y1="300" x2="600" y2="440" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
+  <line x1="800" y1="140" x2="850" y2="140" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
+  <line x1="800" y1="290" x2="850" y2="290" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
+  <line x1="800" y1="440" x2="850" y2="440" stroke="#333" stroke-width="4" marker-end="url(#arrow)" />
 </svg>
