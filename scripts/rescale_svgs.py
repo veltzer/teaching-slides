@@ -63,8 +63,10 @@ def scale_number(val: str, factor: float) -> str:
     m = re.match(r'^(-?[\d.]+)(px|pt|em|%)?$', val)
     if not m:
         return val
-    num = float(m.group(1)) * factor
     unit = m.group(2) or ""
+    if unit == '%':
+        return val
+    num = float(m.group(1)) * factor
     # Format cleanly
     if num == int(num):
         return f"{int(num)}{unit}"
@@ -161,6 +163,19 @@ def scale_path_d(val: str, sx: float, sy: float) -> str:
 
 def scale_element(elem: ET.Element, sx: float, sy: float, su: float) -> None:
     """Scale all coordinate/size attributes of one element."""
+    tag = elem.tag.split("}")[-1]
+    if tag in ("linearGradient", "radialGradient", "filter", "marker"):
+        # Attributes in these are typically objectBoundingBox relative or percentages
+        # Markers might need scaling but usually they are relative to stroke width
+        # Let's be safe and not scale them unless they use userSpaceOnUse.
+        # But wait, markerWidth/Height on <marker> might need scaling?
+        # Let's just exclude gradients and filters
+        pass
+    if tag in ("linearGradient", "radialGradient", "filter"):
+        # We should NOT scale x1, y1, x2, y2, cx, cy, r on gradients
+        # as they are relative to bounding box.
+        return
+        
     for attr, val in list(elem.attrib.items()):
         local = attr.split("}")[-1]  # strip namespace
 
@@ -198,6 +213,14 @@ def scale_element(elem: ET.Element, sx: float, sy: float, su: float) -> None:
         elem.set("style", new_style)
 
 
+def walk_and_scale(elem: ET.Element, sx: float, sy: float, su: float) -> None:
+    tag = elem.tag.split("}")[-1]
+    if tag in ("linearGradient", "radialGradient", "filter", "marker", "pattern"):
+        return
+    scale_element(elem, sx, sy, su)
+    for child in elem:
+        walk_and_scale(child, sx, sy, su)
+
 def rescale_svg(path: Path, orig_w: float, orig_h: float) -> bool:
     """Rescale SVG content to 1280x720 natively. Return True if modified."""
     if orig_w == 0 or orig_h == 0:
@@ -230,17 +253,17 @@ def rescale_svg(path: Path, orig_w: float, orig_h: float) -> bool:
     root.attrib.pop("width", None)
     root.attrib.pop("height", None)
 
-    # Scale all elements
-    for elem in tree.iter():
-        # Skip root svg's own width/height (handled above)
-        if elem is root:
-            # Still scale any coordinate attrs on root if present
-            for attr in list(elem.attrib):
-                local = attr.split("}")[-1]
-                if local not in ("viewBox", "xmlns", "width", "height") and not local.startswith("xmlns"):
-                    pass  # handled below via scale_element excluding viewBox
-            continue
-        scale_element(elem, sx, sy, su)
+    # Scale all elements recursively, skipping defs
+    for child in root:
+        walk_and_scale(child, sx, sy, su)
+        
+    # Scale root itself (excluding viewBox, handled in scale_element safely)
+    for attr in list(root.attrib):
+        local = attr.split("}")[-1]
+        if local not in ("viewBox", "xmlns", "width", "height") and not local.startswith("xmlns"):
+            # A bit hacky but we just temporarily swap attributes to scale them on root
+            pass # Actually, it's safer to just run scale_element on root
+    scale_element(root, sx, sy, su)
 
     # Write back preserving declaration
     ET.indent(tree, space="  ")

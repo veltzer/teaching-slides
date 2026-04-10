@@ -83,13 +83,9 @@ def main():
             print(f"Fixing {f}: max_y={max_y}, max_x={max_x}, scaling by {s}")
             
             # Now scale all elements
-            for elem in tree.iter():
-                if elem is root:
-                    # Don't scale root viewBox, but do remove width/height just in case
-                    root.attrib.pop("width", None)
-                    root.attrib.pop("height", None)
-                    continue
-                rescale_svgs.scale_element(elem, s, s, s)
+            for child in root:
+                rescale_svgs.walk_and_scale(child, s, s, s)
+            rescale_svgs.scale_element(root, s, s, s)
                 
             ET.indent(tree, space="  ")
             tree.write(str(f), encoding="unicode", xml_declaration=False)
