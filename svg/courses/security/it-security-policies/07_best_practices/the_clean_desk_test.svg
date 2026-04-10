@@ -1,17 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="20.6452" y="27.6923" width="1238.7097" height="664.6154" fill="#f0f4f8" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="61.9355" y="110.7692" font-size="28.9032" fill="#222222" font-weight="bold">Before leaving your desk, check:</text>
-  <rect x="61.9355" y="149.5385" width="33.0323" height="44.3077" fill="white" stroke="#333333" stroke-width="3.0968" rx="4.129" />
-  <text x="115.6129" y="182.7692" font-size="26.8387" fill="#222222">Screen locked?</text>
-  <rect x="61.9355" y="221.5385" width="33.0323" height="44.3077" fill="white" stroke="#333333" stroke-width="3.0968" rx="4.129" />
-  <text x="115.6129" y="254.7692" font-size="26.8387" fill="#222222">Sensitive papers put away?</text>
-  <rect x="61.9355" y="293.5385" width="33.0323" height="44.3077" fill="white" stroke="#333333" stroke-width="3.0968" rx="4.129" />
-  <text x="115.6129" y="326.7692" font-size="26.8387" fill="#222222">No passwords visible?</text>
-  <rect x="61.9355" y="365.5385" width="33.0323" height="44.3077" fill="white" stroke="#333333" stroke-width="3.0968" rx="4.129" />
-  <text x="115.6129" y="398.7692" font-size="26.8387" fill="#222222">USB drives secured?</text>
-  <rect x="61.9355" y="437.5385" width="33.0323" height="44.3077" fill="white" stroke="#333333" stroke-width="3.0968" rx="4.129" />
-  <text x="115.6129" y="470.7692" font-size="26.8387" fill="#222222">Whiteboard erased?</text>
-  <rect x="61.9355" y="509.5385" width="33.0323" height="44.3077" fill="white" stroke="#333333" stroke-width="3.0968" rx="4.129" />
-  <text x="115.6129" y="542.7692" font-size="26.8387" fill="#222222">Printouts collected from the printer?</text>
-  <text x="61.9355" y="642.4615" font-size="24.7742" fill="#555555" font-style="italic">If any box is unchecked, fix it before you leave.</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <rect x="20" y="28" width="1240" height="644" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" rx="8" filter="url(#shadow)"/>
+
+  <text x="62" y="102" font-size="26" fill="#222222" font-weight="bold">Before leaving your desk, check:</text>
+
+  <!-- Checklist items -->
+  <rect x="62" y="130" width="32" height="42" fill="#ffffff" stroke="#1e88e5" stroke-width="3" rx="4"/>
+  <text x="115" y="160" font-size="24" fill="#222222">Screen locked?</text>
+
+  <rect x="62" y="196" width="32" height="42" fill="#ffffff" stroke="#1e88e5" stroke-width="3" rx="4"/>
+  <text x="115" y="226" font-size="24" fill="#222222">Sensitive papers put away?</text>
+
+  <rect x="62" y="262" width="32" height="42" fill="#ffffff" stroke="#1e88e5" stroke-width="3" rx="4"/>
+  <text x="115" y="292" font-size="24" fill="#222222">No passwords visible?</text>
+
+  <rect x="62" y="328" width="32" height="42" fill="#ffffff" stroke="#1e88e5" stroke-width="3" rx="4"/>
+  <text x="115" y="358" font-size="24" fill="#222222">USB drives secured?</text>
+
+  <rect x="62" y="394" width="32" height="42" fill="#ffffff" stroke="#1e88e5" stroke-width="3" rx="4"/>
+  <text x="115" y="424" font-size="24" fill="#222222">Whiteboard erased?</text>
+
+  <rect x="62" y="460" width="32" height="42" fill="#ffffff" stroke="#1e88e5" stroke-width="3" rx="4"/>
+  <text x="115" y="490" font-size="24" fill="#222222">Printouts collected from the printer?</text>
+
+  <text x="62" y="610" font-size="22" fill="#555555" font-style="italic">If any box is unchecked, fix it before you leave.</text>
 </svg>

@@ -1,27 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="19.6923" y="24" width="1240.6154" height="672" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.9385" />
-  <text x="640" y="96" text-anchor="middle" font-size="35.4462" font-weight="bold" fill="#333">HTTPS vs HTTP</text>
-  <rect x="49.2308" y="132" width="571.0769" height="528" rx="9.8462" fill="#d4edda" stroke="#28a745" stroke-width="3.9385" />
-  <text x="334.7692" y="192" text-anchor="middle" font-size="29.5385" font-weight="bold" fill="#28a745">Secure (HTTPS)</text>
-  <rect x="88.6154" y="228" width="157.5385" height="96" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.9385" />
-  <text x="167.3846" y="288" text-anchor="middle" font-size="25.6" fill="#333">You</text>
-  <line x1="246.1538" y1="276" x2="384" y2="276" stroke="#28a745" stroke-width="3.9385" stroke-dasharray="7.8769 5.9077" />
-  <text x="315.0769" y="259.2" text-anchor="middle" font-size="19.6923" fill="#28a745">encrypted</text>
-  <rect x="393.8462" y="228" width="177.2308" height="96" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.9385" />
-  <text x="482.4615" y="288" text-anchor="middle" font-size="25.6" fill="#333">Website</text>
-  <rect x="108.3077" y="384" width="472.6154" height="132" rx="9.8462" fill="#d4edda" stroke="#28a745" stroke-width="1.9692" />
-  <text x="344.6154" y="436.8" text-anchor="middle" font-size="23.6308" font-weight="bold" fill="#333">Attacker sees:</text>
-  <text x="344.6154" y="480" text-anchor="middle" font-size="23.6308" fill="#28a745">"x7$kL9#mQ2@..."</text>
-  <rect x="659.6923" y="132" width="571.0769" height="528" rx="9.8462" fill="#f8d7da" stroke="#dc3545" stroke-width="3.9385" />
-  <text x="945.2308" y="192" text-anchor="middle" font-size="29.5385" font-weight="bold" fill="#dc3545">Insecure (HTTP)</text>
-  <rect x="699.0769" y="228" width="157.5385" height="96" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.9385" />
-  <text x="777.8462" y="288" text-anchor="middle" font-size="25.6" fill="#333">You</text>
-  <line x1="856.6154" y1="276" x2="994.4615" y2="276" stroke="#dc3545" stroke-width="3.9385" />
-  <text x="925.5385" y="259.2" text-anchor="middle" font-size="19.6923" fill="#dc3545">plain text</text>
-  <rect x="1004.3077" y="228" width="177.2308" height="96" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.9385" />
-  <text x="1092.9231" y="288" text-anchor="middle" font-size="25.6" fill="#333">Website</text>
-  <rect x="718.7692" y="384" width="472.6154" height="156" rx="9.8462" fill="#f8d7da" stroke="#dc3545" stroke-width="1.9692" />
-  <text x="955.0769" y="436.8" text-anchor="middle" font-size="23.6308" font-weight="bold" fill="#333">Attacker sees:</text>
-  <text x="955.0769" y="480" text-anchor="middle" font-size="23.6308" fill="#dc3545">"username: jsmith</text>
-  <text x="955.0769" y="516" text-anchor="middle" font-size="23.6308" fill="#dc3545">password: MyP@ss1"</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Secure HTTPS panel -->
+  <rect x="20" y="60" width="590" height="540" rx="9" fill="#e8f5e9" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="315" y="110" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Secure (HTTPS)</text>
+
+  <rect x="60" y="140" width="160" height="90" rx="9" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="193" text-anchor="middle" font-size="22" fill="#333333">You</text>
+
+  <line x1="220" y1="185" x2="360" y2="185" stroke="#1e88e5" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="290" y="168" text-anchor="middle" font-size="16" fill="#1e88e5">encrypted</text>
+
+  <rect x="364" y="140" width="180" height="90" rx="9" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="454" y="193" text-anchor="middle" font-size="22" fill="#333333">Website</text>
+
+  <rect x="60" y="280" width="510" height="120" rx="9" fill="#e8f5e9" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="315" y="326" text-anchor="middle" font-size="21" font-weight="bold" fill="#333333">Attacker sees:</text>
+  <text x="315" y="372" text-anchor="middle" font-size="21" fill="#1e88e5">"x7$kL9#mQ2@..."</text>
+
+  <rect x="60" y="440" width="510" height="100" rx="9" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="315" y="480" text-anchor="middle" font-size="18" fill="#333333">TLS certificate verifies identity</text>
+  <text x="315" y="514" text-anchor="middle" font-size="18" fill="#333333">All data is encrypted end-to-end</text>
+
+  <!-- Insecure HTTP panel -->
+  <rect x="670" y="60" width="590" height="540" rx="9" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="965" y="110" text-anchor="middle" font-size="28" font-weight="bold" fill="#e53935">Insecure (HTTP)</text>
+
+  <rect x="710" y="140" width="160" height="90" rx="9" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="790" y="193" text-anchor="middle" font-size="22" fill="#333333">You</text>
+
+  <line x1="870" y1="185" x2="1010" y2="185" stroke="#e53935" stroke-width="3"/>
+  <text x="940" y="168" text-anchor="middle" font-size="16" fill="#e53935">plain text</text>
+
+  <rect x="1014" y="140" width="180" height="90" rx="9" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1104" y="193" text-anchor="middle" font-size="22" fill="#333333">Website</text>
+
+  <rect x="710" y="280" width="510" height="150" rx="9" fill="#fce4ec" stroke="#e53935" stroke-width="1.5"/>
+  <text x="965" y="326" text-anchor="middle" font-size="21" font-weight="bold" fill="#333333">Attacker sees:</text>
+  <text x="965" y="370" text-anchor="middle" font-size="21" fill="#e53935">"username: jsmith</text>
+  <text x="965" y="408" text-anchor="middle" font-size="21" fill="#e53935">password: MyP@ss1"</text>
 </svg>

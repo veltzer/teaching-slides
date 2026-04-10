@@ -1,27 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr2" markerWidth="19.6923" markerHeight="19.0189" refX="17.7231" refY="9.5094" orient="auto">
-      <polygon points="0,27.1698 6.8923,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="393.8462" y="27.1698" width="492.3077" height="108.6792" rx="7.8769" fill="#e3f2fd" stroke="#333333" stroke-width="2.9538" />
-  <text x="640" y="95.0943" text-anchor="middle" font-size="27.5692" font-weight="bold" fill="#222222">Security Incident</text>
-  <line x1="640" y1="135.8491" x2="640" y2="198.3396" stroke="#555" stroke-width="2.9538" />
-  <line x1="305.2308" y1="198.3396" x2="974.7692" y2="198.3396" stroke="#555" stroke-width="2.9538" />
-  <line x1="305.2308" y1="198.3396" x2="305.2308" y2="239.0943" stroke="#555" stroke-width="2.9538" marker-end="url(#arr2)" />
-  <line x1="974.7692" y1="198.3396" x2="974.7692" y2="239.0943" stroke="#555" stroke-width="2.9538" marker-end="url(#arr2)" />
-  <rect x="39.3846" y="244.5283" width="531.6923" height="434.717" rx="7.8769" fill="#f0f4f8" stroke="#333333" stroke-width="2.9538" />
-  <text x="305.2308" y="304.3019" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#222222">Report via:</text>
-  <text x="78.7692" y="361.3585" font-size="25.6" fill="#222222">• Security hotline</text>
-  <text x="78.7692" y="415.6981" font-size="25.6" fill="#222222">• Email to security@co.com</text>
-  <text x="78.7692" y="470.0377" font-size="25.6" fill="#222222">• Incident portal</text>
-  <text x="78.7692" y="524.3774" font-size="25.6" fill="#222222">• Your manager</text>
-  <rect x="708.9231" y="244.5283" width="531.6923" height="434.717" rx="7.8769" fill="#f0f4f8" stroke="#333333" stroke-width="2.9538" />
-  <text x="974.7692" y="304.3019" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#222222">Include:</text>
-  <text x="748.3077" y="361.3585" font-size="25.6" fill="#222222">• What happened</text>
-  <text x="748.3077" y="415.6981" font-size="25.6" fill="#222222">• When it happened</text>
-  <text x="748.3077" y="470.0377" font-size="25.6" fill="#222222">• What device/system</text>
-  <text x="748.3077" y="524.3774" font-size="25.6" fill="#222222">• What you did so far</text>
-  <text x="748.3077" y="578.717" font-size="25.6" fill="#222222">• Any error messages</text>
-  <text x="748.3077" y="633.0566" font-size="25.6" fill="#222222">• Screenshots if possible</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Top: Security Incident -->
+  <rect x="394" y="27" width="492" height="100" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="86" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Security Incident</text>
+
+  <!-- Lines down -->
+  <line x1="640" y1="127" x2="640" y2="186" stroke="#555555" stroke-width="2.5"/>
+  <line x1="305" y1="186" x2="975" y2="186" stroke="#555555" stroke-width="2.5"/>
+  <line x1="305" y1="186" x2="305" y2="225" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="975" y1="186" x2="975" y2="225" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Left: Report Via -->
+  <rect x="40" y="230" width="530" height="420" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="305" y="285" text-anchor="middle" font-size="24" font-weight="bold" fill="#222222">Report via:</text>
+  <text x="80" y="340" font-size="23" fill="#222222">Security hotline</text>
+  <text x="80" y="392" font-size="23" fill="#222222">Email to security@co.com</text>
+  <text x="80" y="444" font-size="23" fill="#222222">Incident portal</text>
+  <text x="80" y="496" font-size="23" fill="#222222">Your manager</text>
+
+  <!-- Right: Include -->
+  <rect x="710" y="230" width="530" height="420" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="975" y="285" text-anchor="middle" font-size="24" font-weight="bold" fill="#222222">Include:</text>
+  <text x="748" y="340" font-size="23" fill="#222222">What happened</text>
+  <text x="748" y="392" font-size="23" fill="#222222">When it happened</text>
+  <text x="748" y="444" font-size="23" fill="#222222">What device / system</text>
+  <text x="748" y="496" font-size="23" fill="#222222">What you did so far</text>
+  <text x="748" y="548" font-size="23" fill="#222222">Any error messages</text>
+  <text x="748" y="600" font-size="23" fill="#222222">Screenshots if possible</text>
 </svg>

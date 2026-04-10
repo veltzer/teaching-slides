@@ -1,26 +1,59 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="20.6452" y="21.1765" width="1238.7097" height="677.6471" fill="#e3f2fd" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <rect x="20.6452" y="21.1765" width="1238.7097" height="76.2353" fill="#1565c0" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="640" y="72" font-size="30.9677" fill="white" font-weight="bold" text-anchor="middle">DAILY SECURITY HABITS</text>
-  <text x="61.9355" y="144" font-size="28.9032" fill="#1565c0" font-weight="bold">Morning:</text>
-  <rect x="66.0645" y="160.9412" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="184.2353" font-size="26.8387" fill="#222222">Check for software updates</text>
-  <rect x="66.0645" y="205.4118" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="228.7059" font-size="26.8387" fill="#222222">Connect to VPN if working remotely</text>
-  <line x1="41.2903" y1="258.3529" x2="1238.7097" y2="258.3529" stroke="#bbbbbb" stroke-width="2.0645" />
-  <text x="61.9355" y="304.9412" font-size="28.9032" fill="#1565c0" font-weight="bold">Throughout the day:</text>
-  <rect x="66.0645" y="321.8824" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="345.1765" font-size="26.8387" fill="#222222">Lock screen when stepping away</text>
-  <rect x="66.0645" y="366.3529" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="389.6471" font-size="26.8387" fill="#222222">Think before clicking links</text>
-  <rect x="66.0645" y="410.8235" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="434.1176" font-size="26.8387" fill="#222222">Verify unusual requests</text>
-  <line x1="41.2903" y1="461.6471" x2="1238.7097" y2="461.6471" stroke="#bbbbbb" stroke-width="2.0645" />
-  <text x="61.9355" y="508.2353" font-size="28.9032" fill="#1565c0" font-weight="bold">End of day:</text>
-  <rect x="66.0645" y="525.1765" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="548.4706" font-size="26.8387" fill="#222222">Clear desk of sensitive materials</text>
-  <rect x="66.0645" y="569.6471" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="592.9412" font-size="26.8387" fill="#222222">Log out of all applications</text>
-  <rect x="66.0645" y="614.1176" width="28.9032" height="29.6471" fill="white" stroke="#333333" stroke-width="2.0645" rx="4.129" />
-  <text x="111.4839" y="637.4118" font-size="26.8387" fill="#222222">Save work to backed-up storage</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Main outer box -->
+  <rect x="20" y="20" width="1240" height="660" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" rx="8" filter="url(#shadow)"/>
+
+  <!-- Header bar -->
+  <rect x="20" y="20" width="1240" height="72" rx="8" fill="url(#grad-accent)"/>
+  <rect x="20" y="80" width="1240" height="12" fill="url(#grad-accent)"/>
+  <text x="640" y="68" font-size="28" fill="#ffffff" font-weight="bold" text-anchor="middle">DAILY SECURITY HABITS</text>
+
+  <!-- Morning -->
+  <text x="62" y="140" font-size="26" fill="#1565c0" font-weight="bold">Morning:</text>
+  <rect x="66" y="155" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="178" font-size="24" fill="#222222">Check for software updates</text>
+  <rect x="66" y="196" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="219" font-size="24" fill="#222222">Connect to VPN if working remotely</text>
+
+  <line x1="40" y1="248" x2="1240" y2="248" stroke="#bbbbbb" stroke-width="2"/>
+
+  <!-- Throughout day -->
+  <text x="62" y="294" font-size="26" fill="#1565c0" font-weight="bold">Throughout the day:</text>
+  <rect x="66" y="310" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="333" font-size="24" fill="#222222">Lock screen when stepping away</text>
+  <rect x="66" y="354" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="377" font-size="24" fill="#222222">Think before clicking links</text>
+  <rect x="66" y="398" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="421" font-size="24" fill="#222222">Verify unusual requests</text>
+
+  <line x1="40" y1="448" x2="1240" y2="448" stroke="#bbbbbb" stroke-width="2"/>
+
+  <!-- End of day -->
+  <text x="62" y="494" font-size="26" fill="#1565c0" font-weight="bold">End of day:</text>
+  <rect x="66" y="510" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="533" font-size="24" fill="#222222">Clear desk of sensitive materials</text>
+  <rect x="66" y="554" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="577" font-size="24" fill="#222222">Log out of all applications</text>
+  <rect x="66" y="598" width="28" height="28" fill="#ffffff" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="112" y="621" font-size="24" fill="#222222">Save work to backed-up storage</text>
 </svg>

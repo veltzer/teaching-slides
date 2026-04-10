@@ -1,33 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="21.3333" y="24" width="1237.3333" height="672" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="640" y="96" text-anchor="middle" font-size="38.4" font-weight="bold" fill="#333">What is a Firewall?</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="21.3333" markerHeight="16.8" refX="21.3333" refY="8.4" orient="auto">
-      <polygon points="0,24 7.4667,0" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrGreen" markerWidth="21.3333" markerHeight="16.8" refX="21.3333" refY="8.4" orient="auto">
-      <polygon points="0,24 7.4667,0" fill="#28a745" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-    <marker id="arrRed" markerWidth="21.3333" markerHeight="16.8" refX="7.4667" refY="24" orient="auto">
-      <polygon points="0,8.4 21.3333,16.8" fill="#dc3545" />
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e53935"/>
     </marker>
   </defs>
-  <rect x="64" y="240" width="277.3333" height="120" rx="10.6667" fill="#fff3cd" stroke="#ffc107" stroke-width="4.2667" />
-  <text x="202.6667" y="312" text-anchor="middle" font-size="27.7333" fill="#333">Internet</text>
-  <text x="202.6667" y="348" text-anchor="middle" font-size="21.3333" fill="#666">(all traffic)</text>
-  <line x1="341.3333" y1="300" x2="480" y2="300" stroke="#4a90e2" stroke-width="4.2667" marker-end="url(#arr)" />
-  <rect x="490.6667" y="180" width="298.6667" height="240" rx="10.6667" fill="#f8d7da" stroke="#dc3545" stroke-width="4.2667" />
-  <text x="640" y="252" text-anchor="middle" font-size="32" font-weight="bold" fill="#dc3545">FIREWALL</text>
-  <text x="640" y="300" text-anchor="middle" font-size="27.7333" fill="#333">ALLOW</text>
-  <text x="640" y="340.8" text-anchor="middle" font-size="27.7333" fill="#333">or</text>
-  <text x="640" y="381.6" text-anchor="middle" font-size="27.7333" fill="#333">BLOCK</text>
-  <line x1="789.3333" y1="264" x2="906.6667" y2="264" stroke="#28a745" stroke-width="4.2667" marker-end="url(#arrGreen)" />
-  <rect x="917.3333" y="204" width="298.6667" height="120" rx="10.6667" fill="#d4edda" stroke="#28a745" stroke-width="4.2667" />
-  <text x="1066.6667" y="259.2" text-anchor="middle" font-size="25.6" fill="#333">Approved traffic</text>
-  <text x="1066.6667" y="300" text-anchor="middle" font-size="23.4667" fill="#666">reaches your network</text>
-  <line x1="640" y1="420" x2="640" y2="504" stroke="#dc3545" stroke-width="4.2667" />
-  <polygon points="629.3333,492 650.6667,492 640,516" fill="#dc3545" />
-  <rect x="469.3333" y="528" width="341.3333" height="108" rx="10.6667" fill="#f8d7da" stroke="#dc3545" stroke-width="4.2667" />
-  <text x="640" y="576" text-anchor="middle" font-size="25.6" fill="#333">Blocked traffic</text>
-  <text x="640" y="616.8" text-anchor="middle" font-size="23.4667" fill="#dc3545">(threats stopped)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Internet -->
+  <rect x="64" y="230" width="280" height="120" rx="10" fill="#fff8e1" stroke="#f9a825" stroke-width="3" filter="url(#shadow)"/>
+  <text x="204" y="297" text-anchor="middle" font-size="26" fill="#333333">Internet</text>
+  <text x="204" y="330" text-anchor="middle" font-size="20" fill="#666666">(all traffic)</text>
+
+  <!-- Arrow right -->
+  <line x1="344" y1="290" x2="475" y2="290" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Firewall -->
+  <rect x="480" y="170" width="310" height="240" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="635" y="234" text-anchor="middle" font-size="30" font-weight="bold" fill="#e53935">FIREWALL</text>
+  <text x="635" y="278" text-anchor="middle" font-size="24" fill="#333333">ALLOW</text>
+  <text x="635" y="314" text-anchor="middle" font-size="24" fill="#333333">or</text>
+  <text x="635" y="350" text-anchor="middle" font-size="24" fill="#333333">BLOCK</text>
+
+  <!-- Arrow to allowed -->
+  <line x1="790" y1="256" x2="900" y2="256" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrow-green)"/>
+
+  <!-- Approved traffic -->
+  <rect x="905" y="196" width="310" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1060" y="248" text-anchor="middle" font-size="22" fill="#333333">Approved traffic</text>
+  <text x="1060" y="288" text-anchor="middle" font-size="20" fill="#666666">reaches your network</text>
+
+  <!-- Arrow down for blocked -->
+  <line x1="635" y1="410" x2="635" y2="490" stroke="#e53935" stroke-width="3"/>
+  <polygon points="623,480 647,480 635,504" fill="#e53935"/>
+
+  <!-- Blocked -->
+  <rect x="468" y="508" width="334" height="104" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="635" y="552" text-anchor="middle" font-size="22" fill="#333333">Blocked traffic</text>
+  <text x="635" y="592" text-anchor="middle" font-size="20" fill="#e53935">(threats stopped)</text>
 </svg>

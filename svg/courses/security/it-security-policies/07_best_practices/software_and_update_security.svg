@@ -1,17 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="sw-arr" markerWidth="17.0667" markerHeight="48" refX="12.8" refY="18" orient="auto">
-      <path d="M 0 0 L 0 36 L 17.0667 18 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="42.6667" y="120" width="469.3333" height="480" fill="#fff3e0" stroke="#cc4400" stroke-width="3.2" rx="8.5333" />
-  <text x="277.3333" y="312" font-size="27.7333" fill="#cc4400" font-weight="bold" text-anchor="middle">Software with known</text>
-  <text x="277.3333" y="420" font-size="27.7333" fill="#cc4400" font-weight="bold" text-anchor="middle">vulnerabilities</text>
-  <text x="277.3333" y="528" font-size="25.6" fill="#cc4400" text-anchor="middle">(RISK)</text>
-  <line x1="533.3333" y1="360" x2="704" y2="360" stroke="#555" stroke-width="3.2" marker-end="url(#sw-arr)" />
-  <text x="618.6667" y="312" font-size="23.4667" fill="#555555" text-anchor="middle">update</text>
-  <rect x="725.3333" y="120" width="512" height="480" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" rx="8.5333" />
-  <text x="981.3333" y="312" font-size="27.7333" fill="#2e7d32" font-weight="bold" text-anchor="middle">Updated software with</text>
-  <text x="981.3333" y="420" font-size="27.7333" fill="#2e7d32" font-weight="bold" text-anchor="middle">patches applied</text>
-  <text x="981.3333" y="528" font-size="25.6" fill="#2e7d32" text-anchor="middle">(PROTECTED)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Unpatched box -->
+  <rect x="42" y="120" width="490" height="480" fill="#fce4ec" stroke="#e53935" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <rect x="42" y="120" width="490" height="60" rx="8" fill="#c62828"/>
+  <rect x="42" y="168" width="490" height="12" fill="#c62828"/>
+  <text x="287" y="157" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">UNPATCHED</text>
+  <text x="287" y="312" text-anchor="middle" font-size="24" fill="#c62828" font-weight="bold">Software with known</text>
+  <text x="287" y="360" text-anchor="middle" font-size="24" fill="#c62828" font-weight="bold">vulnerabilities</text>
+  <text x="287" y="440" text-anchor="middle" font-size="20" fill="#888888">(RISK)</text>
+
+  <!-- Arrow with label -->
+  <line x1="532" y1="360" x2="710" y2="360" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="621" y="335" font-size="20" fill="#555555" text-anchor="middle">update</text>
+
+  <!-- Patched box -->
+  <rect x="720" y="120" width="520" height="480" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <rect x="720" y="120" width="520" height="60" rx="8" fill="#2e7d32"/>
+  <rect x="720" y="168" width="520" height="12" fill="#2e7d32"/>
+  <text x="980" y="157" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">PATCHED</text>
+  <text x="980" y="312" text-anchor="middle" font-size="24" fill="#2e7d32" font-weight="bold">Updated software with</text>
+  <text x="980" y="360" text-anchor="middle" font-size="24" fill="#2e7d32" font-weight="bold">patches applied</text>
+  <text x="980" y="440" text-anchor="middle" font-size="20" fill="#888888">(PROTECTED)</text>
 </svg>

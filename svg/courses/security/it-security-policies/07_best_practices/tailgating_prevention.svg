@@ -1,30 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="tg-arr" markerWidth="15.5152" markerHeight="28.8" refX="11.6364" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 15.5152 10.8 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-down" markerWidth="10" markerHeight="10" refX="5" refY="9" orient="auto">
+      <path d="M2,1 L5,9 L8,1 Z" fill="#555555"/>
     </marker>
   </defs>
-  <rect x="19.3939" y="36" width="572.1212" height="648" fill="#fff3e0" stroke="#cc4400" stroke-width="2.9091" rx="7.7576" />
-  <text x="304.4848" y="122.4" font-size="27.1515" fill="#cc4400" font-weight="bold" text-anchor="middle">WRONG:</text>
-  <rect x="96.9697" y="180" width="116.3636" height="165.6" fill="#ffcc99" stroke="#333333" stroke-width="2.9091" rx="7.7576" />
-  <text x="155.1515" y="280.8" font-size="25.2121" fill="#222222" text-anchor="middle">You</text>
-  <rect x="261.8182" y="180" width="116.3636" height="165.6" fill="#dddddd" stroke="#333333" stroke-width="2.9091" rx="7.7576" />
-  <text x="320" y="280.8" font-size="25.2121" fill="#222222" text-anchor="middle">???</text>
-  <line x1="155.1515" y1="345.6" x2="155.1515" y2="417.6" stroke="#555" stroke-width="2.9091" marker-end="url(#tg-arr)" />
-  <line x1="320" y1="345.6" x2="320" y2="417.6" stroke="#555" stroke-width="2.9091" marker-end="url(#tg-arr)" />
-  <rect x="77.5758" y="424.8" width="320" height="86.4" fill="#8B4513" stroke="#333333" stroke-width="1.9394" rx="3.8788" />
-  <text x="236.6061" y="482.4" font-size="23.2727" fill="white" text-anchor="middle">===DOOR===</text>
-  <text x="236.6061" y="612" font-size="21.3333" fill="#cc4400" text-anchor="middle">Both enter together</text>
-  <rect x="688.4848" y="36" width="572.1212" height="648" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9091" rx="7.7576" />
-  <text x="973.5758" y="122.4" font-size="27.1515" fill="#2e7d32" font-weight="bold" text-anchor="middle">RIGHT:</text>
-  <rect x="727.2727" y="180" width="116.3636" height="165.6" fill="#ffcc99" stroke="#333333" stroke-width="2.9091" rx="7.7576" />
-  <text x="785.4545" y="280.8" font-size="25.2121" fill="#222222" text-anchor="middle">You</text>
-  <rect x="1105.4545" y="180" width="116.3636" height="165.6" fill="#dddddd" stroke="#333333" stroke-width="2.9091" rx="7.7576" />
-  <text x="1163.6364" y="280.8" font-size="25.2121" fill="#222222" text-anchor="middle">???</text>
-  <line x1="785.4545" y1="345.6" x2="785.4545" y2="417.6" stroke="#555" stroke-width="2.9091" marker-end="url(#tg-arr)" />
-  <rect x="727.2727" y="424.8" width="155.1515" height="86.4" fill="#8B4513" stroke="#333333" stroke-width="1.9394" rx="3.8788" />
-  <text x="804.8485" y="482.4" font-size="23.2727" fill="white" text-anchor="middle">DOOR</text>
-  <text x="785.4545" y="612" font-size="21.3333" fill="#2e7d32" text-anchor="middle">Enters alone</text>
-  <text x="1163.6364" y="568.8" font-size="21.3333" fill="#2e7d32" text-anchor="middle">Waits &amp;</text>
-  <text x="1163.6364" y="619.2" font-size="21.3333" fill="#2e7d32" text-anchor="middle">badges in</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- WRONG panel -->
+  <rect x="20" y="36" width="570" height="620" fill="#fce4ec" stroke="#e53935" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <rect x="20" y="36" width="570" height="60" rx="8" fill="#c62828"/>
+  <rect x="20" y="84" width="570" height="12" fill="#c62828"/>
+  <text x="305" y="73" font-size="24" fill="#ffffff" font-weight="bold" text-anchor="middle">WRONG:</text>
+
+  <!-- You + Stranger entering together -->
+  <rect x="97" y="178" width="114" height="160" fill="#ffcc99" stroke="#333333" stroke-width="2" rx="8"/>
+  <text x="154" y="268" font-size="22" fill="#222222" text-anchor="middle">You</text>
+
+  <rect x="263" y="178" width="114" height="160" fill="#dddddd" stroke="#333333" stroke-width="2" rx="8"/>
+  <text x="320" y="268" font-size="22" fill="#222222" text-anchor="middle">???</text>
+
+  <!-- Arrow down -->
+  <line x1="154" y1="338" x2="154" y2="402" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="320" y1="338" x2="320" y2="402" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Door -->
+  <rect x="76" y="408" width="320" height="82" fill="#8B4513" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="236" y="460" font-size="20" fill="#ffffff" text-anchor="middle">===DOOR===</text>
+
+  <text x="236" y="572" font-size="20" fill="#c62828" text-anchor="middle">Both enter together</text>
+  <text x="236" y="608" font-size="18" fill="#888888" text-anchor="middle">Stranger bypasses security</text>
+
+  <!-- RIGHT panel -->
+  <rect x="690" y="36" width="570" height="620" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <rect x="690" y="36" width="570" height="60" rx="8" fill="#2e7d32"/>
+  <rect x="690" y="84" width="570" height="12" fill="#2e7d32"/>
+  <text x="975" y="73" font-size="24" fill="#ffffff" font-weight="bold" text-anchor="middle">RIGHT:</text>
+
+  <!-- You enters alone -->
+  <rect x="727" y="178" width="114" height="160" fill="#ffcc99" stroke="#333333" stroke-width="2" rx="8"/>
+  <text x="784" y="268" font-size="22" fill="#222222" text-anchor="middle">You</text>
+
+  <rect x="1105" y="178" width="114" height="160" fill="#dddddd" stroke="#333333" stroke-width="2" rx="8"/>
+  <text x="1162" y="268" font-size="22" fill="#222222" text-anchor="middle">???</text>
+
+  <!-- Arrow down for You only -->
+  <line x1="784" y1="338" x2="784" y2="402" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Door -->
+  <rect x="727" y="408" width="154" height="82" fill="#8B4513" stroke="#333333" stroke-width="2" rx="4"/>
+  <text x="804" y="460" font-size="20" fill="#ffffff" text-anchor="middle">DOOR</text>
+
+  <text x="784" y="572" font-size="20" fill="#2e7d32" text-anchor="middle">Enters alone</text>
+
+  <text x="1162" y="548" font-size="20" fill="#2e7d32" text-anchor="middle">Waits &amp;</text>
+  <text x="1162" y="588" font-size="20" fill="#2e7d32" text-anchor="middle">badges in</text>
 </svg>
