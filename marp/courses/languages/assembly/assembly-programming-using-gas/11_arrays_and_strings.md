@@ -2,6 +2,12 @@
 
 ---
 
+## Arrays and Strings in Memory
+
+![Arrays and strings memory layout in assembly](svg/courses/languages/assembly/assembly-programming-using-gas/11_arrays_and_strings/array_string_memory.svg)
+
+---
+
 ## Declaring Arrays
 
 In the data section:

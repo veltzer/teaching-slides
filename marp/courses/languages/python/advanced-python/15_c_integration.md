@@ -10,6 +10,12 @@
 
 ---
 
+## Python-C Integration Methods
+
+![Python C integration methods overview](svg/courses/languages/python/advanced-python/15_c_integration/python_c_extension.svg)
+
+---
+
 ## Why Integrate C with Python?
 
 ## Common Motivations

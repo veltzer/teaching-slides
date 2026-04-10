@@ -2,6 +2,12 @@
 
 ---
 
+## GCC Inline Assembly Syntax
+
+![GCC inline assembly syntax diagram](svg/courses/languages/assembly/assembly-programming-using-gas/15_inline_assembly/inline_asm_syntax.svg)
+
+---
+
 ## What is Inline Assembly?
 
 - Assembly code embedded directly in C code

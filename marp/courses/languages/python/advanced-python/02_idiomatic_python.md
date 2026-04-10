@@ -8,6 +8,12 @@
 
 ---
 
+## Idiomatic Python Patterns
+
+![Idiomatic Python patterns overview](svg/courses/languages/python/advanced-python/02_idiomatic_python/idiomatic_patterns.svg)
+
+---
+
 ## What is Idiomatic Python?
 
 ## Pythonic Code

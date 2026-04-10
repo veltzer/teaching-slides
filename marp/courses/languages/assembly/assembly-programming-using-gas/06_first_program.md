@@ -2,6 +2,13 @@
 ## Assembly Programming using GAS
 
 ---
+
+## First GAS Program Anatomy
+
+![Anatomy of a GAS Hello World program](svg/courses/languages/assembly/assembly-programming-using-gas/06_first_program/hello_world_anatomy.svg)
+
+---
+
 ## "Hello, World!" in Assembly
 
 A simple program to print "Hello, World!" to the console.

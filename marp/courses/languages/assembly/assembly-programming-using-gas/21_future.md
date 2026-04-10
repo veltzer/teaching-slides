@@ -1,6 +1,13 @@
 # Future of Assembly Programming
 
 ---
+
+## The Future of Assembly
+
+![The future of assembly programming](svg/courses/languages/assembly/assembly-programming-using-gas/21_future/future_of_assembly.svg)
+
+---
+
 ## Current Role of Assembly
 - Performance-critical sections
 - Device drivers and OS kernels

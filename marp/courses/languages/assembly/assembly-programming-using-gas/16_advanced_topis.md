@@ -2,6 +2,12 @@
 
 ---
 
+## SIMD and AVX Overview
+
+![SIMD and AVX vector registers and data parallelism](svg/courses/languages/assembly/assembly-programming-using-gas/16_advanced_topis/simd_avx_overview.svg)
+
+---
+
 ## Floating-Point Operations
 
 - x87 FPU (Floating-Point Unit)

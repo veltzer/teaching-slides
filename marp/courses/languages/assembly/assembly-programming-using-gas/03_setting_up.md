@@ -2,6 +2,12 @@
 
 ---
 
+## GAS Development Environment
+
+![GAS development environment setup](svg/courses/languages/assembly/assembly-programming-using-gas/03_setting_up/development_environment.svg)
+
+---
+
 ## Essential Tools for Assembly Programming
 
 1. GNU Assembler (GAS)

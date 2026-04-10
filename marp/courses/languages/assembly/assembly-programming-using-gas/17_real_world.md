@@ -2,6 +2,12 @@
 
 ---
 
+## Real-World Assembly Use Cases
+
+![Real-world assembly use cases overview](svg/courses/languages/assembly/assembly-programming-using-gas/17_real_world/real_world_use_cases.svg)
+
+---
+
 ## Implementing Simple Algorithms
 
 - Great way to practice assembly programming

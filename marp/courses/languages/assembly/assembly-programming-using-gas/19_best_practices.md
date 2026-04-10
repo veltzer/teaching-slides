@@ -1,6 +1,13 @@
 # Best Practices and Coding Standards
 
 ---
+
+## Assembly Best Practices
+
+![Assembly best practices overview](svg/courses/languages/assembly/assembly-programming-using-gas/19_best_practices/asm_best_practices.svg)
+
+---
+
 ## Code Organization
 
 - Use a consistent file structure

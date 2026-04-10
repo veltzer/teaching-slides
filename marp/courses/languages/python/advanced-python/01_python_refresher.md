@@ -7,6 +7,12 @@
 
 ---
 
+## Python Data Model
+
+![Python data model overview](svg/courses/languages/python/advanced-python/01_python_refresher/python_data_model.svg)
+
+---
+
 ## Python Basic Types
 
 ## Numbers
