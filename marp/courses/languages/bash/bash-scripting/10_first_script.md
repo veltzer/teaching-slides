@@ -1,6 +1,12 @@
 # Writing Your First Script
 
 ---
+
+## Bash Script Structure
+
+![Bash Script Structure](svg/courses/languages/bash/bash-scripting/10_first_script/script_structure.svg)
+
+---
 ## Day 2: Scripts, Syntax & I/O
 - Writing and running scripts
 - Control flow: conditionals, loops

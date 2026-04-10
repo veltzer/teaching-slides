@@ -1,6 +1,12 @@
 # Test Harnesses
 
 ---
+
+## Bash Test Harness Structure
+
+![Bash Test Harness Structure](svg/courses/languages/bash/bash-scripting/24_test_harnesses/test_harness_structure.svg)
+
+---
 ## Why Test Bash Scripts?
 - Scripts grow complex over time
 - Manual testing misses edge cases

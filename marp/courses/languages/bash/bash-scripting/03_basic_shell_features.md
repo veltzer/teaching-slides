@@ -1,6 +1,12 @@
 # Basic Shell Features
 
 ---
+
+## Basic Shell Features
+
+![Basic Shell Features](svg/courses/languages/bash/bash-scripting/03_basic_shell_features/basic_shell_features.svg)
+
+---
 ## Running Multiple Commands
 
 ```bash

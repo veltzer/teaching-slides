@@ -1,6 +1,12 @@
 # Bash Scripting Course
 
 ---
+
+## Shell Scripting Architecture
+
+![Shell Scripting Architecture](svg/courses/languages/bash/bash-scripting/01_theory/shell_vs_scripting.svg)
+
+---
 ## Course Overview
 - Duration: 3 days (~24 hours)
 - Focus: deep understanding of `bash` scripting

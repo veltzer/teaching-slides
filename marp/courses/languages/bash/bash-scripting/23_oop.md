@@ -1,6 +1,12 @@
 # Object Oriented Programming with Associative Arrays
 
 ---
+
+## OOP Patterns in Bash
+
+![OOP Patterns in Bash](svg/courses/languages/bash/bash-scripting/23_oop/oop_in_bash.svg)
+
+---
 ## OOP in `bash`? Really?
 - `bash` is not an OOP language
 - But we can simulate some OOP patterns

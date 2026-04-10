@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#b71c1c"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title bar -->
+  <rect x="40" y="20" width="1200" height="55" rx="8" fill="url(#grad-red)" filter="url(#shadow)"/>
+  <text x="640" y="54" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">Bash Error Handling Strategies</text>
+
+  <!-- set -e -->
+  <rect x="40" y="100" width="360" height="140" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="128" font-family="monospace" font-size="18" fill="#b71c1c" text-anchor="middle" font-weight="bold">set -e</text>
+  <text x="220" y="152" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">Exit on any error</text>
+  <text x="60" y="178" font-family="monospace" font-size="13" fill="#333333">#!/bin/bash</text>
+  <text x="60" y="198" font-family="monospace" font-size="13" fill="#333333">set -e</text>
+  <text x="60" y="218" font-family="Arial, sans-serif" font-size="12" fill="#777777">script stops at first failing cmd</text>
+
+  <!-- set -u -->
+  <rect x="460" y="100" width="360" height="140" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="128" font-family="monospace" font-size="18" fill="#b71c1c" text-anchor="middle" font-weight="bold">set -u</text>
+  <text x="640" y="152" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">Error on unset variables</text>
+  <text x="480" y="178" font-family="monospace" font-size="13" fill="#333333">set -u</text>
+  <text x="480" y="198" font-family="monospace" font-size="13" fill="#333333">echo $UNDEFINED  # error!</text>
+  <text x="480" y="218" font-family="Arial, sans-serif" font-size="12" fill="#777777">catches typos in var names</text>
+
+  <!-- set -o pipefail -->
+  <rect x="880" y="100" width="360" height="140" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="128" font-family="monospace" font-size="16" fill="#b71c1c" text-anchor="middle" font-weight="bold">set -o pipefail</text>
+  <text x="1060" y="152" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">Pipe failure propagation</text>
+  <text x="900" y="178" font-family="monospace" font-size="13" fill="#333333">false | echo "ok"</text>
+  <text x="900" y="198" font-family="Arial, sans-serif" font-size="12" fill="#777777">without: exits 0 (echo succeeds)</text>
+  <text x="900" y="218" font-family="Arial, sans-serif" font-size="12" fill="#777777">with: exits 1 (false failed)</text>
+
+  <!-- Combined recommended -->
+  <rect x="260" y="275" width="760" height="65" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="303" font-family="monospace" font-size="17" fill="#e65100" text-anchor="middle" font-weight="bold">Recommended: set -euo pipefail</text>
+  <text x="640" y="326" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">combine all three at top of every script for maximum safety</text>
+
+  <!-- trap ERR -->
+  <rect x="40" y="380" width="380" height="160" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="408" font-family="monospace" font-size="18" fill="#6a1b9a" text-anchor="middle" font-weight="bold">trap ERR</text>
+  <text x="230" y="432" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">Run cleanup on error</text>
+  <text x="60" y="456" font-family="monospace" font-size="12" fill="#333333">cleanup() {</text>
+  <text x="60" y="475" font-family="monospace" font-size="12" fill="#333333">  echo "Error on line $LINENO"</text>
+  <text x="60" y="494" font-family="monospace" font-size="12" fill="#333333">}</text>
+  <text x="60" y="513" font-family="monospace" font-size="12" fill="#333333">trap cleanup ERR</text>
+  <text x="60" y="530" font-family="Arial, sans-serif" font-size="12" fill="#777777">runs function when error occurs</text>
+
+  <!-- Checking $? -->
+  <rect x="460" y="380" width="380" height="160" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="650" y="408" font-family="monospace" font-size="18" fill="#2e7d32" text-anchor="middle" font-weight="bold">Checking $?</text>
+  <text x="650" y="432" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">Manual exit code check</text>
+  <text x="480" y="456" font-family="monospace" font-size="12" fill="#333333">cmd</text>
+  <text x="480" y="475" font-family="monospace" font-size="12" fill="#333333">if [ $? -ne 0 ]; then</text>
+  <text x="480" y="494" font-family="monospace" font-size="12" fill="#333333">  echo "cmd failed"</text>
+  <text x="480" y="513" font-family="monospace" font-size="12" fill="#333333">fi</text>
+  <text x="480" y="530" font-family="Arial, sans-serif" font-size="12" fill="#777777">$? = exit code of last command</text>
+
+  <!-- || die pattern -->
+  <rect x="880" y="380" width="360" height="160" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="408" font-family="monospace" font-size="18" fill="#1565c0" text-anchor="middle" font-weight="bold">|| die pattern</text>
+  <text x="1060" y="432" font-family="Arial, sans-serif" font-size="14" fill="#555555" text-anchor="middle">Inline error handling</text>
+  <text x="900" y="456" font-family="monospace" font-size="12" fill="#333333">die() {</text>
+  <text x="900" y="475" font-family="monospace" font-size="12" fill="#333333">  echo "Error: $1" &gt;&amp;2</text>
+  <text x="900" y="494" font-family="monospace" font-size="12" fill="#333333">  exit 1</text>
+  <text x="900" y="513" font-family="monospace" font-size="12" fill="#333333">}</text>
+  <text x="900" y="530" font-family="monospace" font-size="12" fill="#333333">cmd || die "cmd failed"</text>
+
+  <!-- Arrows from combined box to lower sections -->
+  <line x1="400" y1="340" x2="230" y2="380" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="340" x2="550" y2="380" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="780" y1="340" x2="1060" y2="380" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

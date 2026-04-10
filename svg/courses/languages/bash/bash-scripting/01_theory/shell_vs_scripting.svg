@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- User layer -->
+  <rect x="40" y="30" width="220" height="60" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="150" y="67" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">User / Developer</text>
+
+  <!-- Arrow user to interactive shell -->
+  <line x1="150" y1="90" x2="150" y2="135" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="160" y="120" font-family="Arial, sans-serif" font-size="13" fill="#555555">types commands</text>
+
+  <!-- Interactive shell box -->
+  <rect x="40" y="135" width="220" height="65" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="162" font-family="monospace" font-size="17" fill="#1565c0" text-anchor="middle" font-weight="bold">Interactive Shell</text>
+  <text x="150" y="188" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">bash prompt (REPL)</text>
+
+  <!-- Script file box -->
+  <rect x="330" y="30" width="220" height="60" rx="8" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="440" y="67" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Script File (.sh)</text>
+
+  <!-- Arrow script to shell interpreter -->
+  <line x1="440" y1="90" x2="440" y2="135" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="120" font-family="Arial, sans-serif" font-size="13" fill="#555555">interpreted by</text>
+
+  <!-- Shell interpreter box -->
+  <rect x="330" y="135" width="220" height="65" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="162" font-family="monospace" font-size="17" fill="#1565c0" text-anchor="middle" font-weight="bold">Shell Interpreter</text>
+  <text x="440" y="188" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">parses and executes</text>
+
+  <!-- Both shells merge to commands -->
+  <line x1="150" y1="200" x2="150" y2="260" stroke="#555555" stroke-width="2"/>
+  <line x1="440" y1="200" x2="440" y2="260" stroke="#555555" stroke-width="2"/>
+  <line x1="150" y1="260" x2="440" y2="260" stroke="#555555" stroke-width="2"/>
+  <line x1="295" y1="260" x2="295" y2="295" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Commands layer -->
+  <rect x="160" y="295" width="270" height="65" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="295" y="322" font-family="monospace" font-size="17" fill="#1565c0" text-anchor="middle" font-weight="bold">Built-in Commands</text>
+  <text x="295" y="348" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">cd, echo, read, export</text>
+
+  <!-- External commands box -->
+  <rect x="490" y="295" width="270" height="65" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="625" y="322" font-family="monospace" font-size="17" fill="#e65100" text-anchor="middle" font-weight="bold">External Commands</text>
+  <text x="625" y="348" font-family="monospace" font-size="13" fill="#555555" text-anchor="middle">ls, grep, awk, curl</text>
+
+  <!-- Arrow from commands to OS -->
+  <line x1="295" y1="360" x2="295" y2="415" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="625" y1="360" x2="625" y2="415" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- OS / Kernel box spanning full width -->
+  <rect x="100" y="415" width="820" height="65" rx="8" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="510" y="442" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Operating System Kernel</text>
+  <text x="510" y="466" font-family="Arial, sans-serif" font-size="14" fill="#c8e6c9" text-anchor="middle">process management, file system, networking, signals</text>
+
+  <!-- Shebang note box on right -->
+  <rect x="800" y="30" width="430" height="155" rx="8" fill="#fff8e1" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1015" y="58" font-family="monospace" font-size="16" fill="#e65100" text-anchor="middle" font-weight="bold">Key Script Concepts</text>
+  <text x="820" y="85" font-family="monospace" font-size="14" fill="#555555">shebang:  #!/bin/bash</text>
+  <text x="820" y="110" font-family="monospace" font-size="14" fill="#555555">make executable: chmod +x</text>
+  <text x="820" y="135" font-family="monospace" font-size="14" fill="#555555">run: ./myscript.sh</text>
+  <text x="820" y="160" font-family="monospace" font-size="14" fill="#555555">or:  bash myscript.sh</text>
+
+  <!-- Environment / variables note -->
+  <rect x="800" y="210" width="430" height="110" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1015" y="238" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32" text-anchor="middle" font-weight="bold">Script vs Interactive Differences</text>
+  <text x="820" y="263" font-family="Arial, sans-serif" font-size="13" fill="#555555">- Scripts run in a subshell (child process)</text>
+  <text x="820" y="283" font-family="Arial, sans-serif" font-size="13" fill="#555555">- No interactive prompts by default</text>
+  <text x="820" y="303" font-family="Arial, sans-serif" font-size="13" fill="#555555">- Uses exit codes to signal success/failure</text>
+
+  <!-- stdin/stdout/stderr note -->
+  <rect x="800" y="345" width="430" height="110" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1015" y="373" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" text-anchor="middle" font-weight="bold">Standard I/O Streams</text>
+  <text x="820" y="398" font-family="monospace" font-size="13" fill="#555555">stdin  (fd 0) - input</text>
+  <text x="820" y="418" font-family="monospace" font-size="13" fill="#555555">stdout (fd 1) - normal output</text>
+  <text x="820" y="438" font-family="monospace" font-size="13" fill="#555555">stderr (fd 2) - error output</text>
+</svg>

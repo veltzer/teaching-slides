@@ -1,6 +1,12 @@
 # Handling Errors
 
 ---
+
+## Bash Error Handling Strategies
+
+![Bash Error Handling Strategies](svg/courses/languages/bash/bash-scripting/07_handling_errors/error_handling_strategies.svg)
+
+---
 ## Why Error Handling Matters
 
 ```bash

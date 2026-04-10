@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Source code panel -->
+  <rect x="30" y="20" width="520" height="580" rx="8" fill="#1e1e2e" filter="url(#shadow)"/>
+  <text x="280" y="50" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#cdd6f4" text-anchor="middle">hello.s (GAS source)</text>
+
+  <!-- .data section highlight -->
+  <rect x="40" y="60" width="500" height="110" rx="4" fill="#313244"/>
+  <text x="55" y="83" font-family="monospace" font-size="13" fill="#89b4fa">.section .data</text>
+  <text x="55" y="106" font-family="monospace" font-size="13" fill="#a6e3a1">msg: .ascii "Hello, World!\n"</text>
+  <text x="55" y="129" font-family="monospace" font-size="13" fill="#a6e3a1">len: .long . - msg</text>
+  <text x="55" y="152" font-family="monospace" font-size="12" fill="#6c7086"># current loc minus msg start</text>
+
+  <!-- .text section highlight -->
+  <rect x="40" y="180" width="500" height="80" rx="4" fill="#2d2d44"/>
+  <text x="55" y="203" font-family="monospace" font-size="13" fill="#89b4fa">.section .text</text>
+  <text x="55" y="226" font-family="monospace" font-size="13" fill="#cba6f7">.globl _start</text>
+  <text x="55" y="249" font-family="monospace" font-size="12" fill="#6c7086"># exported entry point</text>
+
+  <!-- _start / syscall sequence -->
+  <rect x="40" y="268" width="500" height="200" rx="4" fill="#252535"/>
+  <text x="55" y="291" font-family="monospace" font-size="13" fill="#f38ba8">_start:</text>
+  <text x="55" y="314" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $4, %eax    <tspan fill="#6c7086"># sys_write</tspan></text>
+  <text x="55" y="337" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $1, %ebx    <tspan fill="#6c7086"># stdout fd=1</tspan></text>
+  <text x="55" y="360" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $msg, %ecx  <tspan fill="#6c7086"># buffer addr</tspan></text>
+  <text x="55" y="383" font-family="monospace" font-size="13" fill="#cdd6f4">  movl len, %edx   <tspan fill="#6c7086"># byte count</tspan></text>
+  <text x="55" y="406" font-family="monospace" font-size="13" fill="#fab387">  int $0x80        <tspan fill="#6c7086"># kernel call</tspan></text>
+  <text x="55" y="432" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $1, %eax    <tspan fill="#6c7086"># sys_exit</tspan></text>
+  <text x="55" y="455" font-family="monospace" font-size="13" fill="#cdd6f4">  movl $0, %ebx    <tspan fill="#6c7086"># exit code 0</tspan></text>
+  <text x="55" y="478" font-family="monospace" font-size="13" fill="#fab387">  int $0x80        <tspan fill="#6c7086"># kernel call</tspan></text>
+
+  <!-- Annotation panel -->
+  <rect x="580" y="20" width="670" height="580" rx="8" fill="url(#grad-surface)" filter="url(#shadow)"/>
+
+  <!-- Sections legend header -->
+  <rect x="600" y="35" width="630" height="36" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="915" y="58" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">ELF / GAS Program Anatomy</text>
+
+  <!-- .data box -->
+  <rect x="600" y="85" width="280" height="110" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="middle">.data Section</text>
+  <text x="615" y="133" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Initialized data (read-write)</text>
+  <text x="615" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Strings, constants, variables</text>
+  <text x="615" y="173" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Stored in ELF data segment</text>
+
+  <!-- .text box -->
+  <rect x="600" y="210" width="280" height="110" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="235" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2e7d32" text-anchor="middle">.text Section</text>
+  <text x="615" y="258" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Executable instructions</text>
+  <text x="615" y="278" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Read-only in ELF</text>
+  <text x="615" y="298" font-family="Arial, sans-serif" font-size="13" fill="#333333">- .globl exports _start label</text>
+
+  <!-- Labels box -->
+  <rect x="600" y="335" width="280" height="90" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="740" y="360" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f57c00" text-anchor="middle">Labels</text>
+  <text x="615" y="383" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Symbolic addresses (msg, _start)</text>
+  <text x="615" y="403" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Resolved by assembler/linker</text>
+
+  <!-- Syscall box -->
+  <rect x="910" y="85" width="320" height="200" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Syscall Sequence (int 0x80)</text>
+  <text x="925" y="136" font-family="Arial, sans-serif" font-size="13" fill="#333333">Register  Purpose</text>
+  <line x1="925" y1="143" x2="1220" y2="143" stroke="#8e24aa" stroke-width="1"/>
+  <text x="925" y="163" font-family="monospace" font-size="13" fill="#6a1b9a">%eax</text>
+  <text x="990" y="163" font-family="Arial, sans-serif" font-size="13" fill="#333333">syscall number (4=write, 1=exit)</text>
+  <text x="925" y="188" font-family="monospace" font-size="13" fill="#6a1b9a">%ebx</text>
+  <text x="990" y="188" font-family="Arial, sans-serif" font-size="13" fill="#333333">arg1 (fd=1 for stdout)</text>
+  <text x="925" y="213" font-family="monospace" font-size="13" fill="#6a1b9a">%ecx</text>
+  <text x="990" y="213" font-family="Arial, sans-serif" font-size="13" fill="#333333">arg2 (buffer address)</text>
+  <text x="925" y="238" font-family="monospace" font-size="13" fill="#6a1b9a">%edx</text>
+  <text x="990" y="238" font-family="Arial, sans-serif" font-size="13" fill="#333333">arg3 (byte count)</text>
+  <text x="925" y="263" font-family="monospace" font-size="13" fill="#f57c00">int $0x80</text>
+  <text x="1020" y="263" font-family="Arial, sans-serif" font-size="13" fill="#333333">transfers control to kernel</text>
+
+  <!-- ELF structure box -->
+  <rect x="910" y="300" width="320" height="200" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1070" y="325" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="middle">ELF Output Structure</text>
+  <!-- ELF mini diagram -->
+  <rect x="1010" y="338" width="200" height="28" rx="4" fill="#1565c0"/>
+  <text x="1110" y="357" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">ELF Header</text>
+  <rect x="1010" y="370" width="200" height="28" rx="4" fill="#43a047"/>
+  <text x="1110" y="389" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">.text segment</text>
+  <rect x="1010" y="402" width="200" height="28" rx="4" fill="#fb8c00"/>
+  <text x="1110" y="421" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">.data segment</text>
+  <rect x="1010" y="434" width="200" height="28" rx="4" fill="#8e24aa"/>
+  <text x="1110" y="453" font-family="monospace" font-size="12" fill="#ffffff" text-anchor="middle">Section headers</text>
+  <text x="925" y="488" font-family="Arial, sans-serif" font-size="12" fill="#777777">Produced by ld linker from .o object file</text>
+
+  <!-- Build command -->
+  <rect x="600" y="445" width="610" height="60" rx="6" fill="#1e1e2e" filter="url(#shadow)"/>
+  <text x="615" y="468" font-family="monospace" font-size="13" fill="#cdd6f4">as -o hello.o hello.s</text>
+  <text x="615" y="493" font-family="monospace" font-size="13" fill="#cdd6f4">ld -o hello hello.o   <tspan fill="#6c7086"># or: gcc -nostdlib -o hello hello.s</tspan></text>
+
+  <!-- Run command -->
+  <rect x="600" y="520" width="610" height="50" rx="6" fill="#002200" filter="url(#shadow)"/>
+  <text x="615" y="543" font-family="monospace" font-size="13" fill="#a6e3a1">$ ./hello</text>
+  <text x="750" y="543" font-family="monospace" font-size="13" fill="#f38ba8">Hello, World!</text>
+</svg>

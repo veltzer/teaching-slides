@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Left column: script sections stacked -->
+
+  <!-- Shebang -->
+  <rect x="60" y="30" width="540" height="70" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="150" y="55" font-family="monospace" font-size="16" fill="#bbdefb" font-weight="bold">1. Shebang Line</text>
+  <text x="80" y="82" font-family="monospace" font-size="18" fill="#ffffff">#!/bin/bash</text>
+  <!-- bracket label -->
+  <line x1="610" y1="30" x2="640" y2="30" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="640" y1="30" x2="640" y2="65" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="640" y1="65" x2="610" y2="65" stroke="#1e88e5" stroke-width="2"/>
+  <text x="650" y="68" font-family="Arial, sans-serif" font-size="13" fill="#1565c0">tells OS which interpreter</text>
+
+  <!-- Comments / Header -->
+  <rect x="60" y="120" width="540" height="80" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="145" font-family="monospace" font-size="14" fill="#2e7d32" font-weight="bold">2. Header Comments</text>
+  <text x="80" y="168" font-family="monospace" font-size="14" fill="#333333"># Description: what this script does</text>
+  <text x="80" y="188" font-family="monospace" font-size="14" fill="#333333"># Usage: ./script.sh [options]</text>
+  <line x1="610" y1="120" x2="640" y2="120" stroke="#43a047" stroke-width="2"/>
+  <line x1="640" y1="120" x2="640" y2="160" stroke="#43a047" stroke-width="2"/>
+  <line x1="640" y1="160" x2="610" y2="160" stroke="#43a047" stroke-width="2"/>
+  <text x="650" y="148" font-family="Arial, sans-serif" font-size="13" fill="#2e7d32">documents purpose</text>
+  <text x="650" y="166" font-family="Arial, sans-serif" font-size="13" fill="#2e7d32">and usage</text>
+
+  <!-- Safety options -->
+  <rect x="60" y="220" width="540" height="80" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="245" font-family="monospace" font-size="14" fill="#e65100" font-weight="bold">3. Safety Options</text>
+  <text x="80" y="268" font-family="monospace" font-size="14" fill="#333333">set -euo pipefail</text>
+  <text x="80" y="288" font-family="monospace" font-size="14" fill="#333333">IFS=$'\n\t'</text>
+  <line x1="610" y1="220" x2="640" y2="220" stroke="#fb8c00" stroke-width="2"/>
+  <line x1="640" y1="220" x2="640" y2="260" stroke="#fb8c00" stroke-width="2"/>
+  <line x1="640" y1="260" x2="610" y2="260" stroke="#fb8c00" stroke-width="2"/>
+  <text x="650" y="248" font-family="Arial, sans-serif" font-size="13" fill="#e65100">enables strict mode</text>
+
+  <!-- Functions -->
+  <rect x="60" y="320" width="540" height="100" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="345" font-family="monospace" font-size="14" fill="#6a1b9a" font-weight="bold">4. Function Definitions</text>
+  <text x="80" y="368" font-family="monospace" font-size="14" fill="#333333">usage() { echo "Usage: ..."; exit 0; }</text>
+  <text x="80" y="388" font-family="monospace" font-size="14" fill="#333333">check_deps() { ... }</text>
+  <text x="80" y="408" font-family="monospace" font-size="14" fill="#333333">do_work() { ... }</text>
+  <line x1="610" y1="320" x2="640" y2="320" stroke="#8e24aa" stroke-width="2"/>
+  <line x1="640" y1="320" x2="640" y2="370" stroke="#8e24aa" stroke-width="2"/>
+  <line x1="640" y1="370" x2="610" y2="370" stroke="#8e24aa" stroke-width="2"/>
+  <text x="650" y="348" font-family="Arial, sans-serif" font-size="13" fill="#6a1b9a">define before calling</text>
+
+  <!-- Main logic -->
+  <rect x="60" y="440" width="540" height="100" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="465" font-family="monospace" font-size="14" fill="#1565c0" font-weight="bold">5. Main Logic</text>
+  <text x="80" y="488" font-family="monospace" font-size="14" fill="#333333">parse_args "$@"</text>
+  <text x="80" y="508" font-family="monospace" font-size="14" fill="#333333">check_deps</text>
+  <text x="80" y="528" font-family="monospace" font-size="14" fill="#333333">do_work</text>
+  <line x1="610" y1="440" x2="640" y2="440" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="640" y1="440" x2="640" y2="490" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="640" y1="490" x2="610" y2="490" stroke="#1e88e5" stroke-width="2"/>
+  <text x="650" y="468" font-family="Arial, sans-serif" font-size="13" fill="#1565c0">orchestrates execution</text>
+
+  <!-- Exit code -->
+  <rect x="60" y="560" width="540" height="55" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="80" y="583" font-family="monospace" font-size="14" fill="#bbdefb" font-weight="bold">6. Exit Code</text>
+  <text x="80" y="603" font-family="monospace" font-size="16" fill="#ffffff">exit 0   # success</text>
+  <line x1="610" y1="560" x2="640" y2="560" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="640" y1="560" x2="640" y2="588" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="640" y1="588" x2="610" y2="588" stroke="#1e88e5" stroke-width="2"/>
+  <text x="650" y="576" font-family="Arial, sans-serif" font-size="13" fill="#1565c0">0=success, 1-255=error</text>
+
+  <!-- Right side: key points -->
+  <rect x="800" y="30" width="440" height="175" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1020" y="58" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" text-anchor="middle" font-weight="bold">Making a Script Executable</text>
+  <text x="820" y="84" font-family="monospace" font-size="14" fill="#333333"># Create the file</text>
+  <text x="820" y="104" font-family="monospace" font-size="14" fill="#333333">nano myscript.sh</text>
+  <text x="820" y="128" font-family="monospace" font-size="14" fill="#333333"># Make it executable</text>
+  <text x="820" y="148" font-family="monospace" font-size="14" fill="#333333">chmod +x myscript.sh</text>
+  <text x="820" y="172" font-family="monospace" font-size="14" fill="#333333"># Run it</text>
+  <text x="820" y="192" font-family="monospace" font-size="14" fill="#333333">./myscript.sh</text>
+
+  <rect x="800" y="230" width="440" height="175" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1020" y="258" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32" text-anchor="middle" font-weight="bold">Good Practices</text>
+  <text x="820" y="283" font-family="Arial, sans-serif" font-size="14" fill="#333333">- One task per function</text>
+  <text x="820" y="305" font-family="Arial, sans-serif" font-size="14" fill="#333333">- Quote all variables: "$var"</text>
+  <text x="820" y="327" font-family="Arial, sans-serif" font-size="14" fill="#333333">- Local variables in functions</text>
+  <text x="820" y="349" font-family="Arial, sans-serif" font-size="14" fill="#333333">- Descriptive names</text>
+  <text x="820" y="371" font-family="Arial, sans-serif" font-size="14" fill="#333333">- Handle errors explicitly</text>
+  <text x="820" y="393" font-family="Arial, sans-serif" font-size="14" fill="#333333">- Test with edge cases</text>
+
+  <rect x="800" y="430" width="440" height="155" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1020" y="458" font-family="Arial, sans-serif" font-size="16" fill="#e65100" text-anchor="middle" font-weight="bold">Argument Handling</text>
+  <text x="820" y="483" font-family="monospace" font-size="13" fill="#333333">$0  - script name</text>
+  <text x="820" y="503" font-family="monospace" font-size="13" fill="#333333">$1,$2...  - positional args</text>
+  <text x="820" y="523" font-family="monospace" font-size="13" fill="#333333">$#  - number of args</text>
+  <text x="820" y="543" font-family="monospace" font-size="13" fill="#333333">$@  - all args (quoted)</text>
+  <text x="820" y="563" font-family="monospace" font-size="13" fill="#333333">$*  - all args as one string</text>
+</svg>

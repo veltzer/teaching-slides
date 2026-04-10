@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title -->
+  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Python Data Model: Everything is an Object</text>
+
+  <!-- Center: "Everything is an object" -->
+  <rect x="490" y="80" width="300" height="60" rx="30" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="640" y="116" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Every value is an object</text>
+
+  <!-- Objects radiating out -->
+  <!-- int -->
+  <line x1="490" y1="110" x2="300" y2="150" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="100" y="130" width="200" height="70" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="158" font-family="monospace" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">42</text>
+  <text x="200" y="178" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">type: int  id: 0x7f...</text>
+
+  <!-- str -->
+  <line x1="540" y1="80" x2="420" y2="50" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="270" y="20" width="200" height="60" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="47" font-family="monospace" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">"hello"</text>
+  <text x="370" y="68" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">type: str  id: 0x7f...</text>
+
+  <!-- list -->
+  <line x1="640" y1="140" x2="640" y2="188" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="530" y="190" width="220" height="60" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="217" font-family="monospace" font-size="14" font-weight="bold" fill="#f57c00" text-anchor="middle">[1, 2, 3]</text>
+  <text x="640" y="237" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">type: list  id: 0x7f...</text>
+
+  <!-- function -->
+  <line x1="790" y1="80" x2="890" y2="50" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="820" y="20" width="220" height="60" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="930" y="47" font-family="monospace" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">def foo(): ...</text>
+  <text x="930" y="68" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">type: function  id: 0x7f...</text>
+
+  <!-- class -->
+  <line x1="790" y1="110" x2="980" y2="150" stroke="#888888" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="980" y="130" width="200" height="70" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="158" font-family="monospace" font-size="14" font-weight="bold" fill="#880e4f" text-anchor="middle">class Foo:</text>
+  <text x="1080" y="178" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">type: type  id: 0x7f...</text>
+
+  <!-- Object anatomy box -->
+  <rect x="30" y="270" width="400" height="200" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="230" y="295" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">Every Object Has:</text>
+  <text x="50" y="322" font-family="Arial, sans-serif" font-size="14" fill="#333333">id     - unique identity (memory address)</text>
+  <text x="50" y="347" font-family="Arial, sans-serif" font-size="14" fill="#333333">type   - its class (determines behavior)</text>
+  <text x="50" y="372" font-family="Arial, sans-serif" font-size="14" fill="#333333">value  - the data it holds</text>
+  <text x="50" y="405" font-family="monospace" font-size="13" fill="#1565c0">id(x)    # address</text>
+  <text x="50" y="428" font-family="monospace" font-size="13" fill="#1565c0">type(x)  # class</text>
+  <text x="50" y="451" font-family="monospace" font-size="13" fill="#1565c0">x == y   # value equality</text>
+
+  <!-- Identity vs Equality -->
+  <rect x="450" y="270" width="380" height="200" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="295" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f57c00" text-anchor="middle">Identity vs Equality</text>
+  <rect x="460" y="302" width="360" height="80" rx="4" fill="#1e1e2e"/>
+  <text x="475" y="325" font-family="monospace" font-size="13" fill="#cdd6f4">a = [1, 2, 3]</text>
+  <text x="475" y="345" font-family="monospace" font-size="13" fill="#cdd6f4">b = [1, 2, 3]</text>
+  <text x="475" y="365" font-family="monospace" font-size="13" fill="#a6e3a1">a == b  <tspan fill="#6c7086"># True  (same value)</tspan></text>
+  <text x="475" y="385" font-family="monospace" font-size="13" fill="#f38ba8">a is b  <tspan fill="#6c7086"># False (different obj)</tspan></text>
+  <text x="460" y="420" font-family="Arial, sans-serif" font-size="13" fill="#333333">== calls __eq__() (value comparison)</text>
+  <text x="460" y="442" font-family="Arial, sans-serif" font-size="13" fill="#333333">is  checks id() identity</text>
+  <text x="460" y="462" font-family="Arial, sans-serif" font-size="13" fill="#888888">Use "is" only for None, True, False</text>
+
+  <!-- Dunder methods table -->
+  <rect x="850" y="270" width="400" height="350" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="850" y="270" width="400" height="36" rx="8" fill="url(#grad-purple)"/>
+  <text x="1050" y="293" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Key Dunder Methods</text>
+  <rect x="860" y="310" width="380" height="28" rx="3" fill="#ede7f6"/>
+  <text x="870" y="329" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4a148c">Method</text>
+  <text x="1030" y="329" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4a148c">Triggered by</text>
+  <text x="870" y="354" font-family="monospace" font-size="12" fill="#6a1b9a">__init__</text>
+  <text x="1030" y="354" font-family="Arial, sans-serif" font-size="12" fill="#333333">obj = Class()</text>
+  <text x="870" y="374" font-family="monospace" font-size="12" fill="#6a1b9a">__repr__</text>
+  <text x="1030" y="374" font-family="Arial, sans-serif" font-size="12" fill="#333333">repr(obj)</text>
+  <text x="870" y="394" font-family="monospace" font-size="12" fill="#6a1b9a">__str__</text>
+  <text x="1030" y="394" font-family="Arial, sans-serif" font-size="12" fill="#333333">str(obj), print(obj)</text>
+  <text x="870" y="414" font-family="monospace" font-size="12" fill="#6a1b9a">__len__</text>
+  <text x="1030" y="414" font-family="Arial, sans-serif" font-size="12" fill="#333333">len(obj)</text>
+  <text x="870" y="434" font-family="monospace" font-size="12" fill="#6a1b9a">__getitem__</text>
+  <text x="1030" y="434" font-family="Arial, sans-serif" font-size="12" fill="#333333">obj[key]</text>
+  <text x="870" y="454" font-family="monospace" font-size="12" fill="#6a1b9a">__iter__</text>
+  <text x="1030" y="454" font-family="Arial, sans-serif" font-size="12" fill="#333333">for x in obj</text>
+  <text x="870" y="474" font-family="monospace" font-size="12" fill="#6a1b9a">__eq__</text>
+  <text x="1030" y="474" font-family="Arial, sans-serif" font-size="12" fill="#333333">obj == other</text>
+  <text x="870" y="494" font-family="monospace" font-size="12" fill="#6a1b9a">__add__</text>
+  <text x="1030" y="494" font-family="Arial, sans-serif" font-size="12" fill="#333333">obj + other</text>
+  <text x="870" y="514" font-family="monospace" font-size="12" fill="#6a1b9a">__enter__ / __exit__</text>
+  <text x="1030" y="514" font-family="Arial, sans-serif" font-size="12" fill="#333333">with obj as ...</text>
+  <text x="870" y="534" font-family="monospace" font-size="12" fill="#6a1b9a">__call__</text>
+  <text x="1030" y="534" font-family="Arial, sans-serif" font-size="12" fill="#333333">obj()</text>
+  <text x="870" y="554" font-family="monospace" font-size="12" fill="#6a1b9a">__del__</text>
+  <text x="1030" y="554" font-family="Arial, sans-serif" font-size="12" fill="#333333">garbage collected</text>
+  <text x="870" y="580" font-family="Arial, sans-serif" font-size="11" fill="#888888">Data model enables operator overloading and protocol support</text>
+
+  <!-- Types hierarchy note -->
+  <rect x="30" y="485" width="800" height="125" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="430" y="508" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Type System Hierarchy</text>
+  <!-- boxes -->
+  <rect x="50" y="518" width="120" height="36" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="110" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">object</text>
+  <rect x="200" y="518" width="120" height="36" rx="6" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="260" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">type</text>
+  <rect x="350" y="518" width="120" height="36" rx="6" fill="url(#grad-orange)" filter="url(#shadow)"/>
+  <text x="410" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">int / str / list</text>
+  <rect x="500" y="518" width="140" height="36" rx="6" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <text x="570" y="541" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">MyClass (user)</text>
+  <text x="50" y="580" font-family="Arial, sans-serif" font-size="13" fill="#333333">type(42) is int; type(int) is type; isinstance(42, object) is True</text>
+  <text x="50" y="600" font-family="Arial, sans-serif" font-size="13" fill="#333333">int and type are both instances of object -- everything inherits from object</text>
+</svg>

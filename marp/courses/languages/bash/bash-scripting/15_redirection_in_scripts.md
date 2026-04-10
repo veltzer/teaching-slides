@@ -1,6 +1,12 @@
 # Redirection in Scripts
 
 ---
+
+## Script Redirection Overview
+
+![Script Redirection Overview](svg/courses/languages/bash/bash-scripting/15_redirection_in_scripts/redirection_overview.svg)
+
+---
 ## Redirecting Entire Scripts
 
 ```bash

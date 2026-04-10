@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Tools section header -->
+  <rect x="40" y="30" width="560" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="320" y="58" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Development Tools</text>
+
+  <!-- Tool boxes -->
+  <!-- gcc -->
+  <rect x="40" y="90" width="160" height="80" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="122" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">gcc</text>
+  <text x="120" y="148" font-family="Arial, sans-serif" font-size="13" fill="#444444" text-anchor="middle">Compiler / Driver</text>
+
+  <!-- as -->
+  <rect x="220" y="90" width="160" height="80" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="122" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">as</text>
+  <text x="300" y="148" font-family="Arial, sans-serif" font-size="13" fill="#444444" text-anchor="middle">GNU Assembler</text>
+
+  <!-- ld -->
+  <rect x="400" y="90" width="160" height="80" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="122" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">ld</text>
+  <text x="480" y="148" font-family="Arial, sans-serif" font-size="13" fill="#444444" text-anchor="middle">Linker</text>
+
+  <!-- gdb -->
+  <rect x="40" y="190" width="160" height="80" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="222" font-family="monospace" font-size="18" font-weight="bold" fill="#2e7d32" text-anchor="middle">gdb</text>
+  <text x="120" y="248" font-family="Arial, sans-serif" font-size="13" fill="#444444" text-anchor="middle">Debugger</text>
+
+  <!-- make -->
+  <rect x="220" y="190" width="160" height="80" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="300" y="222" font-family="monospace" font-size="18" font-weight="bold" fill="#2e7d32" text-anchor="middle">make</text>
+  <text x="300" y="248" font-family="Arial, sans-serif" font-size="13" fill="#444444" text-anchor="middle">Build System</text>
+
+  <!-- objdump -->
+  <rect x="400" y="190" width="160" height="80" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="218" font-family="monospace" font-size="16" font-weight="bold" fill="#2e7d32" text-anchor="middle">objdump</text>
+  <text x="480" y="248" font-family="Arial, sans-serif" font-size="13" fill="#444444" text-anchor="middle">Disassembler</text>
+
+  <!-- Compile/Link/Debug Cycle -->
+  <rect x="660" y="30" width="580" height="44" rx="6" fill="url(#grad-green)" filter="url(#shadow)"/>
+  <text x="950" y="58" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Compile / Link / Debug Cycle</text>
+
+  <!-- Source file -->
+  <rect x="720" y="100" width="160" height="64" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800" y="126" font-family="monospace" font-size="15" font-weight="bold" fill="#1565c0" text-anchor="middle">hello.s</text>
+  <text x="800" y="151" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">Source (.s)</text>
+
+  <!-- Object file -->
+  <rect x="720" y="230" width="160" height="64" rx="8" fill="url(#grad-surface)" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800" y="256" font-family="monospace" font-size="15" font-weight="bold" fill="#f57c00" text-anchor="middle">hello.o</text>
+  <text x="800" y="281" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">Object (.o)</text>
+
+  <!-- Executable -->
+  <rect x="720" y="360" width="160" height="64" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800" y="386" font-family="monospace" font-size="15" font-weight="bold" fill="#2e7d32" text-anchor="middle">hello</text>
+  <text x="800" y="411" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">Executable (ELF)</text>
+
+  <!-- GDB box -->
+  <rect x="960" y="360" width="180" height="64" rx="8" fill="url(#grad-surface)" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1050" y="386" font-family="monospace" font-size="15" font-weight="bold" fill="#6a1b9a" text-anchor="middle">gdb hello</text>
+  <text x="1050" y="411" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="middle">Debug Session</text>
+
+  <!-- Arrows: source -> object -->
+  <line x1="800" y1="164" x2="800" y2="226" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="815" y="198" font-family="monospace" font-size="12" fill="#1565c0">as</text>
+
+  <!-- Arrows: object -> executable -->
+  <line x1="800" y1="294" x2="800" y2="356" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="815" y="328" font-family="monospace" font-size="12" fill="#f57c00">ld</text>
+
+  <!-- Arrow: executable -> gdb -->
+  <line x1="880" y1="392" x2="956" y2="392" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="898" y="384" font-family="Arial, sans-serif" font-size="12" fill="#6a1b9a">debug</text>
+
+  <!-- Installation note -->
+  <rect x="40" y="300" width="560" height="100" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="60" y="325" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333333">Install (Ubuntu/Debian):</text>
+  <text x="60" y="353" font-family="monospace" font-size="14" fill="#1565c0">sudo apt install build-essential gdb binutils</text>
+  <text x="60" y="378" font-family="Arial, sans-serif" font-size="13" fill="#777777">Provides: gcc, as, ld, ar, objdump, nm, strip, make</text>
+
+  <!-- gcc driver note -->
+  <rect x="960" y="100" width="280" height="220" rx="8" fill="#fff8e1" stroke="#fb8c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1100" y="126" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#f57c00" text-anchor="middle">gcc as driver</text>
+  <text x="980" y="155" font-family="Arial, sans-serif" font-size="13" fill="#555555">gcc invokes as and ld</text>
+  <text x="980" y="175" font-family="Arial, sans-serif" font-size="13" fill="#555555">automatically:</text>
+  <text x="980" y="202" font-family="monospace" font-size="12" fill="#1565c0">gcc -o hello hello.s</text>
+  <text x="980" y="228" font-family="Arial, sans-serif" font-size="13" fill="#555555">Or step by step:</text>
+  <text x="980" y="253" font-family="monospace" font-size="12" fill="#1565c0">as -o hello.o hello.s</text>
+  <text x="980" y="273" font-family="monospace" font-size="12" fill="#1565c0">ld -o hello hello.o</text>
+  <text x="980" y="298" font-family="Arial, sans-serif" font-size="11" fill="#888888">(-lc for C stdlib)</text>
+
+  <!-- Workflow caption -->
+  <text x="640" y="470" font-family="Arial, sans-serif" font-size="14" fill="#888888" text-anchor="middle">Edit -&gt; Assemble -&gt; Link -&gt; Run -&gt; Debug -&gt; Repeat</text>
+</svg>

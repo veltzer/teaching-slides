@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title -->
+  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Real-World Assembly Use Cases</text>
+
+  <!-- Row 1: Cryptography -->
+  <rect x="30" y="75" width="380" height="170" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="75" width="380" height="40" rx="8" fill="url(#grad-accent)"/>
+  <text x="220" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Cryptography</text>
+  <text x="50" y="132" font-family="Arial, sans-serif" font-size="13" fill="#333333">- AES-NI hardware instructions</text>
+  <text x="50" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Constant-time implementations</text>
+  <text x="50" y="174" font-family="Arial, sans-serif" font-size="13" fill="#333333">- SHA hash extensions (SHA-NI)</text>
+  <text x="50" y="195" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Used in OpenSSL, libsodium</text>
+  <text x="50" y="216" font-family="monospace" font-size="12" fill="#1565c0">aesenc %xmm1, %xmm0</text>
+  <text x="50" y="234" font-family="Arial, sans-serif" font-size="11" fill="#888888">Single-round AES encryption</text>
+
+  <!-- Codecs -->
+  <rect x="430" y="75" width="380" height="170" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="75" width="380" height="40" rx="8" fill="url(#grad-green)"/>
+  <text x="620" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Media Codecs</text>
+  <text x="450" y="132" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Video encoding (H.264, AV1)</text>
+  <text x="450" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Audio DSP (MP3, AAC filters)</text>
+  <text x="450" y="174" font-family="Arial, sans-serif" font-size="13" fill="#333333">- SIMD pixel/sample processing</text>
+  <text x="450" y="195" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Used in FFmpeg, x264, dav1d</text>
+  <text x="450" y="216" font-family="monospace" font-size="12" fill="#2e7d32">pmaddwd %xmm2, %xmm1</text>
+  <text x="450" y="234" font-family="Arial, sans-serif" font-size="11" fill="#888888">SIMD multiply-add for DCT</text>
+
+  <!-- Kernel -->
+  <rect x="830" y="75" width="420" height="170" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="830" y="75" width="420" height="40" rx="8" fill="url(#grad-orange)"/>
+  <text x="1040" y="101" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">OS Kernel Code</text>
+  <text x="850" y="132" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Boot sequence and boot loaders</text>
+  <text x="850" y="153" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Context switch (save/restore regs)</text>
+  <text x="850" y="174" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Interrupt / syscall entry points</text>
+  <text x="850" y="195" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Used in Linux, FreeBSD kernels</text>
+  <text x="850" y="216" font-family="monospace" font-size="12" fill="#f57c00">swapgs; sysretq</text>
+  <text x="850" y="234" font-family="Arial, sans-serif" font-size="11" fill="#888888">Fast syscall return path</text>
+
+  <!-- Row 2: Embedded -->
+  <rect x="30" y="265" width="380" height="170" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="265" width="380" height="40" rx="8" fill="url(#grad-purple)"/>
+  <text x="220" y="291" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Embedded Systems</text>
+  <text x="50" y="322" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Microcontroller startup code</text>
+  <text x="50" y="343" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Real-time interrupt handlers</text>
+  <text x="50" y="364" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Hardware peripheral drivers</text>
+  <text x="50" y="385" font-family="Arial, sans-serif" font-size="13" fill="#333333">- ARM Cortex-M, AVR, RISC-V</text>
+  <text x="50" y="406" font-family="monospace" font-size="12" fill="#6a1b9a">cpsid i ; disable interrupts</text>
+  <text x="50" y="424" font-family="Arial, sans-serif" font-size="11" fill="#888888">ARM: critical section entry</text>
+
+  <!-- Hot paths -->
+  <rect x="430" y="265" width="380" height="170" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="265" width="380" height="40" rx="8" fill="#e91e63"/>
+  <text x="620" y="291" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Performance Hot Paths</text>
+  <text x="450" y="322" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Inner loops (memcpy, memset)</text>
+  <text x="450" y="343" font-family="Arial, sans-serif" font-size="13" fill="#333333">- String operations (strlen, strcmp)</text>
+  <text x="450" y="364" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Database sort/search kernels</text>
+  <text x="450" y="385" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Game engine math routines</text>
+  <text x="450" y="406" font-family="monospace" font-size="12" fill="#880e4f">rep movsq</text>
+  <text x="450" y="424" font-family="Arial, sans-serif" font-size="11" fill="#888888">Fast 64-bit memory copy loop</text>
+
+  <!-- Security / RE -->
+  <rect x="830" y="265" width="420" height="170" rx="8" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="830" y="265" width="420" height="40" rx="8" fill="#afb42b"/>
+  <text x="1040" y="291" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Security and Reverse Engineering</text>
+  <text x="850" y="322" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Shellcode / exploit development</text>
+  <text x="850" y="343" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Malware analysis (disassembly)</text>
+  <text x="850" y="364" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Vulnerability research</text>
+  <text x="850" y="385" font-family="Arial, sans-serif" font-size="13" fill="#333333">- CTF (Capture the Flag) challenges</text>
+  <text x="850" y="406" font-family="monospace" font-size="12" fill="#827717">objdump -d binary | less</text>
+  <text x="850" y="424" font-family="Arial, sans-serif" font-size="11" fill="#888888">Disassemble to study behavior</text>
+
+  <!-- Bottom: decision guide -->
+  <rect x="30" y="455" width="1220" height="155" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="478" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="middle">When to Use Assembly vs. C</text>
+
+  <!-- Use assembly -->
+  <rect x="50" y="490" width="540" height="105" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="320" y="512" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Use Assembly when...</text>
+  <text x="70" y="534" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Compiler cannot emit required instructions (e.g. AES-NI)</text>
+  <text x="70" y="554" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Timing must be precise (side-channel attack resistance)</text>
+  <text x="70" y="574" font-family="Arial, sans-serif" font-size="13" fill="#333333">- No C runtime available (bootloader, startup stub)</text>
+  <text x="70" y="594" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Profiling shows a specific hot loop dominates runtime</text>
+
+  <!-- Use C -->
+  <rect x="610" y="490" width="610" height="105" rx="6" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="915" y="512" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Use C (not assembly) when...</text>
+  <text x="630" y="534" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Compiler auto-vectorization is sufficient</text>
+  <text x="630" y="554" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Portability across architectures matters</text>
+  <text x="630" y="574" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Maintainability and debugging ease are priorities</text>
+  <text x="630" y="594" font-family="Arial, sans-serif" font-size="13" fill="#333333">- Intrinsics (e.g. _mm256_add_ps) cover the SIMD need</text>
+</svg>

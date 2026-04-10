@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#f57c00"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Title -->
+  <rect x="30" y="15" width="1220" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">Idiomatic Python Patterns</text>
+
+  <!-- Comprehensions -->
+  <rect x="30" y="75" width="380" height="260" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="75" width="380" height="38" rx="8" fill="url(#grad-accent)"/>
+  <text x="220" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Comprehensions</text>
+  <rect x="40" y="120" width="360" height="200" rx="4" fill="#1e1e2e"/>
+  <text x="55" y="144" font-family="monospace" font-size="12" fill="#6c7086"># Non-idiomatic:</text>
+  <text x="55" y="164" font-family="monospace" font-size="12" fill="#cdd6f4">result = []</text>
+  <text x="55" y="184" font-family="monospace" font-size="12" fill="#cdd6f4">for x in data:</text>
+  <text x="55" y="204" font-family="monospace" font-size="12" fill="#cdd6f4">    result.append(x*2)</text>
+  <text x="55" y="230" font-family="monospace" font-size="12" fill="#6c7086"># Idiomatic:</text>
+  <text x="55" y="250" font-family="monospace" font-size="12" fill="#a6e3a1">result = [x*2 for x in data]</text>
+  <text x="55" y="278" font-family="monospace" font-size="12" fill="#a6e3a1">evens  = {x for x in d if x%2==0}</text>
+  <text x="55" y="298" font-family="monospace" font-size="12" fill="#a6e3a1">sq_map = {k: k**2 for k in range(5)}</text>
+
+  <!-- Context managers -->
+  <rect x="430" y="75" width="380" height="260" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="430" y="75" width="380" height="38" rx="8" fill="url(#grad-green)"/>
+  <text x="620" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Context Managers</text>
+  <rect x="440" y="120" width="360" height="200" rx="4" fill="#1e1e2e"/>
+  <text x="455" y="144" font-family="monospace" font-size="12" fill="#6c7086"># Non-idiomatic:</text>
+  <text x="455" y="164" font-family="monospace" font-size="12" fill="#cdd6f4">f = open("file.txt")</text>
+  <text x="455" y="184" font-family="monospace" font-size="12" fill="#cdd6f4">data = f.read()</text>
+  <text x="455" y="204" font-family="monospace" font-size="12" fill="#cdd6f4">f.close()</text>
+  <text x="455" y="230" font-family="monospace" font-size="12" fill="#6c7086"># Idiomatic:</text>
+  <text x="455" y="250" font-family="monospace" font-size="12" fill="#a6e3a1">with open("file.txt") as f:</text>
+  <text x="455" y="270" font-family="monospace" font-size="12" fill="#a6e3a1">    data = f.read()</text>
+  <text x="455" y="295" font-family="Arial, sans-serif" font-size="12" fill="#6c7086">Calls __enter__ / __exit__ automatically</text>
+
+  <!-- Generators -->
+  <rect x="830" y="75" width="420" height="260" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="830" y="75" width="420" height="38" rx="8" fill="url(#grad-orange)"/>
+  <text x="1040" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Generators</text>
+  <rect x="840" y="120" width="400" height="200" rx="4" fill="#1e1e2e"/>
+  <text x="855" y="144" font-family="monospace" font-size="12" fill="#6c7086"># Lazy sequence (memory efficient):</text>
+  <text x="855" y="164" font-family="monospace" font-size="12" fill="#cba6f7">def squares(n):</text>
+  <text x="855" y="184" font-family="monospace" font-size="12" fill="#cdd6f4">    for i in range(n):</text>
+  <text x="855" y="204" font-family="monospace" font-size="12" fill="#fab387">        yield i * i</text>
+  <text x="855" y="228" font-family="monospace" font-size="12" fill="#6c7086"># Generator expression:</text>
+  <text x="855" y="248" font-family="monospace" font-size="12" fill="#a6e3a1">g = (x*x for x in range(1000))</text>
+  <text x="855" y="272" font-family="monospace" font-size="12" fill="#a6e3a1">total = sum(x*x for x in data)</text>
+  <text x="855" y="295" font-family="Arial, sans-serif" font-size="12" fill="#6c7086">Values produced on demand -- no list built</text>
+
+  <!-- Bottom row -->
+  <!-- Unpacking -->
+  <rect x="30" y="355" width="380" height="255" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="355" width="380" height="38" rx="8" fill="url(#grad-purple)"/>
+  <text x="220" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Unpacking</text>
+  <rect x="40" y="400" width="360" height="195" rx="4" fill="#1e1e2e"/>
+  <text x="55" y="422" font-family="monospace" font-size="12" fill="#6c7086"># Tuple unpacking:</text>
+  <text x="55" y="442" font-family="monospace" font-size="12" fill="#a6e3a1">a, b, c = (1, 2, 3)</text>
+  <text x="55" y="462" font-family="monospace" font-size="12" fill="#a6e3a1">first, *rest = [1, 2, 3, 4]</text>
+  <text x="55" y="482" font-family="monospace" font-size="12" fill="#a6e3a1">*init, last = [1, 2, 3, 4]</text>
+  <text x="55" y="506" font-family="monospace" font-size="12" fill="#6c7086"># Swap without temp:</text>
+  <text x="55" y="526" font-family="monospace" font-size="12" fill="#a6e3a1">a, b = b, a</text>
+  <text x="55" y="550" font-family="monospace" font-size="12" fill="#6c7086"># Unpack in loop:</text>
+  <text x="55" y="570" font-family="monospace" font-size="12" fill="#a6e3a1">for k, v in d.items(): ...</text>
+
+  <!-- EAFP vs LBYL -->
+  <rect x="430" y="355" width="820" height="255" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="430" y="355" width="820" height="38" rx="8" fill="#455a64"/>
+  <text x="840" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">EAFP vs LBYL Philosophy</text>
+
+  <!-- LBYL left -->
+  <rect x="440" y="400" width="385" height="195" rx="6" fill="#ffebee" stroke="#e53935" stroke-width="1.5"/>
+  <text x="632" y="424" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">LBYL -- Look Before You Leap (non-Pythonic)</text>
+  <rect x="450" y="432" width="365" height="110" rx="4" fill="#1e1e2e"/>
+  <text x="465" y="454" font-family="monospace" font-size="12" fill="#cdd6f4">if key in d:</text>
+  <text x="465" y="474" font-family="monospace" font-size="12" fill="#cdd6f4">    value = d[key]</text>
+  <text x="465" y="494" font-family="monospace" font-size="12" fill="#cdd6f4">else:</text>
+  <text x="465" y="514" font-family="monospace" font-size="12" fill="#cdd6f4">    value = default</text>
+  <text x="450" y="558" font-family="Arial, sans-serif" font-size="12" fill="#888888">Race condition risk; verbose; checks twice</text>
+
+  <!-- EAFP right -->
+  <rect x="840" y="400" width="390" height="195" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="1035" y="424" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">EAFP -- Easier to Ask Forgiveness (Pythonic)</text>
+  <rect x="850" y="432" width="370" height="110" rx="4" fill="#1e1e2e"/>
+  <text x="865" y="454" font-family="monospace" font-size="12" fill="#cdd6f4">try:</text>
+  <text x="865" y="474" font-family="monospace" font-size="12" fill="#a6e3a1">    value = d[key]</text>
+  <text x="865" y="494" font-family="monospace" font-size="12" fill="#cdd6f4">except KeyError:</text>
+  <text x="865" y="514" font-family="monospace" font-size="12" fill="#a6e3a1">    value = default</text>
+  <text x="850" y="558" font-family="Arial, sans-serif" font-size="12" fill="#888888">Cleaner; no race; Pythonic; uses exceptions</text>
+  <text x="840" y="583" font-family="Arial, sans-serif" font-size="12" fill="#888888">Or even: value = d.get(key, default)</text>
+</svg>
