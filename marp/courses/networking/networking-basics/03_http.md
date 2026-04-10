@@ -19,6 +19,74 @@
 
 ---
 
+## HTTP Methods
+
+| Method | Purpose | Idempotent? | Body? |
+|--------|---------|-------------|-------|
+| GET | Retrieve a resource | Yes | No |
+| POST | Submit data / create resource | No | Yes |
+| PUT | Replace a resource entirely | Yes | Yes |
+| PATCH | Partial update | No | Yes |
+| DELETE | Remove a resource | Yes | No |
+| HEAD | Like GET but headers only | Yes | No |
+| OPTIONS | List supported methods (CORS preflight) | Yes | No |
+
+---
+
+## HTTP Status Codes
+
+| Range | Category | Common Examples |
+|-------|----------|-----------------|
+| 1xx | Informational | 101 Switching Protocols |
+| 2xx | Success | 200 OK, 201 Created, 204 No Content |
+| 3xx | Redirection | 301 Moved Permanently, 304 Not Modified |
+| 4xx | Client Error | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found |
+| 5xx | Server Error | 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable |
+
+- APIs use status codes to communicate success/failure semantics
+- `curl -o /dev/null -w '%{http_code}' URL` shows just the status code
+
+---
+
+## HTTP Request/Response in Practice
+
+```bash
+$ curl -v http://example.com/
+> GET / HTTP/1.1
+> Host: example.com
+> User-Agent: curl/8.5.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Content-Type: text/html; charset=UTF-8
+< Content-Length: 1256
+< Cache-Control: max-age=604800
+<
+<!doctype html>...
+```
+
+- Lines starting with `>` are the **request** (sent by client)
+- Lines starting with `<` are the **response** (returned by server)
+- Headers carry metadata; the body follows the blank line
+
+---
+
+## Important HTTP Headers
+
+| Header | Purpose | Example |
+|--------|---------|---------|
+| Content-Type | Body format | `application/json` |
+| Authorization | Authentication | `Bearer eyJhbG...` |
+| Cache-Control | Caching rules | `max-age=3600, public` |
+| Cookie / Set-Cookie | Session state | `session_id=abc123` |
+| Accept | Client's preferred formats | `text/html, application/json` |
+| ETag / If-None-Match | Conditional requests | `"v1.2.3"` |
+| Content-Encoding | Compression | `gzip` |
+
+- HTTP is stateless — cookies and tokens maintain session state
+
+---
+
 ## HTTP/1.0 (1996)
 
 - First standardized version
@@ -36,11 +104,12 @@
 
 ## HTTP/1.1 (1997)
 
-- Persistent connections
-- Pipelining (multiple requests before responses)
-- Host header (virtual hosting)
+- **Persistent connections**: reuse TCP connection for multiple requests
+- **Pipelining**: send multiple requests without waiting for responses
+    - Rarely used in practice — responses must arrive in order (HOL blocking)
+- **Host header**: enables virtual hosting (multiple sites on one IP)
 - New methods: PUT, DELETE, TRACE, OPTIONS
-- Chunked transfer encoding
+- Chunked transfer encoding (stream data without knowing size upfront)
 
 ---
 
@@ -56,6 +125,18 @@
 - Better bandwidth utilization
 - Introduced caching mechanisms
 - Added compression (Content-Encoding)
+
+---
+
+## Head-of-Line Blocking
+
+- **HTTP/1.1 problem**: requests are sequential on one connection
+    - If request #1 is slow, requests #2 and #3 wait behind it
+    - Browsers open 6 parallel connections as a workaround
+- **HTTP/2 fix**: multiplexing — all requests share one connection as independent streams
+    - But TCP itself still has HOL blocking (one lost packet stalls all streams)
+- **HTTP/3 fix**: QUIC uses independent streams over UDP
+    - A lost packet only stalls its own stream, not others
 
 ---
 

@@ -68,6 +68,23 @@
 
 ---
 
+## Seeing the Handshake with tcpdump
+
+```bash
+# Capture TCP handshake to port 80
+sudo tcpdump -i any -nn 'tcp port 80 and (tcp[tcpflags] & (tcp-syn|tcp-fin) != 0)'
+
+# Output shows the three-way handshake:
+# 10:23:01 IP 192.168.1.10.54321 > 93.184.216.34.80: Flags [S], seq 1000
+# 10:23:01 IP 93.184.216.34.80 > 192.168.1.10.54321: Flags [S.], seq 2000, ack 1001
+# 10:23:01 IP 192.168.1.10.54321 > 93.184.216.34.80: Flags [.], ack 2001
+```
+
+- `S` = SYN, `S.` = SYN+ACK, `.` = ACK
+- The seq/ack numbers confirm the handshake mechanism
+
+---
+
 ## TCP Flow Control
 - Prevents overwhelming receivers
 - Uses sliding window mechanism
@@ -76,11 +93,29 @@
 
 ---
 
+## TCP Connection States
+
+| State | Meaning |
+|-------|---------|
+| LISTEN | Server waiting for connections |
+| SYN_SENT | Client sent SYN, waiting for SYN-ACK |
+| ESTABLISHED | Connection open, data flows |
+| FIN_WAIT_1 | Sent FIN, waiting for ACK |
+| TIME_WAIT | Waiting to ensure remote got final ACK (2×MSL) |
+| CLOSE_WAIT | Received FIN, application has not closed yet |
+
+- `TIME_WAIT` lasts ~60s — many in this state means high connection churn
+- `CLOSE_WAIT` accumulating means a bug: the application isn't calling `close()`
+
+---
+
 ## TCP Congestion Control
-- Slow Start
-- Congestion Avoidance
-- Fast Retransmit
-- Fast Recovery
+
+- **Slow Start**: exponentially increase sending rate from 1 segment
+- **Congestion Avoidance**: linearly increase after reaching threshold
+- **Fast Retransmit**: resend after 3 duplicate ACKs (don't wait for timeout)
+- **Fast Recovery**: halve the window instead of restarting from 1
+- Modern algorithms: CUBIC (Linux default), BBR (Google, measures bandwidth)
 
 ---
 
@@ -100,6 +135,16 @@
 | HTTPS | 443 | Secure web |
 | FTP | 21 | File transfer |
 | DNS | 53 | Name resolution |
+
+---
+
+## Well-Known Port Numbers
+
+- Ports 0-1023: well-known ports (require root/admin)
+- Ports 1024-49151: registered ports (applications)
+- Ports 49152-65535: dynamic/ephemeral ports (OS-assigned)
+- A server **listens** on a port; a client connects **from** an ephemeral port
+- `ss -tlnp` shows listening TCP ports on Linux
 
 ---
 
@@ -165,11 +210,13 @@
 ---
 
 ## Common Network Issues
-- Packet loss
-- Latency
-- Jitter
-- Congestion
-- DNS resolution problems
+
+- **Packet loss**: dropped packets cause retransmissions (TCP) or gaps (UDP)
+- **Latency**: round-trip delay; affects interactive applications
+- **Jitter**: variation in latency; critical for voice/video (causes choppy audio)
+- **Congestion**: too much traffic for the link capacity; causes loss + latency
+- **MTU mismatch**: oversized packets get fragmented or dropped
+- Measure with: `ping` (latency/loss), `mtr` (per-hop), `iperf3` (throughput)
 
 ---
 

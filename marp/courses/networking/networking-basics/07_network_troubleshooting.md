@@ -5,7 +5,13 @@
 
 ## Troubleshooting Methodology
 
-A systematic approach to network troubleshooting saves time and frustration.
+1. **Identify** the problem: what exactly fails? For whom? Since when?
+1. **Isolate** the layer: work bottom-up (physical → link → network → transport → app)
+1. **Test** one variable at a time: `ping` gateway, then DNS, then the target
+1. **Compare** working vs broken: `diff` configs, check recent changes
+1. **Document** findings: timestamps, commands run, outputs observed
+
+- Most network problems are DNS, firewall rules, or routing
 
 ---
 
@@ -153,6 +159,19 @@ $ ping -c 3 -D 8.8.8.8
 ## What Ping Failures Mean
 
 ![what_ping_failures_mean](svg/courses/networking/networking-basics/07_network_troubleshooting/what_ping_failures_mean.svg)
+
+---
+
+## Understanding Packet Loss
+
+- **0% loss, low latency**: healthy connection
+- **0% loss, high latency**: congestion or long path (check `mtr` hop-by-hop)
+- **Intermittent loss (1-5%)**: congestion, flaky link, or Wi-Fi interference
+- **100% loss**: host down, firewall blocking, or routing problem
+- **Loss at a specific hop in mtr**: that router deprioritizes ICMP (often harmless)
+- **Loss increasing from a hop onward**: real problem at that hop
+
+Key: always test from **both ends** — the problem may be asymmetric
 
 ---
 

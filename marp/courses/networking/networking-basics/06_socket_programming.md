@@ -23,6 +23,11 @@
 
 ### TCP Connection Lifecycle
 
+1. Server: `socket()` → `bind()` → `listen()` → `accept()` (blocks until client connects)
+1. Client: `socket()` → `connect()` (triggers the three-way handshake)
+1. Both: `send()`/`recv()` to exchange data
+1. Either side: `close()` to tear down (triggers FIN handshake)
+
 ---
 
 ## Socket API: System Call Flow
@@ -33,6 +38,21 @@
 
 ## UDP Communication (no connection)
 ![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
+
+---
+
+## TCP vs UDP: When to Use Which
+
+### Use TCP when:
+- Data must arrive completely and in order (files, web pages, APIs)
+- You need flow control and congestion control
+- Example: HTTP, SSH, database connections, email (SMTP)
+
+### Use UDP when:
+- Speed matters more than reliability (real-time audio/video)
+- You can tolerate some packet loss
+- You need multicast or broadcast
+- Example: DNS queries, VoIP, gaming, video streaming, DHCP
 
 ---
 
@@ -286,6 +306,25 @@ sock.settimeout(10.0)  # 10 second timeout
 sock.settimeout(0)     # Non-blocking mode
 sock.settimeout(None)  # Blocking mode (default)
 ```
+
+---
+
+## shutdown() vs close()
+
+```python
+# close() — releases the file descriptor
+conn.close()
+
+# shutdown() — signals intent, keeps fd open for reading
+conn.shutdown(socket.SHUT_WR)   # "I'm done sending"
+data = conn.recv(4096)           # can still receive
+conn.close()                     # now release the fd
+```
+
+- `close()` immediately releases the socket — pending data may be lost
+- `shutdown(SHUT_WR)` sends FIN, letting the peer know you're done
+- Use `shutdown()` for graceful connection termination
+- Common bug: calling `close()` without draining the receive buffer causes RST
 
 ---
 
