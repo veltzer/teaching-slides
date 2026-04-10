@@ -9,6 +9,7 @@ Checks:
   --fonts       Flag SVGs with font-size below minimum
   --parse       Flag SVGs with XML parse errors
   --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
+  --bounds      Flag SVGs with elements drawn below y=640
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
@@ -24,6 +25,7 @@ MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
 MIN_FONT_SIZE = 10
 REQUIRED_VIEWBOX = "0 0 1280 720"
+MAX_Y_BOUND = 640
 
 
 def _check_size(path: Path) -> list[str]:
@@ -78,6 +80,39 @@ def _check_dimensions(tree: ET.ElementTree) -> list[str]:
     return []
 
 
+def _check_bounds(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs with elements drawn below the maximum Y boundary."""
+    for elem in tree.iter():
+        tag = elem.tag.split('}')[-1]
+        y_max = None
+        
+        try:
+            if tag in ('rect', 'image', 'foreignObject'):
+                y = float(elem.get('y', '0').replace('px', ''))
+                h = float(elem.get('height', '0').replace('px', ''))
+                y_max = y + h
+            elif tag in ('text', 'use'):
+                y = float(elem.get('y', '0').replace('px', ''))
+                y_max = y
+            elif tag in ('circle', 'ellipse'):
+                cy = float(elem.get('cy', '0').replace('px', ''))
+                if tag == 'circle':
+                    r = float(elem.get('r', '0').replace('px', ''))
+                else:
+                    r = float(elem.get('ry', '0').replace('px', ''))
+                y_max = cy + r
+            elif tag == 'line':
+                y1 = float(elem.get('y1', '0').replace('px', ''))
+                y2 = float(elem.get('y2', '0').replace('px', ''))
+                y_max = max(y1, y2)
+        except ValueError:
+            pass
+            
+        if y_max is not None and y_max > MAX_Y_BOUND:
+            return [f"element <{tag}> extends below y={MAX_Y_BOUND} (found bottom y={y_max})"]
+    return []
+
+
 def main() -> None:
     if not Path(".git").exists():
         print("Error: script must be run from the root of the repository", file=sys.stderr)
@@ -98,19 +133,22 @@ def main() -> None:
                         help='Flag SVGs with XML parse errors')
     parser.add_argument('--dimensions', action='store_true',
                         help='Flag SVGs that do not have exactly viewBox="0 0 1280 720"')
+    parser.add_argument('--bounds', action='store_true',
+                        help='Flag SVGs with elements drawn below y=640')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
     # Default: all checks enabled
-    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions]
+    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
     do_fonts = args.fonts or not explicit
     do_parse = args.parse or not explicit
     do_dimensions = args.dimensions or not explicit
+    do_bounds = args.bounds or not explicit
 
     failures = 0
     for path_str in args.paths:
@@ -122,7 +160,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -134,6 +172,8 @@ def main() -> None:
                 errors.extend(_check_fonts(tree))
             if do_dimensions:
                 errors.extend(_check_dimensions(tree))
+            if do_bounds:
+                errors.extend(_check_bounds(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
