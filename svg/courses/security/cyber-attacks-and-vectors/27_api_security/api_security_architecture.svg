@@ -1,43 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16.8421" markerHeight="13.2632" refX="15.1579" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 5.8947,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="56.8421" text-anchor="middle" font-size="26.9474" font-weight="bold" fill="#333">API Security Architecture</text>
-  <rect x="33.6842" y="132.6316" width="168.4211" height="113.6842" rx="8.4211" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3684" />
-  <text x="117.8947" y="185.6842" text-anchor="middle" font-size="20.2105" font-weight="bold" fill="#333">Client</text>
-  <text x="117.8947" y="219.7895" text-anchor="middle" font-size="16.8421" fill="#666">App / Browser</text>
-  <line x1="202.1053" y1="189.4737" x2="252.6316" y2="189.4737" stroke="#4a90e2" stroke-width="3.3684" marker-end="url(#arrow)" />
-  <rect x="266.1053" y="104.2105" width="202.1053" height="170.5263" rx="8.4211" fill="#d4edda" stroke="#28a745" stroke-width="3.3684" />
-  <text x="367.1579" y="151.5789" text-anchor="middle" font-size="18.5263" font-weight="bold" fill="#28a745">API Gateway</text>
-  <text x="367.1579" y="185.6842" text-anchor="middle" font-size="16.8421" fill="#333">TLS termination</text>
-  <text x="367.1579" y="212.2105" text-anchor="middle" font-size="16.8421" fill="#333">Routing</text>
-  <text x="367.1579" y="238.7368" text-anchor="middle" font-size="16.8421" fill="#333">Logging</text>
-  <line x1="468.2105" y1="189.4737" x2="518.7368" y2="189.4737" stroke="#4a90e2" stroke-width="3.3684" marker-end="url(#arrow)" />
-  <rect x="532.2105" y="104.2105" width="202.1053" height="170.5263" rx="8.4211" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3684" />
-  <text x="633.2632" y="151.5789" text-anchor="middle" font-size="18.5263" font-weight="bold" fill="#4a90e2">Authentication</text>
-  <text x="633.2632" y="185.6842" text-anchor="middle" font-size="16.8421" fill="#333">OAuth 2.0</text>
-  <text x="633.2632" y="212.2105" text-anchor="middle" font-size="16.8421" fill="#333">API Keys</text>
-  <text x="633.2632" y="238.7368" text-anchor="middle" font-size="16.8421" fill="#333">JWT</text>
-  <line x1="734.3158" y1="189.4737" x2="784.8421" y2="189.4737" stroke="#4a90e2" stroke-width="3.3684" marker-end="url(#arrow)" />
-  <rect x="798.3158" y="104.2105" width="202.1053" height="170.5263" rx="8.4211" fill="#fff3cd" stroke="#ffc107" stroke-width="3.3684" />
-  <text x="899.3684" y="151.5789" text-anchor="middle" font-size="18.5263" font-weight="bold" fill="#e6a800">Rate Limiting</text>
-  <text x="899.3684" y="185.6842" text-anchor="middle" font-size="16.8421" fill="#333">Throttling</text>
-  <text x="899.3684" y="212.2105" text-anchor="middle" font-size="16.8421" fill="#333">Quotas</text>
-  <text x="899.3684" y="238.7368" text-anchor="middle" font-size="16.8421" fill="#333">Per-client limits</text>
-  <line x1="1000.4211" y1="189.4737" x2="1050.9474" y2="189.4737" stroke="#4a90e2" stroke-width="3.3684" marker-end="url(#arrow)" />
-  <rect x="1064.4211" y="104.2105" width="185.2632" height="170.5263" rx="8.4211" fill="#d4edda" stroke="#28a745" stroke-width="3.3684" />
-  <text x="1157.0526" y="151.5789" text-anchor="middle" font-size="18.5263" font-weight="bold" fill="#28a745">Validation</text>
-  <text x="1157.0526" y="185.6842" text-anchor="middle" font-size="16.8421" fill="#333">Schema check</text>
-  <text x="1157.0526" y="212.2105" text-anchor="middle" font-size="16.8421" fill="#333">Sanitization</text>
-  <text x="1157.0526" y="238.7368" text-anchor="middle" font-size="16.8421" fill="#333">Type checking</text>
-  <line x1="1157.0526" y1="274.7368" x2="1157.0526" y2="341.0526" stroke="#4a90e2" stroke-width="3.3684" marker-end="url(#arrow)" />
-  <rect x="926.3158" y="350.5263" width="421.0526" height="113.6842" rx="8.4211" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3684" />
-  <text x="1136.8421" y="401.6842" text-anchor="middle" font-size="20.2105" font-weight="bold" fill="#333">Backend Services</text>
-  <text x="1136.8421" y="439.5789" text-anchor="middle" font-size="16.8421" fill="#666">Application logic &amp; data</text>
-  <rect x="168.4211" y="378.9474" width="640" height="132.6316" rx="8.4211" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5263" />
-  <text x="488.4211" y="426.3158" text-anchor="middle" font-size="18.5263" font-weight="bold" fill="#dc3545">Security Monitoring &amp; Logging</text>
-  <text x="488.4211" y="464.2105" text-anchor="middle" font-size="16.8421" fill="#333">Anomaly detection, audit trails, threat intelligence</text>
-  <text x="488.4211" y="492.6316" text-anchor="middle" font-size="16.8421" fill="#333">Alerting on suspicious patterns</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <ns0:polygon points="0,18 5.6,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="608" y="54" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">API Security Architecture</ns0:text>
+  <ns0:rect x="32" y="126" width="160" height="108" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <ns0:text x="112" y="176.4" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Client</ns0:text>
+  <ns0:text x="112" y="208.8" text-anchor="middle" font-size="16" fill="#666">App / Browser</ns0:text>
+  <ns0:line x1="192" y1="180" x2="240" y2="180" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <ns0:rect x="252.8" y="99" width="192" height="162" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <ns0:text x="348.8" y="144" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#28a745">API Gateway</ns0:text>
+  <ns0:text x="348.8" y="176.4" text-anchor="middle" font-size="16" fill="#333">TLS termination</ns0:text>
+  <ns0:text x="348.8" y="201.6" text-anchor="middle" font-size="16" fill="#333">Routing</ns0:text>
+  <ns0:text x="348.8" y="226.8" text-anchor="middle" font-size="16" fill="#333">Logging</ns0:text>
+  <ns0:line x1="444.8" y1="180" x2="492.8" y2="180" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <ns0:rect x="505.6" y="99" width="192" height="162" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <ns0:text x="601.6" y="144" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#4a90e2">Authentication</ns0:text>
+  <ns0:text x="601.6" y="176.4" text-anchor="middle" font-size="16" fill="#333">OAuth 2.0</ns0:text>
+  <ns0:text x="601.6" y="201.6" text-anchor="middle" font-size="16" fill="#333">API Keys</ns0:text>
+  <ns0:text x="601.6" y="226.8" text-anchor="middle" font-size="16" fill="#333">JWT</ns0:text>
+  <ns0:line x1="697.6" y1="180" x2="745.6" y2="180" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <ns0:rect x="758.4" y="99" width="192" height="162" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <ns0:text x="854.4" y="144" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#e6a800">Rate Limiting</ns0:text>
+  <ns0:text x="854.4" y="176.4" text-anchor="middle" font-size="16" fill="#333">Throttling</ns0:text>
+  <ns0:text x="854.4" y="201.6" text-anchor="middle" font-size="16" fill="#333">Quotas</ns0:text>
+  <ns0:text x="854.4" y="226.8" text-anchor="middle" font-size="16" fill="#333">Per-client limits</ns0:text>
+  <ns0:line x1="950.4001" y1="180" x2="998.4" y2="180" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <ns0:rect x="1011.2001" y="99" width="176" height="162" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <ns0:text x="1099.2" y="144" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#28a745">Validation</ns0:text>
+  <ns0:text x="1099.2" y="176.4" text-anchor="middle" font-size="16" fill="#333">Schema check</ns0:text>
+  <ns0:text x="1099.2" y="201.6" text-anchor="middle" font-size="16" fill="#333">Sanitization</ns0:text>
+  <ns0:text x="1099.2" y="226.8" text-anchor="middle" font-size="16" fill="#333">Type checking</ns0:text>
+  <ns0:line x1="1099.2" y1="261" x2="1099.2" y2="324" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <ns0:rect x="880" y="333" width="400" height="108" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <ns0:text x="1080" y="381.6" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Backend Services</ns0:text>
+  <ns0:text x="1080" y="417.6" text-anchor="middle" font-size="16" fill="#666">Application logic &amp; data</ns0:text>
+  <ns0:rect x="160" y="360" width="608" height="126" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <ns0:text x="464.0001" y="405" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#dc3545">Security Monitoring &amp; Logging</ns0:text>
+  <ns0:text x="464.0001" y="441" text-anchor="middle" font-size="16" fill="#333">Anomaly detection, audit trails, threat intelligence</ns0:text>
+  <ns0:text x="464.0001" y="468" text-anchor="middle" font-size="16" fill="#333">Alerting on suspicious patterns</ns0:text>
+</ns0:svg>

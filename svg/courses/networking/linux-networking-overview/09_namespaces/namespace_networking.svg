@@ -1,44 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Two namespaces -->
-  <rect x="60" y="120" width="430" height="410" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <rect x="60" y="120" width="430" height="54" fill="url(#grad-accent)" rx="10"/>
-  <rect x="60" y="162" width="430" height="12" fill="url(#grad-accent)"/>
-  <text x="275" y="157" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">Default Namespace</text>
-  <!-- veth0 box -->
-  <rect x="120" y="222" width="310" height="118" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="6"/>
-  <text x="275" y="290" text-anchor="middle" font-size="20" fill="#e65100">veth0 (10.0.0.1)</text>
-  <text x="275" y="438" text-anchor="middle" font-size="16" fill="#777777">ip addr add 10.0.0.1/24</text>
-  <!-- Namespace myns -->
-  <rect x="790" y="120" width="430" height="410" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <rect x="790" y="120" width="430" height="54" fill="url(#grad-accent)" rx="10"/>
-  <rect x="790" y="162" width="430" height="12" fill="url(#grad-accent)"/>
-  <text x="1005" y="157" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">Namespace: myns</text>
-  <!-- veth1 box -->
-  <rect x="850" y="222" width="310" height="118" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="6"/>
-  <text x="1005" y="290" text-anchor="middle" font-size="20" fill="#e65100">veth1 (10.0.0.2)</text>
-  <text x="1005" y="438" text-anchor="middle" font-size="16" fill="#777777">ip netns exec myns</text>
-  <!-- veth pair link -->
-  <line x1="430" y1="280" x2="790" y2="280" stroke="#c62828" stroke-width="5" stroke-dasharray="16,8"/>
-  <text x="610" y="258" text-anchor="middle" font-size="19" fill="#c62828" font-weight="bold">veth pair link</text>
-  <text x="640" y="614" text-anchor="middle" font-size="16" fill="#777777">ip link add veth0 type veth peer name veth1 | ip link set veth1 netns myns</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="53.3333" y="106.6667" width="382.2222" height="364.4444" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="53.3333" y="106.6667" width="382.2222" height="48" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="53.3333" y="144" width="382.2222" height="10.6667" fill="url(#grad-accent)" />
+  <ns0:text x="244.4444" y="139.5556" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="#ffffff">Default Namespace</ns0:text>
+  <ns0:rect x="106.6667" y="197.3333" width="275.5556" height="104.8889" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="5.3333" />
+  <ns0:text x="244.4444" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#e65100">veth0 (10.0.0.1)</ns0:text>
+  <ns0:text x="244.4444" y="389.3333" text-anchor="middle" font-size="14.2222" fill="#777777">ip addr add 10.0.0.1/24</ns0:text>
+  <ns0:rect x="702.2222" y="106.6667" width="382.2222" height="364.4444" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="702.2222" y="106.6667" width="382.2222" height="48" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="702.2222" y="144" width="382.2222" height="10.6667" fill="url(#grad-accent)" />
+  <ns0:text x="893.3333" y="139.5556" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="#ffffff">Namespace: myns</ns0:text>
+  <ns0:rect x="755.5556" y="197.3333" width="275.5556" height="104.8889" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="5.3333" />
+  <ns0:text x="893.3333" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#e65100">veth1 (10.0.0.2)</ns0:text>
+  <ns0:text x="893.3333" y="389.3333" text-anchor="middle" font-size="14.2222" fill="#777777">ip netns exec myns</ns0:text>
+  <ns0:line x1="382.2222" y1="248.8889" x2="702.2222" y2="248.8889" stroke="#c62828" stroke-width="4.4444" stroke-dasharray="14.2222 7.1111" />
+  <ns0:text x="542.2222" y="229.3333" text-anchor="middle" font-size="16.8889" fill="#c62828" font-weight="bold">veth pair link</ns0:text>
+  <ns0:text x="568.8889" y="545.7778" text-anchor="middle" font-size="14.2222" fill="#777777">ip link add veth0 type veth peer name veth1 | ip link set veth1 netns myns</ns0:text>
+</ns0:svg>

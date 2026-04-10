@@ -1,28 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="34.6154" text-anchor="middle" font-size="22.1538" font-weight="bold" fill="#333">Salting Technique for Skewed Joins</text>
-  <text x="68.5714" y="76.1538" font-size="19.3846" font-weight="bold" fill="#dc3545">Before Salting (Skewed)</text>
-  <rect x="45.7143" y="90" width="1165.7143" height="62.3077" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7692" />
-  <text x="80" y="127.3846" font-size="16.6154" fill="#333">Partition 0: key=1 (5M rows)</text>
-  <text x="800" y="127.3846" font-size="16.6154" font-weight="bold" fill="#dc3545">← HOT PARTITION</text>
-  <rect x="45.7143" y="159.2308" width="1165.7143" height="48.4615" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="80" y="189.6923" font-size="16.6154" fill="#333">Partition 1: key=2 (100 rows)</text>
-  <rect x="45.7143" y="214.6154" width="1165.7143" height="48.4615" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="80" y="245.0769" font-size="16.6154" fill="#333">Partition 2: key=3 (200 rows)</text>
-  <text x="640" y="297.6923" text-anchor="middle" font-size="33.2308" fill="#28a745">▼</text>
-  <text x="640" y="325.3846" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#28a745">Apply Salting (factor=10)</text>
-  <text x="68.5714" y="366.9231" font-size="19.3846" font-weight="bold" fill="#28a745">After Salting (Balanced)</text>
-  <rect x="45.7143" y="380.7692" width="1165.7143" height="41.5385" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="80" y="408.4615" font-size="15.2308" fill="#333">Partition 0: key=1_0 (500K)</text>
-  <rect x="45.7143" y="426.4615" width="1165.7143" height="41.5385" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="80" y="454.1538" font-size="15.2308" fill="#333">Partition 1: key=1_1 (500K)</text>
-  <rect x="45.7143" y="472.1538" width="1165.7143" height="41.5385" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="80" y="499.8462" font-size="15.2308" fill="#555">...</text>
-  <rect x="45.7143" y="517.8462" width="1165.7143" height="41.5385" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="80" y="545.5385" font-size="15.2308" fill="#333">Partition 9: key=1_9 (500K)</text>
-  <rect x="45.7143" y="563.5385" width="1165.7143" height="41.5385" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="80" y="591.2308" font-size="15.2308" fill="#333">Partition 10: key=2 (100)</text>
-  <rect x="45.7143" y="609.2308" width="1165.7143" height="41.5385" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="80" y="636.9231" font-size="15.2308" fill="#333">Partition 11: key=3 (200)</text>
-  <rect x="45.7143" y="671.5385" width="1165.7143" height="41.5385" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0769" />
-  <text x="640" y="699.2308" text-anchor="middle" font-size="15.2308" font-weight="bold" fill="#856404">Result: Hot partition split into 10 even partitions</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="574.412" y="31.068" text-anchor="middle" font-size="19.8835" font-weight="bold" fill="#333">Salting Technique for Skewed Joins</ns0:text>
+  <ns0:text x="61.5441" y="68.3495" font-size="17.398" font-weight="bold" fill="#dc3545">Before Salting (Skewed)</ns0:text>
+  <ns0:rect x="41.0294" y="80.7767" width="1046.2505" height="55.9223" rx="6.2136" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4854" />
+  <ns0:text x="71.8015" y="114.3301" font-size="14.9126" fill="#333">Partition 0: key=1 (5M rows)</ns0:text>
+  <ns0:text x="718.015" y="114.3301" font-size="14.9126" font-weight="bold" fill="#dc3545">← HOT PARTITION</ns0:text>
+  <ns0:rect x="41.0294" y="142.9126" width="1046.2505" height="43.4951" rx="6.2136" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="170.2524" font-size="14.9126" fill="#333">Partition 1: key=2 (100 rows)</ns0:text>
+  <ns0:rect x="41.0294" y="192.6214" width="1046.2505" height="43.4951" rx="6.2136" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="219.9611" font-size="14.9126" fill="#333">Partition 2: key=3 (200 rows)</ns0:text>
+  <ns0:text x="574.412" y="267.1844" text-anchor="middle" font-size="29.8253" fill="#28a745">▼</ns0:text>
+  <ns0:text x="574.412" y="292.0388" text-anchor="middle" font-size="14.9126" font-weight="bold" fill="#28a745">Apply Salting (factor=10)</ns0:text>
+  <ns0:text x="61.5441" y="329.3204" font-size="17.398" font-weight="bold" fill="#28a745">After Salting (Balanced)</ns0:text>
+  <ns0:rect x="41.0294" y="341.7475" width="1046.2505" height="37.2816" rx="6.2136" fill="#d4edda" stroke="#28a745" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="366.6019" font-size="13.6699" fill="#333">Partition 0: key=1_0 (500K)</ns0:text>
+  <ns0:rect x="41.0294" y="382.7572" width="1046.2505" height="37.2816" rx="6.2136" fill="#d4edda" stroke="#28a745" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="407.6116" font-size="13.6699" fill="#333">Partition 1: key=1_1 (500K)</ns0:text>
+  <ns0:rect x="41.0294" y="423.7669" width="1046.2505" height="37.2816" rx="6.2136" fill="#d4edda" stroke="#28a745" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="448.6214" font-size="13.6699" fill="#555">...</ns0:text>
+  <ns0:rect x="41.0294" y="464.7767" width="1046.2505" height="37.2816" rx="6.2136" fill="#d4edda" stroke="#28a745" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="489.631" font-size="13.6699" fill="#333">Partition 9: key=1_9 (500K)</ns0:text>
+  <ns0:rect x="41.0294" y="505.7864" width="1046.2505" height="37.2816" rx="6.2136" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="530.6407" font-size="13.6699" fill="#333">Partition 10: key=2 (100)</ns0:text>
+  <ns0:rect x="41.0294" y="546.7961" width="1046.2505" height="37.2816" rx="6.2136" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8641" />
+  <ns0:text x="71.8015" y="571.6504" font-size="13.6699" fill="#333">Partition 11: key=3 (200)</ns0:text>
+  <ns0:rect x="41.0294" y="602.7184" width="1046.2505" height="37.2816" rx="6.2136" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8641" />
+  <ns0:text x="574.412" y="627.5728" text-anchor="middle" font-size="13.6699" font-weight="bold" fill="#856404">Result: Hot partition split into 10 even partitions</ns0:text>
+</ns0:svg>

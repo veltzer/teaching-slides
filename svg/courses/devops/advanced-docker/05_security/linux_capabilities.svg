@@ -1,66 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Traditional model (left) -->
-  <rect x="30" y="20" width="540" height="380" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
-  <text x="300" y="54" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Traditional: Binary root/non-root</text>
-
-  <rect x="60" y="74" width="480" height="120" rx="6" fill="#c62828" filter="url(#shadow)"/>
-  <text x="300" y="122" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">root (uid=0)</text>
-  <text x="300" y="150" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ffcdd2">ALL privileges — bind port 80, load modules,</text>
-  <text x="300" y="170" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ffcdd2">raw sockets, kill any process, …</text>
-
-  <rect x="60" y="216" width="480" height="80" rx="6" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="300" y="262" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#9e9e9e">non-root</text>
-  <text x="300" y="282" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9e9e9e">NO privileges — can do almost nothing privileged</text>
-
-  <text x="300" y="340" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#c62828" font-weight="bold">Problem: all-or-nothing</text>
-  <text x="300" y="364" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Containers running as root have full host access</text>
-
-  <!-- Capabilities model (right) -->
-  <rect x="620" y="20" width="630" height="580" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="935" y="54" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#2e7d32">Capabilities: Fine-grained privileges</text>
-
-  <!-- Capability groups -->
-  <rect x="648" y="68" width="570" height="120" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="700" y="96" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Network</text>
-  <text x="700" y="118" font-family="monospace" font-size="13" fill="#555555">NET_BIND_SERVICE  — bind ports &lt; 1024</text>
-  <text x="700" y="138" font-family="monospace" font-size="13" fill="#555555">NET_RAW           — raw/packet sockets (⚠ risky)</text>
-  <text x="700" y="158" font-family="monospace" font-size="13" fill="#555555">NET_ADMIN         — network config (⚠ risky)</text>
-  <text x="1140" y="130" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#2e7d32">🟢</text>
-
-  <rect x="648" y="200" width="570" height="120" rx="6" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="700" y="228" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100">System</text>
-  <text x="700" y="250" font-family="monospace" font-size="13" fill="#555555">SYS_ADMIN         — many ops (⚠⚠ very risky)</text>
-  <text x="700" y="270" font-family="monospace" font-size="13" fill="#555555">SYS_PTRACE        — debug other processes</text>
-  <text x="700" y="290" font-family="monospace" font-size="13" fill="#555555">SYS_MODULE        — load kernel modules (⚠⚠)</text>
-  <text x="1140" y="262" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#c62828">🔴</text>
-
-  <rect x="648" y="332" width="570" height="100" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="700" y="360" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Process</text>
-  <text x="700" y="382" font-family="monospace" font-size="13" fill="#555555">KILL              — send signals to any process</text>
-  <text x="700" y="402" font-family="monospace" font-size="13" fill="#555555">SETUID / SETGID   — change user/group id</text>
-  <text x="1140" y="378" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#f9a825">🟡</text>
-
-  <!-- Docker drop caps -->
-  <rect x="648" y="446" width="570" height="120" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="935" y="474" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Docker: drop all, add only what's needed</text>
-  <text x="668" y="498" font-family="monospace" font-size="13" fill="#212121">--cap-drop ALL --cap-add NET_BIND_SERVICE</text>
-  <text x="668" y="518" font-family="monospace" font-size="13" fill="#212121">securityContext:</text>
-  <text x="668" y="538" font-family="monospace" font-size="13" fill="#212121">  capabilities:</text>
-  <text x="668" y="556" font-family="monospace" font-size="13" fill="#1565c0">    drop: ["ALL"]   add: ["NET_BIND_SERVICE"]</text>
-
-  <rect x="30" y="618" width="1220" height="42" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="644" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0">Default Docker containers run with ~14 capabilities. Drop ALL and add back only what the app needs.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="26.6667" y="17.7778" width="480" height="337.7778" rx="7.1111" fill="#ffebee" stroke="#c62828" stroke-width="1.7778" />
+  <ns0:text x="266.6667" y="48" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="#c62828">Traditional: Binary root/non-root</ns0:text>
+  <ns0:rect x="53.3333" y="65.7778" width="426.6667" height="106.6667" rx="5.3333" fill="#c62828" filter="url(#shadow)" />
+  <ns0:text x="266.6667" y="108.4444" text-anchor="middle" font-family="sans-serif" font-size="19.5556" font-weight="bold" fill="#ffffff">root (uid=0)</ns0:text>
+  <ns0:text x="266.6667" y="133.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="#ffcdd2">ALL privileges — bind port 80, load modules,</ns0:text>
+  <ns0:text x="266.6667" y="151.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="#ffcdd2">raw sockets, kill any process, …</ns0:text>
+  <ns0:rect x="53.3333" y="192" width="426.6667" height="71.1111" rx="5.3333" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="266.6667" y="232.8889" text-anchor="middle" font-family="sans-serif" font-size="19.5556" font-weight="bold" fill="#9e9e9e">non-root</ns0:text>
+  <ns0:text x="266.6667" y="250.6667" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="#9e9e9e">NO privileges — can do almost nothing privileged</ns0:text>
+  <ns0:text x="266.6667" y="302.2222" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#c62828" font-weight="bold">Problem: all-or-nothing</ns0:text>
+  <ns0:text x="266.6667" y="323.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#555555">Containers running as root have full host access</ns0:text>
+  <ns0:rect x="551.1111" y="17.7778" width="560" height="515.5556" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" />
+  <ns0:text x="831.1111" y="48" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="#2e7d32">Capabilities: Fine-grained privileges</ns0:text>
+  <ns0:rect x="576" y="60.4444" width="506.6667" height="106.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="622.2222" y="85.3333" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Network</ns0:text>
+  <ns0:text x="622.2222" y="104.8889" font-family="monospace" font-size="11.5556" fill="#555555">NET_BIND_SERVICE  — bind ports &lt; 1024</ns0:text>
+  <ns0:text x="622.2222" y="122.6667" font-family="monospace" font-size="11.5556" fill="#555555">NET_RAW           — raw/packet sockets (⚠ risky)</ns0:text>
+  <ns0:text x="622.2222" y="140.4444" font-family="monospace" font-size="11.5556" fill="#555555">NET_ADMIN         — network config (⚠ risky)</ns0:text>
+  <ns0:text x="1013.3333" y="115.5556" text-anchor="middle" font-family="sans-serif" font-size="19.5556" fill="#2e7d32">🟢</ns0:text>
+  <ns0:rect x="576" y="177.7778" width="506.6667" height="106.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="622.2222" y="202.6667" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#e65100">System</ns0:text>
+  <ns0:text x="622.2222" y="222.2222" font-family="monospace" font-size="11.5556" fill="#555555">SYS_ADMIN         — many ops (⚠⚠ very risky)</ns0:text>
+  <ns0:text x="622.2222" y="240" font-family="monospace" font-size="11.5556" fill="#555555">SYS_PTRACE        — debug other processes</ns0:text>
+  <ns0:text x="622.2222" y="257.7778" font-family="monospace" font-size="11.5556" fill="#555555">SYS_MODULE        — load kernel modules (⚠⚠)</ns0:text>
+  <ns0:text x="1013.3333" y="232.8889" text-anchor="middle" font-family="sans-serif" font-size="19.5556" fill="#c62828">🔴</ns0:text>
+  <ns0:rect x="576" y="295.1111" width="506.6667" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="622.2222" y="320" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Process</ns0:text>
+  <ns0:text x="622.2222" y="339.5556" font-family="monospace" font-size="11.5556" fill="#555555">KILL              — send signals to any process</ns0:text>
+  <ns0:text x="622.2222" y="357.3333" font-family="monospace" font-size="11.5556" fill="#555555">SETUID / SETGID   — change user/group id</ns0:text>
+  <ns0:text x="1013.3333" y="336" text-anchor="middle" font-family="sans-serif" font-size="19.5556" fill="#f9a825">🟡</ns0:text>
+  <ns0:rect x="576" y="396.4444" width="506.6667" height="106.6667" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="831.1111" y="421.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Docker: drop all, add only what's needed</ns0:text>
+  <ns0:text x="593.7778" y="442.6667" font-family="monospace" font-size="11.5556" fill="#212121">--cap-drop ALL --cap-add NET_BIND_SERVICE</ns0:text>
+  <ns0:text x="593.7778" y="460.4444" font-family="monospace" font-size="11.5556" fill="#212121">securityContext:</ns0:text>
+  <ns0:text x="593.7778" y="478.2222" font-family="monospace" font-size="11.5556" fill="#212121">  capabilities:</ns0:text>
+  <ns0:text x="593.7778" y="494.2222" font-family="monospace" font-size="11.5556" fill="#1565c0">    drop: ["ALL"]   add: ["NET_BIND_SERVICE"]</ns0:text>
+  <ns0:rect x="26.6667" y="549.3333" width="1084.4444" height="37.3333" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="572.4444" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#1565c0">Default Docker containers run with ~14 capabilities. Drop ALL and add back only what the app needs.</ns0:text>
+</ns0:svg>

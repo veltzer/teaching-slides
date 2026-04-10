@@ -1,113 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Left panel: directory tree -->
-  <rect x="30" y="30" width="480" height="620" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="30" y="30" width="480" height="48" rx="12" fill="url(#grad-accent)"/>
-  <rect x="30" y="60" width="480" height="18" fill="url(#grad-accent)"/>
-  <text x="270" y="62" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff">Directory Tree</text>
-
-  <!-- Tree nodes -->
-  <!-- / -->
-  <text x="80" y="118" font-family="monospace" font-size="20" fill="#1565c0" font-weight="bold">/</text>
-  <line x1="100" y1="122" x2="100" y2="580" stroke="#bdbdbd" stroke-width="1.5"/>
-
-  <!-- /home -->
-  <line x1="100" y1="168" x2="130" y2="168" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="138" y="174" font-family="monospace" font-size="18" fill="#212121">home/</text>
-  <line x1="148" y1="176" x2="148" y2="310" stroke="#bdbdbd" stroke-width="1.5"/>
-
-  <!-- /home/alice -->
-  <line x1="148" y1="215" x2="178" y2="215" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="186" y="221" font-family="monospace" font-size="17" fill="#212121">alice/</text>
-  <line x1="196" y1="223" x2="196" y2="308" stroke="#bdbdbd" stroke-width="1.5"/>
-
-  <!-- /home/alice/documents -->
-  <line x1="196" y1="257" x2="226" y2="257" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="234" y="263" font-family="monospace" font-size="16" fill="#212121">documents/</text>
-  <line x1="244" y1="265" x2="244" y2="307" stroke="#bdbdbd" stroke-width="1.5"/>
-  <!-- report.txt -->
-  <line x1="244" y1="293" x2="274" y2="293" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="282" y="299" font-family="monospace" font-size="15" fill="#555555">report.txt</text>
-
-  <!-- /home/alice/downloads -->
-  <line x1="196" y1="307" x2="226" y2="307" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="234" y="313" font-family="monospace" font-size="16" fill="#212121">downloads/</text>
-
-  <!-- /home/bob -->
-  <line x1="148" y1="353" x2="178" y2="353" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="186" y="359" font-family="monospace" font-size="17" fill="#212121">bob/</text>
-
-  <!-- /usr -->
-  <line x1="100" y1="398" x2="130" y2="398" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="138" y="404" font-family="monospace" font-size="18" fill="#212121">usr/</text>
-
-  <!-- /etc -->
-  <line x1="100" y1="443" x2="130" y2="443" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="138" y="449" font-family="monospace" font-size="18" fill="#212121">etc/</text>
-
-  <!-- /var -->
-  <line x1="100" y1="488" x2="130" y2="488" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="138" y="494" font-family="monospace" font-size="18" fill="#212121">var/</text>
-
-  <!-- /tmp -->
-  <line x1="100" y1="533" x2="130" y2="533" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="138" y="539" font-family="monospace" font-size="18" fill="#212121">tmp/</text>
-
-  <!-- Right panel: commands -->
-  <rect x="560" y="30" width="690" height="620" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="560" y="30" width="690" height="48" rx="12" fill="url(#grad-accent)"/>
-  <rect x="560" y="60" width="690" height="18" fill="url(#grad-accent)"/>
-  <text x="905" y="62" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff">Navigation Commands</text>
-
-  <!-- pwd -->
-  <rect x="590" y="92" width="630" height="90" rx="8" fill="#e3f2fd" stroke="#90caf9" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="620" y="118" font-family="monospace" font-size="20" font-weight="bold" fill="#1565c0">pwd</text>
-  <text x="620" y="140" font-family="monospace" font-size="14" fill="#555555">Print Working Directory — shows current location</text>
-  <text x="620" y="158" font-family="monospace" font-size="15" fill="#212121">$ pwd  →  /home/alice/documents</text>
-  <text x="620" y="175" font-family="monospace" font-size="12" fill="#888888">No arguments needed</text>
-
-  <!-- ls -->
-  <rect x="590" y="200" width="630" height="130" rx="8" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="620" y="226" font-family="monospace" font-size="20" font-weight="bold" fill="#2e7d32">ls</text>
-  <text x="620" y="248" font-family="monospace" font-size="14" fill="#555555">List directory contents</text>
-  <text x="620" y="270" font-family="monospace" font-size="15" fill="#212121">$ ls              → file1.txt  dir1/  report.pdf</text>
-  <text x="620" y="290" font-family="monospace" font-size="15" fill="#212121">$ ls -l           → long format with permissions</text>
-  <text x="620" y="310" font-family="monospace" font-size="15" fill="#212121">$ ls -la          → include hidden files (dot files)</text>
-  <text x="620" y="328" font-family="monospace" font-size="12" fill="#888888">Flags: -l (long)  -a (all)  -h (human sizes)  -R (recursive)</text>
-
-  <!-- cd -->
-  <rect x="590" y="348" width="630" height="175" rx="8" fill="#fff3e0" stroke="#ffcc80" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="620" y="374" font-family="monospace" font-size="20" font-weight="bold" fill="#e65100">cd</text>
-  <text x="620" y="396" font-family="monospace" font-size="14" fill="#555555">Change Directory — move around the tree</text>
-  <text x="620" y="420" font-family="monospace" font-size="15" fill="#212121">$ cd /home/alice/documents   → absolute path</text>
-  <text x="620" y="442" font-family="monospace" font-size="15" fill="#212121">$ cd documents               → relative path</text>
-  <text x="620" y="464" font-family="monospace" font-size="15" fill="#212121">$ cd ..                      → go up one level</text>
-  <text x="620" y="486" font-family="monospace" font-size="15" fill="#212121">$ cd ~                       → go to home dir</text>
-  <text x="620" y="508" font-family="monospace" font-size="15" fill="#212121">$ cd -                       → previous directory</text>
-
-  <!-- Quick tip box -->
-  <rect x="590" y="540" width="630" height="80" rx="8" fill="#f3e5f5" stroke="#ce93d8" stroke-width="1.5"/>
-  <text x="620" y="565" font-family="sans-serif" font-size="15" font-weight="bold" fill="#6a1b9a">Tip: Tab completion</text>
-  <text x="620" y="587" font-family="monospace" font-size="14" fill="#555555">Type the first letters of a path then press TAB →</text>
-  <text x="620" y="607" font-family="monospace" font-size="14" fill="#555555">the shell auto-completes file and directory names.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="26.6667" y="26.6667" width="426.6667" height="551.1111" rx="10.6667" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="26.6667" y="26.6667" width="426.6667" height="42.6667" rx="10.6667" fill="url(#grad-accent)" />
+  <ns0:rect x="26.6667" y="53.3333" width="426.6667" height="16" fill="url(#grad-accent)" />
+  <ns0:text x="240" y="55.1111" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">Directory Tree</ns0:text>
+  <ns0:text x="71.1111" y="104.8889" font-family="monospace" font-size="17.7778" fill="#1565c0" font-weight="bold">/</ns0:text>
+  <ns0:line x1="88.8889" y1="108.4444" x2="88.8889" y2="515.5556" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:line x1="88.8889" y1="149.3333" x2="115.5556" y2="149.3333" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="122.6667" y="154.6667" font-family="monospace" font-size="16" fill="#212121">home/</ns0:text>
+  <ns0:line x1="131.5556" y1="156.4444" x2="131.5556" y2="275.5556" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:line x1="131.5556" y1="191.1111" x2="158.2222" y2="191.1111" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="165.3333" y="196.4444" font-family="monospace" font-size="15.1111" fill="#212121">alice/</ns0:text>
+  <ns0:line x1="174.2222" y1="198.2222" x2="174.2222" y2="273.7778" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:line x1="174.2222" y1="228.4444" x2="200.8889" y2="228.4444" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="208" y="233.7778" font-family="monospace" font-size="14.2222" fill="#212121">documents/</ns0:text>
+  <ns0:line x1="216.8889" y1="235.5556" x2="216.8889" y2="272.8889" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:line x1="216.8889" y1="260.4444" x2="243.5556" y2="260.4444" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="250.6667" y="265.7778" font-family="monospace" font-size="13.3333" fill="#555555">report.txt</ns0:text>
+  <ns0:line x1="174.2222" y1="272.8889" x2="200.8889" y2="272.8889" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="208" y="278.2222" font-family="monospace" font-size="14.2222" fill="#212121">downloads/</ns0:text>
+  <ns0:line x1="131.5556" y1="313.7778" x2="158.2222" y2="313.7778" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="165.3333" y="319.1111" font-family="monospace" font-size="15.1111" fill="#212121">bob/</ns0:text>
+  <ns0:line x1="88.8889" y1="353.7778" x2="115.5556" y2="353.7778" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="122.6667" y="359.1111" font-family="monospace" font-size="16" fill="#212121">usr/</ns0:text>
+  <ns0:line x1="88.8889" y1="393.7778" x2="115.5556" y2="393.7778" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="122.6667" y="399.1111" font-family="monospace" font-size="16" fill="#212121">etc/</ns0:text>
+  <ns0:line x1="88.8889" y1="433.7778" x2="115.5556" y2="433.7778" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="122.6667" y="439.1111" font-family="monospace" font-size="16" fill="#212121">var/</ns0:text>
+  <ns0:line x1="88.8889" y1="473.7778" x2="115.5556" y2="473.7778" stroke="#bdbdbd" stroke-width="1.3333" />
+  <ns0:text x="122.6667" y="479.1111" font-family="monospace" font-size="16" fill="#212121">tmp/</ns0:text>
+  <ns0:rect x="497.7778" y="26.6667" width="613.3333" height="551.1111" rx="10.6667" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="497.7778" y="26.6667" width="613.3333" height="42.6667" rx="10.6667" fill="url(#grad-accent)" />
+  <ns0:rect x="497.7778" y="53.3333" width="613.3333" height="16" fill="url(#grad-accent)" />
+  <ns0:text x="804.4444" y="55.1111" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">Navigation Commands</ns0:text>
+  <ns0:rect x="524.4444" y="81.7778" width="560" height="80" rx="7.1111" fill="#e3f2fd" stroke="#90caf9" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="551.1111" y="104.8889" font-family="monospace" font-size="17.7778" font-weight="bold" fill="#1565c0">pwd</ns0:text>
+  <ns0:text x="551.1111" y="124.4444" font-family="monospace" font-size="12.4444" fill="#555555">Print Working Directory — shows current location</ns0:text>
+  <ns0:text x="551.1111" y="140.4444" font-family="monospace" font-size="13.3333" fill="#212121">$ pwd  →  /home/alice/documents</ns0:text>
+  <ns0:text x="551.1111" y="155.5556" font-family="monospace" font-size="10.6667" fill="#888888">No arguments needed</ns0:text>
+  <ns0:rect x="524.4444" y="177.7778" width="560" height="115.5556" rx="7.1111" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="551.1111" y="200.8889" font-family="monospace" font-size="17.7778" font-weight="bold" fill="#2e7d32">ls</ns0:text>
+  <ns0:text x="551.1111" y="220.4444" font-family="monospace" font-size="12.4444" fill="#555555">List directory contents</ns0:text>
+  <ns0:text x="551.1111" y="240" font-family="monospace" font-size="13.3333" fill="#212121">$ ls              → file1.txt  dir1/  report.pdf</ns0:text>
+  <ns0:text x="551.1111" y="257.7778" font-family="monospace" font-size="13.3333" fill="#212121">$ ls -l           → long format with permissions</ns0:text>
+  <ns0:text x="551.1111" y="275.5556" font-family="monospace" font-size="13.3333" fill="#212121">$ ls -la          → include hidden files (dot files)</ns0:text>
+  <ns0:text x="551.1111" y="291.5556" font-family="monospace" font-size="10.6667" fill="#888888">Flags: -l (long)  -a (all)  -h (human sizes)  -R (recursive)</ns0:text>
+  <ns0:rect x="524.4444" y="309.3333" width="560" height="155.5556" rx="7.1111" fill="#fff3e0" stroke="#ffcc80" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="551.1111" y="332.4444" font-family="monospace" font-size="17.7778" font-weight="bold" fill="#e65100">cd</ns0:text>
+  <ns0:text x="551.1111" y="352" font-family="monospace" font-size="12.4444" fill="#555555">Change Directory — move around the tree</ns0:text>
+  <ns0:text x="551.1111" y="373.3333" font-family="monospace" font-size="13.3333" fill="#212121">$ cd /home/alice/documents   → absolute path</ns0:text>
+  <ns0:text x="551.1111" y="392.8889" font-family="monospace" font-size="13.3333" fill="#212121">$ cd documents               → relative path</ns0:text>
+  <ns0:text x="551.1111" y="412.4444" font-family="monospace" font-size="13.3333" fill="#212121">$ cd ..                      → go up one level</ns0:text>
+  <ns0:text x="551.1111" y="432" font-family="monospace" font-size="13.3333" fill="#212121">$ cd ~                       → go to home dir</ns0:text>
+  <ns0:text x="551.1111" y="451.5556" font-family="monospace" font-size="13.3333" fill="#212121">$ cd -                       → previous directory</ns0:text>
+  <ns0:rect x="524.4444" y="480" width="560" height="71.1111" rx="7.1111" fill="#f3e5f5" stroke="#ce93d8" stroke-width="1.3333" />
+  <ns0:text x="551.1111" y="502.2222" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#6a1b9a">Tip: Tab completion</ns0:text>
+  <ns0:text x="551.1111" y="521.7778" font-family="monospace" font-size="12.4444" fill="#555555">Type the first letters of a path then press TAB →</ns0:text>
+  <ns0:text x="551.1111" y="539.5556" font-family="monospace" font-size="12.4444" fill="#555555">the shell auto-completes file and directory names.</ns0:text>
+</ns0:svg>

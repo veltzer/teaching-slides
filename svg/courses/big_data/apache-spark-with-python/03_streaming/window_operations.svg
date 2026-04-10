@@ -1,98 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Time axis -->
-  <line x1="60" y1="100" x2="1240" y2="100" stroke="#e0e0e0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <text x="1248" y="106" font-family="sans-serif" font-size="16" fill="#1565c0">time</text>
-
-  <!-- Batch interval ticks (every 100px = 1 second) -->
-  <text x="30" y="96" font-family="sans-serif" font-size="13" fill="#9e9e9e">t=</text>
-  <!-- t0..t8 ticks -->
-  <line x1="100"  y1="94" x2="100"  y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="100"  y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">0</text>
-  <line x1="250"  y1="94" x2="250"  y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="250"  y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">1</text>
-  <line x1="400"  y1="94" x2="400"  y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="400"  y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">2</text>
-  <line x1="550"  y1="94" x2="550"  y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="550"  y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">3</text>
-  <line x1="700"  y1="94" x2="700"  y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="700"  y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">4</text>
-  <line x1="850"  y1="94" x2="850"  y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="850"  y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">5</text>
-  <line x1="1000" y1="94" x2="1000" y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="1000" y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">6</text>
-  <line x1="1150" y1="94" x2="1150" y2="108" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="1150" y="122" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">7</text>
-  <text x="640" y="138" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">batch interval = 1s</text>
-
-  <!-- Row 1: Input DStream batches -->
-  <text x="30" y="175" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">Input</text>
-  <text x="30" y="195" font-family="sans-serif" font-size="13" fill="#555555">DStream</text>
-  <rect x="100"  y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="170"  y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[0]</text>
-  <rect x="250"  y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="320"  y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[1]</text>
-  <rect x="400"  y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="470"  y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[2]</text>
-  <rect x="550"  y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="620"  y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[3]</text>
-  <rect x="700"  y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="770"  y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[4]</text>
-  <rect x="850"  y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="920"  y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[5]</text>
-  <rect x="1000" y="155" width="140" height="50" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1070" y="185" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">RDD[6]</text>
-
-  <!-- Window 1: windowDuration=3s, slideDuration=1s -->
-  <text x="30" y="270" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">Window</text>
-  <text x="30" y="290" font-family="sans-serif" font-size="13" fill="#555555">3s / slide 1s</text>
-
-  <!-- Window at t=2 covers [0,1,2] -->
-  <rect x="100" y="250" width="440" height="50" rx="4" fill="url(#grad-accent)" opacity="0.7" filter="url(#shadow)"/>
-  <text x="320" y="280" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">w1: RDD[0]+[1]+[2]</text>
-
-  <!-- Window at t=3 covers [1,2,3] -->
-  <rect x="250" y="316" width="440" height="50" rx="4" fill="url(#grad-accent)" opacity="0.7" filter="url(#shadow)"/>
-  <text x="470" y="346" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">w2: RDD[1]+[2]+[3]</text>
-
-  <!-- Window at t=4 covers [2,3,4] -->
-  <rect x="400" y="382" width="440" height="50" rx="4" fill="url(#grad-accent)" opacity="0.7" filter="url(#shadow)"/>
-  <text x="620" y="412" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">w3: RDD[2]+[3]+[4]</text>
-
-  <!-- Slide interval arrow -->
-  <line x1="100" y1="460" x2="250" y2="460" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <text x="175" y="478" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0">slide = 1s</text>
-  <line x1="250" y1="460" x2="400" y2="460" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <!-- Code example -->
-  <rect x="30" y="500" width="620" height="96" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="340" y="526" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">Code</text>
-  <text x="50"  y="550" font-family="monospace" font-size="14" fill="#1565c0">windowed = stream.window(</text>
-  <text x="50"  y="572" font-family="monospace" font-size="14" fill="#1565c0">    windowDuration=3,   # seconds</text>
-  <text x="50"  y="594" font-family="monospace" font-size="14" fill="#1565c0">    slideDuration=1)</text>
-
-  <!-- Key points -->
-  <rect x="680" y="500" width="570" height="96" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="965" y="526" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Key parameters</text>
-  <text x="700" y="550" font-family="sans-serif" font-size="14" fill="#555555">windowDuration: how much history to include</text>
-  <text x="700" y="572" font-family="sans-serif" font-size="14" fill="#555555">slideDuration: how often result is computed</text>
-  <text x="700" y="594" font-family="sans-serif" font-size="14" fill="#555555">Both must be multiples of the batch interval</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:line x1="53.3333" y1="88.8889" x2="1102.2222" y2="88.8889" stroke="#e0e0e0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:text x="1109.3333" y="94.2222" font-family="sans-serif" font-size="14.2222" fill="#1565c0">time</ns0:text>
+  <ns0:text x="26.6667" y="85.3333" font-family="sans-serif" font-size="11.5556" fill="#9e9e9e">t=</ns0:text>
+  <ns0:line x1="88.8889" y1="83.5556" x2="88.8889" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="88.8889" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">0</ns0:text>
+  <ns0:line x1="222.2222" y1="83.5556" x2="222.2222" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="222.2222" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">1</ns0:text>
+  <ns0:line x1="355.5556" y1="83.5556" x2="355.5556" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="355.5556" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">2</ns0:text>
+  <ns0:line x1="488.8889" y1="83.5556" x2="488.8889" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="488.8889" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">3</ns0:text>
+  <ns0:line x1="622.2222" y1="83.5556" x2="622.2222" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="622.2222" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">4</ns0:text>
+  <ns0:line x1="755.5556" y1="83.5556" x2="755.5556" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="755.5556" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">5</ns0:text>
+  <ns0:line x1="888.8889" y1="83.5556" x2="888.8889" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="888.8889" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">6</ns0:text>
+  <ns0:line x1="1022.2222" y1="83.5556" x2="1022.2222" y2="96" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="1022.2222" y="108.4444" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#9e9e9e">7</ns0:text>
+  <ns0:text x="568.8889" y="122.6667" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#9e9e9e">batch interval = 1s</ns0:text>
+  <ns0:text x="26.6667" y="155.5556" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#212121">Input</ns0:text>
+  <ns0:text x="26.6667" y="173.3333" font-family="sans-serif" font-size="11.5556" fill="#555555">DStream</ns0:text>
+  <ns0:rect x="88.8889" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="151.1111" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[0]</ns0:text>
+  <ns0:rect x="222.2222" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[1]</ns0:text>
+  <ns0:rect x="355.5556" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="417.7778" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[2]</ns0:text>
+  <ns0:rect x="488.8889" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="551.1111" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[3]</ns0:text>
+  <ns0:rect x="622.2222" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="684.4444" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[4]</ns0:text>
+  <ns0:rect x="755.5556" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="817.7778" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[5]</ns0:text>
+  <ns0:rect x="888.8889" y="137.7778" width="124.4444" height="44.4444" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="951.1111" y="164.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">RDD[6]</ns0:text>
+  <ns0:text x="26.6667" y="240" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#212121">Window</ns0:text>
+  <ns0:text x="26.6667" y="257.7778" font-family="sans-serif" font-size="11.5556" fill="#555555">3s / slide 1s</ns0:text>
+  <ns0:rect x="88.8889" y="222.2222" width="391.1111" height="44.4444" rx="3.5556" fill="url(#grad-accent)" opacity="0.7" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="248.8889" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#ffffff">w1: RDD[0]+[1]+[2]</ns0:text>
+  <ns0:rect x="222.2222" y="280.8889" width="391.1111" height="44.4444" rx="3.5556" fill="url(#grad-accent)" opacity="0.7" filter="url(#shadow)" />
+  <ns0:text x="417.7778" y="307.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#ffffff">w2: RDD[1]+[2]+[3]</ns0:text>
+  <ns0:rect x="355.5556" y="339.5556" width="391.1111" height="44.4444" rx="3.5556" fill="url(#grad-accent)" opacity="0.7" filter="url(#shadow)" />
+  <ns0:text x="551.1111" y="366.2222" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#ffffff">w3: RDD[2]+[3]+[4]</ns0:text>
+  <ns0:line x1="88.8889" y1="408.8889" x2="222.2222" y2="408.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:text x="155.5556" y="424.8889" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#1565c0">slide = 1s</ns0:text>
+  <ns0:line x1="222.2222" y1="408.8889" x2="355.5556" y2="408.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="26.6667" y="444.4444" width="551.1111" height="85.3333" rx="5.3333" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="302.2222" y="467.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#212121">Code</ns0:text>
+  <ns0:text x="44.4444" y="488.8889" font-family="monospace" font-size="12.4444" fill="#1565c0">windowed = stream.window(</ns0:text>
+  <ns0:text x="44.4444" y="508.4444" font-family="monospace" font-size="12.4444" fill="#1565c0">    windowDuration=3,   # seconds</ns0:text>
+  <ns0:text x="44.4444" y="528" font-family="monospace" font-size="12.4444" fill="#1565c0">    slideDuration=1)</ns0:text>
+  <ns0:rect x="604.4444" y="444.4444" width="506.6667" height="85.3333" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="857.7778" y="467.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Key parameters</ns0:text>
+  <ns0:text x="622.2222" y="488.8889" font-family="sans-serif" font-size="12.4444" fill="#555555">windowDuration: how much history to include</ns0:text>
+  <ns0:text x="622.2222" y="508.4444" font-family="sans-serif" font-size="12.4444" fill="#555555">slideDuration: how often result is computed</ns0:text>
+  <ns0:text x="622.2222" y="528" font-family="sans-serif" font-size="12.4444" fill="#555555">Both must be multiples of the batch interval</ns0:text>
+</ns0:svg>

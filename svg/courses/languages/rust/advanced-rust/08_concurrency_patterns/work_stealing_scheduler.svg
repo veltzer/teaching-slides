@@ -1,43 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="11.4545" refX="16" refY="5.7273" orient="auto">
-      <polygon points="0,16.3636 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowRed" markerWidth="16" markerHeight="11.4545" refX="16" refY="5.7273" orient="auto">
-      <polygon points="0,16.3636 5.6,0" fill="#dc3545" />
-    </marker>
-  </defs>
-  <text x="640" y="49.0909" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Work-Stealing Scheduler</text>
-  <rect x="48" y="98.1818" width="352" height="278.1818" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="224" y="139.0909" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Worker 1 (Busy)</text>
-  <text x="224" y="171.8182" text-anchor="middle" font-size="16" fill="#555">Local Deque (LIFO)</text>
-  <rect x="80" y="188.1818" width="288" height="36" rx="4.8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="224" y="212.7273" text-anchor="middle" font-size="16" fill="#333">Task D (bottom - push/pop here)</text>
-  <rect x="80" y="229.0909" width="288" height="36" rx="4.8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="224" y="253.6364" text-anchor="middle" font-size="16" fill="#333">Task C</text>
-  <rect x="80" y="270" width="288" height="36" rx="4.8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="224" y="294.5455" text-anchor="middle" font-size="16" fill="#333">Task B</text>
-  <rect x="80" y="310.9091" width="288" height="36" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <text x="224" y="335.4545" text-anchor="middle" font-size="16" fill="#333">Task A (top - stolen from here)</text>
-  <rect x="464" y="98.1818" width="352" height="278.1818" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="640" y="139.0909" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Worker 2</text>
-  <text x="640" y="171.8182" text-anchor="middle" font-size="16" fill="#555">Local Deque</text>
-  <rect x="496" y="188.1818" width="288" height="36" rx="4.8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="640" y="212.7273" text-anchor="middle" font-size="16" fill="#333">Task F</text>
-  <rect x="496" y="229.0909" width="288" height="36" rx="4.8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="640" y="253.6364" text-anchor="middle" font-size="16" fill="#333">Task E</text>
-  <rect x="880" y="98.1818" width="352" height="278.1818" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="1056" y="139.0909" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#dc3545">Worker 3 (Idle)</text>
-  <text x="1056" y="171.8182" text-anchor="middle" font-size="16" fill="#555">Local Deque: EMPTY</text>
-  <text x="1056" y="229.0909" text-anchor="middle" font-size="19.2" fill="#dc3545">Looking to steal...</text>
-  <line x1="880" y1="327.2727" x2="368" y2="327.2727" stroke="#dc3545" stroke-width="4" stroke-dasharray="12.8 6.4" marker-end="url(#arrowRed)" />
-  <text x="640" y="356.7273" text-anchor="middle" font-size="17.6" fill="#dc3545" font-weight="bold">STEAL Task A (from top/oldest)</text>
-  <rect x="48" y="425.4545" width="1184" height="130.9091" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="640" y="466.3636" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">How It Works</text>
-  <text x="72" y="504" font-size="16" fill="#555">Owner pushes/pops from BOTTOM (LIFO) - cache-friendly, processes newest subtasks first</text>
-  <text x="72" y="536.7273" font-size="16" fill="#555">Thieves steal from TOP (FIFO) - steals oldest/largest tasks, minimizing steal frequency</text>
-  <rect x="48" y="589.0909" width="1184" height="106.3636" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="640" y="630" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Why This Is Clever</text>
-  <text x="72" y="667.6364" font-size="16" fill="#555">LIFO local: warm cache, fine-grained tasks | FIFO steal: large tasks split into more work for the thief</text>
-  <text x="928" y="667.6364" font-size="16" fill="#28a745" font-weight="bold">= Automatic load balancing</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.7242" markerHeight="10.5411" refX="14.7242" refY="5.2706" orient="auto">
+      <ns0:polygon points="0,15.0588 5.1535,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowRed" markerWidth="14.7242" markerHeight="10.5411" refX="14.7242" refY="5.2706" orient="auto">
+      <ns0:polygon points="0,15.0588 5.1535,0" fill="#dc3545" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="588.9674" y="45.1765" text-anchor="middle" font-size="29.4484" font-weight="bold" fill="#333">Work-Stealing Scheduler</ns0:text>
+  <ns0:rect x="44.1726" y="90.3529" width="323.932" height="256" rx="7.3621" fill="#d4edda" stroke="#28a745" stroke-width="2.9448" />
+  <ns0:text x="206.1386" y="128" text-anchor="middle" font-size="19.1414" font-weight="bold" fill="#333">Worker 1 (Busy)</ns0:text>
+  <ns0:text x="206.1386" y="158.1177" text-anchor="middle" font-size="14.7242" fill="#555">Local Deque (LIFO)</ns0:text>
+  <ns0:rect x="73.6209" y="173.1765" width="265.0353" height="33.1294" rx="4.4173" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4724" />
+  <ns0:text x="206.1386" y="195.7647" text-anchor="middle" font-size="14.7242" fill="#333">Task D (bottom - push/pop here)</ns0:text>
+  <ns0:rect x="73.6209" y="210.8235" width="265.0353" height="33.1294" rx="4.4173" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4724" />
+  <ns0:text x="206.1386" y="233.4118" text-anchor="middle" font-size="14.7242" fill="#333">Task C</ns0:text>
+  <ns0:rect x="73.6209" y="248.4706" width="265.0353" height="33.1294" rx="4.4173" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4724" />
+  <ns0:text x="206.1386" y="271.0589" text-anchor="middle" font-size="14.7242" fill="#333">Task B</ns0:text>
+  <ns0:rect x="73.6209" y="286.1177" width="265.0353" height="33.1294" rx="4.4173" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4724" />
+  <ns0:text x="206.1386" y="308.7059" text-anchor="middle" font-size="14.7242" fill="#333">Task A (top - stolen from here)</ns0:text>
+  <ns0:rect x="427.0013" y="90.3529" width="323.932" height="256" rx="7.3621" fill="#d4edda" stroke="#28a745" stroke-width="2.9448" />
+  <ns0:text x="588.9674" y="128" text-anchor="middle" font-size="19.1414" font-weight="bold" fill="#333">Worker 2</ns0:text>
+  <ns0:text x="588.9674" y="158.1177" text-anchor="middle" font-size="14.7242" fill="#555">Local Deque</ns0:text>
+  <ns0:rect x="456.4497" y="173.1765" width="265.0353" height="33.1294" rx="4.4173" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4724" />
+  <ns0:text x="588.9674" y="195.7647" text-anchor="middle" font-size="14.7242" fill="#333">Task F</ns0:text>
+  <ns0:rect x="456.4497" y="210.8235" width="265.0353" height="33.1294" rx="4.4173" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4724" />
+  <ns0:text x="588.9674" y="233.4118" text-anchor="middle" font-size="14.7242" fill="#333">Task E</ns0:text>
+  <ns0:rect x="809.8301" y="90.3529" width="323.932" height="256" rx="7.3621" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9448" />
+  <ns0:text x="971.7961" y="128" text-anchor="middle" font-size="19.1414" font-weight="bold" fill="#dc3545">Worker 3 (Idle)</ns0:text>
+  <ns0:text x="971.7961" y="158.1177" text-anchor="middle" font-size="14.7242" fill="#555">Local Deque: EMPTY</ns0:text>
+  <ns0:text x="971.7961" y="210.8235" text-anchor="middle" font-size="17.669" fill="#dc3545">Looking to steal...</ns0:text>
+  <ns0:line x1="809.8301" y1="301.1765" x2="338.6562" y2="301.1765" stroke="#dc3545" stroke-width="3.681" stroke-dasharray="11.7793 5.8897" marker-end="url(#arrowRed)" />
+  <ns0:text x="588.9674" y="328.2824" text-anchor="middle" font-size="16.1966" fill="#dc3545" font-weight="bold">STEAL Task A (from top/oldest)</ns0:text>
+  <ns0:rect x="44.1726" y="391.5294" width="1089.5896" height="120.4706" rx="7.3621" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9448" />
+  <ns0:text x="588.9674" y="429.1765" text-anchor="middle" font-size="20.6139" font-weight="bold" fill="#333">How It Works</ns0:text>
+  <ns0:text x="66.2588" y="463.8118" font-size="14.7242" fill="#555">Owner pushes/pops from BOTTOM (LIFO) - cache-friendly, processes newest subtasks first</ns0:text>
+  <ns0:text x="66.2588" y="493.9295" font-size="14.7242" fill="#555">Thieves steal from TOP (FIFO) - steals oldest/largest tasks, minimizing steal frequency</ns0:text>
+  <ns0:rect x="44.1726" y="542.1177" width="1089.5896" height="97.8823" rx="7.3621" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9448" />
+  <ns0:text x="588.9674" y="579.7647" text-anchor="middle" font-size="19.1414" font-weight="bold" fill="#333">Why This Is Clever</ns0:text>
+  <ns0:text x="66.2588" y="614.4001" font-size="14.7242" fill="#555">LIFO local: warm cache, fine-grained tasks | FIFO steal: large tasks split into more work for the thief</ns0:text>
+  <ns0:text x="854.0027" y="614.4001" font-size="14.7242" fill="#28a745" font-weight="bold">= Automatic load balancing</ns0:text>
+</ns0:svg>

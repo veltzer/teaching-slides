@@ -1,24 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Send and Sync: Thread Safety Markers</text>
-  <rect x="42.6667" y="108" width="576" height="252" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="330.6667" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Send</text>
-  <text x="330.6667" y="226.8" text-anchor="middle" font-size="21.3333">Ownership can transfer between threads</text>
-  <text x="330.6667" y="280.8" text-anchor="middle" font-size="21.3333">Most types are Send (i32, String, Vec...)</text>
-  <text x="330.6667" y="331.2" text-anchor="middle" font-size="21.3333" fill="#c62828">NOT Send: Rc&lt;T&gt;, raw pointers</text>
-  <rect x="661.3333" y="108" width="576" height="252" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="949.3333" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Sync</text>
-  <text x="949.3333" y="226.8" text-anchor="middle" font-size="21.3333">&amp;T can be shared between threads</text>
-  <text x="949.3333" y="280.8" text-anchor="middle" font-size="21.3333">T is Sync if &amp;T is Send</text>
-  <text x="949.3333" y="331.2" text-anchor="middle" font-size="21.3333" fill="#c62828">NOT Sync: Cell&lt;T&gt;, RefCell&lt;T&gt;</text>
-  <rect x="42.6667" y="414" width="384" height="126" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="234.6667" y="468" text-anchor="middle" font-size="21.3333" font-weight="bold">Arc&lt;T&gt;</text>
-  <text x="234.6667" y="518.4" text-anchor="middle" font-size="21.3333">Send + Sync ref counting</text>
-  <rect x="448" y="414" width="384" height="126" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="640" y="468" text-anchor="middle" font-size="21.3333" font-weight="bold">Mutex&lt;T&gt;</text>
-  <text x="640" y="518.4" text-anchor="middle" font-size="21.3333">Makes T Sync via locking</text>
-  <rect x="853.3333" y="414" width="384" height="126" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1045.3333" y="468" text-anchor="middle" font-size="21.3333" font-weight="bold">RwLock&lt;T&gt;</text>
-  <text x="1045.3333" y="518.4" text-anchor="middle" font-size="21.3333">Many readers OR one writer</text>
-  <rect x="170.6667" y="594" width="938.6667" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="640" y="655.2" text-anchor="middle" font-size="21.3333">Auto-traits: compiler derives Send/Sync if all fields are Send/Sync</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">Send and Sync: Thread Safety Markers</ns0:text>
+  <ns0:rect x="39.9221" y="101.0526" width="538.9474" height="235.7895" fill="#e3f2fd" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="309.3957" y="161.6842" text-anchor="middle" font-size="21.9571" font-weight="bold">Send</ns0:text>
+  <ns0:text x="309.3957" y="212.2105" text-anchor="middle" font-size="19.961">Ownership can transfer between threads</ns0:text>
+  <ns0:text x="309.3957" y="262.7368" text-anchor="middle" font-size="19.961">Most types are Send (i32, String, Vec...)</ns0:text>
+  <ns0:text x="309.3957" y="309.8947" text-anchor="middle" font-size="19.961" fill="#c62828">NOT Send: Rc&lt;T&gt;, raw pointers</ns0:text>
+  <ns0:rect x="618.7914" y="101.0526" width="538.9474" height="235.7895" fill="#f3e5f5" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="888.2651" y="161.6842" text-anchor="middle" font-size="21.9571" font-weight="bold">Sync</ns0:text>
+  <ns0:text x="888.2651" y="212.2105" text-anchor="middle" font-size="19.961">&amp;T can be shared between threads</ns0:text>
+  <ns0:text x="888.2651" y="262.7368" text-anchor="middle" font-size="19.961">T is Sync if &amp;T is Send</ns0:text>
+  <ns0:text x="888.2651" y="309.8947" text-anchor="middle" font-size="19.961" fill="#c62828">NOT Sync: Cell&lt;T&gt;, RefCell&lt;T&gt;</ns0:text>
+  <ns0:rect x="39.9221" y="387.3684" width="359.2982" height="117.8947" fill="#e8f5e9" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="219.5712" y="437.8947" text-anchor="middle" font-size="19.961" font-weight="bold">Arc&lt;T&gt;</ns0:text>
+  <ns0:text x="219.5712" y="485.0526" text-anchor="middle" font-size="19.961">Send + Sync ref counting</ns0:text>
+  <ns0:rect x="419.1813" y="387.3684" width="359.2982" height="117.8947" fill="#fff3e0" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="598.8304" y="437.8947" text-anchor="middle" font-size="19.961" font-weight="bold">Mutex&lt;T&gt;</ns0:text>
+  <ns0:text x="598.8304" y="485.0526" text-anchor="middle" font-size="19.961">Makes T Sync via locking</ns0:text>
+  <ns0:rect x="798.4405" y="387.3684" width="359.2982" height="117.8947" fill="#ffebee" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="978.0896" y="437.8947" text-anchor="middle" font-size="19.961" font-weight="bold">RwLock&lt;T&gt;</ns0:text>
+  <ns0:text x="978.0896" y="485.0526" text-anchor="middle" font-size="19.961">Many readers OR one writer</ns0:text>
+  <ns0:rect x="159.6881" y="555.7895" width="878.2846" height="84.2105" fill="#e3f2fd" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="598.8304" y="613.0526" text-anchor="middle" font-size="19.961">Auto-traits: compiler derives Send/Sync if all fields are Send/Sync</ns0:text>
+</ns0:svg>

@@ -1,47 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Left: Concurrent (Threading) -->
-  <text x="320" y="44" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Concurrent (Threading)</text>
-  <text x="320" y="72" text-anchor="middle" font-size="16" fill="#555555">Tasks interleaved on one CPU</text>
-  <rect x="60" y="100" width="520" height="100" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="320" y="158" text-anchor="middle" font-size="20" fill="#333333">Task A</text>
-  <rect x="60" y="220" width="520" height="100" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="320" y="278" text-anchor="middle" font-size="20" fill="#333333">Task B</text>
-  <rect x="60" y="340" width="520" height="100" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="320" y="398" text-anchor="middle" font-size="20" fill="#333333">Task C</text>
-  <text x="320" y="520" text-anchor="middle" font-size="16" fill="#555555">GIL allows only one thread at a time (for CPU work)</text>
-  <!-- Right: Parallel (Multiprocessing) -->
-  <text x="980" y="44" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e7d32">Parallel (Multiprocessing)</text>
-  <text x="980" y="72" text-anchor="middle" font-size="16" fill="#555555">Tasks run simultaneously on multiple CPUs</text>
-  <rect x="720" y="100" width="160" height="340" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="800" y="284" text-anchor="middle" font-size="18" fill="#333333">Task A</text>
-  <rect x="920" y="100" width="160" height="340" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="1000" y="284" text-anchor="middle" font-size="18" fill="#333333">Task B</text>
-  <rect x="1120" y="100" width="160" height="340" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="1200" y="284" text-anchor="middle" font-size="18" fill="#333333">Task C</text>
-  <text x="980" y="520" text-anchor="middle" font-size="16" fill="#555555">Separate processes bypass the GIL</text>
-  <!-- Divider -->
-  <line x1="640" y1="40" x2="640" y2="560" stroke="#cccccc" stroke-width="1.5" stroke-dasharray="8 8"/>
-  <!-- Bottom note -->
-  <rect x="60" y="580" width="1160" height="52" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
-  <text x="640" y="612" text-anchor="middle" font-size="17" fill="#1565c0">Use threading for I/O-bound tasks, multiprocessing for CPU-bound tasks</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="284.4444" y="39.1111" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#1565c0">Concurrent (Threading)</ns0:text>
+  <ns0:text x="284.4444" y="64" text-anchor="middle" font-size="14.2222" fill="#555555">Tasks interleaved on one CPU</ns0:text>
+  <ns0:rect x="53.3333" y="88.8889" width="462.2222" height="88.8889" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="140.4444" text-anchor="middle" font-size="17.7778" fill="#333333">Task A</ns0:text>
+  <ns0:rect x="53.3333" y="195.5556" width="462.2222" height="88.8889" rx="7.1111" fill="#fce4ec" stroke="#e53935" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="247.1111" text-anchor="middle" font-size="17.7778" fill="#333333">Task B</ns0:text>
+  <ns0:rect x="53.3333" y="302.2222" width="462.2222" height="88.8889" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="353.7778" text-anchor="middle" font-size="17.7778" fill="#333333">Task C</ns0:text>
+  <ns0:text x="284.4444" y="462.2222" text-anchor="middle" font-size="14.2222" fill="#555555">GIL allows only one thread at a time (for CPU work)</ns0:text>
+  <ns0:text x="871.1111" y="39.1111" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#2e7d32">Parallel (Multiprocessing)</ns0:text>
+  <ns0:text x="871.1111" y="64" text-anchor="middle" font-size="14.2222" fill="#555555">Tasks run simultaneously on multiple CPUs</ns0:text>
+  <ns0:rect x="640" y="88.8889" width="142.2222" height="302.2222" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="711.1111" y="252.4444" text-anchor="middle" font-size="16" fill="#333333">Task A</ns0:text>
+  <ns0:rect x="817.7778" y="88.8889" width="142.2222" height="302.2222" rx="7.1111" fill="#fce4ec" stroke="#e53935" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="888.8889" y="252.4444" text-anchor="middle" font-size="16" fill="#333333">Task B</ns0:text>
+  <ns0:rect x="995.5556" y="88.8889" width="142.2222" height="302.2222" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="1066.6667" y="252.4444" text-anchor="middle" font-size="16" fill="#333333">Task C</ns0:text>
+  <ns0:text x="871.1111" y="462.2222" text-anchor="middle" font-size="14.2222" fill="#555555">Separate processes bypass the GIL</ns0:text>
+  <ns0:line x1="568.8889" y1="35.5556" x2="568.8889" y2="497.7778" stroke="#cccccc" stroke-width="1.3333" stroke-dasharray="7.1111 7.1111" />
+  <ns0:rect x="53.3333" y="515.5556" width="1031.1111" height="46.2222" rx="5.3333" fill="#f2f6ff" stroke="#bbdefb" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="544" text-anchor="middle" font-size="15.1111" fill="#1565c0">Use threading for I/O-bound tasks, multiprocessing for CPU-bound tasks</ns0:text>
+</ns0:svg>

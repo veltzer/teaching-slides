@@ -1,57 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Cluster border -->
-  <rect x="40" y="50" width="1200" height="630" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
-  <text x="640" y="104" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Cluster: my-cluster</text>
-  <!-- Node 1 -->
-  <rect x="72" y="130" width="342" height="360" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3"/>
-  <text x="243" y="178" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">Data Node 1 (Master)</text>
-  <rect x="94" y="200" width="130" height="80" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="159" y="246" text-anchor="middle" font-size="18" fill="#795548">P0</text>
-  <rect x="248" y="200" width="130" height="80" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="313" y="246" text-anchor="middle" font-size="18" fill="#7b1fa2">R1</text>
-  <rect x="94" y="306" width="130" height="80" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="159" y="352" text-anchor="middle" font-size="18" fill="#7b1fa2">R2</text>
-  <!-- Node 2 -->
-  <rect x="469" y="130" width="342" height="360" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3"/>
-  <text x="640" y="178" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">Data Node 2</text>
-  <rect x="491" y="200" width="130" height="80" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="556" y="246" text-anchor="middle" font-size="18" fill="#7b1fa2">R0</text>
-  <rect x="645" y="200" width="130" height="80" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="710" y="246" text-anchor="middle" font-size="18" fill="#795548">P1</text>
-  <rect x="491" y="306" width="130" height="80" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="556" y="352" text-anchor="middle" font-size="18" fill="#7b1fa2">R2</text>
-  <!-- Node 3 -->
-  <rect x="866" y="130" width="342" height="360" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3"/>
-  <text x="1037" y="178" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">Data Node 3</text>
-  <rect x="888" y="200" width="130" height="80" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="953" y="246" text-anchor="middle" font-size="18" fill="#7b1fa2">R0</text>
-  <rect x="1042" y="200" width="130" height="80" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="1107" y="246" text-anchor="middle" font-size="18" fill="#7b1fa2">R1</text>
-  <rect x="888" y="306" width="130" height="80" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="953" y="352" text-anchor="middle" font-size="18" fill="#795548">P2</text>
-  <!-- Legend -->
-  <text x="260" y="560" text-anchor="middle" font-size="18" fill="#795548" font-weight="bold">P = Primary shard</text>
-  <text x="640" y="560" text-anchor="middle" font-size="18" fill="#7b1fa2" font-weight="bold">R = Replica shard</text>
-  <text x="1020" y="560" text-anchor="middle" font-size="18" fill="#555555">3 shards x 2 replicas</text>
-  <text x="640" y="614" text-anchor="middle" font-size="17" fill="#1565c0">Index "products" distributed across nodes for scalability and fault tolerance</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="35.5556" y="44.4444" width="1066.6667" height="560" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="92.4444" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#1565c0">Cluster: my-cluster</ns0:text>
+  <ns0:rect x="64" y="115.5556" width="304" height="320" rx="5.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.6667" />
+  <ns0:text x="216" y="158.2222" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Data Node 1 (Master)</ns0:text>
+  <ns0:rect x="83.5556" y="177.7778" width="115.5556" height="71.1111" rx="3.5556" fill="#fff9c4" stroke="#f9a825" stroke-width="1.7778" />
+  <ns0:text x="141.3333" y="218.6667" text-anchor="middle" font-size="16" fill="#795548">P0</ns0:text>
+  <ns0:rect x="220.4444" y="177.7778" width="115.5556" height="71.1111" rx="3.5556" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:text x="278.2222" y="218.6667" text-anchor="middle" font-size="16" fill="#7b1fa2">R1</ns0:text>
+  <ns0:rect x="83.5556" y="272" width="115.5556" height="71.1111" rx="3.5556" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:text x="141.3333" y="312.8889" text-anchor="middle" font-size="16" fill="#7b1fa2">R2</ns0:text>
+  <ns0:rect x="416.8889" y="115.5556" width="304" height="320" rx="5.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.6667" />
+  <ns0:text x="568.8889" y="158.2222" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Data Node 2</ns0:text>
+  <ns0:rect x="436.4444" y="177.7778" width="115.5556" height="71.1111" rx="3.5556" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:text x="494.2222" y="218.6667" text-anchor="middle" font-size="16" fill="#7b1fa2">R0</ns0:text>
+  <ns0:rect x="573.3333" y="177.7778" width="115.5556" height="71.1111" rx="3.5556" fill="#fff9c4" stroke="#f9a825" stroke-width="1.7778" />
+  <ns0:text x="631.1111" y="218.6667" text-anchor="middle" font-size="16" fill="#795548">P1</ns0:text>
+  <ns0:rect x="436.4444" y="272" width="115.5556" height="71.1111" rx="3.5556" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:text x="494.2222" y="312.8889" text-anchor="middle" font-size="16" fill="#7b1fa2">R2</ns0:text>
+  <ns0:rect x="769.7778" y="115.5556" width="304" height="320" rx="5.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.6667" />
+  <ns0:text x="921.7778" y="158.2222" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Data Node 3</ns0:text>
+  <ns0:rect x="789.3333" y="177.7778" width="115.5556" height="71.1111" rx="3.5556" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:text x="847.1111" y="218.6667" text-anchor="middle" font-size="16" fill="#7b1fa2">R0</ns0:text>
+  <ns0:rect x="926.2222" y="177.7778" width="115.5556" height="71.1111" rx="3.5556" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:text x="984" y="218.6667" text-anchor="middle" font-size="16" fill="#7b1fa2">R1</ns0:text>
+  <ns0:rect x="789.3333" y="272" width="115.5556" height="71.1111" rx="3.5556" fill="#fff9c4" stroke="#f9a825" stroke-width="1.7778" />
+  <ns0:text x="847.1111" y="312.8889" text-anchor="middle" font-size="16" fill="#795548">P2</ns0:text>
+  <ns0:text x="231.1111" y="497.7778" text-anchor="middle" font-size="16" fill="#795548" font-weight="bold">P = Primary shard</ns0:text>
+  <ns0:text x="568.8889" y="497.7778" text-anchor="middle" font-size="16" fill="#7b1fa2" font-weight="bold">R = Replica shard</ns0:text>
+  <ns0:text x="906.6667" y="497.7778" text-anchor="middle" font-size="16" fill="#555555">3 shards x 2 replicas</ns0:text>
+  <ns0:text x="568.8889" y="545.7778" text-anchor="middle" font-size="15.1111" fill="#1565c0">Index "products" distributed across nodes for scalability and fault tolerance</ns0:text>
+</ns0:svg>

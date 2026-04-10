@@ -1,64 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Left column: inputs (red-tinted) -->
-  <rect x="40" y="150" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="205" y="198" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">User Input</text>
-
-  <rect x="40" y="265" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="205" y="313" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">External Data</text>
-
-  <rect x="40" y="380" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="205" y="428" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Training Data</text>
-
-  <!-- Centre: LLM App -->
-  <rect x="460" y="170" width="360" height="300" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
-  <text x="640" y="330" text-anchor="middle" font-size="30" font-weight="bold" fill="#1565c0">LLM App</text>
-
-  <!-- Right column: outputs (red-tinted) -->
-  <rect x="910" y="150" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1075" y="198" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Output to User</text>
-
-  <rect x="910" y="265" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1075" y="313" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Actions / API Calls</text>
-
-  <rect x="910" y="380" width="330" height="80" rx="8" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1075" y="428" text-anchor="middle" font-size="22" fill="#c62828" font-weight="bold">Database Writes</text>
-
-  <!-- Arrows: inputs -> LLM -->
-  <line x1="370" y1="190" x2="455" y2="255" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-  <line x1="370" y1="305" x2="455" y2="315" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-  <line x1="370" y1="420" x2="455" y2="395" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Arrows: LLM -> outputs -->
-  <line x1="820" y1="255" x2="905" y2="190" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="820" y1="315" x2="905" y2="305" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="820" y1="395" x2="905" y2="420" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-
-  <!-- Section labels -->
-  <text x="205" y="120" text-anchor="middle" font-size="18" fill="#555555" font-weight="bold">INPUTS</text>
-  <text x="1075" y="120" text-anchor="middle" font-size="18" fill="#555555" font-weight="bold">OUTPUTS</text>
-
-  <!-- Attack surface note -->
-  <rect x="360" y="540" width="560" height="60" rx="8" fill="#fdecea" stroke="#e53935" stroke-width="1.5"/>
-  <text x="640" y="576" text-anchor="middle" font-size="18" fill="#c62828">Every input and output is part of the attack surface</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="35.5556" y="133.3333" width="293.3333" height="71.1111" rx="7.1111" fill="url(#grad-surface)" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="182.2222" y="176" text-anchor="middle" font-size="19.5556" fill="#c62828" font-weight="bold">User Input</ns0:text>
+  <ns0:rect x="35.5556" y="235.5556" width="293.3333" height="71.1111" rx="7.1111" fill="url(#grad-surface)" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="182.2222" y="278.2222" text-anchor="middle" font-size="19.5556" fill="#c62828" font-weight="bold">External Data</ns0:text>
+  <ns0:rect x="35.5556" y="337.7778" width="293.3333" height="71.1111" rx="7.1111" fill="url(#grad-surface)" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="182.2222" y="380.4444" text-anchor="middle" font-size="19.5556" fill="#c62828" font-weight="bold">Training Data</ns0:text>
+  <ns0:rect x="408.8889" y="151.1111" width="320" height="266.6667" rx="8.8889" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="293.3333" text-anchor="middle" font-size="26.6667" font-weight="bold" fill="#1565c0">LLM App</ns0:text>
+  <ns0:rect x="808.8889" y="133.3333" width="293.3333" height="71.1111" rx="7.1111" fill="url(#grad-surface)" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="955.5556" y="176" text-anchor="middle" font-size="19.5556" fill="#c62828" font-weight="bold">Output to User</ns0:text>
+  <ns0:rect x="808.8889" y="235.5556" width="293.3333" height="71.1111" rx="7.1111" fill="url(#grad-surface)" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="955.5556" y="278.2222" text-anchor="middle" font-size="19.5556" fill="#c62828" font-weight="bold">Actions / API Calls</ns0:text>
+  <ns0:rect x="808.8889" y="337.7778" width="293.3333" height="71.1111" rx="7.1111" fill="url(#grad-surface)" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="955.5556" y="380.4444" text-anchor="middle" font-size="19.5556" fill="#c62828" font-weight="bold">Database Writes</ns0:text>
+  <ns0:line x1="328.8889" y1="168.8889" x2="404.4444" y2="226.6667" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="328.8889" y1="271.1111" x2="404.4444" y2="280" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="328.8889" y1="373.3333" x2="404.4444" y2="351.1111" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="728.8889" y1="226.6667" x2="804.4444" y2="168.8889" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="728.8889" y1="280" x2="804.4444" y2="271.1111" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="728.8889" y1="351.1111" x2="804.4444" y2="373.3333" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:text x="182.2222" y="106.6667" text-anchor="middle" font-size="16" fill="#555555" font-weight="bold">INPUTS</ns0:text>
+  <ns0:text x="955.5556" y="106.6667" text-anchor="middle" font-size="16" fill="#555555" font-weight="bold">OUTPUTS</ns0:text>
+  <ns0:rect x="320" y="480" width="497.7778" height="53.3333" rx="7.1111" fill="#fdecea" stroke="#e53935" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="512" text-anchor="middle" font-size="16" fill="#c62828">Every input and output is part of the attack surface</ns0:text>
+</ns0:svg>

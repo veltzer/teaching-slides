@@ -1,133 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Pipeline title -->
-  <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1565c0">Text Processing Pipeline</text>
-  <text x="640" y="62" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Data flows left to right through pipes ( | ), each tool transforming the stream</text>
-
-  <!-- Stage 1: Input commands -->
-  <rect x="25" y="90" width="240" height="200" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="25" y="90" width="240" height="40" rx="10" fill="url(#grad-accent)"/>
-  <rect x="25" y="115" width="240" height="15" fill="url(#grad-accent)"/>
-  <text x="145" y="116" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Stage 1: Input</text>
-  <text x="55" y="152" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">cat</text>
-  <text x="55" y="170" font-family="sans-serif" font-size="12" fill="#555555">Output whole file</text>
-  <text x="55" y="193" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">head / tail</text>
-  <text x="55" y="211" font-family="sans-serif" font-size="12" fill="#555555">First / last N lines</text>
-  <text x="55" y="234" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">less</text>
-  <text x="55" y="252" font-family="sans-serif" font-size="12" fill="#555555">Interactive pager</text>
-  <text x="55" y="275" font-family="monospace" font-size="16" font-weight="bold" fill="#1565c0">find</text>
-  <text x="55" y="293" font-family="sans-serif" font-size="12" fill="#555555">Locate files by attr</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="265" y1="190" x2="305" y2="190" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="285" y="183" text-anchor="middle" font-family="monospace" font-size="12" fill="#1565c0">|</text>
-
-  <!-- Stage 2: Filter -->
-  <rect x="305" y="90" width="240" height="200" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="305" y="90" width="240" height="40" rx="10" fill="#388e3c"/>
-  <rect x="305" y="115" width="240" height="15" fill="#388e3c"/>
-  <text x="425" y="116" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Stage 2: Filter</text>
-  <text x="335" y="152" font-family="monospace" font-size="16" font-weight="bold" fill="#1b5e20">grep</text>
-  <text x="335" y="170" font-family="sans-serif" font-size="12" fill="#555555">Match patterns (regex)</text>
-  <text x="335" y="193" font-family="monospace" font-size="16" font-weight="bold" fill="#1b5e20">sed</text>
-  <text x="335" y="211" font-family="sans-serif" font-size="12" fill="#555555">Stream edit / substitute</text>
-  <text x="335" y="234" font-family="monospace" font-size="16" font-weight="bold" fill="#1b5e20">awk</text>
-  <text x="335" y="252" font-family="sans-serif" font-size="12" fill="#555555">Field processing language</text>
-  <text x="335" y="275" font-family="monospace" font-size="16" font-weight="bold" fill="#1b5e20">cut / tr</text>
-  <text x="335" y="293" font-family="sans-serif" font-size="12" fill="#555555">Extract fields / translate</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="545" y1="190" x2="585" y2="190" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="565" y="183" text-anchor="middle" font-family="monospace" font-size="12" fill="#1565c0">|</text>
-
-  <!-- Stage 3: Sort/Unique -->
-  <rect x="585" y="90" width="240" height="200" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="585" y="90" width="240" height="40" rx="10" fill="#f57c00"/>
-  <rect x="585" y="115" width="240" height="15" fill="#f57c00"/>
-  <text x="705" y="116" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Stage 3: Order</text>
-  <text x="615" y="152" font-family="monospace" font-size="16" font-weight="bold" fill="#bf360c">sort</text>
-  <text x="615" y="170" font-family="sans-serif" font-size="12" fill="#555555">Alphabetical / numeric</text>
-  <text x="615" y="193" font-family="monospace" font-size="16" font-weight="bold" fill="#bf360c">uniq</text>
-  <text x="615" y="211" font-family="sans-serif" font-size="12" fill="#555555">Remove / count dups</text>
-  <text x="615" y="234" font-family="monospace" font-size="16" font-weight="bold" fill="#bf360c">tee</text>
-  <text x="615" y="252" font-family="sans-serif" font-size="12" fill="#555555">Split stream to file+pipe</text>
-  <text x="615" y="275" font-family="monospace" font-size="16" font-weight="bold" fill="#bf360c">paste / join</text>
-  <text x="615" y="293" font-family="sans-serif" font-size="12" fill="#555555">Merge lines / files</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="825" y1="190" x2="865" y2="190" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="845" y="183" text-anchor="middle" font-family="monospace" font-size="12" fill="#1565c0">|</text>
-
-  <!-- Stage 4: Aggregate -->
-  <rect x="865" y="90" width="240" height="200" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="865" y="90" width="240" height="40" rx="10" fill="#7b1fa2"/>
-  <rect x="865" y="115" width="240" height="15" fill="#7b1fa2"/>
-  <text x="985" y="116" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Stage 4: Count</text>
-  <text x="895" y="152" font-family="monospace" font-size="16" font-weight="bold" fill="#4a148c">wc</text>
-  <text x="895" y="170" font-family="sans-serif" font-size="12" fill="#555555">Word / line / byte count</text>
-  <text x="895" y="193" font-family="monospace" font-size="16" font-weight="bold" fill="#4a148c">awk (END)</text>
-  <text x="895" y="211" font-family="sans-serif" font-size="12" fill="#555555">Summarize / aggregate</text>
-  <text x="895" y="234" font-family="monospace" font-size="16" font-weight="bold" fill="#4a148c">bc / expr</text>
-  <text x="895" y="252" font-family="sans-serif" font-size="12" fill="#555555">Arithmetic on stream</text>
-  <text x="895" y="275" font-family="monospace" font-size="16" font-weight="bold" fill="#4a148c">head -n1</text>
-  <text x="895" y="293" font-family="sans-serif" font-size="12" fill="#555555">Top result only</text>
-
-  <!-- Arrow 4→output -->
-  <line x1="1105" y1="190" x2="1145" y2="190" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-
-  <!-- Output box -->
-  <rect x="1145" y="120" width="110" height="140" rx="10" fill="url(#grad-surface)" stroke="#bdbdbd" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1200" y="155" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">stdout</text>
-  <text x="1200" y="175" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">file</text>
-  <text x="1200" y="195" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">or</text>
-  <text x="1200" y="215" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">next</text>
-  <text x="1200" y="235" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">command</text>
-
-  <!-- Example pipeline -->
-  <rect x="25" y="315" width="1230" height="200" rx="12" fill="#212121" filter="url(#shadow)"/>
-  <text x="50" y="344" font-family="monospace" font-size="13" fill="#888888"># Real-world example: find the 5 most common error messages in logs</text>
-  <text x="50" y="368" font-family="monospace" font-size="15" fill="#80cbc4">find</text>
-  <text x="110" y="368" font-family="monospace" font-size="15" fill="#ffffff">/var/log -name "*.log" \</text>
-  <text x="50" y="393" font-family="monospace" font-size="15" fill="#aed581">  | xargs grep</text>
-  <text x="200" y="393" font-family="monospace" font-size="15" fill="#ffcc80">-i "error"</text>
-  <text x="50" y="418" font-family="monospace" font-size="15" fill="#aed581">  | grep</text>
-  <text x="130" y="418" font-family="monospace" font-size="15" fill="#ffcc80">-oP '(?&lt;=\] ).*'</text>
-  <text x="50" y="443" font-family="monospace" font-size="15" fill="#aed581">  | sort | uniq -c | sort</text>
-  <text x="340" y="443" font-family="monospace" font-size="15" fill="#ffcc80">-rn</text>
-  <text x="50" y="468" font-family="monospace" font-size="15" fill="#aed581">  | head</text>
-  <text x="130" y="468" font-family="monospace" font-size="15" fill="#ffcc80">-n 5</text>
-  <text x="50" y="493" font-family="monospace" font-size="15" fill="#888888"># Output: count + error message, sorted by frequency</text>
-
-  <!-- Quick reference row -->
-  <rect x="25" y="535" width="1230" height="150" rx="12" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="50" y="562" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Quick Reference</text>
-  <text x="50" y="588" font-family="monospace" font-size="13" fill="#212121">grep -r "pattern" dir/     </text><text x="335" y="588" font-family="sans-serif" font-size="13" fill="#555555">recursive search</text>
-  <text x="50" y="610" font-family="monospace" font-size="13" fill="#212121">sed 's/old/new/g' file     </text><text x="335" y="610" font-family="sans-serif" font-size="13" fill="#555555">global substitution</text>
-  <text x="50" y="632" font-family="monospace" font-size="13" fill="#212121">awk '{print $2}' file      </text><text x="335" y="632" font-family="sans-serif" font-size="13" fill="#555555">print second field</text>
-  <text x="50" y="654" font-family="monospace" font-size="13" fill="#212121">sort -k2 -n file           </text><text x="335" y="654" font-family="sans-serif" font-size="13" fill="#555555">sort by 2nd field numerically</text>
-
-  <text x="680" y="588" font-family="monospace" font-size="13" fill="#212121">wc -l file                 </text><text x="820" y="588" font-family="sans-serif" font-size="13" fill="#555555">count lines</text>
-  <text x="680" y="610" font-family="monospace" font-size="13" fill="#212121">cut -d: -f1 /etc/passwd    </text><text x="970" y="610" font-family="sans-serif" font-size="13" fill="#555555">extract field from colon-delimited file</text>
-  <text x="680" y="632" font-family="monospace" font-size="13" fill="#212121">uniq -c | sort -rn         </text><text x="970" y="632" font-family="sans-serif" font-size="13" fill="#555555">frequency count, most common first</text>
-  <text x="680" y="654" font-family="monospace" font-size="13" fill="#212121">tr 'a-z' 'A-Z'             </text><text x="820" y="654" font-family="sans-serif" font-size="13" fill="#555555">uppercase conversion</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="35.5556" text-anchor="middle" font-family="sans-serif" font-size="19.5556" font-weight="bold" fill="#1565c0">Text Processing Pipeline</ns0:text>
+  <ns0:text x="568.8889" y="55.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#555555">Data flows left to right through pipes ( | ), each tool transforming the stream</ns0:text>
+  <ns0:rect x="22.2222" y="80" width="213.3333" height="177.7778" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="22.2222" y="80" width="213.3333" height="35.5556" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="22.2222" y="102.2222" width="213.3333" height="13.3333" fill="url(#grad-accent)" />
+  <ns0:text x="128.8889" y="103.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff">Stage 1: Input</ns0:text>
+  <ns0:text x="48.8889" y="135.1111" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1565c0">cat</ns0:text>
+  <ns0:text x="48.8889" y="151.1111" font-family="sans-serif" font-size="10.6667" fill="#555555">Output whole file</ns0:text>
+  <ns0:text x="48.8889" y="171.5556" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1565c0">head / tail</ns0:text>
+  <ns0:text x="48.8889" y="187.5556" font-family="sans-serif" font-size="10.6667" fill="#555555">First / last N lines</ns0:text>
+  <ns0:text x="48.8889" y="208" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1565c0">less</ns0:text>
+  <ns0:text x="48.8889" y="224" font-family="sans-serif" font-size="10.6667" fill="#555555">Interactive pager</ns0:text>
+  <ns0:text x="48.8889" y="244.4444" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1565c0">find</ns0:text>
+  <ns0:text x="48.8889" y="260.4444" font-family="sans-serif" font-size="10.6667" fill="#555555">Locate files by attr</ns0:text>
+  <ns0:line x1="235.5556" y1="168.8889" x2="271.1111" y2="168.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="253.3333" y="162.6667" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#1565c0">|</ns0:text>
+  <ns0:rect x="271.1111" y="80" width="213.3333" height="177.7778" rx="8.8889" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="271.1111" y="80" width="213.3333" height="35.5556" rx="8.8889" fill="#388e3c" />
+  <ns0:rect x="271.1111" y="102.2222" width="213.3333" height="13.3333" fill="#388e3c" />
+  <ns0:text x="377.7778" y="103.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff">Stage 2: Filter</ns0:text>
+  <ns0:text x="297.7778" y="135.1111" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1b5e20">grep</ns0:text>
+  <ns0:text x="297.7778" y="151.1111" font-family="sans-serif" font-size="10.6667" fill="#555555">Match patterns (regex)</ns0:text>
+  <ns0:text x="297.7778" y="171.5556" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1b5e20">sed</ns0:text>
+  <ns0:text x="297.7778" y="187.5556" font-family="sans-serif" font-size="10.6667" fill="#555555">Stream edit / substitute</ns0:text>
+  <ns0:text x="297.7778" y="208" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1b5e20">awk</ns0:text>
+  <ns0:text x="297.7778" y="224" font-family="sans-serif" font-size="10.6667" fill="#555555">Field processing language</ns0:text>
+  <ns0:text x="297.7778" y="244.4444" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#1b5e20">cut / tr</ns0:text>
+  <ns0:text x="297.7778" y="260.4444" font-family="sans-serif" font-size="10.6667" fill="#555555">Extract fields / translate</ns0:text>
+  <ns0:line x1="484.4444" y1="168.8889" x2="520" y2="168.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="502.2222" y="162.6667" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#1565c0">|</ns0:text>
+  <ns0:rect x="520" y="80" width="213.3333" height="177.7778" rx="8.8889" fill="#fff3e0" stroke="#e65100" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="520" y="80" width="213.3333" height="35.5556" rx="8.8889" fill="#f57c00" />
+  <ns0:rect x="520" y="102.2222" width="213.3333" height="13.3333" fill="#f57c00" />
+  <ns0:text x="626.6667" y="103.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff">Stage 3: Order</ns0:text>
+  <ns0:text x="546.6667" y="135.1111" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#bf360c">sort</ns0:text>
+  <ns0:text x="546.6667" y="151.1111" font-family="sans-serif" font-size="10.6667" fill="#555555">Alphabetical / numeric</ns0:text>
+  <ns0:text x="546.6667" y="171.5556" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#bf360c">uniq</ns0:text>
+  <ns0:text x="546.6667" y="187.5556" font-family="sans-serif" font-size="10.6667" fill="#555555">Remove / count dups</ns0:text>
+  <ns0:text x="546.6667" y="208" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#bf360c">tee</ns0:text>
+  <ns0:text x="546.6667" y="224" font-family="sans-serif" font-size="10.6667" fill="#555555">Split stream to file+pipe</ns0:text>
+  <ns0:text x="546.6667" y="244.4444" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#bf360c">paste / join</ns0:text>
+  <ns0:text x="546.6667" y="260.4444" font-family="sans-serif" font-size="10.6667" fill="#555555">Merge lines / files</ns0:text>
+  <ns0:line x1="733.3333" y1="168.8889" x2="768.8889" y2="168.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="751.1111" y="162.6667" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#1565c0">|</ns0:text>
+  <ns0:rect x="768.8889" y="80" width="213.3333" height="177.7778" rx="8.8889" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="768.8889" y="80" width="213.3333" height="35.5556" rx="8.8889" fill="#7b1fa2" />
+  <ns0:rect x="768.8889" y="102.2222" width="213.3333" height="13.3333" fill="#7b1fa2" />
+  <ns0:text x="875.5556" y="103.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff">Stage 4: Count</ns0:text>
+  <ns0:text x="795.5556" y="135.1111" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#4a148c">wc</ns0:text>
+  <ns0:text x="795.5556" y="151.1111" font-family="sans-serif" font-size="10.6667" fill="#555555">Word / line / byte count</ns0:text>
+  <ns0:text x="795.5556" y="171.5556" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#4a148c">awk (END)</ns0:text>
+  <ns0:text x="795.5556" y="187.5556" font-family="sans-serif" font-size="10.6667" fill="#555555">Summarize / aggregate</ns0:text>
+  <ns0:text x="795.5556" y="208" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#4a148c">bc / expr</ns0:text>
+  <ns0:text x="795.5556" y="224" font-family="sans-serif" font-size="10.6667" fill="#555555">Arithmetic on stream</ns0:text>
+  <ns0:text x="795.5556" y="244.4444" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#4a148c">head -n1</ns0:text>
+  <ns0:text x="795.5556" y="260.4444" font-family="sans-serif" font-size="10.6667" fill="#555555">Top result only</ns0:text>
+  <ns0:line x1="982.2222" y1="168.8889" x2="1017.7778" y2="168.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="1017.7778" y="106.6667" width="97.7778" height="124.4444" rx="8.8889" fill="url(#grad-surface)" stroke="#bdbdbd" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="1066.6667" y="137.7778" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">stdout</ns0:text>
+  <ns0:text x="1066.6667" y="155.5556" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">file</ns0:text>
+  <ns0:text x="1066.6667" y="173.3333" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">or</ns0:text>
+  <ns0:text x="1066.6667" y="191.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">next</ns0:text>
+  <ns0:text x="1066.6667" y="208.8889" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">command</ns0:text>
+  <ns0:rect x="22.2222" y="280" width="1093.3333" height="177.7778" rx="10.6667" fill="#212121" filter="url(#shadow)" />
+  <ns0:text x="44.4444" y="305.7778" font-family="monospace" font-size="11.5556" fill="#888888"># Real-world example: find the 5 most common error messages in logs</ns0:text>
+  <ns0:text x="44.4444" y="327.1111" font-family="monospace" font-size="13.3333" fill="#80cbc4">find</ns0:text>
+  <ns0:text x="97.7778" y="327.1111" font-family="monospace" font-size="13.3333" fill="#ffffff">/var/log -name "*.log" \</ns0:text>
+  <ns0:text x="44.4444" y="349.3333" font-family="monospace" font-size="13.3333" fill="#aed581">  | xargs grep</ns0:text>
+  <ns0:text x="177.7778" y="349.3333" font-family="monospace" font-size="13.3333" fill="#ffcc80">-i "error"</ns0:text>
+  <ns0:text x="44.4444" y="371.5556" font-family="monospace" font-size="13.3333" fill="#aed581">  | grep</ns0:text>
+  <ns0:text x="115.5556" y="371.5556" font-family="monospace" font-size="13.3333" fill="#ffcc80">-oP '(?&lt;=\] ).*'</ns0:text>
+  <ns0:text x="44.4444" y="393.7778" font-family="monospace" font-size="13.3333" fill="#aed581">  | sort | uniq -c | sort</ns0:text>
+  <ns0:text x="302.2222" y="393.7778" font-family="monospace" font-size="13.3333" fill="#ffcc80">-rn</ns0:text>
+  <ns0:text x="44.4444" y="416" font-family="monospace" font-size="13.3333" fill="#aed581">  | head</ns0:text>
+  <ns0:text x="115.5556" y="416" font-family="monospace" font-size="13.3333" fill="#ffcc80">-n 5</ns0:text>
+  <ns0:text x="44.4444" y="438.2222" font-family="monospace" font-size="13.3333" fill="#888888"># Output: count + error message, sorted by frequency</ns0:text>
+  <ns0:rect x="22.2222" y="475.5556" width="1093.3333" height="133.3333" rx="10.6667" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="44.4444" y="499.5556" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Quick Reference</ns0:text>
+  <ns0:text x="44.4444" y="522.6667" font-family="monospace" font-size="11.5556" fill="#212121">grep -r "pattern" dir/     </ns0:text>
+  <ns0:text x="297.7778" y="522.6667" font-family="sans-serif" font-size="11.5556" fill="#555555">recursive search</ns0:text>
+  <ns0:text x="44.4444" y="542.2222" font-family="monospace" font-size="11.5556" fill="#212121">sed 's/old/new/g' file     </ns0:text>
+  <ns0:text x="297.7778" y="542.2222" font-family="sans-serif" font-size="11.5556" fill="#555555">global substitution</ns0:text>
+  <ns0:text x="44.4444" y="561.7778" font-family="monospace" font-size="11.5556" fill="#212121">awk '{print $2}' file      </ns0:text>
+  <ns0:text x="297.7778" y="561.7778" font-family="sans-serif" font-size="11.5556" fill="#555555">print second field</ns0:text>
+  <ns0:text x="44.4444" y="581.3333" font-family="monospace" font-size="11.5556" fill="#212121">sort -k2 -n file           </ns0:text>
+  <ns0:text x="297.7778" y="581.3333" font-family="sans-serif" font-size="11.5556" fill="#555555">sort by 2nd field numerically</ns0:text>
+  <ns0:text x="604.4444" y="522.6667" font-family="monospace" font-size="11.5556" fill="#212121">wc -l file                 </ns0:text>
+  <ns0:text x="728.8889" y="522.6667" font-family="sans-serif" font-size="11.5556" fill="#555555">count lines</ns0:text>
+  <ns0:text x="604.4444" y="542.2222" font-family="monospace" font-size="11.5556" fill="#212121">cut -d: -f1 /etc/passwd    </ns0:text>
+  <ns0:text x="862.2222" y="542.2222" font-family="sans-serif" font-size="11.5556" fill="#555555">extract field from colon-delimited file</ns0:text>
+  <ns0:text x="604.4444" y="561.7778" font-family="monospace" font-size="11.5556" fill="#212121">uniq -c | sort -rn         </ns0:text>
+  <ns0:text x="862.2222" y="561.7778" font-family="sans-serif" font-size="11.5556" fill="#555555">frequency count, most common first</ns0:text>
+  <ns0:text x="604.4444" y="581.3333" font-family="monospace" font-size="11.5556" fill="#212121">tr 'a-z' 'A-Z'             </ns0:text>
+  <ns0:text x="728.8889" y="581.3333" font-family="sans-serif" font-size="11.5556" fill="#555555">uppercase conversion</ns0:text>
+</ns0:svg>

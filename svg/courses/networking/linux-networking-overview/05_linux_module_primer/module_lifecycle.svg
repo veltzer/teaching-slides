@@ -1,46 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Pipeline boxes -->
-  <rect x="20" y="240" width="218" height="185" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="129" y="308" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">insmod /</text>
-  <text x="129" y="342" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">modprobe</text>
-  <text x="129" y="392" text-anchor="middle" font-size="17" fill="#777777">Load .ko</text>
-  <rect x="274" y="240" width="218" height="185" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="383" y="308" text-anchor="middle" font-size="20" font-weight="bold" fill="#1b5e20">module_init()</text>
-  <text x="383" y="370" text-anchor="middle" font-size="17" fill="#777777">Alloc resources</text>
-  <rect x="528" y="240" width="218" height="185" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="637" y="308" text-anchor="middle" font-size="20" font-weight="bold" fill="#4a148c">Running</text>
-  <text x="637" y="370" text-anchor="middle" font-size="17" fill="#777777">Active in kernel</text>
-  <rect x="782" y="240" width="218" height="185" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="891" y="308" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">module_exit()</text>
-  <text x="891" y="370" text-anchor="middle" font-size="17" fill="#777777">Free resources</text>
-  <rect x="1036" y="240" width="210" height="185" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="1141" y="308" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">rmmod</text>
-  <text x="1141" y="370" text-anchor="middle" font-size="17" fill="#777777">Unload</text>
-  <!-- Arrows -->
-  <line x1="238" y1="333" x2="274" y2="333" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="492" y1="333" x2="528" y2="333" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="746" y1="333" x2="782" y2="333" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="1000" y1="333" x2="1036" y2="333" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="640" y="88" text-anchor="middle" font-size="26" font-weight="bold" fill="#333333">Kernel Module Lifecycle</text>
-  <text x="640" y="590" text-anchor="middle" font-size="18" fill="#777777">lsmod shows loaded modules | modinfo shows module metadata</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="213.3333" width="193.7778" height="164.4444" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="114.6667" y="273.7778" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#0d47a1">insmod /</ns0:text>
+  <ns0:text x="114.6667" y="304" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#0d47a1">modprobe</ns0:text>
+  <ns0:text x="114.6667" y="348.4444" text-anchor="middle" font-size="15.1111" fill="#777777">Load .ko</ns0:text>
+  <ns0:rect x="243.5556" y="213.3333" width="193.7778" height="164.4444" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="340.4444" y="273.7778" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1b5e20">module_init()</ns0:text>
+  <ns0:text x="340.4444" y="328.8889" text-anchor="middle" font-size="15.1111" fill="#777777">Alloc resources</ns0:text>
+  <ns0:rect x="469.3333" y="213.3333" width="193.7778" height="164.4444" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="566.2222" y="273.7778" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#4a148c">Running</ns0:text>
+  <ns0:text x="566.2222" y="328.8889" text-anchor="middle" font-size="15.1111" fill="#777777">Active in kernel</ns0:text>
+  <ns0:rect x="695.1111" y="213.3333" width="193.7778" height="164.4444" fill="#fff8e1" stroke="#f57c00" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="792" y="273.7778" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#e65100">module_exit()</ns0:text>
+  <ns0:text x="792" y="328.8889" text-anchor="middle" font-size="15.1111" fill="#777777">Free resources</ns0:text>
+  <ns0:rect x="920.8889" y="213.3333" width="186.6667" height="164.4444" fill="#ffebee" stroke="#c62828" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="1014.2222" y="273.7778" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#b71c1c">rmmod</ns0:text>
+  <ns0:text x="1014.2222" y="328.8889" text-anchor="middle" font-size="15.1111" fill="#777777">Unload</ns0:text>
+  <ns0:line x1="211.5556" y1="296" x2="243.5556" y2="296" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:line x1="437.3333" y1="296" x2="469.3333" y2="296" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:line x1="663.1111" y1="296" x2="695.1111" y2="296" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:line x1="888.8889" y1="296" x2="920.8889" y2="296" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="78.2222" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#333333">Kernel Module Lifecycle</ns0:text>
+  <ns0:text x="568.8889" y="524.4444" text-anchor="middle" font-size="16" fill="#777777">lsmod shows loaded modules | modinfo shows module metadata</ns0:text>
+</ns0:svg>

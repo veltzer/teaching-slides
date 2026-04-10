@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="ad" markerWidth="18.2857" markerHeight="9.6923" refX="9.1429" refY="9.6923" orient="auto">
-      <polygon points="0,13.8462 0,6.9231" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="34.6154" text-anchor="middle" font-size="20.7692" font-weight="bold" fill="#333">GPT Architecture Deep Dive</text>
-  <rect x="274.2857" y="55.3846" width="731.4286" height="62.3077" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="80.3077" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#333">TOKEN EMBEDDING</text>
-  <text x="640" y="105.2308" text-anchor="middle" font-size="13.8462" fill="#666">"Explain" -&gt; [0.12, -0.34, ...] "quantum" -&gt; [0.78, 0.11, ...]</text>
-  <line x1="640" y1="117.6923" x2="640" y2="145.3846" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#ad)" />
-  <rect x="402.2857" y="145.3846" width="475.4286" height="41.5385" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0769" />
-  <text x="640" y="173.0769" text-anchor="middle" font-size="15.2308" fill="#856404">+ Positional Encoding</text>
-  <line x1="640" y1="186.9231" x2="640" y2="214.6154" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#ad)" />
-  <rect x="182.8571" y="214.6154" width="914.2857" height="290.7692" rx="11.0769" fill="#f0f7ff" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="249.2308" text-anchor="middle" font-size="18" font-weight="bold" fill="#4a90e2">TRANSFORMER DECODER BLOCK x N</text>
-  <rect x="256" y="270" width="768" height="76.1538" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="640" y="301.8462" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#333">Masked Multi-Head Self-Attention</text>
-  <text x="640" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">(causal: can only look left)</text>
-  <line x1="640" y1="346.1538" x2="640" y2="373.8462" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#ad)" />
-  <rect x="256" y="373.8462" width="768" height="76.1538" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="640" y="405.6923" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#333">Feed-Forward Network (MLP)</text>
-  <text x="640" y="433.3846" text-anchor="middle" font-size="13.8462" fill="#666">FFN(x) = GELU(xW1 + b1)W2 + b2</text>
-  <text x="640" y="484.6154" text-anchor="middle" font-size="13.8462" fill="#666">Layer Norm + Residual connections</text>
-  <line x1="640" y1="505.3846" x2="640" y2="546.9231" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#ad)" />
-  <rect x="274.2857" y="546.9231" width="731.4286" height="76.1538" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
-  <text x="640" y="578.7692" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#333">LINEAR + SOFTMAX</text>
-  <text x="640" y="606.4615" text-anchor="middle" font-size="15.2308" fill="#666">Vocabulary probability distribution</text>
-  <line x1="640" y1="623.0769" x2="640" y2="657.6923" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#ad)" />
-  <rect x="411.4286" y="657.6923" width="457.1429" height="48.4615" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
-  <text x="640" y="689.5385" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#28a745">Next token: "in" (p=0.32)</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="ad" markerWidth="16.5727" markerHeight="8.7843" refX="8.2864" refY="8.7843" orient="auto">
+      <ns0:polygon points="0,12.5491 0,6.2745" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="580.0436" y="31.3726" text-anchor="middle" font-size="18.8235" font-weight="bold" fill="#333">GPT Architecture Deep Dive</ns0:text>
+  <ns0:rect x="248.5901" y="50.1961" width="662.907" height="56.4706" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5098" />
+  <ns0:text x="580.0436" y="72.7843" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="#333">TOKEN EMBEDDING</ns0:text>
+  <ns0:text x="580.0436" y="95.3726" text-anchor="middle" font-size="12.5491" fill="#666">"Explain" -&gt; [0.12, -0.34, ...] "quantum" -&gt; [0.78, 0.11, ...]</ns0:text>
+  <ns0:line x1="580.0436" y1="106.6667" x2="580.0436" y2="131.7647" stroke="#4a90e2" stroke-width="1.8823" marker-end="url(#ad)" />
+  <ns0:rect x="364.5988" y="131.7647" width="430.8896" height="37.6471" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8823" />
+  <ns0:text x="580.0436" y="156.8627" text-anchor="middle" font-size="13.804" fill="#856404">+ Positional Encoding</ns0:text>
+  <ns0:line x1="580.0436" y1="169.4118" x2="580.0436" y2="194.5098" stroke="#4a90e2" stroke-width="1.8823" marker-end="url(#ad)" />
+  <ns0:rect x="165.7267" y="194.5098" width="828.6337" height="263.5294" rx="10.0392" fill="#f0f7ff" stroke="#4a90e2" stroke-width="2.5098" />
+  <ns0:text x="580.0436" y="225.8824" text-anchor="middle" font-size="16.3137" font-weight="bold" fill="#4a90e2">TRANSFORMER DECODER BLOCK x N</ns0:text>
+  <ns0:rect x="232.0174" y="244.7059" width="696.0523" height="69.0196" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8823" />
+  <ns0:text x="580.0436" y="273.5687" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="#333">Masked Multi-Head Self-Attention</ns0:text>
+  <ns0:text x="580.0436" y="298.6667" text-anchor="middle" font-size="12.5491" fill="#666">(causal: can only look left)</ns0:text>
+  <ns0:line x1="580.0436" y1="313.7255" x2="580.0436" y2="338.8236" stroke="#4a90e2" stroke-width="1.8823" marker-end="url(#ad)" />
+  <ns0:rect x="232.0174" y="338.8236" width="696.0523" height="69.0196" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="1.8823" />
+  <ns0:text x="580.0436" y="367.6863" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="#333">Feed-Forward Network (MLP)</ns0:text>
+  <ns0:text x="580.0436" y="392.7843" text-anchor="middle" font-size="12.5491" fill="#666">FFN(x) = GELU(xW1 + b1)W2 + b2</ns0:text>
+  <ns0:text x="580.0436" y="439.2157" text-anchor="middle" font-size="12.5491" fill="#666">Layer Norm + Residual connections</ns0:text>
+  <ns0:line x1="580.0436" y1="458.0392" x2="580.0436" y2="495.6863" stroke="#4a90e2" stroke-width="1.8823" marker-end="url(#ad)" />
+  <ns0:rect x="248.5901" y="495.6863" width="662.907" height="69.0196" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5098" />
+  <ns0:text x="580.0436" y="524.549" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="#333">LINEAR + SOFTMAX</ns0:text>
+  <ns0:text x="580.0436" y="549.6471" text-anchor="middle" font-size="13.804" fill="#666">Vocabulary probability distribution</ns0:text>
+  <ns0:line x1="580.0436" y1="564.7059" x2="580.0436" y2="596.0785" stroke="#4a90e2" stroke-width="1.8823" marker-end="url(#ad)" />
+  <ns0:rect x="372.8852" y="596.0785" width="414.3169" height="43.9215" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="2.5098" />
+  <ns0:text x="580.0436" y="624.9413" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="#28a745">Next token: "in" (p=0.32)</ns0:text>
+</ns0:svg>

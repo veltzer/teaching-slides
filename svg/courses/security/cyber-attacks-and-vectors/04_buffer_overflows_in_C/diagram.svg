@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Stack Layout During Buffer Overflow</text>
-  <rect x="64" y="90" width="490.6667" height="612" fill="#e3f2fd" stroke="#1565c0" stroke-width="4.2667" rx="6.4" />
-  <text x="309.3333" y="151.2" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#1565c0">Normal Stack</text>
-  <rect x="117.3333" y="180" width="384" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
-  <text x="309.3333" y="234" text-anchor="middle" font-size="21.3333">Local Variables</text>
-  <rect x="117.3333" y="259.2" width="384" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
-  <text x="309.3333" y="313.2" text-anchor="middle" font-size="21.3333">Buffer[64]</text>
-  <rect x="117.3333" y="338.4" width="384" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" />
-  <text x="309.3333" y="392.4" text-anchor="middle" font-size="21.3333">Saved Frame Pointer</text>
-  <rect x="117.3333" y="417.6" width="384" height="79.2" fill="#ffebee" stroke="#c62828" stroke-width="4.2667" />
-  <text x="309.3333" y="471.6" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#c62828">Return Address</text>
-  <rect x="117.3333" y="496.8" width="384" height="79.2" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" />
-  <text x="309.3333" y="550.8" text-anchor="middle" font-size="21.3333">Function Arguments</text>
-  <text x="309.3333" y="648" text-anchor="middle" font-size="21.3333" fill="#666">Stack grows downward</text>
-  <rect x="682.6667" y="90" width="554.6667" height="612" fill="#ffebee" stroke="#c62828" stroke-width="4.2667" rx="6.4" />
-  <text x="960" y="151.2" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#c62828">Overflowed Stack</text>
-  <rect x="736" y="180" width="448" height="79.2" fill="#ffcdd2" stroke="#333" stroke-width="2.1333" />
-  <text x="960" y="234" text-anchor="middle" font-size="21.3333" fill="#c62828">AAAA AAAA AAAA...</text>
-  <rect x="736" y="259.2" width="448" height="79.2" fill="#ffcdd2" stroke="#333" stroke-width="2.1333" />
-  <text x="960" y="313.2" text-anchor="middle" font-size="21.3333" fill="#c62828">AAAA (overflow)</text>
-  <rect x="736" y="338.4" width="448" height="79.2" fill="#ffcdd2" stroke="#333" stroke-width="2.1333" />
-  <text x="960" y="392.4" text-anchor="middle" font-size="21.3333" fill="#c62828">Overwritten!</text>
-  <rect x="736" y="417.6" width="448" height="79.2" fill="#ff8a80" stroke="#c62828" stroke-width="4.2667" />
-  <text x="960" y="471.6" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#c62828">0xDEADBEEF (hijacked)</text>
-  <rect x="736" y="496.8" width="448" height="79.2" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" />
-  <text x="960" y="550.8" text-anchor="middle" font-size="21.3333">Function Arguments</text>
-  <text x="960" y="648" text-anchor="middle" font-size="21.3333" fill="#c62828">Attacker controls execution</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="583.4758" y="49.2308" text-anchor="middle" font-size="23.339" font-weight="bold">Stack Layout During Buffer Overflow</ns0:text>
+  <ns0:rect x="58.3476" y="82.0513" width="447.3315" height="557.9487" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.8899" rx="5.8348" />
+  <ns0:text x="282.0133" y="137.8462" text-anchor="middle" font-size="21.3941" font-weight="bold" fill="#1565c0">Normal Stack</ns0:text>
+  <ns0:rect x="106.9705" y="164.1026" width="350.0855" height="72.2051" fill="#e8f5e9" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="282.0133" y="213.3333" text-anchor="middle" font-size="19.4492">Local Variables</ns0:text>
+  <ns0:rect x="106.9705" y="236.3077" width="350.0855" height="72.2051" fill="#e8f5e9" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="282.0133" y="285.5385" text-anchor="middle" font-size="19.4492">Buffer[64]</ns0:text>
+  <ns0:rect x="106.9705" y="308.5128" width="350.0855" height="72.2051" fill="#fff3e0" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="282.0133" y="357.7436" text-anchor="middle" font-size="19.4492">Saved Frame Pointer</ns0:text>
+  <ns0:rect x="106.9705" y="380.7179" width="350.0855" height="72.2051" fill="#ffebee" stroke="#c62828" stroke-width="3.8899" />
+  <ns0:text x="282.0133" y="429.9487" text-anchor="middle" font-size="19.4492" font-weight="bold" fill="#c62828">Return Address</ns0:text>
+  <ns0:rect x="106.9705" y="452.9231" width="350.0855" height="72.2051" fill="#f3e5f5" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="282.0133" y="502.1538" text-anchor="middle" font-size="19.4492">Function Arguments</ns0:text>
+  <ns0:text x="282.0133" y="590.7692" text-anchor="middle" font-size="19.4492" fill="#666">Stack grows downward</ns0:text>
+  <ns0:rect x="622.3742" y="82.0513" width="505.679" height="557.9487" fill="#ffebee" stroke="#c62828" stroke-width="3.8899" rx="5.8348" />
+  <ns0:text x="875.2137" y="137.8462" text-anchor="middle" font-size="21.3941" font-weight="bold" fill="#c62828">Overflowed Stack</ns0:text>
+  <ns0:rect x="670.9972" y="164.1026" width="408.433" height="72.2051" fill="#ffcdd2" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="875.2137" y="213.3333" text-anchor="middle" font-size="19.4492" fill="#c62828">AAAA AAAA AAAA...</ns0:text>
+  <ns0:rect x="670.9972" y="236.3077" width="408.433" height="72.2051" fill="#ffcdd2" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="875.2137" y="285.5385" text-anchor="middle" font-size="19.4492" fill="#c62828">AAAA (overflow)</ns0:text>
+  <ns0:rect x="670.9972" y="308.5128" width="408.433" height="72.2051" fill="#ffcdd2" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="875.2137" y="357.7436" text-anchor="middle" font-size="19.4492" fill="#c62828">Overwritten!</ns0:text>
+  <ns0:rect x="670.9972" y="380.7179" width="408.433" height="72.2051" fill="#ff8a80" stroke="#c62828" stroke-width="3.8899" />
+  <ns0:text x="875.2137" y="429.9487" text-anchor="middle" font-size="19.4492" font-weight="bold" fill="#c62828">0xDEADBEEF (hijacked)</ns0:text>
+  <ns0:rect x="670.9972" y="452.9231" width="408.433" height="72.2051" fill="#f3e5f5" stroke="#333" stroke-width="1.9449" />
+  <ns0:text x="875.2137" y="502.1538" text-anchor="middle" font-size="19.4492">Function Arguments</ns0:text>
+  <ns0:text x="875.2137" y="590.7692" text-anchor="middle" font-size="19.4492" fill="#c62828">Attacker controls execution</ns0:text>
+</ns0:svg>

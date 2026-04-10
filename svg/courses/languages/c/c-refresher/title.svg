@@ -1,63 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#1a1a2e"/>
-  <text x="128" y="450" font-family="serif" font-size="320" fill="#16213e" stroke="#1e88e5" stroke-width="5" font-weight="bold">C</text>
-  <rect x="512" y="72" width="672" height="360" rx="12" fill="#16213e" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
-  <text x="544" y="126" font-family="monospace" font-size="21" fill="#e94560">#include</text>
-  <text x="680" y="126" font-family="monospace" font-size="21" fill="#1e88e5">&lt;stdio.h&gt;</text>
-  <text x="544" y="180" font-family="monospace" font-size="21" fill="#1565c0">int</text>
-  <text x="592" y="180" font-family="monospace" font-size="21" fill="#555555">main</text>
-  <text x="656" y="180" font-family="monospace" font-size="21" fill="#333333">(</text>
-  <text x="672" y="180" font-family="monospace" font-size="21" fill="#1565c0">void</text>
-  <text x="728" y="180" font-family="monospace" font-size="21" fill="#333333">) {</text>
-  <text x="576" y="225" font-family="monospace" font-size="21" fill="#1565c0">int</text>
-  <text x="624" y="225" font-family="monospace" font-size="21" fill="#333333">*ptr = </text>
-  <text x="736" y="225" font-family="monospace" font-size="21" fill="#555555">malloc</text>
-  <text x="816" y="225" font-family="monospace" font-size="21" fill="#333333">(</text>
-  <text x="832" y="225" font-family="monospace" font-size="21" fill="#e94560">sizeof</text>
-  <text x="920" y="225" font-family="monospace" font-size="21" fill="#333333">(</text>
-  <text x="933" y="225" font-family="monospace" font-size="21" fill="#1565c0">int</text>
-  <text x="976" y="225" font-family="monospace" font-size="21" fill="#333333">));</text>
-  <text x="576" y="270" font-family="monospace" font-size="21" fill="#333333">*ptr = </text>
-  <text x="672" y="270" font-family="monospace" font-size="21" fill="#e94560">42</text>
-  <text x="704" y="270" font-family="monospace" font-size="21" fill="#333333">;</text>
-  <text x="576" y="315" font-family="monospace" font-size="21" fill="#555555">printf</text>
-  <text x="656" y="315" font-family="monospace" font-size="21" fill="#333333">(</text>
-  <text x="672" y="315" font-family="monospace" font-size="21" fill="#1e88e5">"%d\n"</text>
-  <text x="760" y="315" font-family="monospace" font-size="21" fill="#333333">, *ptr);</text>
-  <text x="576" y="360" font-family="monospace" font-size="21" fill="#555555">free</text>
-  <text x="632" y="360" font-family="monospace" font-size="21" fill="#333333">(ptr);</text>
-  <text x="576" y="405" font-family="monospace" font-size="21" fill="#e94560">return</text>
-  <text x="664" y="405" font-family="monospace" font-size="21" fill="#333333">0;</text>
-  <text x="544" y="432" font-family="monospace" font-size="21" fill="#333333">}</text>
-  <rect x="544" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#e94560" stroke-width="2" filter="url(#shadow)"/>
-  <text x="594" y="526" font-family="monospace" font-size="16" fill="#e94560" text-anchor="middle">stack</text>
-  <rect x="666" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="716" y="526" font-family="monospace" font-size="16" fill="#1e88e5" text-anchor="middle">heap</text>
-  <rect x="788" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="838" y="526" font-family="monospace" font-size="16" fill="#1565c0" text-anchor="middle">bss</text>
-  <rect x="910" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#555555" stroke-width="2" filter="url(#shadow)"/>
-  <text x="960" y="526" font-family="monospace" font-size="16" fill="#555555" text-anchor="middle">data</text>
-  <rect x="1032" y="490" width="100" height="60" rx="6" fill="url(#grad-surface)" stroke="#333333" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1082" y="526" font-family="monospace" font-size="16" fill="#333333" text-anchor="middle">text</text>
-  <line x1="616" y1="590" x2="716" y2="590" stroke="#1e88e5" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="666" y="620" font-family="monospace" font-size="16" fill="#1e88e5" text-anchor="middle">ptr</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#1a1a2e" />
+  <ns0:text x="113.7778" y="400" font-family="serif" font-size="284.4444" fill="#16213e" stroke="#1e88e5" stroke-width="4.4444" font-weight="bold">C</ns0:text>
+  <ns0:rect x="455.1111" y="64" width="597.3333" height="320" rx="10.6667" fill="#16213e" stroke="#1565c0" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="483.5556" y="112" font-family="monospace" font-size="18.6667" fill="#e94560">#include</ns0:text>
+  <ns0:text x="604.4444" y="112" font-family="monospace" font-size="18.6667" fill="#1e88e5">&lt;stdio.h&gt;</ns0:text>
+  <ns0:text x="483.5556" y="160" font-family="monospace" font-size="18.6667" fill="#1565c0">int</ns0:text>
+  <ns0:text x="526.2222" y="160" font-family="monospace" font-size="18.6667" fill="#555555">main</ns0:text>
+  <ns0:text x="583.1111" y="160" font-family="monospace" font-size="18.6667" fill="#333333">(</ns0:text>
+  <ns0:text x="597.3333" y="160" font-family="monospace" font-size="18.6667" fill="#1565c0">void</ns0:text>
+  <ns0:text x="647.1111" y="160" font-family="monospace" font-size="18.6667" fill="#333333">) {</ns0:text>
+  <ns0:text x="512" y="200" font-family="monospace" font-size="18.6667" fill="#1565c0">int</ns0:text>
+  <ns0:text x="554.6667" y="200" font-family="monospace" font-size="18.6667" fill="#333333">*ptr = </ns0:text>
+  <ns0:text x="654.2222" y="200" font-family="monospace" font-size="18.6667" fill="#555555">malloc</ns0:text>
+  <ns0:text x="725.3333" y="200" font-family="monospace" font-size="18.6667" fill="#333333">(</ns0:text>
+  <ns0:text x="739.5556" y="200" font-family="monospace" font-size="18.6667" fill="#e94560">sizeof</ns0:text>
+  <ns0:text x="817.7778" y="200" font-family="monospace" font-size="18.6667" fill="#333333">(</ns0:text>
+  <ns0:text x="829.3333" y="200" font-family="monospace" font-size="18.6667" fill="#1565c0">int</ns0:text>
+  <ns0:text x="867.5556" y="200" font-family="monospace" font-size="18.6667" fill="#333333">));</ns0:text>
+  <ns0:text x="512" y="240" font-family="monospace" font-size="18.6667" fill="#333333">*ptr = </ns0:text>
+  <ns0:text x="597.3333" y="240" font-family="monospace" font-size="18.6667" fill="#e94560">42</ns0:text>
+  <ns0:text x="625.7778" y="240" font-family="monospace" font-size="18.6667" fill="#333333">;</ns0:text>
+  <ns0:text x="512" y="280" font-family="monospace" font-size="18.6667" fill="#555555">printf</ns0:text>
+  <ns0:text x="583.1111" y="280" font-family="monospace" font-size="18.6667" fill="#333333">(</ns0:text>
+  <ns0:text x="597.3333" y="280" font-family="monospace" font-size="18.6667" fill="#1e88e5">"%d\n"</ns0:text>
+  <ns0:text x="675.5556" y="280" font-family="monospace" font-size="18.6667" fill="#333333">, *ptr);</ns0:text>
+  <ns0:text x="512" y="320" font-family="monospace" font-size="18.6667" fill="#555555">free</ns0:text>
+  <ns0:text x="561.7778" y="320" font-family="monospace" font-size="18.6667" fill="#333333">(ptr);</ns0:text>
+  <ns0:text x="512" y="360" font-family="monospace" font-size="18.6667" fill="#e94560">return</ns0:text>
+  <ns0:text x="590.2222" y="360" font-family="monospace" font-size="18.6667" fill="#333333">0;</ns0:text>
+  <ns0:text x="483.5556" y="384" font-family="monospace" font-size="18.6667" fill="#333333">}</ns0:text>
+  <ns0:rect x="483.5556" y="435.5556" width="88.8889" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#e94560" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="528" y="467.5556" font-family="monospace" font-size="14.2222" fill="#e94560" text-anchor="middle">stack</ns0:text>
+  <ns0:rect x="592" y="435.5556" width="88.8889" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="636.4444" y="467.5556" font-family="monospace" font-size="14.2222" fill="#1e88e5" text-anchor="middle">heap</ns0:text>
+  <ns0:rect x="700.4444" y="435.5556" width="88.8889" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="744.8889" y="467.5556" font-family="monospace" font-size="14.2222" fill="#1565c0" text-anchor="middle">bss</ns0:text>
+  <ns0:rect x="808.8889" y="435.5556" width="88.8889" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#555555" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="853.3333" y="467.5556" font-family="monospace" font-size="14.2222" fill="#555555" text-anchor="middle">data</ns0:text>
+  <ns0:rect x="917.3333" y="435.5556" width="88.8889" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#333333" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="961.7778" y="467.5556" font-family="monospace" font-size="14.2222" fill="#333333" text-anchor="middle">text</ns0:text>
+  <ns0:line x1="547.5556" y1="524.4444" x2="636.4444" y2="524.4444" stroke="#1e88e5" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="592" y="551.1111" font-family="monospace" font-size="14.2222" fill="#1e88e5" text-anchor="middle">ptr</ns0:text>
+</ns0:svg>

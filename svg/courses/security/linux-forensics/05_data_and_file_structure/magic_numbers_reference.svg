@@ -1,93 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Header row -->
-  <rect x="20" y="20" width="1240" height="55" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="240" y="56" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">File Type</text>
-  <text x="700" y="56" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Magic Bytes (Hex)</text>
-  <text x="1100" y="56" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">ASCII</text>
-
-  <!-- Data rows alternating -->
-  <rect x="20" y="75" width="1240" height="46" fill="#d4edda" stroke="#28a745" stroke-width="0.8"/>
-  <text x="240" y="106" text-anchor="middle" font-size="20" fill="#333333">ELF binary</text>
-  <text x="700" y="106" text-anchor="middle" font-size="20" fill="#333333">7F 45 4C 46</text>
-  <text x="1100" y="106" text-anchor="middle" font-size="20" fill="#333333">.ELF</text>
-
-  <rect x="20" y="121" width="1240" height="46" fill="#ffffff" stroke="#1e88e5" stroke-width="0.8"/>
-  <text x="240" y="152" text-anchor="middle" font-size="20" fill="#333333">PDF</text>
-  <text x="700" y="152" text-anchor="middle" font-size="20" fill="#333333">25 50 44 46</text>
-  <text x="1100" y="152" text-anchor="middle" font-size="20" fill="#333333">%PDF</text>
-
-  <rect x="20" y="167" width="1240" height="46" fill="#d4edda" stroke="#28a745" stroke-width="0.8"/>
-  <text x="240" y="198" text-anchor="middle" font-size="20" fill="#333333">ZIP/DOCX/XLSX</text>
-  <text x="700" y="198" text-anchor="middle" font-size="20" fill="#333333">50 4B 03 04</text>
-  <text x="1100" y="198" text-anchor="middle" font-size="20" fill="#333333">PK..</text>
-
-  <rect x="20" y="213" width="1240" height="46" fill="#ffffff" stroke="#1e88e5" stroke-width="0.8"/>
-  <text x="240" y="244" text-anchor="middle" font-size="20" fill="#333333">JPEG</text>
-  <text x="700" y="244" text-anchor="middle" font-size="20" fill="#333333">FF D8 FF E0/E1</text>
-  <text x="1100" y="244" text-anchor="middle" font-size="20" fill="#333333">-</text>
-
-  <rect x="20" y="259" width="1240" height="46" fill="#d4edda" stroke="#28a745" stroke-width="0.8"/>
-  <text x="240" y="290" text-anchor="middle" font-size="20" fill="#333333">PNG</text>
-  <text x="700" y="290" text-anchor="middle" font-size="20" fill="#333333">89 50 4E 47 0D 0A 1A 0A</text>
-  <text x="1100" y="290" text-anchor="middle" font-size="20" fill="#333333">.PNG....</text>
-
-  <rect x="20" y="305" width="1240" height="46" fill="#ffffff" stroke="#1e88e5" stroke-width="0.8"/>
-  <text x="240" y="336" text-anchor="middle" font-size="20" fill="#333333">GIF</text>
-  <text x="700" y="336" text-anchor="middle" font-size="20" fill="#333333">47 49 46 38</text>
-  <text x="1100" y="336" text-anchor="middle" font-size="20" fill="#333333">GIF8</text>
-
-  <rect x="20" y="351" width="1240" height="46" fill="#d4edda" stroke="#28a745" stroke-width="0.8"/>
-  <text x="240" y="382" text-anchor="middle" font-size="20" fill="#333333">gzip</text>
-  <text x="700" y="382" text-anchor="middle" font-size="20" fill="#333333">1F 8B</text>
-  <text x="1100" y="382" text-anchor="middle" font-size="20" fill="#333333">-</text>
-
-  <rect x="20" y="397" width="1240" height="46" fill="#ffffff" stroke="#1e88e5" stroke-width="0.8"/>
-  <text x="240" y="428" text-anchor="middle" font-size="20" fill="#333333">bzip2</text>
-  <text x="700" y="428" text-anchor="middle" font-size="20" fill="#333333">42 5A 68</text>
-  <text x="1100" y="428" text-anchor="middle" font-size="20" fill="#333333">BZh</text>
-
-  <rect x="20" y="443" width="1240" height="46" fill="#d4edda" stroke="#28a745" stroke-width="0.8"/>
-  <text x="240" y="474" text-anchor="middle" font-size="20" fill="#333333">7-Zip</text>
-  <text x="700" y="474" text-anchor="middle" font-size="20" fill="#333333">37 7A BC AF 27 1C</text>
-  <text x="1100" y="474" text-anchor="middle" font-size="20" fill="#333333">7z..'.</text>
-
-  <rect x="20" y="489" width="1240" height="46" fill="#ffffff" stroke="#1e88e5" stroke-width="0.8"/>
-  <text x="240" y="520" text-anchor="middle" font-size="20" fill="#333333">tar</text>
-  <text x="700" y="520" text-anchor="middle" font-size="20" fill="#333333">75 73 74 61 72 (at 257)</text>
-  <text x="1100" y="520" text-anchor="middle" font-size="20" fill="#333333">ustar</text>
-
-  <rect x="20" y="535" width="1240" height="46" fill="#d4edda" stroke="#28a745" stroke-width="0.8"/>
-  <text x="240" y="566" text-anchor="middle" font-size="20" fill="#333333">RAR</text>
-  <text x="700" y="566" text-anchor="middle" font-size="20" fill="#333333">52 61 72 21 1A 07</text>
-  <text x="1100" y="566" text-anchor="middle" font-size="20" fill="#333333">Rar!..</text>
-
-  <rect x="20" y="581" width="1240" height="46" fill="#ffffff" stroke="#1e88e5" stroke-width="0.8"/>
-  <text x="240" y="612" text-anchor="middle" font-size="20" fill="#333333">SQLite</text>
-  <text x="700" y="612" text-anchor="middle" font-size="20" fill="#333333">53 51 4C 69 74 65</text>
-  <text x="1100" y="612" text-anchor="middle" font-size="20" fill="#333333">SQLite</text>
-
-  <!-- Column dividers -->
-  <line x1="390" y1="20" x2="390" y2="627" stroke="#888888" stroke-width="1"/>
-  <line x1="820" y1="20" x2="820" y2="627" stroke="#888888" stroke-width="1"/>
-  <rect x="20" y="20" width="1240" height="607" fill="none" stroke="#333333" stroke-width="2" rx="8"/>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="48.8889" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="213.3333" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">File Type</ns0:text>
+  <ns0:text x="622.2222" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">Magic Bytes (Hex)</ns0:text>
+  <ns0:text x="977.7778" y="49.7778" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">ASCII</ns0:text>
+  <ns0:rect x="17.7778" y="66.6667" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="94.2222" text-anchor="middle" font-size="17.7778" fill="#333333">ELF binary</ns0:text>
+  <ns0:text x="622.2222" y="94.2222" text-anchor="middle" font-size="17.7778" fill="#333333">7F 45 4C 46</ns0:text>
+  <ns0:text x="977.7778" y="94.2222" text-anchor="middle" font-size="17.7778" fill="#333333">.ELF</ns0:text>
+  <ns0:rect x="17.7778" y="107.5556" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="135.1111" text-anchor="middle" font-size="17.7778" fill="#333333">PDF</ns0:text>
+  <ns0:text x="622.2222" y="135.1111" text-anchor="middle" font-size="17.7778" fill="#333333">25 50 44 46</ns0:text>
+  <ns0:text x="977.7778" y="135.1111" text-anchor="middle" font-size="17.7778" fill="#333333">%PDF</ns0:text>
+  <ns0:rect x="17.7778" y="148.4444" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="176" text-anchor="middle" font-size="17.7778" fill="#333333">ZIP/DOCX/XLSX</ns0:text>
+  <ns0:text x="622.2222" y="176" text-anchor="middle" font-size="17.7778" fill="#333333">50 4B 03 04</ns0:text>
+  <ns0:text x="977.7778" y="176" text-anchor="middle" font-size="17.7778" fill="#333333">PK..</ns0:text>
+  <ns0:rect x="17.7778" y="189.3333" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="216.8889" text-anchor="middle" font-size="17.7778" fill="#333333">JPEG</ns0:text>
+  <ns0:text x="622.2222" y="216.8889" text-anchor="middle" font-size="17.7778" fill="#333333">FF D8 FF E0/E1</ns0:text>
+  <ns0:text x="977.7778" y="216.8889" text-anchor="middle" font-size="17.7778" fill="#333333">-</ns0:text>
+  <ns0:rect x="17.7778" y="230.2222" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#333333">PNG</ns0:text>
+  <ns0:text x="622.2222" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#333333">89 50 4E 47 0D 0A 1A 0A</ns0:text>
+  <ns0:text x="977.7778" y="257.7778" text-anchor="middle" font-size="17.7778" fill="#333333">.PNG....</ns0:text>
+  <ns0:rect x="17.7778" y="271.1111" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="298.6667" text-anchor="middle" font-size="17.7778" fill="#333333">GIF</ns0:text>
+  <ns0:text x="622.2222" y="298.6667" text-anchor="middle" font-size="17.7778" fill="#333333">47 49 46 38</ns0:text>
+  <ns0:text x="977.7778" y="298.6667" text-anchor="middle" font-size="17.7778" fill="#333333">GIF8</ns0:text>
+  <ns0:rect x="17.7778" y="312" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="339.5556" text-anchor="middle" font-size="17.7778" fill="#333333">gzip</ns0:text>
+  <ns0:text x="622.2222" y="339.5556" text-anchor="middle" font-size="17.7778" fill="#333333">1F 8B</ns0:text>
+  <ns0:text x="977.7778" y="339.5556" text-anchor="middle" font-size="17.7778" fill="#333333">-</ns0:text>
+  <ns0:rect x="17.7778" y="352.8889" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="380.4444" text-anchor="middle" font-size="17.7778" fill="#333333">bzip2</ns0:text>
+  <ns0:text x="622.2222" y="380.4444" text-anchor="middle" font-size="17.7778" fill="#333333">42 5A 68</ns0:text>
+  <ns0:text x="977.7778" y="380.4444" text-anchor="middle" font-size="17.7778" fill="#333333">BZh</ns0:text>
+  <ns0:rect x="17.7778" y="393.7778" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="421.3333" text-anchor="middle" font-size="17.7778" fill="#333333">7-Zip</ns0:text>
+  <ns0:text x="622.2222" y="421.3333" text-anchor="middle" font-size="17.7778" fill="#333333">37 7A BC AF 27 1C</ns0:text>
+  <ns0:text x="977.7778" y="421.3333" text-anchor="middle" font-size="17.7778" fill="#333333">7z..'.</ns0:text>
+  <ns0:rect x="17.7778" y="434.6667" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="462.2222" text-anchor="middle" font-size="17.7778" fill="#333333">tar</ns0:text>
+  <ns0:text x="622.2222" y="462.2222" text-anchor="middle" font-size="17.7778" fill="#333333">75 73 74 61 72 (at 257)</ns0:text>
+  <ns0:text x="977.7778" y="462.2222" text-anchor="middle" font-size="17.7778" fill="#333333">ustar</ns0:text>
+  <ns0:rect x="17.7778" y="475.5556" width="1102.2222" height="40.8889" fill="#d4edda" stroke="#28a745" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">RAR</ns0:text>
+  <ns0:text x="622.2222" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">52 61 72 21 1A 07</ns0:text>
+  <ns0:text x="977.7778" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">Rar!..</ns0:text>
+  <ns0:rect x="17.7778" y="516.4444" width="1102.2222" height="40.8889" fill="#ffffff" stroke="#1e88e5" stroke-width="0.7111" />
+  <ns0:text x="213.3333" y="544" text-anchor="middle" font-size="17.7778" fill="#333333">SQLite</ns0:text>
+  <ns0:text x="622.2222" y="544" text-anchor="middle" font-size="17.7778" fill="#333333">53 51 4C 69 74 65</ns0:text>
+  <ns0:text x="977.7778" y="544" text-anchor="middle" font-size="17.7778" fill="#333333">SQLite</ns0:text>
+  <ns0:line x1="346.6667" y1="17.7778" x2="346.6667" y2="557.3333" stroke="#888888" stroke-width="0.8889" />
+  <ns0:line x1="728.8889" y1="17.7778" x2="728.8889" y2="557.3333" stroke="#888888" stroke-width="0.8889" />
+  <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="539.5556" fill="none" stroke="#333333" stroke-width="1.7778" rx="7.1111" />
+</ns0:svg>

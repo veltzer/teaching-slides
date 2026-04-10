@@ -1,51 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="48" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Rayon Work Stealing</text>
-  <rect x="48" y="88" width="1184" height="288" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="640" y="128" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">Rayon Thread Pool</text>
-  <rect x="80" y="152" width="256" height="192" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="208" y="184" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">Thread 1</text>
-  <rect x="96" y="200" width="56" height="32" rx="3.2" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="123.2" y="222.4" text-anchor="middle" font-size="16" fill="#333">T1</text>
-  <rect x="155.2" y="200" width="56" height="32" rx="3.2" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="182.4" y="222.4" text-anchor="middle" font-size="16" fill="#333">T2</text>
-  <rect x="214.4" y="200" width="56" height="32" rx="3.2" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="241.6" y="222.4" text-anchor="middle" font-size="16" fill="#333">T3</text>
-  <rect x="96" y="236.8" width="56" height="32" rx="3.2" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="123.2" y="259.2" text-anchor="middle" font-size="16" fill="#333">T4</text>
-  <text x="208" y="304" text-anchor="middle" font-size="16" fill="#555">Local deque (full)</text>
-  <rect x="384" y="152" width="256" height="192" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="512" y="184" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">Thread 2</text>
-  <rect x="400" y="200" width="56" height="32" rx="3.2" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="427.2" y="222.4" text-anchor="middle" font-size="16" fill="#333">T5</text>
-  <text x="512" y="304" text-anchor="middle" font-size="16" fill="#555">Local deque</text>
-  <rect x="688" y="152" width="256" height="192" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
-  <text x="816" y="184" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">Thread 3 (idle)</text>
-  <text x="816" y="248" text-anchor="middle" font-size="16" fill="#dc3545">Empty deque!</text>
-  <text x="816" y="304" text-anchor="middle" font-size="16" fill="#dc3545">Steals from Thread 1</text>
-  <line x1="688" y1="232" x2="336" y2="216" stroke="#dc3545" stroke-width="3.2" stroke-dasharray="8 4.8" marker-end="url(#arrow)" />
-  <text x="496" y="204.8" font-size="16" fill="#dc3545" font-weight="bold">STEAL</text>
-  <rect x="992" y="152" width="208" height="192" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="1096" y="184" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">Thread N</text>
-  <rect x="1008" y="200" width="56" height="32" rx="3.2" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <text x="1035.2" y="222.4" text-anchor="middle" font-size="16" fill="#333">T6</text>
-  <rect x="48" y="416" width="560" height="144" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="328" y="456" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Rayon Parallel Iterators</text>
-  <text x="72" y="492.8" font-size="16" fill="#555">data.par_iter().map(|x| x * 2).sum()</text>
-  <text x="72" y="524.8" font-size="16" fill="#555">data.par_sort()</text>
-  <text x="72" y="544" font-size="16" fill="#28a745">Just add .par_ prefix!</text>
-  <rect x="672" y="416" width="560" height="144" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="952" y="456" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">rayon::join</text>
-  <text x="696" y="492.8" font-size="16" fill="#555">rayon::join(|| compute_a(),</text>
-  <text x="696" y="521.6" font-size="16" fill="#555">            || compute_b());</text>
-  <text x="696" y="544" font-size="16" fill="#555">Fork-join parallelism</text>
-  <rect x="48" y="592" width="1184" height="104" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="640" y="632" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Key Benefits</text>
-  <text x="208" y="672" text-anchor="middle" font-size="16" fill="#555">Automatic load balancing</text>
-  <text x="544" y="672" text-anchor="middle" font-size="16" fill="#555">No manual thread management</text>
-  <text x="896" y="672" text-anchor="middle" font-size="16" fill="#555">Cache-friendly (LIFO local)</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.7126" markerHeight="10.2989" refX="14.7126" refY="5.1494" orient="auto">
+      <ns0:polygon points="0,14.7126 5.1494,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="29.4253" font-weight="bold" fill="#333">Rayon Work Stealing</ns0:text>
+  <ns0:rect x="44.1379" y="80.9195" width="1088.7356" height="264.8276" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9425" />
+  <ns0:text x="588.5057" y="117.7011" text-anchor="middle" font-size="20.5977" font-weight="bold" fill="#333">Rayon Thread Pool</ns0:text>
+  <ns0:rect x="73.5632" y="139.7701" width="235.4023" height="176.5517" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.2069" />
+  <ns0:text x="191.2644" y="169.1954" text-anchor="middle" font-size="16.1839" font-weight="bold" fill="#333">Thread 1</ns0:text>
+  <ns0:rect x="88.2759" y="183.908" width="51.4943" height="29.4253" rx="2.9425" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:text x="113.2874" y="204.5057" text-anchor="middle" font-size="14.7126" fill="#333">T1</ns0:text>
+  <ns0:rect x="142.7126" y="183.908" width="51.4943" height="29.4253" rx="2.9425" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:text x="167.7241" y="204.5057" text-anchor="middle" font-size="14.7126" fill="#333">T2</ns0:text>
+  <ns0:rect x="197.1494" y="183.908" width="51.4943" height="29.4253" rx="2.9425" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:text x="222.1609" y="204.5057" text-anchor="middle" font-size="14.7126" fill="#333">T3</ns0:text>
+  <ns0:rect x="88.2759" y="217.7471" width="51.4943" height="29.4253" rx="2.9425" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:text x="113.2874" y="238.3448" text-anchor="middle" font-size="14.7126" fill="#333">T4</ns0:text>
+  <ns0:text x="191.2644" y="279.5402" text-anchor="middle" font-size="14.7126" fill="#555">Local deque (full)</ns0:text>
+  <ns0:rect x="353.1034" y="139.7701" width="235.4023" height="176.5517" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.2069" />
+  <ns0:text x="470.8046" y="169.1954" text-anchor="middle" font-size="16.1839" font-weight="bold" fill="#333">Thread 2</ns0:text>
+  <ns0:rect x="367.8161" y="183.908" width="51.4943" height="29.4253" rx="2.9425" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:text x="392.8276" y="204.5057" text-anchor="middle" font-size="14.7126" fill="#333">T5</ns0:text>
+  <ns0:text x="470.8046" y="279.5402" text-anchor="middle" font-size="14.7126" fill="#555">Local deque</ns0:text>
+  <ns0:rect x="632.6437" y="139.7701" width="235.4023" height="176.5517" rx="7.3563" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2069" />
+  <ns0:text x="750.3448" y="169.1954" text-anchor="middle" font-size="16.1839" font-weight="bold" fill="#333">Thread 3 (idle)</ns0:text>
+  <ns0:text x="750.3448" y="228.046" text-anchor="middle" font-size="14.7126" fill="#dc3545">Empty deque!</ns0:text>
+  <ns0:text x="750.3448" y="279.5402" text-anchor="middle" font-size="14.7126" fill="#dc3545">Steals from Thread 1</ns0:text>
+  <ns0:line x1="632.6437" y1="213.3333" x2="308.9655" y2="198.6207" stroke="#dc3545" stroke-width="2.9425" stroke-dasharray="7.3563 4.4138" marker-end="url(#arrow)" />
+  <ns0:text x="456.092" y="188.3218" font-size="14.7126" fill="#dc3545" font-weight="bold">STEAL</ns0:text>
+  <ns0:rect x="912.1839" y="139.7701" width="191.2644" height="176.5517" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.2069" />
+  <ns0:text x="1007.8161" y="169.1954" text-anchor="middle" font-size="16.1839" font-weight="bold" fill="#333">Thread N</ns0:text>
+  <ns0:rect x="926.8966" y="183.908" width="51.4943" height="29.4253" rx="2.9425" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:text x="951.908" y="204.5057" text-anchor="middle" font-size="14.7126" fill="#333">T6</ns0:text>
+  <ns0:rect x="44.1379" y="382.5287" width="514.9425" height="132.4138" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.9425" />
+  <ns0:text x="301.6092" y="419.3103" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#333">Rayon Parallel Iterators</ns0:text>
+  <ns0:text x="66.2069" y="453.1494" font-size="14.7126" fill="#555">data.par_iter().map(|x| x * 2).sum()</ns0:text>
+  <ns0:text x="66.2069" y="482.5747" font-size="14.7126" fill="#555">data.par_sort()</ns0:text>
+  <ns0:text x="66.2069" y="500.2299" font-size="14.7126" fill="#28a745">Just add .par_ prefix!</ns0:text>
+  <ns0:rect x="617.931" y="382.5287" width="514.9425" height="132.4138" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9425" />
+  <ns0:text x="875.4023" y="419.3103" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#333">rayon::join</ns0:text>
+  <ns0:text x="640" y="453.1494" font-size="14.7126" fill="#555">rayon::join(|| compute_a(),</ns0:text>
+  <ns0:text x="640" y="479.6322" font-size="14.7126" fill="#555">            || compute_b());</ns0:text>
+  <ns0:text x="640" y="500.2299" font-size="14.7126" fill="#555">Fork-join parallelism</ns0:text>
+  <ns0:rect x="44.1379" y="544.3678" width="1088.7356" height="95.6322" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9425" />
+  <ns0:text x="588.5057" y="581.1494" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#333">Key Benefits</ns0:text>
+  <ns0:text x="191.2644" y="617.931" text-anchor="middle" font-size="14.7126" fill="#555">Automatic load balancing</ns0:text>
+  <ns0:text x="500.2299" y="617.931" text-anchor="middle" font-size="14.7126" fill="#555">No manual thread management</ns0:text>
+  <ns0:text x="823.908" y="617.931" text-anchor="middle" font-size="14.7126" fill="#555">Cache-friendly (LIFO local)</ns0:text>
+</ns0:svg>

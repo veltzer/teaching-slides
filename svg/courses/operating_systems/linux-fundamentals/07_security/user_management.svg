@@ -1,163 +1,138 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- /etc/passwd panel -->
-  <rect x="25" y="25" width="370" height="340" rx="10" fill="#212121" filter="url(#shadow)"/>
-  <rect x="25" y="25" width="370" height="40" rx="10" fill="url(#grad-accent)"/>
-  <rect x="25" y="50" width="370" height="15" fill="url(#grad-accent)"/>
-  <text x="210" y="53" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">/etc/passwd</text>
-  <text x="45" y="90" font-family="monospace" font-size="11" fill="#888888"># user:x:UID:GID:comment:home:shell</text>
-  <text x="45" y="115" font-family="monospace" font-size="13" fill="#80cbc4">root</text>
-  <text x="110" y="115" font-family="monospace" font-size="13" fill="#ffffff">:x:0:0:root:/root:/bin/bash</text>
-  <text x="45" y="137" font-family="monospace" font-size="13" fill="#80cbc4">alice</text>
-  <text x="110" y="137" font-family="monospace" font-size="13" fill="#ffffff">:x:1000:1000:Alice:/home/alice:/bin/bash</text>
-  <text x="45" y="159" font-family="monospace" font-size="13" fill="#80cbc4">bob</text>
-  <text x="110" y="159" font-family="monospace" font-size="13" fill="#ffffff">:x:1001:1001:Bob:/home/bob:/bin/zsh</text>
-  <text x="45" y="181" font-family="monospace" font-size="13" fill="#80cbc4">nginx</text>
-  <text x="110" y="181" font-family="monospace" font-size="13" fill="#ffffff">:x:998:998:nginx:/var/www:/sbin/nologin</text>
-
-  <!-- Field legend inside passwd box -->
-  <line x1="45" y1="200" x2="375" y2="200" stroke="#444" stroke-width="1"/>
-  <text x="45" y="220" font-family="sans-serif" font-size="11" fill="#aed581">Field breakdown:</text>
-  <text x="45" y="238" font-family="monospace" font-size="11" fill="#888888">user   — login name</text>
-  <text x="45" y="255" font-family="monospace" font-size="11" fill="#888888">x      — password (→ /etc/shadow)</text>
-  <text x="45" y="272" font-family="monospace" font-size="11" fill="#888888">UID    — numeric user ID</text>
-  <text x="45" y="289" font-family="monospace" font-size="11" fill="#888888">GID    — primary group ID</text>
-  <text x="45" y="306" font-family="monospace" font-size="11" fill="#888888">home   — home directory</text>
-  <text x="45" y="323" font-family="monospace" font-size="11" fill="#888888">shell  — login shell</text>
-  <text x="45" y="342" font-family="monospace" font-size="11" fill="#555555">World readable; passwords NOT stored here</text>
-
-  <!-- /etc/shadow panel -->
-  <rect x="25" y="385" width="370" height="295" rx="10" fill="#212121" filter="url(#shadow)"/>
-  <rect x="25" y="385" width="370" height="40" rx="10" fill="#880e4f"/>
-  <rect x="25" y="410" width="370" height="15" fill="#880e4f"/>
-  <text x="210" y="413" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">/etc/shadow</text>
-  <text x="45" y="450" font-family="monospace" font-size="11" fill="#888888"># user:hash:lastchg:min:max:warn:inactive:expire</text>
-  <text x="45" y="473" font-family="monospace" font-size="12" fill="#f48fb1">alice</text>
-  <text x="100" y="473" font-family="monospace" font-size="12" fill="#ffffff">:$6$salt$hashXYZ...:19600:0:99999:7:::</text>
-  <text x="45" y="495" font-family="monospace" font-size="12" fill="#f48fb1">bob</text>
-  <text x="100" y="495" font-family="monospace" font-size="12" fill="#ffffff">:$6$salt$hashABC...:19580:0:99999:7:::</text>
-  <line x1="45" y1="513" x2="375" y2="513" stroke="#444" stroke-width="1"/>
-  <text x="45" y="533" font-family="sans-serif" font-size="11" fill="#f48fb1">Security features:</text>
-  <text x="45" y="551" font-family="monospace" font-size="11" fill="#888888">$6$  — SHA-512 hash algorithm</text>
-  <text x="45" y="568" font-family="monospace" font-size="11" fill="#888888">salt — prevents rainbow tables</text>
-  <text x="45" y="585" font-family="monospace" font-size="11" fill="#888888">19600 — days since epoch (lastchange)</text>
-  <text x="45" y="602" font-family="monospace" font-size="11" fill="#888888">99999 — max days before forced change</text>
-  <text x="45" y="619" font-family="monospace" font-size="11" fill="#888888">7     — warn days before expiry</text>
-  <text x="45" y="643" font-family="monospace" font-size="11" fill="#555555">Root-only read access (mode 000 or 640)</text>
-  <text x="45" y="661" font-family="monospace" font-size="11" fill="#555555">passwd command updates this file safely</text>
-
-  <!-- /etc/group panel -->
-  <rect x="430" y="25" width="370" height="340" rx="10" fill="#212121" filter="url(#shadow)"/>
-  <rect x="430" y="25" width="370" height="40" rx="10" fill="#1b5e20"/>
-  <rect x="430" y="50" width="370" height="15" fill="#1b5e20"/>
-  <text x="615" y="53" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">/etc/group</text>
-  <text x="450" y="90" font-family="monospace" font-size="11" fill="#888888"># name:x:GID:members</text>
-  <text x="450" y="113" font-family="monospace" font-size="13" fill="#a5d6a7">root</text>
-  <text x="510" y="113" font-family="monospace" font-size="13" fill="#ffffff">:x:0:</text>
-  <text x="450" y="135" font-family="monospace" font-size="13" fill="#a5d6a7">staff</text>
-  <text x="510" y="135" font-family="monospace" font-size="13" fill="#ffffff">:x:50:alice,bob</text>
-  <text x="450" y="157" font-family="monospace" font-size="13" fill="#a5d6a7">developers</text>
-  <text x="560" y="157" font-family="monospace" font-size="13" fill="#ffffff">:x:200:alice</text>
-  <text x="450" y="179" font-family="monospace" font-size="13" fill="#a5d6a7">docker</text>
-  <text x="510" y="179" font-family="monospace" font-size="13" fill="#ffffff">:x:998:alice,bob</text>
-  <line x1="450" y1="198" x2="780" y2="198" stroke="#444" stroke-width="1"/>
-  <text x="450" y="218" font-family="sans-serif" font-size="11" fill="#a5d6a7">Group membership commands:</text>
-  <text x="450" y="237" font-family="monospace" font-size="12" fill="#ffffff">groupadd developers</text>
-  <text x="450" y="257" font-family="monospace" font-size="12" fill="#ffffff">usermod -aG developers alice</text>
-  <text x="450" y="277" font-family="monospace" font-size="12" fill="#ffffff">groups alice</text>
-  <text x="450" y="297" font-family="monospace" font-size="12" fill="#ffffff">id alice</text>
-  <text x="450" y="342" font-family="monospace" font-size="11" fill="#555555">A user has one primary group (in passwd) + supplementary groups (here)</text>
-
-  <!-- sudo elevation flow -->
-  <rect x="430" y="385" width="820" height="295" rx="10" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="430" y="385" width="820" height="40" rx="10" fill="url(#grad-accent)"/>
-  <rect x="430" y="410" width="820" height="15" fill="url(#grad-accent)"/>
-  <text x="840" y="413" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">sudo Elevation Flow</text>
-
-  <!-- Flow boxes -->
-  <rect x="460" y="440" width="160" height="65" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="540" y="466" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">alice (user)</text>
-  <text x="540" y="484" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">UID 1000</text>
-  <text x="540" y="499" text-anchor="middle" font-family="monospace" font-size="12" fill="#555555">sudo command</text>
-
-  <line x1="620" y1="472" x2="670" y2="472" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="670" y="440" width="200" height="65" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="770" y="461" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100">sudo checks</text>
-  <text x="770" y="479" font-family="monospace" font-size="11" fill="#555555">  /etc/sudoers</text>
-  <text x="770" y="496" font-family="monospace" font-size="11" fill="#555555">  /etc/sudoers.d/*</text>
-
-  <line x1="870" y1="472" x2="920" y2="472" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="920" y="440" width="175" height="65" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="1008" y="461" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Auth prompt</text>
-  <text x="1008" y="479" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">alice's password</text>
-  <text x="1008" y="497" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">(not root password)</text>
-
-  <line x1="1095" y1="472" x2="1145" y2="472" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="1145" y="440" width="80" height="65" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="1185" y="461" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#6a1b9a">root</text>
-  <text x="1185" y="479" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">UID 0</text>
-  <text x="1185" y="497" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">executes</text>
-
-  <!-- sudoers example -->
-  <rect x="460" y="525" width="770" height="135" rx="8" fill="#212121"/>
-  <text x="480" y="550" font-family="monospace" font-size="12" fill="#888888"># /etc/sudoers  (edit with: visudo)</text>
-  <text x="480" y="572" font-family="monospace" font-size="13" fill="#aed581">alice</text>
-  <text x="545" y="572" font-family="monospace" font-size="13" fill="#ffffff">ALL=(ALL:ALL) ALL</text>
-  <text x="760" y="572" font-family="monospace" font-size="11" fill="#888888"># full sudo access</text>
-  <text x="480" y="594" font-family="monospace" font-size="13" fill="#aed581">%developers</text>
-  <text x="590" y="594" font-family="monospace" font-size="13" fill="#ffffff">ALL=(ALL) NOPASSWD: /sbin/reboot</text>
-  <text x="480" y="616" font-family="monospace" font-size="13" fill="#aed581">bob</text>
-  <text x="545" y="616" font-family="monospace" font-size="13" fill="#ffffff">ALL=(ALL) /usr/bin/apt, /usr/bin/systemctl</text>
-  <text x="480" y="638" font-family="monospace" font-size="11" fill="#888888"># bob can only use apt and systemctl, with password</text>
-  <text x="480" y="655" font-family="monospace" font-size="11" fill="#555555">Format:  WHO  WHERE=(AS_WHOM)  COMMAND</text>
-
-  <!-- Relationship arrow between files -->
-  <line x1="210" y1="170" x2="430" y2="135" stroke="#888" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
-  <text x="320" y="145" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">UID links</text>
-  <text x="320" y="158" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#888888">accounts</text>
-
-  <line x1="210" y1="450" x2="430" y2="155" stroke="#888" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
-
-  <!-- Right side: user management commands -->
-  <rect x="830" y="25" width="420" height="340" rx="10" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="830" y="25" width="420" height="40" rx="10" fill="url(#grad-accent)"/>
-  <rect x="830" y="50" width="420" height="15" fill="url(#grad-accent)"/>
-  <text x="1040" y="53" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">User Management Commands</text>
-  <text x="850" y="90" font-family="monospace" font-size="13" fill="#1565c0">useradd -m -s /bin/bash alice</text>
-  <text x="850" y="108" font-family="sans-serif" font-size="11" fill="#555555">Create user with home dir and bash shell</text>
-  <text x="850" y="130" font-family="monospace" font-size="13" fill="#1565c0">passwd alice</text>
-  <text x="850" y="148" font-family="sans-serif" font-size="11" fill="#555555">Set/change alice's password</text>
-  <text x="850" y="170" font-family="monospace" font-size="13" fill="#1565c0">usermod -aG sudo alice</text>
-  <text x="850" y="188" font-family="sans-serif" font-size="11" fill="#555555">Add alice to sudo group</text>
-  <text x="850" y="210" font-family="monospace" font-size="13" fill="#1565c0">userdel -r alice</text>
-  <text x="850" y="228" font-family="sans-serif" font-size="11" fill="#555555">Delete user and remove home directory</text>
-  <text x="850" y="250" font-family="monospace" font-size="13" fill="#1565c0">chage -l alice</text>
-  <text x="850" y="268" font-family="sans-serif" font-size="11" fill="#555555">Show password expiry information</text>
-  <text x="850" y="290" font-family="monospace" font-size="13" fill="#1565c0">who / w / last</text>
-  <text x="850" y="308" font-family="sans-serif" font-size="11" fill="#555555">Show logged-in users / login history</text>
-  <text x="850" y="330" font-family="monospace" font-size="13" fill="#1565c0">id alice</text>
-  <text x="850" y="348" font-family="sans-serif" font-size="11" fill="#555555">Show UID, GID, and group memberships</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="22.2222" y="22.2222" width="328.8889" height="302.2222" rx="8.8889" fill="#212121" filter="url(#shadow)" />
+  <ns0:rect x="22.2222" y="22.2222" width="328.8889" height="35.5556" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="22.2222" y="44.4444" width="328.8889" height="13.3333" fill="url(#grad-accent)" />
+  <ns0:text x="186.6667" y="47.1111" text-anchor="middle" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#ffffff">/etc/passwd</ns0:text>
+  <ns0:text x="40" y="80" font-family="monospace" font-size="10" fill="#888888"># user:x:UID:GID:comment:home:shell</ns0:text>
+  <ns0:text x="40" y="102.2222" font-family="monospace" font-size="11.5556" fill="#80cbc4">root</ns0:text>
+  <ns0:text x="97.7778" y="102.2222" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:0:0:root:/root:/bin/bash</ns0:text>
+  <ns0:text x="40" y="121.7778" font-family="monospace" font-size="11.5556" fill="#80cbc4">alice</ns0:text>
+  <ns0:text x="97.7778" y="121.7778" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:1000:1000:Alice:/home/alice:/bin/bash</ns0:text>
+  <ns0:text x="40" y="141.3333" font-family="monospace" font-size="11.5556" fill="#80cbc4">bob</ns0:text>
+  <ns0:text x="97.7778" y="141.3333" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:1001:1001:Bob:/home/bob:/bin/zsh</ns0:text>
+  <ns0:text x="40" y="160.8889" font-family="monospace" font-size="11.5556" fill="#80cbc4">nginx</ns0:text>
+  <ns0:text x="97.7778" y="160.8889" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:998:998:nginx:/var/www:/sbin/nologin</ns0:text>
+  <ns0:line x1="40" y1="177.7778" x2="333.3333" y2="177.7778" stroke="#444" stroke-width="0.8889" />
+  <ns0:text x="40" y="195.5556" font-family="sans-serif" font-size="10" fill="#aed581">Field breakdown:</ns0:text>
+  <ns0:text x="40" y="211.5556" font-family="monospace" font-size="10" fill="#888888">user   — login name</ns0:text>
+  <ns0:text x="40" y="226.6667" font-family="monospace" font-size="10" fill="#888888">x      — password (→ /etc/shadow)</ns0:text>
+  <ns0:text x="40" y="241.7778" font-family="monospace" font-size="10" fill="#888888">UID    — numeric user ID</ns0:text>
+  <ns0:text x="40" y="256.8889" font-family="monospace" font-size="10" fill="#888888">GID    — primary group ID</ns0:text>
+  <ns0:text x="40" y="272" font-family="monospace" font-size="10" fill="#888888">home   — home directory</ns0:text>
+  <ns0:text x="40" y="287.1111" font-family="monospace" font-size="10" fill="#888888">shell  — login shell</ns0:text>
+  <ns0:text x="40" y="304" font-family="monospace" font-size="10" fill="#555555">World readable; passwords NOT stored here</ns0:text>
+  <ns0:rect x="22.2222" y="342.2222" width="328.8889" height="262.2222" rx="8.8889" fill="#212121" filter="url(#shadow)" />
+  <ns0:rect x="22.2222" y="342.2222" width="328.8889" height="35.5556" rx="8.8889" fill="#880e4f" />
+  <ns0:rect x="22.2222" y="364.4444" width="328.8889" height="13.3333" fill="#880e4f" />
+  <ns0:text x="186.6667" y="367.1111" text-anchor="middle" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#ffffff">/etc/shadow</ns0:text>
+  <ns0:text x="40" y="400" font-family="monospace" font-size="10" fill="#888888"># user:hash:lastchg:min:max:warn:inactive:expire</ns0:text>
+  <ns0:text x="40" y="420.4444" font-family="monospace" font-size="10.6667" fill="#f48fb1">alice</ns0:text>
+  <ns0:text x="88.8889" y="420.4444" font-family="monospace" font-size="10.6667" fill="#ffffff">:$6$salt$hashXYZ...:19600:0:99999:7:::</ns0:text>
+  <ns0:text x="40" y="440" font-family="monospace" font-size="10.6667" fill="#f48fb1">bob</ns0:text>
+  <ns0:text x="88.8889" y="440" font-family="monospace" font-size="10.6667" fill="#ffffff">:$6$salt$hashABC...:19580:0:99999:7:::</ns0:text>
+  <ns0:line x1="40" y1="456" x2="333.3333" y2="456" stroke="#444" stroke-width="0.8889" />
+  <ns0:text x="40" y="473.7778" font-family="sans-serif" font-size="10" fill="#f48fb1">Security features:</ns0:text>
+  <ns0:text x="40" y="489.7778" font-family="monospace" font-size="10" fill="#888888">$6$  — SHA-512 hash algorithm</ns0:text>
+  <ns0:text x="40" y="504.8889" font-family="monospace" font-size="10" fill="#888888">salt — prevents rainbow tables</ns0:text>
+  <ns0:text x="40" y="520" font-family="monospace" font-size="10" fill="#888888">19600 — days since epoch (lastchange)</ns0:text>
+  <ns0:text x="40" y="535.1111" font-family="monospace" font-size="10" fill="#888888">99999 — max days before forced change</ns0:text>
+  <ns0:text x="40" y="550.2222" font-family="monospace" font-size="10" fill="#888888">7     — warn days before expiry</ns0:text>
+  <ns0:text x="40" y="571.5556" font-family="monospace" font-size="10" fill="#555555">Root-only read access (mode 000 or 640)</ns0:text>
+  <ns0:text x="40" y="587.5556" font-family="monospace" font-size="10" fill="#555555">passwd command updates this file safely</ns0:text>
+  <ns0:rect x="382.2222" y="22.2222" width="328.8889" height="302.2222" rx="8.8889" fill="#212121" filter="url(#shadow)" />
+  <ns0:rect x="382.2222" y="22.2222" width="328.8889" height="35.5556" rx="8.8889" fill="#1b5e20" />
+  <ns0:rect x="382.2222" y="44.4444" width="328.8889" height="13.3333" fill="#1b5e20" />
+  <ns0:text x="546.6667" y="47.1111" text-anchor="middle" font-family="monospace" font-size="14.2222" font-weight="bold" fill="#ffffff">/etc/group</ns0:text>
+  <ns0:text x="400" y="80" font-family="monospace" font-size="10" fill="#888888"># name:x:GID:members</ns0:text>
+  <ns0:text x="400" y="100.4444" font-family="monospace" font-size="11.5556" fill="#a5d6a7">root</ns0:text>
+  <ns0:text x="453.3333" y="100.4444" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:0:</ns0:text>
+  <ns0:text x="400" y="120" font-family="monospace" font-size="11.5556" fill="#a5d6a7">staff</ns0:text>
+  <ns0:text x="453.3333" y="120" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:50:alice,bob</ns0:text>
+  <ns0:text x="400" y="139.5556" font-family="monospace" font-size="11.5556" fill="#a5d6a7">developers</ns0:text>
+  <ns0:text x="497.7778" y="139.5556" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:200:alice</ns0:text>
+  <ns0:text x="400" y="159.1111" font-family="monospace" font-size="11.5556" fill="#a5d6a7">docker</ns0:text>
+  <ns0:text x="453.3333" y="159.1111" font-family="monospace" font-size="11.5556" fill="#ffffff">:x:998:alice,bob</ns0:text>
+  <ns0:line x1="400" y1="176" x2="693.3333" y2="176" stroke="#444" stroke-width="0.8889" />
+  <ns0:text x="400" y="193.7778" font-family="sans-serif" font-size="10" fill="#a5d6a7">Group membership commands:</ns0:text>
+  <ns0:text x="400" y="210.6667" font-family="monospace" font-size="10.6667" fill="#ffffff">groupadd developers</ns0:text>
+  <ns0:text x="400" y="228.4444" font-family="monospace" font-size="10.6667" fill="#ffffff">usermod -aG developers alice</ns0:text>
+  <ns0:text x="400" y="246.2222" font-family="monospace" font-size="10.6667" fill="#ffffff">groups alice</ns0:text>
+  <ns0:text x="400" y="264" font-family="monospace" font-size="10.6667" fill="#ffffff">id alice</ns0:text>
+  <ns0:text x="400" y="304" font-family="monospace" font-size="10" fill="#555555">A user has one primary group (in passwd) + supplementary groups (here)</ns0:text>
+  <ns0:rect x="382.2222" y="342.2222" width="728.8889" height="262.2222" rx="8.8889" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="382.2222" y="342.2222" width="728.8889" height="35.5556" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="382.2222" y="364.4444" width="728.8889" height="13.3333" fill="url(#grad-accent)" />
+  <ns0:text x="746.6667" y="367.1111" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff">sudo Elevation Flow</ns0:text>
+  <ns0:rect x="408.8889" y="391.1111" width="142.2222" height="57.7778" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" />
+  <ns0:text x="480" y="414.2222" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#1565c0">alice (user)</ns0:text>
+  <ns0:text x="480" y="430.2222" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#555555">UID 1000</ns0:text>
+  <ns0:text x="480" y="443.5556" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#555555">sudo command</ns0:text>
+  <ns0:line x1="551.1111" y1="419.5556" x2="595.5556" y2="419.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="595.5556" y="391.1111" width="177.7778" height="57.7778" rx="7.1111" fill="#fff3e0" stroke="#e65100" stroke-width="1.7778" />
+  <ns0:text x="684.4444" y="409.7778" text-anchor="middle" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#e65100">sudo checks</ns0:text>
+  <ns0:text x="684.4444" y="425.7778" font-family="monospace" font-size="10" fill="#555555">  /etc/sudoers</ns0:text>
+  <ns0:text x="684.4444" y="440.8889" font-family="monospace" font-size="10" fill="#555555">  /etc/sudoers.d/*</ns0:text>
+  <ns0:line x1="773.3333" y1="419.5556" x2="817.7778" y2="419.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="817.7778" y="391.1111" width="155.5556" height="57.7778" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" />
+  <ns0:text x="896" y="409.7778" text-anchor="middle" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#2e7d32">Auth prompt</ns0:text>
+  <ns0:text x="896" y="425.7778" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#555555">alice's password</ns0:text>
+  <ns0:text x="896" y="441.7778" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#555555">(not root password)</ns0:text>
+  <ns0:line x1="973.3333" y1="419.5556" x2="1017.7778" y2="419.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="1017.7778" y="391.1111" width="71.1111" height="57.7778" rx="7.1111" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.7778" />
+  <ns0:text x="1053.3333" y="409.7778" text-anchor="middle" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#6a1b9a">root</ns0:text>
+  <ns0:text x="1053.3333" y="425.7778" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#555555">UID 0</ns0:text>
+  <ns0:text x="1053.3333" y="441.7778" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#555555">executes</ns0:text>
+  <ns0:rect x="408.8889" y="466.6667" width="684.4444" height="120" rx="7.1111" fill="#212121" />
+  <ns0:text x="426.6667" y="488.8889" font-family="monospace" font-size="10.6667" fill="#888888"># /etc/sudoers  (edit with: visudo)</ns0:text>
+  <ns0:text x="426.6667" y="508.4444" font-family="monospace" font-size="11.5556" fill="#aed581">alice</ns0:text>
+  <ns0:text x="484.4444" y="508.4444" font-family="monospace" font-size="11.5556" fill="#ffffff">ALL=(ALL:ALL) ALL</ns0:text>
+  <ns0:text x="675.5556" y="508.4444" font-family="monospace" font-size="10" fill="#888888"># full sudo access</ns0:text>
+  <ns0:text x="426.6667" y="528" font-family="monospace" font-size="11.5556" fill="#aed581">%developers</ns0:text>
+  <ns0:text x="524.4444" y="528" font-family="monospace" font-size="11.5556" fill="#ffffff">ALL=(ALL) NOPASSWD: /sbin/reboot</ns0:text>
+  <ns0:text x="426.6667" y="547.5556" font-family="monospace" font-size="11.5556" fill="#aed581">bob</ns0:text>
+  <ns0:text x="484.4444" y="547.5556" font-family="monospace" font-size="11.5556" fill="#ffffff">ALL=(ALL) /usr/bin/apt, /usr/bin/systemctl</ns0:text>
+  <ns0:text x="426.6667" y="567.1111" font-family="monospace" font-size="10" fill="#888888"># bob can only use apt and systemctl, with password</ns0:text>
+  <ns0:text x="426.6667" y="582.2222" font-family="monospace" font-size="10" fill="#555555">Format:  WHO  WHERE=(AS_WHOM)  COMMAND</ns0:text>
+  <ns0:line x1="186.6667" y1="151.1111" x2="382.2222" y2="120" stroke="#888" stroke-width="1.3333" stroke-dasharray="5.3333 2.6667" marker-end="url(#arrow)" />
+  <ns0:text x="284.4444" y="128.8889" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888888">UID links</ns0:text>
+  <ns0:text x="284.4444" y="140.4444" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888888">accounts</ns0:text>
+  <ns0:line x1="186.6667" y1="400" x2="382.2222" y2="137.7778" stroke="#888" stroke-width="1.3333" stroke-dasharray="5.3333 2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="737.7778" y="22.2222" width="373.3333" height="302.2222" rx="8.8889" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="737.7778" y="22.2222" width="373.3333" height="35.5556" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="737.7778" y="44.4444" width="373.3333" height="13.3333" fill="url(#grad-accent)" />
+  <ns0:text x="924.4444" y="47.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="#ffffff">User Management Commands</ns0:text>
+  <ns0:text x="755.5556" y="80" font-family="monospace" font-size="11.5556" fill="#1565c0">useradd -m -s /bin/bash alice</ns0:text>
+  <ns0:text x="755.5556" y="96" font-family="sans-serif" font-size="10" fill="#555555">Create user with home dir and bash shell</ns0:text>
+  <ns0:text x="755.5556" y="115.5556" font-family="monospace" font-size="11.5556" fill="#1565c0">passwd alice</ns0:text>
+  <ns0:text x="755.5556" y="131.5556" font-family="sans-serif" font-size="10" fill="#555555">Set/change alice's password</ns0:text>
+  <ns0:text x="755.5556" y="151.1111" font-family="monospace" font-size="11.5556" fill="#1565c0">usermod -aG sudo alice</ns0:text>
+  <ns0:text x="755.5556" y="167.1111" font-family="sans-serif" font-size="10" fill="#555555">Add alice to sudo group</ns0:text>
+  <ns0:text x="755.5556" y="186.6667" font-family="monospace" font-size="11.5556" fill="#1565c0">userdel -r alice</ns0:text>
+  <ns0:text x="755.5556" y="202.6667" font-family="sans-serif" font-size="10" fill="#555555">Delete user and remove home directory</ns0:text>
+  <ns0:text x="755.5556" y="222.2222" font-family="monospace" font-size="11.5556" fill="#1565c0">chage -l alice</ns0:text>
+  <ns0:text x="755.5556" y="238.2222" font-family="sans-serif" font-size="10" fill="#555555">Show password expiry information</ns0:text>
+  <ns0:text x="755.5556" y="257.7778" font-family="monospace" font-size="11.5556" fill="#1565c0">who / w / last</ns0:text>
+  <ns0:text x="755.5556" y="273.7778" font-family="sans-serif" font-size="10" fill="#555555">Show logged-in users / login history</ns0:text>
+  <ns0:text x="755.5556" y="293.3333" font-family="monospace" font-size="11.5556" fill="#1565c0">id alice</ns0:text>
+  <ns0:text x="755.5556" y="309.3333" font-family="sans-serif" font-size="10" fill="#555555">Show UID, GID, and group memberships</ns0:text>
+</ns0:svg>

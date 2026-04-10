@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="19.3939" markerHeight="11.7209" refX="17.4545" refY="5.8605" orient="auto">
-      <polygon points="0,16.7442 6.7879,0" fill="#555" />
-    </marker>
-    <marker id="arrl" markerWidth="19.3939" markerHeight="11.7209" refX="1.9394" refY="5.8605" orient="auto">
-      <polygon points="0,0 6.7879,16.7442" fill="#555" />
-    </marker>
-  </defs>
-  <text x="640" y="36.8372" text-anchor="middle" font-size="23.4419" fill="#222222" font-weight="bold">Heartbleed Attack Flow (CVE-2014-0160)</text>
-  <text x="252.1212" y="77.0233" text-anchor="middle" font-size="21.7674" fill="#222222" font-weight="bold">Client</text>
-  <text x="1027.8788" y="77.0233" text-anchor="middle" font-size="21.7674" fill="#222222" font-weight="bold">Server</text>
-  <line x1="252.1212" y1="97.1163" x2="252.1212" y2="686.5116" stroke="#aaa" stroke-width="1.6744" stroke-dasharray="6.6977 5.0233" />
-  <line x1="1027.8788" y1="97.1163" x2="1027.8788" y2="686.5116" stroke="#aaa" stroke-width="1.6744" stroke-dasharray="6.6977 5.0233" />
-  <text x="38.7879" y="130.6047" text-anchor="start" font-size="20.093" fill="#2e7d32" font-weight="bold">Normal:</text>
-  <line x1="290.9091" y1="167.4419" x2="989.0909" y2="167.4419" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <text x="640" y="154.0465" text-anchor="middle" font-size="18.4186" fill="#333" font-style="italic">"bird" (length=4)</text>
-  <line x1="989.0909" y1="217.6744" x2="290.9091" y2="217.6744" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <text x="640" y="204.2791" text-anchor="middle" font-size="18.4186" fill="#333" font-style="italic">"bird"  (correct echo)</text>
-  <text x="38.7879" y="276.2791" text-anchor="start" font-size="20.093" fill="#c62828" font-weight="bold">Attack:</text>
-  <line x1="290.9091" y1="326.5116" x2="989.0909" y2="326.5116" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <text x="640" y="313.1163" text-anchor="middle" font-size="18.4186" fill="#333" font-style="italic">"bird" (claimed length=65535)</text>
-  <rect x="77.5758" y="376.7442" width="1124.8485" height="133.9535" fill="#ffebee" stroke="#c62828" stroke-width="2.5116" rx="6.6977" />
-  <text x="640" y="415.2558" text-anchor="middle" font-size="20.093" fill="#b71c1c" font-weight="bold">Server responds with:</text>
-  <text x="640" y="448.7442" text-anchor="middle" font-size="20.093" fill="#333">"bird" + up to 65,531 bytes of server memory</text>
-  <text x="640" y="482.2326" text-anchor="middle" font-size="20.093" fill="#c62828" font-weight="bold">(private keys, passwords, session tokens!)</text>
-  <line x1="989.0909" y1="532.4651" x2="290.9091" y2="532.4651" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <text x="640" y="522.4186" text-anchor="middle" font-size="18.4186" fill="#c62828" font-style="italic">memory leak response</text>
-  <rect x="38.7879" y="569.3023" width="1202.4242" height="100.4651" fill="#fff3e0" stroke="#f57c00" stroke-width="2.5116" rx="6.6977" />
-  <text x="640" y="606.1395" text-anchor="middle" font-size="20.093" fill="#e65100" font-weight="bold">Root Cause: Server trusts client-supplied length field</text>
-  <text x="640" y="636.2791" text-anchor="middle" font-size="18.4186" fill="#555">No bounds check → reads beyond the heartbeat payload buffer</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="18.08" markerHeight="10.9268" refX="16.2719" refY="5.4634" orient="auto">
+      <ns0:polygon points="0,15.6098 6.328,0" fill="#555" />
+    </ns0:marker>
+    <ns0:marker id="arrl" markerWidth="18.08" markerHeight="10.9268" refX="1.808" refY="5.4634" orient="auto">
+      <ns0:polygon points="0,0 6.328,15.6098" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="596.6396" y="34.3415" text-anchor="middle" font-size="21.8537" fill="#222222" font-weight="bold">Heartbleed Attack Flow (CVE-2014-0160)</ns0:text>
+  <ns0:text x="235.0398" y="71.8049" text-anchor="middle" font-size="20.2926" fill="#222222" font-weight="bold">Client</ns0:text>
+  <ns0:text x="958.2394" y="71.8049" text-anchor="middle" font-size="20.2926" fill="#222222" font-weight="bold">Server</ns0:text>
+  <ns0:line x1="235.0398" y1="90.5366" x2="235.0398" y2="640" stroke="#aaa" stroke-width="1.561" stroke-dasharray="6.2439 4.683" />
+  <ns0:line x1="958.2394" y1="90.5366" x2="958.2394" y2="640" stroke="#aaa" stroke-width="1.561" stroke-dasharray="6.2439 4.683" />
+  <ns0:text x="36.16" y="121.7561" text-anchor="start" font-size="18.7317" fill="#2e7d32" font-weight="bold">Normal:</ns0:text>
+  <ns0:line x1="271.1998" y1="156.0976" x2="922.0794" y2="156.0976" stroke="#555" stroke-width="2.3414" marker-end="url(#arr)" />
+  <ns0:text x="596.6396" y="143.6098" text-anchor="middle" font-size="17.1707" fill="#333" font-style="italic">"bird" (length=4)</ns0:text>
+  <ns0:line x1="922.0794" y1="202.9268" x2="271.1998" y2="202.9268" stroke="#555" stroke-width="2.3414" marker-end="url(#arr)" />
+  <ns0:text x="596.6396" y="190.4391" text-anchor="middle" font-size="17.1707" fill="#333" font-style="italic">"bird"  (correct echo)</ns0:text>
+  <ns0:text x="36.16" y="257.561" text-anchor="start" font-size="18.7317" fill="#c62828" font-weight="bold">Attack:</ns0:text>
+  <ns0:line x1="271.1998" y1="304.3902" x2="922.0794" y2="304.3902" stroke="#555" stroke-width="2.3414" marker-end="url(#arr)" />
+  <ns0:text x="596.6396" y="291.9025" text-anchor="middle" font-size="17.1707" fill="#333" font-style="italic">"bird" (claimed length=65535)</ns0:text>
+  <ns0:rect x="72.32" y="351.2195" width="1048.6393" height="124.8781" fill="#ffebee" stroke="#c62828" stroke-width="2.3414" rx="6.2439" />
+  <ns0:text x="596.6396" y="387.122" text-anchor="middle" font-size="18.7317" fill="#b71c1c" font-weight="bold">Server responds with:</ns0:text>
+  <ns0:text x="596.6396" y="418.3415" text-anchor="middle" font-size="18.7317" fill="#333">"bird" + up to 65,531 bytes of server memory</ns0:text>
+  <ns0:text x="596.6396" y="449.561" text-anchor="middle" font-size="18.7317" fill="#c62828" font-weight="bold">(private keys, passwords, session tokens!)</ns0:text>
+  <ns0:line x1="922.0794" y1="496.3902" x2="271.1998" y2="496.3902" stroke="#555" stroke-width="2.3414" marker-end="url(#arr)" />
+  <ns0:text x="596.6396" y="487.0244" text-anchor="middle" font-size="17.1707" fill="#c62828" font-style="italic">memory leak response</ns0:text>
+  <ns0:rect x="36.16" y="530.7317" width="1120.9592" height="93.6585" fill="#fff3e0" stroke="#f57c00" stroke-width="2.3414" rx="6.2439" />
+  <ns0:text x="596.6396" y="565.0732" text-anchor="middle" font-size="18.7317" fill="#e65100" font-weight="bold">Root Cause: Server trusts client-supplied length field</ns0:text>
+  <ns0:text x="596.6396" y="593.1708" text-anchor="middle" font-size="17.1707" fill="#555">No bounds check → reads beyond the heartbeat payload buffer</ns0:text>
+</ns0:svg>

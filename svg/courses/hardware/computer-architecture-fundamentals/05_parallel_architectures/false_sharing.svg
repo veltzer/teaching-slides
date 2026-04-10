@@ -1,30 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="18.2857" y="25.7143" width="1243.4286" height="668.5714" rx="9.1429" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.8286" />
-  <text x="640" y="102.8571" text-anchor="middle" font-size="29.2571" font-weight="bold" fill="#333">False Sharing - Cache Line Contention</text>
-  <text x="640" y="167.1429" text-anchor="middle" font-size="21.9429" fill="#666">Cache line (64 bytes)</text>
-  <rect x="109.7143" y="205.7143" width="1060.5714" height="154.2857" rx="9.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6571" />
-  <line x1="374.8571" y1="205.7143" x2="374.8571" y2="360" stroke="#4a90e2" stroke-width="1.8286" stroke-dasharray="7.3143" />
-  <line x1="640" y1="205.7143" x2="640" y2="360" stroke="#4a90e2" stroke-width="1.8286" stroke-dasharray="7.3143" />
-  <line x1="905.1429" y1="205.7143" x2="905.1429" y2="360" stroke="#4a90e2" stroke-width="1.8286" stroke-dasharray="7.3143" />
-  <text x="241.3714" y="275.1429" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#dc3545">counter_core0</text>
-  <text x="241.3714" y="321.4286" text-anchor="middle" font-size="18.2857" fill="#666">(8 bytes)</text>
-  <text x="508.3429" y="295.7143" text-anchor="middle" font-size="20.1143" fill="#999">padding...</text>
-  <text x="771.6571" y="275.1429" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#dc3545">counter_core1</text>
-  <text x="771.6571" y="321.4286" text-anchor="middle" font-size="18.2857" fill="#666">(8 bytes)</text>
-  <text x="1036.8" y="295.7143" text-anchor="middle" font-size="20.1143" fill="#999">padding</text>
-  <line x1="241.3714" y1="372.8571" x2="241.3714" y2="437.1429" stroke="#28a745" stroke-width="3.6571" marker-end="url(#arrowGreen)" />
-  <line x1="771.6571" y1="372.8571" x2="771.6571" y2="437.1429" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#arrowBlue)" />
-  <text x="241.3714" y="475.7143" text-anchor="middle" font-size="20.1143" fill="#28a745" font-weight="bold">Core 0 writes here</text>
-  <text x="771.6571" y="475.7143" text-anchor="middle" font-size="20.1143" fill="#4a90e2" font-weight="bold">Core 1 writes here</text>
-  <rect x="146.2857" y="527.1429" width="987.4286" height="128.5714" rx="9.1429" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7429" />
-  <text x="640" y="578.5714" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#dc3545">Both in the SAME cache line!</text>
-  <text x="640" y="624.8571" text-anchor="middle" font-size="20.1143" fill="#666">Every write by one core invalidates the line in the other core's cache.</text>
-  <defs>
-    <marker id="arrowGreen" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
-      <path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#28a745" />
-    </marker>
-    <marker id="arrowBlue" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
-      <path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#4a90e2" />
-    </marker>
-  </defs>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:rect x="16.856" y="23.7037" width="1146.2058" height="616.2963" rx="8.428" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6856" />
+  <ns0:text x="589.9589" y="94.8148" text-anchor="middle" font-size="26.9695" font-weight="bold" fill="#333">False Sharing - Cache Line Contention</ns0:text>
+  <ns0:text x="589.9589" y="154.0741" text-anchor="middle" font-size="20.2272" fill="#666">Cache line (64 bytes)</ns0:text>
+  <ns0:rect x="101.1358" y="189.6296" width="977.6461" height="142.2222" rx="8.428" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3712" />
+  <ns0:line x1="345.5473" y1="189.6296" x2="345.5473" y2="331.8519" stroke="#4a90e2" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <ns0:line x1="589.9589" y1="189.6296" x2="589.9589" y2="331.8519" stroke="#4a90e2" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <ns0:line x1="834.3704" y1="189.6296" x2="834.3704" y2="331.8519" stroke="#4a90e2" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <ns0:text x="222.4987" y="253.6297" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="#dc3545">counter_core0</ns0:text>
+  <ns0:text x="222.4987" y="296.2963" text-anchor="middle" font-size="16.856" fill="#666">(8 bytes)</ns0:text>
+  <ns0:text x="468.5959" y="272.5926" text-anchor="middle" font-size="18.5416" fill="#999">padding...</ns0:text>
+  <ns0:text x="711.3218" y="253.6297" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="#dc3545">counter_core1</ns0:text>
+  <ns0:text x="711.3218" y="296.2963" text-anchor="middle" font-size="16.856" fill="#666">(8 bytes)</ns0:text>
+  <ns0:text x="955.7334" y="272.5926" text-anchor="middle" font-size="18.5416" fill="#999">padding</ns0:text>
+  <ns0:line x1="222.4987" y1="343.7037" x2="222.4987" y2="402.963" stroke="#28a745" stroke-width="3.3712" marker-end="url(#arrowGreen)" />
+  <ns0:line x1="711.3218" y1="343.7037" x2="711.3218" y2="402.963" stroke="#4a90e2" stroke-width="3.3712" marker-end="url(#arrowBlue)" />
+  <ns0:text x="222.4987" y="438.5185" text-anchor="middle" font-size="18.5416" fill="#28a745" font-weight="bold">Core 0 writes here</ns0:text>
+  <ns0:text x="711.3218" y="438.5185" text-anchor="middle" font-size="18.5416" fill="#4a90e2" font-weight="bold">Core 1 writes here</ns0:text>
+  <ns0:rect x="134.8477" y="485.926" width="910.2223" height="118.5185" rx="8.428" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5284" />
+  <ns0:text x="589.9589" y="533.3333" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="#dc3545">Both in the SAME cache line!</ns0:text>
+  <ns0:text x="589.9589" y="576" text-anchor="middle" font-size="18.5416" fill="#666">Every write by one core invalidates the line in the other core's cache.</ns0:text>
+  <ns0:defs>
+    <ns0:marker id="arrowGreen" markerWidth="13.4848" markerHeight="14.2222" refX="13.4848" refY="7.1111" orient="auto">
+      <ns0:path d="M 0 0 L 13.4848 7.1111 L 0 14.2222" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowBlue" markerWidth="13.4848" markerHeight="14.2222" refX="13.4848" refY="7.1111" orient="auto">
+      <ns0:path d="M 0 0 L 13.4848 7.1111 L 0 14.2222" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+</ns0:svg>

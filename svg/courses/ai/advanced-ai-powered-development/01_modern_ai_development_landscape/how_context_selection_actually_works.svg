@@ -1,50 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="ah" markerWidth="33.4367" markerHeight="161.28" refX="33.4367" refY="80.64" orient="auto">
-      <polygon points="0,230.4 11.7029,0" fill="#333" />
-    </marker>
-  </defs>
-  <rect width="2674.9387" height="9216" fill="#f8f9fa" />
-  <text x="1337.4694" y="875.52" text-anchor="middle" font-size="70.2171" font-weight="bold" fill="#1a237e">How Context Selection Works in AI Agents</text>
-  <rect x="100.3101" y="2073.6" width="468.1143" height="1843.2" rx="33.4367" fill="#E3F2FD" stroke="#1565C0" stroke-width="6.6873" />
-  <text x="334.3673" y="2810.88" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#1565C0">1. User</text>
-  <text x="334.3673" y="3225.6" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#1565C0">Query</text>
-  <text x="334.3673" y="3686.4" text-anchor="middle" font-size="36.7804" fill="#333">"Add retry logic"</text>
-  <line x1="568.4244" y1="2995.2" x2="685.453" y2="2995.2" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="685.453" y="2073.6" width="468.1143" height="1843.2" rx="33.4367" fill="#E8F5E9" stroke="#2E7D32" stroke-width="6.6873" />
-  <text x="919.5101" y="2718.72" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#2E7D32">2. Index</text>
-  <text x="919.5101" y="3133.44" text-anchor="middle" font-size="36.7804" fill="#333">Embeddings</text>
-  <text x="919.5101" y="3502.08" text-anchor="middle" font-size="36.7804" fill="#333">Symbol graph</text>
-  <text x="919.5101" y="3870.72" text-anchor="middle" font-size="36.7804" fill="#333">Import graph</text>
-  <line x1="1153.5673" y1="2995.2" x2="1270.5958" y2="2995.2" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="1270.5958" y="2073.6" width="468.1143" height="1843.2" rx="33.4367" fill="#FFF3E0" stroke="#E65100" stroke-width="6.6873" />
-  <text x="1504.653" y="2718.72" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#E65100">3. Retrieve</text>
-  <text x="1504.653" y="3133.44" text-anchor="middle" font-size="36.7804" fill="#333">Semantic search</text>
-  <text x="1504.653" y="3502.08" text-anchor="middle" font-size="36.7804" fill="#333">Keyword match</text>
-  <text x="1504.653" y="3870.72" text-anchor="middle" font-size="36.7804" fill="#333">Recency boost</text>
-  <line x1="1738.7101" y1="2995.2" x2="1855.7387" y2="2995.2" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="1855.7387" y="2073.6" width="468.1143" height="1843.2" rx="33.4367" fill="#FCE4EC" stroke="#C62828" stroke-width="6.6873" />
-  <text x="2089.7958" y="2718.72" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#C62828">4. Pack</text>
-  <text x="2089.7958" y="3133.44" text-anchor="middle" font-size="36.7804" fill="#333">Re-rank chunks</text>
-  <text x="2089.7958" y="3502.08" text-anchor="middle" font-size="36.7804" fill="#333">Token budget</text>
-  <text x="2089.7958" y="3870.72" text-anchor="middle" font-size="36.7804" fill="#333">Assemble context</text>
-  <rect x="685.453" y="5068.8" width="1036.5387" height="2995.2" rx="33.4367" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="6.6873" />
-  <text x="1203.7224" y="5713.92" text-anchor="middle" font-size="50.1552" font-weight="bold" fill="#6A1B9A">Codebase (2M tokens)</text>
-  <rect x="735.6081" y="5990.4" width="267.4939" height="806.4" rx="16.7184" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="869.3552" y="6520.32" text-anchor="middle" font-size="36.7804" fill="#333">auth/</text>
-  <rect x="1053.2571" y="5990.4" width="267.4939" height="806.4" rx="16.7184" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="1187.0042" y="6520.32" text-anchor="middle" font-size="36.7804" fill="#333">payments/</text>
-  <rect x="1370.9061" y="5990.4" width="300.9306" height="806.4" rx="16.7184" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="1521.3714" y="6520.32" text-anchor="middle" font-size="36.7804" fill="#333">services/</text>
-  <text x="1203.7224" y="7603.2" text-anchor="middle" font-size="36.7804" fill="#555">~10% visible in context at any time</text>
-  <line x1="1203.7224" y1="5068.8" x2="1036.5387" y2="3916.8" stroke="#6A1B9A" stroke-width="5.0156" stroke-dasharray="16.7184 10.031" marker-end="url(#ah)" />
-  <rect x="1855.7387" y="5068.8" width="668.7347" height="2995.2" rx="33.4367" fill="#E8EAF6" stroke="#283593" stroke-width="6.6873" />
-  <text x="2190.1061" y="5713.92" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#283593">Context Window</text>
-  <text x="2190.1061" y="6220.8" text-anchor="middle" font-size="36.7804" fill="#333">system prompt</text>
-  <text x="2190.1061" y="6635.52" text-anchor="middle" font-size="36.7804" fill="#333">selected files</text>
-  <text x="2190.1061" y="7050.24" text-anchor="middle" font-size="36.7804" fill="#333">user query</text>
-  <text x="2190.1061" y="7603.2" text-anchor="middle" font-size="36.7804" fill="#555">200K tokens max</text>
-  <line x1="2089.7958" y1="3916.8" x2="2190.1061" y2="5068.8" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="100.3101" y="7603.2" width="1671.8367" height="1152" rx="26.7494" fill="#FFFDE7" stroke="#F9A825" stroke-width="5.0156" />
-  <text x="936.2286" y="8248.32" text-anchor="middle" font-size="43.4677" fill="#555">Key: Smart context selection outperforms brute-force large windows</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="ah" markerWidth="2.322" markerHeight="11.2" refX="2.322" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 0.8127,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="185.7596" height="640" fill="#f8f9fa" />
+  <ns0:text x="92.8798" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">How Context Selection Works in AI Agents</ns0:text>
+  <ns0:rect x="6.966" y="144" width="32.5079" height="128" rx="2.322" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.4644" />
+  <ns0:text x="23.22" y="195.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">1. User</ns0:text>
+  <ns0:text x="23.22" y="224" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Query</ns0:text>
+  <ns0:text x="23.22" y="256" text-anchor="middle" font-size="10" fill="#333">"Add retry logic"</ns0:text>
+  <ns0:line x1="39.4739" y1="208" x2="47.6009" y2="208" stroke="#333" stroke-width="0.4644" marker-end="url(#ah)" />
+  <ns0:rect x="47.6009" y="144" width="32.5079" height="128" rx="2.322" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.4644" />
+  <ns0:text x="63.8549" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">2. Index</ns0:text>
+  <ns0:text x="63.8549" y="217.6" text-anchor="middle" font-size="10" fill="#333">Embeddings</ns0:text>
+  <ns0:text x="63.8549" y="243.2" text-anchor="middle" font-size="10" fill="#333">Symbol graph</ns0:text>
+  <ns0:text x="63.8549" y="268.8" text-anchor="middle" font-size="10" fill="#333">Import graph</ns0:text>
+  <ns0:line x1="80.1088" y1="208" x2="88.2358" y2="208" stroke="#333" stroke-width="0.4644" marker-end="url(#ah)" />
+  <ns0:rect x="88.2358" y="144" width="32.5079" height="128" rx="2.322" fill="#FFF3E0" stroke="#E65100" stroke-width="0.4644" />
+  <ns0:text x="104.4898" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">3. Retrieve</ns0:text>
+  <ns0:text x="104.4898" y="217.6" text-anchor="middle" font-size="10" fill="#333">Semantic search</ns0:text>
+  <ns0:text x="104.4898" y="243.2" text-anchor="middle" font-size="10" fill="#333">Keyword match</ns0:text>
+  <ns0:text x="104.4898" y="268.8" text-anchor="middle" font-size="10" fill="#333">Recency boost</ns0:text>
+  <ns0:line x1="120.7438" y1="208" x2="128.8707" y2="208" stroke="#333" stroke-width="0.4644" marker-end="url(#ah)" />
+  <ns0:rect x="128.8707" y="144" width="32.5079" height="128" rx="2.322" fill="#FCE4EC" stroke="#C62828" stroke-width="0.4644" />
+  <ns0:text x="145.1247" y="188.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">4. Pack</ns0:text>
+  <ns0:text x="145.1247" y="217.6" text-anchor="middle" font-size="10" fill="#333">Re-rank chunks</ns0:text>
+  <ns0:text x="145.1247" y="243.2" text-anchor="middle" font-size="10" fill="#333">Token budget</ns0:text>
+  <ns0:text x="145.1247" y="268.8" text-anchor="middle" font-size="10" fill="#333">Assemble context</ns0:text>
+  <ns0:rect x="47.6009" y="352" width="71.9819" height="208" rx="2.322" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="0.4644" />
+  <ns0:text x="83.5918" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#6A1B9A">Codebase (2M tokens)</ns0:text>
+  <ns0:rect x="51.0839" y="416" width="18.576" height="56" rx="1.161" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="60.3719" y="452.8" text-anchor="middle" font-size="10" fill="#333">auth/</ns0:text>
+  <ns0:rect x="73.1429" y="416" width="18.576" height="56" rx="1.161" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="82.4308" y="452.8" text-anchor="middle" font-size="10" fill="#333">payments/</ns0:text>
+  <ns0:rect x="95.2018" y="416" width="20.898" height="56" rx="1.161" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="105.6508" y="452.8" text-anchor="middle" font-size="10" fill="#333">services/</ns0:text>
+  <ns0:text x="83.5918" y="528" text-anchor="middle" font-size="10" fill="#555">~10% visible in context at any time</ns0:text>
+  <ns0:line x1="83.5918" y1="352" x2="71.9819" y2="272" stroke="#6A1B9A" stroke-width="0.3483" stroke-dasharray="1.161 0.6966" marker-end="url(#ah)" />
+  <ns0:rect x="128.8707" y="352" width="46.4399" height="208" rx="2.322" fill="#E8EAF6" stroke="#283593" stroke-width="0.4644" />
+  <ns0:text x="152.0907" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#283593">Context Window</ns0:text>
+  <ns0:text x="152.0907" y="432" text-anchor="middle" font-size="10" fill="#333">system prompt</ns0:text>
+  <ns0:text x="152.0907" y="460.8" text-anchor="middle" font-size="10" fill="#333">selected files</ns0:text>
+  <ns0:text x="152.0907" y="489.6" text-anchor="middle" font-size="10" fill="#333">user query</ns0:text>
+  <ns0:text x="152.0907" y="528" text-anchor="middle" font-size="10" fill="#555">200K tokens max</ns0:text>
+  <ns0:line x1="145.1247" y1="272" x2="152.0907" y2="352" stroke="#333" stroke-width="0.4644" marker-end="url(#ah)" />
+  <ns0:rect x="6.966" y="528" width="116.0998" height="80" rx="1.8576" fill="#FFFDE7" stroke="#F9A825" stroke-width="0.3483" />
+  <ns0:text x="65.0159" y="572.8" text-anchor="middle" font-size="10" fill="#555">Key: Smart context selection outperforms brute-force large windows</ns0:text>
+</ns0:svg>

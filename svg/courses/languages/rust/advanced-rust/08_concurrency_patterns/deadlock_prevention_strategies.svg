@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="45" text-anchor="middle" font-size="27" font-weight="bold" fill="#333">Deadlock Prevention Strategies</text>
-  <rect x="54.8571" y="75" width="1170.2857" height="97.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="91.4286" y="112.5" font-size="21" font-weight="bold" fill="#4a90e2">1. Lock Ordering</text>
-  <text x="91.4286" y="150" font-size="19.5" fill="#333">Always acquire locks in the same order (e.g., by address or ID).</text>
-  <rect x="54.8571" y="187.5" width="1170.2857" height="97.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
-  <text x="91.4286" y="225" font-size="21" font-weight="bold" fill="#28a745">2. try_lock with Backoff</text>
-  <text x="91.4286" y="262.5" font-size="19.5" fill="#333">Use try_lock() to avoid blocking. If it fails, release all locks and retry.</text>
-  <rect x="54.8571" y="300" width="1170.2857" height="97.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="91.4286" y="337.5" font-size="21" font-weight="bold" fill="#4a90e2">3. Single Lock</text>
-  <text x="91.4286" y="375" font-size="19.5" fill="#333">Combine related data under one Mutex to eliminate ordering issues.</text>
-  <rect x="54.8571" y="412.5" width="1170.2857" height="97.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
-  <text x="91.4286" y="450" font-size="21" font-weight="bold" fill="#28a745">4. Message Passing</text>
-  <text x="91.4286" y="487.5" font-size="19.5" fill="#333">Replace shared state with channels. Actors never deadlock.</text>
-  <rect x="54.8571" y="525" width="1170.2857" height="120" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
-  <text x="91.4286" y="562.5" font-size="21" font-weight="bold" fill="#856404">5. Lock Hierarchies</text>
-  <text x="91.4286" y="600" font-size="19.5" fill="#333">Assign a numeric level to each lock. A thread holding level N</text>
-  <text x="91.4286" y="627" font-size="19.5" fill="#333">may only acquire locks at level N+1 or higher.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="635.0388" y="44.6512" text-anchor="middle" font-size="26.7907" font-weight="bold" fill="#333">Deadlock Prevention Strategies</ns0:text>
+  <ns0:rect x="54.4319" y="74.4186" width="1161.2137" height="96.7442" rx="7.4419" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9767" />
+  <ns0:text x="90.7199" y="111.6279" font-size="20.8372" font-weight="bold" fill="#4a90e2">1. Lock Ordering</ns0:text>
+  <ns0:text x="90.7199" y="148.8372" font-size="19.3488" fill="#333">Always acquire locks in the same order (e.g., by address or ID).</ns0:text>
+  <ns0:rect x="54.4319" y="186.0465" width="1161.2137" height="96.7442" rx="7.4419" fill="#d4edda" stroke="#28a745" stroke-width="2.9767" />
+  <ns0:text x="90.7199" y="223.2558" font-size="20.8372" font-weight="bold" fill="#28a745">2. try_lock with Backoff</ns0:text>
+  <ns0:text x="90.7199" y="260.4651" font-size="19.3488" fill="#333">Use try_lock() to avoid blocking. If it fails, release all locks and retry.</ns0:text>
+  <ns0:rect x="54.4319" y="297.6744" width="1161.2137" height="96.7442" rx="7.4419" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9767" />
+  <ns0:text x="90.7199" y="334.8837" font-size="20.8372" font-weight="bold" fill="#4a90e2">3. Single Lock</ns0:text>
+  <ns0:text x="90.7199" y="372.093" font-size="19.3488" fill="#333">Combine related data under one Mutex to eliminate ordering issues.</ns0:text>
+  <ns0:rect x="54.4319" y="409.3023" width="1161.2137" height="96.7442" rx="7.4419" fill="#d4edda" stroke="#28a745" stroke-width="2.9767" />
+  <ns0:text x="90.7199" y="446.5116" font-size="20.8372" font-weight="bold" fill="#28a745">4. Message Passing</ns0:text>
+  <ns0:text x="90.7199" y="483.7209" font-size="19.3488" fill="#333">Replace shared state with channels. Actors never deadlock.</ns0:text>
+  <ns0:rect x="54.4319" y="520.9302" width="1161.2137" height="119.0698" rx="7.4419" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9767" />
+  <ns0:text x="90.7199" y="558.1395" font-size="20.8372" font-weight="bold" fill="#856404">5. Lock Hierarchies</ns0:text>
+  <ns0:text x="90.7199" y="595.3488" font-size="19.3488" fill="#333">Assign a numeric level to each lock. A thread holding level N</ns0:text>
+  <ns0:text x="90.7199" y="622.1395" font-size="19.3488" fill="#333">may only acquire locks at level N+1 or higher.</ns0:text>
+</ns0:svg>

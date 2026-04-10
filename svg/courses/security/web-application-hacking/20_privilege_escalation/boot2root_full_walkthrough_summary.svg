@@ -1,39 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="21.3333" y="15" width="1237.3333" height="690" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="640" y="60" text-anchor="middle" font-size="27" font-weight="bold" fill="#333">Boot2Root Full Walkthrough</text>
-  <defs>
-    <marker id="arr" markerWidth="21.3333" markerHeight="10.5" refX="7.4667" refY="15" orient="auto">
-      <polygon points="0,5.25 21.3333,10.5" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <rect x="277.3333" y="82.5" width="725.3333" height="75" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
-  <text x="330.6667" y="112.5" font-size="19.5" font-weight="bold" fill="#28a745">1. SCAN</text>
-  <text x="330.6667" y="139.5" font-size="16.5" fill="#333">nmap -sV -sC -p- target -&gt; Found port 80, 22</text>
-  <line x1="640" y1="157.5" x2="640" y2="180" stroke="#4a90e2" stroke-width="3" />
-  <polygon points="629.3333,172.5 650.6667,172.5 640,187.5" fill="#4a90e2" />
-  <rect x="213.3333" y="187.5" width="853.3333" height="75" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
-  <text x="266.6667" y="217.5" font-size="19.5" font-weight="bold" fill="#856404">2. ENUMERATE</text>
-  <text x="266.6667" y="244.5" font-size="16.5" fill="#333">gobuster -&gt; /admin, /uploads | whatweb -&gt; WordPress 5.4</text>
-  <line x1="640" y1="262.5" x2="640" y2="285" stroke="#4a90e2" stroke-width="3" />
-  <polygon points="629.3333,277.5 650.6667,277.5 640,292.5" fill="#4a90e2" />
-  <rect x="213.3333" y="292.5" width="853.3333" height="97.5" rx="7.5" fill="#f8d7da" stroke="#dc3545" stroke-width="3" />
-  <text x="266.6667" y="322.5" font-size="19.5" font-weight="bold" fill="#dc3545">3. EXPLOIT</text>
-  <text x="266.6667" y="349.5" font-size="16.5" fill="#333">wpscan -&gt; Found vulnerable plugin</text>
-  <text x="266.6667" y="372" font-size="16.5" fill="#333">Exploit -&gt; Upload web shell -&gt; Reverse shell as www-data</text>
-  <line x1="640" y1="390" x2="640" y2="412.5" stroke="#4a90e2" stroke-width="3" />
-  <polygon points="629.3333,405 650.6667,405 640,420" fill="#4a90e2" />
-  <rect x="213.3333" y="420" width="853.3333" height="97.5" rx="7.5" fill="#f8d7da" stroke="#dc3545" stroke-width="3" />
-  <text x="266.6667" y="450" font-size="19.5" font-weight="bold" fill="#dc3545">4. ESCALATE</text>
-  <text x="266.6667" y="477" font-size="16.5" fill="#333">sudo -l -&gt; Can run /usr/bin/python3 as root</text>
-  <text x="266.6667" y="499.5" font-size="16.5" fill="#333">sudo python3 -c 'import os; os.system("/bin/bash")' -&gt; ROOT!</text>
-  <line x1="640" y1="517.5" x2="640" y2="540" stroke="#4a90e2" stroke-width="3" />
-  <polygon points="629.3333,532.5 650.6667,532.5 640,547.5" fill="#4a90e2" />
-  <rect x="277.3333" y="547.5" width="725.3333" height="60" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
-  <text x="330.6667" y="577.5" font-size="19.5" font-weight="bold" fill="#28a745">5. CAPTURE</text>
-  <text x="533.3333" y="577.5" font-size="16.5" fill="#333">cat /root/flag.txt -&gt; FLAG{...}</text>
-  <line x1="640" y1="607.5" x2="640" y2="630" stroke="#4a90e2" stroke-width="3" />
-  <polygon points="629.3333,622.5 650.6667,622.5 640,637.5" fill="#4a90e2" />
-  <rect x="277.3333" y="637.5" width="725.3333" height="52.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="330.6667" y="672" font-size="19.5" font-weight="bold" fill="#4a90e2">6. DOCUMENT</text>
-  <text x="576" y="672" font-size="16.5" fill="#333">Write report with all steps and evidence</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:rect x="19.3664" y="13.617" width="1123.2529" height="626.383" rx="6.8085" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:text x="580.9929" y="54.4681" text-anchor="middle" font-size="24.5106" font-weight="bold" fill="#333">Boot2Root Full Walkthrough</ns0:text>
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="19.3664" markerHeight="9.5319" refX="6.7783" refY="13.617" orient="auto">
+      <ns0:polygon points="0,4.766 19.3664,9.5319" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect x="251.7636" y="74.8936" width="658.4586" height="68.0851" rx="6.8085" fill="#d4edda" stroke="#28a745" stroke-width="2.7234" />
+  <ns0:text x="300.1797" y="102.1277" font-size="17.7021" font-weight="bold" fill="#28a745">1. SCAN</ns0:text>
+  <ns0:text x="300.1797" y="126.6383" font-size="14.9787" fill="#333">nmap -sV -sC -p- target -&gt; Found port 80, 22</ns0:text>
+  <ns0:line x1="580.9929" y1="142.9787" x2="580.9929" y2="163.4043" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:polygon points="571.3097,156.5957 590.6762,156.5957 580.9929,170.2128" fill="#4a90e2" />
+  <ns0:rect x="193.6643" y="170.2128" width="774.6572" height="68.0851" rx="6.8085" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7234" />
+  <ns0:text x="242.0804" y="197.4468" font-size="17.7021" font-weight="bold" fill="#856404">2. ENUMERATE</ns0:text>
+  <ns0:text x="242.0804" y="221.9574" font-size="14.9787" fill="#333">gobuster -&gt; /admin, /uploads | whatweb -&gt; WordPress 5.4</ns0:text>
+  <ns0:line x1="580.9929" y1="238.2979" x2="580.9929" y2="258.7234" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:polygon points="571.3097,251.9149 590.6762,251.9149 580.9929,265.5319" fill="#4a90e2" />
+  <ns0:rect x="193.6643" y="265.5319" width="774.6572" height="88.5106" rx="6.8085" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7234" />
+  <ns0:text x="242.0804" y="292.766" font-size="17.7021" font-weight="bold" fill="#dc3545">3. EXPLOIT</ns0:text>
+  <ns0:text x="242.0804" y="317.2766" font-size="14.9787" fill="#333">wpscan -&gt; Found vulnerable plugin</ns0:text>
+  <ns0:text x="242.0804" y="337.7021" font-size="14.9787" fill="#333">Exploit -&gt; Upload web shell -&gt; Reverse shell as www-data</ns0:text>
+  <ns0:line x1="580.9929" y1="354.0426" x2="580.9929" y2="374.4681" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:polygon points="571.3097,367.6596 590.6762,367.6596 580.9929,381.2766" fill="#4a90e2" />
+  <ns0:rect x="193.6643" y="381.2766" width="774.6572" height="88.5106" rx="6.8085" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7234" />
+  <ns0:text x="242.0804" y="408.5106" font-size="17.7021" font-weight="bold" fill="#dc3545">4. ESCALATE</ns0:text>
+  <ns0:text x="242.0804" y="433.0213" font-size="14.9787" fill="#333">sudo -l -&gt; Can run /usr/bin/python3 as root</ns0:text>
+  <ns0:text x="242.0804" y="453.4468" font-size="14.9787" fill="#333">sudo python3 -c 'import os; os.system("/bin/bash")' -&gt; ROOT!</ns0:text>
+  <ns0:line x1="580.9929" y1="469.7872" x2="580.9929" y2="490.2128" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:polygon points="571.3097,483.4043 590.6762,483.4043 580.9929,497.0213" fill="#4a90e2" />
+  <ns0:rect x="251.7636" y="497.0213" width="658.4586" height="54.4681" rx="6.8085" fill="#d4edda" stroke="#28a745" stroke-width="2.7234" />
+  <ns0:text x="300.1797" y="524.2553" font-size="17.7021" font-weight="bold" fill="#28a745">5. CAPTURE</ns0:text>
+  <ns0:text x="484.1607" y="524.2553" font-size="14.9787" fill="#333">cat /root/flag.txt -&gt; FLAG{...}</ns0:text>
+  <ns0:line x1="580.9929" y1="551.4894" x2="580.9929" y2="571.9149" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:polygon points="571.3097,565.1064 590.6762,565.1064 580.9929,578.7234" fill="#4a90e2" />
+  <ns0:rect x="251.7636" y="578.7234" width="658.4586" height="47.6596" rx="6.8085" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7234" />
+  <ns0:text x="300.1797" y="610.0426" font-size="17.7021" font-weight="bold" fill="#4a90e2">6. DOCUMENT</ns0:text>
+  <ns0:text x="522.8936" y="610.0426" font-size="14.9787" fill="#333">Write report with all steps and evidence</ns0:text>
+</ns0:svg>

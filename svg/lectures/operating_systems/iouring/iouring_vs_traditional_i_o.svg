@@ -1,55 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowgreen" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowred" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.2706,0" fill="#dc3545" />
-    </marker>
-  </defs>
-  <text x="640" y="51.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.0941" font-weight="bold" fill="#333">Traditional I/O vs io_uring</text>
-  <text x="316.2353" y="111.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.0824" font-weight="bold" fill="#dc3545">Traditional I/O (Blocking)</text>
-  <rect x="90.3529" y="137.1429" width="195.7647" height="77.1429" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
-  <text x="188.2353" y="183.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" fill="#333">Application</text>
-  <line x1="286.1176" y1="174.8571" x2="353.8824" y2="174.8571" stroke="#dc3545" stroke-width="3.0118" marker-end="url(#arrowred)" />
-  <text x="320.7529" y="159.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0588" fill="#dc3545">syscall</text>
-  <rect x="361.4118" y="137.1429" width="195.7647" height="77.1429" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0118" />
-  <text x="459.2941" y="183.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" fill="#333">read() / write()</text>
-  <line x1="459.2941" y1="214.2857" x2="459.2941" y2="300" stroke="#dc3545" stroke-width="3.0118" marker-end="url(#arrowred)" />
-  <text x="489.4118" y="265.7143" font-family="Arial, sans-serif" font-size="15.0588" fill="#dc3545">wait</text>
-  <rect x="361.4118" y="308.5714" width="195.7647" height="77.1429" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
-  <text x="459.2941" y="354.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" fill="#333">Kernel</text>
-  <path d="M 361.4118 346.2857 Q 45.1765 346.2857 45.1765 174.8571 L 82.8235 174.8571" fill="none" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
-  <text x="30.1176" y="265.7143" font-family="Arial, sans-serif" font-size="15.0588" fill="#4a90e2">data</text>
-  <rect x="150.5882" y="445.7143" width="376.4706" height="51.4286" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <text x="338.8235" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" fill="#dc3545">Thread blocked during each I/O operation</text>
-  <line x1="640" y1="94.2857" x2="640" y2="668.5714" stroke="#ccc" stroke-width="3.0118" stroke-dasharray="9.0353 6.0235" />
-  <text x="963.7647" y="111.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.0824" font-weight="bold" fill="#28a745">io_uring (Async, Batched)</text>
-  <rect x="707.7647" y="137.1429" width="195.7647" height="77.1429" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
-  <text x="805.6471" y="183.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" fill="#333">Application</text>
-  <line x1="903.5294" y1="174.8571" x2="971.2941" y2="174.8571" stroke="#28a745" stroke-width="3.0118" marker-end="url(#arrowgreen)" />
-  <text x="938.1647" y="159.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0588" fill="#28a745">submit</text>
-  <rect x="978.8235" y="137.1429" width="225.8824" height="77.1429" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
-  <text x="1091.7647" y="171.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#333">Submission</text>
-  <text x="1091.7647" y="197.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#333">Queue (SQ)</text>
-  <line x1="1091.7647" y1="214.2857" x2="1091.7647" y2="300" stroke="#28a745" stroke-width="3.0118" marker-end="url(#arrowgreen)" />
-  <text x="1126.4" y="265.7143" font-family="Arial, sans-serif" font-size="15.0588" fill="#28a745">batch</text>
-  <rect x="993.8824" y="308.5714" width="195.7647" height="77.1429" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
-  <text x="1091.7647" y="354.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" fill="#333">Kernel</text>
-  <line x1="993.8824" y1="346.2857" x2="918.5882" y2="346.2857" stroke="#28a745" stroke-width="3.0118" marker-end="url(#arrowgreen)" />
-  <rect x="692.7059" y="308.5714" width="225.8824" height="77.1429" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
-  <text x="805.6471" y="342.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#333">Completion</text>
-  <text x="805.6471" y="368.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#333">Queue (CQ)</text>
-  <line x1="805.6471" y1="308.5714" x2="805.6471" y2="222.8571" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
-  <text x="835.7647" y="274.2857" font-family="Arial, sans-serif" font-size="15.0588" fill="#4a90e2">poll</text>
-  <rect x="737.8824" y="445.7143" width="421.6471" height="51.4286" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <text x="948.7059" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" fill="#28a745">App continues working; no blocking needed</text>
-  <rect x="75.2941" y="548.5714" width="1129.4118" height="111.4286" rx="12.0471" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5059" />
-  <text x="640" y="591.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5765" font-weight="bold" fill="#333">Key Advantages of io_uring</text>
-  <text x="301.1765" y="634.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#555">No per-op syscall overhead</text>
-  <text x="640" y="634.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#555">Batched submissions</text>
-  <text x="978.8235" y="634.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" fill="#555">Shared memory rings</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.4153" markerHeight="11.4872" refX="14.4153" refY="5.7436" orient="auto">
+      <ns0:polygon points="0,16.4103 5.0454,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowgreen" markerWidth="14.4153" markerHeight="11.4872" refX="14.4153" refY="5.7436" orient="auto">
+      <ns0:polygon points="0,16.4103 5.0454,0" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowred" markerWidth="14.4153" markerHeight="11.4872" refX="14.4153" refY="5.7436" orient="auto">
+      <ns0:polygon points="0,16.4103 5.0454,0" fill="#dc3545" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="612.6496" y="49.2308" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.0644" font-weight="bold" fill="#333">Traditional I/O vs io_uring</ns0:text>
+  <ns0:text x="302.721" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.1814" font-weight="bold" fill="#dc3545">Traditional I/O (Blocking)</ns0:text>
+  <ns0:rect x="86.4917" y="131.2821" width="187.3987" height="73.8462" rx="7.2076" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8831" />
+  <ns0:text x="180.1911" y="175.5898" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Application</ns0:text>
+  <ns0:line x1="273.8904" y1="167.3846" x2="338.7592" y2="167.3846" stroke="#dc3545" stroke-width="2.8831" marker-end="url(#arrowred)" />
+  <ns0:text x="307.0455" y="152.6154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4153" fill="#dc3545">syscall</ns0:text>
+  <ns0:rect x="345.9669" y="131.2821" width="187.3987" height="73.8462" rx="7.2076" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8831" />
+  <ns0:text x="439.6662" y="175.5898" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">read() / write()</ns0:text>
+  <ns0:line x1="439.6662" y1="205.1282" x2="439.6662" y2="287.1795" stroke="#dc3545" stroke-width="2.8831" marker-end="url(#arrowred)" />
+  <ns0:text x="468.4968" y="254.359" font-family="Arial, sans-serif" font-size="14.4153" fill="#dc3545">wait</ns0:text>
+  <ns0:rect x="345.9669" y="295.3846" width="187.3987" height="73.8462" rx="7.2076" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8831" />
+  <ns0:text x="439.6662" y="339.6923" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Kernel</ns0:text>
+  <ns0:path d="M 345.9669 331.4872 Q 43.2459 331.4872 43.2459 167.3846 L 79.284 167.3846" fill="none" stroke="#4a90e2" stroke-width="2.8831" marker-end="url(#arrowhead)" />
+  <ns0:text x="28.8305" y="254.359" font-family="Arial, sans-serif" font-size="14.4153" fill="#4a90e2">data</ns0:text>
+  <ns0:rect x="144.1528" y="426.6667" width="360.3821" height="49.2308" rx="7.2076" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4415" stroke-dasharray="5.7661 4.3245" />
+  <ns0:text x="324.3439" y="459.4872" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8568" fill="#dc3545">Thread blocked during each I/O operation</ns0:text>
+  <ns0:line x1="612.6496" y1="90.2564" x2="612.6496" y2="640" stroke="#ccc" stroke-width="2.8831" stroke-dasharray="8.6492 5.7661" />
+  <ns0:text x="922.5782" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.1814" font-weight="bold" fill="#28a745">io_uring (Async, Batched)</ns0:text>
+  <ns0:rect x="677.5184" y="131.2821" width="187.3987" height="73.8462" rx="7.2076" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8831" />
+  <ns0:text x="771.2178" y="175.5898" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Application</ns0:text>
+  <ns0:line x1="864.9171" y1="167.3846" x2="929.7858" y2="167.3846" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrowgreen)" />
+  <ns0:text x="898.0722" y="152.6154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4153" fill="#28a745">submit</ns0:text>
+  <ns0:rect x="936.9935" y="131.2821" width="216.2293" height="73.8462" rx="7.2076" fill="#d4edda" stroke="#28a745" stroke-width="2.8831" />
+  <ns0:text x="1045.1081" y="164.1026" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Submission</ns0:text>
+  <ns0:text x="1045.1081" y="188.718" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Queue (SQ)</ns0:text>
+  <ns0:line x1="1045.1081" y1="205.1282" x2="1045.1081" y2="287.1795" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrowgreen)" />
+  <ns0:text x="1078.2633" y="254.359" font-family="Arial, sans-serif" font-size="14.4153" fill="#28a745">batch</ns0:text>
+  <ns0:rect x="951.4088" y="295.3846" width="187.3987" height="73.8462" rx="7.2076" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8831" />
+  <ns0:text x="1045.1081" y="339.6923" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" fill="#333">Kernel</ns0:text>
+  <ns0:line x1="951.4088" y1="331.4872" x2="879.3323" y2="331.4872" stroke="#28a745" stroke-width="2.8831" marker-end="url(#arrowgreen)" />
+  <ns0:rect x="663.1031" y="295.3846" width="216.2293" height="73.8462" rx="7.2076" fill="#d4edda" stroke="#28a745" stroke-width="2.8831" />
+  <ns0:text x="771.2178" y="328.2051" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Completion</ns0:text>
+  <ns0:text x="771.2178" y="352.8205" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#333">Queue (CQ)</ns0:text>
+  <ns0:line x1="771.2178" y1="295.3846" x2="771.2178" y2="213.3333" stroke="#4a90e2" stroke-width="2.8831" marker-end="url(#arrowhead)" />
+  <ns0:text x="800.0483" y="262.5641" font-family="Arial, sans-serif" font-size="14.4153" fill="#4a90e2">poll</ns0:text>
+  <ns0:rect x="706.349" y="426.6667" width="403.628" height="49.2308" rx="7.2076" fill="#d4edda" stroke="#28a745" stroke-width="1.4415" stroke-dasharray="5.7661 4.3245" />
+  <ns0:text x="908.163" y="459.4872" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.8568" fill="#28a745">App continues working; no blocking needed</ns0:text>
+  <ns0:rect x="72.0764" y="525.1282" width="1081.1464" height="106.6667" rx="11.5323" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.4415" />
+  <ns0:text x="612.6496" y="566.1539" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7399" font-weight="bold" fill="#333">Key Advantages of io_uring</ns0:text>
+  <ns0:text x="288.3057" y="607.1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#555">No per-op syscall overhead</ns0:text>
+  <ns0:text x="612.6496" y="607.1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#555">Batched submissions</ns0:text>
+  <ns0:text x="936.9935" y="607.1795" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.2984" fill="#555">Shared memory rings</ns0:text>
+</ns0:svg>

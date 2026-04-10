@@ -1,54 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrowhead" markerWidth="15.0588" markerHeight="11.2" refX="15.0588" refY="5.6" orient="auto">
-      <polygon points="0,16 5.2706,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-return" markerWidth="15.0588" markerHeight="11.2" refX="15.0588" refY="5.6" orient="auto">
-      <polygon points="0,16 5.2706,0" fill="#999" />
-    </marker>
-  </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Distributed Tracing - Trace ID: 123</text>
-  <rect x="75.2941" y="72" width="150.5882" height="56" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
-  <text x="150.5882" y="107.2" text-anchor="middle" font-size="16.5647" fill="#333">User</text>
-  <rect x="286.1176" y="72" width="150.5882" height="56" rx="7.5294" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.2588" />
-  <text x="361.4118" y="107.2" text-anchor="middle" font-size="16.5647" fill="#333">API Gateway</text>
-  <rect x="512" y="72" width="150.5882" height="56" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
-  <text x="587.2941" y="107.2" text-anchor="middle" font-size="16.5647" fill="#333">Auth Service</text>
-  <rect x="737.8824" y="72" width="165.6471" height="56" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
-  <text x="820.7059" y="107.2" text-anchor="middle" font-size="16.5647" fill="#333">Order Service</text>
-  <rect x="963.7647" y="72" width="165.6471" height="56" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
-  <text x="1046.5882" y="107.2" text-anchor="middle" font-size="16.5647" fill="#333">Payment Svc</text>
-  <line x1="150.5882" y1="128" x2="150.5882" y2="624" stroke="#ccc" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <line x1="361.4118" y1="128" x2="361.4118" y2="624" stroke="#ccc" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <line x1="587.2941" y1="128" x2="587.2941" y2="624" stroke="#ccc" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <line x1="820.7059" y1="128" x2="820.7059" y2="624" stroke="#ccc" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <line x1="1046.5882" y1="128" x2="1046.5882" y2="624" stroke="#ccc" stroke-width="1.5059" stroke-dasharray="6.0235 4.5176" />
-  <line x1="150.5882" y1="176" x2="358.4" y2="176" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <text x="256" y="168" text-anchor="middle" font-size="15.0588" fill="#4a90e2">Request</text>
-  <line x1="361.4118" y1="224" x2="584.2824" y2="224" stroke="#9c27b0" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <text x="472.8471" y="216" text-anchor="middle" font-size="15.0588" fill="#9c27b0">Authenticate</text>
-  <rect x="444.2353" y="227.2" width="105.4118" height="25.6" rx="3.0118" fill="#fff3cd" stroke="none" />
-  <text x="496.9412" y="246.4" text-anchor="middle" font-size="15.0588" fill="#666">span: auth</text>
-  <line x1="584.2824" y1="272" x2="364.4235" y2="272" stroke="#999" stroke-width="1.5059" stroke-dasharray="7.5294 4.5176" marker-end="url(#arrowhead-return)" />
-  <text x="472.8471" y="268.8" text-anchor="middle" font-size="15.0588" fill="#999">Token Valid</text>
-  <line x1="361.4118" y1="320" x2="817.6941" y2="320" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <text x="587.2941" y="312" text-anchor="middle" font-size="15.0588" fill="#28a745">Create Order</text>
-  <rect x="549.6471" y="323.2" width="105.4118" height="25.6" rx="3.0118" fill="#d4edda" stroke="none" />
-  <text x="602.3529" y="342.4" text-anchor="middle" font-size="15.0588" fill="#666">span: order</text>
-  <rect x="798.1176" y="368" width="52.7059" height="24" rx="3.0118" fill="#eee" stroke="#ccc" />
-  <text x="823.7176" y="385.6" text-anchor="middle" font-size="15.0588" fill="#666">DB</text>
-  <line x1="820.7059" y1="360" x2="820.7059" y2="364.8" stroke="#666" stroke-width="1.5059" />
-  <text x="865.8824" y="390.4" font-size="15.0588" fill="#666">span: db-write</text>
-  <line x1="820.7059" y1="432" x2="1043.5765" y2="432" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
-  <text x="932.1412" y="424" text-anchor="middle" font-size="15.0588" fill="#4a90e2">Process Payment</text>
-  <rect x="896" y="435.2" width="120.4706" height="25.6" rx="3.0118" fill="#e8f4f8" stroke="none" />
-  <text x="956.2353" y="454.4" text-anchor="middle" font-size="15.0588" fill="#666">span: payment</text>
-  <line x1="1043.5765" y1="480" x2="823.7176" y2="480" stroke="#999" stroke-width="1.5059" stroke-dasharray="7.5294 4.5176" marker-end="url(#arrowhead-return)" />
-  <text x="933.6471" y="476.8" text-anchor="middle" font-size="15.0588" fill="#999">Complete</text>
-  <line x1="817.6941" y1="528" x2="364.4235" y2="528" stroke="#999" stroke-width="1.5059" stroke-dasharray="7.5294 4.5176" marker-end="url(#arrowhead-return)" />
-  <text x="587.2941" y="524.8" text-anchor="middle" font-size="15.0588" fill="#999">Order Created</text>
-  <line x1="358.4" y1="576" x2="153.6" y2="576" stroke="#999" stroke-width="1.5059" stroke-dasharray="7.5294 4.5176" marker-end="url(#arrowhead-return)" />
-  <text x="256" y="572.8" text-anchor="middle" font-size="15.0588" fill="#999">Response</text>
-  <rect x="301.1765" y="640" width="677.6471" height="48" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5059" />
-  <text x="640" y="672" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#333">Total Trace Duration: 250ms</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.0082" markerHeight="10.4186" refX="14.0082" refY="5.2093" orient="auto">
+      <ns0:polygon points="0,14.8837 4.9029,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-return" markerWidth="14.0082" markerHeight="10.4186" refX="14.0082" refY="5.2093" orient="auto">
+      <ns0:polygon points="0,14.8837 4.9029,0" fill="#999" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="595.3488" y="37.2093" text-anchor="middle" font-size="22.4131" font-weight="bold" fill="#333">Distributed Tracing - Trace ID: 123</ns0:text>
+  <ns0:rect x="70.041" y="66.9767" width="140.082" height="52.093" rx="7.0041" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1012" />
+  <ns0:text x="140.082" y="99.7209" text-anchor="middle" font-size="15.409" fill="#333">User</ns0:text>
+  <ns0:rect x="266.1559" y="66.9767" width="140.082" height="52.093" rx="7.0041" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.1012" />
+  <ns0:text x="336.197" y="99.7209" text-anchor="middle" font-size="15.409" fill="#333">API Gateway</ns0:text>
+  <ns0:rect x="476.2791" y="66.9767" width="140.082" height="52.093" rx="7.0041" fill="#fff3cd" stroke="#ffc107" stroke-width="2.1012" />
+  <ns0:text x="546.3201" y="99.7209" text-anchor="middle" font-size="15.409" fill="#333">Auth Service</ns0:text>
+  <ns0:rect x="686.4022" y="66.9767" width="154.0903" height="52.093" rx="7.0041" fill="#d4edda" stroke="#28a745" stroke-width="2.1012" />
+  <ns0:text x="763.4473" y="99.7209" text-anchor="middle" font-size="15.409" fill="#333">Order Service</ns0:text>
+  <ns0:rect x="896.5253" y="66.9767" width="154.0903" height="52.093" rx="7.0041" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1012" />
+  <ns0:text x="973.5704" y="99.7209" text-anchor="middle" font-size="15.409" fill="#333">Payment Svc</ns0:text>
+  <ns0:line x1="140.082" y1="119.0698" x2="140.082" y2="580.4651" stroke="#ccc" stroke-width="1.4008" stroke-dasharray="5.6033 4.2024" />
+  <ns0:line x1="336.197" y1="119.0698" x2="336.197" y2="580.4651" stroke="#ccc" stroke-width="1.4008" stroke-dasharray="5.6033 4.2024" />
+  <ns0:line x1="546.3201" y1="119.0698" x2="546.3201" y2="580.4651" stroke="#ccc" stroke-width="1.4008" stroke-dasharray="5.6033 4.2024" />
+  <ns0:line x1="763.4473" y1="119.0698" x2="763.4473" y2="580.4651" stroke="#ccc" stroke-width="1.4008" stroke-dasharray="5.6033 4.2024" />
+  <ns0:line x1="973.5704" y1="119.0698" x2="973.5704" y2="580.4651" stroke="#ccc" stroke-width="1.4008" stroke-dasharray="5.6033 4.2024" />
+  <ns0:line x1="140.082" y1="163.7209" x2="333.3953" y2="163.7209" stroke="#4a90e2" stroke-width="2.1012" marker-end="url(#arrowhead)" />
+  <ns0:text x="238.1395" y="156.2791" text-anchor="middle" font-size="14.0082" fill="#4a90e2">Request</ns0:text>
+  <ns0:line x1="336.197" y1="208.3721" x2="543.5185" y2="208.3721" stroke="#9c27b0" stroke-width="2.1012" marker-end="url(#arrowhead)" />
+  <ns0:text x="439.8578" y="200.9302" text-anchor="middle" font-size="14.0082" fill="#9c27b0">Authenticate</ns0:text>
+  <ns0:rect x="413.2421" y="211.3488" width="98.0575" height="23.814" rx="2.8017" fill="#fff3cd" stroke="none" />
+  <ns0:text x="462.2709" y="229.2093" text-anchor="middle" font-size="14.0082" fill="#666">span: auth</ns0:text>
+  <ns0:line x1="543.5185" y1="253.0233" x2="338.9986" y2="253.0233" stroke="#999" stroke-width="1.4008" stroke-dasharray="7.0041 4.2024" marker-end="url(#arrowhead-return)" />
+  <ns0:text x="439.8578" y="250.0465" text-anchor="middle" font-size="14.0082" fill="#999">Token Valid</ns0:text>
+  <ns0:line x1="336.197" y1="297.6744" x2="760.6457" y2="297.6744" stroke="#28a745" stroke-width="2.1012" marker-end="url(#arrowhead)" />
+  <ns0:text x="546.3201" y="290.2326" text-anchor="middle" font-size="14.0082" fill="#28a745">Create Order</ns0:text>
+  <ns0:rect x="511.2996" y="300.6512" width="98.0575" height="23.814" rx="2.8017" fill="#d4edda" stroke="none" />
+  <ns0:text x="560.3283" y="318.5116" text-anchor="middle" font-size="14.0082" fill="#666">span: order</ns0:text>
+  <ns0:rect x="742.435" y="342.3256" width="49.0287" height="22.3256" rx="2.8017" fill="#eee" stroke="#ccc" />
+  <ns0:text x="766.2489" y="358.6977" text-anchor="middle" font-size="14.0082" fill="#666">DB</ns0:text>
+  <ns0:line x1="763.4473" y1="334.8837" x2="763.4473" y2="339.3488" stroke="#666" stroke-width="1.4008" />
+  <ns0:text x="805.472" y="363.1628" font-size="14.0082" fill="#666">span: db-write</ns0:text>
+  <ns0:line x1="763.4473" y1="401.8605" x2="970.7688" y2="401.8605" stroke="#4a90e2" stroke-width="2.1012" marker-end="url(#arrowhead)" />
+  <ns0:text x="867.1081" y="394.4186" text-anchor="middle" font-size="14.0082" fill="#4a90e2">Process Payment</ns0:text>
+  <ns0:rect x="833.4884" y="404.8372" width="112.0657" height="23.814" rx="2.8017" fill="#e8f4f8" stroke="none" />
+  <ns0:text x="889.5212" y="422.6977" text-anchor="middle" font-size="14.0082" fill="#666">span: payment</ns0:text>
+  <ns0:line x1="970.7688" y1="446.5116" x2="766.2489" y2="446.5116" stroke="#999" stroke-width="1.4008" stroke-dasharray="7.0041 4.2024" marker-end="url(#arrowhead-return)" />
+  <ns0:text x="868.5089" y="443.5349" text-anchor="middle" font-size="14.0082" fill="#999">Complete</ns0:text>
+  <ns0:line x1="760.6457" y1="491.1628" x2="338.9986" y2="491.1628" stroke="#999" stroke-width="1.4008" stroke-dasharray="7.0041 4.2024" marker-end="url(#arrowhead-return)" />
+  <ns0:text x="546.3201" y="488.186" text-anchor="middle" font-size="14.0082" fill="#999">Order Created</ns0:text>
+  <ns0:line x1="333.3953" y1="535.814" x2="142.8837" y2="535.814" stroke="#999" stroke-width="1.4008" stroke-dasharray="7.0041 4.2024" marker-end="url(#arrowhead-return)" />
+  <ns0:text x="238.1395" y="532.8372" text-anchor="middle" font-size="14.0082" fill="#999">Response</ns0:text>
+  <ns0:rect x="280.1642" y="595.3488" width="630.3694" height="44.6512" rx="7.0041" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4008" />
+  <ns0:text x="595.3488" y="625.1163" text-anchor="middle" font-size="16.8099" font-weight="bold" fill="#333">Total Trace Duration: 250ms</ns0:text>
+</ns0:svg>

@@ -1,50 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Top row: pipeline boxes -->
-  <rect x="42" y="100" width="240" height="150" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="162" y="162" text-anchor="middle" font-size="19" fill="#4a148c">Transport Layer</text>
-  <text x="162" y="208" text-anchor="middle" font-size="17" fill="#555555">(TCP/UDP)</text>
-  <rect x="338" y="100" width="260" height="150" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="468" y="162" text-anchor="middle" font-size="19" fill="#0d47a1">Queueing Disc</text>
-  <text x="468" y="208" text-anchor="middle" font-size="17" fill="#555555">(qdisc)</text>
-  <rect x="654" y="100" width="240" height="150" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="774" y="162" text-anchor="middle" font-size="19" fill="#e65100">dev_queue_xmit</text>
-  <text x="774" y="208" text-anchor="middle" font-size="17" fill="#555555">TX queue</text>
-  <rect x="950" y="100" width="240" height="150" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="1070" y="162" text-anchor="middle" font-size="19" fill="#1b5e20">NIC Driver</text>
-  <text x="1070" y="208" text-anchor="middle" font-size="17" fill="#555555">hard_start_xmit</text>
-  <!-- Arrows -->
-  <line x1="282" y1="175" x2="338" y2="175" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="598" y1="175" x2="654" y2="175" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="894" y1="175" x2="950" y2="175" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Bottom row: qdisc types -->
-  <rect x="210" y="350" width="215" height="115" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="317" y="420" text-anchor="middle" font-size="19" fill="#0d47a1">pfifo_fast</text>
-  <rect x="464" y="350" width="170" height="115" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8"/>
-  <text x="549" y="420" text-anchor="middle" font-size="19" fill="#e65100">HTB</text>
-  <rect x="678" y="350" width="170" height="115" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="763" y="420" text-anchor="middle" font-size="19" fill="#1b5e20">SFQ</text>
-  <rect x="892" y="350" width="170" height="115" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8"/>
-  <text x="977" y="420" text-anchor="middle" font-size="19" fill="#4a148c">TBF</text>
-  <text x="640" y="530" text-anchor="middle" font-size="21" fill="#555555">Common Queue Disciplines</text>
-  <text x="640" y="610" text-anchor="middle" font-size="18" fill="#777777">tc qdisc add dev eth0 root [discipline] [params]</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="37.3333" y="88.8889" width="213.3333" height="133.3333" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="144" y="144" text-anchor="middle" font-size="16.8889" fill="#4a148c">Transport Layer</ns0:text>
+  <ns0:text x="144" y="184.8889" text-anchor="middle" font-size="15.1111" fill="#555555">(TCP/UDP)</ns0:text>
+  <ns0:rect x="300.4444" y="88.8889" width="231.1111" height="133.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="416" y="144" text-anchor="middle" font-size="16.8889" fill="#0d47a1">Queueing Disc</ns0:text>
+  <ns0:text x="416" y="184.8889" text-anchor="middle" font-size="15.1111" fill="#555555">(qdisc)</ns0:text>
+  <ns0:rect x="581.3333" y="88.8889" width="213.3333" height="133.3333" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="688" y="144" text-anchor="middle" font-size="16.8889" fill="#e65100">dev_queue_xmit</ns0:text>
+  <ns0:text x="688" y="184.8889" text-anchor="middle" font-size="15.1111" fill="#555555">TX queue</ns0:text>
+  <ns0:rect x="844.4444" y="88.8889" width="213.3333" height="133.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="951.1111" y="144" text-anchor="middle" font-size="16.8889" fill="#1b5e20">NIC Driver</ns0:text>
+  <ns0:text x="951.1111" y="184.8889" text-anchor="middle" font-size="15.1111" fill="#555555">hard_start_xmit</ns0:text>
+  <ns0:line x1="250.6667" y1="155.5556" x2="300.4444" y2="155.5556" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="531.5556" y1="155.5556" x2="581.3333" y2="155.5556" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="794.6667" y1="155.5556" x2="844.4444" y2="155.5556" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="186.6667" y="311.1111" width="191.1111" height="102.2222" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" />
+  <ns0:text x="281.7778" y="373.3333" text-anchor="middle" font-size="16.8889" fill="#0d47a1">pfifo_fast</ns0:text>
+  <ns0:rect x="412.4444" y="311.1111" width="151.1111" height="102.2222" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="7.1111" />
+  <ns0:text x="488" y="373.3333" text-anchor="middle" font-size="16.8889" fill="#e65100">HTB</ns0:text>
+  <ns0:rect x="602.6667" y="311.1111" width="151.1111" height="102.2222" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="7.1111" />
+  <ns0:text x="678.2222" y="373.3333" text-anchor="middle" font-size="16.8889" fill="#1b5e20">SFQ</ns0:text>
+  <ns0:rect x="792.8889" y="311.1111" width="151.1111" height="102.2222" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.7778" rx="7.1111" />
+  <ns0:text x="868.4444" y="373.3333" text-anchor="middle" font-size="16.8889" fill="#4a148c">TBF</ns0:text>
+  <ns0:text x="568.8889" y="471.1111" text-anchor="middle" font-size="18.6667" fill="#555555">Common Queue Disciplines</ns0:text>
+  <ns0:text x="568.8889" y="542.2222" text-anchor="middle" font-size="16" fill="#777777">tc qdisc add dev eth0 root [discipline] [params]</ns0:text>
+</ns0:svg>

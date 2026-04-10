@@ -1,40 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow-sh" markerWidth="20.6452" markerHeight="13.2632" refX="18.5806" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 7.2258,0" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="34.1053" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.6316" font-weight="bold" fill="#0277bd">Writer Side (Map stage)</text>
-  <rect x="61.9355" y="47.3684" width="1156.129" height="284.2105" rx="15.1579" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.7895" />
-  <text x="103.2258" y="79.5789" font-family="Arial, sans-serif" font-size="20.8421" font-weight="bold" fill="#333">Executor</text>
-  <rect x="103.2258" y="94.7368" width="227.0968" height="66.3158" rx="11.3684" fill="#fff" stroke="#0277bd" stroke-width="2.8421" />
-  <text x="216.7742" y="136.4211" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Task (process)</text>
-  <line x1="330.3226" y1="126.9474" x2="412.9032" y2="126.9474" stroke="#333" stroke-width="3.7895" marker-end="url(#arrow-sh)" />
-  <rect x="423.2258" y="94.7368" width="412.9032" height="66.3158" rx="11.3684" fill="#fff" stroke="#0277bd" stroke-width="2.8421" />
-  <text x="629.6774" y="123.1579" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Sort by partition key</text>
-  <text x="629.6774" y="147.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#555">+ spill to disk</text>
-  <line x1="516.129" y1="161.0526" x2="268.3871" y2="217.8947" stroke="#333" stroke-width="2.8421" marker-end="url(#arrow-sh)" />
-  <line x1="629.6774" y1="161.0526" x2="629.6774" y2="217.8947" stroke="#333" stroke-width="2.8421" marker-end="url(#arrow-sh)" />
-  <line x1="743.2258" y1="161.0526" x2="990.9677" y2="217.8947" stroke="#333" stroke-width="2.8421" marker-end="url(#arrow-sh)" />
-  <rect x="144.5161" y="227.3684" width="247.7419" height="66.3158" rx="11.3684" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.8421" />
-  <text x="268.3871" y="269.0526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Part 0 file</text>
-  <rect x="505.8065" y="227.3684" width="247.7419" height="66.3158" rx="11.3684" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.8421" />
-  <text x="629.6774" y="269.0526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Part 1 file</text>
-  <rect x="867.0968" y="227.3684" width="247.7419" height="66.3158" rx="11.3684" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.8421" />
-  <text x="990.9677" y="269.0526" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Part 2 file</text>
-  <text x="640" y="378.9474" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.6316" font-weight="bold" fill="#2e7d32">Reader Side (Reduce stage)</text>
-  <rect x="61.9355" y="397.8947" width="1156.129" height="293.6842" rx="15.1579" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.7895" />
-  <text x="103.2258" y="432" font-family="Arial, sans-serif" font-size="20.8421" font-weight="bold" fill="#333">Executor (for Partition 0)</text>
-  <text x="640" y="469.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8421" fill="#555">Fetch Part 0 from all map executors</text>
-  <rect x="165.1613" y="488.8421" width="227.0968" height="66.3158" rx="11.3684" fill="#fff" stroke="#2e7d32" stroke-width="2.8421" />
-  <text x="278.7097" y="517.2632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Exec 0 Part 0</text>
-  <rect x="454.1935" y="488.8421" width="227.0968" height="66.3158" rx="11.3684" fill="#fff" stroke="#2e7d32" stroke-width="2.8421" />
-  <text x="567.7419" y="517.2632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Exec 1 Part 0</text>
-  <rect x="743.2258" y="488.8421" width="227.0968" height="66.3158" rx="11.3684" fill="#fff" stroke="#2e7d32" stroke-width="2.8421" />
-  <text x="856.7742" y="517.2632" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9474" fill="#333">Exec 2 Part 0</text>
-  <line x1="278.7097" y1="555.1579" x2="567.7419" y2="606.3158" stroke="#333" stroke-width="2.8421" marker-end="url(#arrow-sh)" />
-  <line x1="567.7419" y1="555.1579" x2="567.7419" y2="606.3158" stroke="#333" stroke-width="2.8421" marker-end="url(#arrow-sh)" />
-  <line x1="856.7742" y1="555.1579" x2="567.7419" y2="606.3158" stroke="#333" stroke-width="2.8421" marker-end="url(#arrow-sh)" />
-  <rect x="412.9032" y="615.7895" width="309.6774" height="56.8421" rx="11.3684" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.8421" />
-  <text x="567.7419" y="653.6842" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8421" fill="#333">Merge + Sort</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow-sh" markerWidth="19.1055" markerHeight="12.274" refX="17.1948" refY="6.137" orient="auto">
+      <ns0:polygon points="0,17.5343 6.6869,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="592.2679" y="31.5617" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.7945" font-weight="bold" fill="#0277bd">Writer Side (Map stage)</ns0:text>
+  <ns0:rect x="57.3163" y="43.8356" width="1069.9033" height="263.0137" rx="14.0274" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.5069" />
+  <ns0:text x="95.5271" y="73.6438" font-family="Arial, sans-serif" font-size="19.2877" font-weight="bold" fill="#333">Executor</ns0:text>
+  <ns0:rect x="95.5271" y="87.6712" width="210.1596" height="61.3699" rx="10.5205" fill="#fff" stroke="#0277bd" stroke-width="2.6301" />
+  <ns0:text x="200.6069" y="126.2466" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Task (process)</ns0:text>
+  <ns0:line x1="305.6867" y1="117.4795" x2="382.1083" y2="117.4795" stroke="#333" stroke-width="3.5069" marker-end="url(#arrow-sh)" />
+  <ns0:rect x="391.661" y="87.6712" width="382.1083" height="61.3699" rx="10.5205" fill="#fff" stroke="#0277bd" stroke-width="2.6301" />
+  <ns0:text x="582.7152" y="113.9726" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Sort by partition key</ns0:text>
+  <ns0:text x="582.7152" y="136.7672" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#555">+ spill to disk</ns0:text>
+  <ns0:line x1="477.6354" y1="149.0411" x2="248.3704" y2="201.6438" stroke="#333" stroke-width="2.6301" marker-end="url(#arrow-sh)" />
+  <ns0:line x1="582.7152" y1="149.0411" x2="582.7152" y2="201.6438" stroke="#333" stroke-width="2.6301" marker-end="url(#arrow-sh)" />
+  <ns0:line x1="687.795" y1="149.0411" x2="917.06" y2="201.6438" stroke="#333" stroke-width="2.6301" marker-end="url(#arrow-sh)" />
+  <ns0:rect x="133.7379" y="210.411" width="229.265" height="61.3699" rx="10.5205" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.6301" />
+  <ns0:text x="248.3704" y="248.9863" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Part 0 file</ns0:text>
+  <ns0:rect x="468.0828" y="210.411" width="229.265" height="61.3699" rx="10.5205" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.6301" />
+  <ns0:text x="582.7152" y="248.9863" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Part 1 file</ns0:text>
+  <ns0:rect x="802.4275" y="210.411" width="229.265" height="61.3699" rx="10.5205" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.6301" />
+  <ns0:text x="917.06" y="248.9863" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Part 2 file</ns0:text>
+  <ns0:text x="592.2679" y="350.685" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.7945" font-weight="bold" fill="#2e7d32">Reader Side (Reduce stage)</ns0:text>
+  <ns0:rect x="57.3163" y="368.2192" width="1069.9033" height="271.7808" rx="14.0274" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.5069" />
+  <ns0:text x="95.5271" y="399.7808" font-family="Arial, sans-serif" font-size="19.2877" font-weight="bold" fill="#333">Executor (for Partition 0)</ns0:text>
+  <ns0:text x="592.2679" y="434.8493" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2877" fill="#555">Fetch Part 0 from all map executors</ns0:text>
+  <ns0:rect x="152.8433" y="452.3836" width="210.1596" height="61.3699" rx="10.5205" fill="#fff" stroke="#2e7d32" stroke-width="2.6301" />
+  <ns0:text x="257.9231" y="478.685" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Exec 0 Part 0</ns0:text>
+  <ns0:rect x="420.3191" y="452.3836" width="210.1596" height="61.3699" rx="10.5205" fill="#fff" stroke="#2e7d32" stroke-width="2.6301" />
+  <ns0:text x="525.3989" y="478.685" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Exec 1 Part 0</ns0:text>
+  <ns0:rect x="687.795" y="452.3836" width="210.1596" height="61.3699" rx="10.5205" fill="#fff" stroke="#2e7d32" stroke-width="2.6301" />
+  <ns0:text x="792.8748" y="478.685" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5343" fill="#333">Exec 2 Part 0</ns0:text>
+  <ns0:line x1="257.9231" y1="513.7535" x2="525.3989" y2="561.0959" stroke="#333" stroke-width="2.6301" marker-end="url(#arrow-sh)" />
+  <ns0:line x1="525.3989" y1="513.7535" x2="525.3989" y2="561.0959" stroke="#333" stroke-width="2.6301" marker-end="url(#arrow-sh)" />
+  <ns0:line x1="792.8748" y1="513.7535" x2="525.3989" y2="561.0959" stroke="#333" stroke-width="2.6301" marker-end="url(#arrow-sh)" />
+  <ns0:rect x="382.1083" y="569.8631" width="286.5812" height="52.6027" rx="10.5205" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.6301" />
+  <ns0:text x="525.3989" y="604.9315" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2877" fill="#333">Merge + Sort</ns0:text>
+</ns0:svg>

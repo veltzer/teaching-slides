@@ -1,53 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="51.4286" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Thread Pool Architecture</text>
-  <rect x="48" y="102.8571" width="192" height="68.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="144" y="145.7143" text-anchor="middle" font-size="16" fill="#333">Caller 1</text>
-  <rect x="48" y="188.5714" width="192" height="68.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="144" y="231.4286" text-anchor="middle" font-size="16" fill="#333">Caller 2</text>
-  <rect x="48" y="274.2857" width="192" height="68.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="144" y="317.1429" text-anchor="middle" font-size="16" fill="#333">Caller N</text>
-  <line x1="240" y1="137.1429" x2="352" y2="205.7143" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
-  <line x1="240" y1="222.8571" x2="352" y2="222.8571" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
-  <line x1="240" y1="308.5714" x2="352" y2="240" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="368" y="120" width="288" height="205.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="512" y="162.8571" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Task Queue</text>
-  <rect x="392" y="180" width="240" height="34.2857" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="512" y="204" text-anchor="middle" font-size="16" fill="#333">Task A</text>
-  <rect x="392" y="219.4286" width="240" height="34.2857" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="512" y="243.4286" text-anchor="middle" font-size="16" fill="#333">Task B</text>
-  <rect x="392" y="258.8571" width="240" height="34.2857" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="512" y="282.8571" text-anchor="middle" font-size="16" fill="#333">Task C</text>
-  <rect x="768" y="94.2857" width="464" height="308.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="1000" y="133.7143" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Worker Threads (fixed pool)</text>
-  <line x1="656" y1="171.4286" x2="768" y2="171.4286" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
-  <line x1="656" y1="222.8571" x2="768" y2="240" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
-  <line x1="656" y1="274.2857" x2="768" y2="308.5714" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
-  <rect x="800" y="154.2857" width="192" height="51.4286" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="896" y="188.5714" text-anchor="middle" font-size="16" fill="#333">Worker 1 (busy)</text>
-  <rect x="800" y="219.4286" width="192" height="51.4286" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="896" y="253.7143" text-anchor="middle" font-size="16" fill="#333">Worker 2 (busy)</text>
-  <rect x="800" y="284.5714" width="192" height="51.4286" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
-  <text x="896" y="318.8571" text-anchor="middle" font-size="16" fill="#333">Worker 3 (idle)</text>
-  <rect x="800" y="349.7143" width="192" height="37.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
-  <text x="896" y="377.1429" text-anchor="middle" font-size="16" fill="#333">Worker 4 (idle)</text>
-  <text x="1056" y="197.1429" font-size="16" fill="#555">= num_cpus</text>
-  <rect x="48" y="445.7143" width="560" height="240" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="328" y="488.5714" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Benefits</text>
-  <text x="72" y="531.4286" font-size="16" fill="#555">- Avoids thread creation overhead</text>
-  <text x="72" y="562.2857" font-size="16" fill="#555">- Bounded concurrency (no fork bomb)</text>
-  <text x="72" y="593.1429" font-size="16" fill="#555">- Resource reuse (thread stack, TLS)</text>
-  <text x="72" y="624" font-size="16" fill="#555">- Backpressure via bounded queue</text>
-  <text x="72" y="654.8571" font-size="16" fill="#555">- Graceful shutdown support</text>
-  <rect x="672" y="445.7143" width="560" height="240" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="952" y="488.5714" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Rust Implementations</text>
-  <text x="696" y="531.4286" font-size="16" fill="#555">rayon::ThreadPool - work-stealing</text>
-  <text x="696" y="562.2857" font-size="16" fill="#555">tokio::runtime - async tasks</text>
-  <text x="696" y="593.1429" font-size="16" fill="#555">threadpool crate - simple API</text>
-  <text x="696" y="624" font-size="16" fill="#555">crossbeam + manual threads</text>
-  <text x="696" y="654.8571" font-size="16" fill="#555">std::thread::available_parallelism()</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="597.3333" y="48" text-anchor="middle" font-size="29.8667" font-weight="bold" fill="#333">Thread Pool Architecture</ns0:text>
+  <ns0:rect x="44.8" y="96" width="179.2" height="64" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.24" />
+  <ns0:text x="134.4" y="136" text-anchor="middle" font-size="14.9333" fill="#333">Caller 1</ns0:text>
+  <ns0:rect x="44.8" y="176" width="179.2" height="64" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.24" />
+  <ns0:text x="134.4" y="216" text-anchor="middle" font-size="14.9333" fill="#333">Caller 2</ns0:text>
+  <ns0:rect x="44.8" y="256" width="179.2" height="64" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.24" />
+  <ns0:text x="134.4" y="296" text-anchor="middle" font-size="14.9333" fill="#333">Caller N</ns0:text>
+  <ns0:line x1="224" y1="128" x2="328.5333" y2="192" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
+  <ns0:line x1="224" y1="208" x2="328.5333" y2="208" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
+  <ns0:line x1="224" y1="288" x2="328.5333" y2="224" stroke="#4a90e2" stroke-width="2.24" marker-end="url(#arrow)" />
+  <ns0:rect x="343.4667" y="112" width="268.8" height="192" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9867" />
+  <ns0:text x="477.8667" y="152" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#333">Task Queue</ns0:text>
+  <ns0:rect x="365.8667" y="168" width="224" height="32" rx="4.48" fill="#d4edda" stroke="#28a745" stroke-width="1.4933" />
+  <ns0:text x="477.8667" y="190.4" text-anchor="middle" font-size="14.9333" fill="#333">Task A</ns0:text>
+  <ns0:rect x="365.8667" y="204.8" width="224" height="32" rx="4.48" fill="#d4edda" stroke="#28a745" stroke-width="1.4933" />
+  <ns0:text x="477.8667" y="227.2" text-anchor="middle" font-size="14.9333" fill="#333">Task B</ns0:text>
+  <ns0:rect x="365.8667" y="241.6" width="224" height="32" rx="4.48" fill="#d4edda" stroke="#28a745" stroke-width="1.4933" />
+  <ns0:text x="477.8667" y="264" text-anchor="middle" font-size="14.9333" fill="#333">Task C</ns0:text>
+  <ns0:rect x="716.8" y="88" width="433.0667" height="288" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="933.3333" y="124.8" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#333">Worker Threads (fixed pool)</ns0:text>
+  <ns0:line x1="612.2667" y1="160" x2="716.8" y2="160" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrow)" />
+  <ns0:line x1="612.2667" y1="208" x2="716.8" y2="224" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrow)" />
+  <ns0:line x1="612.2667" y1="256" x2="716.8" y2="288" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrow)" />
+  <ns0:rect x="746.6667" y="144" width="179.2" height="48" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.24" />
+  <ns0:text x="836.2666" y="176" text-anchor="middle" font-size="14.9333" fill="#333">Worker 1 (busy)</ns0:text>
+  <ns0:rect x="746.6667" y="204.8" width="179.2" height="48" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.24" />
+  <ns0:text x="836.2666" y="236.8" text-anchor="middle" font-size="14.9333" fill="#333">Worker 2 (busy)</ns0:text>
+  <ns0:rect x="746.6667" y="265.6" width="179.2" height="48" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.24" />
+  <ns0:text x="836.2666" y="297.6" text-anchor="middle" font-size="14.9333" fill="#333">Worker 3 (idle)</ns0:text>
+  <ns0:rect x="746.6667" y="326.4" width="179.2" height="35.2" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.24" />
+  <ns0:text x="836.2666" y="352" text-anchor="middle" font-size="14.9333" fill="#333">Worker 4 (idle)</ns0:text>
+  <ns0:text x="985.6" y="184" font-size="14.9333" fill="#555">= num_cpus</ns0:text>
+  <ns0:rect x="44.8" y="416" width="522.6667" height="224" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
+  <ns0:text x="306.1333" y="456" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#333">Benefits</ns0:text>
+  <ns0:text x="67.2" y="496" font-size="14.9333" fill="#555">- Avoids thread creation overhead</ns0:text>
+  <ns0:text x="67.2" y="524.8" font-size="14.9333" fill="#555">- Bounded concurrency (no fork bomb)</ns0:text>
+  <ns0:text x="67.2" y="553.6" font-size="14.9333" fill="#555">- Resource reuse (thread stack, TLS)</ns0:text>
+  <ns0:text x="67.2" y="582.4" font-size="14.9333" fill="#555">- Backpressure via bounded queue</ns0:text>
+  <ns0:text x="67.2" y="611.1999" font-size="14.9333" fill="#555">- Graceful shutdown support</ns0:text>
+  <ns0:rect x="627.2" y="416" width="522.6667" height="224" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="888.5333" y="456" text-anchor="middle" font-size="19.4133" font-weight="bold" fill="#333">Rust Implementations</ns0:text>
+  <ns0:text x="649.6" y="496" font-size="14.9333" fill="#555">rayon::ThreadPool - work-stealing</ns0:text>
+  <ns0:text x="649.6" y="524.8" font-size="14.9333" fill="#555">tokio::runtime - async tasks</ns0:text>
+  <ns0:text x="649.6" y="553.6" font-size="14.9333" fill="#555">threadpool crate - simple API</ns0:text>
+  <ns0:text x="649.6" y="582.4" font-size="14.9333" fill="#555">crossbeam + manual threads</ns0:text>
+  <ns0:text x="649.6" y="611.1999" font-size="14.9333" fill="#555">std::thread::available_parallelism()</ns0:text>
+</ns0:svg>

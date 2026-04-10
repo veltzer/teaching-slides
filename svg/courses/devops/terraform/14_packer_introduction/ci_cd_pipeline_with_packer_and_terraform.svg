@@ -1,46 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Steps -->
-  <rect x="148" y="24" width="984" height="76" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="68" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">1. Code Change</text>
-  <line x1="640" y1="100" x2="640" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="148" y="120" width="984" height="76" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="164" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">2. Build Application</text>
-  <line x1="640" y1="196" x2="640" y2="216" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="148" y="216" width="984" height="92" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="255" text-anchor="middle" font-size="18" fill="#2e7d32" font-weight="bold">3. Packer Build</text>
-  <text x="640" y="286" text-anchor="middle" font-size="15" fill="#555">(create AMI with app)</text>
-  <line x1="640" y1="308" x2="640" y2="328" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="148" y="328" width="984" height="92" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="367" text-anchor="middle" font-size="18" fill="#e65100" font-weight="bold">4. Terraform Plan</text>
-  <text x="640" y="398" text-anchor="middle" font-size="15" fill="#555">(reference new AMI)</text>
-  <line x1="640" y1="420" x2="640" y2="440" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="148" y="440" width="984" height="92" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="479" text-anchor="middle" font-size="18" fill="#e65100" font-weight="bold">5. Terraform Apply</text>
-  <text x="640" y="510" text-anchor="middle" font-size="15" fill="#555">(deploy new instances)</text>
-  <line x1="640" y1="532" x2="640" y2="552" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="148" y="552" width="984" height="76" rx="8" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="596" text-anchor="middle" font-size="18" fill="#7b1fa2" font-weight="bold">6. Health Check / Smoke Test</text>
-  <line x1="640" y1="628" x2="640" y2="648" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="148" y="648" width="984" height="60" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="686" text-anchor="middle" font-size="18" fill="#2e7d32" font-weight="bold">7. DNS/LB Switch to New Instances</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="131.5556" y="21.3333" width="874.6667" height="67.5556" rx="7.1111" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="60.4444" text-anchor="middle" font-size="16" fill="#1565c0" font-weight="bold">1. Code Change</ns0:text>
+  <ns0:line x1="568.8889" y1="88.8889" x2="568.8889" y2="106.6667" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="131.5556" y="106.6667" width="874.6667" height="67.5556" rx="7.1111" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="145.7778" text-anchor="middle" font-size="16" fill="#1565c0" font-weight="bold">2. Build Application</ns0:text>
+  <ns0:line x1="568.8889" y1="174.2222" x2="568.8889" y2="192" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="131.5556" y="192" width="874.6667" height="81.7778" rx="7.1111" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="226.6667" text-anchor="middle" font-size="16" fill="#2e7d32" font-weight="bold">3. Packer Build</ns0:text>
+  <ns0:text x="568.8889" y="254.2222" text-anchor="middle" font-size="13.3333" fill="#555">(create AMI with app)</ns0:text>
+  <ns0:line x1="568.8889" y1="273.7778" x2="568.8889" y2="291.5556" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="131.5556" y="291.5556" width="874.6667" height="81.7778" rx="7.1111" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="326.2222" text-anchor="middle" font-size="16" fill="#e65100" font-weight="bold">4. Terraform Plan</ns0:text>
+  <ns0:text x="568.8889" y="353.7778" text-anchor="middle" font-size="13.3333" fill="#555">(reference new AMI)</ns0:text>
+  <ns0:line x1="568.8889" y1="373.3333" x2="568.8889" y2="391.1111" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="131.5556" y="391.1111" width="874.6667" height="81.7778" rx="7.1111" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="425.7778" text-anchor="middle" font-size="16" fill="#e65100" font-weight="bold">5. Terraform Apply</ns0:text>
+  <ns0:text x="568.8889" y="453.3333" text-anchor="middle" font-size="13.3333" fill="#555">(deploy new instances)</ns0:text>
+  <ns0:line x1="568.8889" y1="472.8889" x2="568.8889" y2="490.6667" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="131.5556" y="490.6667" width="874.6667" height="67.5556" rx="7.1111" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="529.7778" text-anchor="middle" font-size="16" fill="#7b1fa2" font-weight="bold">6. Health Check / Smoke Test</ns0:text>
+  <ns0:line x1="568.8889" y1="558.2222" x2="568.8889" y2="576" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="131.5556" y="576" width="874.6667" height="53.3333" rx="7.1111" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="609.7778" text-anchor="middle" font-size="16" fill="#2e7d32" font-weight="bold">7. DNS/LB Switch to New Instances</ns0:text>
+</ns0:svg>

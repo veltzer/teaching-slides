@@ -1,33 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrowhead" markerWidth="17.0667" markerHeight="13.6216" refX="17.0667" refY="6.8108" orient="auto">
-      <polygon points="0,19.4595 5.9733,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="17.0667" markerHeight="13.6216" refX="17.0667" refY="6.8108" orient="auto">
-      <polygon points="0,19.4595 5.9733,0" fill="#28a745" />
-    </marker>
-  </defs>
-  <text x="640" y="48.6486" text-anchor="middle" font-size="27.3067" font-weight="bold" fill="#333">Write-Through Pattern</text>
-  <rect x="85.3333" y="233.5135" width="204.8" height="97.2973" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
-  <text x="187.7333" y="291.8919" text-anchor="middle" font-size="22.1867" fill="#333">Application</text>
-  <rect x="512" y="233.5135" width="204.8" height="97.2973" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
-  <text x="614.4" y="291.8919" text-anchor="middle" font-size="22.1867" fill="#333">Cache</text>
-  <rect x="938.6667" y="233.5135" width="204.8" height="97.2973" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
-  <text x="1041.0667" y="291.8919" text-anchor="middle" font-size="22.1867" fill="#333">Database</text>
-  <line x1="290.1333" y1="268.5405" x2="508.5867" y2="268.5405" stroke="#4a90e2" stroke-width="3.4133" marker-end="url(#arrowhead)" />
-  <text x="399.36" y="252.973" text-anchor="middle" font-size="18.7733" fill="#4a90e2">1. Write data</text>
-  <line x1="716.8" y1="268.5405" x2="935.2533" y2="268.5405" stroke="#4a90e2" stroke-width="3.4133" marker-end="url(#arrowhead)" />
-  <text x="826.0267" y="252.973" text-anchor="middle" font-size="18.7733" fill="#4a90e2">2. Write to DB</text>
-  <line x1="935.2533" y1="307.4595" x2="720.2133" y2="307.4595" stroke="#28a745" stroke-width="3.4133" marker-end="url(#arrowhead-green)" />
-  <text x="826.0267" y="346.3784" text-anchor="middle" font-size="18.7733" fill="#28a745">Confirm</text>
-  <line x1="508.5867" y1="307.4595" x2="293.5467" y2="307.4595" stroke="#28a745" stroke-width="3.4133" marker-end="url(#arrowhead-green)" />
-  <text x="399.36" y="346.3784" text-anchor="middle" font-size="18.7733" fill="#28a745">3. Confirm write</text>
-  <rect x="375.4667" y="116.7568" width="477.8667" height="68.1081" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.56" />
-  <text x="614.4" y="159.5676" text-anchor="middle" font-size="20.48" fill="#4a90e2">Synchronous: both written before confirm</text>
-  <rect x="85.3333" y="447.5676" width="1058.1333" height="233.5135" rx="8.5333" fill="#f5f5f5" stroke="#ddd" stroke-width="1.7067" />
-  <text x="614.4" y="496.2162" text-anchor="middle" font-size="20.48" font-weight="bold" fill="#333">Key Characteristics</text>
-  <text x="128" y="540.973" font-size="18.7733" fill="#555">- Data written to cache AND database synchronously</text>
-  <text x="128" y="576" font-size="18.7733" fill="#555">- App receives confirmation only after both writes succeed</text>
-  <text x="128" y="611.027" font-size="18.7733" fill="#d4edda">+ Strong consistency guarantee</text>
-  <text x="128" y="646.0541" font-size="18.7733" fill="#dc3545">- Higher write latency (two writes per operation)</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="16.0373" markerHeight="12.8" refX="16.0373" refY="6.4" orient="auto">
+      <ns0:polygon points="0,18.2858 5.613,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="16.0373" markerHeight="12.8" refX="16.0373" refY="6.4" orient="auto">
+      <ns0:polygon points="0,18.2858 5.613,0" fill="#28a745" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="601.3968" y="45.7142" text-anchor="middle" font-size="25.6596" font-weight="bold" fill="#333">Write-Through Pattern</ns0:text>
+  <ns0:rect x="80.1862" y="219.4286" width="192.447" height="91.4286" rx="8.0186" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2074" />
+  <ns0:text x="176.4097" y="274.2857" text-anchor="middle" font-size="20.8485" fill="#333">Application</ns0:text>
+  <ns0:rect x="481.1174" y="219.4286" width="192.447" height="91.4286" rx="8.0186" fill="#d4edda" stroke="#28a745" stroke-width="3.2074" />
+  <ns0:text x="577.3409" y="274.2857" text-anchor="middle" font-size="20.8485" fill="#333">Cache</ns0:text>
+  <ns0:rect x="882.0487" y="219.4286" width="192.447" height="91.4286" rx="8.0186" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2074" />
+  <ns0:text x="978.2722" y="274.2857" text-anchor="middle" font-size="20.8485" fill="#333">Database</ns0:text>
+  <ns0:line x1="272.6332" y1="252.3428" x2="477.91" y2="252.3428" stroke="#4a90e2" stroke-width="3.2074" marker-end="url(#arrowhead)" />
+  <ns0:text x="375.2716" y="237.7143" text-anchor="middle" font-size="17.6409" fill="#4a90e2">1. Write data</ns0:text>
+  <ns0:line x1="673.5644" y1="252.3428" x2="878.8412" y2="252.3428" stroke="#4a90e2" stroke-width="3.2074" marker-end="url(#arrowhead)" />
+  <ns0:text x="776.2028" y="237.7143" text-anchor="middle" font-size="17.6409" fill="#4a90e2">2. Write to DB</ns0:text>
+  <ns0:line x1="878.8412" y1="288.9143" x2="676.7718" y2="288.9143" stroke="#28a745" stroke-width="3.2074" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="776.2028" y="325.4857" text-anchor="middle" font-size="17.6409" fill="#28a745">Confirm</ns0:text>
+  <ns0:line x1="477.91" y1="288.9143" x2="275.8407" y2="288.9143" stroke="#28a745" stroke-width="3.2074" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="375.2716" y="325.4857" text-anchor="middle" font-size="17.6409" fill="#28a745">3. Confirm write</ns0:text>
+  <ns0:rect x="352.8195" y="109.7143" width="449.043" height="64" rx="8.0186" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4056" />
+  <ns0:text x="577.3409" y="149.9429" text-anchor="middle" font-size="19.2447" fill="#4a90e2">Synchronous: both written before confirm</ns0:text>
+  <ns0:rect x="80.1862" y="420.5714" width="994.3094" height="219.4286" rx="8.0186" fill="#f5f5f5" stroke="#ddd" stroke-width="1.6038" />
+  <ns0:text x="577.3409" y="466.2857" text-anchor="middle" font-size="19.2447" font-weight="bold" fill="#333">Key Characteristics</ns0:text>
+  <ns0:text x="120.2794" y="508.3429" font-size="17.6409" fill="#555">- Data written to cache AND database synchronously</ns0:text>
+  <ns0:text x="120.2794" y="541.2571" font-size="17.6409" fill="#555">- App receives confirmation only after both writes succeed</ns0:text>
+  <ns0:text x="120.2794" y="574.1714" font-size="17.6409" fill="#d4edda">+ Strong consistency guarantee</ns0:text>
+  <ns0:text x="120.2794" y="607.0857" font-size="17.6409" fill="#dc3545">- Higher write latency (two writes per operation)</ns0:text>
+</ns0:svg>

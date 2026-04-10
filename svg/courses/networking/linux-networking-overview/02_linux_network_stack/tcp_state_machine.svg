@@ -1,78 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- CLOSED -->
-  <rect x="526" y="14" width="200" height="52" rx="7" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.5"/>
-  <text x="626" y="47" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">CLOSED</text>
-  <!-- LISTEN (passive open) -->
-  <line x1="570" y1="66" x2="286" y2="118" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="398" y="82" font-size="13" fill="#4a90e2">passive open</text>
-  <rect x="170" y="118" width="200" height="52" rx="7" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5"/>
-  <text x="270" y="151" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">LISTEN</text>
-  <!-- SYN_SENT (active open) -->
-  <line x1="683" y1="66" x2="968" y2="118" stroke="#28a745" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="854" y="82" font-size="13" fill="#28a745">active open / SYN</text>
-  <rect x="882" y="118" width="200" height="52" rx="7" fill="#d4edda" stroke="#28a745" stroke-width="2.5"/>
-  <text x="982" y="151" text-anchor="middle" font-size="16" font-weight="bold" fill="#28a745">SYN_SENT</text>
-  <!-- LISTEN -> SYN_RCVD -->
-  <line x1="270" y1="170" x2="270" y2="242" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="298" y="215" font-size="13" fill="#888888">SYN / SYN+ACK</text>
-  <rect x="170" y="242" width="200" height="52" rx="7" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5"/>
-  <text x="270" y="275" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">SYN_RCVD</text>
-  <!-- SYN_RCVD -> ESTABLISHED -->
-  <line x1="370" y1="275" x2="526" y2="356" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="412" y="330" font-size="13" fill="#888888">ACK</text>
-  <!-- SYN_SENT -> ESTABLISHED -->
-  <line x1="982" y1="170" x2="726" y2="356" stroke="#28a745" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="882" y="275" font-size="13" fill="#888888">SYN+ACK / ACK</text>
-  <!-- ESTABLISHED -->
-  <rect x="526" y="342" width="228" height="58" rx="7" fill="#d4edda" stroke="#28a745" stroke-width="2.5"/>
-  <text x="640" y="379" text-anchor="middle" font-size="17" font-weight="bold" fill="#28a745">ESTABLISHED</text>
-  <!-- ESTABLISHED -> FIN_WAIT_1 -->
-  <line x1="570" y1="400" x2="286" y2="464" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="398" y="422" font-size="13" fill="#dc3545">close / FIN</text>
-  <rect x="170" y="464" width="200" height="52" rx="7" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5"/>
-  <text x="270" y="497" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">FIN_WAIT_1</text>
-  <!-- ESTABLISHED -> CLOSE_WAIT -->
-  <line x1="712" y1="400" x2="968" y2="464" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="868" y="422" font-size="13" fill="#888888">FIN / ACK</text>
-  <rect x="882" y="464" width="200" height="52" rx="7" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5"/>
-  <text x="982" y="497" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">CLOSE_WAIT</text>
-  <!-- FIN_WAIT_1 -> FIN_WAIT_2 -->
-  <line x1="270" y1="516" x2="270" y2="572" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="298" y="552" font-size="13" fill="#888888">ACK</text>
-  <rect x="170" y="572" width="200" height="52" rx="7" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5"/>
-  <text x="270" y="605" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">FIN_WAIT_2</text>
-  <!-- CLOSE_WAIT -> LAST_ACK -->
-  <line x1="982" y1="516" x2="982" y2="572" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1010" y="552" font-size="13" fill="#888888">close / FIN</text>
-  <rect x="882" y="572" width="200" height="52" rx="7" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5"/>
-  <text x="982" y="605" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">LAST_ACK</text>
-  <!-- FIN_WAIT_2 -> TIME_WAIT -->
-  <line x1="370" y1="605" x2="526" y2="648" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="426" y="644" font-size="13" fill="#888888">FIN / ACK</text>
-  <!-- LAST_ACK -> TIME_WAIT -->
-  <line x1="882" y1="605" x2="726" y2="648" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="882" y="644" font-size="13" fill="#888888">ACK</text>
-  <!-- TIME_WAIT -->
-  <rect x="526" y="634" width="200" height="52" rx="7" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.5"/>
-  <text x="626" y="667" text-anchor="middle" font-size="14" font-weight="bold" fill="#333333">TIME_WAIT</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="467.5556" y="12.4444" width="177.7778" height="46.2222" rx="6.2222" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.2222" />
+  <ns0:text x="556.4444" y="41.7778" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#333333">CLOSED</ns0:text>
+  <ns0:line x1="506.6667" y1="58.6667" x2="254.2222" y2="104.8889" stroke="#4a90e2" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="353.7778" y="72.8889" font-size="11.5556" fill="#4a90e2">passive open</ns0:text>
+  <ns0:rect x="151.1111" y="104.8889" width="177.7778" height="46.2222" rx="6.2222" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2222" />
+  <ns0:text x="240" y="134.2222" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0">LISTEN</ns0:text>
+  <ns0:line x1="607.1111" y1="58.6667" x2="860.4444" y2="104.8889" stroke="#28a745" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="759.1111" y="72.8889" font-size="11.5556" fill="#28a745">active open / SYN</ns0:text>
+  <ns0:rect x="784" y="104.8889" width="177.7778" height="46.2222" rx="6.2222" fill="#d4edda" stroke="#28a745" stroke-width="2.2222" />
+  <ns0:text x="872.8889" y="134.2222" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#28a745">SYN_SENT</ns0:text>
+  <ns0:line x1="240" y1="151.1111" x2="240" y2="215.1111" stroke="#4a90e2" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="264.8889" y="191.1111" font-size="11.5556" fill="#888888">SYN / SYN+ACK</ns0:text>
+  <ns0:rect x="151.1111" y="215.1111" width="177.7778" height="46.2222" rx="6.2222" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2222" />
+  <ns0:text x="240" y="244.4444" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0">SYN_RCVD</ns0:text>
+  <ns0:line x1="328.8889" y1="244.4444" x2="467.5556" y2="316.4444" stroke="#4a90e2" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="366.2222" y="293.3333" font-size="11.5556" fill="#888888">ACK</ns0:text>
+  <ns0:line x1="872.8889" y1="151.1111" x2="645.3333" y2="316.4444" stroke="#28a745" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="784" y="244.4444" font-size="11.5556" fill="#888888">SYN+ACK / ACK</ns0:text>
+  <ns0:rect x="467.5556" y="304" width="202.6667" height="51.5556" rx="6.2222" fill="#d4edda" stroke="#28a745" stroke-width="2.2222" />
+  <ns0:text x="568.8889" y="336.8889" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#28a745">ESTABLISHED</ns0:text>
+  <ns0:line x1="506.6667" y1="355.5556" x2="254.2222" y2="412.4444" stroke="#dc3545" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="353.7778" y="375.1111" font-size="11.5556" fill="#dc3545">close / FIN</ns0:text>
+  <ns0:rect x="151.1111" y="412.4444" width="177.7778" height="46.2222" rx="6.2222" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2222" />
+  <ns0:text x="240" y="441.7778" text-anchor="middle" font-size="12.4444" font-weight="bold" fill="#dc3545">FIN_WAIT_1</ns0:text>
+  <ns0:line x1="632.8889" y1="355.5556" x2="860.4444" y2="412.4444" stroke="#dc3545" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="771.5556" y="375.1111" font-size="11.5556" fill="#888888">FIN / ACK</ns0:text>
+  <ns0:rect x="784" y="412.4444" width="177.7778" height="46.2222" rx="6.2222" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2222" />
+  <ns0:text x="872.8889" y="441.7778" text-anchor="middle" font-size="12.4444" font-weight="bold" fill="#856404">CLOSE_WAIT</ns0:text>
+  <ns0:line x1="240" y1="458.6667" x2="240" y2="508.4444" stroke="#dc3545" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="264.8889" y="490.6667" font-size="11.5556" fill="#888888">ACK</ns0:text>
+  <ns0:rect x="151.1111" y="508.4444" width="177.7778" height="46.2222" rx="6.2222" fill="#f8d7da" stroke="#dc3545" stroke-width="2.2222" />
+  <ns0:text x="240" y="537.7778" text-anchor="middle" font-size="12.4444" font-weight="bold" fill="#dc3545">FIN_WAIT_2</ns0:text>
+  <ns0:line x1="872.8889" y1="458.6667" x2="872.8889" y2="508.4444" stroke="#dc3545" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="897.7778" y="490.6667" font-size="11.5556" fill="#888888">close / FIN</ns0:text>
+  <ns0:rect x="784" y="508.4444" width="177.7778" height="46.2222" rx="6.2222" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2222" />
+  <ns0:text x="872.8889" y="537.7778" text-anchor="middle" font-size="12.4444" font-weight="bold" fill="#856404">LAST_ACK</ns0:text>
+  <ns0:line x1="328.8889" y1="537.7778" x2="467.5556" y2="576" stroke="#dc3545" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="378.6667" y="572.4444" font-size="11.5556" fill="#888888">FIN / ACK</ns0:text>
+  <ns0:line x1="784" y1="537.7778" x2="645.3333" y2="576" stroke="#dc3545" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="784" y="572.4444" font-size="11.5556" fill="#888888">ACK</ns0:text>
+  <ns0:rect x="467.5556" y="563.5556" width="177.7778" height="46.2222" rx="6.2222" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.2222" />
+  <ns0:text x="556.4444" y="592.8889" text-anchor="middle" font-size="12.4444" font-weight="bold" fill="#333333">TIME_WAIT</ns0:text>
+</ns0:svg>

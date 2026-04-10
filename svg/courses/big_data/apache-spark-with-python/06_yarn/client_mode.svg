@@ -1,62 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- CLIENT MACHINE boundary -->
-  <rect x="30" y="30" width="340" height="400" rx="10" fill="#f9fbe7" stroke="#cddc39" stroke-width="2" stroke-dasharray="8 4"/>
-  <text x="200" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#827717" font-weight="bold">Client Machine</text>
-  <!-- Driver (on client) -->
-  <rect x="65" y="80" width="270" height="80" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="200" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Driver</text>
-  <text x="200" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e3f2fd">SparkContext here</text>
-  <!-- SparkContext label -->
-  <rect x="65" y="210" width="270" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="200" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1565c0">SparkContext</text>
-  <!-- CLUSTER boundary -->
-  <rect x="420" y="30" width="840" height="590" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" stroke-dasharray="8 4"/>
-  <text x="840" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#0d47a1" font-weight="bold">YARN Cluster</text>
-  <!-- Resource Manager -->
-  <rect x="510" y="80" width="270" height="80" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="645" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e65100">Resource Manager</text>
-  <text x="645" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">schedules containers</text>
-  <!-- Node Manager + Executor 1 -->
-  <rect x="460" y="230" width="230" height="65" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="575" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Node Manager 1</text>
-  <rect x="460" y="320" width="230" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="575" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e65100">Executor 1</text>
-  <!-- Node Manager + Executor 2 -->
-  <rect x="770" y="230" width="230" height="65" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="885" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Node Manager 2</text>
-  <rect x="770" y="320" width="230" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="885" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e65100">Executor 2</text>
-  <!-- Arrows: Client to RM -->
-  <line x1="335" y1="290" x2="510" y2="290" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="423" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888888" font-style="italic">job submit</text>
-  <!-- RM to Node Managers -->
-  <line x1="600" y1="160" x2="545" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="690" y1="160" x2="840" y2="230" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Node Managers to Executors -->
-  <line x1="575" y1="295" x2="575" y2="320" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="885" y1="295" x2="885" y2="320" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Driver to Executors (task dispatch) -->
-  <line x1="335" y1="130" x2="510" y2="355" stroke="#1e88e5" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrow-accent)"/>
-  <line x1="335" y1="130" x2="770" y2="355" stroke="#1e88e5" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arrow-accent)"/>
-  <text x="460" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#1565c0" font-style="italic">Driver dispatches tasks directly to executors</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="26.6667" y="26.6667" width="302.2222" height="355.5556" rx="8.8889" fill="#f9fbe7" stroke="#cddc39" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" />
+  <ns0:text x="177.7778" y="51.5556" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4444" fill="#827717" font-weight="bold">Client Machine</ns0:text>
+  <ns0:rect x="57.7778" y="71.1111" width="240" height="71.1111" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="177.7778" y="104.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#ffffff">Driver</ns0:text>
+  <ns0:text x="177.7778" y="127.1111" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#e3f2fd">SparkContext here</ns0:text>
+  <ns0:rect x="57.7778" y="186.6667" width="240" height="62.2222" rx="7.1111" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="177.7778" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565c0">SparkContext</ns0:text>
+  <ns0:rect x="373.3333" y="26.6667" width="746.6667" height="524.4444" rx="8.8889" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" />
+  <ns0:text x="746.6667" y="51.5556" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4444" fill="#0d47a1" font-weight="bold">YARN Cluster</ns0:text>
+  <ns0:rect x="453.3333" y="71.1111" width="240" height="71.1111" rx="7.1111" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="573.3333" y="102.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e65100">Resource Manager</ns0:text>
+  <ns0:text x="573.3333" y="127.1111" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#888888" font-style="italic">schedules containers</ns0:text>
+  <ns0:rect x="408.8889" y="204.4444" width="204.4444" height="57.7778" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="511.1111" y="238.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2222" fill="#2e7d32">Node Manager 1</ns0:text>
+  <ns0:rect x="408.8889" y="284.4444" width="204.4444" height="53.3333" rx="7.1111" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="511.1111" y="316.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2222" fill="#e65100">Executor 1</ns0:text>
+  <ns0:rect x="684.4444" y="204.4444" width="204.4444" height="57.7778" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="786.6667" y="238.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2222" fill="#2e7d32">Node Manager 2</ns0:text>
+  <ns0:rect x="684.4444" y="284.4444" width="204.4444" height="53.3333" rx="7.1111" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="786.6667" y="316.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2222" fill="#e65100">Executor 2</ns0:text>
+  <ns0:line x1="297.7778" y1="257.7778" x2="453.3333" y2="257.7778" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="376" y="253.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.6667" fill="#888888" font-style="italic">job submit</ns0:text>
+  <ns0:line x1="533.3333" y1="142.2222" x2="484.4444" y2="204.4444" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="613.3333" y1="142.2222" x2="746.6667" y2="204.4444" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="511.1111" y1="262.2222" x2="511.1111" y2="284.4444" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="786.6667" y1="262.2222" x2="786.6667" y2="284.4444" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="297.7778" y1="115.5556" x2="453.3333" y2="315.5556" stroke="#1e88e5" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="297.7778" y1="115.5556" x2="684.4444" y2="315.5556" stroke="#1e88e5" stroke-width="1.3333" stroke-dasharray="5.3333 3.5556" marker-end="url(#arrow-accent)" />
+  <ns0:text x="408.8889" y="444.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#1565c0" font-style="italic">Driver dispatches tasks directly to executors</ns0:text>
+</ns0:svg>

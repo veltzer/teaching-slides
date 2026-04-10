@@ -1,96 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Pipeline header -->
-  <rect x="20" y="20" width="1240" height="48" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="52" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Ansible in CI/CD Pipeline</text>
-
-  <!-- Stage boxes (top row): Code -> Build -> Test -> Deploy -->
-  <!-- Code Commit -->
-  <rect x="30" y="100" width="240" height="140" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="150" y="152" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">Code</text>
-  <text x="150" y="184" text-anchor="middle" font-size="16" fill="#333">Commit / PR</text>
-  <text x="150" y="210" text-anchor="middle" font-size="13" fill="#777">git push</text>
-  <text x="150" y="228" text-anchor="middle" font-size="13" fill="#777">merge request</text>
-  <line x1="272" y1="170" x2="308" y2="170" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Build / Lint -->
-  <rect x="313" y="100" width="240" height="140" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="433" y="152" text-anchor="middle" font-size="20" font-weight="bold" fill="#1b5e20">Build</text>
-  <text x="433" y="184" text-anchor="middle" font-size="16" fill="#333">Lint + Syntax</text>
-  <text x="433" y="210" text-anchor="middle" font-size="13" fill="#777">ansible-lint</text>
-  <text x="433" y="228" text-anchor="middle" font-size="13" fill="#777">yamllint</text>
-  <line x1="555" y1="170" x2="591" y2="170" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Test -->
-  <rect x="596" y="100" width="240" height="140" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="716" y="152" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">Test</text>
-  <text x="716" y="184" text-anchor="middle" font-size="16" fill="#333">Molecule tests</text>
-  <text x="716" y="210" text-anchor="middle" font-size="13" fill="#777">unit + functional</text>
-  <text x="716" y="228" text-anchor="middle" font-size="13" fill="#777">molecule test</text>
-  <line x1="838" y1="170" x2="874" y2="170" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Deploy (Ansible) -->
-  <rect x="879" y="100" width="240" height="140" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="2" filter="url(#shadow)"/>
-  <text x="999" y="148" text-anchor="middle" font-size="20" font-weight="bold" fill="#880e4f">Deploy</text>
-  <text x="999" y="178" text-anchor="middle" font-size="16" fill="#333">(Ansible)</text>
-  <text x="999" y="208" text-anchor="middle" font-size="13" fill="#777">ansible-playbook</text>
-  <text x="999" y="226" text-anchor="middle" font-size="13" fill="#777">site.yml</text>
-
-  <!-- Deploy arrow down to Staging -->
-  <line x1="999" y1="242" x2="999" y2="318" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Staging environment -->
-  <rect x="839" y="326" width="320" height="130" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="999" y="378" text-anchor="middle" font-size="20" font-weight="bold" fill="#1b5e20">Staging</text>
-  <text x="999" y="410" text-anchor="middle" font-size="16" fill="#555">Environment</text>
-  <text x="999" y="440" text-anchor="middle" font-size="13" fill="#777">Integration tests run here</text>
-
-  <!-- Staging arrow down to Production -->
-  <line x1="999" y1="458" x2="999" y2="534" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-  <text x="1020" y="502" font-size="14" fill="#555">Approval / gate</text>
-
-  <!-- Production environment -->
-  <rect x="839" y="542" width="320" height="130" rx="8" fill="#c8e6c9" stroke="#43a047" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="999" y="594" text-anchor="middle" font-size="20" font-weight="bold" fill="#1b5e20">Production</text>
-  <text x="999" y="626" text-anchor="middle" font-size="16" fill="#555">Environment</text>
-  <text x="999" y="655" text-anchor="middle" font-size="13" fill="#777">ansible-playbook --limit prod</text>
-
-  <!-- Left side: CI details -->
-  <rect x="30" y="290" width="760" height="380" rx="8" fill="url(#grad-surface)" stroke="#bbbbbb" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="30" y="290" width="760" height="40" rx="8" fill="#eeeeee"/>
-  <rect x="30" y="310" width="760" height="20" rx="0" fill="#eeeeee"/>
-  <text x="410" y="316" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">CI Runner (GitHub Actions / GitLab CI / Jenkins)</text>
-
-  <text x="60" y="362" font-size="16" fill="#333" font-weight="600">Example .github/workflows/ansible.yml steps:</text>
-  <text x="60" y="394" font-family="monospace" font-size="14" fill="#1565c0">- name: Lint</text>
-  <text x="60" y="416" font-family="monospace" font-size="14" fill="#555">  run: ansible-lint roles/</text>
-  <text x="60" y="444" font-family="monospace" font-size="14" fill="#1565c0">- name: Molecule test</text>
-  <text x="60" y="466" font-family="monospace" font-size="14" fill="#555">  run: molecule test</text>
-  <text x="60" y="494" font-family="monospace" font-size="14" fill="#1565c0">- name: Deploy to staging</text>
-  <text x="60" y="516" font-family="monospace" font-size="14" fill="#555">  run: ansible-playbook site.yml -i inventory/staging</text>
-  <text x="60" y="544" font-family="monospace" font-size="14" fill="#1565c0">- name: Deploy to production</text>
-  <text x="60" y="566" font-family="monospace" font-size="14" fill="#555">  run: ansible-playbook site.yml -i inventory/prod</text>
-  <text x="60" y="594" font-family="monospace" font-size="14" fill="#888">  if: github.ref == 'refs/heads/main'</text>
-  <text x="60" y="622" font-family="monospace" font-size="14" fill="#888">  environment: production</text>
-  <text x="60" y="652" font-size="14" fill="#777">Secrets stored in GitHub Secrets / HashiCorp Vault / AWX credentials</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="42.6667" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="46.2222" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#ffffff">Ansible in CI/CD Pipeline</ns0:text>
+  <ns0:rect x="26.6667" y="88.8889" width="213.3333" height="124.4444" rx="7.1111" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="133.3333" y="135.1111" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1565c0">Code</ns0:text>
+  <ns0:text x="133.3333" y="163.5556" text-anchor="middle" font-size="14.2222" fill="#333">Commit / PR</ns0:text>
+  <ns0:text x="133.3333" y="186.6667" text-anchor="middle" font-size="11.5556" fill="#777">git push</ns0:text>
+  <ns0:text x="133.3333" y="202.6667" text-anchor="middle" font-size="11.5556" fill="#777">merge request</ns0:text>
+  <ns0:line x1="241.7778" y1="151.1111" x2="273.7778" y2="151.1111" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="278.2222" y="88.8889" width="213.3333" height="124.4444" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="384.8889" y="135.1111" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1b5e20">Build</ns0:text>
+  <ns0:text x="384.8889" y="163.5556" text-anchor="middle" font-size="14.2222" fill="#333">Lint + Syntax</ns0:text>
+  <ns0:text x="384.8889" y="186.6667" text-anchor="middle" font-size="11.5556" fill="#777">ansible-lint</ns0:text>
+  <ns0:text x="384.8889" y="202.6667" text-anchor="middle" font-size="11.5556" fill="#777">yamllint</ns0:text>
+  <ns0:line x1="493.3333" y1="151.1111" x2="525.3333" y2="151.1111" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="529.7778" y="88.8889" width="213.3333" height="124.4444" rx="7.1111" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="636.4444" y="135.1111" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#e65100">Test</ns0:text>
+  <ns0:text x="636.4444" y="163.5556" text-anchor="middle" font-size="14.2222" fill="#333">Molecule tests</ns0:text>
+  <ns0:text x="636.4444" y="186.6667" text-anchor="middle" font-size="11.5556" fill="#777">unit + functional</ns0:text>
+  <ns0:text x="636.4444" y="202.6667" text-anchor="middle" font-size="11.5556" fill="#777">molecule test</ns0:text>
+  <ns0:line x1="744.8889" y1="151.1111" x2="776.8889" y2="151.1111" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="781.3333" y="88.8889" width="213.3333" height="124.4444" rx="7.1111" fill="#fce4ec" stroke="#e91e63" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="888" y="131.5556" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#880e4f">Deploy</ns0:text>
+  <ns0:text x="888" y="158.2222" text-anchor="middle" font-size="14.2222" fill="#333">(Ansible)</ns0:text>
+  <ns0:text x="888" y="184.8889" text-anchor="middle" font-size="11.5556" fill="#777">ansible-playbook</ns0:text>
+  <ns0:text x="888" y="200.8889" text-anchor="middle" font-size="11.5556" fill="#777">site.yml</ns0:text>
+  <ns0:line x1="888" y1="215.1111" x2="888" y2="282.6667" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="745.7778" y="289.7778" width="284.4444" height="115.5556" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="888" y="336" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1b5e20">Staging</ns0:text>
+  <ns0:text x="888" y="364.4444" text-anchor="middle" font-size="14.2222" fill="#555">Environment</ns0:text>
+  <ns0:text x="888" y="391.1111" text-anchor="middle" font-size="11.5556" fill="#777">Integration tests run here</ns0:text>
+  <ns0:line x1="888" y1="407.1111" x2="888" y2="474.6667" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:text x="906.6667" y="446.2222" font-size="12.4444" fill="#555">Approval / gate</ns0:text>
+  <ns0:rect x="745.7778" y="481.7778" width="284.4444" height="115.5556" rx="7.1111" fill="#c8e6c9" stroke="#43a047" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="888" y="528" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1b5e20">Production</ns0:text>
+  <ns0:text x="888" y="556.4444" text-anchor="middle" font-size="14.2222" fill="#555">Environment</ns0:text>
+  <ns0:text x="888" y="582.2222" text-anchor="middle" font-size="11.5556" fill="#777">ansible-playbook --limit prod</ns0:text>
+  <ns0:rect x="26.6667" y="257.7778" width="675.5556" height="337.7778" rx="7.1111" fill="url(#grad-surface)" stroke="#bbbbbb" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="26.6667" y="257.7778" width="675.5556" height="35.5556" rx="7.1111" fill="#eeeeee" />
+  <ns0:rect x="26.6667" y="275.5556" width="675.5556" height="17.7778" rx="0" fill="#eeeeee" />
+  <ns0:text x="364.4444" y="280.8889" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#333">CI Runner (GitHub Actions / GitLab CI / Jenkins)</ns0:text>
+  <ns0:text x="53.3333" y="321.7778" font-size="14.2222" fill="#333" font-weight="600">Example .github/workflows/ansible.yml steps:</ns0:text>
+  <ns0:text x="53.3333" y="350.2222" font-family="monospace" font-size="12.4444" fill="#1565c0">- name: Lint</ns0:text>
+  <ns0:text x="53.3333" y="369.7778" font-family="monospace" font-size="12.4444" fill="#555">  run: ansible-lint roles/</ns0:text>
+  <ns0:text x="53.3333" y="394.6667" font-family="monospace" font-size="12.4444" fill="#1565c0">- name: Molecule test</ns0:text>
+  <ns0:text x="53.3333" y="414.2222" font-family="monospace" font-size="12.4444" fill="#555">  run: molecule test</ns0:text>
+  <ns0:text x="53.3333" y="439.1111" font-family="monospace" font-size="12.4444" fill="#1565c0">- name: Deploy to staging</ns0:text>
+  <ns0:text x="53.3333" y="458.6667" font-family="monospace" font-size="12.4444" fill="#555">  run: ansible-playbook site.yml -i inventory/staging</ns0:text>
+  <ns0:text x="53.3333" y="483.5556" font-family="monospace" font-size="12.4444" fill="#1565c0">- name: Deploy to production</ns0:text>
+  <ns0:text x="53.3333" y="503.1111" font-family="monospace" font-size="12.4444" fill="#555">  run: ansible-playbook site.yml -i inventory/prod</ns0:text>
+  <ns0:text x="53.3333" y="528" font-family="monospace" font-size="12.4444" fill="#888">  if: github.ref == 'refs/heads/main'</ns0:text>
+  <ns0:text x="53.3333" y="552.8889" font-family="monospace" font-size="12.4444" fill="#888">  environment: production</ns0:text>
+  <ns0:text x="53.3333" y="579.5556" font-size="12.4444" fill="#777">Secrets stored in GitHub Secrets / HashiCorp Vault / AWX credentials</ns0:text>
+</ns0:svg>

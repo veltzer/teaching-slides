@@ -1,67 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-  </defs>
-
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Array cells -->
-  <!-- [0] accent (ptr points here) -->
-  <rect x="80"  y="130" width="200" height="160" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="180" y="210" text-anchor="middle" font-family="monospace" font-size="38" font-weight="bold" fill="#ffffff">[0]</text>
-  <text x="180" y="246" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#bbdefb">0x1000</text>
-
-  <rect x="290" y="130" width="200" height="160" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="390" y="218" text-anchor="middle" font-family="monospace" font-size="38" font-weight="bold" fill="#212121">[1]</text>
-  <text x="390" y="246" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#9e9e9e">0x1004</text>
-
-  <!-- [2] accent (ptr+2 points here) -->
-  <rect x="500" y="130" width="200" height="160" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="600" y="210" text-anchor="middle" font-family="monospace" font-size="38" font-weight="bold" fill="#ffffff">[2]</text>
-  <text x="600" y="246" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#bbdefb">0x1008</text>
-
-  <rect x="710" y="130" width="200" height="160" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="810" y="218" text-anchor="middle" font-family="monospace" font-size="38" font-weight="bold" fill="#212121">[3]</text>
-  <text x="810" y="246" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#9e9e9e">0x100C</text>
-
-  <rect x="920" y="130" width="200" height="160" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1020" y="218" text-anchor="middle" font-family="monospace" font-size="38" font-weight="bold" fill="#212121">[4]</text>
-  <text x="1020" y="246" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#9e9e9e">0x1010</text>
-
-  <!-- ptr arrow (pointing to [0]) -->
-  <line x1="180" y1="360" x2="180" y2="298" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="180" y="400" text-anchor="middle" font-family="monospace" font-size="24" font-weight="bold" fill="#1565c0">ptr</text>
-  <text x="180" y="426" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">= &amp;arr[0]</text>
-
-  <!-- ptr+2 arrow (pointing to [2]) -->
-  <line x1="600" y1="360" x2="600" y2="298" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="600" y="400" text-anchor="middle" font-family="monospace" font-size="24" font-weight="bold" fill="#1565c0">ptr+2</text>
-  <text x="600" y="426" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">= &amp;arr[2]</text>
-
-  <!-- Stride annotation -->
-  <line x1="80" y1="490" x2="490" y2="490" stroke="#e0e0e0" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="285" y="520" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#555555">+2 × sizeof(int) = +8 bytes</text>
-
-  <!-- Note -->
-  <rect x="200" y="550" width="880" height="60" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="578" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">ptr + n  advances by  n × sizeof(*ptr)  bytes</text>
-  <text x="640" y="600" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Pointer arithmetic is type-aware — the compiler scales by element size automatically</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+    <ns0:marker id="arrow-white" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#ffffff" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="71.1111" y="115.5556" width="177.7778" height="142.2222" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="160" y="186.6667" text-anchor="middle" font-family="monospace" font-size="33.7778" font-weight="bold" fill="#ffffff">[0]</ns0:text>
+  <ns0:text x="160" y="218.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#bbdefb">0x1000</ns0:text>
+  <ns0:rect x="257.7778" y="115.5556" width="177.7778" height="142.2222" rx="5.3333" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="346.6667" y="193.7778" text-anchor="middle" font-family="monospace" font-size="33.7778" font-weight="bold" fill="#212121">[1]</ns0:text>
+  <ns0:text x="346.6667" y="218.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#9e9e9e">0x1004</ns0:text>
+  <ns0:rect x="444.4444" y="115.5556" width="177.7778" height="142.2222" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="533.3333" y="186.6667" text-anchor="middle" font-family="monospace" font-size="33.7778" font-weight="bold" fill="#ffffff">[2]</ns0:text>
+  <ns0:text x="533.3333" y="218.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#bbdefb">0x1008</ns0:text>
+  <ns0:rect x="631.1111" y="115.5556" width="177.7778" height="142.2222" rx="5.3333" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="720" y="193.7778" text-anchor="middle" font-family="monospace" font-size="33.7778" font-weight="bold" fill="#212121">[3]</ns0:text>
+  <ns0:text x="720" y="218.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#9e9e9e">0x100C</ns0:text>
+  <ns0:rect x="817.7778" y="115.5556" width="177.7778" height="142.2222" rx="5.3333" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="906.6667" y="193.7778" text-anchor="middle" font-family="monospace" font-size="33.7778" font-weight="bold" fill="#212121">[4]</ns0:text>
+  <ns0:text x="906.6667" y="218.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="#9e9e9e">0x1010</ns0:text>
+  <ns0:line x1="160" y1="320" x2="160" y2="264.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="160" y="355.5556" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="#1565c0">ptr</ns0:text>
+  <ns0:text x="160" y="378.6667" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#555555">= &amp;arr[0]</ns0:text>
+  <ns0:line x1="533.3333" y1="320" x2="533.3333" y2="264.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="533.3333" y="355.5556" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="#1565c0">ptr+2</ns0:text>
+  <ns0:text x="533.3333" y="378.6667" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#555555">= &amp;arr[2]</ns0:text>
+  <ns0:line x1="71.1111" y1="435.5556" x2="435.5556" y2="435.5556" stroke="#e0e0e0" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:text x="253.3333" y="462.2222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">+2 × sizeof(int) = +8 bytes</ns0:text>
+  <ns0:rect x="177.7778" y="488.8889" width="782.2222" height="53.3333" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="513.7778" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">ptr + n  advances by  n × sizeof(*ptr)  bytes</ns0:text>
+  <ns0:text x="568.8889" y="533.3333" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#555555">Pointer arithmetic is type-aware — the compiler scales by element size automatically</ns0:text>
+</ns0:svg>

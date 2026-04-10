@@ -1,64 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-  </defs>
-
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- RAII flow -->
-  <!-- Step 1: Constructor -->
-  <rect x="380" y="10" width="520" height="100" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="58" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Constructor</text>
-  <text x="640" y="88" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#bbdefb">Acquires the resource</text>
-
-  <line x1="640" y1="112" x2="640" y2="158" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Step 2: Object Lifetime -->
-  <rect x="380" y="160" width="520" height="100" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="208" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#212121">Object Lifetime</text>
-  <text x="640" y="238" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#555555">Resource is valid and usable</text>
-
-  <line x1="640" y1="262" x2="640" y2="308" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Step 3: Destructor -->
-  <rect x="380" y="310" width="520" height="100" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="358" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Destructor</text>
-  <text x="640" y="388" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#bbdefb">Releases the resource — always, even on exception</text>
-
-  <!-- Code example -->
-  <rect x="80" y="440" width="520" height="175" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="100" y="470" font-family="monospace" font-size="17" fill="#212121">class MutexGuard {</text>
-  <text x="120" y="496" font-family="monospace" font-size="17" fill="#1565c0">  MutexGuard(Mutex&amp; m) {</text>
-  <text x="140" y="520" font-family="monospace" font-size="17" fill="#555555">    m.lock();   // acquire</text>
-  <text x="120" y="544" font-family="monospace" font-size="17" fill="#555555">  }</text>
-  <text x="120" y="568" font-family="monospace" font-size="17" fill="#1565c0">  ~MutexGuard() {</text>
-  <text x="140" y="592" font-family="monospace" font-size="17" fill="#555555">    m.unlock(); // release</text>
-  <text x="100" y="608" font-family="monospace" font-size="17" fill="#212121">};</text>
-
-  <!-- Benefit callout -->
-  <rect x="680" y="440" width="520" height="175" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="940" y="478" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Why it matters in embedded:</text>
-  <text x="700" y="510" font-family="sans-serif" font-size="17" fill="#555555">• Mutex always unlocked on scope exit</text>
-  <text x="700" y="536" font-family="sans-serif" font-size="17" fill="#555555">• DMA buffer always returned to pool</text>
-  <text x="700" y="562" font-family="sans-serif" font-size="17" fill="#555555">• GPIO always restored to safe state</text>
-  <text x="700" y="588" font-family="sans-serif" font-size="17" fill="#555555">• No resource leak on error paths</text>
-  <text x="700" y="608" font-family="sans-serif" font-size="15" fill="#9e9e9e">  even without exceptions</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+    <ns0:marker id="arrow-white" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#ffffff" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="337.7778" y="8.8889" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="51.5556" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="#ffffff">Constructor</ns0:text>
+  <ns0:text x="568.8889" y="78.2222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">Acquires the resource</ns0:text>
+  <ns0:line x1="568.8889" y1="99.5556" x2="568.8889" y2="140.4444" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="337.7778" y="142.2222" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="184.8889" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="#212121">Object Lifetime</ns0:text>
+  <ns0:text x="568.8889" y="211.5556" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Resource is valid and usable</ns0:text>
+  <ns0:line x1="568.8889" y1="232.8889" x2="568.8889" y2="273.7778" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="337.7778" y="275.5556" width="462.2222" height="88.8889" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="318.2222" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="#ffffff">Destructor</ns0:text>
+  <ns0:text x="568.8889" y="344.8889" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">Releases the resource — always, even on exception</ns0:text>
+  <ns0:rect x="71.1111" y="391.1111" width="462.2222" height="155.5556" rx="5.3333" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="88.8889" y="417.7778" font-family="monospace" font-size="15.1111" fill="#212121">class MutexGuard {</ns0:text>
+  <ns0:text x="106.6667" y="440.8889" font-family="monospace" font-size="15.1111" fill="#1565c0">  MutexGuard(Mutex&amp; m) {</ns0:text>
+  <ns0:text x="124.4444" y="462.2222" font-family="monospace" font-size="15.1111" fill="#555555">    m.lock();   // acquire</ns0:text>
+  <ns0:text x="106.6667" y="483.5556" font-family="monospace" font-size="15.1111" fill="#555555">  }</ns0:text>
+  <ns0:text x="106.6667" y="504.8889" font-family="monospace" font-size="15.1111" fill="#1565c0">  ~MutexGuard() {</ns0:text>
+  <ns0:text x="124.4444" y="526.2222" font-family="monospace" font-size="15.1111" fill="#555555">    m.unlock(); // release</ns0:text>
+  <ns0:text x="88.8889" y="540.4444" font-family="monospace" font-size="15.1111" fill="#212121">};</ns0:text>
+  <ns0:rect x="604.4444" y="391.1111" width="462.2222" height="155.5556" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="835.5556" y="424.8889" text-anchor="middle" font-family="sans-serif" font-size="17.7778" font-weight="bold" fill="#1565c0">Why it matters in embedded:</ns0:text>
+  <ns0:text x="622.2222" y="453.3333" font-family="sans-serif" font-size="15.1111" fill="#555555">• Mutex always unlocked on scope exit</ns0:text>
+  <ns0:text x="622.2222" y="476.4444" font-family="sans-serif" font-size="15.1111" fill="#555555">• DMA buffer always returned to pool</ns0:text>
+  <ns0:text x="622.2222" y="499.5556" font-family="sans-serif" font-size="15.1111" fill="#555555">• GPIO always restored to safe state</ns0:text>
+  <ns0:text x="622.2222" y="522.6667" font-family="sans-serif" font-size="15.1111" fill="#555555">• No resource leak on error paths</ns0:text>
+  <ns0:text x="622.2222" y="540.4444" font-family="sans-serif" font-size="13.3333" fill="#9e9e9e">  even without exceptions</ns0:text>
+</ns0:svg>

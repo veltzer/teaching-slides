@@ -1,45 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Four operation boxes -->
-  <rect x="60" y="100" width="240" height="165" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="180" y="153" text-anchor="middle" font-size="19" fill="#0d47a1">ndo_open()</text>
-  <text x="180" y="198" text-anchor="middle" font-size="19" fill="#555555">ndo_stop()</text>
-  <rect x="354" y="100" width="260" height="165" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="484" y="153" text-anchor="middle" font-size="19" fill="#e65100">ndo_start_xmit()</text>
-  <text x="484" y="198" text-anchor="middle" font-size="17" fill="#555555">TX path</text>
-  <rect x="668" y="100" width="260" height="165" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="798" y="153" text-anchor="middle" font-size="19" fill="#1b5e20">netif_rx()</text>
-  <text x="798" y="198" text-anchor="middle" font-size="17" fill="#555555">RX path / NAPI</text>
-  <rect x="982" y="100" width="240" height="165" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="1102" y="153" text-anchor="middle" font-size="19" fill="#4a148c">ndo_get_stats()</text>
-  <text x="1102" y="198" text-anchor="middle" font-size="17" fill="#555555">ndo_do_ioctl()</text>
-  <!-- Arrows between boxes -->
-  <line x1="300" y1="182" x2="354" y2="182" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="614" y1="182" x2="668" y2="182" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="928" y1="182" x2="982" y2="182" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Central struct box -->
-  <rect x="256" y="380" width="768" height="130" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="458" text-anchor="middle" font-size="22" fill="#b71c1c">struct net_device_ops (function pointers)</text>
-  <!-- Arrow from ops to boxes area -->
-  <line x1="640" y1="265" x2="640" y2="380" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640" y="610" text-anchor="middle" font-size="18" fill="#777777">Registered via register_netdev() during driver init</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="53.3333" y="88.8889" width="213.3333" height="146.6667" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="160" y="136" text-anchor="middle" font-size="16.8889" fill="#0d47a1">ndo_open()</ns0:text>
+  <ns0:text x="160" y="176" text-anchor="middle" font-size="16.8889" fill="#555555">ndo_stop()</ns0:text>
+  <ns0:rect x="314.6667" y="88.8889" width="231.1111" height="146.6667" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="430.2222" y="136" text-anchor="middle" font-size="16.8889" fill="#e65100">ndo_start_xmit()</ns0:text>
+  <ns0:text x="430.2222" y="176" text-anchor="middle" font-size="15.1111" fill="#555555">TX path</ns0:text>
+  <ns0:rect x="593.7778" y="88.8889" width="231.1111" height="146.6667" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="709.3333" y="136" text-anchor="middle" font-size="16.8889" fill="#1b5e20">netif_rx()</ns0:text>
+  <ns0:text x="709.3333" y="176" text-anchor="middle" font-size="15.1111" fill="#555555">RX path / NAPI</ns0:text>
+  <ns0:rect x="872.8889" y="88.8889" width="213.3333" height="146.6667" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="979.5556" y="136" text-anchor="middle" font-size="16.8889" fill="#4a148c">ndo_get_stats()</ns0:text>
+  <ns0:text x="979.5556" y="176" text-anchor="middle" font-size="15.1111" fill="#555555">ndo_do_ioctl()</ns0:text>
+  <ns0:line x1="266.6667" y1="161.7778" x2="314.6667" y2="161.7778" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="545.7778" y1="161.7778" x2="593.7778" y2="161.7778" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="824.8889" y1="161.7778" x2="872.8889" y2="161.7778" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="227.5556" y="337.7778" width="682.6667" height="115.5556" fill="#ffebee" stroke="#c62828" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="407.1111" text-anchor="middle" font-size="19.5556" fill="#b71c1c">struct net_device_ops (function pointers)</ns0:text>
+  <ns0:line x1="568.8889" y1="235.5556" x2="568.8889" y2="337.7778" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="542.2222" text-anchor="middle" font-size="16" fill="#777777">Registered via register_netdev() during driver init</ns0:text>
+</ns0:svg>

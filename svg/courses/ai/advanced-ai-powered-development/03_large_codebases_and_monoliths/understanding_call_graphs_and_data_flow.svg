@@ -1,43 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arr" markerWidth="60.5918" markerHeight="185.1429" refX="54.5324" refY="92.5714" orient="auto">
-      <polygon points="0,264.4899 21.2071,0" fill="#2c3e50" />
-    </marker>
-  </defs>
-  <rect width="4847.3374" height="10579.5921" fill="#f8f9fa" />
-  <text x="2423.6687" y="925.7143" text-anchor="middle" font-size="121.1835" font-weight="bold" fill="#1a237e">Request Lifecycle: Call Graph and Data Flow</text>
-  <rect x="121.1835" y="2115.9185" width="787.6923" height="2115.9185" rx="60.5918" fill="#27ae60" stroke="#2c3e50" stroke-width="12.1184" />
-  <text x="515.0297" y="2909.3878" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">API</text>
-  <text x="515.0297" y="3438.3672" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">Handler</text>
-  <text x="515.0297" y="4020.245" text-anchor="middle" fill="#D5F5E3" font-size="66.6508">POST /orders</text>
-  <line x1="908.8758" y1="3173.8778" x2="1120.9467" y2="3173.8778" stroke="#2c3e50" stroke-width="12.1184" marker-end="url(#arr)" />
-  <rect x="1120.9467" y="2115.9185" width="787.6923" height="2115.9185" rx="60.5918" fill="#2980b9" stroke="#2c3e50" stroke-width="12.1184" />
-  <text x="1514.7929" y="2909.3878" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">Validator</text>
-  <text x="1514.7929" y="3438.3672" text-anchor="middle" fill="white" font-size="78.7692" />
-  <text x="1514.7929" y="4020.245" text-anchor="middle" fill="#D6EAF8" font-size="66.6508">input schema</text>
-  <line x1="1908.639" y1="3173.8778" x2="2120.7102" y2="3173.8778" stroke="#2c3e50" stroke-width="12.1184" marker-end="url(#arr)" />
-  <rect x="2120.7102" y="2115.9185" width="787.6923" height="2115.9185" rx="60.5918" fill="#8e44ad" stroke="#2c3e50" stroke-width="12.1184" />
-  <text x="2514.5563" y="2909.3878" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">Service</text>
-  <text x="2514.5563" y="3438.3672" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">Layer</text>
-  <text x="2514.5563" y="4020.245" text-anchor="middle" fill="#E8DAEF" font-size="66.6508">business logic</text>
-  <line x1="2908.4025" y1="3173.8778" x2="3120.4734" y2="3173.8778" stroke="#2c3e50" stroke-width="12.1184" marker-end="url(#arr)" />
-  <rect x="3120.4734" y="2115.9185" width="787.6923" height="2115.9185" rx="60.5918" fill="#d35400" stroke="#2c3e50" stroke-width="12.1184" />
-  <text x="3514.3195" y="2909.3878" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">Repository</text>
-  <text x="3514.3195" y="3438.3672" text-anchor="middle" fill="white" font-size="78.7692" />
-  <text x="3514.3195" y="4020.245" text-anchor="middle" fill="#FAD7A0" font-size="66.6508">data access</text>
-  <line x1="3908.1657" y1="3173.8778" x2="4120.2368" y2="3173.8778" stroke="#2c3e50" stroke-width="12.1184" marker-end="url(#arr)" />
-  <rect x="4120.2368" y="2115.9185" width="605.917" height="2115.9185" rx="60.5918" fill="#c0392b" stroke="#2c3e50" stroke-width="12.1184" />
-  <text x="4423.1953" y="2909.3878" text-anchor="middle" fill="white" font-size="84.8283" font-weight="bold">DB</text>
-  <text x="4423.1953" y="3438.3672" text-anchor="middle" fill="#FADBD8" font-size="66.6508">PostgreSQL</text>
-  <text x="4423.1953" y="4020.245" text-anchor="middle" fill="#FADBD8" font-size="66.6508">storage</text>
-  <rect x="2120.7102" y="5554.2857" width="787.6923" height="1586.9386" rx="48.4734" fill="#f39c12" stroke="#2c3e50" stroke-width="9.0887" />
-  <text x="2514.5563" y="6294.8571" text-anchor="middle" fill="white" font-size="78.7692" font-weight="bold">Event Bus</text>
-  <text x="2514.5563" y="6823.8365" text-anchor="middle" fill="#FDE68A" font-size="66.6508">order.created</text>
-  <line x1="2514.5563" y1="4231.8365" x2="2514.5563" y2="5554.2857" stroke="#f39c12" stroke-width="12.1184" stroke-dasharray="30.2959 18.1775" marker-end="url(#arr)" />
-  <text x="2666.0354" y="5078.2042" font-size="66.6508" fill="#f39c12">side effect</text>
-  <rect x="121.1835" y="7802.4492" width="4604.9703" height="2380.4079" rx="60.5918" fill="#E8EAF6" stroke="#3949AB" stroke-width="9.0887" />
-  <text x="2423.6687" y="8543.0206" text-anchor="middle" font-size="84.8283" font-weight="bold" fill="#3949AB">AI Navigation Prompts for Call Graphs</text>
-  <text x="242.3668" y="9204.245" font-size="78.7692" fill="#333">▶ "Trace the request from POST /orders to the database write"</text>
-  <text x="242.3668" y="9733.2243" font-size="78.7692" fill="#333">▶ "Identify all shared mutable state and side effects in OrderService"</text>
-  <text x="242.3668" y="10262.2042" font-size="78.7692" fill="#333">▶ "Map the lifecycle of an order across all service boundaries"</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="3.6654" markerHeight="11.2" refX="3.2989" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 1.2829,0" fill="#2c3e50" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="293.234" height="640" fill="#f8f9fa" />
+  <ns0:text x="146.617" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Request Lifecycle: Call Graph and Data Flow</ns0:text>
+  <ns0:rect x="7.3309" y="128" width="47.6505" height="128" rx="3.6654" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7331" />
+  <ns0:text x="31.1561" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">API</ns0:text>
+  <ns0:text x="31.1561" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Handler</ns0:text>
+  <ns0:text x="31.1561" y="243.2" text-anchor="middle" fill="#D5F5E3" font-size="10">POST /orders</ns0:text>
+  <ns0:line x1="54.9814" y1="192" x2="67.8104" y2="192" stroke="#2c3e50" stroke-width="0.7331" marker-end="url(#arr)" />
+  <ns0:rect x="67.8104" y="128" width="47.6505" height="128" rx="3.6654" fill="#2980b9" stroke="#2c3e50" stroke-width="0.7331" />
+  <ns0:text x="91.6356" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Validator</ns0:text>
+  <ns0:text x="91.6356" y="208" text-anchor="middle" fill="white" font-size="10" />
+  <ns0:text x="91.6356" y="243.2" text-anchor="middle" fill="#D6EAF8" font-size="10">input schema</ns0:text>
+  <ns0:line x1="115.4609" y1="192" x2="128.2899" y2="192" stroke="#2c3e50" stroke-width="0.7331" marker-end="url(#arr)" />
+  <ns0:rect x="128.2899" y="128" width="47.6505" height="128" rx="3.6654" fill="#8e44ad" stroke="#2c3e50" stroke-width="0.7331" />
+  <ns0:text x="152.1151" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Service</ns0:text>
+  <ns0:text x="152.1151" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Layer</ns0:text>
+  <ns0:text x="152.1151" y="243.2" text-anchor="middle" fill="#E8DAEF" font-size="10">business logic</ns0:text>
+  <ns0:line x1="175.9404" y1="192" x2="188.7694" y2="192" stroke="#2c3e50" stroke-width="0.7331" marker-end="url(#arr)" />
+  <ns0:rect x="188.7694" y="128" width="47.6505" height="128" rx="3.6654" fill="#d35400" stroke="#2c3e50" stroke-width="0.7331" />
+  <ns0:text x="212.5946" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Repository</ns0:text>
+  <ns0:text x="212.5946" y="208" text-anchor="middle" fill="white" font-size="10" />
+  <ns0:text x="212.5946" y="243.2" text-anchor="middle" fill="#FAD7A0" font-size="10">data access</ns0:text>
+  <ns0:line x1="236.4199" y1="192" x2="249.2489" y2="192" stroke="#2c3e50" stroke-width="0.7331" marker-end="url(#arr)" />
+  <ns0:rect x="249.2489" y="128" width="36.6542" height="128" rx="3.6654" fill="#c0392b" stroke="#2c3e50" stroke-width="0.7331" />
+  <ns0:text x="267.576" y="176" text-anchor="middle" fill="white" font-size="10" font-weight="bold">DB</ns0:text>
+  <ns0:text x="267.576" y="208" text-anchor="middle" fill="#FADBD8" font-size="10">PostgreSQL</ns0:text>
+  <ns0:text x="267.576" y="243.2" text-anchor="middle" fill="#FADBD8" font-size="10">storage</ns0:text>
+  <ns0:rect x="128.2899" y="336" width="47.6505" height="96" rx="2.9323" fill="#f39c12" stroke="#2c3e50" stroke-width="0.5498" />
+  <ns0:text x="152.1151" y="380.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Event Bus</ns0:text>
+  <ns0:text x="152.1151" y="412.8" text-anchor="middle" fill="#FDE68A" font-size="10">order.created</ns0:text>
+  <ns0:line x1="152.1151" y1="256" x2="152.1151" y2="336" stroke="#f39c12" stroke-width="0.7331" stroke-dasharray="1.8327 1.0996" marker-end="url(#arr)" />
+  <ns0:text x="161.2787" y="307.2" font-size="10" fill="#f39c12">side effect</ns0:text>
+  <ns0:rect x="7.3309" y="472" width="278.5723" height="144" rx="3.6654" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.5498" />
+  <ns0:text x="146.617" y="516.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">AI Navigation Prompts for Call Graphs</ns0:text>
+  <ns0:text x="14.6617" y="556.8" font-size="10" fill="#333">▶ "Trace the request from POST /orders to the database write"</ns0:text>
+  <ns0:text x="14.6617" y="588.8" font-size="10" fill="#333">▶ "Identify all shared mutable state and side effects in OrderService"</ns0:text>
+  <ns0:text x="14.6617" y="620.8" font-size="10" fill="#333">▶ "Map the lifecycle of an order across all service boundaries"</ns0:text>
+</ns0:svg>

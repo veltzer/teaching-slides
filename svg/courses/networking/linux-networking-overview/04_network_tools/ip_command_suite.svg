@@ -1,54 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Root ip box -->
-  <rect x="480" y="80" width="320" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="3" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="143" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">ip</text>
-  <!-- Sub-command boxes -->
-  <rect x="42" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="140" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip addr</text>
-  <rect x="256" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="354" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip link</text>
-  <rect x="470" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="568" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip route</text>
-  <rect x="684" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="782" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip neigh</text>
-  <rect x="898" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="996" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip netns</text>
-  <!-- Lines from root to sub-boxes -->
-  <line x1="640" y1="180" x2="140" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
-  <line x1="640" y1="180" x2="354" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
-  <line x1="640" y1="180" x2="568" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
-  <line x1="640" y1="180" x2="782" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
-  <line x1="640" y1="180" x2="996" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
-  <!-- Descriptions -->
-  <text x="140" y="394" text-anchor="middle" font-size="16" fill="#777777">show/add/del</text>
-  <text x="140" y="420" text-anchor="middle" font-size="16" fill="#777777">IP addresses</text>
-  <text x="354" y="394" text-anchor="middle" font-size="16" fill="#777777">set up/down</text>
-  <text x="354" y="420" text-anchor="middle" font-size="16" fill="#777777">MTU, flags</text>
-  <text x="568" y="394" text-anchor="middle" font-size="16" fill="#777777">show/add/del</text>
-  <text x="568" y="420" text-anchor="middle" font-size="16" fill="#777777">routing table</text>
-  <text x="782" y="394" text-anchor="middle" font-size="16" fill="#777777">ARP/NDP</text>
-  <text x="782" y="420" text-anchor="middle" font-size="16" fill="#777777">neighbors</text>
-  <text x="996" y="394" text-anchor="middle" font-size="16" fill="#777777">network</text>
-  <text x="996" y="420" text-anchor="middle" font-size="16" fill="#777777">namespaces</text>
-  <text x="640" y="570" text-anchor="middle" font-size="18" fill="#777777">Replaces: ifconfig, route, arp, netstat</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="426.6667" y="71.1111" width="284.4444" height="88.8889" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2.6667" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="127.1111" text-anchor="middle" font-size="26.6667" font-weight="bold" fill="#ffffff">ip</ns0:text>
+  <ns0:rect x="37.3333" y="222.2222" width="174.2222" height="88.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="124.4444" y="273.7778" text-anchor="middle" font-size="16.8889" fill="#0d47a1">ip addr</ns0:text>
+  <ns0:rect x="227.5556" y="222.2222" width="174.2222" height="88.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="314.6667" y="273.7778" text-anchor="middle" font-size="16.8889" fill="#0d47a1">ip link</ns0:text>
+  <ns0:rect x="417.7778" y="222.2222" width="174.2222" height="88.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="504.8889" y="273.7778" text-anchor="middle" font-size="16.8889" fill="#0d47a1">ip route</ns0:text>
+  <ns0:rect x="608" y="222.2222" width="174.2222" height="88.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="695.1111" y="273.7778" text-anchor="middle" font-size="16.8889" fill="#0d47a1">ip neigh</ns0:text>
+  <ns0:rect x="798.2222" y="222.2222" width="174.2222" height="88.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="885.3333" y="273.7778" text-anchor="middle" font-size="16.8889" fill="#0d47a1">ip netns</ns0:text>
+  <ns0:line x1="568.8889" y1="160" x2="124.4444" y2="222.2222" stroke="#aaaaaa" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="160" x2="314.6667" y2="222.2222" stroke="#aaaaaa" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="160" x2="504.8889" y2="222.2222" stroke="#aaaaaa" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="160" x2="695.1111" y2="222.2222" stroke="#aaaaaa" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="160" x2="885.3333" y2="222.2222" stroke="#aaaaaa" stroke-width="1.3333" />
+  <ns0:text x="124.4444" y="350.2222" text-anchor="middle" font-size="14.2222" fill="#777777">show/add/del</ns0:text>
+  <ns0:text x="124.4444" y="373.3333" text-anchor="middle" font-size="14.2222" fill="#777777">IP addresses</ns0:text>
+  <ns0:text x="314.6667" y="350.2222" text-anchor="middle" font-size="14.2222" fill="#777777">set up/down</ns0:text>
+  <ns0:text x="314.6667" y="373.3333" text-anchor="middle" font-size="14.2222" fill="#777777">MTU, flags</ns0:text>
+  <ns0:text x="504.8889" y="350.2222" text-anchor="middle" font-size="14.2222" fill="#777777">show/add/del</ns0:text>
+  <ns0:text x="504.8889" y="373.3333" text-anchor="middle" font-size="14.2222" fill="#777777">routing table</ns0:text>
+  <ns0:text x="695.1111" y="350.2222" text-anchor="middle" font-size="14.2222" fill="#777777">ARP/NDP</ns0:text>
+  <ns0:text x="695.1111" y="373.3333" text-anchor="middle" font-size="14.2222" fill="#777777">neighbors</ns0:text>
+  <ns0:text x="885.3333" y="350.2222" text-anchor="middle" font-size="14.2222" fill="#777777">network</ns0:text>
+  <ns0:text x="885.3333" y="373.3333" text-anchor="middle" font-size="14.2222" fill="#777777">namespaces</ns0:text>
+  <ns0:text x="568.8889" y="506.6667" text-anchor="middle" font-size="16" fill="#777777">Replaces: ifconfig, route, arp, netstat</ns0:text>
+</ns0:svg>

@@ -1,72 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Five boot stage boxes -->
-  <rect x="20" y="190" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="20" y="190" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
-  <rect x="20" y="230" width="210" height="10" fill="url(#grad-accent)"/>
-  <text x="125" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">BIOS/UEFI</text>
-  <text x="125" y="295" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Power-On</text>
-  <text x="125" y="320" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Self-Test</text>
-  <text x="125" y="345" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Find bootable</text>
-  <text x="125" y="370" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">device</text>
-
-  <line x1="230" y1="340" x2="258" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <rect x="260" y="190" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="260" y="190" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
-  <rect x="260" y="230" width="210" height="10" fill="url(#grad-accent)"/>
-  <text x="365" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">GRUB</text>
-  <text x="365" y="295" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Boot menu</text>
-  <text x="365" y="320" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Load kernel</text>
-  <text x="365" y="345" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Pass params</text>
-
-  <line x1="470" y1="340" x2="498" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <rect x="500" y="190" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="500" y="190" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
-  <rect x="500" y="230" width="210" height="10" fill="url(#grad-accent)"/>
-  <text x="605" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Kernel</text>
-  <text x="605" y="295" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">vmlinuz</text>
-  <text x="605" y="320" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Hardware init</text>
-  <text x="605" y="345" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Mount rootfs</text>
-
-  <line x1="710" y1="340" x2="738" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <rect x="740" y="190" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="740" y="190" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
-  <rect x="740" y="230" width="210" height="10" fill="url(#grad-accent)"/>
-  <text x="845" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">initramfs</text>
-  <text x="845" y="295" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Temp rootfs</text>
-  <text x="845" y="320" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Load drivers</text>
-  <text x="845" y="345" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Mount real root</text>
-
-  <line x1="950" y1="340" x2="978" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <rect x="980" y="190" width="275" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="980" y="190" width="275" height="50" fill="url(#grad-accent)" rx="10"/>
-  <rect x="980" y="230" width="275" height="10" fill="url(#grad-accent)"/>
-  <text x="1117" y="222" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">systemd</text>
-  <text x="1117" y="295" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">PID 1</text>
-  <text x="1117" y="320" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Start services</text>
-  <text x="1117" y="345" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Reach target</text>
-  <text x="1117" y="370" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Login prompt</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="168.8889" width="186.6667" height="266.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="168.8889" width="186.6667" height="44.4444" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="17.7778" y="204.4444" width="186.6667" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="111.1111" y="197.3333" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">BIOS/UEFI</ns0:text>
+  <ns0:text x="111.1111" y="262.2222" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Power-On</ns0:text>
+  <ns0:text x="111.1111" y="284.4444" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Self-Test</ns0:text>
+  <ns0:text x="111.1111" y="306.6667" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Find bootable</ns0:text>
+  <ns0:text x="111.1111" y="328.8889" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">device</ns0:text>
+  <ns0:line x1="204.4444" y1="302.2222" x2="229.3333" y2="302.2222" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="231.1111" y="168.8889" width="186.6667" height="266.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="231.1111" y="168.8889" width="186.6667" height="44.4444" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="231.1111" y="204.4444" width="186.6667" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="324.4444" y="197.3333" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">GRUB</ns0:text>
+  <ns0:text x="324.4444" y="262.2222" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Boot menu</ns0:text>
+  <ns0:text x="324.4444" y="284.4444" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Load kernel</ns0:text>
+  <ns0:text x="324.4444" y="306.6667" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Pass params</ns0:text>
+  <ns0:line x1="417.7778" y1="302.2222" x2="442.6667" y2="302.2222" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="444.4444" y="168.8889" width="186.6667" height="266.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="444.4444" y="168.8889" width="186.6667" height="44.4444" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="444.4444" y="204.4444" width="186.6667" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="537.7778" y="197.3333" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Kernel</ns0:text>
+  <ns0:text x="537.7778" y="262.2222" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">vmlinuz</ns0:text>
+  <ns0:text x="537.7778" y="284.4444" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Hardware init</ns0:text>
+  <ns0:text x="537.7778" y="306.6667" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Mount rootfs</ns0:text>
+  <ns0:line x1="631.1111" y1="302.2222" x2="656" y2="302.2222" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="657.7778" y="168.8889" width="186.6667" height="266.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="657.7778" y="168.8889" width="186.6667" height="44.4444" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="657.7778" y="204.4444" width="186.6667" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="751.1111" y="197.3333" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">initramfs</ns0:text>
+  <ns0:text x="751.1111" y="262.2222" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Temp rootfs</ns0:text>
+  <ns0:text x="751.1111" y="284.4444" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Load drivers</ns0:text>
+  <ns0:text x="751.1111" y="306.6667" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Mount real root</ns0:text>
+  <ns0:line x1="844.4444" y1="302.2222" x2="869.3333" y2="302.2222" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="871.1111" y="168.8889" width="244.4444" height="266.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="871.1111" y="168.8889" width="244.4444" height="44.4444" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="871.1111" y="204.4444" width="244.4444" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="992.8889" y="197.3333" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">systemd</ns0:text>
+  <ns0:text x="992.8889" y="262.2222" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">PID 1</ns0:text>
+  <ns0:text x="992.8889" y="284.4444" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Start services</ns0:text>
+  <ns0:text x="992.8889" y="306.6667" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Reach target</ns0:text>
+  <ns0:text x="992.8889" y="328.8889" text-anchor="middle" font-size="12.4444" fill="#333333" font-family="sans-serif">Login prompt</ns0:text>
+</ns0:svg>

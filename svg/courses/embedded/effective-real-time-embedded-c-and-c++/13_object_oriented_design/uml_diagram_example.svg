@@ -1,67 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="inherit" markerWidth="14" markerHeight="14" refX="1" refY="7" orient="auto">
-      <polygon points="1,1 13,7 1,13" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
-    </marker>
-  </defs>
-
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Base class -->
-  <rect x="440" y="30" width="400" height="180" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <!-- header stripe -->
-  <rect x="440" y="30" width="400" height="44" rx="6" fill="#0d47a1"/>
-  <rect x="440" y="68" width="400" height="6" fill="#0d47a1"/>
-  <text x="640" y="60" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#ffffff">Sensor</text>
-  <text x="640" y="96" text-anchor="middle" font-family="monospace" font-size="16" fill="#bbdefb">+ id : uint8_t</text>
-  <text x="640" y="120" text-anchor="middle" font-family="monospace" font-size="16" fill="#bbdefb">+ read() : float  «virtual»</text>
-  <text x="640" y="144" text-anchor="middle" font-family="monospace" font-size="16" fill="#bbdefb">+ calibrate() : void</text>
-  <text x="640" y="170" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#90caf9" font-style="italic">«abstract base»</text>
-  <text x="640" y="192" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#90caf9">interface: read(), calibrate()</text>
-
-  <!-- Derived class 1: TempSensor -->
-  <line x1="500" y1="212" x2="300" y2="300" stroke="#555555" stroke-width="2" marker-end="url(#inherit)"/>
-  <rect x="80" y="302" width="440" height="180" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="80" y="302" width="440" height="44" rx="6" fill="#e3f2fd"/>
-  <rect x="80" y="340" width="440" height="6" fill="#e3f2fd"/>
-  <text x="300" y="332" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#1565c0">TempSensor</text>
-  <text x="300" y="366" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">- raw_adc : uint16_t</text>
-  <text x="300" y="390" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">- offset : float</text>
-  <text x="300" y="414" text-anchor="middle" font-family="monospace" font-size="16" fill="#1565c0">+ read() : float  «override»</text>
-  <text x="300" y="438" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">+ set_offset(f) : void</text>
-  <text x="300" y="464" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">returns °C from ADC reading</text>
-
-  <!-- Derived class 2: PressureSensor -->
-  <line x1="780" y1="212" x2="980" y2="300" stroke="#555555" stroke-width="2" marker-end="url(#inherit)"/>
-  <rect x="760" y="302" width="440" height="180" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="760" y="302" width="440" height="44" rx="6" fill="#f2f2f2"/>
-  <rect x="760" y="340" width="440" height="6" fill="#f2f2f2"/>
-  <text x="980" y="332" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#212121">PressureSensor</text>
-  <text x="980" y="366" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">- spi_port : SPI_t*</text>
-  <text x="980" y="390" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">- range : float</text>
-  <text x="980" y="414" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">+ read() : float  «override»</text>
-  <text x="980" y="438" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">+ set_range(f) : void</text>
-  <text x="980" y="464" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">returns hPa via SPI read</text>
-
-  <!-- Legend for inheritance arrow -->
-  <line x1="120" y1="550" x2="200" y2="550" stroke="#555555" stroke-width="2" marker-end="url(#inherit)"/>
-  <text x="220" y="556" font-family="sans-serif" font-size="16" fill="#555555">Inheritance (IS-A)</text>
-
-  <text x="640" y="620" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">In embedded C: simulate with function pointer tables (vtables) inside structs</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+    <ns0:marker id="inherit" markerWidth="12.4444" markerHeight="12.4444" refX="0.8889" refY="6.2222" orient="auto">
+      <ns0:polygon points="0.8889,0.8889 11.5556,6.2222 0.8889,11.5556" fill="#ffffff" stroke="#555555" stroke-width="1.3333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="391.1111" y="26.6667" width="355.5556" height="160" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:rect x="391.1111" y="26.6667" width="355.5556" height="39.1111" rx="5.3333" fill="#0d47a1" />
+  <ns0:rect x="391.1111" y="60.4444" width="355.5556" height="5.3333" fill="#0d47a1" />
+  <ns0:text x="568.8889" y="53.3333" text-anchor="middle" font-family="monospace" font-size="19.5556" font-weight="bold" fill="#ffffff">Sensor</ns0:text>
+  <ns0:text x="568.8889" y="85.3333" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#bbdefb">+ id : uint8_t</ns0:text>
+  <ns0:text x="568.8889" y="106.6667" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#bbdefb">+ read() : float  «virtual»</ns0:text>
+  <ns0:text x="568.8889" y="128" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#bbdefb">+ calibrate() : void</ns0:text>
+  <ns0:text x="568.8889" y="151.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#90caf9" font-style="italic">«abstract base»</ns0:text>
+  <ns0:text x="568.8889" y="170.6667" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#90caf9">interface: read(), calibrate()</ns0:text>
+  <ns0:line x1="444.4444" y1="188.4444" x2="266.6667" y2="266.6667" stroke="#555555" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <ns0:rect x="71.1111" y="268.4444" width="391.1111" height="160" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="71.1111" y="268.4444" width="391.1111" height="39.1111" rx="5.3333" fill="#e3f2fd" />
+  <ns0:rect x="71.1111" y="302.2222" width="391.1111" height="5.3333" fill="#e3f2fd" />
+  <ns0:text x="266.6667" y="295.1111" text-anchor="middle" font-family="monospace" font-size="19.5556" font-weight="bold" fill="#1565c0">TempSensor</ns0:text>
+  <ns0:text x="266.6667" y="325.3333" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">- raw_adc : uint16_t</ns0:text>
+  <ns0:text x="266.6667" y="346.6667" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">- offset : float</ns0:text>
+  <ns0:text x="266.6667" y="368" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#1565c0">+ read() : float  «override»</ns0:text>
+  <ns0:text x="266.6667" y="389.3333" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">+ set_offset(f) : void</ns0:text>
+  <ns0:text x="266.6667" y="412.4444" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#9e9e9e">returns °C from ADC reading</ns0:text>
+  <ns0:line x1="693.3333" y1="188.4444" x2="871.1111" y2="266.6667" stroke="#555555" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <ns0:rect x="675.5556" y="268.4444" width="391.1111" height="160" rx="5.3333" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:rect x="675.5556" y="268.4444" width="391.1111" height="39.1111" rx="5.3333" fill="#f2f2f2" />
+  <ns0:rect x="675.5556" y="302.2222" width="391.1111" height="5.3333" fill="#f2f2f2" />
+  <ns0:text x="871.1111" y="295.1111" text-anchor="middle" font-family="monospace" font-size="19.5556" font-weight="bold" fill="#212121">PressureSensor</ns0:text>
+  <ns0:text x="871.1111" y="325.3333" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">- spi_port : SPI_t*</ns0:text>
+  <ns0:text x="871.1111" y="346.6667" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">- range : float</ns0:text>
+  <ns0:text x="871.1111" y="368" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">+ read() : float  «override»</ns0:text>
+  <ns0:text x="871.1111" y="389.3333" text-anchor="middle" font-family="monospace" font-size="14.2222" fill="#555555">+ set_range(f) : void</ns0:text>
+  <ns0:text x="871.1111" y="412.4444" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="#9e9e9e">returns hPa via SPI read</ns0:text>
+  <ns0:line x1="106.6667" y1="488.8889" x2="177.7778" y2="488.8889" stroke="#555555" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <ns0:text x="195.5556" y="494.2222" font-family="sans-serif" font-size="14.2222" fill="#555555">Inheritance (IS-A)</ns0:text>
+  <ns0:text x="568.8889" y="551.1111" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#9e9e9e">In embedded C: simulate with function pointer tables (vtables) inside structs</ns0:text>
+</ns0:svg>

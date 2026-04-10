@@ -1,50 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
-  <defs>
-    <marker id="arrowhead" markerWidth="14.2222" markerHeight="12.6" refX="14.2222" refY="6.3" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="14.2222" markerHeight="12.6" refX="14.2222" refY="6.3" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="14.2222" markerHeight="12.6" refX="14.2222" refY="6.3" orient="auto">
-      <polygon points="0,18 4.9778,0" fill="#dc3545" />
-    </marker>
-  </defs>
-  <text x="640" y="45" text-anchor="middle" font-size="22.7556" font-weight="bold" fill="#333">Saga Pattern - Distributed Transactions</text>
-  <text x="640" y="99" text-anchor="middle" font-size="18.4889" fill="#28a745" font-weight="bold">Success Path</text>
-  <ellipse cx="85.3333" cy="180" rx="64" ry="28.4444" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8444" />
-  <text x="85.3333" y="189" text-anchor="middle" font-size="17.0667" fill="#333">Start</text>
-  <rect x="213.3333" y="144" width="184.8889" height="72" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
-  <text x="305.7778" y="189" text-anchor="middle" fill="#333">Service A Txn</text>
-  <rect x="483.5556" y="144" width="184.8889" height="72" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
-  <text x="576" y="189" text-anchor="middle" fill="#333">Service B Txn</text>
-  <rect x="753.7778" y="144" width="184.8889" height="72" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
-  <text x="846.2222" y="189" text-anchor="middle" fill="#333">Service C Txn</text>
-  <ellipse cx="1052.4444" cy="180" rx="71.1111" ry="28.4444" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
-  <text x="1052.4444" y="189" text-anchor="middle" font-size="17.0667" fill="#333">Complete</text>
-  <line x1="149.3333" y1="180" x2="210.4889" y2="180" stroke="#28a745" stroke-width="2.8444" marker-end="url(#arrowhead-green)" />
-  <line x1="398.2222" y1="180" x2="480.7111" y2="180" stroke="#28a745" stroke-width="2.8444" marker-end="url(#arrowhead-green)" />
-  <text x="440.8889" y="167.4" text-anchor="middle" font-size="14.2222" fill="#28a745">Success</text>
-  <line x1="668.4444" y1="180" x2="750.9333" y2="180" stroke="#28a745" stroke-width="2.8444" marker-end="url(#arrowhead-green)" />
-  <text x="711.1111" y="167.4" text-anchor="middle" font-size="14.2222" fill="#28a745">Success</text>
-  <line x1="938.6667" y1="180" x2="978.4889" y2="180" stroke="#28a745" stroke-width="2.8444" marker-end="url(#arrowhead-green)" />
-  <text x="960" y="167.4" text-anchor="middle" font-size="14.2222" fill="#28a745">Success</text>
-  <text x="640" y="342" text-anchor="middle" font-size="18.4889" fill="#dc3545" font-weight="bold">Compensation Path (on failure)</text>
-  <rect x="753.7778" y="378" width="184.8889" height="72" rx="7.1111" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
-  <text x="846.2222" y="423" text-anchor="middle" fill="#333">Compensate C</text>
-  <rect x="483.5556" y="378" width="184.8889" height="72" rx="7.1111" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
-  <text x="576" y="423" text-anchor="middle" fill="#333">Compensate B</text>
-  <rect x="213.3333" y="378" width="184.8889" height="72" rx="7.1111" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
-  <text x="305.7778" y="423" text-anchor="middle" fill="#333">Compensate A</text>
-  <ellipse cx="85.3333" cy="414" rx="64" ry="28.4444" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
-  <text x="85.3333" y="423" text-anchor="middle" font-size="17.0667" fill="#333">Failed</text>
-  <line x1="846.2222" y1="216" x2="846.2222" y2="374.4" stroke="#dc3545" stroke-width="2.8444" marker-end="url(#arrowhead-red)" />
-  <text x="867.5556" y="306" text-anchor="start" font-size="14.2222" fill="#dc3545">Failure</text>
-  <line x1="753.7778" y1="414" x2="671.2889" y2="414" stroke="#dc3545" stroke-width="2.8444" marker-end="url(#arrowhead-red)" />
-  <line x1="483.5556" y1="414" x2="401.0667" y2="414" stroke="#dc3545" stroke-width="2.8444" marker-end="url(#arrowhead-red)" />
-  <line x1="213.3333" y1="414" x2="152.1778" y2="414" stroke="#dc3545" stroke-width="2.8444" marker-end="url(#arrowhead-red)" />
-  <rect x="42.6667" y="522" width="1194.6667" height="162" rx="7.1111" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4222" />
-  <text x="640" y="567" text-anchor="middle" font-size="17.0667" fill="#555">The Saga pattern manages distributed transactions across multiple services.</text>
-  <text x="640" y="603" text-anchor="middle" font-size="17.0667" fill="#555">Each service executes its local transaction. On success, the next service is triggered.</text>
-  <text x="640" y="639" text-anchor="middle" font-size="17.0667" fill="#555">On failure, compensating transactions are executed in reverse order to maintain consistency.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="13.3073" markerHeight="11.7895" refX="13.3073" refY="5.8947" orient="auto">
+      <ns0:polygon points="0,16.8421 4.6576,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="13.3073" markerHeight="11.7895" refX="13.3073" refY="5.8947" orient="auto">
+      <ns0:polygon points="0,16.8421 4.6576,0" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-red" markerWidth="13.3073" markerHeight="11.7895" refX="13.3073" refY="5.8947" orient="auto">
+      <ns0:polygon points="0,16.8421 4.6576,0" fill="#dc3545" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="598.8304" y="42.1053" text-anchor="middle" font-size="21.2918" font-weight="bold" fill="#333">Saga Pattern - Distributed Transactions</ns0:text>
+  <ns0:text x="598.8304" y="92.6316" text-anchor="middle" font-size="17.2996" fill="#28a745" font-weight="bold">Success Path</ns0:text>
+  <ns0:ellipse cx="79.844" cy="168.4211" rx="59.883" ry="26.6146" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6614" />
+  <ns0:text x="79.844" y="176.8421" text-anchor="middle" font-size="15.9688" fill="#333">Start</ns0:text>
+  <ns0:rect x="199.6101" y="134.7368" width="172.9955" height="67.3684" rx="6.6537" fill="#d4edda" stroke="#28a745" stroke-width="2.6614" />
+  <ns0:text x="286.1079" y="176.8421" text-anchor="middle" fill="#333">Service A Txn</ns0:text>
+  <ns0:rect x="452.4497" y="134.7368" width="172.9955" height="67.3684" rx="6.6537" fill="#d4edda" stroke="#28a745" stroke-width="2.6614" />
+  <ns0:text x="538.9474" y="176.8421" text-anchor="middle" fill="#333">Service B Txn</ns0:text>
+  <ns0:rect x="705.2892" y="134.7368" width="172.9955" height="67.3684" rx="6.6537" fill="#d4edda" stroke="#28a745" stroke-width="2.6614" />
+  <ns0:text x="791.7869" y="176.8421" text-anchor="middle" fill="#333">Service C Txn</ns0:text>
+  <ns0:ellipse cx="984.7433" cy="168.4211" rx="66.5367" ry="26.6146" fill="#d4edda" stroke="#28a745" stroke-width="2.6614" />
+  <ns0:text x="984.7433" y="176.8421" text-anchor="middle" font-size="15.9688" fill="#333">Complete</ns0:text>
+  <ns0:line x1="139.7271" y1="168.4211" x2="196.9487" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="372.6056" y1="168.4211" x2="449.7882" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="412.5276" y="156.6316" text-anchor="middle" font-size="13.3073" fill="#28a745">Success</ns0:text>
+  <ns0:line x1="625.4451" y1="168.4211" x2="702.6276" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="665.3671" y="156.6316" text-anchor="middle" font-size="13.3073" fill="#28a745">Success</ns0:text>
+  <ns0:line x1="878.2846" y1="168.4211" x2="915.5452" y2="168.4211" stroke="#28a745" stroke-width="2.6614" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="898.2456" y="156.6316" text-anchor="middle" font-size="13.3073" fill="#28a745">Success</ns0:text>
+  <ns0:text x="598.8304" y="320" text-anchor="middle" font-size="17.2996" fill="#dc3545" font-weight="bold">Compensation Path (on failure)</ns0:text>
+  <ns0:rect x="705.2892" y="353.6842" width="172.9955" height="67.3684" rx="6.6537" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6614" />
+  <ns0:text x="791.7869" y="395.7895" text-anchor="middle" fill="#333">Compensate C</ns0:text>
+  <ns0:rect x="452.4497" y="353.6842" width="172.9955" height="67.3684" rx="6.6537" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6614" />
+  <ns0:text x="538.9474" y="395.7895" text-anchor="middle" fill="#333">Compensate B</ns0:text>
+  <ns0:rect x="199.6101" y="353.6842" width="172.9955" height="67.3684" rx="6.6537" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6614" />
+  <ns0:text x="286.1079" y="395.7895" text-anchor="middle" fill="#333">Compensate A</ns0:text>
+  <ns0:ellipse cx="79.844" cy="387.3684" rx="59.883" ry="26.6146" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6614" />
+  <ns0:text x="79.844" y="395.7895" text-anchor="middle" font-size="15.9688" fill="#333">Failed</ns0:text>
+  <ns0:line x1="791.7869" y1="202.1053" x2="791.7869" y2="350.3158" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
+  <ns0:text x="811.7479" y="286.3158" text-anchor="start" font-size="13.3073" fill="#dc3545">Failure</ns0:text>
+  <ns0:line x1="705.2892" y1="387.3684" x2="628.1066" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="452.4497" y1="387.3684" x2="375.2671" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
+  <ns0:line x1="199.6101" y1="387.3684" x2="142.3886" y2="387.3684" stroke="#dc3545" stroke-width="2.6614" marker-end="url(#arrowhead-red)" />
+  <ns0:rect x="39.9221" y="488.4211" width="1117.8168" height="151.5789" rx="6.6537" fill="#f9f9f9" stroke="#ddd" stroke-width="1.3307" />
+  <ns0:text x="598.8304" y="530.5263" text-anchor="middle" font-size="15.9688" fill="#555">The Saga pattern manages distributed transactions across multiple services.</ns0:text>
+  <ns0:text x="598.8304" y="564.2105" text-anchor="middle" font-size="15.9688" fill="#555">Each service executes its local transaction. On success, the next service is triggered.</ns0:text>
+  <ns0:text x="598.8304" y="597.8947" text-anchor="middle" font-size="15.9688" fill="#555">On failure, compensating transactions are executed in reverse order to maintain consistency.</ns0:text>
+</ns0:svg>

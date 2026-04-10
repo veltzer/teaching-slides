@@ -1,56 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Auth Flow top row -->
-  <rect x="80" y="80" width="320" height="110" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="240" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Login</text>
-  <text x="240" y="172" text-anchor="middle" fill="#bbdefb" font-size="16" font-family="Arial, sans-serif">User credentials</text>
-  <line x1="400" y1="135" x2="470" y2="135" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="480" y="80" width="320" height="110" rx="10" fill="#43a047" filter="url(#shadow)"/>
-  <text x="640" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">JWT Token</text>
-  <text x="640" y="172" text-anchor="middle" fill="#c8e6c9" font-size="16" font-family="Arial, sans-serif">Signed &amp; expiring</text>
-  <line x1="800" y1="135" x2="870" y2="135" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="880" y="80" width="320" height="110" rx="10" fill="#e53935" filter="url(#shadow)"/>
-  <text x="1040" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Access</text>
-  <text x="1040" y="172" text-anchor="middle" fill="#ffcdd2" font-size="16" font-family="Arial, sans-serif">Protected resource</text>
-  <!-- Middleware box -->
-  <rect x="80" y="240" width="1120" height="170" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="278" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Middleware Validates Every Request</text>
-  <text x="640" y="318" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Validates token signature and expiry</text>
-  <text x="640" y="350" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Checks user permissions (roles/scopes)</text>
-  <text x="640" y="382" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Refreshes token if nearing expiry</text>
-  <!-- Bottom three panels -->
-  <rect x="80" y="450" width="340" height="160" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="250" y="488" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">OAuth2 / OIDC</text>
-  <text x="250" y="520" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Delegated authorization</text>
-  <text x="250" y="548" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Third-party identity</text>
-  <text x="250" y="576" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">providers</text>
-  <rect x="470" y="450" width="340" height="160" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="488" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32" font-family="Arial, sans-serif">RBAC</text>
-  <text x="640" y="520" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Role-based access control</text>
-  <text x="640" y="548" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Fine-grained permissions</text>
-  <text x="640" y="576" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">per resource</text>
-  <rect x="860" y="450" width="340" height="160" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1030" y="488" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100" font-family="Arial, sans-serif">Refresh Strategy</text>
-  <text x="1030" y="520" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Silent token renewal</text>
-  <text x="1030" y="548" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Rotation on use</text>
-  <text x="1030" y="576" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Revocation support</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="71.1111" y="71.1111" width="284.4444" height="97.7778" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="213.3333" y="128.8889" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">Login</ns0:text>
+  <ns0:text x="213.3333" y="152.8889" text-anchor="middle" fill="#bbdefb" font-size="14.2222" font-family="Arial, sans-serif">User credentials</ns0:text>
+  <ns0:line x1="355.5556" y1="120" x2="417.7778" y2="120" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="426.6667" y="71.1111" width="284.4444" height="97.7778" rx="8.8889" fill="#43a047" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="128.8889" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">JWT Token</ns0:text>
+  <ns0:text x="568.8889" y="152.8889" text-anchor="middle" fill="#c8e6c9" font-size="14.2222" font-family="Arial, sans-serif">Signed &amp; expiring</ns0:text>
+  <ns0:line x1="711.1111" y1="120" x2="773.3333" y2="120" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="782.2222" y="71.1111" width="284.4444" height="97.7778" rx="8.8889" fill="#e53935" filter="url(#shadow)" />
+  <ns0:text x="924.4444" y="128.8889" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">Access</ns0:text>
+  <ns0:text x="924.4444" y="152.8889" text-anchor="middle" fill="#ffcdd2" font-size="14.2222" font-family="Arial, sans-serif">Protected resource</ns0:text>
+  <ns0:rect x="71.1111" y="213.3333" width="995.5556" height="151.1111" rx="10.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="247.1111" text-anchor="middle" fill="#1565c0" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">Middleware Validates Every Request</ns0:text>
+  <ns0:text x="568.8889" y="282.6667" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Validates token signature and expiry</ns0:text>
+  <ns0:text x="568.8889" y="311.1111" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Checks user permissions (roles/scopes)</ns0:text>
+  <ns0:text x="568.8889" y="339.5556" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Refreshes token if nearing expiry</ns0:text>
+  <ns0:rect x="71.1111" y="400" width="302.2222" height="142.2222" rx="8.8889" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="222.2222" y="433.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">OAuth2 / OIDC</ns0:text>
+  <ns0:text x="222.2222" y="462.2222" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Delegated authorization</ns0:text>
+  <ns0:text x="222.2222" y="487.1111" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Third-party identity</ns0:text>
+  <ns0:text x="222.2222" y="512" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">providers</ns0:text>
+  <ns0:rect x="417.7778" y="400" width="302.2222" height="142.2222" rx="8.8889" fill="#e8f5e9" stroke="#43a047" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="433.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32" font-family="Arial, sans-serif">RBAC</ns0:text>
+  <ns0:text x="568.8889" y="462.2222" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Role-based access control</ns0:text>
+  <ns0:text x="568.8889" y="487.1111" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Fine-grained permissions</ns0:text>
+  <ns0:text x="568.8889" y="512" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">per resource</ns0:text>
+  <ns0:rect x="764.4444" y="400" width="302.2222" height="142.2222" rx="8.8889" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="915.5556" y="433.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#e65100" font-family="Arial, sans-serif">Refresh Strategy</ns0:text>
+  <ns0:text x="915.5556" y="462.2222" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Silent token renewal</ns0:text>
+  <ns0:text x="915.5556" y="487.1111" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Rotation on use</ns0:text>
+  <ns0:text x="915.5556" y="512" text-anchor="middle" font-size="13.3333" fill="#444" font-family="Arial, sans-serif">Revocation support</ns0:text>
+</ns0:svg>

@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="18.2857" y="13.8462" width="1243.4286" height="692.3077" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="62.3077" text-anchor="middle" font-size="24.9231" font-weight="bold" fill="#333">PEFT Training Best Practices</text>
-  <rect x="54.8571" y="90" width="1170.2857" height="96.9231" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="91.4286" y="121.8462" font-size="19.3846" font-weight="bold" fill="#333">1. START WITH r=16, adjust based on results</text>
-  <text x="128" y="152.3077" font-size="16.6154" fill="#555">Increase if underfitting | Decrease if overfitting</text>
-  <rect x="54.8571" y="200.7692" width="1170.2857" height="96.9231" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="91.4286" y="232.6154" font-size="19.3846" font-weight="bold" fill="#333">2. TARGET ALL LINEAR LAYERS</text>
-  <text x="128" y="263.0769" font-size="16.6154" fill="#555">target_modules="all-linear" is a good default | More targets = better quality</text>
-  <rect x="54.8571" y="311.5385" width="1170.2857" height="96.9231" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0769" />
-  <text x="91.4286" y="343.3846" font-size="19.3846" font-weight="bold" fill="#333">3. LEARNING RATE</text>
-  <text x="128" y="373.8462" font-size="16.6154" fill="#555">LoRA: 1e-4 to 3e-4 (higher than full FT) | Prompt Tuning: 3e-2 to 3e-1</text>
-  <rect x="54.8571" y="422.3077" width="1170.2857" height="96.9231" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="91.4286" y="454.1538" font-size="19.3846" font-weight="bold" fill="#333">4. USE GRADIENT CHECKPOINTING</text>
-  <text x="128" y="484.6154" font-size="16.6154" fill="#555">Trades compute for memory | model.gradient_checkpointing_enable()</text>
-  <rect x="54.8571" y="533.0769" width="1170.2857" height="152.3077" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.0769" />
-  <text x="91.4286" y="564.9231" font-size="19.3846" font-weight="bold" fill="#333">5. MONITOR TRAINING LOSS</text>
-  <text x="128" y="599.5385" font-size="16.6154" fill="#555">Loss should decrease steadily</text>
-  <text x="128" y="630" font-size="16.6154" fill="#dc3545">Sudden increase = learning rate too high</text>
-  <text x="128" y="660.4615" font-size="16.6154" fill="#ffc107">Flat loss = learning rate too low</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:rect x="16.5727" y="12.5491" width="1126.9417" height="627.4509" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5098" />
+  <ns0:text x="580.0435" y="56.4706" text-anchor="middle" font-size="22.5883" font-weight="bold" fill="#333">PEFT Training Best Practices</ns0:text>
+  <ns0:rect x="49.718" y="81.5686" width="1060.651" height="87.8432" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="1.8823" />
+  <ns0:text x="82.8634" y="110.4314" font-size="17.5686" font-weight="bold" fill="#333">1. START WITH r=16, adjust based on results</ns0:text>
+  <ns0:text x="116.0087" y="138.0392" font-size="15.0588" fill="#555">Increase if underfitting | Decrease if overfitting</ns0:text>
+  <ns0:rect x="49.718" y="181.9607" width="1060.651" height="87.8432" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="1.8823" />
+  <ns0:text x="82.8634" y="210.8235" font-size="17.5686" font-weight="bold" fill="#333">2. TARGET ALL LINEAR LAYERS</ns0:text>
+  <ns0:text x="116.0087" y="238.4313" font-size="15.0588" fill="#555">target_modules="all-linear" is a good default | More targets = better quality</ns0:text>
+  <ns0:rect x="49.718" y="282.353" width="1060.651" height="87.8432" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8823" />
+  <ns0:text x="82.8634" y="311.2156" font-size="17.5686" font-weight="bold" fill="#333">3. LEARNING RATE</ns0:text>
+  <ns0:text x="116.0087" y="338.8235" font-size="15.0588" fill="#555">LoRA: 1e-4 to 3e-4 (higher than full FT) | Prompt Tuning: 3e-2 to 3e-1</ns0:text>
+  <ns0:rect x="49.718" y="382.7451" width="1060.651" height="87.8432" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8823" />
+  <ns0:text x="82.8634" y="411.6078" font-size="17.5686" font-weight="bold" fill="#333">4. USE GRADIENT CHECKPOINTING</ns0:text>
+  <ns0:text x="116.0087" y="439.2157" font-size="15.0588" fill="#555">Trades compute for memory | model.gradient_checkpointing_enable()</ns0:text>
+  <ns0:rect x="49.718" y="483.1372" width="1060.651" height="138.0392" rx="6.2745" fill="#f8d7da" stroke="#dc3545" stroke-width="1.8823" />
+  <ns0:text x="82.8634" y="512" font-size="17.5686" font-weight="bold" fill="#333">5. MONITOR TRAINING LOSS</ns0:text>
+  <ns0:text x="116.0087" y="543.3725" font-size="15.0588" fill="#555">Loss should decrease steadily</ns0:text>
+  <ns0:text x="116.0087" y="570.9803" font-size="15.0588" fill="#dc3545">Sudden increase = learning rate too high</ns0:text>
+  <ns0:text x="116.0087" y="598.5882" font-size="15.0588" fill="#ffc107">Flat loss = learning rate too low</ns0:text>
+</ns0:svg>

@@ -1,30 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrowd8_02_caching" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
-  </defs>
-  <rect x="21.3333" y="72" width="192" height="144" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="117.3333" y="158.4" text-anchor="middle" font-size="21.3333" font-weight="bold">Writer App</text>
-  <rect x="341.3333" y="72" width="192" height="144" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="437.3333" y="158.4" text-anchor="middle" font-size="21.3333" font-weight="bold">Database</text>
-  <rect x="661.3333" y="36" width="234.6667" height="198" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="778.6667" y="115.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Redis Pub/Sub</text>
-  <text x="778.6667" y="172.8" text-anchor="middle" font-size="21.3333" fill="#e65100">invalidation channel</text>
-  <rect x="1045.3333" y="36" width="192" height="126" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1141.3333" y="115.2" text-anchor="middle" font-size="21.3333">App Instance 1</text>
-  <rect x="1045.3333" y="180" width="192" height="126" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1141.3333" y="259.2" text-anchor="middle" font-size="21.3333">App Instance 2</text>
-  <line x1="213.3333" y1="126" x2="337.0667" y2="126" stroke="#6a1b9a" stroke-width="4.2667" marker-end="url(#arrowd8_02_caching)" />
-  <text x="277.3333" y="108" text-anchor="middle" font-size="21.3333" fill="#6a1b9a">1. Write</text>
-  <line x1="213.3333" y1="198" x2="657.0667" y2="162" stroke="#e65100" stroke-width="4.2667" marker-end="url(#arrowd8_02_caching)" />
-  <text x="426.6667" y="244.8" text-anchor="middle" font-size="21.3333" fill="#e65100">2. PUBLISH "invalidate:item:42"</text>
-  <line x1="896" y1="100.8" x2="1041.0667" y2="100.8" stroke="#2e7d32" stroke-width="4.2667" marker-end="url(#arrowd8_02_caching)" />
-  <line x1="896" y1="180" x2="1041.0667" y2="234" stroke="#2e7d32" stroke-width="4.2667" marker-end="url(#arrowd8_02_caching)" />
-  <text x="970.6667" y="64.8" text-anchor="middle" font-size="21.3333" fill="#2e7d32">3. Notify</text>
-  <rect x="1045.3333" y="360" width="192" height="108" fill="#ffebee" stroke="#c62828" stroke-width="2.1333" rx="6.4" />
-  <text x="1141.3333" y="428.4" text-anchor="middle" font-size="21.3333" fill="#c62828">DEL item:42</text>
-  <line x1="1141.3333" y1="306" x2="1141.3333" y2="352.8" stroke="#c62828" stroke-width="4.2667" marker-end="url(#arrowd8_02_caching)" />
-  <rect x="21.3333" y="522" width="1216" height="144" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" opacity="0.4" />
-  <text x="640" y="604.8" text-anchor="middle" font-size="21.3333">All instances invalidate stale data on event. More accurate than TTL-based expiry.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrowd8_02_caching" markerWidth="20.5005" markerHeight="34.5946" refX="18.4505" refY="10.3784" orient="auto">
+      <ns0:path d="M 0 0 L 0 20.7568 L 18.4505 10.3784 z" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect x="20.5005" y="69.1892" width="184.5045" height="138.3784" fill="#e3f2fd" stroke="#333" stroke-width="4.1001" rx="10.2503" />
+  <ns0:text x="112.7527" y="152.2162" text-anchor="middle" font-size="20.5005" font-weight="bold">Writer App</ns0:text>
+  <ns0:rect x="328.008" y="69.1892" width="184.5045" height="138.3784" fill="#f3e5f5" stroke="#333" stroke-width="4.1001" rx="10.2503" />
+  <ns0:text x="420.2602" y="152.2162" text-anchor="middle" font-size="20.5005" font-weight="bold">Database</ns0:text>
+  <ns0:rect x="635.5155" y="34.5946" width="225.5055" height="190.2703" fill="#fff3e0" stroke="#333" stroke-width="4.1001" rx="10.2503" />
+  <ns0:text x="748.2683" y="110.7027" text-anchor="middle" font-size="20.5005" font-weight="bold">Redis Pub/Sub</ns0:text>
+  <ns0:text x="748.2683" y="166.0541" text-anchor="middle" font-size="20.5005" fill="#e65100">invalidation channel</ns0:text>
+  <ns0:rect x="1004.5245" y="34.5946" width="184.5045" height="121.0811" fill="#e8f5e9" stroke="#333" stroke-width="2.05" rx="10.2503" />
+  <ns0:text x="1096.7767" y="110.7027" text-anchor="middle" font-size="20.5005">App Instance 1</ns0:text>
+  <ns0:rect x="1004.5245" y="172.973" width="184.5045" height="121.0811" fill="#e8f5e9" stroke="#333" stroke-width="2.05" rx="10.2503" />
+  <ns0:text x="1096.7767" y="249.0811" text-anchor="middle" font-size="20.5005">App Instance 2</ns0:text>
+  <ns0:line x1="205.005" y1="121.0811" x2="323.9079" y2="121.0811" stroke="#6a1b9a" stroke-width="4.1001" marker-end="url(#arrowd8_02_caching)" />
+  <ns0:text x="266.5065" y="103.7838" text-anchor="middle" font-size="20.5005" fill="#6a1b9a">1. Write</ns0:text>
+  <ns0:line x1="205.005" y1="190.2703" x2="631.4154" y2="155.6757" stroke="#e65100" stroke-width="4.1001" marker-end="url(#arrowd8_02_caching)" />
+  <ns0:text x="410.01" y="235.2432" text-anchor="middle" font-size="20.5005" fill="#e65100">2. PUBLISH "invalidate:item:42"</ns0:text>
+  <ns0:line x1="861.021" y1="96.8649" x2="1000.4245" y2="96.8649" stroke="#2e7d32" stroke-width="4.1001" marker-end="url(#arrowd8_02_caching)" />
+  <ns0:line x1="861.021" y1="172.973" x2="1000.4245" y2="224.8649" stroke="#2e7d32" stroke-width="4.1001" marker-end="url(#arrowd8_02_caching)" />
+  <ns0:text x="932.7728" y="62.2703" text-anchor="middle" font-size="20.5005" fill="#2e7d32">3. Notify</ns0:text>
+  <ns0:rect x="1004.5245" y="345.9459" width="184.5045" height="103.7838" fill="#ffebee" stroke="#c62828" stroke-width="2.05" rx="6.1502" />
+  <ns0:text x="1096.7767" y="411.6757" text-anchor="middle" font-size="20.5005" fill="#c62828">DEL item:42</ns0:text>
+  <ns0:line x1="1096.7767" y1="294.0541" x2="1096.7767" y2="339.027" stroke="#c62828" stroke-width="4.1001" marker-end="url(#arrowd8_02_caching)" />
+  <ns0:rect x="20.5005" y="501.6216" width="1168.5285" height="138.3784" fill="#e8f5e9" stroke="#333" stroke-width="2.05" rx="10.2503" opacity="0.4" />
+  <ns0:text x="615.015" y="581.1892" text-anchor="middle" font-size="20.5005">All instances invalidate stale data on event. More accurate than TTL-based expiry.</ns0:text>
+</ns0:svg>

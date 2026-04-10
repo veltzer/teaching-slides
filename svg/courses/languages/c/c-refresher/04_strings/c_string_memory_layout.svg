@@ -1,85 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Code -->
-  <text x="70" y="52" font-size="22" font-weight="bold" fill="#222222" font-family="monospace">char *str = "Hello";</text>
-
-  <!-- Characters in memory (heap/rodata) -->
-  <rect x="40" y="70" width="80" height="60" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="80" y="97" text-anchor="middle" font-size="20" fill="#222222">'H'</text>
-  <text x="80" y="118" text-anchor="middle" font-size="14" fill="#555555">0x48</text>
-
-  <rect x="124" y="70" width="80" height="60" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="164" y="97" text-anchor="middle" font-size="20" fill="#222222">'e'</text>
-  <text x="164" y="118" text-anchor="middle" font-size="14" fill="#555555">0x65</text>
-
-  <rect x="208" y="70" width="80" height="60" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="248" y="97" text-anchor="middle" font-size="20" fill="#222222">'l'</text>
-  <text x="248" y="118" text-anchor="middle" font-size="14" fill="#555555">0x6C</text>
-
-  <rect x="292" y="70" width="80" height="60" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="332" y="97" text-anchor="middle" font-size="20" fill="#222222">'l'</text>
-  <text x="332" y="118" text-anchor="middle" font-size="14" fill="#555555">0x6C</text>
-
-  <rect x="376" y="70" width="80" height="60" rx="7" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="416" y="97" text-anchor="middle" font-size="20" fill="#222222">'o'</text>
-  <text x="416" y="118" text-anchor="middle" font-size="14" fill="#555555">0x6F</text>
-
-  <rect x="460" y="70" width="80" height="60" rx="7" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <text x="500" y="97" text-anchor="middle" font-size="20" fill="#e53935">'\0'</text>
-  <text x="500" y="118" text-anchor="middle" font-size="14" fill="#555555">0x00</text>
-
-  <!-- Null terminator label -->
-  <text x="690" y="110" font-size="17" fill="#e53935" font-weight="bold">Null terminator</text>
-  <line x1="688" y1="104" x2="548" y2="104" stroke="#e53935" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Pointer box -->
-  <rect x="770" y="70" width="400" height="80" rx="7" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="970" y="104" text-anchor="middle" font-size="18" font-weight="bold" fill="#222222">str (pointer)</text>
-  <text x="970" y="132" text-anchor="middle" font-size="16" fill="#555555">stores address: 0x1000</text>
-  <line x1="770" y1="110" x2="555" y2="110" stroke="#1565c0" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow-accent)"/>
-
-  <!-- Two comparison boxes -->
-  <rect x="70" y="200" width="530" height="210" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="238" text-anchor="middle" font-size="20" font-weight="bold" fill="#222222" font-family="monospace">char str[] = "Hello";</text>
-  <text x="100" y="275" font-size="16" fill="#555555">- Array on stack (6 bytes)</text>
-  <text x="100" y="305" font-size="16" fill="#555555">- Modifiable contents</text>
-  <text x="100" y="335" font-size="16" fill="#555555">- sizeof(str) == 6</text>
-  <text x="100" y="365" font-size="16" fill="#1e88e5">- str[0] = 'h'; // OK</text>
-
-  <rect x="650" y="200" width="560" height="210" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="930" y="238" text-anchor="middle" font-size="20" font-weight="bold" fill="#222222" font-family="monospace">char *str = "Hello";</text>
-  <text x="680" y="275" font-size="16" fill="#555555">- Pointer to read-only data</text>
-  <text x="680" y="305" font-size="16" fill="#555555">- String in .rodata section</text>
-  <text x="680" y="335" font-size="16" fill="#555555">- sizeof(str) == 8 (pointer)</text>
-  <text x="680" y="365" font-size="16" fill="#e53935">- str[0] = 'h'; // SEGFAULT!</text>
-
-  <!-- strlen vs sizeof box -->
-  <rect x="70" y="450" width="1140" height="170" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="490" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">strlen() vs sizeof()</text>
-  <text x="340" y="535" text-anchor="middle" font-size="18" fill="#222222">strlen("Hello") = 5</text>
-  <text x="340" y="568" text-anchor="middle" font-size="16" fill="#555555">Counts chars until '\0'</text>
-  <text x="340" y="596" text-anchor="middle" font-size="16" fill="#555555">Runtime function, O(n)</text>
-  <text x="860" y="535" text-anchor="middle" font-size="18" fill="#222222">sizeof("Hello") = 6</text>
-  <text x="860" y="568" text-anchor="middle" font-size="16" fill="#555555">Includes null terminator</text>
-  <text x="860" y="596" text-anchor="middle" font-size="16" fill="#555555">Compile-time operator</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="62.2222" y="46.2222" font-size="19.5556" font-weight="bold" fill="#222222" font-family="monospace">char *str = "Hello";</ns0:text>
+  <ns0:rect x="35.5556" y="62.2222" width="71.1111" height="53.3333" rx="6.2222" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="71.1111" y="86.2222" text-anchor="middle" font-size="17.7778" fill="#222222">'H'</ns0:text>
+  <ns0:text x="71.1111" y="104.8889" text-anchor="middle" font-size="12.4444" fill="#555555">0x48</ns0:text>
+  <ns0:rect x="110.2222" y="62.2222" width="71.1111" height="53.3333" rx="6.2222" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="145.7778" y="86.2222" text-anchor="middle" font-size="17.7778" fill="#222222">'e'</ns0:text>
+  <ns0:text x="145.7778" y="104.8889" text-anchor="middle" font-size="12.4444" fill="#555555">0x65</ns0:text>
+  <ns0:rect x="184.8889" y="62.2222" width="71.1111" height="53.3333" rx="6.2222" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="220.4444" y="86.2222" text-anchor="middle" font-size="17.7778" fill="#222222">'l'</ns0:text>
+  <ns0:text x="220.4444" y="104.8889" text-anchor="middle" font-size="12.4444" fill="#555555">0x6C</ns0:text>
+  <ns0:rect x="259.5556" y="62.2222" width="71.1111" height="53.3333" rx="6.2222" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="295.1111" y="86.2222" text-anchor="middle" font-size="17.7778" fill="#222222">'l'</ns0:text>
+  <ns0:text x="295.1111" y="104.8889" text-anchor="middle" font-size="12.4444" fill="#555555">0x6C</ns0:text>
+  <ns0:rect x="334.2222" y="62.2222" width="71.1111" height="53.3333" rx="6.2222" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="369.7778" y="86.2222" text-anchor="middle" font-size="17.7778" fill="#222222">'o'</ns0:text>
+  <ns0:text x="369.7778" y="104.8889" text-anchor="middle" font-size="12.4444" fill="#555555">0x6F</ns0:text>
+  <ns0:rect x="408.8889" y="62.2222" width="71.1111" height="53.3333" rx="6.2222" fill="#fce4ec" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="444.4444" y="86.2222" text-anchor="middle" font-size="17.7778" fill="#e53935">'\0'</ns0:text>
+  <ns0:text x="444.4444" y="104.8889" text-anchor="middle" font-size="12.4444" fill="#555555">0x00</ns0:text>
+  <ns0:text x="613.3333" y="97.7778" font-size="15.1111" fill="#e53935" font-weight="bold">Null terminator</ns0:text>
+  <ns0:line x1="611.5556" y1="92.4444" x2="487.1111" y2="92.4444" stroke="#e53935" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="684.4444" y="62.2222" width="355.5556" height="71.1111" rx="6.2222" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="862.2222" y="92.4444" text-anchor="middle" font-size="16" font-weight="bold" fill="#222222">str (pointer)</ns0:text>
+  <ns0:text x="862.2222" y="117.3333" text-anchor="middle" font-size="14.2222" fill="#555555">stores address: 0x1000</ns0:text>
+  <ns0:line x1="684.4444" y1="97.7778" x2="493.3333" y2="97.7778" stroke="#1565c0" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="62.2222" y="177.7778" width="471.1111" height="186.6667" rx="7.1111" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="297.7778" y="211.5556" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">char str[] = "Hello";</ns0:text>
+  <ns0:text x="88.8889" y="244.4444" font-size="14.2222" fill="#555555">- Array on stack (6 bytes)</ns0:text>
+  <ns0:text x="88.8889" y="271.1111" font-size="14.2222" fill="#555555">- Modifiable contents</ns0:text>
+  <ns0:text x="88.8889" y="297.7778" font-size="14.2222" fill="#555555">- sizeof(str) == 6</ns0:text>
+  <ns0:text x="88.8889" y="324.4444" font-size="14.2222" fill="#1e88e5">- str[0] = 'h'; // OK</ns0:text>
+  <ns0:rect x="577.7778" y="177.7778" width="497.7778" height="186.6667" rx="7.1111" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="826.6667" y="211.5556" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">char *str = "Hello";</ns0:text>
+  <ns0:text x="604.4444" y="244.4444" font-size="14.2222" fill="#555555">- Pointer to read-only data</ns0:text>
+  <ns0:text x="604.4444" y="271.1111" font-size="14.2222" fill="#555555">- String in .rodata section</ns0:text>
+  <ns0:text x="604.4444" y="297.7778" font-size="14.2222" fill="#555555">- sizeof(str) == 8 (pointer)</ns0:text>
+  <ns0:text x="604.4444" y="324.4444" font-size="14.2222" fill="#e53935">- str[0] = 'h'; // SEGFAULT!</ns0:text>
+  <ns0:rect x="62.2222" y="400" width="1013.3333" height="151.1111" rx="7.1111" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="435.5556" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#222222">strlen() vs sizeof()</ns0:text>
+  <ns0:text x="302.2222" y="475.5556" text-anchor="middle" font-size="16" fill="#222222">strlen("Hello") = 5</ns0:text>
+  <ns0:text x="302.2222" y="504.8889" text-anchor="middle" font-size="14.2222" fill="#555555">Counts chars until '\0'</ns0:text>
+  <ns0:text x="302.2222" y="529.7778" text-anchor="middle" font-size="14.2222" fill="#555555">Runtime function, O(n)</ns0:text>
+  <ns0:text x="764.4444" y="475.5556" text-anchor="middle" font-size="16" fill="#222222">sizeof("Hello") = 6</ns0:text>
+  <ns0:text x="764.4444" y="504.8889" text-anchor="middle" font-size="14.2222" fill="#555555">Includes null terminator</ns0:text>
+  <ns0:text x="764.4444" y="529.7778" text-anchor="middle" font-size="14.2222" fill="#555555">Compile-time operator</ns0:text>
+</ns0:svg>

@@ -1,68 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Three zone boxes -->
-  <rect x="20" y="30" width="370" height="290" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="20" y="30" width="370" height="55" fill="url(#grad-accent)" rx="12"/>
-  <rect x="20" y="75" width="370" height="10" fill="url(#grad-accent)"/>
-  <text x="205" y="65" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Internet Zone</text>
-  <text x="205" y="135" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Download station</text>
-  <text x="205" y="165" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Patch staging</text>
-  <text x="205" y="195" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">CVE monitoring</text>
-  <text x="205" y="235" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Connected to internet</text>
-  <text x="205" y="290" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Highest risk zone</text>
-
-  <!-- Arrow -->
-  <line x1="390" y1="180" x2="468" y2="180" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <rect x="470" y="30" width="340" height="290" fill="url(#grad-surface)" stroke="#e65100" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="470" y="30" width="340" height="55" fill="#e65100" rx="12"/>
-  <rect x="470" y="75" width="340" height="10" fill="#e65100"/>
-  <text x="640" y="65" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Transfer Zone</text>
-  <text x="640" y="135" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Data diode / Kiosk</text>
-  <text x="640" y="165" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Malware scanning</text>
-  <text x="640" y="195" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Integrity checks</text>
-  <text x="640" y="235" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">One-way data flow</text>
-  <text x="640" y="290" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Isolation enforced</text>
-
-  <!-- Arrow -->
-  <line x1="810" y1="180" x2="888" y2="180" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <rect x="890" y="30" width="370" height="290" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="890" y="30" width="370" height="55" fill="#2e7d32" rx="12"/>
-  <rect x="890" y="75" width="370" height="10" fill="#2e7d32"/>
-  <text x="1075" y="65" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Secure Zone</text>
-  <text x="1075" y="135" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Local repo server</text>
-  <text x="1075" y="165" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Configuration mgmt</text>
-  <text x="1075" y="195" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Production systems</text>
-  <text x="1075" y="235" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">No internet access</text>
-  <text x="1075" y="290" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Classified network</text>
-
-  <!-- Key Design Principles box -->
-  <rect x="20" y="390" width="1240" height="270" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="20" y="390" width="1240" height="50" fill="url(#grad-accent)" rx="12"/>
-  <rect x="20" y="430" width="1240" height="10" fill="url(#grad-accent)"/>
-  <text x="640" y="422" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Key Design Principles</text>
-  <text x="640" y="490" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">One-way data flow only | No bidirectional network links</text>
-  <text x="640" y="525" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">All transfers logged and audited | Media sanitized after use</text>
-  <text x="640" y="570" text-anchor="middle" font-size="15" fill="#555555" font-family="sans-serif">Physical separation enforced | No wireless in secure zone</text>
-  <text x="640" y="610" text-anchor="middle" font-size="15" fill="#555555" font-family="sans-serif">Strict access control | Camera-monitored transfer stations</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="26.6667" width="328.8889" height="257.7778" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="26.6667" width="328.8889" height="48.8889" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="66.6667" width="328.8889" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="182.2222" y="57.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Internet Zone</ns0:text>
+  <ns0:text x="182.2222" y="120" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Download station</ns0:text>
+  <ns0:text x="182.2222" y="146.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Patch staging</ns0:text>
+  <ns0:text x="182.2222" y="173.3333" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">CVE monitoring</ns0:text>
+  <ns0:text x="182.2222" y="208.8889" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Connected to internet</ns0:text>
+  <ns0:text x="182.2222" y="257.7778" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Highest risk zone</ns0:text>
+  <ns0:line x1="346.6667" y1="160" x2="416" y2="160" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="417.7778" y="26.6667" width="302.2222" height="257.7778" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="417.7778" y="26.6667" width="302.2222" height="48.8889" fill="#e65100" rx="10.6667" />
+  <ns0:rect x="417.7778" y="66.6667" width="302.2222" height="8.8889" fill="#e65100" />
+  <ns0:text x="568.8889" y="57.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Transfer Zone</ns0:text>
+  <ns0:text x="568.8889" y="120" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Data diode / Kiosk</ns0:text>
+  <ns0:text x="568.8889" y="146.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Malware scanning</ns0:text>
+  <ns0:text x="568.8889" y="173.3333" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Integrity checks</ns0:text>
+  <ns0:text x="568.8889" y="208.8889" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">One-way data flow</ns0:text>
+  <ns0:text x="568.8889" y="257.7778" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Isolation enforced</ns0:text>
+  <ns0:line x1="720" y1="160" x2="789.3333" y2="160" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="791.1111" y="26.6667" width="328.8889" height="257.7778" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="791.1111" y="26.6667" width="328.8889" height="48.8889" fill="#2e7d32" rx="10.6667" />
+  <ns0:rect x="791.1111" y="66.6667" width="328.8889" height="8.8889" fill="#2e7d32" />
+  <ns0:text x="955.5556" y="57.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Secure Zone</ns0:text>
+  <ns0:text x="955.5556" y="120" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Local repo server</ns0:text>
+  <ns0:text x="955.5556" y="146.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Configuration mgmt</ns0:text>
+  <ns0:text x="955.5556" y="173.3333" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Production systems</ns0:text>
+  <ns0:text x="955.5556" y="208.8889" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">No internet access</ns0:text>
+  <ns0:text x="955.5556" y="257.7778" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Classified network</ns0:text>
+  <ns0:rect x="17.7778" y="346.6667" width="1102.2222" height="240" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="346.6667" width="1102.2222" height="44.4444" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="382.2222" width="1102.2222" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="568.8889" y="375.1111" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Key Design Principles</ns0:text>
+  <ns0:text x="568.8889" y="435.5556" text-anchor="middle" font-size="14.2222" fill="#333333" font-family="sans-serif">One-way data flow only | No bidirectional network links</ns0:text>
+  <ns0:text x="568.8889" y="466.6667" text-anchor="middle" font-size="14.2222" fill="#333333" font-family="sans-serif">All transfers logged and audited | Media sanitized after use</ns0:text>
+  <ns0:text x="568.8889" y="506.6667" text-anchor="middle" font-size="13.3333" fill="#555555" font-family="sans-serif">Physical separation enforced | No wireless in secure zone</ns0:text>
+  <ns0:text x="568.8889" y="542.2222" text-anchor="middle" font-size="13.3333" fill="#555555" font-family="sans-serif">Strict access control | Camera-monitored transfer stations</ns0:text>
+</ns0:svg>

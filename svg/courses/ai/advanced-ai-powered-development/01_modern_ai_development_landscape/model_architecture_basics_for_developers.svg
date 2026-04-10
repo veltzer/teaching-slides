@@ -1,52 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="ah" markerWidth="33.4367" markerHeight="141.75" refX="33.4367" refY="70.875" orient="auto">
-      <polygon points="0,202.5 11.7029,0" fill="#333" />
-    </marker>
-  </defs>
-  <rect width="2674.9387" height="8100" fill="#f8f9fa" />
-  <text x="1337.4694" y="769.5" text-anchor="middle" font-size="70.2171" font-weight="bold" fill="#1a237e">Transformer Architecture for Developers</text>
-  <rect x="66.8734" y="2025" width="468.1143" height="1620" rx="33.4367" fill="#E3F2FD" stroke="#1565C0" stroke-width="6.6873" />
-  <text x="300.9306" y="2673" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#1565C0">Input</text>
-  <text x="300.9306" y="3037.5" text-anchor="middle" font-size="43.4677" fill="#1565C0">Tokens</text>
-  <text x="300.9306" y="3442.5" text-anchor="middle" font-size="36.7804" fill="#555">code + text</text>
-  <line x1="534.9877" y1="2835" x2="652.0163" y2="2835" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="652.0163" y="2025" width="534.9877" height="1620" rx="33.4367" fill="#E8F5E9" stroke="#2E7D32" stroke-width="6.6873" />
-  <text x="919.5101" y="2592" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#2E7D32">Self-</text>
-  <text x="919.5101" y="2956.5" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#2E7D32">Attention</text>
-  <text x="919.5101" y="3402" text-anchor="middle" font-size="36.7804" fill="#555">O(n²) cost</text>
-  <line x1="1187.0042" y1="2835" x2="1304.0327" y2="2835" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="1304.0327" y="2025" width="534.9877" height="1620" rx="33.4367" fill="#FFF3E0" stroke="#E65100" stroke-width="6.6873" />
-  <text x="1571.5266" y="2592" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#E65100">Feed-</text>
-  <text x="1571.5266" y="2956.5" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#E65100">Forward</text>
-  <text x="1571.5266" y="3402" text-anchor="middle" font-size="36.7804" fill="#555">transformations</text>
-  <line x1="1839.0204" y1="2835" x2="1956.049" y2="2835" stroke="#333" stroke-width="6.6873" marker-end="url(#ah)" />
-  <rect x="1956.049" y="2025" width="534.9877" height="1620" rx="33.4367" fill="#FCE4EC" stroke="#C62828" stroke-width="6.6873" />
-  <text x="2223.5429" y="2592" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#C62828">Output</text>
-  <text x="2223.5429" y="2956.5" text-anchor="middle" font-size="46.8114" font-weight="bold" fill="#C62828">Probs</text>
-  <text x="2223.5429" y="3402" text-anchor="middle" font-size="36.7804" fill="#555">one token/step</text>
-  <rect x="66.8734" y="4455" width="1203.7224" height="3037.5" rx="33.4367" fill="#E8EAF6" stroke="#3949AB" stroke-width="5.0156" />
-  <text x="668.7347" y="5022" text-anchor="middle" font-size="50.1552" font-weight="bold" fill="#3949AB">Why This Matters for Developers</text>
-  <text x="117.0286" y="5568.75" font-size="43.4677" fill="#333">▶ Self-attention cost scales quadratically with context length</text>
-  <text x="117.0286" y="6014.25" font-size="43.4677" fill="#333">▶ Longer context = higher cost + latency</text>
-  <text x="117.0286" y="6459.75" font-size="43.4677" fill="#333">▶ Output is autoregressive: one token at a time</text>
-  <text x="117.0286" y="6905.25" font-size="43.4677" fill="#333">▶ Larger models have more params, not bigger context</text>
-  <rect x="1404.3429" y="4455" width="1187.0042" height="3037.5" rx="33.4367" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="5.0156" />
-  <text x="1996.173" y="5022" text-anchor="middle" font-size="50.1552" font-weight="bold" fill="#6A1B9A">Attention: All Tokens See All Tokens</text>
-  <circle cx="1538.0899" cy="5973.75" r="53.4987" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="1538.0899" y="6075" text-anchor="middle" font-size="36.7804" fill="#333">def</text>
-  <circle cx="1738.7101" cy="5973.75" r="53.4987" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="1738.7101" y="6075" text-anchor="middle" font-size="36.7804" fill="#333">fib</text>
-  <circle cx="1939.3306" cy="5973.75" r="53.4987" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="1939.3306" y="6075" text-anchor="middle" font-size="36.7804" fill="#333">(n)</text>
-  <circle cx="2139.951" cy="5973.75" r="53.4987" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="2139.951" y="6075" text-anchor="middle" font-size="36.7804" fill="#333">return</text>
-  <circle cx="2374.0081" cy="5973.75" r="53.4987" fill="#CE93D8" stroke="#6A1B9A" />
-  <text x="2374.0081" y="6075" text-anchor="middle" font-size="36.7804" fill="#333">n-1</text>
-  <line x1="1591.5886" y1="5973.75" x2="1685.2114" y2="5973.75" stroke="#6A1B9A" stroke-width="3.3437" />
-  <line x1="1792.209" y1="5973.75" x2="1885.8319" y2="5973.75" stroke="#6A1B9A" stroke-width="3.3437" />
-  <line x1="1992.8294" y1="5973.75" x2="2086.4523" y2="5973.75" stroke="#6A1B9A" stroke-width="3.3437" />
-  <line x1="2193.4499" y1="5973.75" x2="2320.5094" y2="5973.75" stroke="#6A1B9A" stroke-width="3.3437" />
-  <path d="M 1538.0899 5649.75 Q 1956.049 4860 2374.0081 5649.75" fill="none" stroke="#9C27B0" stroke-width="3.3437" stroke-dasharray="13.3747 6.6873" />
-  <text x="1996.173" y="7087.5" text-anchor="middle" font-size="36.7804" fill="#555">each token attends to every other token</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="ah" markerWidth="2.6419" markerHeight="11.2" refX="2.6419" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 0.9247,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="211.3532" height="640" fill="#f8f9fa" />
+  <ns0:text x="105.6766" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Transformer Architecture for Developers</ns0:text>
+  <ns0:rect x="5.2838" y="160" width="36.9868" height="128" rx="2.6419" fill="#E3F2FD" stroke="#1565C0" stroke-width="0.5284" />
+  <ns0:text x="23.7772" y="211.2" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Input</ns0:text>
+  <ns0:text x="23.7772" y="240" text-anchor="middle" font-size="10" fill="#1565C0">Tokens</ns0:text>
+  <ns0:text x="23.7772" y="272" text-anchor="middle" font-size="10" fill="#555">code + text</ns0:text>
+  <ns0:line x1="42.2706" y1="224" x2="51.5173" y2="224" stroke="#333" stroke-width="0.5284" marker-end="url(#ah)" />
+  <ns0:rect x="51.5173" y="160" width="42.2706" height="128" rx="2.6419" fill="#E8F5E9" stroke="#2E7D32" stroke-width="0.5284" />
+  <ns0:text x="72.6526" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Self-</ns0:text>
+  <ns0:text x="72.6526" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Attention</ns0:text>
+  <ns0:text x="72.6526" y="268.8" text-anchor="middle" font-size="10" fill="#555">O(n²) cost</ns0:text>
+  <ns0:line x1="93.788" y1="224" x2="103.0347" y2="224" stroke="#333" stroke-width="0.5284" marker-end="url(#ah)" />
+  <ns0:rect x="103.0347" y="160" width="42.2706" height="128" rx="2.6419" fill="#FFF3E0" stroke="#E65100" stroke-width="0.5284" />
+  <ns0:text x="124.17" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Feed-</ns0:text>
+  <ns0:text x="124.17" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Forward</ns0:text>
+  <ns0:text x="124.17" y="268.8" text-anchor="middle" font-size="10" fill="#555">transformations</ns0:text>
+  <ns0:line x1="145.3053" y1="224" x2="154.552" y2="224" stroke="#333" stroke-width="0.5284" marker-end="url(#ah)" />
+  <ns0:rect x="154.552" y="160" width="42.2706" height="128" rx="2.6419" fill="#FCE4EC" stroke="#C62828" stroke-width="0.5284" />
+  <ns0:text x="175.6873" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Output</ns0:text>
+  <ns0:text x="175.6873" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Probs</ns0:text>
+  <ns0:text x="175.6873" y="268.8" text-anchor="middle" font-size="10" fill="#555">one token/step</ns0:text>
+  <ns0:rect x="5.2838" y="352" width="95.1089" height="240" rx="2.6419" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.3963" />
+  <ns0:text x="52.8383" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">Why This Matters for Developers</ns0:text>
+  <ns0:text x="9.2467" y="440" font-size="10" fill="#333">▶ Self-attention cost scales quadratically with context length</ns0:text>
+  <ns0:text x="9.2467" y="475.2" font-size="10" fill="#333">▶ Longer context = higher cost + latency</ns0:text>
+  <ns0:text x="9.2467" y="510.4" font-size="10" fill="#333">▶ Output is autoregressive: one token at a time</ns0:text>
+  <ns0:text x="9.2467" y="545.6" font-size="10" fill="#333">▶ Larger models have more params, not bigger context</ns0:text>
+  <ns0:rect x="110.9604" y="352" width="93.788" height="240" rx="2.6419" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="0.3963" />
+  <ns0:text x="157.7223" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#6A1B9A">Attention: All Tokens See All Tokens</ns0:text>
+  <ns0:circle cx="121.5281" cy="472" r="4.2271" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="121.5281" y="480" text-anchor="middle" font-size="10" fill="#333">def</ns0:text>
+  <ns0:circle cx="137.3796" cy="472" r="4.2271" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="137.3796" y="480" text-anchor="middle" font-size="10" fill="#333">fib</ns0:text>
+  <ns0:circle cx="153.2311" cy="472" r="4.2271" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="153.2311" y="480" text-anchor="middle" font-size="10" fill="#333">(n)</ns0:text>
+  <ns0:circle cx="169.0825" cy="472" r="4.2271" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="169.0825" y="480" text-anchor="middle" font-size="10" fill="#333">return</ns0:text>
+  <ns0:circle cx="187.5759" cy="472" r="4.2271" fill="#CE93D8" stroke="#6A1B9A" />
+  <ns0:text x="187.5759" y="480" text-anchor="middle" font-size="10" fill="#333">n-1</ns0:text>
+  <ns0:line x1="125.7551" y1="472" x2="133.1525" y2="472" stroke="#6A1B9A" stroke-width="0.2642" />
+  <ns0:line x1="141.6066" y1="472" x2="149.004" y2="472" stroke="#6A1B9A" stroke-width="0.2642" />
+  <ns0:line x1="157.4581" y1="472" x2="164.8555" y2="472" stroke="#6A1B9A" stroke-width="0.2642" />
+  <ns0:line x1="173.3096" y1="472" x2="183.3489" y2="472" stroke="#6A1B9A" stroke-width="0.2642" />
+  <ns0:path d="M 121.5281 446.4 Q 154.552 384 187.5759 446.4" fill="none" stroke="#9C27B0" stroke-width="0.2642" stroke-dasharray="1.0568 0.5284" />
+  <ns0:text x="157.7223" y="560" text-anchor="middle" font-size="10" fill="#555">each token attends to every other token</ns0:text>
+</ns0:svg>

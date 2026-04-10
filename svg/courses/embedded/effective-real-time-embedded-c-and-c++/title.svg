@@ -1,83 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-  </defs>
-
-  <!-- Dark background for title slide -->
-  <rect width="1280" height="720" fill="#212121"/>
-
-  <!-- Background grid lines (subtle) -->
-  <line x1="0"    y1="240" x2="1280" y2="240" stroke="#2a2a2a" stroke-width="1"/>
-  <line x1="0"    y1="480" x2="1280" y2="480" stroke="#2a2a2a" stroke-width="1"/>
-  <line x1="320"  y1="0"   x2="320"  y2="720" stroke="#2a2a2a" stroke-width="1"/>
-  <line x1="640"  y1="0"   x2="640"  y2="720" stroke="#2a2a2a" stroke-width="1"/>
-  <line x1="960"  y1="0"   x2="960"  y2="720" stroke="#2a2a2a" stroke-width="1"/>
-
-  <!-- Decorative clock / waveform elements -->
-  <!-- Digital waveform top-right -->
-  <polyline points="800,80 840,80 840,120 880,120 880,80 920,80 920,120 960,120 960,80 1000,80 1000,120 1040,120 1040,80 1080,80"
-            fill="none" stroke="#1565c0" stroke-width="2.5" opacity="0.6"/>
-
-  <!-- Microcontroller chip (center decoration) -->
-  <rect x="540" y="260" width="200" height="200" rx="8" fill="#2a2a2a" stroke="#1565c0" stroke-width="2"/>
-  <!-- chip pins left -->
-  <line x1="510" y1="282" x2="540" y2="282" stroke="#555555" stroke-width="2"/>
-  <line x1="510" y1="310" x2="540" y2="310" stroke="#555555" stroke-width="2"/>
-  <line x1="510" y1="338" x2="540" y2="338" stroke="#555555" stroke-width="2"/>
-  <line x1="510" y1="366" x2="540" y2="366" stroke="#555555" stroke-width="2"/>
-  <line x1="510" y1="394" x2="540" y2="394" stroke="#555555" stroke-width="2"/>
-  <line x1="510" y1="422" x2="540" y2="422" stroke="#555555" stroke-width="2"/>
-  <!-- chip pins right -->
-  <line x1="740" y1="282" x2="770" y2="282" stroke="#555555" stroke-width="2"/>
-  <line x1="740" y1="310" x2="770" y2="310" stroke="#555555" stroke-width="2"/>
-  <line x1="740" y1="338" x2="770" y2="338" stroke="#555555" stroke-width="2"/>
-  <line x1="740" y1="366" x2="770" y2="366" stroke="#555555" stroke-width="2"/>
-  <line x1="740" y1="394" x2="770" y2="394" stroke="#555555" stroke-width="2"/>
-  <line x1="740" y1="422" x2="770" y2="422" stroke="#555555" stroke-width="2"/>
-  <!-- chip top pins -->
-  <line x1="580" y1="230" x2="580" y2="260" stroke="#555555" stroke-width="2"/>
-  <line x1="620" y1="230" x2="620" y2="260" stroke="#555555" stroke-width="2"/>
-  <line x1="660" y1="230" x2="660" y2="260" stroke="#555555" stroke-width="2"/>
-  <line x1="700" y1="230" x2="700" y2="260" stroke="#555555" stroke-width="2"/>
-  <!-- chip bottom pins -->
-  <line x1="580" y1="460" x2="580" y2="490" stroke="#555555" stroke-width="2"/>
-  <line x1="620" y1="460" x2="620" y2="490" stroke="#555555" stroke-width="2"/>
-  <line x1="660" y1="460" x2="660" y2="490" stroke="#555555" stroke-width="2"/>
-  <line x1="700" y1="460" x2="700" y2="490" stroke="#555555" stroke-width="2"/>
-  <!-- chip inner circuit lines -->
-  <rect x="570" y="290" width="140" height="140" fill="#1565c0" opacity="0.15" rx="4"/>
-  <line x1="570" y1="360" x2="710" y2="360" stroke="#1565c0" stroke-width="1" opacity="0.4"/>
-  <line x1="640" y1="290" x2="640" y2="430" stroke="#1565c0" stroke-width="1" opacity="0.4"/>
-  <circle cx="640" cy="360" r="20" fill="none" stroke="#1565c0" stroke-width="1.5" opacity="0.5"/>
-
-  <!-- LED indicators (left side) -->
-  <circle cx="200" cy="300" r="14" fill="#1565c0" opacity="0.8"/>
-  <circle cx="200" cy="360" r="14" fill="#1e88e5" opacity="0.5"/>
-  <circle cx="200" cy="420" r="14" fill="#1565c0" opacity="0.3"/>
-
-  <!-- C / C++ text -->
-  <text x="1000" y="420" font-family="monospace" font-size="52" font-weight="bold" fill="#1565c0" opacity="0.8">C/C++</text>
-
-  <!-- RT badge -->
-  <rect x="140" y="530" width="110" height="58" rx="6" fill="#1565c0"/>
-  <text x="195" y="570" text-anchor="middle" font-family="monospace" font-size="32" font-weight="bold" fill="#ffffff">RT</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+    <ns0:marker id="arrow-white" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#ffffff" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#212121" />
+  <ns0:line x1="0" y1="213.3333" x2="1137.7778" y2="213.3333" stroke="#2a2a2a" stroke-width="0.8889" />
+  <ns0:line x1="0" y1="426.6667" x2="1137.7778" y2="426.6667" stroke="#2a2a2a" stroke-width="0.8889" />
+  <ns0:line x1="284.4444" y1="0" x2="284.4444" y2="640" stroke="#2a2a2a" stroke-width="0.8889" />
+  <ns0:line x1="568.8889" y1="0" x2="568.8889" y2="640" stroke="#2a2a2a" stroke-width="0.8889" />
+  <ns0:line x1="853.3333" y1="0" x2="853.3333" y2="640" stroke="#2a2a2a" stroke-width="0.8889" />
+  <ns0:polyline points="711.1111,71.1111 746.6667,71.1111 746.6667,106.6667 782.2222,106.6667 782.2222,71.1111 817.7778,71.1111 817.7778,106.6667 853.3333,106.6667 853.3333,71.1111 888.8889,71.1111 888.8889,106.6667 924.4444,106.6667 924.4444,71.1111 960,71.1111" fill="none" stroke="#1565c0" stroke-width="2.2222" opacity="0.6" />
+  <ns0:rect x="480" y="231.1111" width="177.7778" height="177.7778" rx="7.1111" fill="#2a2a2a" stroke="#1565c0" stroke-width="1.7778" />
+  <ns0:line x1="453.3333" y1="250.6667" x2="480" y2="250.6667" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="453.3333" y1="275.5556" x2="480" y2="275.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="453.3333" y1="300.4444" x2="480" y2="300.4444" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="453.3333" y1="325.3333" x2="480" y2="325.3333" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="453.3333" y1="350.2222" x2="480" y2="350.2222" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="453.3333" y1="375.1111" x2="480" y2="375.1111" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="657.7778" y1="250.6667" x2="684.4444" y2="250.6667" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="657.7778" y1="275.5556" x2="684.4444" y2="275.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="657.7778" y1="300.4444" x2="684.4444" y2="300.4444" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="657.7778" y1="325.3333" x2="684.4444" y2="325.3333" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="657.7778" y1="350.2222" x2="684.4444" y2="350.2222" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="657.7778" y1="375.1111" x2="684.4444" y2="375.1111" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="515.5556" y1="204.4444" x2="515.5556" y2="231.1111" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="551.1111" y1="204.4444" x2="551.1111" y2="231.1111" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="586.6667" y1="204.4444" x2="586.6667" y2="231.1111" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="622.2222" y1="204.4444" x2="622.2222" y2="231.1111" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="515.5556" y1="408.8889" x2="515.5556" y2="435.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="551.1111" y1="408.8889" x2="551.1111" y2="435.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="586.6667" y1="408.8889" x2="586.6667" y2="435.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="622.2222" y1="408.8889" x2="622.2222" y2="435.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:rect x="506.6667" y="257.7778" width="124.4444" height="124.4444" fill="#1565c0" opacity="0.15" rx="3.5556" />
+  <ns0:line x1="506.6667" y1="320" x2="631.1111" y2="320" stroke="#1565c0" stroke-width="0.8889" opacity="0.4" />
+  <ns0:line x1="568.8889" y1="257.7778" x2="568.8889" y2="382.2222" stroke="#1565c0" stroke-width="0.8889" opacity="0.4" />
+  <ns0:circle cx="568.8889" cy="320" r="17.7778" fill="none" stroke="#1565c0" stroke-width="1.3333" opacity="0.5" />
+  <ns0:circle cx="177.7778" cy="266.6667" r="12.4444" fill="#1565c0" opacity="0.8" />
+  <ns0:circle cx="177.7778" cy="320" r="12.4444" fill="#1e88e5" opacity="0.5" />
+  <ns0:circle cx="177.7778" cy="373.3333" r="12.4444" fill="#1565c0" opacity="0.3" />
+  <ns0:text x="888.8889" y="373.3333" font-family="monospace" font-size="46.2222" font-weight="bold" fill="#1565c0" opacity="0.8">C/C++</ns0:text>
+  <ns0:rect x="124.4444" y="471.1111" width="97.7778" height="51.5556" rx="5.3333" fill="#1565c0" />
+  <ns0:text x="173.3333" y="506.6667" text-anchor="middle" font-family="monospace" font-size="28.4444" font-weight="bold" fill="#ffffff">RT</ns0:text>
+</ns0:svg>

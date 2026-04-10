@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold">Quorum: W + R &gt; N = Strong Consistency</text>
-  <rect x="85.3333" y="126" width="320" height="252" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4.2667" rx="6.4" />
-  <text x="245.3333" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#2e7d32">Write Quorum (W=2)</text>
-  <text x="245.3333" y="259.2" text-anchor="middle" font-size="21.3333" fill="#2e7d32">Replica A: Written</text>
-  <text x="245.3333" y="313.2" text-anchor="middle" font-size="21.3333" fill="#2e7d32">Replica B: Written</text>
-  <text x="245.3333" y="360" text-anchor="middle" font-size="21.3333" fill="#999">Replica C: Pending</text>
-  <rect x="480" y="126" width="320" height="252" fill="#e3f2fd" stroke="#1565c0" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#1565c0">Read Quorum (R=2)</text>
-  <text x="640" y="259.2" text-anchor="middle" font-size="21.3333" fill="#1565c0">Replica A: v2</text>
-  <text x="640" y="313.2" text-anchor="middle" font-size="21.3333" fill="#1565c0">Replica C: v1 (stale)</text>
-  <text x="640" y="360" text-anchor="middle" font-size="21.3333" fill="#1565c0">Pick latest: v2</text>
-  <rect x="874.6667" y="126" width="362.6667" height="252" fill="#fff3e0" stroke="#e65100" stroke-width="4.2667" rx="6.4" />
-  <text x="1056" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#e65100">Overlap Guarantee</text>
-  <text x="1056" y="259.2" text-anchor="middle" font-size="21.3333">W + R = 2 + 2 = 4</text>
-  <text x="1056" y="313.2" text-anchor="middle" font-size="21.3333">N = 3 replicas</text>
-  <text x="1056" y="360" text-anchor="middle" font-size="21.3333" fill="#2e7d32">4 &gt; 3: Overlap exists</text>
-  <rect x="213.3333" y="432" width="853.3333" height="108" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="504" text-anchor="middle" font-size="21.3333" fill="#7b1fa2">At least one node in Read set saw the latest Write = consistency guaranteed</text>
-  <text x="640" y="630" text-anchor="middle" font-size="21.3333" fill="#666">Tuning W and R: higher W+R = stronger consistency, lower = faster but weaker</text>
-  <text x="640" y="691.2" text-anchor="middle" font-size="21.3333" fill="#666">Common configs: W=1,R=N (fast writes) | W=N,R=1 (fast reads) | W=R=majority (balanced)</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="592.5926" y="60" text-anchor="middle" font-size="25.679" font-weight="bold">Quorum: W + R &gt; N = Strong Consistency</ns0:text>
+  <ns0:rect x="79.0123" y="116.6667" width="296.2963" height="233.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.9506" rx="5.9259" />
+  <ns0:text x="227.1605" y="183.3333" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="#2e7d32">Write Quorum (W=2)</ns0:text>
+  <ns0:text x="227.1605" y="240" text-anchor="middle" font-size="19.7531" fill="#2e7d32">Replica A: Written</ns0:text>
+  <ns0:text x="227.1605" y="290" text-anchor="middle" font-size="19.7531" fill="#2e7d32">Replica B: Written</ns0:text>
+  <ns0:text x="227.1605" y="333.3333" text-anchor="middle" font-size="19.7531" fill="#999">Replica C: Pending</ns0:text>
+  <ns0:rect x="444.4444" y="116.6667" width="296.2963" height="233.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.9506" rx="5.9259" />
+  <ns0:text x="592.5926" y="183.3333" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="#1565c0">Read Quorum (R=2)</ns0:text>
+  <ns0:text x="592.5926" y="240" text-anchor="middle" font-size="19.7531" fill="#1565c0">Replica A: v2</ns0:text>
+  <ns0:text x="592.5926" y="290" text-anchor="middle" font-size="19.7531" fill="#1565c0">Replica C: v1 (stale)</ns0:text>
+  <ns0:text x="592.5926" y="333.3333" text-anchor="middle" font-size="19.7531" fill="#1565c0">Pick latest: v2</ns0:text>
+  <ns0:rect x="809.8766" y="116.6667" width="335.8025" height="233.3333" fill="#fff3e0" stroke="#e65100" stroke-width="3.9506" rx="5.9259" />
+  <ns0:text x="977.7778" y="183.3333" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="#e65100">Overlap Guarantee</ns0:text>
+  <ns0:text x="977.7778" y="240" text-anchor="middle" font-size="19.7531">W + R = 2 + 2 = 4</ns0:text>
+  <ns0:text x="977.7778" y="290" text-anchor="middle" font-size="19.7531">N = 3 replicas</ns0:text>
+  <ns0:text x="977.7778" y="333.3333" text-anchor="middle" font-size="19.7531" fill="#2e7d32">4 &gt; 3: Overlap exists</ns0:text>
+  <ns0:rect x="197.5308" y="400" width="790.1234" height="100" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.9753" rx="5.9259" />
+  <ns0:text x="592.5926" y="466.6667" text-anchor="middle" font-size="19.7531" fill="#7b1fa2">At least one node in Read set saw the latest Write = consistency guaranteed</ns0:text>
+  <ns0:text x="592.5926" y="583.3333" text-anchor="middle" font-size="19.7531" fill="#666">Tuning W and R: higher W+R = stronger consistency, lower = faster but weaker</ns0:text>
+  <ns0:text x="592.5926" y="640" text-anchor="middle" font-size="19.7531" fill="#666">Common configs: W=1,R=N (fast writes) | W=N,R=1 (fast reads) | W=R=majority (balanced)</ns0:text>
+</ns0:svg>

@@ -1,52 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- CPU -->
-  <rect x="340" y="40" width="600" height="90" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="93" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">CPU (Processor)</text>
-
-  <text x="640" y="168" text-anchor="middle" font-size="20" fill="#555555">System Bus</text>
-  <line x1="640" y1="130" x2="640" y2="210" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <!-- RAM -->
-  <rect x="340" y="212" width="600" height="90" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="265" text-anchor="middle" font-size="24" fill="#333333">RAM (Volatile)</text>
-
-  <line x1="640" y1="302" x2="640" y2="360" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <!-- Storage Controller -->
-  <rect x="340" y="362" width="600" height="90" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="415" text-anchor="middle" font-size="24" fill="#333333">Storage Controller</text>
-
-  <line x1="640" y1="452" x2="640" y2="490" stroke="#555555" stroke-width="2"/>
-  <line x1="480" y1="490" x2="800" y2="490" stroke="#555555" stroke-width="2"/>
-  <line x1="480" y1="490" x2="480" y2="530" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="800" y1="490" x2="800" y2="530" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- HDD and SSD -->
-  <rect x="260" y="532" width="440" height="90" rx="10" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="480" y="585" text-anchor="middle" font-size="24" fill="#333333">HDD</text>
-  <text x="480" y="610" text-anchor="middle" font-size="14" fill="#555555">Magnetic, rotating platters</text>
-
-  <rect x="580" y="532" width="440" height="90" rx="10" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" filter="url(#shadow)"/>
-  <text x="800" y="585" text-anchor="middle" font-size="24" fill="#333333">SSD</text>
-  <text x="800" y="610" text-anchor="middle" font-size="14" fill="#555555">NAND Flash, no moving parts</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="302.2222" y="35.5556" width="533.3333" height="80" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="82.6667" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#ffffff">CPU (Processor)</ns0:text>
+  <ns0:text x="568.8889" y="149.3333" text-anchor="middle" font-size="17.7778" fill="#555555">System Bus</ns0:text>
+  <ns0:line x1="568.8889" y1="115.5556" x2="568.8889" y2="186.6667" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="302.2222" y="188.4444" width="533.3333" height="80" rx="8.8889" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="235.5556" text-anchor="middle" font-size="21.3333" fill="#333333">RAM (Volatile)</ns0:text>
+  <ns0:line x1="568.8889" y1="268.4444" x2="568.8889" y2="320" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="302.2222" y="321.7778" width="533.3333" height="80" rx="8.8889" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="368.8889" text-anchor="middle" font-size="21.3333" fill="#333333">Storage Controller</ns0:text>
+  <ns0:line x1="568.8889" y1="401.7778" x2="568.8889" y2="435.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="426.6667" y1="435.5556" x2="711.1111" y2="435.5556" stroke="#555555" stroke-width="1.7778" />
+  <ns0:line x1="426.6667" y1="435.5556" x2="426.6667" y2="471.1111" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="711.1111" y1="435.5556" x2="711.1111" y2="471.1111" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="231.1111" y="472.8889" width="391.1111" height="80" rx="8.8889" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="426.6667" y="520" text-anchor="middle" font-size="21.3333" fill="#333333">HDD</ns0:text>
+  <ns0:text x="426.6667" y="542.2222" text-anchor="middle" font-size="12.4444" fill="#555555">Magnetic, rotating platters</ns0:text>
+  <ns0:rect x="515.5556" y="472.8889" width="391.1111" height="80" rx="8.8889" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="711.1111" y="520" text-anchor="middle" font-size="21.3333" fill="#333333">SSD</ns0:text>
+  <ns0:text x="711.1111" y="542.2222" text-anchor="middle" font-size="12.4444" fill="#555555">NAND Flash, no moving parts</ns0:text>
+</ns0:svg>

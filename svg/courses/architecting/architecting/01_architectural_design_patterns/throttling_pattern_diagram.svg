@@ -1,53 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#dc3545" />
-    </marker>
-  </defs>
-  <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Throttling Pattern</text>
-  <rect x="48" y="102.8571" width="176" height="60" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="136" y="140.5714" text-anchor="middle" fill="#333">Request 1</text>
-  <rect x="48" y="188.5714" width="176" height="60" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="136" y="226.2857" text-anchor="middle" fill="#333">Request 2</text>
-  <rect x="48" y="274.2857" width="176" height="60" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="136" y="312" text-anchor="middle" fill="#333">Request 3</text>
-  <rect x="48" y="360" width="176" height="60" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="136" y="397.7143" text-anchor="middle" fill="#333">Request 4</text>
-  <rect x="400" y="205.7143" width="224" height="94.2857" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="512" y="248.5714" text-anchor="middle" font-weight="bold" fill="#333">Throttler</text>
-  <text x="512" y="279.4286" text-anchor="middle" font-size="16" fill="#666">Rate Limiter</text>
-  <rect x="800" y="94.2857" width="176" height="60" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="888" y="132" text-anchor="middle" fill="#333">Allow</text>
-  <rect x="800" y="222.8571" width="176" height="60" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="888" y="260.5714" text-anchor="middle" fill="#333">Queue</text>
-  <rect x="800" y="351.4286" width="176" height="60" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="888" y="389.1429" text-anchor="middle" fill="#333">Reject</text>
-  <rect x="1088" y="145.7143" width="160" height="77.1429" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="1168" y="192" text-anchor="middle" font-weight="bold" fill="#333">Service</text>
-  <rect x="1088" y="342.8571" width="160" height="68.5714" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="1168" y="385.7143" text-anchor="middle" fill="#333">Error 429</text>
-  <line x1="224" y1="133.7143" x2="396.8" y2="231.4286" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="224" y1="219.4286" x2="396.8" y2="240" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="224" y1="305.1429" x2="396.8" y2="262.2857" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="224" y1="390.8571" x2="396.8" y2="277.7143" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="624" y1="226.2857" x2="796.8" y2="133.7143" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
-  <text x="704" y="164.5714" text-anchor="middle" font-size="17.6" fill="#28a745">Within Limit</text>
-  <line x1="624" y1="253.7143" x2="796.8" y2="253.7143" stroke="#ffc107" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <text x="710.4" y="243.4286" text-anchor="middle" font-size="17.6" fill="#996600">Exceeds Limit</text>
-  <line x1="624" y1="279.4286" x2="796.8" y2="373.7143" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead-red)" />
-  <text x="704" y="342.8571" text-anchor="middle" font-size="17.6" fill="#dc3545">Queue Full</text>
-  <line x1="976" y1="123.4286" x2="1084.8" y2="168" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
-  <line x1="976" y1="253.7143" x2="1084.8" y2="202.2857" stroke="#ffc107" stroke-width="2.4" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead)" />
-  <text x="1040" y="240" text-anchor="middle" font-size="16" fill="#996600">Delayed</text>
-  <line x1="976" y1="380.5714" x2="1084.8" y2="377.1429" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead-red)" />
-  <rect x="48" y="531.4286" width="1200" height="154.2857" rx="8" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6" />
-  <text x="648" y="574.2857" text-anchor="middle" font-size="19.2" fill="#555">The Throttling pattern controls the rate of incoming requests to protect services.</text>
-  <text x="648" y="608.5714" text-anchor="middle" font-size="19.2" fill="#555">Requests within the rate limit are allowed through. Excess requests are queued for delayed processing.</text>
-  <text x="648" y="642.8571" text-anchor="middle" font-size="19.2" fill="#555">When the queue is full, additional requests are rejected with an error response (HTTP 429).</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-red" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#dc3545" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="597.3333" y="40" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#333">Throttling Pattern</ns0:text>
+  <ns0:rect x="44.8" y="96" width="164.2667" height="56" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="126.9333" y="131.2" text-anchor="middle" fill="#333">Request 1</ns0:text>
+  <ns0:rect x="44.8" y="176" width="164.2667" height="56" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="126.9333" y="211.2" text-anchor="middle" fill="#333">Request 2</ns0:text>
+  <ns0:rect x="44.8" y="256" width="164.2667" height="56" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="126.9333" y="291.2" text-anchor="middle" fill="#333">Request 3</ns0:text>
+  <ns0:rect x="44.8" y="336" width="164.2667" height="56" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="126.9333" y="371.2" text-anchor="middle" fill="#333">Request 4</ns0:text>
+  <ns0:rect x="373.3333" y="192" width="209.0667" height="88" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9867" />
+  <ns0:text x="477.8667" y="232" text-anchor="middle" font-weight="bold" fill="#333">Throttler</ns0:text>
+  <ns0:text x="477.8667" y="260.8" text-anchor="middle" font-size="14.9333" fill="#666">Rate Limiter</ns0:text>
+  <ns0:rect x="746.6667" y="88" width="164.2667" height="56" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
+  <ns0:text x="828.8" y="123.2" text-anchor="middle" fill="#333">Allow</ns0:text>
+  <ns0:rect x="746.6667" y="208" width="164.2667" height="56" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9867" />
+  <ns0:text x="828.8" y="243.2" text-anchor="middle" fill="#333">Queue</ns0:text>
+  <ns0:rect x="746.6667" y="328" width="164.2667" height="56" rx="7.4667" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9867" />
+  <ns0:text x="828.8" y="363.2" text-anchor="middle" fill="#333">Reject</ns0:text>
+  <ns0:rect x="1015.4666" y="136" width="149.3333" height="72" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
+  <ns0:text x="1090.1333" y="179.2" text-anchor="middle" font-weight="bold" fill="#333">Service</ns0:text>
+  <ns0:rect x="1015.4666" y="320" width="149.3333" height="64" rx="7.4667" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9867" />
+  <ns0:text x="1090.1333" y="360" text-anchor="middle" fill="#333">Error 429</ns0:text>
+  <ns0:line x1="209.0667" y1="124.8" x2="370.3467" y2="216" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:line x1="209.0667" y1="204.8" x2="370.3467" y2="224" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:line x1="209.0667" y1="284.8" x2="370.3467" y2="244.8" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:line x1="209.0667" y1="364.8" x2="370.3467" y2="259.2" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:line x1="582.4" y1="211.2" x2="743.68" y2="124.8" stroke="#28a745" stroke-width="2.9867" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="657.0667" y="153.6" text-anchor="middle" font-size="16.4267" fill="#28a745">Within Limit</ns0:text>
+  <ns0:line x1="582.4" y1="236.8" x2="743.68" y2="236.8" stroke="#ffc107" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:text x="663.04" y="227.2" text-anchor="middle" font-size="16.4267" fill="#996600">Exceeds Limit</ns0:text>
+  <ns0:line x1="582.4" y1="260.8" x2="743.68" y2="348.8" stroke="#dc3545" stroke-width="2.9867" marker-end="url(#arrowhead-red)" />
+  <ns0:text x="657.0667" y="320" text-anchor="middle" font-size="16.4267" fill="#dc3545">Queue Full</ns0:text>
+  <ns0:line x1="910.9333" y1="115.2" x2="1012.48" y2="156.8" stroke="#28a745" stroke-width="2.9867" marker-end="url(#arrowhead-green)" />
+  <ns0:line x1="910.9333" y1="236.8" x2="1012.48" y2="188.8" stroke="#ffc107" stroke-width="2.24" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead)" />
+  <ns0:text x="970.6666" y="224" text-anchor="middle" font-size="14.9333" fill="#996600">Delayed</ns0:text>
+  <ns0:line x1="910.9333" y1="355.2" x2="1012.48" y2="352" stroke="#dc3545" stroke-width="2.9867" marker-end="url(#arrowhead-red)" />
+  <ns0:rect x="44.8" y="496" width="1120" height="144" rx="7.4667" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4933" />
+  <ns0:text x="604.8" y="536" text-anchor="middle" font-size="17.92" fill="#555">The Throttling pattern controls the rate of incoming requests to protect services.</ns0:text>
+  <ns0:text x="604.8" y="568" text-anchor="middle" font-size="17.92" fill="#555">Requests within the rate limit are allowed through. Excess requests are queued for delayed processing.</ns0:text>
+  <ns0:text x="604.8" y="599.9999" text-anchor="middle" font-size="17.92" fill="#555">When the queue is full, additional requests are rejected with an error response (HTTP 429).</ns0:text>
+</ns0:svg>

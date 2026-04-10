@@ -1,43 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Boot stages as vertical pipeline -->
-  <rect x="480" y="40" width="320" height="60" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="77" text-anchor="middle" font-size="19" fill="#b71c1c">Power On</text>
-  <line x1="640" y1="100" x2="640" y2="130" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="480" y="130" width="320" height="60" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="167" text-anchor="middle" font-size="19" fill="#e65100">ROM Code</text>
-  <line x1="640" y1="190" x2="640" y2="220" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="480" y="220" width="320" height="60" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="257" text-anchor="middle" font-size="19" fill="#e65100">SPL/MLO</text>
-  <line x1="640" y1="280" x2="640" y2="310" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="480" y="310" width="320" height="60" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="347" text-anchor="middle" font-size="19" fill="#ffffff">U-Boot</text>
-  <line x1="640" y1="370" x2="640" y2="400" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="480" y="400" width="320" height="60" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="437" text-anchor="middle" font-size="19" fill="#1b5e20">Kernel</text>
-  <line x1="640" y1="460" x2="640" y2="490" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="480" y="490" width="320" height="60" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="527" text-anchor="middle" font-size="19" fill="#0d47a1">Init</text>
-  <line x1="640" y1="550" x2="640" y2="580" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <rect x="480" y="580" width="320" height="60" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="617" text-anchor="middle" font-size="19" fill="#1b5e20">Userspace</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="426.6667" y="35.5556" width="284.4444" height="53.3333" fill="#ffebee" stroke="#c62828" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="68.4444" text-anchor="middle" font-size="16.8889" fill="#b71c1c">Power On</ns0:text>
+  <ns0:line x1="568.8889" y1="88.8889" x2="568.8889" y2="115.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="426.6667" y="115.5556" width="284.4444" height="53.3333" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="148.4444" text-anchor="middle" font-size="16.8889" fill="#e65100">ROM Code</ns0:text>
+  <ns0:line x1="568.8889" y1="168.8889" x2="568.8889" y2="195.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="426.6667" y="195.5556" width="284.4444" height="53.3333" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="228.4444" text-anchor="middle" font-size="16.8889" fill="#e65100">SPL/MLO</ns0:text>
+  <ns0:line x1="568.8889" y1="248.8889" x2="568.8889" y2="275.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="426.6667" y="275.5556" width="284.4444" height="53.3333" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="308.4444" text-anchor="middle" font-size="16.8889" fill="#ffffff">U-Boot</ns0:text>
+  <ns0:line x1="568.8889" y1="328.8889" x2="568.8889" y2="355.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="426.6667" y="355.5556" width="284.4444" height="53.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="388.4444" text-anchor="middle" font-size="16.8889" fill="#1b5e20">Kernel</ns0:text>
+  <ns0:line x1="568.8889" y1="408.8889" x2="568.8889" y2="435.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="426.6667" y="435.5556" width="284.4444" height="53.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="468.4444" text-anchor="middle" font-size="16.8889" fill="#0d47a1">Init</ns0:text>
+  <ns0:line x1="568.8889" y1="488.8889" x2="568.8889" y2="515.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="426.6667" y="515.5556" width="284.4444" height="53.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="548.4444" text-anchor="middle" font-size="16.8889" fill="#1b5e20">Userspace</ns0:text>
+</ns0:svg>

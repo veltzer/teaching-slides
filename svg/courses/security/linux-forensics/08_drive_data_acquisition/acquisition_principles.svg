@@ -1,55 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Original Evidence -->
-  <rect x="18" y="100" width="340" height="250" fill="#fce4ec" stroke="#333333" stroke-width="2.5" rx="8" filter="url(#shadow)"/>
-  <text x="188" y="178" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">Original Evidence</text>
-  <text x="188" y="232" text-anchor="middle" font-size="20" fill="#555555">/dev/sdb</text>
-  <text x="188" y="300" text-anchor="middle" font-size="18" fill="#888888">SHA-256: abc123...</text>
-  <text x="188" y="330" text-anchor="middle" font-size="15" fill="#c62828">NEVER write to this!</text>
-
-  <!-- Arrow -->
-  <line x1="358" y1="225" x2="456" y2="225" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-
-  <!-- Write Blocker -->
-  <rect x="458" y="100" width="340" height="250" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2.5" rx="8" filter="url(#shadow)"/>
-  <text x="628" y="178" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">Write Blocker</text>
-  <text x="628" y="232" text-anchor="middle" font-size="20" fill="#1565c0">(read-only)</text>
-  <text x="628" y="290" text-anchor="middle" font-size="18" fill="#555555">Prevents modification</text>
-  <text x="628" y="316" text-anchor="middle" font-size="15" fill="#555555">Hardware or software</text>
-  <text x="628" y="340" text-anchor="middle" font-size="15" fill="#555555">Tableau, WiebeTech</text>
-
-  <!-- Arrow -->
-  <line x1="798" y1="225" x2="896" y2="225" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-
-  <!-- Forensic Workstation -->
-  <rect x="898" y="100" width="360" height="250" fill="#e8f5e9" stroke="#333333" stroke-width="2.5" rx="8" filter="url(#shadow)"/>
-  <text x="1078" y="178" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">Forensic Workstation</text>
-  <text x="1078" y="232" text-anchor="middle" font-size="18" fill="#555555">/evidence/disk.dd</text>
-  <text x="1078" y="300" text-anchor="middle" font-size="18" fill="#888888">SHA-256: abc123...</text>
-  <text x="1078" y="330" text-anchor="middle" font-size="15" fill="#2e7d32">dd, dcfldd, dc3dd</text>
-
-  <!-- Hash verification box -->
-  <rect x="18" y="400" width="1240" height="140" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="455" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">Hash Verification</text>
-  <text x="640" y="510" text-anchor="middle" font-size="20" fill="#333333">Source hash MUST match destination hash - proves image integrity (chain of custody)</text>
-  <text x="640" y="540" text-anchor="middle" font-size="18" fill="#555555">SHA-256 preferred | MD5 acceptable | Document every step</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="16" y="88.8889" width="302.2222" height="222.2222" fill="#fce4ec" stroke="#333333" stroke-width="2.2222" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="167.1111" y="158.2222" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#222222">Original Evidence</ns0:text>
+  <ns0:text x="167.1111" y="206.2222" text-anchor="middle" font-size="17.7778" fill="#555555">/dev/sdb</ns0:text>
+  <ns0:text x="167.1111" y="266.6667" text-anchor="middle" font-size="16" fill="#888888">SHA-256: abc123...</ns0:text>
+  <ns0:text x="167.1111" y="293.3333" text-anchor="middle" font-size="13.3333" fill="#c62828">NEVER write to this!</ns0:text>
+  <ns0:line x1="318.2222" y1="200" x2="405.3333" y2="200" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="407.1111" y="88.8889" width="302.2222" height="222.2222" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2.2222" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="558.2222" y="158.2222" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#222222">Write Blocker</ns0:text>
+  <ns0:text x="558.2222" y="206.2222" text-anchor="middle" font-size="17.7778" fill="#1565c0">(read-only)</ns0:text>
+  <ns0:text x="558.2222" y="257.7778" text-anchor="middle" font-size="16" fill="#555555">Prevents modification</ns0:text>
+  <ns0:text x="558.2222" y="280.8889" text-anchor="middle" font-size="13.3333" fill="#555555">Hardware or software</ns0:text>
+  <ns0:text x="558.2222" y="302.2222" text-anchor="middle" font-size="13.3333" fill="#555555">Tableau, WiebeTech</ns0:text>
+  <ns0:line x1="709.3333" y1="200" x2="796.4444" y2="200" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:rect x="798.2222" y="88.8889" width="320" height="222.2222" fill="#e8f5e9" stroke="#333333" stroke-width="2.2222" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="958.2222" y="158.2222" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#222222">Forensic Workstation</ns0:text>
+  <ns0:text x="958.2222" y="206.2222" text-anchor="middle" font-size="16" fill="#555555">/evidence/disk.dd</ns0:text>
+  <ns0:text x="958.2222" y="266.6667" text-anchor="middle" font-size="16" fill="#888888">SHA-256: abc123...</ns0:text>
+  <ns0:text x="958.2222" y="293.3333" text-anchor="middle" font-size="13.3333" fill="#2e7d32">dd, dcfldd, dc3dd</ns0:text>
+  <ns0:rect x="16" y="355.5556" width="1102.2222" height="124.4444" fill="#fff9c4" stroke="#f9a825" stroke-width="2.2222" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="404.4444" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#e65100">Hash Verification</ns0:text>
+  <ns0:text x="568.8889" y="453.3333" text-anchor="middle" font-size="17.7778" fill="#333333">Source hash MUST match destination hash - proves image integrity (chain of custody)</ns0:text>
+  <ns0:text x="568.8889" y="480" text-anchor="middle" font-size="16" fill="#555555">SHA-256 preferred | MD5 acceptable | Document every step</ns0:text>
+</ns0:svg>

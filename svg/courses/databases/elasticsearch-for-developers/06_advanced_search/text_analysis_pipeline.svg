@@ -1,46 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Text Analysis Pipeline</text>
-  <!-- Stages -->
-  <rect x="40" y="200" width="240" height="160" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="160" y="276" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Text</text>
-  <text x="160" y="316" text-anchor="middle" font-size="15" fill="#555555">"The Quick Brown Fox"</text>
-  <line x1="280" y1="280" x2="338" y2="280" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="342" y="200" width="260" height="160" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="472" y="276" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Tokenizer</text>
-  <text x="472" y="316" text-anchor="middle" font-size="15" fill="#555555">Split into tokens</text>
-  <text x="472" y="338" text-anchor="middle" font-size="14" fill="#888888">"The","Quick","Brown","Fox"</text>
-  <line x1="602" y1="280" x2="660" y2="280" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="664" y="200" width="260" height="160" rx="14" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="794" y="276" text-anchor="middle" font-size="26" font-weight="bold" fill="#795548">Filters</text>
-  <text x="794" y="316" text-anchor="middle" font-size="15" fill="#555555">lowercase, stop words,</text>
-  <text x="794" y="338" text-anchor="middle" font-size="15" fill="#555555">stemming, synonyms</text>
-  <line x1="924" y1="280" x2="982" y2="280" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="986" y="200" width="260" height="160" rx="14" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="1116" y="276" text-anchor="middle" font-size="26" font-weight="bold" fill="#7b1fa2">Terms</text>
-  <text x="1116" y="316" text-anchor="middle" font-size="15" fill="#555555">Stored in inverted index</text>
-  <text x="1116" y="338" text-anchor="middle" font-size="14" fill="#888888">"quick","brown","fox"</text>
-  <!-- Note -->
-  <rect x="40" y="420" width="1200" height="80" rx="8" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="453" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">Analysis happens at index time AND query time</text>
-  <text x="640" y="485" text-anchor="middle" font-size="16" fill="#555555">Same analyzer must be used for both, or queries won't match. Use _analyze API to test.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="46.2222" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="#1565c0">Text Analysis Pipeline</ns0:text>
+  <ns0:rect x="35.5556" y="177.7778" width="213.3333" height="142.2222" rx="12.4444" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="142.2222" y="245.3333" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#2e7d32">Text</ns0:text>
+  <ns0:text x="142.2222" y="280.8889" text-anchor="middle" font-size="13.3333" fill="#555555">"The Quick Brown Fox"</ns0:text>
+  <ns0:line x1="248.8889" y1="248.8889" x2="300.4444" y2="248.8889" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="304" y="177.7778" width="231.1111" height="142.2222" rx="12.4444" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="419.5556" y="245.3333" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1565c0">Tokenizer</ns0:text>
+  <ns0:text x="419.5556" y="280.8889" text-anchor="middle" font-size="13.3333" fill="#555555">Split into tokens</ns0:text>
+  <ns0:text x="419.5556" y="300.4444" text-anchor="middle" font-size="12.4444" fill="#888888">"The","Quick","Brown","Fox"</ns0:text>
+  <ns0:line x1="535.1111" y1="248.8889" x2="586.6667" y2="248.8889" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="590.2222" y="177.7778" width="231.1111" height="142.2222" rx="12.4444" fill="#fff9c4" stroke="#f9a825" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="705.7778" y="245.3333" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#795548">Filters</ns0:text>
+  <ns0:text x="705.7778" y="280.8889" text-anchor="middle" font-size="13.3333" fill="#555555">lowercase, stop words,</ns0:text>
+  <ns0:text x="705.7778" y="300.4444" text-anchor="middle" font-size="13.3333" fill="#555555">stemming, synonyms</ns0:text>
+  <ns0:line x1="821.3333" y1="248.8889" x2="872.8889" y2="248.8889" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="876.4444" y="177.7778" width="231.1111" height="142.2222" rx="12.4444" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="992" y="245.3333" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#7b1fa2">Terms</ns0:text>
+  <ns0:text x="992" y="280.8889" text-anchor="middle" font-size="13.3333" fill="#555555">Stored in inverted index</ns0:text>
+  <ns0:text x="992" y="300.4444" text-anchor="middle" font-size="12.4444" fill="#888888">"quick","brown","fox"</ns0:text>
+  <ns0:rect x="35.5556" y="373.3333" width="1066.6667" height="71.1111" rx="7.1111" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="402.6667" text-anchor="middle" font-size="16" fill="#1565c0" font-weight="bold">Analysis happens at index time AND query time</ns0:text>
+  <ns0:text x="568.8889" y="431.1111" text-anchor="middle" font-size="14.2222" fill="#555555">Same analyzer must be used for both, or queries won't match. Use _analyze API to test.</ns0:text>
+</ns0:svg>

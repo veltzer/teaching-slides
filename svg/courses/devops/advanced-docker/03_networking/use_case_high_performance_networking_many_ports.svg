@@ -1,36 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Title -->
-  <text x="640" y="55" text-anchor="middle" font-size="36" font-weight="bold" fill="#1565c0">Host Network Mode</text>
-  <!-- Host outer box -->
-  <rect x="120" y="90" width="1040" height="500" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="148" text-anchor="middle" font-size="32" font-weight="bold" fill="#1565c0">Host</text>
-  <!-- Container Process -->
-  <rect x="240" y="175" width="800" height="170" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="248" text-anchor="middle" font-size="30" fill="#333333">Container Process</text>
-  <text x="640" y="308" text-anchor="middle" font-size="26" fill="#555555">(uses host network directly)</text>
-  <!-- Host NIC -->
-  <rect x="240" y="395" width="800" height="100" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="454" text-anchor="middle" font-size="28" font-family="monospace" fill="#333333">eth0: 192.168.1.10</text>
-  <!-- Description -->
-  <text x="640" y="630" text-anchor="middle" font-size="24" fill="#555555">No network namespace isolation — best performance for many-port services</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="48.8889" text-anchor="middle" font-size="32" font-weight="bold" fill="#1565c0">Host Network Mode</ns0:text>
+  <ns0:rect x="106.6667" y="80" width="924.4444" height="444.4444" rx="8.8889" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="131.5556" text-anchor="middle" font-size="28.4444" font-weight="bold" fill="#1565c0">Host</ns0:text>
+  <ns0:rect x="213.3333" y="155.5556" width="711.1111" height="151.1111" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="220.4444" text-anchor="middle" font-size="26.6667" fill="#333333">Container Process</ns0:text>
+  <ns0:text x="568.8889" y="273.7778" text-anchor="middle" font-size="23.1111" fill="#555555">(uses host network directly)</ns0:text>
+  <ns0:rect x="213.3333" y="351.1111" width="711.1111" height="88.8889" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="403.5556" text-anchor="middle" font-size="24.8889" font-family="monospace" fill="#333333">eth0: 192.168.1.10</ns0:text>
+  <ns0:text x="568.8889" y="560" text-anchor="middle" font-size="21.3333" fill="#555555">No network namespace isolation — best performance for many-port services</ns0:text>
+</ns0:svg>

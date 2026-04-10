@@ -1,58 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="aft" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="aftd" markerWidth="16" markerHeight="11.2" refX="8" refY="11.2" orient="auto">
-      <polygon points="0,16 0,8" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Fine-Tuning vs Prompt Engineering: Decision Tree</text>
-  <rect x="400" y="64" width="480" height="56" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="640" y="100.8" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Do you have a working prompt?</text>
-  <line x1="512" y1="120" x2="288" y2="160" stroke="#dc3545" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="368" y="144" font-size="16" fill="#dc3545">NO</text>
-  <rect x="128" y="160" width="320" height="48" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
-  <text x="288" y="192" text-anchor="middle" font-size="17.6" fill="#856404">Try prompt engineering first</text>
-  <line x1="768" y1="120" x2="928" y2="160" stroke="#28a745" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="864" y="144" font-size="16" fill="#28a745">YES</text>
-  <rect x="752" y="160" width="416" height="56" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="960" y="196.8" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Is quality sufficient?</text>
-  <line x1="1024" y1="216" x2="1120" y2="256" stroke="#28a745" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="1088" y="243.2" font-size="16" fill="#28a745">YES</text>
-  <rect x="992" y="256" width="256" height="56" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="1120" y="292.8" text-anchor="middle" font-size="16" fill="#28a745">Keep using prompts</text>
-  <line x1="864" y1="216" x2="704" y2="272" stroke="#dc3545" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="768" y="248" font-size="16" fill="#dc3545">NO</text>
-  <rect x="496" y="272" width="416" height="56" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="704" y="308.8" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">Better examples help?</text>
-  <line x1="800" y1="328" x2="928" y2="368" stroke="#28a745" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="880" y="355.2" font-size="16" fill="#28a745">YES</text>
-  <rect x="832" y="368" width="256" height="48" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="960" y="400" text-anchor="middle" font-size="16" fill="#28a745">Use few-shot learning</text>
-  <line x1="608" y1="328" x2="496" y2="384" stroke="#dc3545" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="544" y="360" font-size="16" fill="#dc3545">NO</text>
-  <rect x="304" y="384" width="384" height="56" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="496" y="420.8" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">50+ labeled examples?</text>
-  <line x1="384" y1="440" x2="256" y2="480" stroke="#dc3545" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="304" y="467.2" font-size="16" fill="#dc3545">NO</text>
-  <rect x="96" y="480" width="320" height="48" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
-  <text x="256" y="512" text-anchor="middle" font-size="16" fill="#856404">Collect more data first</text>
-  <line x1="592" y1="440" x2="688" y2="488" stroke="#28a745" stroke-width="2.4" marker-end="url(#aft)" />
-  <text x="656" y="468.8" font-size="16" fill="#28a745">YES</text>
-  <rect x="576" y="488" width="224" height="56" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="688" y="524.8" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#28a745">FINE-TUNE</text>
-  <line x1="688" y1="544" x2="688" y2="584" stroke="#4a90e2" stroke-width="2.4" />
-  <rect x="160" y="592" width="288" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <text x="304" y="619.2" text-anchor="middle" font-size="16" fill="#333">50-500: OpenAI</text>
-  <text x="304" y="643.2" text-anchor="middle" font-size="16" fill="#333">fine-tuning</text>
-  <rect x="496" y="592" width="288" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <text x="640" y="619.2" text-anchor="middle" font-size="16" fill="#333">500-10K: Open-source</text>
-  <text x="640" y="643.2" text-anchor="middle" font-size="16" fill="#333">+ LoRA</text>
-  <rect x="832" y="592" width="288" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <text x="976" y="619.2" text-anchor="middle" font-size="16" fill="#333">10K+: Full</text>
-  <text x="976" y="643.2" text-anchor="middle" font-size="16" fill="#333">fine-tuning viable</text>
-  <line x1="688" y1="584" x2="304" y2="592" stroke="#4a90e2" stroke-width="1.6" />
-  <line x1="688" y1="584" x2="640" y2="592" stroke="#4a90e2" stroke-width="1.6" />
-  <line x1="688" y1="584" x2="976" y2="592" stroke="#4a90e2" stroke-width="1.6" />
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="aft" markerWidth="15.6098" markerHeight="10.9268" refX="15.6098" refY="5.4634" orient="auto">
+      <ns0:polygon points="0,15.6098 5.4634,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="aftd" markerWidth="15.6098" markerHeight="10.9268" refX="7.8049" refY="10.9268" orient="auto">
+      <ns0:polygon points="0,15.6098 0,7.8049" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="624.3902" y="39.0244" text-anchor="middle" font-size="23.4146" font-weight="bold" fill="#333">Fine-Tuning vs Prompt Engineering: Decision Tree</ns0:text>
+  <ns0:rect x="390.2439" y="62.439" width="468.2927" height="54.6341" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.122" />
+  <ns0:text x="624.3902" y="98.3415" text-anchor="middle" font-size="18.7317" font-weight="bold" fill="#333">Do you have a working prompt?</ns0:text>
+  <ns0:line x1="499.5122" y1="117.0732" x2="280.9756" y2="156.0976" stroke="#dc3545" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="359.0244" y="140.4878" font-size="15.6098" fill="#dc3545">NO</ns0:text>
+  <ns0:rect x="124.878" y="156.0976" width="312.1951" height="46.8293" rx="7.8049" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3415" />
+  <ns0:text x="280.9756" y="187.3171" text-anchor="middle" font-size="17.1707" fill="#856404">Try prompt engineering first</ns0:text>
+  <ns0:line x1="749.2683" y1="117.0732" x2="905.3659" y2="156.0976" stroke="#28a745" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="842.9268" y="140.4878" font-size="15.6098" fill="#28a745">YES</ns0:text>
+  <ns0:rect x="733.6585" y="156.0976" width="405.8537" height="54.6341" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.122" />
+  <ns0:text x="936.5854" y="192" text-anchor="middle" font-size="18.7317" font-weight="bold" fill="#333">Is quality sufficient?</ns0:text>
+  <ns0:line x1="999.0244" y1="210.7317" x2="1092.6829" y2="249.7561" stroke="#28a745" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="1061.4634" y="237.2683" font-size="15.6098" fill="#28a745">YES</ns0:text>
+  <ns0:rect x="967.8049" y="249.7561" width="249.7561" height="54.6341" rx="7.8049" fill="#d4edda" stroke="#28a745" stroke-width="2.3415" />
+  <ns0:text x="1092.6829" y="285.6585" text-anchor="middle" font-size="15.6098" fill="#28a745">Keep using prompts</ns0:text>
+  <ns0:line x1="842.9268" y1="210.7317" x2="686.8293" y2="265.3659" stroke="#dc3545" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="749.2683" y="241.9512" font-size="15.6098" fill="#dc3545">NO</ns0:text>
+  <ns0:rect x="483.9024" y="265.3659" width="405.8537" height="54.6341" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.122" />
+  <ns0:text x="686.8293" y="301.2683" text-anchor="middle" font-size="17.1707" font-weight="bold" fill="#333">Better examples help?</ns0:text>
+  <ns0:line x1="780.4878" y1="320" x2="905.3659" y2="359.0244" stroke="#28a745" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="858.5366" y="346.5366" font-size="15.6098" fill="#28a745">YES</ns0:text>
+  <ns0:rect x="811.7073" y="359.0244" width="249.7561" height="46.8293" rx="7.8049" fill="#d4edda" stroke="#28a745" stroke-width="2.3415" />
+  <ns0:text x="936.5854" y="390.2439" text-anchor="middle" font-size="15.6098" fill="#28a745">Use few-shot learning</ns0:text>
+  <ns0:line x1="593.1707" y1="320" x2="483.9024" y2="374.6341" stroke="#dc3545" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="530.7317" y="351.2195" font-size="15.6098" fill="#dc3545">NO</ns0:text>
+  <ns0:rect x="296.5854" y="374.6341" width="374.6341" height="54.6341" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.122" />
+  <ns0:text x="483.9024" y="410.5366" text-anchor="middle" font-size="17.1707" font-weight="bold" fill="#333">50+ labeled examples?</ns0:text>
+  <ns0:line x1="374.6341" y1="429.2683" x2="249.7561" y2="468.2927" stroke="#dc3545" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="296.5854" y="455.8049" font-size="15.6098" fill="#dc3545">NO</ns0:text>
+  <ns0:rect x="93.6585" y="468.2927" width="312.1951" height="46.8293" rx="7.8049" fill="#fff3cd" stroke="#ffc107" stroke-width="2.3415" />
+  <ns0:text x="249.7561" y="499.5122" text-anchor="middle" font-size="15.6098" fill="#856404">Collect more data first</ns0:text>
+  <ns0:line x1="577.561" y1="429.2683" x2="671.2195" y2="476.0976" stroke="#28a745" stroke-width="2.3415" marker-end="url(#aft)" />
+  <ns0:text x="640" y="457.3659" font-size="15.6098" fill="#28a745">YES</ns0:text>
+  <ns0:rect x="561.9512" y="476.0976" width="218.5366" height="54.6341" rx="7.8049" fill="#d4edda" stroke="#28a745" stroke-width="3.122" />
+  <ns0:text x="671.2195" y="512" text-anchor="middle" font-size="20.2927" font-weight="bold" fill="#28a745">FINE-TUNE</ns0:text>
+  <ns0:line x1="671.2195" y1="530.7317" x2="671.2195" y2="569.7561" stroke="#4a90e2" stroke-width="2.3415" />
+  <ns0:rect x="156.0976" y="577.561" width="280.9756" height="62.439" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.561" />
+  <ns0:text x="296.5854" y="604.0976" text-anchor="middle" font-size="15.6098" fill="#333">50-500: OpenAI</ns0:text>
+  <ns0:text x="296.5854" y="627.5122" text-anchor="middle" font-size="15.6098" fill="#333">fine-tuning</ns0:text>
+  <ns0:rect x="483.9024" y="577.561" width="280.9756" height="62.439" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.561" />
+  <ns0:text x="624.3902" y="604.0976" text-anchor="middle" font-size="15.6098" fill="#333">500-10K: Open-source</ns0:text>
+  <ns0:text x="624.3902" y="627.5122" text-anchor="middle" font-size="15.6098" fill="#333">+ LoRA</ns0:text>
+  <ns0:rect x="811.7073" y="577.561" width="280.9756" height="62.439" rx="7.8049" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.561" />
+  <ns0:text x="952.1951" y="604.0976" text-anchor="middle" font-size="15.6098" fill="#333">10K+: Full</ns0:text>
+  <ns0:text x="952.1951" y="627.5122" text-anchor="middle" font-size="15.6098" fill="#333">fine-tuning viable</ns0:text>
+  <ns0:line x1="671.2195" y1="569.7561" x2="296.5854" y2="577.561" stroke="#4a90e2" stroke-width="1.561" />
+  <ns0:line x1="671.2195" y1="569.7561" x2="624.3902" y2="577.561" stroke="#4a90e2" stroke-width="1.561" />
+  <ns0:line x1="671.2195" y1="569.7561" x2="952.1951" y2="577.561" stroke="#4a90e2" stroke-width="1.561" />
+</ns0:svg>

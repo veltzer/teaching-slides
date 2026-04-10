@@ -1,69 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- char row -->
-  <text x="60" y="90" font-size="20" font-weight="bold" fill="#222222" font-family="monospace">char c = 'A';</text>
-  <text x="400" y="90" font-size="16" fill="#666666">(1 byte)</text>
-  <rect x="60" y="106" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="96" y="142" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">41</text>
-  <text x="144" y="142" font-size="16" fill="#666666">(0x41 = 65 = 'A')</text>
-
-  <!-- int row -->
-  <text x="60" y="230" font-size="20" font-weight="bold" fill="#222222" font-family="monospace">int x = 0x12345678;</text>
-  <text x="490" y="230" font-size="16" fill="#666666">(4 bytes, little-endian)</text>
-  <rect x="60" y="246" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="96" y="282" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">78</text>
-  <rect x="136" y="246" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="172" y="282" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">56</text>
-  <rect x="212" y="246" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="248" y="282" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">34</text>
-  <rect x="288" y="246" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="324" y="282" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">12</text>
-  <text x="80" y="326" font-size="15" fill="#888888">addr</text>
-  <text x="156" y="326" font-size="15" fill="#888888">+1</text>
-  <text x="232" y="326" font-size="15" fill="#888888">+2</text>
-  <text x="308" y="326" font-size="15" fill="#888888">+3</text>
-
-  <!-- double row -->
-  <text x="60" y="400" font-size="20" font-weight="bold" fill="#222222" font-family="monospace">double d = 3.14;</text>
-  <text x="400" y="400" font-size="16" fill="#666666">(8 bytes, IEEE 754)</text>
-  <rect x="60" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="96" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">1F</text>
-  <rect x="136" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="172" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">85</text>
-  <rect x="212" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="248" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">EB</text>
-  <rect x="288" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="324" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">51</text>
-  <rect x="364" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">B8</text>
-  <rect x="440" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="476" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">1E</text>
-  <rect x="516" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="552" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">09</text>
-  <rect x="592" y="416" width="72" height="58" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="628" y="452" text-anchor="middle" font-size="18" font-family="monospace" fill="#222222">40</text>
-
-  <!-- Note -->
-  <rect x="60" y="530" width="900" height="60" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <text x="510" y="567" text-anchor="middle" font-size="18" fill="#555555">All multi-byte values stored in little-endian order on x86</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="53.3333" y="80" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">char c = 'A';</ns0:text>
+  <ns0:text x="355.5556" y="80" font-size="14.2222" fill="#666666">(1 byte)</ns0:text>
+  <ns0:rect x="53.3333" y="94.2222" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="85.3333" y="126.2222" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">41</ns0:text>
+  <ns0:text x="128" y="126.2222" font-size="14.2222" fill="#666666">(0x41 = 65 = 'A')</ns0:text>
+  <ns0:text x="53.3333" y="204.4444" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">int x = 0x12345678;</ns0:text>
+  <ns0:text x="435.5556" y="204.4444" font-size="14.2222" fill="#666666">(4 bytes, little-endian)</ns0:text>
+  <ns0:rect x="53.3333" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="85.3333" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">78</ns0:text>
+  <ns0:rect x="120.8889" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="152.8889" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">56</ns0:text>
+  <ns0:rect x="188.4444" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="220.4444" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">34</ns0:text>
+  <ns0:rect x="256" y="218.6667" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="288" y="250.6667" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">12</ns0:text>
+  <ns0:text x="71.1111" y="289.7778" font-size="13.3333" fill="#888888">addr</ns0:text>
+  <ns0:text x="138.6667" y="289.7778" font-size="13.3333" fill="#888888">+1</ns0:text>
+  <ns0:text x="206.2222" y="289.7778" font-size="13.3333" fill="#888888">+2</ns0:text>
+  <ns0:text x="273.7778" y="289.7778" font-size="13.3333" fill="#888888">+3</ns0:text>
+  <ns0:text x="53.3333" y="355.5556" font-size="17.7778" font-weight="bold" fill="#222222" font-family="monospace">double d = 3.14;</ns0:text>
+  <ns0:text x="355.5556" y="355.5556" font-size="14.2222" fill="#666666">(8 bytes, IEEE 754)</ns0:text>
+  <ns0:rect x="53.3333" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="85.3333" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">1F</ns0:text>
+  <ns0:rect x="120.8889" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="152.8889" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">85</ns0:text>
+  <ns0:rect x="188.4444" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="220.4444" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">EB</ns0:text>
+  <ns0:rect x="256" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="288" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">51</ns0:text>
+  <ns0:rect x="323.5556" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="355.5556" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">B8</ns0:text>
+  <ns0:rect x="391.1111" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="423.1111" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">1E</ns0:text>
+  <ns0:rect x="458.6667" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="490.6667" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">09</ns0:text>
+  <ns0:rect x="526.2222" y="369.7778" width="64" height="51.5556" rx="4.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="558.2222" y="401.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#222222">40</ns0:text>
+  <ns0:rect x="53.3333" y="471.1111" width="800" height="53.3333" rx="5.3333" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:text x="453.3333" y="504" text-anchor="middle" font-size="16" fill="#555555">All multi-byte values stored in little-endian order on x86</ns0:text>
+</ns0:svg>

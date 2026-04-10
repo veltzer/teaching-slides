@@ -1,71 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="10.9565" refX="16" refY="5.4783" orient="auto">
-      <polygon points="0,15.6522 5.6,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="46.9565" text-anchor="middle" font-size="31.3043" font-weight="bold" fill="#333">Channel Types Comparison</text>
-  <rect x="48" y="86.087" width="368" height="219.1304" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="3.1304" />
-  <text x="232" y="125.2174" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#28a745">mpsc (std / tokio)</text>
-  <text x="72" y="156.5217" font-size="15.6522" fill="#555">Multiple Producer</text>
-  <text x="72" y="184.6957" font-size="15.6522" fill="#555">Single Consumer</text>
-  <rect x="80" y="203.4783" width="64" height="31.3043" rx="4.6957" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="112" y="225.3913" text-anchor="middle" font-size="15.6522" fill="#333">tx1</text>
-  <rect x="160" y="203.4783" width="64" height="31.3043" rx="4.6957" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="192" y="225.3913" text-anchor="middle" font-size="15.6522" fill="#333">tx2</text>
-  <line x1="224" y1="219.1304" x2="272" y2="242.6087" stroke="#4a90e2" stroke-width="2.3478" marker-end="url(#arrow)" />
-  <line x1="144" y1="234.7826" x2="272" y2="242.6087" stroke="#4a90e2" stroke-width="2.3478" />
-  <rect x="272" y="226.9565" width="112" height="39.1304" rx="4.6957" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5652" />
-  <text x="328" y="253.5652" text-anchor="middle" font-size="15.6522" fill="#333">rx (one)</text>
-  <text x="232" y="292.6957" text-anchor="middle" font-size="15.6522" fill="#555">Bounded or unbounded</text>
-  <rect x="456" y="86.087" width="368" height="219.1304" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.1304" />
-  <text x="640" y="125.2174" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#4a90e2">oneshot (tokio)</text>
-  <text x="480" y="156.5217" font-size="15.6522" fill="#555">Single Producer</text>
-  <text x="480" y="184.6957" font-size="15.6522" fill="#555">Single Consumer</text>
-  <text x="480" y="212.8696" font-size="15.6522" fill="#555">Exactly ONE message</text>
-  <rect x="488" y="226.9565" width="112" height="39.1304" rx="4.6957" fill="#d4edda" stroke="#28a745" stroke-width="1.5652" />
-  <text x="544" y="253.5652" text-anchor="middle" font-size="15.6522" fill="#333">tx</text>
-  <line x1="600" y1="245.7391" x2="672" y2="245.7391" stroke="#4a90e2" stroke-width="2.3478" marker-end="url(#arrow)" />
-  <rect x="680" y="226.9565" width="112" height="39.1304" rx="4.6957" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5652" />
-  <text x="736" y="253.5652" text-anchor="middle" font-size="15.6522" fill="#333">rx</text>
-  <text x="640" y="292.6957" text-anchor="middle" font-size="15.6522" fill="#555">Great for request/response</text>
-  <rect x="864" y="86.087" width="368" height="219.1304" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="3.1304" />
-  <text x="1048" y="125.2174" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#333">broadcast (tokio)</text>
-  <text x="888" y="156.5217" font-size="15.6522" fill="#555">Single Producer</text>
-  <text x="888" y="184.6957" font-size="15.6522" fill="#555">Multiple Consumers</text>
-  <rect x="992" y="203.4783" width="80" height="31.3043" rx="4.6957" fill="#d4edda" stroke="#28a745" stroke-width="1.5652" />
-  <text x="1032" y="225.3913" text-anchor="middle" font-size="15.6522" fill="#333">tx</text>
-  <line x1="1032" y1="234.7826" x2="928" y2="250.4348" stroke="#4a90e2" stroke-width="2.3478" marker-end="url(#arrow)" />
-  <line x1="1032" y1="234.7826" x2="1032" y2="250.4348" stroke="#4a90e2" stroke-width="2.3478" marker-end="url(#arrow)" />
-  <line x1="1032" y1="234.7826" x2="1136" y2="250.4348" stroke="#4a90e2" stroke-width="2.3478" marker-end="url(#arrow)" />
-  <rect x="896" y="253.5652" width="56" height="28.1739" rx="4.6957" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="923.2" y="273.913" text-anchor="middle" font-size="15.6522" fill="#333">rx1</text>
-  <rect x="1004.8" y="253.5652" width="56" height="28.1739" rx="4.6957" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="1032" y="273.913" text-anchor="middle" font-size="15.6522" fill="#333">rx2</text>
-  <rect x="1112" y="253.5652" width="56" height="28.1739" rx="4.6957" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5652" />
-  <text x="1139.2" y="273.913" text-anchor="middle" font-size="15.6522" fill="#333">rx3</text>
-  <text x="1048" y="305.2174" text-anchor="middle" font-size="15.6522" fill="#555">All receivers get clone</text>
-  <rect x="48" y="336.5217" width="368" height="172.1739" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.1304" />
-  <text x="232" y="375.6522" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#4a90e2">watch (tokio)</text>
-  <text x="72" y="406.9565" font-size="15.6522" fill="#555">Single latest value</text>
-  <text x="72" y="435.1304" font-size="15.6522" fill="#555">Multiple observers</text>
-  <text x="72" y="463.3043" font-size="15.6522" fill="#555">Only keeps most recent</text>
-  <text x="72" y="491.4783" font-size="15.6522" fill="#555">Config changes, state updates</text>
-  <rect x="456" y="336.5217" width="368" height="172.1739" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="3.1304" />
-  <text x="640" y="375.6522" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#28a745">crossbeam-channel</text>
-  <text x="480" y="406.9565" font-size="15.6522" fill="#555">MPMC support</text>
-  <text x="480" y="435.1304" font-size="15.6522" fill="#555">select! macro</text>
-  <text x="480" y="463.3043" font-size="15.6522" fill="#555">Bounded &amp; unbounded</text>
-  <text x="480" y="491.4783" font-size="15.6522" fill="#555">Faster than std for sync code</text>
-  <rect x="864" y="336.5217" width="368" height="172.1739" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="3.1304" />
-  <text x="1048" y="375.6522" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#333">flume</text>
-  <text x="888" y="406.9565" font-size="15.6522" fill="#555">MPMC, async + sync</text>
-  <text x="888" y="435.1304" font-size="15.6522" fill="#555">Drop-in std replacement</text>
-  <text x="888" y="463.3043" font-size="15.6522" fill="#555">Works in both contexts</text>
-  <text x="888" y="491.4783" font-size="15.6522" fill="#555">Bridge sync &amp; async code</text>
-  <rect x="48" y="540" width="1184" height="156.5217" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="3.1304" />
-  <text x="640" y="579.1304" text-anchor="middle" font-size="21.913" font-weight="bold" fill="#333">When to Use What</text>
-  <text x="72" y="618.2609" font-size="15.6522" fill="#555">Request/Response: oneshot | Fan-out: broadcast | Config/State: watch</text>
-  <text x="72" y="649.5652" font-size="15.6522" fill="#555">Work distribution: mpsc (bounded for backpressure) | Sync MPMC: crossbeam | Mixed: flume</text>
-  <text x="72" y="680.8696" font-size="15.6522" fill="#dc3545">Unbounded channels can cause OOM - prefer bounded with backpressure in production</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.7016" markerHeight="10.0674" refX="14.7016" refY="5.0337" orient="auto">
+      <ns0:polygon points="0,14.382 5.1456,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="#333">Channel Types Comparison</ns0:text>
+  <ns0:rect x="44.1049" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="#d4edda" stroke="#28a745" stroke-width="2.8764" />
+  <ns0:text x="213.1735" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#28a745">mpsc (std / tokio)</ns0:text>
+  <ns0:text x="66.1573" y="143.8202" font-size="14.382" fill="#555">Multiple Producer</ns0:text>
+  <ns0:text x="66.1573" y="169.7079" font-size="14.382" fill="#555">Single Consumer</ns0:text>
+  <ns0:rect x="73.5081" y="186.9663" width="58.8065" height="28.764" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
+  <ns0:text x="102.9114" y="207.1011" text-anchor="middle" font-size="14.382" fill="#333">tx1</ns0:text>
+  <ns0:rect x="147.0162" y="186.9663" width="58.8065" height="28.764" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
+  <ns0:text x="176.4195" y="207.1011" text-anchor="middle" font-size="14.382" fill="#333">tx2</ns0:text>
+  <ns0:line x1="205.8227" y1="201.3483" x2="249.9276" y2="222.9214" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:line x1="132.3146" y1="215.7303" x2="249.9276" y2="222.9214" stroke="#4a90e2" stroke-width="2.1573" />
+  <ns0:rect x="249.9276" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4382" />
+  <ns0:text x="301.3833" y="232.9888" text-anchor="middle" font-size="14.382" fill="#333">rx (one)</ns0:text>
+  <ns0:text x="213.1735" y="268.9439" text-anchor="middle" font-size="14.382" fill="#555">Bounded or unbounded</ns0:text>
+  <ns0:rect x="418.9963" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8764" />
+  <ns0:text x="588.065" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#4a90e2">oneshot (tokio)</ns0:text>
+  <ns0:text x="441.0487" y="143.8202" font-size="14.382" fill="#555">Single Producer</ns0:text>
+  <ns0:text x="441.0487" y="169.7079" font-size="14.382" fill="#555">Single Consumer</ns0:text>
+  <ns0:text x="441.0487" y="195.5955" font-size="14.382" fill="#555">Exactly ONE message</ns0:text>
+  <ns0:rect x="448.3995" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="#d4edda" stroke="#28a745" stroke-width="1.4382" />
+  <ns0:text x="499.8552" y="232.9888" text-anchor="middle" font-size="14.382" fill="#333">tx</ns0:text>
+  <ns0:line x1="551.3109" y1="225.7977" x2="617.4682" y2="225.7977" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:rect x="624.819" y="208.5393" width="102.9114" height="35.955" rx="4.3147" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4382" />
+  <ns0:text x="676.2747" y="232.9888" text-anchor="middle" font-size="14.382" fill="#333">rx</ns0:text>
+  <ns0:text x="588.065" y="268.9439" text-anchor="middle" font-size="14.382" fill="#555">Great for request/response</ns0:text>
+  <ns0:rect x="793.8877" y="79.1012" width="338.1373" height="201.3483" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
+  <ns0:text x="962.9564" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#333">broadcast (tokio)</ns0:text>
+  <ns0:text x="815.9401" y="143.8202" font-size="14.382" fill="#555">Single Producer</ns0:text>
+  <ns0:text x="815.9401" y="169.7079" font-size="14.382" fill="#555">Multiple Consumers</ns0:text>
+  <ns0:rect x="911.5007" y="186.9663" width="73.5081" height="28.764" rx="4.3147" fill="#d4edda" stroke="#28a745" stroke-width="1.4382" />
+  <ns0:text x="948.2547" y="207.1011" text-anchor="middle" font-size="14.382" fill="#333">tx</ns0:text>
+  <ns0:line x1="948.2547" y1="215.7303" x2="852.6942" y2="230.1124" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:line x1="948.2547" y1="215.7303" x2="948.2547" y2="230.1124" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:line x1="948.2547" y1="215.7303" x2="1043.8153" y2="230.1124" stroke="#4a90e2" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <ns0:rect x="823.2909" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
+  <ns0:text x="848.2837" y="251.6854" text-anchor="middle" font-size="14.382" fill="#333">rx1</ns0:text>
+  <ns0:rect x="923.262" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
+  <ns0:text x="948.2547" y="251.6854" text-anchor="middle" font-size="14.382" fill="#333">rx2</ns0:text>
+  <ns0:rect x="1021.7629" y="232.9888" width="51.4557" height="25.8876" rx="4.3147" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4382" />
+  <ns0:text x="1046.7556" y="251.6854" text-anchor="middle" font-size="14.382" fill="#333">rx3</ns0:text>
+  <ns0:text x="962.9564" y="280.4495" text-anchor="middle" font-size="14.382" fill="#555">All receivers get clone</ns0:text>
+  <ns0:rect x="44.1049" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8764" />
+  <ns0:text x="213.1735" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#4a90e2">watch (tokio)</ns0:text>
+  <ns0:text x="66.1573" y="373.9326" font-size="14.382" fill="#555">Single latest value</ns0:text>
+  <ns0:text x="66.1573" y="399.8202" font-size="14.382" fill="#555">Multiple observers</ns0:text>
+  <ns0:text x="66.1573" y="425.7078" font-size="14.382" fill="#555">Only keeps most recent</ns0:text>
+  <ns0:text x="66.1573" y="451.5956" font-size="14.382" fill="#555">Config changes, state updates</ns0:text>
+  <ns0:rect x="418.9963" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="#d4edda" stroke="#28a745" stroke-width="2.8764" />
+  <ns0:text x="588.065" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#28a745">crossbeam-channel</ns0:text>
+  <ns0:text x="441.0487" y="373.9326" font-size="14.382" fill="#555">MPMC support</ns0:text>
+  <ns0:text x="441.0487" y="399.8202" font-size="14.382" fill="#555">select! macro</ns0:text>
+  <ns0:text x="441.0487" y="425.7078" font-size="14.382" fill="#555">Bounded &amp; unbounded</ns0:text>
+  <ns0:text x="441.0487" y="451.5956" font-size="14.382" fill="#555">Faster than std for sync code</ns0:text>
+  <ns0:rect x="793.8877" y="309.2135" width="338.1373" height="158.2022" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
+  <ns0:text x="962.9564" y="345.1686" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="#333">flume</ns0:text>
+  <ns0:text x="815.9401" y="373.9326" font-size="14.382" fill="#555">MPMC, async + sync</ns0:text>
+  <ns0:text x="815.9401" y="399.8202" font-size="14.382" fill="#555">Drop-in std replacement</ns0:text>
+  <ns0:text x="815.9401" y="425.7078" font-size="14.382" fill="#555">Works in both contexts</ns0:text>
+  <ns0:text x="815.9401" y="451.5956" font-size="14.382" fill="#555">Bridge sync &amp; async code</ns0:text>
+  <ns0:rect x="44.1049" y="496.1798" width="1087.9202" height="143.8202" rx="7.191" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8764" />
+  <ns0:text x="588.065" y="532.1348" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="#333">When to Use What</ns0:text>
+  <ns0:text x="66.1573" y="568.0899" font-size="14.382" fill="#555">Request/Response: oneshot | Fan-out: broadcast | Config/State: watch</ns0:text>
+  <ns0:text x="66.1573" y="596.854" font-size="14.382" fill="#555">Work distribution: mpsc (bounded for backpressure) | Sync MPMC: crossbeam | Mixed: flume</ns0:text>
+  <ns0:text x="66.1573" y="625.618" font-size="14.382" fill="#dc3545">Unbounded channels can cause OOM - prefer bounded with backpressure in production</ns0:text>
+</ns0:svg>

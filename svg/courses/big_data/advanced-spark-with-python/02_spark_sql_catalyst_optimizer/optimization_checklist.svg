@@ -1,59 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="32" font-weight="bold" fill="#1a237e">Spark SQL Optimization Checklist</text>
-  <rect x="32" y="80" width="384" height="624" rx="12.8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
-  <text x="224" y="120" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#1a237e">Data Layer</text>
-  <rect x="56" y="144" width="336" height="48" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="80" y="176" font-family="Arial" font-size="19.2" fill="#1a237e">Use Parquet/ORC format</text>
-  <rect x="56" y="208" width="336" height="48" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="80" y="240" font-family="Arial" font-size="19.2" fill="#1a237e">Enable compression (Snappy)</text>
-  <rect x="56" y="272" width="336" height="48" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="80" y="304" font-family="Arial" font-size="19.2" fill="#1a237e">Partition by common filters</text>
-  <rect x="56" y="336" width="336" height="48" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="80" y="368" font-family="Arial" font-size="19.2" fill="#1a237e">Collect table statistics</text>
-  <rect x="56" y="400" width="336" height="48" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="80" y="432" font-family="Arial" font-size="19.2" fill="#1a237e">Right-size file counts</text>
-  <rect x="56" y="464" width="336" height="48" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="80" y="496" font-family="Arial" font-size="19.2" fill="#1a237e">Use explicit schemas</text>
-  <rect x="448" y="80" width="384" height="624" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
-  <text x="640" y="120" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#1b5e20">Query Layer</text>
-  <rect x="472" y="144" width="336" height="48" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="496" y="176" font-family="Arial" font-size="19.2" fill="#1b5e20">Select specific columns</text>
-  <rect x="472" y="208" width="336" height="48" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="496" y="240" font-family="Arial" font-size="19.2" fill="#1b5e20">Filter early (pushdown)</text>
-  <rect x="472" y="272" width="336" height="48" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="496" y="304" font-family="Arial" font-size="19.2" fill="#1b5e20">Use broadcast joins</text>
-  <rect x="472" y="336" width="336" height="48" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="496" y="368" font-family="Arial" font-size="19.2" fill="#1b5e20">Avoid UDFs if possible</text>
-  <rect x="472" y="400" width="336" height="48" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="496" y="432" font-family="Arial" font-size="19.2" fill="#1b5e20">Cache repeated queries</text>
-  <rect x="472" y="464" width="336" height="48" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="496" y="496" font-family="Arial" font-size="19.2" fill="#1b5e20">Match types in filters</text>
-  <rect x="864" y="80" width="384" height="624" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
-  <text x="1056" y="120" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#e65100">Infrastructure</text>
-  <rect x="888" y="144" width="336" height="48" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
-  <text x="912" y="176" font-family="Arial" font-size="19.2" fill="#e65100">Enable AQE</text>
-  <rect x="888" y="208" width="336" height="48" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
-  <text x="912" y="240" font-family="Arial" font-size="19.2" fill="#e65100">Enable CBO</text>
-  <rect x="888" y="272" width="336" height="48" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
-  <text x="912" y="304" font-family="Arial" font-size="19.2" fill="#e65100">Tune shuffle partitions</text>
-  <rect x="888" y="336" width="336" height="48" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
-  <text x="912" y="368" font-family="Arial" font-size="19.2" fill="#e65100">Configure memory fraction</text>
-  <rect x="888" y="400" width="336" height="48" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
-  <text x="912" y="432" font-family="Arial" font-size="19.2" fill="#e65100">Monitor Spark UI metrics</text>
-  <rect x="888" y="464" width="336" height="48" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
-  <text x="912" y="496" font-family="Arial" font-size="19.2" fill="#e65100">Review explain() output</text>
-  <text x="224" y="576" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1565c0">Impact: High</text>
-  <text x="224" y="608" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Format + partitioning</text>
-  <text x="224" y="633.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">give biggest gains</text>
-  <text x="640" y="576" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#2e7d32">Impact: Medium</text>
-  <text x="640" y="608" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Query patterns affect</text>
-  <text x="640" y="633.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">plan quality</text>
-  <text x="1056" y="576" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Impact: Varies</text>
-  <text x="1056" y="608" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Config tuning needs</text>
-  <text x="1056" y="633.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">workload testing</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.5455" markerHeight="10.1818" refX="13.0909" refY="5.0909" orient="auto">
+      <ns0:polygon points="0,14.5455 5.0909,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="581.8182" y="43.6364" text-anchor="middle" font-family="Arial" font-size="29.0909" font-weight="bold" fill="#1a237e">Spark SQL Optimization Checklist</ns0:text>
+  <ns0:rect x="29.0909" y="72.7273" width="349.0909" height="567.2727" rx="11.6364" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.9091" />
+  <ns0:text x="203.6364" y="109.0909" text-anchor="middle" font-family="Arial" font-size="20.3636" font-weight="bold" fill="#1a237e">Data Layer</ns0:text>
+  <ns0:rect x="50.9091" y="130.9091" width="305.4545" height="43.6364" rx="5.8182" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4545" />
+  <ns0:text x="72.7273" y="160" font-family="Arial" font-size="17.4545" fill="#1a237e">Use Parquet/ORC format</ns0:text>
+  <ns0:rect x="50.9091" y="189.0909" width="305.4545" height="43.6364" rx="5.8182" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4545" />
+  <ns0:text x="72.7273" y="218.1818" font-family="Arial" font-size="17.4545" fill="#1a237e">Enable compression (Snappy)</ns0:text>
+  <ns0:rect x="50.9091" y="247.2727" width="305.4545" height="43.6364" rx="5.8182" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4545" />
+  <ns0:text x="72.7273" y="276.3636" font-family="Arial" font-size="17.4545" fill="#1a237e">Partition by common filters</ns0:text>
+  <ns0:rect x="50.9091" y="305.4545" width="305.4545" height="43.6364" rx="5.8182" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4545" />
+  <ns0:text x="72.7273" y="334.5455" font-family="Arial" font-size="17.4545" fill="#1a237e">Collect table statistics</ns0:text>
+  <ns0:rect x="50.9091" y="363.6364" width="305.4545" height="43.6364" rx="5.8182" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4545" />
+  <ns0:text x="72.7273" y="392.7273" font-family="Arial" font-size="17.4545" fill="#1a237e">Right-size file counts</ns0:text>
+  <ns0:rect x="50.9091" y="421.8182" width="305.4545" height="43.6364" rx="5.8182" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4545" />
+  <ns0:text x="72.7273" y="450.9091" font-family="Arial" font-size="17.4545" fill="#1a237e">Use explicit schemas</ns0:text>
+  <ns0:rect x="407.2727" y="72.7273" width="349.0909" height="567.2727" rx="11.6364" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9091" />
+  <ns0:text x="581.8182" y="109.0909" text-anchor="middle" font-family="Arial" font-size="20.3636" font-weight="bold" fill="#1b5e20">Query Layer</ns0:text>
+  <ns0:rect x="429.0909" y="130.9091" width="305.4545" height="43.6364" rx="5.8182" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4545" />
+  <ns0:text x="450.9091" y="160" font-family="Arial" font-size="17.4545" fill="#1b5e20">Select specific columns</ns0:text>
+  <ns0:rect x="429.0909" y="189.0909" width="305.4545" height="43.6364" rx="5.8182" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4545" />
+  <ns0:text x="450.9091" y="218.1818" font-family="Arial" font-size="17.4545" fill="#1b5e20">Filter early (pushdown)</ns0:text>
+  <ns0:rect x="429.0909" y="247.2727" width="305.4545" height="43.6364" rx="5.8182" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4545" />
+  <ns0:text x="450.9091" y="276.3636" font-family="Arial" font-size="17.4545" fill="#1b5e20">Use broadcast joins</ns0:text>
+  <ns0:rect x="429.0909" y="305.4545" width="305.4545" height="43.6364" rx="5.8182" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4545" />
+  <ns0:text x="450.9091" y="334.5455" font-family="Arial" font-size="17.4545" fill="#1b5e20">Avoid UDFs if possible</ns0:text>
+  <ns0:rect x="429.0909" y="363.6364" width="305.4545" height="43.6364" rx="5.8182" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4545" />
+  <ns0:text x="450.9091" y="392.7273" font-family="Arial" font-size="17.4545" fill="#1b5e20">Cache repeated queries</ns0:text>
+  <ns0:rect x="429.0909" y="421.8182" width="305.4545" height="43.6364" rx="5.8182" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4545" />
+  <ns0:text x="450.9091" y="450.9091" font-family="Arial" font-size="17.4545" fill="#1b5e20">Match types in filters</ns0:text>
+  <ns0:rect x="785.4545" y="72.7273" width="349.0909" height="567.2727" rx="11.6364" fill="#fff3e0" stroke="#e65100" stroke-width="2.9091" />
+  <ns0:text x="960" y="109.0909" text-anchor="middle" font-family="Arial" font-size="20.3636" font-weight="bold" fill="#e65100">Infrastructure</ns0:text>
+  <ns0:rect x="807.2727" y="130.9091" width="305.4545" height="43.6364" rx="5.8182" fill="#ffe0b2" stroke="#e65100" stroke-width="1.4545" />
+  <ns0:text x="829.0909" y="160" font-family="Arial" font-size="17.4545" fill="#e65100">Enable AQE</ns0:text>
+  <ns0:rect x="807.2727" y="189.0909" width="305.4545" height="43.6364" rx="5.8182" fill="#ffe0b2" stroke="#e65100" stroke-width="1.4545" />
+  <ns0:text x="829.0909" y="218.1818" font-family="Arial" font-size="17.4545" fill="#e65100">Enable CBO</ns0:text>
+  <ns0:rect x="807.2727" y="247.2727" width="305.4545" height="43.6364" rx="5.8182" fill="#ffe0b2" stroke="#e65100" stroke-width="1.4545" />
+  <ns0:text x="829.0909" y="276.3636" font-family="Arial" font-size="17.4545" fill="#e65100">Tune shuffle partitions</ns0:text>
+  <ns0:rect x="807.2727" y="305.4545" width="305.4545" height="43.6364" rx="5.8182" fill="#ffe0b2" stroke="#e65100" stroke-width="1.4545" />
+  <ns0:text x="829.0909" y="334.5455" font-family="Arial" font-size="17.4545" fill="#e65100">Configure memory fraction</ns0:text>
+  <ns0:rect x="807.2727" y="363.6364" width="305.4545" height="43.6364" rx="5.8182" fill="#ffe0b2" stroke="#e65100" stroke-width="1.4545" />
+  <ns0:text x="829.0909" y="392.7273" font-family="Arial" font-size="17.4545" fill="#e65100">Monitor Spark UI metrics</ns0:text>
+  <ns0:rect x="807.2727" y="421.8182" width="305.4545" height="43.6364" rx="5.8182" fill="#ffe0b2" stroke="#e65100" stroke-width="1.4545" />
+  <ns0:text x="829.0909" y="450.9091" font-family="Arial" font-size="17.4545" fill="#e65100">Review explain() output</ns0:text>
+  <ns0:text x="203.6364" y="523.6364" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#1565c0">Impact: High</ns0:text>
+  <ns0:text x="203.6364" y="552.7273" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Format + partitioning</ns0:text>
+  <ns0:text x="203.6364" y="576" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">give biggest gains</ns0:text>
+  <ns0:text x="581.8182" y="523.6364" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#2e7d32">Impact: Medium</ns0:text>
+  <ns0:text x="581.8182" y="552.7273" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Query patterns affect</ns0:text>
+  <ns0:text x="581.8182" y="576" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">plan quality</ns0:text>
+  <ns0:text x="960" y="523.6364" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="#e65100">Impact: Varies</ns0:text>
+  <ns0:text x="960" y="552.7273" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Config tuning needs</ns0:text>
+  <ns0:text x="960" y="576" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">workload testing</ns0:text>
+</ns0:svg>

@@ -1,27 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="20" markerHeight="16.8" refX="18" refY="8.4" orient="auto">
-      <polygon points="0,24 7,0" fill="#555" />
-    </marker>
-    <marker id="arrl" markerWidth="20" markerHeight="16.8" refX="2" refY="8.4" orient="auto">
-      <polygon points="0,0 7,24" fill="#555" />
-    </marker>
-  </defs>
-  <text x="640" y="52.8" text-anchor="middle" font-size="28" fill="#222222" font-weight="bold">Future Executor / Waker Interaction</text>
-  <rect x="80" y="120" width="400" height="288" fill="#e3f2fd" stroke="#333333" stroke-width="3" rx="8" />
-  <text x="280" y="187.2" text-anchor="middle" font-size="26" fill="#222222" font-weight="bold">Executor</text>
-  <text x="280" y="240" text-anchor="middle" font-size="24" fill="#222222">(runtime)</text>
-  <text x="280" y="292.8" text-anchor="middle" font-size="24" fill="#222222">task queue</text>
-  <rect x="800" y="120" width="400" height="288" fill="#fff3e0" stroke="#333333" stroke-width="3" rx="8" />
-  <text x="1000" y="187.2" text-anchor="middle" font-size="26" fill="#222222" font-weight="bold">Future</text>
-  <text x="1000" y="240" text-anchor="middle" font-size="24" fill="#222222">stores waker</text>
-  <text x="1000" y="292.8" text-anchor="middle" font-size="24" fill="#222222">I/O / timer state</text>
-  <line x1="480" y1="216" x2="800" y2="216" stroke="#555" stroke-width="3" marker-end="url(#arr)" />
-  <text x="640" y="196.8" text-anchor="middle" font-size="24" fill="#333" font-weight="bold">poll()</text>
-  <line x1="800" y1="312" x2="480" y2="312" stroke="#555" stroke-width="3" marker-end="url(#arr)" />
-  <text x="640" y="297.6" text-anchor="middle" font-size="22" fill="#333">Pending + waker saved</text>
-  <path d="M 280 408 Q 640 648 1000 408" stroke="#555" stroke-width="3" fill="none" marker-start="url(#arrl)" />
-  <text x="640" y="672" text-anchor="middle" font-size="24" fill="#555" font-style="italic">wake() called when I/O ready</text>
-  <line x1="480" y1="360" x2="800" y2="360" stroke="#555" stroke-width="3" marker-end="url(#arr)" />
-  <text x="640" y="345.6" text-anchor="middle" font-size="22" fill="#333">poll() again → Ready(value)</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="12.8" markerHeight="10.752" refX="11.52" refY="5.376" orient="auto">
+      <ns0:polygon points="0,15.36 4.48,0" fill="#555" />
+    </ns0:marker>
+    <ns0:marker id="arrl" markerWidth="12.8" markerHeight="10.752" refX="1.28" refY="5.376" orient="auto">
+      <ns0:polygon points="0,0 4.48,15.36" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="409.6" y="33.792" text-anchor="middle" font-size="17.92" fill="#222222" font-weight="bold">Future Executor / Waker Interaction</ns0:text>
+  <ns0:rect x="51.2" y="76.8" width="256" height="184.32" fill="#e3f2fd" stroke="#333333" stroke-width="1.92" rx="5.12" />
+  <ns0:text x="179.2" y="119.808" text-anchor="middle" font-size="16.64" fill="#222222" font-weight="bold">Executor</ns0:text>
+  <ns0:text x="179.2" y="153.6" text-anchor="middle" font-size="15.36" fill="#222222">(runtime)</ns0:text>
+  <ns0:text x="179.2" y="187.392" text-anchor="middle" font-size="15.36" fill="#222222">task queue</ns0:text>
+  <ns0:rect x="512" y="76.8" width="256" height="184.32" fill="#fff3e0" stroke="#333333" stroke-width="1.92" rx="5.12" />
+  <ns0:text x="640" y="119.808" text-anchor="middle" font-size="16.64" fill="#222222" font-weight="bold">Future</ns0:text>
+  <ns0:text x="640" y="153.6" text-anchor="middle" font-size="15.36" fill="#222222">stores waker</ns0:text>
+  <ns0:text x="640" y="187.392" text-anchor="middle" font-size="15.36" fill="#222222">I/O / timer state</ns0:text>
+  <ns0:line x1="307.2" y1="138.24" x2="512" y2="138.24" stroke="#555" stroke-width="1.92" marker-end="url(#arr)" />
+  <ns0:text x="409.6" y="125.952" text-anchor="middle" font-size="15.36" fill="#333" font-weight="bold">poll()</ns0:text>
+  <ns0:line x1="512" y1="199.68" x2="307.2" y2="199.68" stroke="#555" stroke-width="1.92" marker-end="url(#arr)" />
+  <ns0:text x="409.6" y="190.464" text-anchor="middle" font-size="14.08" fill="#333">Pending + waker saved</ns0:text>
+  <ns0:path d="M 179.2 261.12 Q 409.6 414.72 640 261.12" stroke="#555" stroke-width="1.92" fill="none" marker-start="url(#arrl)" />
+  <ns0:text x="409.6" y="430.08" text-anchor="middle" font-size="15.36" fill="#555" font-style="italic">wake() called when I/O ready</ns0:text>
+  <ns0:line x1="307.2" y1="230.4" x2="512" y2="230.4" stroke="#555" stroke-width="1.92" marker-end="url(#arr)" />
+  <ns0:text x="409.6" y="221.184" text-anchor="middle" font-size="14.08" fill="#333">poll() again → Ready(value)</ns0:text>
+</ns0:svg>

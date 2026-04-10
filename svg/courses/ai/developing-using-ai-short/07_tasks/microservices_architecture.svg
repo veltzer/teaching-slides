@@ -1,49 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Top row -->
-  <rect x="80" y="80" width="330" height="110" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="245" y="142" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">API Gateway</text>
-  <text x="245" y="170" text-anchor="middle" fill="#bbdefb" font-size="15" font-family="Arial, sans-serif">Single entry point</text>
-  <rect x="475" y="80" width="330" height="110" rx="10" fill="#43a047" filter="url(#shadow)"/>
-  <text x="640" y="142" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Service Mesh</text>
-  <text x="640" y="170" text-anchor="middle" fill="#c8e6c9" font-size="15" font-family="Arial, sans-serif">mTLS, observability</text>
-  <rect x="870" y="80" width="330" height="110" rx="10" fill="#e53935" filter="url(#shadow)"/>
-  <text x="1035" y="142" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Message Queue</text>
-  <text x="1035" y="170" text-anchor="middle" fill="#ffcdd2" font-size="15" font-family="Arial, sans-serif">Async communication</text>
-  <!-- Middle row -->
-  <rect x="80" y="240" width="330" height="110" rx="10" fill="#f57c00" filter="url(#shadow)"/>
-  <text x="245" y="300" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">gRPC</text>
-  <text x="245" y="328" text-anchor="middle" fill="#ffe0b2" font-size="15" font-family="Arial, sans-serif">High-perf RPC</text>
-  <rect x="475" y="240" width="330" height="110" rx="10" fill="#8e24aa" filter="url(#shadow)"/>
-  <text x="640" y="300" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">GraphQL</text>
-  <text x="640" y="328" text-anchor="middle" fill="#e1bee7" font-size="15" font-family="Arial, sans-serif">Flexible queries</text>
-  <rect x="870" y="240" width="330" height="110" rx="10" fill="#00897b" filter="url(#shadow)"/>
-  <text x="1035" y="300" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">WebSocket</text>
-  <text x="1035" y="328" text-anchor="middle" fill="#b2dfdb" font-size="15" font-family="Arial, sans-serif">Real-time bidirectional</text>
-  <!-- Summary -->
-  <rect x="80" y="400" width="1120" height="200" rx="12" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="438" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Microservices Communication Patterns</text>
-  <text x="640" y="476" text-anchor="middle" fill="#444" font-size="17" font-family="Arial, sans-serif">Synchronous: REST, gRPC, GraphQL — request/response patterns</text>
-  <text x="640" y="510" text-anchor="middle" fill="#444" font-size="17" font-family="Arial, sans-serif">Asynchronous: Kafka, RabbitMQ — event-driven, decoupled</text>
-  <text x="640" y="544" text-anchor="middle" fill="#444" font-size="17" font-family="Arial, sans-serif">Real-time: WebSocket, SSE — streaming &amp; live updates</text>
-  <text x="640" y="578" text-anchor="middle" fill="#444" font-size="17" font-family="Arial, sans-serif">Service Mesh (Istio/Linkerd) adds mTLS, tracing &amp; retries</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="71.1111" y="71.1111" width="293.3333" height="97.7778" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="217.7778" y="126.2222" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">API Gateway</ns0:text>
+  <ns0:text x="217.7778" y="151.1111" text-anchor="middle" fill="#bbdefb" font-size="13.3333" font-family="Arial, sans-serif">Single entry point</ns0:text>
+  <ns0:rect x="422.2222" y="71.1111" width="293.3333" height="97.7778" rx="8.8889" fill="#43a047" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="126.2222" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">Service Mesh</ns0:text>
+  <ns0:text x="568.8889" y="151.1111" text-anchor="middle" fill="#c8e6c9" font-size="13.3333" font-family="Arial, sans-serif">mTLS, observability</ns0:text>
+  <ns0:rect x="773.3333" y="71.1111" width="293.3333" height="97.7778" rx="8.8889" fill="#e53935" filter="url(#shadow)" />
+  <ns0:text x="920" y="126.2222" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">Message Queue</ns0:text>
+  <ns0:text x="920" y="151.1111" text-anchor="middle" fill="#ffcdd2" font-size="13.3333" font-family="Arial, sans-serif">Async communication</ns0:text>
+  <ns0:rect x="71.1111" y="213.3333" width="293.3333" height="97.7778" rx="8.8889" fill="#f57c00" filter="url(#shadow)" />
+  <ns0:text x="217.7778" y="266.6667" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">gRPC</ns0:text>
+  <ns0:text x="217.7778" y="291.5556" text-anchor="middle" fill="#ffe0b2" font-size="13.3333" font-family="Arial, sans-serif">High-perf RPC</ns0:text>
+  <ns0:rect x="422.2222" y="213.3333" width="293.3333" height="97.7778" rx="8.8889" fill="#8e24aa" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="266.6667" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">GraphQL</ns0:text>
+  <ns0:text x="568.8889" y="291.5556" text-anchor="middle" fill="#e1bee7" font-size="13.3333" font-family="Arial, sans-serif">Flexible queries</ns0:text>
+  <ns0:rect x="773.3333" y="213.3333" width="293.3333" height="97.7778" rx="8.8889" fill="#00897b" filter="url(#shadow)" />
+  <ns0:text x="920" y="266.6667" text-anchor="middle" fill="white" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">WebSocket</ns0:text>
+  <ns0:text x="920" y="291.5556" text-anchor="middle" fill="#b2dfdb" font-size="13.3333" font-family="Arial, sans-serif">Real-time bidirectional</ns0:text>
+  <ns0:rect x="71.1111" y="355.5556" width="995.5556" height="177.7778" rx="10.6667" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="389.3333" text-anchor="middle" fill="#1565c0" font-size="19.5556" font-weight="bold" font-family="Arial, sans-serif">Microservices Communication Patterns</ns0:text>
+  <ns0:text x="568.8889" y="423.1111" text-anchor="middle" fill="#444" font-size="15.1111" font-family="Arial, sans-serif">Synchronous: REST, gRPC, GraphQL — request/response patterns</ns0:text>
+  <ns0:text x="568.8889" y="453.3333" text-anchor="middle" fill="#444" font-size="15.1111" font-family="Arial, sans-serif">Asynchronous: Kafka, RabbitMQ — event-driven, decoupled</ns0:text>
+  <ns0:text x="568.8889" y="483.5556" text-anchor="middle" fill="#444" font-size="15.1111" font-family="Arial, sans-serif">Real-time: WebSocket, SSE — streaming &amp; live updates</ns0:text>
+  <ns0:text x="568.8889" y="513.7778" text-anchor="middle" fill="#444" font-size="15.1111" font-family="Arial, sans-serif">Service Mesh (Istio/Linkerd) adds mTLS, tracing &amp; retries</ns0:text>
+</ns0:svg>

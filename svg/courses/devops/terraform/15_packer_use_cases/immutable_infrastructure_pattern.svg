@@ -1,41 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Mutable label -->
-  <text x="265" y="82" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">Mutable</text>
-  <rect x="55" y="104" width="420" height="302" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
-  <text x="265" y="162" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">Server</text>
-  <text x="265" y="210" text-anchor="middle" font-size="18" fill="#222">v1 → v1.1 → v1.2</text>
-  <text x="265" y="258" text-anchor="middle" font-size="18" fill="#222">← SSH in, modify</text>
-  <text x="265" y="306" text-anchor="middle" font-size="18" fill="#222">   in place</text>
-  <!-- Immutable label -->
-  <text x="950" y="82" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">Immutable</text>
-  <rect x="713" y="104" width="420" height="128" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
-  <text x="923" y="162" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">Server v1</text>
-  <text x="923" y="200" text-anchor="middle" font-size="18" fill="#222">← Replace entirely</text>
-  <rect x="713" y="272" width="420" height="128" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
-  <text x="923" y="330" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">Server v2</text>
-  <text x="923" y="368" text-anchor="middle" font-size="18" fill="#222">← New image</text>
-  <!-- Summary box -->
-  <rect x="37" y="468" width="1206" height="196" fill="#f5f5f5" stroke="#555" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
-  <text x="640" y="526" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">Packer enables immutable infrastructure:</text>
-  <text x="640" y="586" text-anchor="middle" font-size="18" fill="#333">New code → New image → New servers → Old servers removed</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="235.5556" y="72.8889" text-anchor="middle" font-size="17.7778" fill="#222" font-weight="bold">Mutable</ns0:text>
+  <ns0:rect x="48.8889" y="92.4444" width="373.3333" height="268.4444" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.4" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="235.5556" y="144" text-anchor="middle" font-size="16" fill="#222" font-weight="bold">Server</ns0:text>
+  <ns0:text x="235.5556" y="186.6667" text-anchor="middle" font-size="16" fill="#222">v1 → v1.1 → v1.2</ns0:text>
+  <ns0:text x="235.5556" y="229.3333" text-anchor="middle" font-size="16" fill="#222">← SSH in, modify</ns0:text>
+  <ns0:text x="235.5556" y="272" text-anchor="middle" font-size="16" fill="#222">   in place</ns0:text>
+  <ns0:text x="844.4444" y="72.8889" text-anchor="middle" font-size="17.7778" fill="#222" font-weight="bold">Immutable</ns0:text>
+  <ns0:rect x="633.7778" y="92.4444" width="373.3333" height="113.7778" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="820.4444" y="144" text-anchor="middle" font-size="16" fill="#222" font-weight="bold">Server v1</ns0:text>
+  <ns0:text x="820.4444" y="177.7778" text-anchor="middle" font-size="16" fill="#222">← Replace entirely</ns0:text>
+  <ns0:rect x="633.7778" y="241.7778" width="373.3333" height="113.7778" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="820.4444" y="293.3333" text-anchor="middle" font-size="16" fill="#222" font-weight="bold">Server v2</ns0:text>
+  <ns0:text x="820.4444" y="327.1111" text-anchor="middle" font-size="16" fill="#222">← New image</ns0:text>
+  <ns0:rect x="32.8889" y="416" width="1072" height="174.2222" fill="#f5f5f5" stroke="#555" stroke-width="2.4" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="467.5556" text-anchor="middle" font-size="17.7778" fill="#222" font-weight="bold">Packer enables immutable infrastructure:</ns0:text>
+  <ns0:text x="568.8889" y="520.8889" text-anchor="middle" font-size="16" fill="#333">New code → New image → New servers → Old servers removed</ns0:text>
+</ns0:svg>

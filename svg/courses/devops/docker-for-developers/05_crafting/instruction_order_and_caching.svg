@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="23.4667" fill="#555">Layer caching: change invalidates all subsequent layers</text>
-  <rect x="64" y="108" width="1152" height="108" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="180" text-anchor="middle" font-size="23.4667">1. FROM (base image) - rarely changes</text>
-  <text x="1173.3333" y="180" font-size="21.3333" fill="#4caf50">cached</text>
-  <rect x="64" y="234" width="1152" height="108" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="306" text-anchor="middle" font-size="23.4667">2. RUN apt-get install (system deps) - infrequent</text>
-  <text x="1173.3333" y="306" font-size="21.3333" fill="#4caf50">cached</text>
-  <rect x="64" y="360" width="1152" height="108" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="432" text-anchor="middle" font-size="23.4667">3. COPY package.json (app deps) - sometimes</text>
-  <text x="1173.3333" y="432" font-size="21.3333" fill="#2196f3">maybe</text>
-  <rect x="64" y="486" width="1152" height="108" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="558" text-anchor="middle" font-size="23.4667">4. RUN npm install (install deps) - if #3 changed</text>
-  <rect x="64" y="612" width="1152" height="108" fill="#ffebee" stroke="#333" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="684" text-anchor="middle" font-size="23.4667">5. COPY . . (source code) - changes often</text>
-  <text x="1173.3333" y="684" font-size="21.3333" fill="#f44336">rebuild</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="568.8889" y="57.6" text-anchor="middle" font-size="20.8593" fill="#555">Layer caching: change invalidates all subsequent layers</ns0:text>
+  <ns0:rect x="56.8889" y="96" width="1024" height="96" fill="#e8f5e9" stroke="#333" stroke-width="3.7926" rx="5.6889" />
+  <ns0:text x="568.8889" y="160" text-anchor="middle" font-size="20.8593">1. FROM (base image) - rarely changes</ns0:text>
+  <ns0:text x="1042.9629" y="160" font-size="18.9629" fill="#4caf50">cached</ns0:text>
+  <ns0:rect x="56.8889" y="208" width="1024" height="96" fill="#e8f5e9" stroke="#333" stroke-width="3.7926" rx="5.6889" />
+  <ns0:text x="568.8889" y="272" text-anchor="middle" font-size="20.8593">2. RUN apt-get install (system deps) - infrequent</ns0:text>
+  <ns0:text x="1042.9629" y="272" font-size="18.9629" fill="#4caf50">cached</ns0:text>
+  <ns0:rect x="56.8889" y="320" width="1024" height="96" fill="#e3f2fd" stroke="#333" stroke-width="3.7926" rx="5.6889" />
+  <ns0:text x="568.8889" y="384" text-anchor="middle" font-size="20.8593">3. COPY package.json (app deps) - sometimes</ns0:text>
+  <ns0:text x="1042.9629" y="384" font-size="18.9629" fill="#2196f3">maybe</ns0:text>
+  <ns0:rect x="56.8889" y="432" width="1024" height="96" fill="#fff3e0" stroke="#333" stroke-width="3.7926" rx="5.6889" />
+  <ns0:text x="568.8889" y="496" text-anchor="middle" font-size="20.8593">4. RUN npm install (install deps) - if #3 changed</ns0:text>
+  <ns0:rect x="56.8889" y="544" width="1024" height="96" fill="#ffebee" stroke="#333" stroke-width="3.7926" rx="5.6889" />
+  <ns0:text x="568.8889" y="608" text-anchor="middle" font-size="20.8593">5. COPY . . (source code) - changes often</ns0:text>
+  <ns0:text x="1042.9629" y="608" font-size="18.9629" fill="#f44336">rebuild</ns0:text>
+</ns0:svg>

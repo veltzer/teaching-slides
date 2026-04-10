@@ -1,72 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arr" markerWidth="12.4878" markerHeight="26.1818" refX="9.3659" refY="9.8182" orient="auto">
-      <path d="M 0 0 L 0 19.6364 L 12.4878 9.8182 z" fill="#555" />
-    </marker>
-  </defs>
-  <text x="31.2195" y="85.0909" font-family="sans-serif" font-size="21.8537" fill="#222" text-anchor="start" font-weight="bold">Reading a 200-column Parquet table</text>
-  <text x="31.2195" y="183.2727" font-family="sans-serif" font-size="20.2927" fill="#222" text-anchor="start">Without projection pushdown (SELECT *):</text>
-  <rect x="31.2195" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="34.3415" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c1</text>
-  <text x="68.6829" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="149.8537" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="152.9756" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c2</text>
-  <text x="187.3171" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="268.4878" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="271.6098" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c3</text>
-  <text x="305.9512" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="387.122" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="390.2439" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c4</text>
-  <text x="424.5854" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="505.7561" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="508.878" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c5</text>
-  <text x="543.2195" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="624.3902" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="627.5122" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c6</text>
-  <text x="661.8537" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="743.0244" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="746.1463" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c7</text>
-  <text x="780.4878" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="861.6585" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="864.7805" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c8</text>
-  <text x="899.122" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="980.2927" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="983.4146" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">...</text>
-  <text x="1017.7561" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <rect x="1098.9268" y="216" width="112.3902" height="111.2727" fill="#fde0dc" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="1102.0488" y="261.8182" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c200</text>
-  <text x="1136.3902" y="307.6364" font-family="sans-serif" font-size="17.1707" fill="#c62828" text-anchor="start" font-weight="bold">R</text>
-  <text x="31.2195" y="379.6364" font-family="sans-serif" font-size="18.7317" fill="#555" text-anchor="start">Read: 200 columns = 100% of data</text>
-  <text x="31.2195" y="458.1818" font-family="sans-serif" font-size="20.2927" fill="#222" text-anchor="start">With projection pushdown (SELECT c1, c5):</text>
-  <rect x="31.2195" y="490.9091" width="112.3902" height="111.2727" fill="#c8e6c9" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="34.3415" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c1</text>
-  <text x="68.6829" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#1b5e20" text-anchor="start" font-weight="bold">R</text>
-  <rect x="149.8537" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="152.9756" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c2</text>
-  <text x="187.3171" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="268.4878" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="271.6098" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c3</text>
-  <text x="305.9512" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="387.122" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="390.2439" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c4</text>
-  <text x="424.5854" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="505.7561" y="490.9091" width="112.3902" height="111.2727" fill="#c8e6c9" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="508.878" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c5</text>
-  <text x="543.2195" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#1b5e20" text-anchor="start" font-weight="bold">R</text>
-  <rect x="624.3902" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="627.5122" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c6</text>
-  <text x="661.8537" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="743.0244" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="746.1463" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c7</text>
-  <text x="780.4878" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="861.6585" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="864.7805" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c8</text>
-  <text x="899.122" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="980.2927" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="983.4146" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">...</text>
-  <text x="1017.7561" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <rect x="1098.9268" y="490.9091" width="112.3902" height="111.2727" fill="#f5f5f5" stroke="#333" stroke-width="2.3415" rx="6.2439" />
-  <text x="1102.0488" y="536.7273" font-family="sans-serif" font-size="17.1707" fill="#333" text-anchor="start">c200</text>
-  <text x="1136.3902" y="582.5455" font-family="sans-serif" font-size="17.1707" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text>
-  <text x="31.2195" y="661.0909" font-family="sans-serif" font-size="18.7317" fill="#555" text-anchor="start">Read: 2 columns = 1% of data     R = Read,  S = Skip</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="12.0894" markerHeight="25.3465" refX="9.0671" refY="9.505" orient="auto">
+      <ns0:path d="M 0 0 L 0 19.0099 L 12.0894 9.505 z" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="30.2235" y="82.3762" font-family="sans-serif" font-size="21.1565" fill="#222" text-anchor="start" font-weight="bold">Reading a 200-column Parquet table</ns0:text>
+  <ns0:text x="30.2235" y="177.4257" font-family="sans-serif" font-size="19.6453" fill="#222" text-anchor="start">Without projection pushdown (SELECT *):</ns0:text>
+  <ns0:rect x="30.2235" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="33.2459" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c1</ns0:text>
+  <ns0:text x="66.4917" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="145.0729" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="148.0952" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c2</ns0:text>
+  <ns0:text x="181.3411" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="259.9222" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="262.9446" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c3</ns0:text>
+  <ns0:text x="296.1904" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="374.7716" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="377.7939" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c4</ns0:text>
+  <ns0:text x="411.0398" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="489.6209" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="492.6432" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c5</ns0:text>
+  <ns0:text x="525.8891" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="604.4702" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="607.4926" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c6</ns0:text>
+  <ns0:text x="640.7385" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="719.3196" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="722.3419" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c7</ns0:text>
+  <ns0:text x="755.5878" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="834.1689" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="837.1913" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c8</ns0:text>
+  <ns0:text x="870.4372" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="949.0182" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="952.0405" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">...</ns0:text>
+  <ns0:text x="985.2864" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="1063.8675" y="209.1089" width="108.8046" height="107.7227" fill="#fde0dc" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="1066.8899" y="253.4654" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c200</ns0:text>
+  <ns0:text x="1100.1357" y="297.8218" font-family="sans-serif" font-size="16.6229" fill="#c62828" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:text x="30.2235" y="367.5248" font-family="sans-serif" font-size="18.1341" fill="#555" text-anchor="start">Read: 200 columns = 100% of data</ns0:text>
+  <ns0:text x="30.2235" y="443.5643" font-family="sans-serif" font-size="19.6453" fill="#222" text-anchor="start">With projection pushdown (SELECT c1, c5):</ns0:text>
+  <ns0:rect x="30.2235" y="475.2475" width="108.8046" height="107.7227" fill="#c8e6c9" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="33.2459" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c1</ns0:text>
+  <ns0:text x="66.4917" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#1b5e20" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="145.0729" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="148.0952" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c2</ns0:text>
+  <ns0:text x="181.3411" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="259.9222" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="262.9446" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c3</ns0:text>
+  <ns0:text x="296.1904" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="374.7716" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="377.7939" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c4</ns0:text>
+  <ns0:text x="411.0398" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="489.6209" y="475.2475" width="108.8046" height="107.7227" fill="#c8e6c9" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="492.6432" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c5</ns0:text>
+  <ns0:text x="525.8891" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#1b5e20" text-anchor="start" font-weight="bold">R</ns0:text>
+  <ns0:rect x="604.4702" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="607.4926" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c6</ns0:text>
+  <ns0:text x="640.7385" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="719.3196" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="722.3419" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c7</ns0:text>
+  <ns0:text x="755.5878" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="834.1689" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="837.1913" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c8</ns0:text>
+  <ns0:text x="870.4372" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="949.0182" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="952.0405" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">...</ns0:text>
+  <ns0:text x="985.2864" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:rect x="1063.8675" y="475.2475" width="108.8046" height="107.7227" fill="#f5f5f5" stroke="#333" stroke-width="2.2668" rx="6.0447" />
+  <ns0:text x="1066.8899" y="519.604" font-family="sans-serif" font-size="16.6229" fill="#333" text-anchor="start">c200</ns0:text>
+  <ns0:text x="1100.1357" y="563.9604" font-family="sans-serif" font-size="16.6229" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</ns0:text>
+  <ns0:text x="30.2235" y="640" font-family="sans-serif" font-size="18.1341" fill="#555" text-anchor="start">Read: 2 columns = 1% of data     R = Read,  S = Skip</ns0:text>
+</ns0:svg>

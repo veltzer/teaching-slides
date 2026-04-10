@@ -1,23 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="22.8571" y="13.8462" width="1234.2857" height="692.3077" rx="6.9231" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="55.3846" text-anchor="middle" font-size="22.1538" font-weight="bold" fill="#4a90e2">Schema Evolution Decision Tree</text>
-  <text x="68.5714" y="94.1538" font-size="19.3846" font-weight="bold" fill="#333">Is the change backward-compatible?</text>
-  <rect x="68.5714" y="110.7692" width="1142.8571" height="76.1538" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
-  <text x="102.8571" y="138.4615" font-size="18" font-weight="bold" fill="#28a745">Adding a new column?</text>
-  <text x="102.8571" y="166.1538" font-size="16.6154" fill="#333">Yes → Use mergeSchema (safe)</text>
-  <rect x="68.5714" y="200.7692" width="1142.8571" height="90" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0769" />
-  <text x="102.8571" y="228.4615" font-size="18" font-weight="bold" fill="#856404">Renaming a column?</text>
-  <text x="102.8571" y="256.1538" font-size="16.6154" fill="#333">Yes → Add new column + backfill + drop old</text>
-  <text x="102.8571" y="276.9231" font-size="15.2308" fill="#333">(never rename in-place)</text>
-  <rect x="68.5714" y="304.6154" width="1142.8571" height="90" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
-  <text x="102.8571" y="332.3077" font-size="18" font-weight="bold" fill="#4a90e2">Changing column type?</text>
-  <text x="102.8571" y="360" font-size="16.6154" fill="#333">Widening (int→long): mergeSchema</text>
-  <text x="102.8571" y="384.9231" font-size="16.6154" fill="#333">Narrowing (long→int): overwrite</text>
-  <rect x="68.5714" y="408.4615" width="1142.8571" height="90" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.0769" />
-  <text x="102.8571" y="436.1538" font-size="18" font-weight="bold" fill="#dc3545">Removing a column?</text>
-  <text x="102.8571" y="463.8462" font-size="16.6154" fill="#333">Yes → Drop column + rewrite</text>
-  <text x="102.8571" y="484.6154" font-size="15.2308" fill="#333">(consumers may break)</text>
-  <rect x="68.5714" y="526.1538" width="1142.8571" height="69.2308" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
-  <text x="640" y="560.7692" text-anchor="middle" font-size="18" font-weight="bold" fill="#28a745">Best practice: version your schemas</text>
-  <text x="640" y="584.3077" text-anchor="middle" font-size="16.6154" fill="#333">and validate before processing.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:rect x="20.7158" y="12.5491" width="1118.6554" height="627.4509" rx="6.2745" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.5098" />
+  <ns0:text x="580.0435" y="50.1961" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="#4a90e2">Schema Evolution Decision Tree</ns0:text>
+  <ns0:text x="62.1475" y="85.3333" font-size="17.5686" font-weight="bold" fill="#333">Is the change backward-compatible?</ns0:text>
+  <ns0:rect x="62.1475" y="100.3921" width="1035.792" height="69.0196" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="1.8823" />
+  <ns0:text x="93.2212" y="125.4902" font-size="16.3137" font-weight="bold" fill="#28a745">Adding a new column?</ns0:text>
+  <ns0:text x="93.2212" y="150.5882" font-size="15.0588" fill="#333">Yes → Use mergeSchema (safe)</ns0:text>
+  <ns0:rect x="62.1475" y="181.9607" width="1035.792" height="81.5686" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8823" />
+  <ns0:text x="93.2212" y="207.0588" font-size="16.3137" font-weight="bold" fill="#856404">Renaming a column?</ns0:text>
+  <ns0:text x="93.2212" y="232.1568" font-size="15.0588" fill="#333">Yes → Add new column + backfill + drop old</ns0:text>
+  <ns0:text x="93.2212" y="250.9804" font-size="13.8039" fill="#333">(never rename in-place)</ns0:text>
+  <ns0:rect x="62.1475" y="276.0784" width="1035.792" height="81.5686" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8823" />
+  <ns0:text x="93.2212" y="301.1765" font-size="16.3137" font-weight="bold" fill="#4a90e2">Changing column type?</ns0:text>
+  <ns0:text x="93.2212" y="326.2745" font-size="15.0588" fill="#333">Widening (int→long): mergeSchema</ns0:text>
+  <ns0:text x="93.2212" y="348.8627" font-size="15.0588" fill="#333">Narrowing (long→int): overwrite</ns0:text>
+  <ns0:rect x="62.1475" y="370.196" width="1035.792" height="81.5686" rx="6.2745" fill="#f8d7da" stroke="#dc3545" stroke-width="1.8823" />
+  <ns0:text x="93.2212" y="395.294" font-size="16.3137" font-weight="bold" fill="#dc3545">Removing a column?</ns0:text>
+  <ns0:text x="93.2212" y="420.3922" font-size="15.0588" fill="#333">Yes → Drop column + rewrite</ns0:text>
+  <ns0:text x="93.2212" y="439.2157" font-size="13.8039" fill="#333">(consumers may break)</ns0:text>
+  <ns0:rect x="62.1475" y="476.8627" width="1035.792" height="62.7451" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="2.5098" />
+  <ns0:text x="580.0435" y="508.2352" text-anchor="middle" font-size="16.3137" font-weight="bold" fill="#28a745">Best practice: version your schemas</ns0:text>
+  <ns0:text x="580.0435" y="529.5686" text-anchor="middle" font-size="15.0588" fill="#333">and validate before processing.</ns0:text>
+</ns0:svg>

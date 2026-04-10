@@ -1,53 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#555" />
-    </marker>
-  </defs>
-  <text x="640" y="44.8" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1565c0">Spark Performance Optimization Strategies</text>
-  <circle cx="640" cy="336" r="88" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
-  <text x="640" y="328" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1565c0">Performance</text>
-  <text x="640" y="355.2" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1565c0">Tuning</text>
-  <line x1="568" y1="272" x2="376" y2="136" stroke="#1565c0" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="96" y="80" width="288" height="176" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.4" />
-  <text x="240" y="116.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1565c0">Memory</text>
-  <text x="240" y="148.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">memory.fraction = 0.8</text>
-  <text x="240" y="174.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">storageFraction = 0.3</text>
-  <text x="240" y="200" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Off-heap memory</text>
-  <text x="240" y="225.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Serialization tuning</text>
-  <line x1="712" y1="272" x2="904" y2="136" stroke="#2e7d32" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="896" y="80" width="288" height="176" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="1040" y="116.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#2e7d32">CPU</text>
-  <text x="1040" y="148.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Partition sizing</text>
-  <text x="1040" y="174.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Task scheduling</text>
-  <text x="1040" y="200" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Resource allocation</text>
-  <text x="1040" y="225.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Kryo serialization</text>
-  <line x1="728" y1="336" x2="888" y2="384" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="896" y="312" width="320" height="176" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
-  <text x="1056" y="348.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#e65100">Network / Shuffle</text>
-  <text x="1056" y="380.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Broadcast joins</text>
-  <text x="1056" y="406.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Shuffle compression</text>
-  <text x="1056" y="432" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Reduce partitions</text>
-  <text x="1056" y="457.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Coalesce vs Repartition</text>
-  <line x1="552" y1="336" x2="392" y2="384" stroke="#6a1b9a" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="64" y="312" width="320" height="176" rx="9.6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.4" />
-  <text x="224" y="348.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#6a1b9a">Storage / Caching</text>
-  <text x="224" y="380.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Persist with right level</text>
-  <text x="224" y="406.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Unpersist when done</text>
-  <text x="224" y="432" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Columnar formats</text>
-  <text x="224" y="457.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Predicate pushdown</text>
-  <line x1="592" y1="416" x2="400" y2="576" stroke="#c62828" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="96" y="544" width="320" height="160" rx="9.6" fill="#ffcdd2" stroke="#c62828" stroke-width="2.4" />
-  <text x="256" y="580.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#c62828">Query / Code</text>
-  <text x="256" y="612.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Filter early (pushdown)</text>
-  <text x="256" y="638.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Column pruning</text>
-  <text x="256" y="664" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Avoid Python UDFs</text>
-  <text x="256" y="689.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Use built-in functions</text>
-  <line x1="688" y1="416" x2="880" y2="576" stroke="#00695c" stroke-width="2.4" marker-end="url(#arrow)" />
-  <rect x="864" y="544" width="352" height="160" rx="9.6" fill="#e0f2f1" stroke="#00695c" stroke-width="2.4" />
-  <text x="1040" y="580.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#00695c">Adaptive Execution</text>
-  <text x="1040" y="612.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">AQE coalesce partitions</text>
-  <text x="1040" y="638.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Skew join optimization</text>
-  <text x="1040" y="664" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Dynamic partition pruning</text>
-  <text x="1040" y="689.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Runtime plan changes</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.5455" markerHeight="10.1818" refX="13.0909" refY="5.0909" orient="auto">
+      <ns0:polygon points="0,14.5455 5.0909,0" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="581.8182" y="40.7273" text-anchor="middle" font-family="Arial" font-size="26.1818" font-weight="bold" fill="#1565c0">Spark Performance Optimization Strategies</ns0:text>
+  <ns0:circle cx="581.8182" cy="305.4545" r="80" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.9091" />
+  <ns0:text x="581.8182" y="298.1818" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#1565c0">Performance</ns0:text>
+  <ns0:text x="581.8182" y="322.9091" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#1565c0">Tuning</ns0:text>
+  <ns0:line x1="516.3636" y1="247.2727" x2="341.8182" y2="123.6364" stroke="#1565c0" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <ns0:rect x="87.2727" y="72.7273" width="261.8182" height="160" rx="8.7273" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.1818" />
+  <ns0:text x="218.1818" y="106.1818" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#1565c0">Memory</ns0:text>
+  <ns0:text x="218.1818" y="135.2727" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">memory.fraction = 0.8</ns0:text>
+  <ns0:text x="218.1818" y="158.5455" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">storageFraction = 0.3</ns0:text>
+  <ns0:text x="218.1818" y="181.8182" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Off-heap memory</ns0:text>
+  <ns0:text x="218.1818" y="205.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Serialization tuning</ns0:text>
+  <ns0:line x1="647.2727" y1="247.2727" x2="821.8182" y2="123.6364" stroke="#2e7d32" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <ns0:rect x="814.5455" y="72.7273" width="261.8182" height="160" rx="8.7273" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.1818" />
+  <ns0:text x="945.4545" y="106.1818" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#2e7d32">CPU</ns0:text>
+  <ns0:text x="945.4545" y="135.2727" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Partition sizing</ns0:text>
+  <ns0:text x="945.4545" y="158.5455" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Task scheduling</ns0:text>
+  <ns0:text x="945.4545" y="181.8182" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Resource allocation</ns0:text>
+  <ns0:text x="945.4545" y="205.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Kryo serialization</ns0:text>
+  <ns0:line x1="661.8182" y1="305.4545" x2="807.2727" y2="349.0909" stroke="#e65100" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <ns0:rect x="814.5455" y="283.6364" width="290.9091" height="160" rx="8.7273" fill="#fff3e0" stroke="#e65100" stroke-width="2.1818" />
+  <ns0:text x="960" y="317.0909" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#e65100">Network / Shuffle</ns0:text>
+  <ns0:text x="960" y="346.1818" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Broadcast joins</ns0:text>
+  <ns0:text x="960" y="369.4545" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Shuffle compression</ns0:text>
+  <ns0:text x="960" y="392.7273" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Reduce partitions</ns0:text>
+  <ns0:text x="960" y="416" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Coalesce vs Repartition</ns0:text>
+  <ns0:line x1="501.8182" y1="305.4545" x2="356.3636" y2="349.0909" stroke="#6a1b9a" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <ns0:rect x="58.1818" y="283.6364" width="290.9091" height="160" rx="8.7273" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.1818" />
+  <ns0:text x="203.6364" y="317.0909" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#6a1b9a">Storage / Caching</ns0:text>
+  <ns0:text x="203.6364" y="346.1818" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Persist with right level</ns0:text>
+  <ns0:text x="203.6364" y="369.4545" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Unpersist when done</ns0:text>
+  <ns0:text x="203.6364" y="392.7273" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Columnar formats</ns0:text>
+  <ns0:text x="203.6364" y="416" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Predicate pushdown</ns0:text>
+  <ns0:line x1="538.1818" y1="378.1818" x2="363.6364" y2="523.6364" stroke="#c62828" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <ns0:rect x="87.2727" y="494.5455" width="290.9091" height="145.4545" rx="8.7273" fill="#ffcdd2" stroke="#c62828" stroke-width="2.1818" />
+  <ns0:text x="232.7273" y="528" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#c62828">Query / Code</ns0:text>
+  <ns0:text x="232.7273" y="557.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Filter early (pushdown)</ns0:text>
+  <ns0:text x="232.7273" y="580.3636" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Column pruning</ns0:text>
+  <ns0:text x="232.7273" y="603.6364" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Avoid Python UDFs</ns0:text>
+  <ns0:text x="232.7273" y="626.9091" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Use built-in functions</ns0:text>
+  <ns0:line x1="625.4545" y1="378.1818" x2="800" y2="523.6364" stroke="#00695c" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <ns0:rect x="785.4545" y="494.5455" width="320" height="145.4545" rx="8.7273" fill="#e0f2f1" stroke="#00695c" stroke-width="2.1818" />
+  <ns0:text x="945.4545" y="528" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="#00695c">Adaptive Execution</ns0:text>
+  <ns0:text x="945.4545" y="557.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">AQE coalesce partitions</ns0:text>
+  <ns0:text x="945.4545" y="580.3636" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Skew join optimization</ns0:text>
+  <ns0:text x="945.4545" y="603.6364" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Dynamic partition pruning</ns0:text>
+  <ns0:text x="945.4545" y="626.9091" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="#333">Runtime plan changes</ns0:text>
+</ns0:svg>

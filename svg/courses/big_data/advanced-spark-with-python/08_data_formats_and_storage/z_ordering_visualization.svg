@@ -1,47 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arr" markerWidth="14.6286" markerHeight="19.8621" refX="10.9714" refY="7.4483" orient="auto">
-      <path d="M 0 0 L 0 14.8966 L 14.6286 7.4483 z" fill="#555" />
-    </marker>
-  </defs>
-  <text x="36.5714" y="54.6207" font-family="sans-serif" font-size="23.7714" fill="#222" text-anchor="start" font-weight="bold">Without Z-ordering (random distribution):</text>
-  <rect x="36.5714" y="74.4828" width="283.4286" height="114.2069" fill="#fce4ec" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="47.5429" y="111.7241" font-family="sans-serif" font-size="21.9429" fill="#b71c1c" text-anchor="start" font-weight="bold">File 1</text>
-  <text x="47.5429" y="146.4828" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[A,B,C,D,E]</text>
-  <text x="47.5429" y="178.7586" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[01,02,03,04,05]</text>
-  <rect x="332.8" y="74.4828" width="283.4286" height="114.2069" fill="#fce4ec" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="343.7714" y="111.7241" font-family="sans-serif" font-size="21.9429" fill="#b71c1c" text-anchor="start" font-weight="bold">File 2</text>
-  <text x="343.7714" y="146.4828" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[A,C,E,F,G]</text>
-  <text x="343.7714" y="178.7586" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[01,03,05,06,07]</text>
-  <rect x="629.0286" y="74.4828" width="283.4286" height="114.2069" fill="#fce4ec" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="640" y="111.7241" font-family="sans-serif" font-size="21.9429" fill="#b71c1c" text-anchor="start" font-weight="bold">File 3</text>
-  <text x="640" y="146.4828" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[B,D,F,H,I]</text>
-  <text x="640" y="178.7586" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[02,04,06,08,09]</text>
-  <rect x="925.2571" y="74.4828" width="283.4286" height="114.2069" fill="#fce4ec" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="936.2286" y="111.7241" font-family="sans-serif" font-size="21.9429" fill="#b71c1c" text-anchor="start" font-weight="bold">File 4</text>
-  <text x="936.2286" y="146.4828" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[A,G,H,I,J]</text>
-  <text x="936.2286" y="178.7586" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[01,07,08,09,10]</text>
-  <text x="36.5714" y="235.8621" font-family="sans-serif" font-size="21.9429" fill="#c62828" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1, 2, 4  (3/4 files = 75%)</text>
-  <text x="36.5714" y="297.931" font-family="sans-serif" font-size="23.7714" fill="#222" text-anchor="start" font-weight="bold">With Z-ordering on user_id:</text>
-  <rect x="36.5714" y="317.7931" width="283.4286" height="114.2069" fill="#c8e6c9" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="47.5429" y="355.0345" font-family="sans-serif" font-size="21.9429" fill="#1b5e20" text-anchor="start" font-weight="bold">File 1</text>
-  <text x="47.5429" y="389.7931" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[A,A,A,B,B]</text>
-  <text x="47.5429" y="422.069" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[01,03,07,02,04]</text>
-  <rect x="332.8" y="317.7931" width="283.4286" height="114.2069" fill="#c8e6c9" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="343.7714" y="355.0345" font-family="sans-serif" font-size="21.9429" fill="#1b5e20" text-anchor="start" font-weight="bold">File 2</text>
-  <text x="343.7714" y="389.7931" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[C,C,D,D,E]</text>
-  <text x="343.7714" y="422.069" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[03,05,02,04,05]</text>
-  <rect x="629.0286" y="317.7931" width="283.4286" height="114.2069" fill="#c8e6c9" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="640" y="355.0345" font-family="sans-serif" font-size="21.9429" fill="#1b5e20" text-anchor="start" font-weight="bold">File 3</text>
-  <text x="640" y="389.7931" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[F,F,G,G,H]</text>
-  <text x="640" y="422.069" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[06,08,06,07,08]</text>
-  <rect x="925.2571" y="317.7931" width="283.4286" height="114.2069" fill="#c8e6c9" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="936.2286" y="355.0345" font-family="sans-serif" font-size="21.9429" fill="#1b5e20" text-anchor="start" font-weight="bold">File 4</text>
-  <text x="936.2286" y="389.7931" font-family="sans-serif" font-size="18.2857" fill="#333" text-anchor="start">user_id=[H,I,I,J,J]</text>
-  <text x="936.2286" y="422.069" font-family="sans-serif" font-size="18.2857" fill="#555" text-anchor="start">date=[09,08,09,09,10]</text>
-  <text x="36.5714" y="479.1724" font-family="sans-serif" font-size="21.9429" fill="#1b5e20" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1 only  (1/4 files = 25%)</text>
-  <rect x="36.5714" y="516.4138" width="1206.8571" height="168.8276" fill="#e8f5e9" stroke="#333" stroke-width="2.7429" rx="7.3143" />
-  <text x="54.8571" y="561.1034" font-family="sans-serif" font-size="21.9429" fill="#222" text-anchor="start">Z-order creates locality for the specified columns within data files,</text>
-  <text x="54.8571" y="605.7931" font-family="sans-serif" font-size="21.9429" fill="#222" text-anchor="start">making min/max statistics more effective at file skipping.</text>
-  <text x="54.8571" y="650.4828" font-family="sans-serif" font-size="21.9429" fill="#222" text-anchor="start">Result: 75% → 25% files scanned in this example.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="13.6628" markerHeight="18.5508" refX="10.247" refY="6.9565" orient="auto">
+      <ns0:path d="M 0 0 L 0 13.9131 L 13.6628 6.9565 z" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="34.1569" y="51.0145" font-family="sans-serif" font-size="22.202" fill="#222" text-anchor="start" font-weight="bold">Without Z-ordering (random distribution):</ns0:text>
+  <ns0:rect x="34.1569" y="69.5653" width="264.7159" height="106.6667" fill="#fce4ec" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="44.404" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="#b71c1c" text-anchor="start" font-weight="bold">File 1</ns0:text>
+  <ns0:text x="44.404" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[A,B,C,D,E]</ns0:text>
+  <ns0:text x="44.404" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[01,02,03,04,05]</ns0:text>
+  <ns0:rect x="310.8277" y="69.5653" width="264.7159" height="106.6667" fill="#fce4ec" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="321.0747" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="#b71c1c" text-anchor="start" font-weight="bold">File 2</ns0:text>
+  <ns0:text x="321.0747" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[A,C,E,F,G]</ns0:text>
+  <ns0:text x="321.0747" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[01,03,05,06,07]</ns0:text>
+  <ns0:rect x="587.4985" y="69.5653" width="264.7159" height="106.6667" fill="#fce4ec" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="597.7456" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="#b71c1c" text-anchor="start" font-weight="bold">File 3</ns0:text>
+  <ns0:text x="597.7456" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[B,D,F,H,I]</ns0:text>
+  <ns0:text x="597.7456" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[02,04,06,08,09]</ns0:text>
+  <ns0:rect x="864.1692" y="69.5653" width="264.7159" height="106.6667" fill="#fce4ec" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="874.4164" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="#b71c1c" text-anchor="start" font-weight="bold">File 4</ns0:text>
+  <ns0:text x="874.4164" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[A,G,H,I,J]</ns0:text>
+  <ns0:text x="874.4164" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[01,07,08,09,10]</ns0:text>
+  <ns0:text x="34.1569" y="220.2899" font-family="sans-serif" font-size="20.4942" fill="#c62828" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1, 2, 4  (3/4 files = 75%)</ns0:text>
+  <ns0:text x="34.1569" y="278.2608" font-family="sans-serif" font-size="22.202" fill="#222" text-anchor="start" font-weight="bold">With Z-ordering on user_id:</ns0:text>
+  <ns0:rect x="34.1569" y="296.8116" width="264.7159" height="106.6667" fill="#c8e6c9" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="44.404" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="#1b5e20" text-anchor="start" font-weight="bold">File 1</ns0:text>
+  <ns0:text x="44.404" y="364.058" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[A,A,A,B,B]</ns0:text>
+  <ns0:text x="44.404" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[01,03,07,02,04]</ns0:text>
+  <ns0:rect x="310.8277" y="296.8116" width="264.7159" height="106.6667" fill="#c8e6c9" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="321.0747" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="#1b5e20" text-anchor="start" font-weight="bold">File 2</ns0:text>
+  <ns0:text x="321.0747" y="364.058" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[C,C,D,D,E]</ns0:text>
+  <ns0:text x="321.0747" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[03,05,02,04,05]</ns0:text>
+  <ns0:rect x="587.4985" y="296.8116" width="264.7159" height="106.6667" fill="#c8e6c9" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="597.7456" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="#1b5e20" text-anchor="start" font-weight="bold">File 3</ns0:text>
+  <ns0:text x="597.7456" y="364.058" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[F,F,G,G,H]</ns0:text>
+  <ns0:text x="597.7456" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[06,08,06,07,08]</ns0:text>
+  <ns0:rect x="864.1692" y="296.8116" width="264.7159" height="106.6667" fill="#c8e6c9" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="874.4164" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="#1b5e20" text-anchor="start" font-weight="bold">File 4</ns0:text>
+  <ns0:text x="874.4164" y="364.058" font-family="sans-serif" font-size="17.0784" fill="#333" text-anchor="start">user_id=[H,I,I,J,J]</ns0:text>
+  <ns0:text x="874.4164" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="#555" text-anchor="start">date=[09,08,09,09,10]</ns0:text>
+  <ns0:text x="34.1569" y="447.5362" font-family="sans-serif" font-size="20.4942" fill="#1b5e20" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1 only  (1/4 files = 25%)</ns0:text>
+  <ns0:rect x="34.1569" y="482.3188" width="1127.1773" height="157.6812" fill="#e8f5e9" stroke="#333" stroke-width="2.5618" rx="6.8314" />
+  <ns0:text x="51.2353" y="524.0579" font-family="sans-serif" font-size="20.4942" fill="#222" text-anchor="start">Z-order creates locality for the specified columns within data files,</ns0:text>
+  <ns0:text x="51.2353" y="565.7971" font-family="sans-serif" font-size="20.4942" fill="#222" text-anchor="start">making min/max statistics more effective at file skipping.</ns0:text>
+  <ns0:text x="51.2353" y="607.5363" font-family="sans-serif" font-size="20.4942" fill="#222" text-anchor="start">Result: 75% → 25% files scanned in this example.</ns0:text>
+</ns0:svg>

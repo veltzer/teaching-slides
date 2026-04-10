@@ -1,44 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="640" y="48" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Query vs Filter Context</text>
-  <!-- Query context -->
-  <rect x="80" y="90" width="520" height="440" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="340" y="160" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Query Context</text>
-  <text x="340" y="220" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Calculates relevance score</text>
-  <text x="340" y="268" text-anchor="middle" font-size="19" fill="#333333">&#x2022; "How well does this match?"</text>
-  <text x="340" y="316" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Not cached (per query)</text>
-  <text x="340" y="364" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Slower (scoring overhead)</text>
-  <text x="340" y="412" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Use for: full-text search</text>
-  <text x="340" y="460" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Example: match, multi_match</text>
-  <!-- Filter context -->
-  <rect x="680" y="90" width="520" height="440" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="940" y="160" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Filter Context</text>
-  <text x="940" y="220" text-anchor="middle" font-size="19" fill="#333333">&#x2022; No relevance scoring</text>
-  <text x="940" y="268" text-anchor="middle" font-size="19" fill="#333333">&#x2022; "Yes or No - does it match?"</text>
-  <text x="940" y="316" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Results are cached</text>
-  <text x="940" y="364" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Faster execution</text>
-  <text x="940" y="412" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Use for: dates, status, IDs</text>
-  <text x="940" y="460" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Example: term, range, exists</text>
-  <!-- Bottom note -->
-  <rect x="80" y="582" width="1120" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
-  <text x="640" y="616" text-anchor="middle" font-size="17" fill="#1565c0">Prefer filter context wherever possible to leverage caching and improve performance</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="42.6667" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="#1565c0">Query vs Filter Context</ns0:text>
+  <ns0:rect x="71.1111" y="80" width="462.2222" height="391.1111" rx="12.4444" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="302.2222" y="142.2222" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#2e7d32">Query Context</ns0:text>
+  <ns0:text x="302.2222" y="195.5556" text-anchor="middle" font-size="16.8889" fill="#333333">• Calculates relevance score</ns0:text>
+  <ns0:text x="302.2222" y="238.2222" text-anchor="middle" font-size="16.8889" fill="#333333">• "How well does this match?"</ns0:text>
+  <ns0:text x="302.2222" y="280.8889" text-anchor="middle" font-size="16.8889" fill="#333333">• Not cached (per query)</ns0:text>
+  <ns0:text x="302.2222" y="323.5556" text-anchor="middle" font-size="16.8889" fill="#333333">• Slower (scoring overhead)</ns0:text>
+  <ns0:text x="302.2222" y="366.2222" text-anchor="middle" font-size="16.8889" fill="#333333">• Use for: full-text search</ns0:text>
+  <ns0:text x="302.2222" y="408.8889" text-anchor="middle" font-size="16.8889" fill="#333333">• Example: match, multi_match</ns0:text>
+  <ns0:rect x="604.4444" y="80" width="462.2222" height="391.1111" rx="12.4444" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="835.5556" y="142.2222" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1565c0">Filter Context</ns0:text>
+  <ns0:text x="835.5556" y="195.5556" text-anchor="middle" font-size="16.8889" fill="#333333">• No relevance scoring</ns0:text>
+  <ns0:text x="835.5556" y="238.2222" text-anchor="middle" font-size="16.8889" fill="#333333">• "Yes or No - does it match?"</ns0:text>
+  <ns0:text x="835.5556" y="280.8889" text-anchor="middle" font-size="16.8889" fill="#333333">• Results are cached</ns0:text>
+  <ns0:text x="835.5556" y="323.5556" text-anchor="middle" font-size="16.8889" fill="#333333">• Faster execution</ns0:text>
+  <ns0:text x="835.5556" y="366.2222" text-anchor="middle" font-size="16.8889" fill="#333333">• Use for: dates, status, IDs</ns0:text>
+  <ns0:text x="835.5556" y="408.8889" text-anchor="middle" font-size="16.8889" fill="#333333">• Example: term, range, exists</ns0:text>
+  <ns0:rect x="71.1111" y="517.3333" width="995.5556" height="49.7778" rx="5.3333" fill="#f2f6ff" stroke="#bbdefb" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="547.5556" text-anchor="middle" font-size="15.1111" fill="#1565c0">Prefer filter context wherever possible to leverage caching and improve performance</ns0:text>
+</ns0:svg>

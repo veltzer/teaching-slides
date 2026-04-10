@@ -1,69 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- divider -->
-  <line x1="640" y1="20" x2="640" y2="700" stroke="#cccccc" stroke-width="2" stroke-dasharray="8 5"/>
-
-  <!-- LEFT: Static Inventory -->
-  <text x="320" y="60" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Static Inventory</text>
-
-  <rect x="40" y="90" width="560" height="180" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="320" y="148" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">inventory.yml</text>
-  <text x="320" y="192" text-anchor="middle" font-size="18" fill="#555">Manually edited flat file</text>
-  <text x="320" y="232" text-anchor="middle" font-size="16" fill="#777">hosts.ini / inventory.yml / inventory/</text>
-
-  <text x="70" y="330" font-size="18" fill="#333">Fixed, pre-defined hosts</text>
-  <text x="70" y="374" font-size="18" fill="#333">Manual updates required</text>
-  <text x="70" y="418" font-size="18" fill="#333">Simple INI or YAML format</text>
-  <text x="70" y="462" font-size="18" fill="#333">Best for small / stable environments</text>
-  <text x="70" y="506" font-size="18" fill="#333">Version-controlled alongside playbooks</text>
-
-  <!-- static example box -->
-  <rect x="40" y="540" width="560" height="140" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="60" y="568" font-family="monospace" font-size="14" fill="#1565c0">[webservers]</text>
-  <text x="60" y="590" font-family="monospace" font-size="14" fill="#555">web01 ansible_host=192.168.56.20</text>
-  <text x="60" y="612" font-family="monospace" font-size="14" fill="#555">web02 ansible_host=192.168.56.21</text>
-  <text x="60" y="634" font-family="monospace" font-size="14" fill="#1565c0">[dbservers]</text>
-  <text x="60" y="656" font-family="monospace" font-size="14" fill="#555">db01 ansible_host=192.168.56.30</text>
-
-  <!-- RIGHT: Dynamic Inventory -->
-  <text x="960" y="60" text-anchor="middle" font-size="26" font-weight="bold" fill="#1b5e20">Dynamic Inventory</text>
-
-  <rect x="680" y="90" width="560" height="180" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="960" y="148" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">AWS / Azure / GCP / VMware</text>
-  <text x="960" y="192" text-anchor="middle" font-size="18" fill="#555">Script or plugin queries cloud API</text>
-  <text x="960" y="232" text-anchor="middle" font-size="16" fill="#777">Discovered at runtime</text>
-
-  <text x="710" y="330" font-size="18" fill="#333">Hosts discovered at runtime</text>
-  <text x="710" y="374" font-size="18" fill="#333">Always current (no drift)</text>
-  <text x="710" y="418" font-size="18" fill="#333">Plugin or executable script</text>
-  <text x="710" y="462" font-size="18" fill="#333">Best for cloud / ephemeral environments</text>
-  <text x="710" y="506" font-size="18" fill="#333">Scales automatically with infrastructure</text>
-
-  <!-- dynamic example box -->
-  <rect x="680" y="540" width="560" height="140" rx="8" fill="url(#grad-surface)" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="700" y="568" font-family="monospace" font-size="14" fill="#1b5e20"># aws_ec2.yml</text>
-  <text x="700" y="590" font-family="monospace" font-size="14" fill="#555">plugin: amazon.aws.aws_ec2</text>
-  <text x="700" y="612" font-family="monospace" font-size="14" fill="#555">regions: [us-east-1]</text>
-  <text x="700" y="634" font-family="monospace" font-size="14" fill="#555">filters:</text>
-  <text x="700" y="656" font-family="monospace" font-size="14" fill="#555">  instance-state-name: running</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:line x1="568.8889" y1="17.7778" x2="568.8889" y2="622.2222" stroke="#cccccc" stroke-width="1.7778" stroke-dasharray="7.1111 4.4444" />
+  <ns0:text x="284.4444" y="53.3333" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1565c0">Static Inventory</ns0:text>
+  <ns0:rect x="35.5556" y="80" width="497.7778" height="160" rx="7.1111" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="284.4444" y="131.5556" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#222">inventory.yml</ns0:text>
+  <ns0:text x="284.4444" y="170.6667" text-anchor="middle" font-size="16" fill="#555">Manually edited flat file</ns0:text>
+  <ns0:text x="284.4444" y="206.2222" text-anchor="middle" font-size="14.2222" fill="#777">hosts.ini / inventory.yml / inventory/</ns0:text>
+  <ns0:text x="62.2222" y="293.3333" font-size="16" fill="#333">Fixed, pre-defined hosts</ns0:text>
+  <ns0:text x="62.2222" y="332.4444" font-size="16" fill="#333">Manual updates required</ns0:text>
+  <ns0:text x="62.2222" y="371.5556" font-size="16" fill="#333">Simple INI or YAML format</ns0:text>
+  <ns0:text x="62.2222" y="410.6667" font-size="16" fill="#333">Best for small / stable environments</ns0:text>
+  <ns0:text x="62.2222" y="449.7778" font-size="16" fill="#333">Version-controlled alongside playbooks</ns0:text>
+  <ns0:rect x="35.5556" y="480" width="497.7778" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="53.3333" y="504.8889" font-family="monospace" font-size="12.4444" fill="#1565c0">[webservers]</ns0:text>
+  <ns0:text x="53.3333" y="524.4444" font-family="monospace" font-size="12.4444" fill="#555">web01 ansible_host=192.168.56.20</ns0:text>
+  <ns0:text x="53.3333" y="544" font-family="monospace" font-size="12.4444" fill="#555">web02 ansible_host=192.168.56.21</ns0:text>
+  <ns0:text x="53.3333" y="563.5556" font-family="monospace" font-size="12.4444" fill="#1565c0">[dbservers]</ns0:text>
+  <ns0:text x="53.3333" y="583.1111" font-family="monospace" font-size="12.4444" fill="#555">db01 ansible_host=192.168.56.30</ns0:text>
+  <ns0:text x="853.3333" y="53.3333" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1b5e20">Dynamic Inventory</ns0:text>
+  <ns0:rect x="604.4444" y="80" width="497.7778" height="160" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="853.3333" y="131.5556" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#222">AWS / Azure / GCP / VMware</ns0:text>
+  <ns0:text x="853.3333" y="170.6667" text-anchor="middle" font-size="16" fill="#555">Script or plugin queries cloud API</ns0:text>
+  <ns0:text x="853.3333" y="206.2222" text-anchor="middle" font-size="14.2222" fill="#777">Discovered at runtime</ns0:text>
+  <ns0:text x="631.1111" y="293.3333" font-size="16" fill="#333">Hosts discovered at runtime</ns0:text>
+  <ns0:text x="631.1111" y="332.4444" font-size="16" fill="#333">Always current (no drift)</ns0:text>
+  <ns0:text x="631.1111" y="371.5556" font-size="16" fill="#333">Plugin or executable script</ns0:text>
+  <ns0:text x="631.1111" y="410.6667" font-size="16" fill="#333">Best for cloud / ephemeral environments</ns0:text>
+  <ns0:text x="631.1111" y="449.7778" font-size="16" fill="#333">Scales automatically with infrastructure</ns0:text>
+  <ns0:rect x="604.4444" y="480" width="497.7778" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="#43a047" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="622.2222" y="504.8889" font-family="monospace" font-size="12.4444" fill="#1b5e20"># aws_ec2.yml</ns0:text>
+  <ns0:text x="622.2222" y="524.4444" font-family="monospace" font-size="12.4444" fill="#555">plugin: amazon.aws.aws_ec2</ns0:text>
+  <ns0:text x="622.2222" y="544" font-family="monospace" font-size="12.4444" fill="#555">regions: [us-east-1]</ns0:text>
+  <ns0:text x="622.2222" y="563.5556" font-family="monospace" font-size="12.4444" fill="#555">filters:</ns0:text>
+  <ns0:text x="622.2222" y="583.1111" font-family="monospace" font-size="12.4444" fill="#555">  instance-state-name: running</ns0:text>
+</ns0:svg>

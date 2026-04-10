@@ -1,40 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#dc3545" />
-    </marker>
-  </defs>
-  <text x="640" y="47.3684" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Database Caching Patterns</text>
-  <rect x="80" y="189.4737" width="192" height="94.7368" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="176" y="246.3158" text-anchor="middle" font-size="20.8" fill="#333">Application</text>
-  <polygon points="480,236.8421 592,170.5263 704,236.8421 592,303.1579" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="592" y="231.1579" text-anchor="middle" font-size="17.6" fill="#333">Query</text>
-  <text x="592" y="257.6842" text-anchor="middle" font-size="17.6" fill="#333">Cache?</text>
-  <line x1="272" y1="236.8421" x2="476.8" y2="236.8421" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <rect x="832" y="104.2105" width="224" height="85.2632" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="944" y="155.3684" text-anchor="middle" font-size="19.2" fill="#333">Return Cached</text>
-  <line x1="704" y1="204.6316" x2="828.8" y2="151.5789" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
-  <text x="752" y="155.3684" font-size="17.6" fill="#28a745">Hit</text>
-  <rect x="832" y="255.7895" width="224" height="85.2632" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="944" y="306.9474" text-anchor="middle" font-size="19.2" fill="#333">Database</text>
-  <line x1="704" y1="255.7895" x2="828.8" y2="293.6842" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead-red)" />
-  <text x="752" y="293.6842" font-size="17.6" fill="#dc3545">Miss</text>
-  <rect x="832" y="397.8947" width="224" height="85.2632" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="944" y="449.0526" text-anchor="middle" font-size="19.2" fill="#333">Update Cache</text>
-  <line x1="944" y1="341.0526" x2="944" y2="394.1053" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <path d="M 832 439.5789 Q 592 492.6316 592 306.9474" fill="none" stroke="#ffc107" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead)" />
-  <rect x="160" y="416.8421" width="224" height="85.2632" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="272" y="454.7368" text-anchor="middle" font-size="17.6" fill="#333">Cache</text>
-  <text x="272" y="483.1579" text-anchor="middle" font-size="17.6" fill="#333">Invalidation</text>
-  <line x1="176" y1="284.2105" x2="232" y2="413.0526" stroke="#dc3545" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-red)" />
-  <path d="M 384 454.7368 Q 464 454.7368 480 303.1579" fill="none" stroke="#dc3545" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-red)" />
-  <rect x="80" y="568.4211" width="1120" height="113.6842" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1.6" />
-  <text x="640" y="610.1053" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</text>
-  <text x="640" y="648" text-anchor="middle" font-size="17.6" fill="#555">Cache invalidation ensures stale data is removed when underlying data changes.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="12.3077" markerHeight="10.2025" refX="12.3077" refY="5.1012" orient="auto">
+      <ns0:polygon points="0,14.5749 4.3077,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="12.3077" markerHeight="10.2025" refX="12.3077" refY="5.1012" orient="auto">
+      <ns0:polygon points="0,14.5749 4.3077,0" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-red" markerWidth="12.3077" markerHeight="10.2025" refX="12.3077" refY="5.1012" orient="auto">
+      <ns0:polygon points="0,14.5749 4.3077,0" fill="#dc3545" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="492.3077" y="36.4372" text-anchor="middle" font-size="19.6923" font-weight="bold" fill="#333">Database Caching Patterns</ns0:text>
+  <ns0:rect x="61.5385" y="145.749" width="147.6923" height="72.8745" rx="6.1538" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4615" />
+  <ns0:text x="135.3846" y="189.4737" text-anchor="middle" font-size="16" fill="#333">Application</ns0:text>
+  <ns0:polygon points="369.2308,182.1862 455.3846,131.1741 541.5385,182.1862 455.3846,233.1984" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4615" />
+  <ns0:text x="455.3846" y="177.8138" text-anchor="middle" font-size="13.5385" fill="#333">Query</ns0:text>
+  <ns0:text x="455.3846" y="198.2186" text-anchor="middle" font-size="13.5385" fill="#333">Cache?</ns0:text>
+  <ns0:line x1="209.2308" y1="182.1862" x2="366.7692" y2="182.1862" stroke="#4a90e2" stroke-width="2.4615" marker-end="url(#arrowhead)" />
+  <ns0:rect x="640" y="80.1619" width="172.3077" height="65.5871" rx="6.1538" fill="#d4edda" stroke="#28a745" stroke-width="2.4615" />
+  <ns0:text x="726.1538" y="119.5142" text-anchor="middle" font-size="14.7692" fill="#333">Return Cached</ns0:text>
+  <ns0:line x1="541.5385" y1="157.4089" x2="637.5385" y2="116.5992" stroke="#28a745" stroke-width="2.4615" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="578.4615" y="119.5142" font-size="13.5385" fill="#28a745">Hit</ns0:text>
+  <ns0:rect x="640" y="196.7612" width="172.3077" height="65.5871" rx="6.1538" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4615" />
+  <ns0:text x="726.1538" y="236.1134" text-anchor="middle" font-size="14.7692" fill="#333">Database</ns0:text>
+  <ns0:line x1="541.5385" y1="196.7612" x2="637.5385" y2="225.9109" stroke="#dc3545" stroke-width="2.4615" marker-end="url(#arrowhead-red)" />
+  <ns0:text x="578.4615" y="225.9109" font-size="13.5385" fill="#dc3545">Miss</ns0:text>
+  <ns0:rect x="640" y="306.0728" width="172.3077" height="65.5871" rx="6.1538" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4615" />
+  <ns0:text x="726.1538" y="345.4251" text-anchor="middle" font-size="14.7692" fill="#333">Update Cache</ns0:text>
+  <ns0:line x1="726.1538" y1="262.3482" x2="726.1538" y2="303.1579" stroke="#4a90e2" stroke-width="1.8462" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 640 338.1376 Q 455.3846 378.9474 455.3846 236.1134" fill="none" stroke="#ffc107" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrowhead)" />
+  <ns0:rect x="123.0769" y="320.6478" width="172.3077" height="65.5871" rx="6.1538" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4615" />
+  <ns0:text x="209.2308" y="349.7975" text-anchor="middle" font-size="13.5385" fill="#333">Cache</ns0:text>
+  <ns0:text x="209.2308" y="371.6599" text-anchor="middle" font-size="13.5385" fill="#333">Invalidation</ns0:text>
+  <ns0:line x1="135.3846" y1="218.6235" x2="178.4615" y2="317.7328" stroke="#dc3545" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrowhead-red)" />
+  <ns0:path d="M 295.3846 349.7975 Q 356.9231 349.7975 369.2308 233.1984" fill="none" stroke="#dc3545" stroke-width="1.8462" stroke-dasharray="6.1538 3.6923" marker-end="url(#arrowhead-red)" />
+  <ns0:rect x="61.5385" y="437.247" width="861.5385" height="87.4494" rx="6.1538" fill="#f5f5f5" stroke="#ddd" stroke-width="1.2308" />
+  <ns0:text x="492.3077" y="469.3118" text-anchor="middle" font-size="14.7692" font-weight="bold" fill="#333">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</ns0:text>
+  <ns0:text x="492.3077" y="498.4615" text-anchor="middle" font-size="13.5385" fill="#555">Cache invalidation ensures stale data is removed when underlying data changes.</ns0:text>
+</ns0:svg>

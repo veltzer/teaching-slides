@@ -1,87 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Top row: 4 boxes -->
-  <rect x="30" y="40" width="252" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="30" y="40" width="252" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="30" y="78" width="252" height="10" fill="url(#grad-accent)"/>
-  <text x="156" y="72" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Request Change</text>
-  <text x="156" y="125" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">RFC ticket created</text>
-  <text x="156" y="148" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Impact assessed</text>
-
-  <line x1="282" y1="115" x2="318" y2="115" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="320" y="40" width="252" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="320" y="40" width="252" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="320" y="78" width="252" height="10" fill="url(#grad-accent)"/>
-  <text x="446" y="72" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Peer Review</text>
-  <text x="446" y="125" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Technical review</text>
-  <text x="446" y="148" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Risk evaluation</text>
-
-  <line x1="572" y1="115" x2="608" y2="115" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="610" y="40" width="252" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="610" y="40" width="252" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="610" y="78" width="252" height="10" fill="url(#grad-accent)"/>
-  <text x="736" y="72" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Test in Staging</text>
-  <text x="736" y="125" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Validation</text>
-  <text x="736" y="148" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Rollback tested</text>
-
-  <line x1="862" y1="115" x2="898" y2="115" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="900" y="40" width="350" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="900" y="40" width="350" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="900" y="78" width="350" height="10" fill="url(#grad-accent)"/>
-  <text x="1075" y="72" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Approve</text>
-  <text x="1075" y="125" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">CAB sign-off</text>
-  <text x="1075" y="148" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Schedule window</text>
-
-  <!-- Arrow down from Approve and across to Deploy -->
-  <line x1="1075" y1="190" x2="1075" y2="240" stroke="#1565c0" stroke-width="2"/>
-  <line x1="1075" y1="240" x2="156" y2="240" stroke="#1565c0" stroke-width="2"/>
-  <line x1="156" y1="240" x2="156" y2="280" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <!-- Bottom row: 3 boxes -->
-  <rect x="30" y="282" width="252" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="30" y="282" width="252" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="30" y="320" width="252" height="10" fill="url(#grad-accent)"/>
-  <text x="156" y="314" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Deploy to Prod</text>
-  <text x="156" y="367" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Maintenance window</text>
-  <text x="156" y="390" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Rollback ready</text>
-
-  <line x1="282" y1="357" x2="318" y2="357" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="320" y="282" width="252" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="320" y="282" width="252" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="320" y="320" width="252" height="10" fill="url(#grad-accent)"/>
-  <text x="446" y="314" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Verify &amp; Monitor</text>
-  <text x="446" y="367" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Health checks</text>
-  <text x="446" y="390" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Alerts reviewed</text>
-
-  <line x1="572" y1="357" x2="608" y2="357" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-
-  <rect x="610" y="282" width="252" height="150" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <rect x="610" y="282" width="252" height="48" fill="url(#grad-accent)" rx="10"/>
-  <rect x="610" y="320" width="252" height="10" fill="url(#grad-accent)"/>
-  <text x="736" y="314" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Document</text>
-  <text x="736" y="367" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">CMDB update</text>
-  <text x="736" y="390" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Close RFC ticket</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="26.6667" y="35.5556" width="224" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="26.6667" y="35.5556" width="224" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="26.6667" y="69.3333" width="224" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="138.6667" y="64" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Request Change</ns0:text>
+  <ns0:text x="138.6667" y="111.1111" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">RFC ticket created</ns0:text>
+  <ns0:text x="138.6667" y="131.5556" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Impact assessed</ns0:text>
+  <ns0:line x1="250.6667" y1="102.2222" x2="282.6667" y2="102.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="284.4444" y="35.5556" width="224" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="284.4444" y="35.5556" width="224" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="284.4444" y="69.3333" width="224" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="396.4444" y="64" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Peer Review</ns0:text>
+  <ns0:text x="396.4444" y="111.1111" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Technical review</ns0:text>
+  <ns0:text x="396.4444" y="131.5556" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Risk evaluation</ns0:text>
+  <ns0:line x1="508.4444" y1="102.2222" x2="540.4444" y2="102.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="542.2222" y="35.5556" width="224" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="542.2222" y="35.5556" width="224" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="542.2222" y="69.3333" width="224" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="654.2222" y="64" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Test in Staging</ns0:text>
+  <ns0:text x="654.2222" y="111.1111" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Validation</ns0:text>
+  <ns0:text x="654.2222" y="131.5556" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Rollback tested</ns0:text>
+  <ns0:line x1="766.2222" y1="102.2222" x2="798.2222" y2="102.2222" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="800" y="35.5556" width="311.1111" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="800" y="35.5556" width="311.1111" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="800" y="69.3333" width="311.1111" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="955.5556" y="64" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Approve</ns0:text>
+  <ns0:text x="955.5556" y="111.1111" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">CAB sign-off</ns0:text>
+  <ns0:text x="955.5556" y="131.5556" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Schedule window</ns0:text>
+  <ns0:line x1="955.5556" y1="168.8889" x2="955.5556" y2="213.3333" stroke="#1565c0" stroke-width="1.7778" />
+  <ns0:line x1="955.5556" y1="213.3333" x2="138.6667" y2="213.3333" stroke="#1565c0" stroke-width="1.7778" />
+  <ns0:line x1="138.6667" y1="213.3333" x2="138.6667" y2="248.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="26.6667" y="250.6667" width="224" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="26.6667" y="250.6667" width="224" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="26.6667" y="284.4444" width="224" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="138.6667" y="279.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Deploy to Prod</ns0:text>
+  <ns0:text x="138.6667" y="326.2222" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Maintenance window</ns0:text>
+  <ns0:text x="138.6667" y="346.6667" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Rollback ready</ns0:text>
+  <ns0:line x1="250.6667" y1="317.3333" x2="282.6667" y2="317.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="284.4444" y="250.6667" width="224" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="284.4444" y="250.6667" width="224" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="284.4444" y="284.4444" width="224" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="396.4444" y="279.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Verify &amp; Monitor</ns0:text>
+  <ns0:text x="396.4444" y="326.2222" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Health checks</ns0:text>
+  <ns0:text x="396.4444" y="346.6667" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Alerts reviewed</ns0:text>
+  <ns0:line x1="508.4444" y1="317.3333" x2="540.4444" y2="317.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="542.2222" y="250.6667" width="224" height="133.3333" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:rect x="542.2222" y="250.6667" width="224" height="42.6667" fill="url(#grad-accent)" rx="8.8889" />
+  <ns0:rect x="542.2222" y="284.4444" width="224" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="654.2222" y="279.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#ffffff" font-family="sans-serif">Document</ns0:text>
+  <ns0:text x="654.2222" y="326.2222" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">CMDB update</ns0:text>
+  <ns0:text x="654.2222" y="346.6667" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">Close RFC ticket</ns0:text>
+</ns0:svg>

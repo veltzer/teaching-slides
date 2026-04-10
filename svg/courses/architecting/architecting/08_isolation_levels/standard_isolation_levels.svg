@@ -1,62 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrowhead" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
-      <polygon points="0,16.3636 5.2706,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="40.9091" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Standard Isolation Levels</text>
-  <rect x="45.1765" y="98.1818" width="263.5294" height="147.2727" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0118" />
-  <text x="176.1882" y="139.0909" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#dc3545">Read Uncommitted</text>
-  <text x="176.1882" y="171.8182" text-anchor="middle" font-size="15.0588" fill="#333">Lowest isolation</text>
-  <text x="176.1882" y="196.3636" text-anchor="middle" font-size="15.0588" fill="#555">Dirty reads possible</text>
-  <text x="176.1882" y="229.0909" text-anchor="middle" font-size="15.0588" fill="#dc3545">Rarely used</text>
-  <rect x="346.3529" y="98.1818" width="263.5294" height="147.2727" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
-  <text x="477.3647" y="139.0909" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#4a90e2">Read Committed</text>
-  <text x="477.3647" y="171.8182" text-anchor="middle" font-size="15.0588" fill="#333">Default in many DBs</text>
-  <text x="477.3647" y="196.3636" text-anchor="middle" font-size="15.0588" fill="#555">No dirty reads</text>
-  <text x="477.3647" y="229.0909" text-anchor="middle" font-size="15.0588" fill="#4a90e2">PostgreSQL default</text>
-  <rect x="647.5294" y="98.1818" width="263.5294" height="147.2727" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
-  <text x="778.5412" y="139.0909" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#996600">Repeatable Read</text>
-  <text x="778.5412" y="171.8182" text-anchor="middle" font-size="15.0588" fill="#333">Consistent reads</text>
-  <text x="778.5412" y="196.3636" text-anchor="middle" font-size="15.0588" fill="#555">No non-repeatable reads</text>
-  <text x="778.5412" y="229.0909" text-anchor="middle" font-size="15.0588" fill="#996600">MySQL default</text>
-  <rect x="948.7059" y="98.1818" width="263.5294" height="147.2727" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
-  <text x="1079.7176" y="139.0909" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#28a745">Serializable</text>
-  <text x="1079.7176" y="171.8182" text-anchor="middle" font-size="15.0588" fill="#333">Highest isolation</text>
-  <text x="1079.7176" y="196.3636" text-anchor="middle" font-size="15.0588" fill="#555">No phantom reads</text>
-  <text x="1079.7176" y="229.0909" text-anchor="middle" font-size="15.0588" fill="#28a745">Full ACID</text>
-  <line x1="308.7059" y1="171.8182" x2="343.3412" y2="171.8182" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
-  <line x1="609.8824" y1="171.8182" x2="644.5176" y2="171.8182" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
-  <line x1="911.0588" y1="171.8182" x2="945.6941" y2="171.8182" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
-  <text x="640" y="286.3636" text-anchor="middle" font-size="18.0706" fill="#4a90e2">More Isolation ---&gt;</text>
-  <rect x="45.1765" y="327.2727" width="557.1765" height="114.5455" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
-  <text x="323.7647" y="368.1818" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#28a745">High Performance</text>
-  <text x="323.7647" y="405.8182" text-anchor="middle" font-size="16.5647" fill="#333">Better concurrency, more anomalies</text>
-  <line x1="176.1882" y1="245.4545" x2="176.1882" y2="324" stroke="#28a745" stroke-width="2.2588" stroke-dasharray="7.5294 4.5176" />
-  <rect x="677.6471" y="327.2727" width="557.1765" height="114.5455" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0118" />
-  <text x="956.2353" y="368.1818" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#dc3545">Lower Performance</text>
-  <text x="956.2353" y="405.8182" text-anchor="middle" font-size="16.5647" fill="#333">Less concurrency, fewer anomalies</text>
-  <line x1="1079.7176" y1="245.4545" x2="1079.7176" y2="324" stroke="#dc3545" stroke-width="2.2588" stroke-dasharray="7.5294 4.5176" />
-  <rect x="45.1765" y="482.7273" width="1189.6471" height="212.7273" rx="7.5294" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5059" />
-  <text x="640" y="520.3636" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#333">Problems Prevented by Each Level</text>
-  <text x="240.9412" y="556.3636" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="#333">Problem</text>
-  <text x="527.0588" y="556.3636" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="#333">Read Uncommitted</text>
-  <text x="752.9412" y="556.3636" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="#333">Read Committed</text>
-  <text x="948.7059" y="556.3636" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="#333">Repeatable Read</text>
-  <text x="1144.4706" y="556.3636" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="#333">Serializable</text>
-  <text x="240.9412" y="592.3636" text-anchor="middle" font-size="16.5647" fill="#333">Dirty Reads</text>
-  <text x="527.0588" y="592.3636" text-anchor="middle" font-size="16.5647" fill="#dc3545">Possible</text>
-  <text x="752.9412" y="592.3636" text-anchor="middle" font-size="16.5647" fill="#28a745">Prevented</text>
-  <text x="948.7059" y="592.3636" text-anchor="middle" font-size="16.5647" fill="#28a745">Prevented</text>
-  <text x="1144.4706" y="592.3636" text-anchor="middle" font-size="16.5647" fill="#28a745">Prevented</text>
-  <text x="240.9412" y="625.0909" text-anchor="middle" font-size="16.5647" fill="#333">Non-Repeatable</text>
-  <text x="527.0588" y="625.0909" text-anchor="middle" font-size="16.5647" fill="#dc3545">Possible</text>
-  <text x="752.9412" y="625.0909" text-anchor="middle" font-size="16.5647" fill="#dc3545">Possible</text>
-  <text x="948.7059" y="625.0909" text-anchor="middle" font-size="16.5647" fill="#28a745">Prevented</text>
-  <text x="1144.4706" y="625.0909" text-anchor="middle" font-size="16.5647" fill="#28a745">Prevented</text>
-  <text x="240.9412" y="657.8182" text-anchor="middle" font-size="16.5647" fill="#333">Phantom Reads</text>
-  <text x="527.0588" y="657.8182" text-anchor="middle" font-size="16.5647" fill="#dc3545">Possible</text>
-  <text x="752.9412" y="657.8182" text-anchor="middle" font-size="16.5647" fill="#dc3545">Possible</text>
-  <text x="948.7059" y="657.8182" text-anchor="middle" font-size="16.5647" fill="#dc3545">Possible</text>
-  <text x="1144.4706" y="657.8182" text-anchor="middle" font-size="16.5647" fill="#28a745">Prevented</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="13.858" markerHeight="10.5411" refX="13.858" refY="5.2706" orient="auto">
+      <ns0:polygon points="0,15.0588 4.8503,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="588.9673" y="37.6471" text-anchor="middle" font-size="22.1729" font-weight="bold" fill="#333">Standard Isolation Levels</ns0:text>
+  <ns0:rect x="41.5742" y="90.3529" width="242.5159" height="135.5294" rx="6.929" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7716" />
+  <ns0:text x="162.1392" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#dc3545">Read Uncommitted</ns0:text>
+  <ns0:text x="162.1392" y="158.1177" text-anchor="middle" font-size="13.858" fill="#333">Lowest isolation</ns0:text>
+  <ns0:text x="162.1392" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">Dirty reads possible</ns0:text>
+  <ns0:text x="162.1392" y="210.8235" text-anchor="middle" font-size="13.858" fill="#dc3545">Rarely used</ns0:text>
+  <ns0:rect x="318.7352" y="90.3529" width="242.5159" height="135.5294" rx="6.929" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7716" />
+  <ns0:text x="439.3003" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#4a90e2">Read Committed</ns0:text>
+  <ns0:text x="439.3003" y="158.1177" text-anchor="middle" font-size="13.858" fill="#333">Default in many DBs</ns0:text>
+  <ns0:text x="439.3003" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">No dirty reads</ns0:text>
+  <ns0:text x="439.3003" y="210.8235" text-anchor="middle" font-size="13.858" fill="#4a90e2">PostgreSQL default</ns0:text>
+  <ns0:rect x="595.8963" y="90.3529" width="242.5159" height="135.5294" rx="6.929" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7716" />
+  <ns0:text x="716.4614" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#996600">Repeatable Read</ns0:text>
+  <ns0:text x="716.4614" y="158.1177" text-anchor="middle" font-size="13.858" fill="#333">Consistent reads</ns0:text>
+  <ns0:text x="716.4614" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">No non-repeatable reads</ns0:text>
+  <ns0:text x="716.4614" y="210.8235" text-anchor="middle" font-size="13.858" fill="#996600">MySQL default</ns0:text>
+  <ns0:rect x="873.0574" y="90.3529" width="242.5159" height="135.5294" rx="6.929" fill="#d4edda" stroke="#28a745" stroke-width="2.7716" />
+  <ns0:text x="993.6224" y="128" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#28a745">Serializable</ns0:text>
+  <ns0:text x="993.6224" y="158.1177" text-anchor="middle" font-size="13.858" fill="#333">Highest isolation</ns0:text>
+  <ns0:text x="993.6224" y="180.7058" text-anchor="middle" font-size="13.858" fill="#555">No phantom reads</ns0:text>
+  <ns0:text x="993.6224" y="210.8235" text-anchor="middle" font-size="13.858" fill="#28a745">Full ACID</ns0:text>
+  <ns0:line x1="284.0901" y1="158.1177" x2="315.9636" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrowhead)" />
+  <ns0:line x1="561.2512" y1="158.1177" x2="593.1246" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrowhead)" />
+  <ns0:line x1="838.4122" y1="158.1177" x2="870.2857" y2="158.1177" stroke="#4a90e2" stroke-width="2.7716" marker-end="url(#arrowhead)" />
+  <ns0:text x="588.9673" y="263.5294" text-anchor="middle" font-size="16.6297" fill="#4a90e2">More Isolation ---&gt;</ns0:text>
+  <ns0:rect x="41.5742" y="301.1764" width="512.748" height="105.4118" rx="6.929" fill="#d4edda" stroke="#28a745" stroke-width="2.7716" />
+  <ns0:text x="297.9481" y="338.8235" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#28a745">High Performance</ns0:text>
+  <ns0:text x="297.9481" y="373.4588" text-anchor="middle" font-size="15.2439" fill="#333">Better concurrency, more anomalies</ns0:text>
+  <ns0:line x1="162.1392" y1="225.8823" x2="162.1392" y2="298.1647" stroke="#28a745" stroke-width="2.0787" stroke-dasharray="6.929 4.1574" />
+  <ns0:rect x="623.6124" y="301.1764" width="512.748" height="105.4118" rx="6.929" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7716" />
+  <ns0:text x="879.9864" y="338.8235" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#dc3545">Lower Performance</ns0:text>
+  <ns0:text x="879.9864" y="373.4588" text-anchor="middle" font-size="15.2439" fill="#333">Less concurrency, fewer anomalies</ns0:text>
+  <ns0:line x1="993.6224" y1="225.8823" x2="993.6224" y2="298.1647" stroke="#dc3545" stroke-width="2.0787" stroke-dasharray="6.929 4.1574" />
+  <ns0:rect x="41.5742" y="444.2353" width="1094.7863" height="195.7647" rx="6.929" fill="#f5f5f5" stroke="#ddd" stroke-width="1.3858" />
+  <ns0:text x="588.9673" y="478.8705" text-anchor="middle" font-size="16.6297" font-weight="bold" fill="#333">Problems Prevented by Each Level</ns0:text>
+  <ns0:text x="221.7289" y="511.9999" text-anchor="middle" font-size="15.2439" font-weight="bold" fill="#333">Problem</ns0:text>
+  <ns0:text x="485.0319" y="511.9999" text-anchor="middle" font-size="15.2439" font-weight="bold" fill="#333">Read Uncommitted</ns0:text>
+  <ns0:text x="692.9027" y="511.9999" text-anchor="middle" font-size="15.2439" font-weight="bold" fill="#333">Read Committed</ns0:text>
+  <ns0:text x="873.0574" y="511.9999" text-anchor="middle" font-size="15.2439" font-weight="bold" fill="#333">Repeatable Read</ns0:text>
+  <ns0:text x="1053.2121" y="511.9999" text-anchor="middle" font-size="15.2439" font-weight="bold" fill="#333">Serializable</ns0:text>
+  <ns0:text x="221.7289" y="545.1293" text-anchor="middle" font-size="15.2439" fill="#333">Dirty Reads</ns0:text>
+  <ns0:text x="485.0319" y="545.1293" text-anchor="middle" font-size="15.2439" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="692.9027" y="545.1293" text-anchor="middle" font-size="15.2439" fill="#28a745">Prevented</ns0:text>
+  <ns0:text x="873.0574" y="545.1293" text-anchor="middle" font-size="15.2439" fill="#28a745">Prevented</ns0:text>
+  <ns0:text x="1053.2121" y="545.1293" text-anchor="middle" font-size="15.2439" fill="#28a745">Prevented</ns0:text>
+  <ns0:text x="221.7289" y="575.247" text-anchor="middle" font-size="15.2439" fill="#333">Non-Repeatable</ns0:text>
+  <ns0:text x="485.0319" y="575.247" text-anchor="middle" font-size="15.2439" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="692.9027" y="575.247" text-anchor="middle" font-size="15.2439" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="873.0574" y="575.247" text-anchor="middle" font-size="15.2439" fill="#28a745">Prevented</ns0:text>
+  <ns0:text x="1053.2121" y="575.247" text-anchor="middle" font-size="15.2439" fill="#28a745">Prevented</ns0:text>
+  <ns0:text x="221.7289" y="605.3647" text-anchor="middle" font-size="15.2439" fill="#333">Phantom Reads</ns0:text>
+  <ns0:text x="485.0319" y="605.3647" text-anchor="middle" font-size="15.2439" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="692.9027" y="605.3647" text-anchor="middle" font-size="15.2439" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="873.0574" y="605.3647" text-anchor="middle" font-size="15.2439" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="1053.2121" y="605.3647" text-anchor="middle" font-size="15.2439" fill="#28a745">Prevented</ns0:text>
+</ns0:svg>

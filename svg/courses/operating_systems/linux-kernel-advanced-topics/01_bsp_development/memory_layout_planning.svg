@@ -1,39 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Memory map segments as horizontal bars -->
-  <rect x="320" y="30" width="640" height="60" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="68" text-anchor="middle" font-size="18" fill="#b71c1c">0x00000000 - Boot ROM</text>
-  <rect x="320" y="95" width="640" height="60" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="133" text-anchor="middle" font-size="18" fill="#e65100">0x40000000 - SRAM</text>
-  <rect x="320" y="160" width="640" height="86" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="208" text-anchor="middle" font-size="18" fill="#ffffff">0x80000000 - DDR Base</text>
-  <rect x="320" y="252" width="640" height="60" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="290" text-anchor="middle" font-size="18" fill="#1b5e20">0x80008000 - Kernel</text>
-  <rect x="320" y="317" width="640" height="60" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="355" text-anchor="middle" font-size="18" fill="#0d47a1">0x88000000 - Device Tree</text>
-  <rect x="320" y="382" width="640" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="420" text-anchor="middle" font-size="18" fill="#4a148c">0x88100000 - Initramfs</text>
-  <rect x="320" y="447" width="640" height="145" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="527" text-anchor="middle" font-size="18" fill="#1b5e20">0x90000000 - User Space</text>
-  <rect x="320" y="600" width="640" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="4" filter="url(#shadow)"/>
-  <text x="640" y="638" text-anchor="middle" font-size="18" fill="#4a148c">0xF0000000 - Peripherals</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="284.4444" y="26.6667" width="568.8889" height="53.3333" fill="#ffebee" stroke="#c62828" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="60.4444" text-anchor="middle" font-size="16" fill="#b71c1c">0x00000000 - Boot ROM</ns0:text>
+  <ns0:rect x="284.4444" y="84.4444" width="568.8889" height="53.3333" fill="#fff8e1" stroke="#f57c00" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="118.2222" text-anchor="middle" font-size="16" fill="#e65100">0x40000000 - SRAM</ns0:text>
+  <ns0:rect x="284.4444" y="142.2222" width="568.8889" height="76.4444" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="184.8889" text-anchor="middle" font-size="16" fill="#ffffff">0x80000000 - DDR Base</ns0:text>
+  <ns0:rect x="284.4444" y="224" width="568.8889" height="53.3333" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="257.7778" text-anchor="middle" font-size="16" fill="#1b5e20">0x80008000 - Kernel</ns0:text>
+  <ns0:rect x="284.4444" y="281.7778" width="568.8889" height="53.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="315.5556" text-anchor="middle" font-size="16" fill="#0d47a1">0x88000000 - Device Tree</ns0:text>
+  <ns0:rect x="284.4444" y="339.5556" width="568.8889" height="53.3333" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="373.3333" text-anchor="middle" font-size="16" fill="#4a148c">0x88100000 - Initramfs</ns0:text>
+  <ns0:rect x="284.4444" y="397.3333" width="568.8889" height="128.8889" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="468.4444" text-anchor="middle" font-size="16" fill="#1b5e20">0x90000000 - User Space</ns0:text>
+  <ns0:rect x="284.4444" y="533.3333" width="568.8889" height="53.3333" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.7778" rx="3.5556" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="567.1111" text-anchor="middle" font-size="16" fill="#4a148c">0xF0000000 - Peripherals</ns0:text>
+</ns0:svg>

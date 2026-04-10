@@ -1,50 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="497.7778" y="72" width="284.4444" height="172.8" fill="#dcfce7" stroke="#16a34a" stroke-width="2.8444" />
-  <text x="640" y="115.2" text-anchor="middle" font-family="Arial" font-size="22.7556" font-weight="bold">OrderService</text>
-  <line x1="497.7778" y1="129.6" x2="782.2222" y2="129.6" stroke="#16a34a" stroke-width="1.4222" />
-  <text x="512" y="158.4" font-family="Arial" font-size="15.6444">- repository: OrderRepository</text>
-  <text x="512" y="180" font-family="Arial" font-size="15.6444">- paymentProcessor: PaymentProcessor</text>
-  <text x="512" y="201.6" font-family="Arial" font-size="15.6444">- notificationService: NotificationService</text>
-  <line x1="497.7778" y1="216" x2="782.2222" y2="216" stroke="#16a34a" stroke-width="1.4222" />
-  <text x="512" y="237.6" font-family="Arial" font-size="15.6444">+ processOrder(Order)</text>
-  <rect x="71.1111" y="360" width="256" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" rx="7.1111" stroke-dasharray="7.1111 7.1111" />
-  <text x="199.1111" y="388.8" text-anchor="middle" font-family="Arial" font-size="15.6444" font-style="italic">«interface»</text>
-  <text x="199.1111" y="417.6" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">OrderRepository</text>
-  <line x1="71.1111" y1="424.8" x2="327.1111" y2="424.8" stroke="#0284c7" stroke-width="1.4222" />
-  <text x="199.1111" y="453.6" text-anchor="middle" font-family="Arial" font-size="15.6444">+ save(Order)</text>
-  <rect x="497.7778" y="360" width="256" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" rx="7.1111" stroke-dasharray="7.1111 7.1111" />
-  <text x="625.7778" y="388.8" text-anchor="middle" font-family="Arial" font-size="15.6444" font-style="italic">«interface»</text>
-  <text x="625.7778" y="417.6" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">PaymentProcessor</text>
-  <line x1="497.7778" y1="424.8" x2="753.7778" y2="424.8" stroke="#0284c7" stroke-width="1.4222" />
-  <text x="625.7778" y="453.6" text-anchor="middle" font-family="Arial" font-size="15.6444">+ process(Order)</text>
-  <rect x="924.4444" y="360" width="256" height="115.2" fill="#e0f2fe" stroke="#0284c7" stroke-width="2.8444" rx="7.1111" stroke-dasharray="7.1111 7.1111" />
-  <text x="1052.4444" y="388.8" text-anchor="middle" font-family="Arial" font-size="15.6444" font-style="italic">«interface»</text>
-  <text x="1052.4444" y="417.6" text-anchor="middle" font-family="Arial" font-size="19.9111" font-weight="bold">NotificationService</text>
-  <line x1="924.4444" y1="424.8" x2="1180.4444" y2="424.8" stroke="#0284c7" stroke-width="1.4222" />
-  <text x="1052.4444" y="453.6" text-anchor="middle" font-family="Arial" font-size="15.6444">+ notify(Order)</text>
-  <rect x="71.1111" y="547.2" width="213.3333" height="86.4" fill="#f0f4f8" stroke="#64748b" stroke-width="1.4222" />
-  <text x="177.7778" y="597.6" text-anchor="middle" font-family="Arial" font-size="17.0667">MySQLRepository</text>
-  <rect x="355.5556" y="547.2" width="213.3333" height="86.4" fill="#f0f4f8" stroke="#64748b" stroke-width="1.4222" />
-  <text x="462.2222" y="597.6" text-anchor="middle" font-family="Arial" font-size="17.0667">StripeProcessor</text>
-  <rect x="640" y="547.2" width="213.3333" height="86.4" fill="#f0f4f8" stroke="#64748b" stroke-width="1.4222" />
-  <text x="746.6667" y="597.6" text-anchor="middle" font-family="Arial" font-size="17.0667">PayPalProcessor</text>
-  <rect x="924.4444" y="547.2" width="213.3333" height="86.4" fill="#f0f4f8" stroke="#64748b" stroke-width="1.4222" />
-  <text x="1031.1111" y="597.6" text-anchor="middle" font-family="Arial" font-size="17.0667">EmailNotification</text>
-  <path d="M 540.4444 244.8 L 199.1111 360" stroke="#16a34a" stroke-width="2.8444" marker-end="url(#arrow-green-solid)" />
-  <path d="M 640 244.8 L 625.7778 360" stroke="#16a34a" stroke-width="2.8444" marker-end="url(#arrow-green-solid)" />
-  <path d="M 739.5556 244.8 L 1052.4444 360" stroke="#16a34a" stroke-width="2.8444" marker-end="url(#arrow-green-solid)" />
-  <path d="M 177.7778 547.2 L 199.1111 475.2" stroke="#64748b" stroke-width="1.4222" stroke-dasharray="4.2667 4.2667" />
-  <polygon points="199.1111,475.2 192,489.6 206.2222,489.6" fill="none" stroke="#64748b" stroke-width="1.4222" />
-  <path d="M 462.2222 547.2 L 583.1111 475.2" stroke="#64748b" stroke-width="1.4222" stroke-dasharray="4.2667 4.2667" />
-  <polygon points="583.1111,475.2 576,489.6 590.2222,489.6" fill="none" stroke="#64748b" stroke-width="1.4222" />
-  <path d="M 746.6667 547.2 L 668.4444 475.2" stroke="#64748b" stroke-width="1.4222" stroke-dasharray="4.2667 4.2667" />
-  <polygon points="668.4444,475.2 661.3333,489.6 675.5556,489.6" fill="none" stroke="#64748b" stroke-width="1.4222" />
-  <path d="M 1031.1111 547.2 L 1052.4444 475.2" stroke="#64748b" stroke-width="1.4222" stroke-dasharray="4.2667 4.2667" />
-  <polygon points="1052.4444,475.2 1045.3333,489.6 1059.5556,489.6" fill="none" stroke="#64748b" stroke-width="1.4222" />
-  <defs>
-    <marker id="arrow-green-solid" markerWidth="14.2222" markerHeight="14.4" refX="12.8" refY="4.32" orient="auto">
-      <polygon points="0,14.4 4.2667,0" fill="#16a34a" />
-    </marker>
-  </defs>
-  <text x="640" y="684" text-anchor="middle" font-family="Arial" font-size="15.6444" fill="#16a34a">SOLID Design: Separated concerns, dependency on abstractions, extensible</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:rect x="302.7027" y="43.7838" width="172.973" height="105.0811" fill="#dcfce7" stroke="#16a34a" stroke-width="1.7297" />
+  <ns0:text x="389.1892" y="70.0541" text-anchor="middle" font-family="Arial" font-size="13.8379" font-weight="bold">OrderService</ns0:text>
+  <ns0:line x1="302.7027" y1="78.8108" x2="475.6757" y2="78.8108" stroke="#16a34a" stroke-width="0.8649" />
+  <ns0:text x="311.3514" y="96.3243" font-family="Arial" font-size="10">- repository: OrderRepository</ns0:text>
+  <ns0:text x="311.3514" y="109.4595" font-family="Arial" font-size="10">- paymentProcessor: PaymentProcessor</ns0:text>
+  <ns0:text x="311.3514" y="122.5946" font-family="Arial" font-size="10">- notificationService: NotificationService</ns0:text>
+  <ns0:line x1="302.7027" y1="131.3514" x2="475.6757" y2="131.3514" stroke="#16a34a" stroke-width="0.8649" />
+  <ns0:text x="311.3514" y="144.4865" font-family="Arial" font-size="10">+ processOrder(Order)</ns0:text>
+  <ns0:rect x="43.2432" y="218.9189" width="155.6757" height="70.0541" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.7297" rx="4.3243" stroke-dasharray="4.3243 4.3243" />
+  <ns0:text x="121.0811" y="236.4324" text-anchor="middle" font-family="Arial" font-size="10" font-style="italic">«interface»</ns0:text>
+  <ns0:text x="121.0811" y="253.946" text-anchor="middle" font-family="Arial" font-size="12.1081" font-weight="bold">OrderRepository</ns0:text>
+  <ns0:line x1="43.2432" y1="258.3243" x2="198.9189" y2="258.3243" stroke="#0284c7" stroke-width="0.8649" />
+  <ns0:text x="121.0811" y="275.8378" text-anchor="middle" font-family="Arial" font-size="10">+ save(Order)</ns0:text>
+  <ns0:rect x="302.7027" y="218.9189" width="155.6757" height="70.0541" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.7297" rx="4.3243" stroke-dasharray="4.3243 4.3243" />
+  <ns0:text x="380.5406" y="236.4324" text-anchor="middle" font-family="Arial" font-size="10" font-style="italic">«interface»</ns0:text>
+  <ns0:text x="380.5406" y="253.946" text-anchor="middle" font-family="Arial" font-size="12.1081" font-weight="bold">PaymentProcessor</ns0:text>
+  <ns0:line x1="302.7027" y1="258.3243" x2="458.3784" y2="258.3243" stroke="#0284c7" stroke-width="0.8649" />
+  <ns0:text x="380.5406" y="275.8378" text-anchor="middle" font-family="Arial" font-size="10">+ process(Order)</ns0:text>
+  <ns0:rect x="562.1622" y="218.9189" width="155.6757" height="70.0541" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.7297" rx="4.3243" stroke-dasharray="4.3243 4.3243" />
+  <ns0:text x="640" y="236.4324" text-anchor="middle" font-family="Arial" font-size="10" font-style="italic">«interface»</ns0:text>
+  <ns0:text x="640" y="253.946" text-anchor="middle" font-family="Arial" font-size="12.1081" font-weight="bold">NotificationService</ns0:text>
+  <ns0:line x1="562.1622" y1="258.3243" x2="717.8378" y2="258.3243" stroke="#0284c7" stroke-width="0.8649" />
+  <ns0:text x="640" y="275.8378" text-anchor="middle" font-family="Arial" font-size="10">+ notify(Order)</ns0:text>
+  <ns0:rect x="43.2432" y="332.7568" width="129.7297" height="52.5405" fill="#f0f4f8" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:text x="108.1081" y="363.4054" text-anchor="middle" font-family="Arial" font-size="10.3784">MySQLRepository</ns0:text>
+  <ns0:rect x="216.2163" y="332.7568" width="129.7297" height="52.5405" fill="#f0f4f8" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:text x="281.0811" y="363.4054" text-anchor="middle" font-family="Arial" font-size="10.3784">StripeProcessor</ns0:text>
+  <ns0:rect x="389.1892" y="332.7568" width="129.7297" height="52.5405" fill="#f0f4f8" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:text x="454.0541" y="363.4054" text-anchor="middle" font-family="Arial" font-size="10.3784">PayPalProcessor</ns0:text>
+  <ns0:rect x="562.1622" y="332.7568" width="129.7297" height="52.5405" fill="#f0f4f8" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:text x="627.027" y="363.4054" text-anchor="middle" font-family="Arial" font-size="10.3784">EmailNotification</ns0:text>
+  <ns0:path d="M 328.6486 148.8649 L 121.0811 218.9189" stroke="#16a34a" stroke-width="1.7297" marker-end="url(#arrow-green-solid)" />
+  <ns0:path d="M 389.1892 148.8649 L 380.5406 218.9189" stroke="#16a34a" stroke-width="1.7297" marker-end="url(#arrow-green-solid)" />
+  <ns0:path d="M 449.7298 148.8649 L 640 218.9189" stroke="#16a34a" stroke-width="1.7297" marker-end="url(#arrow-green-solid)" />
+  <ns0:path d="M 108.1081 332.7568 L 121.0811 288.973" stroke="#64748b" stroke-width="0.8649" stroke-dasharray="2.5946 2.5946" />
+  <ns0:polygon points="121.0811,288.973 116.7568,297.7297 125.4054,297.7297" fill="none" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:path d="M 281.0811 332.7568 L 354.5946 288.973" stroke="#64748b" stroke-width="0.8649" stroke-dasharray="2.5946 2.5946" />
+  <ns0:polygon points="354.5946,288.973 350.2703,297.7297 358.9189,297.7297" fill="none" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:path d="M 454.0541 332.7568 L 406.4865 288.973" stroke="#64748b" stroke-width="0.8649" stroke-dasharray="2.5946 2.5946" />
+  <ns0:polygon points="406.4865,288.973 402.1622,297.7297 410.8109,297.7297" fill="none" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:path d="M 627.027 332.7568 L 640 288.973" stroke="#64748b" stroke-width="0.8649" stroke-dasharray="2.5946 2.5946" />
+  <ns0:polygon points="640,288.973 635.6757,297.7297 644.3244,297.7297" fill="none" stroke="#64748b" stroke-width="0.8649" />
+  <ns0:defs>
+    <ns0:marker id="arrow-green-solid" markerWidth="8.6486" markerHeight="8.7568" refX="7.7838" refY="2.627" orient="auto">
+      <ns0:polygon points="0,8.7568 2.5946,0" fill="#16a34a" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="389.1892" y="415.946" text-anchor="middle" font-family="Arial" font-size="10" fill="#16a34a">SOLID Design: Separated concerns, dependency on abstractions, extensible</ns0:text>
+</ns0:svg>

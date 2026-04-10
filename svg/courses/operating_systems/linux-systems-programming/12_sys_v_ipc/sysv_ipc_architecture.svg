@@ -1,96 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Kernel IPC namespace — central -->
-  <rect x="390" y="260" width="500" height="140" rx="14" fill="#37474f" filter="url(#shadow)"/>
-  <text x="640" y="295" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle">Kernel IPC Namespace</text>
-  <text x="640" y="318" font-family="Arial,sans-serif" font-size="13" fill="#cfd8dc" text-anchor="middle">Global IPC object table — indexed by integer key</text>
-  <text x="640" y="340" font-family="monospace" font-size="13" fill="#80cbc4" text-anchor="middle">key_t key = ftok("/tmp/app", 42);</text>
-  <text x="640" y="362" font-family="Arial,sans-serif" font-size="12" fill="#aaa" text-anchor="middle">ftok(pathname, proj_id) → deterministic key shared between processes</text>
-  <text x="640" y="382" font-family="Arial,sans-serif" font-size="12" fill="#aaa" text-anchor="middle">ipcs -a  shows all IPC objects on the system</text>
-
-  <!-- Process A (left) -->
-  <rect x="30" y="280" width="180" height="100" rx="10" fill="#455a64" filter="url(#shadow)"/>
-  <text x="120" y="316" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#eceff1" text-anchor="middle">Process A</text>
-  <text x="120" y="338" font-family="Arial,sans-serif" font-size="12" fill="#b0bec5" text-anchor="middle">sender / writer</text>
-  <text x="120" y="356" font-family="monospace" font-size="11" fill="#80cbc4" text-anchor="middle">ftok() → key</text>
-  <line x1="210" y1="330" x2="388" y2="330" stroke="#80cbc4" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Process B (right) -->
-  <rect x="1070" y="280" width="180" height="100" rx="10" fill="#455a64" filter="url(#shadow)"/>
-  <text x="1160" y="316" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#eceff1" text-anchor="middle">Process B</text>
-  <text x="1160" y="338" font-family="Arial,sans-serif" font-size="12" fill="#b0bec5" text-anchor="middle">receiver / reader</text>
-  <text x="1160" y="356" font-family="monospace" font-size="11" fill="#80cbc4" text-anchor="middle">ftok() → same key</text>
-  <line x1="892" y1="330" x2="1068" y2="330" stroke="#80cbc4" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Three IPC mechanisms below the kernel box -->
-
-  <!-- Message Queue -->
-  <rect x="80" y="470" width="330" height="210" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
-  <rect x="80" y="470" width="330" height="38" rx="10" fill="url(#grad-accent)"/>
-  <rect x="80" y="496" width="330" height="12" fill="url(#grad-accent)"/>
-  <text x="245" y="496" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Message Queues</text>
-  <text x="100" y="528" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Create/access:</text>
-  <text x="100" y="546" font-family="monospace" font-size="12" fill="#333">msgget(key, IPC_CREAT|0666)</text>
-  <text x="100" y="566" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Send / Receive:</text>
-  <text x="100" y="584" font-family="monospace" font-size="12" fill="#555">msgsnd(id, &amp;msg, size, 0)</text>
-  <text x="100" y="602" font-family="monospace" font-size="12" fill="#555">msgrcv(id, &amp;msg, size, type, 0)</text>
-  <text x="100" y="624" font-family="Arial,sans-serif" font-size="12" fill="#555">Typed messages — select by mtype</text>
-  <text x="100" y="642" font-family="Arial,sans-serif" font-size="12" fill="#555">Persistent until deleted or reboot</text>
-  <text x="100" y="660" font-family="Arial,sans-serif" font-size="12" fill="#c62828">msgctl(id, IPC_RMID, NULL)  — delete</text>
-  <line x1="245" y1="470" x2="490" y2="398" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
-
-  <!-- Semaphore Sets -->
-  <rect x="475" y="470" width="330" height="210" rx="10" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="2"/>
-  <rect x="475" y="470" width="330" height="38" rx="10" fill="#7b1fa2"/>
-  <rect x="475" y="496" width="330" height="12" fill="#7b1fa2"/>
-  <text x="640" y="496" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Semaphore Sets</text>
-  <text x="495" y="528" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">Create/access:</text>
-  <text x="495" y="546" font-family="monospace" font-size="12" fill="#333">semget(key, nsems, IPC_CREAT|0666)</text>
-  <text x="495" y="566" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">P (wait) / V (signal):</text>
-  <text x="495" y="584" font-family="monospace" font-size="12" fill="#555">semop(id, &amp;sops, nsops)</text>
-  <text x="495" y="604" font-family="Arial,sans-serif" font-size="12" fill="#555">sem_op = -1  → decrement (lock)</text>
-  <text x="495" y="622" font-family="Arial,sans-serif" font-size="12" fill="#555">sem_op = +1  → increment (unlock)</text>
-  <text x="495" y="642" font-family="Arial,sans-serif" font-size="12" fill="#555">Atomic across all sems in set</text>
-  <text x="495" y="660" font-family="Arial,sans-serif" font-size="12" fill="#c62828">semctl(id, 0, IPC_RMID)  — delete</text>
-  <line x1="640" y1="470" x2="640" y2="400" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
-
-  <!-- Shared Memory -->
-  <rect x="870" y="470" width="330" height="210" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
-  <rect x="870" y="470" width="330" height="38" rx="10" fill="#2e7d32"/>
-  <rect x="870" y="496" width="330" height="12" fill="#2e7d32"/>
-  <text x="1035" y="496" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Shared Memory</text>
-  <text x="890" y="528" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Create/access:</text>
-  <text x="890" y="546" font-family="monospace" font-size="12" fill="#333">shmget(key, size, IPC_CREAT|0666)</text>
-  <text x="890" y="566" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Attach / Detach:</text>
-  <text x="890" y="584" font-family="monospace" font-size="12" fill="#555">shmat(id, NULL, 0)  → ptr</text>
-  <text x="890" y="602" font-family="monospace" font-size="12" fill="#555">shmdt(ptr)</text>
-  <text x="890" y="622" font-family="Arial,sans-serif" font-size="12" fill="#555">Fastest IPC — zero-copy data sharing</text>
-  <text x="890" y="640" font-family="Arial,sans-serif" font-size="12" fill="#555">Combine with semaphores for safety</text>
-  <text x="890" y="660" font-family="Arial,sans-serif" font-size="12" fill="#c62828">shmctl(id, IPC_RMID, NULL)  — delete</text>
-  <line x1="1035" y1="470" x2="790" y2="400" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
-
-  <!-- Top legend -->
-  <rect x="30" y="30" width="1220" height="58" rx="8" fill="#eceff1" filter="url(#shadow)" stroke="#b0bec5" stroke-width="1"/>
-  <text x="640" y="52" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#37474f" text-anchor="middle">System V IPC — Three Mechanisms, One Namespace</text>
-  <text x="640" y="74" font-family="Arial,sans-serif" font-size="12" fill="#555" text-anchor="middle">All objects are kernel-managed and persist until deleted with IPC_RMID or system reboot  •  Identify objects with ipcs -a  •  Remove with ipcrm</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="346.6667" y="231.1111" width="444.4444" height="124.4444" rx="12.4444" fill="#37474f" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="262.2222" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Kernel IPC Namespace</ns0:text>
+  <ns0:text x="568.8889" y="282.6667" font-family="Arial,sans-serif" font-size="11.5556" fill="#cfd8dc" text-anchor="middle">Global IPC object table — indexed by integer key</ns0:text>
+  <ns0:text x="568.8889" y="302.2222" font-family="monospace" font-size="11.5556" fill="#80cbc4" text-anchor="middle">key_t key = ftok("/tmp/app", 42);</ns0:text>
+  <ns0:text x="568.8889" y="321.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="#aaa" text-anchor="middle">ftok(pathname, proj_id) → deterministic key shared between processes</ns0:text>
+  <ns0:text x="568.8889" y="339.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#aaa" text-anchor="middle">ipcs -a  shows all IPC objects on the system</ns0:text>
+  <ns0:rect x="26.6667" y="248.8889" width="160" height="88.8889" rx="8.8889" fill="#455a64" filter="url(#shadow)" />
+  <ns0:text x="106.6667" y="280.8889" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#eceff1" text-anchor="middle">Process A</ns0:text>
+  <ns0:text x="106.6667" y="300.4444" font-family="Arial,sans-serif" font-size="10.6667" fill="#b0bec5" text-anchor="middle">sender / writer</ns0:text>
+  <ns0:text x="106.6667" y="316.4444" font-family="monospace" font-size="10" fill="#80cbc4" text-anchor="middle">ftok() → key</ns0:text>
+  <ns0:line x1="186.6667" y1="293.3333" x2="344.8889" y2="293.3333" stroke="#80cbc4" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="951.1111" y="248.8889" width="160" height="88.8889" rx="8.8889" fill="#455a64" filter="url(#shadow)" />
+  <ns0:text x="1031.1111" y="280.8889" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#eceff1" text-anchor="middle">Process B</ns0:text>
+  <ns0:text x="1031.1111" y="300.4444" font-family="Arial,sans-serif" font-size="10.6667" fill="#b0bec5" text-anchor="middle">receiver / reader</ns0:text>
+  <ns0:text x="1031.1111" y="316.4444" font-family="monospace" font-size="10" fill="#80cbc4" text-anchor="middle">ftok() → same key</ns0:text>
+  <ns0:line x1="792.8889" y1="293.3333" x2="949.3333" y2="293.3333" stroke="#80cbc4" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="71.1111" y="417.7778" width="293.3333" height="186.6667" rx="8.8889" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="1.7778" />
+  <ns0:rect x="71.1111" y="417.7778" width="293.3333" height="33.7778" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="71.1111" y="440.8889" width="293.3333" height="10.6667" fill="url(#grad-accent)" />
+  <ns0:text x="217.7778" y="440.8889" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#fff" text-anchor="middle">Message Queues</ns0:text>
+  <ns0:text x="88.8889" y="469.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#1565c0">Create/access:</ns0:text>
+  <ns0:text x="88.8889" y="485.3333" font-family="monospace" font-size="10.6667" fill="#333">msgget(key, IPC_CREAT|0666)</ns0:text>
+  <ns0:text x="88.8889" y="503.1111" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#1565c0">Send / Receive:</ns0:text>
+  <ns0:text x="88.8889" y="519.1111" font-family="monospace" font-size="10.6667" fill="#555">msgsnd(id, &amp;msg, size, 0)</ns0:text>
+  <ns0:text x="88.8889" y="535.1111" font-family="monospace" font-size="10.6667" fill="#555">msgrcv(id, &amp;msg, size, type, 0)</ns0:text>
+  <ns0:text x="88.8889" y="554.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Typed messages — select by mtype</ns0:text>
+  <ns0:text x="88.8889" y="570.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Persistent until deleted or reboot</ns0:text>
+  <ns0:text x="88.8889" y="586.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#c62828">msgctl(id, IPC_RMID, NULL)  — delete</ns0:text>
+  <ns0:line x1="217.7778" y1="417.7778" x2="435.5556" y2="353.7778" stroke="#1565c0" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="422.2222" y="417.7778" width="293.3333" height="186.6667" rx="8.8889" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:rect x="422.2222" y="417.7778" width="293.3333" height="33.7778" rx="8.8889" fill="#7b1fa2" />
+  <ns0:rect x="422.2222" y="440.8889" width="293.3333" height="10.6667" fill="#7b1fa2" />
+  <ns0:text x="568.8889" y="440.8889" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#fff" text-anchor="middle">Semaphore Sets</ns0:text>
+  <ns0:text x="440" y="469.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#7b1fa2">Create/access:</ns0:text>
+  <ns0:text x="440" y="485.3333" font-family="monospace" font-size="10.6667" fill="#333">semget(key, nsems, IPC_CREAT|0666)</ns0:text>
+  <ns0:text x="440" y="503.1111" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#7b1fa2">P (wait) / V (signal):</ns0:text>
+  <ns0:text x="440" y="519.1111" font-family="monospace" font-size="10.6667" fill="#555">semop(id, &amp;sops, nsops)</ns0:text>
+  <ns0:text x="440" y="536.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">sem_op = -1  → decrement (lock)</ns0:text>
+  <ns0:text x="440" y="552.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">sem_op = +1  → increment (unlock)</ns0:text>
+  <ns0:text x="440" y="570.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Atomic across all sems in set</ns0:text>
+  <ns0:text x="440" y="586.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#c62828">semctl(id, 0, IPC_RMID)  — delete</ns0:text>
+  <ns0:line x1="568.8889" y1="417.7778" x2="568.8889" y2="355.5556" stroke="#7b1fa2" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="773.3333" y="417.7778" width="293.3333" height="186.6667" rx="8.8889" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="1.7778" />
+  <ns0:rect x="773.3333" y="417.7778" width="293.3333" height="33.7778" rx="8.8889" fill="#2e7d32" />
+  <ns0:rect x="773.3333" y="440.8889" width="293.3333" height="10.6667" fill="#2e7d32" />
+  <ns0:text x="920" y="440.8889" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#fff" text-anchor="middle">Shared Memory</ns0:text>
+  <ns0:text x="791.1111" y="469.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#2e7d32">Create/access:</ns0:text>
+  <ns0:text x="791.1111" y="485.3333" font-family="monospace" font-size="10.6667" fill="#333">shmget(key, size, IPC_CREAT|0666)</ns0:text>
+  <ns0:text x="791.1111" y="503.1111" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="#2e7d32">Attach / Detach:</ns0:text>
+  <ns0:text x="791.1111" y="519.1111" font-family="monospace" font-size="10.6667" fill="#555">shmat(id, NULL, 0)  → ptr</ns0:text>
+  <ns0:text x="791.1111" y="535.1111" font-family="monospace" font-size="10.6667" fill="#555">shmdt(ptr)</ns0:text>
+  <ns0:text x="791.1111" y="552.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Fastest IPC — zero-copy data sharing</ns0:text>
+  <ns0:text x="791.1111" y="568.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Combine with semaphores for safety</ns0:text>
+  <ns0:text x="791.1111" y="586.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#c62828">shmctl(id, IPC_RMID, NULL)  — delete</ns0:text>
+  <ns0:line x1="920" y1="417.7778" x2="702.2222" y2="355.5556" stroke="#2e7d32" stroke-width="1.3333" stroke-dasharray="4.4444 3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="26.6667" y="26.6667" width="1084.4444" height="51.5556" rx="7.1111" fill="#eceff1" filter="url(#shadow)" stroke="#b0bec5" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="46.2222" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#37474f" text-anchor="middle">System V IPC — Three Mechanisms, One Namespace</ns0:text>
+  <ns0:text x="568.8889" y="65.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="#555" text-anchor="middle">All objects are kernel-managed and persist until deleted with IPC_RMID or system reboot  •  Identify objects with ipcs -a  •  Remove with ipcrm</ns0:text>
+</ns0:svg>

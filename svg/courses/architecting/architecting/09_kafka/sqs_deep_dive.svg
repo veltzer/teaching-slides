@@ -1,36 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-dash" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#999" />
-    </marker>
-  </defs>
-  <text x="640" y="45" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Amazon SQS Architecture</text>
-  <rect x="48" y="216" width="192" height="81" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="144" y="264.6" text-anchor="middle" font-size="19.2" fill="#333">Producer</text>
-  <rect x="368" y="180" width="288" height="144" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3.2" />
-  <text x="512" y="243" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">SQS Queue</text>
-  <text x="512" y="279" text-anchor="middle" font-size="17.6" fill="#666">Messages in flight</text>
-  <rect x="816" y="108" width="208" height="63" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="920" y="147.6" text-anchor="middle" font-size="19.2" fill="#333">Consumer 1</text>
-  <rect x="816" y="198" width="208" height="63" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="920" y="237.6" text-anchor="middle" font-size="19.2" fill="#333">Consumer 2</text>
-  <rect x="816" y="288" width="208" height="63" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="920" y="327.6" text-anchor="middle" font-size="19.2" fill="#333">Consumer N</text>
-  <rect x="400" y="468" width="288" height="90" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
-  <text x="544" y="522" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#dc3545">Dead Letter Queue</text>
-  <line x1="240" y1="255.6" x2="364.8" y2="252" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="656" y1="216" x2="812.8" y2="140.4" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="656" y1="252" x2="812.8" y2="228.6" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <line x1="656" y1="288" x2="812.8" y2="318.6" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <path d="M 920 171 Q 1120 171 1120 252 Q 1120 360 640 360 Q 560 360 560 327.6" stroke="#999" stroke-width="1.6" stroke-dasharray="8 4.8" fill="none" marker-end="url(#arrowhead-dash)" />
-  <text x="1120" y="288" font-size="16" fill="#999">Visibility Timeout</text>
-  <path d="M 920 261 Q 1088 261 1088 288 Q 1088 378 624 378 Q 568 378 568 327.6" stroke="#28a745" stroke-width="1.6" stroke-dasharray="8 4.8" fill="none" />
-  <text x="1088" y="378" font-size="16" fill="#28a745">Delete Message</text>
-  <line x1="512" y1="324" x2="544" y2="464.4" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead)" />
-  <text x="448" y="414" font-size="16" fill="#dc3545">Failed messages</text>
-  <text x="640" y="630" text-anchor="middle" font-size="17.6" fill="#888" font-style="italic">SQS uses visibility timeout to prevent duplicate processing.</text>
-  <text x="640" y="662.4" text-anchor="middle" font-size="17.6" fill="#888" font-style="italic">Failed messages move to the Dead Letter Queue after max retries.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="9.1429" markerHeight="7.2" refX="9.1429" refY="3.6" orient="auto">
+      <ns0:polygon points="0,10.2857 3.2,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-dash" markerWidth="9.1429" markerHeight="7.2" refX="9.1429" refY="3.6" orient="auto">
+      <ns0:polygon points="0,10.2857 3.2,0" fill="#999" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="365.7143" y="25.7143" text-anchor="middle" font-size="14.6286" font-weight="bold" fill="#333">Amazon SQS Architecture</ns0:text>
+  <ns0:rect x="27.4286" y="123.4286" width="109.7143" height="46.2857" rx="4.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.3714" />
+  <ns0:text x="82.2857" y="151.2" text-anchor="middle" font-size="10.9714" fill="#333">Producer</ns0:text>
+  <ns0:rect x="210.2857" y="102.8571" width="164.5714" height="82.2857" rx="4.5714" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.8286" />
+  <ns0:text x="292.5714" y="138.8571" text-anchor="middle" font-size="12.8" font-weight="bold" fill="#333">SQS Queue</ns0:text>
+  <ns0:text x="292.5714" y="159.4286" text-anchor="middle" font-size="10.0571" fill="#666">Messages in flight</ns0:text>
+  <ns0:rect x="466.2857" y="61.7143" width="118.8571" height="36" rx="4.5714" fill="#d4edda" stroke="#28a745" stroke-width="1.3714" />
+  <ns0:text x="525.7143" y="84.3429" text-anchor="middle" font-size="10.9714" fill="#333">Consumer 1</ns0:text>
+  <ns0:rect x="466.2857" y="113.1429" width="118.8571" height="36" rx="4.5714" fill="#d4edda" stroke="#28a745" stroke-width="1.3714" />
+  <ns0:text x="525.7143" y="135.7714" text-anchor="middle" font-size="10.9714" fill="#333">Consumer 2</ns0:text>
+  <ns0:rect x="466.2857" y="164.5714" width="118.8571" height="36" rx="4.5714" fill="#d4edda" stroke="#28a745" stroke-width="1.3714" />
+  <ns0:text x="525.7143" y="187.2" text-anchor="middle" font-size="10.9714" fill="#333">Consumer N</ns0:text>
+  <ns0:rect x="228.5714" y="267.4286" width="164.5714" height="51.4286" rx="4.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="1.3714" />
+  <ns0:text x="310.8571" y="298.2857" text-anchor="middle" font-size="10.9714" font-weight="bold" fill="#dc3545">Dead Letter Queue</ns0:text>
+  <ns0:line x1="137.1429" y1="146.0571" x2="208.4571" y2="144" stroke="#4a90e2" stroke-width="1.3714" marker-end="url(#arrowhead)" />
+  <ns0:line x1="374.8571" y1="123.4286" x2="464.4571" y2="80.2286" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrowhead)" />
+  <ns0:line x1="374.8571" y1="144" x2="464.4571" y2="130.6286" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrowhead)" />
+  <ns0:line x1="374.8571" y1="164.5714" x2="464.4571" y2="182.0571" stroke="#28a745" stroke-width="1.3714" marker-end="url(#arrowhead)" />
+  <ns0:path d="M 525.7143 97.7143 Q 640 97.7143 640 144 Q 640 205.7143 365.7143 205.7143 Q 320 205.7143 320 187.2" stroke="#999" stroke-width="0.9143" stroke-dasharray="4.5714 2.7429" fill="none" marker-end="url(#arrowhead-dash)" />
+  <ns0:text x="640" y="164.5714" font-size="10" fill="#999">Visibility Timeout</ns0:text>
+  <ns0:path d="M 525.7143 149.1429 Q 621.7143 149.1429 621.7143 164.5714 Q 621.7143 216 356.5714 216 Q 324.5714 216 324.5714 187.2" stroke="#28a745" stroke-width="0.9143" stroke-dasharray="4.5714 2.7429" fill="none" />
+  <ns0:text x="621.7143" y="216" font-size="10" fill="#28a745">Delete Message</ns0:text>
+  <ns0:line x1="292.5714" y1="185.1429" x2="310.8571" y2="265.3714" stroke="#dc3545" stroke-width="1.3714" marker-end="url(#arrowhead)" />
+  <ns0:text x="256" y="236.5714" font-size="10" fill="#dc3545">Failed messages</ns0:text>
+  <ns0:text x="365.7143" y="360" text-anchor="middle" font-size="10.0571" fill="#888" font-style="italic">SQS uses visibility timeout to prevent duplicate processing.</ns0:text>
+  <ns0:text x="365.7143" y="378.5143" text-anchor="middle" font-size="10.0571" fill="#888" font-style="italic">Failed messages move to the Dead Letter Queue after max retries.</ns0:text>
+</ns0:svg>

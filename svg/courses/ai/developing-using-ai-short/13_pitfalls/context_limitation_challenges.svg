@@ -1,56 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Header -->
-  <rect x="80" y="40" width="1120" height="60" rx="10" fill="#7b1fa2" filter="url(#shadow)"/>
-  <text x="640" y="79" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">AI Context Limitations</text>
-  <!-- Top row 3 boxes -->
-  <rect x="80" y="140" width="340" height="200" rx="12" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <text x="250" y="218" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Limited</text>
-  <text x="250" y="250" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Context Window</text>
-  <text x="250" y="292" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Can't hold entire</text>
-  <text x="250" y="316" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">codebase in mind</text>
-  <rect x="470" y="140" width="340" height="200" rx="12" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="218" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Missing</text>
-  <text x="640" y="250" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Domain Context</text>
-  <text x="640" y="292" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Doesn't know your</text>
-  <text x="640" y="316" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">business rules</text>
-  <rect x="860" y="140" width="340" height="200" rx="12" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1030" y="218" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Incomplete</text>
-  <text x="1030" y="250" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Codebase View</text>
-  <text x="1030" y="292" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Missing cross-file</text>
-  <text x="1030" y="316" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">dependencies</text>
-  <!-- Bottom row 2 boxes -->
-  <rect x="230" y="380" width="340" height="200" rx="12" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400" y="458" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Legacy System</text>
-  <text x="400" y="490" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Complexity</text>
-  <text x="400" y="532" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Implicit coupling</text>
-  <text x="400" y="556" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">hidden contracts</text>
-  <rect x="710" y="380" width="340" height="200" rx="12" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
-  <text x="880" y="458" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Business Logic</text>
-  <text x="880" y="490" text-anchor="middle" fill="#6a1b9a" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Nuances</text>
-  <text x="880" y="532" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Edge cases from</text>
-  <text x="880" y="556" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">years of prod use</text>
-  <!-- Footer -->
-  <rect x="80" y="615" width="1120" height="80" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="655" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Mitigation: Provide rich context in every prompt</text>
-  <text x="640" y="682" text-anchor="middle" fill="#bbdefb" font-size="16" font-family="Arial, sans-serif">Use CLAUDE.md, code snippets, domain glossaries, and explicit constraints</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="71.1111" y="35.5556" width="995.5556" height="53.3333" rx="8.8889" fill="#7b1fa2" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="70.2222" text-anchor="middle" fill="white" font-size="23.1111" font-weight="bold" font-family="Arial, sans-serif">AI Context Limitations</ns0:text>
+  <ns0:rect x="71.1111" y="124.4444" width="302.2222" height="177.7778" rx="10.6667" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="222.2222" y="193.7778" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Limited</ns0:text>
+  <ns0:text x="222.2222" y="222.2222" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Context Window</ns0:text>
+  <ns0:text x="222.2222" y="259.5556" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Can't hold entire</ns0:text>
+  <ns0:text x="222.2222" y="280.8889" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">codebase in mind</ns0:text>
+  <ns0:rect x="417.7778" y="124.4444" width="302.2222" height="177.7778" rx="10.6667" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="193.7778" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Missing</ns0:text>
+  <ns0:text x="568.8889" y="222.2222" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Domain Context</ns0:text>
+  <ns0:text x="568.8889" y="259.5556" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Doesn't know your</ns0:text>
+  <ns0:text x="568.8889" y="280.8889" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">business rules</ns0:text>
+  <ns0:rect x="764.4444" y="124.4444" width="302.2222" height="177.7778" rx="10.6667" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="915.5556" y="193.7778" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Incomplete</ns0:text>
+  <ns0:text x="915.5556" y="222.2222" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Codebase View</ns0:text>
+  <ns0:text x="915.5556" y="259.5556" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Missing cross-file</ns0:text>
+  <ns0:text x="915.5556" y="280.8889" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">dependencies</ns0:text>
+  <ns0:rect x="204.4444" y="337.7778" width="302.2222" height="177.7778" rx="10.6667" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="355.5556" y="407.1111" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Legacy System</ns0:text>
+  <ns0:text x="355.5556" y="435.5556" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Complexity</ns0:text>
+  <ns0:text x="355.5556" y="472.8889" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Implicit coupling</ns0:text>
+  <ns0:text x="355.5556" y="494.2222" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">hidden contracts</ns0:text>
+  <ns0:rect x="631.1111" y="337.7778" width="302.2222" height="177.7778" rx="10.6667" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="782.2222" y="407.1111" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Business Logic</ns0:text>
+  <ns0:text x="782.2222" y="435.5556" text-anchor="middle" fill="#6a1b9a" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Nuances</ns0:text>
+  <ns0:text x="782.2222" y="472.8889" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">Edge cases from</ns0:text>
+  <ns0:text x="782.2222" y="494.2222" text-anchor="middle" fill="#555" font-size="12.4444" font-family="Arial, sans-serif">years of prod use</ns0:text>
+  <ns0:rect x="71.1111" y="546.6667" width="995.5556" height="71.1111" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="582.2222" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Mitigation: Provide rich context in every prompt</ns0:text>
+  <ns0:text x="568.8889" y="606.2222" text-anchor="middle" fill="#bbdefb" font-size="14.2222" font-family="Arial, sans-serif">Use CLAUDE.md, code snippets, domain glossaries, and explicit constraints</ns0:text>
+</ns0:svg>

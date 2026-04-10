@@ -1,85 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Root node -->
-  <rect x="480" y="20" width="320" height="90" fill="url(#grad-accent)" rx="12" filter="url(#shadow)"/>
-  <text x="640" y="72" text-anchor="middle" font-size="36" font-weight="bold" fill="#ffffff" font-family="monospace">/</text>
-
-  <!-- Child directory boxes -->
-  <rect x="30" y="190" width="170" height="75" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="115" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="monospace">/bin</text>
-
-  <rect x="220" y="190" width="170" height="75" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="305" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="monospace">/etc</text>
-
-  <rect x="410" y="190" width="170" height="75" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="495" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="monospace">/home</text>
-
-  <rect x="600" y="190" width="170" height="75" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="685" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="monospace">/var</text>
-
-  <rect x="790" y="190" width="170" height="75" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="875" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="monospace">/usr</text>
-
-  <rect x="980" y="190" width="170" height="75" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="1065" y="236" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="monospace">/tmp</text>
-
-  <!-- Description labels -->
-  <text x="115" y="295" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Essential binaries</text>
-  <text x="305" y="295" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Config files</text>
-  <text x="495" y="295" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">User home dirs</text>
-  <text x="685" y="295" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Variable data</text>
-  <text x="875" y="295" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">User programs</text>
-  <text x="1065" y="295" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Temporary files</text>
-
-  <!-- Connecting lines -->
-  <line x1="640" y1="110" x2="115" y2="190" stroke="#555555" stroke-width="1.5"/>
-  <line x1="640" y1="110" x2="305" y2="190" stroke="#555555" stroke-width="1.5"/>
-  <line x1="640" y1="110" x2="495" y2="190" stroke="#555555" stroke-width="1.5"/>
-  <line x1="640" y1="110" x2="685" y2="190" stroke="#555555" stroke-width="1.5"/>
-  <line x1="640" y1="110" x2="875" y2="190" stroke="#555555" stroke-width="1.5"/>
-  <line x1="640" y1="110" x2="1065" y2="190" stroke="#555555" stroke-width="1.5"/>
-
-  <!-- Additional notable directories row -->
-  <rect x="30" y="380" width="170" height="70" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.5" rx="8"/>
-  <text x="115" y="422" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/proc</text>
-  <text x="115" y="440" text-anchor="middle" font-size="12" fill="#555555" font-family="sans-serif">Kernel info</text>
-
-  <rect x="220" y="380" width="170" height="70" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.5" rx="8"/>
-  <text x="305" y="422" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/sys</text>
-  <text x="305" y="440" text-anchor="middle" font-size="12" fill="#555555" font-family="sans-serif">Devices</text>
-
-  <rect x="410" y="380" width="170" height="70" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.5" rx="8"/>
-  <text x="495" y="422" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/dev</text>
-  <text x="495" y="440" text-anchor="middle" font-size="12" fill="#555555" font-family="sans-serif">Device files</text>
-
-  <rect x="600" y="380" width="170" height="70" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.5" rx="8"/>
-  <text x="685" y="422" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/boot</text>
-  <text x="685" y="440" text-anchor="middle" font-size="12" fill="#555555" font-family="sans-serif">Boot files</text>
-
-  <rect x="790" y="380" width="170" height="70" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.5" rx="8"/>
-  <text x="875" y="422" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/lib</text>
-  <text x="875" y="440" text-anchor="middle" font-size="12" fill="#555555" font-family="sans-serif">Libraries</text>
-
-  <rect x="980" y="380" width="170" height="70" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.5" rx="8"/>
-  <text x="1065" y="422" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/opt</text>
-  <text x="1065" y="440" text-anchor="middle" font-size="12" fill="#555555" font-family="sans-serif">Optional pkgs</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="426.6667" y="17.7778" width="284.4444" height="80" fill="url(#grad-accent)" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="64" text-anchor="middle" font-size="32" font-weight="bold" fill="#ffffff" font-family="monospace">/</ns0:text>
+  <ns0:rect x="26.6667" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="102.2222" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/bin</ns0:text>
+  <ns0:rect x="195.5556" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="271.1111" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/etc</ns0:text>
+  <ns0:rect x="364.4444" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="440" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/home</ns0:text>
+  <ns0:rect x="533.3333" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="608.8889" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/var</ns0:text>
+  <ns0:rect x="702.2222" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="777.7778" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/usr</ns0:text>
+  <ns0:rect x="871.1111" y="168.8889" width="151.1111" height="66.6667" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="946.6667" y="209.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="monospace">/tmp</ns0:text>
+  <ns0:text x="102.2222" y="262.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Essential binaries</ns0:text>
+  <ns0:text x="271.1111" y="262.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Config files</ns0:text>
+  <ns0:text x="440" y="262.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">User home dirs</ns0:text>
+  <ns0:text x="608.8889" y="262.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Variable data</ns0:text>
+  <ns0:text x="777.7778" y="262.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">User programs</ns0:text>
+  <ns0:text x="946.6667" y="262.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Temporary files</ns0:text>
+  <ns0:line x1="568.8889" y1="97.7778" x2="102.2222" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="97.7778" x2="271.1111" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="97.7778" x2="440" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="97.7778" x2="608.8889" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="97.7778" x2="777.7778" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
+  <ns0:line x1="568.8889" y1="97.7778" x2="946.6667" y2="168.8889" stroke="#555555" stroke-width="1.3333" />
+  <ns0:rect x="26.6667" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:text x="102.2222" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/proc</ns0:text>
+  <ns0:text x="102.2222" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Kernel info</ns0:text>
+  <ns0:rect x="195.5556" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:text x="271.1111" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/sys</ns0:text>
+  <ns0:text x="271.1111" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Devices</ns0:text>
+  <ns0:rect x="364.4444" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:text x="440" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/dev</ns0:text>
+  <ns0:text x="440" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Device files</ns0:text>
+  <ns0:rect x="533.3333" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:text x="608.8889" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/boot</ns0:text>
+  <ns0:text x="608.8889" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Boot files</ns0:text>
+  <ns0:rect x="702.2222" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:text x="777.7778" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/lib</ns0:text>
+  <ns0:text x="777.7778" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Libraries</ns0:text>
+  <ns0:rect x="871.1111" y="337.7778" width="151.1111" height="62.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.3333" rx="7.1111" />
+  <ns0:text x="946.6667" y="375.1111" text-anchor="middle" font-size="14.2222" font-weight="bold" fill="#1565c0" font-family="monospace">/opt</ns0:text>
+  <ns0:text x="946.6667" y="391.1111" text-anchor="middle" font-size="10.6667" fill="#555555" font-family="sans-serif">Optional pkgs</ns0:text>
+</ns0:svg>

@@ -1,58 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Four quadrant boxes -->
-  <rect x="20" y="40" width="600" height="290" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="20" y="40" width="600" height="55" fill="url(#grad-accent)" rx="12"/>
-  <rect x="20" y="85" width="600" height="10" fill="url(#grad-accent)"/>
-  <text x="320" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need speed? No redundancy</text>
-  <text x="320" y="160" text-anchor="middle" font-size="60" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 0</text>
-  <text x="320" y="225" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Striping only — all disks used</text>
-  <text x="320" y="255" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Fastest reads/writes, no fault tolerance</text>
-  <text x="320" y="285" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Use: temp data, scratch space</text>
-
-  <rect x="660" y="40" width="600" height="290" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="660" y="40" width="600" height="55" fill="url(#grad-accent)" rx="12"/>
-  <rect x="660" y="85" width="600" height="10" fill="url(#grad-accent)"/>
-  <text x="960" y="75" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need safety? Simple mirror</text>
-  <text x="960" y="160" text-anchor="middle" font-size="60" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 1</text>
-  <text x="960" y="225" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Full mirror — 50% capacity</text>
-  <text x="960" y="255" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Survives 1 disk failure</text>
-  <text x="960" y="285" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Use: boot, critical data</text>
-
-  <rect x="20" y="380" width="600" height="290" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="20" y="380" width="600" height="55" fill="url(#grad-accent)" rx="12"/>
-  <rect x="20" y="425" width="600" height="10" fill="url(#grad-accent)"/>
-  <text x="320" y="415" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need both? Best of both worlds</text>
-  <text x="320" y="500" text-anchor="middle" font-size="60" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 10</text>
-  <text x="320" y="565" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Mirror + Stripe — 50% capacity</text>
-  <text x="320" y="595" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Fast and redundant, min 4 disks</text>
-  <text x="320" y="625" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Use: databases, production</text>
-
-  <rect x="660" y="380" width="600" height="290" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="660" y="380" width="600" height="55" fill="url(#grad-accent)" rx="12"/>
-  <rect x="660" y="425" width="600" height="10" fill="url(#grad-accent)"/>
-  <text x="960" y="415" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need capacity? Parity protection</text>
-  <text x="960" y="500" text-anchor="middle" font-size="50" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 5/6</text>
-  <text x="960" y="565" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Parity — one/two disk overhead</text>
-  <text x="960" y="595" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Good capacity efficiency, min 3 disks</text>
-  <text x="960" y="625" text-anchor="middle" font-size="16" fill="#555555" font-family="sans-serif">Use: NAS, file servers</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="35.5556" width="533.3333" height="257.7778" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="35.5556" width="533.3333" height="48.8889" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="75.5556" width="533.3333" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="284.4444" y="66.6667" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need speed? No redundancy</ns0:text>
+  <ns0:text x="284.4444" y="142.2222" text-anchor="middle" font-size="53.3333" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 0</ns0:text>
+  <ns0:text x="284.4444" y="200" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Striping only — all disks used</ns0:text>
+  <ns0:text x="284.4444" y="226.6667" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Fastest reads/writes, no fault tolerance</ns0:text>
+  <ns0:text x="284.4444" y="253.3333" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Use: temp data, scratch space</ns0:text>
+  <ns0:rect x="586.6667" y="35.5556" width="533.3333" height="257.7778" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="586.6667" y="35.5556" width="533.3333" height="48.8889" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="586.6667" y="75.5556" width="533.3333" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="853.3333" y="66.6667" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need safety? Simple mirror</ns0:text>
+  <ns0:text x="853.3333" y="142.2222" text-anchor="middle" font-size="53.3333" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 1</ns0:text>
+  <ns0:text x="853.3333" y="200" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Full mirror — 50% capacity</ns0:text>
+  <ns0:text x="853.3333" y="226.6667" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Survives 1 disk failure</ns0:text>
+  <ns0:text x="853.3333" y="253.3333" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Use: boot, critical data</ns0:text>
+  <ns0:rect x="17.7778" y="337.7778" width="533.3333" height="257.7778" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="337.7778" width="533.3333" height="48.8889" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="377.7778" width="533.3333" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="284.4444" y="368.8889" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need both? Best of both worlds</ns0:text>
+  <ns0:text x="284.4444" y="444.4444" text-anchor="middle" font-size="53.3333" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 10</ns0:text>
+  <ns0:text x="284.4444" y="502.2222" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Mirror + Stripe — 50% capacity</ns0:text>
+  <ns0:text x="284.4444" y="528.8889" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Fast and redundant, min 4 disks</ns0:text>
+  <ns0:text x="284.4444" y="555.5556" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Use: databases, production</ns0:text>
+  <ns0:rect x="586.6667" y="337.7778" width="533.3333" height="257.7778" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="586.6667" y="337.7778" width="533.3333" height="48.8889" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="586.6667" y="377.7778" width="533.3333" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="853.3333" y="368.8889" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#ffffff" font-family="sans-serif">Need capacity? Parity protection</ns0:text>
+  <ns0:text x="853.3333" y="444.4444" text-anchor="middle" font-size="44.4444" font-weight="bold" fill="#1565c0" font-family="sans-serif">RAID 5/6</ns0:text>
+  <ns0:text x="853.3333" y="502.2222" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Parity — one/two disk overhead</ns0:text>
+  <ns0:text x="853.3333" y="528.8889" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Good capacity efficiency, min 3 disks</ns0:text>
+  <ns0:text x="853.3333" y="555.5556" text-anchor="middle" font-size="14.2222" fill="#555555" font-family="sans-serif">Use: NAS, file servers</ns0:text>
+</ns0:svg>

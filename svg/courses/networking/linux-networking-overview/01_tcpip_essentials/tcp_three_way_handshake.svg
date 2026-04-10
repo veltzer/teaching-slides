@@ -1,42 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Client box -->
-  <rect x="160" y="30" width="200" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="260" y="90" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Client</text>
-  <!-- Server box -->
-  <rect x="920" y="30" width="200" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
-  <text x="1020" y="90" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Server</text>
-  <!-- Lifelines -->
-  <line x1="260" y1="130" x2="260" y2="660" stroke="#888888" stroke-width="2" stroke-dasharray="6,4"/>
-  <line x1="1020" y1="130" x2="1020" y2="660" stroke="#888888" stroke-width="2" stroke-dasharray="6,4"/>
-  <!-- SYN -->
-  <line x1="260" y1="230" x2="1020" y2="300" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <text x="640" y="218" text-anchor="middle" font-size="21" fill="#1565c0">SYN (seq=x)</text>
-  <!-- SYN-ACK -->
-  <line x1="1020" y1="380" x2="260" y2="450" stroke="#7b1fa2" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="640" y="368" text-anchor="middle" font-size="21" fill="#7b1fa2">SYN-ACK (seq=y, ack=x+1)</text>
-  <!-- ACK -->
-  <line x1="260" y1="530" x2="1020" y2="600" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="640" y="518" text-anchor="middle" font-size="21" fill="#2e7d32">ACK (ack=y+1)</text>
-  <!-- Connection established label -->
-  <text x="640" y="660" text-anchor="middle" font-size="20" fill="#777777">Connection Established</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="142.2222" y="26.6667" width="177.7778" height="88.8889" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="231.1111" y="80" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#ffffff">Client</ns0:text>
+  <ns0:rect x="817.7778" y="26.6667" width="177.7778" height="88.8889" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="1.7778" rx="7.1111" filter="url(#shadow)" />
+  <ns0:text x="906.6667" y="80" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#ffffff">Server</ns0:text>
+  <ns0:line x1="231.1111" y1="115.5556" x2="231.1111" y2="586.6667" stroke="#888888" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
+  <ns0:line x1="906.6667" y1="115.5556" x2="906.6667" y2="586.6667" stroke="#888888" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
+  <ns0:line x1="231.1111" y1="204.4444" x2="906.6667" y2="266.6667" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:text x="568.8889" y="193.7778" text-anchor="middle" font-size="18.6667" fill="#1565c0">SYN (seq=x)</ns0:text>
+  <ns0:line x1="906.6667" y1="337.7778" x2="231.1111" y2="400" stroke="#7b1fa2" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="327.1111" text-anchor="middle" font-size="18.6667" fill="#7b1fa2">SYN-ACK (seq=y, ack=x+1)</ns0:text>
+  <ns0:line x1="231.1111" y1="471.1111" x2="906.6667" y2="533.3333" stroke="#2e7d32" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="460.4444" text-anchor="middle" font-size="18.6667" fill="#2e7d32">ACK (ack=y+1)</ns0:text>
+  <ns0:text x="568.8889" y="586.6667" text-anchor="middle" font-size="17.7778" fill="#777777">Connection Established</ns0:text>
+</ns0:svg>

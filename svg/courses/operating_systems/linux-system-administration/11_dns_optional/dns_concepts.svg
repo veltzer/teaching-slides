@@ -1,70 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Client -->
-  <rect x="20" y="240" width="220" height="230" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="20" y="240" width="220" height="50" fill="url(#grad-accent)" rx="12"/>
-  <rect x="20" y="280" width="220" height="10" fill="url(#grad-accent)"/>
-  <text x="130" y="272" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Client</text>
-  <text x="130" y="335" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Browser/app</text>
-  <text x="130" y="363" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">www.example.com</text>
-  <text x="130" y="420" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">getaddrinfo()</text>
-
-  <line x1="240" y1="355" x2="318" y2="355" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Resolver -->
-  <rect x="320" y="240" width="220" height="230" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="320" y="240" width="220" height="50" fill="url(#grad-accent)" rx="12"/>
-  <rect x="320" y="280" width="220" height="10" fill="url(#grad-accent)"/>
-  <text x="430" y="272" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Resolver</text>
-  <text x="430" y="335" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">ISP or local</text>
-  <text x="430" y="363" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Cache results</text>
-  <text x="430" y="405" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Recursive query</text>
-  <text x="430" y="430" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">8.8.8.8</text>
-
-  <line x1="540" y1="355" x2="618" y2="355" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Root DNS -->
-  <rect x="620" y="240" width="220" height="230" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="620" y="240" width="220" height="50" fill="url(#grad-accent)" rx="12"/>
-  <rect x="620" y="280" width="220" height="10" fill="url(#grad-accent)"/>
-  <text x="730" y="272" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Root DNS</text>
-  <text x="730" y="335" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">13 root servers</text>
-  <text x="730" y="363" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Refers to TLD</text>
-  <text x="730" y="405" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Anycast</text>
-
-  <!-- TLD DNS (upward) -->
-  <rect x="620" y="40" width="220" height="160" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" rx="10" filter="url(#shadow)"/>
-  <text x="730" y="130" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="sans-serif">TLD DNS</text>
-  <text x="730" y="160" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">.com, .org, .net</text>
-  <line x1="730" y1="240" x2="730" y2="200" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <line x1="840" y1="355" x2="918" y2="355" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-
-  <!-- Authoritative -->
-  <rect x="920" y="240" width="320" height="230" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
-  <rect x="920" y="240" width="320" height="50" fill="url(#grad-accent)" rx="12"/>
-  <rect x="920" y="280" width="320" height="10" fill="url(#grad-accent)"/>
-  <text x="1080" y="272" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Authoritative</text>
-  <text x="1080" y="335" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Zone data owner</text>
-  <text x="1080" y="363" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">A, AAAA, MX, CNAME</text>
-  <text x="1080" y="405" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">BIND, PowerDNS</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="213.3333" width="195.5556" height="204.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="17.7778" y="213.3333" width="195.5556" height="44.4444" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="17.7778" y="248.8889" width="195.5556" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="115.5556" y="241.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Client</ns0:text>
+  <ns0:text x="115.5556" y="297.7778" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Browser/app</ns0:text>
+  <ns0:text x="115.5556" y="322.6667" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">www.example.com</ns0:text>
+  <ns0:text x="115.5556" y="373.3333" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">getaddrinfo()</ns0:text>
+  <ns0:line x1="213.3333" y1="315.5556" x2="282.6667" y2="315.5556" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="284.4444" y="213.3333" width="195.5556" height="204.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="284.4444" y="213.3333" width="195.5556" height="44.4444" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="284.4444" y="248.8889" width="195.5556" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="382.2222" y="241.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Resolver</ns0:text>
+  <ns0:text x="382.2222" y="297.7778" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">ISP or local</ns0:text>
+  <ns0:text x="382.2222" y="322.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Cache results</ns0:text>
+  <ns0:text x="382.2222" y="360" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Recursive query</ns0:text>
+  <ns0:text x="382.2222" y="382.2222" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">8.8.8.8</ns0:text>
+  <ns0:line x1="480" y1="315.5556" x2="549.3333" y2="315.5556" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="551.1111" y="213.3333" width="195.5556" height="204.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="551.1111" y="213.3333" width="195.5556" height="44.4444" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="551.1111" y="248.8889" width="195.5556" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="648.8889" y="241.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Root DNS</ns0:text>
+  <ns0:text x="648.8889" y="297.7778" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">13 root servers</ns0:text>
+  <ns0:text x="648.8889" y="322.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Refers to TLD</ns0:text>
+  <ns0:text x="648.8889" y="360" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">Anycast</ns0:text>
+  <ns0:rect x="551.1111" y="35.5556" width="195.5556" height="142.2222" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="1.7778" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="648.8889" y="115.5556" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0" font-family="sans-serif">TLD DNS</ns0:text>
+  <ns0:text x="648.8889" y="142.2222" text-anchor="middle" font-size="12.4444" fill="#555555" font-family="sans-serif">.com, .org, .net</ns0:text>
+  <ns0:line x1="648.8889" y1="213.3333" x2="648.8889" y2="177.7778" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="746.6667" y1="315.5556" x2="816" y2="315.5556" stroke="#1565c0" stroke-width="2.2222" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="817.7778" y="213.3333" width="284.4444" height="204.4444" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" rx="10.6667" filter="url(#shadow)" />
+  <ns0:rect x="817.7778" y="213.3333" width="284.4444" height="44.4444" fill="url(#grad-accent)" rx="10.6667" />
+  <ns0:rect x="817.7778" y="248.8889" width="284.4444" height="8.8889" fill="url(#grad-accent)" />
+  <ns0:text x="960" y="241.7778" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff" font-family="sans-serif">Authoritative</ns0:text>
+  <ns0:text x="960" y="297.7778" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">Zone data owner</ns0:text>
+  <ns0:text x="960" y="322.6667" text-anchor="middle" font-size="13.3333" fill="#333333" font-family="sans-serif">A, AAAA, MX, CNAME</ns0:text>
+  <ns0:text x="960" y="360" text-anchor="middle" font-size="11.5556" fill="#555555" font-family="sans-serif">BIND, PowerDNS</ns0:text>
+</ns0:svg>

@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="426.6667" y="18" width="426.6667" height="126" fill="#673ab7" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="640" y="100.8" text-anchor="middle" font-size="25.6" fill="white" font-weight="bold">Concurrency Tips</text>
-  <line x1="533.3333" y1="144" x2="256" y2="208.8" stroke="#333" stroke-width="4.2667" />
-  <line x1="746.6667" y1="144" x2="1024" y2="208.8" stroke="#333" stroke-width="4.2667" />
-  <line x1="533.3333" y1="144" x2="256" y2="450" stroke="#333" stroke-width="4.2667" />
-  <line x1="746.6667" y1="144" x2="1024" y2="450" stroke="#333" stroke-width="4.2667" />
-  <rect x="64" y="190.8" width="384" height="162" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="256" y="252" text-anchor="middle" font-size="21.3333" font-weight="bold">Channels over mutexes</text>
-  <text x="256" y="302.4" text-anchor="middle" font-size="21.3333">Message passing avoids</text>
-  <text x="256" y="342" text-anchor="middle" font-size="21.3333">shared state complexity</text>
-  <rect x="832" y="190.8" width="384" height="162" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1024" y="252" text-anchor="middle" font-size="21.3333" font-weight="bold">Minimize lock scope</text>
-  <text x="1024" y="302.4" text-anchor="middle" font-size="21.3333">Hold Mutex lock briefly</text>
-  <text x="1024" y="342" text-anchor="middle" font-size="21.3333">Drop guard ASAP</text>
-  <rect x="64" y="432" width="384" height="162" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="256" y="493.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Use scoped threads</text>
-  <text x="256" y="543.6" text-anchor="middle" font-size="21.3333">thread::scope() borrows</text>
-  <text x="256" y="583.2" text-anchor="middle" font-size="21.3333">data without Arc/move</text>
-  <rect x="832" y="432" width="384" height="162" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1024" y="493.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Consistent lock order</text>
-  <text x="1024" y="543.6" text-anchor="middle" font-size="21.3333">Always acquire locks in</text>
-  <text x="1024" y="583.2" text-anchor="middle" font-size="21.3333">the same order (no deadlock)</text>
-  <rect x="320" y="640.8" width="640" height="64.8" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="687.6" text-anchor="middle" font-size="21.3333">Prefer Arc&lt;Mutex&lt;T&gt;&gt; for simple sharing; channels for pipelines</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:rect x="386.9993" y="16.3265" width="386.9993" height="114.2857" fill="#673ab7" stroke="#333" stroke-width="3.87" rx="15.48" />
+  <ns0:text x="580.4989" y="91.4286" text-anchor="middle" font-size="23.22" fill="white" font-weight="bold">Concurrency Tips</ns0:text>
+  <ns0:line x1="483.749" y1="130.6122" x2="232.1995" y2="189.3878" stroke="#333" stroke-width="3.87" />
+  <ns0:line x1="677.2487" y1="130.6122" x2="928.7982" y2="189.3878" stroke="#333" stroke-width="3.87" />
+  <ns0:line x1="483.749" y1="130.6122" x2="232.1995" y2="408.1633" stroke="#333" stroke-width="3.87" />
+  <ns0:line x1="677.2487" y1="130.6122" x2="928.7982" y2="408.1633" stroke="#333" stroke-width="3.87" />
+  <ns0:rect x="58.0499" y="173.0612" width="348.2993" height="146.9388" fill="#e3f2fd" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="232.1995" y="228.5714" text-anchor="middle" font-size="19.3499" font-weight="bold">Channels over mutexes</ns0:text>
+  <ns0:text x="232.1995" y="274.2857" text-anchor="middle" font-size="19.3499">Message passing avoids</ns0:text>
+  <ns0:text x="232.1995" y="310.2041" text-anchor="middle" font-size="19.3499">shared state complexity</ns0:text>
+  <ns0:rect x="754.6485" y="173.0612" width="348.2993" height="146.9388" fill="#f3e5f5" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="928.7982" y="228.5714" text-anchor="middle" font-size="19.3499" font-weight="bold">Minimize lock scope</ns0:text>
+  <ns0:text x="928.7982" y="274.2857" text-anchor="middle" font-size="19.3499">Hold Mutex lock briefly</ns0:text>
+  <ns0:text x="928.7982" y="310.2041" text-anchor="middle" font-size="19.3499">Drop guard ASAP</ns0:text>
+  <ns0:rect x="58.0499" y="391.8367" width="348.2993" height="146.9388" fill="#e8f5e9" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="232.1995" y="447.3469" text-anchor="middle" font-size="19.3499" font-weight="bold">Use scoped threads</ns0:text>
+  <ns0:text x="232.1995" y="493.0612" text-anchor="middle" font-size="19.3499">thread::scope() borrows</ns0:text>
+  <ns0:text x="232.1995" y="528.9796" text-anchor="middle" font-size="19.3499">data without Arc/move</ns0:text>
+  <ns0:rect x="754.6485" y="391.8367" width="348.2993" height="146.9388" fill="#fff3e0" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="928.7982" y="447.3469" text-anchor="middle" font-size="19.3499" font-weight="bold">Consistent lock order</ns0:text>
+  <ns0:text x="928.7982" y="493.0612" text-anchor="middle" font-size="19.3499">Always acquire locks in</ns0:text>
+  <ns0:text x="928.7982" y="528.9796" text-anchor="middle" font-size="19.3499">the same order (no deadlock)</ns0:text>
+  <ns0:rect x="290.2494" y="581.2245" width="580.4989" height="58.7755" fill="#ffebee" stroke="#333" stroke-width="1.935" rx="5.805" />
+  <ns0:text x="580.4989" y="623.6735" text-anchor="middle" font-size="19.3499">Prefer Arc&lt;Mutex&lt;T&gt;&gt; for simple sharing; channels for pipelines</ns0:text>
+</ns0:svg>

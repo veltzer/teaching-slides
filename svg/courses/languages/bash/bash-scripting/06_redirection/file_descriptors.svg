@@ -1,76 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Intro -->
-  <rect x="20" y="20" width="1240" height="72" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="40" y="64" font-size="22" font-weight="bold" fill="#ffffff">Every process has three standard file descriptors:</text>
-
-  <!-- Table header -->
-  <rect x="20" y="110" width="160" height="72" rx="0" fill="#1565c0"/>
-  <rect x="180" y="110" width="200" height="72" fill="#1565c0"/>
-  <rect x="380" y="110" width="240" height="72" fill="#1565c0"/>
-  <rect x="620" y="110" width="640" height="72" fill="#1565c0"/>
-  <text x="40" y="156" font-size="22" font-weight="bold" fill="#ffffff">FD</text>
-  <text x="200" y="156" font-size="22" font-weight="bold" fill="#ffffff">Name</text>
-  <text x="400" y="156" font-size="22" font-weight="bold" fill="#ffffff">Default</text>
-  <text x="640" y="156" font-size="22" font-weight="bold" fill="#ffffff">C equivalent</text>
-
-  <!-- Row 0: stdin -->
-  <rect x="20" y="182" width="160" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="180" y="182" width="200" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="380" y="182" width="240" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="620" y="182" width="640" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <text x="40" y="235" font-size="28" font-weight="bold" fill="#1565c0">0</text>
-  <text x="200" y="230" font-size="22" fill="#222">stdin</text>
-  <text x="200" y="258" font-size="16" fill="#555">standard input</text>
-  <text x="400" y="235" font-size="22" fill="#222">keyboard</text>
-  <text x="640" y="235" font-size="20" fill="#222" font-family="monospace">stdin / scanf()</text>
-
-  <!-- Row 1: stdout -->
-  <rect x="20" y="272" width="160" height="90" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="180" y="272" width="200" height="90" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="380" y="272" width="240" height="90" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="620" y="272" width="640" height="90" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5"/>
-  <text x="40" y="325" font-size="28" font-weight="bold" fill="#1565c0">1</text>
-  <text x="200" y="320" font-size="22" fill="#222">stdout</text>
-  <text x="200" y="348" font-size="16" fill="#555">standard output</text>
-  <text x="400" y="325" font-size="22" fill="#222">terminal</text>
-  <text x="640" y="325" font-size="20" fill="#222" font-family="monospace">stdout / printf()</text>
-
-  <!-- Row 2: stderr -->
-  <rect x="20" y="362" width="160" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="180" y="362" width="200" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="380" y="362" width="240" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <rect x="620" y="362" width="640" height="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
-  <text x="40" y="415" font-size="28" font-weight="bold" fill="#e53935">2</text>
-  <text x="200" y="410" font-size="22" fill="#222">stderr</text>
-  <text x="200" y="438" font-size="16" fill="#555">standard error</text>
-  <text x="400" y="415" font-size="22" fill="#222">terminal</text>
-  <text x="640" y="415" font-size="20" fill="#222" font-family="monospace">stderr / fprintf(stderr)</text>
-
-  <!-- Redirection examples -->
-  <rect x="20" y="480" width="1240" height="180" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="40" y="520" font-size="22" font-weight="bold" fill="#1565c0">Common redirections:</text>
-  <text x="40" y="558" font-size="20" fill="#333" font-family="monospace">cmd &gt; file       redirect stdout to file (overwrite)</text>
-  <text x="40" y="593" font-size="20" fill="#333" font-family="monospace">cmd &gt;&gt; file      redirect stdout to file (append)</text>
-  <text x="40" y="628" font-size="20" fill="#333" font-family="monospace">cmd 2&gt; file      redirect stderr to file</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="17.7778" y="17.7778" width="1102.2222" height="64" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="35.5556" y="56.8889" font-size="19.5556" font-weight="bold" fill="#ffffff">Every process has three standard file descriptors:</ns0:text>
+  <ns0:rect x="17.7778" y="97.7778" width="142.2222" height="64" rx="0" fill="#1565c0" />
+  <ns0:rect x="160" y="97.7778" width="177.7778" height="64" fill="#1565c0" />
+  <ns0:rect x="337.7778" y="97.7778" width="213.3333" height="64" fill="#1565c0" />
+  <ns0:rect x="551.1111" y="97.7778" width="568.8889" height="64" fill="#1565c0" />
+  <ns0:text x="35.5556" y="138.6667" font-size="19.5556" font-weight="bold" fill="#ffffff">FD</ns0:text>
+  <ns0:text x="177.7778" y="138.6667" font-size="19.5556" font-weight="bold" fill="#ffffff">Name</ns0:text>
+  <ns0:text x="355.5556" y="138.6667" font-size="19.5556" font-weight="bold" fill="#ffffff">Default</ns0:text>
+  <ns0:text x="568.8889" y="138.6667" font-size="19.5556" font-weight="bold" fill="#ffffff">C equivalent</ns0:text>
+  <ns0:rect x="17.7778" y="161.7778" width="142.2222" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="160" y="161.7778" width="177.7778" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="337.7778" y="161.7778" width="213.3333" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="551.1111" y="161.7778" width="568.8889" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:text x="35.5556" y="208.8889" font-size="24.8889" font-weight="bold" fill="#1565c0">0</ns0:text>
+  <ns0:text x="177.7778" y="204.4444" font-size="19.5556" fill="#222">stdin</ns0:text>
+  <ns0:text x="177.7778" y="229.3333" font-size="14.2222" fill="#555">standard input</ns0:text>
+  <ns0:text x="355.5556" y="208.8889" font-size="19.5556" fill="#222">keyboard</ns0:text>
+  <ns0:text x="568.8889" y="208.8889" font-size="17.7778" fill="#222" font-family="monospace">stdin / scanf()</ns0:text>
+  <ns0:rect x="17.7778" y="241.7778" width="142.2222" height="80" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="160" y="241.7778" width="177.7778" height="80" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="337.7778" y="241.7778" width="213.3333" height="80" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="551.1111" y="241.7778" width="568.8889" height="80" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:text x="35.5556" y="288.8889" font-size="24.8889" font-weight="bold" fill="#1565c0">1</ns0:text>
+  <ns0:text x="177.7778" y="284.4444" font-size="19.5556" fill="#222">stdout</ns0:text>
+  <ns0:text x="177.7778" y="309.3333" font-size="14.2222" fill="#555">standard output</ns0:text>
+  <ns0:text x="355.5556" y="288.8889" font-size="19.5556" fill="#222">terminal</ns0:text>
+  <ns0:text x="568.8889" y="288.8889" font-size="17.7778" fill="#222" font-family="monospace">stdout / printf()</ns0:text>
+  <ns0:rect x="17.7778" y="321.7778" width="142.2222" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="160" y="321.7778" width="177.7778" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="337.7778" y="321.7778" width="213.3333" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:rect x="551.1111" y="321.7778" width="568.8889" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" />
+  <ns0:text x="35.5556" y="368.8889" font-size="24.8889" font-weight="bold" fill="#e53935">2</ns0:text>
+  <ns0:text x="177.7778" y="364.4444" font-size="19.5556" fill="#222">stderr</ns0:text>
+  <ns0:text x="177.7778" y="389.3333" font-size="14.2222" fill="#555">standard error</ns0:text>
+  <ns0:text x="355.5556" y="368.8889" font-size="19.5556" fill="#222">terminal</ns0:text>
+  <ns0:text x="568.8889" y="368.8889" font-size="17.7778" fill="#222" font-family="monospace">stderr / fprintf(stderr)</ns0:text>
+  <ns0:rect x="17.7778" y="426.6667" width="1102.2222" height="160" rx="8.8889" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="35.5556" y="462.2222" font-size="19.5556" font-weight="bold" fill="#1565c0">Common redirections:</ns0:text>
+  <ns0:text x="35.5556" y="496" font-size="17.7778" fill="#333" font-family="monospace">cmd &gt; file       redirect stdout to file (overwrite)</ns0:text>
+  <ns0:text x="35.5556" y="527.1111" font-size="17.7778" fill="#333" font-family="monospace">cmd &gt;&gt; file      redirect stdout to file (append)</ns0:text>
+  <ns0:text x="35.5556" y="558.2222" font-size="17.7778" fill="#333" font-family="monospace">cmd 2&gt; file      redirect stderr to file</ns0:text>
+</ns0:svg>

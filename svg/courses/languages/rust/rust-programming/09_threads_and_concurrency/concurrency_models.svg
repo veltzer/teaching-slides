@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Rust Concurrency Models</text>
-  <rect x="42.6667" y="100.8" width="362.6667" height="234" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="224" y="165.6" text-anchor="middle" font-size="21.3333" font-weight="bold">Message Passing</text>
-  <text x="224" y="219.6" text-anchor="middle" font-size="21.3333">mpsc::channel()</text>
-  <text x="224" y="266.4" text-anchor="middle" font-size="21.3333">tx.send() / rx.recv()</text>
-  <text x="224" y="313.2" text-anchor="middle" font-size="21.3333">"Share by communicating"</text>
-  <rect x="458.6667" y="100.8" width="362.6667" height="234" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="165.6" text-anchor="middle" font-size="21.3333" font-weight="bold">Shared State</text>
-  <text x="640" y="219.6" text-anchor="middle" font-size="21.3333">Arc&lt;Mutex&lt;T&gt;&gt;</text>
-  <text x="640" y="266.4" text-anchor="middle" font-size="21.3333">Arc&lt;RwLock&lt;T&gt;&gt;</text>
-  <text x="640" y="313.2" text-anchor="middle" font-size="21.3333">Atomic types</text>
-  <rect x="874.6667" y="100.8" width="362.6667" height="234" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1056" y="165.6" text-anchor="middle" font-size="21.3333" font-weight="bold">Thread Spawn</text>
-  <text x="1056" y="219.6" text-anchor="middle" font-size="21.3333">thread::spawn(move || {})</text>
-  <text x="1056" y="266.4" text-anchor="middle" font-size="21.3333">handle.join()</text>
-  <text x="1056" y="313.2" text-anchor="middle" font-size="21.3333">OS-level threads</text>
-  <rect x="128" y="396" width="426.6667" height="126" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="341.3333" y="450" text-anchor="middle" font-size="21.3333" font-weight="bold">Send trait</text>
-  <text x="341.3333" y="500.4" text-anchor="middle" font-size="21.3333">Type can be transferred between threads</text>
-  <rect x="618.6667" y="396" width="426.6667" height="126" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="832" y="450" text-anchor="middle" font-size="21.3333" font-weight="bold">Sync trait</text>
-  <text x="832" y="500.4" text-anchor="middle" font-size="21.3333">Type can be shared (&amp;T) between threads</text>
-  <rect x="170.6667" y="576" width="938.6667" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="640" y="648" text-anchor="middle" font-size="21.3333">Compiler enforces thread safety: data races are compile errors, not runtime bugs</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">Rust Concurrency Models</ns0:text>
+  <ns0:rect x="39.9221" y="94.3158" width="339.3373" height="218.9474" fill="#e3f2fd" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="209.5906" y="154.9474" text-anchor="middle" font-size="19.961" font-weight="bold">Message Passing</ns0:text>
+  <ns0:text x="209.5906" y="205.4737" text-anchor="middle" font-size="19.961">mpsc::channel()</ns0:text>
+  <ns0:text x="209.5906" y="249.2632" text-anchor="middle" font-size="19.961">tx.send() / rx.recv()</ns0:text>
+  <ns0:text x="209.5906" y="293.0526" text-anchor="middle" font-size="19.961">"Share by communicating"</ns0:text>
+  <ns0:rect x="429.1618" y="94.3158" width="339.3373" height="218.9474" fill="#f3e5f5" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="598.8304" y="154.9474" text-anchor="middle" font-size="19.961" font-weight="bold">Shared State</ns0:text>
+  <ns0:text x="598.8304" y="205.4737" text-anchor="middle" font-size="19.961">Arc&lt;Mutex&lt;T&gt;&gt;</ns0:text>
+  <ns0:text x="598.8304" y="249.2632" text-anchor="middle" font-size="19.961">Arc&lt;RwLock&lt;T&gt;&gt;</ns0:text>
+  <ns0:text x="598.8304" y="293.0526" text-anchor="middle" font-size="19.961">Atomic types</ns0:text>
+  <ns0:rect x="818.4016" y="94.3158" width="339.3373" height="218.9474" fill="#e8f5e9" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="988.0702" y="154.9474" text-anchor="middle" font-size="19.961" font-weight="bold">Thread Spawn</ns0:text>
+  <ns0:text x="988.0702" y="205.4737" text-anchor="middle" font-size="19.961">thread::spawn(move || {})</ns0:text>
+  <ns0:text x="988.0702" y="249.2632" text-anchor="middle" font-size="19.961">handle.join()</ns0:text>
+  <ns0:text x="988.0702" y="293.0526" text-anchor="middle" font-size="19.961">OS-level threads</ns0:text>
+  <ns0:rect x="119.7661" y="370.5263" width="399.2203" height="117.8947" fill="#fff3e0" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="319.3762" y="421.0526" text-anchor="middle" font-size="19.961" font-weight="bold">Send trait</ns0:text>
+  <ns0:text x="319.3762" y="468.2105" text-anchor="middle" font-size="19.961">Type can be transferred between threads</ns0:text>
+  <ns0:rect x="578.8694" y="370.5263" width="399.2203" height="117.8947" fill="#ffebee" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="778.4795" y="421.0526" text-anchor="middle" font-size="19.961" font-weight="bold">Sync trait</ns0:text>
+  <ns0:text x="778.4795" y="468.2105" text-anchor="middle" font-size="19.961">Type can be shared (&amp;T) between threads</ns0:text>
+  <ns0:rect x="159.6881" y="538.9474" width="878.2846" height="101.0526" fill="#e3f2fd" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961">Compiler enforces thread safety: data races are compile errors, not runtime bugs</ns0:text>
+</ns0:svg>

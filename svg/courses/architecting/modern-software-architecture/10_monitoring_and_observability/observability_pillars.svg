@@ -1,115 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Header -->
-  <rect x="30" y="14" width="1220" height="46" rx="8" fill="url(#grad-accent)"/>
-  <text x="640" y="44" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#ffffff">The Three Pillars of Observability</text>
-  <!-- Pillar 1: Metrics -->
-  <rect x="40" y="80" width="370" height="480" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="40" y="80" width="370" height="50" rx="10" fill="#1565c0"/>
-  <rect x="40" y="116" width="370" height="14" fill="#1565c0"/>
-  <text x="225" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Metrics</text>
-  <text x="225" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">What is it?</text>
-  <text x="225" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Numeric measurements over time</text>
-  <text x="225" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Aggregated, time-series data</text>
-  <text x="225" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">What it reveals</text>
-  <text x="225" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Is the system healthy?</text>
-  <text x="225" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Where is the bottleneck?</text>
-  <text x="225" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Are SLOs being met?</text>
-  <text x="225" y="325" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Examples</text>
-  <rect x="58" y="336" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="225" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">CPU / Memory / Disk usage</text>
-  <rect x="58" y="368" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="225" y="386" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">HTTP request rate &amp; latency</text>
-  <rect x="58" y="400" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="225" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Error rate (4xx / 5xx %)</text>
-  <rect x="58" y="432" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="225" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Queue depth, DB connections</text>
-  <text x="225" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Tools</text>
-  <rect x="58" y="500" width="155" height="44" rx="6" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="135" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">Prometheus</text>
-  <rect x="225" y="500" width="155" height="44" rx="6" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="302" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">Grafana</text>
-  <!-- Pillar 2: Logs -->
-  <rect x="455" y="80" width="370" height="480" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="455" y="80" width="370" height="50" rx="10" fill="#2e7d32"/>
-  <rect x="455" y="116" width="370" height="14" fill="#2e7d32"/>
-  <text x="640" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Logs</text>
-  <text x="640" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">What is it?</text>
-  <text x="640" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Timestamped text/JSON records</text>
-  <text x="640" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Events as they happen</text>
-  <text x="640" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">What it reveals</text>
-  <text x="640" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">What exactly happened?</text>
-  <text x="640" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">What error was thrown?</text>
-  <text x="640" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Who did what, when?</text>
-  <text x="640" y="325" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Examples</text>
-  <rect x="473" y="336" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="640" y="354" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Application error stack traces</text>
-  <rect x="473" y="368" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="640" y="386" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Audit logs (user actions)</text>
-  <rect x="473" y="400" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="640" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Access logs (who, when)</text>
-  <rect x="473" y="432" width="334" height="26" rx="4" fill="#ffffff"/>
-  <text x="640" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Structured JSON events</text>
-  <text x="640" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Tools</text>
-  <rect x="473" y="500" width="100" height="44" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="523" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">ELK Stack</text>
-  <rect x="583" y="500" width="100" height="44" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="633" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Loki</text>
-  <rect x="693" y="500" width="100" height="44" rx="6" fill="#ffffff" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="743" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Splunk</text>
-  <!-- Pillar 3: Traces -->
-  <rect x="870" y="80" width="375" height="480" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="870" y="80" width="375" height="50" rx="10" fill="#e65100"/>
-  <rect x="870" y="116" width="375" height="14" fill="#e65100"/>
-  <text x="1057" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Traces</text>
-  <text x="1057" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">What is it?</text>
-  <text x="1057" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">End-to-end request journey</text>
-  <text x="1057" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Spans across services</text>
-  <text x="1057" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">What it reveals</text>
-  <text x="1057" y="252" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Where was the latency?</text>
-  <text x="1057" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Which service failed?</text>
-  <text x="1057" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">How do services interact?</text>
-  <text x="1057" y="325" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">Examples</text>
-  <!-- Waterfall trace diagram -->
-  <rect x="888" y="336" width="340" height="22" rx="3" fill="#ffcc80"/>
-  <text x="1058" y="352" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Gateway → 250ms total</text>
-  <rect x="888" y="364" width="220" height="22" rx="3" fill="#ffe0b2"/>
-  <text x="998" y="380" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Auth svc → 80ms</text>
-  <rect x="888" y="392" width="280" height="22" rx="3" fill="#ffb74d"/>
-  <text x="1028" y="408" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Orders svc → 140ms</text>
-  <rect x="888" y="420" width="180" height="22" rx="3" fill="#ff9800"/>
-  <text x="978" y="436" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#ffffff">DB query → 100ms</text>
-  <rect x="888" y="448" width="100" height="22" rx="3" fill="#e65100"/>
-  <text x="938" y="464" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#ffffff">Cache → 20ms</text>
-  <text x="1057" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100">Tools</text>
-  <rect x="888" y="500" width="105" height="44" rx="6" fill="#ffffff" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="940" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Jaeger</text>
-  <rect x="1003" y="500" width="105" height="44" rx="6" fill="#ffffff" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1055" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#212121">Zipkin</text>
-  <rect x="1118" y="500" width="115" height="44" rx="6" fill="#ffffff" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1175" y="519" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Open</text>
-  <text x="1175" y="537" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Telemetry</text>
-  <!-- Bottom unified note -->
-  <rect x="40" y="582" width="1200" height="50" rx="8" fill="#f2f2f2"/>
-  <text x="640" y="602" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#212121">Together: Metrics tell you WHEN, Logs tell you WHAT, Traces tell you WHERE across services</text>
-  <text x="640" y="622" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555555">Unified with correlation IDs → OpenTelemetry standard — instrument once, export anywhere</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="26.6667" y="12.4444" width="1084.4444" height="40.8889" rx="7.1111" fill="url(#grad-accent)" />
+  <ns0:text x="568.8889" y="39.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#ffffff">The Three Pillars of Observability</ns0:text>
+  <ns0:rect x="35.5556" y="71.1111" width="328.8889" height="426.6667" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:rect x="35.5556" y="71.1111" width="328.8889" height="44.4444" rx="8.8889" fill="#1565c0" />
+  <ns0:rect x="35.5556" y="103.1111" width="328.8889" height="12.4444" fill="#1565c0" />
+  <ns0:text x="200" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#ffffff">Metrics</ns0:text>
+  <ns0:text x="200" y="137.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#1565c0">What is it?</ns0:text>
+  <ns0:text x="200" y="158.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Numeric measurements over time</ns0:text>
+  <ns0:text x="200" y="176" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Aggregated, time-series data</ns0:text>
+  <ns0:text x="200" y="204.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#1565c0">What it reveals</ns0:text>
+  <ns0:text x="200" y="224" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Is the system healthy?</ns0:text>
+  <ns0:text x="200" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Where is the bottleneck?</ns0:text>
+  <ns0:text x="200" y="259.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Are SLOs being met?</ns0:text>
+  <ns0:text x="200" y="288.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#1565c0">Examples</ns0:text>
+  <ns0:rect x="51.5556" y="298.6667" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="200" y="314.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">CPU / Memory / Disk usage</ns0:text>
+  <ns0:rect x="51.5556" y="327.1111" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="200" y="343.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">HTTP request rate &amp; latency</ns0:text>
+  <ns0:rect x="51.5556" y="355.5556" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="200" y="371.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Error rate (4xx / 5xx %)</ns0:text>
+  <ns0:rect x="51.5556" y="384" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="200" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Queue depth, DB connections</ns0:text>
+  <ns0:text x="200" y="435.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#1565c0">Tools</ns0:text>
+  <ns0:rect x="51.5556" y="444.4444" width="137.7778" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="120" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">Prometheus</ns0:text>
+  <ns0:rect x="200" y="444.4444" width="137.7778" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="268.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">Grafana</ns0:text>
+  <ns0:rect x="404.4444" y="71.1111" width="328.8889" height="426.6667" rx="8.8889" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:rect x="404.4444" y="71.1111" width="328.8889" height="44.4444" rx="8.8889" fill="#2e7d32" />
+  <ns0:rect x="404.4444" y="103.1111" width="328.8889" height="12.4444" fill="#2e7d32" />
+  <ns0:text x="568.8889" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#ffffff">Logs</ns0:text>
+  <ns0:text x="568.8889" y="137.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#2e7d32">What is it?</ns0:text>
+  <ns0:text x="568.8889" y="158.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Timestamped text/JSON records</ns0:text>
+  <ns0:text x="568.8889" y="176" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Events as they happen</ns0:text>
+  <ns0:text x="568.8889" y="204.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#2e7d32">What it reveals</ns0:text>
+  <ns0:text x="568.8889" y="224" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">What exactly happened?</ns0:text>
+  <ns0:text x="568.8889" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">What error was thrown?</ns0:text>
+  <ns0:text x="568.8889" y="259.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Who did what, when?</ns0:text>
+  <ns0:text x="568.8889" y="288.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#2e7d32">Examples</ns0:text>
+  <ns0:rect x="420.4444" y="298.6667" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="568.8889" y="314.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Application error stack traces</ns0:text>
+  <ns0:rect x="420.4444" y="327.1111" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="568.8889" y="343.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Audit logs (user actions)</ns0:text>
+  <ns0:rect x="420.4444" y="355.5556" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="568.8889" y="371.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Access logs (who, when)</ns0:text>
+  <ns0:rect x="420.4444" y="384" width="296.8889" height="23.1111" rx="3.5556" fill="#ffffff" />
+  <ns0:text x="568.8889" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Structured JSON events</ns0:text>
+  <ns0:text x="568.8889" y="435.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#2e7d32">Tools</ns0:text>
+  <ns0:rect x="420.4444" y="444.4444" width="88.8889" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#2e7d32" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="464.8889" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">ELK Stack</ns0:text>
+  <ns0:rect x="518.2222" y="444.4444" width="88.8889" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#2e7d32" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="562.6667" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Loki</ns0:text>
+  <ns0:rect x="616" y="444.4444" width="88.8889" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#2e7d32" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="660.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Splunk</ns0:text>
+  <ns0:rect x="773.3333" y="71.1111" width="333.3333" height="426.6667" rx="8.8889" fill="#fff3e0" stroke="#e65100" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:rect x="773.3333" y="71.1111" width="333.3333" height="44.4444" rx="8.8889" fill="#e65100" />
+  <ns0:rect x="773.3333" y="103.1111" width="333.3333" height="12.4444" fill="#e65100" />
+  <ns0:text x="939.5556" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#ffffff">Traces</ns0:text>
+  <ns0:text x="939.5556" y="137.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100">What is it?</ns0:text>
+  <ns0:text x="939.5556" y="158.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">End-to-end request journey</ns0:text>
+  <ns0:text x="939.5556" y="176" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Spans across services</ns0:text>
+  <ns0:text x="939.5556" y="204.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100">What it reveals</ns0:text>
+  <ns0:text x="939.5556" y="224" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Where was the latency?</ns0:text>
+  <ns0:text x="939.5556" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Which service failed?</ns0:text>
+  <ns0:text x="939.5556" y="259.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">How do services interact?</ns0:text>
+  <ns0:text x="939.5556" y="288.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100">Examples</ns0:text>
+  <ns0:rect x="789.3333" y="298.6667" width="302.2222" height="19.5556" rx="2.6667" fill="#ffcc80" />
+  <ns0:text x="940.4444" y="312.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Gateway → 250ms total</ns0:text>
+  <ns0:rect x="789.3333" y="323.5556" width="195.5556" height="19.5556" rx="2.6667" fill="#ffe0b2" />
+  <ns0:text x="887.1111" y="337.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Auth svc → 80ms</ns0:text>
+  <ns0:rect x="789.3333" y="348.4444" width="248.8889" height="19.5556" rx="2.6667" fill="#ffb74d" />
+  <ns0:text x="913.7778" y="362.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Orders svc → 140ms</ns0:text>
+  <ns0:rect x="789.3333" y="373.3333" width="160" height="19.5556" rx="2.6667" fill="#ff9800" />
+  <ns0:text x="869.3333" y="387.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#ffffff">DB query → 100ms</ns0:text>
+  <ns0:rect x="789.3333" y="398.2222" width="88.8889" height="19.5556" rx="2.6667" fill="#e65100" />
+  <ns0:text x="833.7778" y="412.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#ffffff">Cache → 20ms</ns0:text>
+  <ns0:text x="939.5556" y="435.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100">Tools</ns0:text>
+  <ns0:rect x="789.3333" y="444.4444" width="93.3333" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#e65100" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="835.5556" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Jaeger</ns0:text>
+  <ns0:rect x="891.5556" y="444.4444" width="93.3333" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#e65100" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="937.7778" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#212121">Zipkin</ns0:text>
+  <ns0:rect x="993.7778" y="444.4444" width="102.2222" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#e65100" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="1044.4444" y="461.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Open</ns0:text>
+  <ns0:text x="1044.4444" y="477.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Telemetry</ns0:text>
+  <ns0:rect x="35.5556" y="517.3333" width="1066.6667" height="44.4444" rx="7.1111" fill="#f2f2f2" />
+  <ns0:text x="568.8889" y="535.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">Together: Metrics tell you WHEN, Logs tell you WHAT, Traces tell you WHERE across services</ns0:text>
+  <ns0:text x="568.8889" y="552.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">Unified with correlation IDs → OpenTelemetry standard — instrument once, export anywhere</ns0:text>
+</ns0:svg>

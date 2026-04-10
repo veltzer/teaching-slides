@@ -1,112 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- HuggingFace Hub — top center, large box -->
-  <rect x="370" y="30" width="540" height="160" rx="12" fill="#fff3e0" filter="url(#shadow)" stroke="#e65100" stroke-width="2"/>
-  <rect x="370" y="30" width="540" height="44" rx="12" fill="#e65100"/>
-  <rect x="370" y="62" width="540" height="12" fill="#e65100"/>
-  <text x="640" y="62" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">HuggingFace Hub  (huggingface.co)</text>
-
-  <!-- Hub sub-sections -->
-  <rect x="390" y="90" width="160" height="80" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="470" y="113" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Models</text>
-  <text x="470" y="133" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">750 000+ models</text>
-  <text x="470" y="151" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">versioned + model cards</text>
-
-  <rect x="560" y="90" width="160" height="80" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="640" y="113" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Datasets</text>
-  <text x="640" y="133" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">100 000+ datasets</text>
-  <text x="640" y="151" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">streaming support</text>
-
-  <rect x="730" y="90" width="160" height="80" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="810" y="113" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Spaces</text>
-  <text x="810" y="133" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">Gradio / Streamlit</text>
-  <text x="810" y="151" font-family="Arial,sans-serif" font-size="11" fill="#555" text-anchor="middle">hosted demos</text>
-
-  <!-- Arrows from Hub down to components -->
-  <line x1="470" y1="190" x2="250" y2="280" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="190" x2="640" y2="280" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="810" y1="190" x2="1020" y2="280" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- transformers library -->
-  <rect x="60" y="280" width="380" height="170" rx="10" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="2"/>
-  <rect x="60" y="280" width="380" height="36" rx="10" fill="url(#grad-accent)"/>
-  <rect x="60" y="304" width="380" height="12" fill="url(#grad-accent)"/>
-  <text x="250" y="305" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">transformers library</text>
-  <text x="80" y="340" font-family="monospace" font-size="12" fill="#333">from transformers import AutoModel,</text>
-  <text x="80" y="358" font-family="monospace" font-size="12" fill="#333">    AutoTokenizer, AutoConfig</text>
-  <text x="80" y="386" font-family="Arial,sans-serif" font-size="12" fill="#555">• Load any model in 2 lines of code</text>
-  <text x="80" y="404" font-family="Arial,sans-serif" font-size="12" fill="#555">• PyTorch &amp; TensorFlow backends</text>
-  <text x="80" y="422" font-family="Arial,sans-serif" font-size="12" fill="#555">• 150+ model architectures (BERT, GPT, T5...)</text>
-  <text x="80" y="440" font-family="Arial,sans-serif" font-size="12" fill="#555">• Pretrained weights auto-downloaded</text>
-
-  <!-- Pipelines -->
-  <rect x="440" y="280" width="400" height="170" rx="10" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="2"/>
-  <rect x="440" y="280" width="400" height="36" rx="10" fill="#7b1fa2"/>
-  <rect x="440" y="304" width="400" height="12" fill="#7b1fa2"/>
-  <text x="640" y="305" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">pipeline() API</text>
-  <text x="460" y="340" font-family="monospace" font-size="12" fill="#333">from transformers import pipeline</text>
-  <text x="460" y="358" font-family="monospace" font-size="12" fill="#333">nlp = pipeline("sentiment-analysis")</text>
-  <text x="460" y="376" font-family="monospace" font-size="12" fill="#333">nlp("I love this!")</text>
-  <text x="460" y="407" font-family="Arial,sans-serif" font-size="12" fill="#555">Tasks: text-generation, summarization,</text>
-  <text x="460" y="424" font-family="Arial,sans-serif" font-size="12" fill="#555">translation, fill-mask, image-classification,</text>
-  <text x="460" y="442" font-family="Arial,sans-serif" font-size="12" fill="#555">object-detection, audio-classification ...</text>
-
-  <!-- Fine-tuning -->
-  <rect x="860" y="280" width="380" height="170" rx="10" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="2"/>
-  <rect x="860" y="280" width="380" height="36" rx="10" fill="#2e7d32"/>
-  <rect x="860" y="304" width="380" height="12" fill="#2e7d32"/>
-  <text x="1050" y="305" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Fine-Tuning (PEFT / LoRA)</text>
-  <text x="880" y="340" font-family="monospace" font-size="12" fill="#333">from peft import LoraConfig,</text>
-  <text x="880" y="358" font-family="monospace" font-size="12" fill="#333">    get_peft_model</text>
-  <text x="880" y="386" font-family="Arial,sans-serif" font-size="12" fill="#555">• Full fine-tune (all params)</text>
-  <text x="880" y="404" font-family="Arial,sans-serif" font-size="12" fill="#555">• LoRA (low-rank adapters, &lt;1% params)</text>
-  <text x="880" y="422" font-family="Arial,sans-serif" font-size="12" fill="#555">• QLoRA (4-bit quantized LoRA)</text>
-  <text x="880" y="440" font-family="Arial,sans-serif" font-size="12" fill="#555">• Trainer / SFTTrainer helper classes</text>
-
-  <!-- Arrows from components down to Trainer/Datasets -->
-  <line x1="250" y1="450" x2="250" y2="510" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="640" y1="450" x2="640" y2="510" stroke="#7b1fa2" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="1050" y1="450" x2="1050" y2="510" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Datasets row -->
-  <rect x="30" y="510" width="360" height="80" rx="8" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="210" y="536" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f57f17" text-anchor="middle">datasets library</text>
-  <text x="50" y="558" font-family="monospace" font-size="11" fill="#333">from datasets import load_dataset</text>
-  <text x="50" y="576" font-family="Arial,sans-serif" font-size="11" fill="#555">Streaming, caching, Arrow format</text>
-
-  <!-- Evaluate row -->
-  <rect x="410" y="510" width="460" height="80" rx="8" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.5"/>
-  <text x="640" y="536" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">evaluate library</text>
-  <text x="430" y="558" font-family="monospace" font-size="11" fill="#333">import evaluate; bleu = evaluate.load("bleu")</text>
-  <text x="430" y="576" font-family="Arial,sans-serif" font-size="11" fill="#555">BLEU, ROUGE, BERTScore, accuracy, F1 ...</text>
-
-  <!-- Inference row -->
-  <rect x="890" y="510" width="360" height="80" rx="8" fill="#e0f7fa" filter="url(#shadow)" stroke="#00838f" stroke-width="1.5"/>
-  <text x="1070" y="536" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#00838f" text-anchor="middle">Inference API</text>
-  <text x="910" y="558" font-family="Arial,sans-serif" font-size="11" fill="#333">REST API — no GPU needed locally</text>
-  <text x="910" y="576" font-family="Arial,sans-serif" font-size="11" fill="#555">hf_hub_download(), InferenceClient</text>
-
-  <!-- Bottom tagline -->
-  <rect x="30" y="622" width="1220" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="640" y="650" font-family="Arial,sans-serif" font-size="13" fill="#e65100" text-anchor="middle" font-weight="bold">HuggingFace is the GitHub for ML — discover, share, and deploy any model or dataset with a single pip install transformers</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="328.8889" y="26.6667" width="480" height="142.2222" rx="10.6667" fill="#fff3e0" filter="url(#shadow)" stroke="#e65100" stroke-width="1.7778" />
+  <ns0:rect x="328.8889" y="26.6667" width="480" height="39.1111" rx="10.6667" fill="#e65100" />
+  <ns0:rect x="328.8889" y="55.1111" width="480" height="10.6667" fill="#e65100" />
+  <ns0:text x="568.8889" y="55.1111" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#fff" text-anchor="middle">HuggingFace Hub  (huggingface.co)</ns0:text>
+  <ns0:rect x="346.6667" y="80" width="142.2222" height="71.1111" rx="7.1111" fill="#ffe0b2" stroke="#e65100" stroke-width="0.8889" />
+  <ns0:text x="417.7778" y="100.4444" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100" text-anchor="middle">Models</ns0:text>
+  <ns0:text x="417.7778" y="118.2222" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">750 000+ models</ns0:text>
+  <ns0:text x="417.7778" y="134.2222" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">versioned + model cards</ns0:text>
+  <ns0:rect x="497.7778" y="80" width="142.2222" height="71.1111" rx="7.1111" fill="#ffe0b2" stroke="#e65100" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="100.4444" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100" text-anchor="middle">Datasets</ns0:text>
+  <ns0:text x="568.8889" y="118.2222" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">100 000+ datasets</ns0:text>
+  <ns0:text x="568.8889" y="134.2222" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">streaming support</ns0:text>
+  <ns0:rect x="648.8889" y="80" width="142.2222" height="71.1111" rx="7.1111" fill="#ffe0b2" stroke="#e65100" stroke-width="0.8889" />
+  <ns0:text x="720" y="100.4444" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#e65100" text-anchor="middle">Spaces</ns0:text>
+  <ns0:text x="720" y="118.2222" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">Gradio / Streamlit</ns0:text>
+  <ns0:text x="720" y="134.2222" font-family="Arial,sans-serif" font-size="10" fill="#555" text-anchor="middle">hosted demos</ns0:text>
+  <ns0:line x1="417.7778" y1="168.8889" x2="222.2222" y2="248.8889" stroke="#e65100" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="568.8889" y1="168.8889" x2="568.8889" y2="248.8889" stroke="#e65100" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:line x1="720" y1="168.8889" x2="906.6667" y2="248.8889" stroke="#e65100" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="53.3333" y="248.8889" width="337.7778" height="151.1111" rx="8.8889" fill="#e3f2fd" filter="url(#shadow)" stroke="#1565c0" stroke-width="1.7778" />
+  <ns0:rect x="53.3333" y="248.8889" width="337.7778" height="32" rx="8.8889" fill="url(#grad-accent)" />
+  <ns0:rect x="53.3333" y="270.2222" width="337.7778" height="10.6667" fill="url(#grad-accent)" />
+  <ns0:text x="222.2222" y="271.1111" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#fff" text-anchor="middle">transformers library</ns0:text>
+  <ns0:text x="71.1111" y="302.2222" font-family="monospace" font-size="10.6667" fill="#333">from transformers import AutoModel,</ns0:text>
+  <ns0:text x="71.1111" y="318.2222" font-family="monospace" font-size="10.6667" fill="#333">    AutoTokenizer, AutoConfig</ns0:text>
+  <ns0:text x="71.1111" y="343.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• Load any model in 2 lines of code</ns0:text>
+  <ns0:text x="71.1111" y="359.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• PyTorch &amp; TensorFlow backends</ns0:text>
+  <ns0:text x="71.1111" y="375.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• 150+ model architectures (BERT, GPT, T5...)</ns0:text>
+  <ns0:text x="71.1111" y="391.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• Pretrained weights auto-downloaded</ns0:text>
+  <ns0:rect x="391.1111" y="248.8889" width="355.5556" height="151.1111" rx="8.8889" fill="#f3e5f5" filter="url(#shadow)" stroke="#7b1fa2" stroke-width="1.7778" />
+  <ns0:rect x="391.1111" y="248.8889" width="355.5556" height="32" rx="8.8889" fill="#7b1fa2" />
+  <ns0:rect x="391.1111" y="270.2222" width="355.5556" height="10.6667" fill="#7b1fa2" />
+  <ns0:text x="568.8889" y="271.1111" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#fff" text-anchor="middle">pipeline() API</ns0:text>
+  <ns0:text x="408.8889" y="302.2222" font-family="monospace" font-size="10.6667" fill="#333">from transformers import pipeline</ns0:text>
+  <ns0:text x="408.8889" y="318.2222" font-family="monospace" font-size="10.6667" fill="#333">nlp = pipeline("sentiment-analysis")</ns0:text>
+  <ns0:text x="408.8889" y="334.2222" font-family="monospace" font-size="10.6667" fill="#333">nlp("I love this!")</ns0:text>
+  <ns0:text x="408.8889" y="361.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Tasks: text-generation, summarization,</ns0:text>
+  <ns0:text x="408.8889" y="376.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">translation, fill-mask, image-classification,</ns0:text>
+  <ns0:text x="408.8889" y="392.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">object-detection, audio-classification ...</ns0:text>
+  <ns0:rect x="764.4444" y="248.8889" width="337.7778" height="151.1111" rx="8.8889" fill="#e8f5e9" filter="url(#shadow)" stroke="#2e7d32" stroke-width="1.7778" />
+  <ns0:rect x="764.4444" y="248.8889" width="337.7778" height="32" rx="8.8889" fill="#2e7d32" />
+  <ns0:rect x="764.4444" y="270.2222" width="337.7778" height="10.6667" fill="#2e7d32" />
+  <ns0:text x="933.3333" y="271.1111" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#fff" text-anchor="middle">Fine-Tuning (PEFT / LoRA)</ns0:text>
+  <ns0:text x="782.2222" y="302.2222" font-family="monospace" font-size="10.6667" fill="#333">from peft import LoraConfig,</ns0:text>
+  <ns0:text x="782.2222" y="318.2222" font-family="monospace" font-size="10.6667" fill="#333">    get_peft_model</ns0:text>
+  <ns0:text x="782.2222" y="343.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• Full fine-tune (all params)</ns0:text>
+  <ns0:text x="782.2222" y="359.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• LoRA (low-rank adapters, &lt;1% params)</ns0:text>
+  <ns0:text x="782.2222" y="375.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• QLoRA (4-bit quantized LoRA)</ns0:text>
+  <ns0:text x="782.2222" y="391.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">• Trainer / SFTTrainer helper classes</ns0:text>
+  <ns0:line x1="222.2222" y1="400" x2="222.2222" y2="453.3333" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="568.8889" y1="400" x2="568.8889" y2="453.3333" stroke="#7b1fa2" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="933.3333" y1="400" x2="933.3333" y2="453.3333" stroke="#2e7d32" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:rect x="26.6667" y="453.3333" width="320" height="71.1111" rx="7.1111" fill="#fff8e1" filter="url(#shadow)" stroke="#f9a825" stroke-width="1.3333" />
+  <ns0:text x="186.6667" y="476.4444" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#f57f17" text-anchor="middle">datasets library</ns0:text>
+  <ns0:text x="44.4444" y="496" font-family="monospace" font-size="10" fill="#333">from datasets import load_dataset</ns0:text>
+  <ns0:text x="44.4444" y="512" font-family="Arial,sans-serif" font-size="10" fill="#555">Streaming, caching, Arrow format</ns0:text>
+  <ns0:rect x="364.4444" y="453.3333" width="408.8889" height="71.1111" rx="7.1111" fill="#fce4ec" filter="url(#shadow)" stroke="#c62828" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="476.4444" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#c62828" text-anchor="middle">evaluate library</ns0:text>
+  <ns0:text x="382.2222" y="496" font-family="monospace" font-size="10" fill="#333">import evaluate; bleu = evaluate.load("bleu")</ns0:text>
+  <ns0:text x="382.2222" y="512" font-family="Arial,sans-serif" font-size="10" fill="#555">BLEU, ROUGE, BERTScore, accuracy, F1 ...</ns0:text>
+  <ns0:rect x="791.1111" y="453.3333" width="320" height="71.1111" rx="7.1111" fill="#e0f7fa" filter="url(#shadow)" stroke="#00838f" stroke-width="1.3333" />
+  <ns0:text x="951.1111" y="476.4444" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#00838f" text-anchor="middle">Inference API</ns0:text>
+  <ns0:text x="808.8889" y="496" font-family="Arial,sans-serif" font-size="10" fill="#333">REST API — no GPU needed locally</ns0:text>
+  <ns0:text x="808.8889" y="512" font-family="Arial,sans-serif" font-size="10" fill="#555">hf_hub_download(), InferenceClient</ns0:text>
+  <ns0:rect x="26.6667" y="552.8889" width="1084.4444" height="44.4444" rx="7.1111" fill="#fff3e0" stroke="#e65100" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="577.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="#e65100" text-anchor="middle" font-weight="bold">HuggingFace is the GitHub for ML — discover, share, and deploy any model or dataset with a single pip install transformers</ns0:text>
+</ns0:svg>

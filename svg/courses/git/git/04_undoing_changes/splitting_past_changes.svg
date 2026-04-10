@@ -1,47 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="298" y="64" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Before</text>
-  <!-- Before: big commit -->
-  <rect x="117" y="108" width="363" height="198" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="4" rx="16" filter="url(#shadow)"/>
-  <text x="298" y="188" text-anchor="middle" font-size="22" font-weight="bold" fill="#7b1fa2">Commit "ABC"</text>
-  <text x="298" y="258" text-anchor="middle" font-size="18" fill="#555">3 unrelated changes</text>
-  <line x1="298" y1="316" x2="298" y2="412" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="427" y="384" font-size="18" font-style="italic" fill="#7b1fa2">rebase -i → edit</text>
-  <text x="640" y="490" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">After</text>
-  <!-- After: 3 commits -->
-  <rect x="64" y="524" width="213" height="144" fill="#e8f5e9" stroke="#4caf50" stroke-width="4" rx="12" filter="url(#shadow)"/>
-  <text x="170" y="612" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e7d32">A</text>
-  <line x1="277" y1="596" x2="341" y2="596" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
-  <rect x="352" y="524" width="213" height="144" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="12" filter="url(#shadow)"/>
-  <text x="459" y="612" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">B</text>
-  <line x1="565" y1="596" x2="629" y2="596" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
-  <rect x="640" y="524" width="213" height="144" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="12" filter="url(#shadow)"/>
-  <text x="747" y="612" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">C</text>
-  <!-- Steps -->
-  <text x="939" y="144" font-size="18" fill="#555">1. git rebase -i HEAD~N</text>
-  <text x="939" y="208" font-size="18" fill="#555">2. Mark commit as "edit"</text>
-  <text x="939" y="272" font-size="18" fill="#555">3. git reset HEAD~1</text>
-  <text x="939" y="336" font-size="18" fill="#555">4. git add + commit (A)</text>
-  <text x="939" y="400" font-size="18" fill="#555">5. git add + commit (B)</text>
-  <text x="939" y="464" font-size="18" fill="#555">6. git add + commit (C)</text>
-  <text x="939" y="528" font-size="18" fill="#555">7. git rebase --continue</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="264.8889" y="56.8889" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#333">Before</ns0:text>
+  <ns0:rect x="104" y="96" width="322.6667" height="176" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3.5556" rx="14.2222" filter="url(#shadow)" />
+  <ns0:text x="264.8889" y="167.1111" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#7b1fa2">Commit "ABC"</ns0:text>
+  <ns0:text x="264.8889" y="229.3333" text-anchor="middle" font-size="16" fill="#555">3 unrelated changes</ns0:text>
+  <ns0:line x1="264.8889" y1="280.8889" x2="264.8889" y2="366.2222" stroke="#555" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <ns0:text x="379.5556" y="341.3333" font-size="16" font-style="italic" fill="#7b1fa2">rebase -i → edit</ns0:text>
+  <ns0:text x="568.8889" y="435.5556" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#333">After</ns0:text>
+  <ns0:rect x="56.8889" y="465.7778" width="189.3333" height="128" fill="#e8f5e9" stroke="#4caf50" stroke-width="3.5556" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="151.1111" y="544" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#2e7d32">A</ns0:text>
+  <ns0:line x1="246.2222" y1="529.7778" x2="303.1111" y2="529.7778" stroke="#555" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="312.8889" y="465.7778" width="189.3333" height="128" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3.5556" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="408" y="544" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#1565c0">B</ns0:text>
+  <ns0:line x1="502.2222" y1="529.7778" x2="559.1111" y2="529.7778" stroke="#555" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="568.8889" y="465.7778" width="189.3333" height="128" fill="#fff3e0" stroke="#f57c00" stroke-width="3.5556" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="664" y="544" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#e65100">C</ns0:text>
+  <ns0:text x="834.6667" y="128" font-size="16" fill="#555">1. git rebase -i HEAD~N</ns0:text>
+  <ns0:text x="834.6667" y="184.8889" font-size="16" fill="#555">2. Mark commit as "edit"</ns0:text>
+  <ns0:text x="834.6667" y="241.7778" font-size="16" fill="#555">3. git reset HEAD~1</ns0:text>
+  <ns0:text x="834.6667" y="298.6667" font-size="16" fill="#555">4. git add + commit (A)</ns0:text>
+  <ns0:text x="834.6667" y="355.5556" font-size="16" fill="#555">5. git add + commit (B)</ns0:text>
+  <ns0:text x="834.6667" y="412.4444" font-size="16" fill="#555">6. git add + commit (C)</ns0:text>
+  <ns0:text x="834.6667" y="469.3333" font-size="16" fill="#555">7. git rebase --continue</ns0:text>
+</ns0:svg>

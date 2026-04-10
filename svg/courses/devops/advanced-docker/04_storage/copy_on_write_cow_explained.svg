@@ -1,48 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Title -->
-  <text x="640" y="44" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Copy-on-Write (CoW) Explained</text>
-  <!-- Read operation -->
-  <text x="68" y="90" font-size="22" font-weight="bold" fill="#1565c0">Read operation:</text>
-  <rect x="68" y="104" width="510" height="60" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323" y="140" text-anchor="middle" font-size="20" fill="#333333">Upper (R/W)</text>
-  <text x="625" y="140" font-size="16" fill="#555555">file not found - look in lower</text>
-  <rect x="68" y="170" width="510" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323" y="206" text-anchor="middle" font-size="20" fill="#333333">Lower (RO)</text>
-  <text x="625" y="206" font-size="16" fill="#1565c0">file found here, read directly</text>
-  <!-- Write operation -->
-  <text x="68" y="268" font-size="22" font-weight="bold" fill="#1565c0">Write operation (existing file):</text>
-  <rect x="68" y="282" width="510" height="60" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323" y="318" text-anchor="middle" font-size="20" fill="#333333">Upper (R/W)</text>
-  <text x="625" y="318" font-size="16" fill="#1565c0">file copied here, then modified</text>
-  <rect x="68" y="348" width="510" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323" y="384" text-anchor="middle" font-size="20" fill="#333333">Lower (RO)</text>
-  <text x="625" y="384" font-size="16" fill="#555555">original unchanged</text>
-  <!-- Delete operation -->
-  <text x="68" y="450" font-size="22" font-weight="bold" fill="#c62828">Delete operation:</text>
-  <rect x="68" y="464" width="510" height="60" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323" y="500" text-anchor="middle" font-size="20" fill="#333333">Upper (R/W)</text>
-  <text x="625" y="500" font-size="16" fill="#c62828">whiteout file created</text>
-  <rect x="68" y="530" width="510" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="323" y="566" text-anchor="middle" font-size="20" fill="#333333">Lower (RO)</text>
-  <text x="625" y="566" font-size="16" fill="#555555">original still exists but hidden</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="39.1111" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="#1565c0">Copy-on-Write (CoW) Explained</ns0:text>
+  <ns0:text x="60.4444" y="80" font-size="19.5556" font-weight="bold" fill="#1565c0">Read operation:</ns0:text>
+  <ns0:rect x="60.4444" y="92.4444" width="453.3333" height="53.3333" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="287.1111" y="124.4444" text-anchor="middle" font-size="17.7778" fill="#333333">Upper (R/W)</ns0:text>
+  <ns0:text x="555.5556" y="124.4444" font-size="14.2222" fill="#555555">file not found - look in lower</ns0:text>
+  <ns0:rect x="60.4444" y="151.1111" width="453.3333" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="287.1111" y="183.1111" text-anchor="middle" font-size="17.7778" fill="#333333">Lower (RO)</ns0:text>
+  <ns0:text x="555.5556" y="183.1111" font-size="14.2222" fill="#1565c0">file found here, read directly</ns0:text>
+  <ns0:text x="60.4444" y="238.2222" font-size="19.5556" font-weight="bold" fill="#1565c0">Write operation (existing file):</ns0:text>
+  <ns0:rect x="60.4444" y="250.6667" width="453.3333" height="53.3333" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="287.1111" y="282.6667" text-anchor="middle" font-size="17.7778" fill="#333333">Upper (R/W)</ns0:text>
+  <ns0:text x="555.5556" y="282.6667" font-size="14.2222" fill="#1565c0">file copied here, then modified</ns0:text>
+  <ns0:rect x="60.4444" y="309.3333" width="453.3333" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="287.1111" y="341.3333" text-anchor="middle" font-size="17.7778" fill="#333333">Lower (RO)</ns0:text>
+  <ns0:text x="555.5556" y="341.3333" font-size="14.2222" fill="#555555">original unchanged</ns0:text>
+  <ns0:text x="60.4444" y="400" font-size="19.5556" font-weight="bold" fill="#c62828">Delete operation:</ns0:text>
+  <ns0:rect x="60.4444" y="412.4444" width="453.3333" height="53.3333" rx="5.3333" fill="#ffebee" stroke="#c62828" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="287.1111" y="444.4444" text-anchor="middle" font-size="17.7778" fill="#333333">Upper (R/W)</ns0:text>
+  <ns0:text x="555.5556" y="444.4444" font-size="14.2222" fill="#c62828">whiteout file created</ns0:text>
+  <ns0:rect x="60.4444" y="471.1111" width="453.3333" height="53.3333" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="287.1111" y="503.1111" text-anchor="middle" font-size="17.7778" fill="#333333">Lower (RO)</ns0:text>
+  <ns0:text x="555.5556" y="503.1111" font-size="14.2222" fill="#555555">original still exists but hidden</ns0:text>
+</ns0:svg>

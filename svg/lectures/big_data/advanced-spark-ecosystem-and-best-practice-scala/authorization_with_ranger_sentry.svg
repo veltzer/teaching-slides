@@ -1,57 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="height: 400px; display: block; margin: auto;">
-  <rect width="1280" height="720" fill="#f8f9fa" />
-  <text x="640" y="45" font-family="Arial, sans-serif" font-size="28.8" font-weight="bold" text-anchor="middle" fill="#333">Apache Ranger Security Architecture</text>
-  <rect x="512" y="90" width="256" height="108" fill="#2e7d32" rx="8" />
-  <text x="640" y="135" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Ranger Admin</text>
-  <text x="640" y="171" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Policy Manager</text>
-  <rect x="880" y="90" width="192" height="108" fill="#1565c0" rx="8" />
-  <text x="976" y="135" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Policy DB</text>
-  <text x="976" y="171" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">MySQL/Postgres</text>
-  <rect x="208" y="90" width="192" height="108" fill="#6a1b9a" rx="8" />
-  <text x="304" y="135" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Audit Store</text>
-  <text x="304" y="171" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Solr/ES</text>
-  <g transform="translate(0, 180)">
-    <rect x="80" y="0" width="192" height="144" fill="#ff6f00" rx="8" />
-    <text x="176" y="36" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white" font-weight="bold">HDFS</text>
-    <rect x="96" y="54" width="160" height="63" fill="#ff8f00" rx="4.8" />
-    <text x="176" y="93.6" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Ranger Plugin</text>
-    <rect x="304" y="0" width="192" height="144" fill="#ff6f00" rx="8" />
-    <text x="400" y="36" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white" font-weight="bold">Hive</text>
-    <rect x="320" y="54" width="160" height="63" fill="#ff8f00" rx="4.8" />
-    <text x="400" y="93.6" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Ranger Plugin</text>
-    <rect x="528" y="0" width="192" height="144" fill="#ff6f00" rx="8" />
-    <text x="624" y="36" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white" font-weight="bold">Spark</text>
-    <rect x="544" y="54" width="160" height="63" fill="#ff8f00" rx="4.8" />
-    <text x="624" y="93.6" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Ranger Plugin</text>
-    <rect x="752" y="0" width="192" height="144" fill="#ff6f00" rx="8" />
-    <text x="848" y="36" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white" font-weight="bold">Kafka</text>
-    <rect x="768" y="54" width="160" height="63" fill="#ff8f00" rx="4.8" />
-    <text x="848" y="93.6" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Ranger Plugin</text>
-    <rect x="976" y="0" width="192" height="144" fill="#ff6f00" rx="8" />
-    <text x="1072" y="36" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white" font-weight="bold">HBase</text>
-    <rect x="992" y="54" width="160" height="63" fill="#ff8f00" rx="4.8" />
-    <text x="1072" y="93.6" font-family="Arial, sans-serif" font-size="17.6" text-anchor="middle" fill="white">Ranger Plugin</text>
-  </g>
-  <rect x="400" y="576" width="480" height="90" fill="#e0e0e0" rx="8" />
-  <text x="640" y="630" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="#333" font-weight="bold">Users / Applications / Services</text>
-  <defs>
-    <marker id="arrowRanger" markerWidth="12.8" markerHeight="14.4" refX="12.8" refY="7.2" orient="auto">
-      <path d="M 0 0 L 12.8 7.2 L 0 14.4 z" fill="#666" />
-    </marker>
-  </defs>
-  <path d="M 640 198 L 176 324" stroke="#666" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 640 198 L 400 324" stroke="#666" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 640 198 L 624 324" stroke="#666" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 640 198 L 848 324" stroke="#666" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 640 198 L 1072 324" stroke="#666" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 176 468 L 304 198" stroke="#9c27b0" stroke-width="3.2" marker-end="url(#arrowRanger)" stroke-dasharray="8 4.8" />
-  <path d="M 400 468 L 304 198" stroke="#9c27b0" stroke-width="3.2" marker-end="url(#arrowRanger)" stroke-dasharray="8 4.8" />
-  <path d="M 768 144 L 880 144" stroke="#1976d2" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 560 576 L 400 468" stroke="#333" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 640 576 L 624 468" stroke="#333" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <path d="M 720 576 L 848 468" stroke="#333" stroke-width="3.2" marker-end="url(#arrowRanger)" />
-  <text x="480" y="252" font-family="Arial, sans-serif" font-size="16" fill="#666">Policy Sync</text>
-  <text x="240" y="306" font-family="Arial, sans-serif" font-size="16" fill="#9c27b0">Audit</text>
-  <text x="824" y="135" font-family="Arial, sans-serif" font-size="16" fill="#1976d2">Store</text>
-  <text x="512" y="531" font-family="Arial, sans-serif" font-size="16" fill="#333">Access Request</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="height: 400px; display: block; margin: auto;">
+  <ns0:rect width="764.1791" height="429.8507" fill="#f8f9fa" />
+  <ns0:text x="382.0896" y="26.8657" font-family="Arial, sans-serif" font-size="17.194" font-weight="bold" text-anchor="middle" fill="#333">Apache Ranger Security Architecture</ns0:text>
+  <ns0:rect x="305.6716" y="53.7313" width="152.8358" height="64.4776" fill="#2e7d32" rx="4.7761" />
+  <ns0:text x="382.0896" y="80.597" font-family="Arial, sans-serif" font-size="13.3731" text-anchor="middle" fill="white" font-weight="bold">Ranger Admin</ns0:text>
+  <ns0:text x="382.0896" y="102.0896" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Policy Manager</ns0:text>
+  <ns0:rect x="525.3731" y="53.7313" width="114.6269" height="64.4776" fill="#1565c0" rx="4.7761" />
+  <ns0:text x="582.6866" y="80.597" font-family="Arial, sans-serif" font-size="13.3731" text-anchor="middle" fill="white" font-weight="bold">Policy DB</ns0:text>
+  <ns0:text x="582.6866" y="102.0896" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">MySQL/Postgres</ns0:text>
+  <ns0:rect x="124.1791" y="53.7313" width="114.6269" height="64.4776" fill="#6a1b9a" rx="4.7761" />
+  <ns0:text x="181.4925" y="80.597" font-family="Arial, sans-serif" font-size="13.3731" text-anchor="middle" fill="white" font-weight="bold">Audit Store</ns0:text>
+  <ns0:text x="181.4925" y="102.0896" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Solr/ES</ns0:text>
+  <ns0:g transform="translate(0, 180)">
+    <ns0:rect x="47.7612" y="0" width="114.6269" height="85.9701" fill="#ff6f00" rx="4.7761" />
+    <ns0:text x="105.0746" y="21.4925" font-family="Arial, sans-serif" font-size="11.4627" text-anchor="middle" fill="white" font-weight="bold">HDFS</ns0:text>
+    <ns0:rect x="57.3134" y="32.2388" width="95.5224" height="37.6119" fill="#ff8f00" rx="2.8657" />
+    <ns0:text x="105.0746" y="55.8806" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Ranger Plugin</ns0:text>
+    <ns0:rect x="181.4925" y="0" width="114.6269" height="85.9701" fill="#ff6f00" rx="4.7761" />
+    <ns0:text x="238.806" y="21.4925" font-family="Arial, sans-serif" font-size="11.4627" text-anchor="middle" fill="white" font-weight="bold">Hive</ns0:text>
+    <ns0:rect x="191.0448" y="32.2388" width="95.5224" height="37.6119" fill="#ff8f00" rx="2.8657" />
+    <ns0:text x="238.806" y="55.8806" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Ranger Plugin</ns0:text>
+    <ns0:rect x="315.2239" y="0" width="114.6269" height="85.9701" fill="#ff6f00" rx="4.7761" />
+    <ns0:text x="372.5373" y="21.4925" font-family="Arial, sans-serif" font-size="11.4627" text-anchor="middle" fill="white" font-weight="bold">Spark</ns0:text>
+    <ns0:rect x="324.7761" y="32.2388" width="95.5224" height="37.6119" fill="#ff8f00" rx="2.8657" />
+    <ns0:text x="372.5373" y="55.8806" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Ranger Plugin</ns0:text>
+    <ns0:rect x="448.9552" y="0" width="114.6269" height="85.9701" fill="#ff6f00" rx="4.7761" />
+    <ns0:text x="506.2687" y="21.4925" font-family="Arial, sans-serif" font-size="11.4627" text-anchor="middle" fill="white" font-weight="bold">Kafka</ns0:text>
+    <ns0:rect x="458.5075" y="32.2388" width="95.5224" height="37.6119" fill="#ff8f00" rx="2.8657" />
+    <ns0:text x="506.2687" y="55.8806" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Ranger Plugin</ns0:text>
+    <ns0:rect x="582.6866" y="0" width="114.6269" height="85.9701" fill="#ff6f00" rx="4.7761" />
+    <ns0:text x="640" y="21.4925" font-family="Arial, sans-serif" font-size="11.4627" text-anchor="middle" fill="white" font-weight="bold">HBase</ns0:text>
+    <ns0:rect x="592.2388" y="32.2388" width="95.5224" height="37.6119" fill="#ff8f00" rx="2.8657" />
+    <ns0:text x="640" y="55.8806" font-family="Arial, sans-serif" font-size="10.5075" text-anchor="middle" fill="white">Ranger Plugin</ns0:text>
+  </ns0:g>
+  <ns0:rect x="238.806" y="343.8806" width="286.5672" height="53.7313" fill="#e0e0e0" rx="4.7761" />
+  <ns0:text x="382.0896" y="376.1194" font-family="Arial, sans-serif" font-size="13.3731" text-anchor="middle" fill="#333" font-weight="bold">Users / Applications / Services</ns0:text>
+  <ns0:defs>
+    <ns0:marker id="arrowRanger" markerWidth="7.6418" markerHeight="8.597" refX="7.6418" refY="4.2985" orient="auto">
+      <ns0:path d="M 0 0 L 7.6418 4.2985 L 0 8.597 z" fill="#666" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:path d="M 382.0896 118.209 L 105.0746 193.4328" stroke="#666" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 382.0896 118.209 L 238.806 193.4328" stroke="#666" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 382.0896 118.209 L 372.5373 193.4328" stroke="#666" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 382.0896 118.209 L 506.2687 193.4328" stroke="#666" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 382.0896 118.209 L 640 193.4328" stroke="#666" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 105.0746 279.403 L 181.4925 118.209" stroke="#9c27b0" stroke-width="1.9104" marker-end="url(#arrowRanger)" stroke-dasharray="4.7761 2.8657" />
+  <ns0:path d="M 238.806 279.403 L 181.4925 118.209" stroke="#9c27b0" stroke-width="1.9104" marker-end="url(#arrowRanger)" stroke-dasharray="4.7761 2.8657" />
+  <ns0:path d="M 458.5075 85.9701 L 525.3731 85.9701" stroke="#1976d2" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 334.3284 343.8806 L 238.806 279.403" stroke="#333" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 382.0896 343.8806 L 372.5373 279.403" stroke="#333" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:path d="M 429.8507 343.8806 L 506.2687 279.403" stroke="#333" stroke-width="1.9104" marker-end="url(#arrowRanger)" />
+  <ns0:text x="286.5672" y="150.4478" font-family="Arial, sans-serif" font-size="10" fill="#666">Policy Sync</ns0:text>
+  <ns0:text x="143.2836" y="182.6866" font-family="Arial, sans-serif" font-size="10" fill="#9c27b0">Audit</ns0:text>
+  <ns0:text x="491.9403" y="80.597" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">Store</ns0:text>
+  <ns0:text x="305.6716" y="317.0149" font-family="Arial, sans-serif" font-size="10" fill="#333">Access Request</ns0:text>
+</ns0:svg>

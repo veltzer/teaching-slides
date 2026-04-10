@@ -1,72 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Pipeline header -->
-  <rect x="80" y="60" width="1120" height="55" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="97" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">Multi-Environment Deployment Pipeline</text>
-  <!-- Environment cards -->
-  <rect x="80" y="155" width="240" height="250" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="80" y="155" width="240" height="46" rx="12" fill="url(#grad-accent)"/>
-  <rect x="80" y="187" width="240" height="14" fill="url(#grad-accent)"/>
-  <text x="200" y="189" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Dev</text>
-  <text x="200" y="240" text-anchor="middle" fill="#1565c0" font-size="16" font-family="Arial, sans-serif">Auto-deploy</text>
-  <text x="200" y="268" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Every commit</text>
-  <text x="200" y="296" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Feature branches</text>
-  <text x="200" y="324" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">No approval needed</text>
-  <text x="200" y="362" text-anchor="middle" fill="#888" font-size="13" font-family="Arial, sans-serif">Minutes</text>
-  <line x1="320" y1="280" x2="370" y2="280" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="380" y="155" width="240" height="250" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="380" y="155" width="240" height="46" rx="12" fill="#43a047"/>
-  <rect x="380" y="187" width="240" height="14" fill="#43a047"/>
-  <text x="500" y="189" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Staging</text>
-  <text x="500" y="240" text-anchor="middle" fill="#2e7d32" font-size="16" font-family="Arial, sans-serif">Daily sync</text>
-  <text x="500" y="268" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Full testing suite</text>
-  <text x="500" y="296" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">QA validation</text>
-  <text x="500" y="324" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Performance tests</text>
-  <text x="500" y="362" text-anchor="middle" fill="#888" font-size="13" font-family="Arial, sans-serif">Hours</text>
-  <line x1="620" y1="280" x2="670" y2="280" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="680" y="155" width="240" height="250" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="680" y="155" width="240" height="46" rx="12" fill="#fb8c00"/>
-  <rect x="680" y="187" width="240" height="14" fill="#fb8c00"/>
-  <text x="800" y="189" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Pre-Prod</text>
-  <text x="800" y="240" text-anchor="middle" fill="#e65100" font-size="16" font-family="Arial, sans-serif">Weekly release</text>
-  <text x="800" y="268" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Prod mirror</text>
-  <text x="800" y="296" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Load testing</text>
-  <text x="800" y="324" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Sign-off required</text>
-  <text x="800" y="362" text-anchor="middle" fill="#888" font-size="13" font-family="Arial, sans-serif">Days</text>
-  <line x1="920" y1="280" x2="970" y2="280" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="980" y="155" width="220" height="250" rx="12" fill="#ffebee" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="980" y="155" width="220" height="46" rx="12" fill="#e53935"/>
-  <rect x="980" y="187" width="220" height="14" fill="#e53935"/>
-  <text x="1090" y="189" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Prod</text>
-  <text x="1090" y="240" text-anchor="middle" fill="#b71c1c" font-size="16" font-family="Arial, sans-serif">Manual gate</text>
-  <text x="1090" y="268" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Approved only</text>
-  <text x="1090" y="296" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Canary rollout</text>
-  <text x="1090" y="324" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Instant rollback</text>
-  <text x="1090" y="362" text-anchor="middle" fill="#888" font-size="13" font-family="Arial, sans-serif">Controlled</text>
-  <!-- Bottom note -->
-  <rect x="80" y="440" width="1120" height="240" rx="12" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="478" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">AI-Managed Environment Consistency</text>
-  <text x="640" y="515" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Config drift detection across environments</text>
-  <text x="640" y="548" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Automated secret rotation and env-var sync</text>
-  <text x="640" y="581" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Promotion gating based on quality metrics</text>
-  <text x="640" y="614" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Rollback triggers on error rate thresholds</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="71.1111" y="53.3333" width="995.5556" height="48.8889" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="86.2222" text-anchor="middle" fill="white" font-size="21.3333" font-weight="bold" font-family="Arial, sans-serif">Multi-Environment Deployment Pipeline</ns0:text>
+  <ns0:rect x="71.1111" y="137.7778" width="213.3333" height="222.2222" rx="10.6667" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="71.1111" y="137.7778" width="213.3333" height="40.8889" rx="10.6667" fill="url(#grad-accent)" />
+  <ns0:rect x="71.1111" y="166.2222" width="213.3333" height="12.4444" fill="url(#grad-accent)" />
+  <ns0:text x="177.7778" y="168" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Dev</ns0:text>
+  <ns0:text x="177.7778" y="213.3333" text-anchor="middle" fill="#1565c0" font-size="14.2222" font-family="Arial, sans-serif">Auto-deploy</ns0:text>
+  <ns0:text x="177.7778" y="238.2222" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Every commit</ns0:text>
+  <ns0:text x="177.7778" y="263.1111" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Feature branches</ns0:text>
+  <ns0:text x="177.7778" y="288" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">No approval needed</ns0:text>
+  <ns0:text x="177.7778" y="321.7778" text-anchor="middle" fill="#888" font-size="11.5556" font-family="Arial, sans-serif">Minutes</ns0:text>
+  <ns0:line x1="284.4444" y1="248.8889" x2="328.8889" y2="248.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="337.7778" y="137.7778" width="213.3333" height="222.2222" rx="10.6667" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="337.7778" y="137.7778" width="213.3333" height="40.8889" rx="10.6667" fill="#43a047" />
+  <ns0:rect x="337.7778" y="166.2222" width="213.3333" height="12.4444" fill="#43a047" />
+  <ns0:text x="444.4444" y="168" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Staging</ns0:text>
+  <ns0:text x="444.4444" y="213.3333" text-anchor="middle" fill="#2e7d32" font-size="14.2222" font-family="Arial, sans-serif">Daily sync</ns0:text>
+  <ns0:text x="444.4444" y="238.2222" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Full testing suite</ns0:text>
+  <ns0:text x="444.4444" y="263.1111" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">QA validation</ns0:text>
+  <ns0:text x="444.4444" y="288" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Performance tests</ns0:text>
+  <ns0:text x="444.4444" y="321.7778" text-anchor="middle" fill="#888" font-size="11.5556" font-family="Arial, sans-serif">Hours</ns0:text>
+  <ns0:line x1="551.1111" y1="248.8889" x2="595.5556" y2="248.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="604.4444" y="137.7778" width="213.3333" height="222.2222" rx="10.6667" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="604.4444" y="137.7778" width="213.3333" height="40.8889" rx="10.6667" fill="#fb8c00" />
+  <ns0:rect x="604.4444" y="166.2222" width="213.3333" height="12.4444" fill="#fb8c00" />
+  <ns0:text x="711.1111" y="168" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Pre-Prod</ns0:text>
+  <ns0:text x="711.1111" y="213.3333" text-anchor="middle" fill="#e65100" font-size="14.2222" font-family="Arial, sans-serif">Weekly release</ns0:text>
+  <ns0:text x="711.1111" y="238.2222" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Prod mirror</ns0:text>
+  <ns0:text x="711.1111" y="263.1111" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Load testing</ns0:text>
+  <ns0:text x="711.1111" y="288" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Sign-off required</ns0:text>
+  <ns0:text x="711.1111" y="321.7778" text-anchor="middle" fill="#888" font-size="11.5556" font-family="Arial, sans-serif">Days</ns0:text>
+  <ns0:line x1="817.7778" y1="248.8889" x2="862.2222" y2="248.8889" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="871.1111" y="137.7778" width="195.5556" height="222.2222" rx="10.6667" fill="#ffebee" stroke="#e53935" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="871.1111" y="137.7778" width="195.5556" height="40.8889" rx="10.6667" fill="#e53935" />
+  <ns0:rect x="871.1111" y="166.2222" width="195.5556" height="12.4444" fill="#e53935" />
+  <ns0:text x="968.8889" y="168" text-anchor="middle" fill="white" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Prod</ns0:text>
+  <ns0:text x="968.8889" y="213.3333" text-anchor="middle" fill="#b71c1c" font-size="14.2222" font-family="Arial, sans-serif">Manual gate</ns0:text>
+  <ns0:text x="968.8889" y="238.2222" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Approved only</ns0:text>
+  <ns0:text x="968.8889" y="263.1111" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Canary rollout</ns0:text>
+  <ns0:text x="968.8889" y="288" text-anchor="middle" fill="#444" font-size="12.4444" font-family="Arial, sans-serif">Instant rollback</ns0:text>
+  <ns0:text x="968.8889" y="321.7778" text-anchor="middle" fill="#888" font-size="11.5556" font-family="Arial, sans-serif">Controlled</ns0:text>
+  <ns0:rect x="71.1111" y="391.1111" width="995.5556" height="213.3333" rx="10.6667" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="424.8889" text-anchor="middle" fill="#1565c0" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">AI-Managed Environment Consistency</ns0:text>
+  <ns0:text x="568.8889" y="457.7778" text-anchor="middle" fill="#444" font-size="14.2222" font-family="Arial, sans-serif">• Config drift detection across environments</ns0:text>
+  <ns0:text x="568.8889" y="487.1111" text-anchor="middle" fill="#444" font-size="14.2222" font-family="Arial, sans-serif">• Automated secret rotation and env-var sync</ns0:text>
+  <ns0:text x="568.8889" y="516.4444" text-anchor="middle" fill="#444" font-size="14.2222" font-family="Arial, sans-serif">• Promotion gating based on quality metrics</ns0:text>
+  <ns0:text x="568.8889" y="545.7778" text-anchor="middle" fill="#444" font-size="14.2222" font-family="Arial, sans-serif">• Rollback triggers on error rate thresholds</ns0:text>
+</ns0:svg>

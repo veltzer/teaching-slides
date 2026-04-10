@@ -1,54 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Five stage boxes: Input, Map, Shuffle/Sort, Reduce, Output -->
-  <!-- Input -->
-  <rect x="40" y="285" width="190" height="130" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="135" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Input</text>
-  <text x="135" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#555555">Data</text>
-  <!-- Map -->
-  <rect x="280" y="285" width="190" height="130" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="375" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2e7d32">Map</text>
-  <text x="375" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#555555">Phase</text>
-  <!-- Shuffle/Sort -->
-  <rect x="520" y="285" width="240" height="130" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">Shuffle</text>
-  <text x="640" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e65100">+ Sort</text>
-  <!-- Reduce -->
-  <rect x="810" y="285" width="210" height="130" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="915" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Reduce</text>
-  <text x="915" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#555555">Phase</text>
-  <!-- Output -->
-  <rect x="1070" y="285" width="190" height="130" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="1165" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Output</text>
-  <text x="1165" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e3f2fd">Result</text>
-  <!-- Arrows -->
-  <line x1="230" y1="350" x2="280" y2="350" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="470" y1="350" x2="520" y2="350" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="760" y1="350" x2="810" y2="350" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="1020" y1="350" x2="1070" y2="350" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <!-- Stage labels below -->
-  <text x="135" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">HDFS / S3</text>
-  <text x="375" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">key-value pairs</text>
-  <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">group by key</text>
-  <text x="915" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">aggregate values</text>
-  <text x="1165" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#888888" font-style="italic">HDFS / S3</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="35.5556" y="253.3333" width="168.8889" height="115.5556" rx="7.1111" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="120" y="306.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#1565c0">Input</ns0:text>
+  <ns0:text x="120" y="328.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4444" fill="#555555">Data</ns0:text>
+  <ns0:rect x="248.8889" y="253.3333" width="168.8889" height="115.5556" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="333.3333" y="306.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#2e7d32">Map</ns0:text>
+  <ns0:text x="333.3333" y="328.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4444" fill="#555555">Phase</ns0:text>
+  <ns0:rect x="462.2222" y="253.3333" width="213.3333" height="115.5556" rx="7.1111" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="302.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#e65100">Shuffle</ns0:text>
+  <ns0:text x="568.8889" y="326.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#e65100">+ Sort</ns0:text>
+  <ns0:rect x="720" y="253.3333" width="186.6667" height="115.5556" rx="7.1111" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="813.3333" y="306.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#1565c0">Reduce</ns0:text>
+  <ns0:text x="813.3333" y="328.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4444" fill="#555555">Phase</ns0:text>
+  <ns0:rect x="951.1111" y="253.3333" width="168.8889" height="115.5556" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="1035.5556" y="306.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" font-weight="bold" fill="#ffffff">Output</ns0:text>
+  <ns0:text x="1035.5556" y="328.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4444" fill="#e3f2fd">Result</ns0:text>
+  <ns0:line x1="204.4444" y1="311.1111" x2="248.8889" y2="311.1111" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="417.7778" y1="311.1111" x2="462.2222" y2="311.1111" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="675.5556" y1="311.1111" x2="720" y2="311.1111" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="906.6667" y1="311.1111" x2="951.1111" y2="311.1111" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:text x="120" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#888888" font-style="italic">HDFS / S3</ns0:text>
+  <ns0:text x="333.3333" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#888888" font-style="italic">key-value pairs</ns0:text>
+  <ns0:text x="568.8889" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#888888" font-style="italic">group by key</ns0:text>
+  <ns0:text x="813.3333" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#888888" font-style="italic">aggregate values</ns0:text>
+  <ns0:text x="1035.5556" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.5556" fill="#888888" font-style="italic">HDFS / S3</ns0:text>
+</ns0:svg>

@@ -1,34 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">Advanced Lifetimes Cheatsheet</text>
-  <rect x="59.0769" y="75.7895" width="1161.8462" height="615.7895" rx="9.4737" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.8947" />
-  <rect x="98.4615" y="104.2105" width="334.7692" height="49.2632" rx="5.6842" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8947" />
-  <text x="265.8462" y="138.3158" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#4a90e2">Elision rule 1</text>
-  <text x="472.6154" y="138.3158" font-size="20.8421" fill="#333">each param gets own lifetime</text>
-  <rect x="98.4615" y="162.9474" width="334.7692" height="49.2632" rx="5.6842" fill="#d4edda" stroke="#28a745" stroke-width="1.8947" />
-  <text x="265.8462" y="197.0526" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#28a745">Elision rule 2</text>
-  <text x="472.6154" y="197.0526" font-size="20.8421" fill="#333">single input -&gt; all outputs</text>
-  <rect x="98.4615" y="221.6842" width="334.7692" height="49.2632" rx="5.6842" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8947" />
-  <text x="265.8462" y="255.7895" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#4a90e2">Elision rule 3</text>
-  <text x="472.6154" y="255.7895" font-size="20.8421" fill="#333">&amp;self lifetime -&gt; all outputs</text>
-  <rect x="98.4615" y="280.4211" width="334.7692" height="49.2632" rx="5.6842" fill="#d4edda" stroke="#28a745" stroke-width="1.8947" />
-  <text x="265.8462" y="314.5263" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#28a745">'static</text>
-  <text x="472.6154" y="314.5263" font-size="20.8421" fill="#333">no non-static borrows (or string lits)</text>
-  <rect x="98.4615" y="339.1579" width="334.7692" height="49.2632" rx="5.6842" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8947" />
-  <text x="265.8462" y="373.2632" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#4a90e2">T: 'a</text>
-  <text x="472.6154" y="373.2632" font-size="20.8421" fill="#333">all refs in T outlive 'a</text>
-  <rect x="98.4615" y="397.8947" width="334.7692" height="49.2632" rx="5.6842" fill="#d4edda" stroke="#28a745" stroke-width="1.8947" />
-  <text x="265.8462" y="432" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#28a745">for&lt;'a&gt;</text>
-  <text x="472.6154" y="432" font-size="20.8421" fill="#333">works for ALL lifetimes</text>
-  <rect x="98.4615" y="456.6316" width="334.7692" height="49.2632" rx="5.6842" fill="#fff3cd" stroke="#ffc107" stroke-width="1.8947" />
-  <text x="265.8462" y="490.7368" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#856404">Covariant</text>
-  <text x="472.6154" y="490.7368" font-size="20.8421" fill="#333">longer life usable as shorter</text>
-  <rect x="98.4615" y="515.3684" width="334.7692" height="49.2632" rx="5.6842" fill="#f8d7da" stroke="#dc3545" stroke-width="1.8947" />
-  <text x="265.8462" y="549.4737" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#dc3545">Invariant</text>
-  <text x="472.6154" y="549.4737" font-size="20.8421" fill="#333">exact lifetime match required</text>
-  <rect x="98.4615" y="574.1053" width="334.7692" height="49.2632" rx="5.6842" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8947" />
-  <text x="265.8462" y="608.2105" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#4a90e2">Self-ref</text>
-  <text x="472.6154" y="608.2105" font-size="20.8421" fill="#333">use indices, Pin, or ouroboros</text>
-  <rect x="98.4615" y="632.8421" width="334.7692" height="49.2632" rx="5.6842" fill="#d4edda" stroke="#28a745" stroke-width="1.8947" />
-  <text x="265.8462" y="666.9474" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#28a745">Reborrowing</text>
-  <text x="472.6154" y="666.9474" font-size="20.8421" fill="#333">&amp;mut *r creates shorter-lived &amp;mut</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="592.2678" y="43.8356" text-anchor="middle" font-size="28.0548" font-weight="bold" fill="#333">Advanced Lifetimes Cheatsheet</ns0:text>
+  <ns0:rect x="54.6709" y="70.137" width="1075.194" height="569.863" rx="8.7671" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.7534" />
+  <ns0:rect x="91.1181" y="96.4383" width="309.8016" height="45.5891" rx="5.2603" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="128" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#4a90e2">Elision rule 1</ns0:text>
+  <ns0:text x="437.367" y="128" font-size="19.2877" fill="#333">each param gets own lifetime</ns0:text>
+  <ns0:rect x="91.1181" y="150.7945" width="309.8016" height="45.5891" rx="5.2603" fill="#d4edda" stroke="#28a745" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="182.3561" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#28a745">Elision rule 2</ns0:text>
+  <ns0:text x="437.367" y="182.3561" font-size="19.2877" fill="#333">single input -&gt; all outputs</ns0:text>
+  <ns0:rect x="91.1181" y="205.1507" width="309.8016" height="45.5891" rx="5.2603" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="236.7123" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#4a90e2">Elision rule 3</ns0:text>
+  <ns0:text x="437.367" y="236.7123" font-size="19.2877" fill="#333">&amp;self lifetime -&gt; all outputs</ns0:text>
+  <ns0:rect x="91.1181" y="259.5069" width="309.8016" height="45.5891" rx="5.2603" fill="#d4edda" stroke="#28a745" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="291.0685" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#28a745">'static</ns0:text>
+  <ns0:text x="437.367" y="291.0685" font-size="19.2877" fill="#333">no non-static borrows (or string lits)</ns0:text>
+  <ns0:rect x="91.1181" y="313.863" width="309.8016" height="45.5891" rx="5.2603" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="345.4247" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#4a90e2">T: 'a</ns0:text>
+  <ns0:text x="437.367" y="345.4247" font-size="19.2877" fill="#333">all refs in T outlive 'a</ns0:text>
+  <ns0:rect x="91.1181" y="368.2191" width="309.8016" height="45.5891" rx="5.2603" fill="#d4edda" stroke="#28a745" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="399.7808" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#28a745">for&lt;'a&gt;</ns0:text>
+  <ns0:text x="437.367" y="399.7808" font-size="19.2877" fill="#333">works for ALL lifetimes</ns0:text>
+  <ns0:rect x="91.1181" y="422.5753" width="309.8016" height="45.5891" rx="5.2603" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="454.1369" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#856404">Covariant</ns0:text>
+  <ns0:text x="437.367" y="454.1369" font-size="19.2877" fill="#333">longer life usable as shorter</ns0:text>
+  <ns0:rect x="91.1181" y="476.9315" width="309.8016" height="45.5891" rx="5.2603" fill="#f8d7da" stroke="#dc3545" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="508.4931" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#dc3545">Invariant</ns0:text>
+  <ns0:text x="437.367" y="508.4931" font-size="19.2877" fill="#333">exact lifetime match required</ns0:text>
+  <ns0:rect x="91.1181" y="531.2877" width="309.8016" height="45.5891" rx="5.2603" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="562.8492" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#4a90e2">Self-ref</ns0:text>
+  <ns0:text x="437.367" y="562.8492" font-size="19.2877" fill="#333">use indices, Pin, or ouroboros</ns0:text>
+  <ns0:rect x="91.1181" y="585.6438" width="309.8016" height="45.5891" rx="5.2603" fill="#d4edda" stroke="#28a745" stroke-width="1.7534" />
+  <ns0:text x="246.019" y="617.2055" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="#28a745">Reborrowing</ns0:text>
+  <ns0:text x="437.367" y="617.2055" font-size="19.2877" fill="#333">&amp;mut *r creates shorter-lived &amp;mut</ns0:text>
+</ns0:svg>

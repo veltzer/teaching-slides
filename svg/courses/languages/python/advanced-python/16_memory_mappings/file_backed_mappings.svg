@@ -1,54 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="640" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">File-Backed Memory Mappings</text>
-  <!-- Memory box -->
-  <rect x="100" y="100" width="420" height="440" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
-  <text x="310" y="70" text-anchor="middle" font-size="20" fill="#555555">Memory</text>
-  <text x="310" y="92" text-anchor="middle" font-size="16" fill="#555555">(Virtual Address Space)</text>
-  <rect x="130" y="160" width="360" height="70" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="310" y="200" text-anchor="middle" font-size="18" fill="#333333">Page 0 (mapped)</text>
-  <rect x="130" y="250" width="360" height="70" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="310" y="290" text-anchor="middle" font-size="18" fill="#333333">Page 1 (mapped)</text>
-  <rect x="130" y="340" width="360" height="70" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="310" y="380" text-anchor="middle" font-size="18" fill="#333333">Page 2 (mapped)</text>
-  <rect x="130" y="430" width="360" height="70" rx="5" fill="#cccccc" stroke="#999999" stroke-width="1.5"/>
-  <text x="310" y="470" text-anchor="middle" font-size="18" fill="#666666">Page 3 (not loaded)</text>
-  <!-- File box -->
-  <rect x="760" y="100" width="420" height="440" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
-  <text x="970" y="70" text-anchor="middle" font-size="20" fill="#555555">File on Disk</text>
-  <rect x="790" y="160" width="360" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
-  <text x="970" y="200" text-anchor="middle" font-size="18" fill="#333333">Block 0</text>
-  <rect x="790" y="250" width="360" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
-  <text x="970" y="290" text-anchor="middle" font-size="18" fill="#333333">Block 1</text>
-  <rect x="790" y="340" width="360" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
-  <text x="970" y="380" text-anchor="middle" font-size="18" fill="#333333">Block 2</text>
-  <rect x="790" y="430" width="360" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
-  <text x="970" y="470" text-anchor="middle" font-size="18" fill="#333333">Block 3</text>
-  <!-- Arrows -->
-  <line x1="520" y1="250" x2="760" y2="250" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="640" y="236" text-anchor="middle" font-size="18" fill="#555555">Page In</text>
-  <line x1="760" y1="420" x2="520" y2="420" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="640" y="410" text-anchor="middle" font-size="18" fill="#555555">Page Out</text>
-  <!-- Note -->
-  <rect x="100" y="588" width="1080" height="48" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
-  <text x="640" y="618" text-anchor="middle" font-size="16" fill="#1565c0">mmap() maps file pages to virtual address space - kernel manages page-in/page-out automatically</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="39.1111" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1565c0">File-Backed Memory Mappings</ns0:text>
+  <ns0:rect x="88.8889" y="88.8889" width="373.3333" height="391.1111" rx="8.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="275.5556" y="62.2222" text-anchor="middle" font-size="17.7778" fill="#555555">Memory</ns0:text>
+  <ns0:text x="275.5556" y="81.7778" text-anchor="middle" font-size="14.2222" fill="#555555">(Virtual Address Space)</ns0:text>
+  <ns0:rect x="115.5556" y="142.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="275.5556" y="177.7778" text-anchor="middle" font-size="16" fill="#333333">Page 0 (mapped)</ns0:text>
+  <ns0:rect x="115.5556" y="222.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="275.5556" y="257.7778" text-anchor="middle" font-size="16" fill="#333333">Page 1 (mapped)</ns0:text>
+  <ns0:rect x="115.5556" y="302.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="275.5556" y="337.7778" text-anchor="middle" font-size="16" fill="#333333">Page 2 (mapped)</ns0:text>
+  <ns0:rect x="115.5556" y="382.2222" width="320" height="62.2222" rx="4.4444" fill="#cccccc" stroke="#999999" stroke-width="1.3333" />
+  <ns0:text x="275.5556" y="417.7778" text-anchor="middle" font-size="16" fill="#666666">Page 3 (not loaded)</ns0:text>
+  <ns0:rect x="675.5556" y="88.8889" width="373.3333" height="391.1111" rx="8.8889" fill="#fce4ec" stroke="#e53935" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="862.2222" y="62.2222" text-anchor="middle" font-size="17.7778" fill="#555555">File on Disk</ns0:text>
+  <ns0:rect x="702.2222" y="142.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#e53935" stroke-width="1.3333" />
+  <ns0:text x="862.2222" y="177.7778" text-anchor="middle" font-size="16" fill="#333333">Block 0</ns0:text>
+  <ns0:rect x="702.2222" y="222.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#e53935" stroke-width="1.3333" />
+  <ns0:text x="862.2222" y="257.7778" text-anchor="middle" font-size="16" fill="#333333">Block 1</ns0:text>
+  <ns0:rect x="702.2222" y="302.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#e53935" stroke-width="1.3333" />
+  <ns0:text x="862.2222" y="337.7778" text-anchor="middle" font-size="16" fill="#333333">Block 2</ns0:text>
+  <ns0:rect x="702.2222" y="382.2222" width="320" height="62.2222" rx="4.4444" fill="#ffffff" stroke="#e53935" stroke-width="1.3333" />
+  <ns0:text x="862.2222" y="417.7778" text-anchor="middle" font-size="16" fill="#333333">Block 3</ns0:text>
+  <ns0:line x1="462.2222" y1="222.2222" x2="675.5556" y2="222.2222" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="209.7778" text-anchor="middle" font-size="16" fill="#555555">Page In</ns0:text>
+  <ns0:line x1="675.5556" y1="373.3333" x2="462.2222" y2="373.3333" stroke="#555555" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="364.4444" text-anchor="middle" font-size="16" fill="#555555">Page Out</ns0:text>
+  <ns0:rect x="88.8889" y="522.6667" width="960" height="42.6667" rx="5.3333" fill="#f2f6ff" stroke="#bbdefb" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="549.3333" text-anchor="middle" font-size="14.2222" fill="#1565c0">mmap() maps file pages to virtual address space - kernel manages page-in/page-out automatically</ns0:text>
+</ns0:svg>

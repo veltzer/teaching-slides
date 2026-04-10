@@ -1,46 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-red" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#dc3545" />
-    </marker>
-  </defs>
-  <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Cache-Aside Pattern</text>
-  <rect x="48" y="240" width="224" height="85.7143" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="160" y="291.4286" text-anchor="middle" font-weight="bold" fill="#333">Application</text>
-  <rect x="512" y="102.8571" width="224" height="85.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="624" y="154.2857" text-anchor="middle" font-weight="bold" fill="#333">Cache</text>
-  <rect x="512" y="377.1429" width="224" height="85.7143" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="624" y="428.5714" text-anchor="middle" font-weight="bold" fill="#333">Database</text>
-  <rect x="928" y="85.7143" width="304" height="137.1429" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
-  <text x="1080" y="123.4286" text-anchor="middle" font-weight="bold" font-size="19.2" fill="#28a745">Cache Hit</text>
-  <text x="1080" y="157.7143" text-anchor="middle" font-size="17.6" fill="#555">1. Check cache</text>
-  <text x="1080" y="185.1429" text-anchor="middle" font-size="17.6" fill="#555">2. Return cached data</text>
-  <text x="1080" y="209.1429" text-anchor="middle" font-size="17.6" fill="#555">Fast path!</text>
-  <rect x="928" y="274.2857" width="304" height="188.5714" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
-  <text x="1080" y="312" text-anchor="middle" font-weight="bold" font-size="19.2" fill="#dc3545">Cache Miss</text>
-  <text x="1080" y="346.2857" text-anchor="middle" font-size="17.6" fill="#555">1. Check cache - not found</text>
-  <text x="1080" y="373.7143" text-anchor="middle" font-size="17.6" fill="#555">2. Query database</text>
-  <text x="1080" y="401.1429" text-anchor="middle" font-size="17.6" fill="#555">3. Update cache</text>
-  <text x="1080" y="428.5714" text-anchor="middle" font-size="17.6" fill="#555">4. Return data</text>
-  <line x1="272" y1="257.1429" x2="508.8" y2="162.8571" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <text x="368" y="197.1429" text-anchor="middle" font-size="17.6" fill="#4a90e2">1. Check</text>
-  <line x1="512" y1="128.5714" x2="275.2" y2="253.7143" stroke="#28a745" stroke-width="3.2" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead-green)" />
-  <text x="352" y="168" text-anchor="middle" font-size="17.6" fill="#28a745">Hit: Return</text>
-  <line x1="272" y1="308.5714" x2="508.8" y2="402.8571" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead-red)" />
-  <text x="368" y="377.1429" text-anchor="middle" font-size="17.6" fill="#dc3545">2. Query DB</text>
-  <line x1="512" y1="437.1429" x2="275.2" y2="317.1429" stroke="#28a745" stroke-width="3.2" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead-green)" />
-  <text x="360" y="411.4286" text-anchor="middle" font-size="17.6" fill="#28a745">Return data</text>
-  <line x1="160" y1="240" x2="160" y2="145.7143" stroke="#ffc107" stroke-width="3.2" />
-  <line x1="160" y1="145.7143" x2="508.8" y2="145.7143" stroke="#ffc107" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <text x="320" y="133.7143" text-anchor="middle" font-size="17.6" fill="#996600">3. Update cache</text>
-  <rect x="48" y="548.5714" width="864" height="137.1429" rx="8" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6" />
-  <text x="480" y="591.4286" text-anchor="middle" font-size="19.2" fill="#555">The application checks the cache first. On a hit, data is returned immediately.</text>
-  <text x="480" y="625.7143" text-anchor="middle" font-size="19.2" fill="#555">On a miss, the application queries the database, updates the cache,</text>
-  <text x="480" y="660" text-anchor="middle" font-size="19.2" fill="#555">then returns the data. The cache is populated lazily on demand.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-red" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#dc3545" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="597.3333" y="40" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#333">Cache-Aside Pattern</ns0:text>
+  <ns0:rect x="44.8" y="224" width="209.0667" height="80" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="149.3333" y="272" text-anchor="middle" font-weight="bold" fill="#333">Application</ns0:text>
+  <ns0:rect x="477.8667" y="96" width="209.0667" height="80" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9867" />
+  <ns0:text x="582.4" y="144" text-anchor="middle" font-weight="bold" fill="#333">Cache</ns0:text>
+  <ns0:rect x="477.8667" y="352" width="209.0667" height="80" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
+  <ns0:text x="582.4" y="400" text-anchor="middle" font-weight="bold" fill="#333">Database</ns0:text>
+  <ns0:rect x="866.1333" y="80" width="283.7333" height="128" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.24" />
+  <ns0:text x="1008" y="115.2" text-anchor="middle" font-weight="bold" font-size="17.92" fill="#28a745">Cache Hit</ns0:text>
+  <ns0:text x="1008" y="147.2" text-anchor="middle" font-size="16.4267" fill="#555">1. Check cache</ns0:text>
+  <ns0:text x="1008" y="172.8" text-anchor="middle" font-size="16.4267" fill="#555">2. Return cached data</ns0:text>
+  <ns0:text x="1008" y="195.2" text-anchor="middle" font-size="16.4267" fill="#555">Fast path!</ns0:text>
+  <ns0:rect x="866.1333" y="256" width="283.7333" height="176" rx="7.4667" fill="#f8d7da" stroke="#dc3545" stroke-width="2.24" />
+  <ns0:text x="1008" y="291.2" text-anchor="middle" font-weight="bold" font-size="17.92" fill="#dc3545">Cache Miss</ns0:text>
+  <ns0:text x="1008" y="323.2" text-anchor="middle" font-size="16.4267" fill="#555">1. Check cache - not found</ns0:text>
+  <ns0:text x="1008" y="348.8" text-anchor="middle" font-size="16.4267" fill="#555">2. Query database</ns0:text>
+  <ns0:text x="1008" y="374.4" text-anchor="middle" font-size="16.4267" fill="#555">3. Update cache</ns0:text>
+  <ns0:text x="1008" y="400" text-anchor="middle" font-size="16.4267" fill="#555">4. Return data</ns0:text>
+  <ns0:line x1="253.8667" y1="240" x2="474.88" y2="152" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:text x="343.4667" y="184" text-anchor="middle" font-size="16.4267" fill="#4a90e2">1. Check</ns0:text>
+  <ns0:line x1="477.8667" y1="120" x2="256.8533" y2="236.8" stroke="#28a745" stroke-width="2.9867" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="328.5333" y="156.8" text-anchor="middle" font-size="16.4267" fill="#28a745">Hit: Return</ns0:text>
+  <ns0:line x1="253.8667" y1="288" x2="474.88" y2="376" stroke="#dc3545" stroke-width="2.9867" marker-end="url(#arrowhead-red)" />
+  <ns0:text x="343.4667" y="352" text-anchor="middle" font-size="16.4267" fill="#dc3545">2. Query DB</ns0:text>
+  <ns0:line x1="477.8667" y1="408" x2="256.8533" y2="296" stroke="#28a745" stroke-width="2.9867" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="336" y="384" text-anchor="middle" font-size="16.4267" fill="#28a745">Return data</ns0:text>
+  <ns0:line x1="149.3333" y1="224" x2="149.3333" y2="136" stroke="#ffc107" stroke-width="2.9867" />
+  <ns0:line x1="149.3333" y1="136" x2="474.88" y2="136" stroke="#ffc107" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:text x="298.6667" y="124.8" text-anchor="middle" font-size="16.4267" fill="#996600">3. Update cache</ns0:text>
+  <ns0:rect x="44.8" y="512" width="806.4" height="128" rx="7.4667" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4933" />
+  <ns0:text x="448" y="552" text-anchor="middle" font-size="17.92" fill="#555">The application checks the cache first. On a hit, data is returned immediately.</ns0:text>
+  <ns0:text x="448" y="584" text-anchor="middle" font-size="17.92" fill="#555">On a miss, the application queries the database, updates the cache,</ns0:text>
+  <ns0:text x="448" y="616" text-anchor="middle" font-size="17.92" fill="#555">then returns the data. The cache is populated lazily on demand.</ns0:text>
+</ns0:svg>

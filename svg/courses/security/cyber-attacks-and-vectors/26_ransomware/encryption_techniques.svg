@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <marker id="arw3" markerWidth="19.3939" markerHeight="14.4828" refX="17.4545" refY="7.2414" orient="auto">
-      <polygon points="0,20.6897 6.7879,0" fill="#555" />
-    </marker>
-  </defs>
-  <rect x="1.9394" y="2.069" width="1276.1212" height="715.8621" rx="7.7576" fill="#fff" stroke="#333" stroke-width="2.9091" />
-  <rect x="1.9394" y="2.069" width="1276.1212" height="70.3448" rx="7.7576" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
-  <text x="640" y="47.5862" font-size="29.0909" font-weight="bold" fill="#222" text-anchor="middle">Ransomware Encryption Architecture</text>
-  <text x="27.1515" y="111.7241" font-size="25.2121" font-weight="bold" fill="#c62828">Attacker has:</text>
-  <text x="27.1515" y="148.9655" font-size="25.2121" fill="#333">• Master RSA key pair — private key kept by attacker only</text>
-  <text x="27.1515" y="202.7586" font-size="25.2121" font-weight="bold" fill="#1565c0">Per-victim:</text>
-  <text x="27.1515" y="240" font-size="25.2121" fill="#333">1. Generate unique RSA key pair for this victim</text>
-  <text x="27.1515" y="277.2414" font-size="25.2121" fill="#333">2. Encrypt victim RSA private key with master public key (stored in ransom note)</text>
-  <text x="27.1515" y="331.0345" font-size="25.2121" font-weight="bold" fill="#e65100">Per-file:</text>
-  <text x="27.1515" y="368.2759" font-size="25.2121" fill="#333">3. Generate random AES-256 key</text>
-  <text x="27.1515" y="405.5172" font-size="25.2121" fill="#333">4. Encrypt file contents with AES-256 (fast)</text>
-  <text x="27.1515" y="442.7586" font-size="25.2121" fill="#333">5. Encrypt AES key with victim RSA public key</text>
-  <text x="27.1515" y="480" font-size="25.2121" fill="#333">6. Append encrypted AES key to encrypted file</text>
-  <rect x="58.1818" y="521.3793" width="232.7273" height="107.5862" rx="7.7576" fill="#fff3e0" stroke="#e65100" stroke-width="2.9091" />
-  <text x="174.5455" y="566.8966" font-size="23.2727" font-weight="bold" fill="#333" text-anchor="middle">Original</text>
-  <text x="174.5455" y="604.1379" font-size="23.2727" fill="#333" text-anchor="middle">File</text>
-  <line x1="290.9091" y1="575.1724" x2="446.0606" y2="575.1724" stroke="#555" stroke-width="2.9091" marker-end="url(#arw3)" />
-  <text x="368.4848" y="558.6207" font-size="21.3333" fill="#555" text-anchor="middle">AES-256</text>
-  <rect x="446.0606" y="521.3793" width="349.0909" height="107.5862" rx="7.7576" fill="#f0f4f8" stroke="#333" stroke-width="2.9091" />
-  <text x="620.6061" y="566.8966" font-size="23.2727" font-weight="bold" fill="#333" text-anchor="middle">Encrypted File</text>
-  <text x="620.6061" y="604.1379" font-size="21.3333" fill="#555" text-anchor="middle">+ Encrypted AES key (RSA)</text>
-  <text x="27.1515" y="691.0345" font-size="25.2121" fill="#555" font-style="italic">Only the attacker's master private key can start the decryption chain</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arw3" markerWidth="17.2887" markerHeight="12.9107" refX="15.5598" refY="6.4553" orient="auto">
+      <ns0:polygon points="0,18.4438 6.0511,0" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect x="1.7289" y="1.8444" width="1137.5988" height="638.1556" rx="6.9155" fill="#fff" stroke="#333" stroke-width="2.5933" />
+  <ns0:rect x="1.7289" y="1.8444" width="1137.5988" height="62.7089" rx="6.9155" fill="#e3f2fd" stroke="#333" stroke-width="2.5933" />
+  <ns0:text x="570.5283" y="42.4207" font-size="25.9331" font-weight="bold" fill="#222" text-anchor="middle">Ransomware Encryption Architecture</ns0:text>
+  <ns0:text x="24.2042" y="99.5965" font-size="22.4753" font-weight="bold" fill="#c62828">Attacker has:</ns0:text>
+  <ns0:text x="24.2042" y="132.7954" font-size="22.4753" fill="#333">• Master RSA key pair — private key kept by attacker only</ns0:text>
+  <ns0:text x="24.2042" y="180.7492" font-size="22.4753" font-weight="bold" fill="#1565c0">Per-victim:</ns0:text>
+  <ns0:text x="24.2042" y="213.9481" font-size="22.4753" fill="#333">1. Generate unique RSA key pair for this victim</ns0:text>
+  <ns0:text x="24.2042" y="247.147" font-size="22.4753" fill="#333">2. Encrypt victim RSA private key with master public key (stored in ransom note)</ns0:text>
+  <ns0:text x="24.2042" y="295.1009" font-size="22.4753" font-weight="bold" fill="#e65100">Per-file:</ns0:text>
+  <ns0:text x="24.2042" y="328.2997" font-size="22.4753" fill="#333">3. Generate random AES-256 key</ns0:text>
+  <ns0:text x="24.2042" y="361.4985" font-size="22.4753" fill="#333">4. Encrypt file contents with AES-256 (fast)</ns0:text>
+  <ns0:text x="24.2042" y="394.6974" font-size="22.4753" fill="#333">5. Encrypt AES key with victim RSA public key</ns0:text>
+  <ns0:text x="24.2042" y="427.8962" font-size="22.4753" fill="#333">6. Append encrypted AES key to encrypted file</ns0:text>
+  <ns0:rect x="51.8662" y="464.7838" width="207.4649" height="95.9078" rx="6.9155" fill="#fff3e0" stroke="#e65100" stroke-width="2.5933" />
+  <ns0:text x="155.5987" y="505.3602" font-size="20.7465" font-weight="bold" fill="#333" text-anchor="middle">Original</ns0:text>
+  <ns0:text x="155.5987" y="538.559" font-size="20.7465" fill="#333" text-anchor="middle">File</ns0:text>
+  <ns0:line x1="259.331" y1="512.7377" x2="397.6409" y2="512.7377" stroke="#555" stroke-width="2.5933" marker-end="url(#arw3)" />
+  <ns0:text x="328.4859" y="497.9827" font-size="19.0176" fill="#555" text-anchor="middle">AES-256</ns0:text>
+  <ns0:rect x="397.6409" y="464.7838" width="311.1972" height="95.9078" rx="6.9155" fill="#f0f4f8" stroke="#333" stroke-width="2.5933" />
+  <ns0:text x="553.2396" y="505.3602" font-size="20.7465" font-weight="bold" fill="#333" text-anchor="middle">Encrypted File</ns0:text>
+  <ns0:text x="553.2396" y="538.559" font-size="19.0176" fill="#555" text-anchor="middle">+ Encrypted AES key (RSA)</ns0:text>
+  <ns0:text x="24.2042" y="616.023" font-size="22.4753" fill="#555" font-style="italic">Only the attacker's master private key can start the decryption chain</ns0:text>
+</ns0:svg>

@@ -1,33 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arr_chan" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Channel Types: Message Passing</text>
-  <rect x="42.6667" y="108" width="256" height="198" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="170.6667" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Producer (tx)</text>
-  <text x="170.6667" y="226.8" text-anchor="middle" font-size="21.3333">tx.send(msg)</text>
-  <text x="170.6667" y="273.6" text-anchor="middle" font-size="21.3333">can clone tx</text>
-  <rect x="512" y="108" width="256" height="198" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Channel</text>
-  <text x="640" y="226.8" text-anchor="middle" font-size="21.3333">FIFO queue</text>
-  <text x="640" y="273.6" text-anchor="middle" font-size="21.3333">buffered/unbuffered</text>
-  <rect x="981.3333" y="108" width="256" height="198" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1109.3333" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Consumer (rx)</text>
-  <text x="1109.3333" y="226.8" text-anchor="middle" font-size="21.3333">rx.recv()</text>
-  <text x="1109.3333" y="273.6" text-anchor="middle" font-size="21.3333">blocks until msg</text>
-  <line x1="298.6667" y1="205.2" x2="512" y2="205.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arr_chan)" />
-  <text x="405.3333" y="180" text-anchor="middle" font-size="21.3333">send</text>
-  <line x1="768" y1="205.2" x2="981.3333" y2="205.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arr_chan)" />
-  <text x="874.6667" y="180" text-anchor="middle" font-size="21.3333">recv</text>
-  <rect x="42.6667" y="360" width="576" height="144" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="330.6667" y="417.6" text-anchor="middle" font-size="21.3333" font-weight="bold">mpsc (multi-producer, single-consumer)</text>
-  <text x="330.6667" y="475.2" text-anchor="middle" font-size="21.3333">Multiple tx clones, one rx. Ownership transferred on send.</text>
-  <rect x="661.3333" y="360" width="576" height="144" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="949.3333" y="417.6" text-anchor="middle" font-size="21.3333" font-weight="bold">sync_channel (bounded)</text>
-  <text x="949.3333" y="475.2" text-anchor="middle" font-size="21.3333">Fixed buffer size. send() blocks when full.</text>
-  <rect x="213.3333" y="558" width="853.3333" height="126" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="640" y="612" text-anchor="middle" font-size="21.3333">Message ownership is moved through the channel</text>
-  <text x="640" y="662.4" text-anchor="middle" font-size="21.3333">Sender cannot use value after send -- compiler enforced</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arr_chan" markerWidth="19.961" markerHeight="33.6842" refX="17.9649" refY="10.1053" orient="auto">
+      <ns0:path d="M 0 0 L 0 20.2105 L 17.9649 10.1053 z" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">Channel Types: Message Passing</ns0:text>
+  <ns0:rect x="39.9221" y="101.0526" width="239.5322" height="185.2632" fill="#e3f2fd" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="159.6881" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Producer (tx)</ns0:text>
+  <ns0:text x="159.6881" y="212.2105" text-anchor="middle" font-size="19.961">tx.send(msg)</ns0:text>
+  <ns0:text x="159.6881" y="256" text-anchor="middle" font-size="19.961">can clone tx</ns0:text>
+  <ns0:rect x="479.0643" y="101.0526" width="239.5322" height="185.2632" fill="#fff3e0" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="598.8304" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Channel</ns0:text>
+  <ns0:text x="598.8304" y="212.2105" text-anchor="middle" font-size="19.961">FIFO queue</ns0:text>
+  <ns0:text x="598.8304" y="256" text-anchor="middle" font-size="19.961">buffered/unbuffered</ns0:text>
+  <ns0:rect x="918.2066" y="101.0526" width="239.5322" height="185.2632" fill="#e8f5e9" stroke="#333" stroke-width="3.9922" rx="9.9805" />
+  <ns0:text x="1037.9727" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Consumer (rx)</ns0:text>
+  <ns0:text x="1037.9727" y="212.2105" text-anchor="middle" font-size="19.961">rx.recv()</ns0:text>
+  <ns0:text x="1037.9727" y="256" text-anchor="middle" font-size="19.961">blocks until msg</ns0:text>
+  <ns0:line x1="279.4542" y1="192" x2="479.0643" y2="192" stroke="#333" stroke-width="3.9922" marker-end="url(#arr_chan)" />
+  <ns0:text x="379.2592" y="168.4211" text-anchor="middle" font-size="19.961">send</ns0:text>
+  <ns0:line x1="718.5965" y1="192" x2="918.2066" y2="192" stroke="#333" stroke-width="3.9922" marker-end="url(#arr_chan)" />
+  <ns0:text x="818.4016" y="168.4211" text-anchor="middle" font-size="19.961">recv</ns0:text>
+  <ns0:rect x="39.9221" y="336.8421" width="538.9474" height="134.7368" fill="#f3e5f5" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="309.3957" y="390.7368" text-anchor="middle" font-size="19.961" font-weight="bold">mpsc (multi-producer, single-consumer)</ns0:text>
+  <ns0:text x="309.3957" y="444.6316" text-anchor="middle" font-size="19.961">Multiple tx clones, one rx. Ownership transferred on send.</ns0:text>
+  <ns0:rect x="618.7914" y="336.8421" width="538.9474" height="134.7368" fill="#ffebee" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="888.2651" y="390.7368" text-anchor="middle" font-size="19.961" font-weight="bold">sync_channel (bounded)</ns0:text>
+  <ns0:text x="888.2651" y="444.6316" text-anchor="middle" font-size="19.961">Fixed buffer size. send() blocks when full.</ns0:text>
+  <ns0:rect x="199.6101" y="522.1053" width="798.4405" height="117.8947" fill="#e3f2fd" stroke="#333" stroke-width="1.9961" rx="9.9805" />
+  <ns0:text x="598.8304" y="572.6316" text-anchor="middle" font-size="19.961">Message ownership is moved through the channel</ns0:text>
+  <ns0:text x="598.8304" y="619.7895" text-anchor="middle" font-size="19.961">Sender cannot use value after send -- compiler enforced</ns0:text>
+</ns0:svg>

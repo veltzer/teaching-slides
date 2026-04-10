@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Spark Capacity Planning</text>
-  <rect x="48" y="99" width="272" height="234" rx="12.8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
-  <text x="184" y="144" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1a237e">Workload Analysis</text>
-  <text x="184" y="185.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Data volume (TB)</text>
-  <text x="184" y="217.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Query complexity</text>
-  <text x="184" y="250.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Concurrency level</text>
-  <text x="184" y="282.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">SLA requirements</text>
-  <text x="184" y="315" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Peak vs average</text>
-  <line x1="320" y1="216" x2="368" y2="216" stroke="#333" stroke-width="3.2" marker-end="url(#arrow)" />
-  <rect x="376" y="99" width="272" height="234" rx="12.8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
-  <text x="512" y="144" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Resource Sizing</text>
-  <text x="512" y="185.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Executor count</text>
-  <text x="512" y="217.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Cores per executor</text>
-  <text x="512" y="250.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Memory per executor</text>
-  <text x="512" y="282.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Driver resources</text>
-  <text x="512" y="315" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Overhead (10%)</text>
-  <line x1="648" y1="216" x2="696" y2="216" stroke="#333" stroke-width="3.2" marker-end="url(#arrow)" />
-  <rect x="704" y="99" width="272" height="234" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
-  <text x="840" y="144" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">Cost Strategy</text>
-  <text x="840" y="185.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">On-demand baseline</text>
-  <text x="840" y="217.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Spot instances (70%)</text>
-  <text x="840" y="250.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Reserved capacity</text>
-  <text x="840" y="282.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Auto-scaling rules</text>
-  <text x="840" y="315" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Storage tiering</text>
-  <line x1="976" y1="216" x2="1024" y2="216" stroke="#333" stroke-width="3.2" marker-end="url(#arrow)" />
-  <rect x="1032" y="99" width="224" height="234" rx="12.8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
-  <text x="1144" y="144" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#4a148c">Monitor</text>
-  <text x="1144" y="185.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Utilization %</text>
-  <text x="1144" y="217.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Cost per job</text>
-  <text x="1144" y="250.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Performance</text>
-  <text x="1144" y="282.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Waste detection</text>
-  <text x="1144" y="315" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Adjust &amp; repeat</text>
-  <rect x="80" y="396" width="1120" height="126" rx="12.8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="3.2" />
-  <text x="640" y="441" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Sizing Guidelines</text>
-  <text x="640" y="495" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">Executors = DataSize / (PartitionSize x CoresPerExecutor) | Memory = 3-5x shuffle data | Cores: 4-5 per executor</text>
-  <rect x="80" y="558" width="528" height="108" rx="12.8" fill="#e8eaf6" stroke="#283593" stroke-width="3.2" />
-  <text x="344" y="603" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1a237e">Short-term (3-6 months)</text>
-  <text x="344" y="644.4" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">Current load + 20% buffer</text>
-  <rect x="656" y="558" width="544" height="108" rx="12.8" fill="#fce4ec" stroke="#c62828" stroke-width="3.2" />
-  <text x="928" y="603" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#b71c1c">Long-term (1-2 years)</text>
-  <text x="928" y="644.4" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">Projected growth + auto-scaling strategy</text>
-  <text x="640" y="711" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#555">Iterative capacity planning: measure, adjust, optimize</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.4023" markerHeight="11.3418" refX="12.962" refY="5.6709" orient="auto">
+      <ns0:polygon points="0,16.2025 5.0408,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="576.09" y="48.6076" text-anchor="middle" font-family="Arial" font-size="25.9241" font-weight="bold" fill="#1a237e">Spark Capacity Planning</ns0:text>
+  <ns0:rect x="43.2068" y="89.1139" width="244.8383" height="210.6329" rx="11.5218" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.8805" />
+  <ns0:text x="165.6259" y="129.6203" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#1a237e">Workload Analysis</ns0:text>
+  <ns0:text x="165.6259" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Data volume (TB)</ns0:text>
+  <ns0:text x="165.6259" y="196.0506" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Query complexity</ns0:text>
+  <ns0:text x="165.6259" y="225.2152" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Concurrency level</ns0:text>
+  <ns0:text x="165.6259" y="254.3797" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">SLA requirements</ns0:text>
+  <ns0:text x="165.6259" y="283.5443" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Peak vs average</ns0:text>
+  <ns0:line x1="288.045" y1="194.4304" x2="331.2518" y2="194.4304" stroke="#333" stroke-width="2.8805" marker-end="url(#arrow)" />
+  <ns0:rect x="338.4529" y="89.1139" width="244.8383" height="210.6329" rx="11.5218" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.8805" />
+  <ns0:text x="460.872" y="129.6203" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#1b5e20">Resource Sizing</ns0:text>
+  <ns0:text x="460.872" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Executor count</ns0:text>
+  <ns0:text x="460.872" y="196.0506" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Cores per executor</ns0:text>
+  <ns0:text x="460.872" y="225.2152" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Memory per executor</ns0:text>
+  <ns0:text x="460.872" y="254.3797" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Driver resources</ns0:text>
+  <ns0:text x="460.872" y="283.5443" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Overhead (10%)</ns0:text>
+  <ns0:line x1="583.2911" y1="194.4304" x2="626.4979" y2="194.4304" stroke="#333" stroke-width="2.8805" marker-end="url(#arrow)" />
+  <ns0:rect x="633.699" y="89.1139" width="244.8383" height="210.6329" rx="11.5218" fill="#fff3e0" stroke="#e65100" stroke-width="2.8805" />
+  <ns0:text x="756.1181" y="129.6203" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#bf360c">Cost Strategy</ns0:text>
+  <ns0:text x="756.1181" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">On-demand baseline</ns0:text>
+  <ns0:text x="756.1181" y="196.0506" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Spot instances (70%)</ns0:text>
+  <ns0:text x="756.1181" y="225.2152" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Reserved capacity</ns0:text>
+  <ns0:text x="756.1181" y="254.3797" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Auto-scaling rules</ns0:text>
+  <ns0:text x="756.1181" y="283.5443" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Storage tiering</ns0:text>
+  <ns0:line x1="878.5373" y1="194.4304" x2="921.744" y2="194.4304" stroke="#333" stroke-width="2.8805" marker-end="url(#arrow)" />
+  <ns0:rect x="928.9451" y="89.1139" width="201.6315" height="210.6329" rx="11.5218" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.8805" />
+  <ns0:text x="1029.7609" y="129.6203" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#4a148c">Monitor</ns0:text>
+  <ns0:text x="1029.7609" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Utilization %</ns0:text>
+  <ns0:text x="1029.7609" y="196.0506" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Cost per job</ns0:text>
+  <ns0:text x="1029.7609" y="225.2152" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Performance</ns0:text>
+  <ns0:text x="1029.7609" y="254.3797" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Waste detection</ns0:text>
+  <ns0:text x="1029.7609" y="283.5443" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="#333">Adjust &amp; repeat</ns0:text>
+  <ns0:rect x="72.0113" y="356.4557" width="1008.1575" height="113.4177" rx="11.5218" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="2.8805" />
+  <ns0:text x="576.09" y="396.962" text-anchor="middle" font-family="Arial" font-size="20.1632" font-weight="bold" fill="#333">Sizing Guidelines</ns0:text>
+  <ns0:text x="576.09" y="445.5696" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="#333">Executors = DataSize / (PartitionSize x CoresPerExecutor) | Memory = 3-5x shuffle data | Cores: 4-5 per executor</ns0:text>
+  <ns0:rect x="72.0113" y="502.2785" width="475.2743" height="97.2152" rx="11.5218" fill="#e8eaf6" stroke="#283593" stroke-width="2.8805" />
+  <ns0:text x="309.6484" y="542.7848" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#1a237e">Short-term (3-6 months)</ns0:text>
+  <ns0:text x="309.6484" y="580.0506" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="#333">Current load + 20% buffer</ns0:text>
+  <ns0:rect x="590.4923" y="502.2785" width="489.6765" height="97.2152" rx="11.5218" fill="#fce4ec" stroke="#c62828" stroke-width="2.8805" />
+  <ns0:text x="835.3305" y="542.7848" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="#b71c1c">Long-term (1-2 years)</ns0:text>
+  <ns0:text x="835.3305" y="580.0506" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="#333">Projected growth + auto-scaling strategy</ns0:text>
+  <ns0:text x="576.09" y="640" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="#555">Iterative capacity planning: measure, adjust, optimize</ns0:text>
+</ns0:svg>

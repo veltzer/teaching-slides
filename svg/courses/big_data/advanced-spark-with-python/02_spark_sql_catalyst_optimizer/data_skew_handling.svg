@@ -1,58 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="32" font-weight="bold" fill="#1a237e">Data Skew Handling</text>
-  <text x="320" y="96" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#c62828">Problem: Skewed Partitions</text>
-  <rect x="96" y="256" width="64" height="48" rx="3.2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="128" y="336" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P1</text>
-  <rect x="176" y="112" width="64" height="192" rx="3.2" fill="#ffcdd2" stroke="#c62828" stroke-width="3.2" />
-  <text x="208" y="336" text-anchor="middle" font-family="Arial" font-size="16" fill="#c62828">P2</text>
-  <text x="208" y="104" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#c62828">Skewed!</text>
-  <rect x="256" y="240" width="64" height="64" rx="3.2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="288" y="336" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P3</text>
-  <rect x="336" y="248" width="64" height="56" rx="3.2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="368" y="336" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P4</text>
-  <rect x="416" y="264" width="64" height="40" rx="3.2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="448" y="336" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P5</text>
-  <rect x="496" y="232" width="64" height="72" rx="3.2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
-  <text x="528" y="336" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P6</text>
-  <text x="320" y="376" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#c62828">P2 has 10x more data = straggler task</text>
-  <line x1="608" y1="224" x2="672" y2="224" stroke="#1565c0" stroke-width="4.8" marker-end="url(#arrowhead)" />
-  <text x="976" y="96" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#2e7d32">Solution: AQE Skew Join</text>
-  <rect x="736" y="232" width="64" height="64" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="768" y="328" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P1</text>
-  <rect x="816" y="224" width="64" height="72" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="848" y="328" text-anchor="middle" font-family="Arial" font-size="16" fill="#2e7d32">P2a</text>
-  <rect x="896" y="220.8" width="64" height="75.2" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="928" y="328" text-anchor="middle" font-family="Arial" font-size="16" fill="#2e7d32">P2b</text>
-  <rect x="976" y="227.2" width="64" height="68.8" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="1008" y="328" text-anchor="middle" font-family="Arial" font-size="16" fill="#2e7d32">P2c</text>
-  <rect x="1056" y="240" width="64" height="56" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="1088" y="328" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P3</text>
-  <rect x="1136" y="236.8" width="64" height="59.2" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="1168" y="328" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P4+</text>
-  <text x="976" y="376" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#2e7d32">P2 split into 3 sub-partitions</text>
-  <text x="640" y="448" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#333">Skew Handling Strategies</text>
-  <rect x="48" y="480" width="272" height="104" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.4" />
-  <text x="184" y="516.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1a237e">AQE Skew Join</text>
-  <text x="184" y="548.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Auto-split large</text>
-  <text x="184" y="572.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">partitions at runtime</text>
-  <rect x="352" y="480" width="272" height="104" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="488" y="516.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1b5e20">Salting</text>
-  <text x="488" y="548.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Add random prefix to</text>
-  <text x="488" y="572.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">skewed join keys</text>
-  <rect x="656" y="480" width="272" height="104" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
-  <text x="792" y="516.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Broadcast Join</text>
-  <text x="792" y="548.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Broadcast small table</text>
-  <text x="792" y="572.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">to avoid shuffle</text>
-  <rect x="960" y="480" width="272" height="104" rx="9.6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.4" />
-  <text x="1096" y="516.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#6a1b9a">Repartition</text>
-  <text x="1096" y="548.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Custom partitioner</text>
-  <text x="1096" y="572.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">to spread data evenly</text>
-  <rect x="160" y="616" width="960" height="48" rx="9.6" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.6" />
-  <text x="640" y="648" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#1a237e">spark.sql.adaptive.skewJoin.enabled = true | skewedPartitionFactor = 5</text>
-  <text x="640" y="712" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">AQE detects skew at runtime and automatically splits oversized partitions</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.382" markerHeight="10.0674" refX="12.9438" refY="5.0337" orient="auto">
+      <ns0:polygon points="0,14.382 5.0337,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="575.2809" y="43.1461" text-anchor="middle" font-family="Arial" font-size="28.764" font-weight="bold" fill="#1a237e">Data Skew Handling</ns0:text>
+  <ns0:text x="287.6404" y="86.2921" text-anchor="middle" font-family="Arial" font-size="21.573" font-weight="bold" fill="#c62828">Problem: Skewed Partitions</ns0:text>
+  <ns0:rect x="86.2921" y="230.1124" width="57.5281" height="43.1461" rx="2.8764" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4382" />
+  <ns0:text x="115.0562" y="302.0225" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P1</ns0:text>
+  <ns0:rect x="158.2022" y="100.6742" width="57.5281" height="172.5843" rx="2.8764" fill="#ffcdd2" stroke="#c62828" stroke-width="2.8764" />
+  <ns0:text x="186.9663" y="302.0225" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#c62828">P2</ns0:text>
+  <ns0:text x="186.9663" y="93.4831" text-anchor="middle" font-family="Arial" font-size="14.382" font-weight="bold" fill="#c62828">Skewed!</ns0:text>
+  <ns0:rect x="230.1124" y="215.7303" width="57.5281" height="57.5281" rx="2.8764" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4382" />
+  <ns0:text x="258.8764" y="302.0225" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P3</ns0:text>
+  <ns0:rect x="302.0225" y="222.9213" width="57.5281" height="50.3371" rx="2.8764" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4382" />
+  <ns0:text x="330.7865" y="302.0225" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P4</ns0:text>
+  <ns0:rect x="373.9326" y="237.3034" width="57.5281" height="35.9551" rx="2.8764" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4382" />
+  <ns0:text x="402.6966" y="302.0225" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P5</ns0:text>
+  <ns0:rect x="445.8427" y="208.5393" width="57.5281" height="64.7191" rx="2.8764" fill="#bbdefb" stroke="#1565c0" stroke-width="1.4382" />
+  <ns0:text x="474.6067" y="302.0225" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P6</ns0:text>
+  <ns0:text x="287.6404" y="337.9775" text-anchor="middle" font-family="Arial" font-size="17.2584" fill="#c62828">P2 has 10x more data = straggler task</ns0:text>
+  <ns0:line x1="546.5169" y1="201.3483" x2="604.0449" y2="201.3483" stroke="#1565c0" stroke-width="4.3146" marker-end="url(#arrowhead)" />
+  <ns0:text x="877.3034" y="86.2921" text-anchor="middle" font-family="Arial" font-size="21.573" font-weight="bold" fill="#2e7d32">Solution: AQE Skew Join</ns0:text>
+  <ns0:rect x="661.573" y="208.5393" width="57.5281" height="57.5281" rx="2.8764" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="690.3371" y="294.8315" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P1</ns0:text>
+  <ns0:rect x="733.4831" y="201.3483" width="57.5281" height="64.7191" rx="2.8764" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="762.2472" y="294.8315" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#2e7d32">P2a</ns0:text>
+  <ns0:rect x="805.3933" y="198.4719" width="57.5281" height="67.5955" rx="2.8764" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="834.1573" y="294.8315" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#2e7d32">P2b</ns0:text>
+  <ns0:rect x="877.3034" y="204.2247" width="57.5281" height="61.8427" rx="2.8764" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="906.0674" y="294.8315" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#2e7d32">P2c</ns0:text>
+  <ns0:rect x="949.2135" y="215.7303" width="57.5281" height="50.3371" rx="2.8764" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="977.9775" y="294.8315" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P3</ns0:text>
+  <ns0:rect x="1021.1236" y="212.8539" width="57.5281" height="53.2135" rx="2.8764" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="1049.8876" y="294.8315" text-anchor="middle" font-family="Arial" font-size="14.382" fill="#333">P4+</ns0:text>
+  <ns0:text x="877.3034" y="337.9775" text-anchor="middle" font-family="Arial" font-size="17.2584" fill="#2e7d32">P2 split into 3 sub-partitions</ns0:text>
+  <ns0:text x="575.2809" y="402.6966" text-anchor="middle" font-family="Arial" font-size="21.573" font-weight="bold" fill="#333">Skew Handling Strategies</ns0:text>
+  <ns0:rect x="43.1461" y="431.4607" width="244.4944" height="93.4831" rx="8.6292" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.1573" />
+  <ns0:text x="165.3933" y="464.5393" text-anchor="middle" font-family="Arial" font-size="17.2584" font-weight="bold" fill="#1a237e">AQE Skew Join</ns0:text>
+  <ns0:text x="165.3933" y="493.3034" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">Auto-split large</ns0:text>
+  <ns0:text x="165.3933" y="514.8764" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">partitions at runtime</ns0:text>
+  <ns0:rect x="316.4045" y="431.4607" width="244.4944" height="93.4831" rx="8.6292" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.1573" />
+  <ns0:text x="438.6517" y="464.5393" text-anchor="middle" font-family="Arial" font-size="17.2584" font-weight="bold" fill="#1b5e20">Salting</ns0:text>
+  <ns0:text x="438.6517" y="493.3034" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">Add random prefix to</ns0:text>
+  <ns0:text x="438.6517" y="514.8764" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">skewed join keys</ns0:text>
+  <ns0:rect x="589.6629" y="431.4607" width="244.4944" height="93.4831" rx="8.6292" fill="#fff3e0" stroke="#e65100" stroke-width="2.1573" />
+  <ns0:text x="711.9101" y="464.5393" text-anchor="middle" font-family="Arial" font-size="17.2584" font-weight="bold" fill="#e65100">Broadcast Join</ns0:text>
+  <ns0:text x="711.9101" y="493.3034" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">Broadcast small table</ns0:text>
+  <ns0:text x="711.9101" y="514.8764" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">to avoid shuffle</ns0:text>
+  <ns0:rect x="862.9213" y="431.4607" width="244.4944" height="93.4831" rx="8.6292" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.1573" />
+  <ns0:text x="985.1685" y="464.5393" text-anchor="middle" font-family="Arial" font-size="17.2584" font-weight="bold" fill="#6a1b9a">Repartition</ns0:text>
+  <ns0:text x="985.1685" y="493.3034" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">Custom partitioner</ns0:text>
+  <ns0:text x="985.1685" y="514.8764" text-anchor="middle" font-family="Arial" font-size="15.8202" fill="#333">to spread data evenly</ns0:text>
+  <ns0:rect x="143.8202" y="553.7079" width="862.9213" height="43.1461" rx="8.6292" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.4382" />
+  <ns0:text x="575.2809" y="582.4719" text-anchor="middle" font-family="Arial" font-size="17.2584" fill="#1a237e">spark.sql.adaptive.skewJoin.enabled = true | skewedPartitionFactor = 5</ns0:text>
+  <ns0:text x="575.2809" y="640" text-anchor="middle" font-family="Arial" font-size="17.2584" fill="#333">AQE detects skew at runtime and automatically splits oversized partitions</ns0:text>
+</ns0:svg>

@@ -1,39 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="17.0667" markerHeight="11.2" refX="17.0667" refY="5.6" orient="auto">
-      <polygon points="0,16 5.9733,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="48" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Blanket Implementation Pattern</text>
-  <rect x="85.3333" y="96" width="426.6667" height="128" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="298.6667" y="136" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">trait Display</text>
-  <text x="110.9333" y="172.8" font-size="17.6" fill="#555">fn fmt(&amp;self, f: &amp;mut Formatter)</text>
-  <text x="110.9333" y="204.8" font-size="17.6" fill="#555">  -&gt; fmt::Result;</text>
-  <rect x="341.3333" y="272" width="597.3333" height="128" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="640" y="312" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#28a745">Blanket Implementation</text>
-  <text x="366.9333" y="348.8" font-size="17.6" fill="#555">impl&lt;T: Display&gt; ToString for T {</text>
-  <text x="384" y="380.8" font-size="17.6" fill="#555">fn to_string(&amp;self) -&gt; String { ... }</text>
-  <rect x="768" y="96" width="426.6667" height="128" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="981.3333" y="136" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">trait ToString</text>
-  <text x="793.6" y="172.8" font-size="17.6" fill="#555">fn to_string(&amp;self) -&gt; String;</text>
-  <text x="793.6" y="204.8" font-size="16" fill="#555">// automatically available!</text>
-  <line x1="298.6667" y1="224" x2="512" y2="272" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
-  <line x1="810.6667" y1="272" x2="981.3333" y2="224" stroke="#ffc107" stroke-width="3.2" marker-end="url(#arrow)" />
-  <rect x="85.3333" y="464" width="256" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="213.3333" y="496" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">i32</text>
-  <text x="213.3333" y="524.8" text-anchor="middle" font-size="16" fill="#555">impl Display</text>
-  <rect x="392.5333" y="464" width="256" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="520.5333" y="496" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">String</text>
-  <text x="520.5333" y="524.8" text-anchor="middle" font-size="16" fill="#555">impl Display</text>
-  <rect x="699.7333" y="464" width="256" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="827.7333" y="496" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">MyStruct</text>
-  <text x="827.7333" y="524.8" text-anchor="middle" font-size="16" fill="#555">impl Display</text>
-  <line x1="512" y1="400" x2="213.3333" y2="464" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrow)" />
-  <line x1="640" y1="400" x2="520.5333" y2="464" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrow)" />
-  <line x1="716.8" y1="400" x2="827.7333" y2="464" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrow)" />
-  <text x="640" y="428.8" text-anchor="middle" font-size="16" fill="#28a745">All get ToString for free!</text>
-  <rect x="85.3333" y="592" width="1109.3333" height="104" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="640" y="632" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Key Insight</text>
-  <text x="110.9333" y="668.8" font-size="17.6" fill="#555">Blanket impls provide trait implementations for ALL types matching a bound.</text>
-  <text x="110.9333" y="684.8" font-size="17.6" fill="#555">This is how the standard library provides ToString for any type implementing Display.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="15.6935" markerHeight="10.2989" refX="15.6935" refY="5.1494" orient="auto">
+      <ns0:polygon points="0,14.7126 5.4927,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="29.4253" font-weight="bold" fill="#333">Blanket Implementation Pattern</ns0:text>
+  <ns0:rect x="78.4674" y="88.2759" width="392.3372" height="117.7011" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9425" />
+  <ns0:text x="274.636" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#333">trait Display</ns0:text>
+  <ns0:text x="102.0076" y="158.8966" font-size="16.1839" fill="#555">fn fmt(&amp;self, f: &amp;mut Formatter)</ns0:text>
+  <ns0:text x="102.0076" y="188.3218" font-size="16.1839" fill="#555">  -&gt; fmt::Result;</ns0:text>
+  <ns0:rect x="313.8697" y="250.1149" width="549.272" height="117.7011" rx="7.3563" fill="#d4edda" stroke="#28a745" stroke-width="2.9425" />
+  <ns0:text x="588.5057" y="286.8966" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#28a745">Blanket Implementation</ns0:text>
+  <ns0:text x="337.4099" y="320.7356" font-size="16.1839" fill="#555">impl&lt;T: Display&gt; ToString for T {</ns0:text>
+  <ns0:text x="353.1034" y="350.1609" font-size="16.1839" fill="#555">fn to_string(&amp;self) -&gt; String { ... }</ns0:text>
+  <ns0:rect x="706.2069" y="88.2759" width="392.3372" height="117.7011" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9425" />
+  <ns0:text x="902.3754" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#333">trait ToString</ns0:text>
+  <ns0:text x="729.7471" y="158.8966" font-size="16.1839" fill="#555">fn to_string(&amp;self) -&gt; String;</ns0:text>
+  <ns0:text x="729.7471" y="188.3218" font-size="14.7126" fill="#555">// automatically available!</ns0:text>
+  <ns0:line x1="274.636" y1="205.977" x2="470.8046" y2="250.1149" stroke="#4a90e2" stroke-width="2.9425" marker-end="url(#arrow)" />
+  <ns0:line x1="745.4406" y1="250.1149" x2="902.3754" y2="205.977" stroke="#ffc107" stroke-width="2.9425" marker-end="url(#arrow)" />
+  <ns0:rect x="78.4674" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2069" />
+  <ns0:text x="196.1686" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#333">i32</ns0:text>
+  <ns0:text x="196.1686" y="482.5747" text-anchor="middle" font-size="14.7126" fill="#555">impl Display</ns0:text>
+  <ns0:rect x="360.9502" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2069" />
+  <ns0:text x="478.6513" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#333">String</ns0:text>
+  <ns0:text x="478.6513" y="482.5747" text-anchor="middle" font-size="14.7126" fill="#555">impl Display</ns0:text>
+  <ns0:rect x="643.4329" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2069" />
+  <ns0:text x="761.1341" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="#333">MyStruct</ns0:text>
+  <ns0:text x="761.1341" y="482.5747" text-anchor="middle" font-size="14.7126" fill="#555">impl Display</ns0:text>
+  <ns0:line x1="470.8046" y1="367.8161" x2="196.1686" y2="426.6667" stroke="#28a745" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <ns0:line x1="588.5057" y1="367.8161" x2="478.6513" y2="426.6667" stroke="#28a745" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <ns0:line x1="659.1264" y1="367.8161" x2="761.1341" y2="426.6667" stroke="#28a745" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <ns0:text x="588.5057" y="394.2989" text-anchor="middle" font-size="14.7126" fill="#28a745">All get ToString for free!</ns0:text>
+  <ns0:rect x="78.4674" y="544.3678" width="1020.0766" height="95.6322" rx="7.3563" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9425" />
+  <ns0:text x="588.5057" y="581.1494" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="#333">Key Insight</ns0:text>
+  <ns0:text x="102.0076" y="614.9885" font-size="16.1839" fill="#555">Blanket impls provide trait implementations for ALL types matching a bound.</ns0:text>
+  <ns0:text x="102.0076" y="629.7011" font-size="16.1839" fill="#555">This is how the standard library provides ToString for any type implementing Display.</ns0:text>
+</ns0:svg>

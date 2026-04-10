@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#f0f4f8" rx="7.7576" stroke="#333" stroke-width="2.9091" />
-  <text x="640" y="57.6" font-family="sans-serif" font-size="29.0909" font-weight="bold" fill="#222" text-anchor="middle">SQL Injection — Positive Indicators</text>
-  <rect x="38.7879" y="96" width="1202.4242" height="115.2" fill="#ffebee" rx="7.7576" stroke="#c62828" stroke-width="1.9394" />
-  <text x="67.8788" y="144" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#c62828">1. Database error messages</text>
-  <text x="67.8788" y="187.2" font-family="monospace" font-size="21.3333" fill="#555">"You have an error in your SQL syntax..." / "ORA-01756: quoted string not properly terminated"</text>
-  <rect x="38.7879" y="230.4" width="1202.4242" height="86.4" fill="#fff3e0" rx="7.7576" stroke="#e65100" stroke-width="1.9394" />
-  <text x="67.8788" y="278.4" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#e65100">2. Behavior differs: single quote (') causes error, two singles ('') do not</text>
-  <rect x="38.7879" y="336" width="1202.4242" height="115.2" fill="#e8f5e9" rx="7.7576" stroke="#2e7d32" stroke-width="1.9394" />
-  <text x="67.8788" y="384" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#2e7d32">3. Boolean differences</text>
-  <text x="67.8788" y="427.2" font-family="monospace" font-size="21.3333" fill="#555">id=1 AND 1=1 → normal   |   id=1 AND 1=2 → different/empty response</text>
-  <rect x="38.7879" y="470.4" width="1202.4242" height="86.4" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="1.9394" />
-  <text x="67.8788" y="513.6" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#1565c0">4. Time delays</text>
-  <text x="67.8788" y="549.6" font-family="monospace" font-size="21.3333" fill="#555">  id=1; WAITFOR DELAY '0:0:5'--  →  5 second delay</text>
-  <rect x="38.7879" y="576" width="1202.4242" height="86.4" fill="#f3e5f5" rx="7.7576" stroke="#7b1fa2" stroke-width="1.9394" />
-  <text x="67.8788" y="619.2" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#7b1fa2">5. Arithmetic evaluation</text>
-  <text x="67.8788" y="655.2" font-family="monospace" font-size="21.3333" fill="#555">  id=2-1  →  same as id=1  (input is being evaluated as SQL)</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:rect width="1137.7778" height="640" fill="#f0f4f8" rx="6.8956" stroke="#333" stroke-width="2.5859" />
+  <ns0:text x="568.8889" y="51.2" font-family="sans-serif" font-size="25.8586" font-weight="bold" fill="#222" text-anchor="middle">SQL Injection — Positive Indicators</ns0:text>
+  <ns0:rect x="34.4781" y="85.3333" width="1068.8215" height="102.4" fill="#ffebee" rx="6.8956" stroke="#c62828" stroke-width="1.7239" />
+  <ns0:text x="60.3367" y="128" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#c62828">1. Database error messages</ns0:text>
+  <ns0:text x="60.3367" y="166.4" font-family="monospace" font-size="18.9629" fill="#555">"You have an error in your SQL syntax..." / "ORA-01756: quoted string not properly terminated"</ns0:text>
+  <ns0:rect x="34.4781" y="204.8" width="1068.8215" height="76.8" fill="#fff3e0" rx="6.8956" stroke="#e65100" stroke-width="1.7239" />
+  <ns0:text x="60.3367" y="247.4667" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#e65100">2. Behavior differs: single quote (') causes error, two singles ('') do not</ns0:text>
+  <ns0:rect x="34.4781" y="298.6667" width="1068.8215" height="102.4" fill="#e8f5e9" rx="6.8956" stroke="#2e7d32" stroke-width="1.7239" />
+  <ns0:text x="60.3367" y="341.3333" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#2e7d32">3. Boolean differences</ns0:text>
+  <ns0:text x="60.3367" y="379.7333" font-family="monospace" font-size="18.9629" fill="#555">id=1 AND 1=1 → normal   |   id=1 AND 1=2 → different/empty response</ns0:text>
+  <ns0:rect x="34.4781" y="418.1333" width="1068.8215" height="76.8" fill="#e3f2fd" rx="6.8956" stroke="#1565c0" stroke-width="1.7239" />
+  <ns0:text x="60.3367" y="456.5333" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#1565c0">4. Time delays</ns0:text>
+  <ns0:text x="60.3367" y="488.5333" font-family="monospace" font-size="18.9629" fill="#555">  id=1; WAITFOR DELAY '0:0:5'--  →  5 second delay</ns0:text>
+  <ns0:rect x="34.4781" y="512" width="1068.8215" height="76.8" fill="#f3e5f5" rx="6.8956" stroke="#7b1fa2" stroke-width="1.7239" />
+  <ns0:text x="60.3367" y="550.4" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#7b1fa2">5. Arithmetic evaluation</ns0:text>
+  <ns0:text x="60.3367" y="582.4" font-family="monospace" font-size="18.9629" fill="#555">  id=2-1  →  same as id=1  (input is being evaluated as SQL)</ns0:text>
+</ns0:svg>

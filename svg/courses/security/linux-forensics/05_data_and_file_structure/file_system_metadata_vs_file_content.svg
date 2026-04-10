@@ -1,49 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Inode (metadata) panel -->
-  <rect x="30" y="30" width="560" height="630" rx="12" fill="#fff3cd" stroke="#ffc107" stroke-width="3" filter="url(#shadow)"/>
-  <text x="310" y="95" text-anchor="middle" font-size="30" font-weight="bold" fill="#856404">Inode (metadata)</text>
-  <text x="90" y="160" font-size="26" fill="#333333">- File size</text>
-  <text x="90" y="210" font-size="26" fill="#333333">- Ownership (UID/GID)</text>
-  <text x="90" y="260" font-size="26" fill="#333333">- Permissions</text>
-  <text x="90" y="310" font-size="26" fill="#333333">- Timestamps (atime, mtime, ctime)</text>
-  <text x="90" y="360" font-size="26" fill="#333333">- Block pointers</text>
-  <text x="90" y="410" font-size="26" fill="#333333">- Link count</text>
-  <text x="90" y="460" font-size="26" fill="#333333">- File type</text>
-  <text x="90" y="540" font-size="20" fill="#856404">No filename stored in inode!</text>
-  <text x="90" y="575" font-size="20" fill="#555555">Filename lives in directory entry</text>
-
-  <!-- Arrow -->
-  <line x1="590" y1="360" x2="660" y2="360" stroke="#1565c0" stroke-width="4" marker-end="url(#arrow-accent)"/>
-
-  <!-- Data Blocks panel -->
-  <rect x="670" y="30" width="580" height="630" rx="12" fill="#d4edda" stroke="#28a745" stroke-width="3" filter="url(#shadow)"/>
-  <text x="960" y="95" text-anchor="middle" font-size="30" font-weight="bold" fill="#28a745">Data Blocks</text>
-  <text x="960" y="140" text-anchor="middle" font-size="22" fill="#666666">(actual content)</text>
-  <rect x="710" y="165" width="500" height="330" rx="12" fill="#ffffff" stroke="#28a745" stroke-width="2"/>
-  <text x="960" y="240" text-anchor="middle" font-size="26" fill="#333333">Hello, this is</text>
-  <text x="960" y="290" text-anchor="middle" font-size="26" fill="#333333">the file data</text>
-  <text x="960" y="340" text-anchor="middle" font-size="26" fill="#333333">stored in</text>
-  <text x="960" y="390" text-anchor="middle" font-size="26" fill="#333333">allocated blocks...</text>
-  <text x="960" y="560" text-anchor="middle" font-size="20" fill="#28a745">Blocks allocated in extents</text>
-  <text x="960" y="595" text-anchor="middle" font-size="18" fill="#555555">Forensic: unallocated may have old data</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="26.6667" y="26.6667" width="497.7778" height="560" rx="10.6667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="275.5556" y="84.4444" text-anchor="middle" font-size="26.6667" font-weight="bold" fill="#856404">Inode (metadata)</ns0:text>
+  <ns0:text x="80" y="142.2222" font-size="23.1111" fill="#333333">- File size</ns0:text>
+  <ns0:text x="80" y="186.6667" font-size="23.1111" fill="#333333">- Ownership (UID/GID)</ns0:text>
+  <ns0:text x="80" y="231.1111" font-size="23.1111" fill="#333333">- Permissions</ns0:text>
+  <ns0:text x="80" y="275.5556" font-size="23.1111" fill="#333333">- Timestamps (atime, mtime, ctime)</ns0:text>
+  <ns0:text x="80" y="320" font-size="23.1111" fill="#333333">- Block pointers</ns0:text>
+  <ns0:text x="80" y="364.4444" font-size="23.1111" fill="#333333">- Link count</ns0:text>
+  <ns0:text x="80" y="408.8889" font-size="23.1111" fill="#333333">- File type</ns0:text>
+  <ns0:text x="80" y="480" font-size="17.7778" fill="#856404">No filename stored in inode!</ns0:text>
+  <ns0:text x="80" y="511.1111" font-size="17.7778" fill="#555555">Filename lives in directory entry</ns0:text>
+  <ns0:line x1="524.4444" y1="320" x2="586.6667" y2="320" stroke="#1565c0" stroke-width="3.5556" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="595.5556" y="26.6667" width="515.5556" height="560" rx="10.6667" fill="#d4edda" stroke="#28a745" stroke-width="2.6667" filter="url(#shadow)" />
+  <ns0:text x="853.3333" y="84.4444" text-anchor="middle" font-size="26.6667" font-weight="bold" fill="#28a745">Data Blocks</ns0:text>
+  <ns0:text x="853.3333" y="124.4444" text-anchor="middle" font-size="19.5556" fill="#666666">(actual content)</ns0:text>
+  <ns0:rect x="631.1111" y="146.6667" width="444.4444" height="293.3333" rx="10.6667" fill="#ffffff" stroke="#28a745" stroke-width="1.7778" />
+  <ns0:text x="853.3333" y="213.3333" text-anchor="middle" font-size="23.1111" fill="#333333">Hello, this is</ns0:text>
+  <ns0:text x="853.3333" y="257.7778" text-anchor="middle" font-size="23.1111" fill="#333333">the file data</ns0:text>
+  <ns0:text x="853.3333" y="302.2222" text-anchor="middle" font-size="23.1111" fill="#333333">stored in</ns0:text>
+  <ns0:text x="853.3333" y="346.6667" text-anchor="middle" font-size="23.1111" fill="#333333">allocated blocks...</ns0:text>
+  <ns0:text x="853.3333" y="497.7778" text-anchor="middle" font-size="17.7778" fill="#28a745">Blocks allocated in extents</ns0:text>
+  <ns0:text x="853.3333" y="528.8889" text-anchor="middle" font-size="16" fill="#555555">Forensic: unallocated may have old data</ns0:text>
+</ns0:svg>

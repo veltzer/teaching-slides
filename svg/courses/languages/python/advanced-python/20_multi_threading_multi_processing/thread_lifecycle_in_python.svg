@@ -1,46 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="640" y="42" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Thread Lifecycle in Python</text>
-  <!-- States -->
-  <rect x="80" y="200" width="200" height="120" rx="22" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="180" y="268" text-anchor="middle" font-size="24" fill="#333333">New</text>
-  <rect x="400" y="200" width="200" height="120" rx="22" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="500" y="268" text-anchor="middle" font-size="24" fill="#333333">Runnable</text>
-  <rect x="720" y="200" width="200" height="120" rx="22" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="820" y="268" text-anchor="middle" font-size="24" fill="#333333">Running</text>
-  <rect x="720" y="440" width="200" height="120" rx="22" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="820" y="508" text-anchor="middle" font-size="24" fill="#333333">Blocked</text>
-  <rect x="400" y="440" width="200" height="120" rx="22" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="500" y="508" text-anchor="middle" font-size="24" fill="#333333">Terminated</text>
-  <!-- Arrows -->
-  <line x1="280" y1="260" x2="400" y2="260" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="340" y="246" text-anchor="middle" font-size="16" fill="#555555">start()</text>
-  <line x1="600" y1="260" x2="720" y2="260" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="820" y1="320" x2="820" y2="440" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="870" y="390" font-size="16" fill="#555555">I/O, sleep()</text>
-  <line x1="720" y1="500" x2="600" y2="500" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="658" y="488" font-size="16" fill="#555555">return</text>
-  <!-- Blocked back to running -->
-  <path d="M 820 440 C 820 370 720 260 720 260" fill="none" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <!-- Labels -->
-  <text x="640" y="660" text-anchor="middle" font-size="16" fill="#555555">A thread transitions through these states during its lifetime</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.7805">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.7805">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.122%" y="-6.2439%" width="84.2927%" height="96.7805%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="7.8049" markerHeight="7.8049" refX="7.0244" refY="3.9024" orient="auto">
+      <ns0:path d="M 0.7805 1.561 L 7.0244 3.9024 L 0.7805 6.2439 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="7.8049" markerHeight="7.8049" refX="7.0244" refY="3.9024" orient="auto">
+      <ns0:path d="M 0.7805 1.561 L 7.0244 3.9024 L 0.7805 6.2439 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="999.0244" height="561.9512" fill="#ffffff" />
+  <ns0:text x="499.5122" y="32.7805" text-anchor="middle" font-size="20.2927" font-weight="bold" fill="#1565c0">Thread Lifecycle in Python</ns0:text>
+  <ns0:rect x="62.439" y="156.0976" width="156.0976" height="93.6585" rx="17.1707" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.9512" filter="url(#shadow)" />
+  <ns0:text x="140.4878" y="209.1707" text-anchor="middle" font-size="18.7317" fill="#333333">New</ns0:text>
+  <ns0:rect x="312.1951" y="156.0976" width="156.0976" height="93.6585" rx="17.1707" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.9512" filter="url(#shadow)" />
+  <ns0:text x="390.2439" y="209.1707" text-anchor="middle" font-size="18.7317" fill="#333333">Runnable</ns0:text>
+  <ns0:rect x="561.9512" y="156.0976" width="156.0976" height="93.6585" rx="17.1707" fill="#fff9c4" stroke="#f9a825" stroke-width="1.9512" filter="url(#shadow)" />
+  <ns0:text x="640" y="209.1707" text-anchor="middle" font-size="18.7317" fill="#333333">Running</ns0:text>
+  <ns0:rect x="561.9512" y="343.4146" width="156.0976" height="93.6585" rx="17.1707" fill="#fce4ec" stroke="#e53935" stroke-width="1.9512" filter="url(#shadow)" />
+  <ns0:text x="640" y="396.4878" text-anchor="middle" font-size="18.7317" fill="#333333">Blocked</ns0:text>
+  <ns0:rect x="312.1951" y="343.4146" width="156.0976" height="93.6585" rx="17.1707" fill="#ede7f6" stroke="#7b1fa2" stroke-width="1.9512" filter="url(#shadow)" />
+  <ns0:text x="390.2439" y="396.4878" text-anchor="middle" font-size="18.7317" fill="#333333">Terminated</ns0:text>
+  <ns0:line x1="218.5366" y1="202.9268" x2="312.1951" y2="202.9268" stroke="#555555" stroke-width="1.9512" marker-end="url(#arrow)" />
+  <ns0:text x="265.3659" y="192" text-anchor="middle" font-size="12.4878" fill="#555555">start()</ns0:text>
+  <ns0:line x1="468.2927" y1="202.9268" x2="561.9512" y2="202.9268" stroke="#555555" stroke-width="1.9512" marker-end="url(#arrow)" />
+  <ns0:line x1="640" y1="249.7561" x2="640" y2="343.4146" stroke="#555555" stroke-width="1.9512" marker-end="url(#arrow)" />
+  <ns0:text x="679.0244" y="304.3902" font-size="12.4878" fill="#555555">I/O, sleep()</ns0:text>
+  <ns0:line x1="561.9512" y1="390.2439" x2="468.2927" y2="390.2439" stroke="#555555" stroke-width="1.9512" marker-end="url(#arrow)" />
+  <ns0:text x="513.561" y="380.878" font-size="12.4878" fill="#555555">return</ns0:text>
+  <ns0:path d="M 640 343.4146 C 640 288.7805 561.9512 202.9268 561.9512 202.9268" fill="none" stroke="#555555" stroke-width="1.9512" marker-end="url(#arrow)" />
+  <ns0:text x="499.5122" y="515.122" text-anchor="middle" font-size="12.4878" fill="#555555">A thread transitions through these states during its lifetime</ns0:text>
+</ns0:svg>

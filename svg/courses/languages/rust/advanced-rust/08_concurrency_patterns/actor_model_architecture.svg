@@ -1,57 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="10.5" refX="16" refY="5.25" orient="auto">
-      <polygon points="0,15 5.6,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="45" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Actor Model Architecture</text>
-  <rect x="48" y="90" width="320" height="240" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="208" y="127.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Actor: UserService</text>
-  <rect x="72" y="142.5" width="272" height="37.5" rx="4.5" fill="#d4edda" stroke="#28a745" stroke-width="1.5" />
-  <text x="208" y="168" text-anchor="middle" font-size="15" fill="#333">Private State</text>
-  <rect x="72" y="187.5" width="272" height="37.5" rx="4.5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5" />
-  <text x="208" y="213" text-anchor="middle" font-size="15" fill="#333">Mailbox (channel rx)</text>
-  <rect x="72" y="232.5" width="272" height="37.5" rx="4.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5" />
-  <text x="208" y="258" text-anchor="middle" font-size="15" fill="#333">Message Handler</text>
-  <text x="208" y="307.5" text-anchor="middle" font-size="15" fill="#555">Processes one msg at a time</text>
-  <rect x="480" y="90" width="320" height="240" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="640" y="127.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Actor: OrderService</text>
-  <rect x="504" y="142.5" width="272" height="37.5" rx="4.5" fill="#d4edda" stroke="#28a745" stroke-width="1.5" />
-  <text x="640" y="168" text-anchor="middle" font-size="15" fill="#333">Private State</text>
-  <rect x="504" y="187.5" width="272" height="37.5" rx="4.5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5" />
-  <text x="640" y="213" text-anchor="middle" font-size="15" fill="#333">Mailbox (channel rx)</text>
-  <rect x="504" y="232.5" width="272" height="37.5" rx="4.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5" />
-  <text x="640" y="258" text-anchor="middle" font-size="15" fill="#333">Message Handler</text>
-  <text x="640" y="307.5" text-anchor="middle" font-size="15" fill="#555">Processes one msg at a time</text>
-  <rect x="912" y="90" width="320" height="240" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="1072" y="127.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Actor: EmailService</text>
-  <rect x="936" y="142.5" width="272" height="37.5" rx="4.5" fill="#d4edda" stroke="#28a745" stroke-width="1.5" />
-  <text x="1072" y="168" text-anchor="middle" font-size="15" fill="#333">Private State</text>
-  <rect x="936" y="187.5" width="272" height="37.5" rx="4.5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5" />
-  <text x="1072" y="213" text-anchor="middle" font-size="15" fill="#333">Mailbox (channel rx)</text>
-  <rect x="936" y="232.5" width="272" height="37.5" rx="4.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5" />
-  <text x="1072" y="258" text-anchor="middle" font-size="15" fill="#333">Message Handler</text>
-  <line x1="368" y1="195" x2="480" y2="195" stroke="#ffc107" stroke-width="3" marker-end="url(#arrow)" />
-  <text x="424" y="183" font-size="15" fill="#ffc107">CreateOrder</text>
-  <line x1="800" y1="195" x2="912" y2="195" stroke="#ffc107" stroke-width="3" marker-end="url(#arrow)" />
-  <text x="856" y="183" font-size="15" fill="#ffc107">SendEmail</text>
-  <line x1="640" y1="330" x2="208" y2="330" stroke="#28a745" stroke-width="2.25" stroke-dasharray="7.5 4.5" marker-end="url(#arrow)" />
-  <text x="424" y="352.5" font-size="15" fill="#28a745">UserFound(response)</text>
-  <rect x="48" y="390" width="560" height="150" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
-  <text x="328" y="427.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Key Principles</text>
-  <text x="72" y="462" font-size="15" fill="#555">- No shared mutable state</text>
-  <text x="72" y="489" font-size="15" fill="#555">- Communication only via messages</text>
-  <text x="72" y="516" font-size="15" fill="#555">- Each actor has exclusive state ownership</text>
-  <rect x="656" y="390" width="576" height="150" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
-  <text x="944" y="427.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Rust Implementation</text>
-  <text x="680" y="462" font-size="15" fill="#555">- tokio::sync::mpsc channels</text>
-  <text x="680" y="489" font-size="15" fill="#555">- Each actor is a tokio::spawn task</text>
-  <text x="680" y="516" font-size="15" fill="#555">- Crates: actix, xactor, ractor</text>
-  <rect x="48" y="570" width="1184" height="127.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="640" y="607.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Benefits of Actor Model in Rust</text>
-  <text x="224" y="645" text-anchor="middle" font-size="15" fill="#555">No locks needed</text>
-  <text x="480" y="645" text-anchor="middle" font-size="15" fill="#555">Natural backpressure</text>
-  <text x="752" y="645" text-anchor="middle" font-size="15" fill="#555">Fault isolation</text>
-  <text x="1024" y="645" text-anchor="middle" font-size="15" fill="#555">Scalable</text>
-  <text x="640" y="682.5" text-anchor="middle" font-size="15" fill="#555">Rust's ownership model aligns perfectly: messages are moved (Send), not shared</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.681" markerHeight="9.6344" refX="14.681" refY="4.8172" orient="auto">
+      <ns0:polygon points="0,13.7634 5.1384,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="587.2401" y="41.2903" text-anchor="middle" font-size="27.5269" font-weight="bold" fill="#333">Actor Model Architecture</ns0:text>
+  <ns0:rect x="44.043" y="82.5806" width="293.6201" height="220.2151" rx="6.8817" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7527" />
+  <ns0:text x="190.853" y="116.9892" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Actor: UserService</ns0:text>
+  <ns0:rect x="66.0645" y="130.7527" width="249.5771" height="34.4086" rx="4.129" fill="#d4edda" stroke="#28a745" stroke-width="1.3763" />
+  <ns0:text x="190.853" y="154.1505" text-anchor="middle" font-size="13.7634" fill="#333">Private State</ns0:text>
+  <ns0:rect x="66.0645" y="172.043" width="249.5771" height="34.4086" rx="4.129" fill="#fff3cd" stroke="#ffc107" stroke-width="1.3763" />
+  <ns0:text x="190.853" y="195.4409" text-anchor="middle" font-size="13.7634" fill="#333">Mailbox (channel rx)</ns0:text>
+  <ns0:rect x="66.0645" y="213.3333" width="249.5771" height="34.4086" rx="4.129" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.3763" />
+  <ns0:text x="190.853" y="236.7312" text-anchor="middle" font-size="13.7634" fill="#333">Message Handler</ns0:text>
+  <ns0:text x="190.853" y="282.1505" text-anchor="middle" font-size="13.7634" fill="#555">Processes one msg at a time</ns0:text>
+  <ns0:rect x="440.4301" y="82.5806" width="293.6201" height="220.2151" rx="6.8817" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7527" />
+  <ns0:text x="587.2401" y="116.9892" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Actor: OrderService</ns0:text>
+  <ns0:rect x="462.4516" y="130.7527" width="249.5771" height="34.4086" rx="4.129" fill="#d4edda" stroke="#28a745" stroke-width="1.3763" />
+  <ns0:text x="587.2401" y="154.1505" text-anchor="middle" font-size="13.7634" fill="#333">Private State</ns0:text>
+  <ns0:rect x="462.4516" y="172.043" width="249.5771" height="34.4086" rx="4.129" fill="#fff3cd" stroke="#ffc107" stroke-width="1.3763" />
+  <ns0:text x="587.2401" y="195.4409" text-anchor="middle" font-size="13.7634" fill="#333">Mailbox (channel rx)</ns0:text>
+  <ns0:rect x="462.4516" y="213.3333" width="249.5771" height="34.4086" rx="4.129" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.3763" />
+  <ns0:text x="587.2401" y="236.7312" text-anchor="middle" font-size="13.7634" fill="#333">Message Handler</ns0:text>
+  <ns0:text x="587.2401" y="282.1505" text-anchor="middle" font-size="13.7634" fill="#555">Processes one msg at a time</ns0:text>
+  <ns0:rect x="836.8172" y="82.5806" width="293.6201" height="220.2151" rx="6.8817" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7527" />
+  <ns0:text x="983.6272" y="116.9892" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Actor: EmailService</ns0:text>
+  <ns0:rect x="858.8387" y="130.7527" width="249.5771" height="34.4086" rx="4.129" fill="#d4edda" stroke="#28a745" stroke-width="1.3763" />
+  <ns0:text x="983.6272" y="154.1505" text-anchor="middle" font-size="13.7634" fill="#333">Private State</ns0:text>
+  <ns0:rect x="858.8387" y="172.043" width="249.5771" height="34.4086" rx="4.129" fill="#fff3cd" stroke="#ffc107" stroke-width="1.3763" />
+  <ns0:text x="983.6272" y="195.4409" text-anchor="middle" font-size="13.7634" fill="#333">Mailbox (channel rx)</ns0:text>
+  <ns0:rect x="858.8387" y="213.3333" width="249.5771" height="34.4086" rx="4.129" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.3763" />
+  <ns0:text x="983.6272" y="236.7312" text-anchor="middle" font-size="13.7634" fill="#333">Message Handler</ns0:text>
+  <ns0:line x1="337.6631" y1="178.9247" x2="440.4301" y2="178.9247" stroke="#ffc107" stroke-width="2.7527" marker-end="url(#arrow)" />
+  <ns0:text x="389.0466" y="167.914" font-size="13.7634" fill="#ffc107">CreateOrder</ns0:text>
+  <ns0:line x1="734.0502" y1="178.9247" x2="836.8172" y2="178.9247" stroke="#ffc107" stroke-width="2.7527" marker-end="url(#arrow)" />
+  <ns0:text x="785.4337" y="167.914" font-size="13.7634" fill="#ffc107">SendEmail</ns0:text>
+  <ns0:line x1="587.2401" y1="302.7957" x2="190.853" y2="302.7957" stroke="#28a745" stroke-width="2.0645" stroke-dasharray="6.8817 4.129" marker-end="url(#arrow)" />
+  <ns0:text x="389.0466" y="323.4409" font-size="13.7634" fill="#28a745">UserFound(response)</ns0:text>
+  <ns0:rect x="44.043" y="357.8495" width="513.8351" height="137.6344" rx="6.8817" fill="#d4edda" stroke="#28a745" stroke-width="2.7527" />
+  <ns0:text x="300.9606" y="392.2581" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Key Principles</ns0:text>
+  <ns0:text x="66.0645" y="423.914" font-size="13.7634" fill="#555">- No shared mutable state</ns0:text>
+  <ns0:text x="66.0645" y="448.6882" font-size="13.7634" fill="#555">- Communication only via messages</ns0:text>
+  <ns0:text x="66.0645" y="473.4624" font-size="13.7634" fill="#555">- Each actor has exclusive state ownership</ns0:text>
+  <ns0:rect x="601.9211" y="357.8495" width="528.5161" height="137.6344" rx="6.8817" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7527" />
+  <ns0:text x="866.1792" y="392.2581" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Rust Implementation</ns0:text>
+  <ns0:text x="623.9427" y="423.914" font-size="13.7634" fill="#555">- tokio::sync::mpsc channels</ns0:text>
+  <ns0:text x="623.9427" y="448.6882" font-size="13.7634" fill="#555">- Each actor is a tokio::spawn task</ns0:text>
+  <ns0:text x="623.9427" y="473.4624" font-size="13.7634" fill="#555">- Crates: actix, xactor, ractor</ns0:text>
+  <ns0:rect x="44.043" y="523.0108" width="1086.3943" height="116.9892" rx="6.8817" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7527" />
+  <ns0:text x="587.2401" y="557.4194" text-anchor="middle" font-size="17.8925" font-weight="bold" fill="#333">Benefits of Actor Model in Rust</ns0:text>
+  <ns0:text x="205.5341" y="591.828" text-anchor="middle" font-size="13.7634" fill="#555">No locks needed</ns0:text>
+  <ns0:text x="440.4301" y="591.828" text-anchor="middle" font-size="13.7634" fill="#555">Natural backpressure</ns0:text>
+  <ns0:text x="690.0072" y="591.828" text-anchor="middle" font-size="13.7634" fill="#555">Fault isolation</ns0:text>
+  <ns0:text x="939.5842" y="591.828" text-anchor="middle" font-size="13.7634" fill="#555">Scalable</ns0:text>
+  <ns0:text x="587.2401" y="626.2366" text-anchor="middle" font-size="13.7634" fill="#555">Rust's ownership model aligns perfectly: messages are moved (Send), not shared</ns0:text>
+</ns0:svg>

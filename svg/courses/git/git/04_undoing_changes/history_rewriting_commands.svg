@@ -1,67 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="640" y="72" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Danger Level: Low → High</text>
-  <!-- Danger gradient bar -->
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="50%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#f44336"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-  </defs>
-  <rect x="64" y="560" width="1152" height="36" rx="10" fill="url(#dangerGrad)" opacity="0.7"/>
-  <text x="64" y="640" font-size="18" fill="#4caf50">Safe</text>
-  <text x="1152" y="640" font-size="18" fill="#f44336" text-anchor="end">Destructive</text>
-  <!-- commit amend -->
-  <rect x="64" y="132" width="256" height="380" fill="#e8f5e9" stroke="#4caf50" stroke-width="4" rx="16" filter="url(#shadow)"/>
-  <text x="192" y="212" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">commit</text>
-  <text x="192" y="256" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">--amend</text>
-  <text x="192" y="330" text-anchor="middle" font-size="18" fill="#555">Fixes last</text>
-  <text x="192" y="370" text-anchor="middle" font-size="18" fill="#555">commit only</text>
-  <text x="192" y="450" text-anchor="middle" font-size="18" fill="#4caf50">● Low risk</text>
-  <!-- rebase -i -->
-  <rect x="363" y="132" width="256" height="380" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="16" filter="url(#shadow)"/>
-  <text x="491" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">rebase -i</text>
-  <text x="491" y="320" text-anchor="middle" font-size="18" fill="#555">Rewrite multiple</text>
-  <text x="491" y="358" text-anchor="middle" font-size="18" fill="#555">past commits</text>
-  <text x="491" y="450" text-anchor="middle" font-size="18" fill="#1976d2">● Medium risk</text>
-  <!-- filter-branch -->
-  <rect x="661" y="132" width="256" height="380" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="16" filter="url(#shadow)"/>
-  <text x="789" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">filter-branch</text>
-  <text x="789" y="320" text-anchor="middle" font-size="18" fill="#555">Rewrites entire</text>
-  <text x="789" y="358" text-anchor="middle" font-size="18" fill="#555">repo history</text>
-  <text x="789" y="450" text-anchor="middle" font-size="18" fill="#f57c00">● High risk</text>
-  <!-- reset hard -->
-  <rect x="960" y="132" width="256" height="380" fill="#ffebee" stroke="#c62828" stroke-width="4" rx="16" filter="url(#shadow)"/>
-  <text x="1088" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">reset --hard</text>
-  <text x="1088" y="320" text-anchor="middle" font-size="18" fill="#555">Discards commits</text>
-  <text x="1088" y="358" text-anchor="middle" font-size="18" fill="#555">and changes</text>
-  <text x="1088" y="450" text-anchor="middle" font-size="18" fill="#c62828">● Destructive</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="64" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#333">Danger Level: Low → High</ns0:text>
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="dangerGrad" x1="0%" y1="0%" x2="88.8889%" y2="0%">
+      <ns0:stop offset="0%" stop-color="#4caf50" />
+      <ns0:stop offset="50%" stop-color="#ff9800" />
+      <ns0:stop offset="100%" stop-color="#f44336" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+  </ns0:defs>
+  <ns0:rect x="56.8889" y="497.7778" width="1024" height="32" rx="8.8889" fill="url(#dangerGrad)" opacity="0.7" />
+  <ns0:text x="56.8889" y="568.8889" font-size="16" fill="#4caf50">Safe</ns0:text>
+  <ns0:text x="1024" y="568.8889" font-size="16" fill="#f44336" text-anchor="end">Destructive</ns0:text>
+  <ns0:rect x="56.8889" y="117.3333" width="227.5556" height="337.7778" fill="#e8f5e9" stroke="#4caf50" stroke-width="3.5556" rx="14.2222" filter="url(#shadow)" />
+  <ns0:text x="170.6667" y="188.4444" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#2e7d32">commit</ns0:text>
+  <ns0:text x="170.6667" y="227.5556" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#2e7d32">--amend</ns0:text>
+  <ns0:text x="170.6667" y="293.3333" text-anchor="middle" font-size="16" fill="#555">Fixes last</ns0:text>
+  <ns0:text x="170.6667" y="328.8889" text-anchor="middle" font-size="16" fill="#555">commit only</ns0:text>
+  <ns0:text x="170.6667" y="400" text-anchor="middle" font-size="16" fill="#4caf50">● Low risk</ns0:text>
+  <ns0:rect x="322.6667" y="117.3333" width="227.5556" height="337.7778" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3.5556" rx="14.2222" filter="url(#shadow)" />
+  <ns0:text x="436.4444" y="208" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1565c0">rebase -i</ns0:text>
+  <ns0:text x="436.4444" y="284.4444" text-anchor="middle" font-size="16" fill="#555">Rewrite multiple</ns0:text>
+  <ns0:text x="436.4444" y="318.2222" text-anchor="middle" font-size="16" fill="#555">past commits</ns0:text>
+  <ns0:text x="436.4444" y="400" text-anchor="middle" font-size="16" fill="#1976d2">● Medium risk</ns0:text>
+  <ns0:rect x="587.5556" y="117.3333" width="227.5556" height="337.7778" fill="#fff3e0" stroke="#f57c00" stroke-width="3.5556" rx="14.2222" filter="url(#shadow)" />
+  <ns0:text x="701.3333" y="208" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#e65100">filter-branch</ns0:text>
+  <ns0:text x="701.3333" y="284.4444" text-anchor="middle" font-size="16" fill="#555">Rewrites entire</ns0:text>
+  <ns0:text x="701.3333" y="318.2222" text-anchor="middle" font-size="16" fill="#555">repo history</ns0:text>
+  <ns0:text x="701.3333" y="400" text-anchor="middle" font-size="16" fill="#f57c00">● High risk</ns0:text>
+  <ns0:rect x="853.3333" y="117.3333" width="227.5556" height="337.7778" fill="#ffebee" stroke="#c62828" stroke-width="3.5556" rx="14.2222" filter="url(#shadow)" />
+  <ns0:text x="967.1111" y="208" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#b71c1c">reset --hard</ns0:text>
+  <ns0:text x="967.1111" y="284.4444" text-anchor="middle" font-size="16" fill="#555">Discards commits</ns0:text>
+  <ns0:text x="967.1111" y="318.2222" text-anchor="middle" font-size="16" fill="#555">and changes</ns0:text>
+  <ns0:text x="967.1111" y="400" text-anchor="middle" font-size="16" fill="#c62828">● Destructive</ns0:text>
+</ns0:svg>

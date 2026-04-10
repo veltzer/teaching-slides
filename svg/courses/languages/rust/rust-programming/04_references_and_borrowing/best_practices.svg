@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="426.6667" y="18" width="426.6667" height="126" fill="#673ab7" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="640" y="100.8" text-anchor="middle" font-size="25.6" fill="white" font-weight="bold">Borrowing Best Practices</text>
-  <line x1="533.3333" y1="144" x2="256" y2="216" stroke="#333" stroke-width="4.2667" />
-  <line x1="746.6667" y1="144" x2="1024" y2="216" stroke="#333" stroke-width="4.2667" />
-  <line x1="533.3333" y1="144" x2="256" y2="450" stroke="#333" stroke-width="4.2667" />
-  <line x1="746.6667" y1="144" x2="1024" y2="450" stroke="#333" stroke-width="4.2667" />
-  <rect x="64" y="198" width="384" height="162" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="256" y="259.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Prefer &amp;T params</text>
-  <text x="256" y="309.6" text-anchor="middle" font-size="21.3333">Borrow instead of taking</text>
-  <text x="256" y="349.2" text-anchor="middle" font-size="21.3333">ownership in functions</text>
-  <rect x="832" y="198" width="384" height="162" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1024" y="259.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Minimize &amp;mut scope</text>
-  <text x="1024" y="309.6" text-anchor="middle" font-size="21.3333">Drop mutable refs early</text>
-  <text x="1024" y="349.2" text-anchor="middle" font-size="21.3333">to allow other borrows</text>
-  <rect x="64" y="432" width="384" height="162" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="256" y="493.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Use slice params</text>
-  <text x="256" y="543.6" text-anchor="middle" font-size="21.3333">fn foo(s: &amp;str) not</text>
-  <text x="256" y="583.2" text-anchor="middle" font-size="21.3333">fn foo(s: &amp;String)</text>
-  <rect x="832" y="432" width="384" height="162" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
-  <text x="1024" y="493.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Avoid dangling refs</text>
-  <text x="1024" y="543.6" text-anchor="middle" font-size="21.3333">Never return &amp;T to a</text>
-  <text x="1024" y="583.2" text-anchor="middle" font-size="21.3333">local variable</text>
-  <rect x="320" y="640.8" width="640" height="64.8" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="687.6" text-anchor="middle" font-size="21.3333">Trust the borrow checker -- it prevents data races and use-after-free</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:rect x="386.9993" y="16.3265" width="386.9993" height="114.2857" fill="#673ab7" stroke="#333" stroke-width="3.87" rx="15.48" />
+  <ns0:text x="580.4989" y="91.4286" text-anchor="middle" font-size="23.22" fill="white" font-weight="bold">Borrowing Best Practices</ns0:text>
+  <ns0:line x1="483.749" y1="130.6122" x2="232.1995" y2="195.9184" stroke="#333" stroke-width="3.87" />
+  <ns0:line x1="677.2487" y1="130.6122" x2="928.7982" y2="195.9184" stroke="#333" stroke-width="3.87" />
+  <ns0:line x1="483.749" y1="130.6122" x2="232.1995" y2="408.1633" stroke="#333" stroke-width="3.87" />
+  <ns0:line x1="677.2487" y1="130.6122" x2="928.7982" y2="408.1633" stroke="#333" stroke-width="3.87" />
+  <ns0:rect x="58.0499" y="179.5918" width="348.2993" height="146.9388" fill="#e3f2fd" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="232.1995" y="235.102" text-anchor="middle" font-size="19.3499" font-weight="bold">Prefer &amp;T params</ns0:text>
+  <ns0:text x="232.1995" y="280.8163" text-anchor="middle" font-size="19.3499">Borrow instead of taking</ns0:text>
+  <ns0:text x="232.1995" y="316.7347" text-anchor="middle" font-size="19.3499">ownership in functions</ns0:text>
+  <ns0:rect x="754.6485" y="179.5918" width="348.2993" height="146.9388" fill="#f3e5f5" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="928.7982" y="235.102" text-anchor="middle" font-size="19.3499" font-weight="bold">Minimize &amp;mut scope</ns0:text>
+  <ns0:text x="928.7982" y="280.8163" text-anchor="middle" font-size="19.3499">Drop mutable refs early</ns0:text>
+  <ns0:text x="928.7982" y="316.7347" text-anchor="middle" font-size="19.3499">to allow other borrows</ns0:text>
+  <ns0:rect x="58.0499" y="391.8367" width="348.2993" height="146.9388" fill="#e8f5e9" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="232.1995" y="447.3469" text-anchor="middle" font-size="19.3499" font-weight="bold">Use slice params</ns0:text>
+  <ns0:text x="232.1995" y="493.0612" text-anchor="middle" font-size="19.3499">fn foo(s: &amp;str) not</ns0:text>
+  <ns0:text x="232.1995" y="528.9796" text-anchor="middle" font-size="19.3499">fn foo(s: &amp;String)</ns0:text>
+  <ns0:rect x="754.6485" y="391.8367" width="348.2993" height="146.9388" fill="#fff3e0" stroke="#333" stroke-width="1.935" rx="9.675" />
+  <ns0:text x="928.7982" y="447.3469" text-anchor="middle" font-size="19.3499" font-weight="bold">Avoid dangling refs</ns0:text>
+  <ns0:text x="928.7982" y="493.0612" text-anchor="middle" font-size="19.3499">Never return &amp;T to a</ns0:text>
+  <ns0:text x="928.7982" y="528.9796" text-anchor="middle" font-size="19.3499">local variable</ns0:text>
+  <ns0:rect x="290.2494" y="581.2245" width="580.4989" height="58.7755" fill="#ffebee" stroke="#333" stroke-width="1.935" rx="5.805" />
+  <ns0:text x="580.4989" y="623.6735" text-anchor="middle" font-size="19.3499">Trust the borrow checker -- it prevents data races and use-after-free</ns0:text>
+</ns0:svg>

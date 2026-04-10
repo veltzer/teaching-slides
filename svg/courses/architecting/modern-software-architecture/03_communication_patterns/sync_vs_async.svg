@@ -1,119 +1,99 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Divider -->
-  <line x1="640" y1="30" x2="640" y2="660" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="6,4"/>
-  <!-- === LEFT: Synchronous === -->
-  <text x="320" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#1565c0">Synchronous (REST / gRPC)</text>
-  <!-- Client box -->
-  <rect x="60" y="80" width="150" height="50" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="135" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Client</text>
-  <!-- Server box -->
-  <rect x="440" y="80" width="150" height="50" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="515" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#212121">Server</text>
-  <!-- Request arrow -->
-  <line x1="210" y1="98" x2="438" y2="98" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <text x="324" y="91" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#1565c0">HTTP GET /orders</text>
-  <!-- Response arrow -->
-  <line x1="438" y1="118" x2="210" y2="118" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="324" y="135" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555555">200 OK { data }</text>
-  <!-- Waiting indicator -->
-  <rect x="60" y="155" width="150" height="30" rx="4" fill="#fff3e0" stroke="#ff9800" stroke-width="1.5"/>
-  <text x="135" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#e65100">⏳ Waiting…</text>
-  <!-- gRPC example -->
-  <rect x="60" y="215" width="530" height="80" rx="8" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
-  <text x="90" y="238" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#212121">gRPC (binary, typed)</text>
-  <text x="90" y="260" font-family="monospace" font-size="13" fill="#1565c0">stub.GetOrder(GetOrderRequest{id: 1})</text>
-  <text x="90" y="280" font-family="Arial,sans-serif" font-size="13" fill="#555555">← Blocks until server responds</text>
-  <!-- Characteristics -->
-  <rect x="60" y="320" width="530" height="160" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="325" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#1565c0">Characteristics</text>
-  <text x="80" y="372" font-family="Arial,sans-serif" font-size="14" fill="#212121">+ Simple request/response model</text>
-  <text x="80" y="395" font-family="Arial,sans-serif" font-size="14" fill="#212121">+ Easy to debug and trace</text>
-  <text x="80" y="418" font-family="Arial,sans-serif" font-size="14" fill="#212121">+ Immediate error feedback</text>
-  <text x="80" y="441" font-family="Arial,sans-serif" font-size="14" fill="#212121">− Temporal coupling (both must be up)</text>
-  <text x="80" y="464" font-family="Arial,sans-serif" font-size="14" fill="#212121">− Caller blocked while waiting</text>
-  <!-- Protocols -->
-  <rect x="60" y="500" width="160" height="44" rx="6" fill="#ffffff" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="140" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">REST / HTTP</text>
-  <rect x="235" y="500" width="160" height="44" rx="6" fill="#ffffff" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="315" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">gRPC</text>
-  <rect x="410" y="500" width="180" height="44" rx="6" fill="#ffffff" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="500" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">GraphQL</text>
-  <!-- === RIGHT: Asynchronous === -->
-  <text x="960" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#1565c0">Asynchronous (Queue / Event Bus)</text>
-  <!-- Producer -->
-  <rect x="660" y="80" width="150" height="50" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="735" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Producer</text>
-  <!-- Message Queue -->
-  <rect x="855" y="70" width="200" height="70" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="955" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f57f17">Message Queue</text>
-  <rect x="868" y="105" width="30" height="24" rx="3" fill="#f9a825"/>
-  <rect x="904" y="105" width="30" height="24" rx="3" fill="#f9a825"/>
-  <rect x="940" y="105" width="30" height="24" rx="3" fill="#f9a825"/>
-  <rect x="976" y="105" width="30" height="24" rx="3" fill="#ffd54f"/>
-  <!-- Consumer -->
-  <rect x="1100" y="80" width="150" height="50" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1175" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#212121">Consumer</text>
-  <!-- Arrows -->
-  <line x1="810" y1="105" x2="853" y2="105" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <text x="831" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">publish</text>
-  <line x1="1055" y1="105" x2="1098" y2="105" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1076" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#555555">consume</text>
-  <!-- Producer free indicator -->
-  <rect x="660" y="155" width="150" height="30" rx="4" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
-  <text x="735" y="175" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#2e7d32">✓ Free to continue</text>
-  <!-- Event Bus example -->
-  <rect x="660" y="215" width="580" height="80" rx="8" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
-  <text x="690" y="238" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#212121">Event Bus (Pub/Sub)</text>
-  <rect x="700" y="252" width="120" height="30" rx="4" fill="#e3f2fd"/>
-  <text x="760" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Publisher</text>
-  <rect x="860" y="245" width="130" height="44" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="925" y="263" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#f57f17">Kafka / SNS</text>
-  <text x="925" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555555">Event Bus</text>
-  <rect x="1030" y="252" width="100" height="30" rx="4" fill="#e8f5e9"/>
-  <text x="1080" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Subscriber</text>
-  <rect x="1140" y="252" width="100" height="30" rx="4" fill="#e8f5e9"/>
-  <text x="1190" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#212121">Subscriber</text>
-  <line x1="820" y1="267" x2="858" y2="267" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
-  <line x1="990" y1="267" x2="1028" y2="267" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="990" y1="267" x2="1138" y2="267" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <!-- Characteristics -->
-  <rect x="660" y="320" width="580" height="160" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
-  <text x="950" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Characteristics</text>
-  <text x="680" y="372" font-family="Arial,sans-serif" font-size="14" fill="#212121">+ Temporal decoupling (sender not blocked)</text>
-  <text x="680" y="395" font-family="Arial,sans-serif" font-size="14" fill="#212121">+ Resilience (messages buffered)</text>
-  <text x="680" y="418" font-family="Arial,sans-serif" font-size="14" fill="#212121">+ Fan-out / broadcast to many consumers</text>
-  <text x="680" y="441" font-family="Arial,sans-serif" font-size="14" fill="#212121">− No immediate response / harder to debug</text>
-  <text x="680" y="464" font-family="Arial,sans-serif" font-size="14" fill="#212121">− Eventual consistency challenges</text>
-  <!-- Protocols -->
-  <rect x="660" y="500" width="170" height="44" rx="6" fill="#ffffff" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="745" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">RabbitMQ</text>
-  <rect x="843" y="500" width="170" height="44" rx="6" fill="#ffffff" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="928" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">Kafka</text>
-  <rect x="1026" y="500" width="170" height="44" rx="6" fill="#ffffff" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1111" y="528" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#212121">AWS SQS/SNS</text>
-  <!-- Bottom comparison -->
-  <rect x="60" y="580" width="1160" height="46" rx="6" fill="#f2f2f2"/>
-  <text x="640" y="598" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#212121">When to choose?</text>
-  <text x="320" y="618" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555555">Sync: real-time query, user-facing, simple flows</text>
-  <text x="960" y="618" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#555555">Async: background jobs, fan-out, decoupled services</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:line x1="568.8889" y1="26.6667" x2="568.8889" y2="586.6667" stroke="#e0e0e0" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
+  <ns0:text x="284.4444" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#1565c0">Synchronous (REST / gRPC)</ns0:text>
+  <ns0:rect x="53.3333" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="120" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff">Client</ns0:text>
+  <ns0:rect x="391.1111" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="457.7778" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Server</ns0:text>
+  <ns0:line x1="186.6667" y1="87.1111" x2="389.3333" y2="87.1111" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:text x="288" y="80.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#1565c0">HTTP GET /orders</ns0:text>
+  <ns0:line x1="389.3333" y1="104.8889" x2="186.6667" y2="104.8889" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="288" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">200 OK { data }</ns0:text>
+  <ns0:rect x="53.3333" y="137.7778" width="133.3333" height="26.6667" rx="3.5556" fill="#fff3e0" stroke="#ff9800" stroke-width="1.3333" />
+  <ns0:text x="120" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#e65100">⏳ Waiting…</ns0:text>
+  <ns0:rect x="53.3333" y="191.1111" width="471.1111" height="71.1111" rx="7.1111" fill="#f2f2f2" stroke="#555555" stroke-width="1.3333" />
+  <ns0:text x="80" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">gRPC (binary, typed)</ns0:text>
+  <ns0:text x="80" y="231.1111" font-family="monospace" font-size="11.5556" fill="#1565c0">stub.GetOrder(GetOrderRequest{id: 1})</ns0:text>
+  <ns0:text x="80" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">← Blocks until server responds</ns0:text>
+  <ns0:rect x="53.3333" y="284.4444" width="471.1111" height="142.2222" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="288.8889" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#1565c0">Characteristics</ns0:text>
+  <ns0:text x="71.1111" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Simple request/response model</ns0:text>
+  <ns0:text x="71.1111" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Easy to debug and trace</ns0:text>
+  <ns0:text x="71.1111" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Immediate error feedback</ns0:text>
+  <ns0:text x="71.1111" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− Temporal coupling (both must be up)</ns0:text>
+  <ns0:text x="71.1111" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− Caller blocked while waiting</ns0:text>
+  <ns0:rect x="53.3333" y="444.4444" width="142.2222" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="124.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">REST / HTTP</ns0:text>
+  <ns0:rect x="208.8889" y="444.4444" width="142.2222" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="280" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">gRPC</ns0:text>
+  <ns0:rect x="364.4444" y="444.4444" width="160" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="444.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">GraphQL</ns0:text>
+  <ns0:text x="853.3333" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="#1565c0">Asynchronous (Queue / Event Bus)</ns0:text>
+  <ns0:rect x="586.6667" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="653.3333" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#ffffff">Producer</ns0:text>
+  <ns0:rect x="760" y="62.2222" width="177.7778" height="62.2222" rx="7.1111" fill="#fff9c4" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="848.8889" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#f57f17">Message Queue</ns0:text>
+  <ns0:rect x="771.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#f9a825" />
+  <ns0:rect x="803.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#f9a825" />
+  <ns0:rect x="835.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#f9a825" />
+  <ns0:rect x="867.5556" y="93.3333" width="26.6667" height="21.3333" rx="2.6667" fill="#ffd54f" />
+  <ns0:rect x="977.7778" y="71.1111" width="133.3333" height="44.4444" rx="7.1111" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="1044.4444" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Consumer</ns0:text>
+  <ns0:line x1="720" y1="93.3333" x2="758.2222" y2="93.3333" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:text x="738.6667" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#1565c0">publish</ns0:text>
+  <ns0:line x1="937.7778" y1="93.3333" x2="976" y2="93.3333" stroke="#555555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:text x="956.4444" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#555555">consume</ns0:text>
+  <ns0:rect x="586.6667" y="137.7778" width="133.3333" height="26.6667" rx="3.5556" fill="#e8f5e9" stroke="#43a047" stroke-width="1.3333" />
+  <ns0:text x="653.3333" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#2e7d32">✓ Free to continue</ns0:text>
+  <ns0:rect x="586.6667" y="191.1111" width="515.5556" height="71.1111" rx="7.1111" fill="#f2f2f2" stroke="#555555" stroke-width="1.3333" />
+  <ns0:text x="613.3333" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">Event Bus (Pub/Sub)</ns0:text>
+  <ns0:rect x="622.2222" y="224" width="106.6667" height="26.6667" rx="3.5556" fill="#e3f2fd" />
+  <ns0:text x="675.5556" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Publisher</ns0:text>
+  <ns0:rect x="764.4444" y="217.7778" width="115.5556" height="39.1111" rx="3.5556" fill="#fff9c4" stroke="#f9a825" stroke-width="1.3333" />
+  <ns0:text x="822.2222" y="233.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#f57f17">Kafka / SNS</ns0:text>
+  <ns0:text x="822.2222" y="248.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555555">Event Bus</ns0:text>
+  <ns0:rect x="915.5556" y="224" width="88.8889" height="26.6667" rx="3.5556" fill="#e8f5e9" />
+  <ns0:text x="960" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Subscriber</ns0:text>
+  <ns0:rect x="1013.3333" y="224" width="88.8889" height="26.6667" rx="3.5556" fill="#e8f5e9" />
+  <ns0:text x="1057.7778" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#212121">Subscriber</ns0:text>
+  <ns0:line x1="728.8889" y1="237.3333" x2="762.6667" y2="237.3333" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#arrow-accent)" />
+  <ns0:line x1="880" y1="237.3333" x2="913.7778" y2="237.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="880" y1="237.3333" x2="1011.5556" y2="237.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <ns0:rect x="586.6667" y="284.4444" width="515.5556" height="142.2222" rx="7.1111" fill="#e8f5e9" stroke="#43a047" stroke-width="1.3333" />
+  <ns0:text x="844.4444" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="#2e7d32">Characteristics</ns0:text>
+  <ns0:text x="604.4444" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Temporal decoupling (sender not blocked)</ns0:text>
+  <ns0:text x="604.4444" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Resilience (messages buffered)</ns0:text>
+  <ns0:text x="604.4444" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">+ Fan-out / broadcast to many consumers</ns0:text>
+  <ns0:text x="604.4444" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− No immediate response / harder to debug</ns0:text>
+  <ns0:text x="604.4444" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">− Eventual consistency challenges</ns0:text>
+  <ns0:rect x="586.6667" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="662.2222" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">RabbitMQ</ns0:text>
+  <ns0:rect x="749.3333" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="824.8889" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">Kafka</ns0:text>
+  <ns0:rect x="912" y="444.4444" width="151.1111" height="39.1111" rx="5.3333" fill="#ffffff" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="987.5556" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="#212121">AWS SQS/SNS</ns0:text>
+  <ns0:rect x="53.3333" y="515.5556" width="1031.1111" height="40.8889" rx="5.3333" fill="#f2f2f2" />
+  <ns0:text x="568.8889" y="531.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">When to choose?</ns0:text>
+  <ns0:text x="284.4444" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">Sync: real-time query, user-facing, simple flows</ns0:text>
+  <ns0:text x="853.3333" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="#555555">Async: background jobs, fan-out, decoupled services</ns0:text>
+</ns0:svg>

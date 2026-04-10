@@ -1,44 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow-cp" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">Checkpointing Mechanism</text>
-  <rect x="80" y="90" width="320" height="108" rx="12.8" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.2" />
-  <text x="240" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#0277bd">Streaming Query</text>
-  <text x="240" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Processing micro-batches</text>
-  <line x1="400" y1="144" x2="496" y2="144" stroke="#333" stroke-width="3.2" marker-end="url(#arrow-cp)" />
-  <text x="448" y="129.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#888">write</text>
-  <rect x="512" y="72" width="560" height="288" rx="12.8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3.2" />
-  <text x="792" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold" fill="#ef6c00">Checkpoint Directory</text>
-  <rect x="544" y="144" width="224" height="63" rx="8" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
-  <text x="656" y="183.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#333">offsets/</text>
-  <rect x="544" y="216" width="224" height="63" rx="8" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
-  <text x="656" y="255.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#333">commits/</text>
-  <rect x="816" y="144" width="224" height="63" rx="8" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
-  <text x="928" y="183.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#333">state/</text>
-  <rect x="816" y="216" width="224" height="63" rx="8" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
-  <text x="928" y="255.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#333">metadata</text>
-  <text x="656" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#888">Source offsets per batch</text>
-  <text x="928" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#888">Operator state snapshots</text>
-  <text x="640" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold" fill="#333">Recovery Flow on Failure</text>
-  <rect x="48" y="459" width="248" height="99" rx="9.6" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="171.2" y="500.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">1. Failure</text>
-  <text x="171.2" y="532.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Query crashes</text>
-  <line x1="296" y1="507.6" x2="344" y2="507.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrow-cp)" />
-  <rect x="360" y="459" width="248" height="99" rx="9.6" fill="#fff3e0" stroke="#ef6c00" stroke-width="3.2" />
-  <text x="483.2" y="500.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#ef6c00">2. Read Checkpoint</text>
-  <text x="483.2" y="532.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Load last state</text>
-  <line x1="608" y1="507.6" x2="656" y2="507.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrow-cp)" />
-  <rect x="672" y="459" width="248" height="99" rx="9.6" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.2" />
-  <text x="795.2" y="500.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#0277bd">3. Replay Batch</text>
-  <text x="795.2" y="532.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">From last offset</text>
-  <line x1="920" y1="507.6" x2="968" y2="507.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrow-cp)" />
-  <rect x="984" y="459" width="248" height="99" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
-  <text x="1107.2" y="500.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#2e7d32">4. Resume</text>
-  <text x="1107.2" y="532.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Continue processing</text>
-  <rect x="80" y="594" width="1120" height="99" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="640" y="633.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#2e7d32">Key Guarantees</text>
-  <text x="640" y="669.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Exactly-once processing | No data loss | Automatic state recovery | Idempotent sinks recommended</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow-cp" markerWidth="14.7763" markerHeight="11.6364" refX="13.2987" refY="5.8182" orient="auto">
+      <ns0:polygon points="0,16.6234 5.1717,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="591.0534" y="41.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.6421" font-weight="bold" fill="#333">Checkpointing Mechanism</ns0:text>
+  <ns0:rect x="73.8817" y="83.1169" width="295.5267" height="99.7403" rx="11.8211" fill="#e1f5fe" stroke="#0277bd" stroke-width="2.9553" />
+  <ns0:text x="221.645" y="124.6753" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2092" font-weight="bold" fill="#0277bd">Streaming Query</ns0:text>
+  <ns0:text x="221.645" y="157.9221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="#555">Processing micro-batches</ns0:text>
+  <ns0:line x1="369.4084" y1="132.987" x2="458.0664" y2="132.987" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow-cp)" />
+  <ns0:text x="413.7374" y="119.6883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="#888">write</ns0:text>
+  <ns0:rect x="472.8427" y="66.4935" width="517.1717" height="265.974" rx="11.8211" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.9553" />
+  <ns0:text x="731.4286" y="108.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="#ef6c00">Checkpoint Directory</ns0:text>
+  <ns0:rect x="502.3954" y="132.987" width="206.8687" height="58.1818" rx="7.3882" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4776" />
+  <ns0:text x="605.8297" y="169.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="#333">offsets/</ns0:text>
+  <ns0:rect x="502.3954" y="199.4805" width="206.8687" height="58.1818" rx="7.3882" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4776" />
+  <ns0:text x="605.8297" y="236.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="#333">commits/</ns0:text>
+  <ns0:rect x="753.5931" y="132.987" width="206.8687" height="58.1818" rx="7.3882" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4776" />
+  <ns0:text x="857.0274" y="169.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="#333">state/</ns0:text>
+  <ns0:rect x="753.5931" y="199.4805" width="206.8687" height="58.1818" rx="7.3882" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.4776" />
+  <ns0:text x="857.0274" y="236.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="#333">metadata</ns0:text>
+  <ns0:text x="605.8297" y="299.2208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="#888">Source offsets per batch</ns0:text>
+  <ns0:text x="857.0274" y="299.2208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="#888">Operator state snapshots</ns0:text>
+  <ns0:text x="591.0534" y="390.6494" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="#333">Recovery Flow on Failure</ns0:text>
+  <ns0:rect x="44.329" y="423.8961" width="229.0332" height="91.4286" rx="8.8658" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9553" />
+  <ns0:text x="158.1068" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="#d32f2f">1. Failure</ns0:text>
+  <ns0:text x="158.1068" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="#555">Query crashes</ns0:text>
+  <ns0:line x1="273.3622" y1="468.7792" x2="317.6912" y2="468.7792" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow-cp)" />
+  <ns0:rect x="332.4675" y="423.8961" width="229.0332" height="91.4286" rx="8.8658" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.9553" />
+  <ns0:text x="446.2453" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="#ef6c00">2. Read Checkpoint</ns0:text>
+  <ns0:text x="446.2453" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="#555">Load last state</ns0:text>
+  <ns0:line x1="561.5007" y1="468.7792" x2="605.8297" y2="468.7792" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow-cp)" />
+  <ns0:rect x="620.6061" y="423.8961" width="229.0332" height="91.4286" rx="8.8658" fill="#e1f5fe" stroke="#0277bd" stroke-width="2.9553" />
+  <ns0:text x="734.3838" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="#0277bd">3. Replay Batch</ns0:text>
+  <ns0:text x="734.3838" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="#555">From last offset</ns0:text>
+  <ns0:line x1="849.6392" y1="468.7792" x2="893.9683" y2="468.7792" stroke="#333" stroke-width="2.9553" marker-end="url(#arrow-cp)" />
+  <ns0:rect x="908.7446" y="423.8961" width="229.0332" height="91.4286" rx="8.8658" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9553" />
+  <ns0:text x="1022.5224" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="#2e7d32">4. Resume</ns0:text>
+  <ns0:text x="1022.5224" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="#555">Continue processing</ns0:text>
+  <ns0:rect x="73.8817" y="548.5714" width="1034.3434" height="91.4286" rx="11.8211" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4776" />
+  <ns0:text x="591.0534" y="585.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="#2e7d32">Key Guarantees</ns0:text>
+  <ns0:text x="591.0534" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="#555">Exactly-once processing | No data loss | Automatic state recovery | Idempotent sinks recommended</ns0:text>
+</ns0:svg>

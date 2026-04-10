@@ -1,49 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Host outer box -->
-  <rect x="26" y="30" width="1228" height="580" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="74" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Host</text>
-  <!-- Container A -->
-  <rect x="160" y="100" width="360" height="130" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="142" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Container A</text>
-  <text x="340" y="172" text-anchor="middle" font-size="18" fill="#555555">eth0</text>
-  <text x="340" y="200" text-anchor="middle" font-size="18" font-family="monospace" fill="#333333">172.17.0.2</text>
-  <!-- Container B -->
-  <rect x="760" y="100" width="360" height="130" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="142" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Container B</text>
-  <text x="940" y="172" text-anchor="middle" font-size="18" fill="#555555">eth0</text>
-  <text x="940" y="200" text-anchor="middle" font-size="18" font-family="monospace" fill="#333333">172.17.0.3</text>
-  <!-- veth lines -->
-  <line x1="340" y1="230" x2="340" y2="300" stroke="#1565c0" stroke-width="2.5"/>
-  <text x="340" y="292" text-anchor="middle" font-size="16" fill="#555555">vethXXXX</text>
-  <line x1="940" y1="230" x2="940" y2="300" stroke="#1565c0" stroke-width="2.5"/>
-  <text x="940" y="292" text-anchor="middle" font-size="16" fill="#555555">vethYYYY</text>
-  <!-- docker0 bridge -->
-  <rect x="160" y="310" width="960" height="90" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="354" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">docker0 bridge</text>
-  <text x="640" y="385" text-anchor="middle" font-size="20" font-family="monospace" fill="#bbdefb">172.17.0.1</text>
-  <!-- down to host eth0 -->
-  <line x1="640" y1="400" x2="640" y2="460" stroke="#1565c0" stroke-width="2.5"/>
-  <!-- host eth0 -->
-  <rect x="320" y="460" width="640" height="72" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="503" text-anchor="middle" font-size="22" fill="#333333">eth0 (host) — NAT to external network</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="23.1111" y="26.6667" width="1091.5556" height="515.5556" rx="7.1111" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="65.7778" text-anchor="middle" font-size="23.1111" font-weight="bold" fill="#1565c0">Host</ns0:text>
+  <ns0:rect x="142.2222" y="88.8889" width="320" height="115.5556" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="302.2222" y="126.2222" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#1565c0">Container A</ns0:text>
+  <ns0:text x="302.2222" y="152.8889" text-anchor="middle" font-size="16" fill="#555555">eth0</ns0:text>
+  <ns0:text x="302.2222" y="177.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#333333">172.17.0.2</ns0:text>
+  <ns0:rect x="675.5556" y="88.8889" width="320" height="115.5556" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="835.5556" y="126.2222" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#1565c0">Container B</ns0:text>
+  <ns0:text x="835.5556" y="152.8889" text-anchor="middle" font-size="16" fill="#555555">eth0</ns0:text>
+  <ns0:text x="835.5556" y="177.7778" text-anchor="middle" font-size="16" font-family="monospace" fill="#333333">172.17.0.3</ns0:text>
+  <ns0:line x1="302.2222" y1="204.4444" x2="302.2222" y2="266.6667" stroke="#1565c0" stroke-width="2.2222" />
+  <ns0:text x="302.2222" y="259.5556" text-anchor="middle" font-size="14.2222" fill="#555555">vethXXXX</ns0:text>
+  <ns0:line x1="835.5556" y1="204.4444" x2="835.5556" y2="266.6667" stroke="#1565c0" stroke-width="2.2222" />
+  <ns0:text x="835.5556" y="259.5556" text-anchor="middle" font-size="14.2222" fill="#555555">vethYYYY</ns0:text>
+  <ns0:rect x="142.2222" y="275.5556" width="853.3333" height="80" rx="7.1111" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="314.6667" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#ffffff">docker0 bridge</ns0:text>
+  <ns0:text x="568.8889" y="342.2222" text-anchor="middle" font-size="17.7778" font-family="monospace" fill="#bbdefb">172.17.0.1</ns0:text>
+  <ns0:line x1="568.8889" y1="355.5556" x2="568.8889" y2="408.8889" stroke="#1565c0" stroke-width="2.2222" />
+  <ns0:rect x="284.4444" y="408.8889" width="568.8889" height="64" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="447.1111" text-anchor="middle" font-size="19.5556" fill="#333333">eth0 (host) — NAT to external network</ns0:text>
+</ns0:svg>

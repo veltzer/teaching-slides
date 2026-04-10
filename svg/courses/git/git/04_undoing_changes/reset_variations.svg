@@ -1,56 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Commit history -->
-  <rect x="64" y="54" width="149" height="126" fill="#e3f2fd" stroke="#1976d2" stroke-width="4" rx="10" filter="url(#shadow)"/>
-  <text x="139" y="126" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">C1</text>
-  <line x1="213" y1="115" x2="277" y2="115" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
-  <rect x="288" y="54" width="149" height="126" fill="#e3f2fd" stroke="#1976d2" stroke-width="4" rx="10" filter="url(#shadow)"/>
-  <text x="363" y="126" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">C2</text>
-  <line x1="437" y1="115" x2="501" y2="115" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
-  <rect x="512" y="54" width="149" height="126" fill="#e3f2fd" stroke="#1976d2" stroke-width="4" rx="10" filter="url(#shadow)"/>
-  <text x="587" y="126" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">C3</text>
-  <text x="587" y="28" text-anchor="middle" font-size="18" fill="#c62828" font-weight="bold">HEAD</text>
-  <text x="853" y="72" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">git reset C1</text>
-  <!-- Soft result -->
-  <rect x="726" y="108" width="533" height="144" fill="#e8f5e9" stroke="#4caf50" stroke-width="4" rx="12" filter="url(#shadow)"/>
-  <text x="779" y="176" font-size="20" font-weight="bold" fill="#2e7d32">--soft</text>
-  <text x="920" y="176" font-size="18" fill="#555">Staged: C2+C3</text>
-  <text x="920" y="226" font-size="18" fill="#555">Working dir: C2+C3</text>
-  <!-- Mixed result -->
-  <rect x="726" y="282" width="533" height="144" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="12" filter="url(#shadow)"/>
-  <text x="779" y="354" font-size="20" font-weight="bold" fill="#e65100">--mixed</text>
-  <text x="930" y="354" font-size="18" fill="#555">Staged: empty</text>
-  <text x="930" y="404" font-size="18" fill="#555">Working dir: C2+C3</text>
-  <!-- Hard result -->
-  <rect x="726" y="456" width="533" height="144" fill="#ffebee" stroke="#c62828" stroke-width="4" rx="12" filter="url(#shadow)"/>
-  <text x="779" y="528" font-size="20" font-weight="bold" fill="#b71c1c">--hard</text>
-  <text x="920" y="528" font-size="18" fill="#555">Staged: empty</text>
-  <text x="920" y="578" font-size="18" fill="#555">Working dir: empty</text>
-  <!-- Dashed pointers from C3 -->
-  <line x1="587" y1="180" x2="722" y2="196" stroke="#4caf50" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
-  <line x1="587" y1="180" x2="722" y2="370" stroke="#f57c00" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
-  <line x1="587" y1="180" x2="722" y2="546" stroke="#c62828" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
-  <!-- Labels -->
-  <text x="139" y="270" text-anchor="middle" font-size="18" fill="#888">keeps all</text>
-  <text x="139" y="414" text-anchor="middle" font-size="18" fill="#888">keeps working</text>
-  <text x="139" y="558" text-anchor="middle" font-size="18" fill="#888">discards all</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="56.8889" y="48" width="132.4444" height="112" fill="#e3f2fd" stroke="#1976d2" stroke-width="3.5556" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="123.5556" y="112" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1565c0">C1</ns0:text>
+  <ns0:line x1="189.3333" y1="102.2222" x2="246.2222" y2="102.2222" stroke="#555" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="256" y="48" width="132.4444" height="112" fill="#e3f2fd" stroke="#1976d2" stroke-width="3.5556" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="322.6667" y="112" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1565c0">C2</ns0:text>
+  <ns0:line x1="388.4444" y1="102.2222" x2="445.3333" y2="102.2222" stroke="#555" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <ns0:rect x="455.1111" y="48" width="132.4444" height="112" fill="#e3f2fd" stroke="#1976d2" stroke-width="3.5556" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="521.7778" y="112" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#1565c0">C3</ns0:text>
+  <ns0:text x="521.7778" y="24.8889" text-anchor="middle" font-size="16" fill="#c62828" font-weight="bold">HEAD</ns0:text>
+  <ns0:text x="758.2222" y="64" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#333">git reset C1</ns0:text>
+  <ns0:rect x="645.3333" y="96" width="473.7778" height="128" fill="#e8f5e9" stroke="#4caf50" stroke-width="3.5556" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="692.4444" y="156.4444" font-size="17.7778" font-weight="bold" fill="#2e7d32">--soft</ns0:text>
+  <ns0:text x="817.7778" y="156.4444" font-size="16" fill="#555">Staged: C2+C3</ns0:text>
+  <ns0:text x="817.7778" y="200.8889" font-size="16" fill="#555">Working dir: C2+C3</ns0:text>
+  <ns0:rect x="645.3333" y="250.6667" width="473.7778" height="128" fill="#fff3e0" stroke="#f57c00" stroke-width="3.5556" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="692.4444" y="314.6667" font-size="17.7778" font-weight="bold" fill="#e65100">--mixed</ns0:text>
+  <ns0:text x="826.6667" y="314.6667" font-size="16" fill="#555">Staged: empty</ns0:text>
+  <ns0:text x="826.6667" y="359.1111" font-size="16" fill="#555">Working dir: C2+C3</ns0:text>
+  <ns0:rect x="645.3333" y="405.3333" width="473.7778" height="128" fill="#ffebee" stroke="#c62828" stroke-width="3.5556" rx="10.6667" filter="url(#shadow)" />
+  <ns0:text x="692.4444" y="469.3333" font-size="17.7778" font-weight="bold" fill="#b71c1c">--hard</ns0:text>
+  <ns0:text x="817.7778" y="469.3333" font-size="16" fill="#555">Staged: empty</ns0:text>
+  <ns0:text x="817.7778" y="513.7778" font-size="16" fill="#555">Working dir: empty</ns0:text>
+  <ns0:line x1="521.7778" y1="160" x2="641.7778" y2="174.2222" stroke="#4caf50" stroke-width="2.6667" stroke-dasharray="7.1111 5.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="521.7778" y1="160" x2="641.7778" y2="328.8889" stroke="#f57c00" stroke-width="2.6667" stroke-dasharray="7.1111 5.3333" marker-end="url(#arrow)" />
+  <ns0:line x1="521.7778" y1="160" x2="641.7778" y2="485.3333" stroke="#c62828" stroke-width="2.6667" stroke-dasharray="7.1111 5.3333" marker-end="url(#arrow)" />
+  <ns0:text x="123.5556" y="240" text-anchor="middle" font-size="16" fill="#888">keeps all</ns0:text>
+  <ns0:text x="123.5556" y="368" text-anchor="middle" font-size="16" fill="#888">keeps working</ns0:text>
+  <ns0:text x="123.5556" y="496" text-anchor="middle" font-size="16" fill="#888">discards all</ns0:text>
+</ns0:svg>

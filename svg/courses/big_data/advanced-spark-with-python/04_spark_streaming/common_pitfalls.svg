@@ -1,44 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="42.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">Common Streaming Pitfalls</text>
-  <rect x="48" y="77.1429" width="376" height="188.5714" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="235.2" y="116.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">No Watermark on Join</text>
-  <text x="235.2" y="150.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">State grows unbounded</text>
-  <text x="235.2" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Eventually causes OOM</text>
-  <rect x="80" y="202.2857" width="312" height="42.8571" rx="6.4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="235.2" y="231.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Fix: Set watermark on both streams</text>
-  <rect x="452.8" y="77.1429" width="376" height="188.5714" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="640" y="116.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">Complete Mode + Large State</text>
-  <text x="640" y="150.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Emits entire result table</text>
-  <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Driver OOM on large data</text>
-  <rect x="484.8" y="202.2857" width="312" height="42.8571" rx="6.4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="640" y="231.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Fix: Use update or append mode</text>
-  <rect x="857.6" y="77.1429" width="376" height="188.5714" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="1044.8" y="116.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">foreachBatch Side Effects</text>
-  <text x="1044.8" y="150.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Non-idempotent writes</text>
-  <text x="1044.8" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Duplicates on retry</text>
-  <rect x="889.6" y="202.2857" width="312" height="42.8571" rx="6.4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="1044.8" y="231.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Fix: Make writes idempotent</text>
-  <rect x="48" y="300" width="376" height="188.5714" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="235.2" y="339.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">No Checkpoint Location</text>
-  <text x="235.2" y="373.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Progress lost on restart</text>
-  <text x="235.2" y="402.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Reprocesses all data</text>
-  <rect x="80" y="425.1429" width="312" height="42.8571" rx="6.4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="235.2" y="454.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Fix: Always set checkpointLocation</text>
-  <rect x="452.8" y="300" width="376" height="188.5714" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="640" y="339.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">Tiny Trigger Intervals</text>
-  <text x="640" y="373.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">High scheduling overhead</text>
-  <text x="640" y="402.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Poor throughput</text>
-  <rect x="484.8" y="425.1429" width="312" height="42.8571" rx="6.4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="640" y="454.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Fix: processingTime &gt;= 10s</text>
-  <rect x="857.6" y="300" width="376" height="188.5714" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
-  <text x="1044.8" y="339.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#d32f2f">collect() in foreachBatch</text>
-  <text x="1044.8" y="373.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Pulls all data to driver</text>
-  <text x="1044.8" y="402.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Driver OOM on large batches</text>
-  <rect x="889.6" y="425.1429" width="312" height="42.8571" rx="6.4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="1044.8" y="454.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2e7d32">Fix: Write directly from DataFrame</text>
-  <rect x="80" y="531.4286" width="1120" height="77.1429" rx="12.8" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.6" />
-  <text x="640" y="569.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#ef6c00">General Rule</text>
-  <text x="640" y="596.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Always configure: watermarks + checkpoints + proper output mode + trigger interval &gt;= 10s</text>
-  <rect x="80" y="625.7143" width="1120" height="77.1429" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="640" y="660" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#2e7d32">Prevention: Monitor state size | Watch processing/input rate ratio | Test with production-scale data | Set alerts</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="582.7642" y="39.0243" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.3106" font-weight="bold" fill="#333">Common Streaming Pitfalls</ns0:text>
+  <ns0:rect x="43.7073" y="70.2439" width="342.374" height="171.7073" rx="11.6553" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9138" />
+  <ns0:text x="214.1658" y="106.1463" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#d32f2f">No Watermark on Join</ns0:text>
+  <ns0:text x="214.1658" y="137.3658" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">State grows unbounded</ns0:text>
+  <ns0:text x="214.1658" y="163.9024" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Eventually causes OOM</ns0:text>
+  <ns0:rect x="72.8455" y="184.1951" width="284.0975" height="39.0243" rx="5.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="214.1658" y="210.7317" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#2e7d32">Fix: Set watermark on both streams</ns0:text>
+  <ns0:rect x="412.3057" y="70.2439" width="342.374" height="171.7073" rx="11.6553" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9138" />
+  <ns0:text x="582.7642" y="106.1463" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#d32f2f">Complete Mode + Large State</ns0:text>
+  <ns0:text x="582.7642" y="137.3658" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Emits entire result table</ns0:text>
+  <ns0:text x="582.7642" y="163.9024" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Driver OOM on large data</ns0:text>
+  <ns0:rect x="441.4439" y="184.1951" width="284.0975" height="39.0243" rx="5.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="582.7642" y="210.7317" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#2e7d32">Fix: Use update or append mode</ns0:text>
+  <ns0:rect x="780.904" y="70.2439" width="342.374" height="171.7073" rx="11.6553" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9138" />
+  <ns0:text x="951.3625" y="106.1463" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#d32f2f">foreachBatch Side Effects</ns0:text>
+  <ns0:text x="951.3625" y="137.3658" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Non-idempotent writes</ns0:text>
+  <ns0:text x="951.3625" y="163.9024" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Duplicates on retry</ns0:text>
+  <ns0:rect x="810.0422" y="184.1951" width="284.0975" height="39.0243" rx="5.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="951.3625" y="210.7317" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#2e7d32">Fix: Make writes idempotent</ns0:text>
+  <ns0:rect x="43.7073" y="273.1707" width="342.374" height="171.7073" rx="11.6553" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9138" />
+  <ns0:text x="214.1658" y="309.0732" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#d32f2f">No Checkpoint Location</ns0:text>
+  <ns0:text x="214.1658" y="340.2927" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Progress lost on restart</ns0:text>
+  <ns0:text x="214.1658" y="366.8292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Reprocesses all data</ns0:text>
+  <ns0:rect x="72.8455" y="387.122" width="284.0975" height="39.0243" rx="5.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="214.1658" y="413.6585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#2e7d32">Fix: Always set checkpointLocation</ns0:text>
+  <ns0:rect x="412.3057" y="273.1707" width="342.374" height="171.7073" rx="11.6553" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9138" />
+  <ns0:text x="582.7642" y="309.0732" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#d32f2f">Tiny Trigger Intervals</ns0:text>
+  <ns0:text x="582.7642" y="340.2927" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">High scheduling overhead</ns0:text>
+  <ns0:text x="582.7642" y="366.8292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Poor throughput</ns0:text>
+  <ns0:rect x="441.4439" y="387.122" width="284.0975" height="39.0243" rx="5.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="582.7642" y="413.6585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#2e7d32">Fix: processingTime &gt;= 10s</ns0:text>
+  <ns0:rect x="780.904" y="273.1707" width="342.374" height="171.7073" rx="11.6553" fill="#ffebee" stroke="#d32f2f" stroke-width="2.9138" />
+  <ns0:text x="951.3625" y="309.0732" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#d32f2f">collect() in foreachBatch</ns0:text>
+  <ns0:text x="951.3625" y="340.2927" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Pulls all data to driver</ns0:text>
+  <ns0:text x="951.3625" y="366.8292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.026" fill="#555">Driver OOM on large batches</ns0:text>
+  <ns0:rect x="810.0422" y="387.122" width="284.0975" height="39.0243" rx="5.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="951.3625" y="413.6585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5691" fill="#2e7d32">Fix: Write directly from DataFrame</ns0:text>
+  <ns0:rect x="72.8455" y="483.9024" width="1019.8373" height="70.2439" rx="11.6553" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.4569" />
+  <ns0:text x="582.7642" y="518.2439" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#ef6c00">General Rule</ns0:text>
+  <ns0:text x="582.7642" y="543.2194" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" fill="#555">Always configure: watermarks + checkpoints + proper output mode + trigger interval &gt;= 10s</ns0:text>
+  <ns0:rect x="72.8455" y="569.7561" width="1019.8373" height="70.2439" rx="11.6553" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4569" />
+  <ns0:text x="582.7642" y="600.9756" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.4829" font-weight="bold" fill="#2e7d32">Prevention: Monitor state size | Watch processing/input rate ratio | Test with production-scale data | Set alerts</ns0:text>
+</ns0:svg>

@@ -1,23 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="22.8571" y="13.8462" width="1234.2857" height="692.3077" rx="6.9231" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="55.3846" text-anchor="middle" font-size="22.1538" font-weight="bold" fill="#333">Idempotent Write Comparison</text>
-  <rect x="68.5714" y="76.1538" width="1142.8571" height="166.1538" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
-  <text x="102.8571" y="110.7692" font-size="19.3846" font-weight="bold" fill="#856404">Dynamic Partition Overwrite (Parquet)</text>
-  <text x="125.7143" y="138.4615" font-size="16.6154" fill="#28a745">+ Works with plain Parquet</text>
-  <text x="125.7143" y="163.3846" font-size="16.6154" fill="#28a745">+ Simple configuration</text>
-  <text x="125.7143" y="188.3077" font-size="16.6154" fill="#dc3545">- Not atomic (partial writes possible)</text>
-  <text x="125.7143" y="213.2308" font-size="16.6154" fill="#dc3545">- No concurrent write safety</text>
-  <rect x="68.5714" y="256.1538" width="1142.8571" height="166.1538" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
-  <text x="102.8571" y="290.7692" font-size="19.3846" font-weight="bold" fill="#28a745">replaceWhere (Delta Lake)</text>
-  <text x="125.7143" y="318.4615" font-size="16.6154" fill="#28a745">+ Atomic (all or nothing)</text>
-  <text x="125.7143" y="343.3846" font-size="16.6154" fill="#28a745">+ Concurrent-safe (optimistic locking)</text>
-  <text x="125.7143" y="368.3077" font-size="16.6154" fill="#28a745">+ Predicate validated at write time</text>
-  <text x="125.7143" y="393.2308" font-size="16.6154" fill="#dc3545">- Requires Delta Lake</text>
-  <rect x="68.5714" y="436.1538" width="1142.8571" height="152.3077" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="102.8571" y="470.7692" font-size="19.3846" font-weight="bold" fill="#4a90e2">DELETE + INSERT (Delta Lake)</text>
-  <text x="125.7143" y="498.4615" font-size="16.6154" fill="#28a745">+ Explicit, easy to understand</text>
-  <text x="125.7143" y="523.3846" font-size="16.6154" fill="#dc3545">- Two operations (not atomic together)</text>
-  <text x="125.7143" y="548.3077" font-size="16.6154" fill="#dc3545">- Slightly slower (two transactions)</text>
-  <rect x="68.5714" y="609.2308" width="1142.8571" height="62.3077" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
-  <text x="640" y="648" text-anchor="middle" font-size="18" font-weight="bold" fill="#28a745">Recommendation: Use replaceWhere with Delta</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:rect x="20.7158" y="12.5491" width="1118.6554" height="627.4509" rx="6.2745" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.5098" />
+  <ns0:text x="580.0435" y="50.1961" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="#333">Idempotent Write Comparison</ns0:text>
+  <ns0:rect x="62.1475" y="69.0196" width="1035.792" height="150.5882" rx="6.2745" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5098" />
+  <ns0:text x="93.2212" y="100.3921" font-size="17.5686" font-weight="bold" fill="#856404">Dynamic Partition Overwrite (Parquet)</ns0:text>
+  <ns0:text x="113.9371" y="125.4902" font-size="15.0588" fill="#28a745">+ Works with plain Parquet</ns0:text>
+  <ns0:text x="113.9371" y="148.0784" font-size="15.0588" fill="#28a745">+ Simple configuration</ns0:text>
+  <ns0:text x="113.9371" y="170.6667" font-size="15.0588" fill="#dc3545">- Not atomic (partial writes possible)</ns0:text>
+  <ns0:text x="113.9371" y="193.2549" font-size="15.0588" fill="#dc3545">- No concurrent write safety</ns0:text>
+  <ns0:rect x="62.1475" y="232.1568" width="1035.792" height="150.5882" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="2.5098" />
+  <ns0:text x="93.2212" y="263.5294" font-size="17.5686" font-weight="bold" fill="#28a745">replaceWhere (Delta Lake)</ns0:text>
+  <ns0:text x="113.9371" y="288.6274" font-size="15.0588" fill="#28a745">+ Atomic (all or nothing)</ns0:text>
+  <ns0:text x="113.9371" y="311.2156" font-size="15.0588" fill="#28a745">+ Concurrent-safe (optimistic locking)</ns0:text>
+  <ns0:text x="113.9371" y="333.8039" font-size="15.0588" fill="#28a745">+ Predicate validated at write time</ns0:text>
+  <ns0:text x="113.9371" y="356.3922" font-size="15.0588" fill="#dc3545">- Requires Delta Lake</ns0:text>
+  <ns0:rect x="62.1475" y="395.294" width="1035.792" height="138.0392" rx="6.2745" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5098" />
+  <ns0:text x="93.2212" y="426.6666" font-size="17.5686" font-weight="bold" fill="#4a90e2">DELETE + INSERT (Delta Lake)</ns0:text>
+  <ns0:text x="113.9371" y="451.7646" font-size="15.0588" fill="#28a745">+ Explicit, easy to understand</ns0:text>
+  <ns0:text x="113.9371" y="474.3529" font-size="15.0588" fill="#dc3545">- Two operations (not atomic together)</ns0:text>
+  <ns0:text x="113.9371" y="496.9411" font-size="15.0588" fill="#dc3545">- Slightly slower (two transactions)</ns0:text>
+  <ns0:rect x="62.1475" y="552.1568" width="1035.792" height="56.4706" rx="6.2745" fill="#d4edda" stroke="#28a745" stroke-width="2.5098" />
+  <ns0:text x="580.0435" y="587.2941" text-anchor="middle" font-size="16.3137" font-weight="bold" fill="#28a745">Recommendation: Use replaceWhere with Delta</ns0:text>
+</ns0:svg>

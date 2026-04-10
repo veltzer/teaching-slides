@@ -1,43 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="54" text-anchor="middle" font-size="30.72" font-weight="bold" fill="#333">When to Use Mutex vs RwLock</text>
-  <rect x="34.1333" y="90" width="341.3333" height="72" rx="8.5333" fill="#4a90e2" stroke="#4a90e2" stroke-width="2.56" />
-  <text x="204.8" y="135" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#fff">Property</text>
-  <rect x="375.4667" y="90" width="409.6" height="72" rx="8.5333" fill="#ffc107" stroke="#ffc107" stroke-width="2.56" />
-  <text x="580.2667" y="135" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#333">Mutex</text>
-  <rect x="785.0667" y="90" width="460.8" height="72" rx="8.5333" fill="#28a745" stroke="#28a745" stroke-width="2.56" />
-  <text x="1015.4667" y="135" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#fff">RwLock</text>
-  <rect x="34.1333" y="171" width="341.3333" height="63" rx="5.12" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7067" />
-  <rect x="375.4667" y="171" width="409.6" height="63" rx="5.12" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7067" />
-  <rect x="785.0667" y="171" width="460.8" height="63" rx="5.12" fill="#d4edda" stroke="#28a745" stroke-width="1.7067" />
-  <text x="51.2" y="210.6" font-size="20.48" fill="#333">Read concurrency</text>
-  <text x="392.5333" y="210.6" font-size="20.48" fill="#333">One at a time</text>
-  <text x="802.1333" y="210.6" font-size="20.48" fill="#28a745">Many concurrent reads</text>
-  <rect x="34.1333" y="243" width="341.3333" height="63" rx="5.12" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7067" />
-  <rect x="375.4667" y="243" width="409.6" height="63" rx="5.12" fill="#f8f9fa" stroke="#ddd" stroke-width="1.7067" />
-  <rect x="785.0667" y="243" width="460.8" height="63" rx="5.12" fill="#f8f9fa" stroke="#ddd" stroke-width="1.7067" />
-  <text x="51.2" y="282.6" font-size="20.48" fill="#333">Write concurrency</text>
-  <text x="392.5333" y="282.6" font-size="20.48" fill="#333">One at a time</text>
-  <text x="802.1333" y="282.6" font-size="20.48" fill="#333">One at a time</text>
-  <rect x="34.1333" y="315" width="341.3333" height="63" rx="5.12" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7067" />
-  <rect x="375.4667" y="315" width="409.6" height="63" rx="5.12" fill="#d4edda" stroke="#28a745" stroke-width="1.7067" />
-  <rect x="785.0667" y="315" width="460.8" height="63" rx="5.12" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7067" />
-  <text x="51.2" y="354.6" font-size="20.48" fill="#333">Overhead</text>
-  <text x="392.5333" y="354.6" font-size="20.48" fill="#28a745">Lower</text>
-  <text x="802.1333" y="354.6" font-size="20.48" fill="#856404">Higher (tracking)</text>
-  <rect x="34.1333" y="387" width="341.3333" height="63" rx="5.12" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7067" />
-  <rect x="375.4667" y="387" width="409.6" height="63" rx="5.12" fill="#fff3cd" stroke="#ffc107" stroke-width="1.7067" />
-  <rect x="785.0667" y="387" width="460.8" height="63" rx="5.12" fill="#d4edda" stroke="#28a745" stroke-width="1.7067" />
-  <text x="51.2" y="426.6" font-size="20.48" fill="#333">Best for</text>
-  <text x="392.5333" y="426.6" font-size="20.48" fill="#333">Write-heavy / short sections</text>
-  <text x="802.1333" y="426.6" font-size="20.48" fill="#28a745">Read-heavy workloads</text>
-  <rect x="34.1333" y="459" width="341.3333" height="63" rx="5.12" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7067" />
-  <rect x="375.4667" y="459" width="409.6" height="63" rx="5.12" fill="#d4edda" stroke="#28a745" stroke-width="1.7067" />
-  <rect x="785.0667" y="459" width="460.8" height="63" rx="5.12" fill="#f8d7da" stroke="#dc3545" stroke-width="1.7067" />
-  <text x="51.2" y="498.6" font-size="20.48" fill="#333">Starvation risk</text>
-  <text x="392.5333" y="498.6" font-size="20.48" fill="#28a745">No</text>
-  <text x="802.1333" y="498.6" font-size="20.48" fill="#dc3545">Writers can starve</text>
-  <rect x="34.1333" y="558" width="1211.7333" height="144" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
-  <text x="68.2667" y="603" font-size="23.8933" font-weight="bold" fill="#4a90e2">Rule of thumb:</text>
-  <text x="68.2667" y="644.4" font-size="22.1867" fill="#333">Mostly reads, few writes =&gt; RwLock</text>
-  <text x="68.2667" y="680.4" font-size="22.1867" fill="#333">Frequent writes or very short locks =&gt; Mutex</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="583.4758" y="49.2308" text-anchor="middle" font-size="28.0068" font-weight="bold" fill="#333">When to Use Mutex vs RwLock</ns0:text>
+  <ns0:rect x="31.1187" y="82.0513" width="311.1871" height="65.641" rx="7.7796" fill="#4a90e2" stroke="#4a90e2" stroke-width="2.3339" />
+  <ns0:text x="186.7123" y="123.0769" text-anchor="middle" font-size="21.7831" font-weight="bold" fill="#fff">Property</ns0:text>
+  <ns0:rect x="342.3058" y="82.0513" width="373.4245" height="65.641" rx="7.7796" fill="#ffc107" stroke="#ffc107" stroke-width="2.3339" />
+  <ns0:text x="529.0181" y="123.0769" text-anchor="middle" font-size="21.7831" font-weight="bold" fill="#333">Mutex</ns0:text>
+  <ns0:rect x="715.7303" y="82.0513" width="420.1026" height="65.641" rx="7.7796" fill="#28a745" stroke="#28a745" stroke-width="2.3339" />
+  <ns0:text x="925.7816" y="123.0769" text-anchor="middle" font-size="21.7831" font-weight="bold" fill="#fff">RwLock</ns0:text>
+  <ns0:rect x="31.1187" y="155.8974" width="311.1871" height="57.4359" rx="4.6678" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.556" />
+  <ns0:rect x="342.3058" y="155.8974" width="373.4245" height="57.4359" rx="4.6678" fill="#fff3cd" stroke="#ffc107" stroke-width="1.556" />
+  <ns0:rect x="715.7303" y="155.8974" width="420.1026" height="57.4359" rx="4.6678" fill="#d4edda" stroke="#28a745" stroke-width="1.556" />
+  <ns0:text x="46.6781" y="192" font-size="18.6712" fill="#333">Read concurrency</ns0:text>
+  <ns0:text x="357.8651" y="192" font-size="18.6712" fill="#333">One at a time</ns0:text>
+  <ns0:text x="731.2896" y="192" font-size="18.6712" fill="#28a745">Many concurrent reads</ns0:text>
+  <ns0:rect x="31.1187" y="221.5385" width="311.1871" height="57.4359" rx="4.6678" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.556" />
+  <ns0:rect x="342.3058" y="221.5385" width="373.4245" height="57.4359" rx="4.6678" fill="#f8f9fa" stroke="#ddd" stroke-width="1.556" />
+  <ns0:rect x="715.7303" y="221.5385" width="420.1026" height="57.4359" rx="4.6678" fill="#f8f9fa" stroke="#ddd" stroke-width="1.556" />
+  <ns0:text x="46.6781" y="257.641" font-size="18.6712" fill="#333">Write concurrency</ns0:text>
+  <ns0:text x="357.8651" y="257.641" font-size="18.6712" fill="#333">One at a time</ns0:text>
+  <ns0:text x="731.2896" y="257.641" font-size="18.6712" fill="#333">One at a time</ns0:text>
+  <ns0:rect x="31.1187" y="287.1795" width="311.1871" height="57.4359" rx="4.6678" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.556" />
+  <ns0:rect x="342.3058" y="287.1795" width="373.4245" height="57.4359" rx="4.6678" fill="#d4edda" stroke="#28a745" stroke-width="1.556" />
+  <ns0:rect x="715.7303" y="287.1795" width="420.1026" height="57.4359" rx="4.6678" fill="#fff3cd" stroke="#ffc107" stroke-width="1.556" />
+  <ns0:text x="46.6781" y="323.2821" font-size="18.6712" fill="#333">Overhead</ns0:text>
+  <ns0:text x="357.8651" y="323.2821" font-size="18.6712" fill="#28a745">Lower</ns0:text>
+  <ns0:text x="731.2896" y="323.2821" font-size="18.6712" fill="#856404">Higher (tracking)</ns0:text>
+  <ns0:rect x="31.1187" y="352.8205" width="311.1871" height="57.4359" rx="4.6678" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.556" />
+  <ns0:rect x="342.3058" y="352.8205" width="373.4245" height="57.4359" rx="4.6678" fill="#fff3cd" stroke="#ffc107" stroke-width="1.556" />
+  <ns0:rect x="715.7303" y="352.8205" width="420.1026" height="57.4359" rx="4.6678" fill="#d4edda" stroke="#28a745" stroke-width="1.556" />
+  <ns0:text x="46.6781" y="388.9231" font-size="18.6712" fill="#333">Best for</ns0:text>
+  <ns0:text x="357.8651" y="388.9231" font-size="18.6712" fill="#333">Write-heavy / short sections</ns0:text>
+  <ns0:text x="731.2896" y="388.9231" font-size="18.6712" fill="#28a745">Read-heavy workloads</ns0:text>
+  <ns0:rect x="31.1187" y="418.4615" width="311.1871" height="57.4359" rx="4.6678" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.556" />
+  <ns0:rect x="342.3058" y="418.4615" width="373.4245" height="57.4359" rx="4.6678" fill="#d4edda" stroke="#28a745" stroke-width="1.556" />
+  <ns0:rect x="715.7303" y="418.4615" width="420.1026" height="57.4359" rx="4.6678" fill="#f8d7da" stroke="#dc3545" stroke-width="1.556" />
+  <ns0:text x="46.6781" y="454.5641" font-size="18.6712" fill="#333">Starvation risk</ns0:text>
+  <ns0:text x="357.8651" y="454.5641" font-size="18.6712" fill="#28a745">No</ns0:text>
+  <ns0:text x="731.2896" y="454.5641" font-size="18.6712" fill="#dc3545">Writers can starve</ns0:text>
+  <ns0:rect x="31.1187" y="508.7179" width="1104.7141" height="131.2821" rx="7.7796" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.1118" />
+  <ns0:text x="62.2374" y="549.7436" font-size="21.7831" font-weight="bold" fill="#4a90e2">Rule of thumb:</ns0:text>
+  <ns0:text x="62.2374" y="587.4872" font-size="20.2272" fill="#333">Mostly reads, few writes =&gt; RwLock</ns0:text>
+  <ns0:text x="62.2374" y="620.3077" font-size="20.2272" fill="#333">Frequent writes or very short locks =&gt; Mutex</ns0:text>
+</ns0:svg>

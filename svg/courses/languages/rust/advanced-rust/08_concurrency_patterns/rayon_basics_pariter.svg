@@ -1,27 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="54" text-anchor="middle" font-size="32.4" font-weight="bold" fill="#333">Rayon par_iter: Work-Stealing Parallelism</text>
-  <text x="640" y="117" text-anchor="middle" font-size="27" font-weight="bold" fill="#4a90e2">Sequential</text>
-  <rect x="91.4286" y="135" width="1097.1429" height="81" rx="9" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6" />
-  <text x="146.2857" y="183.6" font-size="21.6" fill="#333">[1, 2, 3, 4, 5, 6, 7, 8]</text>
-  <text x="512" y="183.6" font-size="21.6" fill="#555">--&gt; map --&gt; map --&gt; map --&gt; ... --&gt; sum</text>
-  <text x="640" y="279" text-anchor="middle" font-size="27" font-weight="bold" fill="#28a745">Parallel (rayon work-stealing)</text>
-  <rect x="274.2857" y="306" width="731.4286" height="63" rx="9" fill="#fff3cd" stroke="#ffc107" stroke-width="3.6" />
-  <text x="640" y="347.4" text-anchor="middle" font-size="23.4" fill="#333">[1, 2, 3, 4, 5, 6, 7, 8]</text>
-  <line x1="493.7143" y1="369" x2="365.7143" y2="414" stroke="#28a745" stroke-width="3.6" marker-end="url(#arrowG)" />
-  <line x1="786.2857" y1="369" x2="914.2857" y2="414" stroke="#28a745" stroke-width="3.6" marker-end="url(#arrowG)" />
-  <rect x="182.8571" y="414" width="365.7143" height="126" rx="9" fill="#d4edda" stroke="#28a745" stroke-width="3.6" />
-  <text x="365.7143" y="459" text-anchor="middle" font-size="23.4" font-weight="bold" fill="#333">Thread 1</text>
-  <text x="365.7143" y="495" text-anchor="middle" font-size="21.6" fill="#555">[1, 2, 3, 4] map+sum</text>
-  <rect x="731.4286" y="414" width="365.7143" height="126" rx="9" fill="#d4edda" stroke="#28a745" stroke-width="3.6" />
-  <text x="914.2857" y="459" text-anchor="middle" font-size="23.4" font-weight="bold" fill="#333">Thread 2</text>
-  <text x="914.2857" y="495" text-anchor="middle" font-size="21.6" fill="#555">[5, 6, 7, 8] map+sum</text>
-  <line x1="365.7143" y1="540" x2="585.1429" y2="612" stroke="#28a745" stroke-width="3.6" marker-end="url(#arrowG)" />
-  <line x1="914.2857" y1="540" x2="694.8571" y2="612" stroke="#28a745" stroke-width="3.6" marker-end="url(#arrowG)" />
-  <rect x="530.2857" y="612" width="219.4286" height="72" rx="9" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6" />
-  <text x="640" y="657" text-anchor="middle" font-size="25.2" font-weight="bold" fill="#333">combine</text>
-  <defs>
-    <marker id="arrowG" markerWidth="18.2857" markerHeight="12.6" refX="18.2857" refY="6.3" orient="auto">
-      <polygon points="0,18 6.4,0" fill="#28a745" />
-    </marker>
-  </defs>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">Rayon par_iter: Work-Stealing Parallelism</ns0:text>
+  <ns0:text x="598.8304" y="109.4737" text-anchor="middle" font-size="25.2632" font-weight="bold" fill="#4a90e2">Sequential</ns0:text>
+  <ns0:rect x="85.5472" y="126.3158" width="1026.5665" height="75.7895" rx="8.4211" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3684" />
+  <ns0:text x="136.8755" y="171.7895" font-size="20.2105" fill="#333">[1, 2, 3, 4, 5, 6, 7, 8]</ns0:text>
+  <ns0:text x="479.0643" y="171.7895" font-size="20.2105" fill="#555">--&gt; map --&gt; map --&gt; map --&gt; ... --&gt; sum</ns0:text>
+  <ns0:text x="598.8304" y="261.0526" text-anchor="middle" font-size="25.2632" font-weight="bold" fill="#28a745">Parallel (rayon work-stealing)</ns0:text>
+  <ns0:rect x="256.6416" y="286.3158" width="684.3776" height="58.9474" rx="8.4211" fill="#fff3cd" stroke="#ffc107" stroke-width="3.3684" />
+  <ns0:text x="598.8304" y="325.0526" text-anchor="middle" font-size="21.8947" fill="#333">[1, 2, 3, 4, 5, 6, 7, 8]</ns0:text>
+  <ns0:line x1="461.9549" y1="345.2632" x2="342.1888" y2="387.3684" stroke="#28a745" stroke-width="3.3684" marker-end="url(#arrowG)" />
+  <ns0:line x1="735.7059" y1="345.2632" x2="855.472" y2="387.3684" stroke="#28a745" stroke-width="3.3684" marker-end="url(#arrowG)" />
+  <ns0:rect x="171.0944" y="387.3684" width="342.1888" height="117.8947" rx="8.4211" fill="#d4edda" stroke="#28a745" stroke-width="3.3684" />
+  <ns0:text x="342.1888" y="429.4737" text-anchor="middle" font-size="21.8947" font-weight="bold" fill="#333">Thread 1</ns0:text>
+  <ns0:text x="342.1888" y="463.1579" text-anchor="middle" font-size="20.2105" fill="#555">[1, 2, 3, 4] map+sum</ns0:text>
+  <ns0:rect x="684.3776" y="387.3684" width="342.1888" height="117.8947" rx="8.4211" fill="#d4edda" stroke="#28a745" stroke-width="3.3684" />
+  <ns0:text x="855.472" y="429.4737" text-anchor="middle" font-size="21.8947" font-weight="bold" fill="#333">Thread 2</ns0:text>
+  <ns0:text x="855.472" y="463.1579" text-anchor="middle" font-size="20.2105" fill="#555">[5, 6, 7, 8] map+sum</ns0:text>
+  <ns0:line x1="342.1888" y1="505.2632" x2="547.5021" y2="572.6316" stroke="#28a745" stroke-width="3.3684" marker-end="url(#arrowG)" />
+  <ns0:line x1="855.472" y1="505.2632" x2="650.1587" y2="572.6316" stroke="#28a745" stroke-width="3.3684" marker-end="url(#arrowG)" />
+  <ns0:rect x="496.1738" y="572.6316" width="205.3133" height="67.3684" rx="8.4211" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.3684" />
+  <ns0:text x="598.8304" y="614.7368" text-anchor="middle" font-size="23.5789" font-weight="bold" fill="#333">combine</ns0:text>
+  <ns0:defs>
+    <ns0:marker id="arrowG" markerWidth="17.1094" markerHeight="11.7895" refX="17.1094" refY="5.8947" orient="auto">
+      <ns0:polygon points="0,16.8421 5.9883,0" fill="#28a745" />
+    </ns0:marker>
+  </ns0:defs>
+</ns0:svg>

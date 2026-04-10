@@ -1,94 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Root question -->
-  <rect x="480" y="14" width="320" height="54" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="47" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">What problem do you have?</text>
-
-  <!-- Branch 1: Creation -->
-  <line x1="560" y1="70" x2="200" y2="130" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <rect x="60" y="132" width="280" height="48" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="200" y="162" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Creating objects</text>
-
-  <rect x="30"  y="210" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="110" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Factory</text>
-  <rect x="200" y="210" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="280" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Builder</text>
-  <rect x="30"  y="272" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="110" y="302" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Singleton</text>
-  <rect x="200" y="272" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="280" y="302" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Prototype</text>
-  <text x="200" y="348" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#555555">Creational Patterns</text>
-
-  <!-- Branch 2: Structure -->
-  <line x1="620" y1="70" x2="500" y2="130" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <rect x="380" y="132" width="280" height="48" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="520" y="162" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Composing classes</text>
-
-  <rect x="370" y="210" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="450" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Adapter</text>
-  <rect x="540" y="210" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="620" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Decorator</text>
-  <rect x="370" y="272" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="450" y="302" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Facade</text>
-  <rect x="540" y="272" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="620" y="302" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Composite</text>
-  <text x="520" y="348" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#555555">Structural Patterns</text>
-
-  <!-- Branch 3: Behaviour -->
-  <line x1="700" y1="70" x2="900" y2="130" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <rect x="780" y="132" width="280" height="48" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="920" y="162" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Object communication</text>
-
-  <rect x="760" y="210" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="840" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Observer</text>
-  <rect x="930" y="210" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="1010" y="240" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Strategy</text>
-  <rect x="760" y="272" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="840" y="302" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Command</text>
-  <rect x="930" y="272" width="160" height="50" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="1010" y="302" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">Template</text>
-  <text x="920" y="348" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#555555">Behavioural Patterns</text>
-
-  <!-- Modern C++ column -->
-  <rect x="1130" y="132" width="130" height="48" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1195" y="162" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#212121">Modern C++</text>
-  <text x="1195" y="236" text-anchor="middle" font-family="monospace" font-size="12" fill="#9e9e9e">make_unique</text>
-  <text x="1195" y="256" text-anchor="middle" font-family="monospace" font-size="12" fill="#9e9e9e">make_shared</text>
-  <text x="1195" y="302" text-anchor="middle" font-family="monospace" font-size="12" fill="#9e9e9e">std::function</text>
-  <text x="1195" y="322" text-anchor="middle" font-family="monospace" font-size="12" fill="#9e9e9e">lambdas</text>
-  <text x="1195" y="180" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#9e9e9e">replaces some</text>
-
-  <!-- Anti-pattern warning -->
-  <rect x="30" y="388" width="1220" height="120" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <text x="640" y="416" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#c62828">Anti-patterns to avoid</text>
-  <rect x="50"  y="430" width="340" height="62" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="220" y="455" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828">Pattern overuse</text>
-  <text x="220" y="476" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Not every class needs a pattern</text>
-  <rect x="420" y="430" width="340" height="62" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="590" y="455" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828">Premature abstraction</text>
-  <text x="590" y="476" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Apply when the problem exists</text>
-  <rect x="790" y="430" width="440" height="62" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="1010" y="455" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828">God object / Singleton abuse</text>
-  <text x="1010" y="476" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Global state makes testing impossible</text>
-
-  <rect x="30" y="526" width="1220" height="44" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="553" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0">Design patterns are vocabulary, not recipes — understand the problem before choosing the pattern</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="426.6667" y="12.4444" width="284.4444" height="48" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="41.7778" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">What problem do you have?</ns0:text>
+  <ns0:line x1="497.7778" y1="62.2222" x2="177.7778" y2="115.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="53.3333" y="117.3333" width="248.8889" height="42.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="177.7778" y="144" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#1565c0">Creating objects</ns0:text>
+  <ns0:rect x="26.6667" y="186.6667" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="97.7778" y="213.3333" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Factory</ns0:text>
+  <ns0:rect x="177.7778" y="186.6667" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="248.8889" y="213.3333" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Builder</ns0:text>
+  <ns0:rect x="26.6667" y="241.7778" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="97.7778" y="268.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Singleton</ns0:text>
+  <ns0:rect x="177.7778" y="241.7778" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="248.8889" y="268.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Prototype</ns0:text>
+  <ns0:text x="177.7778" y="309.3333" text-anchor="middle" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#555555">Creational Patterns</ns0:text>
+  <ns0:line x1="551.1111" y1="62.2222" x2="444.4444" y2="115.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="337.7778" y="117.3333" width="248.8889" height="42.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="462.2222" y="144" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#1565c0">Composing classes</ns0:text>
+  <ns0:rect x="328.8889" y="186.6667" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="400" y="213.3333" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Adapter</ns0:text>
+  <ns0:rect x="480" y="186.6667" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="551.1111" y="213.3333" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Decorator</ns0:text>
+  <ns0:rect x="328.8889" y="241.7778" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="400" y="268.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Facade</ns0:text>
+  <ns0:rect x="480" y="241.7778" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="551.1111" y="268.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Composite</ns0:text>
+  <ns0:text x="462.2222" y="309.3333" text-anchor="middle" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#555555">Structural Patterns</ns0:text>
+  <ns0:line x1="622.2222" y1="62.2222" x2="800" y2="115.5556" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="693.3333" y="117.3333" width="248.8889" height="42.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="817.7778" y="144" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#1565c0">Object communication</ns0:text>
+  <ns0:rect x="675.5556" y="186.6667" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="746.6667" y="213.3333" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Observer</ns0:text>
+  <ns0:rect x="826.6667" y="186.6667" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="897.7778" y="213.3333" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Strategy</ns0:text>
+  <ns0:rect x="675.5556" y="241.7778" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="746.6667" y="268.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Command</ns0:text>
+  <ns0:rect x="826.6667" y="241.7778" width="142.2222" height="44.4444" rx="3.5556" fill="#e3f2fd" stroke="#1565c0" stroke-width="0.8889" />
+  <ns0:text x="897.7778" y="268.4444" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="#1565c0">Template</ns0:text>
+  <ns0:text x="817.7778" y="309.3333" text-anchor="middle" font-family="sans-serif" font-size="11.5556" font-weight="bold" fill="#555555">Behavioural Patterns</ns0:text>
+  <ns0:rect x="1004.4444" y="117.3333" width="115.5556" height="42.6667" rx="5.3333" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="1062.2222" y="144" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#212121">Modern C++</ns0:text>
+  <ns0:text x="1062.2222" y="209.7778" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#9e9e9e">make_unique</ns0:text>
+  <ns0:text x="1062.2222" y="227.5556" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#9e9e9e">make_shared</ns0:text>
+  <ns0:text x="1062.2222" y="268.4444" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#9e9e9e">std::function</ns0:text>
+  <ns0:text x="1062.2222" y="286.2222" text-anchor="middle" font-family="monospace" font-size="10.6667" fill="#9e9e9e">lambdas</ns0:text>
+  <ns0:text x="1062.2222" y="160" text-anchor="middle" font-family="sans-serif" font-size="10.6667" fill="#9e9e9e">replaces some</ns0:text>
+  <ns0:rect x="26.6667" y="344.8889" width="1084.4444" height="106.6667" rx="7.1111" fill="#ffebee" stroke="#c62828" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="369.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" font-weight="bold" fill="#c62828">Anti-patterns to avoid</ns0:text>
+  <ns0:rect x="44.4444" y="382.2222" width="302.2222" height="55.1111" rx="3.5556" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8889" />
+  <ns0:text x="195.5556" y="404.4444" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#c62828">Pattern overuse</ns0:text>
+  <ns0:text x="195.5556" y="423.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">Not every class needs a pattern</ns0:text>
+  <ns0:rect x="373.3333" y="382.2222" width="302.2222" height="55.1111" rx="3.5556" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8889" />
+  <ns0:text x="524.4444" y="404.4444" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#c62828">Premature abstraction</ns0:text>
+  <ns0:text x="524.4444" y="423.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">Apply when the problem exists</ns0:text>
+  <ns0:rect x="702.2222" y="382.2222" width="391.1111" height="55.1111" rx="3.5556" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8889" />
+  <ns0:text x="897.7778" y="404.4444" text-anchor="middle" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="#c62828">God object / Singleton abuse</ns0:text>
+  <ns0:text x="897.7778" y="423.1111" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="#555555">Global state makes testing impossible</ns0:text>
+  <ns0:rect x="26.6667" y="467.5556" width="1084.4444" height="39.1111" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="568.8889" y="491.5556" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="#1565c0">Design patterns are vocabulary, not recipes — understand the problem before choosing the pattern</ns0:text>
+</ns0:svg>

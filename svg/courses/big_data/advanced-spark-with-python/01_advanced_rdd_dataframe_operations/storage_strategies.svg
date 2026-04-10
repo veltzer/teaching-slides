@@ -1,58 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="12" refX="14.4" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#555" />
-    </marker>
-  </defs>
-  <text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1565c0">Spark Data Storage Strategies</text>
-  <text x="640" y="99.4286" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">File Formats</text>
-  <rect x="48" y="120" width="256" height="154.2857" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="176" y="159.4286" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#2e7d32">Parquet</text>
-  <text x="176" y="193.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Columnar format</text>
-  <text x="176" y="219.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Best compression</text>
-  <text x="176" y="245.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#2e7d32">Recommended</text>
-  <rect x="336" y="120" width="256" height="154.2857" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.4" />
-  <text x="464" y="159.4286" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1565c0">ORC</text>
-  <text x="464" y="193.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Columnar format</text>
-  <text x="464" y="219.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Hive optimized</text>
-  <text x="464" y="245.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">ACID support</text>
-  <rect x="624" y="120" width="256" height="154.2857" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
-  <text x="752" y="159.4286" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#e65100">Avro</text>
-  <text x="752" y="193.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Row-based format</text>
-  <text x="752" y="219.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Schema evolution</text>
-  <text x="752" y="245.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Good for writes</text>
-  <rect x="912" y="120" width="320" height="154.2857" rx="9.6" fill="#ffcdd2" stroke="#c62828" stroke-width="2.4" />
-  <text x="1072" y="159.4286" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#c62828">CSV / JSON</text>
-  <text x="1072" y="193.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Text-based, no schema</text>
-  <text x="1072" y="219.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Large, slow to parse</text>
-  <text x="1072" y="245.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#c62828">Avoid in production</text>
-  <text x="640" y="325.7143" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Compression Strategies</text>
-  <rect x="48" y="351.4286" width="368" height="120" rx="9.6" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
-  <text x="232" y="390.8571" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#283593">Snappy (Default)</text>
-  <text x="232" y="425.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Fast, moderate compression</text>
-  <text x="232" y="450.8571" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Splittable with Parquet</text>
-  <rect x="448" y="351.4286" width="368" height="120" rx="9.6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.4" />
-  <text x="632" y="390.8571" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#6a1b9a">GZIP</text>
-  <text x="632" y="425.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">High compression ratio</text>
-  <text x="632" y="450.8571" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Slower, CPU intensive</text>
-  <rect x="848" y="351.4286" width="384" height="120" rx="9.6" fill="#e0f2f1" stroke="#00695c" stroke-width="2.4" />
-  <text x="1040" y="390.8571" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#00695c">ZSTD</text>
-  <text x="1040" y="425.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Best of both worlds</text>
-  <text x="1040" y="450.8571" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Good ratio + speed</text>
-  <text x="640" y="531.4286" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Data Layout Strategies</text>
-  <rect x="48" y="557.1429" width="368" height="137.1429" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="232" y="591.4286" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#2e7d32">Partition by Date</text>
-  <text x="232" y="625.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">data/year=2024/month=01/</text>
-  <text x="232" y="651.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Enables partition pruning</text>
-  <text x="232" y="677.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Reduces scan size</text>
-  <rect x="448" y="557.1429" width="384" height="137.1429" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.4" />
-  <text x="640" y="591.4286" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1565c0">Bucketing</text>
-  <text x="640" y="625.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Pre-shuffle for joins</text>
-  <text x="640" y="651.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Fixed number of buckets</text>
-  <text x="640" y="677.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Avoids runtime shuffles</text>
-  <rect x="864" y="557.1429" width="368" height="137.1429" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
-  <text x="1048" y="591.4286" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">File Sizing</text>
-  <text x="1048" y="625.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Target 128MB-1GB per file</text>
-  <text x="1048" y="651.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Avoid small files problem</text>
-  <text x="1048" y="677.1429" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Use coalesce() to merge</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.749" markerHeight="11.0617" refX="13.2741" refY="5.5309" orient="auto">
+      <ns0:polygon points="0,15.8025 5.1621,0" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="589.9588" y="44.2469" text-anchor="middle" font-family="Arial" font-size="26.5481" font-weight="bold" fill="#1565c0">Spark Data Storage Strategies</ns0:text>
+  <ns0:text x="589.9588" y="91.6543" text-anchor="middle" font-family="Arial" font-size="20.6486" font-weight="bold" fill="#333">File Formats</ns0:text>
+  <ns0:rect x="44.2469" y="110.6173" width="235.9835" height="142.2222" rx="8.8494" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2123" />
+  <ns0:text x="162.2387" y="146.963" text-anchor="middle" font-family="Arial" font-size="19.1737" font-weight="bold" fill="#2e7d32">Parquet</ns0:text>
+  <ns0:text x="162.2387" y="178.5679" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Columnar format</ns0:text>
+  <ns0:text x="162.2387" y="202.2716" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Best compression</ns0:text>
+  <ns0:text x="162.2387" y="225.9753" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#2e7d32">Recommended</ns0:text>
+  <ns0:rect x="309.7284" y="110.6173" width="235.9835" height="142.2222" rx="8.8494" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2123" />
+  <ns0:text x="427.7201" y="146.963" text-anchor="middle" font-family="Arial" font-size="19.1737" font-weight="bold" fill="#1565c0">ORC</ns0:text>
+  <ns0:text x="427.7201" y="178.5679" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Columnar format</ns0:text>
+  <ns0:text x="427.7201" y="202.2716" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Hive optimized</ns0:text>
+  <ns0:text x="427.7201" y="225.9753" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">ACID support</ns0:text>
+  <ns0:rect x="575.2098" y="110.6173" width="235.9835" height="142.2222" rx="8.8494" fill="#fff3e0" stroke="#e65100" stroke-width="2.2123" />
+  <ns0:text x="693.2016" y="146.963" text-anchor="middle" font-family="Arial" font-size="19.1737" font-weight="bold" fill="#e65100">Avro</ns0:text>
+  <ns0:text x="693.2016" y="178.5679" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Row-based format</ns0:text>
+  <ns0:text x="693.2016" y="202.2716" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Schema evolution</ns0:text>
+  <ns0:text x="693.2016" y="225.9753" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Good for writes</ns0:text>
+  <ns0:rect x="840.6913" y="110.6173" width="294.9794" height="142.2222" rx="8.8494" fill="#ffcdd2" stroke="#c62828" stroke-width="2.2123" />
+  <ns0:text x="988.1809" y="146.963" text-anchor="middle" font-family="Arial" font-size="19.1737" font-weight="bold" fill="#c62828">CSV / JSON</ns0:text>
+  <ns0:text x="988.1809" y="178.5679" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Text-based, no schema</ns0:text>
+  <ns0:text x="988.1809" y="202.2716" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Large, slow to parse</ns0:text>
+  <ns0:text x="988.1809" y="225.9753" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#c62828">Avoid in production</ns0:text>
+  <ns0:text x="589.9588" y="300.2469" text-anchor="middle" font-family="Arial" font-size="20.6486" font-weight="bold" fill="#333">Compression Strategies</ns0:text>
+  <ns0:rect x="44.2469" y="323.9506" width="339.2263" height="110.6173" rx="8.8494" fill="#e8eaf6" stroke="#283593" stroke-width="2.2123" />
+  <ns0:text x="213.8601" y="360.2962" text-anchor="middle" font-family="Arial" font-size="17.6988" font-weight="bold" fill="#283593">Snappy (Default)</ns0:text>
+  <ns0:text x="213.8601" y="391.9012" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Fast, moderate compression</ns0:text>
+  <ns0:text x="213.8601" y="415.6048" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Splittable with Parquet</ns0:text>
+  <ns0:rect x="412.9711" y="323.9506" width="339.2263" height="110.6173" rx="8.8494" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.2123" />
+  <ns0:text x="582.5843" y="360.2962" text-anchor="middle" font-family="Arial" font-size="17.6988" font-weight="bold" fill="#6a1b9a">GZIP</ns0:text>
+  <ns0:text x="582.5843" y="391.9012" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">High compression ratio</ns0:text>
+  <ns0:text x="582.5843" y="415.6048" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Slower, CPU intensive</ns0:text>
+  <ns0:rect x="781.6954" y="323.9506" width="353.9753" height="110.6173" rx="8.8494" fill="#e0f2f1" stroke="#00695c" stroke-width="2.2123" />
+  <ns0:text x="958.683" y="360.2962" text-anchor="middle" font-family="Arial" font-size="17.6988" font-weight="bold" fill="#00695c">ZSTD</ns0:text>
+  <ns0:text x="958.683" y="391.9012" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Best of both worlds</ns0:text>
+  <ns0:text x="958.683" y="415.6048" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Good ratio + speed</ns0:text>
+  <ns0:text x="589.9588" y="489.8765" text-anchor="middle" font-family="Arial" font-size="20.6486" font-weight="bold" fill="#333">Data Layout Strategies</ns0:text>
+  <ns0:rect x="44.2469" y="513.5802" width="339.2263" height="126.4198" rx="8.8494" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2123" />
+  <ns0:text x="213.8601" y="545.1851" text-anchor="middle" font-family="Arial" font-size="17.6988" font-weight="bold" fill="#2e7d32">Partition by Date</ns0:text>
+  <ns0:text x="213.8601" y="576.7901" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">data/year=2024/month=01/</ns0:text>
+  <ns0:text x="213.8601" y="600.4938" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Enables partition pruning</ns0:text>
+  <ns0:text x="213.8601" y="624.1975" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Reduces scan size</ns0:text>
+  <ns0:rect x="412.9711" y="513.5802" width="353.9753" height="126.4198" rx="8.8494" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2123" />
+  <ns0:text x="589.9588" y="545.1851" text-anchor="middle" font-family="Arial" font-size="17.6988" font-weight="bold" fill="#1565c0">Bucketing</ns0:text>
+  <ns0:text x="589.9588" y="576.7901" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Pre-shuffle for joins</ns0:text>
+  <ns0:text x="589.9588" y="600.4938" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Fixed number of buckets</ns0:text>
+  <ns0:text x="589.9588" y="624.1975" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Avoids runtime shuffles</ns0:text>
+  <ns0:rect x="796.4443" y="513.5802" width="339.2263" height="126.4198" rx="8.8494" fill="#fff3e0" stroke="#e65100" stroke-width="2.2123" />
+  <ns0:text x="966.0575" y="545.1851" text-anchor="middle" font-family="Arial" font-size="17.6988" font-weight="bold" fill="#e65100">File Sizing</ns0:text>
+  <ns0:text x="966.0575" y="576.7901" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Target 128MB-1GB per file</ns0:text>
+  <ns0:text x="966.0575" y="600.4938" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Avoid small files problem</ns0:text>
+  <ns0:text x="966.0575" y="624.1975" text-anchor="middle" font-family="Arial" font-size="14.749" fill="#333">Use coalesce() to merge</ns0:text>
+</ns0:svg>

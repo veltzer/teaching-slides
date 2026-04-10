@@ -1,106 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="inherit" markerWidth="12" markerHeight="12" refX="1" refY="6" orient="auto">
-      <polygon points="1,1 11,6 1,11" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
-    </marker>
-  </defs>
-
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- BaseException (root) -->
-  <rect x="490" y="10" width="300" height="48" rx="6" fill="#212121" filter="url(#shadow)"/>
-  <text x="640" y="40" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff">BaseException</text>
-
-  <!-- Level 2 -->
-  <line x1="580" y1="60" x2="200" y2="100" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="100" y="102" width="200" height="44" rx="4" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="200" y="130" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">SystemExit</text>
-
-  <line x1="620" y1="60" x2="450" y2="100" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="350" y="102" width="200" height="44" rx="4" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="450" y="130" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">KeyboardInterrupt</text>
-
-  <line x1="640" y1="60" x2="640" y2="100" stroke="#1565c0" stroke-width="2" marker-end="url(#inherit)"/>
-  <rect x="490" y="102" width="300" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="130" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff">Exception</text>
-
-  <line x1="700" y1="60" x2="900" y2="100" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="800" y="102" width="200" height="44" rx="4" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="900" y="130" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">GeneratorExit</text>
-
-  <!-- Exception children — row 3 -->
-  <line x1="570" y1="148" x2="200" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="80"  y="222" width="240" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="200" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">ArithmeticError</text>
-
-  <line x1="600" y1="148" x2="440" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="320" y="222" width="240" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="440" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">LookupError</text>
-
-  <line x1="640" y1="148" x2="640" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="560" y="222" width="160" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">OSError</text>
-
-  <line x1="680" y1="148" x2="840" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="740" y="222" width="200" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="840" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">TypeError</text>
-
-  <line x1="710" y1="148" x2="1040" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="960" y="222" width="240" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1080" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">ValueError</text>
-
-  <!-- Row 4: grandchildren -->
-  <line x1="200" y1="268" x2="110" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="30"  y="332" width="160" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="110" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">ZeroDivisionError</text>
-
-  <line x1="200" y1="268" x2="220" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="200" y="332" width="140" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="270" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">OverflowError</text>
-
-  <line x1="440" y1="268" x2="380" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="340" y="332" width="130" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="405" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">IndexError</text>
-
-  <line x1="440" y1="268" x2="500" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="480" y="332" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="540" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">KeyError</text>
-
-  <line x1="640" y1="268" x2="640" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="610" y="332" width="170" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="695" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">FileNotFoundError</text>
-
-  <line x1="1080" y1="268" x2="1080" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
-  <rect x="1000" y="332" width="160" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="1080" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">UnicodeError</text>
-
-  <!-- Custom exception section -->
-  <rect x="30" y="420" width="600" height="160" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="330" y="450" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Custom exceptions — always inherit from Exception</text>
-  <text x="50"  y="478" font-family="monospace" font-size="15" fill="#1565c0">class AppError(Exception):       # base for app</text>
-  <text x="50"  y="500" font-family="monospace" font-size="15" fill="#1565c0">    pass</text>
-  <text x="50"  y="524" font-family="monospace" font-size="15" fill="#212121">class ValidationError(AppError):</text>
-  <text x="50"  y="546" font-family="monospace" font-size="15" fill="#212121">    def __init__(self, field, msg):</text>
-  <text x="50"  y="568" font-family="monospace" font-size="15" fill="#212121">        super().__init__(f"{field}: {msg}")</text>
-
-  <!-- try/except tip -->
-  <rect x="660" y="420" width="590" height="160" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="955"  y="450" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Catch specifics before base classes</text>
-  <text x="680"  y="478" font-family="monospace" font-size="15" fill="#212121">try:</text>
-  <text x="680"  y="500" font-family="monospace" font-size="15" fill="#212121">    risky()</text>
-  <text x="680"  y="522" font-family="monospace" font-size="15" fill="#1565c0">except ZeroDivisionError:</text>
-  <text x="680"  y="544" font-family="monospace" font-size="15" fill="#1565c0">    ...                  # specific first</text>
-  <text x="680"  y="566" font-family="monospace" font-size="15" fill="#555555">except ArithmeticError:</text>
-  <text x="680"  y="588" font-family="monospace" font-size="15" fill="#555555">    ...                  # broader second</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="inherit" markerWidth="10.6667" markerHeight="10.6667" refX="0.8889" refY="5.3333" orient="auto">
+      <ns0:polygon points="0.8889,0.8889 9.7778,5.3333 0.8889,9.7778" fill="#ffffff" stroke="#555555" stroke-width="1.3333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="435.5556" y="8.8889" width="266.6667" height="42.6667" rx="5.3333" fill="#212121" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="35.5556" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">BaseException</ns0:text>
+  <ns0:line x1="515.5556" y1="53.3333" x2="177.7778" y2="88.8889" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="88.8889" y="90.6667" width="177.7778" height="39.1111" rx="3.5556" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="177.7778" y="115.5556" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#9e9e9e">SystemExit</ns0:text>
+  <ns0:line x1="551.1111" y1="53.3333" x2="400" y2="88.8889" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="311.1111" y="90.6667" width="177.7778" height="39.1111" rx="3.5556" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="400" y="115.5556" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#9e9e9e">KeyboardInterrupt</ns0:text>
+  <ns0:line x1="568.8889" y1="53.3333" x2="568.8889" y2="88.8889" stroke="#1565c0" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <ns0:rect x="435.5556" y="90.6667" width="266.6667" height="39.1111" rx="5.3333" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="115.5556" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">Exception</ns0:text>
+  <ns0:line x1="622.2222" y1="53.3333" x2="800" y2="88.8889" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="711.1111" y="90.6667" width="177.7778" height="39.1111" rx="3.5556" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="800" y="115.5556" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#9e9e9e">GeneratorExit</ns0:text>
+  <ns0:line x1="506.6667" y1="131.5556" x2="177.7778" y2="195.5556" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="71.1111" y="197.3333" width="213.3333" height="39.1111" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="177.7778" y="222.2222" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">ArithmeticError</ns0:text>
+  <ns0:line x1="533.3333" y1="131.5556" x2="391.1111" y2="195.5556" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="284.4444" y="197.3333" width="213.3333" height="39.1111" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="391.1111" y="222.2222" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">LookupError</ns0:text>
+  <ns0:line x1="568.8889" y1="131.5556" x2="568.8889" y2="195.5556" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="497.7778" y="197.3333" width="142.2222" height="39.1111" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="222.2222" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">OSError</ns0:text>
+  <ns0:line x1="604.4444" y1="131.5556" x2="746.6667" y2="195.5556" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="657.7778" y="197.3333" width="177.7778" height="39.1111" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="746.6667" y="222.2222" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">TypeError</ns0:text>
+  <ns0:line x1="631.1111" y1="131.5556" x2="924.4444" y2="195.5556" stroke="#1565c0" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="853.3333" y="197.3333" width="213.3333" height="39.1111" rx="3.5556" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="960" y="222.2222" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="#212121">ValueError</ns0:text>
+  <ns0:line x1="177.7778" y1="238.2222" x2="97.7778" y2="293.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="26.6667" y="295.1111" width="142.2222" height="35.5556" rx="3.5556" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="97.7778" y="317.3333" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#555555">ZeroDivisionError</ns0:text>
+  <ns0:line x1="177.7778" y1="238.2222" x2="195.5556" y2="293.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="177.7778" y="295.1111" width="124.4444" height="35.5556" rx="3.5556" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="240" y="317.3333" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#555555">OverflowError</ns0:text>
+  <ns0:line x1="391.1111" y1="238.2222" x2="337.7778" y2="293.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="302.2222" y="295.1111" width="115.5556" height="35.5556" rx="3.5556" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="360" y="317.3333" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#555555">IndexError</ns0:text>
+  <ns0:line x1="391.1111" y1="238.2222" x2="444.4444" y2="293.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="426.6667" y="295.1111" width="106.6667" height="35.5556" rx="3.5556" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="480" y="317.3333" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#555555">KeyError</ns0:text>
+  <ns0:line x1="568.8889" y1="238.2222" x2="568.8889" y2="293.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="542.2222" y="295.1111" width="151.1111" height="35.5556" rx="3.5556" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="617.7778" y="317.3333" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#555555">FileNotFoundError</ns0:text>
+  <ns0:line x1="960" y1="238.2222" x2="960" y2="293.3333" stroke="#555555" stroke-width="1.3333" marker-end="url(#inherit)" />
+  <ns0:rect x="888.8889" y="295.1111" width="142.2222" height="35.5556" rx="3.5556" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="960" y="317.3333" text-anchor="middle" font-family="monospace" font-size="11.5556" fill="#555555">UnicodeError</ns0:text>
+  <ns0:rect x="26.6667" y="373.3333" width="533.3333" height="142.2222" rx="5.3333" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.3333" />
+  <ns0:text x="293.3333" y="400" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#212121">Custom exceptions — always inherit from Exception</ns0:text>
+  <ns0:text x="44.4444" y="424.8889" font-family="monospace" font-size="13.3333" fill="#1565c0">class AppError(Exception):       # base for app</ns0:text>
+  <ns0:text x="44.4444" y="444.4444" font-family="monospace" font-size="13.3333" fill="#1565c0">    pass</ns0:text>
+  <ns0:text x="44.4444" y="465.7778" font-family="monospace" font-size="13.3333" fill="#212121">class ValidationError(AppError):</ns0:text>
+  <ns0:text x="44.4444" y="485.3333" font-family="monospace" font-size="13.3333" fill="#212121">    def __init__(self, field, msg):</ns0:text>
+  <ns0:text x="44.4444" y="504.8889" font-family="monospace" font-size="13.3333" fill="#212121">        super().__init__(f"{field}: {msg}")</ns0:text>
+  <ns0:rect x="586.6667" y="373.3333" width="524.4444" height="142.2222" rx="5.3333" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="848.8889" y="400" text-anchor="middle" font-family="sans-serif" font-size="14.2222" font-weight="bold" fill="#1565c0">Catch specifics before base classes</ns0:text>
+  <ns0:text x="604.4444" y="424.8889" font-family="monospace" font-size="13.3333" fill="#212121">try:</ns0:text>
+  <ns0:text x="604.4444" y="444.4444" font-family="monospace" font-size="13.3333" fill="#212121">    risky()</ns0:text>
+  <ns0:text x="604.4444" y="464" font-family="monospace" font-size="13.3333" fill="#1565c0">except ZeroDivisionError:</ns0:text>
+  <ns0:text x="604.4444" y="483.5556" font-family="monospace" font-size="13.3333" fill="#1565c0">    ...                  # specific first</ns0:text>
+  <ns0:text x="604.4444" y="503.1111" font-family="monospace" font-size="13.3333" fill="#555555">except ArithmeticError:</ns0:text>
+  <ns0:text x="604.4444" y="522.6667" font-family="monospace" font-size="13.3333" fill="#555555">    ...                  # broader second</ns0:text>
+</ns0:svg>

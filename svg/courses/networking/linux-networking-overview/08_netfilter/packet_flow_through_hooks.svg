@@ -1,62 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <text x="640" y="60" text-anchor="middle" font-size="24" font-weight="bold" fill="#333333">Packet Flow Through Netfilter Hooks</text>
-  <!-- NIC In -->
-  <rect x="20" y="256" width="142" height="118" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="91" y="326" text-anchor="middle" font-size="19" font-weight="bold" fill="#0d47a1">NIC In</text>
-  <!-- PREROUTING -->
-  <rect x="200" y="256" width="174" height="118" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="287" y="308" text-anchor="middle" font-size="17" font-weight="bold" fill="#e65100">PRE-</text>
-  <text x="287" y="348" text-anchor="middle" font-size="17" font-weight="bold" fill="#e65100">ROUTING</text>
-  <!-- Routing (top) -->
-  <rect x="412" y="134" width="132" height="100" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="478" y="194" text-anchor="middle" font-size="17" font-weight="bold" fill="#4a148c">Routing</text>
-  <!-- FORWARD (bottom) -->
-  <rect x="412" y="412" width="152" height="100" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="488" y="472" text-anchor="middle" font-size="17" font-weight="bold" fill="#b71c1c">FORWARD</text>
-  <!-- INPUT -->
-  <rect x="582" y="256" width="130" height="118" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="647" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#1b5e20">INPUT</text>
-  <!-- Local -->
-  <rect x="748" y="256" width="130" height="118" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="813" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#4a148c">Local</text>
-  <!-- OUTPUT -->
-  <rect x="916" y="256" width="130" height="118" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="981" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#0d47a1">OUTPUT</text>
-  <!-- POSTROUTING -->
-  <rect x="916" y="412" width="174" height="100" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="1003" y="462" text-anchor="middle" font-size="17" font-weight="bold" fill="#e65100">POSTROUTING</text>
-  <!-- NIC Out -->
-  <rect x="1132" y="256" width="122" height="118" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
-  <text x="1193" y="326" text-anchor="middle" font-size="17" font-weight="bold" fill="#0d47a1">NIC Out</text>
-  <!-- Arrows -->
-  <line x1="162" y1="315" x2="200" y2="315" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="374" y1="294" x2="412" y2="202" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="478" y1="234" x2="582" y2="300" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="478" y1="234" x2="480" y2="412" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="712" y1="315" x2="748" y2="315" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="878" y1="315" x2="916" y2="315" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="564" y1="462" x2="916" y2="462" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="1046" y1="315" x2="1046" y2="412" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <line x1="1090" y1="462" x2="1132" y2="340" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="640" y="628" text-anchor="middle" font-size="18" fill="#777777">5 hook points intercept packets at different stages of processing</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:text x="568.8889" y="53.3333" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333333">Packet Flow Through Netfilter Hooks</ns0:text>
+  <ns0:rect x="17.7778" y="227.5556" width="126.2222" height="104.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="80.8889" y="289.7778" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="#0d47a1">NIC In</ns0:text>
+  <ns0:rect x="177.7778" y="227.5556" width="154.6667" height="104.8889" fill="#fff8e1" stroke="#f57c00" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="255.1111" y="273.7778" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#e65100">PRE-</ns0:text>
+  <ns0:text x="255.1111" y="309.3333" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#e65100">ROUTING</ns0:text>
+  <ns0:rect x="366.2222" y="119.1111" width="117.3333" height="88.8889" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="424.8889" y="172.4444" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#4a148c">Routing</ns0:text>
+  <ns0:rect x="366.2222" y="366.2222" width="135.1111" height="88.8889" fill="#ffebee" stroke="#c62828" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="433.7778" y="419.5556" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#b71c1c">FORWARD</ns0:text>
+  <ns0:rect x="517.3333" y="227.5556" width="115.5556" height="104.8889" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="575.1111" y="289.7778" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#1b5e20">INPUT</ns0:text>
+  <ns0:rect x="664.8889" y="227.5556" width="115.5556" height="104.8889" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="722.6667" y="289.7778" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#4a148c">Local</ns0:text>
+  <ns0:rect x="814.2222" y="227.5556" width="115.5556" height="104.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="872" y="289.7778" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#0d47a1">OUTPUT</ns0:text>
+  <ns0:rect x="814.2222" y="366.2222" width="154.6667" height="88.8889" fill="#fff8e1" stroke="#f57c00" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="891.5556" y="410.6667" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#e65100">POSTROUTING</ns0:text>
+  <ns0:rect x="1006.2222" y="227.5556" width="108.4444" height="104.8889" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <ns0:text x="1060.4444" y="289.7778" text-anchor="middle" font-size="15.1111" font-weight="bold" fill="#0d47a1">NIC Out</ns0:text>
+  <ns0:line x1="144" y1="280" x2="177.7778" y2="280" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="332.4444" y1="261.3333" x2="366.2222" y2="179.5556" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="424.8889" y1="208" x2="517.3333" y2="266.6667" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="424.8889" y1="208" x2="426.6667" y2="366.2222" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="632.8889" y1="280" x2="664.8889" y2="280" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="780.4444" y1="280" x2="814.2222" y2="280" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="501.3333" y1="410.6667" x2="814.2222" y2="410.6667" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="929.7778" y1="280" x2="929.7778" y2="366.2222" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:line x1="968.8889" y1="410.6667" x2="1006.2222" y2="302.2222" stroke="#555555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:text x="568.8889" y="558.2222" text-anchor="middle" font-size="16" fill="#777777">5 hook points intercept packets at different stages of processing</ns0:text>
+</ns0:svg>

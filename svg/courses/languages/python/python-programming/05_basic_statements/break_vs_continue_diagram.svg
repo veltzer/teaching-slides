@@ -1,49 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Divider -->
-  <line x1="640" y1="20" x2="640" y2="600" stroke="#cccccc" stroke-width="1.8" stroke-dasharray="8 8"/>
-  <!-- Break side -->
-  <text x="90" y="52" font-size="28" font-weight="bold" fill="#c62828" text-anchor="middle">break</text>
-  <text x="90" y="86" font-size="20" fill="#555555" text-anchor="middle">(exits loop entirely)</text>
-  <rect x="30" y="110" width="540" height="380" rx="8" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
-  <text x="56" y="170" font-size="22" fill="#222222" font-family="monospace">for item in items:</text>
-  <text x="56" y="220" font-size="22" fill="#222222" font-family="monospace">    ...</text>
-  <text x="56" y="270" font-size="22" fill="#c62828" font-family="monospace">    if cond:</text>
-  <text x="56" y="320" font-size="22" fill="#c62828" font-family="monospace">        break</text>
-  <text x="56" y="370" font-size="22" fill="#888888" font-family="monospace">    ...  &#x2190; skipped</text>
-  <text x="56" y="420" font-size="22" fill="#888888" font-family="monospace">(loop exits here)</text>
-  <text x="56" y="470" font-size="20" fill="#555555">Everything after break is skipped.</text>
-  <!-- Continue side -->
-  <text x="960" y="52" font-size="28" font-weight="bold" fill="#1565c0" text-anchor="middle">continue</text>
-  <text x="960" y="86" font-size="20" fill="#555555" text-anchor="middle">(skips to next iteration)</text>
-  <rect x="670" y="110" width="580" height="380" rx="8" fill="#f5f5f5" stroke="#999999" stroke-width="2"/>
-  <text x="696" y="170" font-size="22" fill="#222222" font-family="monospace">for item in items:</text>
-  <text x="696" y="220" font-size="22" fill="#222222" font-family="monospace">    ...</text>
-  <text x="696" y="270" font-size="22" fill="#1565c0" font-family="monospace">    if cond:</text>
-  <text x="696" y="320" font-size="22" fill="#1565c0" font-family="monospace">        continue</text>
-  <text x="696" y="370" font-size="22" fill="#222222" font-family="monospace">    ...  &#x2190; this runs</text>
-  <text x="696" y="420" font-size="22" fill="#555555" font-family="monospace">(next iteration)</text>
-  <text x="696" y="470" font-size="20" fill="#555555">Code after continue is skipped for this iter.</text>
-  <!-- Bottom note -->
-  <rect x="30" y="540" width="1220" height="52" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
-  <text x="640" y="572" text-anchor="middle" font-size="17" fill="#1565c0">Both work inside for and while loops. break is more disruptive than continue.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:line x1="568.8889" y1="17.7778" x2="568.8889" y2="533.3333" stroke="#cccccc" stroke-width="1.6" stroke-dasharray="7.1111 7.1111" />
+  <ns0:text x="80" y="46.2222" font-size="24.8889" font-weight="bold" fill="#c62828" text-anchor="middle">break</ns0:text>
+  <ns0:text x="80" y="76.4444" font-size="17.7778" fill="#555555" text-anchor="middle">(exits loop entirely)</ns0:text>
+  <ns0:rect x="26.6667" y="97.7778" width="480" height="337.7778" rx="7.1111" fill="#f5f5f5" stroke="#999999" stroke-width="1.7778" />
+  <ns0:text x="49.7778" y="151.1111" font-size="19.5556" fill="#222222" font-family="monospace">for item in items:</ns0:text>
+  <ns0:text x="49.7778" y="195.5556" font-size="19.5556" fill="#222222" font-family="monospace">    ...</ns0:text>
+  <ns0:text x="49.7778" y="240" font-size="19.5556" fill="#c62828" font-family="monospace">    if cond:</ns0:text>
+  <ns0:text x="49.7778" y="284.4444" font-size="19.5556" fill="#c62828" font-family="monospace">        break</ns0:text>
+  <ns0:text x="49.7778" y="328.8889" font-size="19.5556" fill="#888888" font-family="monospace">    ...  ← skipped</ns0:text>
+  <ns0:text x="49.7778" y="373.3333" font-size="19.5556" fill="#888888" font-family="monospace">(loop exits here)</ns0:text>
+  <ns0:text x="49.7778" y="417.7778" font-size="17.7778" fill="#555555">Everything after break is skipped.</ns0:text>
+  <ns0:text x="853.3333" y="46.2222" font-size="24.8889" font-weight="bold" fill="#1565c0" text-anchor="middle">continue</ns0:text>
+  <ns0:text x="853.3333" y="76.4444" font-size="17.7778" fill="#555555" text-anchor="middle">(skips to next iteration)</ns0:text>
+  <ns0:rect x="595.5556" y="97.7778" width="515.5556" height="337.7778" rx="7.1111" fill="#f5f5f5" stroke="#999999" stroke-width="1.7778" />
+  <ns0:text x="618.6667" y="151.1111" font-size="19.5556" fill="#222222" font-family="monospace">for item in items:</ns0:text>
+  <ns0:text x="618.6667" y="195.5556" font-size="19.5556" fill="#222222" font-family="monospace">    ...</ns0:text>
+  <ns0:text x="618.6667" y="240" font-size="19.5556" fill="#1565c0" font-family="monospace">    if cond:</ns0:text>
+  <ns0:text x="618.6667" y="284.4444" font-size="19.5556" fill="#1565c0" font-family="monospace">        continue</ns0:text>
+  <ns0:text x="618.6667" y="328.8889" font-size="19.5556" fill="#222222" font-family="monospace">    ...  ← this runs</ns0:text>
+  <ns0:text x="618.6667" y="373.3333" font-size="19.5556" fill="#555555" font-family="monospace">(next iteration)</ns0:text>
+  <ns0:text x="618.6667" y="417.7778" font-size="17.7778" fill="#555555">Code after continue is skipped for this iter.</ns0:text>
+  <ns0:rect x="26.6667" y="480" width="1084.4444" height="46.2222" rx="5.3333" fill="#f2f6ff" stroke="#bbdefb" stroke-width="0.8889" />
+  <ns0:text x="568.8889" y="508.4444" text-anchor="middle" font-size="15.1111" fill="#1565c0">Both work inside for and while loops. break is more disruptive than continue.</ns0:text>
+</ns0:svg>

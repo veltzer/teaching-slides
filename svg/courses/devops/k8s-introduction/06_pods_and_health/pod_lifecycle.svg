@@ -1,117 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-
-  <!-- White background -->
-  <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Pod Phases row -->
-
-  <!-- Pending -->
-  <rect x="60" y="100" width="180" height="100" rx="14" fill="#eeeeee" stroke="#9e9e9e" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="150" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#616161">Pending</text>
-  <text x="150" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#757575">accepted by API server</text>
-  <text x="150" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#757575">waiting to be scheduled</text>
-
-  <!-- Arrow Pending → Running -->
-  <line x1="240" y1="150" x2="340" y2="150" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="290" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">scheduled</text>
-
-  <!-- Running -->
-  <rect x="340" y="100" width="180" height="100" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="430" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Running</text>
-  <text x="430" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">bound to node</text>
-  <text x="430" y="180" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">≥1 container running</text>
-
-  <!-- Arrow Running → Succeeded -->
-  <line x1="520" y1="130" x2="620" y2="130" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="570" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">all containers</text>
-  <text x="570" y="134" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">exit 0</text>
-
-  <!-- Arrow Running → Failed -->
-  <line x1="520" y1="180" x2="620" y2="220" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="568" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">container exit ≠0</text>
-
-  <!-- Succeeded -->
-  <rect x="620" y="80" width="180" height="100" rx="14" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="710" y="118" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#2e7d32">Succeeded</text>
-  <text x="710" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#388e3c">all containers</text>
-  <text x="710" y="158" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#388e3c">terminated exit 0</text>
-  <text x="710" y="174" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#388e3c">(terminal state)</text>
-
-  <!-- Failed -->
-  <rect x="620" y="200" width="180" height="100" rx="14" fill="#ffebee" stroke="#c62828" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="710" y="238" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#b71c1c">Failed</text>
-  <text x="710" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#c62828">≥1 container</text>
-  <text x="710" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#c62828">terminated with error</text>
-
-  <!-- Unknown -->
-  <rect x="340" y="240" width="180" height="80" rx="14" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
-  <text x="430" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e65100">Unknown</text>
-  <text x="430" y="295" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#ef6c00">node communication lost</text>
-
-  <!-- Arrow Running → Unknown -->
-  <line x1="430" y1="200" x2="430" y2="240" stroke="#f9a825" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
-
-  <!-- Container States section -->
-  <rect x="880" y="60" width="360" height="310" rx="12" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="880" y="60" width="360" height="46" rx="12" fill="#546e7a"/>
-  <rect x="880" y="94" width="360" height="12" fill="#546e7a"/>
-  <text x="1060" y="92" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#fff">Container States</text>
-
-  <!-- Waiting -->
-  <rect x="900" y="120" width="310" height="60" rx="8" fill="#eeeeee" stroke="#9e9e9e" stroke-width="1.5"/>
-  <text x="1055" y="145" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#616161">Waiting</text>
-  <text x="1055" y="168" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#757575">pulling image, initializing</text>
-
-  <!-- Arrow Waiting→Running container -->
-  <line x1="1060" y1="180" x2="1060" y2="200" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Running container -->
-  <rect x="900" y="200" width="310" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="1055" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Running</text>
-  <text x="1055" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#1565c0">process executing</text>
-
-  <!-- Arrow Running container → Terminated -->
-  <line x1="1060" y1="260" x2="1060" y2="280" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Terminated -->
-  <rect x="900" y="280" width="310" height="68" rx="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
-  <text x="1055" y="308" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#880e4f">Terminated</text>
-  <text x="1055" y="328" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#c2185b">exit code 0 (ok) or non-0 (err)</text>
-  <text x="1055" y="344" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#c2185b">reason, message, startedAt, finishedAt</text>
-
-  <!-- Restart policy box -->
-  <rect x="40" y="380" width="780" height="120" rx="12" fill="#ede7f6" stroke="#7e57c2" stroke-width="2" filter="url(#shadow)"/>
-  <text x="50" y="406" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#4527a0">Restart Policy (restartPolicy on Pod spec)</text>
-  <text x="80" y="434" font-family="Arial,sans-serif" font-size="14" fill="#555">Always (default)   — restart container on any exit (good for services)</text>
-  <text x="80" y="458" font-family="Arial,sans-serif" font-size="14" fill="#555">OnFailure            — restart only on non-zero exit (good for jobs)</text>
-  <text x="80" y="482" font-family="Arial,sans-serif" font-size="14" fill="#555">Never                   — never restart (one-shot tasks)</text>
-
-  <!-- Health probe types -->
-  <rect x="880" y="400" width="360" height="200" rx="12" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="425" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#2e7d32">Health Probes</text>
-  <text x="900" y="452" font-family="Arial,sans-serif" font-size="13" fill="#1b5e20">startupProbe   — has container started? (blocks others)</text>
-  <text x="900" y="476" font-family="Arial,sans-serif" font-size="13" fill="#1b5e20">livenessProbe  — is container alive? (restart if fails)</text>
-  <text x="900" y="500" font-family="Arial,sans-serif" font-size="13" fill="#1b5e20">readinessProbe — ready for traffic? (remove from svc)</text>
-  <text x="900" y="526" font-family="Arial,sans-serif" font-size="12" fill="#555">Methods: httpGet / tcpSocket / exec</text>
-  <text x="900" y="548" font-family="Arial,sans-serif" font-size="12" fill="#555">Params: initialDelaySeconds, periodSeconds, failureThreshold</text>
-  <text x="900" y="570" font-family="Arial,sans-serif" font-size="12" fill="#555">successThreshold, timeoutSeconds</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="53.3333" y="88.8889" width="160" height="88.8889" rx="12.4444" fill="#eeeeee" stroke="#9e9e9e" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="133.3333" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#616161">Pending</ns0:text>
+  <ns0:text x="133.3333" y="144" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#757575">accepted by API server</ns0:text>
+  <ns0:text x="133.3333" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#757575">waiting to be scheduled</ns0:text>
+  <ns0:line x1="213.3333" y1="133.3333" x2="302.2222" y2="133.3333" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:text x="257.7778" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555">scheduled</ns0:text>
+  <ns0:rect x="302.2222" y="88.8889" width="160" height="88.8889" rx="12.4444" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="382.2222" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#1565c0">Running</ns0:text>
+  <ns0:text x="382.2222" y="144" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#1565c0">bound to node</ns0:text>
+  <ns0:text x="382.2222" y="160" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#1565c0">≥1 container running</ns0:text>
+  <ns0:line x1="462.2222" y1="115.5556" x2="551.1111" y2="115.5556" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:text x="506.6667" y="106.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555">all containers</ns0:text>
+  <ns0:text x="506.6667" y="119.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555">exit 0</ns0:text>
+  <ns0:line x1="462.2222" y1="160" x2="551.1111" y2="195.5556" stroke="#555" stroke-width="2.2222" marker-end="url(#arrow)" />
+  <ns0:text x="504.8889" y="191.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#555">container exit ≠0</ns0:text>
+  <ns0:rect x="551.1111" y="71.1111" width="160" height="88.8889" rx="12.4444" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="631.1111" y="104.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#2e7d32">Succeeded</ns0:text>
+  <ns0:text x="631.1111" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#388e3c">all containers</ns0:text>
+  <ns0:text x="631.1111" y="140.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#388e3c">terminated exit 0</ns0:text>
+  <ns0:text x="631.1111" y="154.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#388e3c">(terminal state)</ns0:text>
+  <ns0:rect x="551.1111" y="177.7778" width="160" height="88.8889" rx="12.4444" fill="#ffebee" stroke="#c62828" stroke-width="2.2222" filter="url(#shadow)" />
+  <ns0:text x="631.1111" y="211.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17.7778" font-weight="bold" fill="#b71c1c">Failed</ns0:text>
+  <ns0:text x="631.1111" y="231.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#c62828">≥1 container</ns0:text>
+  <ns0:text x="631.1111" y="247.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#c62828">terminated with error</ns0:text>
+  <ns0:rect x="302.2222" y="213.3333" width="160" height="71.1111" rx="12.4444" fill="#fff8e1" stroke="#f9a825" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="382.2222" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#e65100">Unknown</ns0:text>
+  <ns0:text x="382.2222" y="262.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#ef6c00">node communication lost</ns0:text>
+  <ns0:line x1="382.2222" y1="177.7778" x2="382.2222" y2="213.3333" stroke="#f9a825" stroke-width="1.7778" stroke-dasharray="4.4444 2.6667" marker-end="url(#arrow)" />
+  <ns0:rect x="782.2222" y="53.3333" width="320" height="275.5556" rx="10.6667" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:rect x="782.2222" y="53.3333" width="320" height="40.8889" rx="10.6667" fill="#546e7a" />
+  <ns0:rect x="782.2222" y="83.5556" width="320" height="10.6667" fill="#546e7a" />
+  <ns0:text x="942.2222" y="81.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fff">Container States</ns0:text>
+  <ns0:rect x="800" y="106.6667" width="275.5556" height="53.3333" rx="7.1111" fill="#eeeeee" stroke="#9e9e9e" stroke-width="1.3333" />
+  <ns0:text x="937.7778" y="128.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#616161">Waiting</ns0:text>
+  <ns0:text x="937.7778" y="149.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#757575">pulling image, initializing</ns0:text>
+  <ns0:line x1="942.2222" y1="160" x2="942.2222" y2="177.7778" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="800" y="177.7778" width="275.5556" height="53.3333" rx="7.1111" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.3333" />
+  <ns0:text x="937.7778" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#1565c0">Running</ns0:text>
+  <ns0:text x="937.7778" y="220.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#1565c0">process executing</ns0:text>
+  <ns0:line x1="942.2222" y1="231.1111" x2="942.2222" y2="248.8889" stroke="#555" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <ns0:rect x="800" y="248.8889" width="275.5556" height="60.4444" rx="7.1111" fill="#fce4ec" stroke="#e91e63" stroke-width="1.3333" />
+  <ns0:text x="937.7778" y="273.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#880e4f">Terminated</ns0:text>
+  <ns0:text x="937.7778" y="291.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="#c2185b">exit code 0 (ok) or non-0 (err)</ns0:text>
+  <ns0:text x="937.7778" y="305.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#c2185b">reason, message, startedAt, finishedAt</ns0:text>
+  <ns0:rect x="35.5556" y="337.7778" width="693.3333" height="106.6667" rx="10.6667" fill="#ede7f6" stroke="#7e57c2" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="44.4444" y="360.8889" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#4527a0">Restart Policy (restartPolicy on Pod spec)</ns0:text>
+  <ns0:text x="71.1111" y="385.7778" font-family="Arial,sans-serif" font-size="12.4444" fill="#555">Always (default)   — restart container on any exit (good for services)</ns0:text>
+  <ns0:text x="71.1111" y="407.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="#555">OnFailure            — restart only on non-zero exit (good for jobs)</ns0:text>
+  <ns0:text x="71.1111" y="428.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="#555">Never                   — never restart (one-shot tasks)</ns0:text>
+  <ns0:rect x="782.2222" y="355.5556" width="320" height="177.7778" rx="10.6667" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="942.2222" y="377.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="#2e7d32">Health Probes</ns0:text>
+  <ns0:text x="800" y="401.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="#1b5e20">startupProbe   — has container started? (blocks others)</ns0:text>
+  <ns0:text x="800" y="423.1111" font-family="Arial,sans-serif" font-size="11.5556" fill="#1b5e20">livenessProbe  — is container alive? (restart if fails)</ns0:text>
+  <ns0:text x="800" y="444.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="#1b5e20">readinessProbe — ready for traffic? (remove from svc)</ns0:text>
+  <ns0:text x="800" y="467.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Methods: httpGet / tcpSocket / exec</ns0:text>
+  <ns0:text x="800" y="487.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">Params: initialDelaySeconds, periodSeconds, failureThreshold</ns0:text>
+  <ns0:text x="800" y="506.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="#555">successThreshold, timeoutSeconds</ns0:text>
+</ns0:svg>

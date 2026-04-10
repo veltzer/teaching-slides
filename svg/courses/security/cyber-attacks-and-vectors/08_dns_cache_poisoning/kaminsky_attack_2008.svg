@@ -1,28 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="18.2857" markerHeight="12.6" refX="16.4571" refY="6.3" orient="auto">
-      <polygon points="0,18 6.4,0" fill="#555" />
-    </marker>
-    <marker id="arrl" markerWidth="18.2857" markerHeight="12.6" refX="1.8286" refY="6.3" orient="auto">
-      <polygon points="0,0 6.4,18" fill="#555" />
-    </marker>
-  </defs>
-  <text x="640" y="39.6" text-anchor="middle" font-size="25.2" fill="#222222" font-weight="bold">Kaminsky DNS Cache Poisoning Attack</text>
-  <rect x="18.2857" y="68.4" width="1243.4286" height="633.6" fill="#fff8e1" stroke="#f9a825" stroke-width="2.7" rx="7.2" />
-  <text x="40.2286" y="117" text-anchor="start" font-size="23.4" fill="#e65100" font-weight="bold">1.</text>
-  <text x="100.5714" y="117" text-anchor="start" font-size="21.6" fill="#222222">Attacker queries resolver for random.example.com</text>
-  <text x="100.5714" y="149.4" text-anchor="start" font-size="19.8" fill="#555">(a subdomain that does NOT exist in cache)</text>
-  <text x="40.2286" y="199.8" text-anchor="start" font-size="23.4" fill="#e65100" font-weight="bold">2.</text>
-  <text x="100.5714" y="199.8" text-anchor="start" font-size="21.6" fill="#222222">Resolver sends query to authoritative server for example.com</text>
-  <text x="40.2286" y="250.2" text-anchor="start" font-size="23.4" fill="#e65100" font-weight="bold">3.</text>
-  <text x="100.5714" y="250.2" text-anchor="start" font-size="21.6" fill="#222222">Before real response arrives, attacker floods resolver with</text>
-  <text x="100.5714" y="282.6" text-anchor="start" font-size="19.8" fill="#555">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</text>
-  <text x="40.2286" y="333" text-anchor="start" font-size="23.4" fill="#e65100" font-weight="bold">4.</text>
-  <text x="100.5714" y="333" text-anchor="start" font-size="21.6" fill="#222222">If forged response arrives FIRST and ID matches:</text>
-  <text x="100.5714" y="365.4" text-anchor="start" font-size="19.8" fill="#555">Resolver caches:  example.com NS  →  EVIL_IP</text>
-  <text x="40.2286" y="415.8" text-anchor="start" font-size="23.4" fill="#e65100" font-weight="bold">5.</text>
-  <text x="100.5714" y="415.8" text-anchor="start" font-size="21.6" fill="#222222">ALL future queries for *.example.com are redirected to attacker!</text>
-  <text x="40.2286" y="466.2" text-anchor="start" font-size="23.4" fill="#e65100" font-weight="bold">Key:</text>
-  <text x="100.5714" y="466.2" text-anchor="start" font-size="21.6" fill="#222222">Attacker retries with different random subdomains until one succeeds</text>
-  <text x="100.5714" y="498.6" text-anchor="start" font-size="19.8" fill="#555">— thousands of attempts possible per second</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="16.6707" markerHeight="11.4872" refX="15.0036" refY="5.7436" orient="auto">
+      <ns0:polygon points="0,16.4103 5.8348,0" fill="#555" />
+    </ns0:marker>
+    <ns0:marker id="arrl" markerWidth="16.6707" markerHeight="11.4872" refX="1.6671" refY="5.7436" orient="auto">
+      <ns0:polygon points="0,0 5.8348,16.4103" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="583.4758" y="36.1026" text-anchor="middle" font-size="22.9744" fill="#222222" font-weight="bold">Kaminsky DNS Cache Poisoning Attack</ns0:text>
+  <ns0:rect x="16.6707" y="62.359" width="1133.6101" height="577.641" fill="#fff8e1" stroke="#f9a825" stroke-width="2.4615" rx="6.5641" />
+  <ns0:text x="36.6756" y="106.6667" text-anchor="start" font-size="21.3333" fill="#e65100" font-weight="bold">1.</ns0:text>
+  <ns0:text x="91.689" y="106.6667" text-anchor="start" font-size="19.6923" fill="#222222">Attacker queries resolver for random.example.com</ns0:text>
+  <ns0:text x="91.689" y="136.2051" text-anchor="start" font-size="18.0513" fill="#555">(a subdomain that does NOT exist in cache)</ns0:text>
+  <ns0:text x="36.6756" y="182.1538" text-anchor="start" font-size="21.3333" fill="#e65100" font-weight="bold">2.</ns0:text>
+  <ns0:text x="91.689" y="182.1538" text-anchor="start" font-size="19.6923" fill="#222222">Resolver sends query to authoritative server for example.com</ns0:text>
+  <ns0:text x="36.6756" y="228.1026" text-anchor="start" font-size="21.3333" fill="#e65100" font-weight="bold">3.</ns0:text>
+  <ns0:text x="91.689" y="228.1026" text-anchor="start" font-size="19.6923" fill="#222222">Before real response arrives, attacker floods resolver with</ns0:text>
+  <ns0:text x="91.689" y="257.641" text-anchor="start" font-size="18.0513" fill="#555">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</ns0:text>
+  <ns0:text x="36.6756" y="303.5897" text-anchor="start" font-size="21.3333" fill="#e65100" font-weight="bold">4.</ns0:text>
+  <ns0:text x="91.689" y="303.5897" text-anchor="start" font-size="19.6923" fill="#222222">If forged response arrives FIRST and ID matches:</ns0:text>
+  <ns0:text x="91.689" y="333.1282" text-anchor="start" font-size="18.0513" fill="#555">Resolver caches:  example.com NS  →  EVIL_IP</ns0:text>
+  <ns0:text x="36.6756" y="379.0769" text-anchor="start" font-size="21.3333" fill="#e65100" font-weight="bold">5.</ns0:text>
+  <ns0:text x="91.689" y="379.0769" text-anchor="start" font-size="19.6923" fill="#222222">ALL future queries for *.example.com are redirected to attacker!</ns0:text>
+  <ns0:text x="36.6756" y="425.0256" text-anchor="start" font-size="21.3333" fill="#e65100" font-weight="bold">Key:</ns0:text>
+  <ns0:text x="91.689" y="425.0256" text-anchor="start" font-size="19.6923" fill="#222222">Attacker retries with different random subdomains until one succeeds</ns0:text>
+  <ns0:text x="91.689" y="454.5641" text-anchor="start" font-size="18.0513" fill="#555">— thousands of attempts possible per second</ns0:text>
+</ns0:svg>

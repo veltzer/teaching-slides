@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="25.6" font-weight="bold">Dockerfile Layer Order for Caching</text>
-  <rect x="42.6667" y="108" width="554.6667" height="108" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4.2667" rx="8.5333" />
-  <text x="320" y="180" text-anchor="middle" font-size="21.3333">FROM node:18-alpine</text>
-  <text x="938.6667" y="180" font-size="21.3333" fill="#2e7d32">Cached (rarely changes)</text>
-  <rect x="42.6667" y="234" width="554.6667" height="108" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" rx="8.5333" />
-  <text x="320" y="306" text-anchor="middle" font-size="21.3333">COPY package*.json ./</text>
-  <text x="938.6667" y="306" font-size="21.3333" fill="#2e7d32">Cached (deps stable)</text>
-  <rect x="42.6667" y="360" width="554.6667" height="108" fill="#e3f2fd" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="320" y="432" text-anchor="middle" font-size="21.3333">RUN npm install</text>
-  <text x="938.6667" y="432" font-size="21.3333" fill="#1565c0">Cached if deps unchanged</text>
-  <rect x="42.6667" y="486" width="554.6667" height="108" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" rx="8.5333" />
-  <text x="320" y="558" text-anchor="middle" font-size="21.3333">COPY . .</text>
-  <text x="938.6667" y="558" font-size="21.3333" fill="#e65100">Invalidated on code change</text>
-  <rect x="42.6667" y="612" width="554.6667" height="90" fill="#ffebee" stroke="#c62828" stroke-width="3.2" rx="8.5333" />
-  <text x="320" y="673.2" text-anchor="middle" font-size="21.3333">RUN npm run build</text>
-  <text x="938.6667" y="673.2" font-size="21.3333" fill="#c62828">Rebuilds every time</text>
-  <line x1="661.3333" y1="144" x2="661.3333" y2="666" stroke="#333" stroke-width="2.1333" stroke-dasharray="6.4 4.2667" />
-  <text x="704" y="108" font-size="21.3333" fill="#555" font-weight="bold">Cache status</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:text x="583.4758" y="59.0769" text-anchor="middle" font-size="23.339" font-weight="bold">Dockerfile Layer Order for Caching</ns0:text>
+  <ns0:rect x="38.8984" y="98.4615" width="505.679" height="98.4615" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.8899" rx="7.7796" />
+  <ns0:text x="291.7379" y="164.1026" text-anchor="middle" font-size="19.4492">FROM node:18-alpine</ns0:text>
+  <ns0:text x="855.7645" y="164.1026" font-size="19.4492" fill="#2e7d32">Cached (rarely changes)</ns0:text>
+  <ns0:rect x="38.8984" y="213.3333" width="505.679" height="98.4615" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.9174" rx="7.7796" />
+  <ns0:text x="291.7379" y="278.9744" text-anchor="middle" font-size="19.4492">COPY package*.json ./</ns0:text>
+  <ns0:text x="855.7645" y="278.9744" font-size="19.4492" fill="#2e7d32">Cached (deps stable)</ns0:text>
+  <ns0:rect x="38.8984" y="328.2051" width="505.679" height="98.4615" fill="#e3f2fd" stroke="#333" stroke-width="2.9174" rx="7.7796" />
+  <ns0:text x="291.7379" y="393.8462" text-anchor="middle" font-size="19.4492">RUN npm install</ns0:text>
+  <ns0:text x="855.7645" y="393.8462" font-size="19.4492" fill="#1565c0">Cached if deps unchanged</ns0:text>
+  <ns0:rect x="38.8984" y="443.0769" width="505.679" height="98.4615" fill="#fff3e0" stroke="#e65100" stroke-width="2.9174" rx="7.7796" />
+  <ns0:text x="291.7379" y="508.7179" text-anchor="middle" font-size="19.4492">COPY . .</ns0:text>
+  <ns0:text x="855.7645" y="508.7179" font-size="19.4492" fill="#e65100">Invalidated on code change</ns0:text>
+  <ns0:rect x="38.8984" y="557.9487" width="505.679" height="82.0513" fill="#ffebee" stroke="#c62828" stroke-width="2.9174" rx="7.7796" />
+  <ns0:text x="291.7379" y="613.7436" text-anchor="middle" font-size="19.4492">RUN npm run build</ns0:text>
+  <ns0:text x="855.7645" y="613.7436" font-size="19.4492" fill="#c62828">Rebuilds every time</ns0:text>
+  <ns0:line x1="602.9249" y1="131.2821" x2="602.9249" y2="607.1795" stroke="#333" stroke-width="1.9449" stroke-dasharray="5.8348 3.8899" />
+  <ns0:text x="641.8234" y="98.4615" font-size="19.4492" fill="#555" font-weight="bold">Cache status</ns0:text>
+</ns0:svg>

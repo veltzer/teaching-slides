@@ -1,46 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#4a90e2" />
-    </marker>
-  </defs>
-  <text x="640" y="48" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Raw Pointer Types</text>
-  <rect x="48" y="88" width="544" height="240" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="320" y="128" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#4a90e2">*const T (immutable raw ptr)</text>
-  <text x="72" y="168" font-size="17.6" fill="#555">let x = 42;</text>
-  <text x="72" y="200" font-size="17.6" fill="#555">let ptr: *const i32 = &amp;x;</text>
-  <text x="72" y="240" font-size="17.6" fill="#555">// Creating is safe</text>
-  <text x="72" y="272" font-size="17.6" fill="#dc3545">// Dereferencing requires unsafe</text>
-  <text x="72" y="304" font-size="17.6" fill="#dc3545">unsafe { println!("{}", *ptr); }</text>
-  <rect x="656" y="88" width="576" height="240" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="944" y="128" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">*mut T (mutable raw ptr)</text>
-  <text x="680" y="168" font-size="17.6" fill="#555">let mut x = 42;</text>
-  <text x="680" y="200" font-size="17.6" fill="#555">let ptr: *mut i32 = &amp;mut x;</text>
-  <text x="680" y="240" font-size="17.6" fill="#555">// Can read AND write</text>
-  <text x="680" y="272" font-size="17.6" fill="#dc3545">unsafe { *ptr = 99; }</text>
-  <text x="680" y="304" font-size="17.6" fill="#dc3545">// No aliasing rules enforced!</text>
-  <rect x="48" y="368" width="1184" height="320" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
-  <text x="640" y="408" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">Raw Pointers vs References</text>
-  <text x="320" y="448" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Property</text>
-  <text x="672" y="448" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#28a745">&amp;T / &amp;mut T</text>
-  <text x="1024" y="448" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#dc3545">*const T / *mut T</text>
-  <line x1="80" y1="460.8" x2="1200" y2="460.8" stroke="#dc3545" stroke-width="1.6" />
-  <text x="320" y="492.8" text-anchor="middle" font-size="17.6" fill="#555">Null</text>
-  <text x="672" y="492.8" text-anchor="middle" font-size="17.6" fill="#28a745">Never null</text>
-  <text x="1024" y="492.8" text-anchor="middle" font-size="17.6" fill="#dc3545">Can be null</text>
-  <text x="320" y="528" text-anchor="middle" font-size="17.6" fill="#555">Validity</text>
-  <text x="672" y="528" text-anchor="middle" font-size="17.6" fill="#28a745">Always valid</text>
-  <text x="1024" y="528" text-anchor="middle" font-size="17.6" fill="#dc3545">May be dangling</text>
-  <text x="320" y="563.2" text-anchor="middle" font-size="17.6" fill="#555">Aliasing</text>
-  <text x="672" y="563.2" text-anchor="middle" font-size="17.6" fill="#28a745">Enforced by borrow checker</text>
-  <text x="1024" y="563.2" text-anchor="middle" font-size="17.6" fill="#dc3545">No rules</text>
-  <text x="320" y="598.4" text-anchor="middle" font-size="17.6" fill="#555">Alignment</text>
-  <text x="672" y="598.4" text-anchor="middle" font-size="17.6" fill="#28a745">Guaranteed aligned</text>
-  <text x="1024" y="598.4" text-anchor="middle" font-size="17.6" fill="#dc3545">May be unaligned</text>
-  <text x="320" y="633.6" text-anchor="middle" font-size="17.6" fill="#555">Send/Sync</text>
-  <text x="672" y="633.6" text-anchor="middle" font-size="17.6" fill="#28a745">Automatic</text>
-  <text x="1024" y="633.6" text-anchor="middle" font-size="17.6" fill="#dc3545">Neither Send nor Sync</text>
-  <text x="320" y="668.8" text-anchor="middle" font-size="17.6" fill="#555">Deref</text>
-  <text x="672" y="668.8" text-anchor="middle" font-size="17.6" fill="#28a745">Safe</text>
-  <text x="1024" y="668.8" text-anchor="middle" font-size="17.6" fill="#dc3545">Requires unsafe</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.8837" markerHeight="10.4186" refX="14.8837" refY="5.2093" orient="auto">
+      <ns0:polygon points="0,14.8837 5.2093,0" fill="#4a90e2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="595.3488" y="44.6512" text-anchor="middle" font-size="29.7674" font-weight="bold" fill="#333">Raw Pointer Types</ns0:text>
+  <ns0:rect x="44.6512" y="81.8605" width="506.0465" height="223.2558" rx="7.4419" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9767" />
+  <ns0:text x="297.6744" y="119.0698" text-anchor="middle" font-size="20.8372" font-weight="bold" fill="#4a90e2">*const T (immutable raw ptr)</ns0:text>
+  <ns0:text x="66.9767" y="156.2791" font-size="16.3721" fill="#555">let x = 42;</ns0:text>
+  <ns0:text x="66.9767" y="186.0465" font-size="16.3721" fill="#555">let ptr: *const i32 = &amp;x;</ns0:text>
+  <ns0:text x="66.9767" y="223.2558" font-size="16.3721" fill="#555">// Creating is safe</ns0:text>
+  <ns0:text x="66.9767" y="253.0233" font-size="16.3721" fill="#dc3545">// Dereferencing requires unsafe</ns0:text>
+  <ns0:text x="66.9767" y="282.7907" font-size="16.3721" fill="#dc3545">unsafe { println!("{}", *ptr); }</ns0:text>
+  <ns0:rect x="610.2326" y="81.8605" width="535.814" height="223.2558" rx="7.4419" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9767" />
+  <ns0:text x="878.1395" y="119.0698" text-anchor="middle" font-size="20.8372" font-weight="bold" fill="#333">*mut T (mutable raw ptr)</ns0:text>
+  <ns0:text x="632.5581" y="156.2791" font-size="16.3721" fill="#555">let mut x = 42;</ns0:text>
+  <ns0:text x="632.5581" y="186.0465" font-size="16.3721" fill="#555">let ptr: *mut i32 = &amp;mut x;</ns0:text>
+  <ns0:text x="632.5581" y="223.2558" font-size="16.3721" fill="#555">// Can read AND write</ns0:text>
+  <ns0:text x="632.5581" y="253.0233" font-size="16.3721" fill="#dc3545">unsafe { *ptr = 99; }</ns0:text>
+  <ns0:text x="632.5581" y="282.7907" font-size="16.3721" fill="#dc3545">// No aliasing rules enforced!</ns0:text>
+  <ns0:rect x="44.6512" y="342.3256" width="1101.3953" height="297.6744" rx="7.4419" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9767" />
+  <ns0:text x="595.3488" y="379.5349" text-anchor="middle" font-size="20.8372" font-weight="bold" fill="#333">Raw Pointers vs References</ns0:text>
+  <ns0:text x="297.6744" y="416.7442" text-anchor="middle" font-size="17.8605" font-weight="bold" fill="#333">Property</ns0:text>
+  <ns0:text x="625.1163" y="416.7442" text-anchor="middle" font-size="17.8605" font-weight="bold" fill="#28a745">&amp;T / &amp;mut T</ns0:text>
+  <ns0:text x="952.5581" y="416.7442" text-anchor="middle" font-size="17.8605" font-weight="bold" fill="#dc3545">*const T / *mut T</ns0:text>
+  <ns0:line x1="74.4186" y1="428.6512" x2="1116.2791" y2="428.6512" stroke="#dc3545" stroke-width="1.4884" />
+  <ns0:text x="297.6744" y="458.4186" text-anchor="middle" font-size="16.3721" fill="#555">Null</ns0:text>
+  <ns0:text x="625.1163" y="458.4186" text-anchor="middle" font-size="16.3721" fill="#28a745">Never null</ns0:text>
+  <ns0:text x="952.5581" y="458.4186" text-anchor="middle" font-size="16.3721" fill="#dc3545">Can be null</ns0:text>
+  <ns0:text x="297.6744" y="491.1628" text-anchor="middle" font-size="16.3721" fill="#555">Validity</ns0:text>
+  <ns0:text x="625.1163" y="491.1628" text-anchor="middle" font-size="16.3721" fill="#28a745">Always valid</ns0:text>
+  <ns0:text x="952.5581" y="491.1628" text-anchor="middle" font-size="16.3721" fill="#dc3545">May be dangling</ns0:text>
+  <ns0:text x="297.6744" y="523.907" text-anchor="middle" font-size="16.3721" fill="#555">Aliasing</ns0:text>
+  <ns0:text x="625.1163" y="523.907" text-anchor="middle" font-size="16.3721" fill="#28a745">Enforced by borrow checker</ns0:text>
+  <ns0:text x="952.5581" y="523.907" text-anchor="middle" font-size="16.3721" fill="#dc3545">No rules</ns0:text>
+  <ns0:text x="297.6744" y="556.6512" text-anchor="middle" font-size="16.3721" fill="#555">Alignment</ns0:text>
+  <ns0:text x="625.1163" y="556.6512" text-anchor="middle" font-size="16.3721" fill="#28a745">Guaranteed aligned</ns0:text>
+  <ns0:text x="952.5581" y="556.6512" text-anchor="middle" font-size="16.3721" fill="#dc3545">May be unaligned</ns0:text>
+  <ns0:text x="297.6744" y="589.3953" text-anchor="middle" font-size="16.3721" fill="#555">Send/Sync</ns0:text>
+  <ns0:text x="625.1163" y="589.3953" text-anchor="middle" font-size="16.3721" fill="#28a745">Automatic</ns0:text>
+  <ns0:text x="952.5581" y="589.3953" text-anchor="middle" font-size="16.3721" fill="#dc3545">Neither Send nor Sync</ns0:text>
+  <ns0:text x="297.6744" y="622.1395" text-anchor="middle" font-size="16.3721" fill="#555">Deref</ns0:text>
+  <ns0:text x="625.1163" y="622.1395" text-anchor="middle" font-size="16.3721" fill="#28a745">Safe</ns0:text>
+  <ns0:text x="952.5581" y="622.1395" text-anchor="middle" font-size="16.3721" fill="#dc3545">Requires unsafe</ns0:text>
+</ns0:svg>

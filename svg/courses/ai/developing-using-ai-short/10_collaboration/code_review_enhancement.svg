@@ -1,70 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f2f2f2"/>
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-  </defs>
-  <rect width="1280" height="720" fill="#ffffff"/>
-  <!-- Header -->
-  <rect x="60" y="50" width="1160" height="55" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="640" y="87" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">AI-Enhanced Code Review Process</text>
-  <!-- Pipeline steps -->
-  <rect x="60" y="145" width="255" height="110" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
-  <text x="187" y="185" text-anchor="middle" fill="#e65100" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Pre-Review</text>
-  <text x="187" y="210" text-anchor="middle" fill="#e65100" font-size="16" font-weight="bold" font-family="Arial, sans-serif">AI Check</text>
-  <text x="187" y="240" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Automated scan</text>
-  <line x1="315" y1="200" x2="370" y2="200" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="380" y="145" width="255" height="110" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="507" y="193" text-anchor="middle" fill="#2e7d32" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Human</text>
-  <text x="507" y="218" text-anchor="middle" fill="#2e7d32" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Review</text>
-  <text x="507" y="244" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Focus on design</text>
-  <line x1="635" y1="200" x2="690" y2="200" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="700" y="145" width="255" height="110" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="827" y="193" text-anchor="middle" fill="#1565c0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">AI</text>
-  <text x="827" y="218" text-anchor="middle" fill="#1565c0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Suggestions</text>
-  <text x="827" y="244" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Refactor hints</text>
-  <line x1="955" y1="200" x2="1010" y2="200" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
-  <rect x="1020" y="145" width="200" height="110" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1120" y="210" text-anchor="middle" fill="#2e7d32" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Merge</text>
-  <text x="1120" y="240" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Approved</text>
-  <!-- Benefits -->
-  <rect x="60" y="300" width="1160" height="90" rx="10" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="338" text-anchor="middle" fill="#1565c0" font-size="19" font-weight="bold" font-family="Arial, sans-serif">AI Pre-Review: Humans focus on what matters</text>
-  <text x="640" y="370" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">AI handles style/linting/security → humans review architecture &amp; logic</text>
-  <!-- Detail cards row -->
-  <rect x="60" y="420" width="360" height="260" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="240" y="460" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">AI Catches</text>
-  <text x="240" y="494" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Code style violations</text>
-  <text x="240" y="524" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Security patterns</text>
-  <text x="240" y="554" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Missing test cases</text>
-  <text x="240" y="584" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Documentation gaps</text>
-  <text x="240" y="614" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Complexity metrics</text>
-  <rect x="460" y="420" width="360" height="260" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="460" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Humans Focus On</text>
-  <text x="640" y="494" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Business logic</text>
-  <text x="640" y="524" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Architecture decisions</text>
-  <text x="640" y="554" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Domain correctness</text>
-  <text x="640" y="584" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Team knowledge share</text>
-  <text x="640" y="614" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Mentoring junior devs</text>
-  <rect x="860" y="420" width="360" height="260" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1040" y="460" text-anchor="middle" fill="#e65100" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Outcomes</text>
-  <text x="1040" y="494" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• 50% faster review</text>
-  <text x="1040" y="524" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Fewer reopened PRs</text>
-  <text x="1040" y="554" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Consistent standards</text>
-  <text x="1040" y="584" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Better code quality</text>
-  <text x="1040" y="614" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Reduced reviewer load</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#1e88e5" />
+      <ns0:stop offset="100%" stop-color="#1565c0" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="0.8889">
+      <ns0:stop offset="0%" stop-color="#ffffff" />
+      <ns0:stop offset="100%" stop-color="#f2f2f2" />
+    </ns0:linearGradient>
+    <ns0:filter id="shadow" x="-3.5556%" y="-7.1111%" width="96%" height="110.2222%">
+      <ns0:feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+    </ns0:filter>
+    <ns0:marker id="arrow" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#555555" />
+    </ns0:marker>
+    <ns0:marker id="arrow-accent" markerWidth="8.8889" markerHeight="8.8889" refX="8" refY="4.4444" orient="auto">
+      <ns0:path d="M 0.8889 1.7778 L 8 4.4444 L 0.8889 7.1111 Z" fill="#1565c0" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="1137.7778" height="640" fill="#ffffff" />
+  <ns0:rect x="53.3333" y="44.4444" width="1031.1111" height="48.8889" rx="8.8889" fill="url(#grad-accent)" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="77.3333" text-anchor="middle" fill="white" font-size="21.3333" font-weight="bold" font-family="Arial, sans-serif">AI-Enhanced Code Review Process</ns0:text>
+  <ns0:rect x="53.3333" y="128.8889" width="226.6667" height="97.7778" rx="8.8889" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="166.2222" y="164.4444" text-anchor="middle" fill="#e65100" font-size="14.2222" font-weight="bold" font-family="Arial, sans-serif">Pre-Review</ns0:text>
+  <ns0:text x="166.2222" y="186.6667" text-anchor="middle" fill="#e65100" font-size="14.2222" font-weight="bold" font-family="Arial, sans-serif">AI Check</ns0:text>
+  <ns0:text x="166.2222" y="213.3333" text-anchor="middle" fill="#555" font-size="11.5556" font-family="Arial, sans-serif">Automated scan</ns0:text>
+  <ns0:line x1="280" y1="177.7778" x2="328.8889" y2="177.7778" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="337.7778" y="128.8889" width="226.6667" height="97.7778" rx="8.8889" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="450.6667" y="171.5556" text-anchor="middle" fill="#2e7d32" font-size="14.2222" font-weight="bold" font-family="Arial, sans-serif">Human</ns0:text>
+  <ns0:text x="450.6667" y="193.7778" text-anchor="middle" fill="#2e7d32" font-size="14.2222" font-weight="bold" font-family="Arial, sans-serif">Review</ns0:text>
+  <ns0:text x="450.6667" y="216.8889" text-anchor="middle" fill="#555" font-size="11.5556" font-family="Arial, sans-serif">Focus on design</ns0:text>
+  <ns0:line x1="564.4444" y1="177.7778" x2="613.3333" y2="177.7778" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="622.2222" y="128.8889" width="226.6667" height="97.7778" rx="8.8889" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="735.1111" y="171.5556" text-anchor="middle" fill="#1565c0" font-size="14.2222" font-weight="bold" font-family="Arial, sans-serif">AI</ns0:text>
+  <ns0:text x="735.1111" y="193.7778" text-anchor="middle" fill="#1565c0" font-size="14.2222" font-weight="bold" font-family="Arial, sans-serif">Suggestions</ns0:text>
+  <ns0:text x="735.1111" y="216.8889" text-anchor="middle" fill="#555" font-size="11.5556" font-family="Arial, sans-serif">Refactor hints</ns0:text>
+  <ns0:line x1="848.8889" y1="177.7778" x2="897.7778" y2="177.7778" stroke="#1565c0" stroke-width="2.6667" marker-end="url(#arrow-accent)" />
+  <ns0:rect x="906.6667" y="128.8889" width="177.7778" height="97.7778" rx="8.8889" fill="#e8f5e9" stroke="#43a047" stroke-width="1.7778" filter="url(#shadow)" />
+  <ns0:text x="995.5556" y="186.6667" text-anchor="middle" fill="#2e7d32" font-size="17.7778" font-weight="bold" font-family="Arial, sans-serif">Merge</ns0:text>
+  <ns0:text x="995.5556" y="213.3333" text-anchor="middle" fill="#555" font-size="11.5556" font-family="Arial, sans-serif">Approved</ns0:text>
+  <ns0:rect x="53.3333" y="266.6667" width="1031.1111" height="80" rx="8.8889" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="300.4444" text-anchor="middle" fill="#1565c0" font-size="16.8889" font-weight="bold" font-family="Arial, sans-serif">AI Pre-Review: Humans focus on what matters</ns0:text>
+  <ns0:text x="568.8889" y="328.8889" text-anchor="middle" fill="#444" font-size="14.2222" font-family="Arial, sans-serif">AI handles style/linting/security → humans review architecture &amp; logic</ns0:text>
+  <ns0:rect x="53.3333" y="373.3333" width="320" height="231.1111" rx="10.6667" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="213.3333" y="408.8889" text-anchor="middle" fill="#1565c0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">AI Catches</ns0:text>
+  <ns0:text x="213.3333" y="439.1111" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Code style violations</ns0:text>
+  <ns0:text x="213.3333" y="465.7778" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Security patterns</ns0:text>
+  <ns0:text x="213.3333" y="492.4444" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Missing test cases</ns0:text>
+  <ns0:text x="213.3333" y="519.1111" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Documentation gaps</ns0:text>
+  <ns0:text x="213.3333" y="545.7778" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Complexity metrics</ns0:text>
+  <ns0:rect x="408.8889" y="373.3333" width="320" height="231.1111" rx="10.6667" fill="#e8f5e9" stroke="#43a047" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="568.8889" y="408.8889" text-anchor="middle" fill="#2e7d32" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Humans Focus On</ns0:text>
+  <ns0:text x="568.8889" y="439.1111" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Business logic</ns0:text>
+  <ns0:text x="568.8889" y="465.7778" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Architecture decisions</ns0:text>
+  <ns0:text x="568.8889" y="492.4444" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Domain correctness</ns0:text>
+  <ns0:text x="568.8889" y="519.1111" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Team knowledge share</ns0:text>
+  <ns0:text x="568.8889" y="545.7778" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Mentoring junior devs</ns0:text>
+  <ns0:rect x="764.4444" y="373.3333" width="320" height="231.1111" rx="10.6667" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.3333" filter="url(#shadow)" />
+  <ns0:text x="924.4444" y="408.8889" text-anchor="middle" fill="#e65100" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Outcomes</ns0:text>
+  <ns0:text x="924.4444" y="439.1111" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• 50% faster review</ns0:text>
+  <ns0:text x="924.4444" y="465.7778" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Fewer reopened PRs</ns0:text>
+  <ns0:text x="924.4444" y="492.4444" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Consistent standards</ns0:text>
+  <ns0:text x="924.4444" y="519.1111" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Better code quality</ns0:text>
+  <ns0:text x="924.4444" y="545.7778" text-anchor="middle" fill="#444" font-size="13.3333" font-family="Arial, sans-serif">• Reduced reviewer load</ns0:text>
+</ns0:svg>

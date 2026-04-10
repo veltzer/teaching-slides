@@ -1,58 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="48" text-anchor="middle" font-size="28.8" font-weight="bold" fill="#333">Lock-Free vs Lock-Based Trade-offs</text>
-  <rect x="34.1333" y="80" width="341.3333" height="64" rx="8" fill="#4a90e2" stroke="#4a90e2" stroke-width="2.4" />
-  <text x="204.8" y="120" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#fff">Property</text>
-  <rect x="375.4667" y="80" width="409.6" height="64" rx="8" fill="#ffc107" stroke="#ffc107" stroke-width="2.4" />
-  <text x="580.2667" y="120" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">Lock-Based</text>
-  <rect x="785.0667" y="80" width="460.8" height="64" rx="8" fill="#28a745" stroke="#28a745" stroke-width="2.4" />
-  <text x="1015.4667" y="120" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#fff">Lock-Free</text>
-  <rect x="34.1333" y="152" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="152" width="409.6" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <rect x="785.0667" y="152" width="460.8" height="56" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
-  <text x="51.2" y="187.2" font-size="19.2" fill="#333">Simplicity</text>
-  <text x="392.5333" y="187.2" font-size="19.2" fill="#333">Easy to reason about</text>
-  <text x="802.1333" y="187.2" font-size="19.2" fill="#333">Complex, subtle bugs</text>
-  <rect x="34.1333" y="216" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="216" width="409.6" height="56" rx="4.8" fill="#fff3cd" stroke="#ffc107" stroke-width="1.6" />
-  <rect x="785.0667" y="216" width="460.8" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="51.2" y="251.2" font-size="19.2" fill="#333">Contention</text>
-  <text x="392.5333" y="251.2" font-size="19.2" fill="#333">Threads block</text>
-  <text x="802.1333" y="251.2" font-size="19.2" fill="#333">Threads retry (spin)</text>
-  <rect x="34.1333" y="280" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="280" width="409.6" height="56" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
-  <rect x="785.0667" y="280" width="460.8" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="51.2" y="315.2" font-size="19.2" fill="#333">Priority inversion</text>
-  <text x="392.5333" y="315.2" font-size="19.2" fill="#dc3545">Possible</text>
-  <text x="802.1333" y="315.2" font-size="19.2" fill="#28a745">Not possible</text>
-  <rect x="34.1333" y="344" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="344" width="409.6" height="56" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
-  <rect x="785.0667" y="344" width="460.8" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="51.2" y="379.2" font-size="19.2" fill="#333">Deadlock</text>
-  <text x="392.5333" y="379.2" font-size="19.2" fill="#dc3545">Possible</text>
-  <text x="802.1333" y="379.2" font-size="19.2" fill="#28a745">Not possible</text>
-  <rect x="34.1333" y="408" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="408" width="409.6" height="56" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
-  <rect x="785.0667" y="408" width="460.8" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="51.2" y="443.2" font-size="19.2" fill="#333">Progress guarantee</text>
-  <text x="392.5333" y="443.2" font-size="19.2" fill="#dc3545">None (can deadlock)</text>
-  <text x="802.1333" y="443.2" font-size="19.2" fill="#28a745">At least one progresses</text>
-  <rect x="34.1333" y="472" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="472" width="409.6" height="56" rx="4.8" fill="#f8f9fa" stroke="#ddd" stroke-width="1.6" />
-  <rect x="785.0667" y="472" width="460.8" height="56" rx="4.8" fill="#f8f9fa" stroke="#ddd" stroke-width="1.6" />
-  <text x="51.2" y="507.2" font-size="19.2" fill="#333">Perf (low contention)</text>
-  <text x="392.5333" y="507.2" font-size="19.2" fill="#333">Good</text>
-  <text x="802.1333" y="507.2" font-size="19.2" fill="#333">Similar or better</text>
-  <rect x="34.1333" y="536" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="536" width="409.6" height="56" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
-  <rect x="785.0667" y="536" width="460.8" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <text x="51.2" y="571.2" font-size="19.2" fill="#333">Perf (high contention)</text>
-  <text x="392.5333" y="571.2" font-size="19.2" fill="#dc3545">Degrades quickly</text>
-  <text x="802.1333" y="571.2" font-size="19.2" fill="#28a745">Degrades gracefully</text>
-  <rect x="34.1333" y="600" width="341.3333" height="56" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
-  <rect x="375.4667" y="600" width="409.6" height="56" rx="4.8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
-  <rect x="785.0667" y="600" width="460.8" height="56" rx="4.8" fill="#f8d7da" stroke="#dc3545" stroke-width="1.6" />
-  <text x="51.2" y="635.2" font-size="19.2" fill="#333">Memory reclamation</text>
-  <text x="392.5333" y="635.2" font-size="19.2" fill="#28a745">Trivial</text>
-  <text x="802.1333" y="635.2" font-size="19.2" fill="#dc3545">Hard (ABA problem)</text>
-  <text x="640" y="696" text-anchor="middle" font-size="19.2" fill="#555" font-style="italic">Prefer Mutex/RwLock unless profiling shows lock contention is a real bottleneck.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="26.4828" font-weight="bold" fill="#333">Lock-Free vs Lock-Based Trade-offs</ns0:text>
+  <ns0:rect x="31.3869" y="73.5632" width="313.8697" height="58.8506" rx="7.3563" fill="#4a90e2" stroke="#4a90e2" stroke-width="2.2069" />
+  <ns0:text x="188.3218" y="110.3448" text-anchor="middle" font-size="20.5977" font-weight="bold" fill="#fff">Property</ns0:text>
+  <ns0:rect x="345.2567" y="73.5632" width="376.6437" height="58.8506" rx="7.3563" fill="#ffc107" stroke="#ffc107" stroke-width="2.2069" />
+  <ns0:text x="533.5786" y="110.3448" text-anchor="middle" font-size="20.5977" font-weight="bold" fill="#333">Lock-Based</ns0:text>
+  <ns0:rect x="721.9004" y="73.5632" width="423.7241" height="58.8506" rx="7.3563" fill="#28a745" stroke="#28a745" stroke-width="2.2069" />
+  <ns0:text x="933.7625" y="110.3448" text-anchor="middle" font-size="20.5977" font-weight="bold" fill="#fff">Lock-Free</ns0:text>
+  <ns0:rect x="31.3869" y="139.7701" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="139.7701" width="376.6437" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="139.7701" width="423.7241" height="51.4943" rx="4.4138" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="172.1379" font-size="17.6552" fill="#333">Simplicity</ns0:text>
+  <ns0:text x="360.9502" y="172.1379" font-size="17.6552" fill="#333">Easy to reason about</ns0:text>
+  <ns0:text x="737.5938" y="172.1379" font-size="17.6552" fill="#333">Complex, subtle bugs</ns0:text>
+  <ns0:rect x="31.3869" y="198.6207" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="198.6207" width="376.6437" height="51.4943" rx="4.4138" fill="#fff3cd" stroke="#ffc107" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="198.6207" width="423.7241" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="230.9885" font-size="17.6552" fill="#333">Contention</ns0:text>
+  <ns0:text x="360.9502" y="230.9885" font-size="17.6552" fill="#333">Threads block</ns0:text>
+  <ns0:text x="737.5938" y="230.9885" font-size="17.6552" fill="#333">Threads retry (spin)</ns0:text>
+  <ns0:rect x="31.3869" y="257.4713" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="257.4713" width="376.6437" height="51.4943" rx="4.4138" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="257.4713" width="423.7241" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="289.8391" font-size="17.6552" fill="#333">Priority inversion</ns0:text>
+  <ns0:text x="360.9502" y="289.8391" font-size="17.6552" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="737.5938" y="289.8391" font-size="17.6552" fill="#28a745">Not possible</ns0:text>
+  <ns0:rect x="31.3869" y="316.3218" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="316.3218" width="376.6437" height="51.4943" rx="4.4138" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="316.3218" width="423.7241" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="348.6897" font-size="17.6552" fill="#333">Deadlock</ns0:text>
+  <ns0:text x="360.9502" y="348.6897" font-size="17.6552" fill="#dc3545">Possible</ns0:text>
+  <ns0:text x="737.5938" y="348.6897" font-size="17.6552" fill="#28a745">Not possible</ns0:text>
+  <ns0:rect x="31.3869" y="375.1724" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="375.1724" width="376.6437" height="51.4943" rx="4.4138" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="375.1724" width="423.7241" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="407.5402" font-size="17.6552" fill="#333">Progress guarantee</ns0:text>
+  <ns0:text x="360.9502" y="407.5402" font-size="17.6552" fill="#dc3545">None (can deadlock)</ns0:text>
+  <ns0:text x="737.5938" y="407.5402" font-size="17.6552" fill="#28a745">At least one progresses</ns0:text>
+  <ns0:rect x="31.3869" y="434.023" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="434.023" width="376.6437" height="51.4943" rx="4.4138" fill="#f8f9fa" stroke="#ddd" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="434.023" width="423.7241" height="51.4943" rx="4.4138" fill="#f8f9fa" stroke="#ddd" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="466.3908" font-size="17.6552" fill="#333">Perf (low contention)</ns0:text>
+  <ns0:text x="360.9502" y="466.3908" font-size="17.6552" fill="#333">Good</ns0:text>
+  <ns0:text x="737.5938" y="466.3908" font-size="17.6552" fill="#333">Similar or better</ns0:text>
+  <ns0:rect x="31.3869" y="492.8736" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="492.8736" width="376.6437" height="51.4943" rx="4.4138" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="492.8736" width="423.7241" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="525.2414" font-size="17.6552" fill="#333">Perf (high contention)</ns0:text>
+  <ns0:text x="360.9502" y="525.2414" font-size="17.6552" fill="#dc3545">Degrades quickly</ns0:text>
+  <ns0:text x="737.5938" y="525.2414" font-size="17.6552" fill="#28a745">Degrades gracefully</ns0:text>
+  <ns0:rect x="31.3869" y="551.7241" width="313.8697" height="51.4943" rx="4.4138" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.4713" />
+  <ns0:rect x="345.2567" y="551.7241" width="376.6437" height="51.4943" rx="4.4138" fill="#d4edda" stroke="#28a745" stroke-width="1.4713" />
+  <ns0:rect x="721.9004" y="551.7241" width="423.7241" height="51.4943" rx="4.4138" fill="#f8d7da" stroke="#dc3545" stroke-width="1.4713" />
+  <ns0:text x="47.0805" y="584.092" font-size="17.6552" fill="#333">Memory reclamation</ns0:text>
+  <ns0:text x="360.9502" y="584.092" font-size="17.6552" fill="#28a745">Trivial</ns0:text>
+  <ns0:text x="737.5938" y="584.092" font-size="17.6552" fill="#dc3545">Hard (ABA problem)</ns0:text>
+  <ns0:text x="588.5057" y="640" text-anchor="middle" font-size="17.6552" fill="#555" font-style="italic">Prefer Mutex/RwLock unless profiling shows lock contention is a real bottleneck.</ns0:text>
+</ns0:svg>

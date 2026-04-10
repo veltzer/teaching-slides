@@ -1,50 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
-    </marker>
-  </defs>
-  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Graph Data Formats</text>
-  <rect x="48" y="99" width="352" height="270" rx="12.8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
-  <text x="224" y="144" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#1565c0">Edge List</text>
-  <rect x="80" y="162" width="288" height="180" rx="6.4" fill="#fff" stroke="#ccc" stroke-width="1.6" />
-  <text x="104" y="201.6" font-family="Courier New" font-size="17.6" fill="#333">1  2</text>
-  <text x="104" y="230.4" font-family="Courier New" font-size="17.6" fill="#333">1  3</text>
-  <text x="104" y="259.2" font-family="Courier New" font-size="17.6" fill="#333">2  4</text>
-  <text x="104" y="288" font-family="Courier New" font-size="17.6" fill="#333">3  5</text>
-  <text x="104" y="316.8" font-family="Courier New" font-size="17.6" fill="#888">src  dst</text>
-  <rect x="464" y="99" width="352" height="270" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
-  <text x="640" y="144" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#2e7d32">Adjacency List</text>
-  <rect x="496" y="162" width="288" height="180" rx="6.4" fill="#fff" stroke="#ccc" stroke-width="1.6" />
-  <text x="520" y="201.6" font-family="Courier New" font-size="17.6" fill="#333">1: [2, 3]</text>
-  <text x="520" y="230.4" font-family="Courier New" font-size="17.6" fill="#333">2: [4]</text>
-  <text x="520" y="259.2" font-family="Courier New" font-size="17.6" fill="#333">3: [5]</text>
-  <text x="520" y="288" font-family="Courier New" font-size="17.6" fill="#333">4: []</text>
-  <text x="520" y="316.8" font-family="Courier New" font-size="17.6" fill="#888">node: [neighbors]</text>
-  <rect x="880" y="99" width="352" height="270" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
-  <text x="1056" y="144" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#e65100">GraphML (XML)</text>
-  <rect x="912" y="162" width="288" height="180" rx="6.4" fill="#fff" stroke="#ccc" stroke-width="1.6" />
-  <text x="928" y="198" font-family="Courier New" font-size="16" fill="#333">&lt;graph&gt;</text>
-  <text x="944" y="226.8" font-family="Courier New" font-size="16" fill="#333">&lt;node id="1"/&gt;</text>
-  <text x="944" y="255.6" font-family="Courier New" font-size="16" fill="#333">&lt;node id="2"/&gt;</text>
-  <text x="944" y="284.4" font-family="Courier New" font-size="16" fill="#333">&lt;edge src="1"</text>
-  <text x="968" y="313.2" font-family="Courier New" font-size="16" fill="#333">dst="2"/&gt;</text>
-  <rect x="48" y="432" width="352" height="234" rx="12.8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3.2" />
-  <text x="224" y="477" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#7b1fa2">Parquet (Columnar)</text>
-  <text x="224" y="522" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">vertices.parquet</text>
-  <text x="224" y="554.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">edges.parquet</text>
-  <text x="224" y="594" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#2e7d32">Best for Spark!</text>
-  <text x="224" y="626.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Compressed, fast reads</text>
-  <rect x="464" y="432" width="352" height="234" rx="12.8" fill="#e0f2f1" stroke="#00695c" stroke-width="3.2" />
-  <text x="640" y="477" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#00695c">CSV / TSV</text>
-  <text x="640" y="522" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Simple text format</text>
-  <text x="640" y="554.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Easy to produce/consume</text>
-  <text x="640" y="586.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">No schema enforcement</text>
-  <text x="640" y="626.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Good for interop</text>
-  <rect x="880" y="432" width="352" height="234" rx="12.8" fill="#fce4ec" stroke="#c62828" stroke-width="3.2" />
-  <text x="1056" y="477" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#c62828">JSON</text>
-  <text x="1056" y="522" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Nested properties</text>
-  <text x="1056" y="554.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Schema flexibility</text>
-  <text x="1056" y="586.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Human readable</text>
-  <text x="1056" y="626.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Larger file sizes</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="15.3754" markerHeight="12.1081" refX="13.8378" refY="6.0541" orient="auto">
+      <ns0:polygon points="0,17.2973 5.3814,0" fill="#333" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="615.015" y="51.8919" text-anchor="middle" font-family="Arial" font-size="27.6757" font-weight="bold" fill="#1a237e">Graph Data Formats</ns0:text>
+  <ns0:rect x="46.1261" y="95.1351" width="338.2583" height="259.4595" rx="12.3003" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.0751" />
+  <ns0:text x="215.2553" y="138.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#1565c0">Edge List</ns0:text>
+  <ns0:rect x="76.8769" y="155.6757" width="276.7568" height="172.973" rx="6.1502" fill="#fff" stroke="#ccc" stroke-width="1.5375" />
+  <ns0:text x="99.9399" y="193.7297" font-family="Courier New" font-size="16.9129" fill="#333">1  2</ns0:text>
+  <ns0:text x="99.9399" y="221.4054" font-family="Courier New" font-size="16.9129" fill="#333">1  3</ns0:text>
+  <ns0:text x="99.9399" y="249.0811" font-family="Courier New" font-size="16.9129" fill="#333">2  4</ns0:text>
+  <ns0:text x="99.9399" y="276.7568" font-family="Courier New" font-size="16.9129" fill="#333">3  5</ns0:text>
+  <ns0:text x="99.9399" y="304.4324" font-family="Courier New" font-size="16.9129" fill="#888">src  dst</ns0:text>
+  <ns0:rect x="445.8859" y="95.1351" width="338.2583" height="259.4595" rx="12.3003" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.0751" />
+  <ns0:text x="615.015" y="138.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#2e7d32">Adjacency List</ns0:text>
+  <ns0:rect x="476.6366" y="155.6757" width="276.7568" height="172.973" rx="6.1502" fill="#fff" stroke="#ccc" stroke-width="1.5375" />
+  <ns0:text x="499.6997" y="193.7297" font-family="Courier New" font-size="16.9129" fill="#333">1: [2, 3]</ns0:text>
+  <ns0:text x="499.6997" y="221.4054" font-family="Courier New" font-size="16.9129" fill="#333">2: [4]</ns0:text>
+  <ns0:text x="499.6997" y="249.0811" font-family="Courier New" font-size="16.9129" fill="#333">3: [5]</ns0:text>
+  <ns0:text x="499.6997" y="276.7568" font-family="Courier New" font-size="16.9129" fill="#333">4: []</ns0:text>
+  <ns0:text x="499.6997" y="304.4324" font-family="Courier New" font-size="16.9129" fill="#888">node: [neighbors]</ns0:text>
+  <ns0:rect x="845.6456" y="95.1351" width="338.2583" height="259.4595" rx="12.3003" fill="#fff3e0" stroke="#e65100" stroke-width="3.0751" />
+  <ns0:text x="1014.7748" y="138.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#e65100">GraphML (XML)</ns0:text>
+  <ns0:rect x="876.3964" y="155.6757" width="276.7568" height="172.973" rx="6.1502" fill="#fff" stroke="#ccc" stroke-width="1.5375" />
+  <ns0:text x="891.7718" y="190.2703" font-family="Courier New" font-size="15.3754" fill="#333">&lt;graph&gt;</ns0:text>
+  <ns0:text x="907.1471" y="217.9459" font-family="Courier New" font-size="15.3754" fill="#333">&lt;node id="1"/&gt;</ns0:text>
+  <ns0:text x="907.1471" y="245.6216" font-family="Courier New" font-size="15.3754" fill="#333">&lt;node id="2"/&gt;</ns0:text>
+  <ns0:text x="907.1471" y="273.2973" font-family="Courier New" font-size="15.3754" fill="#333">&lt;edge src="1"</ns0:text>
+  <ns0:text x="930.2102" y="300.973" font-family="Courier New" font-size="15.3754" fill="#333">dst="2"/&gt;</ns0:text>
+  <ns0:rect x="46.1261" y="415.1351" width="338.2583" height="224.8649" rx="12.3003" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3.0751" />
+  <ns0:text x="215.2553" y="458.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#7b1fa2">Parquet (Columnar)</ns0:text>
+  <ns0:text x="215.2553" y="501.6216" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">vertices.parquet</ns0:text>
+  <ns0:text x="215.2553" y="532.7568" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">edges.parquet</ns0:text>
+  <ns0:text x="215.2553" y="570.8108" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#2e7d32">Best for Spark!</ns0:text>
+  <ns0:text x="215.2553" y="601.9459" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Compressed, fast reads</ns0:text>
+  <ns0:rect x="445.8859" y="415.1351" width="338.2583" height="224.8649" rx="12.3003" fill="#e0f2f1" stroke="#00695c" stroke-width="3.0751" />
+  <ns0:text x="615.015" y="458.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#00695c">CSV / TSV</ns0:text>
+  <ns0:text x="615.015" y="501.6216" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Simple text format</ns0:text>
+  <ns0:text x="615.015" y="532.7568" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Easy to produce/consume</ns0:text>
+  <ns0:text x="615.015" y="563.8919" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">No schema enforcement</ns0:text>
+  <ns0:text x="615.015" y="601.9459" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Good for interop</ns0:text>
+  <ns0:rect x="845.6456" y="415.1351" width="338.2583" height="224.8649" rx="12.3003" fill="#fce4ec" stroke="#c62828" stroke-width="3.0751" />
+  <ns0:text x="1014.7748" y="458.3784" text-anchor="middle" font-family="Arial" font-size="21.5255" font-weight="bold" fill="#c62828">JSON</ns0:text>
+  <ns0:text x="1014.7748" y="501.6216" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Nested properties</ns0:text>
+  <ns0:text x="1014.7748" y="532.7568" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Schema flexibility</ns0:text>
+  <ns0:text x="1014.7748" y="563.8919" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Human readable</ns0:text>
+  <ns0:text x="1014.7748" y="601.9459" text-anchor="middle" font-family="Arial" font-size="16.9129" fill="#555">Larger file sizes</ns0:text>
+</ns0:svg>

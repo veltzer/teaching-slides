@@ -1,47 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">DMA (Direct Memory Access)</text>
-  <rect x="22.069" y="75.7895" width="1235.8621" height="227.3684" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="66.2069" y="123.1579" font-size="26.5263" font-weight="bold" fill="#dc3545">Without DMA (Programmed I/O):</text>
-  <rect x="66.2069" y="151.5789" width="198.6207" height="94.7368" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="165.5172" y="208.4211" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">CPU</text>
-  <rect x="485.5172" y="151.5789" width="220.6897" height="94.7368" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8421" />
-  <text x="595.8621" y="208.4211" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">Device</text>
-  <rect x="926.8966" y="151.5789" width="220.6897" height="94.7368" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="2.8421" />
-  <text x="1037.2414" y="208.4211" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">Memory</text>
-  <line x1="264.8276" y1="189.4737" x2="481.1034" y2="189.4737" stroke="#dc3545" stroke-width="2.8421" marker-end="url(#dma1)" />
-  <line x1="264.8276" y1="217.8947" x2="922.4828" y2="217.8947" stroke="#dc3545" stroke-width="2.8421" marker-end="url(#dma1)" />
-  <text x="375.1724" y="180" font-size="18.9474" fill="#555">byte</text>
-  <text x="640" y="274.7368" text-anchor="middle" font-size="20.8421" fill="#dc3545">CPU copies each byte! CPU is 100% busy</text>
-  <rect x="22.069" y="331.5789" width="1235.8621" height="360" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="2.8421" />
-  <text x="66.2069" y="378.9474" font-size="26.5263" font-weight="bold" fill="#28a745">With DMA:</text>
-  <rect x="66.2069" y="407.3684" width="198.6207" height="94.7368" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="165.5172" y="464.2105" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">CPU</text>
-  <rect x="485.5172" y="407.3684" width="264.8276" height="94.7368" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8421" />
-  <text x="617.931" y="449.0526" text-anchor="middle" font-size="22.7368" font-weight="bold" fill="#333">DMA</text>
-  <text x="617.931" y="483.1579" text-anchor="middle" font-size="20.8421" fill="#555">Controller</text>
-  <rect x="948.9655" y="407.3684" width="220.6897" height="94.7368" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="2.8421" />
-  <text x="1059.3103" y="464.2105" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">Memory</text>
-  <line x1="264.8276" y1="435.7895" x2="481.1034" y2="435.7895" stroke="#4a90e2" stroke-width="2.8421" marker-end="url(#dma2)" />
-  <text x="375.1724" y="422.5263" font-size="18.9474" fill="#4a90e2">1. Setup</text>
-  <line x1="750.3448" y1="454.7368" x2="944.5517" y2="454.7368" stroke="#28a745" stroke-width="3.7895" marker-end="url(#dma3)" />
-  <line x1="944.5517" y1="473.6842" x2="750.3448" y2="473.6842" stroke="#28a745" stroke-width="3.7895" marker-end="url(#dma4)" />
-  <text x="849.6552" y="441.4737" font-size="18.9474" fill="#28a745">2. Bulk data</text>
-  <text x="165.5172" y="549.4737" text-anchor="middle" font-size="20.8421" fill="#4a90e2">CPU is free!</text>
-  <text x="165.5172" y="577.8947" text-anchor="middle" font-size="20.8421" fill="#4a90e2">Does other work</text>
-  <line x1="617.931" y1="502.1053" x2="264.8276" y2="568.4211" stroke="#dc3545" stroke-width="2.8421" stroke-dasharray="7.5789 3.7895" marker-end="url(#dma1)" />
-  <text x="485.5172" y="558.9474" font-size="18.9474" fill="#dc3545">3. Interrupt: "done!"</text>
-  <defs>
-    <marker id="dma1" viewBox="0 0 10 10" refX="19.8621" refY="9.4737" markerWidth="13.2414" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.069 9.4737 L 0 18.9474 z" fill="#dc3545" />
-    </marker>
-    <marker id="dma2" viewBox="0 0 10 10" refX="19.8621" refY="9.4737" markerWidth="13.2414" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.069 9.4737 L 0 18.9474 z" fill="#4a90e2" />
-    </marker>
-    <marker id="dma3" viewBox="0 0 10 10" refX="19.8621" refY="9.4737" markerWidth="13.2414" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.069 9.4737 L 0 18.9474 z" fill="#28a745" />
-    </marker>
-    <marker id="dma4" viewBox="0 0 10 10" refX="19.8621" refY="9.4737" markerWidth="13.2414" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.069 9.4737 L 0 18.9474 z" fill="#28a745" />
-    </marker>
-  </defs>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <ns0:text x="592.2679" y="43.8356" text-anchor="middle" font-size="28.0548" font-weight="bold" fill="#333">DMA (Direct Memory Access)</ns0:text>
+  <ns0:rect x="20.4231" y="70.137" width="1143.6898" height="210.411" rx="8.7671" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6301" />
+  <ns0:text x="61.2691" y="113.9726" font-size="24.5479" font-weight="bold" fill="#dc3545">Without DMA (Programmed I/O):</ns0:text>
+  <ns0:rect x="61.2691" y="140.2739" width="183.8073" height="87.6712" rx="8.7671" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6301" />
+  <ns0:text x="153.1727" y="192.8768" text-anchor="middle" font-size="22.7945" font-weight="bold" fill="#333">CPU</ns0:text>
+  <ns0:rect x="449.3067" y="140.2739" width="204.2304" height="87.6712" rx="8.7671" fill="#fff3cd" stroke="#ffc107" stroke-width="2.6301" />
+  <ns0:text x="551.4219" y="192.8768" text-anchor="middle" font-size="22.7945" font-weight="bold" fill="#333">Device</ns0:text>
+  <ns0:rect x="857.7674" y="140.2739" width="204.2304" height="87.6712" rx="8.7671" fill="#d4edda" stroke="#28a745" stroke-width="2.6301" />
+  <ns0:text x="959.8825" y="192.8768" text-anchor="middle" font-size="22.7945" font-weight="bold" fill="#333">Memory</ns0:text>
+  <ns0:line x1="245.0764" y1="175.3425" x2="445.2221" y2="175.3425" stroke="#dc3545" stroke-width="2.6301" marker-end="url(#dma1)" />
+  <ns0:line x1="245.0764" y1="201.6438" x2="853.6828" y2="201.6438" stroke="#dc3545" stroke-width="2.6301" marker-end="url(#dma1)" />
+  <ns0:text x="347.1915" y="166.5754" font-size="17.5343" fill="#555">byte</ns0:text>
+  <ns0:text x="592.2679" y="254.2466" text-anchor="middle" font-size="19.2877" fill="#dc3545">CPU copies each byte! CPU is 100% busy</ns0:text>
+  <ns0:rect x="20.4231" y="306.8493" width="1143.6898" height="333.1507" rx="8.7671" fill="#d4edda" stroke="#28a745" stroke-width="2.6301" />
+  <ns0:text x="61.2691" y="350.685" font-size="24.5479" font-weight="bold" fill="#28a745">With DMA:</ns0:text>
+  <ns0:rect x="61.2691" y="376.9863" width="183.8073" height="87.6712" rx="8.7671" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6301" />
+  <ns0:text x="153.1727" y="429.589" text-anchor="middle" font-size="22.7945" font-weight="bold" fill="#333">CPU</ns0:text>
+  <ns0:rect x="449.3067" y="376.9863" width="245.0764" height="87.6712" rx="8.7671" fill="#fff3cd" stroke="#ffc107" stroke-width="2.6301" />
+  <ns0:text x="571.8449" y="415.5616" text-anchor="middle" font-size="21.0411" font-weight="bold" fill="#333">DMA</ns0:text>
+  <ns0:text x="571.8449" y="447.1233" text-anchor="middle" font-size="19.2877" fill="#555">Controller</ns0:text>
+  <ns0:rect x="878.1904" y="376.9863" width="204.2304" height="87.6712" rx="8.7671" fill="#d4edda" stroke="#28a745" stroke-width="2.6301" />
+  <ns0:text x="980.3055" y="429.589" text-anchor="middle" font-size="22.7945" font-weight="bold" fill="#333">Memory</ns0:text>
+  <ns0:line x1="245.0764" y1="403.2877" x2="445.2221" y2="403.2877" stroke="#4a90e2" stroke-width="2.6301" marker-end="url(#dma2)" />
+  <ns0:text x="347.1915" y="391.0137" font-size="17.5343" fill="#4a90e2">1. Setup</ns0:text>
+  <ns0:line x1="694.3831" y1="420.8219" x2="874.1057" y2="420.8219" stroke="#28a745" stroke-width="3.5069" marker-end="url(#dma3)" />
+  <ns0:line x1="874.1057" y1="438.3562" x2="694.3831" y2="438.3562" stroke="#28a745" stroke-width="3.5069" marker-end="url(#dma4)" />
+  <ns0:text x="786.2868" y="408.548" font-size="17.5343" fill="#28a745">2. Bulk data</ns0:text>
+  <ns0:text x="153.1727" y="508.4932" text-anchor="middle" font-size="19.2877" fill="#4a90e2">CPU is free!</ns0:text>
+  <ns0:text x="153.1727" y="534.7945" text-anchor="middle" font-size="19.2877" fill="#4a90e2">Does other work</ns0:text>
+  <ns0:line x1="571.8449" y1="464.6576" x2="245.0764" y2="526.0275" stroke="#dc3545" stroke-width="2.6301" stroke-dasharray="7.0137 3.5069" marker-end="url(#dma1)" />
+  <ns0:text x="449.3067" y="517.2603" font-size="17.5343" fill="#dc3545">3. Interrupt: "done!"</ns0:text>
+  <ns0:defs>
+    <ns0:marker id="dma1" viewBox="0 0 10 10" refX="18.3808" refY="8.7671" markerWidth="12.2538" markerHeight="10.5205" orient="auto-start-reverse">
+      <ns0:path d="M 0 0 L 20.4231 8.7671 L 0 17.5343 z" fill="#dc3545" />
+    </ns0:marker>
+    <ns0:marker id="dma2" viewBox="0 0 10 10" refX="18.3808" refY="8.7671" markerWidth="12.2538" markerHeight="10.5205" orient="auto-start-reverse">
+      <ns0:path d="M 0 0 L 20.4231 8.7671 L 0 17.5343 z" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="dma3" viewBox="0 0 10 10" refX="18.3808" refY="8.7671" markerWidth="12.2538" markerHeight="10.5205" orient="auto-start-reverse">
+      <ns0:path d="M 0 0 L 20.4231 8.7671 L 0 17.5343 z" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="dma4" viewBox="0 0 10 10" refX="18.3808" refY="8.7671" markerWidth="12.2538" markerHeight="10.5205" orient="auto-start-reverse">
+      <ns0:path d="M 0 0 L 20.4231 8.7671 L 0 17.5343 z" fill="#28a745" />
+    </ns0:marker>
+  </ns0:defs>
+</ns0:svg>

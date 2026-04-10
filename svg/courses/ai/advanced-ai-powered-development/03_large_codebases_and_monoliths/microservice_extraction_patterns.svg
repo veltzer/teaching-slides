@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arr" markerWidth="65.536" markerHeight="185.1429" refX="58.9824" refY="92.5714" orient="auto">
-      <polygon points="0,264.4899 22.9376,0" fill="#2c3e50" />
-    </marker>
-  </defs>
-  <rect width="5242.88" height="10579.5921" fill="#f8f9fa" />
-  <text x="2621.44" y="925.7143" text-anchor="middle" font-size="131.072" font-weight="bold" fill="#1a237e">Strangler Fig: Microservice Extraction Pattern</text>
-  <text x="851.968" y="1798.5307" text-anchor="middle" font-size="91.7504" font-weight="bold" fill="#C62828">Phase 1: Before</text>
-  <text x="2621.44" y="1798.5307" text-anchor="middle" font-size="91.7504" font-weight="bold" fill="#E65100">Phase 2: Transition</text>
-  <text x="4390.912" y="1798.5307" text-anchor="middle" font-size="91.7504" font-weight="bold" fill="#2E7D32">Phase 3: After</text>
-  <rect x="196.608" y="2115.9185" width="1310.72" height="5289.7958" rx="65.536" fill="#e74c3c" fill-opacity="0.8" stroke="#2c3e50" stroke-width="13.1072" />
-  <text x="851.968" y="3438.3672" text-anchor="middle" fill="white" font-size="104.8576" font-weight="bold">Monolith</text>
-  <text x="851.968" y="4099.5921" text-anchor="middle" fill="#FADBD8" font-size="85.1968">auth module</text>
-  <text x="851.968" y="4628.5714" text-anchor="middle" fill="#FADBD8" font-size="85.1968">payments module</text>
-  <text x="851.968" y="5157.5508" text-anchor="middle" fill="#FADBD8" font-size="85.1968">billing module</text>
-  <text x="851.968" y="5686.5307" text-anchor="middle" fill="#FADBD8" font-size="85.1968">notifications</text>
-  <text x="851.968" y="6347.755" text-anchor="middle" fill="#FADBD8" font-size="72.0896">2M LOC</text>
-  <line x1="1507.328" y1="4760.8164" x2="1769.472" y2="4760.8164" stroke="#333" stroke-width="13.1072" marker-end="url(#arr)" />
-  <rect x="1769.472" y="2115.9185" width="851.968" height="5289.7958" rx="65.536" fill="#e74c3c" fill-opacity="0.5" stroke="#2c3e50" stroke-width="13.1072" />
-  <text x="2195.456" y="3438.3672" text-anchor="middle" fill="white" font-size="91.7504" font-weight="bold">Monolith</text>
-  <text x="2195.456" y="4020.245" text-anchor="middle" fill="#FADBD8" font-size="78.6432">(shrinking)</text>
-  <text x="2195.456" y="4628.5714" text-anchor="middle" fill="#FADBD8" font-size="78.6432">payments</text>
-  <text x="2195.456" y="5157.5508" text-anchor="middle" fill="#FADBD8" font-size="78.6432">billing</text>
-  <text x="2195.456" y="5686.5307" text-anchor="middle" fill="#FADBD8" font-size="78.6432">notifications</text>
-  <rect x="2162.688" y="5554.2857" width="917.504" height="1322.4492" rx="52.4288" fill="#f39c12" stroke="#2c3e50" stroke-width="13.1072" />
-  <text x="2621.44" y="6162.6122" text-anchor="middle" fill="white" font-size="85.1968" font-weight="bold">Proxy / Facade</text>
-  <text x="2621.44" y="6638.6937" text-anchor="middle" fill="#FDE68A" font-size="72.0896">AI-generated adapter</text>
-  <rect x="2686.976" y="2115.9185" width="851.968" height="3173.8778" rx="65.536" fill="#27ae60" stroke="#2c3e50" stroke-width="13.1072" />
-  <text x="3112.96" y="3120.9794" text-anchor="middle" fill="white" font-size="91.7504" font-weight="bold">New Service</text>
-  <text x="3112.96" y="3702.8571" text-anchor="middle" fill="#D5F5E3" font-size="78.6432">auth module</text>
-  <text x="3112.96" y="4284.7349" text-anchor="middle" fill="#D5F5E3" font-size="78.6432">(extracted)</text>
-  <text x="3112.96" y="4866.6122" text-anchor="middle" fill="#D5F5E3" font-size="72.0896">own deploy</text>
-  <line x1="2621.44" y1="5289.7958" x2="2621.44" y2="5554.2857" stroke="#E65100" stroke-width="9.8304" marker-end="url(#arr)" />
-  <line x1="3080.192" y1="5289.7958" x2="2621.44" y2="5554.2857" stroke="#E65100" stroke-width="9.8304" />
-  <line x1="3538.944" y1="4760.8164" x2="3801.088" y2="4760.8164" stroke="#333" stroke-width="13.1072" marker-end="url(#arr)" />
-  <rect x="3801.088" y="2115.9185" width="851.968" height="1983.6735" rx="65.536" fill="#27ae60" stroke="#2c3e50" stroke-width="13.1072" />
-  <text x="4227.072" y="2962.2857" text-anchor="middle" fill="white" font-size="85.1968" font-weight="bold">Auth Service</text>
-  <text x="4227.072" y="3491.2651" text-anchor="middle" fill="#D5F5E3" font-size="72.0896">independent</text>
-  <rect x="3801.088" y="4364.0815" width="851.968" height="1983.6735" rx="65.536" fill="#27ae60" stroke="#2c3e50" stroke-width="13.1072" />
-  <text x="4227.072" y="5210.4492" text-anchor="middle" fill="white" font-size="85.1968" font-weight="bold">Pay Service</text>
-  <text x="4227.072" y="5739.4286" text-anchor="middle" fill="#D5F5E3" font-size="72.0896">independent</text>
-  <rect x="3801.088" y="6612.245" width="851.968" height="1057.9593" rx="52.4288" fill="#e74c3c" fill-opacity="0.3" stroke="#2c3e50" stroke-width="9.8304" />
-  <text x="4227.072" y="7299.9185" text-anchor="middle" fill="#555" font-size="78.6432">Remaining...</text>
-  <rect x="196.608" y="8199.1836" width="4849.664" height="1983.6735" rx="65.536" fill="#E8EAF6" stroke="#3949AB" stroke-width="9.8304" />
-  <text x="2621.44" y="8939.755" text-anchor="middle" font-size="91.7504" font-weight="bold" fill="#3949AB">AI-Assisted Strangler Fig Steps</text>
-  <text x="2621.44" y="9521.6328" text-anchor="middle" font-size="78.6432" fill="#333">1. AI identifies public API surface → 2. generates proxy service → 3. migrates endpoints one-by-one</text>
-  <text x="2621.44" y="9997.7143" text-anchor="middle" font-size="78.6432" fill="#333">4. AI writes data sync logic → 5. all endpoints migrated → 6. retire proxy</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arr" markerWidth="3.9645" markerHeight="11.2" refX="3.5681" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 1.3876,0" fill="#2c3e50" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:rect width="317.1619" height="640" fill="#f8f9fa" />
+  <ns0:text x="158.5809" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a237e">Strangler Fig: Microservice Extraction Pattern</ns0:text>
+  <ns0:text x="51.5388" y="108.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">Phase 1: Before</ns0:text>
+  <ns0:text x="158.5809" y="108.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#E65100">Phase 2: Transition</ns0:text>
+  <ns0:text x="265.6231" y="108.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#2E7D32">Phase 3: After</ns0:text>
+  <ns0:rect x="11.8936" y="128" width="79.2905" height="320" rx="3.9645" fill="#e74c3c" fill-opacity="0.8" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="51.5388" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Monolith</ns0:text>
+  <ns0:text x="51.5388" y="248" text-anchor="middle" fill="#FADBD8" font-size="10">auth module</ns0:text>
+  <ns0:text x="51.5388" y="280" text-anchor="middle" fill="#FADBD8" font-size="10">payments module</ns0:text>
+  <ns0:text x="51.5388" y="312" text-anchor="middle" fill="#FADBD8" font-size="10">billing module</ns0:text>
+  <ns0:text x="51.5388" y="344" text-anchor="middle" fill="#FADBD8" font-size="10">notifications</ns0:text>
+  <ns0:text x="51.5388" y="384" text-anchor="middle" fill="#FADBD8" font-size="10">2M LOC</ns0:text>
+  <ns0:line x1="91.184" y1="288" x2="107.0421" y2="288" stroke="#333" stroke-width="0.7929" marker-end="url(#arr)" />
+  <ns0:rect x="107.0421" y="128" width="51.5388" height="320" rx="3.9645" fill="#e74c3c" fill-opacity="0.5" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="132.8115" y="208" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Monolith</ns0:text>
+  <ns0:text x="132.8115" y="243.2" text-anchor="middle" fill="#FADBD8" font-size="10">(shrinking)</ns0:text>
+  <ns0:text x="132.8115" y="280" text-anchor="middle" fill="#FADBD8" font-size="10">payments</ns0:text>
+  <ns0:text x="132.8115" y="312" text-anchor="middle" fill="#FADBD8" font-size="10">billing</ns0:text>
+  <ns0:text x="132.8115" y="344" text-anchor="middle" fill="#FADBD8" font-size="10">notifications</ns0:text>
+  <ns0:rect x="130.8293" y="336" width="55.5033" height="80" rx="3.1716" fill="#f39c12" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="158.5809" y="372.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Proxy / Facade</ns0:text>
+  <ns0:text x="158.5809" y="401.6" text-anchor="middle" fill="#FDE68A" font-size="10">AI-generated adapter</ns0:text>
+  <ns0:rect x="162.5455" y="128" width="51.5388" height="192" rx="3.9645" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="188.3149" y="188.8" text-anchor="middle" fill="white" font-size="10" font-weight="bold">New Service</ns0:text>
+  <ns0:text x="188.3149" y="224" text-anchor="middle" fill="#D5F5E3" font-size="10">auth module</ns0:text>
+  <ns0:text x="188.3149" y="259.2" text-anchor="middle" fill="#D5F5E3" font-size="10">(extracted)</ns0:text>
+  <ns0:text x="188.3149" y="294.4" text-anchor="middle" fill="#D5F5E3" font-size="10">own deploy</ns0:text>
+  <ns0:line x1="158.5809" y1="320" x2="158.5809" y2="336" stroke="#E65100" stroke-width="0.5947" marker-end="url(#arr)" />
+  <ns0:line x1="186.3326" y1="320" x2="158.5809" y2="336" stroke="#E65100" stroke-width="0.5947" />
+  <ns0:line x1="214.0843" y1="288" x2="229.9424" y2="288" stroke="#333" stroke-width="0.7929" marker-end="url(#arr)" />
+  <ns0:rect x="229.9424" y="128" width="51.5388" height="120" rx="3.9645" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="255.7118" y="179.2" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Auth Service</ns0:text>
+  <ns0:text x="255.7118" y="211.2" text-anchor="middle" fill="#D5F5E3" font-size="10">independent</ns0:text>
+  <ns0:rect x="229.9424" y="264" width="51.5388" height="120" rx="3.9645" fill="#27ae60" stroke="#2c3e50" stroke-width="0.7929" />
+  <ns0:text x="255.7118" y="315.2" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Pay Service</ns0:text>
+  <ns0:text x="255.7118" y="347.2" text-anchor="middle" fill="#D5F5E3" font-size="10">independent</ns0:text>
+  <ns0:rect x="229.9424" y="400" width="51.5388" height="64" rx="3.1716" fill="#e74c3c" fill-opacity="0.3" stroke="#2c3e50" stroke-width="0.5947" />
+  <ns0:text x="255.7118" y="441.6" text-anchor="middle" fill="#555" font-size="10">Remaining...</ns0:text>
+  <ns0:rect x="11.8936" y="496" width="293.3747" height="120" rx="3.9645" fill="#E8EAF6" stroke="#3949AB" stroke-width="0.5947" />
+  <ns0:text x="158.5809" y="540.8" text-anchor="middle" font-size="10" font-weight="bold" fill="#3949AB">AI-Assisted Strangler Fig Steps</ns0:text>
+  <ns0:text x="158.5809" y="576" text-anchor="middle" font-size="10" fill="#333">1. AI identifies public API surface → 2. generates proxy service → 3. migrates endpoints one-by-one</ns0:text>
+  <ns0:text x="158.5809" y="604.8" text-anchor="middle" font-size="10" fill="#333">4. AI writes data sync logic → 5. all endpoints migrated → 6. retire proxy</ns0:text>
+</ns0:svg>

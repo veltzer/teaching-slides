@@ -1,43 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
-      <polygon points="0,18.9474 5.6,0" fill="#999" />
-    </marker>
-  </defs>
-  <text x="640" y="47.3684" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Apache Spark Architecture</text>
-  <rect x="480" y="94.7368" width="224" height="94.7368" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="592" y="136.4211" text-anchor="middle" font-weight="bold" fill="#333">Driver</text>
-  <text x="592" y="166.7368" text-anchor="middle" font-size="16" fill="#666">SparkContext</text>
-  <rect x="896" y="104.2105" width="208" height="75.7895" rx="8" fill="#f9f9f9" stroke="#999" stroke-width="2.4" />
-  <text x="1000" y="142.1053" text-anchor="middle" font-size="19.2" fill="#666">Cluster Manager</text>
-  <text x="1000" y="166.7368" text-anchor="middle" font-size="16" fill="#999">(YARN/Mesos/K8s)</text>
-  <rect x="128" y="322.1053" width="208" height="85.2632" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="232" y="373.2632" text-anchor="middle" fill="#333">Executor 1</text>
-  <rect x="480" y="322.1053" width="208" height="85.2632" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="584" y="373.2632" text-anchor="middle" fill="#333">Executor 2</text>
-  <rect x="832" y="322.1053" width="208" height="85.2632" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="936" y="373.2632" text-anchor="middle" fill="#333">Executor 3</text>
-  <rect x="128" y="492.6316" width="208" height="66.3158" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="232" y="534.3158" text-anchor="middle" fill="#333">Workers / Tasks</text>
-  <rect x="480" y="492.6316" width="208" height="66.3158" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="584" y="534.3158" text-anchor="middle" fill="#333">Workers / Tasks</text>
-  <rect x="832" y="492.6316" width="208" height="66.3158" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="936" y="534.3158" text-anchor="middle" fill="#333">Workers / Tasks</text>
-  <line x1="528" y1="189.4737" x2="256" y2="318.3158" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="592" y1="189.4737" x2="584" y2="318.3158" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="656" y1="189.4737" x2="912" y2="318.3158" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <line x1="704" y1="142.1053" x2="892.8" y2="142.1053" stroke="#999" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-gray)" />
-  <text x="800" y="128.8421" text-anchor="middle" font-size="16" fill="#999">Coordinates</text>
-  <line x1="232" y1="407.3684" x2="232" y2="488.8421" stroke="#999" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-gray)" />
-  <text x="256" y="458.5263" text-anchor="start" font-size="16" fill="#999">Tasks</text>
-  <line x1="584" y1="407.3684" x2="584" y2="488.8421" stroke="#999" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-gray)" />
-  <text x="608" y="458.5263" text-anchor="start" font-size="16" fill="#999">Tasks</text>
-  <line x1="936" y1="407.3684" x2="936" y2="488.8421" stroke="#999" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-gray)" />
-  <text x="960" y="458.5263" text-anchor="start" font-size="16" fill="#999">Tasks</text>
-  <rect x="48" y="606.3158" width="1184" height="85.2632" rx="8" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6" />
-  <text x="640" y="648" text-anchor="middle" font-size="19.2" fill="#555">The Driver coordinates with the Cluster Manager and distributes work across Executors.</text>
-  <text x="640" y="678.3158" text-anchor="middle" font-size="19.2" fill="#555">Each Executor runs tasks on its workers for parallel data processing.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.8067" markerHeight="12.274" refX="14.8067" refY="6.137" orient="auto">
+      <ns0:polygon points="0,17.5343 5.1823,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-gray" markerWidth="14.8067" markerHeight="12.274" refX="14.8067" refY="6.137" orient="auto">
+      <ns0:polygon points="0,17.5343 5.1823,0" fill="#999" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="592.2678" y="43.8356" text-anchor="middle" font-size="23.6907" font-weight="bold" fill="#333">Apache Spark Architecture</ns0:text>
+  <ns0:rect x="444.2009" y="87.6712" width="207.2937" height="87.6712" rx="7.4033" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9613" />
+  <ns0:text x="547.8478" y="126.2466" text-anchor="middle" font-weight="bold" fill="#333">Driver</ns0:text>
+  <ns0:text x="547.8478" y="154.3013" text-anchor="middle" font-size="14.8067" fill="#666">SparkContext</ns0:text>
+  <ns0:rect x="829.175" y="96.4383" width="192.487" height="70.137" rx="7.4033" fill="#f9f9f9" stroke="#999" stroke-width="2.221" />
+  <ns0:text x="925.4185" y="131.5069" text-anchor="middle" font-size="17.768" fill="#666">Cluster Manager</ns0:text>
+  <ns0:text x="925.4185" y="154.3013" text-anchor="middle" font-size="14.8067" fill="#999">(YARN/Mesos/K8s)</ns0:text>
+  <ns0:rect x="118.4536" y="298.0822" width="192.487" height="78.9041" rx="7.4033" fill="#d4edda" stroke="#28a745" stroke-width="2.9613" />
+  <ns0:text x="214.6971" y="345.4247" text-anchor="middle" fill="#333">Executor 1</ns0:text>
+  <ns0:rect x="444.2009" y="298.0822" width="192.487" height="78.9041" rx="7.4033" fill="#d4edda" stroke="#28a745" stroke-width="2.9613" />
+  <ns0:text x="540.4444" y="345.4247" text-anchor="middle" fill="#333">Executor 2</ns0:text>
+  <ns0:rect x="769.9482" y="298.0822" width="192.487" height="78.9041" rx="7.4033" fill="#d4edda" stroke="#28a745" stroke-width="2.9613" />
+  <ns0:text x="866.1917" y="345.4247" text-anchor="middle" fill="#333">Executor 3</ns0:text>
+  <ns0:rect x="118.4536" y="455.8904" width="192.487" height="61.3699" rx="7.4033" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9613" />
+  <ns0:text x="214.6971" y="494.4657" text-anchor="middle" fill="#333">Workers / Tasks</ns0:text>
+  <ns0:rect x="444.2009" y="455.8904" width="192.487" height="61.3699" rx="7.4033" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9613" />
+  <ns0:text x="540.4444" y="494.4657" text-anchor="middle" fill="#333">Workers / Tasks</ns0:text>
+  <ns0:rect x="769.9482" y="455.8904" width="192.487" height="61.3699" rx="7.4033" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9613" />
+  <ns0:text x="866.1917" y="494.4657" text-anchor="middle" fill="#333">Workers / Tasks</ns0:text>
+  <ns0:line x1="488.621" y1="175.3425" x2="236.9071" y2="294.5753" stroke="#4a90e2" stroke-width="2.9613" marker-end="url(#arrowhead)" />
+  <ns0:line x1="547.8478" y1="175.3425" x2="540.4444" y2="294.5753" stroke="#4a90e2" stroke-width="2.9613" marker-end="url(#arrowhead)" />
+  <ns0:line x1="607.0745" y1="175.3425" x2="843.9817" y2="294.5753" stroke="#4a90e2" stroke-width="2.9613" marker-end="url(#arrowhead)" />
+  <ns0:line x1="651.4946" y1="131.5069" x2="826.2136" y2="131.5069" stroke="#999" stroke-width="2.221" stroke-dasharray="7.4033 4.442" marker-end="url(#arrowhead-gray)" />
+  <ns0:text x="740.3348" y="119.2329" text-anchor="middle" font-size="14.8067" fill="#999">Coordinates</ns0:text>
+  <ns0:line x1="214.6971" y1="376.9863" x2="214.6971" y2="452.3835" stroke="#999" stroke-width="2.221" stroke-dasharray="7.4033 4.442" marker-end="url(#arrowhead-gray)" />
+  <ns0:text x="236.9071" y="424.3287" text-anchor="start" font-size="14.8067" fill="#999">Tasks</ns0:text>
+  <ns0:line x1="540.4444" y1="376.9863" x2="540.4444" y2="452.3835" stroke="#999" stroke-width="2.221" stroke-dasharray="7.4033 4.442" marker-end="url(#arrowhead-gray)" />
+  <ns0:text x="562.6544" y="424.3287" text-anchor="start" font-size="14.8067" fill="#999">Tasks</ns0:text>
+  <ns0:line x1="866.1917" y1="376.9863" x2="866.1917" y2="452.3835" stroke="#999" stroke-width="2.221" stroke-dasharray="7.4033 4.442" marker-end="url(#arrowhead-gray)" />
+  <ns0:text x="888.4018" y="424.3287" text-anchor="start" font-size="14.8067" fill="#999">Tasks</ns0:text>
+  <ns0:rect x="44.4201" y="561.0959" width="1095.6955" height="78.9041" rx="7.4033" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4807" />
+  <ns0:text x="592.2678" y="599.6712" text-anchor="middle" font-size="17.768" fill="#555">The Driver coordinates with the Cluster Manager and distributes work across Executors.</ns0:text>
+  <ns0:text x="592.2678" y="627.726" text-anchor="middle" font-size="17.768" fill="#555">Each Executor runs tasks on its workers for parallel data processing.</ns0:text>
+</ns0:svg>

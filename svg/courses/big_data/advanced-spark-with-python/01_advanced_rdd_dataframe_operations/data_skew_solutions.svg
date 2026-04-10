@@ -1,61 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <defs>
-    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="14.4" refY="5.6" orient="auto">
-      <polygon points="0,16 5.6,0" fill="#555" />
-    </marker>
-  </defs>
-  <text x="640" y="44.8" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1565c0">Data Skew: Problem and Solutions</text>
-  <text x="320" y="92.8" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#c62828">Problem: Skewed Data</text>
-  <rect x="80" y="224" width="64" height="48" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="112" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P0</text>
-  <rect x="160" y="112" width="64" height="160" rx="3.2" fill="#ffcdd2" stroke="#c62828" stroke-width="3.2" />
-  <text x="192" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#c62828">P1</text>
-  <text x="192" y="104" text-anchor="middle" font-family="Arial" font-size="16" fill="#c62828">90%!</text>
-  <rect x="240" y="240" width="64" height="32" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="272" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P2</text>
-  <rect x="320" y="232" width="64" height="40" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="352" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P3</text>
-  <rect x="400" y="248" width="64" height="24" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="432" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P4</text>
-  <text x="320" y="307.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#c62828">One partition has most data</text>
-  <text x="320" y="331.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#c62828">Straggler task slows everything</text>
-  <line x1="528" y1="208" x2="608" y2="208" stroke="#555" stroke-width="3.2" marker-end="url(#arrow)" />
-  <text x="568" y="192" text-anchor="middle" font-family="Arial" font-size="17.6" font-weight="bold" fill="#555">Fix</text>
-  <text x="960" y="92.8" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#2e7d32">After Fix: Balanced</text>
-  <rect x="688" y="192" width="64" height="80" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="720" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P0</text>
-  <rect x="768" y="184" width="64" height="88" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="800" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P1</text>
-  <rect x="848" y="200" width="64" height="72" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="880" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P2</text>
-  <rect x="928" y="188.8" width="64" height="83.2" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="960" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P3</text>
-  <rect x="1008" y="195.2" width="64" height="76.8" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="1040" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P4</text>
-  <rect x="1088" y="204.8" width="64" height="67.2" rx="3.2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
-  <text x="1120" y="272" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">P5</text>
-  <text x="960" y="307.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#2e7d32">Even distribution across partitions</text>
-  <text x="960" y="331.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#2e7d32">All tasks finish around same time</text>
-  <text x="640" y="384" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#333">Solutions</text>
-  <rect x="32" y="412.8" width="384" height="160" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.4" />
-  <text x="224" y="448" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1565c0">1. Key Salting</text>
-  <text x="224" y="476.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Add random prefix to hot keys</text>
-  <text x="224" y="502.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">key_0, key_1, ... key_N</text>
-  <text x="224" y="528" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Splits hot partition into N parts</text>
-  <text x="224" y="553.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#1565c0">Best for joins with skewed keys</text>
-  <rect x="448" y="412.8" width="384" height="160" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" />
-  <text x="640" y="448" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#2e7d32">2. Repartition</text>
-  <text x="640" y="476.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">repartition(N, "column")</text>
-  <text x="640" y="502.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Redistribute data evenly</text>
-  <text x="640" y="528" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Causes full shuffle</text>
-  <text x="640" y="553.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#2e7d32">Best for aggregations</text>
-  <rect x="864" y="412.8" width="384" height="160" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
-  <text x="1056" y="448" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#e65100">3. Adaptive Query (AQE)</text>
-  <text x="1056" y="476.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">adaptive.skewJoin.enabled</text>
-  <text x="1056" y="502.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Automatically splits skewed</text>
-  <text x="1056" y="528" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">partitions at runtime</text>
-  <text x="1056" y="553.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#e65100">Spark 3.0+ recommended</text>
-  <rect x="160" y="600" width="960" height="96" rx="9.6" fill="#f5f5f5" stroke="#757575" stroke-width="2.4" />
-  <text x="640" y="635.2" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#333">Detection: skew_ratio = max(partition_size) / avg(partition_size)</text>
-  <text x="640" y="667.2" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#555">Ratio &gt; 3.0 indicates significant skew -- check with spark_partition_id()</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <ns0:defs>
+    <ns0:marker id="arrow" markerWidth="14.7126" markerHeight="10.2989" refX="13.2414" refY="5.1494" orient="auto">
+      <ns0:polygon points="0,14.7126 5.1494,0" fill="#555" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="588.5057" y="41.1954" text-anchor="middle" font-family="Arial" font-size="26.4828" font-weight="bold" fill="#1565c0">Data Skew: Problem and Solutions</ns0:text>
+  <ns0:text x="294.2529" y="85.3333" text-anchor="middle" font-family="Arial" font-size="20.5977" font-weight="bold" fill="#c62828">Problem: Skewed Data</ns0:text>
+  <ns0:rect x="73.5632" y="205.977" width="58.8506" height="44.1379" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="102.9885" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P0</ns0:text>
+  <ns0:rect x="147.1264" y="102.9885" width="58.8506" height="147.1264" rx="2.9425" fill="#ffcdd2" stroke="#c62828" stroke-width="2.9425" />
+  <ns0:text x="176.5517" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#c62828">P1</ns0:text>
+  <ns0:text x="176.5517" y="95.6322" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#c62828">90%!</ns0:text>
+  <ns0:rect x="220.6897" y="220.6897" width="58.8506" height="29.4253" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="250.1149" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P2</ns0:text>
+  <ns0:rect x="294.2529" y="213.3333" width="58.8506" height="36.7816" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="323.6782" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P3</ns0:text>
+  <ns0:rect x="367.8161" y="228.046" width="58.8506" height="22.069" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="397.2414" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P4</ns0:text>
+  <ns0:text x="294.2529" y="282.4828" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#c62828">One partition has most data</ns0:text>
+  <ns0:text x="294.2529" y="304.5517" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#c62828">Straggler task slows everything</ns0:text>
+  <ns0:line x1="485.5172" y1="191.2644" x2="559.0805" y2="191.2644" stroke="#555" stroke-width="2.9425" marker-end="url(#arrow)" />
+  <ns0:text x="522.2989" y="176.5517" text-anchor="middle" font-family="Arial" font-size="16.1839" font-weight="bold" fill="#555">Fix</ns0:text>
+  <ns0:text x="882.7586" y="85.3333" text-anchor="middle" font-family="Arial" font-size="20.5977" font-weight="bold" fill="#2e7d32">After Fix: Balanced</ns0:text>
+  <ns0:rect x="632.6437" y="176.5517" width="58.8506" height="73.5632" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="662.069" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P0</ns0:text>
+  <ns0:rect x="706.2069" y="169.1954" width="58.8506" height="80.9195" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="735.6322" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P1</ns0:text>
+  <ns0:rect x="779.7701" y="183.908" width="58.8506" height="66.2069" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="809.1954" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P2</ns0:text>
+  <ns0:rect x="853.3333" y="173.6092" width="58.8506" height="76.5057" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="882.7586" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P3</ns0:text>
+  <ns0:rect x="926.8966" y="179.4943" width="58.8506" height="70.6207" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="956.3218" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P4</ns0:text>
+  <ns0:rect x="1000.4598" y="188.3218" width="58.8506" height="61.7931" rx="2.9425" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.4713" />
+  <ns0:text x="1029.8851" y="250.1149" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">P5</ns0:text>
+  <ns0:text x="882.7586" y="282.4828" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#2e7d32">Even distribution across partitions</ns0:text>
+  <ns0:text x="882.7586" y="304.5517" text-anchor="middle" font-family="Arial" font-size="16.1839" fill="#2e7d32">All tasks finish around same time</ns0:text>
+  <ns0:text x="588.5057" y="353.1034" text-anchor="middle" font-family="Arial" font-size="22.069" font-weight="bold" fill="#333">Solutions</ns0:text>
+  <ns0:rect x="29.4253" y="379.5862" width="353.1034" height="147.1264" rx="8.8276" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.2069" />
+  <ns0:text x="205.977" y="411.954" text-anchor="middle" font-family="Arial" font-size="19.1264" font-weight="bold" fill="#1565c0">1. Key Salting</ns0:text>
+  <ns0:text x="205.977" y="438.4368" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Add random prefix to hot keys</ns0:text>
+  <ns0:text x="205.977" y="461.977" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">key_0, key_1, ... key_N</ns0:text>
+  <ns0:text x="205.977" y="485.5172" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Splits hot partition into N parts</ns0:text>
+  <ns0:text x="205.977" y="509.0575" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#1565c0">Best for joins with skewed keys</ns0:text>
+  <ns0:rect x="411.954" y="379.5862" width="353.1034" height="147.1264" rx="8.8276" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.2069" />
+  <ns0:text x="588.5057" y="411.954" text-anchor="middle" font-family="Arial" font-size="19.1264" font-weight="bold" fill="#2e7d32">2. Repartition</ns0:text>
+  <ns0:text x="588.5057" y="438.4368" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">repartition(N, "column")</ns0:text>
+  <ns0:text x="588.5057" y="461.977" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Redistribute data evenly</ns0:text>
+  <ns0:text x="588.5057" y="485.5172" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Causes full shuffle</ns0:text>
+  <ns0:text x="588.5057" y="509.0575" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#2e7d32">Best for aggregations</ns0:text>
+  <ns0:rect x="794.4828" y="379.5862" width="353.1034" height="147.1264" rx="8.8276" fill="#fff3e0" stroke="#e65100" stroke-width="2.2069" />
+  <ns0:text x="971.0345" y="411.954" text-anchor="middle" font-family="Arial" font-size="19.1264" font-weight="bold" fill="#e65100">3. Adaptive Query (AQE)</ns0:text>
+  <ns0:text x="971.0345" y="438.4368" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">adaptive.skewJoin.enabled</ns0:text>
+  <ns0:text x="971.0345" y="461.977" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">Automatically splits skewed</ns0:text>
+  <ns0:text x="971.0345" y="485.5172" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#333">partitions at runtime</ns0:text>
+  <ns0:text x="971.0345" y="509.0575" text-anchor="middle" font-family="Arial" font-size="14.7126" fill="#e65100">Spark 3.0+ recommended</ns0:text>
+  <ns0:rect x="147.1264" y="551.7241" width="882.7586" height="88.2759" rx="8.8276" fill="#f5f5f5" stroke="#757575" stroke-width="2.2069" />
+  <ns0:text x="588.5057" y="584.092" text-anchor="middle" font-family="Arial" font-size="19.1264" font-weight="bold" fill="#333">Detection: skew_ratio = max(partition_size) / avg(partition_size)</ns0:text>
+  <ns0:text x="588.5057" y="613.5172" text-anchor="middle" font-family="Arial" font-size="17.6552" fill="#555">Ratio &gt; 3.0 indicates significant skew -- check with spark_partition_id()</ns0:text>
+</ns0:svg>

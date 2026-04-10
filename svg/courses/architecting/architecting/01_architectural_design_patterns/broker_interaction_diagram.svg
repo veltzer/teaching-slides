@@ -1,47 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
-  <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowhead-green" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#28a745" />
-    </marker>
-    <marker id="arrowhead-gray" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <polygon points="0,17.1429 5.6,0" fill="#999" />
-    </marker>
-  </defs>
-  <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Broker Interaction Pattern</text>
-  <rect x="48" y="102.8571" width="192" height="68.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="144" y="145.7143" text-anchor="middle" fill="#333">Client 1</text>
-  <rect x="48" y="274.2857" width="192" height="68.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
-  <text x="144" y="317.1429" text-anchor="middle" fill="#333">Client 2</text>
-  <rect x="496" y="188.5714" width="224" height="85.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
-  <text x="608" y="240" text-anchor="middle" font-weight="bold" fill="#333">Broker</text>
-  <rect x="992" y="102.8571" width="208" height="68.5714" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="1096" y="145.7143" text-anchor="middle" fill="#333">Server 1</text>
-  <rect x="992" y="274.2857" width="208" height="68.5714" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
-  <text x="1096" y="317.1429" text-anchor="middle" fill="#333">Server 2</text>
-  <line x1="240" y1="137.1429" x2="492.8" y2="214.2857" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <text x="352" y="157.7143" text-anchor="middle" font-size="17.6" fill="#4a90e2">1. Request</text>
-  <line x1="240" y1="308.5714" x2="492.8" y2="248.5714" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
-  <text x="352" y="294.8571" text-anchor="middle" font-size="17.6" fill="#4a90e2">1. Request</text>
-  <line x1="720" y1="214.2857" x2="988.8" y2="140.5714" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
-  <text x="864" y="157.7143" text-anchor="middle" font-size="17.6" fill="#28a745">2. Forward</text>
-  <line x1="720" y1="248.5714" x2="988.8" y2="305.1429" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
-  <text x="864" y="294.8571" text-anchor="middle" font-size="17.6" fill="#28a745">2. Forward</text>
-  <line x1="992" y1="162.8571" x2="723.2" y2="205.7143" stroke="#28a745" stroke-width="2.4" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead-green)" />
-  <text x="872" y="197.1429" text-anchor="middle" font-size="17.6" fill="#28a745">3. Response</text>
-  <line x1="992" y1="334.2857" x2="723.2" y2="257.1429" stroke="#28a745" stroke-width="2.4" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead-green)" />
-  <text x="872" y="317.1429" text-anchor="middle" font-size="17.6" fill="#28a745">3. Response</text>
-  <line x1="496" y1="202.2857" x2="243.2" y2="154.2857" stroke="#4a90e2" stroke-width="2.4" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead)" />
-  <text x="360" y="192" text-anchor="middle" font-size="17.6" fill="#4a90e2">4. Return</text>
-  <line x1="496" y1="260.5714" x2="243.2" y2="291.4286" stroke="#4a90e2" stroke-width="2.4" stroke-dasharray="9.6 4.8" marker-end="url(#arrowhead)" />
-  <text x="360" y="262.2857" text-anchor="middle" font-size="17.6" fill="#4a90e2">4. Return</text>
-  <line x1="1096" y1="342.8571" x2="1096" y2="480" stroke="#999" stroke-width="2.4" stroke-dasharray="6.4 6.4" />
-  <line x1="1096" y1="480" x2="608" y2="480" stroke="#999" stroke-width="2.4" stroke-dasharray="6.4 6.4" marker-end="url(#arrowhead-gray)" />
-  <text x="864" y="471.4286" text-anchor="middle" font-size="17.6" fill="#999">Register Services</text>
-  <rect x="48" y="548.5714" width="1184" height="137.1429" rx="8" fill="#f9f9f9" stroke="#ddd" stroke-width="1.6" />
-  <text x="80" y="591.4286" font-size="19.2" fill="#555" font-weight="bold">Flow:</text>
-  <text x="80" y="625.7143" font-size="17.6" fill="#555">Clients send requests to the Broker, which forwards them to registered Servers.</text>
-  <text x="80" y="660" font-size="17.6" fill="#555">Servers process and respond through the Broker. Servers register their services with the Broker on startup.</text>
-</svg>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
+  <ns0:defs>
+    <ns0:marker id="arrowhead" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#4a90e2" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-green" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#28a745" />
+    </ns0:marker>
+    <ns0:marker id="arrowhead-gray" markerWidth="14.9333" markerHeight="11.2" refX="14.9333" refY="5.6" orient="auto">
+      <ns0:polygon points="0,16 5.2267,0" fill="#999" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:text x="597.3333" y="40" text-anchor="middle" font-size="23.8933" font-weight="bold" fill="#333">Broker Interaction Pattern</ns0:text>
+  <ns0:rect x="44.8" y="96" width="179.2" height="64" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="134.4" y="136" text-anchor="middle" fill="#333">Client 1</ns0:text>
+  <ns0:rect x="44.8" y="256" width="179.2" height="64" rx="7.4667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9867" />
+  <ns0:text x="134.4" y="296" text-anchor="middle" fill="#333">Client 2</ns0:text>
+  <ns0:rect x="462.9333" y="176" width="209.0667" height="80" rx="7.4667" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9867" />
+  <ns0:text x="567.4667" y="224" text-anchor="middle" font-weight="bold" fill="#333">Broker</ns0:text>
+  <ns0:rect x="925.8666" y="96" width="194.1333" height="64" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
+  <ns0:text x="1022.9333" y="136" text-anchor="middle" fill="#333">Server 1</ns0:text>
+  <ns0:rect x="925.8666" y="256" width="194.1333" height="64" rx="7.4667" fill="#d4edda" stroke="#28a745" stroke-width="2.9867" />
+  <ns0:text x="1022.9333" y="296" text-anchor="middle" fill="#333">Server 2</ns0:text>
+  <ns0:line x1="224" y1="128" x2="459.9467" y2="200" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:text x="328.5333" y="147.2" text-anchor="middle" font-size="16.4267" fill="#4a90e2">1. Request</ns0:text>
+  <ns0:line x1="224" y1="288" x2="459.9467" y2="232" stroke="#4a90e2" stroke-width="2.9867" marker-end="url(#arrowhead)" />
+  <ns0:text x="328.5333" y="275.2" text-anchor="middle" font-size="16.4267" fill="#4a90e2">1. Request</ns0:text>
+  <ns0:line x1="672" y1="200" x2="922.88" y2="131.2" stroke="#28a745" stroke-width="2.9867" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="806.4" y="147.2" text-anchor="middle" font-size="16.4267" fill="#28a745">2. Forward</ns0:text>
+  <ns0:line x1="672" y1="232" x2="922.88" y2="284.8" stroke="#28a745" stroke-width="2.9867" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="806.4" y="275.2" text-anchor="middle" font-size="16.4267" fill="#28a745">2. Forward</ns0:text>
+  <ns0:line x1="925.8666" y1="152" x2="674.9867" y2="192" stroke="#28a745" stroke-width="2.24" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="813.8666" y="184" text-anchor="middle" font-size="16.4267" fill="#28a745">3. Response</ns0:text>
+  <ns0:line x1="925.8666" y1="312" x2="674.9867" y2="240" stroke="#28a745" stroke-width="2.24" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead-green)" />
+  <ns0:text x="813.8666" y="296" text-anchor="middle" font-size="16.4267" fill="#28a745">3. Response</ns0:text>
+  <ns0:line x1="462.9333" y1="188.8" x2="226.9867" y2="144" stroke="#4a90e2" stroke-width="2.24" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead)" />
+  <ns0:text x="336" y="179.2" text-anchor="middle" font-size="16.4267" fill="#4a90e2">4. Return</ns0:text>
+  <ns0:line x1="462.9333" y1="243.2" x2="226.9867" y2="272" stroke="#4a90e2" stroke-width="2.24" stroke-dasharray="8.96 4.48" marker-end="url(#arrowhead)" />
+  <ns0:text x="336" y="244.8" text-anchor="middle" font-size="16.4267" fill="#4a90e2">4. Return</ns0:text>
+  <ns0:line x1="1022.9333" y1="320" x2="1022.9333" y2="448" stroke="#999" stroke-width="2.24" stroke-dasharray="5.9733 5.9733" />
+  <ns0:line x1="1022.9333" y1="448" x2="567.4667" y2="448" stroke="#999" stroke-width="2.24" stroke-dasharray="5.9733 5.9733" marker-end="url(#arrowhead-gray)" />
+  <ns0:text x="806.4" y="440" text-anchor="middle" font-size="16.4267" fill="#999">Register Services</ns0:text>
+  <ns0:rect x="44.8" y="512" width="1105.0666" height="128" rx="7.4667" fill="#f9f9f9" stroke="#ddd" stroke-width="1.4933" />
+  <ns0:text x="74.6667" y="552" font-size="17.92" fill="#555" font-weight="bold">Flow:</ns0:text>
+  <ns0:text x="74.6667" y="584" font-size="16.4267" fill="#555">Clients send requests to the Broker, which forwards them to registered Servers.</ns0:text>
+  <ns0:text x="74.6667" y="616" font-size="16.4267" fill="#555">Servers process and respond through the Broker. Servers register their services with the Broker on startup.</ns0:text>
+</ns0:svg>
