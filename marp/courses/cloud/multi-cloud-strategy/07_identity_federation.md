@@ -127,6 +127,12 @@ gcloud iam workload-identity-pools providers create-oidc \
 
 ---
 
+## Cross-Cloud Identity Federation
+
+![identity](svg/courses/cloud/multi-cloud-strategy/07_identity_federation/cross_cloud_identity.svg)
+
+---
+
 ## Workload Identity vs User Identity
 - User identity: humans accessing consoles and APIs
 - Workload identity: services calling other services across clouds

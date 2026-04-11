@@ -109,6 +109,12 @@ audience:
 
 ---
 
+## Data Gravity
+
+![gravity](svg/courses/cloud/multi-cloud-strategy/02_vendor_lock_in/data_gravity.svg)
+
+---
+
 ## Calculating Exit Costs
 - Data egress fees (typically $0.08-0.12/GB)
 - Staff time for migration engineering
@@ -152,6 +158,12 @@ resource "aws_db_instance" "orders" {
 1. Calculate data egress costs
 1. Identify open-source or cross-cloud alternatives
 1. Prioritize based on business risk
+
+---
+
+## Lock-In Spectrum
+
+![spectrum](svg/courses/cloud/multi-cloud-strategy/02_vendor_lock_in/lock_in_spectrum.svg)
 
 ---
 

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+  <!-- Modules on top -->
+  <rect x="340" y="30" width="600" height="70" rx="12" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="72" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Terraform Modules (reusable components)</text>
+  <!-- Arrow from modules to terraform -->
+  <line x1="640" y1="100" x2="640" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Terraform center -->
+  <rect x="460" y="170" width="360" height="120" rx="16" fill="var(--info-pale)" stroke="var(--info)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="220" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Terraform</text>
+  <text x="640" y="250" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)" text-anchor="middle">Infrastructure as Code</text>
+  <text x="640" y="275" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">HCL Configuration</text>
+  <!-- Arrow to AWS -->
+  <line x1="520" y1="290" x2="200" y2="390" stroke="var(--primary)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="340" y="330" font-family="Arial, sans-serif" font-size="14" fill="var(--primary)" text-anchor="middle">AWS Provider</text>
+  <!-- Arrow to Azure -->
+  <line x1="640" y1="290" x2="640" y2="390" stroke="var(--info)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="720" y="350" font-family="Arial, sans-serif" font-size="14" fill="var(--info)">Azure Provider</text>
+  <!-- Arrow to GCP -->
+  <line x1="760" y1="290" x2="1080" y2="390" stroke="var(--ok)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="940" y="330" font-family="Arial, sans-serif" font-size="14" fill="var(--ok)" text-anchor="middle">GCP Provider</text>
+  <!-- AWS cloud -->
+  <rect x="60" y="390" width="280" height="180" rx="14" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="430" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">AWS</text>
+  <text x="200" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">EC2, S3, RDS</text>
+  <text x="200" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">Lambda, VPC</text>
+  <rect x="100" y="510" width="200" height="40" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="200" y="536" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)" text-anchor="middle">us-east-1, eu-west-1</text>
+  <!-- Azure cloud -->
+  <rect x="500" y="390" width="280" height="180" rx="14" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="430" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Azure</text>
+  <text x="640" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">VMs, Blob, SQL</text>
+  <text x="640" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">Functions, VNet</text>
+  <rect x="540" y="510" width="200" height="40" rx="6" fill="var(--info-lt)" stroke="var(--info)" stroke-width="1"/>
+  <text x="640" y="536" font-family="Arial, sans-serif" font-size="14" fill="var(--info-dk)" text-anchor="middle">eastus, westeurope</text>
+  <!-- GCP cloud -->
+  <rect x="940" y="390" width="280" height="180" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1080" y="430" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">GCP</text>
+  <text x="1080" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">GCE, GCS, Cloud SQL</text>
+  <text x="1080" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)" text-anchor="middle">Cloud Functions, VPC</text>
+  <rect x="980" y="510" width="200" height="40" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="1080" y="536" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)" text-anchor="middle">us-central1, europe</text>
+  <!-- State file below -->
+  <rect x="460" y="590" width="360" height="40" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="640" y="616" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">terraform.tfstate (remote backend)</text>
+</svg>

@@ -22,7 +22,7 @@ Legend: [x] = slides exist, [ ] = slides needed
 | architecting | 2 | 24 | 26 |
 | big_data | 0 | 16 | 16 |
 | build_systems | 1 | 11 | 12 |
-| cloud | 4 | 39 | 43 |
+| cloud | 5 | 38 | 43 |
 | containers | 0 | 4 | 4 |
 | data_driven | 0 | 2 | 2 |
 | data_engineering | 0 | 8 | 8 |
@@ -48,7 +48,7 @@ Legend: [x] = slides exist, [ ] = slides needed
 | testing | 0 | 20 | 20 |
 | unity | 0 | 1 | 1 |
 | wifi | 0 | 1 | 1 |
-| **TOTAL** | **28** | **368** | **396** |
+| **TOTAL** | **29** | **367** | **396** |
 
 ## ai (3/16)
 
@@ -134,12 +134,12 @@ Legend: [x] = slides exist, [ ] = slides needed
 - [ ] nix
 - [ ] scons
 
-## cloud (4/43)
+## cloud (5/43)
 
 - [x] architecting_in_the_cloud
 - [x] finops
 - [x] introduction_to_cloud_computing
-- [ ] multi_cloud_strategy
+- [x] multi_cloud_strategy
 - **aws (1/13)**
     - [x] introduction_to_aws
     - [ ] aws_architecting

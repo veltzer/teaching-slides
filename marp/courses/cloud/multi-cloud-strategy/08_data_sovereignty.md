@@ -84,6 +84,12 @@ audience:
 
 ---
 
+## Data Residency Map
+
+![residency](svg/courses/cloud/multi-cloud-strategy/08_data_sovereignty/data_residency_map.svg)
+
+---
+
 ## Cloud Provider Region Selection
 - AWS: 33+ Regions globally
 - Azure: 60+ Regions globally

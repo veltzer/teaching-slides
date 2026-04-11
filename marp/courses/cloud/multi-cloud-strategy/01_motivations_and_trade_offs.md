@@ -109,6 +109,12 @@ audience:
 
 ---
 
+## Benefits vs Risks
+
+![risks](svg/courses/cloud/multi-cloud-strategy/01_motivations/multi_cloud_risks.svg)
+
+---
+
 ## The Cost of Multi-Cloud: Financial Overhead
 - Volume discounts are diluted across providers
 - Reserved instances and committed-use lose effectiveness
@@ -124,6 +130,12 @@ audience:
 - Segmented: different workloads on different clouds
 - Burst: overflow from primary cloud to secondary
 - Segmented is the most common and easiest to manage
+
+---
+
+## Multi-Cloud Patterns
+
+![patterns](svg/courses/cloud/multi-cloud-strategy/01_motivations/multi_cloud_patterns.svg)
 
 ---
 

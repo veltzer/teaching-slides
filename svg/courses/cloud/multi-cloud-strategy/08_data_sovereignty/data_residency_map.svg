@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+  <!-- EU Region -->
+  <rect x="40" y="40" width="360" height="440" rx="16" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="40" width="360" height="55" rx="16" fill="url(#grad-danger)"/>
+  <rect x="40" y="80" width="360" height="15" fill="url(#grad-danger)"/>
+  <text x="220" y="76" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)" text-anchor="middle">European Union</text>
+  <!-- EU regulations -->
+  <rect x="70" y="115" width="300" height="40" rx="8" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1"/>
+  <text x="220" y="141" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">GDPR</text>
+  <text x="220" y="180" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Strict data protection rules</text>
+  <text x="220" y="202" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Right to erasure, portability</text>
+  <text x="220" y="224" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">DPO required</text>
+  <!-- Data icon -->
+  <rect x="140" y="250" width="160" height="70" rx="10" fill="var(--bg)" stroke="var(--danger)" stroke-width="2"/>
+  <text x="220" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">EU Customer Data</text>
+  <text x="220" y="305" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">Must stay in EU regions</text>
+  <!-- Cloud regions available -->
+  <text x="220" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Available Regions:</text>
+  <text x="220" y="380" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">AWS eu-west-1, eu-central-1</text>
+  <text x="220" y="400" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Azure West Europe, North EU</text>
+  <text x="220" y="420" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">GCP europe-west1, europe-west4</text>
+  <text x="220" y="460" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">Max fine: 4% global revenue</text>
+  <!-- US Region -->
+  <rect x="460" y="40" width="360" height="440" rx="16" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="460" y="40" width="360" height="55" rx="16" fill="url(#grad-primary)"/>
+  <rect x="460" y="80" width="360" height="15" fill="url(#grad-primary)"/>
+  <text x="640" y="76" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)" text-anchor="middle">United States</text>
+  <rect x="490" y="115" width="140" height="40" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="560" y="141" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">HIPAA</text>
+  <rect x="650" y="115" width="140" height="40" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="720" y="141" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">SOC 2</text>
+  <text x="640" y="180" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Industry-specific regulations</text>
+  <text x="640" y="202" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">FedRAMP for government</text>
+  <text x="640" y="224" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">State-level laws (CCPA)</text>
+  <rect x="560" y="250" width="160" height="70" rx="10" fill="var(--bg)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="640" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">US Health/Finance</text>
+  <text x="640" y="305" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">Sector-specific rules</text>
+  <text x="640" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Available Regions:</text>
+  <text x="640" y="380" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">AWS us-east-1, us-west-2</text>
+  <text x="640" y="400" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Azure East US, West US</text>
+  <text x="640" y="420" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">GCP us-central1, us-east1</text>
+  <text x="640" y="460" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">GovCloud for sensitive workloads</text>
+  <!-- Asia Region -->
+  <rect x="880" y="40" width="360" height="440" rx="16" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="40" width="360" height="55" rx="16" fill="url(#grad-warn)"/>
+  <rect x="880" y="80" width="360" height="15" fill="url(#grad-warn)"/>
+  <text x="1060" y="76" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)" text-anchor="middle">Asia-Pacific</text>
+  <rect x="910" y="115" width="300" height="40" rx="8" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1"/>
+  <text x="1060" y="141" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">Various Regulations</text>
+  <text x="1060" y="180" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">China: data must stay local</text>
+  <text x="1060" y="202" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Japan: APPI (privacy act)</text>
+  <text x="1060" y="224" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Australia: Privacy Act 1988</text>
+  <rect x="980" y="250" width="160" height="70" rx="10" fill="var(--bg)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="1060" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">APAC Data</text>
+  <text x="1060" y="305" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">Country-specific rules</text>
+  <text x="1060" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Available Regions:</text>
+  <text x="1060" y="380" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">AWS ap-northeast-1, ap-southeast</text>
+  <text x="1060" y="400" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Azure Japan, Southeast Asia</text>
+  <text x="1060" y="420" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">GCP asia-east1, asia-northeast1</text>
+  <text x="1060" y="460" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">China requires separate cloud</text>
+  <!-- Blocked arrows between regions -->
+  <line x1="400" y1="285" x2="460" y2="285" stroke="var(--danger)" stroke-width="3"/>
+  <text x="430" y="275" font-family="Arial, sans-serif" font-size="20" fill="var(--danger)" text-anchor="middle">X</text>
+  <line x1="820" y1="285" x2="880" y2="285" stroke="var(--danger)" stroke-width="3"/>
+  <text x="850" y="275" font-family="Arial, sans-serif" font-size="20" fill="var(--danger)" text-anchor="middle">X</text>
+  <!-- Bottom note -->
+  <rect x="200" y="510" width="880" height="70" rx="10" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2"/>
+  <text x="640" y="540" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Data cannot freely cross regulatory boundaries</text>
+  <text x="640" y="565" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)" text-anchor="middle">Multi-cloud enables compliance by using the right provider per region</text>
+</svg>

@@ -38,6 +38,12 @@ audience:
 
 ---
 
+## Unified Cost View
+
+![cost](svg/courses/cloud/multi-cloud-strategy/09_cost_management/unified_cost_view.svg)
+
+---
+
 ## FinOps for Multi-Cloud
 - FinOps is the practice of managing cloud costs as a team sport
 - Three phases: Inform, Optimize, Operate

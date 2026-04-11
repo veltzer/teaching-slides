@@ -99,6 +99,12 @@ gcloud compute instances create web-server \
 
 ---
 
+## Compute Service Mapping
+
+![compute](svg/courses/cloud/multi-cloud-strategy/03_service_mapping/compute_mapping.svg)
+
+---
+
 ## Compute: Container Orchestration
 - AWS: EKS (Elastic Kubernetes Service)
 - Azure: AKS (Azure Kubernetes Service)
@@ -156,6 +162,12 @@ gcloud compute instances create web-server \
 - Archive: S3 Glacier / Archive / Coldline
 - Deep archive: S3 Glacier Deep Archive / Archive / Archive
 - Lifecycle policies exist on all three but syntax differs
+
+---
+
+## Storage Service Mapping
+
+![storage](svg/courses/cloud/multi-cloud-strategy/03_service_mapping/storage_mapping.svg)
 
 ---
 
@@ -226,6 +238,12 @@ gcloud storage buckets create gs://my-bucket-name \
 - GCP: Bigtable (wide-column), Firestore (document)
 - These are highly proprietary — migration is costly
 - Cosmos DB is unique in supporting multiple query APIs
+
+---
+
+## Database Service Mapping
+
+![databases](svg/courses/cloud/multi-cloud-strategy/03_service_mapping/database_mapping.svg)
 
 ---
 
