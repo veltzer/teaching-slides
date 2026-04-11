@@ -42,6 +42,27 @@ audience:
 
 ---
 
+## VPC and Subnet CLI Example
+
+```bash
+# Create a VPC
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+# Create a public subnet
+aws ec2 create-subnet \
+  --vpc-id vpc-abc123 \
+  --cidr-block 10.0.1.0/24 \
+  --availability-zone us-east-1a
+
+# Create a private subnet
+aws ec2 create-subnet \
+  --vpc-id vpc-abc123 \
+  --cidr-block 10.0.2.0/24 \
+  --availability-zone us-east-1a
+```
+
+---
+
 ## Subnets
 - Divide a VPC into smaller segments
 - Each subnet lives in one Availability Zone
@@ -96,6 +117,12 @@ audience:
 
 ---
 
+## VPC Architecture
+
+![vpc_architecture](svg/courses/cloud/introduction-to-aws/04_networking_and_content_delivery/vpc_architecture.svg)
+
+---
+
 ## Security Groups
 - Instance-level virtual firewall
 - Stateful: return traffic automatically allowed
@@ -129,6 +156,12 @@ audience:
 - Use Security Groups as primary defense
 - Use NACLs for additional subnet-level control
 - Both work together for defense in depth
+
+---
+
+## Security Groups vs NACLs
+
+![security_groups_vs_nacls](svg/courses/cloud/introduction-to-aws/04_networking_and_content_delivery/security_groups_vs_nacls.svg)
 
 ---
 
@@ -169,6 +202,29 @@ audience:
 
 ---
 
+## Route 53 Record Example
+
+```bash
+# Create a weighted routing record
+aws route53 change-resource-record-sets \
+  --hosted-zone-id Z123456 \
+  --change-batch '{
+    "Changes": [{
+      "Action": "CREATE",
+      "ResourceRecordSet": {
+        "Name": "api.example.com",
+        "Type": "A",
+        "SetIdentifier": "us-east",
+        "Weight": 70,
+        "TTL": 300,
+        "ResourceRecords": [{"Value": "1.2.3.4"}]
+      }
+    }]
+  }'
+```
+
+---
+
 ## Route 53 Health Checks
 - Monitor endpoint health
 - HTTP, HTTPS, or TCP checks
@@ -193,6 +249,12 @@ audience:
 - Behaviors: path patterns and caching rules
 - Cache policies: TTL, headers, cookies
 - Invalidation: clear cached content
+
+---
+
+## CloudFront Distribution Flow
+
+![cloudfront_distribution](svg/courses/cloud/introduction-to-aws/04_networking_and_content_delivery/cloudfront_distribution.svg)
 
 ---
 

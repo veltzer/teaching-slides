@@ -79,6 +79,12 @@ audience:
 
 ---
 
+## Cloud Evolution Timeline
+
+![timeline](svg/courses/cloud/introduction-to-cloud-computing/02_history_and_evolution/cloud_evolution_timeline.svg)
+
+---
+
 ## How Cloud Changed IT
 - From CapEx to OpEx
 - From months to minutes for provisioning

@@ -24,6 +24,12 @@ audience:
 
 ---
 
+## Cost Tools Landscape
+
+![cost_tools_landscape](svg/courses/cloud/finops/07_cost_optimization_tools/cost_tools_landscape.svg)
+
+---
+
 ## AWS Cost Explorer
 - Visualize spending over time
 - Filter by service, Region, tag, account
@@ -39,6 +45,22 @@ audience:
 - Export to S3 for custom analysis
 - Query with Athena or load into data warehouse
 - Foundation for advanced FinOps analytics
+
+---
+
+## Query CUR Data with Athena
+
+```sql
+-- Top 10 most expensive services last month
+SELECT line_item_product_code AS service,
+       SUM(line_item_blended_cost) AS cost
+FROM cost_and_usage_report
+WHERE month = '1'
+  AND year = '2024'
+GROUP BY line_item_product_code
+ORDER BY cost DESC
+LIMIT 10;
+```
 
 ---
 
@@ -129,3 +151,9 @@ audience:
 - Per-team and per-service breakdowns
 - Anomaly indicators
 - Actionable: link to recommendations
+
+---
+
+## Cost Dashboard Layout
+
+![cost_dashboard_layout](svg/courses/cloud/finops/07_cost_optimization_tools/cost_dashboard_layout.svg)

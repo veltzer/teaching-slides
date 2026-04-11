@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+  <!-- Cold Start Label -->
+  <text x="100" y="100" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Cold Start</text>
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">~500ms total</text>
+  <!-- Cold start timeline bar -->
+  <rect x="100" y="160" width="220" height="70" rx="6" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2"/>
+  <text x="210" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Download Code</text>
+  <text x="210" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">~150ms</text>
+  <rect x="320" y="160" width="220" height="70" rx="6" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="430" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Init Runtime</text>
+  <text x="430" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">~150ms</text>
+  <rect x="540" y="160" width="220" height="70" rx="6" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="650" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Init Handler</text>
+  <text x="650" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">~150ms</text>
+  <rect x="760" y="160" width="180" height="70" rx="6" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="850" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Execute</text>
+  <text x="850" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">~50ms</text>
+  <!-- Total cold start bracket -->
+  <line x1="100" y1="250" x2="100" y2="270" stroke="var(--danger)" stroke-width="2"/>
+  <line x1="100" y1="270" x2="940" y2="270" stroke="var(--danger)" stroke-width="2"/>
+  <line x1="940" y1="250" x2="940" y2="270" stroke="var(--danger)" stroke-width="2"/>
+  <text x="520" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger)">~500ms Total Latency</text>
+  <!-- Warm Start Label -->
+  <text x="100" y="380" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Warm Start</text>
+  <text x="100" y="405" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">~5ms total</text>
+  <!-- Warm start: skipped phases -->
+  <rect x="100" y="430" width="660" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="430" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-faint)">Skipped (already initialized)</text>
+  <rect x="760" y="430" width="180" height="70" rx="6" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="850" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Execute</text>
+  <text x="850" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">~5ms</text>
+  <!-- Total warm start bracket -->
+  <line x1="760" y1="520" x2="760" y2="540" stroke="var(--ok)" stroke-width="2"/>
+  <line x1="760" y1="540" x2="940" y2="540" stroke="var(--ok)" stroke-width="2"/>
+  <line x1="940" y1="520" x2="940" y2="540" stroke="var(--ok)" stroke-width="2"/>
+  <text x="850" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok)">~5ms Total Latency</text>
+  <!-- Speed comparison -->
+  <text x="1080" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-dk)">100x</text>
+  <text x="1080" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok)">faster</text>
+</svg>

@@ -50,6 +50,12 @@ audience:
 
 ---
 
+## Cloud Shift Comparison
+
+![cloud_shift_comparison](svg/courses/cloud/introduction-to-aws/01_cloud_computing_and_aws/cloud_shift_comparison.svg)
+
+---
+
 ## Benefits of the AWS Cloud
 - Agility and speed
 - Elasticity and scalability
@@ -138,6 +144,12 @@ audience:
 
 ---
 
+## AWS Global Infrastructure
+
+![aws_global_infrastructure](svg/courses/cloud/introduction-to-aws/01_cloud_computing_and_aws/aws_global_infrastructure.svg)
+
+---
+
 ## AWS Regions
 - 30+ Regions worldwide (and growing)
 - Each Region is fully independent
@@ -200,6 +212,23 @@ audience:
 
 ---
 
+## AWS CLI Examples
+
+```bash
+# List all S3 buckets
+aws s3 ls
+
+# Describe running EC2 instances
+aws ec2 describe-instances \
+  --filters "Name=instance-state-name,Values=running" \
+  --query "Reservations[].Instances[].InstanceId"
+
+# Get current caller identity
+aws sts get-caller-identity
+```
+
+---
+
 ## AWS SDKs
 - Libraries for many programming languages
 - Python (boto3), Java, JavaScript, Go, .NET, etc.
@@ -218,6 +247,25 @@ audience:
 
 ---
 
+## CloudFormation Example
+
+```yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  MyBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: my-app-data-bucket
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+```
+
+---
+
 ## AWS Free Tier
 - 12 months of free usage for many services
 - Always-free tier for some services (Lambda, DynamoDB)
@@ -233,3 +281,9 @@ audience:
 - Shared controls (patch management, configuration)
 - Varies by service type (IaaS vs PaaS vs SaaS)
 - Understanding this model is fundamental
+
+---
+
+## Shared Responsibility Model
+
+![shared_responsibility_model](svg/courses/cloud/introduction-to-aws/01_cloud_computing_and_aws/shared_responsibility_model.svg)

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1280" height="640" rx="0" fill="var(--bg)"/>
+
+  <!-- Launch (start point) -->
+  <circle cx="80" cy="200" r="24" fill="var(--text)"/>
+  <text x="80" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--bg)">Start</text>
+  <text x="80" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Launch</text>
+
+  <!-- Arrow: Launch -> Pending -->
+  <line x1="104" y1="200" x2="170" y2="200" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pending -->
+  <rect x="180" y="170" width="160" height="60" rx="20" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="260" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--warn-dk)">Pending</text>
+
+  <!-- Arrow: Pending -> Running -->
+  <line x1="340" y1="200" x2="420" y2="200" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Running (main state) -->
+  <rect x="430" y="160" width="200" height="80" rx="20" fill="url(#grad-primary)" stroke="var(--primary-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">Running</text>
+
+  <!-- Arrow: Running -> Stopping (down-left) -->
+  <line x1="480" y1="240" x2="380" y2="380" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Stop</text>
+
+  <!-- Arrow: Running -> Shutting Down (down-right) -->
+  <line x1="580" y1="240" x2="700" y2="380" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="310" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Terminate</text>
+
+  <!-- Stopping -->
+  <rect x="280" y="390" width="180" height="60" rx="20" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--warn-dk)">Stopping</text>
+
+  <!-- Arrow: Stopping -> Stopped -->
+  <line x1="370" y1="450" x2="370" y2="500" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stopped -->
+  <rect x="280" y="510" width="180" height="60" rx="20" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--text-muted)">Stopped</text>
+
+  <!-- Arrow: Stopped -> Running (back up, curved) -->
+  <path d="M280,530 Q140,530 140,300 Q140,200 180,200" fill="none" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="110" y="370" font-family="Arial, sans-serif" font-size="12" fill="var(--ok)">Start</text>
+
+  <!-- Arrow: Stopped -> Terminated -->
+  <line x1="460" y1="540" x2="650" y2="540" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="555" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Terminate</text>
+
+  <!-- Shutting Down -->
+  <rect x="660" y="390" width="200" height="60" rx="20" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)">Shutting Down</text>
+
+  <!-- Arrow: Shutting Down -> Terminated -->
+  <line x1="760" y1="450" x2="760" y2="500" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Terminated -->
+  <rect x="660" y="510" width="200" height="60" rx="20" fill="url(#grad-danger)" stroke="var(--danger-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--bg)">Terminated</text>
+
+  <!-- Legend -->
+  <rect x="930" y="140" width="310" height="260" rx="12" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1085" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">State Legend</text>
+
+  <rect x="960" y="195" width="24" height="16" rx="6" fill="var(--primary)"/>
+  <text x="998" y="209" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Running (billing active)</text>
+
+  <rect x="960" y="225" width="24" height="16" rx="6" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="1"/>
+  <text x="998" y="239" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Transitioning</text>
+
+  <rect x="960" y="255" width="24" height="16" rx="6" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1"/>
+  <text x="998" y="269" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Stopped (no billing)</text>
+
+  <rect x="960" y="285" width="24" height="16" rx="6" fill="var(--danger)"/>
+  <text x="998" y="299" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Terminated (deleted)</text>
+
+  <text x="1085" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">EBS-backed instances can</text>
+  <text x="1085" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">be stopped and restarted.</text>
+  <text x="1085" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Termination is permanent.</text>
+
+  <!-- Reboot note -->
+  <path d="M530,160 Q530,100 600,100 Q670,100 670,160" fill="none" stroke="var(--primary-dk)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="600" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-dk)">Reboot</text>
+</svg>

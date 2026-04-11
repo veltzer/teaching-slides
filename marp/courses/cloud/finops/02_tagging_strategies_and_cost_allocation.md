@@ -33,6 +33,28 @@ audience:
 
 ---
 
+## Tagging with CLI and Terraform
+
+```bash
+# Tag via AWS CLI
+aws ec2 create-tags --resources i-abc123 \
+  --tags Key=Team,Value=Platform \
+       Key=CostCenter,Value=CC-1234
+
+# Tag in Terraform
+resource "aws_instance" "web" {
+  ami           = "ami-0c55b159"
+  instance_type = "t3.micro"
+  tags = {
+    Team        = "Platform"
+    CostCenter  = "CC-1234"
+    Environment = "production"
+  }
+}
+```
+
+---
+
 ## Designing a Tagging Strategy
 - Define mandatory tags for all resources
 - Keep tag keys consistent (naming convention)
@@ -78,6 +100,31 @@ audience:
 
 ---
 
+## Tag Enforcement with AWS Config
+
+```json
+{
+  "ConfigRuleName": "required-tags",
+  "Source": {
+    "Owner": "AWS",
+    "SourceIdentifier": "REQUIRED_TAGS"
+  },
+  "InputParameters": {
+    "tag1Key": "Team",
+    "tag2Key": "Environment",
+    "tag3Key": "CostCenter"
+  },
+  "Scope": {
+    "ComplianceResourceTypes": [
+      "AWS::EC2::Instance",
+      "AWS::RDS::DBInstance"
+    ]
+  }
+}
+```
+
+---
+
 ## Automation for Tagging
 - Tag on creation via IaC templates
 - Auto-tag from CI/CD pipelines
@@ -93,6 +140,12 @@ audience:
 - Filter and group costs by any tag
 - Untagged resources show as "No tag"
 - Goal: 100% of spend is tagged and allocated
+
+---
+
+## Tagging and Cost Allocation Flow
+
+![tagging_flow](svg/courses/cloud/finops/02_tagging_strategies/tagging_flow.svg)
 
 ---
 

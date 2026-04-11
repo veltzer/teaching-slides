@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Row 1 -->
+  <!-- Box 1: Rehost -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="40" width="350" height="240" rx="14" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5"/>
+    <rect x="60" y="40" width="350" height="50" rx="14" fill="var(--primary)"/>
+    <rect x="60" y="70" width="350" height="20" fill="var(--primary)"/>
+    <text x="235" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)">Rehost</text>
+    <text x="235" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)">"Lift and Shift"</text>
+    <text x="235" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Move as-is to cloud VMs.</text>
+    <text x="235" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">No code changes.</text>
+    <text x="235" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Fastest migration path.</text>
+    <rect x="80" y="238" width="80" height="26" rx="13" fill="var(--primary)" opacity="0.2"/>
+    <text x="120" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Low Effort</text>
+  </g>
+
+  <!-- Box 2: Replatform -->
+  <g filter="url(#shadow)">
+    <rect x="440" y="40" width="350" height="240" rx="14" fill="var(--primary-pale)" stroke="var(--primary-lt)" stroke-width="2.5"/>
+    <rect x="440" y="40" width="350" height="50" rx="14" fill="var(--primary-lt)"/>
+    <rect x="440" y="70" width="350" height="20" fill="var(--primary-lt)"/>
+    <text x="615" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-dk)">Replatform</text>
+    <text x="615" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)">"Lift, Tinker, and Shift"</text>
+    <text x="615" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Minor optimizations for cloud.</text>
+    <text x="615" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">E.g., use managed DB</text>
+    <text x="615" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">instead of self-hosted.</text>
+    <rect x="460" y="238" width="110" height="26" rx="13" fill="var(--primary)" opacity="0.15"/>
+    <text x="515" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Low-Med Effort</text>
+  </g>
+
+  <!-- Box 3: Repurchase -->
+  <g filter="url(#shadow)">
+    <rect x="820" y="40" width="350" height="240" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2.5"/>
+    <rect x="820" y="40" width="350" height="50" rx="14" fill="var(--ok)"/>
+    <rect x="820" y="70" width="350" height="20" fill="var(--ok)"/>
+    <text x="995" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)">Repurchase</text>
+    <text x="995" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)">"Drop and Shop"</text>
+    <text x="995" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Switch to a SaaS product.</text>
+    <text x="995" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">E.g., CRM to Salesforce,</text>
+    <text x="995" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">email to O365.</text>
+    <rect x="840" y="238" width="110" height="26" rx="13" fill="var(--ok)" opacity="0.2"/>
+    <text x="895" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Medium Effort</text>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- Box 4: Refactor -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="330" width="350" height="240" rx="14" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2.5"/>
+    <rect x="60" y="330" width="350" height="50" rx="14" fill="var(--warn)"/>
+    <rect x="60" y="360" width="350" height="20" fill="var(--warn)"/>
+    <text x="235" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)">Refactor</text>
+    <text x="235" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)">"Re-architect"</text>
+    <text x="235" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Redesign for cloud-native.</text>
+    <text x="235" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Microservices, serverless.</text>
+    <text x="235" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Maximum cloud benefits.</text>
+    <rect x="80" y="528" width="100" height="26" rx="13" fill="var(--warn)" opacity="0.2"/>
+    <text x="130" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">High Effort</text>
+  </g>
+
+  <!-- Box 5: Retain -->
+  <g filter="url(#shadow)">
+    <rect x="440" y="330" width="350" height="240" rx="14" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2.5"/>
+    <rect x="440" y="330" width="350" height="50" rx="14" fill="var(--surface-alt)"/>
+    <rect x="440" y="360" width="350" height="20" fill="var(--surface-alt)"/>
+    <text x="615" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--text-dark)">Retain</text>
+    <text x="615" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)">"Keep As-Is"</text>
+    <text x="615" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Not ready to migrate yet.</text>
+    <text x="615" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Compliance, legacy deps,</text>
+    <text x="615" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">or recent investment.</text>
+    <rect x="460" y="528" width="80" height="26" rx="13" fill="var(--surface-alt)"/>
+    <text x="500" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text-muted)">No Effort</text>
+  </g>
+
+  <!-- Box 6: Retire -->
+  <g filter="url(#shadow)">
+    <rect x="820" y="330" width="350" height="240" rx="14" fill="var(--danger-pale)" stroke="var(--danger-lt)" stroke-width="2.5"/>
+    <rect x="820" y="330" width="350" height="50" rx="14" fill="var(--danger-lt)"/>
+    <rect x="820" y="360" width="350" height="20" fill="var(--danger-lt)"/>
+    <text x="995" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-dk)">Retire</text>
+    <text x="995" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)">"Decommission"</text>
+    <text x="995" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Turn off unused apps.</text>
+    <text x="995" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Reduce portfolio before</text>
+    <text x="995" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">migrating the rest.</text>
+    <rect x="840" y="528" width="80" height="26" rx="13" fill="var(--danger-lt)" opacity="0.5"/>
+    <text x="880" y="546" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-dk)">No Effort</text>
+  </g>
+
+  <!-- Effort arrow along bottom -->
+  <line x1="120" y1="610" x2="1100" y2="610" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="610" y="628" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Increasing transformation effort and cloud optimization</text>
+</svg>

@@ -42,6 +42,12 @@ audience:
 
 ---
 
+## FinOps Team Model
+
+![finops_team_model](svg/courses/cloud/finops/08_organizational_best_practices/finops_team_model.svg)
+
+---
+
 ## Engineering Practices That Reduce Cost
 - Choose the right architecture (serverless vs always-on)
 - Implement caching to reduce compute and API calls
@@ -66,6 +72,28 @@ audience:
 - Cost metrics in deployment dashboards
 - Post-deployment cost validation
 - Cost as a non-functional requirement
+
+---
+
+## Infracost in CI/CD
+
+```bash
+# Estimate cost of Terraform changes
+infracost breakdown --path .
+
+# Show cost diff in pull requests
+infracost diff \
+  --path . \
+  --compare-to infracost-base.json \
+  --format json \
+  --out-file infracost-diff.json
+
+# Post comment to GitHub PR
+infracost comment github \
+  --path infracost-diff.json \
+  --repo myorg/myrepo \
+  --pull-request 42
+```
 
 ---
 

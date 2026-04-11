@@ -33,11 +33,23 @@ audience:
 
 ---
 
+## RPO and RTO
+
+![rpo_rto](svg/courses/cloud/architecting-in-the-cloud/09_disaster_recovery/rpo_rto_diagram.svg)
+
+---
+
 ## DR Strategies Spectrum
 1. Backup and Restore: lowest cost, highest RTO
 1. Pilot Light: minimal always-on footprint
 1. Warm Standby: scaled-down running copy
 1. Multi-Site Active-Active: lowest RTO, highest cost
+
+---
+
+## DR Strategies Spectrum
+
+![dr_spectrum](svg/courses/cloud/architecting-in-the-cloud/09_disaster_recovery/dr_strategies_spectrum.svg)
 
 ---
 
@@ -104,6 +116,30 @@ audience:
 
 ---
 
+## S3 Cross-Region Replication
+
+```bash
+# Enable versioning (required for replication)
+aws s3api put-bucket-versioning \
+  --bucket my-primary-bucket \
+  --versioning-configuration Status=Enabled
+
+# Set up replication rule
+aws s3api put-bucket-replication \
+  --bucket my-primary-bucket \
+  --replication-configuration '{
+    "Role": "arn:aws:iam::123:role/replication",
+    "Rules": [{
+      "Status": "Enabled",
+      "Destination": {
+        "Bucket": "arn:aws:s3:::my-dr-bucket"
+      }
+    }]
+  }'
+```
+
+---
+
 ## Database DR
 - RDS Multi-AZ: automatic failover within Region
 - RDS Cross-Region Read Replicas: promote on DR
@@ -164,6 +200,35 @@ audience:
 - If primary Region unhealthy, route to DR Region
 - Automated, no manual intervention
 - TTL affects failover speed
+
+---
+
+## DNS Failover
+
+![dns_failover](svg/courses/cloud/architecting-in-the-cloud/09_disaster_recovery/dns_failover.svg)
+
+---
+
+## Route 53 Failover Record
+
+```json
+{
+  "Changes": [{
+    "Action": "CREATE",
+    "ResourceRecordSet": {
+      "Name": "app.example.com",
+      "Type": "A",
+      "SetIdentifier": "primary",
+      "Failover": "PRIMARY",
+      "AliasTarget": {
+        "HostedZoneId": "Z123",
+        "DNSName": "alb-primary.us-east-1.elb.amazonaws.com",
+        "EvaluateTargetHealth": true
+      }
+    }
+  }]
+}
+```
 
 ---
 

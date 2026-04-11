@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="640" fill="var(--bg)"/>
+
+  <!-- Column 1: General Purpose -->
+  <rect x="30" y="30" width="228" height="590" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="30" width="228" height="60" rx="10" fill="url(#grad-primary)"/>
+  <rect x="30" y="65" width="228" height="25" fill="url(#grad-primary)"/>
+  <text x="144" y="60" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">General Purpose</text>
+  <text x="144" y="78" font-family="Arial, sans-serif" font-size="11" fill="var(--bg)" text-anchor="middle">Balanced CPU/RAM</text>
+
+  <!-- Icon area -->
+  <rect x="60" y="110" width="168" height="50" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="144" y="132" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">CPU : RAM = 1:4</text>
+  <text x="144" y="150" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Balanced ratio</text>
+
+  <text x="50" y="190" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Workloads:</text>
+  <text x="50" y="210" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Web servers</text>
+  <text x="50" y="228" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- App servers</text>
+  <text x="50" y="246" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Small DBs</text>
+  <text x="50" y="264" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Dev/test</text>
+
+  <text x="50" y="300" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Families:</text>
+  <text x="50" y="320" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" font-weight="bold">M5, M6i, M7g</text>
+  <text x="50" y="340" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" font-weight="bold">T3, T4g</text>
+  <text x="50" y="360" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">(T = burstable)</text>
+
+  <!-- Column 2: Compute Optimized -->
+  <rect x="278" y="30" width="228" height="590" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="278" y="30" width="228" height="60" rx="10" fill="url(#grad-danger)"/>
+  <rect x="278" y="65" width="228" height="25" fill="url(#grad-danger)"/>
+  <text x="392" y="60" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Compute Optimized</text>
+  <text x="392" y="78" font-family="Arial, sans-serif" font-size="11" fill="var(--bg)" text-anchor="middle">High CPU performance</text>
+
+  <rect x="308" y="110" width="168" height="50" rx="6" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1"/>
+  <text x="392" y="132" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">CPU : RAM = 1:2</text>
+  <text x="392" y="150" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">CPU-heavy ratio</text>
+
+  <text x="298" y="190" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Workloads:</text>
+  <text x="298" y="210" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Batch processing</text>
+  <text x="298" y="228" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- HPC</text>
+  <text x="298" y="246" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Gaming servers</text>
+  <text x="298" y="264" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Video encoding</text>
+
+  <text x="298" y="300" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Families:</text>
+  <text x="298" y="320" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-dk)" font-weight="bold">C5, C6i, C7g</text>
+  <text x="298" y="340" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-dk)" font-weight="bold">C6gn (network)</text>
+
+  <!-- Column 3: Memory Optimized -->
+  <rect x="526" y="30" width="228" height="590" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="526" y="30" width="228" height="60" rx="10" fill="url(#grad-ok)"/>
+  <rect x="526" y="65" width="228" height="25" fill="url(#grad-ok)"/>
+  <text x="640" y="60" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Memory Optimized</text>
+  <text x="640" y="78" font-family="Arial, sans-serif" font-size="11" fill="var(--bg)" text-anchor="middle">High RAM capacity</text>
+
+  <rect x="556" y="110" width="168" height="50" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="640" y="132" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">CPU : RAM = 1:8+</text>
+  <text x="640" y="150" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">RAM-heavy ratio</text>
+
+  <text x="546" y="190" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Workloads:</text>
+  <text x="546" y="210" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- In-memory DBs</text>
+  <text x="546" y="228" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Redis / Memcached</text>
+  <text x="546" y="246" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Real-time analytics</text>
+  <text x="546" y="264" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- SAP HANA</text>
+
+  <text x="546" y="300" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Families:</text>
+  <text x="546" y="320" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-dk)" font-weight="bold">R5, R6i, R7g</text>
+  <text x="546" y="340" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-dk)" font-weight="bold">X2idn (up to 4TB)</text>
+
+  <!-- Column 4: Storage Optimized -->
+  <rect x="774" y="30" width="228" height="590" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="774" y="30" width="228" height="60" rx="10" fill="url(#grad-warn)"/>
+  <rect x="774" y="65" width="228" height="25" fill="url(#grad-warn)"/>
+  <text x="888" y="60" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Storage Optimized</text>
+  <text x="888" y="78" font-family="Arial, sans-serif" font-size="11" fill="var(--bg)" text-anchor="middle">High disk throughput</text>
+
+  <rect x="804" y="110" width="168" height="50" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1"/>
+  <text x="888" y="132" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">High IOPS / seq IO</text>
+  <text x="888" y="150" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">NVMe local storage</text>
+
+  <text x="794" y="190" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Workloads:</text>
+  <text x="794" y="210" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Data warehouses</text>
+  <text x="794" y="228" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Distributed FS</text>
+  <text x="794" y="246" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Log processing</text>
+  <text x="794" y="264" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Elasticsearch</text>
+
+  <text x="794" y="300" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Families:</text>
+  <text x="794" y="320" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)" font-weight="bold">I3, I4i</text>
+  <text x="794" y="340" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)" font-weight="bold">D2, D3, H1</text>
+
+  <!-- Column 5: Accelerated -->
+  <rect x="1022" y="30" width="228" height="590" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1022" y="30" width="228" height="60" rx="10" fill="url(#grad-info)"/>
+  <rect x="1022" y="65" width="228" height="25" fill="url(#grad-info)"/>
+  <text x="1136" y="60" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Accelerated</text>
+  <text x="1136" y="78" font-family="Arial, sans-serif" font-size="11" fill="var(--bg)" text-anchor="middle">GPU / FPGA / Inferentia</text>
+
+  <rect x="1052" y="110" width="168" height="50" rx="6" fill="var(--info-lt)" stroke="var(--info)" stroke-width="1"/>
+  <text x="1136" y="132" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Hardware accelerators</text>
+  <text x="1136" y="150" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">GPU / custom silicon</text>
+
+  <text x="1042" y="190" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Workloads:</text>
+  <text x="1042" y="210" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- ML training</text>
+  <text x="1042" y="228" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- ML inference</text>
+  <text x="1042" y="246" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Graphics rendering</text>
+  <text x="1042" y="264" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">- Video transcoding</text>
+
+  <text x="1042" y="300" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)" font-weight="bold">Families:</text>
+  <text x="1042" y="320" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)" font-weight="bold">P4d, P5 (GPU)</text>
+  <text x="1042" y="340" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)" font-weight="bold">Inf2 (Inferentia)</text>
+  <text x="1042" y="360" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)" font-weight="bold">Trn1 (Trainium)</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Concentric rings - outermost to innermost -->
+  <!-- Ring 5: Physical (outermost) -->
+  <ellipse cx="480" cy="320" rx="380" ry="280" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5"/>
+  <text x="480" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-dk)">Physical Security</text>
+
+  <!-- Ring 4: Network -->
+  <ellipse cx="480" cy="320" rx="300" ry="220" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2.5"/>
+  <text x="480" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)">Network Security</text>
+
+  <!-- Ring 3: Infrastructure -->
+  <ellipse cx="480" cy="320" rx="220" ry="160" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2.5"/>
+  <text x="480" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-dk)">Infrastructure</text>
+
+  <!-- Ring 2: Application -->
+  <ellipse cx="480" cy="320" rx="140" ry="100" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2.5"/>
+  <text x="480" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-dk)">Application</text>
+
+  <!-- Ring 1: Data (innermost) -->
+  <ellipse cx="480" cy="320" rx="65" ry="45" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="3"/>
+  <text x="480" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-dk)">Data</text>
+
+  <!-- Right side: labels with descriptions -->
+  <g transform="translate(900, 60)">
+    <!-- Physical -->
+    <rect x="0" y="0" width="320" height="70" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="160" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">Physical Security</text>
+    <text x="160" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Guards, locks, CCTV, biometrics</text>
+    <line x1="0" y1="35" x2="-40" y2="35" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+    <!-- Network -->
+    <rect x="0" y="90" width="320" height="70" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="160" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">Network Security</text>
+    <text x="160" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Firewalls, VPNs, DDoS protection</text>
+
+    <!-- Infrastructure -->
+    <rect x="0" y="180" width="320" height="70" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="160" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)">Infrastructure</text>
+    <text x="160" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">OS hardening, patching, IAM</text>
+
+    <!-- Application -->
+    <rect x="0" y="270" width="320" height="70" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="160" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-dk)">Application</text>
+    <text x="160" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Input validation, auth, WAF</text>
+
+    <!-- Data -->
+    <rect x="0" y="360" width="320" height="70" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+    <text x="160" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-dk)">Data</text>
+    <text x="160" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Encryption, classification, DLP</text>
+  </g>
+
+  <!-- Arrow from outer to inner -->
+  <text x="480" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Each layer adds protection -- attacker must breach all layers</text>
+</svg>

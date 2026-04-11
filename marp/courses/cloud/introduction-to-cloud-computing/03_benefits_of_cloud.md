@@ -23,6 +23,12 @@ audience:
 
 ---
 
+## Scalability Types
+
+![scalability](svg/courses/cloud/introduction-to-cloud-computing/03_benefits_of_cloud/scalability_types.svg)
+
+---
+
 ## Elasticity
 - Automatically adjust resources to demand
 - Auto Scaling responds to metrics in real time
@@ -65,6 +71,12 @@ audience:
 - SLAs guaranteeing uptime (99.9% - 99.999%)
 - Redundancy built into managed services
 - Design for failure, recover automatically
+
+---
+
+## High Availability Architecture
+
+![ha](svg/courses/cloud/introduction-to-cloud-computing/03_benefits_of_cloud/high_availability_architecture.svg)
 
 ---
 

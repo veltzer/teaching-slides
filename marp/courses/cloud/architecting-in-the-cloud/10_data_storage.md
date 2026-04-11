@@ -69,6 +69,12 @@ audience:
 
 ---
 
+## Aurora Architecture
+
+![aurora](svg/courses/cloud/architecting-in-the-cloud/10_data_storage/aurora_architecture.svg)
+
+---
+
 ## Aurora Serverless
 - Auto-scales compute up and down
 - Scales to zero (v2 scales to minimum)
@@ -93,6 +99,26 @@ audience:
 - Consistent performance at any scale
 - On-Demand or Provisioned capacity
 - Global Tables for multi-Region replication
+
+---
+
+## DynamoDB Put and Query
+
+```bash
+# Put an item
+aws dynamodb put-item --table-name Orders \
+  --item '{
+    "orderId": {"S": "O-1001"},
+    "customerId": {"S": "C-42"},
+    "total": {"N": "149.99"},
+    "status": {"S": "pending"}
+  }'
+
+# Query by partition key
+aws dynamodb query --table-name Orders \
+  --key-condition-expression "customerId = :cid" \
+  --expression-attribute-values '{":cid":{"S":"C-42"}}'
+```
 
 ---
 
@@ -231,6 +257,12 @@ audience:
 
 ---
 
+## Database Decision Framework
+
+![decision](svg/courses/cloud/architecting-in-the-cloud/10_data_storage/database_decision_framework.svg)
+
+---
+
 ## Connection Pooling
 - Database connections are expensive to create
 - Connection pools reuse connections
@@ -240,12 +272,39 @@ audience:
 
 ---
 
+## RDS Proxy in Terraform
+
+```hcl
+resource "aws_db_proxy" "app" {
+  name          = "app-proxy"
+  engine_family = "POSTGRESQL"
+  role_arn      = aws_iam_role.proxy.arn
+  vpc_subnet_ids = [
+    aws_subnet.private_a.id,
+    aws_subnet.private_b.id,
+  ]
+  auth {
+    auth_scheme = "SECRETS"
+    iam_auth    = "REQUIRED"
+    secret_arn  = aws_secretsmanager_secret.db.arn
+  }
+}
+```
+
+---
+
 ## Read/Write Splitting
 - Write to primary database
 - Read from read replicas
 - Application or proxy routes queries
 - Scale reads independently from writes
 - Eventual consistency for reads (replication lag)
+
+---
+
+## Read/Write Splitting
+
+![rw_split](svg/courses/cloud/architecting-in-the-cloud/10_data_storage/read_write_splitting.svg)
 
 ---
 

@@ -10,6 +10,9 @@ Legend: [x] = slides exist, [ ] = slides needed
 - Target **~100 slides per training day** (roughly 12-13 slides per hour)
 - A 2-day (16h) course should have ~200 slides
 - A 1-day (8h) course should have ~100 slides
+- Each course needs **SVG diagrams** (~1 per 8-10 text slides) in `svg/courses/cloud/<course>/<chapter>/`
+- Each course needs **code samples** (~1 per 10-15 slides) as inline fenced code blocks
+- SVGs must use `var()` palette references, viewBox="0 0 1280 720", content ≤ y=630
 
 ## Summary
 

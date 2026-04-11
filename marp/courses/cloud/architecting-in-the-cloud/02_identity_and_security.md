@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Zero Trust vs Perimeter Security
+
+![zero_trust](svg/courses/cloud/architecting-in-the-cloud/02_identity_and_security/zero_trust_vs_perimeter.svg)
+
+---
+
 ## Corporate Identity Mapping
 - Map corporate identities to cloud identities
 - Single Sign-On (SSO) via SAML or OIDC
@@ -57,6 +63,23 @@ audience:
 - No hardcoded credentials in code
 - Temporary credentials, automatically rotated
 - Principle of least privilege for every service
+
+---
+
+## EC2 IAM Role Trust Policy
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Principal": {
+      "Service": "ec2.amazonaws.com"
+    },
+    "Action": "sts:AssumeRole"
+  }]
+}
+```
 
 ---
 
@@ -87,6 +110,12 @@ audience:
 
 ---
 
+## Multi-Account Structure
+
+![multi_account](svg/courses/cloud/architecting-in-the-cloud/02_identity_and_security/multi_account_structure.svg)
+
+---
+
 ## Creating VPN with the Cloud
 - Site-to-site VPN: connect on-premises to cloud
 - Encrypted tunnel over public internet
@@ -111,6 +140,12 @@ audience:
 - Many organizations start with VPN, add dedicated later
 - Use both for redundancy
 - Dedicated for production, VPN as backup
+
+---
+
+## VPN vs Direct Connect
+
+![vpn_dc](svg/courses/cloud/architecting-in-the-cloud/02_identity_and_security/vpn_vs_direct_connect.svg)
 
 ---
 
@@ -147,6 +182,25 @@ audience:
 - Automatic rotation of database credentials
 - Applications retrieve secrets at runtime
 - Audit secret access
+
+---
+
+## Retrieve a Secret at Runtime
+
+```bash
+# Store a secret
+aws secretsmanager create-secret \
+  --name prod/db/password \
+  --secret-string 'SuperSecret123!'
+
+# Retrieve in application code (Python)
+import boto3
+client = boto3.client('secretsmanager')
+resp = client.get_secret_value(
+    SecretId='prod/db/password'
+)
+password = resp['SecretString']
+```
 
 ---
 

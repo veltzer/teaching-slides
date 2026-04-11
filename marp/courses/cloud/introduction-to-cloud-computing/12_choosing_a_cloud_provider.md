@@ -59,6 +59,27 @@ audience:
 
 ---
 
+## Terraform Multi-Provider Example
+
+```hcl
+# Same Terraform, different providers
+provider "aws" {
+  region = "us-east-1"
+}
+
+provider "google" {
+  project = "my-project"
+  region  = "us-central1"
+}
+
+# Kubernetes works on any cloud
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+```
+
+---
+
 ## When Lock-In Is Acceptable
 - Managed service significantly reduces development effort
 - No realistic plan to switch providers
@@ -84,6 +105,12 @@ audience:
 1. Refactor: re-architect
 1. Retain: keep on-premises for now
 1. Retire: decommission
+
+---
+
+## The 6 R's of Migration
+
+![6rs](svg/courses/cloud/introduction-to-cloud-computing/12_choosing_a_cloud_provider/six_rs_migration.svg)
 
 ---
 

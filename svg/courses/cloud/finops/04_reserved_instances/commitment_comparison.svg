@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Column 1: Reserved Instances -->
+  <rect x="40" y="30" width="380" height="580" rx="14" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="30" width="380" height="60" rx="14" fill="url(#grad-primary)"/>
+  <rect x="40" y="70" width="380" height="20" fill="url(#grad-primary)"/>
+  <text x="230" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)">Reserved Instances</text>
+
+  <text x="70" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Flexibility</text>
+  <text x="70" y="148" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Low - locked to instance type,</text>
+  <text x="70" y="168" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">region, and OS</text>
+
+  <line x1="70" y1="185" x2="390" y2="185" stroke="var(--primary-lt)" stroke-width="1"/>
+
+  <text x="70" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Discount Range</text>
+  <text x="70" y="233" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Up to 72% (3-year, all upfront)</text>
+
+  <line x1="70" y1="250" x2="390" y2="250" stroke="var(--primary-lt)" stroke-width="1"/>
+
+  <text x="70" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Commitment</text>
+  <text x="70" y="298" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">1 or 3 year term</text>
+  <text x="70" y="318" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">No / Partial / All upfront</text>
+
+  <line x1="70" y1="335" x2="390" y2="335" stroke="var(--primary-lt)" stroke-width="1"/>
+
+  <text x="70" y="360" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Best For</text>
+  <text x="70" y="383" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Steady-state workloads</text>
+  <text x="70" y="403" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Known instance types</text>
+  <text x="70" y="423" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Predictable demand</text>
+
+  <line x1="70" y1="440" x2="390" y2="440" stroke="var(--primary-lt)" stroke-width="1"/>
+
+  <text x="70" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Risk Level</text>
+  <rect x="70" y="478" width="120" height="24" rx="4" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1"/>
+  <text x="130" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Medium</text>
+
+  <!-- Column 2: Savings Plans -->
+  <rect x="450" y="30" width="380" height="580" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="450" y="30" width="380" height="60" rx="14" fill="url(#grad-ok)"/>
+  <rect x="450" y="70" width="380" height="20" fill="url(#grad-ok)"/>
+  <text x="640" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)">Savings Plans</text>
+
+  <text x="480" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Flexibility</text>
+  <text x="480" y="148" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">High - applies across instance</text>
+  <text x="480" y="168" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">families, sizes, OS, regions</text>
+
+  <line x1="480" y1="185" x2="800" y2="185" stroke="var(--ok-lt)" stroke-width="1"/>
+
+  <text x="480" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Discount Range</text>
+  <text x="480" y="233" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Up to 66% (Compute SP)</text>
+
+  <line x1="480" y1="250" x2="800" y2="250" stroke="var(--ok-lt)" stroke-width="1"/>
+
+  <text x="480" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Commitment</text>
+  <text x="480" y="298" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">1 or 3 year term</text>
+  <text x="480" y="318" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">$/hour commitment</text>
+
+  <line x1="480" y1="335" x2="800" y2="335" stroke="var(--ok-lt)" stroke-width="1"/>
+
+  <text x="480" y="360" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Best For</text>
+  <text x="480" y="383" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Dynamic workloads</text>
+  <text x="480" y="403" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Changing instance types</text>
+  <text x="480" y="423" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Multi-region deployments</text>
+
+  <line x1="480" y1="440" x2="800" y2="440" stroke="var(--ok-lt)" stroke-width="1"/>
+
+  <text x="480" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Risk Level</text>
+  <rect x="480" y="478" width="120" height="24" rx="4" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="540" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Low</text>
+
+  <!-- Column 3: Spot Instances -->
+  <rect x="860" y="30" width="380" height="580" rx="14" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="860" y="30" width="380" height="60" rx="14" fill="url(#grad-warn)"/>
+  <rect x="860" y="70" width="380" height="20" fill="url(#grad-warn)"/>
+  <text x="1050" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)">Spot Instances</text>
+
+  <text x="890" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Flexibility</text>
+  <text x="890" y="148" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Very High - any instance, any</text>
+  <text x="890" y="168" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">time, no commitment</text>
+
+  <line x1="890" y1="185" x2="1210" y2="185" stroke="var(--warn-lt)" stroke-width="1"/>
+
+  <text x="890" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Discount Range</text>
+  <text x="890" y="233" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Up to 90% off On-Demand</text>
+
+  <line x1="890" y1="250" x2="1210" y2="250" stroke="var(--warn-lt)" stroke-width="1"/>
+
+  <text x="890" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Commitment</text>
+  <text x="890" y="298" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">None - pay market price</text>
+  <text x="890" y="318" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Can be interrupted (2-min notice)</text>
+
+  <line x1="890" y1="335" x2="1210" y2="335" stroke="var(--warn-lt)" stroke-width="1"/>
+
+  <text x="890" y="360" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Best For</text>
+  <text x="890" y="383" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Fault-tolerant workloads</text>
+  <text x="890" y="403" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Batch processing, CI/CD</text>
+  <text x="890" y="423" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Stateless applications</text>
+
+  <line x1="890" y1="440" x2="1210" y2="440" stroke="var(--warn-lt)" stroke-width="1"/>
+
+  <text x="890" y="465" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Risk Level</text>
+  <rect x="890" y="478" width="120" height="24" rx="4" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1"/>
+  <text x="950" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-dk)">High</text>
+</svg>

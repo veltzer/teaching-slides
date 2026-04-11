@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Rightsizing Opportunity
+
+![rightsizing_opportunity](svg/courses/cloud/finops/03_rightsizing/rightsizing_opportunity.svg)
+
+---
+
 ## Identifying Underutilized Resources
 - CPU utilization consistently below 20%
 - Memory utilization consistently below 30%
@@ -96,12 +102,35 @@ audience:
 
 ---
 
+## Get Rightsizing Recommendations
+
+```bash
+# Get EC2 rightsizing recommendations
+aws compute-optimizer \
+  get-ec2-instance-recommendations \
+  --filters name=Finding,values=OVER_PROVISIONED \
+  --query 'instanceRecommendations[].{
+    Id: instanceArn,
+    Current: currentInstanceType,
+    Recommended: recommendationOptions[0].instanceType,
+    Savings: recommendationOptions[0].estimatedMonthlySavings.value
+  }'
+```
+
+---
+
 ## The Rightsizing Process
 1. Collect utilization data (2-4 weeks minimum)
 1. Identify over-provisioned and idle resources
 1. Validate recommendations with application owners
 1. Test changes in non-production first
 1. Apply changes and monitor impact
+
+---
+
+## Rightsizing Process Flow
+
+![rightsizing_process](svg/courses/cloud/finops/03_rightsizing/rightsizing_process.svg)
 
 ---
 

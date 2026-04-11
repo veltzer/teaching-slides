@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Section label -->
+  <text x="640" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-faint)">Native Cloud Provider Tools</text>
+
+  <!-- Column 1: AWS Tools -->
+  <rect x="40" y="50" width="380" height="310" rx="14" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="50" width="380" height="50" rx="14" fill="url(#grad-primary)"/>
+  <rect x="40" y="82" width="380" height="18" fill="url(#grad-primary)"/>
+  <text x="230" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">AWS</text>
+
+  <rect x="65" y="115" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="230" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-dk)">Cost Explorer</text>
+  <text x="230" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Visualize and analyze costs</text>
+
+  <rect x="65" y="182" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="230" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-dk)">Compute Optimizer</text>
+  <text x="230" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">ML-based rightsizing recommendations</text>
+
+  <rect x="65" y="249" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="230" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-dk)">Cost &amp; Usage Report (CUR)</text>
+  <text x="230" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Detailed line-item billing data</text>
+
+  <text x="230" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary)">+ Trusted Advisor, Budgets</text>
+
+  <!-- Column 2: Azure Tools -->
+  <rect x="450" y="50" width="380" height="310" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="450" y="50" width="380" height="50" rx="14" fill="url(#grad-ok)"/>
+  <rect x="450" y="82" width="380" height="18" fill="url(#grad-ok)"/>
+  <text x="640" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">Azure</text>
+
+  <rect x="475" y="115" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="640" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-dk)">Cost Management</text>
+  <text x="640" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Monitor, allocate, optimize costs</text>
+
+  <rect x="475" y="182" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="640" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-dk)">Azure Advisor</text>
+  <text x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Personalized best practices</text>
+
+  <rect x="475" y="249" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="640" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-dk)">Reservations + Savings Plans</text>
+  <text x="640" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Commitment recommendations</text>
+
+  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok)">+ Power BI integration</text>
+
+  <!-- Column 3: GCP Tools -->
+  <rect x="860" y="50" width="380" height="310" rx="14" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="860" y="50" width="380" height="50" rx="14" fill="url(#grad-warn)"/>
+  <rect x="860" y="82" width="380" height="18" fill="url(#grad-warn)"/>
+  <text x="1050" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)">GCP</text>
+
+  <rect x="885" y="115" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="1050" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)">Cloud Billing</text>
+  <text x="1050" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Billing reports and exports</text>
+
+  <rect x="885" y="182" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="1050" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)">Recommender</text>
+  <text x="1050" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">ML-driven optimization advice</text>
+
+  <rect x="885" y="249" width="330" height="55" rx="8" fill="var(--bg)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="1050" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)">BigQuery Billing Export</text>
+  <text x="1050" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Detailed billing in BigQuery</text>
+
+  <text x="1050" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn)">+ Active Assist, Budgets API</text>
+
+  <!-- Third-party row -->
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-faint)">Third-Party / Multi-Cloud Tools</text>
+
+  <rect x="40" y="415" width="1200" height="200" rx="14" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Tool 1 -->
+  <rect x="75" y="445" width="220" height="80" rx="8" fill="var(--bg)" stroke="var(--info)" stroke-width="1.5"/>
+  <text x="185" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-dk)">CloudHealth</text>
+  <text x="185" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Multi-cloud cost management</text>
+
+  <!-- Tool 2 -->
+  <rect x="325" y="445" width="220" height="80" rx="8" fill="var(--bg)" stroke="var(--info)" stroke-width="1.5"/>
+  <text x="435" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-dk)">Spot.io (NetApp)</text>
+  <text x="435" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Spot automation &amp; optimization</text>
+
+  <!-- Tool 3 -->
+  <rect x="575" y="445" width="220" height="80" rx="8" fill="var(--bg)" stroke="var(--info)" stroke-width="1.5"/>
+  <text x="685" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-dk)">Kubecost</text>
+  <text x="685" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Kubernetes cost monitoring</text>
+
+  <!-- Tool 4 -->
+  <rect x="825" y="445" width="220" height="80" rx="8" fill="var(--bg)" stroke="var(--info)" stroke-width="1.5"/>
+  <text x="935" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-dk)">Apptio Cloudability</text>
+  <text x="935" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Enterprise FinOps platform</text>
+
+  <!-- Tool 5 -->
+  <rect x="1075" y="445" width="140" height="80" rx="8" fill="var(--bg)" stroke="var(--info)" stroke-width="1.5"/>
+  <text x="1145" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-dk)">Infracost</text>
+  <text x="1145" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">IaC cost estimates</text>
+
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info)">Multi-cloud visibility | Automated optimization | Kubernetes-native | Shift-left cost awareness</text>
+</svg>

@@ -60,6 +60,27 @@ audience:
 
 ---
 
+## Spot Termination Handler Script
+
+```bash
+#!/bin/bash
+# Poll for spot termination notice
+while true; do
+  STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+    http://169.254.169.254/latest/meta-data/\
+spot/termination-time)
+  if [ "$STATUS" -eq 200 ]; then
+    echo "Spot termination notice received!"
+    # Drain connections and save state
+    /app/graceful-shutdown.sh
+    break
+  fi
+  sleep 5
+done
+```
+
+---
+
 ## Spot Fleet Management
 - Request a mix of instance types and AZs
 - Diversification reduces interruption risk
@@ -75,6 +96,12 @@ audience:
 - Auto Scaling groups with mixed instances
 - Example: 30% on-demand base, 70% spot burst
 - Ensures minimum capacity even during interruptions
+
+---
+
+## Spot Mixing Strategy
+
+![spot_mixing_strategy](svg/courses/cloud/finops/05_spot_instances/spot_mixing_strategy.svg)
 
 ---
 

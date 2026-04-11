@@ -26,6 +26,12 @@ audience:
 
 ---
 
+## Cloud Market Share
+
+![market](svg/courses/cloud/introduction-to-cloud-computing/10_overview_of_major_cloud_providers/cloud_market_share.svg)
+
+---
+
 ## Amazon Web Services (AWS)
 - Launched 2006, most mature platform
 - 200+ services across all categories
@@ -113,6 +119,12 @@ audience:
 - Serverless: Lambda / Azure Functions / Cloud Functions
 - Container Orchestration: EKS / AKS / GKE
 - NoSQL: DynamoDB / Cosmos DB / Firestore
+
+---
+
+## Service Equivalents
+
+![mapping](svg/courses/cloud/introduction-to-cloud-computing/10_overview_of_major_cloud_providers/service_name_mapping.svg)
 
 ---
 

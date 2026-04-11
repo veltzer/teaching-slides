@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## VM Internals
+
+![vm_internals](svg/courses/cloud/architecting-in-the-cloud/03_renting_machines/vm_internals.svg)
+
+---
+
 ## What is Your Responsibility?
 - OS patches and updates
 - Application installation and configuration
@@ -84,6 +90,12 @@ audience:
 - Memory optimized: in-memory databases, real-time analytics
 - Storage optimized: data warehousing, Hadoop
 - Match workload characteristics to family
+
+---
+
+## Instance Family Selection
+
+![instance_families](svg/courses/cloud/architecting-in-the-cloud/03_renting_machines/instance_family_selection.svg)
 
 ---
 
@@ -205,6 +217,23 @@ audience:
 
 ---
 
+## Querying Instance Metadata
+
+```bash
+# IMDSv2 (recommended - token-based)
+TOKEN=$(curl -s -X PUT \
+  "http://169.254.169.254/latest/api/token" \
+  -H "X-aws-ec2-metadata-token-ttl-seconds: 300")
+
+curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+  http://169.254.169.254/latest/meta-data/instance-id
+
+curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+  http://169.254.169.254/latest/meta-data/local-ipv4
+```
+
+---
+
 ## Disks for Your Machines
 - Boot volume: OS and application binaries
 - Data volumes: application data, databases
@@ -232,12 +261,35 @@ audience:
 
 ---
 
+## EBS vs Instance Store
+
+![ebs_store](svg/courses/cloud/architecting-in-the-cloud/03_renting_machines/ebs_vs_instance_store.svg)
+
+---
+
 ## Snapshots and Backups
 - EBS snapshots: point-in-time backup to S3
 - Incremental: only changed blocks stored
 - Automate with Data Lifecycle Manager
 - Copy across Regions for DR
 - Create AMIs from snapshots for cloning
+
+---
+
+## Create Snapshot and AMI
+
+```bash
+# Create a snapshot of an EBS volume
+aws ec2 create-snapshot \
+  --volume-id vol-abc123 \
+  --description "Backup before upgrade"
+
+# Create an AMI from a running instance
+aws ec2 create-image \
+  --instance-id i-0abc123 \
+  --name "web-golden-v2.1" \
+  --no-reboot
+```
 
 ---
 
@@ -256,6 +308,12 @@ audience:
 - Hybrid: golden image + light bootstrap for configuration
 - Golden images are preferred for production
 - Bootstrap for development and experimentation
+
+---
+
+## Golden Image vs Bootstrap
+
+![golden_image](svg/courses/cloud/architecting-in-the-cloud/03_renting_machines/golden_image_vs_bootstrap.svg)
 
 ---
 
@@ -409,6 +467,12 @@ audience:
 1. Does it need PaaS? -> Beanstalk/App Service
 1. Does it need full OS control? -> EC2/VMs
 1. Start simple, evolve as needed
+
+---
+
+## Compute Decision Tree
+
+![compute_tree](svg/courses/cloud/architecting-in-the-cloud/03_renting_machines/compute_decision_tree.svg)
 
 ---
 

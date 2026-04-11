@@ -24,6 +24,12 @@ audience:
 
 ---
 
+## Caching Layers
+
+![layers](svg/courses/cloud/architecting-in-the-cloud/11_caching/caching_layers.svg)
+
+---
+
 ## Caching Close to the Client
 - CDN caching (CloudFront, Akamai, Fastly)
 - Cache static assets at edge locations globally
@@ -87,6 +93,27 @@ audience:
 
 ---
 
+## Redis Cache Example
+
+```python
+import redis
+
+r = redis.Redis(host='my-cache.abc.cache.amazonaws.com',
+                port=6379, decode_responses=True)
+
+# Cache-aside pattern
+def get_user(user_id):
+    cached = r.get(f"user:{user_id}")
+    if cached:
+        return json.loads(cached)
+
+    user = db.query(f"SELECT * FROM users WHERE id={user_id}")
+    r.setex(f"user:{user_id}", 3600, json.dumps(user))
+    return user
+```
+
+---
+
 ## Redis vs Memcached
 - Redis: rich data structures (lists, sets, sorted sets, hashes)
 - Redis: persistence, replication, pub/sub
@@ -102,6 +129,12 @@ audience:
 1. Cache miss: query database
 1. Store result in cache with TTL
 1. Return data to caller
+
+---
+
+## Cache-Aside Pattern
+
+![cache_aside](svg/courses/cloud/architecting-in-the-cloud/11_caching/cache_aside_pattern.svg)
 
 ---
 
@@ -183,6 +216,12 @@ audience:
 - Multi-AZ for high availability
 - Automatic failover to replicas
 - Scale reads with replicas, data with shards
+
+---
+
+## ElastiCache Architecture
+
+![elasticache](svg/courses/cloud/architecting-in-the-cloud/11_caching/elasticache_architecture.svg)
 
 ---
 

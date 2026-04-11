@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Vertical vs Horizontal Scaling
+
+![scaling](svg/courses/cloud/architecting-in-the-cloud/04_scalability/vertical_vs_horizontal.svg)
+
+---
+
 ## Stateless vs Stateful
 - Stateless: no data stored on the instance between requests
 - Stateful: instance holds session data, state
@@ -87,6 +93,28 @@ audience:
 
 ---
 
+## ALB Health Check in Terraform
+
+```hcl
+resource "aws_lb_target_group" "web" {
+  name     = "web-tg"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = aws_vpc.main.id
+
+  health_check {
+    path                = "/health"
+    healthy_threshold   = 2
+    unhealthy_threshold = 3
+    timeout             = 5
+    interval            = 30
+    matcher             = "200"
+  }
+}
+```
+
+---
+
 ## Auto Scaling
 - Automatically add/remove instances based on demand
 - Scale out on high CPU, request count, queue depth
@@ -96,12 +124,36 @@ audience:
 
 ---
 
+## Auto Scaling with Load Balancer
+
+![auto_scaling](svg/courses/cloud/architecting-in-the-cloud/04_scalability/auto_scaling_with_lb.svg)
+
+---
+
 ## Scaling Policies
 - Target Tracking: maintain a target (e.g., 60% CPU)
 - Step Scaling: add N instances when metric exceeds threshold
 - Scheduled Scaling: scale at known times (business hours)
 - Predictive Scaling: ML-based forecast
 - Target Tracking is the simplest and recommended starting point
+
+---
+
+## Target Tracking Scaling Policy
+
+```bash
+aws autoscaling put-scaling-policy \
+  --auto-scaling-group-name web-asg \
+  --policy-name cpu-target-tracking \
+  --policy-type TargetTrackingScaling \
+  --target-tracking-configuration '{
+    "PredefinedMetricSpecification": {
+      "PredefinedMetricType":
+        "ASGAverageCPUUtilization"
+    },
+    "TargetValue": 60.0
+  }'
+```
 
 ---
 
@@ -129,6 +181,12 @@ audience:
 - Active-active or active-passive
 - Data replication between Regions
 - Significantly more complex than multi-AZ
+
+---
+
+## Multi-Region Architecture
+
+![multi_region](svg/courses/cloud/architecting-in-the-cloud/04_scalability/multi_region_architecture.svg)
 
 ---
 

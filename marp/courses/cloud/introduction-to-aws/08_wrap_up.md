@@ -23,6 +23,12 @@ audience:
 
 ---
 
+## The Six Pillars
+
+![well_architected_six_pillars](svg/courses/cloud/introduction-to-aws/08_wrap_up/well_architected_six_pillars.svg)
+
+---
+
 ## Pillar: Operational Excellence
 - Run and monitor systems effectively
 - Automate changes and responses
@@ -122,6 +128,35 @@ audience:
 
 ---
 
+## Create a Budget with CLI
+
+```bash
+aws budgets create-budget \
+  --account-id 123456789012 \
+  --budget '{
+    "BudgetName": "MonthlyTotal",
+    "BudgetLimit": {
+      "Amount": "500",
+      "Unit": "USD"
+    },
+    "TimeUnit": "MONTHLY",
+    "BudgetType": "COST"
+  }' \
+  --notifications-with-subscribers '[{
+    "Notification": {
+      "NotificationType": "ACTUAL",
+      "ComparisonOperator": "GREATER_THAN",
+      "Threshold": 80
+    },
+    "Subscribers": [{
+      "SubscriptionType": "EMAIL",
+      "Address": "team@example.com"
+    }]
+  }]'
+```
+
+---
+
 ## Cost Allocation Tags
 - Tag resources by project, team, environment
 - Appear in billing reports
@@ -155,6 +190,12 @@ audience:
 1. AWS Certified Developer - Associate
 1. AWS Certified SysOps Administrator - Associate
 1. Specialty and Professional certifications
+
+---
+
+## AWS Certification Paths
+
+![certification_paths](svg/courses/cloud/introduction-to-aws/08_wrap_up/certification_paths.svg)
 
 ---
 

@@ -60,12 +60,34 @@ audience:
 
 ---
 
+## Encryption at Rest and in Transit
+
+![encryption](svg/courses/cloud/introduction-to-cloud-computing/09_cloud_security_basics/encryption_at_rest_and_transit.svg)
+
+---
+
 ## Key Management
 - Centralized key management services (KMS)
 - Create, rotate, and control access to keys
 - Hardware Security Modules (HSM) for high security
 - Automatic key rotation policies
 - Audit key usage
+
+---
+
+## KMS Encryption Example
+
+```bash
+# Create a KMS key
+aws kms create-key \
+  --description "App encryption key"
+
+# Encrypt data
+aws kms encrypt \
+  --key-id alias/my-app-key \
+  --plaintext fileb://secret.txt \
+  --output text --query CiphertextBlob
+```
 
 ---
 
@@ -84,6 +106,12 @@ audience:
 - Web Application Firewalls (WAF) for HTTP traffic
 - DDoS protection services
 - Network segmentation
+
+---
+
+## Defense in Depth
+
+![defense](svg/courses/cloud/introduction-to-cloud-computing/09_cloud_security_basics/defense_in_depth.svg)
 
 ---
 

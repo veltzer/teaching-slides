@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Left Panel: On-Premises -->
+  <rect x="40" y="30" width="580" height="590" rx="12" fill="var(--danger-pale)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="330" y="65" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">On-Premises (Fixed Capacity)</text>
+
+  <!-- Left graph axes -->
+  <line x1="100" y1="120" x2="100" y2="520" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="100" y1="520" x2="560" y2="520" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="60" y="320" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle" transform="rotate(-90,60,320)">Capacity / Demand</text>
+  <text x="330" y="550" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Time</text>
+
+  <!-- Fixed capacity line -->
+  <line x1="100" y1="200" x2="560" y2="200" stroke="var(--danger)" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="565" y="195" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-dk)">Peak Capacity</text>
+
+  <!-- Demand curve (on-prem) -->
+  <path d="M100,420 C160,400 200,350 240,300 C280,250 300,180 340,160 C380,180 400,250 440,350 C460,400 500,430 540,410" fill="none" stroke="var(--primary)" stroke-width="3"/>
+  <text x="545" y="405" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)">Demand</text>
+
+  <!-- Wasted capacity shading -->
+  <path d="M100,200 L100,420 C160,400 200,350 240,300 C280,250 300,200 300,200 Z" fill="var(--danger-lt)" opacity="0.4"/>
+  <text x="180" y="290" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-dk)" text-anchor="middle">Wasted</text>
+  <text x="180" y="308" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-dk)" text-anchor="middle">capacity</text>
+
+  <!-- Over-demand zone -->
+  <path d="M300,200 C300,200 300,180 340,160 C380,180 380,200 380,200 Z" fill="var(--warn-lt)" opacity="0.5"/>
+  <text x="340" y="155" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle">Unmet demand!</text>
+
+  <!-- Right Panel: Cloud -->
+  <rect x="660" y="30" width="580" height="590" rx="12" fill="var(--ok-pale)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="950" y="65" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Cloud (Elastic Scaling)</text>
+
+  <!-- Right graph axes -->
+  <line x1="720" y1="120" x2="720" y2="520" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="720" y1="520" x2="1180" y2="520" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="680" y="320" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle" transform="rotate(-90,680,320)">Capacity / Demand</text>
+  <text x="950" y="550" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Time</text>
+
+  <!-- Demand curve (cloud) -->
+  <path d="M720,420 C780,400 820,350 860,300 C900,250 920,180 960,160 C1000,180 1020,250 1060,350 C1080,400 1120,430 1160,410" fill="none" stroke="var(--primary)" stroke-width="3"/>
+  <text x="1165" y="405" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)">Demand</text>
+
+  <!-- Elastic capacity (follows demand closely) -->
+  <path d="M720,410 C780,390 820,340 860,290 C900,240 920,170 960,150 C1000,170 1020,240 1060,340 C1080,390 1120,420 1160,400" fill="none" stroke="var(--ok)" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="1165" y="395" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-dk)">Capacity</text>
+
+  <!-- Minimal waste shading -->
+  <path d="M720,410 C780,390 820,340 860,290 C900,240 920,170 960,150 C1000,170 1020,240 1060,340 C1080,390 1120,420 1160,400 L1160,410 C1120,430 1080,400 1060,350 C1020,250 1000,180 960,160 C920,180 900,250 860,300 C820,350 780,400 720,420 Z" fill="var(--ok-lt)" opacity="0.4"/>
+  <text x="950" y="280" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle">Minimal waste</text>
+
+  <!-- Pay-as-you-go label -->
+  <text x="950" y="590" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Pay only for what you use</text>
+  <text x="330" y="590" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Pay for peak, waste the rest</text>
+</svg>

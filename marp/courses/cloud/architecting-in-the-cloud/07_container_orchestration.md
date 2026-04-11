@@ -96,6 +96,36 @@ audience:
 
 ---
 
+## Kubernetes Deployment Manifest
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: myapp:v1.2.0
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+```
+
+---
+
 ## Scaling in Kubernetes
 - Horizontal Pod Autoscaler (HPA): scale pods based on metrics
 - Vertical Pod Autoscaler (VPA): resize pod resources
@@ -156,6 +186,26 @@ audience:
 - Values: customize deployments
 - Helm repositories for sharing
 - Standard way to deploy complex applications
+
+---
+
+## Helm Install and Upgrade
+
+```bash
+# Add a chart repository
+helm repo add bitnami https://charts.bitnami.com
+
+# Install a release
+helm install my-redis bitnami/redis \
+  --set auth.password=secret123
+
+# Upgrade with new values
+helm upgrade my-redis bitnami/redis \
+  --set replica.replicaCount=3
+
+# Rollback to previous version
+helm rollback my-redis 1
+```
 
 ---
 

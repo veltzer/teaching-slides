@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Database Models Comparison
+
+![database_models_comparison](svg/courses/cloud/introduction-to-aws/06_database_services/database_models_comparison.svg)
+
+---
+
 ## SQL vs NoSQL
 - SQL: fixed schema, joins, transactions
 - NoSQL: flexible schema, horizontal scaling
@@ -97,6 +103,12 @@ audience:
 
 ---
 
+## Aurora Architecture
+
+![aurora_architecture](svg/courses/cloud/introduction-to-aws/06_database_services/aurora_architecture.svg)
+
+---
+
 ## Aurora Serverless
 - On-demand auto-scaling Aurora
 - Scales compute capacity up and down
@@ -112,6 +124,12 @@ audience:
 - No manual intervention required
 - Same DNS endpoint after failover
 - Use for production databases
+
+---
+
+## RDS Multi-AZ Failover
+
+![rds_multi_az_failover](svg/courses/cloud/introduction-to-aws/06_database_services/rds_multi_az_failover.svg)
 
 ---
 
@@ -142,6 +160,22 @@ audience:
 
 ---
 
+## Create an RDS Instance
+
+```bash
+aws rds create-db-instance \
+  --db-instance-identifier my-postgres \
+  --db-instance-class db.t3.medium \
+  --engine postgres \
+  --master-username admin \
+  --master-user-password 'SecurePass123!' \
+  --allocated-storage 20 \
+  --multi-az \
+  --storage-encrypted
+```
+
+---
+
 ## Amazon DynamoDB Overview
 - Fully managed NoSQL database
 - Key-value and document data model
@@ -157,6 +191,26 @@ audience:
 - Primary Key: partition key or partition + sort key
 - Attributes: data elements (like columns)
 - No fixed schema beyond the primary key
+
+---
+
+## DynamoDB CLI Example
+
+```bash
+# Create a table
+aws dynamodb create-table \
+  --table-name Users \
+  --attribute-definitions \
+    AttributeName=UserId,AttributeType=S \
+  --key-schema \
+    AttributeName=UserId,KeyType=HASH \
+  --billing-mode PAY_PER_REQUEST
+
+# Put an item
+aws dynamodb put-item \
+  --table-name Users \
+  --item '{"UserId":{"S":"u001"},"Name":{"S":"Alice"}}'
+```
 
 ---
 

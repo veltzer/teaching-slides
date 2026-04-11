@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Customer label -->
+  <text x="100" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-dk)">CUSTOMER Responsibility</text>
+
+  <!-- Customer layers (top half) -->
+  <g filter="url(#shadow)">
+    <rect x="200" y="65" width="880" height="55" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+    <text x="640" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-dk)">Data Classification &amp; Encryption</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="200" y="130" width="880" height="55" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+    <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-dk)">Identity &amp; Access Management (IAM)</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="200" y="195" width="880" height="55" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+    <text x="640" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-dk)">Applications &amp; Middleware</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="200" y="260" width="880" height="55" rx="8" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="2"/>
+    <text x="640" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-dk)">Operating System &amp; Network Config</text>
+  </g>
+
+  <!-- Responsibility Boundary -->
+  <line x1="140" y1="340" x2="1140" y2="340" stroke="var(--danger)" stroke-width="4" stroke-dasharray="16,8"/>
+  <rect x="440" y="322" width="400" height="36" rx="6" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2"/>
+  <text x="640" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-dk)">Responsibility Boundary</text>
+
+  <!-- Provider layers (bottom half) -->
+  <g filter="url(#shadow)">
+    <rect x="200" y="375" width="880" height="55" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+    <text x="640" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-dk)">Managed Services &amp; APIs</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="200" y="440" width="880" height="55" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+    <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-dk)">Hypervisor &amp; Virtualization</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="200" y="505" width="880" height="55" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="2"/>
+    <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-dk)">Network Infrastructure</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="200" y="570" width="880" height="55" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="2"/>
+    <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-dk)">Physical Security &amp; Hardware</text>
+  </g>
+
+  <!-- Provider label -->
+  <text x="100" y="605" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-dk)">PROVIDER</text>
+  <text x="100" y="625" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-dk)">Responsibility</text>
+</svg>

@@ -33,6 +33,32 @@ audience:
 
 ---
 
+## GitHub Actions Deploy to AWS
+
+```yaml
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+    - uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::123:role/deploy
+        aws-region: us-east-1
+    - run: |
+        aws s3 sync ./dist s3://my-app-bucket
+        aws cloudfront create-invalidation \
+          --distribution-id E123 --paths "/*"
+```
+
+---
+
 ## Source Control
 - AWS CodeCommit (being deprecated), GitHub, GitLab
 - Azure Repos (part of Azure DevOps)
@@ -49,6 +75,12 @@ audience:
 1. Deploy to staging
 1. Integration and E2E tests
 1. Deploy to production (rolling, blue-green, canary)
+
+---
+
+## CI/CD Pipeline
+
+![cicd](svg/courses/cloud/architecting-in-the-cloud/13_other_cloud_services/cicd_pipeline_architecture.svg)
 
 ---
 
@@ -152,6 +184,30 @@ audience:
 
 ---
 
+## API Gateway with SAM
+
+```yaml
+Resources:
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.12
+      Handler: app.handler
+      Events:
+        GetOrder:
+          Type: Api
+          Properties:
+            Path: /orders/{id}
+            Method: get
+        CreateOrder:
+          Type: Api
+          Properties:
+            Path: /orders
+            Method: post
+```
+
+---
+
 ## When to Use Managed Services
 - Does the cloud offer a managed version? Use it.
 - Will save weeks or months of engineering
@@ -217,6 +273,12 @@ audience:
 
 ---
 
+## Architecture Review Checklist
+
+![checklist](svg/courses/cloud/architecting-in-the-cloud/13_other_cloud_services/architecture_review_checklist.svg)
+
+---
+
 ## Cost Optimization in Architecture
 - Architect for cost from the start
 - Right-size all resources
@@ -235,6 +297,12 @@ audience:
 
 ---
 
+## Three Pillars of Observability
+
+![observability](svg/courses/cloud/architecting-in-the-cloud/13_other_cloud_services/observability_three_pillars.svg)
+
+---
+
 ## Multi-Tenancy Architecture
 - Serve multiple customers from shared infrastructure
 - Silo model: separate resources per tenant
@@ -244,12 +312,24 @@ audience:
 
 ---
 
+## Multi-Tenancy Models
+
+![tenancy](svg/courses/cloud/architecting-in-the-cloud/13_other_cloud_services/multi_tenancy_models.svg)
+
+---
+
 ## Edge Computing
 - Run compute close to end users
 - CloudFront Functions, Lambda@Edge
 - Azure Edge Zones, GCP Distributed Cloud
 - IoT edge processing
 - Reduce latency for real-time applications
+
+---
+
+## Edge Computing
+
+![edge](svg/courses/cloud/architecting-in-the-cloud/13_other_cloud_services/edge_computing.svg)
 
 ---
 

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+  <!-- Pillar 1: Metrics -->
+  <rect x="80" y="40" width="340" height="380" rx="14" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="250" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-dk)">Metrics</text>
+  <line x1="120" y1="100" x2="380" y2="100" stroke="var(--primary)" stroke-width="1"/>
+  <text x="250" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Time-series data</text>
+  <text x="250" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Counters &amp; Gauges</text>
+  <text x="250" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Histograms</text>
+  <!-- Metrics mini chart -->
+  <rect x="130" y="230" width="240" height="80" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <polyline points="145,290 175,270 205,280 235,250 265,260 295,240 325,255 355,245" fill="none" stroke="var(--primary)" stroke-width="2"/>
+  <text x="250" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">CloudWatch Metrics</text>
+  <text x="250" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Prometheus, Datadog</text>
+  <text x="250" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary)">What is happening?</text>
+  <!-- Pillar 2: Logs -->
+  <rect x="470" y="40" width="340" height="380" rx="14" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-dk)">Logs</text>
+  <line x1="510" y1="100" x2="770" y2="100" stroke="var(--warn)" stroke-width="1"/>
+  <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Structured events</text>
+  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Text records</text>
+  <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Error traces</text>
+  <!-- Logs mini display -->
+  <rect x="520" y="230" width="240" height="80" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="535" y="253" font-family="monospace" font-size="10" fill="var(--ok)">INFO  request started</text>
+  <text x="535" y="268" font-family="monospace" font-size="10" fill="var(--warn)">WARN  high latency</text>
+  <text x="535" y="283" font-family="monospace" font-size="10" fill="var(--danger)">ERROR timeout 500</text>
+  <text x="535" y="298" font-family="monospace" font-size="10" fill="var(--ok)">INFO  request done</text>
+  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">CloudWatch Logs</text>
+  <text x="640" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">ELK Stack, Splunk</text>
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn)">Why did it happen?</text>
+  <!-- Pillar 3: Traces -->
+  <rect x="860" y="40" width="340" height="380" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1030" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-dk)">Traces</text>
+  <line x1="900" y1="100" x2="1160" y2="100" stroke="var(--ok)" stroke-width="1"/>
+  <text x="1030" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Request path</text>
+  <text x="1030" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Through services</text>
+  <text x="1030" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Latency breakdown</text>
+  <!-- Traces mini waterfall -->
+  <rect x="910" y="230" width="240" height="80" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="920" y="242" width="180" height="12" rx="2" fill="var(--primary)" opacity="0.7"/>
+  <text x="925" y="251" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">API Gateway 200ms</text>
+  <rect x="940" y="258" width="120" height="12" rx="2" fill="var(--ok)" opacity="0.7"/>
+  <text x="945" y="267" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">Lambda 100ms</text>
+  <rect x="960" y="274" width="80" height="12" rx="2" fill="var(--warn)" opacity="0.7"/>
+  <text x="965" y="283" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">DB 50ms</text>
+  <rect x="980" y="290" width="40" height="12" rx="2" fill="var(--info)" opacity="0.7"/>
+  <text x="985" y="299" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">S3</text>
+  <text x="1030" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">X-Ray, Jaeger</text>
+  <text x="1030" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Zipkin, OpenTelemetry</text>
+  <text x="1030" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok)">Where did it happen?</text>
+  <!-- Convergence: Dashboards & Alerts -->
+  <line x1="250" y1="420" x2="450" y2="530" stroke="var(--primary)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="420" x2="640" y2="518" stroke="var(--warn)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1030" y1="420" x2="830" y2="530" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="400" y="530" width="480" height="70" rx="14" fill="var(--info-pale)" stroke="var(--info)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)">Dashboards &amp; Alerts</text>
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Unified observability platform</text>
+</svg>

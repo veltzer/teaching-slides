@@ -159,6 +159,12 @@ audience:
 
 ---
 
+## Certification Paths
+
+![certs](svg/courses/cloud/introduction-to-cloud-computing/13_cloud_career_paths/certification_paths_multi_cloud.svg)
+
+---
+
 ## Building Your Cloud Career
 - Start with fundamentals (this course)
 - Get hands-on with free tiers

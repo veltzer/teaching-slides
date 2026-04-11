@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Horizontal stacked bar -->
+  <text x="640" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-dark)">Typical Cloud Fleet Utilization</text>
+
+  <!-- Stacked bar: total width 1000, x starts at 140 -->
+  <!-- Over-provisioned: 35% = 350px -->
+  <rect x="140" y="80" width="350" height="100" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="2"/>
+  <text x="315" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-dk)">Over-provisioned</text>
+  <text x="315" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger)">35%</text>
+
+  <!-- Idle: 10% = 100px -->
+  <rect x="490" y="80" width="100" height="100" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="540" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)">Idle</text>
+  <text x="540" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn)">10%</text>
+
+  <!-- Right-sized: 55% = 550px -->
+  <rect x="590" y="80" width="550" height="100" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="865" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)">Right-sized</text>
+  <text x="865" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok)">55%</text>
+
+  <!-- Savings annotation with bracket -->
+  <line x1="140" y1="200" x2="140" y2="230" stroke="var(--danger)" stroke-width="2"/>
+  <line x1="590" y1="200" x2="590" y2="230" stroke="var(--danger)" stroke-width="2"/>
+  <line x1="140" y1="230" x2="590" y2="230" stroke="var(--danger)" stroke-width="2"/>
+  <line x1="365" y1="230" x2="365" y2="255" stroke="var(--danger)" stroke-width="2"/>
+
+  <rect x="240" y="258" width="250" height="50" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="365" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-dk)">Savings Opportunity</text>
+
+  <!-- Detail boxes below -->
+  <!-- Over-provisioned detail -->
+  <rect x="60" y="340" width="350" height="180" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="235" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-dk)">Over-provisioned Resources</text>
+  <text x="85" y="405" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">CPU utilization &lt; 20%</text>
+  <text x="85" y="428" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Memory used &lt; 30%</text>
+  <text x="85" y="451" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Can downsize 1-2 instance sizes</text>
+  <text x="85" y="480" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger)">Potential: 20-40% savings</text>
+
+  <!-- Idle detail -->
+  <rect x="440" y="340" width="350" height="180" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="615" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)">Idle Resources</text>
+  <text x="465" y="405" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Zero or near-zero usage</text>
+  <text x="465" y="428" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Orphaned volumes / IPs</text>
+  <text x="465" y="451" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Forgotten dev/test instances</text>
+  <text x="465" y="480" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn)">Potential: 100% savings</text>
+
+  <!-- Right-sized detail -->
+  <rect x="820" y="340" width="400" height="180" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1020" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">Right-sized Resources</text>
+  <text x="845" y="405" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Appropriate instance types</text>
+  <text x="845" y="428" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Good utilization (40-80% CPU)</text>
+  <text x="845" y="451" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Regularly reviewed</text>
+  <text x="845" y="480" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok)">Target: maintain this state</text>
+
+  <!-- Bottom summary -->
+  <rect x="340" y="555" width="600" height="50" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="640" y="586" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--primary-dk)">Average organization saves 20-35% through rightsizing</text>
+</svg>

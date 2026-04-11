@@ -33,12 +33,38 @@ audience:
 
 ---
 
+## Generate a Pre-Signed URL
+
+```python
+import boto3
+
+s3 = boto3.client('s3')
+
+url = s3.generate_presigned_url(
+    'get_object',
+    Params={
+        'Bucket': 'my-assets',
+        'Key': 'reports/q4-2024.pdf'
+    },
+    ExpiresIn=3600  # 1 hour
+)
+# Return URL to client for direct S3 download
+```
+
+---
+
 ## Pre-Signed URL Flow
 1. Client requests download from application
 1. Application generates pre-signed URL (valid for N minutes)
 1. Application returns URL to client
 1. Client downloads directly from S3/Blob Storage
 1. No traffic through application server
+
+---
+
+## Pre-Signed URL Flow
+
+![presigned](svg/courses/cloud/architecting-in-the-cloud/12_patterns/presigned_url_flow.svg)
 
 ---
 
@@ -69,6 +95,29 @@ audience:
 
 ---
 
+## S3 Static Website in Terraform
+
+```hcl
+resource "aws_s3_bucket_website_configuration" "site" {
+  bucket = aws_s3_bucket.site.id
+  index_document { suffix = "index.html" }
+  error_document { key    = "error.html" }
+}
+
+resource "aws_cloudfront_distribution" "cdn" {
+  origin {
+    domain_name = aws_s3_bucket.site.bucket_regional_domain_name
+    origin_id   = "s3-site"
+    origin_access_control_id = aws_cloudfront_origin_access_control.s3.id
+  }
+  enabled             = true
+  default_root_object = "index.html"
+  # ... viewer certificate, cache behavior
+}
+```
+
+---
+
 ## Pattern: Service-to-Service via API
 - REST or gRPC between microservices
 - Service discovery (DNS, service mesh, cloud map)
@@ -84,6 +133,12 @@ audience:
 - Loose coupling: producers don't know consumers
 - Easy to add new consumers
 - Natural for microservices
+
+---
+
+## Event-Driven Architecture
+
+![eda](svg/courses/cloud/architecting-in-the-cloud/12_patterns/event_driven_architecture.svg)
 
 ---
 
@@ -129,6 +184,12 @@ audience:
 - Return fallback or error immediately
 - Periodically check if service recovered (half-open)
 - Prevent cascade failures
+
+---
+
+## Circuit Breaker States
+
+![circuit_breaker](svg/courses/cloud/architecting-in-the-cloud/12_patterns/circuit_breaker_states.svg)
 
 ---
 

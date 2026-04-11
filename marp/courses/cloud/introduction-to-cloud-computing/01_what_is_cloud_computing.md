@@ -32,6 +32,12 @@ audience:
 
 ---
 
+## NIST Five Characteristics
+
+![nist](svg/courses/cloud/introduction-to-cloud-computing/01_what_is_cloud_computing/nist_five_characteristics.svg)
+
+---
+
 ## On-Demand Self-Service
 - Provision resources without human interaction
 - No need to call or email an IT department
@@ -101,6 +107,12 @@ audience:
 - Scale to actual demand
 - No hardware to manage or refresh
 - Focus on applications, not infrastructure
+
+---
+
+## Cloud vs Traditional IT
+
+![comparison](svg/courses/cloud/introduction-to-cloud-computing/01_what_is_cloud_computing/cloud_vs_traditional.svg)
 
 ---
 

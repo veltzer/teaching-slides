@@ -24,6 +24,12 @@ audience:
 
 ---
 
+## Shared Responsibility Model
+
+![srm](svg/courses/cloud/introduction-to-cloud-computing/08_shared_responsibility_model/shared_responsibility_model.svg)
+
+---
+
 ## Provider Responsibilities
 - Physical data center security
 - Hardware and networking infrastructure
@@ -66,6 +72,12 @@ audience:
 - Customer: data they input into the service
 - Least responsibility for the customer
 - But still responsible for proper use
+
+---
+
+## Responsibility by Service Type
+
+![responsibility](svg/courses/cloud/introduction-to-cloud-computing/08_shared_responsibility_model/responsibility_by_service_type.svg)
 
 ---
 

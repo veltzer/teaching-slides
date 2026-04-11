@@ -32,6 +32,12 @@ audience:
 
 ---
 
+## Cloud vs On-Premises
+
+![cloud_vs_onprem](svg/courses/cloud/architecting-in-the-cloud/01_introduction/cloud_vs_onprem.svg)
+
+---
+
 ## Advantages of Cloud Computing
 - Elastic scaling to actual demand
 - Global deployment in minutes
@@ -95,6 +101,28 @@ audience:
 
 ---
 
+## Auto Scaling Group in Terraform
+
+```hcl
+resource "aws_autoscaling_group" "web" {
+  name                = "web-asg"
+  min_size            = 2
+  max_size            = 10
+  desired_capacity    = 2
+  vpc_zone_identifier = [
+    aws_subnet.private_a.id,
+    aws_subnet.private_b.id,
+  ]
+  launch_template {
+    id      = aws_launch_template.web.id
+    version = "$Latest"
+  }
+  target_group_arns = [aws_lb_target_group.web.arn]
+}
+```
+
+---
+
 ## Use Managed Services
 - Don't run what the cloud provider can run for you
 - Managed databases, queues, caches, search
@@ -119,6 +147,12 @@ audience:
 - Move sessions to external store (Redis/DynamoDB)
 - Background jobs via queues
 - Each change addresses a specific bottleneck
+
+---
+
+## Simple Web App Architecture
+
+![simple_web_app](svg/courses/cloud/architecting-in-the-cloud/01_introduction/simple_web_app.svg)
 
 ---
 
@@ -174,6 +208,12 @@ audience:
 - GCP Architecture Framework
 - Common themes: reliability, security, cost, performance
 - Use as a checklist for architecture reviews
+
+---
+
+## Well-Architected Pillars
+
+![pillars](svg/courses/cloud/architecting-in-the-cloud/01_introduction/well_architected_pillars.svg)
 
 ---
 

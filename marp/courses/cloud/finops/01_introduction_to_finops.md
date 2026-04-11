@@ -50,6 +50,12 @@ audience:
 
 ---
 
+## The FinOps Lifecycle
+
+![finops_lifecycle](svg/courses/cloud/finops/01_introduction_to_finops/finops_lifecycle.svg)
+
+---
+
 ## Phase: Inform
 - See where money is going
 - Allocate costs to teams, projects, products
@@ -128,3 +134,9 @@ audience:
 - Run: automated, real-time, embedded in culture
 - Not every organization needs to "Run" everywhere
 - Focus maturity where it matters most
+
+---
+
+## FinOps Maturity Model
+
+![finops_maturity_model](svg/courses/cloud/finops/01_introduction_to_finops/finops_maturity_model.svg)

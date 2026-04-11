@@ -69,6 +69,12 @@ audience:
 
 ---
 
+## Cold Start vs Warm Start
+
+![cold_start](svg/courses/cloud/architecting-in-the-cloud/08_cloud_functions/cold_start_timeline.svg)
+
+---
+
 ## Function Triggers
 - HTTP/API Gateway: web APIs
 - Queue messages (SQS, Service Bus)
@@ -79,12 +85,41 @@ audience:
 
 ---
 
+## Serverless Event Sources
+
+![triggers](svg/courses/cloud/architecting-in-the-cloud/08_cloud_functions/serverless_event_flow.svg)
+
+---
+
 ## Function Design Principles
 - Single responsibility: one function, one job
 - Small and focused: fast cold start
 - Idempotent: safe to retry
 - Stateless: no local state between invocations
 - Fast: minimize execution time (cost and experience)
+
+---
+
+## Python Lambda Handler
+
+```python
+import json
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('Orders')
+
+def handler(event, context):
+    order_id = event['pathParameters']['id']
+    response = table.get_item(Key={'orderId': order_id})
+
+    if 'Item' not in response:
+        return {'statusCode': 404,
+                'body': json.dumps({'error': 'Not found'})}
+
+    return {'statusCode': 200,
+            'body': json.dumps(response['Item'])}
+```
 
 ---
 
@@ -124,6 +159,12 @@ audience:
 
 ---
 
+## Step Functions Workflow
+
+![workflow](svg/courses/cloud/architecting-in-the-cloud/08_cloud_functions/step_functions_workflow.svg)
+
+---
+
 ## Patterns: API Backend
 - API Gateway + Lambda
 - Each route maps to a function
@@ -148,6 +189,29 @@ audience:
 - No always-running instance needed
 - Pay only for execution time
 - Replace cron servers entirely
+
+---
+
+## Scheduled Lambda with SAM
+
+```yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  CleanupFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.12
+      Handler: cleanup.handler
+      Timeout: 300
+      Events:
+        NightlyCleanup:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 2 * * ? *)
+            Description: "Run cleanup at 2 AM UTC"
+```
 
 ---
 
@@ -184,6 +248,28 @@ audience:
 - Reduce function deployment size
 - AWS-managed layers (pandas, numpy)
 - Version and manage independently
+
+---
+
+## SAM Local Testing
+
+```bash
+# Initialize a new SAM project
+sam init --runtime python3.12
+
+# Build the application
+sam build
+
+# Test locally with a sample event
+sam local invoke MyFunction \
+  --event events/test.json
+
+# Start local API Gateway
+sam local start-api --port 3000
+
+# Deploy to AWS
+sam deploy --guided
+```
 
 ---
 

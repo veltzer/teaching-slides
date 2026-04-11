@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+  <!-- Start -->
+  <circle cx="100" cy="310" r="30" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="3"/>
+  <text x="100" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Start</text>
+  <line x1="130" y1="310" x2="190" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Process Order -->
+  <rect x="200" y="280" width="150" height="60" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="275" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Process Order</text>
+  <line x1="350" y1="310" x2="410" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Parallel split -->
+  <rect x="420" y="295" width="30" height="30" fill="var(--surface-alt)" stroke="var(--border-strong)" stroke-width="2"/>
+  <text x="435" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">+</text>
+  <!-- Send Email (top branch) -->
+  <line x1="450" y1="300" x2="500" y2="200" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="510" y="170" width="160" height="60" rx="12" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Send Email</text>
+  <line x1="670" y1="200" x2="720" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Update Inventory (bottom branch) -->
+  <line x1="450" y1="320" x2="500" y2="420" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="510" y="390" width="160" height="60" rx="12" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Update</text>
+  <text x="590" y="438" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Inventory</text>
+  <line x1="670" y1="420" x2="720" y2="320" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Parallel join -->
+  <rect x="730" y="295" width="30" height="30" fill="var(--surface-alt)" stroke="var(--border-strong)" stroke-width="2"/>
+  <text x="745" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">+</text>
+  <line x1="760" y1="310" x2="820" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Check Result -->
+  <polygon points="900,260 980,310 900,360 820,310" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Check</text>
+  <text x="900" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Result</text>
+  <!-- Success -->
+  <line x1="980" y1="290" x2="1060" y2="200" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1070" y="170" width="140" height="60" rx="12" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">Success</text>
+  <text x="1030" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok)" transform="rotate(-25,1030,230)">pass</text>
+  <!-- Fail -->
+  <line x1="980" y1="330" x2="1060" y2="420" stroke="var(--danger)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1070" y="390" width="140" height="60" rx="12" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1140" y="426" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-dk)">Fail</text>
+  <text x="1030" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger)" transform="rotate(25,1030,400)">fail</text>
+  <!-- Label: Parallel -->
+  <text x="590" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Parallel Execution</text>
+  <rect x="440" y="150" width="300" height="320" rx="8" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="6,4"/>
+</svg>

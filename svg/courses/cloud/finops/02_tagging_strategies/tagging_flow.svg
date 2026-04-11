@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Step 1: Resource Created -->
+  <rect x="40" y="180" width="220" height="200" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-dk)">Resource Created</text>
+  <line x1="60" y1="235" x2="240" y2="235" stroke="var(--primary-lt)" stroke-width="1"/>
+  <text x="70" y="262" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">team: platform</text>
+  <text x="70" y="284" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">project: api-v2</text>
+  <text x="70" y="306" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">env: production</text>
+  <text x="70" y="328" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">cost-center: CC-1042</text>
+  <text x="70" y="350" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">owner: jane@co.com</text>
+
+  <!-- Arrow 1 -->
+  <line x1="260" y1="280" x2="320" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Billing Data -->
+  <rect x="330" y="210" width="200" height="140" rx="12" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-dk)">Billing Data</text>
+  <line x1="350" y1="268" x2="510" y2="268" stroke="var(--warn-lt)" stroke-width="1"/>
+  <text x="430" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Usage + Cost records</text>
+  <text x="430" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Tag metadata attached</text>
+
+  <!-- Arrow 2 -->
+  <line x1="530" y1="280" x2="590" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Cost Explorer -->
+  <rect x="600" y="210" width="200" height="140" rx="12" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-dk)">Cost Explorer</text>
+  <line x1="620" y1="268" x2="780" y2="268" stroke="var(--info-lt)" stroke-width="1"/>
+  <text x="700" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Filter &amp; group by tags</text>
+  <text x="700" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Analyze trends</text>
+
+  <!-- Arrow 3 -->
+  <line x1="800" y1="280" x2="860" y2="280" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Reports -->
+  <rect x="870" y="120" width="370" height="340" rx="12" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1055" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-dk)">Reports &amp; Dashboards</text>
+  <line x1="890" y1="173" x2="1220" y2="173" stroke="var(--ok-lt)" stroke-width="1"/>
+
+  <!-- By Team sub-box -->
+  <rect x="895" y="190" width="160" height="70" rx="6" fill="var(--bg)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="975" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">By Team</text>
+  <text x="975" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Platform: $12,400</text>
+
+  <!-- By Project sub-box -->
+  <rect x="1075" y="190" width="160" height="70" rx="6" fill="var(--bg)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="1155" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">By Project</text>
+  <text x="1155" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">API-v2: $8,200</text>
+
+  <!-- By Environment sub-box -->
+  <rect x="895" y="275" width="160" height="70" rx="6" fill="var(--bg)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="975" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">By Environment</text>
+  <text x="975" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Production: $9,800</text>
+
+  <!-- By Cost Center sub-box -->
+  <rect x="1075" y="275" width="160" height="70" rx="6" fill="var(--bg)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="1155" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">By Cost Center</text>
+  <text x="1155" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">CC-1042: $6,500</text>
+
+  <!-- Chargeback/Showback label -->
+  <rect x="930" y="370" width="250" height="40" rx="8" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1"/>
+  <text x="1055" y="396" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Chargeback / Showback</text>
+
+  <!-- Bottom annotation -->
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-faint)">Tags flow through the billing pipeline, enabling cost attribution and accountability</text>
+</svg>

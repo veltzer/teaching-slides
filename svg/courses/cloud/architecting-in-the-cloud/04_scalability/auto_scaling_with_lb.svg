@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="640" fill="var(--bg)"/>
+
+  <!-- Users -->
+  <rect x="30" y="230" width="110" height="80" rx="10" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="85" y="260" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Users</text>
+  <text x="85" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Traffic</text>
+
+  <!-- Arrow to ALB -->
+  <line x1="140" y1="270" x2="210" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ALB -->
+  <rect x="215" y="220" width="140" height="100" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="285" y="255" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">ALB</text>
+  <text x="285" y="275" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Application</text>
+  <text x="285" y="290" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Load Balancer</text>
+  <text x="285" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--primary)" text-anchor="middle">Health checks</text>
+
+  <!-- Auto Scaling Group boundary -->
+  <rect x="410" y="50" width="500" height="540" rx="12" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="660" y="80" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Auto Scaling Group</text>
+  <text x="660" y="98" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Min: 2 | Desired: 4 | Max: 8</text>
+
+  <!-- AZ-a -->
+  <rect x="430" y="115" width="220" height="230" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="540" y="138" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle" font-weight="bold">AZ-a</text>
+
+  <rect x="450" y="150" width="80" height="55" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="490" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="490" y="195" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Active</text>
+
+  <rect x="550" y="150" width="80" height="55" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="590" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="590" y="195" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Active</text>
+
+  <!-- Scaling instance (dashed) -->
+  <rect x="450" y="220" width="80" height="55" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="490" y="245" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="490" y="265" font-family="Arial, sans-serif" font-size="10" fill="var(--ok)" text-anchor="middle">Scaling up</text>
+
+  <!-- AZ-b -->
+  <rect x="670" y="115" width="220" height="230" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="780" y="138" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle" font-weight="bold">AZ-b</text>
+
+  <rect x="690" y="150" width="80" height="55" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="730" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="730" y="195" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Active</text>
+
+  <rect x="790" y="150" width="80" height="55" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="830" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="830" y="195" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Active</text>
+
+  <rect x="690" y="220" width="80" height="55" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="730" y="245" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="730" y="265" font-family="Arial, sans-serif" font-size="10" fill="var(--ok)" text-anchor="middle">Scaling up</text>
+
+  <!-- ALB arrows to instances -->
+  <line x1="355" y1="250" x2="448" y2="175" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="355" y1="260" x2="448" y2="250" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="355" y1="275" x2="688" y2="175" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="355" y1="285" x2="688" y2="250" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- CloudWatch -->
+  <rect x="960" y="50" width="280" height="160" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100" y="80" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">CloudWatch</text>
+
+  <text x="980" y="105" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Metric: CPU Utilization</text>
+  <text x="980" y="128" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Current: 78%</text>
+
+  <rect x="980" y="140" width="240" height="30" rx="4" fill="var(--surface)"/>
+  <rect x="980" y="140" width="187" height="30" rx="4" fill="var(--warn)" opacity="0.7"/>
+  <text x="1100" y="160" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)" text-anchor="middle">78% (threshold: 70%)</text>
+
+  <!-- Alarm -->
+  <rect x="960" y="240" width="280" height="70" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1100" y="270" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Alarm: TRIGGERED</text>
+  <text x="1100" y="292" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">CPU &gt; 70% for 5 minutes</text>
+
+  <!-- Arrow CloudWatch -> Alarm -->
+  <line x1="1100" y1="210" x2="1100" y2="238" stroke="var(--warn)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow Alarm -> ASG -->
+  <path d="M960,275 L920,275 L920,400 L912,400" fill="none" stroke="var(--danger)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="930" y="350" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" font-weight="bold" transform="rotate(-90,930,350)">Scale Out!</text>
+
+  <!-- Scaling Policy box -->
+  <rect x="430" y="380" width="480" height="100" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="670" y="410" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Scaling Policy</text>
+  <text x="670" y="435" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">Scale Out: Add 2 instances when CPU &gt; 70%</text>
+  <text x="670" y="458" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">Scale In: Remove 1 instance when CPU &lt; 30%</text>
+  <text x="670" y="475" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">Cooldown: 300 seconds between actions</text>
+
+  <!-- Flow summary -->
+  <rect x="430" y="510" width="480" height="60" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="670" y="535" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Flow: CloudWatch Metric → Alarm → ASG Policy → Launch/Terminate → ALB registers</text>
+  <text x="670" y="555" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">New instances automatically registered with ALB target group</text>
+</svg>

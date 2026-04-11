@@ -25,6 +25,12 @@ audience:
 
 ---
 
+## Service Model Spectrum
+
+![spectrum](svg/courses/cloud/introduction-to-cloud-computing/04_types_of_cloud_services/service_model_spectrum.svg)
+
+---
+
 ## Infrastructure as a Service (IaaS)
 - Rent virtual machines, storage, networks
 - You manage the OS, runtime, and applications
@@ -97,6 +103,19 @@ audience:
 
 ---
 
+## AWS Lambda Handler Example
+
+```python
+def handler(event, context):
+    name = event.get("name", "World")
+    return {
+        "statusCode": 200,
+        "body": f"Hello, {name}!"
+    }
+```
+
+---
+
 ## Comparing Service Models
 - IaaS: "Give me a machine, I'll handle the rest"
 - PaaS: "Give me a platform, I'll write the code"
@@ -112,6 +131,12 @@ audience:
 - SaaS: provider manages almost everything
 - FaaS: provider manages all runtime aspects
 - Security responsibility shifts accordingly
+
+---
+
+## Responsibility by Service Model
+
+![responsibility](svg/courses/cloud/introduction-to-cloud-computing/04_types_of_cloud_services/shared_responsibility_by_model.svg)
 
 ---
 

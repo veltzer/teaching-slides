@@ -87,6 +87,12 @@ audience:
 
 ---
 
+## IAM Entity Relationships
+
+![iam_entity_relationships](svg/courses/cloud/introduction-to-aws/05_identity_and_access_management/iam_entity_relationships.svg)
+
+---
+
 ## IAM Roles
 - Temporary credentials for trusted entities
 - No permanent credentials (no passwords or keys)
@@ -157,6 +163,12 @@ audience:
 
 ---
 
+## Policy Evaluation Flowchart
+
+![policy_evaluation_logic](svg/courses/cloud/introduction-to-aws/05_identity_and_access_management/policy_evaluation_logic.svg)
+
+---
+
 ## Least Privilege Principle
 - Grant only the permissions needed
 - Start with minimal access
@@ -202,12 +214,42 @@ audience:
 
 ---
 
+## Organizations Structure
+
+![organizations_structure](svg/courses/cloud/introduction-to-aws/05_identity_and_access_management/organizations_structure.svg)
+
+---
+
 ## Service Control Policies
 - Guardrails for accounts in an Organization
 - Restrict which services and actions are allowed
 - Applied to OUs or individual accounts
 - Do not grant permissions, only restrict
 - Even account root user is restricted by SCPs
+
+---
+
+## SCP Example: Deny Unapproved Regions
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "DenyNonApprovedRegions",
+    "Effect": "Deny",
+    "Action": "*",
+    "Resource": "*",
+    "Condition": {
+      "StringNotEquals": {
+        "aws:RequestedRegion": [
+          "us-east-1",
+          "eu-west-1"
+        ]
+      }
+    }
+  }]
+}
+```
 
 ---
 

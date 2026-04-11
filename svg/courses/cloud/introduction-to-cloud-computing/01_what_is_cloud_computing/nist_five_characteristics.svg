@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)"/>
+
+  <!-- Central circle -->
+  <circle cx="640" cy="320" r="90" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="640" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Cloud</text>
+  <text x="640" y="334" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Computing</text>
+
+  <!-- Characteristic 1: On-demand Self-service (top) -->
+  <line x1="640" y1="230" x2="640" y2="130" stroke="var(--primary)" stroke-width="2"/>
+  <circle cx="640" cy="90" r="55" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">On-demand</text>
+  <text x="640" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Self-service</text>
+
+  <!-- Characteristic 2: Broad Network Access (top-right) -->
+  <line x1="726" y1="262" x2="880" y2="140" stroke="var(--ok)" stroke-width="2"/>
+  <circle cx="920" cy="115" r="55" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="920" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Broad Network</text>
+  <text x="920" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Access</text>
+
+  <!-- Characteristic 3: Resource Pooling (bottom-right) -->
+  <line x1="726" y1="378" x2="880" y2="470" stroke="var(--warn)" stroke-width="2"/>
+  <circle cx="920" cy="500" r="55" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="920" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Resource</text>
+  <text x="920" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Pooling</text>
+
+  <!-- Characteristic 4: Rapid Elasticity (bottom-left) -->
+  <line x1="554" y1="378" x2="400" y2="470" stroke="var(--danger)" stroke-width="2"/>
+  <circle cx="360" cy="500" r="55" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-dk)">Rapid</text>
+  <text x="360" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-dk)">Elasticity</text>
+
+  <!-- Characteristic 5: Measured Service (top-left) -->
+  <line x1="554" y1="262" x2="400" y2="140" stroke="var(--info)" stroke-width="2"/>
+  <circle cx="360" cy="115" r="55" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="360" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--info-dk)">Measured</text>
+  <text x="360" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--info-dk)">Service</text>
+
+  <!-- Descriptive labels -->
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">NIST SP 800-145 — Five Essential Characteristics of Cloud Computing</text>
+</svg>

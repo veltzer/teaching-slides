@@ -60,12 +60,33 @@ audience:
 
 ---
 
+## Check Savings Plans Coverage
+
+```bash
+# View Savings Plans utilization
+aws ce get-savings-plans-utilization \
+  --time-period Start=2024-01-01,End=2024-01-31
+
+# View coverage (what % is covered)
+aws ce get-savings-plans-coverage \
+  --time-period Start=2024-01-01,End=2024-01-31 \
+  --group-by Type=DIMENSION,Key=INSTANCE_TYPE
+```
+
+---
+
 ## Savings Plans vs Reserved Instances
 - Savings Plans: simpler, more flexible
 - RIs: slightly higher savings in some cases
 - Savings Plans cover Lambda and Fargate too
 - RIs cover only EC2 or RDS
 - For new commitments, prefer Savings Plans
+
+---
+
+## Commitment Options Comparison
+
+![commitment_comparison](svg/courses/cloud/finops/04_reserved_instances/commitment_comparison.svg)
 
 ---
 
@@ -102,6 +123,12 @@ audience:
 - No Upfront 1-year: savings from day one
 - 3-year: larger savings but longer commitment
 - Model different scenarios before buying
+
+---
+
+## Break-Even Analysis
+
+![break_even_analysis](svg/courses/cloud/finops/04_reserved_instances/break_even_analysis.svg)
 
 ---
 

@@ -51,6 +51,12 @@ audience:
 
 ---
 
+## Object Storage Architecture
+
+![object_storage](svg/courses/cloud/architecting-in-the-cloud/05_distributed_storage/object_storage_architecture.svg)
+
+---
+
 ## How Costly Is It?
 - Storage: $0.02-0.03/GB/month (standard tier)
 - Requests: $0.005 per 1000 GET, $0.05 per 1000 PUT
@@ -75,6 +81,12 @@ audience:
 - Cold: archive, very low cost, retrieval time
 - Deep archive: lowest cost, hours to retrieve
 - Match tier to access pattern
+
+---
+
+## Storage Tiers
+
+![tiers](svg/courses/cloud/architecting-in-the-cloud/05_distributed_storage/storage_tiers.svg)
 
 ---
 
@@ -168,6 +180,29 @@ audience:
 
 ---
 
+## S3 Bucket Policy: Deny Unencrypted
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "DenyUnencrypted",
+    "Effect": "Deny",
+    "Principal": "*",
+    "Action": "s3:PutObject",
+    "Resource": "arn:aws:s3:::my-data/*",
+    "Condition": {
+      "StringNotEquals": {
+        "s3:x-amz-server-side-encryption":
+          "aws:kms"
+      }
+    }
+  }]
+}
+```
+
+---
+
 ## Object Storage Best Practices
 - Enable versioning for critical data
 - Use lifecycle policies from day one
@@ -203,6 +238,12 @@ audience:
 - EBS gp3: ~$0.08/GB/month
 - EFS: ~$0.30/GB/month
 - Choose based on access pattern, not just price
+
+---
+
+## Storage Cost Comparison
+
+![cost](svg/courses/cloud/architecting-in-the-cloud/05_distributed_storage/storage_cost_comparison.svg)
 
 ---
 

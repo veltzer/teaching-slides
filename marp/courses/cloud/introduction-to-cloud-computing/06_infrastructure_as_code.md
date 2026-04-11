@@ -69,12 +69,46 @@ audience:
 
 ---
 
+## Terraform HCL Example
+
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "web-server"
+  }
+}
+```
+
+---
+
 ## AWS CloudFormation
 - AWS-native IaC service
 - YAML or JSON templates
 - Deep integration with all AWS services
 - Stack management and rollback
 - No additional cost (pay for resources created)
+
+---
+
+## CloudFormation Template Example
+
+```yaml
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  WebBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: my-web-assets
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+```
 
 ---
 
@@ -96,6 +130,21 @@ audience:
 
 ---
 
+## Pulumi Python Example
+
+```python
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("my-bucket",
+    acl="private",
+    versioning=aws.s3.BucketVersioningArgs(
+        enabled=True,
+    ),
+)
+```
+
+---
+
 ## IaC Best Practices
 - Store templates in version control
 - Use modules for reusable components
@@ -111,6 +160,12 @@ audience:
 1. CI pipeline validates and plans changes
 1. Approved changes applied automatically
 1. Infrastructure versioned alongside application code
+
+---
+
+## IaC Workflow
+
+![iac](svg/courses/cloud/introduction-to-cloud-computing/06_infrastructure_as_code/iac_workflow.svg)
 
 ---
 

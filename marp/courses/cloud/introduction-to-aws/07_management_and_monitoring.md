@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Monitoring Tools Overview
+
+![monitoring_tools_overview](svg/courses/cloud/introduction-to-aws/07_management_and_monitoring/monitoring_tools_overview.svg)
+
+---
+
 ## Amazon CloudWatch Overview
 - Monitoring and observability service
 - Collects metrics from all AWS services
@@ -78,6 +84,12 @@ audience:
 
 ---
 
+## CloudWatch Alarm Flow
+
+![cloudwatch_alarm_flow](svg/courses/cloud/introduction-to-aws/07_management_and_monitoring/cloudwatch_alarm_flow.svg)
+
+---
+
 ## CloudWatch Logs
 - Collect and store log files
 - Log Groups: collection of related streams
@@ -93,6 +105,30 @@ audience:
 - Aggregate and visualize log data
 - Pre-built sample queries
 - Faster than manual log search
+
+---
+
+## CloudWatch Custom Metric Example
+
+```bash
+# Publish a custom metric
+aws cloudwatch put-metric-data \
+  --namespace "MyApp" \
+  --metric-name "ActiveUsers" \
+  --value 142 \
+  --unit Count
+
+# Create an alarm
+aws cloudwatch put-metric-alarm \
+  --alarm-name "HighCPU" \
+  --metric-name CPUUtilization \
+  --namespace AWS/EC2 \
+  --threshold 80 \
+  --comparison-operator GreaterThanThreshold \
+  --period 300 --evaluation-periods 2 \
+  --statistic Average \
+  --alarm-actions arn:aws:sns:us-east-1:123:ops
+```
 
 ---
 

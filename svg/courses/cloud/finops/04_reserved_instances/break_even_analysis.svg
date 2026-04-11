@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+
+  <!-- Chart area -->
+  <!-- Y-axis -->
+  <line x1="140" y1="40" x2="140" y2="500" stroke="var(--border-strong)" stroke-width="2"/>
+  <!-- X-axis -->
+  <line x1="140" y1="500" x2="1180" y2="500" stroke="var(--border-strong)" stroke-width="2"/>
+
+  <!-- Y-axis label -->
+  <text x="30" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-dark)" transform="rotate(-90, 30, 270)">Cumulative Cost ($)</text>
+
+  <!-- X-axis label -->
+  <text x="660" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-dark)">Months</text>
+
+  <!-- Y-axis tick marks and labels -->
+  <line x1="132" y1="500" x2="140" y2="500" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="125" y="505" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">$0</text>
+
+  <line x1="132" y1="385" x2="140" y2="385" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="125" y="390" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">$5k</text>
+
+  <line x1="132" y1="270" x2="140" y2="270" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="125" y="275" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">$10k</text>
+
+  <line x1="132" y1="155" x2="140" y2="155" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="125" y="160" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">$15k</text>
+
+  <line x1="132" y1="80" x2="140" y2="80" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="125" y="85" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">$18k</text>
+
+  <!-- X-axis tick marks -->
+  <line x1="226" y1="500" x2="226" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="226" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">2</text>
+
+  <line x1="400" y1="500" x2="400" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="400" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">6</text>
+
+  <line x1="573" y1="500" x2="573" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="573" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">10</text>
+
+  <line x1="660" y1="500" x2="660" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="660" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">12</text>
+
+  <line x1="833" y1="500" x2="833" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="833" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">16</text>
+
+  <line x1="1006" y1="500" x2="1006" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="1006" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">20</text>
+
+  <line x1="1093" y1="500" x2="1093" y2="508" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <text x="1093" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">22</text>
+
+  <!-- Grid lines (light) -->
+  <line x1="140" y1="385" x2="1180" y2="385" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="140" y1="270" x2="1180" y2="270" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="140" y1="155" x2="1180" y2="155" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- On-Demand line (danger - straight line from origin, steep slope) -->
+  <!-- $750/month, over 24 months = $18,000. Y range: 500 to 80 = 420px for $18k -->
+  <line x1="140" y1="500" x2="1180" y2="80" stroke="var(--danger)" stroke-width="3.5"/>
+  <text x="1100" y="65" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger)">On-Demand</text>
+  <text x="1100" y="83" font-family="Arial, sans-serif" font-size="12" fill="var(--danger)">$750/mo</text>
+
+  <!-- Reserved line (ok - starts with upfront, then lower slope) -->
+  <!-- $3000 upfront + $350/month. Month 0: $3000, Month 24: $3000 + 24*350 = $11,400 -->
+  <!-- $3000 = 70px up from baseline = y430; $11400 at month 24 = y233 -->
+  <polyline points="140,500 140,430 1180,163" fill="none" stroke="var(--ok)" stroke-width="3.5"/>
+  <text x="1100" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok)">Reserved (1yr)</text>
+  <text x="1100" y="168" font-family="Arial, sans-serif" font-size="12" fill="var(--ok)">$3k up + $350/mo</text>
+
+  <!-- Break-even point (where lines cross) -->
+  <!-- On-Demand: 750*m. Reserved: 3000 + 350*m. Equal when 750m = 3000+350m -> 400m = 3000 -> m = 7.5 -->
+  <!-- Month 7.5: x = 140 + 7.5 * (1040/24) = 140 + 325 = 465 -->
+  <!-- Cost at 7.5 months: 750*7.5 = 5625 -> y = 500 - (5625/18000)*420 = 500 - 131 = 369 -->
+  <circle cx="465" cy="369" r="8" fill="var(--warn)" stroke="var(--warn-dk)" stroke-width="2"/>
+
+  <!-- Break-even annotation -->
+  <line x1="465" y1="361" x2="465" y2="260" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="365" y="228" width="200" height="35" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="465" y="251" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Break-even: ~7.5 months</text>
+
+  <!-- Savings area annotation -->
+  <rect x="700" y="245" width="220" height="60" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="810" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Savings Zone</text>
+  <text x="810" y="291" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok)">~37% savings over 2 years</text>
+
+  <!-- Legend -->
+  <rect x="180" y="568" width="240" height="48" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <line x1="200" y1="592" x2="240" y2="592" stroke="var(--danger)" stroke-width="3"/>
+  <text x="250" y="597" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">On-Demand</text>
+  <line x1="330" y1="592" x2="370" y2="592" stroke="var(--ok)" stroke-width="3"/>
+  <text x="380" y="597" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Reserved</text>
+</svg>

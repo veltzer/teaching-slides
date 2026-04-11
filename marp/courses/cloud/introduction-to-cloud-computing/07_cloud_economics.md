@@ -34,12 +34,24 @@ audience:
 
 ---
 
+## CapEx vs OpEx Cost Curves
+
+![capex](svg/courses/cloud/introduction-to-cloud-computing/07_cloud_economics/capex_vs_opex.svg)
+
+---
+
 ## Cloud Pricing Dimensions
 - Compute: per second or per hour of CPU time
 - Storage: per GB per month
 - Data transfer: per GB out (inbound usually free)
 - Requests: per API call or transaction
 - Each service has its own pricing model
+
+---
+
+## Pricing Dimensions
+
+![pricing](svg/courses/cloud/introduction-to-cloud-computing/07_cloud_economics/pricing_dimensions.svg)
 
 ---
 
@@ -94,6 +106,19 @@ audience:
 - Budgets and alerts: get notified on thresholds
 - Cost allocation tags: track by project or team
 - Third-party tools: CloudHealth, Spot.io, Kubecost
+
+---
+
+## AWS CLI Cost Query Example
+
+```bash
+# Query last month's costs by service
+aws ce get-cost-and-usage \
+  --time-period Start=2024-01-01,End=2024-01-31 \
+  --granularity MONTHLY \
+  --metrics "BlendedCost" \
+  --group-by Type=DIMENSION,Key=SERVICE
+```
 
 ---
 
@@ -157,6 +182,19 @@ audience:
 - Enable showback and chargeback
 - Enforce tagging via policies
 - Essential for multi-team organizations
+
+---
+
+## Tagging Resources for Cost Tracking
+
+```bash
+# Tag an EC2 instance for cost tracking
+aws ec2 create-tags \
+  --resources i-0abc123def456 \
+  --tags Key=Project,Value=WebApp \
+       Key=Team,Value=Backend \
+       Key=Environment,Value=production
+```
 
 ---
 

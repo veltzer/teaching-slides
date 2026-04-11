@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1280" height="640" rx="8" fill="var(--surface)"/>
+
+  <!-- Origins (right side) -->
+  <rect x="1020" y="100" width="200" height="80" rx="10" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="1120" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">S3 Bucket</text>
+  <text x="1120" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-pale)">Static Assets</text>
+
+  <rect x="1020" y="220" width="200" height="80" rx="10" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <text x="1120" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">ALB / EC2</text>
+  <text x="1120" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-pale)">Dynamic Content</text>
+
+  <text x="1120" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)">Origins</text>
+
+  <!-- CloudFront Edge Locations (middle) -->
+  <rect x="440" y="50" width="360" height="540" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="620" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">CloudFront Edge Locations</text>
+
+  <!-- Edge location dots -->
+  <circle cx="520" cy="140" r="22" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="520" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">US-E</text>
+
+  <circle cx="680" cy="140" r="22" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="680" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">US-W</text>
+
+  <circle cx="520" cy="230" r="22" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="520" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">EU</text>
+
+  <circle cx="680" cy="230" r="22" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="680" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">APAC</text>
+
+  <circle cx="600" cy="320" r="22" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="600" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">SA</text>
+
+  <!-- Cache Hit path (green, short) -->
+  <rect x="470" y="380" width="300" height="80" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="620" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-dk)">Cache HIT</text>
+  <text x="620" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Response from edge (low latency)</text>
+
+  <!-- Cache Miss path (orange, long) -->
+  <rect x="470" y="480" width="300" height="80" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="620" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)">Cache MISS</text>
+  <text x="620" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Fetch from origin, cache, respond</text>
+
+  <!-- Cache miss arrow to origin -->
+  <line x1="770" y1="520" x2="1020" y2="260" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrow-warn)"/>
+  <text x="920" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)">Fetch from origin</text>
+
+  <!-- Origin to edge arrow (cache fill) -->
+  <line x1="1020" y1="180" x2="720" y2="180" stroke="var(--primary-dk)" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-primary)"/>
+  <text x="870" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)">Content delivery</text>
+
+  <!-- End Users (left side) -->
+  <text x="170" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)">End Users</text>
+
+  <!-- User icons as simple shapes -->
+  <circle cx="120" cy="160" r="20" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="120" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--bg)">&#x263A;</text>
+  <text x="120" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Americas</text>
+
+  <circle cx="240" cy="160" r="20" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="240" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--bg)">&#x263A;</text>
+  <text x="240" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Europe</text>
+
+  <circle cx="120" cy="280" r="20" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="120" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--bg)">&#x263A;</text>
+  <text x="120" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Asia</text>
+
+  <circle cx="240" cy="280" r="20" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="240" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--bg)">&#x263A;</text>
+  <text x="240" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Global</text>
+
+  <!-- User to edge arrows -->
+  <line x1="260" y1="160" x2="440" y2="160" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="260" y1="280" x2="440" y2="280" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="140" y1="160" x2="440" y2="200" stroke="var(--ok)" stroke-width="1.5" marker-end="url(#arrow-ok)"/>
+  <line x1="140" y1="280" x2="440" y2="300" stroke="var(--ok)" stroke-width="1.5" marker-end="url(#arrow-ok)"/>
+
+  <!-- Cache hit arrow back to users -->
+  <line x1="470" y1="420" x2="280" y2="420" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arrow-ok)"/>
+  <text x="375" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Fast response</text>
+
+  <!-- Legend -->
+  <rect x="60" y="480" width="300" height="130" rx="8" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="80" y="505" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text-dark)">Legend</text>
+  <line x1="80" y1="525" x2="130" y2="525" stroke="var(--ok)" stroke-width="2.5"/>
+  <text x="140" y="530" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Cache Hit (fast, local edge)</text>
+  <line x1="80" y1="555" x2="130" y2="555" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="140" y="560" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Cache Miss (fetch from origin)</text>
+  <line x1="80" y1="585" x2="130" y2="585" stroke="var(--primary-dk)" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="140" y="590" font-family="Arial, sans-serif" font-size="12" fill="var(--text-dark)">Content delivery to edge</text>
+</svg>

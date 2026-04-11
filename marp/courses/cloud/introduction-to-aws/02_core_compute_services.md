@@ -42,6 +42,12 @@ audience:
 
 ---
 
+## EC2 Instance Lifecycle
+
+![ec2_instance_lifecycle](svg/courses/cloud/introduction-to-aws/02_core_compute_services/ec2_instance_lifecycle.svg)
+
+---
+
 ## Amazon Machine Images (AMIs)
 - Pre-configured templates for instances
 - Contains OS, application server, applications
@@ -159,6 +165,12 @@ audience:
 
 ---
 
+## EC2 Pricing Comparison
+
+![ec2_pricing_comparison](svg/courses/cloud/introduction-to-aws/02_core_compute_services/ec2_pricing_comparison.svg)
+
+---
+
 ## Key Pairs
 - SSH access to Linux instances
 - RDP access to Windows instances
@@ -192,6 +204,37 @@ audience:
 - Instance Metadata: info about the instance
 - Available at http://169.254.169.254/latest/meta-data/
 - Retrieve instance ID, IP, IAM role credentials
+
+---
+
+## User Data Bootstrap Script
+
+```bash
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello from $(hostname)</h1>" \
+  > /var/www/html/index.html
+```
+
+---
+
+## Security Group CLI Example
+
+```bash
+# Create a security group
+aws ec2 create-security-group \
+  --group-name web-sg \
+  --description "Allow HTTP and SSH"
+
+# Allow HTTP from anywhere
+aws ec2 authorize-security-group-ingress \
+  --group-name web-sg \
+  --protocol tcp --port 80 \
+  --cidr 0.0.0.0/0
+```
 
 ---
 
@@ -236,6 +279,12 @@ audience:
 - Scaling Policies: when and how to scale
 - Cooldown Periods: prevent rapid scaling
 - Scheduled Scaling: predictable demand patterns
+
+---
+
+## Auto Scaling Architecture
+
+![auto_scaling_architecture](svg/courses/cloud/introduction-to-aws/02_core_compute_services/auto_scaling_architecture.svg)
 
 ---
 

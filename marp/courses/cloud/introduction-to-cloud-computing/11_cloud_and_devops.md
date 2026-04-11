@@ -32,6 +32,12 @@ audience:
 
 ---
 
+## CI/CD Pipeline
+
+![cicd](svg/courses/cloud/introduction-to-cloud-computing/11_cloud_and_devops/cicd_pipeline.svg)
+
+---
+
 ## CI/CD Benefits
 - Faster feedback on code changes
 - Automated testing catches bugs early
@@ -47,6 +53,20 @@ audience:
 - Consistent across development, staging, production
 - Lightweight compared to virtual machines
 - Start in seconds, not minutes
+
+---
+
+## Dockerfile Example
+
+```dockerfile
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --production
+COPY . .
+EXPOSE 3000
+CMD ["node", "server.js"]
+```
 
 ---
 
@@ -101,6 +121,22 @@ audience:
 - Replace, don't patch
 - Consistent and reproducible
 - Enabled by cloud's fast provisioning
+
+---
+
+## Kubernetes Deployment Example
+
+```bash
+# Deploy a new version
+kubectl set image deployment/web \
+  web=myapp:v2.1.0
+
+# Check rollout status
+kubectl rollout status deployment/web
+
+# Rollback if needed
+kubectl rollout undo deployment/web
+```
 
 ---
 

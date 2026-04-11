@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="640" fill="var(--bg)"/>
+
+  <!-- Root Account -->
+  <rect x="530" y="30" width="220" height="60" rx="10" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="640" y="67" font-family="Arial, sans-serif" font-size="16" fill="var(--bg)" text-anchor="middle" font-weight="bold">Root Account</text>
+
+  <!-- Lines from Root to OUs -->
+  <line x1="580" y1="90" x2="175" y2="160" stroke="var(--border-strong)" stroke-width="2"/>
+  <line x1="610" y1="90" x2="465" y2="160" stroke="var(--border-strong)" stroke-width="2"/>
+  <line x1="670" y1="90" x2="815" y2="160" stroke="var(--border-strong)" stroke-width="2"/>
+  <line x1="700" y1="90" x2="1105" y2="160" stroke="var(--border-strong)" stroke-width="2"/>
+
+  <!-- OU: Security -->
+  <rect x="70" y="160" width="210" height="60" rx="8" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="175" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">OU: Security</text>
+  <!-- SCP badge -->
+  <rect x="235" y="155" width="50" height="20" rx="4" fill="var(--danger)" stroke="var(--danger-dk)" stroke-width="1"/>
+  <text x="260" y="169" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)" text-anchor="middle" font-weight="bold">SCP</text>
+
+  <!-- Security accounts -->
+  <line x1="120" y1="220" x2="120" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <line x1="230" y1="220" x2="230" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+
+  <rect x="55" y="280" width="130" height="50" rx="6" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1.5"/>
+  <text x="120" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Log Archive</text>
+  <text x="120" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">CloudTrail, Config</text>
+
+  <rect x="165" y="280" width="130" height="50" rx="6" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1.5"/>
+  <text x="230" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Security Tooling</text>
+  <text x="230" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">GuardDuty, Hub</text>
+
+  <!-- OU: Shared Services -->
+  <rect x="360" y="160" width="210" height="60" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="465" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">OU: Shared Services</text>
+  <rect x="525" y="155" width="50" height="20" rx="4" fill="var(--primary)" stroke="var(--primary-dk)" stroke-width="1"/>
+  <text x="550" y="169" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)" text-anchor="middle" font-weight="bold">SCP</text>
+
+  <!-- Shared accounts -->
+  <line x1="410" y1="220" x2="410" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <line x1="520" y1="220" x2="520" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+
+  <rect x="345" y="280" width="130" height="50" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="410" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Networking</text>
+  <text x="410" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Transit GW, DNS</text>
+
+  <rect x="455" y="280" width="130" height="50" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="520" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">CI/CD</text>
+  <text x="520" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Pipelines, Artifacts</text>
+
+  <!-- OU: Production -->
+  <rect x="710" y="160" width="210" height="60" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="815" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">OU: Production</text>
+  <rect x="875" y="155" width="50" height="20" rx="4" fill="var(--ok)" stroke="var(--ok-dk)" stroke-width="1"/>
+  <text x="900" y="169" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)" text-anchor="middle" font-weight="bold">SCP</text>
+
+  <!-- Production accounts -->
+  <line x1="760" y1="220" x2="760" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <line x1="870" y1="220" x2="870" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+
+  <rect x="695" y="280" width="130" height="50" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="760" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Prod - App A</text>
+  <text x="760" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Workload isolated</text>
+
+  <rect x="805" y="280" width="130" height="50" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="870" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Prod - App B</text>
+  <text x="870" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Workload isolated</text>
+
+  <!-- OU: Development -->
+  <rect x="1000" y="160" width="210" height="60" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1105" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">OU: Development</text>
+  <rect x="1165" y="155" width="50" height="20" rx="4" fill="var(--warn)" stroke="var(--warn-dk)" stroke-width="1"/>
+  <text x="1190" y="169" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)" text-anchor="middle" font-weight="bold">SCP</text>
+
+  <!-- Dev accounts -->
+  <line x1="1050" y1="220" x2="1050" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <line x1="1160" y1="220" x2="1160" y2="280" stroke="var(--border-strong)" stroke-width="1.5"/>
+
+  <rect x="985" y="280" width="130" height="50" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="1050" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Dev - Team 1</text>
+  <text x="1050" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Sandbox</text>
+
+  <rect x="1095" y="280" width="130" height="50" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="1160" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Dev - Team 2</text>
+  <text x="1160" y="318" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Sandbox</text>
+
+  <!-- Legend box -->
+  <rect x="40" y="400" width="1200" height="220" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="640" y="435" font-family="Arial, sans-serif" font-size="16" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Key Concepts</text>
+
+  <rect x="80" y="460" width="50" height="22" rx="4" fill="var(--primary)" stroke="var(--primary-dk)" stroke-width="1"/>
+  <text x="105" y="476" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)" text-anchor="middle" font-weight="bold">SCP</text>
+  <text x="145" y="476" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Service Control Policies - guardrails applied at OU level, inherited by all child accounts</text>
+
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">● Each account is a hard security boundary (blast radius isolation)</text>
+  <text x="80" y="535" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">● AWS Organizations manages all accounts centrally from the Root</text>
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">● Separate environments (dev/prod) prevent accidental production impact</text>
+  <text x="80" y="585" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">● Consolidated billing across all accounts with cost allocation tags</text>
+</svg>

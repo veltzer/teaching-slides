@@ -33,6 +33,12 @@ audience:
 
 ---
 
+## Storage Types at a Glance
+
+![storage_types_comparison](svg/courses/cloud/introduction-to-aws/03_core_storage_services/storage_types_comparison.svg)
+
+---
+
 ## Amazon S3 Overview
 - Simple Storage Service
 - Object storage with unlimited capacity
@@ -57,6 +63,24 @@ audience:
 - DELETE: remove objects
 - LIST: enumerate objects in a bucket
 - Multipart upload for large files (>100 MB)
+
+---
+
+## S3 CLI Examples
+
+```bash
+# Create a bucket
+aws s3 mb s3://my-app-bucket-2024
+
+# Upload a file
+aws s3 cp report.pdf s3://my-app-bucket-2024/
+
+# Sync a directory
+aws s3 sync ./build/ s3://my-app-bucket-2024/static/
+
+# List objects
+aws s3 ls s3://my-app-bucket-2024/ --recursive
+```
 
 ---
 
@@ -88,12 +112,40 @@ audience:
 
 ---
 
+## S3 Lifecycle Flow
+
+![s3_lifecycle_flow](svg/courses/cloud/introduction-to-aws/03_core_storage_services/s3_lifecycle_flow.svg)
+
+---
+
 ## S3 Security
 - Bucket policies (resource-based, JSON)
 - IAM policies (identity-based)
 - Block Public Access settings (account or bucket level)
 - Server-side encryption (SSE-S3, SSE-KMS, SSE-C)
 - Client-side encryption
+
+---
+
+## S3 Bucket Policy Example
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "DenyUnencryptedUploads",
+    "Effect": "Deny",
+    "Principal": "*",
+    "Action": "s3:PutObject",
+    "Resource": "arn:aws:s3:::my-bucket/*",
+    "Condition": {
+      "StringNotEquals": {
+        "s3:x-amz-server-side-encryption": "AES256"
+      }
+    }
+  }]
+}
+```
 
 ---
 
@@ -166,6 +218,12 @@ audience:
 - st1: sequential large reads (data warehousing)
 - sc1: infrequent access, lowest cost
 - Match IOPS and throughput to workload
+
+---
+
+## EBS Volume Decision Tree
+
+![ebs_volume_decision_tree](svg/courses/cloud/introduction-to-aws/03_core_storage_services/ebs_volume_decision_tree.svg)
 
 ---
 

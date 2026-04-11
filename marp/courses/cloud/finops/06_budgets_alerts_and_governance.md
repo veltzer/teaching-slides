@@ -42,6 +42,26 @@ audience:
 
 ---
 
+## Create a Budget via CLI
+
+```bash
+aws budgets create-budget \
+  --account-id 123456789012 \
+  --budget '{
+    "BudgetName": "TeamPlatform-Monthly",
+    "BudgetLimit": {"Amount":"5000","Unit":"USD"},
+    "TimeUnit": "MONTHLY",
+    "BudgetType": "COST",
+    "CostFilters": {
+      "TagKeyValue": [
+        "user:Team$Platform"
+      ]
+    }
+  }'
+```
+
+---
+
 ## Azure Cost Management Budgets
 - Create budgets in Azure Cost Management
 - Scope: subscription, resource group, or management group
@@ -69,6 +89,12 @@ audience:
 
 ---
 
+## Budget Alert Flow
+
+![budget_alert_flow](svg/courses/cloud/finops/06_budgets_alerts/budget_alert_flow.svg)
+
+---
+
 ## Cost Anomaly Detection
 - Automatically detect unusual spending patterns
 - AWS Cost Anomaly Detection
@@ -93,6 +119,29 @@ audience:
 - GCP: Organization Policies, Constraints
 - Prevent non-compliant resources before creation
 - Detect and remediate existing violations
+
+---
+
+## SCP: Restrict Instance Types
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "AllowOnlyApprovedInstances",
+    "Effect": "Deny",
+    "Action": "ec2:RunInstances",
+    "Resource": "arn:aws:ec2:*:*:instance/*",
+    "Condition": {
+      "ForAnyValue:StringNotLike": {
+        "ec2:InstanceType": [
+          "t3.*", "m6i.*", "c6i.*"
+        ]
+      }
+    }
+  }]
+}
+```
 
 ---
 

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1280" height="640" rx="8" fill="var(--surface)"/>
+
+  <!-- Step 1: Metric Source -->
+  <rect x="40" y="180" width="220" height="200" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-dk)">Metric Source</text>
+
+  <!-- CPU graph mini visualization -->
+  <rect x="60" y="225" width="180" height="80" rx="4" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70" y="245" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">CPU %</text>
+  <polyline points="70,290 95,280 120,285 145,260 165,240 185,235 210,230 225,228" fill="none" stroke="var(--primary)" stroke-width="2"/>
+  <!-- Threshold line -->
+  <line x1="60" y1="255" x2="240" y2="255" stroke="var(--danger)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="200" y="250" font-family="Arial, sans-serif" font-size="10" fill="var(--danger)">80%</text>
+
+  <text x="150" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">EC2, RDS, Lambda</text>
+  <text x="150" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Custom metrics</text>
+
+  <!-- Arrow to threshold check -->
+  <line x1="260" y1="280" x2="330" y2="280" stroke="var(--text-muted)" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Threshold Evaluation -->
+  <rect x="340" y="210" width="200" height="140" rx="12" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Threshold</text>
+  <text x="440" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Evaluation</text>
+
+  <text x="440" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">CPU > 80% for</text>
+  <text x="440" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">5 min (3 of 3</text>
+  <text x="440" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">datapoints)</text>
+
+  <!-- Arrow to alarm state -->
+  <line x1="540" y1="280" x2="610" y2="280" stroke="var(--text-muted)" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Alarm States -->
+  <rect x="620" y="160" width="200" height="240" rx="12" fill="var(--bg)" stroke="var(--border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="720" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Alarm States</text>
+
+  <rect x="645" y="205" width="150" height="36" rx="6" fill="url(#grad-ok)"/>
+  <text x="720" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">OK</text>
+
+  <rect x="645" y="252" width="150" height="36" rx="6" fill="url(#grad-danger)"/>
+  <text x="720" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">ALARM</text>
+
+  <rect x="645" y="299" width="150" height="36" rx="6" fill="var(--text-muted)"/>
+  <text x="720" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">INSUFFICIENT DATA</text>
+
+  <text x="720" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">State transitions</text>
+  <text x="720" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">trigger actions</text>
+
+  <!-- Arrow from ALARM to actions -->
+  <line x1="820" y1="270" x2="890" y2="270" stroke="var(--danger)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="855" y="260" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--danger)">ALARM</text>
+
+  <!-- Step 4: Actions -->
+  <text x="1060" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-dark)">Actions</text>
+
+  <!-- Action 1: SNS Notification -->
+  <line x1="900" y1="270" x2="950" y2="120" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="950" y="70" width="220" height="90" rx="10" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <text x="1060" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">SNS Notification</text>
+  <text x="1060" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-pale)">Email, SMS, HTTP</text>
+  <text x="1060" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-pale)">Lambda trigger</text>
+
+  <!-- Action 2: Auto Scaling -->
+  <line x1="900" y1="270" x2="950" y2="270" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="950" y="220" width="220" height="90" rx="10" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <text x="1060" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">Auto Scaling</text>
+  <text x="1060" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-pale)">Scale out/in instances</text>
+  <text x="1060" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-pale)">Dynamic scaling policies</text>
+
+  <!-- Action 3: EC2 Actions -->
+  <line x1="900" y1="270" x2="950" y2="420" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <rect x="950" y="370" width="220" height="90" rx="10" fill="url(#grad-warn)" filter="url(#shadow)"/>
+  <text x="1060" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">EC2 Actions</text>
+  <text x="1060" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-pale)">Stop, Terminate, Reboot</text>
+  <text x="1060" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-pale)">Recover instance</text>
+
+  <!-- Example scenarios -->
+  <rect x="40" y="450" width="800" height="170" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="440" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text-dark)">Common Alarm Patterns</text>
+
+  <rect x="60" y="495" width="240" height="50" rx="6" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="180" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">CPU > 80% for 5 min</text>
+  <text x="180" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Scale out + notify</text>
+
+  <rect x="320" y="495" width="240" height="50" rx="6" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="1"/>
+  <text x="440" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-dk)">Status Check Failed</text>
+  <text x="440" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Recover instance</text>
+
+  <rect x="580" y="495" width="240" height="50" rx="6" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <text x="700" y="516" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Billing > $100</text>
+  <text x="700" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Budget alert notification</text>
+
+  <rect x="60" y="555" width="240" height="50" rx="6" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="180" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-dk)">Healthy Hosts &lt; 2</text>
+  <text x="180" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">ALB target group alert</text>
+
+  <rect x="320" y="555" width="240" height="50" rx="6" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
+  <text x="440" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--info-dk)">Error Rate > 5%</text>
+  <text x="440" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Application health alert</text>
+
+  <rect x="580" y="555" width="240" height="50" rx="6" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="700" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Disk Usage > 90%</text>
+  <text x="700" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Storage capacity warning</text>
+</svg>

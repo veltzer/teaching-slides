@@ -23,6 +23,12 @@ audience:
 
 ---
 
+## Cloud Deployment Models
+
+![deployment](svg/courses/cloud/introduction-to-cloud-computing/05_cloud_deployment_models/deployment_models.svg)
+
+---
+
 ## Public Cloud
 - Owned and operated by a third-party provider
 - Shared infrastructure, multi-tenant
@@ -92,6 +98,12 @@ audience:
 - Disaster recovery in public cloud
 - Gradual migration to public cloud
 - Regulatory requirements for some workloads
+
+---
+
+## Hybrid Cloud Architecture
+
+![hybrid](svg/courses/cloud/introduction-to-cloud-computing/05_cloud_deployment_models/hybrid_cloud_architecture.svg)
 
 ---
 

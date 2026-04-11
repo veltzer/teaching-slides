@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="640" fill="var(--bg)"/>
+
+  <!-- EC2 Instance (center) -->
+  <rect x="440" y="40" width="400" height="180" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="75" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2 Instance</text>
+  <text x="640" y="100" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)" text-anchor="middle">Running application with two storage options</text>
+
+  <!-- CPU/RAM boxes inside instance -->
+  <rect x="470" y="115" width="110" height="40" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="525" y="140" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle">vCPUs</text>
+  <rect x="600" y="115" width="110" height="40" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="655" y="140" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle">RAM</text>
+  <rect x="730" y="115" width="90" height="40" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1"/>
+  <text x="775" y="140" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle">NIC</text>
+
+  <!-- Left: Instance Store -->
+  <line x1="540" y1="220" x2="250" y2="290" stroke="var(--warn)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="360" y="250" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" font-weight="bold">Local NVMe</text>
+
+  <rect x="40" y="290" width="420" height="330" rx="12" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="250" y="320" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Instance Store (NVMe)</text>
+  <text x="250" y="342" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">Physically attached to host</text>
+
+  <!-- Instance store properties -->
+  <rect x="60" y="360" width="380" height="35" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1"/>
+  <text x="250" y="383" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Ephemeral - Data lost on stop/terminate</text>
+
+  <text x="70" y="420" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Speed: Extremely fast (local NVMe)</text>
+  <text x="70" y="445" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">IOPS: Up to 3.3M random read</text>
+  <text x="70" y="470" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Cost: Included in instance price</text>
+  <text x="70" y="495" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Persistence: None (ephemeral)</text>
+  <text x="70" y="520" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Snapshots: Not supported</text>
+
+  <text x="70" y="555" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-dk)" font-weight="bold">Use for: caches, temp files, scratch data</text>
+  <text x="70" y="575" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-dk)" font-weight="bold">Not for: anything you need to keep!</text>
+
+  <!-- Right: EBS -->
+  <line x1="740" y1="220" x2="1030" y2="290" stroke="var(--primary)" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="920" y="250" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" font-weight="bold">Network (EBS)</text>
+
+  <rect x="820" y="290" width="420" height="330" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="1030" y="320" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EBS (Elastic Block Store)</text>
+  <text x="1030" y="342" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">Network-attached storage</text>
+
+  <rect x="840" y="360" width="380" height="35" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1"/>
+  <text x="1030" y="383" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Persistent - Survives stop/terminate</text>
+
+  <text x="850" y="420" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Speed: Fast (gp3: 3K-16K IOPS)</text>
+  <text x="850" y="445" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">IOPS: Up to 256K (io2 Block Express)</text>
+  <text x="850" y="470" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Cost: $0.08/GB-month (gp3)</text>
+  <text x="850" y="495" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Persistence: Independent lifecycle</text>
+  <text x="850" y="520" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)">Snapshots: To S3 (incremental)</text>
+
+  <text x="850" y="555" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-dk)" font-weight="bold">Use for: boot volumes, databases, app data</text>
+  <text x="850" y="575" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" font-weight="bold">Can detach and attach to another instance</text>
+
+  <!-- S3 snapshot arrow -->
+  <rect x="1100" y="170" width="140" height="55" rx="8" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1170" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">S3</text>
+  <text x="1170" y="212" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Snapshots stored</text>
+  <line x1="1170" y1="225" x2="1170" y2="288" stroke="var(--ok)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+  <text x="1185" y="260" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)">Snapshot</text>
+</svg>

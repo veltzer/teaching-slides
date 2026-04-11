@@ -51,12 +51,56 @@ audience:
 
 ---
 
+## SQS: Create Queue and Send Message
+
+```bash
+# Create a queue
+aws sqs create-queue --queue-name orders
+
+# Send a message
+aws sqs send-message \
+  --queue-url https://sqs.us-east-1.amazonaws.com/\
+123456789012/orders \
+  --message-body '{"orderId":"O-1234","total":99.50}'
+
+# Receive and delete
+MSG=$(aws sqs receive-message --queue-url $URL)
+aws sqs delete-message --queue-url $URL \
+  --receipt-handle $(echo $MSG | jq -r '.Messages[0].ReceiptHandle')
+```
+
+---
+
 ## SNS: Pub/Sub Notifications
 - Amazon Simple Notification Service
 - Publish a message to a topic
 - Multiple subscribers receive it (fan-out)
 - Subscribers: SQS queues, Lambda, email, HTTP
 - Combine SNS + SQS for robust fan-out
+
+---
+
+## SNS Fan-Out Pattern
+
+```bash
+# Create topic and subscribe queues
+aws sns create-topic --name order-events
+
+aws sns subscribe \
+  --topic-arn arn:aws:sns:us-east-1:123:order-events \
+  --protocol sqs \
+  --notification-endpoint arn:aws:sqs:us-east-1:123:email-queue
+
+aws sns subscribe \
+  --topic-arn arn:aws:sns:us-east-1:123:order-events \
+  --protocol sqs \
+  --notification-endpoint arn:aws:sqs:us-east-1:123:inventory-queue
+
+# Publish event (goes to BOTH queues)
+aws sns publish \
+  --topic-arn arn:aws:sns:us-east-1:123:order-events \
+  --message '{"orderId":"O-1234"}'
+```
 
 ---
 
@@ -150,6 +194,12 @@ audience:
 
 ---
 
+## Queue Patterns
+
+![patterns](svg/courses/cloud/architecting-in-the-cloud/06_distributed_queues/queue_patterns.svg)
+
+---
+
 ## Guarantees from Various Cloud Queues
 - SQS Standard: at-least-once, best-effort order, unlimited throughput
 - SQS FIFO: exactly-once, strict order, 300-3000 msg/sec
@@ -165,6 +215,12 @@ audience:
 - If not deleted, message reappears for another consumer
 - Prevents multiple consumers processing the same message
 - Set timeout based on expected processing time
+
+---
+
+## Visibility Timeout
+
+![visibility](svg/courses/cloud/architecting-in-the-cloud/06_distributed_queues/visibility_timeout.svg)
 
 ---
 
@@ -201,6 +257,12 @@ audience:
 - Queues: simple work distribution
 - Streaming: event sourcing, analytics, multiple consumers
 - Choose based on your use case
+
+---
+
+## Queues vs Streaming
+
+![queues_streaming](svg/courses/cloud/architecting-in-the-cloud/06_distributed_queues/queues_vs_streaming.svg)
 
 ---
 

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
+        --border: #e0e0e0; --border-strong: #bdbdbd;
+        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
+        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
+        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
+        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
+        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
+        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+      }
+    </style>
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="640" fill="var(--bg)"/>
+
+  <!-- Client -->
+  <rect x="30" y="220" width="140" height="100" rx="10" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="255" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Client</text>
+  <text x="100" y="275" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">SDK / CLI</text>
+  <text x="100" y="295" font-family="Arial, sans-serif" font-size="10" fill="var(--primary)" text-anchor="middle">PUT/GET by key</text>
+
+  <!-- Arrow Client -> API -->
+  <line x1="170" y1="270" x2="240" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="205" y="260" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">HTTPS</text>
+
+  <!-- HTTP API Layer -->
+  <rect x="245" y="180" width="180" height="180" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="335" y="215" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">HTTP API</text>
+  <text x="335" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">REST / S3 API</text>
+  <rect x="265" y="255" width="140" height="30" rx="4" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="335" y="275" font-family="Arial, sans-serif" font-size="10" fill="var(--text-dark)" text-anchor="middle">PUT bucket/key → object</text>
+  <rect x="265" y="295" width="140" height="30" rx="4" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="335" y="315" font-family="Arial, sans-serif" font-size="10" fill="var(--text-dark)" text-anchor="middle">GET bucket/key → data</text>
+
+  <!-- Arrow API -> Routing -->
+  <line x1="425" y1="270" x2="490" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="457" y="260" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">Route</text>
+
+  <!-- Routing / Partitioning Layer -->
+  <rect x="495" y="195" width="160" height="150" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Partition</text>
+  <text x="575" y="245" font-family="Arial, sans-serif" font-size="13" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Router</text>
+  <text x="575" y="275" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Hash(key) → node</text>
+  <text x="575" y="295" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Consistent hashing</text>
+  <text x="575" y="315" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">for distribution</text>
+
+  <!-- Arrows to AZs -->
+  <line x1="655" y1="240" x2="730" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="655" y1="270" x2="730" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="655" y1="310" x2="730" y2="480" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- AZ 1 -->
+  <rect x="735" y="40" width="510" height="150" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="990" y="65" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone 1</text>
+
+  <rect x="760" y="80" width="90" height="70" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="805" y="105" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Node 1</text>
+  <text x="805" y="125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition A</text>
+  <text x="805" y="140" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition D</text>
+
+  <rect x="870" y="80" width="90" height="70" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="915" y="105" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Node 2</text>
+  <text x="915" y="125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition B</text>
+  <text x="915" y="140" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition E</text>
+
+  <rect x="980" y="80" width="90" height="70" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
+  <text x="1025" y="105" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Node 3</text>
+  <text x="1025" y="125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition C</text>
+  <text x="1025" y="140" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition F</text>
+
+  <!-- AZ 2 -->
+  <rect x="735" y="220" width="510" height="150" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="990" y="245" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Availability Zone 2 (Replica)</text>
+
+  <rect x="760" y="260" width="90" height="70" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="805" y="285" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Node 4</text>
+  <text x="805" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
+
+  <rect x="870" y="260" width="90" height="70" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="915" y="285" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Node 5</text>
+  <text x="915" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
+
+  <rect x="980" y="260" width="90" height="70" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
+  <text x="1025" y="285" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Node 6</text>
+  <text x="1025" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
+
+  <!-- AZ 3 -->
+  <rect x="735" y="400" width="510" height="150" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="990" y="425" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Availability Zone 3 (Replica)</text>
+
+  <rect x="760" y="440" width="90" height="70" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="805" y="465" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Node 7</text>
+  <text x="805" y="490" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
+
+  <rect x="870" y="440" width="90" height="70" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="915" y="465" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Node 8</text>
+  <text x="915" y="490" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
+
+  <rect x="980" y="440" width="90" height="70" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
+  <text x="1025" y="465" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Node 9</text>
+  <text x="1025" y="490" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
+
+  <!-- Replication arrows between AZs -->
+  <line x1="1100" y1="190" x2="1100" y2="218" stroke="var(--info)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="1100" y1="370" x2="1100" y2="398" stroke="var(--info)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="1160" y="205" font-family="Arial, sans-serif" font-size="10" fill="var(--info-dk)">Replicate</text>
+  <text x="1160" y="385" font-family="Arial, sans-serif" font-size="10" fill="var(--info-dk)">Replicate</text>
+
+  <!-- Bottom: Key properties -->
+  <rect x="40" y="570" width="1200" height="55" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="640" y="595" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">S3: 11 nines durability (99.999999999%) | 3 AZ replication | Key-value access (bucket + key) | Unlimited scale</text>
+  <text x="640" y="615" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Objects stored as flat namespace, no hierarchy. Prefix-based partitioning for performance.</text>
+</svg>
