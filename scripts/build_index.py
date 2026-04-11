@@ -66,14 +66,26 @@ def count_chapters(directory: Path, ext: str) -> int:
     return sum(1 for f in directory.iterdir() if f.is_file() and f.suffix == ext)
 
 
+def _strip_front_matter(content: str) -> str:
+    """Remove YAML front matter (opening --- to closing ---) from content."""
+    if not content.startswith("---"):
+        return content
+    end = content.find("\n---", 3)
+    if end == -1:
+        return content
+    return content[end + 4:]
+
+
 def count_slides(directory: Path, ext: str) -> int:
     """Count slides in all files with the given extension in a directory (non-recursive).
-    Each file contributes 1 slide (the first) plus one for each '---' separator line."""
+    Each file contributes 1 slide (the first) plus one for each '---' separator line.
+    YAML front matter delimiters are excluded from the count."""
     total = 0
     for f in directory.iterdir():
         if f.is_file() and f.suffix == ext:
             content = f.read_text(encoding="utf-8", errors="replace")
-            total += 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
+            body = _strip_front_matter(content)
+            total += 1 + sum(1 for line in body.splitlines() if line.strip() == "---")
     return total
 
 
@@ -150,9 +162,11 @@ def build_course_entries(
 
 def count_slides_in_file(filepath: Path) -> int:
     """Count slides in a single markdown file.
-    Each file has 1 slide (the first) plus one for each '---' separator line."""
+    Each file has 1 slide (the first) plus one for each '---' separator line.
+    YAML front matter delimiters are excluded from the count."""
     content = filepath.read_text(encoding="utf-8", errors="replace")
-    return 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
+    body = _strip_front_matter(content)
+    return 1 + sum(1 for line in body.splitlines() if line.strip() == "---")
 
 
 def parse_file_front_matter(filepath: Path) -> dict[str, Any]:

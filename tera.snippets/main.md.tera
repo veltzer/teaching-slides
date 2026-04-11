@@ -2,6 +2,6 @@
 
 - Currently there are {{ shell_output(command="find marp/courses -type f -name '*.md' -printf '%h\n' | sort -u | wc -l") }} courses in this repo.
 - Currently there are {{ git_count_files(pattern="marp/**/*.md") }} marp files in this repo.
-- Currently there are {{ shell_output(command="grep -R -- '^---$' marp | wc -l") }} marp slides in this repo.
+- Currently there are {{ shell_output(command="python3 scripts/count_slides.py") }} marp slides in this repo.
 - Currently there are {{ git_count_files(pattern="svg/**/*.svg") }} SVG diagrams in this repo.
 - Currently there are {{ shell_output(command="grep -r '^|.*---.*|' marp/ --include='*.md' | wc -l") }} tables in this repo.
