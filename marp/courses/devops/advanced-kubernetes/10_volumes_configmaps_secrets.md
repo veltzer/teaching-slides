@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:kubernetes
+  - infrastructure:containers
+  - practices:devops
+  - languages:go
+  - concepts:service-mesh
+level: advanced
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Advanced Volumes, `ConfigMaps` & `Secrets`
 
 Advanced Kubernetes Course - Day 2, Module 5

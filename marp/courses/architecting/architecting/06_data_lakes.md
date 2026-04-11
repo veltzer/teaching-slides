@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:data-lakes
+  - concepts:big-data
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Data Lakes and Lakehouses
 ## Modern Architecture Course
 

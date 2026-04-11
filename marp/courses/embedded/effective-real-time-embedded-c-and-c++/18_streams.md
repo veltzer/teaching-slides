@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:c++
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Input/Output Using Stream Classes
 
 ---
@@ -48,6 +57,8 @@ int main() {
     cout << "You entered: " << value << endl;
     cerr << "Error logging" << endl;
     return 0;
+}
+```
 
 ---
 
@@ -1022,3 +1033,4 @@ int main() {
     }
     return 0;
 }
+```

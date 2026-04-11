@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Undoing Things
 
 ---
@@ -62,7 +74,7 @@ git commit --amend -m "Fixed typo"  # Safe!
 git push origin feature
 # Work alone on it
 git rebase main
-git push --force-lease origin feature  # Safe with force-lease
+git push --force-with-lease origin feature  # Safe with force-with-lease
 
 # UNSAFE: Shared branches
 git checkout main
@@ -70,7 +82,7 @@ git reset --hard HEAD~3
 git push --force  # NEVER DO THIS!
 ```
 
-### Use `--force-lease` instead of `--force` for safety
+### Use `--force-with-lease` instead of `--force` for safety
 
 ---
 
@@ -709,7 +721,7 @@ GIT_SEQUENCE_EDITOR="sed -i 's/pick/reword/g'" \
 1. **Prefer revert for public commits** - Maintains history
 1. **Test in a branch first** - Create a backup branch
 1. **Communicate with team** - Before rewriting shared history
-1. **Use --force-lease** - Safer than --force
+1. **Use --force-with-lease** - Safer than --force
 1. **Keep backups** - Clone before dangerous operations
 1. **Document your changes** - Explain why history was rewritten
 

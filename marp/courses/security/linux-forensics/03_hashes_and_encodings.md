@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - security:forensics
+  - security:security
+level: advanced
+category: security
+audience:
+  - audiences:security-professionals
+---
+
 # Hashes and Encodings
 
 ## Course: Linux Forensics - Day 2

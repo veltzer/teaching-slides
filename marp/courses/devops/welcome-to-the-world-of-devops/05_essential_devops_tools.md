@@ -1,3 +1,17 @@
+---
+tags:
+  - practices:devops
+  - practices:ci-cd
+  - practices:automation
+level: beginner
+category: devops
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+  - audiences:managers
+
+---
 # Essential DevOps Tools
 Understanding the core toolset for DevOps implementation
 

@@ -1,5 +1,18 @@
+---
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
+  - practices:performance
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+
+---
 # Spark Optimization and Tuning
 
+---
 ## Performance Overview
 
 1. Memory Management

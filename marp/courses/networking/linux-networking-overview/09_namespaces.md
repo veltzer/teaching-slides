@@ -1,3 +1,16 @@
+---
+tags:
+  - networking:namespaces
+  - infrastructure:linux
+  - infrastructure:containers
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Linux Namespaces
 ## Chapter 9: Resource Isolation and Control Groups
 

@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Generic Types and Traits
 ## Chapter 6: Abstraction and Code Reuse
 

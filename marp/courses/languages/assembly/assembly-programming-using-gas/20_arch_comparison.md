@@ -1,12 +1,25 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Comparison with Other Architectures
 
 ---
+
 ## ARM Assembly Basics
 - Reduced Instruction Set Computing (RISC)
 - Used in mobile devices, embedded systems
 - Different syntax and conventions from x86
 
 ---
+
 ## ARM vs x86: Register Set
 ARM:
 - r0-r15 (general-purpose registers)
@@ -24,6 +37,7 @@ x86:
 ![Side-by-side register comparison of x86 CISC and ARM RISC architectures with roles, aliases, and key philosophy differences](svg/courses/languages/assembly/assembly-programming-using-gas/20_arch_comparison/x86_vs_arm_registers.svg)
 
 ---
+
 ## ARM Assembly Example
 
 ```arm
@@ -175,6 +189,7 @@ message:
 ```
 
 ---
+
 ## Instruction Set Comparison
 | Architecture | Add           | Load                | Branch        |
 |--------------|---------------|---------------------|---------------|
@@ -185,6 +200,7 @@ message:
 | RISC-V       | add a0, a1, a2| lw a0, 0(a1)        | bne a0, a1, label |
 
 ---
+
 ## Architectural Trade-offs
 - Performance vs Power consumption
 - Code density vs Simplicity
@@ -192,6 +208,7 @@ message:
 - Backward compatibility vs Clean design
 
 ---
+
 ## Choosing an Architecture
 - Consider target platform (mobile, desktop, server)
 - Evaluate performance requirements

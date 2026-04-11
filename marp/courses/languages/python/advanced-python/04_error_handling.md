@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:python
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Advanced Error Handling in Python
 
 ## Overview

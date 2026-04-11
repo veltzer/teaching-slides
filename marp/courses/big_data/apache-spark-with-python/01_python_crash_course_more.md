@@ -1,9 +1,18 @@
+---
+tags:
+  - languages:python
+  - data-and-ai:big-data
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Python Crash Course for Spark
 
 ---
-## Course Introduction
-
-## Overview
+## Course Overview
 - Introduction to Python programming
 - Focus on Spark-relevant concepts
 - Hands-on approach with examples
@@ -26,8 +35,6 @@
 - Practice memory-efficient coding
 
 ---
-## Python Fundamentals
-
 ## Variables and Assignment
 
 ```python
@@ -87,8 +94,6 @@ print(type(float_num))  # <class 'float'>
 ```
 
 ---
-## String Operations
-
 ## String Manipulation
 
 ```python
@@ -140,8 +145,6 @@ def extract_numbers(text):
 ```
 
 ---
-## Advanced Data Types
-
 ## Lists in Depth
 
 ```python
@@ -211,8 +214,6 @@ squares = {x: x**2 for x in range(5)}
 ```
 
 ---
-## Functional Programming
-
 ## Lambda Functions
 
 ```python
@@ -273,8 +274,6 @@ word_length = {word: len(word) for word in ['cat', 'dog', 'elephant']}
 ```
 
 ---
-## Memory Management
-
 ## Memory Efficiency
 
 ```python
@@ -317,8 +316,6 @@ def chunk_processor(data, chunk_size=1000):
 ---
 ## Exception Handling
 
-## Basic Exception Handling
-
 ```python
 # Try-except structure
 try:
@@ -357,8 +354,6 @@ def validate_data(data):
 ```
 
 ---
-## File Handling
-
 ## File Operations
 
 ```python
@@ -395,9 +390,7 @@ with open('output.csv', 'w') as file:
 ```
 
 ---
-## Best Practices for Spark
-
-## Code Organization
+## Code Organization for Spark
 
 ```python
 # Module structure
@@ -452,8 +445,6 @@ class TestDataProcessor(unittest.TestCase):
 ```
 
 ---
-## Practical Exercises
-
 ## Exercise 1: Data Processing
 
 ```python
@@ -514,8 +505,6 @@ def transform_data(data):
 ```
 
 ---
-## Summary
-
 ## Key Takeaways
 - Python fundamentals mastered
 - Data structures and their operations

@@ -19,4 +19,6 @@ audience:
 
 ---
 
+## Course Overview
+
 ![title](svg/courses/networking/linux-networking-overview/title.svg)

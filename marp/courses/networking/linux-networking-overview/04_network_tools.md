@@ -1,3 +1,16 @@
+---
+tags:
+  - networking:tools
+  - infrastructure:linux
+  - operations:monitoring
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Linux Network Command Line Tools
 ## Chapter 4: System Administration and Monitoring
 

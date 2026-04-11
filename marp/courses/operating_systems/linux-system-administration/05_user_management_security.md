@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - audiences:sysadmin
+level: intermediate
+category: operating-systems
+audience:
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # User Management and System Security
 ## Users, ACLs, PAM, SSH, and Hardening
 

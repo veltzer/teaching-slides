@@ -1,3 +1,15 @@
+---
+tags:
+  - networking:troubleshooting
+  - networking:tools
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:sysadmins
+
+---
 # Network Troubleshooting
 ## Tools and Techniques for Diagnosing Network Issues
 

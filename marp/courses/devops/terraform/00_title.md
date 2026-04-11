@@ -18,7 +18,15 @@ audience:
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
-![h:300](jpg/courses/devops/terraform/mitchell_hashimoto.jpg)
+---
+## Mitchell Hashimoto
+
+![bg left](jpg/courses/devops/terraform/mitchell_hashimoto.jpg)
+
+- Co-founder of **HashiCorp**
+- Created Terraform, Vagrant, Packer, and Consul
+- Pioneer of infrastructure as code
+- Advocate for DevOps automation
 
 ---
 

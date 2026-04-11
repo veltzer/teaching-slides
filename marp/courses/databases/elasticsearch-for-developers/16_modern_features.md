@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - data-and-ai:machine-learning
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Modern Search Features
 
 ## Vector Search, Machine Learning, and Beyond

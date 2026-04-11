@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+  - audiences:managers
+
+---
 # Git Course
 
 ---
@@ -36,10 +49,7 @@
 ---
 ## History of Git
 
-![h:300](jpg/courses/git/git/linus_torvalds.jpg)
-
----
-## History of Git
+![bg left](jpg/courses/git/git/linus_torvalds.jpg)
 
 - Created by Linus Torvalds in 2005
 - Born from Linux kernel development needs

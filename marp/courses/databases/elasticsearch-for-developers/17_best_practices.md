@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:best-practices
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Best Practices and Common Pitfalls
 
 ## Building Robust Elasticsearch Applications
@@ -1124,14 +1135,9 @@ class ElasticsearchTeamStandards:
 
 ## Continuous Improvement
 
-```python
-def improvement_cycle():
-    """Continuous improvement process"""
-
-    while True:
-        # Measure
-        metrics = collect_metrics()
-
-        # Analyze
-        bottlenecks = identify_bottlenecks
-```
+1. Measure performance metrics regularly
+1. Analyze bottlenecks and slow queries
+1. Implement targeted optimizations
+1. Test changes in staging environment
+1. Deploy with monitoring
+1. Repeat the cycle

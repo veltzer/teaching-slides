@@ -1,10 +1,23 @@
+---
+tags:
+  - tools:cmake
+  - languages:c
+  - languages:c++
+  - practices:build-systems
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Importing Dependencies in CMake
 
 ---
 
 ## CMake Dependency Management
 
-![CMake find_package Config vs Module mode, FetchContent workflow](svg/courses/build_systems/cmake/04_importing_dependencies/cmake_find_package.svg)
+![cmake_find_package](svg/courses/build_systems/cmake/04_importing_dependencies/cmake_find_package.svg)
 
 ---
 

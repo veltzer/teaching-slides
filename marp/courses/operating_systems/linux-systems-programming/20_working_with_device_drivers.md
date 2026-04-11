@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - languages:c
+  - concepts:systems-programming
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Working with Device Drivers
 
 ---

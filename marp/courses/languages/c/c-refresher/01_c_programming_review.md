@@ -1,11 +1,23 @@
+---
+tags:
+  - languages:c
+  - concepts:programming
+  - concepts:memory-management
+  - concepts:pointers
+level: intermediate
+category: language
+audience:
+  - audiences:developers
+
+---
 # C Programming Review
 
 ---
 ## Introduction to C
 
-![h:300](jpg/courses/languages/c/c-refresher/dennis_ritchie.jpg)
+![bg left](jpg/courses/languages/c/c-refresher/dennis_ritchie.jpg)
 
-- Developed by Dennis Ritchie at Bell Labs in 1972
+- Developed by **Dennis Ritchie** at Bell Labs in 1972
 - Widely used in embedded systems, operating systems, and application development
 - Known for efficiency and low-level control
 

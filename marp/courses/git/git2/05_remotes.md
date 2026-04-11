@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Remote Repositories
 
 ---
@@ -404,7 +416,7 @@ git rebase -i main  # Before creating PR
 # Update branch before merge
 git fetch origin
 git rebase origin/main
-git push --force-lease
+git push --force-with-lease
 
 # Use draft PRs for work in progress
 # Mark as "Draft" in GitHub/GitLab
@@ -434,13 +446,13 @@ git push origin main
 git fetch upstream
 git checkout main
 git rebase upstream/main
-git push origin main --force-lease
+git push origin main --force-with-lease
 
 # Sync all branches
 git fetch upstream
 git checkout main
 git reset --hard upstream/main
-git push origin main --force-lease
+git push origin main --force-with-lease
 ```
 
 ---

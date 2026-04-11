@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:unix
+  - practices:command-line
+level: beginner
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # UNIX Basics
 ## Getting Started with the Command Line
 

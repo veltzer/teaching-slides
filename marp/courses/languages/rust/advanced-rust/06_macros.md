@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Macros
 
 Declarative Macros, Procedural Macros, and Metaprogramming

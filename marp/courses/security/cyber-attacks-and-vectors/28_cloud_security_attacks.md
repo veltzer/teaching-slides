@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Cloud Security Attacks: Exploiting Misconfigured Cloud Environments
 
 ---

@@ -1,3 +1,13 @@
+---
+tags:
+  - hardware-and-embedded:embedded
+  - infrastructure:real-time
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Timing
 
 ---
@@ -826,5 +836,3 @@ void good_isr(void) {
 1. **Jitter compensation** - for periodic events
 1. **Watchdog design** - balance safety and false triggers
 1. **Debug impact** - measure and compensate
-
-Next: Object Oriented C

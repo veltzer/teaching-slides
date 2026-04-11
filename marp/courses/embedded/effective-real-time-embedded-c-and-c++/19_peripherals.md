@@ -1,3 +1,13 @@
+---
+tags:
+  - hardware-and-embedded:embedded
+  - hardware-and-embedded:hardware-programming
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Peripherals
 
 ---

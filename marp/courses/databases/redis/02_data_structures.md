@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:redis
+  - data-and-ai:nosql
+  - concepts:data-structures
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Redis Data Structures
 
 ---
@@ -483,6 +494,12 @@ Data structure efficiency (for 1 million items):
 ---
 
 ## Performance Considerations
+
+1. **Time complexity**: Most operations are O(1) or O(log N)
+1. **Memory overhead**: Each data structure has different overhead
+1. **Encoding optimization**: Redis uses compact encodings for small structures
+1. **Pipelining**: Batch multiple commands to reduce round trips
+1. **Key design**: Shorter keys save memory
 
 ---
 

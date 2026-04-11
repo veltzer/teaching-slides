@@ -1,9 +1,20 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - concepts:distributed-systems
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Cluster Management with YARN
 
 ---
-## YARN Architecture
-
-## Overview
+## YARN Architecture Overview
 - Yet Another Resource Negotiator (YARN)
 - Second generation Hadoop compute platform
 - Separates resource management from processing model
@@ -40,33 +51,24 @@
     - Managed by Node Manager
 
 ---
-## YARN Deployment Modes
-
-## Client Mode
-
----
-## YARN Deployment Modes
+## YARN Client Mode
 
 ![client_mode](svg/courses/big_data/apache-spark-with-python/06_yarn/client_mode.svg)
 
 ---
-## YARN Deployment Modes
-
-Characteristics:
+## YARN Client Mode Characteristics
 - Driver runs on client machine
 - Better for interactive applications
 - Client must stay alive
 - Good for development and debugging
 
 ---
-## Cluster Mode
+## YARN Cluster Mode
 
 ![cluster_mode](svg/courses/big_data/apache-spark-with-python/06_yarn/cluster_mode.svg)
 
 ---
-## Cluster Mode
-
-Characteristics:
+## YARN Cluster Mode Characteristics
 - Driver runs on cluster
 - Better for production
 - Client can disconnect
@@ -94,8 +96,6 @@ spark-submit \
 ```
 
 ---
-## Configuration and Tuning
-
 ## Resource Allocation
 
 ```yaml
@@ -145,8 +145,6 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
 ```
 
 ---
-## Monitoring and Debugging
-
 ## YARN Web UI
 - Resource Manager UI (port 8088)
     - Cluster overview
@@ -184,8 +182,6 @@ spark.conf.set("spark.metrics.conf.*.sink.graphite.port", "2003")
 ```
 
 ---
-## Common Issues and Solutions
-
 ## Resource Issues
 1. Container Launch Failure
 
@@ -219,8 +215,6 @@ spark.memory.storageFraction: 0.3
 ```
 
 ---
-## Debugging Tools
-
 ## Log Analysis
 ```bash
 # Aggregate logs
@@ -229,16 +223,12 @@ yarn logs -applicationId <app_id> > application_logs.txt
 grep "ERROR" application_logs.txt
 ```
 
-## Metrics Visualization
-
 ---
-## Debugging Tools
+## Metrics Visualization
 
 ![metrics_visualization](svg/courses/big_data/apache-spark-with-python/06_yarn/metrics_visualization.svg)
 
 ---
-## Best Practices
-
 ## Resource Planning
 1. Calculate Resources
 

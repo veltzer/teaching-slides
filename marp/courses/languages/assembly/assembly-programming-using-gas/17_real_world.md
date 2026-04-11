@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Real-world Applications and Projects
 
 ---
@@ -181,7 +192,9 @@ _start:
 ```
 
 ---
+
 ## Malware Analysis Techniques
+
 1. Static Analysis
     - Examine without running
     - Disassemble and analyze code structure
@@ -193,7 +206,9 @@ _start:
     - Identify hidden functionality
 
 ---
+
 ## Project Ideas
+
 1. Implement a simple encryption algorithm
 1. Write a basic bootloader
 1. Create a minimal operating system kernel

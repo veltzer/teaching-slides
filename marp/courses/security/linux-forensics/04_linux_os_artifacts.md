@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - security:forensics
+  - security:security
+level: advanced
+category: security
+audience:
+  - audiences:security-professionals
+---
+
 # Linux OS Artifacts
 
 ## Course: Linux Forensics - Day 2 (continued)

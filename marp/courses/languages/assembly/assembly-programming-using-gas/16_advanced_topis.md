@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Advanced Topics in Assembly Programming
 
 ---
@@ -30,6 +41,7 @@ fstp dword ptr [z]   ; Store result in z and pop
 ```
 
 ---
+
 ## SSE Floating-Point Operations
 
 - SIMD (Single Instruction, Multiple Data)

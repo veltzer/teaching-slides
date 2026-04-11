@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:workflows
+  - concepts:data-pipelines
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Workflow Orchestration and Data Pipelines
 ## Modern Architecture Course
 

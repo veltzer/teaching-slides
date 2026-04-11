@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Advanced Traits
 
 Trait Objects, Generics, Associated Types, and Dispatch

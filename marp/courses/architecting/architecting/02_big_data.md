@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:big-data
+  - infrastructure:cloud
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Architecting Systems for Big Data
 ## Modern Architecture Course
 

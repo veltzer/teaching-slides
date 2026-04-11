@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - audiences:sysadmin
+level: intermediate
+category: operating-systems
+audience:
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Maintaining Linux in Air-Gapped Environments (Optional)
 ## Offline Package Management, Security, and Updates
 

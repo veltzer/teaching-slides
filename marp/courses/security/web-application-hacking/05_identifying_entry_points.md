@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:web-security
+  - security:penetration-testing
+  - security:owasp
+level: advanced
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Identifying Entry Points & Server-Side Technologies
 
 ## Where to Probe and What to Expect

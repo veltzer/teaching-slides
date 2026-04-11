@@ -1,5 +1,18 @@
+---
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
+  - data-and-ai:machine-learning
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+
+---
 # Spark MLlib
 
+---
 ## Introduction to Machine Learning
 
 1. Supervised Learning

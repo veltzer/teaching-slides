@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - practices:testing
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Testing and Debugging
 ## Building Reliable Android Applications
 

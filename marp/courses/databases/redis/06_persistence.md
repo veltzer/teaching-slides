@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:redis
+  - data-and-ai:nosql
+  - concepts:persistence
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Redis Persistence
 
 ---

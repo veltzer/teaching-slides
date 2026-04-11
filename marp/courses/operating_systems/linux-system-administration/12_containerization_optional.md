@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - audiences:sysadmin
+level: intermediate
+category: operating-systems
+audience:
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Containerization (Optional)
 ## Docker, Podman, and Container Management
 

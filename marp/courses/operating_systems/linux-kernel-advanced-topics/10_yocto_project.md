@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:embedded
+  - tools:yocto
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+
+---
 # Yocto Project
 
 ---

@@ -1,5 +1,18 @@
+---
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
+  - concepts:distributed-systems
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+
+---
 # Introduction to Apache Spark
 
+---
 ## What is Big Data?
 
 1. Data that exceeds traditional processing capabilities

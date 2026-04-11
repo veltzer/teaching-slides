@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:python
+  - data-and-ai:big-data
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Python Crash Course for Spark
 
 ---
@@ -13,8 +24,6 @@
 - We'll cover essential concepts needed for Spark development
 
 ---
-## Basic Syntax
-
 ## Variables and Data Types
 
 ```python
@@ -53,8 +62,6 @@ repeated = "Hi " * 3
 ```
 
 ---
-## Data Structures
-
 ## Tuples
 
 ```python
@@ -119,8 +126,6 @@ values = person.values()
 ---
 ## Lambda Functions
 
-## Understanding Lambda Functions
-
 ```python
 # Traditional function
 def square(x):
@@ -151,8 +156,6 @@ sorted_pairs = sorted(pairs, key=lambda x: x[1])
 
 ---
 ## Python Best Practices for Spark
-
-## Code Style
 - Use meaningful variable names
 - Follow PEP 8 guidelines
 - Keep functions small and focused
@@ -170,9 +173,7 @@ data = (i**2 for i in range(1000000))
 ```
 
 ---
-## Exercise Examples
-
-## Basic Operations
+## Exercise: Basic Operations
 
 ```python
 # Exercise 1: Create a function that converts temperature

@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - security:forensics
+  - security:security
+level: advanced
+category: security
+audience:
+  - audiences:security-professionals
+---
+
 # Tools for Correct Reporting
 
 ## Course: Linux Forensics - Day 5 (continued)

@@ -1,3 +1,16 @@
+---
+tags:
+  - networking:firewall
+  - networking:security
+  - infrastructure:linux
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # TCP/IP Firewall
 ## Chapter 7: IP Filtering and Security
 

@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:machine-learning
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Emerging Technologies and Future Trends
 ## Next Generation Android Development
 

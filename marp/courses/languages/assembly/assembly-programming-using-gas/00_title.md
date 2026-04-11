@@ -18,4 +18,6 @@ audience:
 
 ---
 
+## Course Overview
+
 ![title](svg/courses/languages/assembly/assembly-programming-using-gas/title.svg)

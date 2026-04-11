@@ -1,3 +1,13 @@
+---
+tags:
+  - hardware-and-embedded:embedded
+  - infrastructure:performance
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Optimizations
 
 ---
@@ -376,12 +386,12 @@ void configure_zero_latency_irq(IRQn_Type irq) {
     // Allows priority 0 interrupts
     __set_BASEPRI(1 << (8 - __NVIC_PRIO_BITS));
 }
+```
 
 ---
 
 ## DMA Optimization
 
-```
 ```c
 // Double buffering with DMA
 typedef struct {

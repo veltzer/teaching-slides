@@ -17,4 +17,6 @@ audience:
 
 ---
 
+## Title
+
 ![title](svg/courses/languages/c/c-refresher/title.svg)

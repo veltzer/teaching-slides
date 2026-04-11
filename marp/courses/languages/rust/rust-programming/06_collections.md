@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:data-structures
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Collections
 ## Chapter 5: Working with Data Structures
 

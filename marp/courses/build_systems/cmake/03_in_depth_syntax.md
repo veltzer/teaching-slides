@@ -1,10 +1,23 @@
+---
+tags:
+  - tools:cmake
+  - languages:c
+  - languages:c++
+  - practices:build-systems
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # In-Depth CMake Syntax
 
 ---
 
 ## CMake Variables and Control Flow
 
-![CMake variables, control flow, macros and functions](svg/courses/build_systems/cmake/03_in_depth_syntax/cmake_variables_and_flow.svg)
+![cmake_variables_and_flow](svg/courses/build_systems/cmake/03_in_depth_syntax/cmake_variables_and_flow.svg)
 
 ---
 

@@ -1,6 +1,21 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Password Security and Access Management
 
+---
+
 ## Why Passwords Matter
+
 - Passwords are the keys to your digital life
 - 81% of hacking-related breaches use stolen or weak passwords
 - One compromised password can unlock multiple accounts
@@ -8,9 +23,7 @@
 
 ---
 
-## What Makes a Bad Password?
-
-## The Most Common Passwords (Still!)
+## Most Common Passwords (Still!)
 
 | Rank | Password | Time to Crack |
 |------|----------|---------------|
@@ -53,15 +66,13 @@ Excellent:  correct-horse-battery-staple
 
 ---
 
-## Creating Strong Passwords
-
-## The Passphrase Method
+## Creating Strong Passwords: The Passphrase Method
 - Pick 4-5 random, unrelated words
 - Add a number or symbol between them
 - Example: `purple-hammer-cloud-bicycle-9`
 - Easy to remember, hard to crack
 
-## Rules to Follow
+### Rules to Follow
 - Minimum 12 characters (16+ is better)
 - Never reuse passwords across accounts
 - Never use personal information
@@ -70,14 +81,12 @@ Excellent:  correct-horse-battery-staple
 ---
 
 ## Password Managers
-
-## What They Do
 - Store all your passwords in one encrypted vault
 - Generate strong, unique passwords for every account
 - Auto-fill login forms securely
 - You only need to remember one master password
 
-## Recommended by Our Organization
+### Recommended by Our Organization
 - Use the company-approved password manager
 - Store work passwords only in the approved tool
 - Never store passwords in browsers, sticky notes, or spreadsheets
@@ -91,8 +100,6 @@ Excellent:  correct-horse-battery-staple
 ---
 
 ## Multi-Factor Authentication (MFA)
-
-## What Is `MFA`?
 - Something you **know** (password)
 - Something you **have** (phone, security key)
 - Something you **are** (fingerprint, face)
@@ -101,9 +108,7 @@ Using two or more of these factors dramatically improves security
 
 ---
 
-## MFA in Practice
-
-## Common Second Factors
+## MFA in Practice: Common Second Factors
 
 | Method | Security Level | Convenience |
 |--------|---------------|-------------|
@@ -119,13 +124,11 @@ Using two or more of these factors dramatically improves security
 ---
 
 ## Role-Based Access Control (`RBAC`)
-
-## The Principle of Least Privilege
 - You should only have access to what you need for your job
 - No more, no less
 - If you change roles, your access should be updated
 
-## Why This Matters
+### Why This Matters
 - Limits damage if your account is compromised
 - Reduces accidental exposure of sensitive data
 - Meets compliance requirements (`GDPR`, `SOX`, `HIPAA`)

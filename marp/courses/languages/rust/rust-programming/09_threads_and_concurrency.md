@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:concurrency
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Threads and Concurrency
 ## Chapter 8: Parallel Programming in Rust
 

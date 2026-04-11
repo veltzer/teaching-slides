@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Rust Libraries and Advanced Exercises
 
 Error Handling, Utilities, HTTP, Web Programming, and Async

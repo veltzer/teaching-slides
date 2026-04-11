@@ -1,3 +1,16 @@
+---
+tags:
+  - networking:security
+  - networking:firewall
+  - networking:vpn
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:sysadmins
+
+---
 # Network Security Basics
 ## Encryption, Firewalls, and VPNs
 

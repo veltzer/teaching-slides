@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:memory-management
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Understanding Ownership
 ## Chapter 3: Rust's Unique Memory Management
 

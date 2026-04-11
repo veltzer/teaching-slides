@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:python
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Exceptions
 
 ---

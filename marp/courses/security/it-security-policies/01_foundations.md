@@ -1,6 +1,21 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Foundation of Information Security
 
+---
+
 ## Course Overview
+
 - IT Security Policies for all employees
 - One-day course covering essential security awareness
 - No technical background required
@@ -17,9 +32,7 @@
 
 ---
 
-## Real-World Impact
-
-## Notable Breaches Caused by Human Error
+## Real-World Impact: Notable Breaches
 
 | Company | Year | Cause | Impact |
 |---------|------|-------|--------|
@@ -76,8 +89,6 @@ The three pillars of information security:
 ---
 
 ## Common Threat Landscape
-
-## Types of Threats
 
 - **Phishing** - deceptive emails or messages
 - **Malware** - viruses, ransomware, spyware

@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - languages:java
+  - concepts:mobile-development
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Advanced Java for Android
 ## Advanced Features and Modern Patterns
 
@@ -73,21 +84,13 @@ List<String> sorted = names.stream()
 
 ---
 
-## Stream API
-
-### Data Processing Pipeline
-
----
-
-## Stream API
+## Stream API - Data Processing Pipeline
 
 ![data_processing_pipeline](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/data_processing_pipeline.svg)
 
 ---
 
-## Stream API
-
-Example:
+## Stream API Example
 ```java
 List<User> activeAdmins = users.stream()
     .filter(User::isActive)

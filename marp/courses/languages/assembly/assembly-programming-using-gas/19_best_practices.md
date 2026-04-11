@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Best Practices and Coding Standards
 
 ---
@@ -27,6 +38,7 @@ Example:
 ```
 
 ---
+
 ## Naming Conventions
 
 - Use descriptive names for labels and variables
@@ -44,6 +56,7 @@ current_index: .long 0
 ```
 
 ---
+
 ## Commenting
 
 - Comment your code thoroughly
@@ -72,6 +85,7 @@ factorial:
 ```
 
 ---
+
 ## Modular Programming
 
 - Break code into reusable functions
@@ -91,6 +105,7 @@ add_numbers:
 ```
 
 ---
+
 ## Consistent Register Usage
 
 - Use registers consistently across your program
@@ -106,6 +121,7 @@ Example:
 ```
 
 ---
+
 ## Proper Alignment
 - Align data for optimal performance
 - Use appropriate directives
@@ -119,6 +135,7 @@ sse_data:
 ```
 
 ---
+
 ## Error Handling in Assembly
 - Use conditional jumps for error checking
 - Set error codes in a consistent manner
@@ -196,6 +213,7 @@ Example:
 ```
 
 ---
+
 ## Avoid Self-Modifying Code
 
 - Self-modifying code is hard to maintain

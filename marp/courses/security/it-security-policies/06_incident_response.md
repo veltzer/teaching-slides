@@ -1,4 +1,18 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Incident Response and Reporting
+
+---
 
 ## When Things Go Wrong
 - No security system is 100% effective
@@ -42,8 +56,6 @@
 ---
 
 ## Step 1: Detect and Identify
-
-## How to Recognize an Incident
 - Unexpected pop-ups or system behavior
 - Files that have been encrypted or renamed
 - Accounts locked out without reason
@@ -57,8 +69,6 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Step 2: Contain the Damage
-
-## What You Can Do Immediately
 - **Do not turn off your computer** (it may destroy evidence)
 - Disconnect from Wi-Fi or unplug the network cable
 - Do not log into other accounts from the affected device
@@ -75,8 +85,6 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Reporting: What to Say
-
-## Template for Reporting an Incident
 - **What happened**: "I clicked a link in an email and was taken to a login page that looked suspicious"
 - **When**: "Today at 2:15 PM"
 - **What system/device**: "My work laptop, Windows, connected to office Wi-Fi"
@@ -101,8 +109,6 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Business Continuity Planning
-
-## What Is Business Continuity?
 - The plan for keeping the business running during and after a disruption
 - Covers scenarios like:
     - Cyberattack (ransomware, data breach)
@@ -122,9 +128,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ---
 
-## Disaster Recovery
-
-## `RTO` and `RPO` Explained
+## Disaster Recovery: `RTO` and `RPO`
 
 ---
 
@@ -157,8 +161,6 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## Ransomware: The Growing Threat
 
-## What Happens in a Ransomware Attack
-
 ---
 
 ## Ransomware: The Growing Threat
@@ -188,15 +190,13 @@ Trust your instincts - **if something feels wrong, report it**
 ---
 
 ## Lessons from Real Incidents
-
-## What We Learn After Every Incident
 - Root cause analysis identifies what went wrong
 - Improvements are made to prevent recurrence
 - Policies and procedures are updated
 - Additional training is provided if needed
 - No incident is wasted if we learn from it
 
-## Common Root Causes
+### Common Root Causes
 - Phishing email clicked (most common)
 - Weak or reused passwords
 - Unpatched software

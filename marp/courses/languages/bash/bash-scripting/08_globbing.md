@@ -1,3 +1,16 @@
+---
+tags:
+  - languages:bash
+  - practices:scripting
+  - infrastructure:linux
+  - practices:automation
+level: intermediate
+category: language
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+---
 # Globbing
 
 ---

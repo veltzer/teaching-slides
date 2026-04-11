@@ -1,4 +1,18 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Security Best Practices
+
+---
 
 ## Building a Security-First Culture
 - Security is not a one-time event - it is a daily habit
@@ -9,13 +23,11 @@
 ---
 
 ## Clean Desk Policy
-
-## Why It Matters
 - Sensitive documents left on desks can be seen or stolen
 - Unlocked screens expose company data to anyone walking by
 - Visitors, cleaning staff, and even colleagues may see things they should not
 
-## The Rules
+### The Rules
 - Lock your screen every time you leave your desk (`Win+L` or `Ctrl+Cmd+Q`)
 - Put away sensitive documents in locked drawers
 - Shred documents you no longer need
@@ -31,8 +43,6 @@
 ---
 
 ## Physical Security
-
-## Protecting the Physical Space
 - Do not let strangers tailgate through secure doors
 - Politely challenge unfamiliar faces in restricted areas
 - Wear your badge visibly at all times
@@ -56,8 +66,6 @@
 ---
 
 ## Social Media Security
-
-## What Attackers Learn from Your Posts
 - Where you work and what you do
 - When you are traveling (home is empty)
 - Names of colleagues and managers
@@ -118,13 +126,11 @@
 ---
 
 ## Third-Party Vendor Security
-
-## Supply Chain Risk
 - Your organization is only as secure as its weakest partner
 - Vendors with access to your systems or data are a risk
 - Major breaches have occurred through vendor access
 
-## Your Role
+### Your Role
 - Only grant vendors the minimum access they need
 - Ensure vendors follow your company's security policies
 - Report if a vendor asks for unusual access
@@ -146,14 +152,12 @@
 ---
 
 ## Travel Security
-
-## Before You Travel
 - Back up your data before leaving
 - Only bring devices you actually need
 - Enable device encryption and remote wipe
 - Know how to contact IT security from abroad
 
-## During Travel
+### During Travel
 - Never leave devices unattended
 - Use a `VPN` for all connections
 - Be cautious of public charging stations ("juice jacking")
@@ -163,14 +167,12 @@
 ---
 
 ## AI and Chatbot Security
-
-## New Risks from AI Tools
 - Do not paste confidential data into public AI chatbots
 - Do not upload company documents to external AI services
 - AI-generated phishing emails are more convincing than ever
 - Deepfake audio and video can impersonate colleagues
 
-## Guidelines
+### Guidelines
 - Use only company-approved AI tools
 - Treat AI output with the same caution as any external source
 - Verify any AI-generated instructions through official channels
@@ -178,9 +180,7 @@
 
 ---
 
-## Security Awareness for Daily Habits
-
-## The Security Mindset Checklist
+## Security Awareness: The Mindset Checklist
 
 - Before clicking a link: "Is this expected? Is the source trustworthy?"
 - Before sharing data: "Does this person need this? Am I using a secure channel?"
@@ -210,8 +210,6 @@
 
 ## Course Summary
 
-## What We Covered Today
-
 1. **Foundations** - CIA triad, common threats, your role
 1. **Passwords** - strong passwords, `MFA`, password managers
 1. **Email** - phishing detection, safe email practices
@@ -239,6 +237,8 @@ Security is a team effort. Every good decision you make protects not just you, b
 - What questions do you have?
 - What scenarios from your work would you like to discuss?
 - What security challenges do you face in your daily role?
+
+---
 
 ## Resources
 - Company security policy portal

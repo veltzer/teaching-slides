@@ -82,11 +82,11 @@ void chronoExample() {
 ## Creating Strongly Typed Primitive Types
 
 Goals for custom primitive types:
-1. 1. 1. Type safety - prevent mixing with other types
-1. 1. 1. Range validation - ensure values are within valid range
-1. 1. 1. Self-documenting - clear semantics through type names
-1. 1. 1. Natural usage - appropriate operators and conversions
-1. 1. 1. Efficient - minimal runtime overhead
+1. Type safety - prevent mixing with other types
+1. Range validation - ensure values are within valid range
+1. Self-documenting - clear semantics through type names
+1. Natural usage - appropriate operators and conversions
+1. Efficient - minimal runtime overhead
 
 ---
 
@@ -914,8 +914,8 @@ void preventImplicitConversions() {
 
 ## Lab Exercises
 
-1. 1. 1. Create a strong `EmailAddress` type with validation
-1. 1. 1. Implement a unit-safe `Velocity` class with operators
-1. 1. 1. Design a template for creating strong ID types
-1. 1. 1. Create a money type with proper rounding semantics
-1. 1. 1. Implement a physical quantity system with dimensional analysis
+1. Create a strong `EmailAddress` type with validation
+1. Implement a unit-safe `Velocity` class with operators
+1. Design a template for creating strong ID types
+1. Create a money type with proper rounding semantics
+1. Implement a physical quantity system with dimensional analysis

@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:unix
+  - languages:shell
+level: beginner
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Shell Scripting Introduction
 ## Getting Started with Shell Programming
 

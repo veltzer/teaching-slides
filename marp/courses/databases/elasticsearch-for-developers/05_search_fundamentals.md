@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:api
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Search Fundamentals
 
 ## Building Powerful Search Queries

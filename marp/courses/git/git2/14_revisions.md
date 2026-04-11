@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: advanced
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Understanding Revisions (gitrevisions)
 
 ---

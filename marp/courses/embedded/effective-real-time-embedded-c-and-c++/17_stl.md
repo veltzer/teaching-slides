@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:c++
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # The Standard Template Library
 
 ---
@@ -157,12 +166,12 @@ auto range = s.equal_range(3);  // [lower, upper)
 // Custom comparator
 std::set<int, std::greater<int>> descending;
 descending.insert({3, 1, 4, 1, 5});  // {5, 4, 3, 1}
+```
 
 ---
 
 ## Map Usage
 
-```
 ```cpp
 // Map - key-value pairs
 std::map<std::string, int> ages;

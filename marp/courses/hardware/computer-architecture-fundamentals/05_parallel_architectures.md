@@ -1,3 +1,16 @@
+---
+tags:
+  - concepts:parallelism
+  - concepts:computer-architecture
+  - concepts:gpu
+  - concepts:simd
+level: beginner
+category: hardware
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Parallel Architectures
 
 ---

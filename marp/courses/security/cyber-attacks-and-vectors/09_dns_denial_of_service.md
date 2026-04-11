@@ -1,11 +1,27 @@
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # DNS Denial of Service
 
-## DNS (Domain Name System) is a critical component of the internet, responsible for translating human-readable domain names into IP addresses. However, this essential service is vulnerable to various types of attacks, including Denial of Service (DoS) attacks
-
 ---
+
 ## What is a DNS DoS Attack
 
-### A DNS DoS attack is a type of cyber-attack that aims to disrupt or overwhelm the DNS servers, making them unavailable to legitimate users and clients. The attack typically involves flooding the DNS servers with a massive amount of bogus requests, consuming all available resources and preventing the server from responding to genuine requests
+- A DNS DoS attack aims to disrupt or overwhelm DNS servers
+- Makes DNS unavailable to legitimate users and clients
+- Typically involves flooding DNS servers with massive bogus requests
+- Consumes all available resources, preventing genuine request processing
+- DNS is a critical internet component, translating domain names to IP addresses
 
 ---
 ## Types of DNS DoS Attacks
@@ -138,6 +154,11 @@ dnsperf -s 127.0.0.1 -d queryfile.txt -c 100 -Q 10000
 # -Q: queries per second limit
 ```
 
+---
+
 ## Conclusion
 
-DNS DoS attacks can have severe consequences for businesses and organizations that rely on online services. By understanding the different types of attacks and implementing appropriate mitigation strategies, organizations can enhance the resilience and availability of their DNS infrastructure, ensuring uninterrupted access to their online services.
+- DNS DoS attacks can severely impact businesses relying on online services
+- Understanding different attack types enables effective mitigation
+- Implement rate limiting, Anycast DNS, and monitoring
+- Organizations must enhance DNS infrastructure resilience

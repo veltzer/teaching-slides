@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - audiences:sysadmin
+level: intermediate
+category: operating-systems
+audience:
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Wireshark Network Analysis (Optional)
 ## Packet Capture, Filtering, and Protocol Analysis
 

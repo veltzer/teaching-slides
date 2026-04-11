@@ -1,3 +1,18 @@
+---
+tags:
+  - practices:devops
+  - tools:terraform
+  - infrastructure:infrastructure-as-code
+  - infrastructure:cloud
+  - tools:terragrunt
+level: intermediate
+category: devops
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Security and Terraform
 
 ## Security Concerns with Terraform

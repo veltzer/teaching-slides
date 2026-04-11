@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:messaging
+  - concepts:distributed-systems
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Queues in Distributed Systems
 ## Modern Architecture Course
 
@@ -9,9 +21,9 @@
 1. Queue Types and Patterns
 1. Message Ordering and Delivery
 1. Queue Systems Deep Dive
-   - RabbitMQ
-   - Apache Kafka
-   - Amazon SQS
+    - RabbitMQ
+    - Apache Kafka
+    - Amazon SQS
 1. Advanced Concepts
 
 ---

@@ -3,20 +3,24 @@
 """
 Install the canonical palette into every SVG under svg/.
 
-Reads resources/palette.yaml and for each SVG:
-  1. Injects a <style> block with CSS custom properties (--bg, --primary, etc.)
-  2. Injects gradient, filter, and marker <defs> entries
-  3. Converts raw hex color values in attributes to var(--name) references
-  4. Converts named CSS colors (white, black, red, etc.) to var(--name)
-  5. Renames old gradient/marker IDs to canonical ones
+Each SVG is stamped with a <!-- palette: path/to/palette.yaml --> comment
+so that check_svg.py knows which palette to validate against.
+
+For each SVG:
+  1. Stamps a <!-- palette: ... --> comment (or updates an existing one)
+  2. Injects a <style> block with CSS custom properties (--bg, --primary, etc.)
+  3. Injects gradient, filter, and marker <defs> entries
+  4. Converts raw hex color values in attributes to var(--name) references
+  5. Converts named CSS colors (white, black, red, etc.) to var(--name)
+  6. Renames old gradient/marker IDs to canonical ones
 
 The <style> block and defs entries are placed inside a <defs> block
 at the top of the SVG. Custom SVG-specific defs are preserved.
 
 Usage:
-    scripts/install_palette.py                  # dry-run
-    scripts/install_palette.py --apply          # write changes
-    scripts/install_palette.py --apply svg/...  # specific files only
+    scripts/install_palette.py                                    # dry-run, diagram palette
+    scripts/install_palette.py --apply                            # apply diagram palette to all
+    scripts/install_palette.py --palette resources/palette_intro.yaml --apply svg/courses/**/title.svg
 """
 
 import argparse
@@ -26,8 +30,11 @@ from pathlib import Path
 
 import yaml
 
-PALETTE_PATH = Path("resources/palette.yaml")
+DEFAULT_PALETTE = Path("resources/palette_diagram.yaml")
 SVG_ROOT = Path("svg")
+
+# Regex to find/replace the palette comment stamped into SVGs
+_PALETTE_COMMENT_RE = re.compile(r'<!--\s*palette:\s*(\S+)\s*-->')
 
 # Canonical IDs that the palette owns
 PALETTE_IDS: set[str] = {
@@ -98,9 +105,9 @@ _STYLE_BLOCK_RE = re.compile(
 )
 
 
-def _load_palette() -> dict:
+def _load_palette(path: Path) -> dict:
     """Load and return the palette data from YAML."""
-    with open(PALETTE_PATH, encoding="utf-8") as f:
+    with open(path, encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
@@ -330,8 +337,22 @@ def _merge_defs(svg_text: str, palette_block: str) -> str:
     return svg_text
 
 
+def _stamp_palette_comment(text: str, palette_path: Path) -> str:
+    """Insert or update the <!-- palette: path --> comment after the <svg> tag."""
+    comment = f'<!-- palette: {palette_path} -->'
+    existing = _PALETTE_COMMENT_RE.search(text)
+    if existing:
+        return text[:existing.start()] + comment + text[existing.end():]
+    # Insert right after the opening <svg ...> tag
+    svg_m = _SVG_OPEN_RE.search(text)
+    if svg_m:
+        return text[:svg_m.end()] + '\n  ' + comment + text[svg_m.end():]
+    return text
+
+
 def process_file(
     path: Path,
+    palette_path: Path,
     palette_block: str,
     hex_to_name: dict[str, str],
     apply: bool,
@@ -339,13 +360,16 @@ def process_file(
     """Process one SVG. Returns True if the file would/did change."""
     original = path.read_text(encoding="utf-8")
 
-    # Step 1: rename old IDs
-    updated = _apply_renames(original)
+    # Step 1: stamp palette comment
+    updated = _stamp_palette_comment(original, palette_path)
 
-    # Step 2: convert hex colors to var() references
+    # Step 2: rename old IDs
+    updated = _apply_renames(updated)
+
+    # Step 3: convert hex colors to var() references
     updated = _convert_colors_to_vars(updated, hex_to_name)
 
-    # Step 3: merge palette defs (style block + gradients + markers)
+    # Step 4: merge palette defs (style block + gradients + markers)
     updated = _merge_defs(updated, palette_block)
 
     if updated == original:
@@ -369,13 +393,16 @@ def main() -> None:
                         help="SVG files to process (default: all under svg/)")
     parser.add_argument("--apply", action="store_true",
                         help="Write changes to disk (default is dry-run)")
+    parser.add_argument("--palette", type=Path, default=DEFAULT_PALETTE,
+                        help=f"Palette YAML to install (default: {DEFAULT_PALETTE})")
     args = parser.parse_args()
 
-    if not PALETTE_PATH.exists():
-        print(f"Error: {PALETTE_PATH} not found", file=sys.stderr)
+    palette_path = args.palette
+    if not palette_path.exists():
+        print(f"Error: {palette_path} not found", file=sys.stderr)
         sys.exit(1)
 
-    data = _load_palette()
+    data = _load_palette(palette_path)
     hex_to_name = _build_hex_to_name(data)
     style_block = _generate_style_block(data)
     defs_content = _generate_defs_content(data)
@@ -389,7 +416,7 @@ def main() -> None:
 
     for path in svg_files:
         try:
-            if process_file(path, palette_block, hex_to_name, args.apply):
+            if process_file(path, palette_path, palette_block, hex_to_name, args.apply):
                 changed.append(path)
         except Exception as exc:
             errors.append((path, exc))

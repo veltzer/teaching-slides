@@ -18,4 +18,6 @@ audience:
 
 ---
 
+## Course Overview
+
 ![title](svg/courses/hardware/computer-architecture-fundamentals/title.svg)

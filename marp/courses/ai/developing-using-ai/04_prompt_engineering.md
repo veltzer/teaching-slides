@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: intermediate
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Prompt Engineering for Developers
 
 ---
@@ -604,9 +616,6 @@ Analyze this code and provide results in this exact format:
 - [ ] [Specific action item]
 
 ## Code Fixes
-
-```
-```template
 [Fixed code here]
 
 ## Estimated Impact
@@ -642,10 +651,6 @@ Team standards: {guidelines}
 ---
 
 ## Context Window Management
-
----
-
-## Prompt Templates Library
 
 ![context_window_management](svg/courses/ai/developing-using-ai/04_prompt_engineering/context_window_management.svg)
 

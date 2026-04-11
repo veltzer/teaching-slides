@@ -1,5 +1,17 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - concepts:streaming
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Spark Streaming
-## Introduction to Spark Streaming
 
 ---
 ## What is Spark Streaming
@@ -33,8 +45,6 @@
     - GraphX for graph processing
 
 ---
-## DStream (Discretized Stream)
-
 ## DStream Basics
 - Continuous sequence of RDDs
 - Each RDD contains data from a specific interval
@@ -63,9 +73,7 @@ kafka_stream = KafkaUtils.createDirectStream(ssc,
 ```
 
 ---
-## DStream Operations
-
-## Transformations
+## DStream Transformations
 
 ```python
 # Basic transformations
@@ -105,8 +113,6 @@ word_counts.foreachRDD(lambda rdd: rdd.foreachPartition(save_to_db))
 ![window_operations](svg/courses/big_data/apache-spark-with-python/03_streaming/window_operations.svg)
 
 ---
-## Stateful Operations
-
 ## UpdateStateByKey
 
 ```python
@@ -119,6 +125,7 @@ def update_function(new_values, running_count):
 running_counts = pairs.updateStateByKey(update_function)
 ```
 
+---
 ## MapWithState
 
 ```python
@@ -128,8 +135,6 @@ state_stream = stream.mapWithState(state_spec)
 ```
 
 ---
-## Use Cases
-
 ## Real-time Analytics Dashboard
 
 ```python
@@ -177,8 +182,6 @@ avg_response = response_times.meanByWindow(60, 10)
 ```
 
 ---
-## Performance Tuning
-
 ## Batch Size Optimization
 - Smaller batches: lower latency but higher overhead
 - Larger batches: higher throughput but increased latency
@@ -209,8 +212,6 @@ conf = SparkConf().set("spark.streaming.backpressure.enabled", "true")
 ```
 
 ---
-## Error Handling and Recovery
-
 ## Checkpointing
 
 ```python
@@ -222,7 +223,7 @@ reliable_stream = ssc.receiverStream(reliable_receiver)
 ```
 
 ---
-### Error Recovery
+## Error Recovery
 
 ```python
 def create_context():
@@ -235,8 +236,6 @@ context = StreamingContext.getOrCreate(checkpoint_dir, create_context)
 ```
 
 ---
-## Monitoring and Debugging
-
 ## Metrics Collection
 
 ```python
@@ -267,8 +266,6 @@ ssc.addStreamingListener(CustomListener())
     - Monitor garbage collection
 
 ---
-## Integration Patterns
-
 ## Kafka Integration
 
 ```python
@@ -282,7 +279,7 @@ stream = directKafkaStream.transform(lambda rdd: process_with_exactly_once(rdd))
 ```
 
 ---
-### Database Integration
+## Database Integration
 
 ```python
 def save_partition(partition):
@@ -297,9 +294,7 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
 ```
 
 ---
-## Best Practices
-
-### Production Deployment
+## Production Deployment Best Practices
 1. Monitoring Setup
     - Implement custom metrics
     - Set up alerting
@@ -310,8 +305,7 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
     - Log error details
 
 ---
-
-1. Testing
+## Testing Streaming Applications
 
 ```python
 # Unit testing streams

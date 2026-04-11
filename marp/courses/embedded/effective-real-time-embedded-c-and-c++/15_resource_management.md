@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:c++
+  - design-patterns:raii
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # C++ Resource Management
 
 ---

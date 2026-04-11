@@ -1,5 +1,18 @@
+---
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
+  - concepts:graph-processing
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+
+---
 # Graph Processing with GraphX
 
+---
 ## Introduction to Graph Computation
 
 1. Vertices and Edges

@@ -174,12 +174,12 @@ void performanceExample() {
 ## Compiler Synthesized Member Functions
 
 In C++11, compiler can synthesize:
-1. 1. 1. Default constructor
-1. 1. 1. Destructor
-1. 1. 1. Copy constructor
-1. 1. 1. Copy assignment operator
-1. 1. 1. Move constructor
-1. 1. 1. Move assignment operator
+1. Default constructor
+1. Destructor
+1. Copy constructor
+1. Copy assignment operator
+1. Move constructor
+1. Move assignment operator
 
 Default behavior:
 - Performs memberwise copy/move for each member

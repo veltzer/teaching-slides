@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - concepts:kernel
+  - concepts:boot
+  - concepts:performance
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+
+---
 # Kernel Boot Time Optimization
 
 ---

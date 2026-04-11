@@ -1,14 +1,27 @@
+---
+tags:
+  - tools:make
+  - languages:c
+  - practices:build-systems
+  - infrastructure:linux
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+
+---
 # Advanced Features
 
 ---
 
 ## GNU Make Advanced Features
 
-![GNU Make pattern rules, automatic variables, functions, conditionals, parallel builds](svg/courses/build_systems/make/04_advanced_features/make_advanced_features.svg)
+![make_advanced_features](svg/courses/build_systems/make/04_advanced_features/make_advanced_features.svg)
 
 ---
 
 ## Overview
+
 - Pattern rules and implicit rules
 - Functions for string manipulation
 - Conditionals
@@ -19,7 +32,6 @@
 
 ## Pattern Rules
 
-## Generic Rules with %
 ```makefile
 # Pattern rule for C files
 %.o: %.c
@@ -34,9 +46,8 @@ The `%` matches any non-empty string.
 
 ---
 
-## Pattern Rules
+## Pattern Rules - Multiple Patterns
 
-## Multiple Patterns
 ```makefile
 # Generate .d dependency files
 %.d: %.c
@@ -55,8 +66,7 @@ The `%` matches any non-empty string.
 
 ## Implicit Rules
 
-## Built-in Pattern Rules
-Make has built-in rules for common tasks:
+- Make has built-in rules for common tasks:
 
 ```makefile
 # These are implicit (you don't need to write them)
@@ -76,7 +86,6 @@ make -p | grep -A2 "%.o"
 
 ## Disabling Implicit Rules
 
-## When You Need Control
 ```makefile
 # Cancel implicit rule with empty recipe
 %.o: %.c
@@ -90,7 +99,6 @@ MAKEFLAGS += --no-builtin-rules
 
 ## Static Pattern Rules
 
-## More Specific Patterns
 ```makefile
 OBJECTS = foo.o bar.o baz.o
 
@@ -108,7 +116,6 @@ $(TEST_OBJS): %.o: %.c
 
 ## String Functions
 
-## Text Manipulation
 ```makefile
 FILES := foo.c bar.c baz.c
 
@@ -125,7 +132,6 @@ $(filter-out %.c,$(FILES))   # (empty)
 
 ## More String Functions
 
-## Common Operations
 ```makefile
 FILES := src/foo.c src/bar.c
 
@@ -142,7 +148,6 @@ $(addprefix build/,$(notdir $(FILES)))
 
 ## Wildcard Function
 
-## Finding Files
 ```makefile
 # Find all C files in current directory
 SRCS := $(wildcard *.c)
@@ -158,7 +163,6 @@ SRCS := $(shell find src -name '*.c')
 
 ## Shell Function
 
-## Running Commands
 ```makefile
 # Get current date
 DATE := $(shell date +%Y%m%d)
@@ -176,7 +180,6 @@ VERSION := $(shell cat VERSION)
 
 ## Conditionals
 
-## If Statements
 ```makefile
 DEBUG ?= 0
 
@@ -194,7 +197,6 @@ program: main.c
 
 ## Conditional Syntax
 
-## Various Forms
 ```makefile
 # Check equality
 ifeq ($(VAR),value)
@@ -215,9 +217,8 @@ endif
 
 ---
 
-## Conditional Example
+## Conditional Example - Platform-Specific Builds
 
-## Platform-Specific Builds
 ```makefile
 UNAME := $(shell uname)
 
@@ -238,7 +239,6 @@ endif
 
 ## Include Directive
 
-## Splitting Makefiles
 ```makefile
 # Include other makefiles
 include config.mk
@@ -253,7 +253,6 @@ include rules.mk
 
 ## Auto-Generated Dependencies
 
-## Tracking Header Dependencies
 ```makefile
 SRCS := main.c utils.c
 DEPS := $(SRCS:.c=.d)
@@ -270,7 +269,6 @@ DEPS := $(SRCS:.c=.d)
 
 ## Parallel Builds
 
-## Using -j Flag
 ```bash
 # Use 4 parallel jobs
 make -j4
@@ -286,7 +284,6 @@ make -j
 
 ## Parallel Build Issues
 
-## Order Dependencies
 ```makefile
 # Problem: both might run simultaneously
 clean:
@@ -306,7 +303,6 @@ setup:
 
 ## Order-Only Prerequisites
 
-## The Pipe Syntax
 ```makefile
 # Normal: rebuild if dir timestamp changes
 output.o: output.c build
@@ -324,7 +320,6 @@ After `|`, prerequisites only need to exist, not be newer.
 
 ## Recursive Make
 
-## Building Subdirectories
 ```makefile
 SUBDIRS := lib app tests
 
@@ -345,7 +340,6 @@ clean:
 
 ## Recursive Make Issues
 
-## Problems and Solutions
 ```makefile
 # Problem: each submake is independent
 # Can't share dependency information
@@ -362,7 +356,6 @@ app/main.o: app/main.c lib/utils.h
 
 ## Secondary Expansion
 
-## Two-Phase Parsing
 ```makefile
 .SECONDEXPANSION:
 
@@ -377,7 +370,6 @@ $(OBJECTS): $$(patsubst %.o,%.c,$$@)
 
 ## Eval Function
 
-## Dynamic Rule Generation
 ```makefile
 define PROGRAM_template
 $(1): $$($(1)_OBJS)
@@ -395,7 +387,6 @@ $(eval $(call PROGRAM_template,server))
 
 ## Summary
 
-## Advanced Features Covered
 - Pattern rules with `%` for generic building
 - String and path manipulation functions
 - Conditionals for platform-specific builds

@@ -1,3 +1,17 @@
+---
+tags:
+  - tools:github
+  - practices:ci-cd
+  - practices:automation
+  - practices:devops
+level: intermediate
+category: devops
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:managers
+
+---
 # Environment Management
 
 ---

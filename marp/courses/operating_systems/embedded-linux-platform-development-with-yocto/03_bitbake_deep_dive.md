@@ -1,3 +1,16 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:embedded
+  - tools:yocto
+  - tools:bitbake
+level: advanced
+category: embedded
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # BitBake Deep Dive
 
 ---

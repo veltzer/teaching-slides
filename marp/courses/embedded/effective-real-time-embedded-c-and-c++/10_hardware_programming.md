@@ -1,3 +1,13 @@
+---
+tags:
+  - hardware-and-embedded:embedded
+  - hardware-and-embedded:hardware-programming
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Hardware Programming Model
 
 ---
@@ -274,12 +284,12 @@ void PendSV_Handler(void) {
         deferred_tail = (deferred_tail + 1) % MAX_DEFERRED;
     }
 }
+```
 
 ---
 
 ## Critical Sections in ISRs
 
-```
 ```c
 // Interrupt-safe critical sections
 uint32_t enter_critical_from_isr(void) {

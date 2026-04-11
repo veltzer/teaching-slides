@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:concurrency
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Async Programming
 ## Chapter 9: Asynchronous Programming in Rust
 

@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - security:forensics
+  - security:security
+level: advanced
+category: security
+audience:
+  - audiences:security-professionals
+---
+
 # Advanced Linux OS Analysis
 
 ## Course: Linux Forensics - Day 4 (continued)

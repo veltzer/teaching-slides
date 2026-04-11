@@ -1,3 +1,17 @@
+---
+tags:
+  - practices:devops
+  - concepts:architecture
+  - practices:ci-cd
+  - infrastructure:infrastructure-as-code
+level: advanced
+category: devops
+audience:
+  - audiences:architects
+  - audiences:devops
+  - audiences:managers
+
+---
 # Service Mesh Decisions
 - Understanding when and how to adopt a service mesh
 - Evaluating trade-offs between complexity, performance, and operational benefits

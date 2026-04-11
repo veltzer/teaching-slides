@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:redis
+  - data-and-ai:nosql
+  - concepts:integration
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Integrating Redis with Applications
 
 ---
@@ -928,10 +939,25 @@ app.listen(3000, () => {
 
 ## Error Handling and Resilience
 
-Robust Redis integration requires:
+![error_handling_and_resilience](svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)
 
 ---
 
-## Error Handling and Resilience
+## Error Handling Best Practices
 
-![error_handling_and_resilience](svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)
+1. Implement connection retry with exponential backoff
+1. Use circuit breaker pattern for Redis failures
+1. Gracefully degrade when Redis is unavailable
+1. Log and monitor Redis errors
+1. Set appropriate timeouts for all operations
+
+---
+
+## Summary
+
+- Redis integrates with all major programming languages
+- Connection pooling is essential for production use
+- Choose the right serialization format for your use case
+- Implement caching, session management, and rate limiting patterns
+- Use Redis for real-time features like chat and leaderboards
+- Build resilience with proper error handling and fallbacks

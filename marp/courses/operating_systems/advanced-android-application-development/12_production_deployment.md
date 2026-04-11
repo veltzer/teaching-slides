@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - practices:deployment
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Production Deployment
 ## Preparing and Deploying Android Applications
 

@@ -1,3 +1,13 @@
+---
+tags:
+  - hardware-and-embedded:embedded
+  - infrastructure:real-time
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Intertask Communication
 
 ---

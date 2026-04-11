@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:design-patterns
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Application Development Patterns
 
 ## Building Production-Ready Search Applications

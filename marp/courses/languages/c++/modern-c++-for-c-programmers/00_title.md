@@ -16,8 +16,18 @@ audience:
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
-![h:300](jpg/courses/languages/c++/modern-c++-for-c-programmers/bjarne_stroustrup.jpg)
+---
+## Bjarne Stroustrup
+
+![bg left](jpg/courses/languages/c++/modern-c++-for-c-programmers/bjarne_stroustrup.jpg)
+
+- Creator of **C++**
+- Designed C++ as an extension of C with OOP
+- First released in 1985
+- Fellow of the ACM and IEEE
 
 ---
+
+## Title
 
 ![title](svg/courses/languages/c++/modern-c++-for-c-programmers/title.svg)

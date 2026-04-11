@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:performance
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Performance
 
 Zero-Cost Abstractions, Profiling, Benchmarking, and Optimization

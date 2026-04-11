@@ -1,3 +1,16 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:embedded
+  - tools:yocto
+  - practices:ci-cd
+level: advanced
+category: embedded
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Build Optimization and CI/CD
 
 ---
@@ -31,12 +44,6 @@ Memory recommendations:
 - Recommended: 16GB+ RAM
 - Optimal: 32GB+ RAM
 - Swap: 2x RAM size
-
----
-
-## Storage Optimization
-
-SSD vs HDD performance:
 
 ---
 

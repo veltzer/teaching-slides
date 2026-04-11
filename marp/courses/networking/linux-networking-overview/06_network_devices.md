@@ -1,3 +1,14 @@
+---
+tags:
+  - networking:devices
+  - infrastructure:linux
+  - concepts:kernel
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+
+---
 # Network Device Overview
 ## Chapter 6: Device Drivers and Network Stack Integration
 

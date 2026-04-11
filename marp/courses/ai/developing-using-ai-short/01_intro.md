@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: beginner
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Introduction to AI-Assisted Development
 
 ---

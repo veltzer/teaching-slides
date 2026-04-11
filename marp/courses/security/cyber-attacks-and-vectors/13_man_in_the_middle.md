@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Man-in-the-Middle Attacks: Intercepting Communications
 
 ---
@@ -87,8 +100,6 @@
 - Conduct penetration testing and vulnerability assessments.
 - Stay informed about the latest MITM attack techniques and mitigation strategies.
 - Continuously monitor and improve your organization's security posture.
-
-## Defending against MITM attacks requires a multi-layered approach, including encryption, authentication, network monitoring, and user awareness
 
 ---
 ## Interesting command lines that have to do with libssl

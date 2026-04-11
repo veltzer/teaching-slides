@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+  - audiences:managers
+
+---
 # Introduction to Git
 
 ---
@@ -29,10 +42,7 @@
 ---
 ## The Birth of Git (2005)
 
-![h:300](jpg/courses/git/git2/linus_torvalds.jpg)
-
----
-## The Birth of Git (2005)
+![bg left](jpg/courses/git/git2/linus_torvalds.jpg)
 
 **Linus Torvalds** created Git in April 2005
 

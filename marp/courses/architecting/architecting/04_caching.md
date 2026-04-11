@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:caching
+  - infrastructure:cdn
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Caching Strategies and Content Delivery Networks
 ## Modern Architecture Course
 

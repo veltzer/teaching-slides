@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:resiliency
+  - concepts:design-patterns
+level: advanced
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Architecting for Resiliency
 
 ---
@@ -27,7 +39,7 @@
 ![the_cascade_effect](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
 
 ---
-## The Cascade Effect
+## The Cascade Effect Explained
 
 - Service C fails; B waits and exhausts its thread pool
 - Service A waits for B and also becomes unresponsive
@@ -83,7 +95,7 @@ response = requests.get(
 ![retry_with_exponential_backoff](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/retry_with_exponential_backoff.svg)
 
 ---
-## Retry with Exponential Backoff
+## Retry Best Practices
 
 - Each retry waits longer than the previous one
 - Add random jitter to prevent thundering herd
@@ -126,7 +138,7 @@ def retry_with_backoff(func, max_retries=3):
 - Protects both the caller and the failing service
 
 ---
-## Circuit Breaker Pattern
+## Circuit Breaker Overview
 
 ![circuit_breaker_pattern](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_pattern.svg)
 
@@ -210,7 +222,7 @@ class CircuitBreaker:
 ![bulkhead_architecture](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/bulkhead_architecture.svg)
 
 ---
-## Bulkhead Architecture
+## Bulkhead Benefits
 
 - Service C is slow but only consumes its own thread pool
 - Services A and B continue to operate normally
@@ -282,7 +294,7 @@ class CircuitBreaker:
 ![hedging_diagram](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/hedging_diagram.svg)
 
 ---
-## Hedging Diagram
+## Hedging Trade-Offs
 
 - Instance 2 responds first; its response is used
 - Trade-off: uses more resources for lower latency

@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:performance
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Performance Optimization
 ## Building High-Performance Android Applications
 

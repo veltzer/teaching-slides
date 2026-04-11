@@ -1,4 +1,18 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Network Security Awareness
+
+---
 
 ## Your Connection Is Your Lifeline
 - Everything you do at work depends on the network
@@ -9,8 +23,6 @@
 ---
 
 ## Secure Internet Usage
-
-## Basic Rules for Safe Browsing
 - Only visit `HTTPS` websites (look for the padlock icon)
 - Do not download software from unknown sources
 - Do not click on pop-up ads or "You've won!" banners
@@ -35,8 +47,6 @@
 ---
 
 ## What Is a `VPN`?
-
-## Virtual Private Network
 
 ```misc
 Without VPN:                      With VPN:
@@ -69,8 +79,6 @@ You ---> [open internet] ---> Server    You ---> [encrypted tunnel] ---> Server
 
 ## Public Wi-Fi: The Hidden Danger
 
-## Why Free Wi-Fi Is Risky
-
 - You do not know who controls the network
 - Attackers can create fake hotspots with legitimate-sounding names
 - Unencrypted traffic can be intercepted
@@ -100,8 +108,6 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ## Firewall Basics
 
-## What Is a Firewall?
-
 ---
 
 ## Firewall Basics
@@ -120,8 +126,6 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 ---
 
 ## Remote Work Security
-
-## Your Home Is Now an Extension of the Office
 
 - Home networks are less secure than office networks
 - Other family members share your network
@@ -142,8 +146,6 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 ---
 
 ## Recognizing Network Threats
-
-## Warning Signs Something Is Wrong
 - Unusually slow internet connection
 - Browser redirecting to unexpected websites
 - Pop-ups appearing even when the browser is closed

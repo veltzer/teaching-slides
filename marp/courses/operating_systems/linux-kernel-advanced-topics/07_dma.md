@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - concepts:kernel
+  - concepts:dma
+  - concepts:device-drivers
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+
+---
 # Direct Memory Access (DMA)
 
 ---

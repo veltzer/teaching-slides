@@ -11,7 +11,7 @@ Checks:
   --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
   --bounds      Flag SVGs with elements drawn below y=640
   --title       Flag SVGs that contain a <title> element
-  --colors      Flag SVGs that use colors not in resources/palette.yaml
+  --colors      Flag SVGs against their <!-- palette: path --> comment
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
@@ -117,7 +117,7 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
             return [f"element <{tag}> extends below y={MAX_Y_BOUND} (found bottom y={y_max})"]
     return []
 
-_PALETTE_NAMES: set[str] | None = None
+_PALETTE_CACHE: dict[str, set[str]] = {}
 _COLOR_ATTRS = {"fill", "stroke", "stop-color", "flood-color"}
 _COLOR_RE = re.compile(r'#[0-9a-fA-F]{3,8}')
 _VAR_RE = re.compile(r'^var\(--([a-zA-Z0-9_-]+)\)$')
@@ -126,20 +126,22 @@ _NON_COLOR_VALUES = {"none", "currentcolor", "inherit", "transparent"}
 # Tags inside <defs> where raw hex is allowed (gradient stops, marker fills, filter colors)
 _DEFS_TAGS = {"stop", "feDropShadow"}
 
+_DEFAULT_PALETTE = Path("resources/palette_diagram.yaml")
+_PALETTE_COMMENT_RE = re.compile(r'<!--\s*palette:\s*(\S+)\s*-->')
 
-def _load_palette_names() -> set[str]:
-    """Load allowed semantic color names from resources/palette.yaml.
+
+def _load_palette_names(palette_path: Path) -> set[str]:
+    """Load allowed semantic color names from a palette YAML file.
 
     Returns a set of names like {"bg", "primary", "danger-lt", ...}.
     """
-    global _PALETTE_NAMES
-    if _PALETTE_NAMES is not None:
-        return _PALETTE_NAMES
+    key = str(palette_path)
+    if key in _PALETTE_CACHE:
+        return _PALETTE_CACHE[key]
 
-    palette_path = Path("resources/palette.yaml")
     if not palette_path.exists():
-        _PALETTE_NAMES = set()
-        return _PALETTE_NAMES
+        _PALETTE_CACHE[key] = set()
+        return _PALETTE_CACHE[key]
 
     with open(palette_path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
@@ -149,22 +151,40 @@ def _load_palette_names() -> set[str]:
         for name in group:
             names.add(name)
 
-    _PALETTE_NAMES = names
-    return _PALETTE_NAMES
+    _PALETTE_CACHE[key] = names
+    return _PALETTE_CACHE[key]
 
 
-def _check_colors(tree: ET.ElementTree) -> list[str]:
+def _palette_for_svg(svg_path: Path) -> Path:
+    """Return the palette file for an SVG by reading its <!-- palette: ... --> comment.
+
+    Falls back to the default diagram palette if no comment is found.
+    """
+    try:
+        text = svg_path.read_text(encoding="utf-8")
+        m = _PALETTE_COMMENT_RE.search(text)
+        if m:
+            return Path(m.group(1))
+    except OSError:
+        pass
+    return _DEFAULT_PALETTE
+
+
+def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[str]:
     """Flag SVGs that use colors not expressed as var(--name) from the palette.
 
-    Color attributes must use var(--semantic-name) where name is defined in
-    resources/palette.yaml. Raw hex values and named CSS colors are rejected.
+    Reads the <!-- palette: path --> comment inside the SVG to determine
+    which palette YAML to validate against. Falls back to palette_diagram.yaml
+    if no comment is present.
+    Raw hex values and named CSS colors are rejected.
 
     Exception: elements inside <defs> (gradient stops, marker paths, filter
     params) may use raw hex since CSS var() doesn't work reliably there.
     """
-    palette_names = _load_palette_names()
+    palette_path = _palette_for_svg(svg_path) if svg_path else _DEFAULT_PALETTE
+    palette_names = _load_palette_names(palette_path)
     if not palette_names:
-        return ["cannot check colors: resources/palette.yaml not found or empty"]
+        return [f"cannot check colors: {palette_path} not found or empty"]
 
     errors: list[str] = []
     seen_bad: set[str] = set()
@@ -252,7 +272,7 @@ def main() -> None:
     parser.add_argument('--title', action='store_true',
                         help='Flag SVGs that contain a <title> element')
     parser.add_argument('--colors', action='store_true',
-                        help='Flag SVGs that use colors not in resources/palette.yaml (default: on)')
+                        help='Flag SVGs against their <!-- palette: path --> comment (default: palette_diagram)')
     args = parser.parse_args()
 
     if not args.paths:
@@ -297,7 +317,7 @@ def main() -> None:
             if do_title:
                 errors.extend(_check_title(tree))
             if do_colors:
-                errors.extend(_check_colors(tree))
+                errors.extend(_check_colors(tree, svg_path=path))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)

@@ -1,3 +1,17 @@
+---
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
+  - infrastructure:iaas
+  - infrastructure:paas
+level: beginner
+category: cloud
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Azure Compute Services
 
 ---

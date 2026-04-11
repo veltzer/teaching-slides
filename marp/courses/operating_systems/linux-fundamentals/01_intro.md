@@ -1,10 +1,25 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:unix
+  - practices:command-line
+level: beginner
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Introduction to UNIX
 
 ---
 
 ## Understanding the Fundamentals
 
-![h:500](jpg/courses/operating_systems/linux-fundamentals/unix.svg) ![h:500,width:50%](jpg/courses/operating_systems/linux-fundamentals/ken_thompson.jpg) ![h:500,width:50%](jpg/courses/operating_systems/linux-fundamentals/linus_torvalds.jpg)
+- UNIX: the foundation of modern operating systems
+- Ken Thompson and Dennis Ritchie created UNIX at Bell Labs
+- Linus Torvalds created Linux in 1991
+- Linux is the most widely used UNIX-like operating system
 
 ---
 
@@ -41,9 +56,8 @@
 
 ---
 
-## The Process Tree
+## Why is the Process Tree Important?
 
-## Why is it important
 - Process management
 - Resource tracking
 - System organization

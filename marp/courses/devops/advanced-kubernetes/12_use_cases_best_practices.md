@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:kubernetes
+  - infrastructure:containers
+  - practices:devops
+  - languages:go
+  - concepts:service-mesh
+level: advanced
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Use Cases, Best Practices & Real-Life Examples
 
 Advanced Kubernetes Course - Day 3, Module 2

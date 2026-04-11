@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:cmake
+  - languages:c
+  - languages:c++
+  - practices:build-systems
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Testing with CTest
 
 ---

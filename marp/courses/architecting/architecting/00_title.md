@@ -19,4 +19,6 @@ audience:
 
 ---
 
+## Title
+
 ![title](svg/courses/architecting/architecting/title.svg)

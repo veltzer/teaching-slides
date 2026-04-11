@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: beginner
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Real-World Project Workflows
 
 ---
@@ -231,21 +243,19 @@ describe('Notification Feature', () => {
 
 Systematic bug investigation:
 
-```markdown
-## Bug Report Analysis
+```misc
+Bug Report Analysis
 
-**Issue**: Users report notifications not arriving
+Issue: Users report notifications not arriving
 
-**AI Investigation Steps**:
+AI Investigation Steps:
 1. Check error logs for exceptions
 2. Verify queue is processing
 3. Confirm email service is up
 4. Test with specific user account
 5. Review recent deployments
-
-**Reproduction Script**:
-
 ```
+
 ```javascript
 // AI generates reproduction test
 const reproducer = async () => {

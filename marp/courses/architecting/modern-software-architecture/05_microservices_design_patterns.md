@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:microservices
+  - concepts:design-patterns
+level: advanced
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Microservices Design Patterns
 
 ---
@@ -27,7 +39,7 @@
 ![api_gateway_architecture](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_architecture.svg)
 
 ---
-## API Gateway Pattern
+## API Gateway Flow
 
 ![api_gateway_pattern](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_pattern.svg)
 
@@ -101,7 +113,7 @@
 ![client_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.svg)
 
 ---
-## Client-Side Service Discovery
+## Client-Side Discovery Details
 
 - Client queries the service registry directly
 - Client performs load balancing
@@ -113,7 +125,7 @@
 ![server_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.svg)
 
 ---
-## Server-Side Service Discovery
+## Server-Side Discovery Details
 
 - Load balancer queries the registry
 - Client does not need to know about discovery

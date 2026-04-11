@@ -1,3 +1,16 @@
+---
+tags:
+  - concepts:cpu
+  - concepts:computer-architecture
+  - concepts:pipelining
+  - concepts:caching
+level: beginner
+category: hardware
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # CPU Architecture
 
 ---

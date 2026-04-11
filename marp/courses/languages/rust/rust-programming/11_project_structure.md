@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Project Structure and Tools
 
 ## Chapter 10: Organizing and Managing Rust Projects

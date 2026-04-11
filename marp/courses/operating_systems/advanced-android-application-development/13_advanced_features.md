@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:machine-learning
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Advanced Features and Integrations
 ## Enhancing Android Applications with Advanced Capabilities
 

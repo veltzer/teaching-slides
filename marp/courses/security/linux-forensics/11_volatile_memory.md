@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - security:forensics
+  - security:security
+level: advanced
+category: security
+audience:
+  - audiences:security-professionals
+---
+
 # Working with Volatile Memory
 
 ## Course: Linux Forensics - Day 4 (continued)

@@ -1,6 +1,17 @@
-# Spark MLlib
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - data-and-ai:machine-learning
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
 
-## Introduction to Machine Learning
+---
+# Spark MLlib
 
 ---
 ## What is Machine Learning
@@ -14,9 +25,7 @@
 ![mllib_overview](svg/courses/big_data/apache-spark-with-python/05_mllib/mllib_overview.svg)
 
 ---
-## The MLlib API
-
-## Key Components
+## MLlib Key Components
 1. Transformers
     - Transform one DataFrame to another
     - Implement transform() method
@@ -48,8 +57,6 @@ pipeline = Pipeline(stages=[tokenizer, hashingTF, lr])
 ```
 
 ---
-## Feature Engineering
-
 ## Data Preprocessing
 
 ```python
@@ -94,8 +101,6 @@ assembler = VectorAssembler(
 ```
 
 ---
-## Supervised Learning
-
 ## Classification
 
 ```python
@@ -141,8 +146,6 @@ dt = DecisionTreeRegressor(
 ```
 
 ---
-## Unsupervised Learning
-
 ## Clustering
 
 ```python
@@ -172,9 +175,7 @@ word2Vec = Word2Vec(
 ```
 
 ---
-## Model Evaluation
-
-## Metrics and Validation
+## Evaluation Metrics and Validation
 
 ```python
 # Binary classification evaluation
@@ -215,8 +216,6 @@ cvModel = crossval.fit(training_data)
 ```
 
 ---
-## Real-World Use Cases
-
 ## Customer Churn Prediction
 
 ```python
@@ -269,8 +268,6 @@ pipeline = Pipeline(stages=[
 ```
 
 ---
-## Model Deployment
-
 ## Saving and Loading Models
 
 ```python
@@ -298,8 +295,6 @@ streaming_data.foreachBatch(process_stream)
 ```
 
 ---
-## Best Practices
-
 ## Performance Optimization
 
 ```python

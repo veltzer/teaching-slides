@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - data-and-ai:analytics
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Search Analytics and Monitoring
 
 ## Measuring and Improving Search Performance

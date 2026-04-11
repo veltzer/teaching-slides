@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:c
+  - languages:c++
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Effective Pointers
 
 ---

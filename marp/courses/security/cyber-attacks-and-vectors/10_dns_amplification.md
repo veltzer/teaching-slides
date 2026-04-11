@@ -1,6 +1,17 @@
-# DNS Amplification Attacks
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
 
-- DNS amplification is a type of Distributed Denial of Service (DDoS) attack that exploits open DNS resolvers to amplify malicious traffic directed at a target system or network
+# DNS Amplification Attacks
 
 ---
 ## How DNS Amplification Works
@@ -24,13 +35,13 @@
 ![diagram](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/diagram.svg)
 
 ---
-## Demo
+## Demo: DNS Trace
 
 ```bash
 dig . NS +trace
 ```
 
-### Look at the large response
+- Look at the large response size compared to the small query
 
 ---
 ## Impact of DNS Amplification
@@ -176,6 +187,11 @@ The 2018 GitHub attack used Memcached amplification: 1.35 Tbps!
 1. Use Wireshark to capture and analyze DNS amplification traffic patterns
 1. Set up a monitoring dashboard that alerts on anomalous DNS response volume
 
+---
+
 ## Conclusion
 
-DNS amplification attacks are a significant threat, as they can generate massive amounts of traffic with relatively little effort from the attacker. By securing DNS infrastructure, implementing DDoS mitigation strategies, and keeping systems up-to-date, organizations can protect themselves from these types of attacks and maintain the availability of their online services.
+- DNS amplification attacks generate massive traffic with minimal attacker effort
+- Secure DNS infrastructure by disabling open resolvers
+- Implement DDoS mitigation strategies and keep systems up-to-date
+- BCP38 ingress filtering at ISP level would eliminate IP spoofing-based amplification

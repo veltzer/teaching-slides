@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Rust Fundamentals
 ## Chapter 2: Core Concepts and Basic Syntax
 

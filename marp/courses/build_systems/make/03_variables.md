@@ -1,6 +1,21 @@
+---
+tags:
+  - tools:make
+  - languages:c
+  - practices:build-systems
+  - infrastructure:linux
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+
+---
 # Variables and Macros
 
+---
+
 ## Overview
+
 - Defining and using variables
 - Automatic variables
 - Variable assignment types
@@ -11,7 +26,6 @@
 
 ## Why Variables?
 
-## Benefits
 - Avoid repetition (DRY principle)
 - Easy to change settings in one place
 - Cleaner, more maintainable Makefiles
@@ -21,7 +35,6 @@
 
 ## Basic Variable Syntax
 
-## Definition and Usage
 ```makefile
 # Define a variable
 CC = gcc
@@ -36,7 +49,6 @@ program: main.c
 
 ## Variable Reference Styles
 
-## Two Equivalent Syntaxes
 ```makefile
 CC = gcc
 
@@ -58,7 +70,6 @@ program: main.c
 
 ## Assignment Operators Detail
 
-## Four Types of Assignment
 ```makefile
 # Simple assignment (evaluated immediately)
 CC := gcc
@@ -75,9 +86,8 @@ CFLAGS += -Wall
 
 ---
 
-## Simple vs Recursive
+## Simple vs Recursive - The Difference
 
-## The Difference
 ```makefile
 # Recursive (=) - evaluated each time used
 A = $(B)
@@ -92,9 +102,8 @@ B = hello
 
 ---
 
-## Simple vs Recursive
+## Simple vs Recursive - Practical Example
 
-## Practical Example
 ```makefile
 # Recursive - can cause infinite loops
 CFLAGS = $(CFLAGS) -Wall  # WRONG! Infinite recursion
@@ -110,7 +119,6 @@ CFLAGS += -Wall  # OK
 
 ## Conditional Assignment
 
-## Set If Not Defined
 ```makefile
 # Only set if CC is not already defined
 CC ?= gcc
@@ -128,7 +136,6 @@ make           # Uses gcc (default)
 
 ## Common Variables
 
-## Standard Conventions
 ```makefile
 CC = gcc           # C compiler
 CXX = g++          # C++ compiler
@@ -143,7 +150,6 @@ PREFIX = /usr/local
 
 ## Automatic Variables
 
-## Built-in Special Variables
 ```makefile
 $@    # Target name
 $<    # First prerequisite
@@ -157,9 +163,8 @@ $(@F) # File part of target
 
 ---
 
-## Automatic Variables Examples
+## Automatic Variables - Using $@ and $<
 
-## Using $@ and $<
 ```makefile
 program: main.o utils.o
     $(CC) -o $@ $^
@@ -172,9 +177,8 @@ main.o: main.c
 
 ---
 
-## Automatic Variables Examples
+## Automatic Variables - Using $^ and $?
 
-## Using $^ and $?
 ```makefile
 # $^ - all prerequisites
 archive.tar: file1 file2 file3
@@ -190,7 +194,6 @@ backup: file1 file2 file3
 
 ## Pattern Rules with %
 
-## The $* Variable
 ```makefile
 %.o: %.c
     $(CC) -c $< -o $@
@@ -206,7 +209,6 @@ backup: file1 file2 file3
 
 ## Built-in Variables
 
-## Predefined by Make
 ```makefile
 # Compiler defaults
 $(CC)      # cc
@@ -224,7 +226,6 @@ $(LDFLAGS)
 
 ## Environment Variables
 
-## Automatic Import
 ```makefile
 # Environment variables are available
 # But Makefile definitions take precedence
@@ -242,7 +243,6 @@ make  # Will use clang (if CC not in Makefile)
 
 ## Override Directive
 
-## Force Use of Environment
 ```makefile
 # Override prevents command-line override
 override CFLAGS += -Wall
@@ -257,7 +257,6 @@ override CFLAGS += -Wall
 
 ## Multi-line Variables
 
-## Using define
 ```makefile
 define HELP_TEXT
 Usage: make [target]
@@ -275,7 +274,6 @@ help:
 
 ## Variable Substitution
 
-## Pattern Replacement
 ```makefile
 SRCS = main.c utils.c lib.c
 OBJS = $(SRCS:.c=.o)
@@ -289,7 +287,6 @@ OBJS = $(SRCS:%.c=%.o)
 
 ## Variable Functions
 
-## Common Text Functions
 ```makefile
 FILES = main.c utils.c lib.c
 
@@ -310,7 +307,6 @@ $(lastword $(FILES))    # lib.c
 
 ## Practical Example
 
-## Complete Variable Usage
 ```makefile
 CC := gcc
 CFLAGS := -Wall -Wextra -g
@@ -332,7 +328,6 @@ $(TARGET): $(OBJS)
 
 ## Summary
 
-## Key Takeaways
 - Use `:=` for simple assignment (evaluated once)
 - Use `=` for recursive (evaluated when used)
 - Use `?=` for defaults that users can override

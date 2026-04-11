@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: intermediate
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Common Pitfalls and Solutions
 
 ---

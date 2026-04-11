@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:docker
+  - infrastructure:containers
+  - practices:devops
+  - networking:networking
+level: advanced
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Docker Internals and Architecture
 
 Understanding what happens beneath the `docker` CLI

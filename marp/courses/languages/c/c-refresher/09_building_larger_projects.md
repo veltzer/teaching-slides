@@ -1,3 +1,15 @@
+---
+tags:
+  - languages:c
+  - concepts:programming
+  - concepts:memory-management
+  - concepts:pointers
+level: intermediate
+category: language
+audience:
+  - audiences:developers
+
+---
 # Building a Larger-Than-One-File System in C
 
 ---

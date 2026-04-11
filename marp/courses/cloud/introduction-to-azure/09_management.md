@@ -1,3 +1,16 @@
+---
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
+  - practices:devops
+level: beginner
+category: cloud
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Azure Management and Cost Optimization
 
 ---

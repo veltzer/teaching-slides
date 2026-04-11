@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:unix
+  - concepts:networking
+level: beginner
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Networking Basics
 ## Understanding UNIX Network Configuration and Tools
 

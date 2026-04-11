@@ -1,14 +1,27 @@
+---
+tags:
+  - tools:make
+  - languages:c
+  - practices:build-systems
+  - infrastructure:linux
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+
+---
 # Best Practices and Real Examples
 
 ---
 
 ## Makefile Best Practices
 
-![Makefile best practices: PHONY targets, variable organization, debug, help target](svg/courses/build_systems/make/05_best_practices/makefile_best_practices.svg)
+![makefile_best_practices](svg/courses/build_systems/make/05_best_practices/makefile_best_practices.svg)
 
 ---
 
 ## Overview
+
 - Makefile organization and structure
 - Common patterns and idioms
 - Real-world examples
@@ -18,8 +31,6 @@
 ---
 
 ## Makefile Structure
-
-## Recommended Order
 
 ```makefile
 # 1. Variables and configuration
@@ -41,8 +52,6 @@ all: program
 
 ## Standard Targets
 
-## Common Conventions
-
 ```makefile
 .PHONY: all clean install uninstall test dist
 
@@ -60,8 +69,6 @@ test: $(TARGET)          # Run tests
 ---
 
 ## Directory Structure
-
-## Organized Build
 
 ```makefile
 SRCDIR := src
@@ -83,8 +90,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 
 ## Creating Directories
 
-## Order-Only Prerequisites
-
 ```makefile
 DIRS := build bin
 
@@ -103,8 +108,6 @@ $(TARGET): $(OBJS) | $(BINDIR)
 ---
 
 ## Complete C Project
-
-## Real-World Example
 
 ```makefile
 CC := gcc
@@ -127,8 +130,6 @@ TARGET := $(BINDIR)/myapp
 
 ## Complete C Project (continued)
 
-## Rules
-
 ```makefile
 all: $(TARGET)
 
@@ -148,8 +149,6 @@ clean:
 ---
 
 ## Debug vs Release
-
-## Build Configurations
 
 ```makefile
 DEBUG ?= 0
@@ -174,8 +173,6 @@ make            # Release build
 
 ## Header Dependencies
 
-## Automatic Tracking
-
 ```makefile
 DEPDIR := .deps
 DEPS := $(SRCS:$(SRCDIR)/%.c=$(DEPDIR)/%.d)
@@ -194,8 +191,6 @@ $(DEPDIR):
 ---
 
 ## Multi-Binary Project
-
-## Building Multiple Programs
 
 ```makefile
 BINS := client server utils
@@ -217,9 +212,7 @@ clean:
 
 ---
 
-## Library Building
-
-## Static Library
+## Library Building - Static Library
 
 ```makefile
 LIBNAME := mylib
@@ -236,9 +229,7 @@ program: main.o $(LIB)
 
 ---
 
-## Library Building
-
-## Shared Library
+## Library Building - Shared Library
 
 ```makefile
 LIBNAME := mylib
@@ -259,8 +250,6 @@ install: $(LIB)
 
 ## Help Target
 
-## Self-Documenting Makefile
-
 ```makefile
 .PHONY: help
 help:
@@ -279,8 +268,6 @@ help:
 
 ## Version Embedding
 
-## Build Information
-
 ```makefile
 VERSION := 1.0.0
 GIT_HASH := $(shell git rev-parse --short HEAD 2>/dev/null)
@@ -295,7 +282,6 @@ CFLAGS += -DBUILD_DATE=\"$(BUILD_DATE)\"
 
 ## Common Pitfalls
 
-## Mistakes to Avoid
 1. **Spaces instead of tabs** in recipes
 1. **Missing dependencies** on headers
 1. **Recursive make** without care
@@ -305,8 +291,6 @@ CFLAGS += -DBUILD_DATE=\"$(BUILD_DATE)\"
 ---
 
 ## Pitfall: Shell Variables
-
-## Escaping in Recipes
 
 ```makefile
 # WRONG - $i is Make variable (empty)
@@ -324,8 +308,6 @@ list:
 ---
 
 ## Pitfall: Recipe Execution
-
-## Each Line is Separate Shell
 
 ```makefile
 # WRONG - cd doesn't persist
@@ -345,8 +327,6 @@ better:
 ---
 
 ## Debugging Techniques
-
-## Finding Problems
 
 ```bash
 # Show what would be done
@@ -369,8 +349,6 @@ make -p | grep 'VARIABLE'
 
 ## Makefile Linting
 
-## Checking for Issues
-
 ```bash
 # Check syntax
 make -n -p > /dev/null
@@ -388,7 +366,6 @@ checkmake Makefile
 
 ## Performance Tips
 
-## Faster Builds
 1. Use parallel builds: `make -j$(nproc)`
 1. Use `:=` instead of `=` when possible
 1. Avoid recursive make
@@ -404,7 +381,6 @@ make -j8
 
 ## Summary
 
-## Best Practices Recap
 - Follow consistent structure and naming
 - Use `.PHONY` for all non-file targets
 - Separate source, object, and binary directories

@@ -1,5 +1,6 @@
 ## SVG Guidelines
 
+- look at exiting svs and how they use the palette.
 - always use the same pallette for slides (resources/svg_palette.svg)
 - SVG diagrams must NOT contain a title element. The slide's ## heading is the title. Adding a title inside the SVG wastes vertical space because Marp renders the heading above the image, shrinking the area available to the diagram.
 - SVG content must not extend below y=640. Marp takes the markdown header (e.g. `## Slide Title`) and renders it at the top of the slide, pushing the SVG down. By restricting drawings to the top 640 pixels, you leave a blank "buffer" area at the bottom so that when Marp shifts the image down, your actual drawing doesn't get pushed off the bottom edge of the screen or get clipped. The check_svg.py --bounds check enforces this limit.

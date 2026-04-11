@@ -1,5 +1,16 @@
+---
+tags:
+  - languages:scala
+  - data-and-ai:big-data
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+
+---
 # Scala Refresher for Apache Spark
 
+---
 ## Course Overview
 
 1. Basic Scala Syntax

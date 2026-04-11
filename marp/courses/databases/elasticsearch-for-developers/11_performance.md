@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:performance
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Performance Optimization for Developers
 
 ## Maximizing Elasticsearch Performance

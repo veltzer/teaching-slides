@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Getting Started with Rust
 ## Chapter 1: Introduction to Rust Programming
 

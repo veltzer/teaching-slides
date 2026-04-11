@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:data-pipelines
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Data Ingestion and Pipelines
 
 ## Getting Data Into Elasticsearch

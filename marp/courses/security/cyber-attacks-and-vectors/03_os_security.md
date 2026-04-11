@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Basic OS Security
 
 ---
@@ -244,11 +257,7 @@ lsblk -f | grep crypto
 
 ---
 
-## Breaking OS Security
-
----
-
-## Weak Access Controls
+## Breaking OS Security: Weak Access Controls
 
 - Default or Weak Passwords
 - Insecure User Account Management

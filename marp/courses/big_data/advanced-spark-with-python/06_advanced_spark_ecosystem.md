@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - practices:devops
+level: advanced
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Advanced Spark Ecosystem and Best Practices
 
 ---

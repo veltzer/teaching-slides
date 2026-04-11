@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:communication-patterns
+  - concepts:messaging
+level: advanced
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Communication Patterns
 
 ---

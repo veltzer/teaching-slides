@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - practices:design-patterns
+level: advanced
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Real-World Patterns
 
 ---

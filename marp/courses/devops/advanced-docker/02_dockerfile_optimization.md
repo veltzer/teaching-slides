@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:docker
+  - infrastructure:containers
+  - practices:devops
+  - networking:networking
+level: advanced
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Advanced Dockerfile Techniques and Image Optimization
 
 Building production-grade container images

@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Structs and Enums
 ## Chapter 4: Custom Data Types in Rust
 

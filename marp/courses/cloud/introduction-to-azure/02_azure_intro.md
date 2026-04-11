@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
+level: beginner
+category: cloud
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Introduction to Microsoft Azure
 
 ## What is Azure?

@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Merging Changes
 
 ---
@@ -204,6 +216,8 @@ git diff --name-only --diff-filter=U
 # Check if conflicts remain
 git diff --check
 ```
+
+---
 
 ## Using Merge Tools
 

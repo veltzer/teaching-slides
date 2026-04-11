@@ -1,3 +1,16 @@
+---
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
+  - infrastructure:storage
+level: beginner
+category: cloud
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Azure Storage Services
 
 ---

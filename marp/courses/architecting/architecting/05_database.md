@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:databases
+  - concepts:data-modeling
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Database Architecture and Design
 ## Modern Architecture Course
 
@@ -94,14 +106,14 @@ import redis
 
 r = redis.Redis(host='localhost', port=6379)
 
-## Set value
+# Set value
 r.set('user:1', 'John Doe')
 r.hset('user:1:details', mapping={
     'email': 'john@example.com',
     'age': '30'
 })
 
-## Get value
+# Get value
 name = r.get('user:1')
 details = r.hgetall('user:1:details')
 ```
@@ -116,7 +128,7 @@ from pymongo import MongoClient
 client = MongoClient('mongodb://localhost:27017/')
 db = client['mydb']
 
-## Insert document
+# Insert document
 db.users.insert_one({
     'name': 'John Doe',
     'email': 'john@example.com',
@@ -126,7 +138,7 @@ db.users.insert_one({
     }
 })
 
-## Query
+# Query
 user = db.users.find_one({'email': 'john@example.com'})
 ```
 
@@ -140,16 +152,16 @@ from cassandra.cluster import Cluster
 cluster = Cluster(['127.0.0.1'])
 session = cluster.connect('mykeyspace')
 
-## Create table
+# Create table
 session.execute("""
     CREATE TABLE users (
         user_id uuid PRIMARY KEY,
         name text,
         email text
     )
-"""")
+""")
 
-## Insert data
+# Insert data
 session.execute("""
     INSERT INTO users (user_id, name, email)
     VALUES (%s, %s, %s)
@@ -453,8 +465,8 @@ def get_user(user_id):
 
 ## Security Implementation
 
-```python
-# User management
+```sql
+-- User management
 CREATE ROLE readonly WITH
     LOGIN
     PASSWORD 'secure_password'
@@ -463,7 +475,7 @@ CREATE ROLE readonly WITH
 
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly;
 
-# Encryption
+-- Encryption
 ALTER SYSTEM SET ssl = on;
 ALTER SYSTEM SET ssl_cert_file = 'server.crt';
 ALTER SYSTEM SET ssl_key_file = 'server.key';

@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Git Tools
 
 ---
@@ -732,13 +744,6 @@ def handle_webhook():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
-
----
-## Tool Selection Criteria
-
-Choosing the right Git tools:
-
-**Development Environment:**
 
 ---
 ## Tool Selection Criteria

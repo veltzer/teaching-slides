@@ -1,3 +1,16 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:embedded
+  - tools:yocto
+  - concepts:kernel
+level: advanced
+category: embedded
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Kernel and Device Integration
 
 ---

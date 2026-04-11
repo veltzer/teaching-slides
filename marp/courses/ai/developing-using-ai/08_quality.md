@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: intermediate
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Quality and Best Practices
 
 ---
@@ -497,6 +509,7 @@ class UserAuth:
 
         Returns:
             Dict with token and user data
+        """
 ```
 
 ---

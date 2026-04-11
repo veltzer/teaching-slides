@@ -1,3 +1,16 @@
+---
+tags:
+  - concepts:architecture
+  - infrastructure:containers
+  - infrastructure:docker
+level: advanced
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+  - audiences:devops
+
+---
 # Containerization Recap
 
 ---

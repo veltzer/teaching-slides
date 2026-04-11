@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:python
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Your First Python Program
 
 ---
@@ -112,7 +121,7 @@ Hello, World!
 - On Unix systems, you can make scripts executable
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 print("Hello, World!")
 ```
 
@@ -121,7 +130,7 @@ chmod +x hello.py
 ./hello.py
 ```
 
-- `#!/usr/bin/env python3` tells the OS which interpreter to use
+- `#!/usr/bin/env python` tells the OS which interpreter to use
 
 ---
 ## Comments in Python
@@ -198,7 +207,7 @@ print(f"Next year you will be {age + 1}")
 ## A Complete Interactive Program
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 name = input("Enter your name: ")
 birth_year = int(input("Enter your birth year: "))
 current_year = 2026

@@ -15,4 +15,6 @@ audience:
 
 ---
 
+## Advanced Rust
+
 ![title](svg/courses/languages/rust/advanced-rust/title.svg)

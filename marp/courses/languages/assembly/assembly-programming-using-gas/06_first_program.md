@@ -1,5 +1,15 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Writing Your First Assembly Program
-## Assembly Programming using GAS
 
 ---
 
@@ -36,6 +46,7 @@ _start:
 ```
 
 ---
+
 ## Assembling and Linking
 
 1. Save the program as `hello.s`
@@ -167,7 +178,9 @@ _start:
     - Incorrect directives or register names
 
 ---
+
 ## Best Practices
+
 1. Comment your code thoroughly
 1. Use meaningful label names
 1. Organize your code into logical sections
@@ -175,12 +188,15 @@ _start:
 1. Use debugging tools like GDB to understand program flow
 
 ---
+
 ## Exercises
+
 1. Modify the "Hello, World!" program to print your name
 1. Write a program that adds two numbers and prints the result
 1. Create a program that prints numbers from 1 to 10
 
 ---
+
 ## Additional Resources
 - [GAS manual](https://sourceware.org/binutils/docs/as)
 - [x86 instruction set reference](https://www.felixcloutier.com/x86)

@@ -1,3 +1,14 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:design-patterns
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Layered (n-tier) Pattern
 
 - Partitions the system into layers, each with a specific role and responsibility

@@ -20,4 +20,6 @@ audience:
 
 ---
 
+## Title
+
 ![title](svg/courses/architecting/modern-software-architecture/title.svg)

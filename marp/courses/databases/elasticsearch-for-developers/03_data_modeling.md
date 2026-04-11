@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:data-modeling
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Data Modeling and Mappings
 
 ## Designing Your Data Structure

@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:web-security
+  - security:penetration-testing
+  - security:owasp
+level: advanced
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Testing for Injections in Boot2Root
 
 ## Systematically Probing Every Entry Point

@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:python
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # **Porting from Python 2 to Python 3**
 
 ## A Comprehensive Guide

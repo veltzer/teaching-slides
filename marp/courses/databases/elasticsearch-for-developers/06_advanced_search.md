@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:text-analysis
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Advanced Search Features
 
 ## Text Analysis and Relevance Tuning

@@ -1,3 +1,19 @@
+---
+tags:
+  - data-and-ai:ai
+  - data-and-ai:agents
+  - data-and-ai:mcp
+  - data-and-ai:rag
+  - practices:tools
+  - practices:large-codebases
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: advanced
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Working with Large Codebases and Monoliths
 
 ## Overview

@@ -376,9 +376,7 @@ public:
 ---
 ## The Diamond Problem
 
-Multiple inheritance can lead to ambiguity:
-
-```xml
+Multiple inheritance can lead to ambiguity.
 
 ---
 ## The Diamond Problem
@@ -386,9 +384,7 @@ Multiple inheritance can lead to ambiguity:
 ![the_diamond_problem](svg/courses/languages/c++/modern-c++-for-c-programmers/10_delegation/the_diamond_problem.svg)
 
 ---
-## The Diamond Problem
-
-```
+## The Diamond Problem (cont.)
 
 ```cpp
 class Base {

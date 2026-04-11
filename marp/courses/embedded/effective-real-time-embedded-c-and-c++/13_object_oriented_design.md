@@ -1,12 +1,22 @@
+---
+tags:
+  - languages:c++
+  - design-patterns:oop
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Inheritance and OO Design
 
 ---
 
 ## Inheritance in C++
 
-* Mechanism for deriving new classes from existing ones
-* Promotes code reuse and extensibility
-* Supports polymorphism through virtual functions
+- Mechanism for deriving new classes from existing ones
+- Promotes code reuse and extensibility
+- Supports polymorphism through virtual functions
 
 ---
 
@@ -22,8 +32,8 @@
 
 ## Single Inheritance
 
-* One base class and one derived class
-* Simplest form of inheritance
+- One base class and one derived class
+- Simplest form of inheritance
 
 ```cpp
 class Base {
@@ -40,8 +50,8 @@ class Derived : public Base {
 
 ## Multiple Inheritance
 
-* A class can inherit from more than one base class
-* Can lead to ambiguity (e.g., Diamond Problem)
+- A class can inherit from more than one base class
+- Can lead to ambiguity (e.g., Diamond Problem)
 
 ```cpp
 class A { };
@@ -53,8 +63,8 @@ class C : public A, public B { };
 
 ## Diamond Problem
 
-* Occurs in multiple inheritance when two base classes inherit from a common ancestor
-* Resolved using **virtual inheritance**
+- Occurs in multiple inheritance when two base classes inherit from a common ancestor
+- Resolved using **virtual inheritance**
 
 ```cpp
 class A { };
@@ -67,9 +77,9 @@ class D : public B, public C { };
 
 ## Virtual Functions
 
-* Enable **runtime polymorphism**
-* Base class defines a virtual function
-* Derived class overrides it
+- Enable **runtime polymorphism**
+- Base class defines a virtual function
+- Derived class overrides it
 
 ```cpp
 class Base {
@@ -87,9 +97,9 @@ public:
 
 ## Abstract Classes
 
-* A class with at least one **pure virtual function**
-* Cannot be instantiated
-* Used as **interfaces**
+- A class with at least one **pure virtual function**
+- Cannot be instantiated
+- Used as **interfaces**
 
 ```cpp
 class Interface {
@@ -102,31 +112,31 @@ public:
 
 ## Interface Segregation Principle
 
-* Clients should not be forced to depend on interfaces they do not use
-* Split large interfaces into smaller, specific ones
+- Clients should not be forced to depend on interfaces they do not use
+- Split large interfaces into smaller, specific ones
 
 ---
 
 ## Liskov Substitution Principle
 
-* Subtypes must be substitutable for their base types
-* Derived classes should not violate expectations set by base classes
+- Subtypes must be substitutable for their base types
+- Derived classes should not violate expectations set by base classes
 
 ---
 
 ## Composition vs Inheritance
 
-* **Inheritance**: "is-a" relationship
-* **Composition**: "has-a" relationship
-* Prefer composition for flexibility and maintainability
+- **Inheritance**: "is-a" relationship
+- **Composition**: "has-a" relationship
+- Prefer composition for flexibility and maintainability
 
 ---
 
 ## Favor Composition Over Inheritance
 
-* Reduces tight coupling
-* Easier to test and modify
-* Promotes reuse of behavior without inheriting unnecessary interface
+- Reduces tight coupling
+- Easier to test and modify
+- Promotes reuse of behavior without inheriting unnecessary interface
 
 ---
 
@@ -138,17 +148,17 @@ public:
 
 ## OO Design in Embedded Systems
 
-* OO design offers modularity, maintainability, and abstraction
-* Encapsulation isolates hardware-specific code
-* Reduces global state and improves testing
+- OO design offers modularity, maintainability, and abstraction
+- Encapsulation isolates hardware-specific code
+- Reduces global state and improves testing
 
 ---
 
 ## Embedded System Constraints
 
-* Limited memory and CPU resources
-* Deterministic and predictable behavior required
-* Overhead from dynamic allocation and virtual tables can be costly
+- Limited memory and CPU resources
+- Deterministic and predictable behavior required
+- Overhead from dynamic allocation and virtual tables can be costly
 
 ---
 
@@ -163,8 +173,8 @@ public:
 
 ## Hardware Abstraction with Interfaces
 
-* Define abstract classes for hardware components
-* Implement platform-specific behavior in derived classes
+- Define abstract classes for hardware components
+- Implement platform-specific behavior in derived classes
 
 ```cpp
 class ILED {
@@ -201,24 +211,24 @@ class AdcSensor : public ISensor {
 
 ## Encapsulation in Embedded Systems
 
-* Group related data and functions
-* Protects system integrity
-* Makes hardware drivers easier to reason about and test
+- Group related data and functions
+- Protects system integrity
+- Makes hardware drivers easier to reason about and test
 
 ---
 
 ## Class Design Guidelines
 
-* Keep classes small and focused
-* Favor interfaces over implementation inheritance
-* Isolate hardware access through drivers and interfaces
+- Keep classes small and focused
+- Favor interfaces over implementation inheritance
+- Isolate hardware access through drivers and interfaces
 
 ---
 
 ## Virtual Destructors
 
-* Always declare destructors `virtual` in base classes
-* Ensures proper cleanup in polymorphic scenarios
+- Always declare destructors `virtual` in base classes
+- Ensures proper cleanup in polymorphic scenarios
 
 ```cpp
 class Device {
@@ -231,25 +241,25 @@ public:
 
 ## Polymorphism Benefits in Embedded
 
-* Simplifies interface use across different implementations
-* Decouples system logic from hardware details
-* Enables mock hardware for unit testing
+- Simplifies interface use across different implementations
+- Decouples system logic from hardware details
+- Enables mock hardware for unit testing
 
 ---
 
 ## Real-World Use: Driver Abstraction
 
-* A motor controller can have:
-    * A generic interface `IMotor`
-    * Implementations like `PwmMotor` or `StepMotor`
-* Higher-level logic uses `IMotor` without knowing implementation
+- A motor controller can have:
+    - A generic interface `IMotor`
+    - Implementations like `PwmMotor` or `StepMotor`
+- Higher-level logic uses `IMotor` without knowing implementation
 
 ---
 
 ## Static Polymorphism (CRTP)
 
-* Avoids vtable overhead
-* Enables polymorphism at compile time
+- Avoids vtable overhead
+- Enables polymorphism at compile time
 
 ```cpp
 template<typename Derived>
@@ -270,17 +280,17 @@ public:
 
 ## OO and RTOS Integration
 
-* OO patterns fit well with RTOS tasks and handlers
-* Interfaces encapsulate task logic
-* Message passing can follow observer pattern
+- OO patterns fit well with RTOS tasks and handlers
+- Interfaces encapsulate task logic
+- Message passing can follow observer pattern
 
 ---
 
 ## State Machines with OO
 
-* Represent states as classes
-* Use inheritance and polymorphism to switch behaviors
-* Clear separation of concerns
+- Represent states as classes
+- Use inheritance and polymorphism to switch behaviors
+- Clear separation of concerns
 
 ---
 
@@ -305,8 +315,8 @@ class ActiveState : public State {
 
 ## Design Pattern: Strategy
 
-* Define interchangeable behaviors
-* Change behavior at runtime without modifying class
+- Define interchangeable behaviors
+- Change behavior at runtime without modifying class
 
 ```cpp
 class CompressionStrategy {
@@ -329,9 +339,9 @@ public:
 
 ## Summary
 
-* Inheritance enables reuse and polymorphism
-* Use inheritance judiciously in embedded systems
-* Abstract interfaces provide clean separation
-* Prefer composition and static allocation when possible
-* OO design improves modularity, testability, and maintainability
-* OO patterns like State and Strategy enhance clarity and flexibility
+- Inheritance enables reuse and polymorphism
+- Use inheritance judiciously in embedded systems
+- Abstract interfaces provide clean separation
+- Prefer composition and static allocation when possible
+- OO design improves modularity, testability, and maintainability
+- OO patterns like State and Strategy enhance clarity and flexibility

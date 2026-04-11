@@ -1,3 +1,17 @@
+---
+tags:
+  - practices:devops
+  - concepts:architecture
+  - practices:ci-cd
+  - infrastructure:infrastructure-as-code
+level: advanced
+category: devops
+audience:
+  - audiences:architects
+  - audiences:devops
+  - audiences:managers
+
+---
 # Database Migration Strategies in CI/CD
 Approaches for safe, automated schema and data migrations in modern pipelines
 

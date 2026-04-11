@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:web-security
+  - security:penetration-testing
+  - security:owasp
+level: advanced
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Session Management Attacks
 
 ## Hijacking and Manipulating User Sessions

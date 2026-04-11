@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:redis
+  - data-and-ai:nosql
+  - concepts:distributed-systems
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Redis Cluster and Scalability
 
 ---
@@ -315,6 +326,12 @@ Steps performed:
 ---
 
 ## Redis Cluster Resharding Process
+
+1. Source node marks slots as "migrating"
+1. Destination node marks slots as "importing"
+1. Keys are moved in batches to the destination
+1. Slot ownership is updated across the cluster
+1. Clients are redirected to the new node
 
 ---
 

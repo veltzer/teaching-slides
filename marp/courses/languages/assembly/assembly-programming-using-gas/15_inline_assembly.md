@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Inline Assembly in C
 
 ---
@@ -130,6 +141,7 @@ __asm__ (
 ```
 
 ---
+
 ## Using Inline Assembly for Optimization
 
 Example: Fast integer square root

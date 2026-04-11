@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:databases
+  - concepts:transactions
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Database Isolation Levels
 ## Understanding and Implementing Transaction Isolation
 

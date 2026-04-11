@@ -15,7 +15,15 @@ audience:
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
-![h:300](jpg/courses/devops/advanced-docker/solomon_hykes.jpg)
+---
+## Solomon Hykes
+
+![bg left](jpg/courses/devops/advanced-docker/solomon_hykes.jpg)
+
+- Founder of **Docker**
+- Introduced Linux containers to the mainstream
+- Revolutionized application packaging and deployment
+- Sparked the container orchestration ecosystem
 
 ---
 

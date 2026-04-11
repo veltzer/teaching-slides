@@ -1,10 +1,17 @@
-# Message Queue Systems
-## Kafka vs Traditional Queue Systems
+---
+tags:
+  - concepts:architecture
+  - concepts:messaging
+  - infrastructure:kafka
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
 
 ---
-## Traditional Kafka vs Streaming
-
-Traditional Message Processing
+# Message Queue Systems
+## Kafka vs Traditional Queue Systems
 
 ---
 ## Traditional Kafka vs Streaming
@@ -12,7 +19,7 @@ Traditional Message Processing
 ![traditional_kafka_vs_streaming](svg/courses/architecting/architecting/09_kafka/traditional_kafka_vs_streaming.svg)
 
 ---
-## Traditional Kafka vs Streaming
+## Traditional Message Processing
 
 * Messages are **consumed and committed**
 * Processing is done **after** retrieval
@@ -25,7 +32,7 @@ Traditional Message Processing
 ![kafka_streams](svg/courses/architecting/architecting/09_kafka/kafka_streams.svg)
 
 ---
-## Kafka Streams
+## Kafka Streams Features
 
 * **Real-time** processing
 * **Stateful** operations
@@ -50,7 +57,7 @@ Traditional Message Processing
 ![sqs_deep_dive](svg/courses/architecting/architecting/09_kafka/sqs_deep_dive.svg)
 
 ---
-## SQS Deep Dive
+## SQS Key Features
 
 * **Standard** vs **FIFO** queues
 * Message retention up to 14 days
@@ -82,7 +89,7 @@ Traditional Message Processing
 ![rabbitmq_architecture](svg/courses/architecting/architecting/09_kafka/rabbitmq_architecture.svg)
 
 ---
-## RabbitMQ Architecture
+## RabbitMQ Key Features
 
 * **Exchange types**: Direct, Fanout, Topic, Headers
 * **Advanced routing** capabilities
@@ -124,7 +131,7 @@ Traditional Message Processing
 ![kafka_deep_dive_topics_partitions](svg/courses/architecting/architecting/09_kafka/kafka_deep_dive_topics_partitions.svg)
 
 ---
-## Kafka Deep Dive: Topics & Partitions
+## Kafka Partition Details
 
 * Each partition is an **ordered log**
 * Segments are **physical files**
@@ -137,7 +144,7 @@ Traditional Message Processing
 ![advanced_kafka_consumer_groups](svg/courses/architecting/architecting/09_kafka/advanced_kafka_consumer_groups.svg)
 
 ---
-## Advanced Kafka: Consumer Groups
+## Consumer Group Features
 
 * **Automatic partition assignment**
 * **Rebalancing** on consumer changes
@@ -156,17 +163,12 @@ Traditional Message Processing
 | ActiveMQ | v | v | v (with XA) |
 
 ---
-## Scaling Patterns
-
-### Kafka
-
----
-## Scaling Patterns
+## Kafka Scaling Patterns
 
 ![kafka](svg/courses/architecting/architecting/09_kafka/kafka.svg)
 
 ---
-## Scaling Patterns
+## Kafka Scaling Details
 
 * **Horizontal scaling** via partitions
 * **Replication** for fault tolerance
@@ -179,7 +181,7 @@ Traditional Message Processing
 ![sqs_scaling_patterns](svg/courses/architecting/architecting/09_kafka/sqs_scaling_patterns.svg)
 
 ---
-## SQS Scaling Patterns
+## SQS Scaling Approaches
 
 * **Queue-per-microservice**
 * **Auto-scaling** based on queue depth
@@ -204,7 +206,7 @@ Traditional Message Processing
     * Typically 1 partition per broker for start
 
 ---
-## Performance Optimization: Topics
+## Topic Optimization Diagram
 
 ![performance_optimization_topics](svg/courses/architecting/architecting/09_kafka/performance_optimization_topics.svg)
 
@@ -214,7 +216,7 @@ Traditional Message Processing
 ![advanced_kafka_replication](svg/courses/architecting/architecting/09_kafka/advanced_kafka_replication.svg)
 
 ---
-## Advanced Kafka: Replication
+## Kafka Replication Details
 
 * **Leader** handles all reads/writes
 * **Followers** maintain replicas
@@ -299,7 +301,7 @@ Key Metrics to Watch
 ![integration_patterns](svg/courses/architecting/architecting/09_kafka/integration_patterns.svg)
 
 ---
-## Integration Patterns
+## Integration Approaches
 
 * **Hybrid** approaches
 * **Bridge** patterns

@@ -1,3 +1,17 @@
+---
+tags:
+  - practices:devops
+  - concepts:architecture
+  - practices:ci-cd
+  - infrastructure:infrastructure-as-code
+level: advanced
+category: devops
+audience:
+  - audiences:architects
+  - audiences:devops
+  - audiences:managers
+
+---
 # Testing Strategy Tradeoffs
 Balancing speed, cost, and confidence in CI/CD testing
 

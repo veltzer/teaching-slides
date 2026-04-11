@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:geolocation
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Location and Maps
 ## Implementing Location-Based Services
 

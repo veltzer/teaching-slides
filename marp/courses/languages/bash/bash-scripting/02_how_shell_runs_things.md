@@ -1,13 +1,26 @@
+---
+tags:
+  - languages:bash
+  - practices:scripting
+  - infrastructure:linux
+  - practices:automation
+level: intermediate
+category: language
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+---
 # How the Shell Runs Things
 
 ---
 ## What Happens When You Type a Command?
 - You type `ls -la /tmp` and press Enter
 - The shell must figure out:
-  1. What program to run
-  1. Where that program lives
-  1. How to pass arguments to it
-  1. What to do with the result
+    1. What program to run
+    1. Where that program lives
+    1. How to pass arguments to it
+    1. What to do with the result
 
 ---
 ## Command Line Parsing: Step by Step

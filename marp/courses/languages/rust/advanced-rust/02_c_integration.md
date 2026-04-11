@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Rust and C Integration
 
 FFI, Bindgen, and `#![no_std]`

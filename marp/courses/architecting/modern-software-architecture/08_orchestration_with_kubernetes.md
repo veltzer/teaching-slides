@@ -1,3 +1,16 @@
+---
+tags:
+  - concepts:architecture
+  - infrastructure:kubernetes
+  - infrastructure:containers
+level: advanced
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+  - audiences:devops
+
+---
 # Orchestration with Kubernetes
 
 ---

@@ -1,3 +1,15 @@
+---
+tags:
+  - networking:tcp-ip
+  - infrastructure:linux
+  - concepts:kernel
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # The Linux Networking Stack
 ## Chapter 2: Architecture and Implementation
 

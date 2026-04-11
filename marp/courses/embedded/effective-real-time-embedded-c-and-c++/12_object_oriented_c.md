@@ -1,3 +1,13 @@
+---
+tags:
+  - languages:c
+  - design-patterns:oop
+level: advanced
+category: embedded
+audience:
+  - audiences:embedded-engineers
+  - audiences:developers
+---
 # Object Oriented C
 
 ---

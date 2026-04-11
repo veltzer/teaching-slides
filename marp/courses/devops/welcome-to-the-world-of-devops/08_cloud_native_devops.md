@@ -1,3 +1,17 @@
+---
+tags:
+  - practices:devops
+  - practices:ci-cd
+  - practices:automation
+level: beginner
+category: devops
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+  - audiences:managers
+
+---
 # Cloud-Native DevOps
 Modern cloud architecture and practices
 

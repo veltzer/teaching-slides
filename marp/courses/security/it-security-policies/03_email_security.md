@@ -1,4 +1,18 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Email Security and Phishing Prevention
+
+---
 
 ## Email: The #1 Attack Vector
 - Over 90% of cyberattacks start with a phishing email
@@ -84,14 +98,14 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ## Real vs. Fake: Can You Tell?
 
-## Scenario 1
+### Scenario 1
 - From: `helpdesk@yourcompany.com`
 - Subject: "Password reset required by Friday"
 - Contains a link to `https://yourcompany.okta.com/reset`
 
 **Likely legitimate** - but verify with IT if unexpected
 
-## Scenario 2
+### Scenario 2
 - From: `helpdesk@yourcompany.security-reset.com`
 - Subject: "URGENT: Password expires in 1 hour!!!"
 - Contains a link to `https://security-reset.com/yourcompany`
@@ -102,13 +116,13 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ## Email Attachments: Proceed with Caution
 
-## Dangerous File Types
+### Dangerous File Types
 - `.exe`, `.bat`, `.cmd` - executable programs
 - `.zip`, `.rar` - compressed files that may hide malware
 - `.docm`, `.xlsm` - Office files with macros
 - `.js`, `.vbs` - script files
 
-## Safe Practices
+### Safe Practices
 - Do not open attachments you were not expecting
 - Verify with the sender through a separate channel
 - Use the company's file-sharing platform instead of email attachments
@@ -127,9 +141,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ---
 
-## Spam Filtering
-
-## How It Works
+## Spam Filtering: How It Works
 
 ---
 
@@ -139,7 +151,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ---
 
-## Spam Filtering
+## Spam Filtering Best Practices
 
 - Spam filters catch most threats, but not all
 - Check your spam folder occasionally for legitimate emails

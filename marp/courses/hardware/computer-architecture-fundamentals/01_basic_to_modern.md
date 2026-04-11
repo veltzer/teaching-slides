@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:computer-architecture
+  - concepts:hardware
+  - concepts:system-design
+level: beginner
+category: hardware
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Computer Architecture Fundamentals
 ## From Basic Principles to Modern Systems
 
@@ -230,10 +242,7 @@
 - DevOps integration
 
 ---
-## Best Practices
-
----
-## Documentation
+## Best Practices: Documentation
 - Architecture diagrams
 - System specifications
 - Runbooks

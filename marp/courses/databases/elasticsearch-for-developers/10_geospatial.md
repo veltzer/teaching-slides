@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:geospatial
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Geospatial Search
 
 ## Location-Based Search and Analytics

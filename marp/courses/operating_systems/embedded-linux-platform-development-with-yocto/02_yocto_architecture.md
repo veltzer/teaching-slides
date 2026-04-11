@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:embedded
+  - tools:yocto
+level: advanced
+category: embedded
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Yocto Architecture Deep Dive
 
 ---

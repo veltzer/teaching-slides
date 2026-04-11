@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:design-patterns
+  - concepts:microservices
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Client-Server Pattern
 
 ---

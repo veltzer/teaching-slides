@@ -15,9 +15,6 @@ audience:
 
 ---
 # Linux System Administration
-
-![h:400](jpg/courses/operating_systems/linux-system-administration/linus_torvalds.jpg)
-
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 

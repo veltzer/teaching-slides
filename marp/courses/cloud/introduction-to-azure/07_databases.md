@@ -1,3 +1,16 @@
+---
+tags:
+  - infrastructure:cloud
+  - infrastructure:azure
+  - infrastructure:databases
+level: beginner
+category: cloud
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Azure Database Services
 
 ---

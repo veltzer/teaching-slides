@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:ui
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Material Design and Animations
 ## Creating Engaging User Interfaces
 

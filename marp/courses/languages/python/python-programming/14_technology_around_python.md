@@ -1,3 +1,12 @@
+---
+tags:
+  - languages:python
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Technology Around Python
 
 ---
@@ -550,11 +559,11 @@ poetry install
 poetry run python3 script.py
 
 ```
-```console
 
 ---
 ## `uv` - Modern Python Package Manager
 
+```bash
 # Install uv
 pip install uv
 

@@ -1,3 +1,18 @@
+---
+tags:
+  - tools:kubernetes
+  - infrastructure:containers
+  - infrastructure:orchestration
+  - practices:devops
+  - tools:docker
+level: beginner
+category: devops
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:sysadmins
+
+---
 # Ingress and Container Registries
 
 ---

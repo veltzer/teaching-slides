@@ -1,6 +1,17 @@
-# Fast Flux DNS
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
 
-Fast Flux DNS is a technique used by botnets and other malicious actors to hide their malicious infrastructure behind an ever-changing network of compromised hosts.
+# Fast Flux DNS
 
 ---
 
@@ -140,6 +151,11 @@ The Avalanche network takedown in 2016 required coordinated effort across 30+ co
 1. Test against legitimate CDN domains (which also have multiple IPs) vs known fast flux patterns
 1. Discuss: How do you distinguish fast flux from legitimate CDN/anycast?
 
+---
+
 ## Conclusion
 
-Fast Flux DNS is a sophisticated technique used by cybercriminals to ensure the availability and resilience of their malicious infrastructure. Effective mitigation requires a multi-layered approach, involving DNS monitoring, threat intelligence, and collaboration with various stakeholders in the internet ecosystem.
+- Fast flux DNS is a sophisticated technique ensuring availability of malicious infrastructure
+- Effective mitigation requires a multi-layered approach
+- DNS monitoring, threat intelligence, and stakeholder collaboration are essential
+- Distinguishing fast flux from legitimate CDN behavior remains challenging

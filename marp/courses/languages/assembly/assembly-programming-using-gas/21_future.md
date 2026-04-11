@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Future of Assembly Programming
 
 ---
@@ -15,6 +26,7 @@
 - Reverse engineering and security
 
 ---
+
 ## High-Level Languages vs Assembly
 - Most applications: High-level languages
 - Specific use cases: Assembly still relevant
@@ -35,6 +47,7 @@ int add(int a, int b) {
 ```
 
 ---
+
 ## Emerging Architectures
 - RISC-V: Open-source ISA
 - Quantum Computing
@@ -61,6 +74,7 @@ message:
 ```
 
 ---
+
 ## Specialized Instruction Sets
 
 - AI and Machine Learning (e.g., TPUs)
@@ -74,6 +88,7 @@ aesenc xmm0, xmm1   ; AES encryption round
 ```
 
 ---
+
 ## Assembly in Education
 - Teaching computer architecture
 - Understanding low-level operations
@@ -98,6 +113,7 @@ Example:
 ```
 
 ---
+
 ## Just-In-Time (JIT) Compilation
 - Runtime compilation of code
 - Combines advantages of interpreted and compiled code
@@ -171,6 +187,7 @@ Example for an ARM Cortex-M:
 ```
 
 ---
+
 ## Ongoing Relevance of Assembly
 - Performance optimization
 - Hardware-software interface
@@ -178,6 +195,7 @@ Example for an ARM Cortex-M:
 - Understanding computer architecture
 
 ---
+
 ## Challenges and Opportunities
 - Keeping up with new architectures
 - Balancing performance and maintainability

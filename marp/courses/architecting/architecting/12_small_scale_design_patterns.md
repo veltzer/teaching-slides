@@ -1,4 +1,15 @@
-# Small Scale Design patterns
+---
+tags:
+  - concepts:architecture
+  - concepts:design-patterns
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
+# Small Scale Design Patterns
 
 ## Model-View-Controller (MVC) Pattern
 

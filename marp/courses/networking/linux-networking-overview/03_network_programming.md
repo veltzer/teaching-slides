@@ -1,3 +1,14 @@
+---
+tags:
+  - networking:sockets
+  - programming:c
+  - infrastructure:linux
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+
+---
 # Network C Programming Essentials
 ## Chapter 3: Socket Programming in Linux
 

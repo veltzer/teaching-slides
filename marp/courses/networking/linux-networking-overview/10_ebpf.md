@@ -1,3 +1,15 @@
+---
+tags:
+  - networking:ebpf
+  - infrastructure:linux
+  - concepts:kernel
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # eBPF Overview and Usage
 ## Chapter 10: Extended Berkeley Packet Filter
 

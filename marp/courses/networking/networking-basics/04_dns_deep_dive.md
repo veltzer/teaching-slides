@@ -1,3 +1,15 @@
+---
+tags:
+  - networking:dns
+  - networking:protocols
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+  - audiences:sysadmins
+
+---
 # DNS Deep Dive
 ## Understanding the Domain Name System
 
@@ -650,7 +662,7 @@ Traditional DNS queries are sent in plaintext over UDP port 53, allowing eavesdr
 ```bash
 # Test DoH with curl
 $ curl -s -H 'Accept: application/dns-json' \
-    'https://cloudflare-dns.com/dns-query?name=example.com&type=A' | python3 -m json.tool
+    'https://cloudflare-dns.com/dns-query?name=example.com&type=A' | python -m json.tool
 
 # Configure systemd-resolved for DoT
 # Edit /etc/systemd/resolved.conf:
@@ -824,7 +836,7 @@ $ dig +dnssec example.com @1.1.1.1
 ## Python DNS Example
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple DNS resolver using the socket library and dnspython."""
 
 import socket
@@ -853,7 +865,7 @@ resolve_basic("example.com")
 ```
 
 ```bash
-$ python3 dns_resolver.py
+$ python dns_resolver.py
 example.com -> 93.184.216.34
   Hostname: example.com
   Aliases:  []
@@ -867,7 +879,7 @@ example.com -> 93.184.216.34
 ## Advanced DNS with dnspython
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Advanced DNS queries using dnspython library."""
 
 import dns.resolver

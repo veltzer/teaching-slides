@@ -1,11 +1,21 @@
-# Introduction to Python
+---
+tags:
+  - languages:python
+level: beginner
+category: language
+audience:
+  - audiences:developers
 
-![h:500](jpg/courses/languages/python/python-programming/guido_van_rossum.jpg)
+---
+# Introduction to Python
 
 ---
 ## What is Python?
-- Python is a high-level, general-purpose programming language
-- Created by Guido van Rossum
+
+![bg left](jpg/courses/languages/python/python-programming/guido_van_rossum.jpg)
+
+- High-level, general-purpose programming language
+- Created by **Guido van Rossum**
 - First released in 1991
 - Named after Monty Python's Flying Circus
 - Emphasizes code readability and simplicity

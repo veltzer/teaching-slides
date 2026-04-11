@@ -18,4 +18,6 @@ audience:
 
 ---
 
+## Course Overview
+
 ![title](svg/courses/networking/networking-basics/title.svg)

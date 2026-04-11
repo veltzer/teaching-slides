@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: intermediate
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Chat-Based Development Workflows
 
 ---
@@ -454,46 +466,25 @@ Implementing design patterns:
 
 Creating comprehensive docs:
 
-```markdown
+```misc
 You: "Generate API documentation for this endpoint:
 @app.post('/api/users')
 async def create_user(user: UserCreate, db: Session = Depends(get_db)):"
 
-AI: """
+AI: "
 ## Create User
-
 Creates a new user in the system.
 
-### Endpoint
-`POST /api/users`
+### Endpoint: POST /api/users
 
-### Request Body
+### Request Body:
+{ email, username, full_name, password }
 
-```
-```json
-{
-  "email": "user@example.com",
-  "username": "johndoe",
-  "full_name": "John Doe",
-  "password": "securepassword123"
-}
-```
-
-### Response
-- **201 Created**: User successfully created
-- **400 Bad Request**: Invalid input data
-- **409 Conflict**: User already exists
-
-### Example Response
-
-```json
-{
-  "id": "123e4567-e89b-12d3-a456-426614174000",
-  "email": "user@example.com",
-  "username": "johndoe",
-  "full_name": "John Doe",
-  "created_at": "2024-01-15T10:30:00Z"
-}
+### Responses:
+- 201 Created: User successfully created
+- 400 Bad Request: Invalid input data
+- 409 Conflict: User already exists
+"
 ```
 
 ---
@@ -676,10 +667,14 @@ When AI misunderstands:
 ```markdown
 You: "That's not what I meant. Let me clarify:
 - I need X, not Y
-- The constraint is
+- The constraint is [specify constraint]
+- Here's an example of what I want: [example]"
 ```
 
+Redirect the conversation with specific corrections
+
 ---
+
 ## Integration with Development Flow
 
 ![integration_with_development_flow](svg/courses/ai/developing-using-ai/03_chats/integration_with_development_flow.svg)

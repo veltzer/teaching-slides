@@ -1,3 +1,15 @@
+---
+tags:
+  - data-and-ai:ai
+  - concepts:code-generation
+  - data-and-ai:prompt-engineering
+  - practices:productivity
+level: intermediate
+category: ai
+audience:
+  - audiences:developers
+
+---
 # Learning and Skill Development
 
 ---
@@ -597,10 +609,9 @@ def get_user_with_orders_nosql():
     return user
 ```
 
-## Decision Making Frameworks
-
 ---
-## Trade-off Analysis
+
+## Decision Making Frameworks
 
 ![decision_making_frameworks](svg/courses/ai/developing-using-ai/06_learning_and_skills/decision_making_frameworks.svg)
 
@@ -878,10 +889,7 @@ class KnowledgeEntry:
 - Concept 2: explanation
 
 ## Code Example
-
-```
-```template
-# Working example
+[code example here]
 
 ## Use Cases
 - When to use

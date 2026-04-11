@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:query-languages
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Elasticsearch Query Language (ES|QL)
 
 ## Structured Query Language for Elasticsearch

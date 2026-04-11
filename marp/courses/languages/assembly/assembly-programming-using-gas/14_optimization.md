@@ -1,6 +1,18 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Optimization Techniques
 
 ---
+
 ## Why Optimize?
 - Improve execution speed
 - Reduce memory usage
@@ -8,6 +20,7 @@
 - Better utilization of hardware resources
 
 ---
+
 ## Common Optimization Strategies
 1. Loop optimization
 1. Function inlining
@@ -18,6 +31,7 @@
 1. Parallelization
 
 ---
+
 ## Loop Optimization: Loop Unrolling
 
 Before:
@@ -59,6 +73,7 @@ After:
 ![Side-by-side comparison of original loop vs 4x unrolled loop showing iteration count reduction from 100 to 25 and instruction analysis](svg/courses/languages/assembly/assembly-programming-using-gas/14_optimization/loop_unrolling_before_after.svg)
 
 ---
+
 ## Function Inlining
 - Replace function call with actual code
 - Eliminates call/return overhead
@@ -77,6 +92,7 @@ mov [result], eax
 ```
 
 ---
+
 ## Branch Prediction Optimization
 - Arrange code so that the most likely path is fall-through
 - Use conditional moves instead of branches for simple conditions
@@ -102,6 +118,7 @@ Can be optimized to:
 ```
 
 ---
+
 ## Data Alignment
 - Align data to natural boundaries
 - Improves memory access efficiency
@@ -116,6 +133,7 @@ my_array:
 ```
 
 ---
+
 ## Register Allocation
 - Keep frequently used values in registers
 - Minimize memory access
@@ -139,6 +157,7 @@ mov [counter], eax
 ```
 
 ---
+
 ## Instruction Selection
 - Choose instructions with lower latency or higher throughput
 - Use SIMD instructions for data parallelism
@@ -186,6 +205,7 @@ add esi, array_start  ; starting point for this thread
 ```
 
 ---
+
 ## Profiling and Benchmarking
 - Use tools like `gprof`, `perf`, or `valgrind`
 - Identify performance bottlenecks
@@ -200,6 +220,7 @@ gprof program gmon.out > analysis.txt
 ```
 
 ---
+
 ## Optimization Pitfalls
 - Premature optimization
 - Over-optimization leading to unreadable code
@@ -207,7 +228,9 @@ gprof program gmon.out > analysis.txt
 - Optimizations that break correctness
 
 ---
+
 ## Best Practices
+
 1. Profile before optimizing
 1. Focus on hot spots (frequently executed code)
 1. Benchmark to verify improvements

@@ -17,4 +17,6 @@ audience:
 
 ---
 
+## Rust Programming
+
 ![title](svg/courses/languages/rust/rust-programming/title.svg)

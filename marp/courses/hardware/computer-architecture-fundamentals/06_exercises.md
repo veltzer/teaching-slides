@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:computer-architecture
+  - concepts:hardware
+  - concepts:performance
+level: beginner
+category: hardware
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Hands-On Exercises
 
 ---
@@ -510,64 +522,6 @@ Measure branch prediction accuracy on sorted vs unsorted data:
 
 ```c
 /* branch_pred.c -- demonstrate branch prediction impact */
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-#define N (32 * 1024 * 1024)
-
-static double time_seconds(void) {
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return ts.tv_sec + ts.tv_nsec * 1e-9;
-}
-
-int main(int argc, char **argv) {
-    int sorted = (argc > 1 && argv[1][0] == 's');
-    int *data = malloc(N * sizeof(int));
-
-    srand(42);
-    for (int i = 0; i < N; i++)
-        data[i] = rand() % 256;
-
-    if (sorted)
-        qsort(data, N, sizeof(int), (__compar_fn_t)strcmp);
-        /* Simple sort -- for proper sorting use a real comparator */
-
-    /* Actually, let's do a proper integer sort: */
-    if (sorted) {
-        /* Insertion of proper qsort comparator */
-        for (int i = 1; i < N; i++) {
-            int key = data[i];
-            int j = i - 1;
-            while (j >= 0 && data[j] > key) {
-                data[j + 1] = data[j];
-                j--;
-            }
-            data[j + 1] = key;
-        }
-    }
-
-    volatile long sum = 0;
-    double t0 = time_seconds();
-    for (int i = 0; i < N; i++) {
-        if (data[i] >= 128)
-            sum += data[i];
-    }
-    double t1 = time_seconds();
-
-    printf("%s: sum=%ld, time=%.3f sec\n",
-           sorted ? "Sorted" : "Unsorted", (long)sum, t1 - t0);
-
-    free(data);
-    return 0;
-}
-```
-
-**A better version with proper sorting:**
-
-```c
-/* branch_pred2.c -- cleaner version */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

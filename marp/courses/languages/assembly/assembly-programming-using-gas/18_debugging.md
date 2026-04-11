@@ -1,6 +1,18 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Debugging and Tools
 
 ---
+
 ## GDB for Assembly Programs
 - GNU Debugger (GDB)
 - Powerful tool for debugging assembly code
@@ -13,6 +25,7 @@
 ![GDB debugging workflow flowchart with key assembly-level commands for registers, memory, and stepping](svg/courses/languages/assembly/assembly-programming-using-gas/18_debugging/gdb_debugging_workflow.svg)
 
 ---
+
 ## Compiling for Debugging
 
 ```bash
@@ -64,6 +77,7 @@ Example:
 ```
 
 ---
+
 ## Objdump
 
 - Displays information about object files
@@ -122,6 +136,7 @@ objdump -d program
     - Valgrind
 
 ---
+
 ## Using gprof
 
 1. Compile with profiling support:
@@ -143,6 +158,7 @@ gprof program gmon.out > analysis.txt
 ```
 
 ---
+
 ## perf Example
 
 Record performance data:

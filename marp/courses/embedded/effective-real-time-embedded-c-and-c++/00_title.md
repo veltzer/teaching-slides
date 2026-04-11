@@ -17,4 +17,6 @@ audience:
 
 ---
 
+## Course Overview
+
 ![title](svg/courses/embedded/effective-real-time-embedded-c-and-c++/title.svg)

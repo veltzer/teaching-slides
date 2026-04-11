@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Account Takeover: Protecting Your Digital Identities
 
 ---
@@ -97,8 +110,6 @@
 - Participate in information sharing communities (ISACs, CERTs)
 - Collaborate with industry partners and law enforcement agencies
 - Continuously assess and improve your organization's security posture
-
-Defending against account takeover attacks requires a multi-layered approach, combining strong authentication, monitoring, password hygiene, security assessments, user awareness, and continuous vigilance.
 
 ---
 

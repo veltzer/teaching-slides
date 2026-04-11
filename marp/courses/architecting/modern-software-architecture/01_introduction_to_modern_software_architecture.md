@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:microservices
+  - concepts:design-patterns
+level: advanced
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Introduction to Modern Software Architecture
 
 ---

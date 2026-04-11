@@ -846,9 +846,7 @@ namespace GoodLibrary {
 ---
 ## Memory Layout of Static Variables
 
-Understanding where static variables are stored:
-
-```xml
+Understanding where static variables are stored.
 
 ---
 ## Memory Layout of Static Variables
@@ -856,9 +854,7 @@ Understanding where static variables are stored:
 ![memory_layout_of_static_variables](svg/courses/languages/c++/modern-c++-for-c-programmers/11_statics_and_globals/memory_layout_of_static_variables.svg)
 
 ---
-## Memory Layout of Static Variables
-
-```
+## Memory Layout of Static Variables (cont.)
 
 ```cpp
 static int initializedStatic = 42;    // .data segment

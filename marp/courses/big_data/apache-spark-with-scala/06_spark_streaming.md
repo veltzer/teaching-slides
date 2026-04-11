@@ -1,5 +1,18 @@
+---
+tags:
+  - tools:spark
+  - languages:scala
+  - data-and-ai:big-data
+  - concepts:streaming
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+
+---
 # Spark Streaming
 
+---
 ## Introduction to Streaming
 
 1. Real-time processing

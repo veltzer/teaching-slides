@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:docker
+  - infrastructure:containers
+  - practices:devops
+  - networking:networking
+level: intermediate
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Dead Containers
 
 ---

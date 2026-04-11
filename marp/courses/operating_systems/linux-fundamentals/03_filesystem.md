@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:unix
+  - concepts:filesystem
+level: beginner
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # UNIX File System
 ## Understanding Structure and Navigation
 
@@ -110,9 +122,7 @@ cd /home/username
 
 ---
 
-## Moving Around Commands
-
-## Basic Navigation
+## Moving Around Commands - Basic Navigation
 
 ```bash
 # Print working directory
@@ -125,6 +135,8 @@ cd /path/to/directory
 ls
 ls -la
 ```
+
+---
 
 ## Directory Stack
 

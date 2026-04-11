@@ -1,10 +1,23 @@
+---
+tags:
+  - tools:cmake
+  - languages:c
+  - languages:c++
+  - practices:build-systems
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Installing Software
 
 ---
 
 ## CMake Install Workflow
 
-![CMake install workflow: targets, GNUInstallDirs, component install](svg/courses/build_systems/cmake/05_installing_software/cmake_install_workflow.svg)
+![cmake_install_workflow](svg/courses/build_systems/cmake/05_installing_software/cmake_install_workflow.svg)
 
 ---
 

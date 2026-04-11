@@ -1,3 +1,15 @@
+---
+tags:
+  - languages:c
+  - concepts:programming
+  - concepts:memory-management
+  - concepts:pointers
+level: intermediate
+category: language
+audience:
+  - audiences:developers
+
+---
 # Strings in C Refresher
 
 ---
@@ -231,9 +243,13 @@ char *s = "Hello"; s[0] = 'h';  // Undefined behavior!
 
 ---
 
-## String Memory Layout
+## String Memory Layout (1)
 
 ![string_memory_layout_1](svg/courses/languages/c/c-refresher/04_strings/string_memory_layout_1.svg)
+
+---
+
+## String Memory Layout (2)
 
 ![string_memory_layout_2](svg/courses/languages/c/c-refresher/04_strings/string_memory_layout_2.svg)
 

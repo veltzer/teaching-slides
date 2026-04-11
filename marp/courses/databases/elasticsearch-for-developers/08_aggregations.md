@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - data-and-ai:analytics
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Aggregations
 
 ## Analytics and Data Summarization

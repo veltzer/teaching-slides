@@ -1,10 +1,23 @@
+---
+tags:
+  - tools:cmake
+  - languages:c
+  - languages:c++
+  - practices:build-systems
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Packaging Software
 
 ---
 
 ## CPack Packaging Generators
 
-![CPack generators: TGZ, DEB, RPM, NSIS and workflow](svg/courses/build_systems/cmake/06_packaging_software/cpack_generators.svg)
+![cpack_generators](svg/courses/build_systems/cmake/06_packaging_software/cpack_generators.svg)
 
 ---
 

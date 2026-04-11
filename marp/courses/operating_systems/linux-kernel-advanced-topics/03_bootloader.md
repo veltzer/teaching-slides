@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - concepts:kernel
+  - concepts:boot
+  - infrastructure:embedded
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+
+---
 # Bootloader
 
 ---

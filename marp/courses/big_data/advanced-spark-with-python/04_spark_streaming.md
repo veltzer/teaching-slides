@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - concepts:streaming
+level: advanced
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Spark Streaming and Structured Streaming
 
 ---

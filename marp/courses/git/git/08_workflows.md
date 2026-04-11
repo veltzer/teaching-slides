@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:git
+  - concepts:version-control
+level: intermediate
+category: version-control
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+  - audiences:managers
+
+---
 # Git Workflows
 
 ---
@@ -116,7 +129,6 @@
 ![branch_protection_flow](svg/courses/git/git/08_workflows/branch_protection_flow.svg)
 
 ---
-
 ## Branch Protection Rules
 - Required reviews
 - Status checks

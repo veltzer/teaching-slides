@@ -1,3 +1,16 @@
+---
+tags:
+  - networking:firewall
+  - networking:netfilter
+  - infrastructure:linux
+  - concepts:kernel
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Netfilters
 ## Chapter 8: Network Packet Filtering Framework
 

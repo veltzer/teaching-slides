@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - concepts:kernel
+  - concepts:power-management
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+
+---
 # Power Management
 
 ---

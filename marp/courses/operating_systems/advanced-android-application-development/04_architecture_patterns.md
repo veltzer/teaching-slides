@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - practices:software-design
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Architecture Patterns
 ## Building Scalable Android Applications
 

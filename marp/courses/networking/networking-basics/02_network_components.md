@@ -1,4 +1,19 @@
+---
+tags:
+  - networking:networking
+  - networking:infrastructure
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Network Components: Understanding the Differences
+
+---
+
+## Chapter Overview
 
 - Load Balancers
 - Proxies

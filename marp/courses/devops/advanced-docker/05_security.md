@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:docker
+  - infrastructure:containers
+  - practices:devops
+  - networking:networking
+level: advanced
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Docker Security and Compliance
 
 Hardening containers for production

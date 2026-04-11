@@ -1,3 +1,15 @@
+---
+tags:
+  - languages:cpp
+  - concepts:design-patterns
+  - concepts:oop
+  - practices:software-design
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Design Patterns Summary
 
 ---

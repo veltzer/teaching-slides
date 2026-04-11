@@ -1,3 +1,16 @@
+---
+tags:
+  - data-and-ai:ai
+  - data-and-ai:generative-ai
+  - languages:python
+  - data-and-ai:prompt-engineering
+  - concepts:ethics
+level: intermediate
+category: ai
+audience:
+  - audiences:data-scientists
+
+---
 # Using HuggingFace Infrastructure and LangChain
 
 ---

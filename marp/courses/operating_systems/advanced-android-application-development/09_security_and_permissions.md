@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:security
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Security and Permissions
 ## Implementing Android Security Best Practices
 

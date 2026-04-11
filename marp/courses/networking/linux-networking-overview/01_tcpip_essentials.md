@@ -1,3 +1,16 @@
+---
+tags:
+  - networking:tcp-ip
+  - networking:protocols
+  - infrastructure:linux
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # TCP/IP Essentials
 ## Chapter 1: Introduction to Computer Networks
 

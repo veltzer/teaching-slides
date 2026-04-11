@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - data-and-ai:ai
+  - data-and-ai:llm
+  - security:owasp
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # LLM03: Training Data Poisoning
 ## Corrupting the Foundation
 

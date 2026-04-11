@@ -1,3 +1,13 @@
+---
+tags:
+  - networking:sockets
+  - programming:python
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+
+---
 # Socket Programming
 ## Building Networked Applications
 
@@ -59,7 +69,7 @@
 ## TCP Server in Python: Basic
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple TCP echo server."""
 
 import socket
@@ -105,7 +115,7 @@ while True:
 ## TCP Client in Python: Basic
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple TCP client."""
 
 import socket
@@ -134,10 +144,10 @@ finally:
 
 ```bash
 # Test the echo server
-$ python3 tcp_server.py &
+$ python tcp_server.py &
 Server listening on port 8080...
 
-$ python3 tcp_client.py
+$ python tcp_client.py
 Connected to server
 Sent: Hello, Server!
 Received: Hello, Server!
@@ -151,7 +161,7 @@ Connection closed
 The basic server handles only one client at a time. Use threading for concurrency:
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Multi-threaded TCP server."""
 
 import socket
@@ -201,7 +211,7 @@ UDP is connectionless -- no handshake, no guaranteed delivery, but lower overhea
 **UDP Server:**
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple UDP echo server."""
 
 import socket
@@ -221,7 +231,7 @@ while True:
 **UDP Client:**
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple UDP client."""
 
 import socket
@@ -333,7 +343,7 @@ conn.close()                     # now release the fd
 By default, socket operations block (wait until complete). Non-blocking mode returns immediately.
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Non-blocking socket example."""
 
 import socket
@@ -386,7 +396,7 @@ The busy-loop above is inefficient. That is where select/poll/epoll come in.
 `select()` monitors multiple sockets and tells you which ones are ready for I/O.
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """TCP server using select() for I/O multiplexing."""
 
 import socket
@@ -456,7 +466,7 @@ while inputs:
 ## epoll Example
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """TCP server using epoll (Linux only)."""
 
 import socket
@@ -524,7 +534,7 @@ finally:
 Python's `asyncio` wraps epoll/kqueue with a clean async/await interface.
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """TCP echo server using asyncio."""
 
 import asyncio
@@ -573,7 +583,7 @@ This handles thousands of concurrent connections on a single thread using the ev
 Understanding sockets by building a minimal HTTP server:
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Minimal HTTP server using raw sockets."""
 
 import socket
@@ -854,7 +864,7 @@ This "length-prefix" pattern is fundamental to many network protocols.
 ## A Complete Chat Application
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple TCP chat server."""
 
 import socket
@@ -931,7 +941,7 @@ Welcome, Alice!
 Raw sockets allow constructing packets at a low level (requires root privileges).
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Simple ICMP ping using raw sockets (requires root)."""
 
 import socket
@@ -1041,7 +1051,7 @@ Trace system calls to see exactly what your socket program does:
 
 ```bash
 # Trace all network-related syscalls
-$ strace -e trace=network python3 tcp_client.py
+$ strace -e trace=network python tcp_client.py
 socket(AF_INET, SOCK_STREAM, IPPROTO_IP) = 3
 connect(3, {sa_family=AF_INET, sin_port=htons(8080),
         sin_addr=inet_addr("127.0.0.1")}, 16) = 0
@@ -1050,7 +1060,7 @@ recvfrom(3, "Hello, Server!", 4096, 0, NULL, NULL) = 14
 close(3)                                = 0
 
 # Trace with timestamps
-$ strace -e trace=network -T python3 tcp_client.py
+$ strace -e trace=network -T python tcp_client.py
 connect(...) = 0 <0.000234>    # connect took 234 microseconds
 sendto(...)  = 14 <0.000045>   # send took 45 microseconds
 recvfrom(...) = 14 <0.012345>  # recv took 12ms (waiting for response)

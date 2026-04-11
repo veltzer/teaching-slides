@@ -1,3 +1,18 @@
+---
+tags:
+  - practices:devops
+  - tools:ansible
+  - infrastructure:configuration-management
+  - infrastructure:cloud
+  - practices:automation
+level: intermediate
+category: devops
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Roles: Structure, Creation, and Galaxy
 
 ## Topics Covered

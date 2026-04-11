@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:assembly
+  - hardware-and-embedded:x86
+  - infrastructure:linux
+  - infrastructure:low-level
+level: advanced
+category: language
+audience:
+  - audiences:developers
+---
 # Basic Assembly Concepts
 
 ---
@@ -37,6 +48,7 @@ section .data
 ```
 
 ---
+
 ## Instruction Set Architecture (ISA)
 - Set of instructions that a CPU can execute
 - Defines:
@@ -47,6 +59,7 @@ section .data
     - Memory organization
 
 ---
+
 ## Basic x86 Instruction Format
 
 ```nasm
@@ -111,6 +124,7 @@ mov eax, [ebx + ecx*4]
 ```
 
 ---
+
 ## Data Types
 - Byte: 8 bits
 - Word: 16 bits

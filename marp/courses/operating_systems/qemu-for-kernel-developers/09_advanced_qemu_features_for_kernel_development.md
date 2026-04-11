@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:qemu
+  - infrastructure:virtualization
+  - concepts:kernel
+  - infrastructure:linux
+level: advanced
+category: operating-systems
+audience:
+  - audiences:developers
+
+---
 # Advanced QEMU Features for Kernel Development
 
 ---

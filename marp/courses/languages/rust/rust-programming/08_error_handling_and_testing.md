@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:testing
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # Error Handling and Testing
 ## Chapter 7: Writing Reliable Code
 

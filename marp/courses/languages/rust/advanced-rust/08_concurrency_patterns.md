@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:concurrency
+level: advanced
+category: language
+audience:
+  - audiences:developers
+
+---
 # Concurrency Patterns
 
 Channels, Shared State, Data Parallelism, and Advanced Patterns

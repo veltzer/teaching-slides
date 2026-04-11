@@ -1,3 +1,15 @@
+---
+tags:
+  - networking:sdn
+  - networking:containers
+  - networking:kubernetes
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # Modern Networking
 ## SDN, Containers, Service Mesh, and Beyond
 
@@ -453,7 +465,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ## WebSocket: Python Example
 
 ```python
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """WebSocket server using the websockets library."""
 
 import asyncio

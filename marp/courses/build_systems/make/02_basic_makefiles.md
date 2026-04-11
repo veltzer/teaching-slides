@@ -1,6 +1,21 @@
+---
+tags:
+  - tools:make
+  - languages:c
+  - practices:build-systems
+  - infrastructure:linux
+level: intermediate
+category: build-system
+audience:
+  - audiences:developers
+
+---
 # Basic Makefiles
 
+---
+
 ## Overview
+
 - Writing your first rules
 - Understanding targets and dependencies
 - Phony targets
@@ -11,7 +26,6 @@
 
 ## Rule Syntax
 
-## The Basic Format
 ```makefile
 target: prerequisites
     recipe
@@ -27,7 +41,6 @@ target: prerequisites
 
 ## Tab vs Spaces
 
-## Common Mistake
 ```makefile
 # WRONG - spaces before gcc
 program: main.c
@@ -42,9 +55,7 @@ Configure your editor to show tabs!
 
 ---
 
-## Simple C Project
-
-## File Structure
+## Simple C Project - File Structure
 
 ```tree
 project/
@@ -56,9 +67,8 @@ project/
 
 ---
 
-## Simple C Project
+## Simple C Project - The Makefile
 
-## The Makefile
 ```makefile
 program: main.o utils.o
     gcc -o program main.o utils.o
@@ -77,7 +87,6 @@ clean:
 
 ## Multiple Targets
 
-## Building Different Things
 ```makefile
 all: program tests docs
 
@@ -95,7 +104,6 @@ docs:
 
 ## Default Target
 
-## First Target is Default
 - Make executes the first target by default
 - Convention: name it `all`
 
@@ -118,7 +126,6 @@ make all  # same as above
 
 ## Phony Targets
 
-## Targets That Are Not Files
 ```makefile
 .PHONY: clean all install test
 
@@ -138,7 +145,6 @@ test:
 
 ## Why Use .PHONY?
 
-## The Problem Without It
 - If a file named `clean` exists, `make clean` won't run
 - Make thinks the target is up to date
 
@@ -156,7 +162,6 @@ clean:
 
 ## Dependencies Deep Dive
 
-## Transitive Dependencies
 ```makefile
 program: main.o utils.o lib.o
     gcc -o program main.o utils.o lib.o
@@ -181,7 +186,6 @@ lib.o: lib.c lib.h
 
 ## Comments
 
-## Documenting Your Makefile
 ```makefile
 # Main build target
 # Compiles all source files and links them
@@ -200,7 +204,6 @@ main.o: main.c
 
 ## Multiple Rules for Same Target
 
-## Adding Dependencies
 ```makefile
 # First rule defines the recipe
 main.o: main.c
@@ -221,7 +224,6 @@ main.o: main.c utils.h config.h
 
 ## Handling Errors
 
-## Recipe Error Behavior
 - By default, make stops on first error
 - Prefix with `-` to ignore errors
 
@@ -238,7 +240,6 @@ force_clean:
 
 ## Silent Recipes
 
-## Suppressing Echo
 - By default, make prints each command
 - Prefix with `@` to suppress
 
@@ -261,7 +262,6 @@ Done!
 
 ## Running Make
 
-## Common Invocations
 ```bash
 make              # Build default target
 make target       # Build specific target
@@ -276,7 +276,6 @@ make -C dir       # Change to dir first
 
 ## Debugging Makefiles
 
-## Useful Options
 ```bash
 make -n           # Print commands without executing
 make -d           # Debug output
@@ -289,7 +288,6 @@ make --trace      # Trace rule execution
 
 ## Summary
 
-## Key Points
 - Rules consist of target, prerequisites, recipe
 - Recipe lines MUST begin with TAB
 - First target is the default

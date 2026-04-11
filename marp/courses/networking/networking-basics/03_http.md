@@ -1,3 +1,14 @@
+---
+tags:
+  - networking:http
+  - networking:protocols
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # HTTP Protocol: Evolution and Versions
 
 ## From 1.0 to 3.0

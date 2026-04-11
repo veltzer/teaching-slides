@@ -1,3 +1,15 @@
+---
+tags:
+  - concepts:architecture
+  - concepts:monitoring
+  - concepts:observability
+level: intermediate
+category: architecture
+audience:
+  - audiences:developers
+  - audiences:architects
+
+---
 # Monitoring and Observability
 ## Modern Architecture Course
 
@@ -101,11 +113,11 @@ logger.info("order_processed",
 ## Metrics Collection
 
 1. System Metrics
-   - CPU, Memory, Disk, Network
+    - CPU, Memory, Disk, Network
 1. Application Metrics
-   - Response time, Error rates
+    - Response time, Error rates
 1. Business Metrics
-   - Transactions, Users, Revenue
+    - Transactions, Users, Revenue
 
 ---
 

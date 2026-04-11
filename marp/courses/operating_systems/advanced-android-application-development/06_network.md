@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:networking
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Network Operations
 ## Building Robust Networked Applications
 

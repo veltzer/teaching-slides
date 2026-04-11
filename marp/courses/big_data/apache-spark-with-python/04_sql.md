@@ -1,9 +1,20 @@
-# Spark SQL & DataFrames
-
-## Introduction to Spark SQL
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - languages:sql
+level: intermediate
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
 
 ---
-## Overview
+# Spark SQL & DataFrames
+
+---
+## Spark SQL Overview
 - High-level API for structured data processing
 - Seamless integration with SQL and DataFrame operations
 - Optimized execution through Catalyst optimizer
@@ -21,8 +32,6 @@
 1. Tungsten Execution Engine
 
 ---
-## Working with DataFrames
-
 ## Creating DataFrames
 
 ```python
@@ -86,9 +95,7 @@ df.withColumn("rank", rank().over(window_spec))
 ```
 
 ---
-## SQL Queries
-
-## Running SQL
+## Running SQL Queries
 
 ```python
 # Register temporary view
@@ -137,9 +144,7 @@ result = spark.sql("""
 ```
 
 ---
-## Integration with Different Data Sources
-
-## Supported Formats
+## Supported Data Formats
 
 ```python
 # Reading different formats
@@ -178,8 +183,6 @@ df.write \
 ```
 
 ---
-## Integration with Hive
-
 ## Hive Configuration
 
 ```python
@@ -254,8 +257,6 @@ spark.sql("SELECT * FROM events WHERE date = '2024-01-01'")
 ```
 
 ---
-## Advanced Features
-
 ## User-Defined Functions (UDFs)
 
 ```python
@@ -307,9 +308,7 @@ query = streaming_df.writeStream \
 ```
 
 ---
-## Best Practices
-
-## Schema Management
+## Schema Management Best Practices
 
 ```python
 # Define schema explicitly

@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:android
+  - concepts:mobile-development
+  - concepts:concurrency
+level: advanced
+category: mobile
+audience:
+  - audiences:developers
+
+---
 # Background Processing
 ## Managing Background Tasks and Services
 

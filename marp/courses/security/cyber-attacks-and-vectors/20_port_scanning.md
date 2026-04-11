@@ -1,6 +1,17 @@
-# Port Scanning
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
 
-## Understanding Network Security Vulnerabilities
+# Port Scanning
 
 ---
 ## What is Port Scanning?

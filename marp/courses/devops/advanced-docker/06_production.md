@@ -1,3 +1,15 @@
+---
+tags:
+  - tools:docker
+  - infrastructure:containers
+  - practices:devops
+  - networking:networking
+level: advanced
+category: devops
+audience:
+  - audiences:developers
+
+---
 # Docker in Production
 
 Logging, monitoring, health checks, and lifecycle management

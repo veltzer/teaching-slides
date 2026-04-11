@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - practices:performance
+level: advanced
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Spark SQL and Catalyst Optimizer
 
 ---

@@ -1,3 +1,16 @@
+---
+tags:
+  - tools:spark
+  - languages:python
+  - data-and-ai:big-data
+  - practices:testing
+level: advanced
+category: big-data
+audience:
+  - audiences:developers
+  - audiences:data-scientists
+
+---
 # Testing and CI/CD for PySpark
 
 ---

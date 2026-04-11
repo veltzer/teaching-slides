@@ -1,4 +1,18 @@
+---
+tags:
+  - security:security
+  - security:policies
+  - security:compliance
+level: beginner
+category: security
+audience:
+  - audiences:managers
+  - audiences:it-staff
+---
+
 # Data Protection and Privacy
+
+---
 
 ## Why Data Protection Matters
 - Data is one of the most valuable assets your organization holds
@@ -22,8 +36,6 @@
 
 ## Data Classification Levels
 
-## Not All Data Is Equal
-
 | Level | Label | Examples | Handling |
 |-------|-------|----------|----------|
 | 1 | **Public** | Marketing brochures, press releases | Share freely |
@@ -37,8 +49,6 @@
 ---
 
 ## Personally Identifiable Information (`PII`)
-
-## What Counts as `PII`?
 - Full name combined with:
     - Social security / national ID number
     - Date of birth
@@ -55,7 +65,6 @@
 
 ## Encryption Basics
 
-## What Is Encryption?
 - Scrambling data so only authorized parties can read it
 
 ---
@@ -85,8 +94,6 @@
 
 ## Secure File Sharing
 
-## Do This, Not That
-
 | Instead of... | Use... |
 |---------------|--------|
 | Email attachments with sensitive data | Company-approved file sharing platform |
@@ -109,9 +116,7 @@
 
 ---
 
-## `GDPR` - General Data Protection Regulation
-
-## Key Principles (EU Regulation, Global Impact)
+## `GDPR` Key Principles (EU Regulation, Global Impact)
 - **Lawfulness** - you must have a legal basis to process personal data
 - **Purpose limitation** - collect data only for specified purposes
 - **Data minimization** - collect only what you need
@@ -129,21 +134,19 @@
 - **Right to data portability** - people can take their data elsewhere
 - **Right to object** - people can opt out of certain processing
 
-## Fines
+### Fines
 - Up to 20 million euros or 4% of annual global revenue
 - Whichever is higher
 
 ---
 
 ## `CCPA` - California Consumer Privacy Act
-
-## Similar Rights for California Residents
 - Right to know what data is collected
 - Right to delete personal information
 - Right to opt out of data selling
 - Right to non-discrimination for exercising rights
 
-## Why It Matters Even Outside California
+### Why It Matters Even Outside California
 - Many companies apply `CCPA` standards globally
 - Other US states are passing similar laws
 - The trend is toward stronger privacy protections everywhere
@@ -151,8 +154,6 @@
 ---
 
 ## Data Protection in Practice
-
-## Everyday Scenarios
 
 - **Receiving a customer data request**: forward to your privacy team immediately
 - **Creating a spreadsheet with customer data**: classify it as Confidential or Restricted
@@ -163,12 +164,10 @@
 ---
 
 ## Mobile Device Security
-
-## Your Phone Is a Computer
 - Company email, files, and apps on your phone are at risk
 - Lost or stolen phones are a major source of data breaches
 
-## Protection Measures
+### Protection Measures
 - Enable screen lock (PIN, fingerprint, or face recognition)
 - Enable remote wipe capability
 - Keep your operating system and apps updated

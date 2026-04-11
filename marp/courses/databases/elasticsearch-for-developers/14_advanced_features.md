@@ -1,3 +1,14 @@
+---
+tags:
+  - tools:elasticsearch
+  - data-and-ai:search
+  - concepts:scripting
+level: intermediate
+category: database
+audience:
+  - audiences:developers
+
+---
 # Advanced Developer Features
 
 ## Scripting, Pipelines, and Advanced Capabilities

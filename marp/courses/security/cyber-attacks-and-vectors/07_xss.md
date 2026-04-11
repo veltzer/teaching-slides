@@ -1,3 +1,16 @@
+---
+tags:
+  - security:security
+  - security:cyber-attacks
+  - security:penetration-testing
+  - security:vulnerabilities
+level: intermediate
+category: security
+audience:
+  - audiences:developers
+  - audiences:security-professionals
+---
+
 # Cross-Site Scripting (XSS)
 
 ---
@@ -384,6 +397,11 @@ const safeHTML = DOMPurify.sanitize(userInput, config);
    - DOMPurify for user-generated HTML
 1. Test with XSStrike to verify all XSS vectors are closed
 
+---
+
 ## Conclusion
 
-XSS is a critical security vulnerability that can have severe consequences. Web developers must implement appropriate security measures, including input validation, output encoding, CSP, secure coding practices, and regular security testing to prevent XSS attacks and protect their applications and users.
+- XSS is a critical security vulnerability with severe consequences
+- Implement input validation, output encoding, and CSP
+- Follow secure coding practices and conduct regular security testing
+- Protect applications and users from XSS attacks

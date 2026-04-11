@@ -1,3 +1,14 @@
+---
+tags:
+  - networking:tcp-ip
+  - networking:protocols
+level: beginner
+category: networking
+audience:
+  - audiences:developers
+  - audiences:devops
+
+---
 # TCP/IP Fundamentals
 ## Understanding the Internet's Core Protocols
 

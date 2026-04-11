@@ -1,3 +1,14 @@
+---
+tags:
+  - languages:rust
+  - concepts:programming
+  - concepts:memory-management
+level: beginner
+category: language
+audience:
+  - audiences:developers
+
+---
 # References and Borrowing
 ## Chapter 4: Memory Management in Practice
 

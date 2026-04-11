@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:cloud
+  - practices:architecture
+level: beginner
+category: cloud
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+  - audiences:devops
+
+---
 # Introduction to Cloud Computing
 
 ## What is Cloud Computing?

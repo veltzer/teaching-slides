@@ -1,3 +1,14 @@
+---
+tags:
+  - infrastructure:linux
+  - concepts:kernel
+  - programming:c
+level: intermediate
+category: networking
+audience:
+  - audiences:developers
+
+---
 # Linux Module Primer
 ## Chapter 5: Kernel Module Development
 

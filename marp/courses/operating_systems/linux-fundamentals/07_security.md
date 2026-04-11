@@ -1,3 +1,15 @@
+---
+tags:
+  - infrastructure:linux
+  - infrastructure:unix
+  - concepts:security
+level: beginner
+category: operating-systems
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+
+---
 # Security in Practice
 ## Understanding UNIX Security Mechanisms
 
@@ -107,13 +119,7 @@ Output example:
 
 ---
 
-## Directory and File Access Modes
-
-Symbolic notation:
-
----
-
-## Directory and File Access Modes
+## Directory and File Access Modes - Symbolic Notation
 
 ![directory_and_file_access_modes_2](svg/courses/operating_systems/linux-fundamentals/07_security/directory_and_file_access_modes_2.svg)
 
