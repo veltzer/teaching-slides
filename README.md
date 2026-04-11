@@ -13,6 +13,7 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 ## Slide numbers
 
 - Currently there are 55 courses in this repo.
+- Currently there are 34 lectures in this repo.
 - Currently there are 824 marp files in this repo.
 - Currently there are 22554 marp slides in this repo.
 - Currently there are 3327 SVG diagrams in this repo.
