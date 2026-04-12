@@ -9,9 +9,6 @@
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
@@ -27,80 +24,84 @@
         --danger-fill: #e74c3c;
         --danger-border: #c62828;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="582.465753" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.104974" font-weight="bold" fill="var(--text)">Consistent Hashing</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <!-- Ring diagram on the left -->
+  <g>
+    <circle cx="286.575342" cy="343.063063" r="235.436476" fill="none" stroke="var(--text)" stroke-width="3"/>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+    <!-- Nodes on ring -->
+    <circle cx="286.575342" cy="113.153153" r="17.122653" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+    <text x="286.575342" y="87.027027" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node A</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+    <circle cx="494.794521" cy="228.108108" r="17.122653" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+    <text x="533.150685" y="226.018018" text-anchor="start" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node B</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+    <circle cx="429.041096" cy="499.81982" r="17.122653" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+    <text x="450.958904" y="531.171171" text-anchor="start" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node C</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+    <circle cx="144.109589" cy="499.81982" r="17.122653" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+    <text x="122.191781" y="531.171171" text-anchor="end" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node D</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="646.7951" cy="306.8" r="171.7059" fill="none" stroke="var(--text)" stroke-width="3.6468" />
-  <circle cx="646.7951" cy="74.8" r="13.7364" fill="var(--danger-fill)" />
-  <circle cx="784.0431" cy="202.4" r="13.7364" fill="var(--ok-fill)" />
-  <circle cx="732.5752" cy="434.4" r="13.7364" fill="var(--primary-fill)" />
-  <circle cx="509.5473" cy="434.4" r="13.7364" fill="var(--warn-fill)" />
-  <circle cx="475.2354" cy="202.4" r="13.7364" fill="var(--info-fill)" />
-  <text x="646.7951" y="40" text-anchor="middle" font-size="17.1706">Node A</text>
-  <text x="818.355" y="202.4" text-anchor="start" font-size="17.1706">Node B</text>
-  <text x="732.5752" y="480.8" text-anchor="middle" font-size="17.1706">Node C</text>
-  <text x="646.7951" y="620" text-anchor="middle" font-size="20.6047">Keys assigned to next node clockwise</text>
+    <circle cx="78.356164" cy="228.108108" r="17.122653" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+    <text x="40" y="226.018018" text-anchor="end" font-family="Arial, sans-serif" font-size="16.052487" font-weight="bold" fill="var(--text)">Node E</text>
+
+    <!-- Keys on ring -->
+    <circle cx="385.205479" cy="144.504505" r="7.491161" fill="var(--text)"/>
+    <text x="393.972603" y="134.054054" text-anchor="start" font-family="Arial, sans-serif" font-size="12.84199" fill="var(--text-muted)">k1</text>
+
+    <circle cx="505.753425" cy="384.864865" r="7.491161" fill="var(--text)"/>
+    <text x="522.191781" y="384.864865" text-anchor="start" font-family="Arial, sans-serif" font-size="12.84199" fill="var(--text-muted)">k2</text>
+
+    <circle cx="286.575342" cy="572.972973" r="7.491161" fill="var(--text)"/>
+    <text x="286.575342" y="599.099099" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.84199" fill="var(--text-muted)">k3</text>
+
+    <circle cx="67.39726" cy="384.864865" r="7.491161" fill="var(--text)"/>
+    <text x="50.958904" y="384.864865" text-anchor="end" font-family="Arial, sans-serif" font-size="12.84199" fill="var(--text-muted)">k4</text>
+
+    <circle cx="176.986301" cy="144.504505" r="7.491161" fill="var(--text)"/>
+    <text x="168.219178" y="134.054054" text-anchor="end" font-family="Arial, sans-serif" font-size="12.84199" fill="var(--text-muted)">k5</text>
+
+    <text x="286.575342" y="348.288288" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text-faint)">hash ring</text>
+    <text x="286.575342" y="369.189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text-faint)">0 → 2^32-1</text>
+  </g>
+
+  <!-- Right side explanation panel -->
+  <rect x="604.383562" y="81.801802" width="635.616438" height="229.90991" rx="8.561326" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="922.191781" y="118.378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.262984" font-weight="bold" fill="var(--primary-accent)">How it works</text>
+  <text x="626.30137" y="154.954955" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">1. Hash both nodes and keys onto the same ring.</text>
+  <text x="626.30137" y="186.306306" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">2. A key is owned by the next node clockwise.</text>
+  <text x="626.30137" y="217.657658" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">3. Add or remove a node — only its neighbour's</text>
+  <text x="626.30137" y="238.558559" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   keys move, not the entire dataset.</text>
+  <text x="626.30137" y="275.135135" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">4. Virtual nodes (tokens) smooth the load —</text>
+  <text x="626.30137" y="296.036036" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   each physical node owns many ring positions.</text>
+
+  <!-- Benefits -->
+  <rect x="604.383562" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="757.808219" y="369.189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--ok-text)">Benefits</text>
+  <text x="757.808219" y="400.540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--ok-text)">Minimal reshuffling</text>
+  <text x="757.808219" y="424.576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--ok-text)">Horizontal scaling</text>
+  <text x="757.808219" y="448.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--ok-text)">Fault tolerance</text>
+
+  <rect x="933.150685" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1086.575342" y="369.189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--warn-text)">Watch out</text>
+  <text x="1086.575342" y="400.540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Hot keys on one node</text>
+  <text x="1086.575342" y="424.576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Uneven token spread</text>
+  <text x="1086.575342" y="448.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Rebalance cost</text>
+
+  <!-- Used by -->
+  <rect x="604.383562" y="489.369369" width="635.616438" height="125.405405" rx="8.561326" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="922.191781" y="525.945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--info-text)">Used by</text>
+  <text x="922.191781" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Cassandra, DynamoDB, Riak, Redis Cluster, Memcached clients.</text>
+  <text x="922.191781" y="583.423423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Also at the CDN edge — object-to-origin routing.</text>
+
+  <text x="582.465753" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--text-faint)">Key property: adding N+1th node moves ~1/N of the keys.</text>
 </svg>

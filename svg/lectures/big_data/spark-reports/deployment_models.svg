@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,78 +33,67 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead9" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 8.1455,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="149.0909" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Code</text>
-  <rect x="367.2727" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="476.3636" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Build</text>
-  <rect x="694.5455" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="803.6364" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Deploy</text>
-  <rect x="1021.8182" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1130.909" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Monitor</text>
-  <line x1="258.1817" y1="330" x2="367.2727" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead9)" />
-  <line x1="585.4544" y1="330" x2="694.5455" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead9)" />
-  <line x1="912.7272" y1="330" x2="1021.8182" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead9)" />
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--text)">Deployment Models</text>
+
+  <rect x="40" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="175" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Code</text>
+  <line x1="60" y1="145.454545" x2="290" y2="145.454545" stroke="var(--ok-text)" stroke-width="1" opacity="0.5"/>
+  <text x="175" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">Source of truth</text>
+  <text x="175" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Git-tracked jobs</text>
+  <text x="175" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Pinned dependencies</text>
+  <text x="175" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Pull-request review</text>
+  <text x="175" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Feature branches</text>
+  <text x="175" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Semantic versions</text>
+  <text x="175" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">Config lives with</text>
+  <text x="175" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">code, not the box</text>
+
+  <rect x="340" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="475" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Build</text>
+  <line x1="360" y1="145.454545" x2="590" y2="145.454545" stroke="var(--warn-text)" stroke-width="1" opacity="0.5"/>
+  <text x="475" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--warn-text)">Produce an artifact</text>
+  <text x="475" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Compile and test</text>
+  <text x="475" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Package fat JAR / wheel</text>
+  <text x="475" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Lint and scan</text>
+  <text x="475" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Sign and publish</text>
+  <text x="475" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Tag immutable version</text>
+  <text x="475" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--warn-text)">Build once, promote</text>
+  <text x="475" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--warn-text)">the same artifact</text>
+
+  <rect x="640" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="775" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Deploy</text>
+  <line x1="660" y1="145.454545" x2="890" y2="145.454545" stroke="var(--info-text)" stroke-width="1" opacity="0.5"/>
+  <text x="775" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">Place it on a cluster</text>
+  <text x="775" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">spark-submit jobs</text>
+  <text x="775" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Airflow / Dagster DAGs</text>
+  <text x="775" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Databricks workflows</text>
+  <text x="775" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Kubernetes operators</text>
+  <text x="775" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">EMR / Dataproc steps</text>
+  <text x="775" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">Canary a fraction</text>
+  <text x="775" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">before full rollout</text>
+
+  <rect x="940" y="71.636364" width="300" height="421.818182" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1090" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Monitor</text>
+  <line x1="960" y1="145.454545" x2="1220" y2="145.454545" stroke="var(--danger-text)" stroke-width="1" opacity="0.5"/>
+  <text x="1090" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">Close the loop</text>
+  <text x="1090" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Job success rate</text>
+  <text x="1090" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Runtime / SLA</text>
+  <text x="1090" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Output freshness</text>
+  <text x="1090" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Cost per run</text>
+  <text x="1090" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Rollback triggers</text>
+  <text x="1090" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">Alerts should</text>
+  <text x="1090" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">page a human</text>
+
+  <line x1="312" y1="282.545455" x2="338" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="612" y1="282.545455" x2="638" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="912" y1="282.545455" x2="938" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="509.272727" width="1200" height="110.727273" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">One pipeline from commit to cluster</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Every Spark job follows the same path: commit, build, deploy, watch.</text>
+  <text x="640" y="604.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Automation removes the drift between environments.</text>
 </svg>

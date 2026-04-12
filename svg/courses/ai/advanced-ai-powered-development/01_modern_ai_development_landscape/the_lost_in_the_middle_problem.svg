@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -9,9 +8,6 @@
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
@@ -31,95 +27,63 @@
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="646.451613" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.661779" font-weight="bold" fill="var(--primary-accent)">Recall Accuracy vs Position in Context Window</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <!-- Chart area -->
+  <rect x="52.903226" y="82.181818" width="1187.096774" height="442.909091" rx="6.998953" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <!-- Y-axis label -->
+  <text x="120" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)" transform="rotate(-90,120,320)">Recall Accuracy</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <!-- Y-axis ticks -->
+  <text x="40" y="108.545455" text-anchor="end" font-family="Arial, sans-serif" font-size="18.663874" fill="var(--text-muted)">100%</text>
+  <text x="40" y="192.909091" text-anchor="end" font-family="Arial, sans-serif" font-size="18.663874" fill="var(--text-muted)">75%</text>
+  <text x="40" y="277.272727" text-anchor="end" font-family="Arial, sans-serif" font-size="18.663874" fill="var(--text-muted)">50%</text>
+  <text x="40" y="361.636364" text-anchor="end" font-family="Arial, sans-serif" font-size="18.663874" fill="var(--text-muted)">25%</text>
+  <text x="40" y="446" text-anchor="end" font-family="Arial, sans-serif" font-size="18.663874" fill="var(--text-muted)">0%</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <!-- Gridlines -->
+  <line x1="52.903226" y1="103.272727" x2="1240" y2="103.272727" stroke="var(--border)" stroke-width="1"/>
+  <line x1="52.903226" y1="187.636364" x2="1240" y2="187.636364" stroke="var(--border)" stroke-width="1"/>
+  <line x1="52.903226" y1="272" x2="1240" y2="272" stroke="var(--border)" stroke-width="1"/>
+  <line x1="52.903226" y1="356.363636" x2="1240" y2="356.363636" stroke="var(--border)" stroke-width="1"/>
+  <line x1="52.903226" y1="440.727273" x2="1240" y2="440.727273" stroke="var(--text)" stroke-width="2"/>
+  <line x1="52.903226" y1="103.272727" x2="52.903226" y2="440.727273" stroke="var(--text)" stroke-width="2"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <!-- U-shaped recall curve (fill) -->
+  <polygon points="78.709677,119.090909 220.645161,156 362.580645,261.454545 504.516129,345.818182 646.451613,372.181818 788.387097,345.818182 930.322581,261.454545 1072.258065,156 1214.193548,119.090909 1214.193548,440.727273 78.709677,440.727273"
+           fill="var(--danger-fill)" fill-opacity="0.15"/>
+  <!-- Curve line -->
+  <polyline points="78.709677,119.090909 220.645161,156 362.580645,261.454545 504.516129,345.818182 646.451613,372.181818 788.387097,345.818182 930.322581,261.454545 1072.258065,156 1214.193548,119.090909"
+            fill="none" stroke="var(--danger-border)" stroke-width="4"/>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect width="330" height="580" fill="var(--surface)" rx="6.0004" x="475" y="40"/>
-  <text x="640" y="95.1" text-anchor="middle" font-size="10.0007" font-weight="bold" fill="var(--primary-accent)">The Lost-in-the-Middle Problem</text>
-  <text x="640" y="129.9" text-anchor="middle" font-size="10.0007" fill="var(--text-muted)">Recall accuracy varies by position in the context window</text>
-  <line x1="508" y1="504" x2="772" y2="504" stroke="var(--text)" stroke-width="0.9102" />
-  <line x1="508" y1="156" x2="508" y2="504" stroke="var(--text)" stroke-width="0.9102" />
-  <text x="503.875" y="511.25" text-anchor="end" font-size="10.0007" fill="var(--text)">0%</text>
-  <text x="503.875" y="431.5" text-anchor="end" font-size="10.0007" fill="var(--text)">25%</text>
-  <text x="503.875" y="351.75" text-anchor="end" font-size="10.0007" fill="var(--text)">50%</text>
-  <text x="503.875" y="272" text-anchor="end" font-size="10.0007" fill="var(--text)">75%</text>
-  <text x="503.875" y="192.25" text-anchor="end" font-size="10.0007" fill="var(--text)">100%</text>
-  <line x1="508" y1="431.5" x2="772" y2="431.5" stroke="var(--border)" stroke-width="0.4551" />
-  <line x1="508" y1="351.75" x2="772" y2="351.75" stroke="var(--border)" stroke-width="0.4551" />
-  <line x1="508" y1="272" x2="772" y2="272" stroke="var(--border)" stroke-width="0.4551" />
-  <line x1="508" y1="192.25" x2="772" y2="192.25" stroke="var(--border)" stroke-width="0.4551" />
-  <polyline points="508,185 541,202.4 574,279.25 607.0001,373.5 640,395.25 672.9999,373.5 706,293.75 739,221.25 772,185" fill="none" stroke="var(--danger-border)" stroke-width="1.3653" />
-  <polygon points="508,185 541,202.4 574,279.25 607.0001,373.5 640,395.25 672.9999,373.5 706,293.75 739,221.25 772,185 772,504 508,504" fill="var(--danger-fill)" fill-opacity="0.1" />
-  <rect x="510.0625" y="148.75" width="37.125" height="43.5" rx="6.0004" fill="var(--ok-fill)" fill-opacity="0.8" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="528.625" y="177.75" text-anchor="middle" font-size="10.0007" font-weight="bold" fill="var(--bg)">HIGH recall</text>
-  <rect x="732.8125" y="148.75" width="37.125" height="43.5" rx="6.0004" fill="var(--ok-fill)" fill-opacity="0.8" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="751.375" y="177.75" text-anchor="middle" font-size="10.0007" font-weight="bold" fill="var(--bg)">HIGH recall</text>
-  <rect x="615.25" y="402.5" width="49.5" height="43.5" rx="6.0004" fill="var(--danger-fill)" fill-opacity="0.8" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="640" y="431.5" text-anchor="middle" font-size="10.0007" font-weight="bold" fill="var(--bg)">LOW recall</text>
-  <text x="640" y="540.25" text-anchor="middle" font-size="10.0007" fill="var(--text)">Position in Context Window</text>
-  <text x="528.625" y="533" text-anchor="middle" font-size="10.0007" fill="var(--ok-accent)">Start</text>
-  <text x="640" y="533" text-anchor="middle" font-size="10.0007" fill="var(--danger-accent)">Middle</text>
-  <text x="751.375" y="533" text-anchor="middle" font-size="10.0007" fill="var(--ok-accent)">End</text>
-  <text x="485.3333" y="330" text-anchor="middle" font-size="10" fill="var(--text)" transform="rotate(-90,25,200)">Recall Accuracy</text>
-  <rect x="557.5" y="554.75" width="164.9999" height="43.5" rx="6.0004" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="583.75" text-anchor="middle" font-size="10.0007" fill="var(--text-muted)">Tip: Place critical instructions at the start or end of prompts</text>
+  <!-- Points -->
+  <circle cx="78.709677" cy="119.090909" r="8.165445" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <circle cx="646.451613" cy="372.181818" r="8.165445" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <circle cx="1214.193548" cy="119.090909" r="8.165445" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+
+  <!-- Annotations -->
+  <rect x="104.516129" y="124.363636" width="193.548387" height="42.181818" rx="6.998953" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="201.290323" y="151.781818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--ok-text)">HIGH recall</text>
+
+  <rect x="994.83871" y="124.363636" width="193.548387" height="42.181818" rx="6.998953" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1091.612903" y="151.781818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--ok-text)">HIGH recall</text>
+
+  <rect x="549.677419" y="382.727273" width="193.548387" height="42.181818" rx="6.998953" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="646.451613" y="410.145455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--danger-text)">LOW recall</text>
+
+  <!-- X-axis label regions -->
+  <text x="181.935484" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--ok-accent)">Start</text>
+  <text x="646.451613" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--danger-accent)">Middle</text>
+  <text x="1110.967742" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--ok-accent)">End</text>
+  <text x="646.451613" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" fill="var(--text)">Position in Context Window</text>
+
+  <!-- Tip box -->
+  <rect x="52.903226" y="546.181818" width="1187.096774" height="73.818182" rx="6.998953" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="646.451613" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" font-weight="bold" fill="var(--warn-text)">Tip</text>
+  <text x="646.451613" y="604.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.996858" fill="var(--warn-text)">Place critical instructions at the start or end of prompts — not buried in the middle</text>
 </svg>

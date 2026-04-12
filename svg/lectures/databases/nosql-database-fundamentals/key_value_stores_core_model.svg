@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="249" width="450" height="162" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
-  <rect x="790" y="249" width="450" height="162" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6"/>
-  <text x="265" y="350.25" text-anchor="middle" font-size="42">Key: "user:123"</text>
-  <text x="1015" y="350.25" text-anchor="middle" font-size="42">Value: {data}</text>
-  <line x1="490" y1="330" x2="790" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -14,9 +9,6 @@
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
@@ -32,70 +24,61 @@
         --danger-fill: #e74c3c;
         --danger-border: #c62828;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.807319" font-weight="bold" fill="var(--text)">Key-Value Stores: Core Model</text>
+
+  <!-- Key -> Value arrow -->
+  <rect x="60" y="113.818182" width="460" height="179.272727" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="290" y="177.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Key</text>
+  <text x="290" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--warn-text)">"user:123"</text>
+  <text x="290" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">string, opaque to DB</text>
+
+  <rect x="760" y="113.818182" width="460" height="179.272727" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="990" y="177.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Value</text>
+  <text x="990" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">{ name, email, age, ... }</text>
+  <text x="990" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">blob, JSON, or number</text>
+
+  <line x1="520" y1="203.454545" x2="760" y2="203.454545" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="640" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" font-weight="bold" fill="var(--text-muted)">hash(key)</text>
+
+  <!-- Operations row -->
+  <rect x="40" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">PUT(k, v)</text>
+  <text x="185" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Store or overwrite</text>
+  <text x="185" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">O(1) average</text>
+  <text x="185" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">atomic per key</text>
+
+  <rect x="350" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="495" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-text)">GET(k)</text>
+  <text x="495" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Fetch by exact key</text>
+  <text x="495" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">O(1) average</text>
+  <text x="495" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">no scan, no query</text>
+
+  <rect x="660" y="324.727273" width="290" height="158.181818" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="805" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--danger-text)">DELETE(k)</text>
+  <text x="805" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Remove entry</text>
+  <text x="805" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">idempotent</text>
+  <text x="805" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">often tombstoned</text>
+
+  <rect x="970" y="324.727273" width="270" height="158.181818" rx="8.215285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1105" y="361.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">TTL / Expiry</text>
+  <text x="1105" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Auto-delete after</text>
+  <text x="1105" y="424.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">N seconds</text>
+  <text x="1105" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">cache, sessions</text>
+
+  <!-- Properties summary -->
+  <rect x="40" y="504" width="1200" height="116" rx="8.215285" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="540.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--text)">Properties</text>
+  <text x="640" y="572.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Schemaless values — the DB sees only bytes. No joins, no secondary indexes, no range scans by default.</text>
+  <text x="640" y="598.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Examples: Redis, DynamoDB, Memcached, etcd, RocksDB. Ideal for caches, sessions, counters, feature flags.</text>
 </svg>

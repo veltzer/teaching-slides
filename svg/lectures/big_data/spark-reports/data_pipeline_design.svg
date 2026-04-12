@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,78 +33,71 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead13" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 8.1455,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="149.0909" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Source</text>
-  <rect x="367.2727" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="476.3636" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Process</text>
-  <rect x="694.5455" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="803.6364" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Transform</text>
-  <rect x="1021.8182" y="245.5" width="218.1818" height="169" rx="6.0044" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1130.909" y="346.9" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="30.5681">Load</text>
-  <line x1="258.1817" y1="330" x2="367.2727" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead13)" />
-  <line x1="585.4544" y1="330" x2="694.5455" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead13)" />
-  <line x1="912.7272" y1="330" x2="1021.8182" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead13)" />
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--text)">Data Pipeline Design</text>
+
+  <!-- Source -->
+  <rect x="40" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="175" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Source</text>
+  <line x1="60" y1="145.454545" x2="290" y2="145.454545" stroke="var(--ok-text)" stroke-width="1" opacity="0.5"/>
+  <text x="175" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">Read raw inputs</text>
+  <text x="175" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Kafka topics</text>
+  <text x="175" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">JDBC databases</text>
+  <text x="175" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">S3 / HDFS files</text>
+  <text x="175" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">REST API pulls</text>
+  <text x="175" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">CDC change feeds</text>
+  <text x="175" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">Schema and offsets</text>
+  <text x="175" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--ok-text)">captured early</text>
+
+  <!-- Process -->
+  <rect x="340" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="475" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Process</text>
+  <line x1="360" y1="145.454545" x2="590" y2="145.454545" stroke="var(--primary-text)" stroke-width="1" opacity="0.5"/>
+  <text x="475" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">Clean and validate</text>
+  <text x="475" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Parse and cast</text>
+  <text x="475" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Deduplicate</text>
+  <text x="475" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Fill missing values</text>
+  <text x="475" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Reject bad records</text>
+  <text x="475" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Enforce contracts</text>
+  <text x="475" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">Quarantine bad rows,</text>
+  <text x="475" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--primary-text)">never drop silently</text>
+
+  <!-- Transform -->
+  <rect x="640" y="71.636364" width="270" height="421.818182" rx="8.215285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="775" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Transform</text>
+  <line x1="660" y1="145.454545" x2="890" y2="145.454545" stroke="var(--info-text)" stroke-width="1" opacity="0.5"/>
+  <text x="775" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">Shape the business view</text>
+  <text x="775" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Joins and lookups</text>
+  <text x="775" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Aggregations</text>
+  <text x="775" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Window functions</text>
+  <text x="775" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Feature derivation</text>
+  <text x="775" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">Dimensional modeling</text>
+  <text x="775" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">Push heavy work</text>
+  <text x="775" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--info-text)">into Spark SQL</text>
+
+  <!-- Load -->
+  <rect x="940" y="71.636364" width="300" height="421.818182" rx="8.215285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1090" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Load</text>
+  <line x1="960" y1="145.454545" x2="1220" y2="145.454545" stroke="var(--danger-text)" stroke-width="1" opacity="0.5"/>
+  <text x="1090" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">Publish results</text>
+  <text x="1090" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Delta / Iceberg tables</text>
+  <text x="1090" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Warehouse sinks</text>
+  <text x="1090" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Partitioned Parquet</text>
+  <text x="1090" y="335.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Downstream topics</text>
+  <text x="1090" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">BI and ML consumers</text>
+  <text x="1090" y="440.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">Idempotent writes,</text>
+  <text x="1090" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" font-style="italic" fill="var(--danger-text)">atomic commits</text>
+
+  <line x1="312" y1="282.545455" x2="338" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="612" y1="282.545455" x2="638" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="912" y1="282.545455" x2="938" y2="282.545455" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="509.272727" width="1200" height="110.727273" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Classic ETL, Spark-native</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Each stage is a separate DataFrame job with explicit inputs, outputs, and checkpoints.</text>
+  <text x="640" y="604.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Make stages restartable so backfills and reruns are cheap.</text>
 </svg>

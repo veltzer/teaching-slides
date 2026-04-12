@@ -9,9 +9,6 @@
         --text: #212121;
         --text-muted: #555555;
         --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
@@ -27,81 +24,76 @@
         --danger-fill: #e74c3c;
         --danger-border: #c62828;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.668233" font-weight="bold" fill="var(--text)">Android Security Overview</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <!-- Four pillars -->
+  <rect x="40" y="81.801802" width="290" height="240.36036" rx="8.178196" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="185" y="123.603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--ok-text)">App Sandbox</text>
+  <text x="185" y="160.18018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">Each app = own UID</text>
+  <text x="185" y="186.306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">Own process, own files</text>
+  <text x="185" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">SELinux enforced</text>
+  <text x="185" y="238.558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">No access across apps</text>
+  <text x="185" y="275.135135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Linux kernel isolation</text>
+  <text x="185" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">Bionic libc, seccomp</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="340" y="81.801802" width="290" height="240.36036" rx="8.178196" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="485" y="123.603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--primary-text)">Permissions</text>
+  <text x="485" y="160.18018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--primary-text)">Install-time: normal</text>
+  <text x="485" y="186.306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--primary-text)">Runtime: dangerous</text>
+  <text x="485" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--primary-text)">Special: one-time grants</text>
+  <text x="485" y="238.558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--primary-text)">Scoped storage</text>
+  <text x="485" y="275.135135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">User can revoke any time</text>
+  <text x="485" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Privacy dashboard</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="640" y="81.801802" width="290" height="240.36036" rx="8.178196" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="785" y="123.603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--warn-text)">Encryption</text>
+  <text x="785" y="160.18018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--warn-text)">File-based (FBE)</text>
+  <text x="785" y="186.306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--warn-text)">Keystore + StrongBox</text>
+  <text x="785" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--warn-text)">EncryptedSharedPrefs</text>
+  <text x="785" y="238.558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--warn-text)">BiometricPrompt</text>
+  <text x="785" y="275.135135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">Hardware-backed keys</text>
+  <text x="785" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">TLS by default</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="940" y="81.801802" width="300" height="240.36036" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1090" y="123.603604" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--info-text)">App Integrity</text>
+  <text x="1090" y="160.18018" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">Signed APKs / AABs</text>
+  <text x="1090" y="186.306306" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">Play Integrity API</text>
+  <text x="1090" y="212.432432" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">Verified Boot</text>
+  <text x="1090" y="238.558559" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">SafetyNet / attestation</text>
+  <text x="1090" y="275.135135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">R8 obfuscation</text>
+  <text x="1090" y="301.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">Network Security Config</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <!-- Permission flow -->
+  <rect x="40" y="353.513514" width="1200" height="156.756757" rx="8.178196" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="390.09009" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--primary-accent)">Runtime permission flow</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="495" y="40" width="290" height="90.625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="94.375" font-family="Arial, sans-serif" font-size="25.375" font-weight="bold" text-anchor="middle" fill="var(--bg)">Check Permission</text>
-  <line x1="640" y1="130.625" x2="640" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="495" y="203.125" width="290" height="90.625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="257.5" font-family="Arial, sans-serif" font-size="25.375" font-weight="bold" text-anchor="middle" fill="var(--bg)">Request if Needed</text>
-  <line x1="640" y1="293.75" x2="640" y2="348.125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="495" y="366.25" width="290" height="90.625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="420.625" font-family="Arial, sans-serif" font-size="25.375" font-weight="bold" text-anchor="middle" fill="var(--bg)">Handle Result</text>
-  <line x1="640" y1="456.875" x2="640" y2="511.25" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="495" y="529.375" width="290" height="90.625" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="583.75" font-family="Arial, sans-serif" font-size="25.375" font-weight="bold" text-anchor="middle" fill="var(--bg)">Proceed</text>
+  <rect x="70" y="416.216216" width="240" height="62.702703" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="190" y="454.882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--ok-text)">Check</text>
+
+  <rect x="360" y="416.216216" width="240" height="62.702703" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="480" y="454.882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--primary-text)">Request if needed</text>
+
+  <rect x="650" y="416.216216" width="240" height="62.702703" rx="6.133647" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="770" y="454.882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--warn-text)">Handle result</text>
+
+  <rect x="940" y="416.216216" width="270" height="62.702703" rx="6.133647" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1075" y="454.882883" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--info-text)">Proceed or degrade</text>
+
+  <line x1="310" y1="447.567568" x2="360" y2="447.567568" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="600" y1="447.567568" x2="650" y2="447.567568" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="890" y1="447.567568" x2="940" y2="447.567568" stroke="var(--text-muted)" stroke-width="2"/>
+
+  <!-- Principles -->
+  <rect x="40" y="531.171171" width="1200" height="88.828829" rx="8.178196" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="565.657658" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.356391" font-weight="bold" fill="var(--danger-text)">Principles</text>
+  <text x="640" y="591.783784" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--danger-text)">Least privilege • Defense in depth • Never trust input • Store secrets in Keystore, never in code.</text>
+  <text x="640" y="614.774775" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--danger-text)">Test on restricted profiles; assume the device is hostile.</text>
 </svg>
