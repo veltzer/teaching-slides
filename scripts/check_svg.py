@@ -361,8 +361,7 @@ def main() -> None:
     # Words check is opt-in only for now; too many existing SVGs exceed the
     # limit. Flip to `args.words or not explicit` once the backlog is clean.
     do_words = args.words
-    # Fill check is opt-in until the backlog of thin/narrow SVGs is cleaned up.
-    do_fill = args.fill
+    do_fill = args.fill or not explicit
 
     failures = 0
     for path_str in args.paths:
