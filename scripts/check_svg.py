@@ -12,6 +12,8 @@ Checks:
   --bounds      Flag SVGs with elements drawn below y=640
   --title       Flag SVGs that contain a <title> element
   --colors      Flag SVGs against their <!-- palette: path --> comment
+  --words       Flag SVGs whose <text>/<tspan> content exceeds MAX_WORD_COUNT
+  --fill        Flag SVGs whose bbox fills < MIN_FILL_PCT of the usable area
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
@@ -32,6 +34,9 @@ MIN_FONT_SIZE = 10
 REQUIRED_VIEWBOX = "0 0 1280 720"
 MAX_Y_BOUND = 640
 MAX_WORD_COUNT = 60
+MIN_FILL_PCT = 40.0
+USABLE_W = 1200.0
+USABLE_H = 580.0
 
 
 def _check_size(path: Path) -> list[str]:
@@ -266,6 +271,38 @@ def _check_colors(tree: ET.ElementTree, svg_path: Path | None = None) -> list[st
     return errors
 
 
+def _check_fill(path: Path) -> list[str]:
+    """Flag SVGs whose drawing bbox fills less than MIN_FILL_PCT of the
+    usable area (1200x580). Under-filled SVGs waste slide space; most end
+    up that way through a broken prior edit, not by design."""
+    # Lazy-import to avoid paying the cost when --fill isn't used.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "fit_svg_to_slide",
+        Path(__file__).resolve().parent / "fit_svg_to_slide.py",
+    )
+    fit = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fit)
+    try:
+        content = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
+    bbox = fit.compute_bbox(outside)
+    if bbox is None:
+        return ["no drawable content (bbox is empty)"]
+    x0, y0, x1, y1 = bbox
+    w = max(0.0, x1 - x0)
+    h = max(0.0, y1 - y0)
+    fill_pct = 100 * (w * h) / (USABLE_W * USABLE_H)
+    if fill_pct < MIN_FILL_PCT:
+        return [
+            f"fill ratio {fill_pct:.1f}% < {MIN_FILL_PCT:.0f}% "
+            f"(bbox {w:.0f}x{h:.0f}) — expand content to fill 1200x580"
+        ]
+    return []
+
+
 def _check_title(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that contain a <title> element."""
     for elem in tree.iter():
@@ -302,13 +339,16 @@ def main() -> None:
                         help='Flag SVGs against their <!-- palette: path --> comment (default: palette_diagram)')
     parser.add_argument('--words', action='store_true',
                         help=f'Flag SVGs whose <text>/<tspan> content exceeds {MAX_WORD_COUNT} words total')
+    parser.add_argument('--fill', action='store_true',
+                        help=f'Flag SVGs whose content bbox fills less than {MIN_FILL_PCT:.0f}% of the 1200x580 usable area')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
     # Default: all checks enabled when no flags are specified
-    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title, args.colors, args.words]
+    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
+            args.bounds, args.title, args.colors, args.words, args.fill]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -321,6 +361,8 @@ def main() -> None:
     # Words check is opt-in only for now; too many existing SVGs exceed the
     # limit. Flip to `args.words or not explicit` once the backlog is clean.
     do_words = args.words
+    # Fill check is opt-in until the backlog of thin/narrow SVGs is cleaned up.
+    do_fill = args.fill
 
     failures = 0
     for path_str in args.paths:
@@ -332,6 +374,9 @@ def main() -> None:
 
         if do_words:
             errors.extend(_check_words(path))
+
+        if do_fill:
+            errors.extend(_check_fill(path))
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None

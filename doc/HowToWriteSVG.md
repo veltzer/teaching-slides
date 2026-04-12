@@ -35,6 +35,30 @@ used in our Marp-rendered slides.
 - Do NOT put a title element inside the SVG. The slide's `##` heading IS the
   title. Duplicating it wastes vertical space.
 
+## Fill the usable area
+
+Every SVG's drawing content should fill the usable area — the rectangle
+`x ∈ [40, 1240], y ∈ [40, 620]` (1200×580). A diagram that only occupies a
+thin band in the middle of the slide wastes screen real estate and looks
+amateurish next to its well-filled neighbours.
+
+- **Design the content to fill the full 1200×580** from the start. Use a
+  layout that matches the topic (4-column comparison, flow with arrows,
+  left/right split, 2×2 grid, etc.) and stretch it to the edges.
+- **Do not rely on fit_svg_to_slide.py to rescue a tiny diagram.** The fit
+  script stretches content to fit, but extreme scale ratios (>1.5×) trigger
+  a uniform-scale fallback that leaves letterbox space — see "Why circles
+  don't stretch like rects" below.
+- **The fill ratio** is `content bbox area / (1200 × 580)`. Aim for ≥ 90%.
+  Below 40% is a failure and the build will reject it. Values in the
+  40–70% band are acceptable but worth improving.
+- Inspect with `scripts/stats_svg_bbox.py` — shows per-file fill%, offsets
+  from center, and top offenders. Use `--fill-below 40` to list the
+  under-filled files.
+- `scripts/fit_svg_to_slide.py` is idempotent and exact: it centers content
+  on integer pixels and re-runs are no-ops. Run after authoring an SVG.
+- `scripts/check_svg.py --fill` enforces the minimum fill ratio.
+
 ## Slide composition rules
 
 - A slide that contains an SVG must have ONLY the `##` heading and the image
