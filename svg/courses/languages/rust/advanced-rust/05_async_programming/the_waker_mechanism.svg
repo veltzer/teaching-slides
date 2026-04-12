@@ -100,21 +100,21 @@
       <polygon points="0,0 7,24" fill="#555" />
     </marker>
   </defs>
-  <text x="409.6" y="33.792" text-anchor="middle" font-size="17.92" fill="var(--text)" font-weight="bold">Future Executor / Waker Interaction</text>
-  <rect x="51.2" y="76.8" width="256" height="184.32" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="179.2" y="119.808" text-anchor="middle" font-size="16.64" fill="var(--text)" font-weight="bold">Executor</text>
-  <text x="179.2" y="153.6" text-anchor="middle" font-size="15.36" fill="var(--text)">(runtime)</text>
-  <text x="179.2" y="187.392" text-anchor="middle" font-size="15.36" fill="var(--text)">task queue</text>
-  <rect x="512" y="76.8" width="256" height="184.32" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="640" y="119.808" text-anchor="middle" font-size="16.64" fill="var(--text)" font-weight="bold">Future</text>
-  <text x="640" y="153.6" text-anchor="middle" font-size="15.36" fill="var(--text)">stores waker</text>
-  <text x="640" y="187.392" text-anchor="middle" font-size="15.36" fill="var(--text)">I/O / timer state</text>
-  <line x1="307.2" y1="138.24" x2="512" y2="138.24" stroke="var(--text-muted)" stroke-width="1.92" marker-end="url(#arr)" />
-  <text x="409.6" y="125.952" text-anchor="middle" font-size="15.36" fill="var(--text)" font-weight="bold">poll()</text>
-  <line x1="512" y1="199.68" x2="307.2" y2="199.68" stroke="var(--text-muted)" stroke-width="1.92" marker-end="url(#arr)" />
-  <text x="409.6" y="190.464" text-anchor="middle" font-size="14.08" fill="var(--text)">Pending + waker saved</text>
-  <path d="M 179.2 261.12 Q 409.6 414.72 640 261.12" stroke="var(--text-muted)" stroke-width="1.92" fill="none" marker-start="url(#arrl)" />
-  <text x="409.6" y="430.08" text-anchor="middle" font-size="15.36" fill="var(--text-muted)" font-style="italic">wake() called when I/O ready</text>
-  <line x1="307.2" y1="230.4" x2="512" y2="230.4" stroke="var(--text-muted)" stroke-width="1.92" marker-end="url(#arr)" />
-  <text x="409.6" y="221.184" text-anchor="middle" font-size="14.08" fill="var(--text)">poll() again → Ready(value)</text>
+  <text x="640" y="80" text-anchor="middle" font-size="22.6098" fill="var(--text)" font-weight="bold">Future Executor / Waker Interaction</text>
+  <rect x="187.8036" y="134.2636" width="322.9974" height="232.5581" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.5703" />
+  <text x="349.3023" y="188.5271" text-anchor="middle" font-size="20.9948" fill="var(--text)" font-weight="bold">Executor</text>
+  <text x="349.3023" y="231.1628" text-anchor="middle" font-size="19.3798" fill="var(--text)">(runtime)</text>
+  <text x="349.3023" y="273.7984" text-anchor="middle" font-size="19.3798" fill="var(--text)">task queue</text>
+  <rect x="769.199" y="134.2636" width="322.9974" height="232.5581" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.5703" />
+  <text x="930.6977" y="188.5271" text-anchor="middle" font-size="20.9948" fill="var(--text)" font-weight="bold">Future</text>
+  <text x="930.6977" y="231.1628" text-anchor="middle" font-size="19.3798" fill="var(--text)">stores waker</text>
+  <text x="930.6977" y="273.7984" text-anchor="middle" font-size="19.3798" fill="var(--text)">I/O / timer state</text>
+  <line x1="510.801" y1="211.7829" x2="769.199" y2="211.7829" stroke="var(--text-muted)" stroke-width="1.92" marker-end="url(#arr)" />
+  <text x="640" y="196.2791" text-anchor="middle" font-size="19.3798" fill="var(--text)" font-weight="bold">poll()</text>
+  <line x1="769.199" y1="289.3023" x2="510.801" y2="289.3023" stroke="var(--text-muted)" stroke-width="1.92" marker-end="url(#arr)" />
+  <text x="640" y="277.6744" text-anchor="middle" font-size="17.7649" fill="var(--text)">Pending + waker saved</text>
+  <path d="M 349.3023 366.8217 Q 640 560.6202 930.6977 366.8217" stroke="var(--text-muted)" stroke-width="1.92" fill="none" marker-start="url(#arrl)" />
+  <text x="640" y="580" text-anchor="middle" font-size="19.3798" fill="var(--text-muted)" font-style="italic">wake() called when I/O ready</text>
+  <line x1="510.801" y1="328.062" x2="769.199" y2="328.062" stroke="var(--text-muted)" stroke-width="1.92" marker-end="url(#arr)" />
+  <text x="640" y="316.4341" text-anchor="middle" font-size="17.7649" fill="var(--text)">poll() again → Ready(value)</text>
 </svg>

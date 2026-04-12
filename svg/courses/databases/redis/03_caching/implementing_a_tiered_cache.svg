@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="64" y="216" width="234.6667" height="180" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="181.3333" y="288" text-anchor="middle" font-size="23.4667" font-weight="bold">L1: In-Process</text>
-  <text x="181.3333" y="342" text-anchor="middle" font-size="21.3333">HashMap/LRU</text>
-  <rect x="490.6667" y="216" width="234.6667" height="180" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="608" y="288" text-anchor="middle" font-size="23.4667" font-weight="bold">L2: Redis</text>
-  <text x="608" y="342" text-anchor="middle" font-size="21.3333">Shared Cache</text>
-  <rect x="917.3333" y="216" width="256" height="180" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="1045.3333" y="288" text-anchor="middle" font-size="23.4667" font-weight="bold">L3: Database</text>
-  <text x="1045.3333" y="342" text-anchor="middle" font-size="21.3333">Source of Truth</text>
-  <text x="181.3333" y="486" text-anchor="middle" font-size="21.3333" fill="var(--primary-accent)">~1 us</text>
-  <text x="608" y="486" text-anchor="middle" font-size="21.3333" fill="var(--info-accent)">~1 ms</text>
-  <text x="1045.3333" y="486" text-anchor="middle" font-size="21.3333" fill="var(--ok-accent)">~10 ms</text>
-  <line x1="298.6667" y1="306" x2="490.6667" y2="306" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd15_02_caching)" />
-  <line x1="725.3333" y1="306" x2="917.3333" y2="306" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd15_02_caching)" />
-  <text x="394.6667" y="280.8" text-anchor="middle" font-size="21.3333" fill="var(--text-muted)">miss</text>
-  <text x="821.3333" y="280.8" text-anchor="middle" font-size="21.3333" fill="var(--text-muted)">miss</text>
-  <text x="640" y="612" text-anchor="middle" font-size="23.4667" fill="var(--text)">Request flows L1 -&gt; L2 -&gt; L3 on cache miss</text>
+  <rect x="80" y="130.0961" width="236.9231" height="181.7308" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0577" />
+  <text x="198.4615" y="202.7885" text-anchor="middle" font-size="23.6923" font-weight="bold">L1: In-Process</text>
+  <text x="198.4615" y="257.3077" text-anchor="middle" font-size="21.5384">HashMap/LRU</text>
+  <rect x="510.7693" y="130.0961" width="236.9231" height="181.7308" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0577" />
+  <text x="629.2308" y="202.7885" text-anchor="middle" font-size="23.6923" font-weight="bold">L2: Redis</text>
+  <text x="629.2308" y="257.3077" text-anchor="middle" font-size="21.5384">Shared Cache</text>
+  <rect x="941.5385" y="130.0961" width="258.4615" height="181.7308" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0577" />
+  <text x="1070.7692" y="202.7885" text-anchor="middle" font-size="23.6923" font-weight="bold">L3: Database</text>
+  <text x="1070.7692" y="257.3077" text-anchor="middle" font-size="21.5384">Source of Truth</text>
+  <text x="198.4615" y="402.6923" text-anchor="middle" font-size="21.5384" fill="var(--primary-accent)">~1 us</text>
+  <text x="629.2308" y="402.6923" text-anchor="middle" font-size="21.5384" fill="var(--info-accent)">~1 ms</text>
+  <text x="1070.7692" y="402.6923" text-anchor="middle" font-size="21.5384" fill="var(--ok-accent)">~10 ms</text>
+  <line x1="316.9231" y1="220.9615" x2="510.7693" y2="220.9615" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd15_02_caching)" />
+  <line x1="747.6923" y1="220.9615" x2="941.5385" y2="220.9615" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd15_02_caching)" />
+  <text x="413.8462" y="195.5192" text-anchor="middle" font-size="21.5384" fill="var(--text-muted)">miss</text>
+  <text x="844.6154" y="195.5192" text-anchor="middle" font-size="21.5384" fill="var(--text-muted)">miss</text>
+  <text x="661.5385" y="529.9039" text-anchor="middle" font-size="23.6923" fill="var(--text)">Request flows L1 -&gt; L2 -&gt; L3 on cache miss</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
