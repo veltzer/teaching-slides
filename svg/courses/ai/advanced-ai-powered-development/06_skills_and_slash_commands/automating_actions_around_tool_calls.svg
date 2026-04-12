@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,102 +33,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,360 22.9376,0" fill="#666" />
-    </marker>
   </defs>
-  <rect width="211" height="580" fill="var(--surface)" rx="5.9976" x="534.5" y="40"/>
-  <text x="640" y="90.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Hooks: Automating Actions Around Tool Calls</text>
-  <rect x="539.775" y="170.5" width="47.475" height="130.5" rx="5.9976" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="563.5125" y="216.9" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Pre-Hook</text>
-  <text x="563.5125" y="248.8" text-anchor="middle" fill="var(--danger-accent)" font-size="10">validate / block</text>
-  <text x="563.5125" y="279.25" text-anchor="middle" fill="var(--danger-accent)" font-size="10">check permissions</text>
-  <line x1="587.25" y1="235.75" x2="597.8" y2="235.75" stroke="var(--text-muted)" stroke-width="0.5825" marker-end="url(#arr)" />
-  <rect x="597.8" y="170.5" width="63.3" height="130.5" rx="5.9976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="629.45" y="216.9" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tool Execution</text>
-  <text x="629.45" y="248.8" text-anchor="middle" fill="var(--primary-accent)" font-size="10">file edit / shell / git</text>
-  <text x="629.45" y="279.25" text-anchor="middle" fill="var(--primary-accent)" font-size="10">the actual action</text>
-  <line x1="661.0999" y1="235.75" x2="671.65" y2="235.75" stroke="var(--text-muted)" stroke-width="0.5825" marker-end="url(#arr)" />
-  <rect x="671.65" y="170.5" width="68.575" height="130.5" rx="5.9976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="705.9375" y="216.9" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Post-Hook</text>
-  <text x="705.9375" y="248.8" text-anchor="middle" fill="var(--ok-accent)" font-size="10">notify / log / run tests</text>
-  <text x="705.9375" y="279.25" text-anchor="middle" fill="var(--ok-accent)" font-size="10">trigger downstream</text>
-  <path d="M 563.5125 301 Q 563.5125 359 629.45 359" fill="none" stroke="var(--danger-border)" stroke-width="0.5825" stroke-dasharray="1.4564 0.8738" marker-end="url(#arr)" />
-  <text x="595.1626" y="344.5" text-anchor="middle" font-size="10" fill="var(--danger-accent)">on_fail: block (stops execution)</text>
-  <rect x="539.775" y="402.5" width="200.4499" height="195.75" rx="5.9976" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="443.1" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Example Hook Configurations</text>
-  <rect x="545.05" y="467.75" width="59.3437" height="108.75" rx="5.9976" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="574.59" y="504" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Pre-Hook: Block Dangerous</text>
-  <text x="574.59" y="533" text-anchor="middle" font-size="10" fill="var(--text)">event: bash_command</text>
-  <text x="574.59" y="559.1" text-anchor="middle" font-size="10" fill="var(--text)">match: "rm -rf|DROP TABLE"</text>
-  <text x="574.59" y="580.85" text-anchor="middle" font-size="10" fill="var(--text)">action: block</text>
-  <rect x="610.1962" y="467.75" width="59.3437" height="108.75" rx="5.9976" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="639.7363" y="504" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Pre-Hook: Scan Secrets</text>
-  <text x="639.7363" y="533" text-anchor="middle" font-size="10" fill="var(--text)">event: file_edit</text>
-  <text x="639.7363" y="559.1" text-anchor="middle" font-size="10" fill="var(--text)">run: scan_secrets.sh $FILE</text>
-  <text x="639.7363" y="580.85" text-anchor="middle" font-size="10" fill="var(--text)">on_fail: block</text>
-  <rect x="675.3426" y="467.75" width="59.3437" height="108.75" rx="5.9976" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="704.8824" y="504" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Post-Hook: Notify Slack</text>
-  <text x="704.8824" y="533" text-anchor="middle" font-size="10" fill="var(--text)">event: pr_create</text>
-  <text x="704.8824" y="559.1" text-anchor="middle" font-size="10" fill="var(--text)">run: notify_slack.sh</text>
-  <text x="704.8824" y="580.85" text-anchor="middle" font-size="10" fill="var(--text)">$PR_NUMBER</text>
+
+  <rect x="40" y="40" width="1200" height="580" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-accent)">Hooks: Automating Actions Around Tool Calls</text>
+
+  <rect x="100" y="140" width="300" height="200" rx="8" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="250" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Pre-Hook</text>
+  <text x="250" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">validate / block</text>
+  <text x="250" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">check permissions</text>
+  <text x="250" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">scan secrets</text>
+
+  <line x1="410" y1="240" x2="485" y2="240" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arr)"/>
+
+  <rect x="490" y="140" width="300" height="200" rx="8" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Tool Execution</text>
+  <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">file edit / shell</text>
+  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">git / network</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">the actual action</text>
+
+  <line x1="800" y1="240" x2="875" y2="240" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arr)"/>
+
+  <rect x="880" y="140" width="300" height="200" rx="8" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1030" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Post-Hook</text>
+  <text x="1030" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">notify / log</text>
+  <text x="1030" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">run tests</text>
+  <text x="1030" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">trigger downstream</text>
+
+  <rect x="100" y="380" width="340" height="220" rx="8" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="270" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">Block Dangerous Commands</text>
+  <text x="120" y="460" font-family="Courier, monospace" font-size="16" fill="var(--text)">event: bash_command</text>
+  <text x="120" y="495" font-family="Courier, monospace" font-size="16" fill="var(--text)">match: "rm -rf | DROP"</text>
+  <text x="120" y="530" font-family="Courier, monospace" font-size="16" fill="var(--text)">action: block</text>
+  <text x="120" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Pre-hook guards destructive actions</text>
+
+  <rect x="470" y="380" width="340" height="220" rx="8" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-accent)">Scan Files for Secrets</text>
+  <text x="490" y="460" font-family="Courier, monospace" font-size="16" fill="var(--text)">event: file_edit</text>
+  <text x="490" y="495" font-family="Courier, monospace" font-size="16" fill="var(--text)">run: scan_secrets.sh</text>
+  <text x="490" y="530" font-family="Courier, monospace" font-size="16" fill="var(--text)">on_fail: block</text>
+  <text x="490" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Catches credentials before commit</text>
+
+  <rect x="840" y="380" width="340" height="220" rx="8" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1010" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)">Notify Slack on PR Create</text>
+  <text x="860" y="460" font-family="Courier, monospace" font-size="16" fill="var(--text)">event: pr_create</text>
+  <text x="860" y="495" font-family="Courier, monospace" font-size="16" fill="var(--text)">run: notify_slack.sh</text>
+  <text x="860" y="530" font-family="Courier, monospace" font-size="16" fill="var(--text)">args: $PR_NUMBER</text>
+  <text x="860" y="570" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Post-hook pings the team</text>
 </svg>
