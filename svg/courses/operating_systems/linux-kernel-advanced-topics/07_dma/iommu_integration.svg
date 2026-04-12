@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="205.5" width="276.923" height="165.9999" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="5.9972" stroke-width="2"/>
-  <text x="178.4616" y="298.875" text-anchor="middle">Device</text>
-  <rect x="501.5384" y="205.5" width="276.923" height="165.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="5.9972" stroke-width="2"/>
-  <text x="640" y="298.875" text-anchor="middle">IOMMU</text>
-  <rect x="963.077" y="205.5" width="276.923" height="165.9999" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="5.9972" stroke-width="2"/>
-  <text x="1101.5384" y="298.875" text-anchor="middle">Memory</text>
-  <line x1="316.923" y1="288.5001" x2="501.5384" y2="288.5001" stroke="var(--black)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="778.4616" y1="288.5001" x2="963.077" y2="288.5001" stroke="var(--black)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="178.4616" y="454.5">Virtual Address</text>
-  <text x="640" y="454.5">Translation</text>
-  <text x="1101.5384" y="454.5">Physical Address</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -45,67 +34,60 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.8,0" />
-    </marker>
   </defs>
+
+  <rect x="40" y="40" width="360" height="320" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="220" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--danger-text)">Device</text>
+  <text x="220" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">NIC / GPU / NVMe</text>
+  <text x="220" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Issues DMA with</text>
+  <text x="220" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">I/O virtual addresses</text>
+  <text x="220" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">cannot see real RAM</text>
+
+  <rect x="460" y="40" width="360" height="320" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--primary-text)">IOMMU</text>
+  <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Intel VT-d / AMD-Vi</text>
+  <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Translates IOVA to PA</text>
+  <text x="640" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Enforces per-device</text>
+  <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">page permissions</text>
+  <text x="640" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">page tables + IOTLB</text>
+
+  <rect x="880" y="40" width="360" height="320" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1060" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--ok-text)">Memory</text>
+  <text x="1060" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">System RAM</text>
+  <text x="1060" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Physical frames</text>
+  <text x="1060" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">allocated by kernel</text>
+  <text x="1060" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">protected from stray DMA</text>
+
+  <line x1="400" y1="200" x2="458" y2="200" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="820" y1="200" x2="878" y2="200" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="429" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">IOVA</text>
+  <text x="849" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">PA</text>
+
+  <rect x="40" y="400" width="390" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="235" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Why it exists</text>
+  <text x="235" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Isolates buggy or</text>
+  <text x="235" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">malicious devices.</text>
+  <text x="235" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Enables safe passthrough</text>
+  <text x="235" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">to virtual machines.</text>
+  <text x="235" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">VFIO, DPDK, SR-IOV build on it</text>
+
+  <rect x="445" y="400" width="390" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Kernel API</text>
+  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">dma_map_single / _sg</text>
+  <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">returns a dma_addr_t</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Drivers never touch IOVA;</text>
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">DMA API hides IOMMU setup.</text>
+
+  <rect x="850" y="400" width="390" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1045" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Cost</text>
+  <text x="1045" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">IOTLB miss = walk</text>
+  <text x="1045" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">page tables.</text>
+  <text x="1045" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Batch mappings; use</text>
+  <text x="1045" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">hugepages where possible.</text>
 </svg>

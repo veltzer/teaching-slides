@@ -34,82 +34,66 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="243.3334" width="171.4286" height="130" fill="var(--primary-fill)" rx="5.9959" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="125.7144" y="319.1667" text-anchor="middle" fill="var(--bg)" font-size="20.5573">Planning</text>
-  <rect x="245.7143" y="243.3334" width="171.4286" height="130" fill="var(--ok-fill)" rx="5.9959" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="331.4286" y="319.1667" text-anchor="middle" fill="var(--bg)" font-size="20.5573">Design</text>
-  <rect x="451.4286" y="243.3334" width="171.4286" height="130" fill="var(--danger-fill)" rx="5.9959" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="537.1429" y="319.1667" text-anchor="middle" fill="var(--bg)" font-size="20.5573">Code</text>
-  <rect x="657.1428" y="243.3334" width="171.4286" height="130" fill="var(--warn-fill)" rx="5.9959" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="742.8572" y="319.1667" text-anchor="middle" fill="var(--bg)" font-size="20.5573">Test</text>
-  <rect x="862.8571" y="243.3334" width="171.4286" height="130" fill="var(--info-fill)" rx="5.9959" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="948.5715" y="319.1667" text-anchor="middle" fill="var(--bg)" font-size="20.5573">Deploy</text>
-  <rect x="1068.5714" y="243.3334" width="171.4286" height="130" fill="var(--ok-fill)" rx="5.9959" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1154.2858" y="319.1667" text-anchor="middle" fill="var(--bg)" font-size="20.5573">Monitor</text>
-  <text x="640.0001" y="460" text-anchor="middle" font-size="27.4098" font-weight="bold">AI Chat Assists Every Phase</text>
-  <text x="125.7144" y="200" text-anchor="middle" font-size="17.1311">Requirements</text>
-  <text x="331.4286" y="200" text-anchor="middle" font-size="17.1311">Architecture</text>
-  <text x="537.1429" y="200" text-anchor="middle" font-size="17.1311">Generation</text>
-  <text x="742.8572" y="200" text-anchor="middle" font-size="17.1311">Validation</text>
-  <text x="948.5715" y="200" text-anchor="middle" font-size="17.1311">Scripts</text>
-  <text x="1154.2858" y="200" text-anchor="middle" font-size="17.1311">Debugging</text>
+  </defs>
+
+  <rect x="40" y="40" width="190" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="135" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Plan</text>
+  <text x="135" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Define task</text>
+  <text x="135" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Sketch approach</text>
+  <text x="135" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Ask AI to critique</text>
+  <text x="135" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Pick smallest slice</text>
+  <text x="135" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">Chat opens in</text>
+  <text x="135" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">the editor.</text>
+  <text x="135" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--primary-text)">1</text>
+
+  <line x1="235" y1="330" x2="275" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="280" y="40" width="190" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="375" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Draft</text>
+  <text x="375" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Share open file</text>
+  <text x="375" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Paste context</text>
+  <text x="375" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Get a first cut</text>
+  <text x="375" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Apply as diff</text>
+  <text x="375" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">Inline edits land</text>
+  <text x="375" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">next to the code.</text>
+  <text x="375" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--info-text)">2</text>
+
+  <line x1="475" y1="330" x2="515" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="520" y="40" width="190" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="615" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Run</text>
+  <text x="615" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Save and build</text>
+  <text x="615" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Run the tests</text>
+  <text x="615" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Try the feature</text>
+  <text x="615" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Capture errors</text>
+  <text x="615" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Feed failures</text>
+  <text x="615" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">back to chat.</text>
+  <text x="615" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--warn-text)">3</text>
+
+  <line x1="715" y1="330" x2="755" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="40" width="190" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="855" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Review</text>
+  <text x="855" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Read every diff</text>
+  <text x="855" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Question choices</text>
+  <text x="855" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Reject bad code</text>
+  <text x="855" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Refactor as you go</text>
+  <text x="855" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">You are still</text>
+  <text x="855" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">the author.</text>
+  <text x="855" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--danger-text)">4</text>
+
+  <line x1="955" y1="330" x2="995" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1000" y="40" width="240" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1120" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Ship</text>
+  <text x="1120" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Write commit note</text>
+  <text x="1120" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Open pull request</text>
+  <text x="1120" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Summarise chat decisions</text>
+  <text x="1120" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Merge, deploy, observe</text>
+  <text x="1120" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">The chat becomes</text>
+  <text x="1120" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">a build artifact.</text>
+  <text x="1120" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="var(--ok-text)">5</text>
 </svg>

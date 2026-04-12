@@ -3,111 +3,42 @@
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
+        --text: #212121; --text-muted: #555555; --text-faint: #888888;
+        --code-bg: #1a1a2e; --shadow: #00000022; --black: #000000;
+        --primary-fill: #2196f3; --primary-border: #1565c0; --primary-text: #ffffff; --primary-accent: #0d47a1;
+        --ok-fill: #4caf50; --ok-border: #2e7d32; --ok-text: #ffffff; --ok-accent: #1b5e20;
+        --warn-fill: #ff9800; --warn-border: #e65100; --warn-text: #ffffff; --warn-accent: #bf360c;
+        --danger-fill: #e74c3c; --danger-border: #c62828; --danger-text: #ffffff; --danger-accent: #b71c1c;
+        --info-fill: #9c27b0; --info-border: #6a1b9a; --info-text: #ffffff; --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="640" cy="330" r="290" fill="none" stroke="var(--primary-border)" stroke-width="4.7628" />
-  <circle cx="640" cy="330" r="58" fill="var(--danger-fill)" />
-  <text x="640" y="342.2344" text-anchor="middle" fill="var(--bg)" font-size="23.2">Team</text>
-  <circle cx="640" cy="85.3124" r="38.6666" fill="var(--warn-fill)" />
-  <text x="640" y="97.5468" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Docs</text>
-  <circle cx="794.6666" cy="207.6561" r="38.6666" fill="var(--ok-fill)" />
-  <text x="794.6666" y="219.8906" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Reviews</text>
-  <circle cx="833.3333" cy="403.4062" r="38.6666" fill="var(--info-fill)" />
-  <text x="833.3333" y="415.6406" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Pairing</text>
-  <circle cx="736.6666" cy="550.2188" r="38.6666" fill="var(--primary-fill)" />
-  <text x="736.6666" y="562.4531" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Demos</text>
-  <circle cx="543.3333" cy="550.2188" r="38.6666" fill="var(--ok-fill)" />
-  <text x="543.3333" y="562.4531" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Wiki</text>
-  <circle cx="446.6666" cy="403.4062" r="38.6666" fill="var(--warn-fill)" />
-  <text x="446.6666" y="415.6406" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Training</text>
-  <circle cx="485.3333" cy="207.6561" r="38.6666" fill="var(--ok-fill)" />
-  <text x="485.3333" y="219.8906" text-anchor="middle" fill="var(--bg)" font-size="19.3334">Standards</text>
+  </defs>
+
+  <rect x="40" y="40" width="585" height="270" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="332" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">Code review</text>
+  <text x="332" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">AI explains diffs, suggests tests</text>
+  <text x="332" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Humans still approve</text>
+  <text x="332" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--primary-text)">Faster feedback</text>
+
+  <rect x="655" y="40" width="585" height="270" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="947" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">Pair programming</text>
+  <text x="947" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Model drafts, you steer</text>
+  <text x="947" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Great for onboarding</text>
+  <text x="947" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--ok-text)">Human in the loop</text>
+
+  <rect x="40" y="340" width="585" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="332" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-text)">Docs and ADRs</text>
+  <text x="332" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Generate first drafts</text>
+  <text x="332" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Link decisions to code</text>
+  <text x="332" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--warn-text)">Team memory</text>
+
+  <rect x="655" y="340" width="585" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="947" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--info-text)">Shared prompts</text>
+  <text x="947" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Check prompts into repo</text>
+  <text x="947" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Version playbooks</text>
+  <text x="947" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="var(--info-text)">Reuse wins</text>
 </svg>

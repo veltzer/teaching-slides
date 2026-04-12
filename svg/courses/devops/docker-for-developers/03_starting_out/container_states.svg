@@ -1,116 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="317.3425" width="171.4286" height="144.6575" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0003" />
-  <text x="125.7144" y="407.7533" text-anchor="middle" font-size="21.4296">Created</text>
-  <rect x="297.1428" y="317.3425" width="171.4286" height="144.6575" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0003" />
-  <text x="382.8572" y="407.7533" text-anchor="middle" font-size="21.4296">Running</text>
-  <rect x="554.2857" y="317.3425" width="171.4286" height="144.6575" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0003" />
-  <text x="640.0001" y="407.7533" text-anchor="middle" font-size="21.4296">Paused</text>
-  <rect x="811.4285" y="317.3425" width="171.4286" height="144.6575" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0003" />
-  <text x="897.1429" y="407.7533" text-anchor="middle" font-size="21.4296">Exited</text>
-  <rect x="1068.5714" y="317.3425" width="171.4286" height="144.6575" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.0003" />
-  <text x="1154.2858" y="407.7533" text-anchor="middle" font-size="21.4296">Dead</text>
-  <line x1="211.4286" y1="389.6712" x2="297.1428" y2="389.6712" stroke="var(--text)" stroke-width="2" marker-end="url(#arr03st)" />
-  <line x1="468.5715" y1="389.6712" x2="554.2857" y2="389.6712" stroke="var(--text)" stroke-width="2" marker-end="url(#arr03st)" />
-  <line x1="725.7143" y1="389.6712" x2="811.4285" y2="389.6712" stroke="var(--text)" stroke-width="2" marker-end="url(#arr03st)" />
-  <line x1="982.8572" y1="389.6712" x2="1068.5714" y2="389.6712" stroke="var(--text)" stroke-width="2" marker-end="url(#arr03st)" />
-  <path d="M 640.0001 317.3425 Q 640.0001 208.8493 382.8572 208.8493 Q 382.8572 208.8493 382.8572 317.3425" fill="none" stroke="var(--text)" stroke-width="3.2" marker-end="url(#arr03st)" />
-  <text x="511.4286" y="198" text-anchor="middle" font-size="21.4296" fill="var(--text-muted)">unpause</text>
   <defs>
-    <style id="palette-vars">
-      :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
-      }
-    </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr03st" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)">Container States</text>
+
+  <rect x="40" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="180" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--text)">Created</text>
+  <text x="180" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">docker create</text>
+  <text x="180" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Filesystem ready</text>
+  <text x="180" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">No process yet</text>
+  <text x="180" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Config frozen</text>
+  <text x="180" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Writable layer</text>
+  <text x="180" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">is allocated</text>
+  <text x="180" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--text-muted)">Awaiting start</text>
+
+  <rect x="340" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="480" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Running</text>
+  <text x="480" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">docker start</text>
+  <text x="480" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">PID 1 executing</text>
+  <text x="480" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Namespaces active</text>
+  <text x="480" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Network attached</text>
+  <text x="480" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Logs streaming</text>
+  <text x="480" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Can exec into it</text>
+  <text x="480" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--ok-text)">Healthy state</text>
+
+  <rect x="640" y="82.962963" width="280" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="780" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">Paused</text>
+  <text x="780" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">docker pause</text>
+  <text x="780" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">SIGSTOP via cgroup</text>
+  <text x="780" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Processes frozen</text>
+  <text x="780" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Memory retained</text>
+  <text x="780" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">No CPU use</text>
+  <text x="780" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Resume via unpause</text>
+  <text x="780" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--warn-text)">Good for debugging</text>
+
+  <rect x="940" y="82.962963" width="300" height="537.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1090" y="125.925926" text-anchor="middle" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">Exited</text>
+  <text x="1090" y="190.37037" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">PID 1 terminated</text>
+  <text x="1090" y="233.333333" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">docker stop or crash</text>
+  <text x="1090" y="276.296296" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Exit code recorded</text>
+  <text x="1090" y="340.740741" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Filesystem kept</text>
+  <text x="1090" y="405.185185" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Can restart</text>
+  <text x="1090" y="469.62963" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">docker rm removes</text>
+  <text x="1090" y="555.555556" text-anchor="middle" font-size="15.545632" fill="var(--danger-text)">Final cleanup</text>
 </svg>

@@ -34,96 +34,51 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18.9474 5.9733,0" fill="#666" />
-    </marker>
   </defs>
-  <rect x="40" y="187.5" width="377.1429" height="284.9999" rx="5.995" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="228.5715" y="235.0001" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.267" font-weight="bold" fill="var(--primary-accent)">Prefect Core</text>
-  <rect x="74.2858" y="263.5" width="308.5714" height="57" rx="5.995" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="228.5715" y="301.4999" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">Flows</text>
-  <line x1="228.5715" y1="320.5" x2="228.5715" y2="339.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="74.2858" y="349" width="308.5714" height="57" rx="5.995" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="228.5715" y="387" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">Tasks</text>
-  <line x1="228.5715" y1="406" x2="228.5715" y2="424.9999" stroke="var(--text-muted)" stroke-width="2" />
-  <text x="228.5715" y="457.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8413" fill="var(--text-muted)">State Management</text>
-  <line x1="417.1429" y1="339.5" x2="502.8571" y2="339.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="502.8571" y="187.5" width="342.8571" height="284.9999" rx="5.995" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="674.2857" y="235.0001" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.267" font-weight="bold" fill="var(--info-accent)">Prefect Server</text>
-  <rect x="537.1429" y="263.5" width="274.2857" height="57" rx="5.995" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="674.2857" y="301.4999" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">API Server</text>
-  <rect x="537.1429" y="339.5" width="274.2857" height="57" rx="5.995" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="674.2857" y="377.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">UI Dashboard</text>
-  <rect x="537.1429" y="415.5" width="274.2857" height="57" rx="5.995" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="674.2857" y="453.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">PostgreSQL</text>
-  <rect x="931.4286" y="187.5" width="308.5714" height="284.9999" rx="5.995" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1085.7143" y="235.0001" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.267" font-weight="bold" fill="var(--ok-accent)">Agents</text>
-  <rect x="965.7143" y="263.5" width="240" height="57" rx="5.995" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1085.7143" y="301.4999" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">Agent 1</text>
-  <rect x="965.7143" y="339.5" width="240" height="57" rx="5.995" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1085.7143" y="377.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">Agent 2</text>
-  <rect x="965.7143" y="415.5" width="240" height="57" rx="5.995" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1085.7143" y="453.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5541">Agent N</text>
-  <line x1="931.4286" y1="292" x2="845.7143" y2="292" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="931.4286" y1="368" x2="845.7143" y2="368" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="931.4286" y1="443.9999" x2="845.7143" y2="443.9999" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="380" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="230" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-accent)">Prefect Core</text>
+  <rect x="70" y="120" width="320" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Flows</text>
+  <text x="230" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">DAGs of tasks</text>
+  <rect x="70" y="260" width="320" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Tasks</text>
+  <text x="230" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Units of work</text>
+  <rect x="70" y="400" width="320" height="180" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)">State Management</text>
+  <text x="230" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">pending / running</text>
+  <text x="230" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">success / failed</text>
+  <text x="230" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">retries, caching</text>
+
+  <rect x="450" y="40" width="380" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-accent)">Prefect Server</text>
+  <rect x="480" y="120" width="320" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">API Server</text>
+  <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">REST + GraphQL</text>
+  <rect x="480" y="290" width="320" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">UI Dashboard</text>
+  <text x="640" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Observability</text>
+  <rect x="480" y="460" width="320" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">PostgreSQL</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Metadata store</text>
+
+  <rect x="860" y="40" width="380" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1050" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-accent)">Agents / Workers</text>
+  <rect x="890" y="120" width="320" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1050" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Agent 1</text>
+  <text x="1050" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Kubernetes pool</text>
+  <rect x="890" y="290" width="320" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1050" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Agent 2</text>
+  <text x="1050" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Docker pool</text>
+  <rect x="890" y="460" width="320" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1050" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Agent N</text>
+  <text x="1050" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Process pool</text>
+
+  <line x1="420" y1="310" x2="450" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="860" y1="180" x2="830" y2="180" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="860" y1="350" x2="830" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="860" y1="520" x2="830" y2="520" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

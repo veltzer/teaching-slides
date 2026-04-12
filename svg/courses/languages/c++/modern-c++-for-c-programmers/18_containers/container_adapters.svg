@@ -34,72 +34,32 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="390" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="235" y="130" text-anchor="middle" font-size="36" font-weight="bold" fill="var(--info-text)">stack</text>
+  <text x="235" y="180" text-anchor="middle" font-size="24" fill="var(--info-text)">(LIFO)</text>
+  <text x="235" y="260" text-anchor="middle" font-size="18" fill="var(--info-text)">push / pop / top</text>
+  <text x="235" y="330" text-anchor="middle" font-size="18" fill="var(--info-text)">backed by deque</text>
+  <text x="235" y="400" text-anchor="middle" font-size="18" fill="var(--info-text)">O(1) ops</text>
+  <text x="235" y="470" text-anchor="middle" font-size="18" fill="var(--info-text)">no iteration</text>
+  <text x="235" y="540" text-anchor="middle" font-size="18" fill="var(--info-text)">undo, parsers</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="445" y="40" width="390" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="130" text-anchor="middle" font-size="36" font-weight="bold" fill="var(--primary-text)">queue</text>
+  <text x="640" y="180" text-anchor="middle" font-size="24" fill="var(--primary-text)">(FIFO)</text>
+  <text x="640" y="260" text-anchor="middle" font-size="18" fill="var(--primary-text)">push / pop / front</text>
+  <text x="640" y="330" text-anchor="middle" font-size="18" fill="var(--primary-text)">backed by deque</text>
+  <text x="640" y="400" text-anchor="middle" font-size="18" fill="var(--primary-text)">O(1) ops</text>
+  <text x="640" y="470" text-anchor="middle" font-size="18" fill="var(--primary-text)">no iteration</text>
+  <text x="640" y="540" text-anchor="middle" font-size="18" fill="var(--primary-text)">BFS, buffering</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="208.5" width="360" height="243" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
-  <text x="220" y="350.25" text-anchor="middle" font-size="33.6" font-weight="bold">stack</text>
-  <text x="220" y="411" text-anchor="middle" font-size="28.8">(LIFO)</text>
-  <rect x="460" y="208.5" width="360" height="243" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
-  <text x="640" y="350.25" text-anchor="middle" font-size="33.6" font-weight="bold">queue</text>
-  <text x="640" y="411" text-anchor="middle" font-size="28.8">(FIFO)</text>
-  <rect x="880" y="208.5" width="360" height="243" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6"/>
-  <text x="1060" y="350.25" text-anchor="middle" font-size="33.6" font-weight="bold">priority_queue</text>
-  <text x="1060" y="411" text-anchor="middle" font-size="28.8">(Heap)</text>
+  <rect x="850" y="40" width="390" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1045" y="130" text-anchor="middle" font-size="34" font-weight="bold" fill="var(--ok-text)">priority_queue</text>
+  <text x="1045" y="180" text-anchor="middle" font-size="24" fill="var(--ok-text)">(Heap)</text>
+  <text x="1045" y="260" text-anchor="middle" font-size="18" fill="var(--ok-text)">push / pop / top</text>
+  <text x="1045" y="330" text-anchor="middle" font-size="18" fill="var(--ok-text)">backed by vector</text>
+  <text x="1045" y="400" text-anchor="middle" font-size="18" fill="var(--ok-text)">O(log n) insert</text>
+  <text x="1045" y="470" text-anchor="middle" font-size="18" fill="var(--ok-text)">max-heap default</text>
+  <text x="1045" y="540" text-anchor="middle" font-size="18" fill="var(--ok-text)">Dijkstra, schedulers</text>
 </svg>

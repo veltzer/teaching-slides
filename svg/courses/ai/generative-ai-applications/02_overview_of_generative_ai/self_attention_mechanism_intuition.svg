@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,90 +34,53 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="87.731092" rx="5.923887" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="74.117647" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.720919" font-weight="bold" fill="var(--text)">"The animal didn't cross the street because it was too tired"</text>
+  <text x="640" y="108.235294" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.771661" fill="var(--text-muted)">What does "it" refer to? Attention weights resolve the reference.</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <text x="280" y="171.596639" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">The</text>
+  <rect x="300" y="152.10084" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="380" y="171.596639" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.05</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <text x="280" y="220.336134" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" font-weight="bold" fill="var(--danger-accent)">animal</text>
+  <rect x="300" y="200.840336" width="820" height="29.243697" rx="5.923887" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1130" y="220.336134" font-family="Arial, sans-serif" font-size="15.797032" font-weight="bold" fill="var(--danger-accent)">0.68  high</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <text x="280" y="269.07563" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">didn't</text>
+  <rect x="300" y="249.579832" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="380" y="269.07563" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.05</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <text x="280" y="317.815126" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">cross</text>
+  <rect x="300" y="298.319328" width="90" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="410" y="317.815126" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.07</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <text x="280" y="366.554622" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">the</text>
+  <rect x="300" y="347.058824" width="30" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="350" y="366.554622" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.02</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="341" y="40" font-size="24.6018" fill="var(--text)">Sentence: "The animal didn't cross the street because it was too tired"</text>
-  <text x="341" y="80" font-size="24.6018" fill="var(--text-muted)">What does "it" refer to?</text>
-  <text x="341" y="124" font-size="24.6018" font-weight="bold" fill="var(--text)">Attention weights for "it":</text>
-  <text x="492.3924" y="171.9999" text-anchor="end" font-size="22.7093" fill="var(--text)">The</text>
-  <rect x="511.3164" y="148" width="70.019" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="216" text-anchor="end" font-size="22.7093" fill="var(--text)">animal</text>
-  <rect x="511.3164" y="192" width="416.3291" height="32" rx="5.9999" fill="var(--primary-accent)" />
-  <text x="939" y="216" font-size="20.8168" fill="var(--primary-accent)"> ← high attention</text>
-  <text x="492.3924" y="260" text-anchor="end" font-size="22.7093" fill="var(--text)">didn't</text>
-  <rect x="511.3164" y="236" width="70.019" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="304" text-anchor="end" font-size="22.7093" fill="var(--text)">cross</text>
-  <rect x="511.3164" y="280" width="104.0823" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="348" text-anchor="end" font-size="22.7093" fill="var(--text)">the</text>
-  <rect x="511.3164" y="324" width="34.0633" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="392" text-anchor="end" font-size="22.7093" fill="var(--text)">street</text>
-  <rect x="511.3164" y="368" width="138.1456" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="435.9999" text-anchor="end" font-size="22.7093" fill="var(--text)">because</text>
-  <rect x="511.3164" y="412" width="34.0633" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="479.9999" text-anchor="end" font-size="22.7093" fill="var(--text)">it</text>
-  <rect x="511.3164" y="456" width="104.0823" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="524" text-anchor="end" font-size="22.7093" fill="var(--text)">was</text>
-  <rect x="511.3164" y="500" width="70.019" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="568" text-anchor="end" font-size="22.7093" fill="var(--text)">too</text>
-  <rect x="511.3164" y="544" width="70.019" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="492.3924" y="612" text-anchor="end" font-size="22.7093" fill="var(--text)">tired</text>
-  <rect x="511.3164" y="588" width="174.1014" height="32" rx="5.9999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="696.7722" y="612" font-size="20.8168" fill="var(--primary-accent)"> ← helps disambiguate "it" = "animal"</text>
+  <text x="280" y="415.294118" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">street</text>
+  <rect x="300" y="395.798319" width="140" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="460" y="415.294118" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.12</text>
+
+  <text x="280" y="464.033613" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">because</text>
+  <rect x="300" y="444.537815" width="30" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="350" y="464.033613" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.02</text>
+
+  <text x="280" y="512.773109" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">was</text>
+  <rect x="300" y="493.277311" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="380" y="512.773109" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.04</text>
+
+  <text x="280" y="561.512605" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" fill="var(--text)">too</text>
+  <rect x="300" y="542.016807" width="60" height="29.243697" rx="5.923887" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="380" y="561.512605" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text-muted)">0.04</text>
+
+  <text x="280" y="610.252101" text-anchor="end" font-family="Arial, sans-serif" font-size="19.74629" font-weight="bold" fill="var(--warn-accent)">tired</text>
+  <rect x="300" y="590.756303" width="200" height="29.243697" rx="5.923887" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="520" y="610.252101" font-family="Arial, sans-serif" font-size="15.797032" font-weight="bold" fill="var(--warn-accent)">0.17  supports</text>
+
+  <rect x="1150" y="298.319328" width="90" height="38.991597" rx="5.923887" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1195" y="324.638655" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.771661" font-weight="bold" fill="var(--danger-text)">it =</text>
+  <text x="1195" y="361.680672" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.797032" fill="var(--text)">animal</text>
 </svg>

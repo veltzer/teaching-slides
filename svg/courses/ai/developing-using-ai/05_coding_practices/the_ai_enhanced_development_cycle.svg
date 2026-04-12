@@ -34,78 +34,49 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="639.99995" cy="329.9999" r="226.7943" fill="none" stroke="var(--primary-border)" stroke-width="4.3146" />
-  <circle cx="639.99995" cy="100.4785" r="60.4785" fill="var(--danger-fill)" />
-  <text x="639.99995" y="110.042" text-anchor="middle" fill="var(--bg)" font-size="21.1675">Plan</text>
-  <circle cx="821.52095" cy="215.2393" r="60.4785" fill="var(--warn-fill)" />
-  <text x="821.52095" y="224.8028" text-anchor="middle" fill="var(--bg)" font-size="21.1675">Test</text>
-  <circle cx="821.52095" cy="444.7607" r="60.4785" fill="var(--ok-fill)" />
-  <text x="821.52095" y="454.3242" text-anchor="middle" fill="var(--bg)" font-size="21.1675">Code</text>
-  <circle cx="639.99995" cy="559.5215" r="60.4785" fill="var(--info-fill)" />
-  <text x="639.99995" y="569.0848" text-anchor="middle" fill="var(--bg)" font-size="21.1675">Refactor</text>
-  <circle cx="458.47905" cy="444.7607" r="60.4785" fill="var(--ok-fill)" />
-  <text x="458.47905" y="454.3242" text-anchor="middle" fill="var(--bg)" font-size="21.1675">Review</text>
-  <circle cx="458.47905" cy="215.2393" r="60.4785" fill="var(--primary-fill)" />
-  <text x="458.47905" y="224.8028" text-anchor="middle" fill="var(--bg)" font-size="21.1675">Deploy</text>
-  <text x="639.99995" y="329.9999" text-anchor="middle" font-size="24.1914" font-weight="bold">AI Assists</text>
-  <text x="639.99995" y="368.2535" text-anchor="middle" font-size="24.1914" font-weight="bold">Every Step</text>
+  </defs>
+
+  <rect x="40" y="40" width="190" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="135" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Plan</text>
+  <text x="135" y="180" text-anchor="middle" font-size="14" fill="var(--danger-text)">AI drafts specs</text>
+  <text x="135" y="210" text-anchor="middle" font-size="14" fill="var(--danger-text)">from tickets</text>
+
+  <rect x="250" y="40" width="190" height="260" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="345" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Design</text>
+  <text x="345" y="180" text-anchor="middle" font-size="14" fill="var(--primary-text)">AI suggests</text>
+  <text x="345" y="210" text-anchor="middle" font-size="14" fill="var(--primary-text)">architecture</text>
+
+  <rect x="460" y="40" width="190" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="555" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Code</text>
+  <text x="555" y="180" text-anchor="middle" font-size="14" fill="var(--ok-text)">AI writes and</text>
+  <text x="555" y="210" text-anchor="middle" font-size="14" fill="var(--ok-text)">autocompletes</text>
+
+  <rect x="670" y="40" width="190" height="260" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="765" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Test</text>
+  <text x="765" y="180" text-anchor="middle" font-size="14" fill="var(--warn-text)">AI generates</text>
+  <text x="765" y="210" text-anchor="middle" font-size="14" fill="var(--warn-text)">unit tests</text>
+
+  <rect x="880" y="40" width="190" height="260" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="975" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">Review</text>
+  <text x="975" y="180" text-anchor="middle" font-size="14" fill="var(--info-text)">AI critiques</text>
+  <text x="975" y="210" text-anchor="middle" font-size="14" fill="var(--info-text)">PR diffs</text>
+
+  <rect x="1090" y="40" width="150" height="260" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1165" y="90" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Deploy</text>
+  <text x="1165" y="180" text-anchor="middle" font-size="14" fill="var(--primary-text)">AI drafts</text>
+  <text x="1165" y="210" text-anchor="middle" font-size="14" fill="var(--primary-text)">release notes</text>
+
+  <line x1="40" y1="340" x2="1240" y2="340" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="330" text-anchor="middle" font-size="14" fill="var(--text-muted)">feedback flows back to planning</text>
+
+  <rect x="40" y="370" width="1200" height="250" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="415" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)">AI Assists Every Step</text>
+  <text x="640" y="460" text-anchor="middle" font-size="15" fill="var(--text-muted)">The human stays in charge of intent, tradeoffs, and acceptance.</text>
+  <text x="640" y="495" text-anchor="middle" font-size="15" fill="var(--text-muted)">AI accelerates drafts, checks, and repetitive transformations.</text>
+  <text x="640" y="530" text-anchor="middle" font-size="15" fill="var(--text-muted)">Short iterations keep context fresh and reviews cheap.</text>
+  <text x="640" y="565" text-anchor="middle" font-size="15" fill="var(--text-muted)">Automated tests and CI gate every AI-produced change.</text>
+  <text x="640" y="600" text-anchor="middle" font-size="15" fill="var(--text-muted)">The cycle compresses from weeks to hours.</text>
 </svg>

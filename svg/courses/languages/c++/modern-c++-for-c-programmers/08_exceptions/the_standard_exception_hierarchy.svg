@@ -3,114 +3,57 @@
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
+        --text: #212121; --text-muted: #555555; --text-faint: #888888;
+        --code-bg: #1a1a2e; --shadow: #00000022; --black: #000000;
+        --primary-fill: #2196f3; --primary-border: #1565c0; --primary-text: #ffffff; --primary-accent: #0d47a1;
+        --ok-fill: #4caf50; --ok-border: #2e7d32; --ok-text: #ffffff; --ok-accent: #1b5e20;
+        --warn-fill: #ff9800; --warn-border: #e65100; --warn-text: #ffffff; --warn-accent: #bf360c;
+        --danger-fill: #e74c3c; --danger-border: #c62828; --danger-text: #ffffff; --danger-accent: #b71c1c;
+        --info-fill: #9c27b0; --info-border: #6a1b9a; --info-text: #ffffff; --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="570.7692" y="189" width="230.7692" height="58.3448" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="5.9965" stroke-width="2"/>
-  <text x="686.1538" y="227.8965" text-anchor="middle">exception</text>
-  <rect x="224.6153" y="305.6897" width="276.923" height="58.3448" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="5.9965" stroke-width="2"/>
-  <text x="363.0769" y="344.5862" text-anchor="middle">logic_error</text>
-  <rect x="870.7692" y="305.6897" width="276.923" height="58.3448" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="5.9965" stroke-width="2"/>
-  <text x="1009.2308" y="344.5862" text-anchor="middle">runtime_error</text>
-  <rect x="40" y="422.3793" width="230.7692" height="48.6207" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9965" stroke-width="2"/>
-  <text x="155.3845" y="455.4413" text-anchor="middle">invalid_argument</text>
-  <rect x="316.923" y="422.3793" width="230.7692" height="48.6207" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9965" stroke-width="2"/>
-  <text x="432.3076" y="455.4413" text-anchor="middle">out_of_range</text>
-  <rect x="732.3078" y="422.3793" width="230.7692" height="48.6207" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9965" stroke-width="2"/>
-  <text x="847.6922" y="455.4413" text-anchor="middle">system_error</text>
-  <rect x="1009.2308" y="422.3793" width="230.7692" height="48.6207" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9965" stroke-width="2"/>
-  <text x="1124.6154" y="455.4413" text-anchor="middle">overflow_error</text>
-  <line x1="686.1538" y1="247.3449" x2="363.0769" y2="305.6897" stroke="var(--black)" />
-  <line x1="686.1538" y1="247.3449" x2="1009.2308" y2="305.6897" stroke="var(--black)" />
-  <line x1="363.0769" y1="364.0345" x2="155.3845" y2="422.3793" stroke="var(--black)" />
-  <line x1="363.0769" y1="364.0345" x2="432.3076" y2="422.3793" stroke="var(--black)" />
-  <line x1="1009.2308" y1="364.0345" x2="847.6922" y2="422.3793" stroke="var(--black)" />
-  <line x1="1009.2308" y1="364.0345" x2="1124.6154" y2="422.3793" stroke="var(--black)" />
+  </defs>
+
+  <rect x="440" y="40" width="400" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">std::exception</text>
+  <text x="640" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">virtual const char* what()</text>
+
+  <line x1="640" y1="120" x2="240" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="120" x2="1040" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="180" width="600" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="340" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">logic_error</text>
+  <text x="340" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Preventable bugs; fix calling code</text>
+
+  <rect x="640" y="180" width="600" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="940" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">runtime_error</text>
+  <text x="940" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">External failures at runtime</text>
+
+  <rect x="40" y="280" width="190" height="340" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="135" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">invalid_argument</text>
+  <text x="135" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">bad input</text>
+
+  <rect x="240" y="280" width="190" height="340" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="335" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">out_of_range</text>
+  <text x="335" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">index outside</text>
+
+  <rect x="440" y="280" width="200" height="340" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="540" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">length_error</text>
+  <text x="540" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">size exceeds max</text>
+
+  <rect x="650" y="280" width="180" height="340" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="740" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">range_error</text>
+  <text x="740" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">math out</text>
+
+  <rect x="840" y="280" width="200" height="340" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="940" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">overflow_error</text>
+  <text x="940" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">arith overflow</text>
+
+  <rect x="1050" y="280" width="190" height="340" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1145" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">system_error</text>
+  <text x="1145" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">OS / errno</text>
 </svg>

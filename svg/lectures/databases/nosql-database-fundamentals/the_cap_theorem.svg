@@ -34,69 +34,34 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="235" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--danger-text)">C</text>
+  <text x="235" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--danger-text)">Consistency</text>
+  <text x="235" y="292.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--danger-text)">Every read sees the</text>
+  <text x="235" y="322.434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--danger-text)">most recent write</text>
+  <text x="235" y="393.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--danger-text)">or an error</text>
+  <text x="235" y="453.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" fill="var(--danger-text)">CP: MongoDB, HBase</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="445" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--ok-text)">A</text>
+  <text x="640" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--ok-text)">Availability</text>
+  <text x="640" y="292.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--ok-text)">Every request gets</text>
+  <text x="640" y="322.434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--ok-text)">a non-error response</text>
+  <text x="640" y="393.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--ok-text)">maybe stale</text>
+  <text x="640" y="453.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" fill="var(--ok-text)">AP: Cassandra, Dynamo</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="850" y="40" width="390" height="443.826087" rx="6.02603" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1045" y="140.869565" text-anchor="middle" font-family="Arial, sans-serif" font-size="120.52061" font-weight="bold" fill="var(--primary-text)">P</text>
+  <text x="1045" y="221.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="30.130152" font-weight="bold" fill="var(--primary-text)">Partition tolerance</text>
+  <text x="1045" y="292.173913" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--primary-text)">System keeps running</text>
+  <text x="1045" y="322.434783" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--primary-text)">despite network splits</text>
+  <text x="1045" y="393.043478" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.078091" fill="var(--primary-text)">non-negotiable</text>
+  <text x="1045" y="453.565217" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.069415" fill="var(--primary-text)">in any real network</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="552.018074" cy="250.962099" r="210.962099" fill="var(--danger-fill)" opacity="0.3" stroke="var(--text)" stroke-width="3.3796" />
-  <circle cx="727.981926" cy="250.962099" r="210.962099" fill="var(--ok-fill)" opacity="0.3" stroke="var(--text)" stroke-width="3.3796" />
-  <circle cx="639.9999" cy="409.037901" r="210.962099" fill="var(--primary-fill)" opacity="0.3" stroke="var(--text)" stroke-width="3.3796" />
-  <text x="552.018074" y="152.164798" text-anchor="middle" font-size="24.612192" font-weight="bold">Consistency</text>
-  <text x="727.981926" y="152.164798" text-anchor="middle" font-size="24.612192" font-weight="bold">Availability</text>
-  <text x="639.9999" y="527.594702" text-anchor="middle" font-size="24.612192" font-weight="bold">Partition Tolerance</text>
+  <rect x="40" y="514.086957" width="1200" height="105.913043" rx="6.02603" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="549.391304" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.095445" font-weight="bold" fill="var(--text)">Pick at most two. P is forced, so the real choice is C or A.</text>
+  <text x="640" y="584.695652" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.073753" fill="var(--text-muted)">During a partition: CP refuses writes to stay consistent; AP accepts writes and reconciles later.</text>
+  <text x="640" y="614.956522" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.073753" fill="var(--text-muted)">Outside partitions, modern systems tune latency vs consistency dynamically (PACELC).</text>
 </svg>

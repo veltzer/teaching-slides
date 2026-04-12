@@ -34,82 +34,52 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 28.8 L 16.4571 14.4 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="205" width="228.5715" height="250" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="154.2857" y="305" text-anchor="middle" font-size="20.9524" font-weight="bold">Prod DB</text>
-  <text x="154.2857" y="380" text-anchor="middle" font-size="19.0476" fill="var(--text-muted)">Real PII</text>
-  <line x1="268.5715" y1="330" x2="354.2857" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="363.8096" y="205" width="228.5715" height="250" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="478.0952" y="305" text-anchor="middle" font-size="20.9524" font-weight="bold">Export</text>
-  <text x="478.0952" y="380" text-anchor="middle" font-size="19.0476" fill="var(--text-muted)">Snapshot</text>
-  <line x1="592.3809" y1="330" x2="678.0952" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="687.6191" y="205" width="228.5715" height="250" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="801.9048" y="305" text-anchor="middle" font-size="20.9524" font-weight="bold">Anonymize</text>
-  <text x="801.9048" y="380" text-anchor="middle" font-size="19.0476" fill="var(--text-muted)">Mask/Hash PII</text>
-  <line x1="916.1905" y1="330" x2="1001.9048" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1011.4285" y="205" width="228.5715" height="250" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="1125.7143" y="305" text-anchor="middle" font-size="20.9524" font-weight="bold">Non-prod DB</text>
-  <text x="1125.7143" y="380" text-anchor="middle" font-size="19.0476" fill="var(--text-muted)">Safe data</text>
+
+  <rect x="40" y="40" width="275" height="400" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="177" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--danger-text)">Prod DB</text>
+  <text x="177" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Real PII</text>
+  <text x="177" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">emails, SSNs,</text>
+  <text x="177" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">payment cards</text>
+  <text x="177" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">access: on-call</text>
+  <text x="177" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">engineers only</text>
+  <text x="177" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">audited, encrypted</text>
+
+  <rect x="345" y="40" width="275" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="482" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--warn-text)">Export</text>
+  <text x="482" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Snapshot</text>
+  <text x="482" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">read-replica dump</text>
+  <text x="482" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">nightly cron</text>
+  <text x="482" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">still contains PII</text>
+  <text x="482" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">treat as sensitive</text>
+
+  <rect x="650" y="40" width="275" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="787" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">Anonymize</text>
+  <text x="787" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Mask / Hash / Fake</text>
+  <text x="787" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">names to Faker</text>
+  <text x="787" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">emails hashed</text>
+  <text x="787" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">cards tokenized</text>
+  <text x="787" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">preserves shape,</text>
+  <text x="787" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">stats, referential keys</text>
+
+  <rect x="955" y="40" width="285" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1097" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">Non-prod DB</text>
+  <text x="1097" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Safe data</text>
+  <text x="1097" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">staging, QA, dev</text>
+  <text x="1097" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">load tests, demos</text>
+  <text x="1097" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">access: all engineers</text>
+  <text x="1097" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">no compliance scope</text>
+
+  <line x1="316" y1="240" x2="343" y2="240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="621" y1="240" x2="648" y2="240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="926" y1="240" x2="953" y2="240" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="460" width="1200" height="160" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Why a pipeline, not a one-off script</text>
+  <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Repeatable, audited, reversible. Prod schema changes automatically flow through.</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Consistent tokens across tables keep joins working in non-prod.</text>
+  <text x="640" y="598" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">GDPR / HIPAA: only the anonymize step needs compliance review.</text>
 </svg>

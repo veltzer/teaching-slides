@@ -34,86 +34,51 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,28.8 6.4,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="187" width="200" height="143" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9962" />
-  <text x="140.0001" y="244.2" text-anchor="middle" font-size="21.8043" font-weight="bold">Write</text>
-  <text x="140.0001" y="295.68" text-anchor="middle" font-size="19.9873">.tf files</text>
-  <line x1="240" y1="258.5" x2="312.7272" y2="258.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="312.7272" y="187" width="200" height="143" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="5.9962" />
-  <text x="412.7273" y="244.2" text-anchor="middle" font-size="21.8043" font-weight="bold">Init</text>
-  <text x="412.7273" y="295.68" text-anchor="middle" font-size="19.9873">providers</text>
-  <line x1="512.7273" y1="258.5" x2="585.4546" y2="258.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="585.4546" y="187" width="200" height="143" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9962" />
-  <text x="685.4546" y="244.2" text-anchor="middle" font-size="21.8043" font-weight="bold">Plan</text>
-  <text x="685.4546" y="295.68" text-anchor="middle" font-size="19.9873">diff state</text>
-  <line x1="785.4545" y1="258.5" x2="858.1818" y2="258.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="858.1818" y="187" width="200" height="143" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9962" />
-  <text x="958.1818" y="244.2" text-anchor="middle" font-size="21.8043" font-weight="bold">Apply</text>
-  <text x="958.1818" y="295.68" text-anchor="middle" font-size="19.9873">execute</text>
-  <line x1="1058.1818" y1="258.5" x2="1130.9091" y2="258.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1130.9091" y="187" width="109.0909" height="143" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9962" />
-  <text x="1185.4545" y="272.8" text-anchor="middle" font-size="21.8043" font-weight="bold">Done</text>
-  <text x="685.4546" y="473" text-anchor="middle" font-size="23.6213" fill="var(--text-muted)">State file updated after successful apply</text>
+
+  <rect x="40" y="40" width="210" height="325.233645" rx="6.247242" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="145" y="126.728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.153798" font-weight="bold" fill="var(--warn-text)">Write</text>
+  <text x="145" y="191.775701" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--warn-text)">.tf files</text>
+  <text x="145" y="235.140187" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--warn-text)">HCL syntax</text>
+  <text x="145" y="278.504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--warn-text)">declarative</text>
+
+  <rect x="280" y="40" width="210" height="325.233645" rx="6.247242" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="385" y="126.728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.153798" font-weight="bold" fill="var(--info-text)">Init</text>
+  <text x="385" y="191.775701" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--info-text)">providers</text>
+  <text x="385" y="235.140187" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--info-text)">modules</text>
+  <text x="385" y="278.504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--info-text)">backend</text>
+
+  <rect x="520" y="40" width="210" height="325.233645" rx="6.247242" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="625" y="126.728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.153798" font-weight="bold" fill="var(--primary-text)">Plan</text>
+  <text x="625" y="191.775701" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--primary-text)">diff vs state</text>
+  <text x="625" y="235.140187" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--primary-text)">preview</text>
+  <text x="625" y="278.504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--primary-text)">no changes yet</text>
+
+  <rect x="760" y="40" width="210" height="325.233645" rx="6.247242" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="865" y="126.728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.153798" font-weight="bold" fill="var(--danger-text)">Apply</text>
+  <text x="865" y="191.775701" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--danger-text)">execute plan</text>
+  <text x="865" y="235.140187" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--danger-text)">call APIs</text>
+  <text x="865" y="278.504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--danger-text)">mutate infra</text>
+
+  <rect x="1000" y="40" width="240" height="325.233645" rx="6.247242" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1120" y="126.728972" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.153798" font-weight="bold" fill="var(--ok-text)">State</text>
+  <text x="1120" y="191.775701" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--ok-text)">terraform.tfstate</text>
+  <text x="1120" y="235.140187" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--ok-text)">remote backend</text>
+  <text x="1120" y="278.504673" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--ok-text)">source of truth</text>
+
+  <line x1="250" y1="202.616822" x2="278" y2="202.616822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="202.616822" x2="518" y2="202.616822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="730" y1="202.616822" x2="758" y2="202.616822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="970" y1="202.616822" x2="998" y2="202.616822" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M 1120 365.233645 Q 1120 495.327103 640 495.327103 Q 145 495.327103 145 365.233645" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <rect x="440" y="462.803738" width="400" height="75.88785" rx="6.247242" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="495.327103" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" font-weight="bold" fill="var(--text)">Iterate</text>
+  <text x="640" y="522.429907" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.659313" fill="var(--text-muted)">Edit code, re-plan, re-apply</text>
+
+  <text x="640" y="592.897196" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.741727" fill="var(--text-muted)">State file is updated after every successful apply</text>
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.659313" fill="var(--text-faint)">Never edit state by hand - use `terraform state` subcommands</text>
 </svg>

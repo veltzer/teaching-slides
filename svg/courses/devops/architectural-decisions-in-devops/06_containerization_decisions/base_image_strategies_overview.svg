@@ -34,82 +34,32 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="140" y="65.663717" text-anchor="end" font-size="18.237373" fill="var(--text)">Scratch</text>
+  <rect x="160" y="40" width="30" height="41.061947" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124"/>
+  <text x="200" y="65.663717" font-size="16.210998" fill="var(--text)">0 MB</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <text x="140" y="158.053097" text-anchor="end" font-size="18.237373" fill="var(--text)">Distroless</text>
+  <rect x="160" y="132.389381" width="90" height="41.061947" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124"/>
+  <text x="260" y="158.053097" font-size="16.210998" fill="var(--text)">~2 MB</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <text x="140" y="250.442478" text-anchor="end" font-size="18.237373" fill="var(--text)">Alpine</text>
+  <rect x="160" y="224.778761" width="130" height="41.061947" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.079124"/>
+  <text x="300" y="250.442478" font-size="16.210998" fill="var(--text)">~7 MB</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <text x="140" y="342.831858" text-anchor="end" font-size="18.237373" fill="var(--text)">Debian slim</text>
+  <rect x="160" y="317.168142" width="440" height="41.061947" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124"/>
+  <text x="610" y="342.831858" font-size="16.210998" fill="var(--text)">~80 MB</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <text x="140" y="435.221239" text-anchor="end" font-size="18.237373" fill="var(--text)">Ubuntu</text>
+  <rect x="160" y="409.557522" width="660" height="41.061947" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.079124"/>
+  <text x="830" y="435.221239" font-size="16.210998" fill="var(--text)">~120 MB</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <text x="140" y="527.610619" text-anchor="end" font-size="18.237373" fill="var(--text)">Full Debian</text>
+  <rect x="160" y="501.946903" width="990" height="41.061947" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.079124"/>
+  <text x="1160" y="527.610619" font-size="16.210998" fill="var(--text)">~180 MB</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="889.5" y="40" text-anchor="middle" font-size="26.1819" font-weight="bold">Base Image Size Comparison</text>
-  <text x="390.5" y="168.8889" text-anchor="end" font-size="19.6366">Scratch</text>
-  <rect x="398.6803" y="136.6667" width="16.3606" height="53.7037" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9989"/>
-  <text x="431.4016" y="175.3334" font-size="18.0001">0 MB</text>
-  <text x="390.5" y="254.8148" text-anchor="end" font-size="19.6366">Distroless</text>
-  <rect x="398.6803" y="222.5926" width="49.0819" height="53.7037" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9989"/>
-  <text x="464.1229" y="261.2592" font-size="18.0001">~2 MB</text>
-  <text x="390.5" y="340.7407" text-anchor="end" font-size="19.6366">Alpine</text>
-  <rect x="398.6803" y="308.5185" width="65.4426" height="53.7037" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9989"/>
-  <text x="480.4837" y="347.1852" font-size="18.0001">~7 MB</text>
-  <text x="390.5" y="426.6667" text-anchor="end" font-size="19.6366">Debian slim</text>
-  <rect x="398.6803" y="394.4444" width="212.6885" height="53.7037" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9989"/>
-  <text x="627.7295" y="433.1111" font-size="18.0001">~80 MB</text>
-  <text x="390.5" y="512.5926" text-anchor="end" font-size="19.6366">Ubuntu</text>
-  <rect x="398.6803" y="480.3704" width="294.4918" height="53.7037" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9989"/>
-  <text x="709.5327" y="519.037" font-size="18.0001">~120 MB</text>
-  <text x="390.5" y="598.5185" text-anchor="end" font-size="19.6366">Full Debian</text>
-  <rect x="398.6803" y="566.2963" width="409.0163" height="53.7037" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9989"/>
-  <text x="824.0573" y="604.963" font-size="18.0001">~180 MB</text>
+  <rect x="40" y="578.938053" width="1200" height="41.061947" rx="6.079124" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="606.654867" text-anchor="middle" font-size="15.197811" fill="var(--text-muted)">Smaller images pull faster, ship fewer CVEs, and start sooner.</text>
 </svg>

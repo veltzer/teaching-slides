@@ -34,82 +34,59 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="640" cy="320" r="236.9744" fill="none" stroke="var(--primary-border)" stroke-width="4.3344" />
-  <text x="640" y="320" text-anchor="middle" font-size="25.2773" font-weight="bold">Debug</text>
-  <text x="640" y="360" text-anchor="middle" font-size="25.2773" font-weight="bold">Principles</text>
-  <circle cx="640" cy="80" r="12.6387" fill="var(--ok-fill)" />
-  <text x="640" y="40" text-anchor="middle" font-size="18.958">Reproduce First</text>
-  <circle cx="766.3529" cy="160" r="12.6387" fill="var(--ok-fill)" />
-  <text x="876.9117" y="160" font-size="18.958">Isolate Problem</text>
-  <circle cx="797.9412" cy="320" r="12.6387" fill="var(--ok-fill)" />
-  <text x="908.5" y="320" font-size="18.958">One Change</text>
-  <circle cx="766.3529" cy="480" r="12.6387" fill="var(--ok-fill)" />
-  <text x="876.9117" y="480" font-size="18.958">Document Fix</text>
-  <circle cx="640" cy="560" r="12.6387" fill="var(--ok-fill)" />
-  <text x="640" y="620" text-anchor="middle" font-size="18.958">Test Thoroughly</text>
-  <circle cx="513.647" cy="480" r="12.6387" fill="var(--ok-fill)" />
-  <text x="403.0882" y="480" text-anchor="end" font-size="18.958">Use Debugger</text>
-  <circle cx="482.0588" cy="320" r="12.6387" fill="var(--ok-fill)" />
-  <text x="371.5" y="320" text-anchor="end" font-size="18.958">Check Logs</text>
-  <circle cx="513.647" cy="160" r="12.6387" fill="var(--ok-fill)" />
-  <text x="403.0882" y="160" text-anchor="end" font-size="18.958">Binary Search</text>
+  </defs>
+
+  <rect x="40" y="40" width="235" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="157" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Reproduce</text>
+  <text x="157" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Find the smallest input</text>
+  <text x="157" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Write a failing test</text>
+  <text x="157" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Capture exact error</text>
+  <text x="157" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Note environment</text>
+  <text x="157" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">A bug you cannot</text>
+  <text x="157" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">reproduce cannot</text>
+  <text x="157" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--danger-text)">be fixed.</text>
+  <text x="157" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="var(--danger-text)">1</text>
+
+  <line x1="280" y1="330" x2="335" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="340" y="40" width="235" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="457" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Ask the AI</text>
+  <text x="457" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Paste the stack trace</text>
+  <text x="457" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Share the failing test</text>
+  <text x="457" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Describe what you tried</text>
+  <text x="457" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Request hypotheses</text>
+  <text x="457" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">Ask for a list of</text>
+  <text x="457" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">possible causes, not</text>
+  <text x="457" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--warn-text)">one confident answer.</text>
+  <text x="457" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="var(--warn-text)">2</text>
+
+  <line x1="580" y1="330" x2="635" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="640" y="40" width="235" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="757" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Verify Cause</text>
+  <text x="757" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Read the suspect code</text>
+  <text x="757" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Add logs and prints</text>
+  <text x="757" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Step through in debugger</text>
+  <text x="757" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Confirm assumptions</text>
+  <text x="757" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">Never accept the first</text>
+  <text x="757" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">guess. Make the theory</text>
+  <text x="757" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--info-text)">earn the fix.</text>
+  <text x="757" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="var(--info-text)">3</text>
+
+  <line x1="880" y1="330" x2="935" y2="330" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="940" y="40" width="300" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Fix and Lock In</text>
+  <text x="1090" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Apply smallest fix</text>
+  <text x="1090" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Rerun the failing test</text>
+  <text x="1090" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Run the full suite</text>
+  <text x="1090" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Add a regression test</text>
+  <text x="1090" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Commit with clear note</text>
+  <text x="1090" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">A green test and a</text>
+  <text x="1090" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">written explanation</text>
+  <text x="1090" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-style="italic" fill="var(--ok-text)">close the loop.</text>
+  <text x="1090" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="var(--ok-text)">4</text>
 </svg>

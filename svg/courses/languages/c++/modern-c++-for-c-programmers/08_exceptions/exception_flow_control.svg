@@ -1,116 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="197.5" width="300" height="96.3637" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="5.998" stroke-width="2"/>
-  <text x="190" y="257.7273" text-anchor="middle">try block</text>
-  <rect x="40" y="366.1363" width="300" height="96.3637" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="5.998" stroke-width="2"/>
-  <text x="190" y="426.3637" text-anchor="middle">throw</text>
-  <rect x="490" y="197.5" width="300" height="96.3637" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="5.998" stroke-width="2"/>
-  <text x="640" y="257.7273" text-anchor="middle">normal flow</text>
-  <rect x="490" y="366.1363" width="300" height="96.3637" fill="var(--info-fill)" stroke="var(--info-border)" rx="5.998" stroke-width="2"/>
-  <text x="640" y="426.3637" text-anchor="middle">stack unwind</text>
-  <rect x="940" y="366.1363" width="300" height="96.3637" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.998" stroke-width="2"/>
-  <text x="1090" y="426.3637" text-anchor="middle">catch block</text>
-  <line x1="340" y1="245.6819" x2="490" y2="245.6819" stroke="var(--ok-border)" marker-end="url(#arrow)" />
-  <line x1="190" y1="293.8638" x2="190" y2="366.1363" stroke="var(--danger-border)" marker-end="url(#arrow)" />
-  <line x1="340" y1="414.3183" x2="490" y2="414.3183" stroke="var(--danger-border)" marker-end="url(#arrow)" />
-  <line x1="790" y1="414.3183" x2="940" y2="414.3183" stroke="var(--danger-border)" marker-end="url(#arrow)" />
-  <text x="415" y="233.6364" fill="var(--ok-accent)">No exception</text>
-  <text x="415" y="450.4545" fill="var(--danger-accent)">Exception thrown</text>
   <defs>
-    <style id="palette-vars">
-      :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
-      }
-    </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 8.96,0" fill="black" />
-    </marker>
   </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Exception Flow Control</text>
+
+  <rect x="40" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">try</text>
+  <text x="180" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Guarded region</text>
+  <text x="180" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Code runs normally</text>
+  <text x="180" y="279.449541" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Objects constructed</text>
+  <text x="180" y="332.66055" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">RAII tracks lifetime</text>
+  <text x="180" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">No runtime overhead</text>
+  <text x="180" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">on the happy path</text>
+  <text x="180" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--primary-text)">Zero-cost model</text>
+
+  <rect x="340" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="480" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--danger-text)">throw</text>
+  <text x="480" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Allocate exception</text>
+  <text x="480" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Copy into slot</text>
+  <text x="480" y="279.449541" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Abandon current scope</text>
+  <text x="480" y="332.66055" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Begin unwinding</text>
+  <text x="480" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Search for handler</text>
+  <text x="480" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">Match by type</text>
+  <text x="480" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--danger-text)">terminate if none</text>
+
+  <rect x="640" y="77.247706" width="280" height="542.752294" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="780" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Unwind</text>
+  <text x="780" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Walk the stack</text>
+  <text x="780" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Pop each frame</text>
+  <text x="780" y="279.449541" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Call destructors</text>
+  <text x="780" y="332.66055" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Release resources</text>
+  <text x="780" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">RAII guarantees it</text>
+  <text x="780" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">No leaks if disciplined</text>
+  <text x="780" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--warn-text)">Stops at catch</text>
+
+  <rect x="940" y="77.247706" width="300" height="542.752294" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="119.816514" text-anchor="middle" font-size="20.63221" font-weight="bold" fill="var(--ok-text)">catch</text>
+  <text x="1090" y="173.027523" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Handler executes</text>
+  <text x="1090" y="215.59633" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Exception bound</text>
+  <text x="1090" y="279.449541" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Log, recover, rethrow</text>
+  <text x="1090" y="332.66055" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Control resumes</text>
+  <text x="1090" y="407.155963" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Object destroyed</text>
+  <text x="1090" y="460.366972" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">at block end</text>
+  <text x="1090" y="545.504587" text-anchor="middle" font-size="15.474157" fill="var(--ok-text)">Normal flow resumes</text>
 </svg>

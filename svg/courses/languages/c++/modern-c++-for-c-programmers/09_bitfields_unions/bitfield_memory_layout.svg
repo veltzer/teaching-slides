@@ -34,81 +34,51 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">uint32_t packed as bit-fields (MSB left)</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <text x="40" y="82.181818" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">bit 31</text>
+  <text x="1240" y="82.181818" text-anchor="end" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">bit 0</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="40" y="103.272727" width="650" height="253.090909" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="365" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.86114" font-weight="bold" fill="var(--danger-text)">reserved</text>
+  <text x="365" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" fill="var(--danger-text)">23 bits, unused</text>
+  <text x="365" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">bits 8..30</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="700" y="103.272727" width="130" height="253.090909" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="765" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--primary-text)">cat</text>
+  <text x="765" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">4 bits</text>
+  <text x="765" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">bits 4..7</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="840" y="103.272727" width="100" height="253.090909" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="890" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--ok-text)">pri</text>
+  <text x="890" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">3 bits</text>
+  <text x="890" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">bits 1..3</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="950" y="103.272727" width="140" height="253.090909" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1020" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--warn-text)">vis</text>
+  <text x="1020" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--warn-text)">1 bit</text>
+  <text x="1020" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">bit 1</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="54.8149" y="225.8334" width="1185.1851" height="166.6667" fill="none" stroke="var(--border)" rx="6" stroke-width="1"/>
-  <text x="40" y="205">31</text>
-  <text x="1225.1851" y="205">0</text>
-  <rect x="54.8149" y="225.8334" width="681.4815" height="166.6667" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="6" stroke-width="2"/>
-  <text x="395.5556" y="330" text-anchor="middle">reserved (23 bits)</text>
-  <rect x="736.2962" y="225.8334" width="118.5185" height="166.6667" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="6" stroke-width="2"/>
-  <text x="795.5556" y="330" text-anchor="middle">cat</text>
-  <rect x="854.8148" y="225.8334" width="88.8889" height="166.6667" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="6" stroke-width="2"/>
-  <text x="899.2592" y="330" text-anchor="middle">pri</text>
-  <rect x="943.7037" y="225.8334" width="148.1481" height="83.3334" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6" stroke-width="2"/>
-  <text x="1017.7778" y="288.3333" text-anchor="middle">vis</text>
-  <rect x="1091.8519" y="225.8334" width="148.1481" height="83.3334" fill="var(--info-fill)" stroke="var(--info-border)" rx="6" stroke-width="2"/>
-  <text x="1165.9259" y="288.3333" text-anchor="middle">act</text>
-  <text x="395.5556" y="455" text-anchor="middle">8-30</text>
-  <text x="795.5556" y="455" text-anchor="middle">4-7</text>
-  <text x="899.2592" y="455" text-anchor="middle">1-3</text>
-  <text x="1017.7778" y="455" text-anchor="middle">1</text>
-  <text x="1165.9259" y="455" text-anchor="middle">0</text>
+  <rect x="1100" y="103.272727" width="140" height="253.090909" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1170" y="208.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.699677" font-weight="bold" fill="var(--info-text)">act</text>
+  <text x="1170" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">1 bit</text>
+  <text x="1170" y="303.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">bit 0</text>
+
+  <rect x="40" y="388" width="590" height="232" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="335" y="430.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--text)">What the compiler guarantees</text>
+  <text x="335" y="472.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Packing order within a byte is</text>
+  <text x="335" y="498.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">implementation-defined.</text>
+  <text x="335" y="535.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Sizeof may add padding.</text>
+  <text x="335" y="567.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">No address-of on a bit-field.</text>
+  <text x="335" y="598.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Read-modify-write, not atomic.</text>
+
+  <rect x="650" y="388" width="590" height="232" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="945" y="430.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--text)">Don't use bit-fields for</text>
+  <text x="945" y="472.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Hardware registers (use masks).</text>
+  <text x="945" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Wire protocols (endian unspecified).</text>
+  <text x="945" y="535.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Shared memory across ABIs.</text>
+  <text x="945" y="572.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Do use them: memory-tight</text>
+  <text x="945" y="598.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">process-local structs.</text>
 </svg>

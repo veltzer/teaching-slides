@@ -34,72 +34,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <circle cx="640" cy="296" r="256" fill="var(--primary-fill)" opacity="0.2" />
-  <circle cx="640" cy="296" r="170.6666" fill="var(--ok-fill)" opacity="0.3" />
-  <circle cx="640" cy="296" r="85.3334" fill="var(--danger-fill)" opacity="0.4" />
-  <text x="640" y="296" text-anchor="middle" fill="var(--bg)" font-size="23.8933" font-weight="bold">Task</text>
-  <text x="640" y="144.7999" text-anchor="middle" font-size="20.48">Technical Stack</text>
-  <text x="640" y="447.2" text-anchor="middle" font-size="20.48">Business Context</text>
-  <text x="776.5332" y="296" text-anchor="middle" font-size="18.7733">Requirements</text>
-  <text x="503.4667" y="296" text-anchor="middle" font-size="18.7733">Constraints</text>
-  <text x="640" y="620" text-anchor="middle" font-size="27.3067" font-weight="bold">Layer Context from Broad to Specific</text>
+  </defs>
+
+  <rect x="40" y="40" width="290" height="580" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="185" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Business</text>
+  <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Context</text>
+  <text x="185" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Why this matters</text>
+  <text x="185" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Who the users are</text>
+  <text x="185" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Success criteria</text>
+  <text x="185" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Domain vocabulary</text>
+  <text x="185" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Goal: alignment</text>
+  <text x="185" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">broadest</text>
+
+  <rect x="340" y="40" width="290" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="485" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Technical</text>
+  <text x="485" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Stack</text>
+  <text x="485" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Languages, frameworks</text>
+  <text x="485" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Versions, runtime</text>
+  <text x="485" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Project structure</text>
+  <text x="485" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Coding conventions</text>
+  <text x="485" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Goal: compatibility</text>
+  <text x="485" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">narrower</text>
+
+  <rect x="640" y="40" width="290" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="785" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Constraints</text>
+  <text x="785" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Performance budgets</text>
+  <text x="785" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Memory / CPU limits</text>
+  <text x="785" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Security requirements</text>
+  <text x="785" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Backward compatibility</text>
+  <text x="785" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--warn-text)">Goal: rule out options</text>
+  <text x="785" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">tighter</text>
+
+  <rect x="940" y="40" width="300" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1090" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">Task</text>
+  <text x="1090" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Exact file to change</text>
+  <text x="1090" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Function signature</text>
+  <text x="1090" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Expected I/O shape</text>
+  <text x="1090" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Acceptance tests</text>
+  <text x="1090" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Goal: exact action</text>
+  <text x="1090" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">sharpest</text>
+
+  <line x1="330" y1="500" x2="340" y2="500" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="630" y1="500" x2="640" y2="500" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="930" y1="500" x2="940" y2="500" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

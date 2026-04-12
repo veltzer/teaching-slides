@@ -1,113 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <style id="palette-vars">
-      :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
-      }
-    </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="240" width="1200" height="225" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6"/>
-  <rect x="40" y="240" width="160" height="225" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6"/>
-  <text x="120" y="318.75" text-anchor="middle" font-size="22">Boot</text>
-  <text x="120" y="363.75" text-anchor="middle" font-size="20">64MB</text>
-  <text x="120" y="408.75" text-anchor="middle" font-size="20">FAT32</text>
-  <rect x="200" y="240" width="600" height="225" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
-  <text x="500" y="318.75" text-anchor="middle" font-size="22">Root FS</text>
-  <text x="500" y="363.75" text-anchor="middle" font-size="20">2GB</text>
-  <text x="500" y="408.75" text-anchor="middle" font-size="20">ext4</text>
-  <rect x="800" y="240" width="300" height="225" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6"/>
-  <text x="950" y="318.75" text-anchor="middle" font-size="22">Data</text>
-  <text x="950" y="363.75" text-anchor="middle" font-size="20">1GB</text>
-  <text x="950" y="408.75" text-anchor="middle" font-size="20">ext4</text>
-  <rect x="1100" y="240" width="140" height="225" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6"/>
-  <text x="1170" y="318.75" text-anchor="middle" font-size="22">Swap</text>
-  <text x="1170" y="363.75" text-anchor="middle" font-size="20">512MB</text>
-  <text x="640" y="195" text-anchor="middle" font-size="24" font-weight="bold">SD Card / eMMC Layout</text>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="26.821872" font-weight="bold" fill="var(--text)">Partition Layout</text>
+
+  <rect x="40" y="77.247706" width="1200" height="63.853211" rx="6.189663" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="117.688073" text-anchor="middle" font-size="16.505768" fill="var(--text-muted)">eMMC or SD card: sector 0 holds the partition table (GPT or MBR).</text>
+
+  <rect x="40" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="150" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--primary-text)">Boot</text>
+  <text x="150" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">FAT32, 64 MB</text>
+  <text x="150" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">U-Boot, MLO</text>
+  <text x="150" y="343.302752" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">uEnv.txt</text>
+  <text x="150" y="396.513761" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Device tree</text>
+  <text x="150" y="439.082569" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">zImage</text>
+  <text x="150" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Read by ROM</text>
+  <text x="150" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--primary-text)">Rarely modified</text>
+
+  <rect x="280" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="390" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--ok-text)">Rootfs A</text>
+  <text x="390" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">ext4, ~1 GB</text>
+  <text x="390" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Kernel modules</text>
+  <text x="390" y="343.302752" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">systemd, busybox</text>
+  <text x="390" y="396.513761" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">App binaries</text>
+  <text x="390" y="449.724771" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Mounted read-only</text>
+  <text x="390" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Active slot</text>
+  <text x="390" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)">Current release</text>
+
+  <rect x="520" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="630" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--info-text)">Rootfs B</text>
+  <text x="630" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">ext4, ~1 GB</text>
+  <text x="630" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Standby slot</text>
+  <text x="630" y="343.302752" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Receives updates</text>
+  <text x="630" y="396.513761" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Verified, then swap</text>
+  <text x="630" y="449.724771" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Atomic A/B flip</text>
+  <text x="630" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">Rollback on failure</text>
+  <text x="630" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--info-text)">mender, swupdate</text>
+
+  <rect x="760" y="162.385321" width="220" height="457.614679" rx="6.189663" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="870" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--warn-text)">Data</text>
+  <text x="870" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">ext4, variable</text>
+  <text x="870" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">/var, /home</text>
+  <text x="870" y="343.302752" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Logs, databases</text>
+  <text x="870" y="396.513761" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">User settings</text>
+  <text x="870" y="449.724771" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Survives updates</text>
+  <text x="870" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Encrypted if needed</text>
+  <text x="870" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--warn-text)">Growth planned</text>
+
+  <rect x="1000" y="162.385321" width="240" height="457.614679" rx="6.189663" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1120" y="204.954128" text-anchor="middle" font-size="18.568989" font-weight="bold" fill="var(--danger-text)">Recovery</text>
+  <text x="1120" y="247.522936" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">squashfs, 128 MB</text>
+  <text x="1120" y="300.733945" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Minimal rootfs</text>
+  <text x="1120" y="343.302752" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Network-capable</text>
+  <text x="1120" y="396.513761" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Reflash utility</text>
+  <text x="1120" y="449.724771" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Factory reset</text>
+  <text x="1120" y="502.93578" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Rescue partition</text>
+  <text x="1120" y="556.146789" text-anchor="middle" font-size="14.442547" fill="var(--danger-text)">Signed, immutable</text>
 </svg>

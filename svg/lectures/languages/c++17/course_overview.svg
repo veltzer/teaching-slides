@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,69 +34,32 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="390" height="580" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="var(--primary-text)">Language</text>
+  <text x="235" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">Syntax &amp; semantics</text>
+  <text x="235" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">Type system</text>
+  <text x="235" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">constexpr, lambdas</text>
+  <text x="235" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">structured bindings</text>
+  <text x="235" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">if-constexpr, fold</text>
+  <text x="235" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">class template args</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="445" y="40" width="390" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="var(--danger-text)">Library</text>
+  <text x="640" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">std::optional</text>
+  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">std::variant, any</text>
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">std::string_view</text>
+  <text x="640" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">std::filesystem</text>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">parallel algorithms</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">shared_mutex</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="185.5" width="342.8571" height="289" fill="var(--primary-accent)" rx="5.997" />
-  <text x="211.4285" y="366.125" text-anchor="middle" fill="var(--bg)" font-size="51.4032">Language</text>
-  <rect x="468.5714" y="185.5" width="342.8571" height="289" fill="var(--danger-fill)" rx="5.997" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="640" y="366.125" text-anchor="middle" fill="var(--bg)" font-size="51.4032">Library</text>
-  <rect x="897.1429" y="185.5" width="342.8571" height="289" fill="var(--warn-fill)" rx="5.997" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1068.5715" y="366.125" text-anchor="middle" fill="var(--bg)" font-size="51.4032">Practice</text>
+  <rect x="850" y="40" width="390" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1045" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="var(--warn-text)">Practice</text>
+  <text x="1045" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">Idioms, RAII</text>
+  <text x="1045" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">Error handling</text>
+  <text x="1045" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">Build systems</text>
+  <text x="1045" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">Testing, fuzzing</text>
+  <text x="1045" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">Sanitizers, tooling</text>
+  <text x="1045" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">Migration from C++11</text>
 </svg>

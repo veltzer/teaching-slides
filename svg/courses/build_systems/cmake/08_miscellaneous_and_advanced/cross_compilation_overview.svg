@@ -1,102 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <style id="palette-vars">
-      :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
-      }
-    </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="370.5" y="40" width="539" height="207.1429" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0024" />
-  <text x="640" y="131.1429" font-size="26.9393" font-weight="bold" fill="var(--text)" text-anchor="middle">Host Machine (x86_64 Linux)</text>
-  <line x1="640" y1="247.1429" x2="640" y2="404.5714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="660.7308" y="346.5714" font-size="22.7948" fill="var(--text-muted)">cross-compiler</text>
-  <rect x="370.5" y="412.8571" width="539" height="207.1429" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0024" />
-  <text x="640" y="504" font-size="26.9393" font-weight="bold" fill="var(--text)" text-anchor="middle">Target Machine (ARM embedded)</text>
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="29.018513" font-weight="bold" fill="var(--text)">Cross-Compilation Overview</text>
+
+  <rect x="40" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="225" y="131.296296" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Host</text>
+  <text x="225" y="168.888889" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">Machine that runs CMake</text>
+  <text x="225" y="222.592593" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">x86_64 Linux laptop</text>
+  <text x="225" y="265.555556" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">Invokes the compiler</text>
+  <text x="225" y="319.259259" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">Runs build tools</text>
+  <text x="225" y="372.962963" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">Generates artifacts</text>
+  <text x="225" y="448.148148" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">Needs toolchain file</text>
+  <text x="225" y="491.111111" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">-DCMAKE_TOOLCHAIN_FILE</text>
+  <text x="225" y="555.555556" text-anchor="middle" font-size="16.582007" fill="var(--primary-text)">points at sysroot</text>
+
+  <rect x="455" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="131.296296" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--warn-text)">Toolchain</text>
+  <text x="640" y="168.888889" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">Cross compiler + sysroot</text>
+  <text x="640" y="222.592593" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">aarch64-linux-gnu-gcc</text>
+  <text x="640" y="265.555556" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">Target headers</text>
+  <text x="640" y="319.259259" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">Target libraries</text>
+  <text x="640" y="372.962963" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">CMAKE_SYSTEM_NAME</text>
+  <text x="640" y="426.666667" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">CMAKE_SYSTEM_PROCESSOR</text>
+  <text x="640" y="480.37037" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">find_root rules</text>
+  <text x="640" y="555.555556" text-anchor="middle" font-size="16.582007" fill="var(--warn-text)">Reproducible builds</text>
+
+  <rect x="870" y="82.962963" width="370" height="537.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1055" y="131.296296" text-anchor="middle" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">Target</text>
+  <text x="1055" y="168.888889" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">Device that runs output</text>
+  <text x="1055" y="222.592593" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">ARM board, MCU</text>
+  <text x="1055" y="265.555556" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">Different CPU arch</text>
+  <text x="1055" y="319.259259" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">Different OS or libc</text>
+  <text x="1055" y="372.962963" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">Receives binary</text>
+  <text x="1055" y="448.148148" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">Cannot run host tools</text>
+  <text x="1055" y="491.111111" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">try_run needs emulator</text>
+  <text x="1055" y="555.555556" text-anchor="middle" font-size="16.582007" fill="var(--ok-text)">qemu-user helps</text>
+
+  <line x1="410" y1="351.481481" x2="455" y2="351.481481" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="825" y1="351.481481" x2="870" y2="351.481481" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>
