@@ -97,39 +97,39 @@
       <polygon points="0,23.2258 7.2258,0" fill="#333" />
     </marker>
   </defs>
-  <text x="640" y="41.8065" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.8387" font-weight="bold" fill="var(--text)">DAG: Join + Aggregation</text>
-  <rect x="41.2903" y="69.6774" width="1176.7742" height="162.5806" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="103.2258" y="111.4839" font-family="Arial, sans-serif" font-size="24.7742" font-weight="bold" fill="var(--primary-accent)">Stage 0: Scan Table A</text>
-  <rect x="82.5806" y="127.7419" width="206.4516" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3.0968" />
-  <text x="185.8065" y="162.5806" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">FileScan</text>
-  <text x="185.8065" y="190.4516" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text-muted)">Parquet</text>
-  <line x1="289.0323" y1="167.2258" x2="371.6129" y2="167.2258" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="381.9355" y="127.7419" width="247.7419" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3.0968" />
-  <text x="505.8065" y="162.5806" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">Filter</text>
-  <text x="505.8065" y="190.4516" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text-muted)">(pushdown)</text>
-  <line x1="629.6774" y1="167.2258" x2="712.2581" y2="167.2258" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="722.5806" y="127.7419" width="247.7419" height="81.2903" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="846.4516" y="178.8387" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">ShuffleWrite</text>
-  <rect x="41.2903" y="267.0968" width="1176.7742" height="162.5806" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="103.2258" y="308.9032" font-family="Arial, sans-serif" font-size="24.7742" font-weight="bold" fill="var(--ok-accent)">Stage 1: Scan Table B</text>
-  <rect x="82.5806" y="325.1613" width="206.4516" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3.0968" />
-  <text x="185.8065" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">FileScan</text>
-  <text x="185.8065" y="387.871" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text-muted)">Parquet</text>
-  <line x1="289.0323" y1="364.6452" x2="371.6129" y2="364.6452" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="381.9355" y="325.1613" width="206.4516" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3.0968" />
-  <text x="485.1613" y="376.2581" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">Select</text>
-  <line x1="588.3871" y1="364.6452" x2="712.2581" y2="364.6452" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="722.5806" y="325.1613" width="247.7419" height="81.2903" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="846.4516" y="376.2581" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">ShuffleWrite</text>
-  <rect x="41.2903" y="464.5161" width="1176.7742" height="162.5806" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="103.2258" y="506.3226" font-family="Arial, sans-serif" font-size="24.7742" font-weight="bold" fill="var(--info-accent)">Stage 2: Join + Aggregate</text>
-  <rect x="82.5806" y="522.5806" width="247.7419" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
-  <text x="206.4516" y="557.4194" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">ShuffleRead</text>
-  <text x="206.4516" y="585.2903" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text-muted)">(both sides)</text>
-  <line x1="330.3226" y1="562.0645" x2="412.9032" y2="562.0645" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="423.2258" y="522.5806" width="206.4516" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
-  <text x="526.4516" y="573.6774" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">Join</text>
-  <line x1="629.6774" y1="562.0645" x2="712.2581" y2="562.0645" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
-  <rect x="722.5806" y="522.5806" width="247.7419" height="81.2903" rx="6" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
-  <text x="846.4516" y="573.6774" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6452" fill="var(--text)">Aggregate</text>
+  <text x="650.5263" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.9795" font-weight="bold" fill="var(--text)">DAG: Join + Aggregation</text>
+  <rect x="40" y="67.619" width="1200" height="161.1111" rx="6.0315" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="103.1579" y="109.0476" font-family="Arial, sans-serif" font-size="24.9042" font-weight="bold" fill="var(--primary-accent)">Stage 0: Scan Table A</text>
+  <rect x="82.1052" y="125.1587" width="210.5263" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3.0968" />
+  <text x="187.3685" y="159.6825" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">FileScan</text>
+  <text x="187.3685" y="187.3016" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">Parquet</text>
+  <line x1="292.6316" y1="164.2857" x2="376.8421" y2="164.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <rect x="387.3685" y="125.1587" width="252.6315" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="3.0968" />
+  <text x="513.6843" y="159.6825" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Filter</text>
+  <text x="513.6843" y="187.3016" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">(pushdown)</text>
+  <line x1="640" y1="164.2857" x2="724.2106" y2="164.2857" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <rect x="734.7368" y="125.1587" width="252.6315" height="80.5556" rx="6.0315" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="861.0526" y="175.7936" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">ShuffleWrite</text>
+  <rect x="40" y="263.254" width="1200" height="161.1111" rx="6.0315" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="103.1579" y="304.6825" font-family="Arial, sans-serif" font-size="24.9042" font-weight="bold" fill="var(--ok-accent)">Stage 1: Scan Table B</text>
+  <rect x="82.1052" y="320.7937" width="210.5263" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3.0968" />
+  <text x="187.3685" y="355.3175" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">FileScan</text>
+  <text x="187.3685" y="382.9366" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">Parquet</text>
+  <line x1="292.6316" y1="359.9207" x2="376.8421" y2="359.9207" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <rect x="387.3685" y="320.7937" width="210.5263" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="3.0968" />
+  <text x="492.6316" y="371.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Select</text>
+  <line x1="597.8948" y1="359.9207" x2="724.2106" y2="359.9207" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <rect x="734.7368" y="320.7937" width="252.6315" height="80.5556" rx="6.0315" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="861.0526" y="371.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">ShuffleWrite</text>
+  <rect x="40" y="458.8889" width="1200" height="161.1111" rx="6.0315" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="103.1579" y="500.3175" font-family="Arial, sans-serif" font-size="24.9042" font-weight="bold" fill="var(--info-accent)">Stage 2: Join + Aggregate</text>
+  <rect x="82.1052" y="516.4286" width="252.6315" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
+  <text x="208.4211" y="550.9525" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">ShuffleRead</text>
+  <text x="208.4211" y="578.5715" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text-muted)">(both sides)</text>
+  <line x1="334.7369" y1="555.5556" x2="418.9474" y2="555.5556" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <rect x="429.4737" y="516.4286" width="210.5263" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
+  <text x="534.7368" y="567.0635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Join</text>
+  <line x1="640" y1="555.5556" x2="724.2106" y2="555.5556" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-dag)" />
+  <rect x="734.7368" y="516.4286" width="252.6315" height="80.5556" rx="6.0315" fill="var(--bg)" stroke="var(--info-border)" stroke-width="3.0968" />
+  <text x="861.0526" y="567.0635" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.7535" fill="var(--text)">Aggregate</text>
 </svg>

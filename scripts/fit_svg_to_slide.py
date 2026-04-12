@@ -436,12 +436,13 @@ def fit_svg(content: str) -> tuple[str, dict]:
     tx = USABLE_X0 + (USABLE_W - new_w) / 2 - x0 * sx
     ty = USABLE_Y0 + (USABLE_H - new_h) / 2 - y0 * sy
 
-    # Skip if the SVG is within 5% of a perfect fit. Path bbox approximation
-    # (we use alternating x/y from d= attributes, which is imprecise around
-    # H/V/A commands) can produce several pixels of drift even on well-
-    # fitted files. Without this loose threshold, the fit is not idempotent:
-    # sub-pixel residuals keep triggering micro-rescales.
-    if abs(sx - 1.0) < 0.05 and abs(sy - 1.0) < 0.05 and abs(tx) < 5.0 and abs(ty) < 5.0:
+    # Skip if the SVG is within 5% of a perfect fit in scale AND within
+    # 2px in translation. Path bbox approximation can produce a few
+    # pixels of scale drift even on well-fitted files, but translation
+    # drift is a real off-center problem the user can see. The scale
+    # tolerance keeps idempotency; the tight translation tolerance keeps
+    # content centered.
+    if abs(sx - 1.0) < 0.05 and abs(sy - 1.0) < 0.05 and abs(tx) < 2.0 and abs(ty) < 2.0:
         return content, {"skipped": "already exactly fitted"}
 
     info = {
