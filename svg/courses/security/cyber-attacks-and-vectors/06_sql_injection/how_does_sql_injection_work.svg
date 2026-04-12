@@ -1,28 +1,28 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">SQL Injection Attack Flow</ns0:text>
-  <ns0:rect x="39.9221" y="101.0526" width="219.5712" height="168.4211" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="149.7076" y="175.1579" text-anchor="middle" font-size="19.961" font-weight="bold">Attacker</ns0:text>
-  <ns0:text x="149.7076" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">' OR '1'='1</ns0:text>
-  <ns0:rect x="359.2982" y="101.0526" width="259.4931" height="168.4211" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="489.0449" y="168.4211" text-anchor="middle" font-size="19.961" font-weight="bold">Web App</ns0:text>
-  <ns0:text x="489.0449" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--warn-dk)">No input validation</ns0:text>
-  <ns0:rect x="718.5965" y="101.0526" width="239.5322" height="168.4211" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="838.3626" y="168.4211" text-anchor="middle" font-size="19.961" font-weight="bold" fill="var(--danger-dk)">SQL Engine</ns0:text>
-  <ns0:text x="838.3626" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">Executes malicious</ns0:text>
-  <ns0:rect x="1018.0117" y="101.0526" width="159.6881" height="168.4211" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="1097.8557" y="175.1579" text-anchor="middle" font-size="19.961" font-weight="bold">Database</ns0:text>
-  <ns0:text x="1097.8557" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">Data leaked</ns0:text>
-  <ns0:line x1="259.4931" y1="185.2632" x2="355.306" y2="185.2632" stroke="var(--danger-dk)" stroke-width="3.9922" marker-end="url(#arrowsqli)" />
-  <ns0:line x1="618.7914" y1="185.2632" x2="714.6043" y2="185.2632" stroke="var(--danger-dk)" stroke-width="3.9922" marker-end="url(#arrowsqli)" />
-  <ns0:line x1="958.1287" y1="185.2632" x2="1014.0195" y2="185.2632" stroke="var(--danger-dk)" stroke-width="3.9922" marker-end="url(#arrowsqli)" />
-  <ns0:rect x="199.6101" y="336.8421" width="798.4405" height="134.7368" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="1.9961" rx="5.9883" />
-  <ns0:text x="598.8304" y="394.1053" text-anchor="middle" font-size="19.961" fill="var(--warn-dk)">SELECT * FROM users WHERE name='' OR '1'='1' --'</ns0:text>
-  <ns0:text x="598.8304" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">Unsanitized input becomes part of SQL query</ns0:text>
-  <ns0:rect x="199.6101" y="505.2632" width="798.4405" height="134.7368" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.9961" rx="5.9883" />
-  <ns0:text x="598.8304" y="562.5263" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">SELECT * FROM users WHERE name=? (parameterized)</ns0:text>
-  <ns0:text x="598.8304" y="613.0526" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">Safe: input treated as data, not code</ns0:text>
-  <ns0:defs>
+  <text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">SQL Injection Attack Flow</text>
+  <rect x="39.9221" y="101.0526" width="219.5712" height="168.4211" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="149.7076" y="175.1579" text-anchor="middle" font-size="19.961" font-weight="bold">Attacker</text>
+  <text x="149.7076" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">' OR '1'='1</text>
+  <rect x="359.2982" y="101.0526" width="259.4931" height="168.4211" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="489.0449" y="168.4211" text-anchor="middle" font-size="19.961" font-weight="bold">Web App</text>
+  <text x="489.0449" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--warn-dk)">No input validation</text>
+  <rect x="718.5965" y="101.0526" width="239.5322" height="168.4211" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="838.3626" y="168.4211" text-anchor="middle" font-size="19.961" font-weight="bold" fill="var(--danger-dk)">SQL Engine</text>
+  <text x="838.3626" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">Executes malicious</text>
+  <rect x="1018.0117" y="101.0526" width="159.6881" height="168.4211" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="1097.8557" y="175.1579" text-anchor="middle" font-size="19.961" font-weight="bold">Database</text>
+  <text x="1097.8557" y="229.0526" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">Data leaked</text>
+  <line x1="259.4931" y1="185.2632" x2="355.306" y2="185.2632" stroke="var(--danger-dk)" stroke-width="3.9922" marker-end="url(#arrowsqli)" />
+  <line x1="618.7914" y1="185.2632" x2="714.6043" y2="185.2632" stroke="var(--danger-dk)" stroke-width="3.9922" marker-end="url(#arrowsqli)" />
+  <line x1="958.1287" y1="185.2632" x2="1014.0195" y2="185.2632" stroke="var(--danger-dk)" stroke-width="3.9922" marker-end="url(#arrowsqli)" />
+  <rect x="199.6101" y="336.8421" width="798.4405" height="134.7368" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="1.9961" rx="5.9883" />
+  <text x="598.8304" y="394.1053" text-anchor="middle" font-size="19.961" fill="var(--warn-dk)">SELECT * FROM users WHERE name='' OR '1'='1' --'</text>
+  <text x="598.8304" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--danger-dk)">Unsanitized input becomes part of SQL query</text>
+  <rect x="199.6101" y="505.2632" width="798.4405" height="134.7368" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.9961" rx="5.9883" />
+  <text x="598.8304" y="562.5263" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">SELECT * FROM users WHERE name=? (parameterized)</text>
+  <text x="598.8304" y="613.0526" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">Safe: input treated as data, not code</text>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -180,8 +180,8 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowsqli" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <ns0:path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#c62828" />
-    </ns0:marker>
-  </ns0:defs>
-</ns0:svg>
+    <marker id="arrowsqli" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#c62828" />
+    </marker>
+  </defs>
+</svg>

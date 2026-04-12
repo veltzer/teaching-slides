@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,42 +158,42 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="53.3333" y="44.4444" width="1031.1111" height="524.4444" rx="8" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.7778" />
-  <ns0:rect x="88.8889" y="71.1111" width="227.5556" height="53.3333" rx="4.4444" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="202.6667" y="104" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="var(--bg)">Strategy</ns0:text>
-  <ns0:rect x="323.5556" y="71.1111" width="736" height="53.3333" rx="4.4444" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="691.5556" y="104" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="var(--bg)">Description</ns0:text>
-  <ns0:rect x="88.8889" y="131.5556" width="227.5556" height="53.3333" rx="4.4444" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.7778" />
-  <ns0:text x="202.6667" y="164.4444" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Bump / Arena</ns0:text>
-  <ns0:rect x="323.5556" y="131.5556" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
-  <ns0:text x="353.7778" y="164.4444" font-size="16.8889" fill="var(--text-dark)">Linear allocation, bulk free</ns0:text>
-  <ns0:rect x="88.8889" y="192" width="227.5556" height="53.3333" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" />
-  <ns0:text x="202.6667" y="224.8889" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Pool</ns0:text>
-  <ns0:rect x="323.5556" y="192" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
-  <ns0:text x="353.7778" y="224.8889" font-size="16.8889" fill="var(--text-dark)">Fixed-size blocks, O(1) alloc/free</ns0:text>
-  <ns0:rect x="88.8889" y="252.4444" width="227.5556" height="53.3333" rx="4.4444" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.7778" />
-  <ns0:text x="202.6667" y="285.3333" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Free List</ns0:text>
-  <ns0:rect x="323.5556" y="252.4444" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
-  <ns0:text x="353.7778" y="285.3333" font-size="16.8889" fill="var(--text-dark)">Variable size, linked free blocks</ns0:text>
-  <ns0:rect x="88.8889" y="312.8889" width="227.5556" height="53.3333" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" />
-  <ns0:text x="202.6667" y="345.7778" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Slab</ns0:text>
-  <ns0:rect x="323.5556" y="312.8889" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
-  <ns0:text x="353.7778" y="345.7778" font-size="16.8889" fill="var(--text-dark)">Caches of same-type objects</ns0:text>
-  <ns0:rect x="88.8889" y="373.3333" width="227.5556" height="53.3333" rx="4.4444" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.7778" />
-  <ns0:text x="202.6667" y="406.2222" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Buddy</ns0:text>
-  <ns0:rect x="323.5556" y="373.3333" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
-  <ns0:text x="353.7778" y="406.2222" font-size="16.8889" fill="var(--text-dark)">Power-of-2 splitting / coalescing</ns0:text>
-  <ns0:rect x="88.8889" y="433.7778" width="227.5556" height="53.3333" rx="4.4444" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.7778" />
-  <ns0:text x="202.6667" y="466.6667" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">jemalloc</ns0:text>
-  <ns0:rect x="323.5556" y="433.7778" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
-  <ns0:text x="353.7778" y="466.6667" font-size="16.8889" fill="var(--text-dark)">Thread-local caches, size classes</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="53.3333" y="44.4444" width="1031.1111" height="524.4444" rx="8" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.7778" />
+  <rect x="88.8889" y="71.1111" width="227.5556" height="53.3333" rx="4.4444" fill="url(#grad-primary)" filter="url(#shadow)" />
+  <text x="202.6667" y="104" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="var(--bg)">Strategy</text>
+  <rect x="323.5556" y="71.1111" width="736" height="53.3333" rx="4.4444" fill="url(#grad-primary)" filter="url(#shadow)" />
+  <text x="691.5556" y="104" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="var(--bg)">Description</text>
+  <rect x="88.8889" y="131.5556" width="227.5556" height="53.3333" rx="4.4444" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.7778" />
+  <text x="202.6667" y="164.4444" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Bump / Arena</text>
+  <rect x="323.5556" y="131.5556" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
+  <text x="353.7778" y="164.4444" font-size="16.8889" fill="var(--text-dark)">Linear allocation, bulk free</text>
+  <rect x="88.8889" y="192" width="227.5556" height="53.3333" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" />
+  <text x="202.6667" y="224.8889" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Pool</text>
+  <rect x="323.5556" y="192" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
+  <text x="353.7778" y="224.8889" font-size="16.8889" fill="var(--text-dark)">Fixed-size blocks, O(1) alloc/free</text>
+  <rect x="88.8889" y="252.4444" width="227.5556" height="53.3333" rx="4.4444" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.7778" />
+  <text x="202.6667" y="285.3333" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Free List</text>
+  <rect x="323.5556" y="252.4444" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
+  <text x="353.7778" y="285.3333" font-size="16.8889" fill="var(--text-dark)">Variable size, linked free blocks</text>
+  <rect x="88.8889" y="312.8889" width="227.5556" height="53.3333" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" />
+  <text x="202.6667" y="345.7778" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Slab</text>
+  <rect x="323.5556" y="312.8889" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
+  <text x="353.7778" y="345.7778" font-size="16.8889" fill="var(--text-dark)">Caches of same-type objects</text>
+  <rect x="88.8889" y="373.3333" width="227.5556" height="53.3333" rx="4.4444" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.7778" />
+  <text x="202.6667" y="406.2222" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">Buddy</text>
+  <rect x="323.5556" y="373.3333" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
+  <text x="353.7778" y="406.2222" font-size="16.8889" fill="var(--text-dark)">Power-of-2 splitting / coalescing</text>
+  <rect x="88.8889" y="433.7778" width="227.5556" height="53.3333" rx="4.4444" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.7778" />
+  <text x="202.6667" y="466.6667" text-anchor="middle" font-size="16.8889" font-weight="bold" fill="var(--text-darker)">jemalloc</text>
+  <rect x="323.5556" y="433.7778" width="736" height="53.3333" rx="4.4444" fill="url(#grad-surface)" stroke="var(--border-faint)" stroke-width="0.8889" />
+  <text x="353.7778" y="466.6667" font-size="16.8889" fill="var(--text-dark)">Thread-local caches, size classes</text>
+</svg>

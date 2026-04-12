@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,20 +158,20 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="597.3333" y="40" text-anchor="middle" font-size="25.6" font-weight="bold" fill="var(--text-dark)">Data Skew Solution: Salting (for Joins)</ns0:text>
-  <ns0:rect x="44.2469" y="64" width="1106.1728" height="576" rx="8" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2" />
-  <ns0:rect x="88.4938" y="96" width="1017.679" height="88" rx="8" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.4" />
-  <ns0:text x="132.7407" y="131.2" font-size="20.8" font-weight="bold" fill="var(--text-dark)">Original key: "hot_user_123"</ns0:text>
-  <ns0:text x="132.7407" y="163.2" font-size="19.2" fill="var(--danger-bright)">Records: 10,000,000</ns0:text>
-  <ns0:text x="597.3333" y="216" text-anchor="middle" font-size="32" fill="var(--ok-bright)">▼ salt_factor = 10</ns0:text>
-  <ns0:rect x="88.4938" y="240" width="1017.679" height="320" rx="8" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4" />
-  <ns0:text x="132.7407" y="280" font-size="20.8" font-weight="bold" fill="var(--text-dark)">Salted Keys:</ns0:text>
-  <ns0:text x="132.7407" y="316.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_0" → 1,000,000 records</ns0:text>
-  <ns0:text x="132.7407" y="348.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_1" → 1,000,000 records</ns0:text>
-  <ns0:text x="132.7407" y="380.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_2" → 1,000,000 records</ns0:text>
-  <ns0:text x="132.7407" y="412.8" font-size="19.2" fill="var(--text-muted)">...</ns0:text>
-  <ns0:text x="132.7407" y="444.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_9" → 1,000,000 records</ns0:text>
-  <ns0:text x="132.7407" y="483.2" font-size="17.6" fill="var(--ok-bright)">Each partition now handles 1/10 of the data</ns0:text>
-  <ns0:rect x="88.4938" y="576" width="1017.679" height="48" rx="8" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4" />
-  <ns0:text x="597.3333" y="608" text-anchor="middle" font-size="17.6" font-weight="bold" fill="var(--danger-deeper)">Note: Small table must be exploded with all salt values (0-9) to match</ns0:text>
-</ns0:svg>
+  <text x="597.3333" y="40" text-anchor="middle" font-size="25.6" font-weight="bold" fill="var(--text-dark)">Data Skew Solution: Salting (for Joins)</text>
+  <rect x="44.2469" y="64" width="1106.1728" height="576" rx="8" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2" />
+  <rect x="88.4938" y="96" width="1017.679" height="88" rx="8" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.4" />
+  <text x="132.7407" y="131.2" font-size="20.8" font-weight="bold" fill="var(--text-dark)">Original key: "hot_user_123"</text>
+  <text x="132.7407" y="163.2" font-size="19.2" fill="var(--danger-bright)">Records: 10,000,000</text>
+  <text x="597.3333" y="216" text-anchor="middle" font-size="32" fill="var(--ok-bright)">▼ salt_factor = 10</text>
+  <rect x="88.4938" y="240" width="1017.679" height="320" rx="8" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4" />
+  <text x="132.7407" y="280" font-size="20.8" font-weight="bold" fill="var(--text-dark)">Salted Keys:</text>
+  <text x="132.7407" y="316.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_0" → 1,000,000 records</text>
+  <text x="132.7407" y="348.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_1" → 1,000,000 records</text>
+  <text x="132.7407" y="380.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_2" → 1,000,000 records</text>
+  <text x="132.7407" y="412.8" font-size="19.2" fill="var(--text-muted)">...</text>
+  <text x="132.7407" y="444.8" font-size="19.2" fill="var(--text-muted)">"hot_user_123_9" → 1,000,000 records</text>
+  <text x="132.7407" y="483.2" font-size="17.6" fill="var(--ok-bright)">Each partition now handles 1/10 of the data</text>
+  <rect x="88.4938" y="576" width="1017.679" height="48" rx="8" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4" />
+  <text x="597.3333" y="608" text-anchor="middle" font-size="17.6" font-weight="bold" fill="var(--danger-deeper)">Note: Small table must be exploded with all salt values (0-9) to match</text>
+</svg>

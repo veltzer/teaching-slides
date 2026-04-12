@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,32 +158,32 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--surface)" rx="6.8956" stroke="var(--text-dark)" stroke-width="2.5859" />
-  <ns0:text x="568.8889" y="48.9412" font-family="sans-serif" font-size="25.8586" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">xz-utils Backdoor (CVE-2024-3094)</ns0:text>
-  <ns0:rect x="34.4781" y="75.2941" width="155.1516" height="82.8236" fill="var(--primary-pale)" rx="6.8956" stroke="var(--text-muted)" stroke-width="1.7239" />
-  <ns0:text x="112.0539" y="111.0588" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">2 years</ns0:text>
-  <ns0:text x="112.0539" y="139.2941" font-family="sans-serif" font-size="18.9629" fill="var(--primary-dk)" text-anchor="middle">setup</ns0:text>
-  <ns0:text x="215.4882" y="105.4117" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">"Jia Tan" builds trust as xz-utils contributor</ns0:text>
-  <ns0:text x="215.4882" y="139.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">with legitimate patches</ns0:text>
-  <ns0:rect x="34.4781" y="173.1764" width="155.1516" height="82.8236" fill="var(--primary-pale)" rx="6.8956" stroke="var(--text-muted)" stroke-width="1.7239" />
-  <ns0:text x="112.0539" y="208.9412" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Pressure</ns0:text>
-  <ns0:text x="112.0539" y="237.1764" font-family="sans-serif" font-size="18.9629" fill="var(--primary-dk)" text-anchor="middle">campaign</ns0:text>
-  <ns0:text x="215.4882" y="203.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Social pressure to add Jia Tan as co-maintainer</ns0:text>
-  <ns0:text x="215.4882" y="237.1764" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">(sockpuppet accounts)</ns0:text>
-  <ns0:rect x="34.4781" y="271.0588" width="155.1516" height="109.1764" fill="var(--warn-pale)" rx="6.8956" stroke="var(--warn-dk)" stroke-width="1.7239" />
-  <ns0:text x="112.0539" y="306.8236" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">Backdoor</ns0:text>
-  <ns0:text x="112.0539" y="335.0588" font-family="sans-serif" font-size="18.9629" fill="var(--warn-dk)" text-anchor="middle">insertion</ns0:text>
-  <ns0:text x="215.4882" y="301.1764" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Malicious code hidden in .xz test fixture files</ns0:text>
-  <ns0:text x="215.4882" y="335.0588" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Injected during build process, invisible in source</ns0:text>
-  <ns0:text x="215.4882" y="368.9412" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Target: liblzma → sshd (via systemd) → RCE via SSH</ns0:text>
-  <ns0:rect x="34.4781" y="395.2941" width="155.1516" height="82.8236" fill="var(--danger-pale)" rx="6.8956" stroke="var(--danger-dk)" stroke-width="1.7239" />
-  <ns0:text x="112.0539" y="431.0588" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">Discovery</ns0:text>
-  <ns0:text x="215.4882" y="425.4117" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Andres Freund noticed 500ms SSH delay</ns0:text>
-  <ns0:text x="215.4882" y="459.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">and investigated (pure luck!)</ns0:text>
-  <ns0:rect x="34.4781" y="493.1764" width="155.1516" height="56.4706" fill="var(--ok-pale)" rx="6.8956" stroke="var(--ok-dk)" stroke-width="1.7239" />
-  <ns0:text x="112.0539" y="528.9412" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Impact</ns0:text>
-  <ns0:text x="215.4882" y="523.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Would have backdoored most Linux distros — caught just before widespread deployment</ns0:text>
-  <ns0:rect x="34.4781" y="564.7059" width="155.1516" height="56.4706" fill="var(--info-pale)" rx="6.8956" stroke="var(--info-mid)" stroke-width="1.7239" />
-  <ns0:text x="112.0539" y="600.4706" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--info-mid)" text-anchor="middle">Lesson</ns0:text>
-  <ns0:text x="215.4882" y="594.8236" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Even open source review can be subverted with patient, long-term social engineering</ns0:text>
-</ns0:svg>
+  <rect width="1137.7778" height="640" fill="var(--surface)" rx="6.8956" stroke="var(--text-dark)" stroke-width="2.5859" />
+  <text x="568.8889" y="48.9412" font-family="sans-serif" font-size="25.8586" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">xz-utils Backdoor (CVE-2024-3094)</text>
+  <rect x="34.4781" y="75.2941" width="155.1516" height="82.8236" fill="var(--primary-pale)" rx="6.8956" stroke="var(--text-muted)" stroke-width="1.7239" />
+  <text x="112.0539" y="111.0588" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">2 years</text>
+  <text x="112.0539" y="139.2941" font-family="sans-serif" font-size="18.9629" fill="var(--primary-dk)" text-anchor="middle">setup</text>
+  <text x="215.4882" y="105.4117" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">"Jia Tan" builds trust as xz-utils contributor</text>
+  <text x="215.4882" y="139.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">with legitimate patches</text>
+  <rect x="34.4781" y="173.1764" width="155.1516" height="82.8236" fill="var(--primary-pale)" rx="6.8956" stroke="var(--text-muted)" stroke-width="1.7239" />
+  <text x="112.0539" y="208.9412" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Pressure</text>
+  <text x="112.0539" y="237.1764" font-family="sans-serif" font-size="18.9629" fill="var(--primary-dk)" text-anchor="middle">campaign</text>
+  <text x="215.4882" y="203.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Social pressure to add Jia Tan as co-maintainer</text>
+  <text x="215.4882" y="237.1764" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">(sockpuppet accounts)</text>
+  <rect x="34.4781" y="271.0588" width="155.1516" height="109.1764" fill="var(--warn-pale)" rx="6.8956" stroke="var(--warn-dk)" stroke-width="1.7239" />
+  <text x="112.0539" y="306.8236" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--warn-dk)" text-anchor="middle">Backdoor</text>
+  <text x="112.0539" y="335.0588" font-family="sans-serif" font-size="18.9629" fill="var(--warn-dk)" text-anchor="middle">insertion</text>
+  <text x="215.4882" y="301.1764" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Malicious code hidden in .xz test fixture files</text>
+  <text x="215.4882" y="335.0588" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Injected during build process, invisible in source</text>
+  <text x="215.4882" y="368.9412" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Target: liblzma → sshd (via systemd) → RCE via SSH</text>
+  <rect x="34.4781" y="395.2941" width="155.1516" height="82.8236" fill="var(--danger-pale)" rx="6.8956" stroke="var(--danger-dk)" stroke-width="1.7239" />
+  <text x="112.0539" y="431.0588" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">Discovery</text>
+  <text x="215.4882" y="425.4117" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Andres Freund noticed 500ms SSH delay</text>
+  <text x="215.4882" y="459.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">and investigated (pure luck!)</text>
+  <rect x="34.4781" y="493.1764" width="155.1516" height="56.4706" fill="var(--ok-pale)" rx="6.8956" stroke="var(--ok-dk)" stroke-width="1.7239" />
+  <text x="112.0539" y="528.9412" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Impact</text>
+  <text x="215.4882" y="523.2941" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Would have backdoored most Linux distros — caught just before widespread deployment</text>
+  <rect x="34.4781" y="564.7059" width="155.1516" height="56.4706" fill="var(--info-pale)" rx="6.8956" stroke="var(--info-mid)" stroke-width="1.7239" />
+  <text x="112.0539" y="600.4706" font-family="sans-serif" font-size="18.9629" font-weight="bold" fill="var(--info-mid)" text-anchor="middle">Lesson</text>
+  <text x="215.4882" y="594.8236" font-family="sans-serif" font-size="20.6868" fill="var(--text-darker)">Even open source review can be subverted with patient, long-term social engineering</text>
+</svg>

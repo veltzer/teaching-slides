@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,42 +158,42 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrow-os" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 5.6,0" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="583.4758" y="41.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.339" font-weight="bold" fill="var(--text-dark)">Spark Streaming Output Sinks</ns0:text>
-  <ns0:rect x="72.9345" y="229.7436" width="262.5641" height="114.8718" rx="14.5869" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.9174" />
-  <ns0:text x="204.2165" y="278.9744" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--primary-dk)">Streaming Engine</ns0:text>
-  <ns0:text x="204.2165" y="311.7949" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">writeStream.format(...)</ns0:text>
-  <ns0:line x1="335.4986" y1="254.359" x2="452.1937" y2="114.8718" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
-  <ns0:line x1="335.4986" y1="270.7692" x2="452.1937" y2="237.9487" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
-  <ns0:line x1="335.4986" y1="303.5897" x2="452.1937" y2="369.2308" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
-  <ns0:line x1="335.4986" y1="320" x2="452.1937" y2="492.3077" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
-  <ns0:rect x="466.7806" y="73.8462" width="291.7379" height="90.2564" rx="11.6695" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="2.9174" />
-  <ns0:text x="612.6496" y="111.5897" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--primary-strong)">Kafka</ns0:text>
-  <ns0:text x="612.6496" y="142.7692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">format("kafka")</ns0:text>
-  <ns0:rect x="466.7806" y="196.9231" width="291.7379" height="90.2564" rx="11.6695" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9174" />
-  <ns0:text x="612.6496" y="234.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--ok-dk)">File / Delta Lake</ns0:text>
-  <ns0:text x="612.6496" y="265.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">format("delta") / parquet / json</ns0:text>
-  <ns0:rect x="466.7806" y="328.2051" width="291.7379" height="90.2564" rx="11.6695" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.9174" />
-  <ns0:text x="612.6496" y="365.9487" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--warn-deep)">Console</ns0:text>
-  <ns0:text x="612.6496" y="397.1282" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">format("console") - debug</ns0:text>
-  <ns0:rect x="466.7806" y="451.2821" width="291.7379" height="90.2564" rx="11.6695" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9174" />
-  <ns0:text x="612.6496" y="489.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--info-mid)">foreachBatch</ns0:text>
-  <ns0:text x="612.6496" y="520.2051" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Custom batch processing</ns0:text>
-  <ns0:rect x="816.8661" y="73.8462" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
-  <ns0:text x="970.0285" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Append mode only</ns0:text>
-  <ns0:text x="970.0285" y="134.5641" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Exactly-once with idempotent</ns0:text>
-  <ns0:rect x="816.8661" y="196.9231" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
-  <ns0:text x="970.0285" y="229.7436" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Append mode, partitionBy</ns0:text>
-  <ns0:text x="970.0285" y="257.641" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">ACID with Delta Lake</ns0:text>
-  <ns0:rect x="816.8661" y="328.2051" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
-  <ns0:text x="970.0285" y="361.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">All output modes</ns0:text>
-  <ns0:text x="970.0285" y="388.9231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-faint)">Development/debug only</ns0:text>
-  <ns0:rect x="816.8661" y="451.2821" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
-  <ns0:text x="970.0285" y="484.1026" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Write to any system</ns0:text>
-  <ns0:text x="970.0285" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Make writes idempotent!</ns0:text>
-  <ns0:rect x="72.9345" y="582.5641" width="1050.2564" height="57.4359" rx="8.7521" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.4587" />
-  <ns0:text x="583.4758" y="618.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5043" fill="var(--text-muted)">Output Modes: <ns0:tspan font-weight="bold" fill="var(--primary-strong)">Append</ns0:tspan> (new rows) | <ns0:tspan font-weight="bold" fill="var(--ok-dk)">Update</ns0:tspan> (changed rows) | <ns0:tspan font-weight="bold" fill="var(--warn-deep)">Complete</ns0:tspan> (full table)</ns0:text>
-</ns0:svg>
+    <marker id="arrow-os" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
+    </marker>
+  </defs>
+  <text x="583.4758" y="41.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.339" font-weight="bold" fill="var(--text-dark)">Spark Streaming Output Sinks</text>
+  <rect x="72.9345" y="229.7436" width="262.5641" height="114.8718" rx="14.5869" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.9174" />
+  <text x="204.2165" y="278.9744" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--primary-dk)">Streaming Engine</text>
+  <text x="204.2165" y="311.7949" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">writeStream.format(...)</text>
+  <line x1="335.4986" y1="254.359" x2="452.1937" y2="114.8718" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
+  <line x1="335.4986" y1="270.7692" x2="452.1937" y2="237.9487" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
+  <line x1="335.4986" y1="303.5897" x2="452.1937" y2="369.2308" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
+  <line x1="335.4986" y1="320" x2="452.1937" y2="492.3077" stroke="var(--text-dark)" stroke-width="2.9174" marker-end="url(#arrow-os)" />
+  <rect x="466.7806" y="73.8462" width="291.7379" height="90.2564" rx="11.6695" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="2.9174" />
+  <text x="612.6496" y="111.5897" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--primary-strong)">Kafka</text>
+  <text x="612.6496" y="142.7692" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">format("kafka")</text>
+  <rect x="466.7806" y="196.9231" width="291.7379" height="90.2564" rx="11.6695" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9174" />
+  <text x="612.6496" y="234.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--ok-dk)">File / Delta Lake</text>
+  <text x="612.6496" y="265.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">format("delta") / parquet / json</text>
+  <rect x="466.7806" y="328.2051" width="291.7379" height="90.2564" rx="11.6695" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.9174" />
+  <text x="612.6496" y="365.9487" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--warn-deep)">Console</text>
+  <text x="612.6496" y="397.1282" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">format("console") - debug</text>
+  <rect x="466.7806" y="451.2821" width="291.7379" height="90.2564" rx="11.6695" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9174" />
+  <text x="612.6496" y="489.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.963" font-weight="bold" fill="var(--info-mid)">foreachBatch</text>
+  <text x="612.6496" y="520.2051" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Custom batch processing</text>
+  <rect x="816.8661" y="73.8462" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
+  <text x="970.0285" y="106.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Append mode only</text>
+  <text x="970.0285" y="134.5641" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Exactly-once with idempotent</text>
+  <rect x="816.8661" y="196.9231" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
+  <text x="970.0285" y="229.7436" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Append mode, partitionBy</text>
+  <text x="970.0285" y="257.641" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">ACID with Delta Lake</text>
+  <rect x="816.8661" y="328.2051" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
+  <text x="970.0285" y="361.0256" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">All output modes</text>
+  <text x="970.0285" y="388.9231" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-faint)">Development/debug only</text>
+  <rect x="816.8661" y="451.2821" width="306.3248" height="90.2564" rx="8.7521" fill="var(--surface-light)" stroke="var(--border-faint)" stroke-width="1.4587" />
+  <text x="970.0285" y="484.1026" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Write to any system</text>
+  <text x="970.0285" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0456" fill="var(--text-muted)">Make writes idempotent!</text>
+  <rect x="72.9345" y="582.5641" width="1050.2564" height="57.4359" rx="8.7521" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.4587" />
+  <text x="583.4758" y="618.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.5043" fill="var(--text-muted)">Output Modes: <tspan font-weight="bold" fill="var(--primary-strong)">Append</tspan> (new rows) | <tspan font-weight="bold" fill="var(--ok-dk)">Update</tspan> (changed rows) | <tspan font-weight="bold" fill="var(--warn-deep)">Complete</tspan> (full table)</text>
+</svg>

@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,48 +158,48 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="14.6286" markerHeight="19.8621" refX="10.9714" refY="7.4483" orient="auto">
-      <ns0:path d="M 0 0 L 0 14.8966 L 14.6286 7.4483 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="34.1569" y="51.0145" font-family="sans-serif" font-size="22.202" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Without Z-ordering (random distribution):</ns0:text>
-  <ns0:rect x="34.1569" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="44.404" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 1</ns0:text>
-  <ns0:text x="44.404" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,B,C,D,E]</ns0:text>
-  <ns0:text x="44.404" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,02,03,04,05]</ns0:text>
-  <ns0:rect x="310.8277" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="321.0747" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 2</ns0:text>
-  <ns0:text x="321.0747" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,C,E,F,G]</ns0:text>
-  <ns0:text x="321.0747" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,03,05,06,07]</ns0:text>
-  <ns0:rect x="587.4985" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="597.7456" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 3</ns0:text>
-  <ns0:text x="597.7456" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[B,D,F,H,I]</ns0:text>
-  <ns0:text x="597.7456" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[02,04,06,08,09]</ns0:text>
-  <ns0:rect x="864.1692" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="874.4164" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 4</ns0:text>
-  <ns0:text x="874.4164" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,G,H,I,J]</ns0:text>
-  <ns0:text x="874.4164" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,07,08,09,10]</ns0:text>
-  <ns0:text x="34.1569" y="220.2899" font-family="sans-serif" font-size="20.4942" fill="var(--danger-dk)" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1, 2, 4  (3/4 files = 75%)</ns0:text>
-  <ns0:text x="34.1569" y="278.2608" font-family="sans-serif" font-size="22.202" fill="var(--text-darker)" text-anchor="start" font-weight="bold">With Z-ordering on user_id:</ns0:text>
-  <ns0:rect x="34.1569" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="44.404" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 1</ns0:text>
-  <ns0:text x="44.404" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,A,A,B,B]</ns0:text>
-  <ns0:text x="44.404" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,03,07,02,04]</ns0:text>
-  <ns0:rect x="310.8277" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="321.0747" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 2</ns0:text>
-  <ns0:text x="321.0747" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[C,C,D,D,E]</ns0:text>
-  <ns0:text x="321.0747" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[03,05,02,04,05]</ns0:text>
-  <ns0:rect x="587.4985" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="597.7456" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 3</ns0:text>
-  <ns0:text x="597.7456" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[F,F,G,G,H]</ns0:text>
-  <ns0:text x="597.7456" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[06,08,06,07,08]</ns0:text>
-  <ns0:rect x="864.1692" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="874.4164" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 4</ns0:text>
-  <ns0:text x="874.4164" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[H,I,I,J,J]</ns0:text>
-  <ns0:text x="874.4164" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[09,08,09,09,10]</ns0:text>
-  <ns0:text x="34.1569" y="447.5362" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1 only  (1/4 files = 25%)</ns0:text>
-  <ns0:rect x="34.1569" y="482.3188" width="1127.1773" height="157.6812" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
-  <ns0:text x="51.2353" y="524.0579" font-family="sans-serif" font-size="20.4942" fill="var(--text-darker)" text-anchor="start">Z-order creates locality for the specified columns within data files,</ns0:text>
-  <ns0:text x="51.2353" y="565.7971" font-family="sans-serif" font-size="20.4942" fill="var(--text-darker)" text-anchor="start">making min/max statistics more effective at file skipping.</ns0:text>
-  <ns0:text x="51.2353" y="607.5363" font-family="sans-serif" font-size="20.4942" fill="var(--text-darker)" text-anchor="start">Result: 75% → 25% files scanned in this example.</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="14.6286" markerHeight="19.8621" refX="10.9714" refY="7.4483" orient="auto">
+      <path d="M 0 0 L 0 14.8966 L 14.6286 7.4483 z" fill="#555" />
+    </marker>
+  </defs>
+  <text x="34.1569" y="51.0145" font-family="sans-serif" font-size="22.202" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Without Z-ordering (random distribution):</text>
+  <rect x="34.1569" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="44.404" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 1</text>
+  <text x="44.404" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,B,C,D,E]</text>
+  <text x="44.404" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,02,03,04,05]</text>
+  <rect x="310.8277" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="321.0747" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 2</text>
+  <text x="321.0747" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,C,E,F,G]</text>
+  <text x="321.0747" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,03,05,06,07]</text>
+  <rect x="587.4985" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="597.7456" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 3</text>
+  <text x="597.7456" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[B,D,F,H,I]</text>
+  <text x="597.7456" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[02,04,06,08,09]</text>
+  <rect x="864.1692" y="69.5653" width="264.7159" height="106.6667" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="874.4164" y="104.3478" font-family="sans-serif" font-size="20.4942" fill="var(--danger-deep)" text-anchor="start" font-weight="bold">File 4</text>
+  <text x="874.4164" y="136.8116" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,G,H,I,J]</text>
+  <text x="874.4164" y="166.9565" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,07,08,09,10]</text>
+  <text x="34.1569" y="220.2899" font-family="sans-serif" font-size="20.4942" fill="var(--danger-dk)" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1, 2, 4  (3/4 files = 75%)</text>
+  <text x="34.1569" y="278.2608" font-family="sans-serif" font-size="22.202" fill="var(--text-darker)" text-anchor="start" font-weight="bold">With Z-ordering on user_id:</text>
+  <rect x="34.1569" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="44.404" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 1</text>
+  <text x="44.404" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[A,A,A,B,B]</text>
+  <text x="44.404" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[01,03,07,02,04]</text>
+  <rect x="310.8277" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="321.0747" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 2</text>
+  <text x="321.0747" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[C,C,D,D,E]</text>
+  <text x="321.0747" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[03,05,02,04,05]</text>
+  <rect x="587.4985" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="597.7456" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 3</text>
+  <text x="597.7456" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[F,F,G,G,H]</text>
+  <text x="597.7456" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[06,08,06,07,08]</text>
+  <rect x="864.1692" y="296.8116" width="264.7159" height="106.6667" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="874.4164" y="331.5942" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start" font-weight="bold">File 4</text>
+  <text x="874.4164" y="364.058" font-family="sans-serif" font-size="17.0784" fill="var(--text-dark)" text-anchor="start">user_id=[H,I,I,J,J]</text>
+  <text x="874.4164" y="394.2029" font-family="sans-serif" font-size="17.0784" fill="var(--text-muted)" text-anchor="start">date=[09,08,09,09,10]</text>
+  <text x="34.1569" y="447.5362" font-family="sans-serif" font-size="20.4942" fill="var(--ok-deep)" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1 only  (1/4 files = 25%)</text>
+  <rect x="34.1569" y="482.3188" width="1127.1773" height="157.6812" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.5618" rx="6.8314" />
+  <text x="51.2353" y="524.0579" font-family="sans-serif" font-size="20.4942" fill="var(--text-darker)" text-anchor="start">Z-order creates locality for the specified columns within data files,</text>
+  <text x="51.2353" y="565.7971" font-family="sans-serif" font-size="20.4942" fill="var(--text-darker)" text-anchor="start">making min/max statistics more effective at file skipping.</text>
+  <text x="51.2353" y="607.5363" font-family="sans-serif" font-size="20.4942" fill="var(--text-darker)" text-anchor="start">Result: 75% → 25% files scanned in this example.</text>
+</svg>

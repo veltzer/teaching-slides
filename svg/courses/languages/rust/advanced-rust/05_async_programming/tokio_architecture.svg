@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,38 +158,38 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="19.3939" markerHeight="13.2632" refX="17.4545" refY="6.6316" orient="auto">
-      <ns0:polygon points="0,18.9474 6.7879,0" fill="#555" />
-    </ns0:marker>
-    <ns0:marker id="arrl" markerWidth="19.3939" markerHeight="13.2632" refX="1.9394" refY="6.6316" orient="auto">
-      <ns0:polygon points="0,0 6.7879,18.9474" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="600.4938" y="39.1111" text-anchor="middle" font-size="24.8889" fill="var(--text-darker)" font-weight="bold">Tokio Runtime Architecture</ns0:text>
-  <ns0:rect x="36.3936" y="62.2222" width="1128.2004" height="577.7778" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="600.4938" y="103.1111" text-anchor="middle" font-size="24.8889" fill="var(--text-darker)" font-weight="bold">Tokio Runtime</ns0:text>
-  <ns0:rect x="90.9839" y="124.4445" width="272.9517" height="106.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="227.4597" y="170.6666" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Worker 1</ns0:text>
-  <ns0:text x="227.4597" y="202.6667" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">(thread)</ns0:text>
-  <ns0:rect x="400.3292" y="124.4445" width="272.9517" height="106.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="536.805" y="170.6666" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Worker 2</ns0:text>
-  <ns0:text x="536.805" y="202.6667" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">(thread)</ns0:text>
-  <ns0:rect x="709.6745" y="124.4445" width="272.9517" height="106.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="846.1504" y="170.6666" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Worker 3</ns0:text>
-  <ns0:text x="846.1504" y="202.6667" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">(thread)</ns0:text>
-  <ns0:text x="1037.2165" y="186.6667" text-anchor="middle" font-size="28.4445" fill="var(--text-faint)">...</ns0:text>
-  <ns0:rect x="90.9839" y="293.3333" width="1000.823" height="106.6667" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="591.3954" y="334.2222" text-anchor="middle" font-size="23.1111" fill="var(--text-darker)" font-weight="bold">Task Scheduler</ns0:text>
-  <ns0:text x="591.3954" y="369.7778" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)">(work-stealing queue)</ns0:text>
-  <ns0:line x1="227.4597" y1="231.1111" x2="227.4597" y2="293.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
-  <ns0:line x1="536.805" y1="231.1111" x2="536.805" y2="293.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
-  <ns0:line x1="846.1504" y1="231.1111" x2="846.1504" y2="293.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
-  <ns0:rect x="90.9839" y="471.1111" width="482.2147" height="124.4445" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="331.1814" y="515.5555" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">I/O Driver (epoll)</ns0:text>
-  <ns0:text x="331.1814" y="551.1111" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">async I/O notifications</ns0:text>
-  <ns0:rect x="609.5922" y="471.1111" width="482.2147" height="124.4445" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
-  <ns0:text x="849.7897" y="515.5555" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Timer Wheel</ns0:text>
-  <ns0:text x="849.7897" y="551.1111" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">scheduled wakeups</ns0:text>
-  <ns0:line x1="331.1814" y1="400" x2="331.1814" y2="471.1111" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
-  <ns0:line x1="849.7897" y1="400" x2="849.7897" y2="471.1111" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
-</ns0:svg>
+    <marker id="arr" markerWidth="19.3939" markerHeight="13.2632" refX="17.4545" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 6.7879,0" fill="#555" />
+    </marker>
+    <marker id="arrl" markerWidth="19.3939" markerHeight="13.2632" refX="1.9394" refY="6.6316" orient="auto">
+      <polygon points="0,0 6.7879,18.9474" fill="#555" />
+    </marker>
+  </defs>
+  <text x="600.4938" y="39.1111" text-anchor="middle" font-size="24.8889" fill="var(--text-darker)" font-weight="bold">Tokio Runtime Architecture</text>
+  <rect x="36.3936" y="62.2222" width="1128.2004" height="577.7778" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="600.4938" y="103.1111" text-anchor="middle" font-size="24.8889" fill="var(--text-darker)" font-weight="bold">Tokio Runtime</text>
+  <rect x="90.9839" y="124.4445" width="272.9517" height="106.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="227.4597" y="170.6666" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Worker 1</text>
+  <text x="227.4597" y="202.6667" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">(thread)</text>
+  <rect x="400.3292" y="124.4445" width="272.9517" height="106.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="536.805" y="170.6666" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Worker 2</text>
+  <text x="536.805" y="202.6667" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">(thread)</text>
+  <rect x="709.6745" y="124.4445" width="272.9517" height="106.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="846.1504" y="170.6666" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Worker 3</text>
+  <text x="846.1504" y="202.6667" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">(thread)</text>
+  <text x="1037.2165" y="186.6667" text-anchor="middle" font-size="28.4445" fill="var(--text-faint)">...</text>
+  <rect x="90.9839" y="293.3333" width="1000.823" height="106.6667" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="591.3954" y="334.2222" text-anchor="middle" font-size="23.1111" fill="var(--text-darker)" font-weight="bold">Task Scheduler</text>
+  <text x="591.3954" y="369.7778" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)">(work-stealing queue)</text>
+  <line x1="227.4597" y1="231.1111" x2="227.4597" y2="293.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
+  <line x1="536.805" y1="231.1111" x2="536.805" y2="293.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
+  <line x1="846.1504" y1="231.1111" x2="846.1504" y2="293.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
+  <rect x="90.9839" y="471.1111" width="482.2147" height="124.4445" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="331.1814" y="515.5555" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">I/O Driver (epoll)</text>
+  <text x="331.1814" y="551.1111" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">async I/O notifications</text>
+  <rect x="609.5922" y="471.1111" width="482.2147" height="124.4445" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.6667" rx="7.1111" />
+  <text x="849.7897" y="515.5555" text-anchor="middle" font-size="21.3333" fill="var(--text-darker)" font-weight="bold">Timer Wheel</text>
+  <text x="849.7897" y="551.1111" text-anchor="middle" font-size="19.5555" fill="var(--text-darker)">scheduled wakeups</text>
+  <line x1="331.1814" y1="400" x2="331.1814" y2="471.1111" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
+  <line x1="849.7897" y1="400" x2="849.7897" y2="471.1111" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arr)" />
+</svg>

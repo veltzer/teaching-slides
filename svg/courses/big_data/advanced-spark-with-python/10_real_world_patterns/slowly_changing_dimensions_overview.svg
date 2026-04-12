@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,26 +158,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="579.6226" y="30.1886" text-anchor="middle" font-size="19.3207" font-weight="bold" fill="var(--text-dark)">Slowly Changing Dimensions (SCD Types)</ns0:text>
-  <ns0:rect x="20.7008" y="48.3019" width="1117.8436" height="175.0943" rx="6.0378" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4151" />
-  <ns0:text x="62.1024" y="78.4906" font-size="16.9057" font-weight="bold" fill="var(--primary-bright)">Type 1: Overwrite (no history)</ns0:text>
-  <ns0:text x="82.8033" y="106.2641" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">Before: customer_id=1, city="New York"</ns0:text>
-  <ns0:text x="82.8033" y="130.4151" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">Update: city changed to "Boston"</ns0:text>
-  <ns0:text x="82.8033" y="154.5661" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">After:  customer_id=1, city="Boston"</ns0:text>
-  <ns0:text x="82.8033" y="187.1698" font-size="13.283" fill="var(--text-mid)">Use when: history not needed</ns0:text>
-  <ns0:rect x="20.7008" y="235.4717" width="1117.8436" height="229.4339" rx="6.0378" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4151" />
-  <ns0:text x="62.1024" y="265.6603" font-size="16.9057" font-weight="bold" fill="var(--ok-bright)">Type 2: Add new row (full history)</ns0:text>
-  <ns0:text x="82.8033" y="295.8491" font-size="14.4906" fill="var(--text-dark)">Before:</ns0:text>
-  <ns0:text x="103.504" y="320" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="New York", current=true</ns0:text>
-  <ns0:text x="82.8033" y="350.1887" font-size="14.4906" fill="var(--text-dark)">After update:</ns0:text>
-  <ns0:text x="103.504" y="374.3396" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="New York", current=false, end_date="2024-06-14"</ns0:text>
-  <ns0:text x="103.504" y="398.4905" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="Boston", current=true, start_date="2024-06-15"</ns0:text>
-  <ns0:text x="82.8033" y="434.717" font-size="13.283" fill="var(--text-mid)">Use when: full audit trail needed</ns0:text>
-  <ns0:rect x="20.7008" y="476.9811" width="1117.8436" height="163.0189" rx="6.0378" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4151" />
-  <ns0:text x="62.1024" y="507.1698" font-size="16.9057" font-weight="bold" fill="var(--danger-deeper)">Type 3: Add new column (limited history)</ns0:text>
-  <ns0:text x="82.8033" y="537.3584" font-size="14.4906" fill="var(--text-dark)">Before:</ns0:text>
-  <ns0:text x="103.504" y="561.5094" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="New York", prev_city=null</ns0:text>
-  <ns0:text x="82.8033" y="589.283" font-size="14.4906" fill="var(--text-dark)">After:</ns0:text>
-  <ns0:text x="103.504" y="613.4339" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="Boston", prev_city="NY"</ns0:text>
-  <ns0:text x="82.8033" y="633.9622" font-size="13.283" fill="var(--text-mid)">Use when: only previous value needed</ns0:text>
-</ns0:svg>
+  <text x="579.6226" y="30.1886" text-anchor="middle" font-size="19.3207" font-weight="bold" fill="var(--text-dark)">Slowly Changing Dimensions (SCD Types)</text>
+  <rect x="20.7008" y="48.3019" width="1117.8436" height="175.0943" rx="6.0378" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4151" />
+  <text x="62.1024" y="78.4906" font-size="16.9057" font-weight="bold" fill="var(--primary-bright)">Type 1: Overwrite (no history)</text>
+  <text x="82.8033" y="106.2641" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">Before: customer_id=1, city="New York"</text>
+  <text x="82.8033" y="130.4151" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">Update: city changed to "Boston"</text>
+  <text x="82.8033" y="154.5661" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">After:  customer_id=1, city="Boston"</text>
+  <text x="82.8033" y="187.1698" font-size="13.283" fill="var(--text-mid)">Use when: history not needed</text>
+  <rect x="20.7008" y="235.4717" width="1117.8436" height="229.4339" rx="6.0378" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4151" />
+  <text x="62.1024" y="265.6603" font-size="16.9057" font-weight="bold" fill="var(--ok-bright)">Type 2: Add new row (full history)</text>
+  <text x="82.8033" y="295.8491" font-size="14.4906" fill="var(--text-dark)">Before:</text>
+  <text x="103.504" y="320" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="New York", current=true</text>
+  <text x="82.8033" y="350.1887" font-size="14.4906" fill="var(--text-dark)">After update:</text>
+  <text x="103.504" y="374.3396" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="New York", current=false, end_date="2024-06-14"</text>
+  <text x="103.504" y="398.4905" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="Boston", current=true, start_date="2024-06-15"</text>
+  <text x="82.8033" y="434.717" font-size="13.283" fill="var(--text-mid)">Use when: full audit trail needed</text>
+  <rect x="20.7008" y="476.9811" width="1117.8436" height="163.0189" rx="6.0378" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4151" />
+  <text x="62.1024" y="507.1698" font-size="16.9057" font-weight="bold" fill="var(--danger-deeper)">Type 3: Add new column (limited history)</text>
+  <text x="82.8033" y="537.3584" font-size="14.4906" fill="var(--text-dark)">Before:</text>
+  <text x="103.504" y="561.5094" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="New York", prev_city=null</text>
+  <text x="82.8033" y="589.283" font-size="14.4906" fill="var(--text-dark)">After:</text>
+  <text x="103.504" y="613.4339" font-size="14.4906" font-family="monospace" fill="var(--text-dark)">id=1, city="Boston", prev_city="NY"</text>
+  <text x="82.8033" y="633.9622" font-size="13.283" fill="var(--text-mid)">Use when: only previous value needed</text>
+</svg>

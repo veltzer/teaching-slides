@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,101 +158,101 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="22.2222" y="22.2222" width="506.6667" height="586.6667" rx="10.6667" fill="var(--text)" filter="url(#shadow)" />
-  <ns0:text x="44.4444" y="55.1111" font-family="monospace" font-size="13.3333" fill="var(--danger-light)">#!/usr/bin/env bash</ns0:text>
-  <ns0:text x="44.4444" y="73.7778" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># ===================================</ns0:text>
-  <ns0:text x="44.4444" y="91.5556" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># backup.sh — daily backup script</ns0:text>
-  <ns0:text x="44.4444" y="109.3333" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># ===================================</ns0:text>
-  <ns0:text x="44.4444" y="134.2222" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Constants</ns0:text>
-  <ns0:text x="44.4444" y="152" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">readonly</ns0:text>
-  <ns0:text x="120" y="152" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">BACKUP_DIR</ns0:text>
-  <ns0:text x="240" y="152" font-family="monospace" font-size="12.4444" fill="var(--bg)">="/var/backup"</ns0:text>
-  <ns0:text x="44.4444" y="169.7778" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">readonly</ns0:text>
-  <ns0:text x="120" y="169.7778" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">MAX_KEEP</ns0:text>
-  <ns0:text x="231.1111" y="169.7778" font-family="monospace" font-size="12.4444" fill="var(--bg)">=7</ns0:text>
-  <ns0:text x="44.4444" y="194.6667" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Variables</ns0:text>
-  <ns0:text x="44.4444" y="212.4444" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">SOURCE</ns0:text>
-  <ns0:text x="115.5556" y="212.4444" font-family="monospace" font-size="12.4444" fill="var(--bg)">="${1:-/home}"</ns0:text>
-  <ns0:text x="44.4444" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">TIMESTAMP</ns0:text>
-  <ns0:text x="151.1111" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--bg)">=$(</ns0:text>
-  <ns0:text x="186.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">date</ns0:text>
-  <ns0:text x="226.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--bg)">+%Y%m%d)</ns0:text>
-  <ns0:text x="44.4444" y="255.1111" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Function</ns0:text>
-  <ns0:text x="44.4444" y="272.8889" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">do_backup</ns0:text>
-  <ns0:text x="146.6667" y="272.8889" font-family="monospace" font-size="12.4444" fill="var(--bg)">() {</ns0:text>
-  <ns0:text x="62.2222" y="290.6667" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">  local</ns0:text>
-  <ns0:text x="115.5556" y="290.6667" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">src</ns0:text>
-  <ns0:text x="146.6667" y="290.6667" font-family="monospace" font-size="12.4444" fill="var(--bg)">="$1"</ns0:text>
-  <ns0:text x="62.2222" y="308.4444" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">  if</ns0:text>
-  <ns0:text x="88.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="var(--bg)">[ ! -d "$src" ]; </ns0:text>
-  <ns0:text x="248.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">then</ns0:text>
-  <ns0:text x="62.2222" y="326.2222" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">    echo</ns0:text>
-  <ns0:text x="115.5556" y="326.2222" font-family="monospace" font-size="12.4444" fill="var(--ok-tint)">"Error: $src not found"</ns0:text>
-  <ns0:text x="62.2222" y="344" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">    return</ns0:text>
-  <ns0:text x="137.7778" y="344" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">1</ns0:text>
-  <ns0:text x="44.4444" y="361.7778" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">  fi</ns0:text>
-  <ns0:text x="62.2222" y="379.5556" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">  tar</ns0:text>
-  <ns0:text x="97.7778" y="379.5556" font-family="monospace" font-size="12.4444" fill="var(--bg)">-czf "${BACKUP_DIR}/backup_${TIMESTAMP}.tgz" "$src"</ns0:text>
-  <ns0:text x="44.4444" y="397.3333" font-family="monospace" font-size="12.4444" fill="var(--bg)">}</ns0:text>
-  <ns0:text x="44.4444" y="422.2222" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Control flow</ns0:text>
-  <ns0:text x="44.4444" y="440" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">for</ns0:text>
-  <ns0:text x="75.5556" y="440" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">dir</ns0:text>
-  <ns0:text x="102.2222" y="440" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">in</ns0:text>
-  <ns0:text x="124.4444" y="440" font-family="monospace" font-size="12.4444" fill="var(--bg)">/home /etc /var; </ns0:text>
-  <ns0:text x="248.8889" y="440" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">do</ns0:text>
-  <ns0:text x="62.2222" y="457.7778" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">  do_backup</ns0:text>
-  <ns0:text x="177.7778" y="457.7778" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">"$dir"</ns0:text>
-  <ns0:text x="44.4444" y="475.5556" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">done</ns0:text>
-  <ns0:text x="44.4444" y="500.4444" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Exit code</ns0:text>
-  <ns0:text x="44.4444" y="518.2222" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">exit</ns0:text>
-  <ns0:text x="80" y="518.2222" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">0</ns0:text>
-  <ns0:line x1="528.8889" y1="55.1111" x2="577.7778" y2="71.1111" stroke="var(--danger-light)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="160" x2="577.7778" y2="173.3333" stroke="var(--warn-tint)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="222.2222" x2="577.7778" y2="284.4444" stroke="var(--bg)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="328.8889" x2="577.7778" y2="382.2222" stroke="var(--primary-bright)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="453.3333" x2="577.7778" y2="480" stroke="var(--danger-light)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:line x1="528.8889" y1="518.2222" x2="577.7778" y2="552.8889" stroke="var(--warn-tint)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <ns0:rect x="577.7778" y="28.4444" width="533.3333" height="97.7778" rx="7.1111" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="595.5556" y="50.6667" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-dk)">Shebang line</ns0:text>
-  <ns0:text x="595.5556" y="69.3333" font-family="monospace" font-size="11.5556" fill="var(--text)">#!/usr/bin/env bash</ns0:text>
-  <ns0:text x="595.5556" y="87.1111" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Tells the kernel which interpreter to use.</ns0:text>
-  <ns0:text x="595.5556" y="104" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">env searches PATH — portable across systems.</ns0:text>
-  <ns0:text x="595.5556" y="118.2222" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">Must be first line, no spaces before #!</ns0:text>
-  <ns0:rect x="577.7778" y="142.2222" width="533.3333" height="93.3333" rx="7.1111" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="595.5556" y="162.6667" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--warn-dk)">Constants (readonly)</ns0:text>
-  <ns0:text x="595.5556" y="180.4444" font-family="monospace" font-size="11.5556" fill="var(--text)">readonly NAME="value"</ns0:text>
-  <ns0:text x="595.5556" y="197.3333" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Cannot be changed after assignment.</ns0:text>
-  <ns0:text x="595.5556" y="214.2222" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Convention: UPPERCASE for constants.</ns0:text>
-  <ns0:text x="595.5556" y="229.3333" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">Attempting to reassign causes an error.</ns0:text>
-  <ns0:rect x="577.7778" y="250.6667" width="533.3333" height="93.3333" rx="7.1111" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="595.5556" y="271.1111" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--ok-dk)">Variables &amp; Args</ns0:text>
-  <ns0:text x="595.5556" y="288.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">VAR="value"   $VAR   ${VAR:-default}</ns0:text>
-  <ns0:text x="595.5556" y="305.7778" font-family="monospace" font-size="11.5556" fill="var(--text)">$1 $2 $@  — positional args</ns0:text>
-  <ns0:text x="595.5556" y="322.6667" font-family="monospace" font-size="11.5556" fill="var(--text)">$# — arg count   $? — last exit code</ns0:text>
-  <ns0:text x="595.5556" y="338.6667" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">local keyword limits scope to function</ns0:text>
-  <ns0:rect x="577.7778" y="359.1111" width="533.3333" height="97.7778" rx="7.1111" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="595.5556" y="379.5556" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--info-dk)">Functions</ns0:text>
-  <ns0:text x="595.5556" y="397.3333" font-family="monospace" font-size="11.5556" fill="var(--text)">func_name() { ... }</ns0:text>
-  <ns0:text x="595.5556" y="414.2222" font-family="monospace" font-size="11.5556" fill="var(--text)">return 0  — success (return N for error)</ns0:text>
-  <ns0:text x="595.5556" y="431.1111" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Functions must be defined before use.</ns0:text>
-  <ns0:text x="595.5556" y="447.1111" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Use local to avoid variable collisions.</ns0:text>
-  <ns0:rect x="577.7778" y="472.8889" width="533.3333" height="93.3333" rx="7.1111" fill="var(--danger-pale3)" stroke="var(--danger-pink)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="595.5556" y="493.3333" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--danger-pink)">Control Flow</ns0:text>
-  <ns0:text x="595.5556" y="511.1111" font-family="monospace" font-size="11.5556" fill="var(--text)">if [ cond ]; then ... fi</ns0:text>
-  <ns0:text x="595.5556" y="528" font-family="monospace" font-size="11.5556" fill="var(--text)">for x in list; do ... done</ns0:text>
-  <ns0:text x="595.5556" y="544.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">while [ cond ]; do ... done</ns0:text>
-  <ns0:text x="595.5556" y="560.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">case "$x" in pattern) ... ;; esac</ns0:text>
-  <ns0:rect x="577.7778" y="581.3333" width="533.3333" height="46.2222" rx="7.1111" fill="var(--surface-dark)" stroke="var(--text-muted)" stroke-width="1.3333" />
-  <ns0:text x="595.5556" y="600.8889" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text-muted)">Exit codes:</ns0:text>
-  <ns0:text x="702.2222" y="600.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">0 = success  ·  1-255 = error  ·  $? gets last code  ·  set -e exits on any error</ns0:text>
-  <ns0:text x="595.5556" y="618.6667" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">Use exit 0 at script end to be explicit. Trap signals with: trap cleanup EXIT INT TERM</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="22.2222" y="22.2222" width="506.6667" height="586.6667" rx="10.6667" fill="var(--text)" filter="url(#shadow)" />
+  <text x="44.4444" y="55.1111" font-family="monospace" font-size="13.3333" fill="var(--danger-light)">#!/usr/bin/env bash</text>
+  <text x="44.4444" y="73.7778" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># ===================================</text>
+  <text x="44.4444" y="91.5556" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># backup.sh — daily backup script</text>
+  <text x="44.4444" y="109.3333" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># ===================================</text>
+  <text x="44.4444" y="134.2222" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Constants</text>
+  <text x="44.4444" y="152" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">readonly</text>
+  <text x="120" y="152" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">BACKUP_DIR</text>
+  <text x="240" y="152" font-family="monospace" font-size="12.4444" fill="var(--bg)">="/var/backup"</text>
+  <text x="44.4444" y="169.7778" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">readonly</text>
+  <text x="120" y="169.7778" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">MAX_KEEP</text>
+  <text x="231.1111" y="169.7778" font-family="monospace" font-size="12.4444" fill="var(--bg)">=7</text>
+  <text x="44.4444" y="194.6667" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Variables</text>
+  <text x="44.4444" y="212.4444" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">SOURCE</text>
+  <text x="115.5556" y="212.4444" font-family="monospace" font-size="12.4444" fill="var(--bg)">="${1:-/home}"</text>
+  <text x="44.4444" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">TIMESTAMP</text>
+  <text x="151.1111" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--bg)">=$(</text>
+  <text x="186.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">date</text>
+  <text x="226.6667" y="230.2222" font-family="monospace" font-size="12.4444" fill="var(--bg)">+%Y%m%d)</text>
+  <text x="44.4444" y="255.1111" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Function</text>
+  <text x="44.4444" y="272.8889" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">do_backup</text>
+  <text x="146.6667" y="272.8889" font-family="monospace" font-size="12.4444" fill="var(--bg)">() {</text>
+  <text x="62.2222" y="290.6667" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">  local</text>
+  <text x="115.5556" y="290.6667" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">src</text>
+  <text x="146.6667" y="290.6667" font-family="monospace" font-size="12.4444" fill="var(--bg)">="$1"</text>
+  <text x="62.2222" y="308.4444" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">  if</text>
+  <text x="88.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="var(--bg)">[ ! -d "$src" ]; </text>
+  <text x="248.8889" y="308.4444" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">then</text>
+  <text x="62.2222" y="326.2222" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">    echo</text>
+  <text x="115.5556" y="326.2222" font-family="monospace" font-size="12.4444" fill="var(--ok-tint)">"Error: $src not found"</text>
+  <text x="62.2222" y="344" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">    return</text>
+  <text x="137.7778" y="344" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">1</text>
+  <text x="44.4444" y="361.7778" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">  fi</text>
+  <text x="62.2222" y="379.5556" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">  tar</text>
+  <text x="97.7778" y="379.5556" font-family="monospace" font-size="12.4444" fill="var(--bg)">-czf "${BACKUP_DIR}/backup_${TIMESTAMP}.tgz" "$src"</text>
+  <text x="44.4444" y="397.3333" font-family="monospace" font-size="12.4444" fill="var(--bg)">}</text>
+  <text x="44.4444" y="422.2222" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Control flow</text>
+  <text x="44.4444" y="440" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">for</text>
+  <text x="75.5556" y="440" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">dir</text>
+  <text x="102.2222" y="440" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">in</text>
+  <text x="124.4444" y="440" font-family="monospace" font-size="12.4444" fill="var(--bg)">/home /etc /var; </text>
+  <text x="248.8889" y="440" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">do</text>
+  <text x="62.2222" y="457.7778" font-family="monospace" font-size="12.4444" fill="var(--primary-bright)">  do_backup</text>
+  <text x="177.7778" y="457.7778" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">"$dir"</text>
+  <text x="44.4444" y="475.5556" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">done</text>
+  <text x="44.4444" y="500.4444" font-family="monospace" font-size="12.4444" fill="var(--text-mid)"># Exit code</text>
+  <text x="44.4444" y="518.2222" font-family="monospace" font-size="12.4444" fill="var(--danger-light)">exit</text>
+  <text x="80" y="518.2222" font-family="monospace" font-size="12.4444" fill="var(--warn-tint)">0</text>
+  <line x1="528.8889" y1="55.1111" x2="577.7778" y2="71.1111" stroke="var(--danger-light)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="528.8889" y1="160" x2="577.7778" y2="173.3333" stroke="var(--warn-tint)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="528.8889" y1="222.2222" x2="577.7778" y2="284.4444" stroke="var(--bg)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="528.8889" y1="328.8889" x2="577.7778" y2="382.2222" stroke="var(--primary-bright)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="528.8889" y1="453.3333" x2="577.7778" y2="480" stroke="var(--danger-light)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="528.8889" y1="518.2222" x2="577.7778" y2="552.8889" stroke="var(--warn-tint)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <rect x="577.7778" y="28.4444" width="533.3333" height="97.7778" rx="7.1111" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="595.5556" y="50.6667" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-dk)">Shebang line</text>
+  <text x="595.5556" y="69.3333" font-family="monospace" font-size="11.5556" fill="var(--text)">#!/usr/bin/env bash</text>
+  <text x="595.5556" y="87.1111" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Tells the kernel which interpreter to use.</text>
+  <text x="595.5556" y="104" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">env searches PATH — portable across systems.</text>
+  <text x="595.5556" y="118.2222" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">Must be first line, no spaces before #!</text>
+  <rect x="577.7778" y="142.2222" width="533.3333" height="93.3333" rx="7.1111" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="595.5556" y="162.6667" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--warn-dk)">Constants (readonly)</text>
+  <text x="595.5556" y="180.4444" font-family="monospace" font-size="11.5556" fill="var(--text)">readonly NAME="value"</text>
+  <text x="595.5556" y="197.3333" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Cannot be changed after assignment.</text>
+  <text x="595.5556" y="214.2222" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Convention: UPPERCASE for constants.</text>
+  <text x="595.5556" y="229.3333" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">Attempting to reassign causes an error.</text>
+  <rect x="577.7778" y="250.6667" width="533.3333" height="93.3333" rx="7.1111" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="595.5556" y="271.1111" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--ok-dk)">Variables &amp; Args</text>
+  <text x="595.5556" y="288.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">VAR="value"   $VAR   ${VAR:-default}</text>
+  <text x="595.5556" y="305.7778" font-family="monospace" font-size="11.5556" fill="var(--text)">$1 $2 $@  — positional args</text>
+  <text x="595.5556" y="322.6667" font-family="monospace" font-size="11.5556" fill="var(--text)">$# — arg count   $? — last exit code</text>
+  <text x="595.5556" y="338.6667" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">local keyword limits scope to function</text>
+  <rect x="577.7778" y="359.1111" width="533.3333" height="97.7778" rx="7.1111" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="595.5556" y="379.5556" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--info-dk)">Functions</text>
+  <text x="595.5556" y="397.3333" font-family="monospace" font-size="11.5556" fill="var(--text)">func_name() { ... }</text>
+  <text x="595.5556" y="414.2222" font-family="monospace" font-size="11.5556" fill="var(--text)">return 0  — success (return N for error)</text>
+  <text x="595.5556" y="431.1111" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Functions must be defined before use.</text>
+  <text x="595.5556" y="447.1111" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">Use local to avoid variable collisions.</text>
+  <rect x="577.7778" y="472.8889" width="533.3333" height="93.3333" rx="7.1111" fill="var(--danger-pale3)" stroke="var(--danger-pink)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="595.5556" y="493.3333" font-family="sans-serif" font-size="13.3333" font-weight="bold" fill="var(--danger-pink)">Control Flow</text>
+  <text x="595.5556" y="511.1111" font-family="monospace" font-size="11.5556" fill="var(--text)">if [ cond ]; then ... fi</text>
+  <text x="595.5556" y="528" font-family="monospace" font-size="11.5556" fill="var(--text)">for x in list; do ... done</text>
+  <text x="595.5556" y="544.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">while [ cond ]; do ... done</text>
+  <text x="595.5556" y="560.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">case "$x" in pattern) ... ;; esac</text>
+  <rect x="577.7778" y="581.3333" width="533.3333" height="46.2222" rx="7.1111" fill="var(--surface-dark)" stroke="var(--text-muted)" stroke-width="1.3333" />
+  <text x="595.5556" y="600.8889" font-family="sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text-muted)">Exit codes:</text>
+  <text x="702.2222" y="600.8889" font-family="monospace" font-size="11.5556" fill="var(--text)">0 = success  ·  1-255 = error  ·  $? gets last code  ·  set -e exits on any error</text>
+  <text x="595.5556" y="618.6667" font-family="sans-serif" font-size="10.6667" fill="var(--text-faint)">Use exit 0 at script end to be explicit. Trap signals with: trap cleanup EXIT INT TERM</text>
+</svg>

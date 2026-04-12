@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,43 +158,43 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 5.6,0" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="576.09" y="48.6076" text-anchor="middle" font-family="Arial" font-size="28.8045" font-weight="bold" fill="var(--primary-deeper)">Cost-Based Optimization (CBO)</ns0:text>
-  <ns0:rect x="43.2068" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.8805" />
-  <ns0:text x="158.4248" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--primary-deeper)">Statistics</ns0:text>
-  <ns0:text x="158.4248" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Row count, data size</ns0:text>
-  <ns0:text x="158.4248" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Column min/max/nulls</ns0:text>
-  <ns0:line x1="273.6428" y1="153.9241" x2="345.654" y2="153.9241" stroke="var(--text-dark)" stroke-width="2.8805" marker-end="url(#arrow)" />
-  <ns0:rect x="352.8551" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.8805" />
-  <ns0:text x="468.0731" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--ok-deep)">Cost Model</ns0:text>
-  <ns0:text x="468.0731" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Estimate I/O cost</ns0:text>
-  <ns0:text x="468.0731" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Estimate CPU cost</ns0:text>
-  <ns0:line x1="583.2911" y1="153.9241" x2="655.3024" y2="153.9241" stroke="var(--text-dark)" stroke-width="2.8805" marker-end="url(#arrow)" />
-  <ns0:rect x="662.5035" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.8805" />
-  <ns0:text x="777.7215" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--warn-dk)">Plan Comparison</ns0:text>
-  <ns0:text x="777.7215" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Evaluate alternatives</ns0:text>
-  <ns0:text x="777.7215" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Pick lowest cost</ns0:text>
-  <ns0:line x1="892.9395" y1="153.9241" x2="936.1463" y2="153.9241" stroke="var(--text-dark)" stroke-width="2.8805" marker-end="url(#arrow)" />
-  <ns0:rect x="943.3474" y="97.2152" width="172.827" height="113.4177" rx="11.5218" fill="var(--primary-dk)" stroke="var(--primary-deep)" stroke-width="2.8805" />
-  <ns0:text x="1029.7609" y="145.8228" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--bg)">Best Plan</ns0:text>
-  <ns0:text x="1029.7609" y="178.2278" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--primary-pale)">Optimal execution</ns0:text>
-  <ns0:text x="576.09" y="275.443" text-anchor="middle" font-family="Arial" font-size="21.6034" font-weight="bold" fill="var(--text-dark)">Example: Join Reorder Decision</ns0:text>
-  <ns0:rect x="86.4135" y="315.9494" width="403.263" height="291.6456" rx="11.5218" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.1603" />
-  <ns0:text x="288.045" y="356.4557" text-anchor="middle" font-family="Arial" font-size="20.1632" font-weight="bold" fill="var(--danger-dk)">Plan A: Orders JOIN Customers</ns0:text>
-  <ns0:rect x="144.0225" y="380.7595" width="288.045" height="56.7089" rx="7.2011" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="1.4402" />
-  <ns0:text x="288.045" y="418.0253" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--danger-dk)">Join(1M x 10K) = Sort Merge</ns0:text>
-  <ns0:rect x="144.0225" y="453.6709" width="288.045" height="56.7089" rx="7.2011" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="1.4402" />
-  <ns0:text x="288.045" y="490.9367" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--danger-dk)">Shuffle: 2 x large</ns0:text>
-  <ns0:text x="288.045" y="575.1899" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--danger-dk)">Cost: 850</ns0:text>
-  <ns0:rect x="662.5035" y="315.9494" width="403.263" height="291.6456" rx="11.5218" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.1603" />
-  <ns0:text x="864.135" y="356.4557" text-anchor="middle" font-family="Arial" font-size="20.1632" font-weight="bold" fill="var(--ok-dk)">Plan B: Broadcast Join</ns0:text>
-  <ns0:rect x="720.1125" y="380.7595" width="288.045" height="56.7089" rx="7.2011" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.4402" />
-  <ns0:text x="864.135" y="418.0253" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--ok-dk)">Broadcast(10K) + Hash Join</ns0:text>
-  <ns0:rect x="720.1125" y="453.6709" width="288.045" height="56.7089" rx="7.2011" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.4402" />
-  <ns0:text x="864.135" y="490.9367" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--ok-dk)">No shuffle needed</ns0:text>
-  <ns0:text x="864.135" y="575.1899" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--ok-dk)">Cost: 120 (chosen)</ns0:text>
-  <ns0:text x="576.09" y="640" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--text-dark)">CBO uses table/column statistics to pick optimal join strategy</ns0:text>
-</ns0:svg>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
+    </marker>
+  </defs>
+  <text x="576.09" y="48.6076" text-anchor="middle" font-family="Arial" font-size="28.8045" font-weight="bold" fill="var(--primary-deeper)">Cost-Based Optimization (CBO)</text>
+  <rect x="43.2068" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.8805" />
+  <text x="158.4248" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--primary-deeper)">Statistics</text>
+  <text x="158.4248" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Row count, data size</text>
+  <text x="158.4248" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Column min/max/nulls</text>
+  <line x1="273.6428" y1="153.9241" x2="345.654" y2="153.9241" stroke="var(--text-dark)" stroke-width="2.8805" marker-end="url(#arrow)" />
+  <rect x="352.8551" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.8805" />
+  <text x="468.0731" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--ok-deep)">Cost Model</text>
+  <text x="468.0731" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Estimate I/O cost</text>
+  <text x="468.0731" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Estimate CPU cost</text>
+  <line x1="583.2911" y1="153.9241" x2="655.3024" y2="153.9241" stroke="var(--text-dark)" stroke-width="2.8805" marker-end="url(#arrow)" />
+  <rect x="662.5035" y="97.2152" width="230.436" height="113.4177" rx="11.5218" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.8805" />
+  <text x="777.7215" y="137.7215" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--warn-dk)">Plan Comparison</text>
+  <text x="777.7215" y="166.8861" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Evaluate alternatives</text>
+  <text x="777.7215" y="192.8101" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--text-dark)">Pick lowest cost</text>
+  <line x1="892.9395" y1="153.9241" x2="936.1463" y2="153.9241" stroke="var(--text-dark)" stroke-width="2.8805" marker-end="url(#arrow)" />
+  <rect x="943.3474" y="97.2152" width="172.827" height="113.4177" rx="11.5218" fill="var(--primary-dk)" stroke="var(--primary-deep)" stroke-width="2.8805" />
+  <text x="1029.7609" y="145.8228" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--bg)">Best Plan</text>
+  <text x="1029.7609" y="178.2278" text-anchor="middle" font-family="Arial" font-size="15.8425" fill="var(--primary-pale)">Optimal execution</text>
+  <text x="576.09" y="275.443" text-anchor="middle" font-family="Arial" font-size="21.6034" font-weight="bold" fill="var(--text-dark)">Example: Join Reorder Decision</text>
+  <rect x="86.4135" y="315.9494" width="403.263" height="291.6456" rx="11.5218" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.1603" />
+  <text x="288.045" y="356.4557" text-anchor="middle" font-family="Arial" font-size="20.1632" font-weight="bold" fill="var(--danger-dk)">Plan A: Orders JOIN Customers</text>
+  <rect x="144.0225" y="380.7595" width="288.045" height="56.7089" rx="7.2011" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="1.4402" />
+  <text x="288.045" y="418.0253" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--danger-dk)">Join(1M x 10K) = Sort Merge</text>
+  <rect x="144.0225" y="453.6709" width="288.045" height="56.7089" rx="7.2011" fill="var(--danger-lt)" stroke="var(--danger-dk)" stroke-width="1.4402" />
+  <text x="288.045" y="490.9367" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--danger-dk)">Shuffle: 2 x large</text>
+  <text x="288.045" y="575.1899" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--danger-dk)">Cost: 850</text>
+  <rect x="662.5035" y="315.9494" width="403.263" height="291.6456" rx="11.5218" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.1603" />
+  <text x="864.135" y="356.4557" text-anchor="middle" font-family="Arial" font-size="20.1632" font-weight="bold" fill="var(--ok-dk)">Plan B: Broadcast Join</text>
+  <rect x="720.1125" y="380.7595" width="288.045" height="56.7089" rx="7.2011" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.4402" />
+  <text x="864.135" y="418.0253" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--ok-dk)">Broadcast(10K) + Hash Join</text>
+  <rect x="720.1125" y="453.6709" width="288.045" height="56.7089" rx="7.2011" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.4402" />
+  <text x="864.135" y="490.9367" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--ok-dk)">No shuffle needed</text>
+  <text x="864.135" y="575.1899" text-anchor="middle" font-family="Arial" font-size="18.7229" font-weight="bold" fill="var(--ok-dk)">Cost: 120 (chosen)</text>
+  <text x="576.09" y="640" text-anchor="middle" font-family="Arial" font-size="17.2827" fill="var(--text-dark)">CBO uses table/column statistics to pick optimal join strategy</text>
+</svg>

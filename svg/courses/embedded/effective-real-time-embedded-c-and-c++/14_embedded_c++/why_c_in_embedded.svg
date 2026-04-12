@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,41 +158,41 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="71.1111" y="35.5556" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="293.3333" y="81.7778" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--bg)">Type Safety</ns0:text>
-  <ns0:text x="293.3333" y="108.4444" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-lt)">Strong typing catches errors at compile time</ns0:text>
-  <ns0:text x="293.3333" y="129.7778" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">no implicit void* casts</ns0:text>
-  <ns0:text x="293.3333" y="149.3333" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">enum class, constexpr</ns0:text>
-  <ns0:rect x="622.2222" y="35.5556" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="844.4444" y="81.7778" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">Abstraction</ns0:text>
-  <ns0:text x="844.4444" y="108.4444" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Classes, namespaces, operator overload</ns0:text>
-  <ns0:text x="844.4444" y="129.7778" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">GPIO::Pin led(GPIOC, 13);</ns0:text>
-  <ns0:text x="844.4444" y="149.3333" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">led.toggle();</ns0:text>
-  <ns0:rect x="71.1111" y="182.2222" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="293.3333" y="228.4444" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">RAII</ns0:text>
-  <ns0:text x="293.3333" y="255.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Resources released automatically</ns0:text>
-  <ns0:text x="293.3333" y="276.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">MutexGuard lock(m); // auto-releases</ns0:text>
-  <ns0:text x="293.3333" y="296" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">no manual unlock needed</ns0:text>
-  <ns0:rect x="622.2222" y="182.2222" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="844.4444" y="228.4444" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">Templates</ns0:text>
-  <ns0:text x="844.4444" y="255.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Generic code, resolved at compile time</ns0:text>
-  <ns0:text x="844.4444" y="276.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">RingBuffer&lt;uint8_t, 64&gt; buf;</ns0:text>
-  <ns0:text x="844.4444" y="296" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">zero runtime overhead</ns0:text>
-  <ns0:rect x="346.6667" y="328.8889" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="375.1111" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--bg)">Const Correctness</ns0:text>
-  <ns0:text x="568.8889" y="401.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-lt)">const and constexpr prevent unintended writes</ns0:text>
-  <ns0:text x="568.8889" y="423.1111" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">constexpr uint32_t CLK = 168'000'000;</ns0:text>
-  <ns0:text x="568.8889" y="442.6667" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">evaluated at compile time, zero RAM</ns0:text>
-  <ns0:rect x="177.7778" y="487.1111" width="782.2222" height="42.6667" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
-  <ns0:text x="568.8889" y="513.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-dk)">Use C++ features that have zero or near-zero overhead: constexpr, templates, RAII, inline</ns0:text>
-  <ns0:text x="568.8889" y="531.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Avoid: exceptions, RTTI, dynamic_cast, virtual in hot paths — these add size/overhead</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="71.1111" y="35.5556" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
+  <text x="293.3333" y="81.7778" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--bg)">Type Safety</text>
+  <text x="293.3333" y="108.4444" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-lt)">Strong typing catches errors at compile time</text>
+  <text x="293.3333" y="129.7778" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">no implicit void* casts</text>
+  <text x="293.3333" y="149.3333" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">enum class, constexpr</text>
+  <rect x="622.2222" y="35.5556" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="844.4444" y="81.7778" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">Abstraction</text>
+  <text x="844.4444" y="108.4444" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Classes, namespaces, operator overload</text>
+  <text x="844.4444" y="129.7778" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">GPIO::Pin led(GPIOC, 13);</text>
+  <text x="844.4444" y="149.3333" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">led.toggle();</text>
+  <rect x="71.1111" y="182.2222" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="293.3333" y="228.4444" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">RAII</text>
+  <text x="293.3333" y="255.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Resources released automatically</text>
+  <text x="293.3333" y="276.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">MutexGuard lock(m); // auto-releases</text>
+  <text x="293.3333" y="296" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">no manual unlock needed</text>
+  <rect x="622.2222" y="182.2222" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="844.4444" y="228.4444" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">Templates</text>
+  <text x="844.4444" y="255.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Generic code, resolved at compile time</text>
+  <text x="844.4444" y="276.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">RingBuffer&lt;uint8_t, 64&gt; buf;</text>
+  <text x="844.4444" y="296" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-disabled)">zero runtime overhead</text>
+  <rect x="346.6667" y="328.8889" width="444.4444" height="124.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
+  <text x="568.8889" y="375.1111" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--bg)">Const Correctness</text>
+  <text x="568.8889" y="401.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-lt)">const and constexpr prevent unintended writes</text>
+  <text x="568.8889" y="423.1111" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">constexpr uint32_t CLK = 168'000'000;</text>
+  <text x="568.8889" y="442.6667" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-tint)">evaluated at compile time, zero RAM</text>
+  <rect x="177.7778" y="487.1111" width="782.2222" height="42.6667" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
+  <text x="568.8889" y="513.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-dk)">Use C++ features that have zero or near-zero overhead: constexpr, templates, RAII, inline</text>
+  <text x="568.8889" y="531.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Avoid: exceptions, RTTI, dynamic_cast, virtual in hot paths — these add size/overhead</text>
+</svg>

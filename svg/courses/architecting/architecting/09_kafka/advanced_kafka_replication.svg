@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,44 +158,44 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <ns0:polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
-    </ns0:marker>
-    <ns0:marker id="arrowhead-green" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <ns0:polygon points="0,17.1429 5.6,0" fill="#28a745" />
-    </ns0:marker>
-    <ns0:marker id="arrowhead-dash" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
-      <ns0:polygon points="0,17.1429 5.6,0" fill="#999" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="612.6496" y="41.0256" text-anchor="middle" font-size="24.506" font-weight="bold" fill="var(--text-dark)">Kafka Partition Replication</ns0:text>
-  <ns0:rect x="45.9487" y="164.1026" width="183.7949" height="65.641" rx="7.6581" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2974" />
-  <ns0:text x="137.8462" y="205.1282" text-anchor="middle" font-size="18.3795" fill="var(--text-dark)">Producer</ns0:text>
-  <ns0:rect x="413.5385" y="147.6923" width="245.0598" height="90.2564" rx="7.6581" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0632" />
-  <ns0:text x="536.0684" y="183.7949" text-anchor="middle" font-size="19.9111" font-weight="bold" fill="var(--text-dark)">Leader</ns0:text>
-  <ns0:text x="536.0684" y="213.3333" text-anchor="middle" font-size="16.8479" fill="var(--text-mid)">Broker 1</ns0:text>
-  <ns0:rect x="811.7607" y="82.0513" width="245.0598" height="90.2564" rx="7.6581" fill="var(--info-pale)" stroke="var(--info-light)" stroke-width="2.2974" />
-  <ns0:text x="934.2906" y="118.1539" text-anchor="middle" font-size="19.9111" fill="var(--text-dark)">Follower</ns0:text>
-  <ns0:text x="934.2906" y="147.6923" text-anchor="middle" font-size="16.8479" fill="var(--text-mid)">Broker 2</ns0:text>
-  <ns0:rect x="811.7607" y="229.7436" width="245.0598" height="90.2564" rx="7.6581" fill="var(--info-pale)" stroke="var(--info-light)" stroke-width="2.2974" />
-  <ns0:text x="934.2906" y="265.8462" text-anchor="middle" font-size="19.9111" fill="var(--text-dark)">Follower</ns0:text>
-  <ns0:text x="934.2906" y="295.3846" text-anchor="middle" font-size="16.8479" fill="var(--text-mid)">Broker 3</ns0:text>
-  <ns0:rect x="45.9487" y="344.6154" width="183.7949" height="65.641" rx="7.6581" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.2974" />
-  <ns0:text x="137.8462" y="385.641" text-anchor="middle" font-size="18.3795" fill="var(--text-dark)">Consumer</ns0:text>
-  <ns0:line x1="229.7436" y1="196.9231" x2="410.4752" y2="192" stroke="var(--primary-bright)" stroke-width="2.2974" marker-end="url(#arrow)" />
-  <ns0:text x="306.3248" y="177.2308" text-anchor="middle" font-size="16.8479" fill="var(--primary-bright)">Write</ns0:text>
-  <ns0:line x1="658.5983" y1="164.1026" x2="808.6975" y2="131.2821" stroke="var(--info-light)" stroke-width="2.2974" marker-end="url(#arrow)" />
-  <ns0:text x="742.8376" y="128" font-size="16.8479" fill="var(--info-light)">Replicate</ns0:text>
-  <ns0:line x1="658.5983" y1="213.3333" x2="808.6975" y2="262.5641" stroke="var(--info-light)" stroke-width="2.2974" marker-end="url(#arrow)" />
-  <ns0:text x="742.8376" y="259.282" font-size="16.8479" fill="var(--info-light)">Replicate</ns0:text>
-  <ns0:line x1="229.7436" y1="377.4359" x2="459.4872" y2="241.2308" stroke="var(--ok-bright)" stroke-width="2.2974" marker-end="url(#arrow-ok)" />
-  <ns0:text x="306.3248" y="328.2051" text-anchor="middle" font-size="16.8479" fill="var(--ok-bright)">Read</ns0:text>
-  <ns0:rect x="413.5385" y="443.0769" width="643.2821" height="98.4615" rx="12.253" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.2974" stroke-dasharray="9.1897 4.5949" />
-  <ns0:text x="735.1795" y="475.8975" text-anchor="middle" font-size="19.9111" font-weight="bold" fill="var(--ok-bright)">In-Sync Replicas (ISR)</ns0:text>
-  <ns0:text x="735.1795" y="521.8462" text-anchor="middle" font-size="18.3795" fill="var(--text-dark)">Leader (Broker 1) + Follower (Broker 2) + Follower (Broker 3)</ns0:text>
-  <ns0:line x1="536.0684" y1="237.9487" x2="612.6496" y2="439.7949" stroke="var(--text-faintest)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
-  <ns0:line x1="934.2906" y1="172.3077" x2="842.3932" y2="439.7949" stroke="var(--text-faintest)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
-  <ns0:line x1="934.2906" y1="320" x2="857.7094" y2="439.7949" stroke="var(--text-faintest)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
-  <ns0:text x="612.6496" y="607.1795" text-anchor="middle" font-size="16.8479" fill="var(--text-faint)" font-style="italic">Consumers read only from the leader; followers replicate for fault tolerance.</ns0:text>
-  <ns0:text x="612.6496" y="640" text-anchor="middle" font-size="16.8479" fill="var(--text-faint)" font-style="italic">ISR tracks which replicas are caught up with the leader.</ns0:text>
-</ns0:svg>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#28a745" />
+    </marker>
+    <marker id="arrowhead-dash" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#999" />
+    </marker>
+  </defs>
+  <text x="612.6496" y="41.0256" text-anchor="middle" font-size="24.506" font-weight="bold" fill="var(--text-dark)">Kafka Partition Replication</text>
+  <rect x="45.9487" y="164.1026" width="183.7949" height="65.641" rx="7.6581" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2974" />
+  <text x="137.8462" y="205.1282" text-anchor="middle" font-size="18.3795" fill="var(--text-dark)">Producer</text>
+  <rect x="413.5385" y="147.6923" width="245.0598" height="90.2564" rx="7.6581" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.0632" />
+  <text x="536.0684" y="183.7949" text-anchor="middle" font-size="19.9111" font-weight="bold" fill="var(--text-dark)">Leader</text>
+  <text x="536.0684" y="213.3333" text-anchor="middle" font-size="16.8479" fill="var(--text-mid)">Broker 1</text>
+  <rect x="811.7607" y="82.0513" width="245.0598" height="90.2564" rx="7.6581" fill="var(--info-pale)" stroke="var(--info-light)" stroke-width="2.2974" />
+  <text x="934.2906" y="118.1539" text-anchor="middle" font-size="19.9111" fill="var(--text-dark)">Follower</text>
+  <text x="934.2906" y="147.6923" text-anchor="middle" font-size="16.8479" fill="var(--text-mid)">Broker 2</text>
+  <rect x="811.7607" y="229.7436" width="245.0598" height="90.2564" rx="7.6581" fill="var(--info-pale)" stroke="var(--info-light)" stroke-width="2.2974" />
+  <text x="934.2906" y="265.8462" text-anchor="middle" font-size="19.9111" fill="var(--text-dark)">Follower</text>
+  <text x="934.2906" y="295.3846" text-anchor="middle" font-size="16.8479" fill="var(--text-mid)">Broker 3</text>
+  <rect x="45.9487" y="344.6154" width="183.7949" height="65.641" rx="7.6581" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.2974" />
+  <text x="137.8462" y="385.641" text-anchor="middle" font-size="18.3795" fill="var(--text-dark)">Consumer</text>
+  <line x1="229.7436" y1="196.9231" x2="410.4752" y2="192" stroke="var(--primary-bright)" stroke-width="2.2974" marker-end="url(#arrow)" />
+  <text x="306.3248" y="177.2308" text-anchor="middle" font-size="16.8479" fill="var(--primary-bright)">Write</text>
+  <line x1="658.5983" y1="164.1026" x2="808.6975" y2="131.2821" stroke="var(--info-light)" stroke-width="2.2974" marker-end="url(#arrow)" />
+  <text x="742.8376" y="128" font-size="16.8479" fill="var(--info-light)">Replicate</text>
+  <line x1="658.5983" y1="213.3333" x2="808.6975" y2="262.5641" stroke="var(--info-light)" stroke-width="2.2974" marker-end="url(#arrow)" />
+  <text x="742.8376" y="259.282" font-size="16.8479" fill="var(--info-light)">Replicate</text>
+  <line x1="229.7436" y1="377.4359" x2="459.4872" y2="241.2308" stroke="var(--ok-bright)" stroke-width="2.2974" marker-end="url(#arrow-ok)" />
+  <text x="306.3248" y="328.2051" text-anchor="middle" font-size="16.8479" fill="var(--ok-bright)">Read</text>
+  <rect x="413.5385" y="443.0769" width="643.2821" height="98.4615" rx="12.253" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.2974" stroke-dasharray="9.1897 4.5949" />
+  <text x="735.1795" y="475.8975" text-anchor="middle" font-size="19.9111" font-weight="bold" fill="var(--ok-bright)">In-Sync Replicas (ISR)</text>
+  <text x="735.1795" y="521.8462" text-anchor="middle" font-size="18.3795" fill="var(--text-dark)">Leader (Broker 1) + Follower (Broker 2) + Follower (Broker 3)</text>
+  <line x1="536.0684" y1="237.9487" x2="612.6496" y2="439.7949" stroke="var(--text-faintest)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
+  <line x1="934.2906" y1="172.3077" x2="842.3932" y2="439.7949" stroke="var(--text-faintest)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
+  <line x1="934.2906" y1="320" x2="857.7094" y2="439.7949" stroke="var(--text-faintest)" stroke-width="1.5316" stroke-dasharray="7.6581 4.5949" marker-end="url(#arrow)" />
+  <text x="612.6496" y="607.1795" text-anchor="middle" font-size="16.8479" fill="var(--text-faint)" font-style="italic">Consumers read only from the leader; followers replicate for fault tolerance.</text>
+  <text x="612.6496" y="640" text-anchor="middle" font-size="16.8479" fill="var(--text-faint)" font-style="italic">ISR tracks which replicas are caught up with the leader.</text>
+</svg>

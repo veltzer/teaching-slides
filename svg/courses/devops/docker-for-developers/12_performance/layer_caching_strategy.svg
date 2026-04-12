@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,22 +158,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="583.4758" y="59.0769" text-anchor="middle" font-size="23.339" font-weight="bold">Dockerfile Layer Order for Caching</ns0:text>
-  <ns0:rect x="38.8984" y="98.4615" width="505.679" height="98.4615" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.8899" rx="7.7796" />
-  <ns0:text x="291.7379" y="164.1026" text-anchor="middle" font-size="19.4492">FROM node:18-alpine</ns0:text>
-  <ns0:text x="855.7645" y="164.1026" font-size="19.4492" fill="var(--ok-dk)">Cached (rarely changes)</ns0:text>
-  <ns0:rect x="38.8984" y="213.3333" width="505.679" height="98.4615" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9174" rx="7.7796" />
-  <ns0:text x="291.7379" y="278.9744" text-anchor="middle" font-size="19.4492">COPY package*.json ./</ns0:text>
-  <ns0:text x="855.7645" y="278.9744" font-size="19.4492" fill="var(--ok-dk)">Cached (deps stable)</ns0:text>
-  <ns0:rect x="38.8984" y="328.2051" width="505.679" height="98.4615" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.9174" rx="7.7796" />
-  <ns0:text x="291.7379" y="393.8462" text-anchor="middle" font-size="19.4492">RUN npm install</ns0:text>
-  <ns0:text x="855.7645" y="393.8462" font-size="19.4492" fill="var(--primary-dk)">Cached if deps unchanged</ns0:text>
-  <ns0:rect x="38.8984" y="443.0769" width="505.679" height="98.4615" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.9174" rx="7.7796" />
-  <ns0:text x="291.7379" y="508.7179" text-anchor="middle" font-size="19.4492">COPY . .</ns0:text>
-  <ns0:text x="855.7645" y="508.7179" font-size="19.4492" fill="var(--warn-dk)">Invalidated on code change</ns0:text>
-  <ns0:rect x="38.8984" y="557.9487" width="505.679" height="82.0513" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.9174" rx="7.7796" />
-  <ns0:text x="291.7379" y="613.7436" text-anchor="middle" font-size="19.4492">RUN npm run build</ns0:text>
-  <ns0:text x="855.7645" y="613.7436" font-size="19.4492" fill="var(--danger-dk)">Rebuilds every time</ns0:text>
-  <ns0:line x1="602.9249" y1="131.2821" x2="602.9249" y2="607.1795" stroke="var(--text-dark)" stroke-width="1.9449" stroke-dasharray="5.8348 3.8899" />
-  <ns0:text x="641.8234" y="98.4615" font-size="19.4492" fill="var(--text-muted)" font-weight="bold">Cache status</ns0:text>
-</ns0:svg>
+  <text x="583.4758" y="59.0769" text-anchor="middle" font-size="23.339" font-weight="bold">Dockerfile Layer Order for Caching</text>
+  <rect x="38.8984" y="98.4615" width="505.679" height="98.4615" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.8899" rx="7.7796" />
+  <text x="291.7379" y="164.1026" text-anchor="middle" font-size="19.4492">FROM node:18-alpine</text>
+  <text x="855.7645" y="164.1026" font-size="19.4492" fill="var(--ok-dk)">Cached (rarely changes)</text>
+  <rect x="38.8984" y="213.3333" width="505.679" height="98.4615" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9174" rx="7.7796" />
+  <text x="291.7379" y="278.9744" text-anchor="middle" font-size="19.4492">COPY package*.json ./</text>
+  <text x="855.7645" y="278.9744" font-size="19.4492" fill="var(--ok-dk)">Cached (deps stable)</text>
+  <rect x="38.8984" y="328.2051" width="505.679" height="98.4615" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.9174" rx="7.7796" />
+  <text x="291.7379" y="393.8462" text-anchor="middle" font-size="19.4492">RUN npm install</text>
+  <text x="855.7645" y="393.8462" font-size="19.4492" fill="var(--primary-dk)">Cached if deps unchanged</text>
+  <rect x="38.8984" y="443.0769" width="505.679" height="98.4615" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.9174" rx="7.7796" />
+  <text x="291.7379" y="508.7179" text-anchor="middle" font-size="19.4492">COPY . .</text>
+  <text x="855.7645" y="508.7179" font-size="19.4492" fill="var(--warn-dk)">Invalidated on code change</text>
+  <rect x="38.8984" y="557.9487" width="505.679" height="82.0513" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.9174" rx="7.7796" />
+  <text x="291.7379" y="613.7436" text-anchor="middle" font-size="19.4492">RUN npm run build</text>
+  <text x="855.7645" y="613.7436" font-size="19.4492" fill="var(--danger-dk)">Rebuilds every time</text>
+  <line x1="602.9249" y1="131.2821" x2="602.9249" y2="607.1795" stroke="var(--text-dark)" stroke-width="1.9449" stroke-dasharray="5.8348 3.8899" />
+  <text x="641.8234" y="98.4615" font-size="19.4492" fill="var(--text-muted)" font-weight="bold">Cache status</text>
+</svg>

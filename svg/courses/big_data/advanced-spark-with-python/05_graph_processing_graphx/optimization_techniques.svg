@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,45 +157,45 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="604.8946" y="48.6076" text-anchor="middle" font-family="Arial" font-size="27.2203" font-weight="bold" fill="var(--primary-deeper)">Graph Optimization Techniques</ns0:text>
-  <ns0:rect x="45.3671" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.0245" />
-  <ns0:text x="219.2743" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--primary-dk)">1. Partitioning</ns0:text>
-  <ns0:text x="68.0506" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Choose right strategy</ns0:text>
-  <ns0:text x="68.0506" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Balance partition sizes</ns0:text>
-  <ns0:text x="68.0506" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Minimize cross-partition</ns0:text>
-  <ns0:text x="68.0506" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">  edges (less shuffle)</ns0:text>
-  <ns0:rect x="430.9874" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.0245" />
-  <ns0:text x="604.8946" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--ok-dk)">2. Caching</ns0:text>
-  <ns0:text x="453.6709" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Cache before iterations</ns0:text>
-  <ns0:text x="453.6709" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Unpersist old versions</ns0:text>
-  <ns0:text x="453.6709" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use serialized storage</ns0:text>
-  <ns0:text x="453.6709" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Checkpoint long lineages</ns0:text>
-  <ns0:rect x="816.6077" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.0245" />
-  <ns0:text x="990.5149" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--warn-dk)">3. Serialization</ns0:text>
-  <ns0:text x="839.2912" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use Kryo serializer</ns0:text>
-  <ns0:text x="839.2912" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Register graph classes</ns0:text>
-  <ns0:text x="839.2912" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Reduce object overhead</ns0:text>
-  <ns0:text x="839.2912" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Compact data types</ns0:text>
-  <ns0:rect x="45.3671" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="3.0245" />
-  <ns0:text x="219.2743" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--info-mid)">4. Algorithm Choice</ns0:text>
-  <ns0:text x="68.0506" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use built-in when possible</ns0:text>
-  <ns0:text x="68.0506" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Set maxIterations</ns0:text>
-  <ns0:text x="68.0506" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Tune tolerance (tol)</ns0:text>
-  <ns0:text x="68.0506" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Approximate when ok</ns0:text>
-  <ns0:rect x="430.9874" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="var(--primary-pale2)" stroke="var(--ok-dk)" stroke-width="3.0245" />
-  <ns0:text x="604.8946" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--ok-dk)">5. Data Reduction</ns0:text>
-  <ns0:text x="453.6709" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Filter before processing</ns0:text>
-  <ns0:text x="453.6709" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use subgraph views</ns0:text>
-  <ns0:text x="453.6709" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Remove low-degree nodes</ns0:text>
-  <ns0:text x="453.6709" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Sample large graphs</ns0:text>
-  <ns0:rect x="816.6077" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="3.0245" />
-  <ns0:text x="990.5149" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--danger-dk)">6. Resource Tuning</ns0:text>
-  <ns0:text x="839.2912" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Increase executor memory</ns0:text>
-  <ns0:text x="839.2912" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Set memoryOverhead</ns0:text>
-  <ns0:text x="839.2912" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Tune parallelism</ns0:text>
-  <ns0:text x="839.2912" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Monitor GC pressure</ns0:text>
-  <ns0:rect x="226.8355" y="550.8861" width="756.1182" height="89.1139" rx="12.0979" fill="var(--surface)" stroke="var(--text-faintest)" stroke-width="2.2684" />
-  <ns0:text x="604.8946" y="586.5317" text-anchor="middle" font-family="Arial" font-size="18.1468" font-weight="bold" fill="var(--text-dark)">Impact Order: Partitioning &gt; Caching &gt; Algorithm &gt; Resource Tuning</ns0:text>
-  <ns0:text x="604.8946" y="618.9367" text-anchor="middle" font-family="Arial" font-size="16.6346" fill="var(--text-mid)">Always profile before optimizing -- measure, don't guess</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="604.8946" y="48.6076" text-anchor="middle" font-family="Arial" font-size="27.2203" font-weight="bold" fill="var(--primary-deeper)">Graph Optimization Techniques</text>
+  <rect x="45.3671" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.0245" />
+  <text x="219.2743" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--primary-dk)">1. Partitioning</text>
+  <text x="68.0506" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Choose right strategy</text>
+  <text x="68.0506" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Balance partition sizes</text>
+  <text x="68.0506" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Minimize cross-partition</text>
+  <text x="68.0506" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">  edges (less shuffle)</text>
+  <rect x="430.9874" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.0245" />
+  <text x="604.8946" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--ok-dk)">2. Caching</text>
+  <text x="453.6709" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Cache before iterations</text>
+  <text x="453.6709" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Unpersist old versions</text>
+  <text x="453.6709" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use serialized storage</text>
+  <text x="453.6709" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Checkpoint long lineages</text>
+  <rect x="816.6077" y="89.1139" width="347.8144" height="178.2278" rx="12.0979" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.0245" />
+  <text x="990.5149" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--warn-dk)">3. Serialization</text>
+  <text x="839.2912" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use Kryo serializer</text>
+  <text x="839.2912" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Register graph classes</text>
+  <text x="839.2912" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Reduce object overhead</text>
+  <text x="839.2912" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Compact data types</text>
+  <rect x="45.3671" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="3.0245" />
+  <text x="219.2743" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--info-mid)">4. Algorithm Choice</text>
+  <text x="68.0506" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use built-in when possible</text>
+  <text x="68.0506" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Set maxIterations</text>
+  <text x="68.0506" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Tune tolerance (tol)</text>
+  <text x="68.0506" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Approximate when ok</text>
+  <rect x="430.9874" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="var(--primary-pale2)" stroke="var(--ok-dk)" stroke-width="3.0245" />
+  <text x="604.8946" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--ok-dk)">5. Data Reduction</text>
+  <text x="453.6709" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Filter before processing</text>
+  <text x="453.6709" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Use subgraph views</text>
+  <text x="453.6709" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Remove low-degree nodes</text>
+  <text x="453.6709" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Sample large graphs</text>
+  <rect x="816.6077" y="315.9494" width="347.8144" height="178.2278" rx="12.0979" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="3.0245" />
+  <text x="990.5149" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--danger-dk)">6. Resource Tuning</text>
+  <text x="839.2912" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Increase executor memory</text>
+  <text x="839.2912" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Set memoryOverhead</text>
+  <text x="839.2912" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Tune parallelism</text>
+  <text x="839.2912" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text-dark)">- Monitor GC pressure</text>
+  <rect x="226.8355" y="550.8861" width="756.1182" height="89.1139" rx="12.0979" fill="var(--surface)" stroke="var(--text-faintest)" stroke-width="2.2684" />
+  <text x="604.8946" y="586.5317" text-anchor="middle" font-family="Arial" font-size="18.1468" font-weight="bold" fill="var(--text-dark)">Impact Order: Partitioning &gt; Caching &gt; Algorithm &gt; Resource Tuning</text>
+  <text x="604.8946" y="618.9367" text-anchor="middle" font-family="Arial" font-size="16.6346" fill="var(--text-mid)">Always profile before optimizing -- measure, don't guess</text>
+</svg>

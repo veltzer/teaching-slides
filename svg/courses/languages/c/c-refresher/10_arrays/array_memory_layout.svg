@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,59 +158,59 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:text x="17.7778" y="35.5556" font-size="21.3333" fill="var(--text-darker)">int arr[5] = {10, 20, 30, 40, 50};</ns0:text>
-  <ns0:text x="17.7778" y="69.3333" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">Contiguous memory (4 bytes per int):</ns0:text>
-  <ns0:rect x="17.7778" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="222.2222" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="426.6667" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="631.1111" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="835.5556" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="119.1111" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">10</ns0:text>
-  <ns0:text x="323.5556" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">20</ns0:text>
-  <ns0:text x="528" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">30</ns0:text>
-  <ns0:text x="732.4444" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">40</ns0:text>
-  <ns0:text x="936.8889" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">50</ns0:text>
-  <ns0:text x="119.1111" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[0]</ns0:text>
-  <ns0:text x="323.5556" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[1]</ns0:text>
-  <ns0:text x="528" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[2]</ns0:text>
-  <ns0:text x="732.4444" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[3]</ns0:text>
-  <ns0:text x="936.8889" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[4]</ns0:text>
-  <ns0:text x="17.7778" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1000</ns0:text>
-  <ns0:text x="222.2222" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1004</ns0:text>
-  <ns0:text x="426.6667" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1008</ns0:text>
-  <ns0:text x="631.1111" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x100C</ns0:text>
-  <ns0:text x="835.5556" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1010</ns0:text>
-  <ns0:text x="17.7778" y="224" font-size="21.3333" fill="var(--text-darker)">arr      == &amp;arr[0] == 0x1000</ns0:text>
-  <ns0:text x="17.7778" y="256" font-size="21.3333" fill="var(--text-darker)">arr + 1  == &amp;arr[1] == 0x1004  (advances by sizeof(int))</ns0:text>
-  <ns0:text x="17.7778" y="288" font-size="21.3333" fill="var(--text-darker)">*(arr+i) == arr[i]             (pointer arithmetic identity)</ns0:text>
-  <ns0:text x="17.7778" y="334.2222" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">2D array: int matrix[2][3] = {{1,2,3},{4,5,6}};</ns0:text>
-  <ns0:text x="17.7778" y="368" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">Row-major layout in memory:</ns0:text>
-  <ns0:rect x="17.7778" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="188.4444" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="359.1111" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="529.7778" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="700.4444" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="871.1111" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="102.2222" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">1</ns0:text>
-  <ns0:text x="272.8889" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">2</ns0:text>
-  <ns0:text x="443.5556" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">3</ns0:text>
-  <ns0:text x="614.2222" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">4</ns0:text>
-  <ns0:text x="784.8889" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">5</ns0:text>
-  <ns0:text x="955.5556" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">6</ns0:text>
-  <ns0:text x="102.2222" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[0][0]</ns0:text>
-  <ns0:text x="272.8889" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[0][1]</ns0:text>
-  <ns0:text x="443.5556" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[0][2]</ns0:text>
-  <ns0:text x="614.2222" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[1][0]</ns0:text>
-  <ns0:text x="784.8889" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[1][1]</ns0:text>
-  <ns0:text x="955.5556" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[1][2]</ns0:text>
-  <ns0:text x="17.7778" y="497.7778" font-size="21.3333" fill="var(--text-darker)">matrix[i][j] is at offset (i * 3 + j) * sizeof(int)</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <text x="17.7778" y="35.5556" font-size="21.3333" fill="var(--text-darker)">int arr[5] = {10, 20, 30, 40, 50};</text>
+  <text x="17.7778" y="69.3333" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">Contiguous memory (4 bytes per int):</text>
+  <rect x="17.7778" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="222.2222" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="426.6667" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="631.1111" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="835.5556" y="84.4444" width="202.6667" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="119.1111" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">10</text>
+  <text x="323.5556" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">20</text>
+  <text x="528" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">30</text>
+  <text x="732.4444" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">40</text>
+  <text x="936.8889" y="124.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">50</text>
+  <text x="119.1111" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[0]</text>
+  <text x="323.5556" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[1]</text>
+  <text x="528" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[2]</text>
+  <text x="732.4444" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[3]</text>
+  <text x="936.8889" y="149.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">arr[4]</text>
+  <text x="17.7778" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1000</text>
+  <text x="222.2222" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1004</text>
+  <text x="426.6667" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1008</text>
+  <text x="631.1111" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x100C</text>
+  <text x="835.5556" y="183.1111" font-size="16.8889" fill="var(--text-faint)">0x1010</text>
+  <text x="17.7778" y="224" font-size="21.3333" fill="var(--text-darker)">arr      == &amp;arr[0] == 0x1000</text>
+  <text x="17.7778" y="256" font-size="21.3333" fill="var(--text-darker)">arr + 1  == &amp;arr[1] == 0x1004  (advances by sizeof(int))</text>
+  <text x="17.7778" y="288" font-size="21.3333" fill="var(--text-darker)">*(arr+i) == arr[i]             (pointer arithmetic identity)</text>
+  <text x="17.7778" y="334.2222" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">2D array: int matrix[2][3] = {{1,2,3},{4,5,6}};</text>
+  <text x="17.7778" y="368" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">Row-major layout in memory:</text>
+  <rect x="17.7778" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="188.4444" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="359.1111" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="529.7778" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="700.4444" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="871.1111" y="380.4444" width="168.8889" height="69.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="102.2222" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">1</text>
+  <text x="272.8889" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">2</text>
+  <text x="443.5556" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">3</text>
+  <text x="614.2222" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">4</text>
+  <text x="784.8889" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">5</text>
+  <text x="955.5556" y="420.4444" font-size="23.1111" font-weight="bold" fill="var(--text-darker)" text-anchor="middle">6</text>
+  <text x="102.2222" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[0][0]</text>
+  <text x="272.8889" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[0][1]</text>
+  <text x="443.5556" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[0][2]</text>
+  <text x="614.2222" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[1][0]</text>
+  <text x="784.8889" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[1][1]</text>
+  <text x="955.5556" y="444.4444" font-size="16.8889" fill="var(--text-muted)" text-anchor="middle">[1][2]</text>
+  <text x="17.7778" y="497.7778" font-size="21.3333" fill="var(--text-darker)">matrix[i][j] is at offset (i * 3 + j) * sizeof(int)</text>
+</svg>

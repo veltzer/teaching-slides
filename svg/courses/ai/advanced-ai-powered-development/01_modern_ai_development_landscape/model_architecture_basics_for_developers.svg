@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,53 +158,53 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="ah" markerWidth="33.4367" markerHeight="141.75" refX="33.4367" refY="70.875" orient="auto">
-      <ns0:polygon points="0,202.5 11.7029,0" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="211.3532" height="640" fill="var(--surface-light)" />
-  <ns0:text x="105.6766" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Transformer Architecture for Developers</ns0:text>
-  <ns0:rect x="5.2838" y="160" width="36.9868" height="128" rx="2.6419" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.5284" />
-  <ns0:text x="23.7772" y="211.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Input</ns0:text>
-  <ns0:text x="23.7772" y="240" text-anchor="middle" font-size="10" fill="var(--primary-dk)">Tokens</ns0:text>
-  <ns0:text x="23.7772" y="272" text-anchor="middle" font-size="10" fill="var(--text-muted)">code + text</ns0:text>
-  <ns0:line x1="42.2706" y1="224" x2="51.5173" y2="224" stroke="var(--text-dark)" stroke-width="0.5284" marker-end="url(#ah)" />
-  <ns0:rect x="51.5173" y="160" width="42.2706" height="128" rx="2.6419" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.5284" />
-  <ns0:text x="72.6526" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Self-</ns0:text>
-  <ns0:text x="72.6526" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Attention</ns0:text>
-  <ns0:text x="72.6526" y="268.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">O(n²) cost</ns0:text>
-  <ns0:line x1="93.788" y1="224" x2="103.0347" y2="224" stroke="var(--text-dark)" stroke-width="0.5284" marker-end="url(#ah)" />
-  <ns0:rect x="103.0347" y="160" width="42.2706" height="128" rx="2.6419" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.5284" />
-  <ns0:text x="124.17" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Feed-</ns0:text>
-  <ns0:text x="124.17" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Forward</ns0:text>
-  <ns0:text x="124.17" y="268.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">transformations</ns0:text>
-  <ns0:line x1="145.3053" y1="224" x2="154.552" y2="224" stroke="var(--text-dark)" stroke-width="0.5284" marker-end="url(#ah)" />
-  <ns0:rect x="154.552" y="160" width="42.2706" height="128" rx="2.6419" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="0.5284" />
-  <ns0:text x="175.6873" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Output</ns0:text>
-  <ns0:text x="175.6873" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Probs</ns0:text>
-  <ns0:text x="175.6873" y="268.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">one token/step</ns0:text>
-  <ns0:rect x="5.2838" y="352" width="95.1089" height="240" rx="2.6419" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.3963" />
-  <ns0:text x="52.8383" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Why This Matters for Developers</ns0:text>
-  <ns0:text x="9.2467" y="440" font-size="10" fill="var(--text-dark)">▶ Self-attention cost scales quadratically with context length</ns0:text>
-  <ns0:text x="9.2467" y="475.2" font-size="10" fill="var(--text-dark)">▶ Longer context = higher cost + latency</ns0:text>
-  <ns0:text x="9.2467" y="510.4" font-size="10" fill="var(--text-dark)">▶ Output is autoregressive: one token at a time</ns0:text>
-  <ns0:text x="9.2467" y="545.6" font-size="10" fill="var(--text-dark)">▶ Larger models have more params, not bigger context</ns0:text>
-  <ns0:rect x="110.9604" y="352" width="93.788" height="240" rx="2.6419" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="0.3963" />
-  <ns0:text x="157.7223" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-dk)">Attention: All Tokens See All Tokens</ns0:text>
-  <ns0:circle cx="121.5281" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
-  <ns0:text x="121.5281" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">def</ns0:text>
-  <ns0:circle cx="137.3796" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
-  <ns0:text x="137.3796" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">fib</ns0:text>
-  <ns0:circle cx="153.2311" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
-  <ns0:text x="153.2311" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">(n)</ns0:text>
-  <ns0:circle cx="169.0825" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
-  <ns0:text x="169.0825" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">return</ns0:text>
-  <ns0:circle cx="187.5759" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
-  <ns0:text x="187.5759" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">n-1</ns0:text>
-  <ns0:line x1="125.7551" y1="472" x2="133.1525" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
-  <ns0:line x1="141.6066" y1="472" x2="149.004" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
-  <ns0:line x1="157.4581" y1="472" x2="164.8555" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
-  <ns0:line x1="173.3096" y1="472" x2="183.3489" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
-  <ns0:path d="M 121.5281 446.4 Q 154.552 384 187.5759 446.4" fill="none" stroke="var(--info-light)" stroke-width="0.2642" stroke-dasharray="1.0568 0.5284" />
-  <ns0:text x="157.7223" y="560" text-anchor="middle" font-size="10" fill="var(--text-muted)">each token attends to every other token</ns0:text>
-</ns0:svg>
+    <marker id="ah" markerWidth="33.4367" markerHeight="141.75" refX="33.4367" refY="70.875" orient="auto">
+      <polygon points="0,202.5 11.7029,0" fill="#333" />
+    </marker>
+  </defs>
+  <rect width="211.3532" height="640" fill="var(--surface-light)" />
+  <text x="105.6766" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Transformer Architecture for Developers</text>
+  <rect x="5.2838" y="160" width="36.9868" height="128" rx="2.6419" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.5284" />
+  <text x="23.7772" y="211.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Input</text>
+  <text x="23.7772" y="240" text-anchor="middle" font-size="10" fill="var(--primary-dk)">Tokens</text>
+  <text x="23.7772" y="272" text-anchor="middle" font-size="10" fill="var(--text-muted)">code + text</text>
+  <line x1="42.2706" y1="224" x2="51.5173" y2="224" stroke="var(--text-dark)" stroke-width="0.5284" marker-end="url(#ah)" />
+  <rect x="51.5173" y="160" width="42.2706" height="128" rx="2.6419" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.5284" />
+  <text x="72.6526" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Self-</text>
+  <text x="72.6526" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Attention</text>
+  <text x="72.6526" y="268.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">O(n²) cost</text>
+  <line x1="93.788" y1="224" x2="103.0347" y2="224" stroke="var(--text-dark)" stroke-width="0.5284" marker-end="url(#ah)" />
+  <rect x="103.0347" y="160" width="42.2706" height="128" rx="2.6419" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.5284" />
+  <text x="124.17" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Feed-</text>
+  <text x="124.17" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Forward</text>
+  <text x="124.17" y="268.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">transformations</text>
+  <line x1="145.3053" y1="224" x2="154.552" y2="224" stroke="var(--text-dark)" stroke-width="0.5284" marker-end="url(#ah)" />
+  <rect x="154.552" y="160" width="42.2706" height="128" rx="2.6419" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="0.5284" />
+  <text x="175.6873" y="204.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Output</text>
+  <text x="175.6873" y="233.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Probs</text>
+  <text x="175.6873" y="268.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">one token/step</text>
+  <rect x="5.2838" y="352" width="95.1089" height="240" rx="2.6419" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.3963" />
+  <text x="52.8383" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Why This Matters for Developers</text>
+  <text x="9.2467" y="440" font-size="10" fill="var(--text-dark)">▶ Self-attention cost scales quadratically with context length</text>
+  <text x="9.2467" y="475.2" font-size="10" fill="var(--text-dark)">▶ Longer context = higher cost + latency</text>
+  <text x="9.2467" y="510.4" font-size="10" fill="var(--text-dark)">▶ Output is autoregressive: one token at a time</text>
+  <text x="9.2467" y="545.6" font-size="10" fill="var(--text-dark)">▶ Larger models have more params, not bigger context</text>
+  <rect x="110.9604" y="352" width="93.788" height="240" rx="2.6419" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="0.3963" />
+  <text x="157.7223" y="396.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-dk)">Attention: All Tokens See All Tokens</text>
+  <circle cx="121.5281" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
+  <text x="121.5281" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">def</text>
+  <circle cx="137.3796" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
+  <text x="137.3796" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">fib</text>
+  <circle cx="153.2311" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
+  <text x="153.2311" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">(n)</text>
+  <circle cx="169.0825" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
+  <text x="169.0825" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">return</text>
+  <circle cx="187.5759" cy="472" r="4.2271" fill="var(--info-lt)" stroke="var(--info-dk)" />
+  <text x="187.5759" y="480" text-anchor="middle" font-size="10" fill="var(--text-dark)">n-1</text>
+  <line x1="125.7551" y1="472" x2="133.1525" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
+  <line x1="141.6066" y1="472" x2="149.004" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
+  <line x1="157.4581" y1="472" x2="164.8555" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
+  <line x1="173.3096" y1="472" x2="183.3489" y2="472" stroke="var(--info-dk)" stroke-width="0.2642" />
+  <path d="M 121.5281 446.4 Q 154.552 384 187.5759 446.4" fill="none" stroke="var(--info-light)" stroke-width="0.2642" stroke-dasharray="1.0568 0.5284" />
+  <text x="157.7223" y="560" text-anchor="middle" font-size="10" fill="var(--text-muted)">each token attends to every other token</text>
+</svg>

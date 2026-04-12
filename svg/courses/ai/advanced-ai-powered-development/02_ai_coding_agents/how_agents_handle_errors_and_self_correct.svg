@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,38 +158,38 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="25.6" markerHeight="112" refX="23.04" refY="56" orient="auto">
-      <ns0:polygon points="0,160 8.96,0" fill="white" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="204.8" height="640" fill="var(--code-bg)" />
-  <ns0:text x="102.4" y="56" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">How Agents Handle Errors and Self-Correct</ns0:text>
-  <ns0:rect x="5.12" y="128" width="42.24" height="136" fill="var(--danger-deeper)" rx="2.56" />
-  <ns0:text x="26.112" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">1. Error</ns0:text>
-  <ns0:text x="26.112" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Occurs</ns0:text>
-  <ns0:text x="26.112" y="248" text-anchor="middle" fill="var(--warn-tint)" font-size="10">test fails / crash</ns0:text>
-  <ns0:line x1="47.36" y1="195.2" x2="55.04" y2="195.2" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="55.04" y="128" width="42.24" height="136" fill="var(--primary-dk)" rx="2.56" />
-  <ns0:text x="76.032" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">2. Read</ns0:text>
-  <ns0:text x="76.032" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Output</ns0:text>
-  <ns0:text x="76.032" y="248" text-anchor="middle" fill="var(--primary-lt)" font-size="10">parse error message</ns0:text>
-  <ns0:line x1="97.28" y1="195.2" x2="104.96" y2="195.2" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="104.96" y="128" width="42.24" height="136" fill="var(--info-vivid)" rx="2.56" />
-  <ns0:text x="125.952" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">3. Diagnose</ns0:text>
-  <ns0:text x="125.952" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Root Cause</ns0:text>
-  <ns0:text x="125.952" y="248" text-anchor="middle" fill="var(--info-pale)" font-size="10">LLM reasons why</ns0:text>
-  <ns0:line x1="147.2" y1="195.2" x2="154.88" y2="195.2" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="154.88" y="128" width="44.8" height="136" fill="var(--ok-mid)" rx="2.56" />
-  <ns0:text x="177.152" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">4. Fix + Retry</ns0:text>
-  <ns0:text x="177.152" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tool Call</ns0:text>
-  <ns0:text x="177.152" y="248" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">edit + re-run</ns0:text>
-  <ns0:path d="M 177.152 264 Q 177.152 368 102.4 368 Q 76.032 368 76.032 264" fill="none" stroke="var(--bg)" stroke-width="0.512" stroke-dasharray="1.536 0.768" marker-end="url(#arr)" />
-  <ns0:text x="128" y="400" text-anchor="middle" fill="var(--warn-amber)" font-size="10">retry loop (up to max iterations)</ns0:text>
-  <ns0:rect x="76.8" y="440" width="51.2" height="96" fill="var(--ok-dk)" rx="2.56" />
-  <ns0:text x="102.4" y="484.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Done</ns0:text>
-  <ns0:text x="102.4" y="516.8" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">test passes</ns0:text>
-  <ns0:line x1="177.152" y1="264" x2="128" y2="440" stroke="var(--ok-vivid)" stroke-width="0.512" marker-end="url(#arr)" />
-  <ns0:rect x="5.12" y="552" width="194.56" height="72" rx="2.048" fill="var(--warn-amber)" fill-opacity="0.15" stroke="var(--warn-amber)" stroke-width="0.256" />
-  <ns0:text x="102.4" y="588.8" text-anchor="middle" fill="var(--warn-amber)" font-size="10">Key principles: cap retries, detect loops, log each attempt for debugging</ns0:text>
-  <ns0:text x="102.4" y="614.4" text-anchor="middle" fill="var(--border-softer)" font-size="10">Good agents set a max_turns limit and surface partial results on failure</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="25.6" markerHeight="112" refX="23.04" refY="56" orient="auto">
+      <polygon points="0,160 8.96,0" fill="white" />
+    </marker>
+  </defs>
+  <rect width="204.8" height="640" fill="var(--code-bg)" />
+  <text x="102.4" y="56" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">How Agents Handle Errors and Self-Correct</text>
+  <rect x="5.12" y="128" width="42.24" height="136" fill="var(--danger-deeper)" rx="2.56" />
+  <text x="26.112" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">1. Error</text>
+  <text x="26.112" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Occurs</text>
+  <text x="26.112" y="248" text-anchor="middle" fill="var(--warn-tint)" font-size="10">test fails / crash</text>
+  <line x1="47.36" y1="195.2" x2="55.04" y2="195.2" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="55.04" y="128" width="42.24" height="136" fill="var(--primary-dk)" rx="2.56" />
+  <text x="76.032" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">2. Read</text>
+  <text x="76.032" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Output</text>
+  <text x="76.032" y="248" text-anchor="middle" fill="var(--primary-lt)" font-size="10">parse error message</text>
+  <line x1="97.28" y1="195.2" x2="104.96" y2="195.2" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="104.96" y="128" width="42.24" height="136" fill="var(--info-vivid)" rx="2.56" />
+  <text x="125.952" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">3. Diagnose</text>
+  <text x="125.952" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Root Cause</text>
+  <text x="125.952" y="248" text-anchor="middle" fill="var(--info-pale)" font-size="10">LLM reasons why</text>
+  <line x1="147.2" y1="195.2" x2="154.88" y2="195.2" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="154.88" y="128" width="44.8" height="136" fill="var(--ok-mid)" rx="2.56" />
+  <text x="177.152" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">4. Fix + Retry</text>
+  <text x="177.152" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tool Call</text>
+  <text x="177.152" y="248" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">edit + re-run</text>
+  <path d="M 177.152 264 Q 177.152 368 102.4 368 Q 76.032 368 76.032 264" fill="none" stroke="var(--bg)" stroke-width="0.512" stroke-dasharray="1.536 0.768" marker-end="url(#arr)" />
+  <text x="128" y="400" text-anchor="middle" fill="var(--warn-amber)" font-size="10">retry loop (up to max iterations)</text>
+  <rect x="76.8" y="440" width="51.2" height="96" fill="var(--ok-dk)" rx="2.56" />
+  <text x="102.4" y="484.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Done</text>
+  <text x="102.4" y="516.8" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">test passes</text>
+  <line x1="177.152" y1="264" x2="128" y2="440" stroke="var(--ok-vivid)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="5.12" y="552" width="194.56" height="72" rx="2.048" fill="var(--warn-amber)" fill-opacity="0.15" stroke="var(--warn-amber)" stroke-width="0.256" />
+  <text x="102.4" y="588.8" text-anchor="middle" fill="var(--warn-amber)" font-size="10">Key principles: cap retries, detect loops, log each attempt for debugging</text>
+  <text x="102.4" y="614.4" text-anchor="middle" fill="var(--border-softer)" font-size="10">Good agents set a max_turns limit and surface partial results on failure</text>
+</svg>

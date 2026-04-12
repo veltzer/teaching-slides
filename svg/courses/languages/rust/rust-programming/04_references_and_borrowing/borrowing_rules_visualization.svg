@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,26 +158,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="592.5926" y="50" text-anchor="middle" font-size="23.7037" font-weight="bold">Borrow Checker Rules at a Glance</ns0:text>
-  <ns0:rect x="39.5062" y="100" width="513.5803" height="250" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="3.9506" rx="9.8766" />
-  <ns0:text x="296.2963" y="166.6667" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--ok-dk)">ALLOWED</ns0:text>
-  <ns0:text x="296.2963" y="223.3333" text-anchor="middle" font-size="19.7531">&amp;T + &amp;T + &amp;T (many immutable)</ns0:text>
-  <ns0:text x="296.2963" y="273.3333" text-anchor="middle" font-size="19.7531">&amp;mut T (one mutable, alone)</ns0:text>
-  <ns0:text x="296.2963" y="323.3333" text-anchor="middle" font-size="19.7531">Non-overlapping scopes: &amp;T then &amp;mut T</ns0:text>
-  <ns0:rect x="632.0988" y="100" width="513.5803" height="250" fill="var(--danger-pale)" stroke="var(--text-dark)" stroke-width="3.9506" rx="9.8766" />
-  <ns0:text x="888.8889" y="166.6667" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--danger-dk)">REJECTED</ns0:text>
-  <ns0:text x="888.8889" y="223.3333" text-anchor="middle" font-size="19.7531">&amp;T + &amp;mut T (simultaneous)</ns0:text>
-  <ns0:text x="888.8889" y="273.3333" text-anchor="middle" font-size="19.7531">&amp;mut T + &amp;mut T (two writers)</ns0:text>
-  <ns0:text x="888.8889" y="323.3333" text-anchor="middle" font-size="19.7531">Dangling ref (owner dropped)</ns0:text>
-  <ns0:rect x="118.5185" y="400" width="276.5432" height="116.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
-  <ns0:text x="256.7901" y="450" text-anchor="middle" font-size="19.7531" font-weight="bold">Compile Time</ns0:text>
-  <ns0:text x="256.7901" y="496.6667" text-anchor="middle" font-size="19.7531">Zero runtime cost</ns0:text>
-  <ns0:rect x="454.321" y="400" width="276.5432" height="116.6667" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
-  <ns0:text x="592.5926" y="450" text-anchor="middle" font-size="19.7531" font-weight="bold">NLL (Non-Lexical)</ns0:text>
-  <ns0:text x="592.5926" y="496.6667" text-anchor="middle" font-size="19.7531">Ref ends at last use</ns0:text>
-  <ns0:rect x="790.1234" y="400" width="276.5432" height="116.6667" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
-  <ns0:text x="928.3951" y="450" text-anchor="middle" font-size="19.7531" font-weight="bold">Data Race Free</ns0:text>
-  <ns0:text x="928.3951" y="496.6667" text-anchor="middle" font-size="19.7531">Prevents UB at compile</ns0:text>
-  <ns0:rect x="197.5308" y="566.6667" width="790.1234" height="73.3333" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="5.9259" />
-  <ns0:text x="592.5926" y="616.6667" text-anchor="middle" font-size="19.7531">Key insight: aliasing XOR mutation (but never both)</ns0:text>
-</ns0:svg>
+  <text x="592.5926" y="50" text-anchor="middle" font-size="23.7037" font-weight="bold">Borrow Checker Rules at a Glance</text>
+  <rect x="39.5062" y="100" width="513.5803" height="250" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="3.9506" rx="9.8766" />
+  <text x="296.2963" y="166.6667" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--ok-dk)">ALLOWED</text>
+  <text x="296.2963" y="223.3333" text-anchor="middle" font-size="19.7531">&amp;T + &amp;T + &amp;T (many immutable)</text>
+  <text x="296.2963" y="273.3333" text-anchor="middle" font-size="19.7531">&amp;mut T (one mutable, alone)</text>
+  <text x="296.2963" y="323.3333" text-anchor="middle" font-size="19.7531">Non-overlapping scopes: &amp;T then &amp;mut T</text>
+  <rect x="632.0988" y="100" width="513.5803" height="250" fill="var(--danger-pale)" stroke="var(--text-dark)" stroke-width="3.9506" rx="9.8766" />
+  <text x="888.8889" y="166.6667" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--danger-dk)">REJECTED</text>
+  <text x="888.8889" y="223.3333" text-anchor="middle" font-size="19.7531">&amp;T + &amp;mut T (simultaneous)</text>
+  <text x="888.8889" y="273.3333" text-anchor="middle" font-size="19.7531">&amp;mut T + &amp;mut T (two writers)</text>
+  <text x="888.8889" y="323.3333" text-anchor="middle" font-size="19.7531">Dangling ref (owner dropped)</text>
+  <rect x="118.5185" y="400" width="276.5432" height="116.6667" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
+  <text x="256.7901" y="450" text-anchor="middle" font-size="19.7531" font-weight="bold">Compile Time</text>
+  <text x="256.7901" y="496.6667" text-anchor="middle" font-size="19.7531">Zero runtime cost</text>
+  <rect x="454.321" y="400" width="276.5432" height="116.6667" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
+  <text x="592.5926" y="450" text-anchor="middle" font-size="19.7531" font-weight="bold">NLL (Non-Lexical)</text>
+  <text x="592.5926" y="496.6667" text-anchor="middle" font-size="19.7531">Ref ends at last use</text>
+  <rect x="790.1234" y="400" width="276.5432" height="116.6667" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
+  <text x="928.3951" y="450" text-anchor="middle" font-size="19.7531" font-weight="bold">Data Race Free</text>
+  <text x="928.3951" y="496.6667" text-anchor="middle" font-size="19.7531">Prevents UB at compile</text>
+  <rect x="197.5308" y="566.6667" width="790.1234" height="73.3333" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="5.9259" />
+  <text x="592.5926" y="616.6667" text-anchor="middle" font-size="19.7531">Key insight: aliasing XOR mutation (but never both)</text>
+</svg>

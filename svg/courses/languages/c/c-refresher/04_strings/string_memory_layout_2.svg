@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,34 +158,34 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:text x="88.8889" y="51.5556" font-size="19.5556" font-weight="bold" fill="var(--text-darker)" font-family="monospace">char *ptr = "Hello";</ns0:text>
-  <ns0:text x="88.8889" y="97.7778" font-size="16" fill="var(--text-faint)">Stack:</ns0:text>
-  <ns0:rect x="88.8889" y="111.1111" width="177.7778" height="97.7778" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="177.7778" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)" font-family="monospace">ptr: 0x1000</ns0:text>
-  <ns0:line x1="266.6667" y1="160" x2="444.4444" y2="160" stroke="var(--primary-dk)" stroke-width="1.7778" stroke-dasharray="8.8889 4.4444" marker-end="url(#arrow-primary)" />
-  <ns0:text x="448.8889" y="97.7778" font-size="16" fill="var(--text-faint)">Read-only data:</ns0:text>
-  <ns0:rect x="448.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="495.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'H'</ns0:text>
-  <ns0:rect x="544.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="591.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'e'</ns0:text>
-  <ns0:rect x="640.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="687.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'l'</ns0:text>
-  <ns0:rect x="736.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="783.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'l'</ns0:text>
-  <ns0:rect x="832.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="879.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'o'</ns0:text>
-  <ns0:rect x="928.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="975.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--danger)">'\0'</ns0:text>
-  <ns0:rect x="164.4444" y="275.5556" width="808.8889" height="124.4444" rx="7.1111" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="324.4444" text-anchor="middle" font-size="17.7778" fill="var(--danger)" font-weight="bold">String literal is in read-only memory!</ns0:text>
-  <ns0:text x="568.8889" y="368" text-anchor="middle" font-size="16" fill="var(--text-muted)">Writing to ptr[0] = 'h' is undefined behavior (segfault)</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <text x="88.8889" y="51.5556" font-size="19.5556" font-weight="bold" fill="var(--text-darker)" font-family="monospace">char *ptr = "Hello";</text>
+  <text x="88.8889" y="97.7778" font-size="16" fill="var(--text-faint)">Stack:</text>
+  <rect x="88.8889" y="111.1111" width="177.7778" height="97.7778" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="177.7778" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)" font-family="monospace">ptr: 0x1000</text>
+  <line x1="266.6667" y1="160" x2="444.4444" y2="160" stroke="var(--primary-dk)" stroke-width="1.7778" stroke-dasharray="8.8889 4.4444" marker-end="url(#arrow-primary)" />
+  <text x="448.8889" y="97.7778" font-size="16" fill="var(--text-faint)">Read-only data:</text>
+  <rect x="448.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="495.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'H'</text>
+  <rect x="544.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="591.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'e'</text>
+  <rect x="640.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="687.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'l'</text>
+  <rect x="736.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="783.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'l'</text>
+  <rect x="832.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="879.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--text-darker)">'o'</text>
+  <rect x="928.8889" y="111.1111" width="93.3333" height="97.7778" rx="4.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="975.1111" y="165.3333" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--danger)">'\0'</text>
+  <rect x="164.4444" y="275.5556" width="808.8889" height="124.4444" rx="7.1111" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="568.8889" y="324.4444" text-anchor="middle" font-size="17.7778" fill="var(--danger)" font-weight="bold">String literal is in read-only memory!</text>
+  <text x="568.8889" y="368" text-anchor="middle" font-size="16" fill="var(--text-muted)">Writing to ptr[0] = 'h' is undefined behavior (segfault)</text>
+</svg>

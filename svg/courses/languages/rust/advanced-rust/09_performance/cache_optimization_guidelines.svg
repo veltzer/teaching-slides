@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,22 +158,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="15.0588" markerHeight="16" refX="11.2941" refY="6" orient="auto">
-      <ns0:path d="M 0 0 L 0 12 L 15.0588 6 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="17.2101" y="18.2857" width="1135.8655" height="621.7143" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.5815" rx="6.884" />
-  <ns0:text x="34.4202" y="54.8571" font-family="sans-serif" font-size="24.0941" fill="var(--primary-deep)" text-anchor="start" font-weight="bold">Cache Optimization Rules</ns0:text>
-  <ns0:text x="34.4202" y="84.1143" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">1. Sequential access beats random access</ns0:text>
-  <ns0:text x="48.1883" y="111.5429" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Vec&lt;T&gt;  &gt;&gt;  LinkedList&lt;T&gt; for iteration</ns0:text>
-  <ns0:text x="34.4202" y="149.9429" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">2. Keep hot data together</ns0:text>
-  <ns0:text x="48.1883" y="177.3714" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">SoA layout: few fields, many items   |   AoS layout: all fields, few items</ns0:text>
-  <ns0:text x="34.4202" y="215.7714" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">3. Minimize struct size</ns0:text>
-  <ns0:text x="48.1883" y="243.2" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Less data per cache line = more items per line. Use #[repr(C)] or reorder fields.</ns0:text>
-  <ns0:text x="34.4202" y="281.6" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">4. Avoid pointer chasing</ns0:text>
-  <ns0:text x="48.1883" y="309.0286" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Vec&lt;T&gt; instead of Vec&lt;Box&lt;T&gt;&gt;   |   Flatten nested structures when possible</ns0:text>
-  <ns0:text x="34.4202" y="347.4286" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">5. Use indices instead of pointers for graphs/trees</ns0:text>
-  <ns0:text x="48.1883" y="374.8571" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Store nodes in a Vec, reference by index  (arena allocation pattern)</ns0:text>
-  <ns0:line x1="34.4202" y1="416.9143" x2="1135.8655" y2="416.9143" stroke="var(--text-placeholder)" stroke-width="1.7211" />
-  <ns0:text x="34.4202" y="446.1714" font-family="sans-serif" font-size="18.9311" fill="var(--text-muted)" text-anchor="start">Cache line = 64 bytes on x86.  L1 ~1ns,  L2 ~5ns,  L3 ~20ns,  DRAM ~100ns.</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="15.0588" markerHeight="16" refX="11.2941" refY="6" orient="auto">
+      <path d="M 0 0 L 0 12 L 15.0588 6 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="17.2101" y="18.2857" width="1135.8655" height="621.7143" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.5815" rx="6.884" />
+  <text x="34.4202" y="54.8571" font-family="sans-serif" font-size="24.0941" fill="var(--primary-deep)" text-anchor="start" font-weight="bold">Cache Optimization Rules</text>
+  <text x="34.4202" y="84.1143" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">1. Sequential access beats random access</text>
+  <text x="48.1883" y="111.5429" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Vec&lt;T&gt;  &gt;&gt;  LinkedList&lt;T&gt; for iteration</text>
+  <text x="34.4202" y="149.9429" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">2. Keep hot data together</text>
+  <text x="48.1883" y="177.3714" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">SoA layout: few fields, many items   |   AoS layout: all fields, few items</text>
+  <text x="34.4202" y="215.7714" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">3. Minimize struct size</text>
+  <text x="48.1883" y="243.2" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Less data per cache line = more items per line. Use #[repr(C)] or reorder fields.</text>
+  <text x="34.4202" y="281.6" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">4. Avoid pointer chasing</text>
+  <text x="48.1883" y="309.0286" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Vec&lt;T&gt; instead of Vec&lt;Box&lt;T&gt;&gt;   |   Flatten nested structures when possible</text>
+  <text x="34.4202" y="347.4286" font-family="sans-serif" font-size="20.6521" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">5. Use indices instead of pointers for graphs/trees</text>
+  <text x="48.1883" y="374.8571" font-family="sans-serif" font-size="18.9311" fill="var(--text-dark)" text-anchor="start">Store nodes in a Vec, reference by index  (arena allocation pattern)</text>
+  <line x1="34.4202" y1="416.9143" x2="1135.8655" y2="416.9143" stroke="var(--text-placeholder)" stroke-width="1.7211" />
+  <text x="34.4202" y="446.1714" font-family="sans-serif" font-size="18.9311" fill="var(--text-muted)" text-anchor="start">Cache line = 64 bytes on x86.  L1 ~1ns,  L2 ~5ns,  L3 ~20ns,  DRAM ~100ns.</text>
+</svg>

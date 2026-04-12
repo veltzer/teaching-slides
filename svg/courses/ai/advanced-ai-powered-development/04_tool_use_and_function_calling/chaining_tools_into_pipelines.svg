@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,50 +158,50 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="42.6223" markerHeight="141.75" refX="38.3599" refY="70.875" orient="auto">
-      <ns0:polygon points="0,202.5 14.9178,0" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="269.4148" height="640" fill="var(--surface-light)" />
-  <ns0:text x="134.7074" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Tool Pipeline: "Find and Fix All Deprecated API Calls"</ns0:text>
-  <ns0:rect x="6.7354" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.6735" />
-  <ns0:text x="34.3504" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Step 1</ns0:text>
-  <ns0:text x="34.3504" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">grep("deprecated")</ns0:text>
-  <ns0:text x="34.3504" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ list of files</ns0:text>
-  <ns0:text x="34.3504" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">codebase search</ns0:text>
-  <ns0:line x1="62.3022" y1="208" x2="72.4052" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
-  <ns0:rect x="72.4052" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.6735" />
-  <ns0:text x="100.0203" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Step 2</ns0:text>
-  <ns0:text x="100.0203" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">read_file(file)</ns0:text>
-  <ns0:text x="100.0203" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ source code</ns0:text>
-  <ns0:text x="100.0203" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">for each match</ns0:text>
-  <ns0:line x1="127.972" y1="208" x2="138.0751" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
-  <ns0:rect x="138.0751" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.6735" />
-  <ns0:text x="165.6901" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Step 3</ns0:text>
-  <ns0:text x="165.6901" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">edit_file(file)</ns0:text>
-  <ns0:text x="165.6901" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ patched file</ns0:text>
-  <ns0:text x="165.6901" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">apply new API</ns0:text>
-  <ns0:line x1="193.6419" y1="208" x2="203.745" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
-  <ns0:rect x="203.745" y="128" width="58.9345" height="160" rx="3.3677" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.6735" />
-  <ns0:text x="233.0438" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Step 4</ns0:text>
-  <ns0:text x="233.0438" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">shell("npm test")</ns0:text>
-  <ns0:text x="233.0438" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ validation</ns0:text>
-  <ns0:text x="233.0438" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">all tests green</ns0:text>
-  <ns0:rect x="6.7354" y="352" width="255.9441" height="264" rx="3.3677" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5052" />
-  <ns0:text x="134.7074" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Orchestration Strategies</ns0:text>
-  <ns0:rect x="13.4707" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
-  <ns0:text x="49.505" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Sequential</ns0:text>
-  <ns0:text x="49.505" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">each step depends</ns0:text>
-  <ns0:text x="49.505" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">on previous result</ns0:text>
-  <ns0:text x="49.505" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. read → analyze → fix</ns0:text>
-  <ns0:rect x="98.6732" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
-  <ns0:text x="134.7074" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Fan-Out / Fan-In</ns0:text>
-  <ns0:text x="134.7074" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">parallel reads,</ns0:text>
-  <ns0:text x="134.7074" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">then aggregate</ns0:text>
-  <ns0:text x="134.7074" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. read 5 files at once</ns0:text>
-  <ns0:rect x="183.8756" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
-  <ns0:text x="219.9099" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Conditional</ns0:text>
-  <ns0:text x="219.9099" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">branch based on</ns0:text>
-  <ns0:text x="219.9099" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">tool output</ns0:text>
-  <ns0:text x="219.9099" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. skip if tests pass</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="42.6223" markerHeight="141.75" refX="38.3599" refY="70.875" orient="auto">
+      <polygon points="0,202.5 14.9178,0" fill="#555" />
+    </marker>
+  </defs>
+  <rect width="269.4148" height="640" fill="var(--surface-light)" />
+  <text x="134.7074" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Tool Pipeline: "Find and Fix All Deprecated API Calls"</text>
+  <rect x="6.7354" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.6735" />
+  <text x="34.3504" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Step 1</text>
+  <text x="34.3504" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">grep("deprecated")</text>
+  <text x="34.3504" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ list of files</text>
+  <text x="34.3504" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">codebase search</text>
+  <line x1="62.3022" y1="208" x2="72.4052" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
+  <rect x="72.4052" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.6735" />
+  <text x="100.0203" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Step 2</text>
+  <text x="100.0203" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">read_file(file)</text>
+  <text x="100.0203" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ source code</text>
+  <text x="100.0203" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">for each match</text>
+  <line x1="127.972" y1="208" x2="138.0751" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
+  <rect x="138.0751" y="128" width="55.5668" height="160" rx="3.3677" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.6735" />
+  <text x="165.6901" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">Step 3</text>
+  <text x="165.6901" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">edit_file(file)</text>
+  <text x="165.6901" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ patched file</text>
+  <text x="165.6901" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">apply new API</text>
+  <line x1="193.6419" y1="208" x2="203.745" y2="208" stroke="var(--text-muted)" stroke-width="0.6735" marker-end="url(#arr)" />
+  <rect x="203.745" y="128" width="58.9345" height="160" rx="3.3677" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.6735" />
+  <text x="233.0438" y="176" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Step 4</text>
+  <text x="233.0438" y="211.2" text-anchor="middle" font-size="10" fill="var(--text-dark)">shell("npm test")</text>
+  <text x="233.0438" y="248" text-anchor="middle" font-size="10" fill="var(--text-muted)">→ validation</text>
+  <text x="233.0438" y="275.2" text-anchor="middle" font-size="10" fill="var(--text-faint)">all tests green</text>
+  <rect x="6.7354" y="352" width="255.9441" height="264" rx="3.3677" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5052" />
+  <text x="134.7074" y="400" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Orchestration Strategies</text>
+  <rect x="13.4707" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <text x="49.505" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Sequential</text>
+  <text x="49.505" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">each step depends</text>
+  <text x="49.505" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">on previous result</text>
+  <text x="49.505" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. read → analyze → fix</text>
+  <rect x="98.6732" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <text x="134.7074" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Fan-Out / Fan-In</text>
+  <text x="134.7074" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">parallel reads,</text>
+  <text x="134.7074" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">then aggregate</text>
+  <text x="134.7074" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. read 5 files at once</text>
+  <rect x="183.8756" y="428.8" width="72.4052" height="160" rx="2.6941" fill="var(--primary-lt)" stroke="var(--primary-indigo)" />
+  <text x="219.9099" y="473.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Conditional</text>
+  <text x="219.9099" y="508.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">branch based on</text>
+  <text x="219.9099" y="540.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">tool output</text>
+  <text x="219.9099" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">e.g. skip if tests pass</text>
+</svg>

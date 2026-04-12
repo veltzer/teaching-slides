@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,33 +157,33 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="574.4121" y="31.068" text-anchor="middle" font-size="19.8835" font-weight="bold" fill="var(--text-dark)">CDC Architecture</ns0:text>
-  <ns0:rect x="19.147" y="43.4951" width="1110.53" height="596.5049" rx="6.2136" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="2.4854" />
-  <ns0:rect x="76.5883" y="68.3495" width="248.9119" height="62.136" rx="6.2136" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4854" />
-  <ns0:text x="201.0442" y="105.6311" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Postgres</ns0:text>
-  <ns0:text x="201.0442" y="124.2718" text-anchor="middle" font-size="12.4272" fill="var(--text-mid)">(source)</ns0:text>
-  <ns0:line x1="325.5002" y1="99.4175" x2="421.2355" y2="99.4175" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
-  <ns0:rect x="421.2355" y="68.3495" width="268.059" height="62.136" rx="6.2136" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4854" />
-  <ns0:text x="555.2651" y="105.6311" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Debezium</ns0:text>
-  <ns0:line x1="689.2945" y1="99.4175" x2="785.0299" y2="99.4175" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
-  <ns0:rect x="785.0299" y="68.3495" width="268.059" height="62.136" rx="6.2136" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4854" />
-  <ns0:text x="919.0594" y="105.6311" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Kafka Topic</ns0:text>
-  <ns0:text x="76.5883" y="167.767" font-size="14.9126" fill="var(--text-muted)">Debezium reads the WAL (Write-Ahead Log)</ns0:text>
-  <ns0:text x="76.5883" y="186.4078" font-size="14.9126" fill="var(--text-muted)">and emits change events:</ns0:text>
-  <ns0:line x1="919.0594" y1="130.4854" x2="919.0594" y2="211.2621" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
-  <ns0:rect x="76.5883" y="211.2621" width="995.6476" height="248.5437" rx="6.2136" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4854" />
-  <ns0:text x="114.8824" y="242.3301" font-size="16.1553" font-weight="bold" fill="var(--danger-deeper)">Change Event Structure:</ns0:text>
-  <ns0:text x="114.8824" y="270.9127" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">{</ns0:text>
-  <ns0:text x="153.1766" y="295.767" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"op": "c|u|d|r",</ns0:text>
-  <ns0:text x="153.1766" y="320.6214" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"before": { old row data },</ns0:text>
-  <ns0:text x="153.1766" y="345.4758" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"after":  { new row data },</ns0:text>
-  <ns0:text x="153.1766" y="370.3301" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"source": { table, lsn, ts },</ns0:text>
-  <ns0:text x="153.1766" y="395.1845" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"ts_ms": 1718460000000</ns0:text>
-  <ns0:text x="114.8824" y="420.0388" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">}</ns0:text>
-  <ns0:text x="114.8824" y="447.3786" font-size="13.6699" fill="var(--text-muted)">op: c=create, u=update, d=delete, r=read (snapshot)</ns0:text>
-  <ns0:line x1="574.4121" y1="459.8058" x2="574.4121" y2="509.5146" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
-  <ns0:rect x="153.1766" y="509.5146" width="842.4711" height="62.136" rx="6.2136" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4854" />
-  <ns0:text x="574.4121" y="540.5825" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Spark Structured Streaming</ns0:text>
-  <ns0:text x="574.4121" y="561.7088" text-anchor="middle" font-size="13.6699" fill="var(--text-mid)">Apply changes to Delta Lake</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="574.4121" y="31.068" text-anchor="middle" font-size="19.8835" font-weight="bold" fill="var(--text-dark)">CDC Architecture</text>
+  <rect x="19.147" y="43.4951" width="1110.53" height="596.5049" rx="6.2136" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="2.4854" />
+  <rect x="76.5883" y="68.3495" width="248.9119" height="62.136" rx="6.2136" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4854" />
+  <text x="201.0442" y="105.6311" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Postgres</text>
+  <text x="201.0442" y="124.2718" text-anchor="middle" font-size="12.4272" fill="var(--text-mid)">(source)</text>
+  <line x1="325.5002" y1="99.4175" x2="421.2355" y2="99.4175" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
+  <rect x="421.2355" y="68.3495" width="268.059" height="62.136" rx="6.2136" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4854" />
+  <text x="555.2651" y="105.6311" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Debezium</text>
+  <line x1="689.2945" y1="99.4175" x2="785.0299" y2="99.4175" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
+  <rect x="785.0299" y="68.3495" width="268.059" height="62.136" rx="6.2136" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4854" />
+  <text x="919.0594" y="105.6311" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Kafka Topic</text>
+  <text x="76.5883" y="167.767" font-size="14.9126" fill="var(--text-muted)">Debezium reads the WAL (Write-Ahead Log)</text>
+  <text x="76.5883" y="186.4078" font-size="14.9126" fill="var(--text-muted)">and emits change events:</text>
+  <line x1="919.0594" y1="130.4854" x2="919.0594" y2="211.2621" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
+  <rect x="76.5883" y="211.2621" width="995.6476" height="248.5437" rx="6.2136" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4854" />
+  <text x="114.8824" y="242.3301" font-size="16.1553" font-weight="bold" fill="var(--danger-deeper)">Change Event Structure:</text>
+  <text x="114.8824" y="270.9127" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">{</text>
+  <text x="153.1766" y="295.767" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"op": "c|u|d|r",</text>
+  <text x="153.1766" y="320.6214" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"before": { old row data },</text>
+  <text x="153.1766" y="345.4758" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"after":  { new row data },</text>
+  <text x="153.1766" y="370.3301" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"source": { table, lsn, ts },</text>
+  <text x="153.1766" y="395.1845" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">"ts_ms": 1718460000000</text>
+  <text x="114.8824" y="420.0388" font-size="14.9126" font-family="monospace" fill="var(--text-dark)">}</text>
+  <text x="114.8824" y="447.3786" font-size="13.6699" fill="var(--text-muted)">op: c=create, u=update, d=delete, r=read (snapshot)</text>
+  <line x1="574.4121" y1="459.8058" x2="574.4121" y2="509.5146" stroke="var(--primary-bright)" stroke-width="2.4854" marker-end="url(#arrow)" />
+  <rect x="153.1766" y="509.5146" width="842.4711" height="62.136" rx="6.2136" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4854" />
+  <text x="574.4121" y="540.5825" text-anchor="middle" font-size="16.1553" fill="var(--text-dark)">Spark Structured Streaming</text>
+  <text x="574.4121" y="561.7088" text-anchor="middle" font-size="13.6699" fill="var(--text-mid)">Apply changes to Delta Lake</text>
+</svg>

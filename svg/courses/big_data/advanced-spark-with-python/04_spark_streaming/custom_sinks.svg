@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,48 +158,48 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrow-cs" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
-      <ns0:polygon points="0,18 5.6,0" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="591.0534" y="41.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.6421" font-weight="bold" fill="var(--text-dark)">Custom Sink Implementation</ns0:text>
-  <ns0:rect x="44.329" y="83.1169" width="517.1717" height="265.974" rx="11.8211" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="2.9553" />
-  <ns0:text x="302.9149" y="124.6753" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--primary-strong)">foreachBatch (Recommended)</ns0:text>
-  <ns0:text x="73.8817" y="166.2338" font-family="monospace" font-size="16.254" fill="var(--text-muted)">def write_batch(df, epoch_id):</ns0:text>
-  <ns0:text x="73.8817" y="196.1558" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    df.write.format("jdbc")</ns0:text>
-  <ns0:text x="73.8817" y="226.0779" font-family="monospace" font-size="16.254" fill="var(--text-muted)">      .option("url", jdbc_url)</ns0:text>
-  <ns0:text x="73.8817" y="256" font-family="monospace" font-size="16.254" fill="var(--text-muted)">      .mode("append").save()</ns0:text>
-  <ns0:text x="302.9149" y="307.5325" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--ok-dk)">Full DataFrame API available</ns0:text>
-  <ns0:text x="302.9149" y="332.4675" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--ok-dk)">Multiple writes per batch</ns0:text>
-  <ns0:rect x="605.8297" y="83.1169" width="531.9481" height="265.974" rx="11.8211" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.9553" />
-  <ns0:text x="871.8038" y="124.6753" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--warn-deep)">foreach (Row-by-Row)</ns0:text>
-  <ns0:text x="635.3824" y="166.2338" font-family="monospace" font-size="16.254" fill="var(--text-muted)">class MySink(ForeachWriter):</ns0:text>
-  <ns0:text x="635.3824" y="196.1558" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    def open(partition, epoch):</ns0:text>
-  <ns0:text x="635.3824" y="226.0779" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    def process(row):</ns0:text>
-  <ns0:text x="635.3824" y="256" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    def close(error):</ns0:text>
-  <ns0:text x="871.8038" y="307.5325" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--warn-deep)">Per-row processing</ns0:text>
-  <ns0:text x="871.8038" y="332.4675" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--warn-deep)">Connection management built-in</ns0:text>
-  <ns0:text x="591.0534" y="398.961" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--text-dark)">Custom Sink Flow</ns0:text>
-  <ns0:rect x="73.8817" y="432.2078" width="192.0924" height="74.8052" rx="8.8658" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="2.9553" />
-  <ns0:text x="169.9278" y="477.0909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--primary-strong)">Stream</ns0:text>
-  <ns0:line x1="265.974" y1="468.7792" x2="325.0794" y2="468.7792" stroke="var(--text-dark)" stroke-width="2.9553" marker-end="url(#arrow-cs)" />
-  <ns0:rect x="339.8557" y="432.2078" width="192.0924" height="74.8052" rx="8.8658" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9553" />
-  <ns0:text x="435.9019" y="465.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--ok-dk)">Transform</ns0:text>
-  <ns0:text x="435.9019" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-muted)">filter / map / agg</ns0:text>
-  <ns0:line x1="531.9481" y1="468.7792" x2="591.0534" y2="468.7792" stroke="var(--text-dark)" stroke-width="2.9553" marker-end="url(#arrow-cs)" />
-  <ns0:rect x="605.8297" y="432.2078" width="192.0924" height="74.8052" rx="8.8658" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.9553" />
-  <ns0:text x="701.8759" y="465.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--warn-deep)">Custom Sink</ns0:text>
-  <ns0:text x="701.8759" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-muted)">foreachBatch</ns0:text>
-  <ns0:line x1="797.9221" y1="448.8312" x2="857.0274" y2="432.2078" stroke="var(--text-dark)" stroke-width="2.2165" marker-end="url(#arrow-cs)" />
-  <ns0:line x1="797.9221" y1="468.7792" x2="857.0274" y2="468.7792" stroke="var(--text-dark)" stroke-width="2.2165" marker-end="url(#arrow-cs)" />
-  <ns0:line x1="797.9221" y1="488.7273" x2="857.0274" y2="505.3506" stroke="var(--text-dark)" stroke-width="2.2165" marker-end="url(#arrow-cs)" />
-  <ns0:rect x="871.8038" y="412.2597" width="147.7633" height="41.5584" rx="5.9105" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="1.4776" />
-  <ns0:text x="945.6854" y="440.5195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--info-mid)">Database</ns0:text>
-  <ns0:rect x="871.8038" y="462.1299" width="147.7633" height="41.5584" rx="5.9105" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="1.4776" />
-  <ns0:text x="945.6854" y="490.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--info-mid)">REST API</ns0:text>
-  <ns0:rect x="871.8038" y="512" width="147.7633" height="41.5584" rx="5.9105" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="1.4776" />
-  <ns0:text x="945.6854" y="540.2597" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--info-mid)">Cache / Redis</ns0:text>
-  <ns0:rect x="73.8817" y="548.5714" width="738.8167" height="91.4286" rx="8.8658" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.4776" />
-  <ns0:text x="443.29" y="585.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--ok-dk)">Best Practices</ns0:text>
-  <ns0:text x="443.29" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">Make writes idempotent | Use epoch_id for dedup | Handle retries | Batch connections</ns0:text>
-</ns0:svg>
+    <marker id="arrow-cs" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
+    </marker>
+  </defs>
+  <text x="591.0534" y="41.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.6421" font-weight="bold" fill="var(--text-dark)">Custom Sink Implementation</text>
+  <rect x="44.329" y="83.1169" width="517.1717" height="265.974" rx="11.8211" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="2.9553" />
+  <text x="302.9149" y="124.6753" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--primary-strong)">foreachBatch (Recommended)</text>
+  <text x="73.8817" y="166.2338" font-family="monospace" font-size="16.254" fill="var(--text-muted)">def write_batch(df, epoch_id):</text>
+  <text x="73.8817" y="196.1558" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    df.write.format("jdbc")</text>
+  <text x="73.8817" y="226.0779" font-family="monospace" font-size="16.254" fill="var(--text-muted)">      .option("url", jdbc_url)</text>
+  <text x="73.8817" y="256" font-family="monospace" font-size="16.254" fill="var(--text-muted)">      .mode("append").save()</text>
+  <text x="302.9149" y="307.5325" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--ok-dk)">Full DataFrame API available</text>
+  <text x="302.9149" y="332.4675" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--ok-dk)">Multiple writes per batch</text>
+  <rect x="605.8297" y="83.1169" width="531.9481" height="265.974" rx="11.8211" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.9553" />
+  <text x="871.8038" y="124.6753" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--warn-deep)">foreach (Row-by-Row)</text>
+  <text x="635.3824" y="166.2338" font-family="monospace" font-size="16.254" fill="var(--text-muted)">class MySink(ForeachWriter):</text>
+  <text x="635.3824" y="196.1558" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    def open(partition, epoch):</text>
+  <text x="635.3824" y="226.0779" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    def process(row):</text>
+  <text x="635.3824" y="256" font-family="monospace" font-size="16.254" fill="var(--text-muted)">    def close(error):</text>
+  <text x="871.8038" y="307.5325" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--warn-deep)">Per-row processing</text>
+  <text x="871.8038" y="332.4675" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--warn-deep)">Connection management built-in</text>
+  <text x="591.0534" y="398.961" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--text-dark)">Custom Sink Flow</text>
+  <rect x="73.8817" y="432.2078" width="192.0924" height="74.8052" rx="8.8658" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="2.9553" />
+  <text x="169.9278" y="477.0909" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--primary-strong)">Stream</text>
+  <line x1="265.974" y1="468.7792" x2="325.0794" y2="468.7792" stroke="var(--text-dark)" stroke-width="2.9553" marker-end="url(#arrow-cs)" />
+  <rect x="339.8557" y="432.2078" width="192.0924" height="74.8052" rx="8.8658" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.9553" />
+  <text x="435.9019" y="465.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--ok-dk)">Transform</text>
+  <text x="435.9019" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-muted)">filter / map / agg</text>
+  <line x1="531.9481" y1="468.7792" x2="591.0534" y2="468.7792" stroke="var(--text-dark)" stroke-width="2.9553" marker-end="url(#arrow-cs)" />
+  <rect x="605.8297" y="432.2078" width="192.0924" height="74.8052" rx="8.8658" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="2.9553" />
+  <text x="701.8759" y="465.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--warn-deep)">Custom Sink</text>
+  <text x="701.8759" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-muted)">foreachBatch</text>
+  <line x1="797.9221" y1="448.8312" x2="857.0274" y2="432.2078" stroke="var(--text-dark)" stroke-width="2.2165" marker-end="url(#arrow-cs)" />
+  <line x1="797.9221" y1="468.7792" x2="857.0274" y2="468.7792" stroke="var(--text-dark)" stroke-width="2.2165" marker-end="url(#arrow-cs)" />
+  <line x1="797.9221" y1="488.7273" x2="857.0274" y2="505.3506" stroke="var(--text-dark)" stroke-width="2.2165" marker-end="url(#arrow-cs)" />
+  <rect x="871.8038" y="412.2597" width="147.7633" height="41.5584" rx="5.9105" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="1.4776" />
+  <text x="945.6854" y="440.5195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--info-mid)">Database</text>
+  <rect x="871.8038" y="462.1299" width="147.7633" height="41.5584" rx="5.9105" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="1.4776" />
+  <text x="945.6854" y="490.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--info-mid)">REST API</text>
+  <rect x="871.8038" y="512" width="147.7633" height="41.5584" rx="5.9105" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="1.4776" />
+  <text x="945.6854" y="540.2597" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--info-mid)">Cache / Redis</text>
+  <rect x="73.8817" y="548.5714" width="738.8167" height="91.4286" rx="8.8658" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.4776" />
+  <text x="443.29" y="585.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--ok-dk)">Best Practices</text>
+  <text x="443.29" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">Make writes idempotent | Use epoch_id for dedup | Handle retries | Batch connections</text>
+</svg>

@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,25 +158,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:rect x="20.7158" y="12.5491" width="1118.6554" height="627.4509" rx="6.2745" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="2.5098" />
-  <ns0:text x="580.0435" y="50.1961" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="var(--primary-bright)">Schema Evolution Decision Tree</ns0:text>
-  <ns0:text x="62.1475" y="85.3333" font-size="17.5686" font-weight="bold" fill="var(--text-dark)">Is the change backward-compatible?</ns0:text>
-  <ns0:rect x="62.1475" y="100.3921" width="1035.792" height="69.0196" rx="6.2745" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.8823" />
-  <ns0:text x="93.2212" y="125.4902" font-size="16.3137" font-weight="bold" fill="var(--ok-bright)">Adding a new column?</ns0:text>
-  <ns0:text x="93.2212" y="150.5882" font-size="15.0588" fill="var(--text-dark)">Yes → Use mergeSchema (safe)</ns0:text>
-  <ns0:rect x="62.1475" y="181.9607" width="1035.792" height="81.5686" rx="6.2745" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.8823" />
-  <ns0:text x="93.2212" y="207.0588" font-size="16.3137" font-weight="bold" fill="var(--danger-deeper)">Renaming a column?</ns0:text>
-  <ns0:text x="93.2212" y="232.1568" font-size="15.0588" fill="var(--text-dark)">Yes → Add new column + backfill + drop old</ns0:text>
-  <ns0:text x="93.2212" y="250.9804" font-size="13.8039" fill="var(--text-dark)">(never rename in-place)</ns0:text>
-  <ns0:rect x="62.1475" y="276.0784" width="1035.792" height="81.5686" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.8823" />
-  <ns0:text x="93.2212" y="301.1765" font-size="16.3137" font-weight="bold" fill="var(--primary-bright)">Changing column type?</ns0:text>
-  <ns0:text x="93.2212" y="326.2745" font-size="15.0588" fill="var(--text-dark)">Widening (int→long): mergeSchema</ns0:text>
-  <ns0:text x="93.2212" y="348.8627" font-size="15.0588" fill="var(--text-dark)">Narrowing (long→int): overwrite</ns0:text>
-  <ns0:rect x="62.1475" y="370.196" width="1035.792" height="81.5686" rx="6.2745" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.8823" />
-  <ns0:text x="93.2212" y="395.294" font-size="16.3137" font-weight="bold" fill="var(--danger-bright)">Removing a column?</ns0:text>
-  <ns0:text x="93.2212" y="420.3922" font-size="15.0588" fill="var(--text-dark)">Yes → Drop column + rewrite</ns0:text>
-  <ns0:text x="93.2212" y="439.2157" font-size="13.8039" fill="var(--text-dark)">(consumers may break)</ns0:text>
-  <ns0:rect x="62.1475" y="476.8627" width="1035.792" height="62.7451" rx="6.2745" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5098" />
-  <ns0:text x="580.0435" y="508.2352" text-anchor="middle" font-size="16.3137" font-weight="bold" fill="var(--ok-bright)">Best practice: version your schemas</ns0:text>
-  <ns0:text x="580.0435" y="529.5686" text-anchor="middle" font-size="15.0588" fill="var(--text-dark)">and validate before processing.</ns0:text>
-</ns0:svg>
+  <rect x="20.7158" y="12.5491" width="1118.6554" height="627.4509" rx="6.2745" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="2.5098" />
+  <text x="580.0435" y="50.1961" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="var(--primary-bright)">Schema Evolution Decision Tree</text>
+  <text x="62.1475" y="85.3333" font-size="17.5686" font-weight="bold" fill="var(--text-dark)">Is the change backward-compatible?</text>
+  <rect x="62.1475" y="100.3921" width="1035.792" height="69.0196" rx="6.2745" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.8823" />
+  <text x="93.2212" y="125.4902" font-size="16.3137" font-weight="bold" fill="var(--ok-bright)">Adding a new column?</text>
+  <text x="93.2212" y="150.5882" font-size="15.0588" fill="var(--text-dark)">Yes → Use mergeSchema (safe)</text>
+  <rect x="62.1475" y="181.9607" width="1035.792" height="81.5686" rx="6.2745" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.8823" />
+  <text x="93.2212" y="207.0588" font-size="16.3137" font-weight="bold" fill="var(--danger-deeper)">Renaming a column?</text>
+  <text x="93.2212" y="232.1568" font-size="15.0588" fill="var(--text-dark)">Yes → Add new column + backfill + drop old</text>
+  <text x="93.2212" y="250.9804" font-size="13.8039" fill="var(--text-dark)">(never rename in-place)</text>
+  <rect x="62.1475" y="276.0784" width="1035.792" height="81.5686" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.8823" />
+  <text x="93.2212" y="301.1765" font-size="16.3137" font-weight="bold" fill="var(--primary-bright)">Changing column type?</text>
+  <text x="93.2212" y="326.2745" font-size="15.0588" fill="var(--text-dark)">Widening (int→long): mergeSchema</text>
+  <text x="93.2212" y="348.8627" font-size="15.0588" fill="var(--text-dark)">Narrowing (long→int): overwrite</text>
+  <rect x="62.1475" y="370.196" width="1035.792" height="81.5686" rx="6.2745" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.8823" />
+  <text x="93.2212" y="395.294" font-size="16.3137" font-weight="bold" fill="var(--danger-bright)">Removing a column?</text>
+  <text x="93.2212" y="420.3922" font-size="15.0588" fill="var(--text-dark)">Yes → Drop column + rewrite</text>
+  <text x="93.2212" y="439.2157" font-size="13.8039" fill="var(--text-dark)">(consumers may break)</text>
+  <rect x="62.1475" y="476.8627" width="1035.792" height="62.7451" rx="6.2745" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5098" />
+  <text x="580.0435" y="508.2352" text-anchor="middle" font-size="16.3137" font-weight="bold" fill="var(--ok-bright)">Best practice: version your schemas</text>
+  <text x="580.0435" y="529.5686" text-anchor="middle" font-size="15.0588" fill="var(--text-dark)">and validate before processing.</text>
+</svg>

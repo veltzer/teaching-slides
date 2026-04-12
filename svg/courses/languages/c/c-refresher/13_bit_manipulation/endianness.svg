@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,40 +158,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:text x="17.7778" y="71.1111" font-size="21.3333" font-weight="bold" fill="var(--text-darker)" font-family="sans-serif">Big-Endian (network byte order)</ns0:text>
-  <ns0:text x="17.7778" y="133.3333" font-size="19.5556" fill="var(--text-muted)">uint32_t val = 0x12345678</ns0:text>
-  <ns0:text x="17.7778" y="213.3333" font-size="17.7778" fill="var(--text-faint)">Address:  0x00  0x01  0x02  0x03</ns0:text>
-  <ns0:rect x="17.7778" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="120.8889" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="224" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="327.1111" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="67.5556" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x12</ns0:text>
-  <ns0:text x="170.6667" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x34</ns0:text>
-  <ns0:text x="273.7778" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x56</ns0:text>
-  <ns0:text x="376.8889" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x78</ns0:text>
-  <ns0:text x="17.7778" y="391.1111" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">MSB first (most significant byte at lowest address)</ns0:text>
-  <ns0:text x="586.6667" y="71.1111" font-size="21.3333" font-weight="bold" fill="var(--text-darker)" font-family="sans-serif">Little-Endian (x86)</ns0:text>
-  <ns0:text x="586.6667" y="133.3333" font-size="19.5556" fill="var(--text-muted)">uint32_t val = 0x12345678</ns0:text>
-  <ns0:text x="586.6667" y="213.3333" font-size="17.7778" fill="var(--text-faint)">Address:  0x00  0x01  0x02  0x03</ns0:text>
-  <ns0:rect x="586.6667" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="689.7778" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="792.8889" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:rect x="896" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="636.4444" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x78</ns0:text>
-  <ns0:text x="739.5556" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x56</ns0:text>
-  <ns0:text x="842.6667" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x34</ns0:text>
-  <ns0:text x="945.7778" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x12</ns0:text>
-  <ns0:text x="586.6667" y="391.1111" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">LSB first (least significant byte at lowest address)</ns0:text>
-  <ns0:line x1="568.8889" y1="53.3333" x2="568.8889" y2="551.1111" stroke="var(--border-faint)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" />
-  <ns0:rect x="53.3333" y="453.3333" width="1031.1111" height="71.1111" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.3333" />
-  <ns0:text x="568.8889" y="496" text-anchor="middle" font-size="16" fill="var(--text-muted)">Use htonl() / ntohl() when sending multi-byte values over a network</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <text x="17.7778" y="71.1111" font-size="21.3333" font-weight="bold" fill="var(--text-darker)" font-family="sans-serif">Big-Endian (network byte order)</text>
+  <text x="17.7778" y="133.3333" font-size="19.5556" fill="var(--text-muted)">uint32_t val = 0x12345678</text>
+  <text x="17.7778" y="213.3333" font-size="17.7778" fill="var(--text-faint)">Address:  0x00  0x01  0x02  0x03</text>
+  <rect x="17.7778" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="120.8889" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="224" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="327.1111" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="67.5556" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x12</text>
+  <text x="170.6667" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x34</text>
+  <text x="273.7778" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x56</text>
+  <text x="376.8889" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x78</text>
+  <text x="17.7778" y="391.1111" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">MSB first (most significant byte at lowest address)</text>
+  <text x="586.6667" y="71.1111" font-size="21.3333" font-weight="bold" fill="var(--text-darker)" font-family="sans-serif">Little-Endian (x86)</text>
+  <text x="586.6667" y="133.3333" font-size="19.5556" fill="var(--text-muted)">uint32_t val = 0x12345678</text>
+  <text x="586.6667" y="213.3333" font-size="17.7778" fill="var(--text-faint)">Address:  0x00  0x01  0x02  0x03</text>
+  <rect x="586.6667" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="689.7778" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--warn-pale3)" stroke="var(--warn-amber)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="792.8889" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="var(--ok-pale)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <rect x="896" y="231.1111" width="99.5556" height="115.5556" rx="4.4444" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="636.4444" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x78</text>
+  <text x="739.5556" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x56</text>
+  <text x="842.6667" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x34</text>
+  <text x="945.7778" y="300.4444" font-size="21.3333" fill="var(--text-darker)" text-anchor="middle">0x12</text>
+  <text x="586.6667" y="391.1111" font-size="19.5556" fill="var(--text-muted)" font-family="sans-serif">LSB first (least significant byte at lowest address)</text>
+  <line x1="568.8889" y1="53.3333" x2="568.8889" y2="551.1111" stroke="var(--border-faint)" stroke-width="1.7778" stroke-dasharray="7.1111 3.5556" />
+  <rect x="53.3333" y="453.3333" width="1031.1111" height="71.1111" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.3333" />
+  <text x="568.8889" y="496" text-anchor="middle" font-size="16" fill="var(--text-muted)">Use htonl() / ntohl() when sending multi-byte values over a network</text>
+</svg>

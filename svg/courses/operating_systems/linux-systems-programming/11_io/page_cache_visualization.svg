@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:style>
+  <style>
     .txt { font-family: sans-serif; font-size: 12px; text-anchor: middle; }
     .title { font-weight: bold; }
     .box { stroke: #333; stroke-width: 1; fill: #fff; }
@@ -8,8 +8,8 @@
     .kern { fill: #e8f5e9; }
     .disk { fill: #ffebee; }
     .arr { stroke: #555; stroke-width: 1.5; marker-end: url(#arrow); fill: none; }
-  </ns0:style>
-  <ns0:defs>
+  </style>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -167,28 +167,28 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowhead" viewBox="0 0 10 10" refX="25.6" refY="14.4" markerWidth="19.2" markerHeight="17.28" orient="auto-start-reverse">
-      <ns0:path d="M 0 0 L 32 14.4 L 0 28.8 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="23.7037" y="21.3333" width="237.037" height="170.6667" class="box user" />
-  <ns0:text x="142.2222" y="117.3333" class="txt">User Process</ns0:text>
-  <ns0:rect x="355.5556" y="21.3333" width="568.8889" height="384" class="box kern" />
-  <ns0:text x="640" y="64" class="txt title">Kernel Space</ns0:text>
-  <ns0:rect x="402.963" y="106.6667" width="474.0741" height="256" class="box" />
-  <ns0:text x="640" y="149.3333" class="txt">Page Cache (RAM)</ns0:text>
-  <ns0:rect x="426.6667" y="181.3333" width="118.5185" height="64" fill="var(--ok-pale2)" />
-  <ns0:text x="485.9259" y="224" class="txt">Clean</ns0:text>
-  <ns0:rect x="568.8889" y="181.3333" width="118.5185" height="64" fill="var(--danger-lt)" />
-  <ns0:text x="628.1481" y="224" class="txt">Dirty</ns0:text>
-  <ns0:rect x="711.1111" y="181.3333" width="118.5185" height="64" fill="var(--ok-pale2)" />
-  <ns0:text x="770.3704" y="224" class="txt">Clean</ns0:text>
-  <ns0:rect x="355.5556" y="448" width="568.8889" height="64" class="box disk" />
-  <ns0:text x="640" y="490.6667" class="txt">Disk Hardware</ns0:text>
-  <ns0:path d="M 142.2222 202.6667 L 142.2222 277.3333 L 391.1111 277.3333" class="arr" />
-  <ns0:text x="237.037" y="245.3333" class="txt">read()</ns0:text>
-  <ns0:path d="M 521.4815 373.3333 L 521.4815 437.3333" class="arr" />
-  <ns0:text x="474.0741" y="416" class="txt">Disk Read</ns0:text>
-  <ns0:path d="M 640 373.3333 L 640 437.3333" class="arr" />
-  <ns0:text x="687.4074" y="416" class="txt">Disk Write</ns0:text>
-</ns0:svg>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="25.6" refY="14.4" markerWidth="19.2" markerHeight="17.28" orient="auto-start-reverse">
+      <path d="M 0 0 L 32 14.4 L 0 28.8 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="23.7037" y="21.3333" width="237.037" height="170.6667" class="box user" />
+  <text x="142.2222" y="117.3333" class="txt">User Process</text>
+  <rect x="355.5556" y="21.3333" width="568.8889" height="384" class="box kern" />
+  <text x="640" y="64" class="txt title">Kernel Space</text>
+  <rect x="402.963" y="106.6667" width="474.0741" height="256" class="box" />
+  <text x="640" y="149.3333" class="txt">Page Cache (RAM)</text>
+  <rect x="426.6667" y="181.3333" width="118.5185" height="64" fill="var(--ok-pale2)" />
+  <text x="485.9259" y="224" class="txt">Clean</text>
+  <rect x="568.8889" y="181.3333" width="118.5185" height="64" fill="var(--danger-lt)" />
+  <text x="628.1481" y="224" class="txt">Dirty</text>
+  <rect x="711.1111" y="181.3333" width="118.5185" height="64" fill="var(--ok-pale2)" />
+  <text x="770.3704" y="224" class="txt">Clean</text>
+  <rect x="355.5556" y="448" width="568.8889" height="64" class="box disk" />
+  <text x="640" y="490.6667" class="txt">Disk Hardware</text>
+  <path d="M 142.2222 202.6667 L 142.2222 277.3333 L 391.1111 277.3333" class="arr" />
+  <text x="237.037" y="245.3333" class="txt">read()</text>
+  <path d="M 521.4815 373.3333 L 521.4815 437.3333" class="arr" />
+  <text x="474.0741" y="416" class="txt">Disk Read</text>
+  <path d="M 640 373.3333 L 640 437.3333" class="arr" />
+  <text x="687.4074" y="416" class="txt">Disk Write</text>
+</svg>

@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,37 +157,37 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="588.5057" y="44.1379" text-anchor="middle" font-size="29.4253" font-weight="bold" fill="var(--text-dark)">Blanket Implementation Pattern</ns0:text>
-  <ns0:rect x="78.4674" y="88.2759" width="392.3372" height="117.7011" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9425" />
-  <ns0:text x="274.636" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--text-dark)">trait Display</ns0:text>
-  <ns0:text x="102.0076" y="158.8966" font-size="16.1839" fill="var(--text-muted)">fn fmt(&amp;self, f: &amp;mut Formatter)</ns0:text>
-  <ns0:text x="102.0076" y="188.3218" font-size="16.1839" fill="var(--text-muted)">  -&gt; fmt::Result;</ns0:text>
-  <ns0:rect x="313.8697" y="250.1149" width="549.272" height="117.7011" rx="7.3563" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.9425" />
-  <ns0:text x="588.5057" y="286.8966" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--ok-bright)">Blanket Implementation</ns0:text>
-  <ns0:text x="337.4099" y="320.7356" font-size="16.1839" fill="var(--text-muted)">impl&lt;T: Display&gt; ToString for T {</ns0:text>
-  <ns0:text x="353.1034" y="350.1609" font-size="16.1839" fill="var(--text-muted)">fn to_string(&amp;self) -&gt; String { ... }</ns0:text>
-  <ns0:rect x="706.2069" y="88.2759" width="392.3372" height="117.7011" rx="7.3563" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.9425" />
-  <ns0:text x="902.3754" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--text-dark)">trait ToString</ns0:text>
-  <ns0:text x="729.7471" y="158.8966" font-size="16.1839" fill="var(--text-muted)">fn to_string(&amp;self) -&gt; String;</ns0:text>
-  <ns0:text x="729.7471" y="188.3218" font-size="14.7126" fill="var(--text-muted)">// automatically available!</ns0:text>
-  <ns0:line x1="274.636" y1="205.977" x2="470.8046" y2="250.1149" stroke="var(--primary-bright)" stroke-width="2.9425" marker-end="url(#arrow)" />
-  <ns0:line x1="745.4406" y1="250.1149" x2="902.3754" y2="205.977" stroke="var(--warn-yellow)" stroke-width="2.9425" marker-end="url(#arrow)" />
-  <ns0:rect x="78.4674" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2069" />
-  <ns0:text x="196.1686" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--text-dark)">i32</ns0:text>
-  <ns0:text x="196.1686" y="482.5747" text-anchor="middle" font-size="14.7126" fill="var(--text-muted)">impl Display</ns0:text>
-  <ns0:rect x="360.9502" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2069" />
-  <ns0:text x="478.6513" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--text-dark)">String</ns0:text>
-  <ns0:text x="478.6513" y="482.5747" text-anchor="middle" font-size="14.7126" fill="var(--text-muted)">impl Display</ns0:text>
-  <ns0:rect x="643.4329" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2069" />
-  <ns0:text x="761.1341" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--text-dark)">MyStruct</ns0:text>
-  <ns0:text x="761.1341" y="482.5747" text-anchor="middle" font-size="14.7126" fill="var(--text-muted)">impl Display</ns0:text>
-  <ns0:line x1="470.8046" y1="367.8161" x2="196.1686" y2="426.6667" stroke="var(--ok-bright)" stroke-width="2.2069" marker-end="url(#arrow)" />
-  <ns0:line x1="588.5057" y1="367.8161" x2="478.6513" y2="426.6667" stroke="var(--ok-bright)" stroke-width="2.2069" marker-end="url(#arrow)" />
-  <ns0:line x1="659.1264" y1="367.8161" x2="761.1341" y2="426.6667" stroke="var(--ok-bright)" stroke-width="2.2069" marker-end="url(#arrow)" />
-  <ns0:text x="588.5057" y="394.2989" text-anchor="middle" font-size="14.7126" fill="var(--ok-bright)">All get ToString for free!</ns0:text>
-  <ns0:rect x="78.4674" y="544.3678" width="1020.0766" height="95.6322" rx="7.3563" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.9425" />
-  <ns0:text x="588.5057" y="581.1494" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--text-dark)">Key Insight</ns0:text>
-  <ns0:text x="102.0076" y="614.9885" font-size="16.1839" fill="var(--text-muted)">Blanket impls provide trait implementations for ALL types matching a bound.</ns0:text>
-  <ns0:text x="102.0076" y="629.7011" font-size="16.1839" fill="var(--text-muted)">This is how the standard library provides ToString for any type implementing Display.</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="588.5057" y="44.1379" text-anchor="middle" font-size="29.4253" font-weight="bold" fill="var(--text-dark)">Blanket Implementation Pattern</text>
+  <rect x="78.4674" y="88.2759" width="392.3372" height="117.7011" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.9425" />
+  <text x="274.636" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--text-dark)">trait Display</text>
+  <text x="102.0076" y="158.8966" font-size="16.1839" fill="var(--text-muted)">fn fmt(&amp;self, f: &amp;mut Formatter)</text>
+  <text x="102.0076" y="188.3218" font-size="16.1839" fill="var(--text-muted)">  -&gt; fmt::Result;</text>
+  <rect x="313.8697" y="250.1149" width="549.272" height="117.7011" rx="7.3563" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.9425" />
+  <text x="588.5057" y="286.8966" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--ok-bright)">Blanket Implementation</text>
+  <text x="337.4099" y="320.7356" font-size="16.1839" fill="var(--text-muted)">impl&lt;T: Display&gt; ToString for T {</text>
+  <text x="353.1034" y="350.1609" font-size="16.1839" fill="var(--text-muted)">fn to_string(&amp;self) -&gt; String { ... }</text>
+  <rect x="706.2069" y="88.2759" width="392.3372" height="117.7011" rx="7.3563" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.9425" />
+  <text x="902.3754" y="125.0575" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--text-dark)">trait ToString</text>
+  <text x="729.7471" y="158.8966" font-size="16.1839" fill="var(--text-muted)">fn to_string(&amp;self) -&gt; String;</text>
+  <text x="729.7471" y="188.3218" font-size="14.7126" fill="var(--text-muted)">// automatically available!</text>
+  <line x1="274.636" y1="205.977" x2="470.8046" y2="250.1149" stroke="var(--primary-bright)" stroke-width="2.9425" marker-end="url(#arrow)" />
+  <line x1="745.4406" y1="250.1149" x2="902.3754" y2="205.977" stroke="var(--warn-yellow)" stroke-width="2.9425" marker-end="url(#arrow)" />
+  <rect x="78.4674" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2069" />
+  <text x="196.1686" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--text-dark)">i32</text>
+  <text x="196.1686" y="482.5747" text-anchor="middle" font-size="14.7126" fill="var(--text-muted)">impl Display</text>
+  <rect x="360.9502" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2069" />
+  <text x="478.6513" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--text-dark)">String</text>
+  <text x="478.6513" y="482.5747" text-anchor="middle" font-size="14.7126" fill="var(--text-muted)">impl Display</text>
+  <rect x="643.4329" y="426.6667" width="235.4023" height="73.5632" rx="7.3563" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.2069" />
+  <text x="761.1341" y="456.092" text-anchor="middle" font-size="17.6552" font-weight="bold" fill="var(--text-dark)">MyStruct</text>
+  <text x="761.1341" y="482.5747" text-anchor="middle" font-size="14.7126" fill="var(--text-muted)">impl Display</text>
+  <line x1="470.8046" y1="367.8161" x2="196.1686" y2="426.6667" stroke="var(--ok-bright)" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <line x1="588.5057" y1="367.8161" x2="478.6513" y2="426.6667" stroke="var(--ok-bright)" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <line x1="659.1264" y1="367.8161" x2="761.1341" y2="426.6667" stroke="var(--ok-bright)" stroke-width="2.2069" marker-end="url(#arrow)" />
+  <text x="588.5057" y="394.2989" text-anchor="middle" font-size="14.7126" fill="var(--ok-bright)">All get ToString for free!</text>
+  <rect x="78.4674" y="544.3678" width="1020.0766" height="95.6322" rx="7.3563" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.9425" />
+  <text x="588.5057" y="581.1494" text-anchor="middle" font-size="19.1264" font-weight="bold" fill="var(--text-dark)">Key Insight</text>
+  <text x="102.0076" y="614.9885" font-size="16.1839" fill="var(--text-muted)">Blanket impls provide trait implementations for ALL types matching a bound.</text>
+  <text x="102.0076" y="629.7011" font-size="16.1839" fill="var(--text-muted)">This is how the standard library provides ToString for any type implementing Display.</text>
+</svg>

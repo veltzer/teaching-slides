@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,40 +158,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="18.8889" y="44" font-size="26.4444" font-weight="bold" fill="var(--text-darker)">Direct-mapped (1-way)</ns0:text>
-  <ns0:text x="18.8889" y="80" font-size="22.6667" fill="var(--text-muted)">Each address maps to exactly one cache slot</ns0:text>
-  <ns0:text x="18.8889" y="140" font-size="22.6667" fill="var(--text-muted)">Slots:</ns0:text>
-  <ns0:rect x="94.4444" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--primary-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="141.6667" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">0</ns0:text>
-  <ns0:rect x="188.8889" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="236.1111" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">1</ns0:text>
-  <ns0:rect x="283.3333" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--warn-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="330.5555" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">2</ns0:text>
-  <ns0:rect x="377.7778" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="425" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">3</ns0:text>
-  <ns0:rect x="472.2222" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--primary-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="519.4444" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">4</ns0:text>
-  <ns0:rect x="566.6666" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="613.8889" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">5</ns0:text>
-  <ns0:rect x="661.1111" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--warn-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="708.3333" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">6</ns0:text>
-  <ns0:rect x="755.5555" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="802.7777" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">7</ns0:text>
-  <ns0:text x="18.8889" y="224" font-size="22.6667" fill="var(--text-muted)">Address 0x100 → always slot 0  (conflict if 0x200 also maps here)</ns0:text>
-  <ns0:line x1="18.8889" y1="260" x2="1189.9999" y2="260" stroke="var(--border-faint)" stroke-width="1.8889" />
-  <ns0:text x="18.8889" y="304" font-size="26.4444" font-weight="bold" fill="var(--text-darker)">Fully Associative</ns0:text>
-  <ns0:text x="18.8889" y="340" font-size="22.6667" fill="var(--text-muted)">Any address can go in any slot – most flexible but expensive to search.</ns0:text>
-  <ns0:line x1="18.8889" y1="372" x2="1189.9999" y2="372" stroke="var(--border-faint)" stroke-width="1.8889" />
-  <ns0:text x="18.8889" y="416" font-size="26.4444" font-weight="bold" fill="var(--text-darker)">N-way Set Associative</ns0:text>
-  <ns0:text x="18.8889" y="451.9999" font-size="22.6667" fill="var(--text-muted)">Each address maps to a SET of N slots (ways).</ns0:text>
-  <ns0:rect x="56.6667" y="480" width="321.1111" height="110" rx="7.5556" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="217.2222" y="519.9999" text-anchor="middle" font-size="24.5556" font-weight="bold" fill="var(--text-darker)">Set 0</ns0:text>
-  <ns0:text x="217.2222" y="565.9999" text-anchor="middle" font-size="22.6667" fill="var(--text-muted)">Way0  Way1 … WayN</ns0:text>
-  <ns0:rect x="434.4444" y="480" width="321.1111" height="110" rx="7.5556" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="595" y="519.9999" text-anchor="middle" font-size="24.5556" font-weight="bold" fill="var(--text-darker)">Set 1</ns0:text>
-  <ns0:text x="595" y="565.9999" text-anchor="middle" font-size="22.6667" fill="var(--text-muted)">Way0  Way1 … WayN</ns0:text>
-  <ns0:rect x="812.2222" y="480" width="321.1111" height="110" rx="7.5556" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.8333" />
-  <ns0:text x="972.7777" y="519.9999" text-anchor="middle" font-size="24.5556" font-weight="bold" fill="var(--text-darker)">Set 2</ns0:text>
-  <ns0:text x="972.7777" y="565.9999" text-anchor="middle" font-size="22.6667" fill="var(--text-muted)">Way0  Way1 … WayN</ns0:text>
-  <ns0:text x="18.8889" y="640" font-size="22.6667" fill="var(--text-muted)">Modern L1: 8–12 way   L2: 8–16 way   L3: 12–20 way</ns0:text>
-</ns0:svg>
+  <text x="18.8889" y="44" font-size="26.4444" font-weight="bold" fill="var(--text-darker)">Direct-mapped (1-way)</text>
+  <text x="18.8889" y="80" font-size="22.6667" fill="var(--text-muted)">Each address maps to exactly one cache slot</text>
+  <text x="18.8889" y="140" font-size="22.6667" fill="var(--text-muted)">Slots:</text>
+  <rect x="94.4444" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--primary-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="141.6667" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">0</text>
+  <rect x="188.8889" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="236.1111" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">1</text>
+  <rect x="283.3333" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--warn-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="330.5555" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">2</text>
+  <rect x="377.7778" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="425" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">3</text>
+  <rect x="472.2222" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--primary-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="519.4444" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">4</text>
+  <rect x="566.6666" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--ok-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="613.8889" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">5</text>
+  <rect x="661.1111" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--warn-lt)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="708.3333" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">6</text>
+  <rect x="755.5555" y="110" width="94.4444" height="60" rx="3.7778" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="802.7777" y="150" text-anchor="middle" font-size="24.5556" fill="var(--text-darker)">7</text>
+  <text x="18.8889" y="224" font-size="22.6667" fill="var(--text-muted)">Address 0x100 → always slot 0  (conflict if 0x200 also maps here)</text>
+  <line x1="18.8889" y1="260" x2="1189.9999" y2="260" stroke="var(--border-faint)" stroke-width="1.8889" />
+  <text x="18.8889" y="304" font-size="26.4444" font-weight="bold" fill="var(--text-darker)">Fully Associative</text>
+  <text x="18.8889" y="340" font-size="22.6667" fill="var(--text-muted)">Any address can go in any slot – most flexible but expensive to search.</text>
+  <line x1="18.8889" y1="372" x2="1189.9999" y2="372" stroke="var(--border-faint)" stroke-width="1.8889" />
+  <text x="18.8889" y="416" font-size="26.4444" font-weight="bold" fill="var(--text-darker)">N-way Set Associative</text>
+  <text x="18.8889" y="451.9999" font-size="22.6667" fill="var(--text-muted)">Each address maps to a SET of N slots (ways).</text>
+  <rect x="56.6667" y="480" width="321.1111" height="110" rx="7.5556" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="217.2222" y="519.9999" text-anchor="middle" font-size="24.5556" font-weight="bold" fill="var(--text-darker)">Set 0</text>
+  <text x="217.2222" y="565.9999" text-anchor="middle" font-size="22.6667" fill="var(--text-muted)">Way0  Way1 … WayN</text>
+  <rect x="434.4444" y="480" width="321.1111" height="110" rx="7.5556" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="595" y="519.9999" text-anchor="middle" font-size="24.5556" font-weight="bold" fill="var(--text-darker)">Set 1</text>
+  <text x="595" y="565.9999" text-anchor="middle" font-size="22.6667" fill="var(--text-muted)">Way0  Way1 … WayN</text>
+  <rect x="812.2222" y="480" width="321.1111" height="110" rx="7.5556" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.8333" />
+  <text x="972.7777" y="519.9999" text-anchor="middle" font-size="24.5556" font-weight="bold" fill="var(--text-darker)">Set 2</text>
+  <text x="972.7777" y="565.9999" text-anchor="middle" font-size="22.6667" fill="var(--text-muted)">Way0  Way1 … WayN</text>
+  <text x="18.8889" y="640" font-size="22.6667" fill="var(--text-muted)">Modern L1: 8–12 way   L2: 8–16 way   L3: 12–20 way</text>
+</svg>

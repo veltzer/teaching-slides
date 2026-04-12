@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,37 +158,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="15.0588" markerHeight="12.5217" refX="11.2941" refY="4.6957" orient="auto">
-      <ns0:path d="M 0 0 L 0 9.3913 L 15.0588 4.6957 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="17.335" y="14.4144" width="1144.1088" height="172.973" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="40.3604" font-family="sans-serif" font-size="18.7387" fill="var(--ok-dk)" text-anchor="start" font-weight="bold">Good partition column:</ns0:text>
-  <ns0:text x="34.67" y="66.3063" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Used in WHERE clauses frequently</ns0:text>
-  <ns0:text x="34.67" y="90.8108" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Low-to-medium cardinality (10 – 10,000)</ns0:text>
-  <ns0:text x="34.67" y="115.3153" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Even data distribution</ns0:text>
-  <ns0:text x="34.67" y="139.8198" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Each partition &gt; 128 MB</ns0:text>
-  <ns0:rect x="17.335" y="201.8018" width="1144.1088" height="230.6307" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="227.7477" font-family="sans-serif" font-size="18.7387" fill="var(--danger-dk)" text-anchor="start" font-weight="bold">Bad partition column:</ns0:text>
-  <ns0:text x="34.67" y="253.6937" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] High cardinality (user_id with millions) → too many small files</ns0:text>
-  <ns0:text x="34.67" y="278.1982" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] Never filtered on → no pruning benefit, extra overhead</ns0:text>
-  <ns0:text x="34.67" y="302.7028" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] Very skewed (99% in one value) → one giant partition, rest tiny</ns0:text>
-  <ns0:text x="34.67" y="327.2072" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] Too few values (boolean: true/false) → only 2 partitions, minimal benefit</ns0:text>
-  <ns0:text x="17.335" y="461.2613" font-family="sans-serif" font-size="18.7387" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Partition count guidelines:</ns0:text>
-  <ns0:rect x="17.335" y="481.4414" width="1144.1088" height="31.7117" fill="var(--primary-lt)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="503.0631" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Total data size</ns0:text>
-  <ns0:text x="424.7071" y="503.0631" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Target partitions</ns0:text>
-  <ns0:line x1="407.3721" y1="481.4414" x2="407.3721" y2="640" stroke="var(--text-dark)" stroke-width="1.4414" />
-  <ns0:rect x="17.335" y="513.1532" width="1144.1088" height="31.7117" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="534.7748" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">&lt; 1 GB</ns0:text>
-  <ns0:text x="424.7071" y="534.7748" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">No partitioning needed</ns0:text>
-  <ns0:rect x="17.335" y="544.8649" width="1144.1088" height="31.7117" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="566.4865" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">1 GB – 100 GB</ns0:text>
-  <ns0:text x="424.7071" y="566.4865" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">10 – 100 partitions</ns0:text>
-  <ns0:rect x="17.335" y="576.5766" width="1144.1088" height="31.7117" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="598.1982" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">100 GB – 10 TB</ns0:text>
-  <ns0:text x="424.7071" y="598.1982" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">100 – 10,000 partitions</ns0:text>
-  <ns0:rect x="17.335" y="608.2883" width="1144.1088" height="31.7117" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
-  <ns0:text x="34.67" y="629.9099" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">&gt; 10 TB</ns0:text>
-  <ns0:text x="424.7071" y="629.9099" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">1,000 – 100,000 partitions</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="15.0588" markerHeight="12.5217" refX="11.2941" refY="4.6957" orient="auto">
+      <path d="M 0 0 L 0 9.3913 L 15.0588 4.6957 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="17.335" y="14.4144" width="1144.1088" height="172.973" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="40.3604" font-family="sans-serif" font-size="18.7387" fill="var(--ok-dk)" text-anchor="start" font-weight="bold">Good partition column:</text>
+  <text x="34.67" y="66.3063" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Used in WHERE clauses frequently</text>
+  <text x="34.67" y="90.8108" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Low-to-medium cardinality (10 – 10,000)</text>
+  <text x="34.67" y="115.3153" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Even data distribution</text>
+  <text x="34.67" y="139.8198" font-family="sans-serif" font-size="17.2973" fill="var(--ok-deep)" text-anchor="start">[✓] Each partition &gt; 128 MB</text>
+  <rect x="17.335" y="201.8018" width="1144.1088" height="230.6307" fill="var(--danger-pale3)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="227.7477" font-family="sans-serif" font-size="18.7387" fill="var(--danger-dk)" text-anchor="start" font-weight="bold">Bad partition column:</text>
+  <text x="34.67" y="253.6937" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] High cardinality (user_id with millions) → too many small files</text>
+  <text x="34.67" y="278.1982" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] Never filtered on → no pruning benefit, extra overhead</text>
+  <text x="34.67" y="302.7028" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] Very skewed (99% in one value) → one giant partition, rest tiny</text>
+  <text x="34.67" y="327.2072" font-family="sans-serif" font-size="17.2973" fill="var(--danger-deep)" text-anchor="start">[✗] Too few values (boolean: true/false) → only 2 partitions, minimal benefit</text>
+  <text x="17.335" y="461.2613" font-family="sans-serif" font-size="18.7387" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Partition count guidelines:</text>
+  <rect x="17.335" y="481.4414" width="1144.1088" height="31.7117" fill="var(--primary-lt)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="503.0631" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Total data size</text>
+  <text x="424.7071" y="503.0631" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start" font-weight="bold">Target partitions</text>
+  <line x1="407.3721" y1="481.4414" x2="407.3721" y2="640" stroke="var(--text-dark)" stroke-width="1.4414" />
+  <rect x="17.335" y="513.1532" width="1144.1088" height="31.7117" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="534.7748" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">&lt; 1 GB</text>
+  <text x="424.7071" y="534.7748" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">No partitioning needed</text>
+  <rect x="17.335" y="544.8649" width="1144.1088" height="31.7117" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="566.4865" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">1 GB – 100 GB</text>
+  <text x="424.7071" y="566.4865" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">10 – 100 partitions</text>
+  <rect x="17.335" y="576.5766" width="1144.1088" height="31.7117" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="598.1982" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">100 GB – 10 TB</text>
+  <text x="424.7071" y="598.1982" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">100 – 10,000 partitions</text>
+  <rect x="17.335" y="608.2883" width="1144.1088" height="31.7117" fill="var(--surface)" stroke="var(--text-dark)" stroke-width="2.1621" rx="5.7658" />
+  <text x="34.67" y="629.9099" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">&gt; 10 TB</text>
+  <text x="424.7071" y="629.9099" font-family="sans-serif" font-size="17.2973" fill="var(--text-darker)" text-anchor="start">1,000 – 100,000 partitions</text>
+</svg>

@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,60 +157,60 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="581.8182" y="43.6364" text-anchor="middle" font-family="Arial" font-size="26.1818" font-weight="bold" fill="var(--primary-dk)">Understanding Spark Partitioning</ns0:text>
-  <ns0:rect x="43.6364" y="80" width="232.7273" height="174.5455" rx="8.7273" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.9091" />
-  <ns0:text x="160" y="113.4545" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="var(--primary-dk)">Source Data</ns0:text>
-  <ns0:text x="160" y="142.5455" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(A,1) (B,2) (C,3)</ns0:text>
-  <ns0:text x="160" y="167.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(A,4) (D,5) (B,6)</ns0:text>
-  <ns0:text x="160" y="192" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(C,7) (A,8) (D,9)</ns0:text>
-  <ns0:text x="160" y="216.7273" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(B,10) (C,11) ...</ns0:text>
-  <ns0:line x1="276.3636" y1="167.2727" x2="349.0909" y2="167.2727" stroke="var(--text-muted)" stroke-width="2.9091" marker-end="url(#arrow)" />
-  <ns0:rect x="356.3636" y="109.0909" width="189.0909" height="116.3636" rx="8.7273" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.9091" />
-  <ns0:text x="450.9091" y="145.4545" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="var(--warn-dk)">Hash Function</ns0:text>
-  <ns0:text x="450.9091" y="174.5455" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">hash(key) %</ns0:text>
-  <ns0:text x="450.9091" y="199.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">numPartitions</ns0:text>
-  <ns0:line x1="545.4545" y1="138.1818" x2="640" y2="109.0909" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:line x1="545.4545" y1="160" x2="640" y2="210.9091" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:line x1="545.4545" y1="181.8182" x2="640" y2="312.7273" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:line x1="545.4545" y1="203.6364" x2="640" y2="414.5455" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:rect x="647.2727" y="72.7273" width="218.1818" height="94.5455" rx="7.2727" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.1818" />
-  <ns0:text x="756.3636" y="101.8182" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--ok-dk)">Partition 0</ns0:text>
-  <ns0:text x="756.3636" y="128" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(A,1) (A,4) (A,8)</ns0:text>
-  <ns0:text x="756.3636" y="152.7273" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=0</ns0:text>
-  <ns0:rect x="647.2727" y="181.8182" width="218.1818" height="94.5455" rx="7.2727" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.1818" />
-  <ns0:text x="756.3636" y="210.9091" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--primary-dk)">Partition 1</ns0:text>
-  <ns0:text x="756.3636" y="237.0909" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(B,2) (B,6) (B,10)</ns0:text>
-  <ns0:text x="756.3636" y="261.8182" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=1</ns0:text>
-  <ns0:rect x="647.2727" y="290.9091" width="218.1818" height="94.5455" rx="7.2727" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="2.1818" />
-  <ns0:text x="756.3636" y="320" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--danger-dk)">Partition 2</ns0:text>
-  <ns0:text x="756.3636" y="346.1818" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(C,3) (C,7) (C,11)</ns0:text>
-  <ns0:text x="756.3636" y="370.9091" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=2</ns0:text>
-  <ns0:rect x="647.2727" y="400" width="218.1818" height="94.5455" rx="7.2727" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.1818" />
-  <ns0:text x="756.3636" y="429.0909" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--warn-dk)">Partition 3</ns0:text>
-  <ns0:text x="756.3636" y="455.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(D,5) (D,9) ...</ns0:text>
-  <ns0:text x="756.3636" y="480" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=3</ns0:text>
-  <ns0:line x1="865.4545" y1="119.2727" x2="938.1818" y2="119.2727" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:line x1="865.4545" y1="228.3636" x2="938.1818" y2="228.3636" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:line x1="865.4545" y1="337.4545" x2="938.1818" y2="337.4545" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:line x1="865.4545" y1="446.5455" x2="938.1818" y2="446.5455" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
-  <ns0:rect x="945.4545" y="90.1818" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
-  <ns0:text x="1040" y="126.5455" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 1</ns0:text>
-  <ns0:rect x="945.4545" y="199.2727" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
-  <ns0:text x="1040" y="235.6364" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 2</ns0:text>
-  <ns0:rect x="945.4545" y="308.3636" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
-  <ns0:text x="1040" y="344.7273" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 3</ns0:text>
-  <ns0:rect x="945.4545" y="417.4545" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
-  <ns0:text x="1040" y="453.8182" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 4</ns0:text>
-  <ns0:rect x="43.6364" y="290.9091" width="247.2727" height="80" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
-  <ns0:text x="167.2727" y="320" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--primary-indigo-dk)">Hash Partitioning</ns0:text>
-  <ns0:text x="167.2727" y="349.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-dark)">hash(key) % N partitions</ns0:text>
-  <ns0:rect x="43.6364" y="385.4545" width="247.2727" height="80" rx="7.2727" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="2.1818" />
-  <ns0:text x="167.2727" y="414.5455" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--info-dk)">Range Partitioning</ns0:text>
-  <ns0:text x="167.2727" y="443.6364" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-dark)">Keys sorted into ranges</ns0:text>
-  <ns0:rect x="43.6364" y="480" width="247.2727" height="80" rx="7.2727" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.1818" />
-  <ns0:text x="167.2727" y="509.0909" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--warn-dk)">Custom Partitioning</ns0:text>
-  <ns0:text x="167.2727" y="538.1818" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-dark)">User-defined logic</ns0:text>
-  <ns0:text x="581.8182" y="610.9091" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="var(--primary-dk)">Same keys always land in the same partition - enables efficient joins and aggregations</ns0:text>
-  <ns0:text x="581.8182" y="640" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--text-muted)">Co-located data reduces shuffling across the network</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="581.8182" y="43.6364" text-anchor="middle" font-family="Arial" font-size="26.1818" font-weight="bold" fill="var(--primary-dk)">Understanding Spark Partitioning</text>
+  <rect x="43.6364" y="80" width="232.7273" height="174.5455" rx="8.7273" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.9091" />
+  <text x="160" y="113.4545" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="var(--primary-dk)">Source Data</text>
+  <text x="160" y="142.5455" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(A,1) (B,2) (C,3)</text>
+  <text x="160" y="167.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(A,4) (D,5) (B,6)</text>
+  <text x="160" y="192" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(C,7) (A,8) (D,9)</text>
+  <text x="160" y="216.7273" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(B,10) (C,11) ...</text>
+  <line x1="276.3636" y1="167.2727" x2="349.0909" y2="167.2727" stroke="var(--text-muted)" stroke-width="2.9091" marker-end="url(#arrow)" />
+  <rect x="356.3636" y="109.0909" width="189.0909" height="116.3636" rx="8.7273" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.9091" />
+  <text x="450.9091" y="145.4545" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="var(--warn-dk)">Hash Function</text>
+  <text x="450.9091" y="174.5455" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">hash(key) %</text>
+  <text x="450.9091" y="199.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">numPartitions</text>
+  <line x1="545.4545" y1="138.1818" x2="640" y2="109.0909" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <line x1="545.4545" y1="160" x2="640" y2="210.9091" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <line x1="545.4545" y1="181.8182" x2="640" y2="312.7273" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <line x1="545.4545" y1="203.6364" x2="640" y2="414.5455" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <rect x="647.2727" y="72.7273" width="218.1818" height="94.5455" rx="7.2727" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.1818" />
+  <text x="756.3636" y="101.8182" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--ok-dk)">Partition 0</text>
+  <text x="756.3636" y="128" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(A,1) (A,4) (A,8)</text>
+  <text x="756.3636" y="152.7273" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=0</text>
+  <rect x="647.2727" y="181.8182" width="218.1818" height="94.5455" rx="7.2727" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.1818" />
+  <text x="756.3636" y="210.9091" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--primary-dk)">Partition 1</text>
+  <text x="756.3636" y="237.0909" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(B,2) (B,6) (B,10)</text>
+  <text x="756.3636" y="261.8182" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=1</text>
+  <rect x="647.2727" y="290.9091" width="218.1818" height="94.5455" rx="7.2727" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="2.1818" />
+  <text x="756.3636" y="320" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--danger-dk)">Partition 2</text>
+  <text x="756.3636" y="346.1818" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(C,3) (C,7) (C,11)</text>
+  <text x="756.3636" y="370.9091" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=2</text>
+  <rect x="647.2727" y="400" width="218.1818" height="94.5455" rx="7.2727" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.1818" />
+  <text x="756.3636" y="429.0909" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--warn-dk)">Partition 3</text>
+  <text x="756.3636" y="455.2727" text-anchor="middle" font-family="Arial" font-size="16" fill="var(--text-dark)">(D,5) (D,9) ...</text>
+  <text x="756.3636" y="480" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-mid)">All keys with hash%4=3</text>
+  <line x1="865.4545" y1="119.2727" x2="938.1818" y2="119.2727" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <line x1="865.4545" y1="228.3636" x2="938.1818" y2="228.3636" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <line x1="865.4545" y1="337.4545" x2="938.1818" y2="337.4545" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <line x1="865.4545" y1="446.5455" x2="938.1818" y2="446.5455" stroke="var(--text-muted)" stroke-width="2.1818" marker-end="url(#arrow)" />
+  <rect x="945.4545" y="90.1818" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
+  <text x="1040" y="126.5455" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 1</text>
+  <rect x="945.4545" y="199.2727" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
+  <text x="1040" y="235.6364" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 2</text>
+  <rect x="945.4545" y="308.3636" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
+  <text x="1040" y="344.7273" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 3</text>
+  <rect x="945.4545" y="417.4545" width="189.0909" height="58.1818" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
+  <text x="1040" y="453.8182" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--primary-indigo-dk)">Worker 4</text>
+  <rect x="43.6364" y="290.9091" width="247.2727" height="80" rx="7.2727" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo-dk)" stroke-width="2.1818" />
+  <text x="167.2727" y="320" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--primary-indigo-dk)">Hash Partitioning</text>
+  <text x="167.2727" y="349.0909" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-dark)">hash(key) % N partitions</text>
+  <rect x="43.6364" y="385.4545" width="247.2727" height="80" rx="7.2727" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="2.1818" />
+  <text x="167.2727" y="414.5455" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--info-dk)">Range Partitioning</text>
+  <text x="167.2727" y="443.6364" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-dark)">Keys sorted into ranges</text>
+  <rect x="43.6364" y="480" width="247.2727" height="80" rx="7.2727" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.1818" />
+  <text x="167.2727" y="509.0909" text-anchor="middle" font-family="Arial" font-size="17.4545" font-weight="bold" fill="var(--warn-dk)">Custom Partitioning</text>
+  <text x="167.2727" y="538.1818" text-anchor="middle" font-family="Arial" font-size="14.5455" fill="var(--text-dark)">User-defined logic</text>
+  <text x="581.8182" y="610.9091" text-anchor="middle" font-family="Arial" font-size="18.9091" font-weight="bold" fill="var(--primary-dk)">Same keys always land in the same partition - enables efficient joins and aggregations</text>
+  <text x="581.8182" y="640" text-anchor="middle" font-family="Arial" font-size="17.4545" fill="var(--text-muted)">Co-located data reduces shuffling across the network</text>
+</svg>

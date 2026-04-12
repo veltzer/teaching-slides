@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,48 +157,48 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="var(--text-dark)">Concurrent Data Structures</ns0:text>
-  <ns0:rect x="44.1049" y="79.1012" width="338.1373" height="186.9663" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
-  <ns0:text x="213.1735" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">Mutex&lt;T&gt;</ns0:text>
-  <ns0:text x="66.1573" y="143.8202" font-size="14.382" fill="var(--text-muted)">Exclusive access</ns0:text>
-  <ns0:text x="66.1573" y="169.7079" font-size="14.382" fill="var(--text-muted)">lock() -&gt; MutexGuard&lt;T&gt;</ns0:text>
-  <ns0:text x="66.1573" y="195.5955" font-size="14.382" fill="var(--text-muted)">RAII: auto-unlock on drop</ns0:text>
-  <ns0:text x="66.1573" y="221.4832" font-size="14.382" fill="var(--danger-bright)">Can deadlock if nested!</ns0:text>
-  <ns0:text x="66.1573" y="250.2472" font-size="14.382" fill="var(--text-muted)">Use when: writes common</ns0:text>
-  <ns0:rect x="418.9963" y="79.1012" width="338.1373" height="186.9663" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">RwLock&lt;T&gt;</ns0:text>
-  <ns0:text x="441.0487" y="143.8202" font-size="14.382" fill="var(--text-muted)">Multiple readers OR one writer</ns0:text>
-  <ns0:text x="441.0487" y="169.7079" font-size="14.382" fill="var(--text-muted)">read() -&gt; RwLockReadGuard</ns0:text>
-  <ns0:text x="441.0487" y="195.5955" font-size="14.382" fill="var(--text-muted)">write() -&gt; RwLockWriteGuard</ns0:text>
-  <ns0:text x="441.0487" y="221.4832" font-size="14.382" fill="var(--text-muted)">More overhead than Mutex</ns0:text>
-  <ns0:text x="441.0487" y="250.2472" font-size="14.382" fill="var(--text-muted)">Use when: reads &gt;&gt; writes</ns0:text>
-  <ns0:rect x="793.8877" y="79.1012" width="338.1373" height="186.9663" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
-  <ns0:text x="962.9564" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">Atomics</ns0:text>
-  <ns0:text x="815.9401" y="143.8202" font-size="14.382" fill="var(--text-muted)">AtomicBool, AtomicUsize, ...</ns0:text>
-  <ns0:text x="815.9401" y="169.7079" font-size="14.382" fill="var(--text-muted)">Lock-free operations</ns0:text>
-  <ns0:text x="815.9401" y="195.5955" font-size="14.382" fill="var(--text-muted)">load, store, CAS</ns0:text>
-  <ns0:text x="815.9401" y="221.4832" font-size="14.382" fill="var(--text-muted)">Ordering: Relaxed..SeqCst</ns0:text>
-  <ns0:text x="815.9401" y="250.2472" font-size="14.382" fill="var(--text-muted)">Use when: simple counters/flags</ns0:text>
-  <ns0:rect x="44.1049" y="302.0225" width="338.1373" height="143.8202" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
-  <ns0:text x="213.1735" y="337.9776" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">Arc&lt;T&gt;</ns0:text>
-  <ns0:text x="66.1573" y="371.0562" font-size="14.382" fill="var(--text-muted)">Atomic Reference Counting</ns0:text>
-  <ns0:text x="66.1573" y="396.9438" font-size="14.382" fill="var(--text-muted)">Shared ownership across threads</ns0:text>
-  <ns0:text x="66.1573" y="422.8315" font-size="14.382" fill="var(--text-muted)">Arc&lt;Mutex&lt;T&gt;&gt; = shared mutable</ns0:text>
-  <ns0:rect x="418.9963" y="302.0225" width="338.1373" height="143.8202" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="337.9776" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">DashMap&lt;K, V&gt;</ns0:text>
-  <ns0:text x="441.0487" y="371.0562" font-size="14.382" fill="var(--text-muted)">Concurrent HashMap</ns0:text>
-  <ns0:text x="441.0487" y="396.9438" font-size="14.382" fill="var(--text-muted)">Sharded internally</ns0:text>
-  <ns0:text x="441.0487" y="422.8315" font-size="14.382" fill="var(--text-muted)">Much faster than Mutex&lt;HashMap&gt;</ns0:text>
-  <ns0:rect x="793.8877" y="302.0225" width="338.1373" height="143.8202" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
-  <ns0:text x="962.9564" y="337.9776" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">crossbeam</ns0:text>
-  <ns0:text x="815.9401" y="371.0562" font-size="14.382" fill="var(--text-muted)">SegQueue - lock-free queue</ns0:text>
-  <ns0:text x="815.9401" y="396.9438" font-size="14.382" fill="var(--text-muted)">ArrayQueue - bounded</ns0:text>
-  <ns0:text x="815.9401" y="422.8315" font-size="14.382" fill="var(--text-muted)">Epoch-based GC for safety</ns0:text>
-  <ns0:rect x="44.1049" y="481.7978" width="1087.9202" height="158.2022" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="517.7529" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--text-dark)">Selection Guide</ns0:text>
-  <ns0:text x="66.1573" y="553.7079" font-size="14.382" fill="var(--text-muted)">Simple counter/flag -&gt; AtomicUsize / AtomicBool</ns0:text>
-  <ns0:text x="66.1573" y="579.5955" font-size="14.382" fill="var(--text-muted)">Shared complex state -&gt; Arc&lt;Mutex&lt;T&gt;&gt; (or Arc&lt;RwLock&lt;T&gt;&gt; for read-heavy)</ns0:text>
-  <ns0:text x="66.1573" y="605.4832" font-size="14.382" fill="var(--text-muted)">Concurrent map -&gt; DashMap (or flurry for Java-style ConcurrentHashMap)</ns0:text>
-  <ns0:text x="66.1573" y="631.3708" font-size="14.382" fill="var(--text-muted)">Lock-free queue -&gt; crossbeam::SegQueue or crossbeam::ArrayQueue</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="var(--text-dark)">Concurrent Data Structures</text>
+  <rect x="44.1049" y="79.1012" width="338.1373" height="186.9663" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
+  <text x="213.1735" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">Mutex&lt;T&gt;</text>
+  <text x="66.1573" y="143.8202" font-size="14.382" fill="var(--text-muted)">Exclusive access</text>
+  <text x="66.1573" y="169.7079" font-size="14.382" fill="var(--text-muted)">lock() -&gt; MutexGuard&lt;T&gt;</text>
+  <text x="66.1573" y="195.5955" font-size="14.382" fill="var(--text-muted)">RAII: auto-unlock on drop</text>
+  <text x="66.1573" y="221.4832" font-size="14.382" fill="var(--danger-bright)">Can deadlock if nested!</text>
+  <text x="66.1573" y="250.2472" font-size="14.382" fill="var(--text-muted)">Use when: writes common</text>
+  <rect x="418.9963" y="79.1012" width="338.1373" height="186.9663" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <text x="588.065" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">RwLock&lt;T&gt;</text>
+  <text x="441.0487" y="143.8202" font-size="14.382" fill="var(--text-muted)">Multiple readers OR one writer</text>
+  <text x="441.0487" y="169.7079" font-size="14.382" fill="var(--text-muted)">read() -&gt; RwLockReadGuard</text>
+  <text x="441.0487" y="195.5955" font-size="14.382" fill="var(--text-muted)">write() -&gt; RwLockWriteGuard</text>
+  <text x="441.0487" y="221.4832" font-size="14.382" fill="var(--text-muted)">More overhead than Mutex</text>
+  <text x="441.0487" y="250.2472" font-size="14.382" fill="var(--text-muted)">Use when: reads &gt;&gt; writes</text>
+  <rect x="793.8877" y="79.1012" width="338.1373" height="186.9663" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <text x="962.9564" y="115.0562" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">Atomics</text>
+  <text x="815.9401" y="143.8202" font-size="14.382" fill="var(--text-muted)">AtomicBool, AtomicUsize, ...</text>
+  <text x="815.9401" y="169.7079" font-size="14.382" fill="var(--text-muted)">Lock-free operations</text>
+  <text x="815.9401" y="195.5955" font-size="14.382" fill="var(--text-muted)">load, store, CAS</text>
+  <text x="815.9401" y="221.4832" font-size="14.382" fill="var(--text-muted)">Ordering: Relaxed..SeqCst</text>
+  <text x="815.9401" y="250.2472" font-size="14.382" fill="var(--text-muted)">Use when: simple counters/flags</text>
+  <rect x="44.1049" y="302.0225" width="338.1373" height="143.8202" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <text x="213.1735" y="337.9776" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">Arc&lt;T&gt;</text>
+  <text x="66.1573" y="371.0562" font-size="14.382" fill="var(--text-muted)">Atomic Reference Counting</text>
+  <text x="66.1573" y="396.9438" font-size="14.382" fill="var(--text-muted)">Shared ownership across threads</text>
+  <text x="66.1573" y="422.8315" font-size="14.382" fill="var(--text-muted)">Arc&lt;Mutex&lt;T&gt;&gt; = shared mutable</text>
+  <rect x="418.9963" y="302.0225" width="338.1373" height="143.8202" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
+  <text x="588.065" y="337.9776" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">DashMap&lt;K, V&gt;</text>
+  <text x="441.0487" y="371.0562" font-size="14.382" fill="var(--text-muted)">Concurrent HashMap</text>
+  <text x="441.0487" y="396.9438" font-size="14.382" fill="var(--text-muted)">Sharded internally</text>
+  <text x="441.0487" y="422.8315" font-size="14.382" fill="var(--text-muted)">Much faster than Mutex&lt;HashMap&gt;</text>
+  <rect x="793.8877" y="302.0225" width="338.1373" height="143.8202" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <text x="962.9564" y="337.9776" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">crossbeam</text>
+  <text x="815.9401" y="371.0562" font-size="14.382" fill="var(--text-muted)">SegQueue - lock-free queue</text>
+  <text x="815.9401" y="396.9438" font-size="14.382" fill="var(--text-muted)">ArrayQueue - bounded</text>
+  <text x="815.9401" y="422.8315" font-size="14.382" fill="var(--text-muted)">Epoch-based GC for safety</text>
+  <rect x="44.1049" y="481.7978" width="1087.9202" height="158.2022" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <text x="588.065" y="517.7529" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--text-dark)">Selection Guide</text>
+  <text x="66.1573" y="553.7079" font-size="14.382" fill="var(--text-muted)">Simple counter/flag -&gt; AtomicUsize / AtomicBool</text>
+  <text x="66.1573" y="579.5955" font-size="14.382" fill="var(--text-muted)">Shared complex state -&gt; Arc&lt;Mutex&lt;T&gt;&gt; (or Arc&lt;RwLock&lt;T&gt;&gt; for read-heavy)</text>
+  <text x="66.1573" y="605.4832" font-size="14.382" fill="var(--text-muted)">Concurrent map -&gt; DashMap (or flurry for Java-style ConcurrentHashMap)</text>
+  <text x="66.1573" y="631.3708" font-size="14.382" fill="var(--text-muted)">Lock-free queue -&gt; crossbeam::SegQueue or crossbeam::ArrayQueue</text>
+</svg>

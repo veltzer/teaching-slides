@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,30 +158,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:text x="568.8889" y="46.2222" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--primary-dk)">Aggregation Cost (Low to High)</ns0:text>
-  <ns0:rect x="142.2222" y="195.5556" width="248.8889" height="142.2222" rx="12.4444" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.2222" filter="url(#shadow)" />
-  <ns0:text x="266.6667" y="272" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--ok-dk)">Metrics</ns0:text>
-  <ns0:text x="266.6667" y="307.5556" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">avg, min, max, sum</ns0:text>
-  <ns0:text x="266.6667" y="382.2222" text-anchor="middle" font-size="14.2222" fill="var(--ok-dk)" font-weight="bold">Cheap - O(1) per shard</ns0:text>
-  <ns0:rect x="444.4444" y="142.2222" width="248.8889" height="195.5556" rx="12.4444" fill="var(--warn-pale4)" stroke="var(--warn-amber)" stroke-width="2.2222" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="231.1111" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--text-muted)">Terms</ns0:text>
-  <ns0:text x="568.8889" y="266.6667" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">top-N buckets</ns0:text>
-  <ns0:text x="568.8889" y="382.2222" text-anchor="middle" font-size="14.2222" fill="var(--text-muted)" font-weight="bold">Medium - scales with cardinality</ns0:text>
-  <ns0:rect x="746.6667" y="71.1111" width="266.6667" height="266.6667" rx="12.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="2.2222" filter="url(#shadow)" />
-  <ns0:text x="880" y="177.7778" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--danger)">Cardinality</ns0:text>
-  <ns0:text x="880" y="216.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">unique count (HLL)</ns0:text>
-  <ns0:text x="880" y="382.2222" text-anchor="middle" font-size="14.2222" fill="var(--danger)" font-weight="bold">Expensive - HyperLogLog algorithm</ns0:text>
-  <ns0:line x1="124.4444" y1="453.3333" x2="1031.1111" y2="453.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
-  <ns0:text x="568.8889" y="488.8889" text-anchor="middle" font-size="16" fill="var(--text-muted)">Low Cost → High Cost</ns0:text>
-  <ns0:rect x="71.1111" y="522.6667" width="995.5556" height="49.7778" rx="5.3333" fill="var(--surface-light)" stroke="var(--primary-lt)" stroke-width="0.8889" />
-  <ns0:text x="568.8889" y="552.8889" text-anchor="middle" font-size="14.2222" fill="var(--primary-dk)">Use precision_threshold on cardinality aggs. Enable doc_values on fields used in aggs.</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <text x="568.8889" y="46.2222" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--primary-dk)">Aggregation Cost (Low to High)</text>
+  <rect x="142.2222" y="195.5556" width="248.8889" height="142.2222" rx="12.4444" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.2222" filter="url(#shadow)" />
+  <text x="266.6667" y="272" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--ok-dk)">Metrics</text>
+  <text x="266.6667" y="307.5556" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">avg, min, max, sum</text>
+  <text x="266.6667" y="382.2222" text-anchor="middle" font-size="14.2222" fill="var(--ok-dk)" font-weight="bold">Cheap - O(1) per shard</text>
+  <rect x="444.4444" y="142.2222" width="248.8889" height="195.5556" rx="12.4444" fill="var(--warn-pale4)" stroke="var(--warn-amber)" stroke-width="2.2222" filter="url(#shadow)" />
+  <text x="568.8889" y="231.1111" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--text-muted)">Terms</text>
+  <text x="568.8889" y="266.6667" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">top-N buckets</text>
+  <text x="568.8889" y="382.2222" text-anchor="middle" font-size="14.2222" fill="var(--text-muted)" font-weight="bold">Medium - scales with cardinality</text>
+  <rect x="746.6667" y="71.1111" width="266.6667" height="266.6667" rx="12.4444" fill="var(--danger-pale3)" stroke="var(--danger)" stroke-width="2.2222" filter="url(#shadow)" />
+  <text x="880" y="177.7778" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--danger)">Cardinality</text>
+  <text x="880" y="216.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">unique count (HLL)</text>
+  <text x="880" y="382.2222" text-anchor="middle" font-size="14.2222" fill="var(--danger)" font-weight="bold">Expensive - HyperLogLog algorithm</text>
+  <line x1="124.4444" y1="453.3333" x2="1031.1111" y2="453.3333" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <text x="568.8889" y="488.8889" text-anchor="middle" font-size="16" fill="var(--text-muted)">Low Cost → High Cost</text>
+  <rect x="71.1111" y="522.6667" width="995.5556" height="49.7778" rx="5.3333" fill="var(--surface-light)" stroke="var(--primary-lt)" stroke-width="0.8889" />
+  <text x="568.8889" y="552.8889" text-anchor="middle" font-size="14.2222" fill="var(--primary-dk)">Use precision_threshold on cardinality aggs. Enable doc_values on fields used in aggs.</text>
+</svg>

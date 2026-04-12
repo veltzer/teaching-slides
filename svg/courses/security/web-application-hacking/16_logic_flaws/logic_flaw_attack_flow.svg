@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,33 +157,33 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="622.2222" y="60" text-anchor="middle" font-size="27.6543" font-weight="bold" fill="var(--text-dark)">Logic Flaw Attack Flow</ns0:text>
-  <ns0:rect x="51.8518" y="110" width="345.6791" height="100" rx="8.642" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.4568" />
-  <ns0:text x="224.6914" y="154" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--primary-bright)">1. Understand Workflow</ns0:text>
-  <ns0:text x="224.6914" y="190" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Map the normal user journey</ns0:text>
-  <ns0:line x1="397.5309" y1="160" x2="445.926" y2="160" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
-  <ns0:rect x="458.0247" y="110" width="345.6791" height="100" rx="8.642" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.4568" />
-  <ns0:text x="630.8642" y="154" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--primary-bright)">2. Map State Transitions</ns0:text>
-  <ns0:text x="630.8642" y="190" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Identify all state changes</ns0:text>
-  <ns0:line x1="803.7038" y1="160" x2="852.0987" y2="160" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
-  <ns0:rect x="864.1976" y="110" width="345.6791" height="100" rx="8.642" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.4568" />
-  <ns0:text x="1037.0371" y="154" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--warn-gold)">3. Identify Assumptions</ns0:text>
-  <ns0:text x="1037.0371" y="190" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">What does the app assume?</ns0:text>
-  <ns0:line x1="1037.0371" y1="210" x2="1037.0371" y2="290" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
-  <ns0:rect x="864.1976" y="300" width="345.6791" height="100" rx="8.642" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.4568" />
-  <ns0:text x="1037.0371" y="344" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--warn-gold)">4. Test Boundaries</ns0:text>
-  <ns0:text x="1037.0371" y="380" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Negative values, limits, etc.</ns0:text>
-  <ns0:line x1="864.1976" y1="350" x2="815.8025" y2="350" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
-  <ns0:rect x="458.0247" y="300" width="345.6791" height="100" rx="8.642" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.4568" />
-  <ns0:text x="630.8642" y="344" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--danger-bright)">5. Attempt Bypass</ns0:text>
-  <ns0:text x="630.8642" y="380" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Skip steps, modify params</ns0:text>
-  <ns0:line x1="458.0247" y1="350" x2="409.6296" y2="350" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
-  <ns0:rect x="51.8518" y="300" width="345.6791" height="100" rx="8.642" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.4568" />
-  <ns0:text x="224.6914" y="344" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--danger-bright)">6. Exploit Logic Gap</ns0:text>
-  <ns0:text x="224.6914" y="380" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Leverage discovered flaw</ns0:text>
-  <ns0:rect x="103.7037" y="480" width="1037.0371" height="160" rx="8.642" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5926" />
-  <ns0:text x="622.2222" y="530.0001" text-anchor="middle" font-size="19.0124" font-weight="bold" fill="var(--primary-bright)">Example: E-commerce checkout bypass</ns0:text>
-  <ns0:text x="622.2222" y="570" text-anchor="middle" font-size="17.284" fill="var(--text-dark)">Normal: Cart -&gt; Address -&gt; Payment -&gt; Confirm</ns0:text>
-  <ns0:text x="622.2222" y="610" text-anchor="middle" font-size="17.284" fill="var(--danger-bright)">Attack: Cart -&gt; Confirm (skip payment by calling confirm URL directly)</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="622.2222" y="60" text-anchor="middle" font-size="27.6543" font-weight="bold" fill="var(--text-dark)">Logic Flaw Attack Flow</text>
+  <rect x="51.8518" y="110" width="345.6791" height="100" rx="8.642" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.4568" />
+  <text x="224.6914" y="154" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--primary-bright)">1. Understand Workflow</text>
+  <text x="224.6914" y="190" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Map the normal user journey</text>
+  <line x1="397.5309" y1="160" x2="445.926" y2="160" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
+  <rect x="458.0247" y="110" width="345.6791" height="100" rx="8.642" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.4568" />
+  <text x="630.8642" y="154" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--primary-bright)">2. Map State Transitions</text>
+  <text x="630.8642" y="190" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Identify all state changes</text>
+  <line x1="803.7038" y1="160" x2="852.0987" y2="160" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
+  <rect x="864.1976" y="110" width="345.6791" height="100" rx="8.642" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.4568" />
+  <text x="1037.0371" y="154" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--warn-gold)">3. Identify Assumptions</text>
+  <text x="1037.0371" y="190" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">What does the app assume?</text>
+  <line x1="1037.0371" y1="210" x2="1037.0371" y2="290" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
+  <rect x="864.1976" y="300" width="345.6791" height="100" rx="8.642" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.4568" />
+  <text x="1037.0371" y="344" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--warn-gold)">4. Test Boundaries</text>
+  <text x="1037.0371" y="380" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Negative values, limits, etc.</text>
+  <line x1="864.1976" y1="350" x2="815.8025" y2="350" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
+  <rect x="458.0247" y="300" width="345.6791" height="100" rx="8.642" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.4568" />
+  <text x="630.8642" y="344" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--danger-bright)">5. Attempt Bypass</text>
+  <text x="630.8642" y="380" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Skip steps, modify params</text>
+  <line x1="458.0247" y1="350" x2="409.6296" y2="350" stroke="var(--primary-bright)" stroke-width="3.4568" marker-end="url(#arrow)" />
+  <rect x="51.8518" y="300" width="345.6791" height="100" rx="8.642" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.4568" />
+  <text x="224.6914" y="344" text-anchor="middle" font-size="17.284" font-weight="bold" fill="var(--danger-bright)">6. Exploit Logic Gap</text>
+  <text x="224.6914" y="380" text-anchor="middle" font-size="17.284" fill="var(--text-mid)">Leverage discovered flaw</text>
+  <rect x="103.7037" y="480" width="1037.0371" height="160" rx="8.642" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5926" />
+  <text x="622.2222" y="530.0001" text-anchor="middle" font-size="19.0124" font-weight="bold" fill="var(--primary-bright)">Example: E-commerce checkout bypass</text>
+  <text x="622.2222" y="570" text-anchor="middle" font-size="17.284" fill="var(--text-dark)">Normal: Cart -&gt; Address -&gt; Payment -&gt; Confirm</text>
+  <text x="622.2222" y="610" text-anchor="middle" font-size="17.284" fill="var(--danger-bright)">Attack: Cart -&gt; Confirm (skip payment by calling confirm URL directly)</text>
+</svg>

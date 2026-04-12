@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,39 +158,39 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:rect x="21.3436" y="8.3117" width="1109.8668" height="631.6883" rx="4.1559" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="1.6624" />
-  <ns0:text x="576.277" y="33.2468" text-anchor="middle" font-size="13.2987" font-weight="bold" fill="var(--text-dark)">Performance Tuning Checklist</ns0:text>
-  <ns0:line x1="64.0308" y1="41.5584" x2="1088.5232" y2="41.5584" stroke="var(--primary-bright)" stroke-width="1.6624" />
-  <ns0:rect x="64.0308" y="54.026" width="1024.4925" height="99.7402" rx="4.1559" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.2467" />
-  <ns0:text x="106.7179" y="72.3117" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Before Running</ns0:text>
-  <ns0:text x="106.7179" y="88.935" font-size="10" fill="var(--text-muted)">☐ Set appropriate executor memory</ns0:text>
-  <ns0:text x="106.7179" y="103.0649" font-size="10" fill="var(--text-muted)">☐ Set executor cores (2-5 per executor)</ns0:text>
-  <ns0:text x="106.7179" y="117.1948" font-size="10" fill="var(--text-muted)">☐ Enable AQE</ns0:text>
-  <ns0:text x="106.7179" y="131.3247" font-size="10" fill="var(--text-muted)">☐ Set shuffle partitions</ns0:text>
-  <ns0:text x="106.7179" y="145.4546" font-size="10" fill="var(--text-muted)">☐ Enable Kryo serialization</ns0:text>
-  <ns0:rect x="64.0308" y="162.0779" width="1024.4925" height="91.4286" rx="4.1559" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.2467" />
-  <ns0:text x="106.7179" y="180.3636" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Data Reading</ns0:text>
-  <ns0:text x="106.7179" y="196.987" font-size="10" fill="var(--text-muted)">☐ Use columnar formats (Parquet)</ns0:text>
-  <ns0:text x="106.7179" y="211.1168" font-size="10" fill="var(--text-muted)">☐ Define schema explicitly</ns0:text>
-  <ns0:text x="106.7179" y="225.2467" font-size="10" fill="var(--text-muted)">☐ Use partition pruning</ns0:text>
-  <ns0:text x="106.7179" y="239.3766" font-size="10" fill="var(--text-muted)">☐ Push predicates to source</ns0:text>
-  <ns0:rect x="64.0308" y="261.8181" width="1024.4925" height="99.7402" rx="4.1559" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.2467" />
-  <ns0:text x="106.7179" y="280.1038" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Transformations</ns0:text>
-  <ns0:text x="106.7179" y="296.7273" font-size="10" fill="var(--text-muted)">☐ Filter early, select early</ns0:text>
-  <ns0:text x="106.7179" y="310.8571" font-size="10" fill="var(--text-muted)">☐ Avoid UDFs (use built-in functions)</ns0:text>
-  <ns0:text x="106.7179" y="324.987" font-size="10" fill="var(--text-muted)">☐ Broadcast small tables in joins</ns0:text>
-  <ns0:text x="106.7179" y="339.1169" font-size="10" fill="var(--text-muted)">☐ Handle data skew</ns0:text>
-  <ns0:text x="106.7179" y="353.2467" font-size="10" fill="var(--text-muted)">☐ Cache reused DataFrames</ns0:text>
-  <ns0:rect x="64.0308" y="369.8701" width="1024.4925" height="91.4286" rx="4.1559" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.2467" />
-  <ns0:text x="106.7179" y="388.1558" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Writing</ns0:text>
-  <ns0:text x="106.7179" y="404.7792" font-size="10" fill="var(--text-muted)">☐ Coalesce before writing</ns0:text>
-  <ns0:text x="106.7179" y="418.9091" font-size="10" fill="var(--text-muted)">☐ Partition output by query pattern</ns0:text>
-  <ns0:text x="106.7179" y="433.0389" font-size="10" fill="var(--text-muted)">☐ Use dynamic partition overwrite</ns0:text>
-  <ns0:text x="106.7179" y="447.1688" font-size="10" fill="var(--text-muted)">☐ Choose appropriate compression</ns0:text>
-  <ns0:rect x="64.0308" y="469.6104" width="1024.4925" height="91.4286" rx="4.1559" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.2467" />
-  <ns0:text x="106.7179" y="487.8961" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Monitoring</ns0:text>
-  <ns0:text x="106.7179" y="504.5194" font-size="10" fill="var(--text-muted)">☐ Check Spark UI for skew</ns0:text>
-  <ns0:text x="106.7179" y="518.6493" font-size="10" fill="var(--text-muted)">☐ Check GC time per executor</ns0:text>
-  <ns0:text x="106.7179" y="532.7792" font-size="10" fill="var(--text-muted)">☐ Check shuffle spill metrics</ns0:text>
-  <ns0:text x="106.7179" y="546.909" font-size="10" fill="var(--text-muted)">☐ Check task duration distribution</ns0:text>
-</ns0:svg>
+  <rect x="21.3436" y="8.3117" width="1109.8668" height="631.6883" rx="4.1559" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="1.6624" />
+  <text x="576.277" y="33.2468" text-anchor="middle" font-size="13.2987" font-weight="bold" fill="var(--text-dark)">Performance Tuning Checklist</text>
+  <line x1="64.0308" y1="41.5584" x2="1088.5232" y2="41.5584" stroke="var(--primary-bright)" stroke-width="1.6624" />
+  <rect x="64.0308" y="54.026" width="1024.4925" height="99.7402" rx="4.1559" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.2467" />
+  <text x="106.7179" y="72.3117" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Before Running</text>
+  <text x="106.7179" y="88.935" font-size="10" fill="var(--text-muted)">☐ Set appropriate executor memory</text>
+  <text x="106.7179" y="103.0649" font-size="10" fill="var(--text-muted)">☐ Set executor cores (2-5 per executor)</text>
+  <text x="106.7179" y="117.1948" font-size="10" fill="var(--text-muted)">☐ Enable AQE</text>
+  <text x="106.7179" y="131.3247" font-size="10" fill="var(--text-muted)">☐ Set shuffle partitions</text>
+  <text x="106.7179" y="145.4546" font-size="10" fill="var(--text-muted)">☐ Enable Kryo serialization</text>
+  <rect x="64.0308" y="162.0779" width="1024.4925" height="91.4286" rx="4.1559" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.2467" />
+  <text x="106.7179" y="180.3636" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Data Reading</text>
+  <text x="106.7179" y="196.987" font-size="10" fill="var(--text-muted)">☐ Use columnar formats (Parquet)</text>
+  <text x="106.7179" y="211.1168" font-size="10" fill="var(--text-muted)">☐ Define schema explicitly</text>
+  <text x="106.7179" y="225.2467" font-size="10" fill="var(--text-muted)">☐ Use partition pruning</text>
+  <text x="106.7179" y="239.3766" font-size="10" fill="var(--text-muted)">☐ Push predicates to source</text>
+  <rect x="64.0308" y="261.8181" width="1024.4925" height="99.7402" rx="4.1559" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.2467" />
+  <text x="106.7179" y="280.1038" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Transformations</text>
+  <text x="106.7179" y="296.7273" font-size="10" fill="var(--text-muted)">☐ Filter early, select early</text>
+  <text x="106.7179" y="310.8571" font-size="10" fill="var(--text-muted)">☐ Avoid UDFs (use built-in functions)</text>
+  <text x="106.7179" y="324.987" font-size="10" fill="var(--text-muted)">☐ Broadcast small tables in joins</text>
+  <text x="106.7179" y="339.1169" font-size="10" fill="var(--text-muted)">☐ Handle data skew</text>
+  <text x="106.7179" y="353.2467" font-size="10" fill="var(--text-muted)">☐ Cache reused DataFrames</text>
+  <rect x="64.0308" y="369.8701" width="1024.4925" height="91.4286" rx="4.1559" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.2467" />
+  <text x="106.7179" y="388.1558" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Writing</text>
+  <text x="106.7179" y="404.7792" font-size="10" fill="var(--text-muted)">☐ Coalesce before writing</text>
+  <text x="106.7179" y="418.9091" font-size="10" fill="var(--text-muted)">☐ Partition output by query pattern</text>
+  <text x="106.7179" y="433.0389" font-size="10" fill="var(--text-muted)">☐ Use dynamic partition overwrite</text>
+  <text x="106.7179" y="447.1688" font-size="10" fill="var(--text-muted)">☐ Choose appropriate compression</text>
+  <rect x="64.0308" y="469.6104" width="1024.4925" height="91.4286" rx="4.1559" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.2467" />
+  <text x="106.7179" y="487.8961" font-size="10.8052" font-weight="bold" fill="var(--text-dark)">Monitoring</text>
+  <text x="106.7179" y="504.5194" font-size="10" fill="var(--text-muted)">☐ Check Spark UI for skew</text>
+  <text x="106.7179" y="518.6493" font-size="10" fill="var(--text-muted)">☐ Check GC time per executor</text>
+  <text x="106.7179" y="532.7792" font-size="10" fill="var(--text-muted)">☐ Check shuffle spill metrics</text>
+  <text x="106.7179" y="546.909" font-size="10" fill="var(--text-muted)">☐ Check task duration distribution</text>
+</svg>

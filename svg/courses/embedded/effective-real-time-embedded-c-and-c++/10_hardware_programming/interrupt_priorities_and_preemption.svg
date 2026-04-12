@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,35 +158,35 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="142.2222" y="8.8889" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="426.6667" y="55.1111" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--bg)">0x00 – 0x0F  (Highest)</ns0:text>
-  <ns0:text x="853.3333" y="49.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-lt)">Preempts everything</ns0:text>
-  <ns0:text x="853.3333" y="69.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--primary-lt)">Safety-critical ISRs</ns0:text>
-  <ns0:rect x="142.2222" y="106.6667" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="426.6667" y="152.8889" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--text)">0x10 – 0x1F</ns0:text>
-  <ns0:text x="853.3333" y="147.5556" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">High-priority comms</ns0:text>
-  <ns0:text x="853.3333" y="167.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">e.g. DMA complete</ns0:text>
-  <ns0:rect x="142.2222" y="204.4444" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="426.6667" y="250.6667" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--text)">0x20 – 0x3F</ns0:text>
-  <ns0:text x="853.3333" y="245.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Normal peripherals</ns0:text>
-  <ns0:text x="853.3333" y="264.8889" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">e.g. UART, SPI</ns0:text>
-  <ns0:rect x="142.2222" y="302.2222" width="853.3333" height="88.8889" rx="5.3333" fill="var(--surface-dark)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="426.6667" y="348.4444" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--text-disabled)">0x40 – 0xFF  (Lowest)</ns0:text>
-  <ns0:text x="853.3333" y="343.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-disabled)">Background tasks</ns0:text>
-  <ns0:text x="853.3333" y="362.6667" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">e.g. logging, telemetry</ns0:text>
-  <ns0:line x1="97.7778" y1="400" x2="97.7778" y2="8.8889" stroke="var(--primary-dk)" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
-  <ns0:text x="53.3333" y="213.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-dk)" transform="rotate(-90 60 340)">Priority</ns0:text>
-  <ns0:rect x="177.7778" y="424.8889" width="782.2222" height="49.7778" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
-  <ns0:text x="568.8889" y="449.7778" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">Preemption only occurs between groups, not between sub-priorities</ns0:text>
-  <ns0:text x="568.8889" y="467.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Sub-priority determines order when two same-group IRQs fire simultaneously</ns0:text>
-  <ns0:text x="568.8889" y="524.4444" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">Configure via NVIC_SetPriority() — higher number = lower priority on ARM</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="142.2222" y="8.8889" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-primary)" filter="url(#shadow)" />
+  <text x="426.6667" y="55.1111" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--bg)">0x00 – 0x0F  (Highest)</text>
+  <text x="853.3333" y="49.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-lt)">Preempts everything</text>
+  <text x="853.3333" y="69.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--primary-lt)">Safety-critical ISRs</text>
+  <rect x="142.2222" y="106.6667" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="426.6667" y="152.8889" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--text)">0x10 – 0x1F</text>
+  <text x="853.3333" y="147.5556" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">High-priority comms</text>
+  <text x="853.3333" y="167.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">e.g. DMA complete</text>
+  <rect x="142.2222" y="204.4444" width="853.3333" height="88.8889" rx="5.3333" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="426.6667" y="250.6667" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--text)">0x20 – 0x3F</text>
+  <text x="853.3333" y="245.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Normal peripherals</text>
+  <text x="853.3333" y="264.8889" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">e.g. UART, SPI</text>
+  <rect x="142.2222" y="302.2222" width="853.3333" height="88.8889" rx="5.3333" fill="var(--surface-dark)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="426.6667" y="348.4444" text-anchor="middle" font-family="monospace" font-size="21.3333" font-weight="bold" fill="var(--text-disabled)">0x40 – 0xFF  (Lowest)</text>
+  <text x="853.3333" y="343.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-disabled)">Background tasks</text>
+  <text x="853.3333" y="362.6667" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">e.g. logging, telemetry</text>
+  <line x1="97.7778" y1="400" x2="97.7778" y2="8.8889" stroke="var(--primary-dk)" stroke-width="2.2222" marker-end="url(#arrow-primary)" />
+  <text x="53.3333" y="213.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-dk)" transform="rotate(-90 60 340)">Priority</text>
+  <rect x="177.7778" y="424.8889" width="782.2222" height="49.7778" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
+  <text x="568.8889" y="449.7778" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">Preemption only occurs between groups, not between sub-priorities</text>
+  <text x="568.8889" y="467.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Sub-priority determines order when two same-group IRQs fire simultaneously</text>
+  <text x="568.8889" y="524.4444" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-disabled)">Configure via NVIC_SetPriority() — higher number = lower priority on ARM</text>
+</svg>

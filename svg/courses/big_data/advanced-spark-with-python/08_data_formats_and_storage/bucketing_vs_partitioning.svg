@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,21 +158,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="12.4878" markerHeight="16.9412" refX="9.3659" refY="6.3529" orient="auto">
-      <ns0:path d="M 0 0 L 0 12.7059 L 12.4878 6.3529 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="14.2958" y="19.394" width="1143.6643" height="290.9091" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.1444" rx="5.7183" />
-  <ns0:text x="28.5916" y="54.303" font-family="sans-serif" font-size="20.0142" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">Partitioning</ns0:text>
-  <ns0:text x="28.5916" y="93.091" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Physically separates data into folders</ns0:text>
-  <ns0:text x="28.5916" y="131.8788" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">/table/date=2024-01-01/   /table/date=2024-01-02/</ns0:text>
-  <ns0:text x="28.5916" y="178.4242" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Pros: partition pruning, human-readable layout on disk</ns0:text>
-  <ns0:text x="28.5916" y="224.9697" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Cons: small files problem, limited to low-cardinality columns</ns0:text>
-  <ns0:rect x="14.2958" y="339.3939" width="1143.6643" height="300.6061" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.1444" rx="5.7183" />
-  <ns0:text x="28.5916" y="374.3031" font-family="sans-serif" font-size="20.0142" fill="var(--ok-dk)" text-anchor="start" font-weight="bold">Bucketing</ns0:text>
-  <ns0:text x="28.5916" y="413.0909" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Distributes data into fixed-size buckets based on hash of column value</ns0:text>
-  <ns0:text x="28.5916" y="459.6364" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">/table/part-00000 (bucket 0)   /table/part-00001 (bucket 1)</ns0:text>
-  <ns0:text x="28.5916" y="506.1819" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">/table/part-00002 (bucket 2)   ...   /table/part-00031 (bucket 31)</ns0:text>
-  <ns0:text x="28.5916" y="552.7273" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Pros: eliminates shuffle in joins, works with high cardinality columns</ns0:text>
-  <ns0:text x="28.5916" y="599.2727" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Cons: fixed bucket count, write overhead</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="12.4878" markerHeight="16.9412" refX="9.3659" refY="6.3529" orient="auto">
+      <path d="M 0 0 L 0 12.7059 L 12.4878 6.3529 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="14.2958" y="19.394" width="1143.6643" height="290.9091" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.1444" rx="5.7183" />
+  <text x="28.5916" y="54.303" font-family="sans-serif" font-size="20.0142" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">Partitioning</text>
+  <text x="28.5916" y="93.091" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Physically separates data into folders</text>
+  <text x="28.5916" y="131.8788" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">/table/date=2024-01-01/   /table/date=2024-01-02/</text>
+  <text x="28.5916" y="178.4242" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Pros: partition pruning, human-readable layout on disk</text>
+  <text x="28.5916" y="224.9697" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Cons: small files problem, limited to low-cardinality columns</text>
+  <rect x="14.2958" y="339.3939" width="1143.6643" height="300.6061" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.1444" rx="5.7183" />
+  <text x="28.5916" y="374.3031" font-family="sans-serif" font-size="20.0142" fill="var(--ok-dk)" text-anchor="start" font-weight="bold">Bucketing</text>
+  <text x="28.5916" y="413.0909" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Distributes data into fixed-size buckets based on hash of column value</text>
+  <text x="28.5916" y="459.6364" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">/table/part-00000 (bucket 0)   /table/part-00001 (bucket 1)</text>
+  <text x="28.5916" y="506.1819" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">/table/part-00002 (bucket 2)   ...   /table/part-00031 (bucket 31)</text>
+  <text x="28.5916" y="552.7273" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Pros: eliminates shuffle in joins, works with high cardinality columns</text>
+  <text x="28.5916" y="599.2727" font-family="sans-serif" font-size="17.155" fill="var(--text-dark)" text-anchor="start">Cons: fixed bucket count, write overhead</text>
+</svg>

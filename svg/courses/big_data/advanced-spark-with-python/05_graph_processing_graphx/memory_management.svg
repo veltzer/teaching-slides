@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,38 +157,38 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="606.8148" y="51.2" text-anchor="middle" font-family="Arial" font-size="27.3067" font-weight="bold" fill="var(--primary-deeper)">Graph Memory Management</ns0:text>
-  <ns0:rect x="45.5111" y="93.8667" width="515.7926" height="546.1333" rx="15.1704" fill="var(--surface-light)" stroke="var(--text-dark)" stroke-width="3.0341" />
-  <ns0:text x="303.4074" y="136.5333" text-anchor="middle" font-family="Arial" font-size="21.2385" font-weight="bold" fill="var(--text-dark)">Executor Memory</ns0:text>
-  <ns0:rect x="75.8519" y="162.1333" width="455.1111" height="136.5333" rx="9.1022" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.0341" />
-  <ns0:text x="303.4074" y="201.3867" text-anchor="middle" font-family="Arial" font-size="19.7215" font-weight="bold" fill="var(--primary-dk)">Storage Memory (60%)</ns0:text>
-  <ns0:rect x="98.6074" y="221.8667" width="128.9481" height="51.2" rx="6.0681" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="1.517" />
-  <ns0:text x="162.323" y="256" text-anchor="middle" font-family="Arial" font-size="15.1704" fill="var(--text-dark)">Cached Vertices</ns0:text>
-  <ns0:rect x="242.7259" y="221.8667" width="128.9481" height="51.2" rx="6.0681" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="1.517" />
-  <ns0:text x="306.4415" y="256" text-anchor="middle" font-family="Arial" font-size="15.1704" fill="var(--text-dark)">Cached Edges</ns0:text>
-  <ns0:rect x="386.8444" y="221.8667" width="121.363" height="51.2" rx="6.0681" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="1.517" />
-  <ns0:text x="447.5259" y="256" text-anchor="middle" font-family="Arial" font-size="15.1704" fill="var(--text-dark)">Broadcasts</ns0:text>
-  <ns0:rect x="75.8519" y="324.2667" width="455.1111" height="102.4" rx="9.1022" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.0341" />
-  <ns0:text x="303.4074" y="363.52" text-anchor="middle" font-family="Arial" font-size="19.7215" font-weight="bold" fill="var(--ok-dk)">Execution Memory (40%)</ns0:text>
-  <ns0:text x="303.4074" y="401.0667" text-anchor="middle" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Shuffles, Joins, Aggregations</ns0:text>
-  <ns0:rect x="75.8519" y="452.2667" width="455.1111" height="76.8" rx="9.1022" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.0341" />
-  <ns0:text x="303.4074" y="491.52" text-anchor="middle" font-family="Arial" font-size="19.7215" font-weight="bold" fill="var(--warn-dk)">Overhead Memory</ns0:text>
-  <ns0:text x="303.4074" y="517.12" text-anchor="middle" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">JVM internals, class metadata</ns0:text>
-  <ns0:rect x="637.1556" y="93.8667" width="530.963" height="546.1333" rx="15.1704" fill="var(--surface-light)" stroke="var(--text-dark)" stroke-width="3.0341" />
-  <ns0:text x="902.637" y="136.5333" text-anchor="middle" font-family="Arial" font-size="21.2385" font-weight="bold" fill="var(--text-dark)">Caching Strategies</ns0:text>
-  <ns0:rect x="667.4963" y="162.1333" width="470.2815" height="76.8" rx="9.1022" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.2756" />
-  <ns0:text x="682.6667" y="196.2667" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--ok-dk)">MEMORY_ONLY</ns0:text>
-  <ns0:text x="682.6667" y="225.28" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Fast, but may OOM on large graphs</ns0:text>
-  <ns0:rect x="667.4963" y="256" width="470.2815" height="76.8" rx="9.1022" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.2756" />
-  <ns0:text x="682.6667" y="290.1333" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--primary-dk)">MEMORY_AND_DISK</ns0:text>
-  <ns0:text x="682.6667" y="319.1467" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Spills to disk; recommended for graphs</ns0:text>
-  <ns0:rect x="667.4963" y="349.8667" width="470.2815" height="76.8" rx="9.1022" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.2756" />
-  <ns0:text x="682.6667" y="384" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--warn-dk)">MEMORY_ONLY_SER</ns0:text>
-  <ns0:text x="682.6667" y="413.0133" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Serialized; saves space, costs CPU</ns0:text>
-  <ns0:rect x="667.4963" y="460.8" width="470.2815" height="153.6" rx="9.1022" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.2756" />
-  <ns0:text x="902.637" y="498.3467" text-anchor="middle" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--info-mid)">Best Practices</ns0:text>
-  <ns0:text x="682.6667" y="532.48" font-family="Arial" font-size="16.6874" fill="var(--text-dark)">- Cache graph before iterative algos</ns0:text>
-  <ns0:text x="682.6667" y="559.7867" font-family="Arial" font-size="16.6874" fill="var(--text-dark)">- Unpersist when no longer needed</ns0:text>
-  <ns0:text x="682.6667" y="587.0933" font-family="Arial" font-size="16.6874" fill="var(--text-dark)">- Use checkpointing for long lineages</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="606.8148" y="51.2" text-anchor="middle" font-family="Arial" font-size="27.3067" font-weight="bold" fill="var(--primary-deeper)">Graph Memory Management</text>
+  <rect x="45.5111" y="93.8667" width="515.7926" height="546.1333" rx="15.1704" fill="var(--surface-light)" stroke="var(--text-dark)" stroke-width="3.0341" />
+  <text x="303.4074" y="136.5333" text-anchor="middle" font-family="Arial" font-size="21.2385" font-weight="bold" fill="var(--text-dark)">Executor Memory</text>
+  <rect x="75.8519" y="162.1333" width="455.1111" height="136.5333" rx="9.1022" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.0341" />
+  <text x="303.4074" y="201.3867" text-anchor="middle" font-family="Arial" font-size="19.7215" font-weight="bold" fill="var(--primary-dk)">Storage Memory (60%)</text>
+  <rect x="98.6074" y="221.8667" width="128.9481" height="51.2" rx="6.0681" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="1.517" />
+  <text x="162.323" y="256" text-anchor="middle" font-family="Arial" font-size="15.1704" fill="var(--text-dark)">Cached Vertices</text>
+  <rect x="242.7259" y="221.8667" width="128.9481" height="51.2" rx="6.0681" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="1.517" />
+  <text x="306.4415" y="256" text-anchor="middle" font-family="Arial" font-size="15.1704" fill="var(--text-dark)">Cached Edges</text>
+  <rect x="386.8444" y="221.8667" width="121.363" height="51.2" rx="6.0681" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="1.517" />
+  <text x="447.5259" y="256" text-anchor="middle" font-family="Arial" font-size="15.1704" fill="var(--text-dark)">Broadcasts</text>
+  <rect x="75.8519" y="324.2667" width="455.1111" height="102.4" rx="9.1022" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.0341" />
+  <text x="303.4074" y="363.52" text-anchor="middle" font-family="Arial" font-size="19.7215" font-weight="bold" fill="var(--ok-dk)">Execution Memory (40%)</text>
+  <text x="303.4074" y="401.0667" text-anchor="middle" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Shuffles, Joins, Aggregations</text>
+  <rect x="75.8519" y="452.2667" width="455.1111" height="76.8" rx="9.1022" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.0341" />
+  <text x="303.4074" y="491.52" text-anchor="middle" font-family="Arial" font-size="19.7215" font-weight="bold" fill="var(--warn-dk)">Overhead Memory</text>
+  <text x="303.4074" y="517.12" text-anchor="middle" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">JVM internals, class metadata</text>
+  <rect x="637.1556" y="93.8667" width="530.963" height="546.1333" rx="15.1704" fill="var(--surface-light)" stroke="var(--text-dark)" stroke-width="3.0341" />
+  <text x="902.637" y="136.5333" text-anchor="middle" font-family="Arial" font-size="21.2385" font-weight="bold" fill="var(--text-dark)">Caching Strategies</text>
+  <rect x="667.4963" y="162.1333" width="470.2815" height="76.8" rx="9.1022" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.2756" />
+  <text x="682.6667" y="196.2667" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--ok-dk)">MEMORY_ONLY</text>
+  <text x="682.6667" y="225.28" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Fast, but may OOM on large graphs</text>
+  <rect x="667.4963" y="256" width="470.2815" height="76.8" rx="9.1022" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.2756" />
+  <text x="682.6667" y="290.1333" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--primary-dk)">MEMORY_AND_DISK</text>
+  <text x="682.6667" y="319.1467" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Spills to disk; recommended for graphs</text>
+  <rect x="667.4963" y="349.8667" width="470.2815" height="76.8" rx="9.1022" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2.2756" />
+  <text x="682.6667" y="384" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--warn-dk)">MEMORY_ONLY_SER</text>
+  <text x="682.6667" y="413.0133" font-family="Arial" font-size="16.6874" fill="var(--text-muted)">Serialized; saves space, costs CPU</text>
+  <rect x="667.4963" y="460.8" width="470.2815" height="153.6" rx="9.1022" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.2756" />
+  <text x="902.637" y="498.3467" text-anchor="middle" font-family="Arial" font-size="18.2044" font-weight="bold" fill="var(--info-mid)">Best Practices</text>
+  <text x="682.6667" y="532.48" font-family="Arial" font-size="16.6874" fill="var(--text-dark)">- Cache graph before iterative algos</text>
+  <text x="682.6667" y="559.7867" font-family="Arial" font-size="16.6874" fill="var(--text-dark)">- Unpersist when no longer needed</text>
+  <text x="682.6667" y="587.0933" font-family="Arial" font-size="16.6874" fill="var(--text-dark)">- Use checkpointing for long lineages</text>
+</svg>

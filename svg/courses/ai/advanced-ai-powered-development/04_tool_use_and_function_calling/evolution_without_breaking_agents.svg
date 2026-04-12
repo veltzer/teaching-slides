@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,40 +158,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="65.536" markerHeight="448" refX="58.9824" refY="224" orient="auto">
-      <ns0:polygon points="0,640 22.9376,0" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="131.072" height="640" fill="var(--surface-light)" />
-  <ns0:text x="65.536" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Tool Versioning: Evolution Without Breaking Agents</ns0:text>
-  <ns0:rect x="4.9152" y="136" width="25.3952" height="176" rx="1.6384" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.3277" />
-  <ns0:text x="17.5309" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">v1.0</ns0:text>
-  <ns0:text x="17.5309" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">Initial release</ns0:text>
-  <ns0:text x="17.5309" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">required: pattern</ns0:text>
-  <ns0:text x="17.5309" y="288" text-anchor="middle" font-size="10" fill="var(--ok-light)">stable API</ns0:text>
-  <ns0:line x1="30.3104" y1="224" x2="36.0448" y2="224" stroke="var(--text-dark)" stroke-width="0.3277" marker-end="url(#arr)" />
-  <ns0:rect x="36.0448" y="136" width="25.3952" height="176" rx="1.6384" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.3277" />
-  <ns0:text x="48.6605" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">v1.1</ns0:text>
-  <ns0:text x="48.6605" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">Add optional params</ns0:text>
-  <ns0:text x="48.6605" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ max_results</ns0:text>
-  <ns0:text x="48.6605" y="288" text-anchor="middle" font-size="10" fill="var(--ok-light)">backward-compat</ns0:text>
-  <ns0:line x1="61.44" y1="224" x2="67.1744" y2="224" stroke="var(--text-dark)" stroke-width="0.3277" marker-end="url(#arr)" />
-  <ns0:rect x="67.1744" y="136" width="25.3952" height="176" rx="1.6384" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.3277" />
-  <ns0:text x="79.7901" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">v2.0</ns0:text>
-  <ns0:text x="79.7901" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">Breaking change</ns0:text>
-  <ns0:text x="79.7901" y="256" text-anchor="middle" font-size="10" fill="var(--danger-dk)">rename required</ns0:text>
-  <ns0:text x="79.7901" y="288" text-anchor="middle" font-size="10" fill="var(--text-muted)">param</ns0:text>
-  <ns0:line x1="92.5696" y1="224" x2="98.304" y2="224" stroke="var(--text-dark)" stroke-width="0.3277" marker-end="url(#arr)" />
-  <ns0:rect x="98.304" y="136" width="28.672" height="176" rx="1.6384" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="0.3277" />
-  <ns0:text x="112.5581" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Deprecate</ns0:text>
-  <ns0:text x="112.5581" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">v1.x sunset</ns0:text>
-  <ns0:text x="112.5581" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">warn in description</ns0:text>
-  <ns0:text x="112.5581" y="288" text-anchor="middle" font-size="10" fill="var(--text-muted)">track usage</ns0:text>
-  <ns0:rect x="4.9152" y="384" width="121.2416" height="232" rx="1.6384" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.2458" />
-  <ns0:text x="65.536" y="428.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Versioning Rules for Tool Authors</ns0:text>
-  <ns0:text x="8.192" y="472" font-size="10" fill="var(--text-dark)">▶ Never remove or rename required parameters — always add optional ones</ns0:text>
-  <ns0:text x="8.192" y="508.8" font-size="10" fill="var(--text-dark)">▶ Use semantic versioning: MAJOR.MINOR.PATCH</ns0:text>
-  <ns0:text x="8.192" y="545.6" font-size="10" fill="var(--text-dark)">▶ Mark deprecated tools in description: "[DEPRECATED: use search_code_v2]"</ns0:text>
-  <ns0:text x="8.192" y="582.4" font-size="10" fill="var(--text-dark)">▶ Monitor tool call success rates and latency after every update</ns0:text>
-  <ns0:text x="8.192" y="608" font-size="10" fill="var(--text-mid)">▶ Support multiple versions concurrently during migration periods</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="65.536" markerHeight="448" refX="58.9824" refY="224" orient="auto">
+      <polygon points="0,640 22.9376,0" fill="#333" />
+    </marker>
+  </defs>
+  <rect width="131.072" height="640" fill="var(--surface-light)" />
+  <text x="65.536" y="60.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Tool Versioning: Evolution Without Breaking Agents</text>
+  <rect x="4.9152" y="136" width="25.3952" height="176" rx="1.6384" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.3277" />
+  <text x="17.5309" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">v1.0</text>
+  <text x="17.5309" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">Initial release</text>
+  <text x="17.5309" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">required: pattern</text>
+  <text x="17.5309" y="288" text-anchor="middle" font-size="10" fill="var(--ok-light)">stable API</text>
+  <line x1="30.3104" y1="224" x2="36.0448" y2="224" stroke="var(--text-dark)" stroke-width="0.3277" marker-end="url(#arr)" />
+  <rect x="36.0448" y="136" width="25.3952" height="176" rx="1.6384" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.3277" />
+  <text x="48.6605" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">v1.1</text>
+  <text x="48.6605" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">Add optional params</text>
+  <text x="48.6605" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ max_results</text>
+  <text x="48.6605" y="288" text-anchor="middle" font-size="10" fill="var(--ok-light)">backward-compat</text>
+  <line x1="61.44" y1="224" x2="67.1744" y2="224" stroke="var(--text-dark)" stroke-width="0.3277" marker-end="url(#arr)" />
+  <rect x="67.1744" y="136" width="25.3952" height="176" rx="1.6384" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.3277" />
+  <text x="79.7901" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">v2.0</text>
+  <text x="79.7901" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">Breaking change</text>
+  <text x="79.7901" y="256" text-anchor="middle" font-size="10" fill="var(--danger-dk)">rename required</text>
+  <text x="79.7901" y="288" text-anchor="middle" font-size="10" fill="var(--text-muted)">param</text>
+  <line x1="92.5696" y1="224" x2="98.304" y2="224" stroke="var(--text-dark)" stroke-width="0.3277" marker-end="url(#arr)" />
+  <rect x="98.304" y="136" width="28.672" height="176" rx="1.6384" fill="var(--danger-pale3)" stroke="var(--danger-dk)" stroke-width="0.3277" />
+  <text x="112.5581" y="184" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Deprecate</text>
+  <text x="112.5581" y="224" text-anchor="middle" font-size="10" fill="var(--text-dark)">v1.x sunset</text>
+  <text x="112.5581" y="256" text-anchor="middle" font-size="10" fill="var(--text-muted)">warn in description</text>
+  <text x="112.5581" y="288" text-anchor="middle" font-size="10" fill="var(--text-muted)">track usage</text>
+  <rect x="4.9152" y="384" width="121.2416" height="232" rx="1.6384" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.2458" />
+  <text x="65.536" y="428.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Versioning Rules for Tool Authors</text>
+  <text x="8.192" y="472" font-size="10" fill="var(--text-dark)">▶ Never remove or rename required parameters — always add optional ones</text>
+  <text x="8.192" y="508.8" font-size="10" fill="var(--text-dark)">▶ Use semantic versioning: MAJOR.MINOR.PATCH</text>
+  <text x="8.192" y="545.6" font-size="10" fill="var(--text-dark)">▶ Mark deprecated tools in description: "[DEPRECATED: use search_code_v2]"</text>
+  <text x="8.192" y="582.4" font-size="10" fill="var(--text-dark)">▶ Monitor tool call success rates and latency after every update</text>
+  <text x="8.192" y="608" font-size="10" fill="var(--text-mid)">▶ Support multiple versions concurrently during migration periods</text>
+</svg>

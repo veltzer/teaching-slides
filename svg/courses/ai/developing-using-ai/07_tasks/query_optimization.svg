@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,18 +158,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:rect x="144.4797" y="91.4286" width="866.8783" height="548.5714" fill="var(--text-dark)" rx="14.448" />
-  <ns0:text x="577.9189" y="146.2857" text-anchor="middle" fill="var(--bg)" font-size="26.0063" font-weight="bold">Query Performance Analysis</ns0:text>
-  <ns0:rect x="216.7196" y="182.8571" width="722.3986" height="73.1429" fill="var(--danger-light)" rx="7.224" />
-  <ns0:text x="231.1675" y="228.5714" fill="var(--bg)" font-size="17.3376">Before: SELECT * FROM orders WHERE status = 'pending'</ns0:text>
-  <ns0:text x="794.6384" y="228.5714" fill="var(--bg)" font-size="17.3376">Time: 2.5s</ns0:text>
-  <ns0:rect x="216.7196" y="274.2857" width="722.3986" height="146.2857" fill="var(--ok-soft)" rx="7.224" />
-  <ns0:text x="231.1675" y="320" fill="var(--bg)" font-size="17.3376">After: WITH pending_orders AS (</ns0:text>
-  <ns0:text x="260.0635" y="356.5714" fill="var(--bg)" font-size="17.3376">SELECT id, customer_id, total FROM orders</ns0:text>
-  <ns0:text x="260.0635" y="393.1429" fill="var(--bg)" font-size="17.3376">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</ns0:text>
-  <ns0:text x="231.1675" y="429.7143" fill="var(--bg)" font-size="17.3376">) SELECT * FROM pending_orders;</ns0:text>
-  <ns0:text x="794.6384" y="356.5714" fill="var(--bg)" font-size="17.3376">Time: 0.08s</ns0:text>
-  <ns0:rect x="216.7196" y="457.1429" width="722.3986" height="109.7143" fill="var(--primary-soft)" rx="7.224" />
-  <ns0:text x="231.1675" y="502.8571" fill="var(--bg)" font-size="17.3376">Optimizations Applied:</ns0:text>
-  <ns0:text x="231.1675" y="539.4286" fill="var(--bg)" font-size="17.3376">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</ns0:text>
-</ns0:svg>
+  <rect x="144.4797" y="91.4286" width="866.8783" height="548.5714" fill="var(--text-dark)" rx="14.448" />
+  <text x="577.9189" y="146.2857" text-anchor="middle" fill="var(--bg)" font-size="26.0063" font-weight="bold">Query Performance Analysis</text>
+  <rect x="216.7196" y="182.8571" width="722.3986" height="73.1429" fill="var(--danger-light)" rx="7.224" />
+  <text x="231.1675" y="228.5714" fill="var(--bg)" font-size="17.3376">Before: SELECT * FROM orders WHERE status = 'pending'</text>
+  <text x="794.6384" y="228.5714" fill="var(--bg)" font-size="17.3376">Time: 2.5s</text>
+  <rect x="216.7196" y="274.2857" width="722.3986" height="146.2857" fill="var(--ok-soft)" rx="7.224" />
+  <text x="231.1675" y="320" fill="var(--bg)" font-size="17.3376">After: WITH pending_orders AS (</text>
+  <text x="260.0635" y="356.5714" fill="var(--bg)" font-size="17.3376">SELECT id, customer_id, total FROM orders</text>
+  <text x="260.0635" y="393.1429" fill="var(--bg)" font-size="17.3376">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</text>
+  <text x="231.1675" y="429.7143" fill="var(--bg)" font-size="17.3376">) SELECT * FROM pending_orders;</text>
+  <text x="794.6384" y="356.5714" fill="var(--bg)" font-size="17.3376">Time: 0.08s</text>
+  <rect x="216.7196" y="457.1429" width="722.3986" height="109.7143" fill="var(--primary-soft)" rx="7.224" />
+  <text x="231.1675" y="502.8571" fill="var(--bg)" font-size="17.3376">Optimizations Applied:</text>
+  <text x="231.1675" y="539.4286" fill="var(--bg)" font-size="17.3376">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
+</svg>

@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,18 +158,18 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:rect x="35.4632" y="18.2857" width="1099.3593" height="621.7143" rx="8.8658" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.5463" />
-  <ns0:text x="585.1429" y="73.1429" text-anchor="middle" font-size="31.9169" font-weight="bold" fill="var(--text-dark)">Subdomain Takeover Attack</ns0:text>
-  <ns0:rect x="88.658" y="109.7143" width="992.9697" height="137.1429" rx="8.8658" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.6597" />
-  <ns0:text x="124.1212" y="155.4286" font-size="23.0511" font-weight="bold" fill="var(--text-dark)">1. Company creates:</ns0:text>
-  <ns0:text x="159.5845" y="197.4857" font-size="21.2779" fill="var(--text-muted)">blog.company.com CNAME -&gt; company.github.io</ns0:text>
-  <ns0:text x="159.5845" y="228.5714" font-size="21.2779" fill="var(--ok-bright)">(pointing to their GitHub Pages)</ns0:text>
-  <ns0:rect x="88.658" y="265.1429" width="992.9697" height="137.1429" rx="8.8658" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.6597" />
-  <ns0:text x="124.1212" y="310.8571" font-size="23.0511" font-weight="bold" fill="var(--text-dark)">2. Company deletes GitHub Pages repo but forgets DNS:</ns0:text>
-  <ns0:text x="159.5845" y="352.9143" font-size="21.2779" fill="var(--text-muted)">blog.company.com CNAME -&gt; company.github.io (404)</ns0:text>
-  <ns0:text x="159.5845" y="384" font-size="21.2779" fill="var(--warn-yellow)">(dangling CNAME record)</ns0:text>
-  <ns0:rect x="88.658" y="420.5714" width="992.9697" height="137.1429" rx="8.8658" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.6597" />
-  <ns0:text x="124.1212" y="466.2857" font-size="23.0511" font-weight="bold" fill="var(--text-dark)">3. Attacker creates repo "company.github.io" on GitHub:</ns0:text>
-  <ns0:text x="159.5845" y="508.3429" font-size="21.2779" fill="var(--danger-bright)">blog.company.com CNAME -&gt; attacker's content!</ns0:text>
-  <ns0:text x="585.1429" y="566.8571" text-anchor="middle" font-size="24.8242" font-weight="bold" fill="var(--danger-bright)">Result: Attacker controls blog.company.com content</ns0:text>
-</ns0:svg>
+  <rect x="35.4632" y="18.2857" width="1099.3593" height="621.7143" rx="8.8658" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.5463" />
+  <text x="585.1429" y="73.1429" text-anchor="middle" font-size="31.9169" font-weight="bold" fill="var(--text-dark)">Subdomain Takeover Attack</text>
+  <rect x="88.658" y="109.7143" width="992.9697" height="137.1429" rx="8.8658" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.6597" />
+  <text x="124.1212" y="155.4286" font-size="23.0511" font-weight="bold" fill="var(--text-dark)">1. Company creates:</text>
+  <text x="159.5845" y="197.4857" font-size="21.2779" fill="var(--text-muted)">blog.company.com CNAME -&gt; company.github.io</text>
+  <text x="159.5845" y="228.5714" font-size="21.2779" fill="var(--ok-bright)">(pointing to their GitHub Pages)</text>
+  <rect x="88.658" y="265.1429" width="992.9697" height="137.1429" rx="8.8658" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.6597" />
+  <text x="124.1212" y="310.8571" font-size="23.0511" font-weight="bold" fill="var(--text-dark)">2. Company deletes GitHub Pages repo but forgets DNS:</text>
+  <text x="159.5845" y="352.9143" font-size="21.2779" fill="var(--text-muted)">blog.company.com CNAME -&gt; company.github.io (404)</text>
+  <text x="159.5845" y="384" font-size="21.2779" fill="var(--warn-yellow)">(dangling CNAME record)</text>
+  <rect x="88.658" y="420.5714" width="992.9697" height="137.1429" rx="8.8658" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.6597" />
+  <text x="124.1212" y="466.2857" font-size="23.0511" font-weight="bold" fill="var(--text-dark)">3. Attacker creates repo "company.github.io" on GitHub:</text>
+  <text x="159.5845" y="508.3429" font-size="21.2779" fill="var(--danger-bright)">blog.company.com CNAME -&gt; attacker's content!</text>
+  <text x="585.1429" y="566.8571" text-anchor="middle" font-size="24.8242" font-weight="bold" fill="var(--danger-bright)">Result: Attacker controls blog.company.com content</text>
+</svg>

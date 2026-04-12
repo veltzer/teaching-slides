@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,40 +158,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="589.9589" y="39.5061" text-anchor="middle" font-size="25.284" font-weight="bold" fill="var(--text-dark)">Advanced Traits Cheatsheet</ns0:text>
-  <ns0:rect x="54.4577" y="63.2099" width="1071.0023" height="576.7901" rx="7.9012" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.5803" />
-  <ns0:rect x="90.7629" y="86.9136" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="115.3581" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Static dispatch</ns0:text>
-  <ns0:text x="453.8145" y="115.3581" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">fn foo&lt;T: Trait&gt;(x: T)</ns0:text>
-  <ns0:rect x="90.7629" y="135.9013" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="164.3457" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Dynamic dispatch</ns0:text>
-  <ns0:text x="453.8145" y="164.3457" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">fn foo(x: &amp;dyn Trait)</ns0:text>
-  <ns0:rect x="90.7629" y="184.8889" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="213.3334" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Associated types</ns0:text>
-  <ns0:text x="453.8145" y="213.3334" font-size="17.3827" fill="var(--text-dark)">type Item; (one impl per type)</ns0:text>
-  <ns0:rect x="90.7629" y="233.8766" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="262.321" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Type parameters</ns0:text>
-  <ns0:text x="453.8145" y="262.321" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">Trait&lt;T&gt;</ns0:text>
-  <ns0:text x="635.3403" y="262.321" font-size="17.3827" fill="var(--text-mid)">(many impls per type)</ns0:text>
-  <ns0:rect x="90.7629" y="282.8642" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="311.3087" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Supertraits</ns0:text>
-  <ns0:text x="453.8145" y="311.3087" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">trait Sub: Super { }</ns0:text>
-  <ns0:rect x="90.7629" y="331.8519" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="360.2963" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Blanket impl</ns0:text>
-  <ns0:text x="453.8145" y="360.2963" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">impl&lt;T: X&gt; Y for T { }</ns0:text>
-  <ns0:rect x="90.7629" y="380.8396" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="409.284" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Orphan rule</ns0:text>
-  <ns0:text x="453.8145" y="409.284" font-size="17.3827" fill="var(--text-dark)">your trait OR your type</ns0:text>
-  <ns0:rect x="90.7629" y="429.8272" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="458.2717" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Newtype pattern</ns0:text>
-  <ns0:text x="453.8145" y="458.2717" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">struct W(ForeignType);</ns0:text>
-  <ns0:rect x="90.7629" y="478.8149" width="326.7464" height="41.0864" rx="4.7408" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="507.2593" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--danger-deeper)">Send</ns0:text>
-  <ns0:text x="453.8145" y="507.2593" font-size="17.3827" fill="var(--text-dark)">safe to move between threads</ns0:text>
-  <ns0:rect x="90.7629" y="527.8025" width="326.7464" height="41.0864" rx="4.7408" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="556.247" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--danger-deeper)">Sync</ns0:text>
-  <ns0:text x="453.8145" y="556.247" font-size="17.3827" fill="var(--text-dark)">safe to share references</ns0:text>
-  <ns0:rect x="90.7629" y="576.7901" width="326.7464" height="41.0864" rx="4.7408" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5803" />
-  <ns0:text x="254.1361" y="605.2346" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--danger-deeper)">Sized / Unpin</ns0:text>
-  <ns0:text x="453.8145" y="605.2346" font-size="17.3827" fill="var(--text-dark)">compile-time size / safe to move after pinning</ns0:text>
-</ns0:svg>
+  <text x="589.9589" y="39.5061" text-anchor="middle" font-size="25.284" font-weight="bold" fill="var(--text-dark)">Advanced Traits Cheatsheet</text>
+  <rect x="54.4577" y="63.2099" width="1071.0023" height="576.7901" rx="7.9012" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.5803" />
+  <rect x="90.7629" y="86.9136" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="115.3581" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Static dispatch</text>
+  <text x="453.8145" y="115.3581" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">fn foo&lt;T: Trait&gt;(x: T)</text>
+  <rect x="90.7629" y="135.9013" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="164.3457" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Dynamic dispatch</text>
+  <text x="453.8145" y="164.3457" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">fn foo(x: &amp;dyn Trait)</text>
+  <rect x="90.7629" y="184.8889" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="213.3334" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Associated types</text>
+  <text x="453.8145" y="213.3334" font-size="17.3827" fill="var(--text-dark)">type Item; (one impl per type)</text>
+  <rect x="90.7629" y="233.8766" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="262.321" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Type parameters</text>
+  <text x="453.8145" y="262.321" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">Trait&lt;T&gt;</text>
+  <text x="635.3403" y="262.321" font-size="17.3827" fill="var(--text-mid)">(many impls per type)</text>
+  <rect x="90.7629" y="282.8642" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="311.3087" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Supertraits</text>
+  <text x="453.8145" y="311.3087" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">trait Sub: Super { }</text>
+  <rect x="90.7629" y="331.8519" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="360.2963" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Blanket impl</text>
+  <text x="453.8145" y="360.2963" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">impl&lt;T: X&gt; Y for T { }</text>
+  <rect x="90.7629" y="380.8396" width="326.7464" height="41.0864" rx="4.7408" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="409.284" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--primary-bright)">Orphan rule</text>
+  <text x="453.8145" y="409.284" font-size="17.3827" fill="var(--text-dark)">your trait OR your type</text>
+  <rect x="90.7629" y="429.8272" width="326.7464" height="41.0864" rx="4.7408" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5803" />
+  <text x="254.1361" y="458.2717" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--ok-bright)">Newtype pattern</text>
+  <text x="453.8145" y="458.2717" font-size="17.3827" fill="var(--text-dark)" font-family="monospace">struct W(ForeignType);</text>
+  <rect x="90.7629" y="478.8149" width="326.7464" height="41.0864" rx="4.7408" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5803" />
+  <text x="254.1361" y="507.2593" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--danger-deeper)">Send</text>
+  <text x="453.8145" y="507.2593" font-size="17.3827" fill="var(--text-dark)">safe to move between threads</text>
+  <rect x="90.7629" y="527.8025" width="326.7464" height="41.0864" rx="4.7408" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5803" />
+  <text x="254.1361" y="556.247" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--danger-deeper)">Sync</text>
+  <text x="453.8145" y="556.247" font-size="17.3827" fill="var(--text-dark)">safe to share references</text>
+  <rect x="90.7629" y="576.7901" width="326.7464" height="41.0864" rx="4.7408" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5803" />
+  <text x="254.1361" y="605.2346" text-anchor="middle" font-size="17.3827" font-weight="bold" fill="var(--danger-deeper)">Sized / Unpin</text>
+  <text x="453.8145" y="605.2346" font-size="17.3827" fill="var(--text-dark)">compile-time size / safe to move after pinning</text>
+</svg>

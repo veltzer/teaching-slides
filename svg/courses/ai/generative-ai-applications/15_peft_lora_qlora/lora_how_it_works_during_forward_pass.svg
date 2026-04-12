@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,40 +158,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowGreen" markerWidth="17.0667" markerHeight="10.5" refX="17.0667" refY="5.25" orient="auto">
-      <ns0:polygon points="0,15 5.9733,0" fill="#28a745" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="580.9929" y="34.0426" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7872" font-weight="bold" fill="var(--text-dark)">LoRA: How It Works During Forward Pass</ns0:text>
-  <ns0:rect x="464.7943" y="61.2766" width="232.3972" height="47.6596" rx="6.8085" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.0426" />
-  <ns0:text x="580.9929" y="91.234" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7021" font-weight="bold" fill="var(--text-dark)">Input x</ns0:text>
-  <ns0:line x1="580.9929" y1="108.9362" x2="580.9929" y2="149.7872" stroke="var(--primary-bright)" stroke-width="2.0426" />
-  <ns0:line x1="580.9929" y1="149.7872" x2="309.8629" y2="149.7872" stroke="var(--primary-bright)" stroke-width="1.3617" />
-  <ns0:line x1="580.9929" y1="149.7872" x2="852.123" y2="149.7872" stroke="var(--ok-bright)" stroke-width="1.3617" />
-  <ns0:line x1="309.8629" y1="149.7872" x2="309.8629" y2="190.6383" stroke="var(--primary-bright)" stroke-width="2.0426" marker-end="url(#arrow)" />
-  <ns0:line x1="852.123" y1="149.7872" x2="852.123" y2="190.6383" stroke="var(--ok-bright)" stroke-width="2.0426" marker-end="url(#arrowGreen)" />
-  <ns0:rect x="185.9177" y="190.6383" width="247.8903" height="136.1702" rx="6.8085" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.0426" />
-  <ns0:text x="309.8629" y="224.6809" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3404" font-weight="bold" fill="var(--danger-bright)">Original Weight W</ns0:text>
-  <ns0:text x="309.8629" y="251.9149" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" fill="var(--text-muted)">(frozen)</ns0:text>
-  <ns0:text x="309.8629" y="285.9574" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3404" fill="var(--text-dark)">W * x</ns0:text>
-  <ns0:text x="309.8629" y="310.4681" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.617" fill="var(--text-faint)">No gradients computed</ns0:text>
-  <ns0:rect x="728.1777" y="190.6383" width="247.8903" height="272.3404" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.0426" />
-  <ns0:text x="852.123" y="224.6809" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3404" font-weight="bold" fill="var(--ok-bright)">LoRA Path</ns0:text>
-  <ns0:rect x="774.6572" y="245.1064" width="154.9315" height="54.4681" rx="4.0851" fill="var(--bg)" stroke="var(--ok-bright)" />
-  <ns0:text x="852.123" y="269.617" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" font-weight="bold" fill="var(--text-dark)">A</ns0:text>
-  <ns0:text x="852.123" y="290.0426" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.617" fill="var(--text-muted)">d -&gt; r</ns0:text>
-  <ns0:line x1="852.123" y1="299.5745" x2="852.123" y2="333.617" stroke="var(--ok-bright)" stroke-width="2.0426" marker-end="url(#arrowGreen)" />
-  <ns0:rect x="774.6572" y="333.617" width="154.9315" height="54.4681" rx="4.0851" fill="var(--bg)" stroke="var(--ok-bright)" />
-  <ns0:text x="852.123" y="358.1277" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" font-weight="bold" fill="var(--text-dark)">B</ns0:text>
-  <ns0:text x="852.123" y="378.5532" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.617" fill="var(--text-muted)">r -&gt; d</ns0:text>
-  <ns0:text x="852.123" y="442.5532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" fill="var(--ok-bright)">= B * A * x</ns0:text>
-  <ns0:line x1="309.8629" y1="326.8085" x2="309.8629" y2="517.4468" stroke="var(--primary-bright)" stroke-width="2.0426" />
-  <ns0:line x1="852.123" y1="462.9787" x2="852.123" y2="517.4468" stroke="var(--ok-bright)" stroke-width="2.0426" />
-  <ns0:line x1="309.8629" y1="517.4468" x2="542.26" y2="517.4468" stroke="var(--primary-bright)" stroke-width="2.0426" />
-  <ns0:line x1="852.123" y1="517.4468" x2="619.7258" y2="517.4468" stroke="var(--ok-bright)" stroke-width="2.0426" />
-  <ns0:circle cx="580.9929" cy="517.4468" r="24.5106" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.7234" />
-  <ns0:text x="580.9929" y="524.2553" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7872" font-weight="bold" fill="var(--text-dark)">+</ns0:text>
-  <ns0:line x1="580.9929" y1="541.9574" x2="580.9929" y2="585.5319" stroke="var(--primary-bright)" stroke-width="2.0426" marker-end="url(#arrow)" />
-  <ns0:rect x="278.8766" y="585.5319" width="604.2326" height="54.4681" rx="6.8085" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.7234" />
-  <ns0:text x="580.9929" y="619.5745" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7021" font-weight="bold" fill="var(--text-dark)">Output: W*x + B*A*x = (W + BA)*x</ns0:text>
-</ns0:svg>
+    <marker id="arrowGreen" markerWidth="17.0667" markerHeight="10.5" refX="17.0667" refY="5.25" orient="auto">
+      <polygon points="0,15 5.9733,0" fill="#28a745" />
+    </marker>
+  </defs>
+  <text x="580.9929" y="34.0426" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7872" font-weight="bold" fill="var(--text-dark)">LoRA: How It Works During Forward Pass</text>
+  <rect x="464.7943" y="61.2766" width="232.3972" height="47.6596" rx="6.8085" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.0426" />
+  <text x="580.9929" y="91.234" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7021" font-weight="bold" fill="var(--text-dark)">Input x</text>
+  <line x1="580.9929" y1="108.9362" x2="580.9929" y2="149.7872" stroke="var(--primary-bright)" stroke-width="2.0426" />
+  <line x1="580.9929" y1="149.7872" x2="309.8629" y2="149.7872" stroke="var(--primary-bright)" stroke-width="1.3617" />
+  <line x1="580.9929" y1="149.7872" x2="852.123" y2="149.7872" stroke="var(--ok-bright)" stroke-width="1.3617" />
+  <line x1="309.8629" y1="149.7872" x2="309.8629" y2="190.6383" stroke="var(--primary-bright)" stroke-width="2.0426" marker-end="url(#arrow)" />
+  <line x1="852.123" y1="149.7872" x2="852.123" y2="190.6383" stroke="var(--ok-bright)" stroke-width="2.0426" marker-end="url(#arrowGreen)" />
+  <rect x="185.9177" y="190.6383" width="247.8903" height="136.1702" rx="6.8085" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.0426" />
+  <text x="309.8629" y="224.6809" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3404" font-weight="bold" fill="var(--danger-bright)">Original Weight W</text>
+  <text x="309.8629" y="251.9149" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" fill="var(--text-muted)">(frozen)</text>
+  <text x="309.8629" y="285.9574" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3404" fill="var(--text-dark)">W * x</text>
+  <text x="309.8629" y="310.4681" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.617" fill="var(--text-faint)">No gradients computed</text>
+  <rect x="728.1777" y="190.6383" width="247.8903" height="272.3404" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.0426" />
+  <text x="852.123" y="224.6809" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3404" font-weight="bold" fill="var(--ok-bright)">LoRA Path</text>
+  <rect x="774.6572" y="245.1064" width="154.9315" height="54.4681" rx="4.0851" fill="var(--bg)" stroke="var(--ok-bright)" />
+  <text x="852.123" y="269.617" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" font-weight="bold" fill="var(--text-dark)">A</text>
+  <text x="852.123" y="290.0426" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.617" fill="var(--text-muted)">d -&gt; r</text>
+  <line x1="852.123" y1="299.5745" x2="852.123" y2="333.617" stroke="var(--ok-bright)" stroke-width="2.0426" marker-end="url(#arrowGreen)" />
+  <rect x="774.6572" y="333.617" width="154.9315" height="54.4681" rx="4.0851" fill="var(--bg)" stroke="var(--ok-bright)" />
+  <text x="852.123" y="358.1277" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" font-weight="bold" fill="var(--text-dark)">B</text>
+  <text x="852.123" y="378.5532" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.617" fill="var(--text-muted)">r -&gt; d</text>
+  <text x="852.123" y="442.5532" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.9787" fill="var(--ok-bright)">= B * A * x</text>
+  <line x1="309.8629" y1="326.8085" x2="309.8629" y2="517.4468" stroke="var(--primary-bright)" stroke-width="2.0426" />
+  <line x1="852.123" y1="462.9787" x2="852.123" y2="517.4468" stroke="var(--ok-bright)" stroke-width="2.0426" />
+  <line x1="309.8629" y1="517.4468" x2="542.26" y2="517.4468" stroke="var(--primary-bright)" stroke-width="2.0426" />
+  <line x1="852.123" y1="517.4468" x2="619.7258" y2="517.4468" stroke="var(--ok-bright)" stroke-width="2.0426" />
+  <circle cx="580.9929" cy="517.4468" r="24.5106" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.7234" />
+  <text x="580.9929" y="524.2553" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.7872" font-weight="bold" fill="var(--text-dark)">+</text>
+  <line x1="580.9929" y1="541.9574" x2="580.9929" y2="585.5319" stroke="var(--primary-bright)" stroke-width="2.0426" marker-end="url(#arrow)" />
+  <rect x="278.8766" y="585.5319" width="604.2326" height="54.4681" rx="6.8085" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.7234" />
+  <text x="580.9929" y="619.5745" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7021" font-weight="bold" fill="var(--text-dark)">Output: W*x + B*A*x = (W + BA)*x</text>
+</svg>

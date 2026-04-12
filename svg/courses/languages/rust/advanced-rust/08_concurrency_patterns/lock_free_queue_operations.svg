@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,48 +157,48 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="var(--text-dark)">Lock-Free Queue Operations</ns0:text>
-  <ns0:rect x="44.1049" y="79.1012" width="514.5568" height="244.4944" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
-  <ns0:text x="301.3833" y="115.0562" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--text-dark)">Compare-And-Swap (CAS) Loop</ns0:text>
-  <ns0:text x="66.1573" y="151.0112" font-size="14.382" fill="var(--text-muted)">loop {</ns0:text>
-  <ns0:text x="80.8589" y="176.8989" font-size="14.382" fill="var(--text-muted)">  let old = tail.load(Ordering::Acquire);</ns0:text>
-  <ns0:text x="80.8589" y="202.7866" font-size="14.382" fill="var(--text-muted)">  let new_node = Node::new(value);</ns0:text>
-  <ns0:text x="80.8589" y="228.6742" font-size="14.382" fill="var(--text-muted)">  match tail.compare_exchange(</ns0:text>
-  <ns0:text x="95.5606" y="254.5618" font-size="14.382" fill="var(--text-muted)">    old, new_node, ...)</ns0:text>
-  <ns0:text x="80.8589" y="280.4495" font-size="14.382" fill="var(--ok-bright)">  { Ok(_) =&gt; break,  // success!</ns0:text>
-  <ns0:text x="80.8589" y="306.3371" font-size="14.382" fill="var(--danger-bright)">    Err(_) =&gt; continue } // retry</ns0:text>
-  <ns0:rect x="617.4682" y="79.1012" width="514.5568" height="244.4944" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
-  <ns0:text x="874.7466" y="115.0562" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--ok-bright)">Enqueue Operation</ns0:text>
-  <ns0:rect x="646.8714" y="143.8202" width="88.2097" height="50.3371" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1573" />
-  <ns0:text x="690.9763" y="175.4607" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">A</ns0:text>
-  <ns0:line x1="735.0812" y1="168.2696" x2="779.1861" y2="168.2696" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:rect x="793.8877" y="143.8202" width="88.2097" height="50.3371" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1573" />
-  <ns0:text x="837.9926" y="175.4607" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">B</ns0:text>
-  <ns0:line x1="882.0974" y1="168.2696" x2="926.2023" y2="168.2696" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:rect x="940.9039" y="143.8202" width="88.2097" height="50.3371" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
-  <ns0:text x="985.0088" y="175.4607" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">C</ns0:text>
-  <ns0:text x="985.0088" y="215.7303" font-size="14.382" fill="var(--warn-yellow)">tail</ns0:text>
-  <ns0:rect x="940.9039" y="230.1124" width="88.2097" height="50.3371" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" stroke-dasharray="5.7528 2.8764" />
-  <ns0:text x="985.0088" y="261.7529" text-anchor="middle" font-size="14.382" fill="var(--ok-bright)">D</ns0:text>
-  <ns0:line x1="985.0088" y1="194.1573" x2="985.0088" y2="230.1124" stroke="var(--ok-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
-  <ns0:text x="1014.412" y="222.9214" font-size="14.382" fill="var(--ok-bright)">CAS</ns0:text>
-  <ns0:text x="646.8714" y="309.2135" font-size="14.382" fill="var(--text-muted)">1. Read tail  2. Create node  3. CAS tail.next  4. Update tail</ns0:text>
-  <ns0:rect x="44.1049" y="359.5505" width="514.5568" height="143.8202" rx="7.191" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.8764" />
-  <ns0:text x="301.3833" y="395.5057" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--danger-bright)">ABA Problem</ns0:text>
-  <ns0:text x="66.1573" y="428.5843" font-size="14.382" fill="var(--text-muted)">Thread 1 reads A, pauses</ns0:text>
-  <ns0:text x="66.1573" y="454.4719" font-size="14.382" fill="var(--text-muted)">Thread 2: A -&gt; B -&gt; A (same pointer!)</ns0:text>
-  <ns0:text x="66.1573" y="480.3596" font-size="14.382" fill="var(--danger-bright)">Thread 1 CAS succeeds but state changed!</ns0:text>
-  <ns0:rect x="617.4682" y="359.5505" width="514.5568" height="143.8202" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
-  <ns0:text x="874.7466" y="395.5057" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">ABA Solutions</ns0:text>
-  <ns0:text x="639.5206" y="428.5843" font-size="14.382" fill="var(--text-muted)">- Tagged pointers (generation counter)</ns0:text>
-  <ns0:text x="639.5206" y="454.4719" font-size="14.382" fill="var(--text-muted)">- Epoch-based reclamation (crossbeam)</ns0:text>
-  <ns0:text x="639.5206" y="480.3596" font-size="14.382" fill="var(--text-muted)">- Hazard pointers</ns0:text>
-  <ns0:rect x="44.1049" y="532.1348" width="1087.9202" height="107.8652" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
-  <ns0:text x="588.065" y="568.0899" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">Memory Ordering for Lock-Free Code</ns0:text>
-  <ns0:text x="176.4195" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">Relaxed: counters</ns0:text>
-  <ns0:text x="411.6455" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">Acquire/Release: locks</ns0:text>
-  <ns0:text x="690.9763" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">AcqRel: CAS ops</ns0:text>
-  <ns0:text x="940.9039" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">SeqCst: safest</ns0:text>
-  <ns0:text x="588.065" y="632.8091" text-anchor="middle" font-size="14.382" fill="var(--danger-bright)">When in doubt, use SeqCst. Optimize only with proof of correctness.</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="588.065" y="43.146" text-anchor="middle" font-size="28.764" font-weight="bold" fill="var(--text-dark)">Lock-Free Queue Operations</text>
+  <rect x="44.1049" y="79.1012" width="514.5568" height="244.4944" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
+  <text x="301.3833" y="115.0562" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--text-dark)">Compare-And-Swap (CAS) Loop</text>
+  <text x="66.1573" y="151.0112" font-size="14.382" fill="var(--text-muted)">loop {</text>
+  <text x="80.8589" y="176.8989" font-size="14.382" fill="var(--text-muted)">  let old = tail.load(Ordering::Acquire);</text>
+  <text x="80.8589" y="202.7866" font-size="14.382" fill="var(--text-muted)">  let new_node = Node::new(value);</text>
+  <text x="80.8589" y="228.6742" font-size="14.382" fill="var(--text-muted)">  match tail.compare_exchange(</text>
+  <text x="95.5606" y="254.5618" font-size="14.382" fill="var(--text-muted)">    old, new_node, ...)</text>
+  <text x="80.8589" y="280.4495" font-size="14.382" fill="var(--ok-bright)">  { Ok(_) =&gt; break,  // success!</text>
+  <text x="80.8589" y="306.3371" font-size="14.382" fill="var(--danger-bright)">    Err(_) =&gt; continue } // retry</text>
+  <rect x="617.4682" y="79.1012" width="514.5568" height="244.4944" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <text x="874.7466" y="115.0562" text-anchor="middle" font-size="20.1348" font-weight="bold" fill="var(--ok-bright)">Enqueue Operation</text>
+  <rect x="646.8714" y="143.8202" width="88.2097" height="50.3371" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1573" />
+  <text x="690.9763" y="175.4607" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">A</text>
+  <line x1="735.0812" y1="168.2696" x2="779.1861" y2="168.2696" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <rect x="793.8877" y="143.8202" width="88.2097" height="50.3371" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.1573" />
+  <text x="837.9926" y="175.4607" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">B</text>
+  <line x1="882.0974" y1="168.2696" x2="926.2023" y2="168.2696" stroke="var(--primary-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <rect x="940.9039" y="143.8202" width="88.2097" height="50.3371" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <text x="985.0088" y="175.4607" text-anchor="middle" font-size="14.382" fill="var(--text-dark)">C</text>
+  <text x="985.0088" y="215.7303" font-size="14.382" fill="var(--warn-yellow)">tail</text>
+  <rect x="940.9039" y="230.1124" width="88.2097" height="50.3371" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" stroke-dasharray="5.7528 2.8764" />
+  <text x="985.0088" y="261.7529" text-anchor="middle" font-size="14.382" fill="var(--ok-bright)">D</text>
+  <line x1="985.0088" y1="194.1573" x2="985.0088" y2="230.1124" stroke="var(--ok-bright)" stroke-width="2.1573" marker-end="url(#arrow)" />
+  <text x="1014.412" y="222.9214" font-size="14.382" fill="var(--ok-bright)">CAS</text>
+  <text x="646.8714" y="309.2135" font-size="14.382" fill="var(--text-muted)">1. Read tail  2. Create node  3. CAS tail.next  4. Update tail</text>
+  <rect x="44.1049" y="359.5505" width="514.5568" height="143.8202" rx="7.191" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.8764" />
+  <text x="301.3833" y="395.5057" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--danger-bright)">ABA Problem</text>
+  <text x="66.1573" y="428.5843" font-size="14.382" fill="var(--text-muted)">Thread 1 reads A, pauses</text>
+  <text x="66.1573" y="454.4719" font-size="14.382" fill="var(--text-muted)">Thread 2: A -&gt; B -&gt; A (same pointer!)</text>
+  <text x="66.1573" y="480.3596" font-size="14.382" fill="var(--danger-bright)">Thread 1 CAS succeeds but state changed!</text>
+  <rect x="617.4682" y="359.5505" width="514.5568" height="143.8202" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <text x="874.7466" y="395.5057" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">ABA Solutions</text>
+  <text x="639.5206" y="428.5843" font-size="14.382" fill="var(--text-muted)">- Tagged pointers (generation counter)</text>
+  <text x="639.5206" y="454.4719" font-size="14.382" fill="var(--text-muted)">- Epoch-based reclamation (crossbeam)</text>
+  <text x="639.5206" y="480.3596" font-size="14.382" fill="var(--text-muted)">- Hazard pointers</text>
+  <rect x="44.1049" y="532.1348" width="1087.9202" height="107.8652" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <text x="588.065" y="568.0899" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--text-dark)">Memory Ordering for Lock-Free Code</text>
+  <text x="176.4195" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">Relaxed: counters</text>
+  <text x="411.6455" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">Acquire/Release: locks</text>
+  <text x="690.9763" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">AcqRel: CAS ops</text>
+  <text x="940.9039" y="604.045" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">SeqCst: safest</text>
+  <text x="588.065" y="632.8091" text-anchor="middle" font-size="14.382" fill="var(--danger-bright)">When in doubt, use SeqCst. Optimize only with proof of correctness.</text>
+</svg>

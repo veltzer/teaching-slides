@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,34 +158,34 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="17.7778" y="21.3333" width="497.7778" height="133.3333" fill="var(--surface)" stroke="var(--border-faint)" stroke-width="1.7778" rx="6.2222" />
-  <ns0:text x="35.5556" y="62.2222" font-size="21.3333" fill="var(--text-darker)">int x = 42;</ns0:text>
-  <ns0:text x="35.5556" y="94.2222" font-size="21.3333" fill="var(--text-darker)">int *p = &amp;x;</ns0:text>
-  <ns0:text x="35.5556" y="126.2222" font-size="21.3333" fill="var(--text-darker)">int **pp = &amp;p;</ns0:text>
-  <ns0:text x="17.7778" y="195.5556" font-size="21.3333" font-weight="bold" fill="var(--text-dark)" font-family="sans-serif">Stack Memory:</ns0:text>
-  <ns0:rect x="17.7778" y="213.3333" width="337.7778" height="67.5556" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="35.5556" y="257.7778" font-size="21.3333" fill="var(--text-darker)">pp: 0x7FF008</ns0:text>
-  <ns0:rect x="17.7778" y="284.4444" width="337.7778" height="67.5556" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="35.5556" y="328.8889" font-size="21.3333" fill="var(--text-darker)">p:  0x7FF010</ns0:text>
-  <ns0:rect x="17.7778" y="355.5556" width="337.7778" height="67.5556" fill="url(#grad-surface)" stroke="var(--text-muted)" stroke-width="1.7778" filter="url(#shadow)" />
-  <ns0:text x="35.5556" y="391.1111" font-size="21.3333" fill="var(--text-darker)">x:  42</ns0:text>
-  <ns0:text x="35.5556" y="414.2222" font-size="18.6667" fill="var(--text-faint)">    0x7FF018</ns0:text>
-  <ns0:line x1="355.5556" y1="247.1111" x2="426.6667" y2="247.1111" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <ns0:line x1="426.6667" y1="247.1111" x2="426.6667" y2="318.2222" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <ns0:line x1="355.5556" y1="318.2222" x2="418.6667" y2="318.2222" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:line x1="355.5556" y1="318.2222" x2="453.3333" y2="318.2222" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <ns0:line x1="453.3333" y1="318.2222" x2="453.3333" y2="389.3333" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <ns0:line x1="355.5556" y1="389.3333" x2="445.3333" y2="389.3333" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:text x="17.7778" y="484.4444" font-size="21.3333" fill="var(--text-darker)">**pp == *p == x == 42</ns0:text>
-  <ns0:text x="17.7778" y="524.4444" font-size="21.3333" fill="var(--text-darker)"> *pp == p  == 0x7FF018</ns0:text>
-  <ns0:text x="17.7778" y="564.4444" font-size="21.3333" fill="var(--text-darker)">  pp       == 0x7FF010</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="17.7778" y="21.3333" width="497.7778" height="133.3333" fill="var(--surface)" stroke="var(--border-faint)" stroke-width="1.7778" rx="6.2222" />
+  <text x="35.5556" y="62.2222" font-size="21.3333" fill="var(--text-darker)">int x = 42;</text>
+  <text x="35.5556" y="94.2222" font-size="21.3333" fill="var(--text-darker)">int *p = &amp;x;</text>
+  <text x="35.5556" y="126.2222" font-size="21.3333" fill="var(--text-darker)">int **pp = &amp;p;</text>
+  <text x="17.7778" y="195.5556" font-size="21.3333" font-weight="bold" fill="var(--text-dark)" font-family="sans-serif">Stack Memory:</text>
+  <rect x="17.7778" y="213.3333" width="337.7778" height="67.5556" fill="url(#grad-surface)" stroke="var(--primary)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="35.5556" y="257.7778" font-size="21.3333" fill="var(--text-darker)">pp: 0x7FF008</text>
+  <rect x="17.7778" y="284.4444" width="337.7778" height="67.5556" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="35.5556" y="328.8889" font-size="21.3333" fill="var(--text-darker)">p:  0x7FF010</text>
+  <rect x="17.7778" y="355.5556" width="337.7778" height="67.5556" fill="url(#grad-surface)" stroke="var(--text-muted)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="35.5556" y="391.1111" font-size="21.3333" fill="var(--text-darker)">x:  42</text>
+  <text x="35.5556" y="414.2222" font-size="18.6667" fill="var(--text-faint)">    0x7FF018</text>
+  <line x1="355.5556" y1="247.1111" x2="426.6667" y2="247.1111" stroke="var(--text-muted)" stroke-width="1.7778" />
+  <line x1="426.6667" y1="247.1111" x2="426.6667" y2="318.2222" stroke="var(--text-muted)" stroke-width="1.7778" />
+  <line x1="355.5556" y1="318.2222" x2="418.6667" y2="318.2222" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <line x1="355.5556" y1="318.2222" x2="453.3333" y2="318.2222" stroke="var(--text-muted)" stroke-width="1.7778" />
+  <line x1="453.3333" y1="318.2222" x2="453.3333" y2="389.3333" stroke="var(--text-muted)" stroke-width="1.7778" />
+  <line x1="355.5556" y1="389.3333" x2="445.3333" y2="389.3333" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="17.7778" y="484.4444" font-size="21.3333" fill="var(--text-darker)">**pp == *p == x == 42</text>
+  <text x="17.7778" y="524.4444" font-size="21.3333" fill="var(--text-darker)"> *pp == p  == 0x7FF018</text>
+  <text x="17.7778" y="564.4444" font-size="21.3333" fill="var(--text-darker)">  pp       == 0x7FF010</text>
+</svg>

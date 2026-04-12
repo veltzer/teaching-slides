@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,43 +158,43 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="588.9674" y="37.6471" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="var(--text-dark)">Unsafe Rust Cheatsheet</ns0:text>
-  <ns0:rect x="54.3662" y="60.2353" width="1069.2023" height="579.7647" rx="7.5294" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.5059" />
-  <ns0:rect x="90.6103" y="82.8235" width="308.0752" height="39.153" rx="4.5177" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="109.9294" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--danger-bright)">5 superpowers</ns0:text>
-  <ns0:text x="434.9298" y="109.9294" font-size="15.0588" fill="var(--text-dark)">raw ptrs, unsafe fn, static mut, unsafe traits, union fields</ns0:text>
-  <ns0:rect x="90.6103" y="129.5059" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="156.6118" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">Raw pointers</ns0:text>
-  <ns0:text x="434.9298" y="156.6118" font-size="16.5647" fill="var(--text-dark)" font-family="monospace">*const T, *mut T</ns0:text>
-  <ns0:text x="724.8829" y="156.6118" font-size="15.0588" fill="var(--text-mid)">(no borrow check)</ns0:text>
-  <ns0:rect x="90.6103" y="176.1882" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="203.2941" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">Cell&lt;T&gt;</ns0:text>
-  <ns0:text x="434.9298" y="203.2941" font-size="16.5647" fill="var(--text-dark)">Copy-based interior mutability</ns0:text>
-  <ns0:rect x="90.6103" y="222.8706" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="249.9765" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">RefCell&lt;T&gt;</ns0:text>
-  <ns0:text x="434.9298" y="249.9765" font-size="16.5647" fill="var(--text-dark)">runtime borrow checking</ns0:text>
-  <ns0:rect x="90.6103" y="269.553" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="296.6588" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">UnsafeCell&lt;T&gt;</ns0:text>
-  <ns0:text x="434.9298" y="296.6588" font-size="16.5647" fill="var(--text-dark)">foundation of interior mutability</ns0:text>
-  <ns0:rect x="90.6103" y="316.2353" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="343.3412" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">repr(C)</ns0:text>
-  <ns0:text x="434.9298" y="343.3412" font-size="16.5647" fill="var(--text-dark)">C-compatible layout</ns0:text>
-  <ns0:rect x="90.6103" y="362.9176" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="390.0236" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">repr(packed)</ns0:text>
-  <ns0:text x="434.9298" y="390.0236" font-size="16.5647" fill="var(--text-dark)">no padding</ns0:text>
-  <ns0:rect x="90.6103" y="409.6" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="436.706" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">repr(align(N))</ns0:text>
-  <ns0:text x="434.9298" y="436.706" font-size="16.5647" fill="var(--text-dark)">minimum alignment</ns0:text>
-  <ns0:rect x="90.6103" y="456.2824" width="308.0752" height="39.153" rx="4.5177" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="483.3882" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--danger-bright)">transmute</ns0:text>
-  <ns0:text x="434.9298" y="483.3882" font-size="16.5647" fill="var(--text-dark)">reinterpret bits as another type</ns0:text>
-  <ns0:rect x="90.6103" y="502.9648" width="308.0752" height="39.153" rx="4.5177" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="530.0706" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--danger-deeper)">MaybeUninit</ns0:text>
-  <ns0:text x="434.9298" y="530.0706" font-size="16.5647" fill="var(--text-dark)">safe uninitialized memory handling</ns0:text>
-  <ns0:rect x="90.6103" y="549.6471" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="576.753" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">SAFETY comment</ns0:text>
-  <ns0:text x="434.9298" y="576.753" font-size="16.5647" fill="var(--text-dark)">document why unsafe code is sound</ns0:text>
-  <ns0:rect x="90.6103" y="596.3295" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
-  <ns0:text x="244.648" y="623.4353" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">Miri</ns0:text>
-  <ns0:text x="434.9298" y="623.4353" font-size="16.5647" fill="var(--text-dark)">runtime UB detector</ns0:text>
-</ns0:svg>
+  <text x="588.9674" y="37.6471" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="var(--text-dark)">Unsafe Rust Cheatsheet</text>
+  <rect x="54.3662" y="60.2353" width="1069.2023" height="579.7647" rx="7.5294" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.5059" />
+  <rect x="90.6103" y="82.8235" width="308.0752" height="39.153" rx="4.5177" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="109.9294" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--danger-bright)">5 superpowers</text>
+  <text x="434.9298" y="109.9294" font-size="15.0588" fill="var(--text-dark)">raw ptrs, unsafe fn, static mut, unsafe traits, union fields</text>
+  <rect x="90.6103" y="129.5059" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="156.6118" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">Raw pointers</text>
+  <text x="434.9298" y="156.6118" font-size="16.5647" fill="var(--text-dark)" font-family="monospace">*const T, *mut T</text>
+  <text x="724.8829" y="156.6118" font-size="15.0588" fill="var(--text-mid)">(no borrow check)</text>
+  <rect x="90.6103" y="176.1882" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="203.2941" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">Cell&lt;T&gt;</text>
+  <text x="434.9298" y="203.2941" font-size="16.5647" fill="var(--text-dark)">Copy-based interior mutability</text>
+  <rect x="90.6103" y="222.8706" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="249.9765" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">RefCell&lt;T&gt;</text>
+  <text x="434.9298" y="249.9765" font-size="16.5647" fill="var(--text-dark)">runtime borrow checking</text>
+  <rect x="90.6103" y="269.553" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="296.6588" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">UnsafeCell&lt;T&gt;</text>
+  <text x="434.9298" y="296.6588" font-size="16.5647" fill="var(--text-dark)">foundation of interior mutability</text>
+  <rect x="90.6103" y="316.2353" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="343.3412" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">repr(C)</text>
+  <text x="434.9298" y="343.3412" font-size="16.5647" fill="var(--text-dark)">C-compatible layout</text>
+  <rect x="90.6103" y="362.9176" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="390.0236" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">repr(packed)</text>
+  <text x="434.9298" y="390.0236" font-size="16.5647" fill="var(--text-dark)">no padding</text>
+  <rect x="90.6103" y="409.6" width="308.0752" height="39.153" rx="4.5177" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="436.706" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--primary-bright)">repr(align(N))</text>
+  <text x="434.9298" y="436.706" font-size="16.5647" fill="var(--text-dark)">minimum alignment</text>
+  <rect x="90.6103" y="456.2824" width="308.0752" height="39.153" rx="4.5177" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="483.3882" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--danger-bright)">transmute</text>
+  <text x="434.9298" y="483.3882" font-size="16.5647" fill="var(--text-dark)">reinterpret bits as another type</text>
+  <rect x="90.6103" y="502.9648" width="308.0752" height="39.153" rx="4.5177" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.5059" />
+  <text x="244.648" y="530.0706" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--danger-deeper)">MaybeUninit</text>
+  <text x="434.9298" y="530.0706" font-size="16.5647" fill="var(--text-dark)">safe uninitialized memory handling</text>
+  <rect x="90.6103" y="549.6471" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="576.753" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">SAFETY comment</text>
+  <text x="434.9298" y="576.753" font-size="16.5647" fill="var(--text-dark)">document why unsafe code is sound</text>
+  <rect x="90.6103" y="596.3295" width="308.0752" height="39.153" rx="4.5177" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.5059" />
+  <text x="244.648" y="623.4353" text-anchor="middle" font-size="16.5647" font-weight="bold" fill="var(--ok-bright)">Miri</text>
+  <text x="434.9298" y="623.4353" font-size="16.5647" fill="var(--text-dark)">runtime UB detector</text>
+</svg>

@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,34 +158,34 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrow-eo" markerWidth="20.6452" markerHeight="13.6216" refX="18.5806" refY="6.8108" orient="auto">
-      <ns0:polygon points="0,19.4595 7.2258,0" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="601.3968" y="36.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.4286" font-weight="bold" fill="var(--text-dark)">Exactly-Once Guarantee</ns0:text>
-  <ns0:rect x="96.9995" y="64" width="329.7982" height="128" rx="14.6286" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="3.6572" />
-  <ns0:text x="261.8986" y="100.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold" fill="var(--text-dark)">Source (Kafka)</ns0:text>
-  <ns0:text x="261.8986" y="131.6571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">Offsets tracked</ns0:text>
-  <ns0:text x="261.8986" y="159.0857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">in checkpoint</ns0:text>
-  <ns0:rect x="775.9959" y="64" width="329.7982" height="128" rx="14.6286" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="3.6572" />
-  <ns0:text x="940.895" y="100.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold" fill="var(--text-dark)">Processing</ns0:text>
-  <ns0:text x="940.895" y="131.6571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">State</ns0:text>
-  <ns0:text x="940.895" y="159.0857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">checkpointed</ns0:text>
-  <ns0:line x1="261.8986" y1="192" x2="465.5976" y2="246.8571" stroke="var(--text-dark)" stroke-width="3.6572" marker-end="url(#arrow-eo)" />
-  <ns0:line x1="940.895" y1="192" x2="737.1961" y2="246.8571" stroke="var(--text-dark)" stroke-width="3.6572" marker-end="url(#arrow-eo)" />
-  <ns0:rect x="193.999" y="256" width="814.7957" height="182.8571" rx="14.6286" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="3.6572" />
-  <ns0:text x="601.3968" y="296.2285" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.7714" font-weight="bold" fill="var(--text-dark)">Checkpoint Directory</ns0:text>
-  <ns0:text x="387.9979" y="334.6286" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">offsets/</ns0:text>
-  <ns0:text x="601.3968" y="334.6286" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(source offsets)</ns0:text>
-  <ns0:text x="387.9979" y="365.7143" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">commits/</ns0:text>
-  <ns0:text x="601.3968" y="365.7143" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(batch commits)</ns0:text>
-  <ns0:text x="387.9979" y="396.8" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">state/</ns0:text>
-  <ns0:text x="601.3968" y="396.8" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(operator state)</ns0:text>
-  <ns0:text x="387.9979" y="427.8857" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">metadata</ns0:text>
-  <ns0:text x="601.3968" y="427.8857" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(query metadata)</ns0:text>
-  <ns0:line x1="601.3968" y1="438.8571" x2="601.3968" y2="493.7143" stroke="var(--text-dark)" stroke-width="3.6572" marker-end="url(#arrow-eo)" />
-  <ns0:rect x="349.1981" y="502.8571" width="504.3973" height="91.4286" rx="14.6286" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.6572" />
-  <ns0:text x="601.3968" y="539.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold" fill="var(--text-dark)">Sink: Delta Lake</ns0:text>
-  <ns0:text x="601.3968" y="572.3429" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">ACID writes ensure no duplicates (idempotent)</ns0:text>
-  <ns0:text x="601.3968" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">On failure: replay from last committed checkpoint, reprocess the batch</ns0:text>
-</ns0:svg>
+    <marker id="arrow-eo" markerWidth="20.6452" markerHeight="13.6216" refX="18.5806" refY="6.8108" orient="auto">
+      <polygon points="0,19.4595 7.2258,0" fill="#333" />
+    </marker>
+  </defs>
+  <text x="601.3968" y="36.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.4286" font-weight="bold" fill="var(--text-dark)">Exactly-Once Guarantee</text>
+  <rect x="96.9995" y="64" width="329.7982" height="128" rx="14.6286" fill="var(--primary-pale3)" stroke="var(--primary-strong)" stroke-width="3.6572" />
+  <text x="261.8986" y="100.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold" fill="var(--text-dark)">Source (Kafka)</text>
+  <text x="261.8986" y="131.6571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">Offsets tracked</text>
+  <text x="261.8986" y="159.0857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">in checkpoint</text>
+  <rect x="775.9959" y="64" width="329.7982" height="128" rx="14.6286" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="3.6572" />
+  <text x="940.895" y="100.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold" fill="var(--text-dark)">Processing</text>
+  <text x="940.895" y="131.6571" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">State</text>
+  <text x="940.895" y="159.0857" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">checkpointed</text>
+  <line x1="261.8986" y1="192" x2="465.5976" y2="246.8571" stroke="var(--text-dark)" stroke-width="3.6572" marker-end="url(#arrow-eo)" />
+  <line x1="940.895" y1="192" x2="737.1961" y2="246.8571" stroke="var(--text-dark)" stroke-width="3.6572" marker-end="url(#arrow-eo)" />
+  <rect x="193.999" y="256" width="814.7957" height="182.8571" rx="14.6286" fill="var(--warn-pale)" stroke="var(--warn-deep)" stroke-width="3.6572" />
+  <text x="601.3968" y="296.2285" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.7714" font-weight="bold" fill="var(--text-dark)">Checkpoint Directory</text>
+  <text x="387.9979" y="334.6286" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">offsets/</text>
+  <text x="601.3968" y="334.6286" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(source offsets)</text>
+  <text x="387.9979" y="365.7143" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">commits/</text>
+  <text x="601.3968" y="365.7143" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(batch commits)</text>
+  <text x="387.9979" y="396.8" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">state/</text>
+  <text x="601.3968" y="396.8" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(operator state)</text>
+  <text x="387.9979" y="427.8857" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">metadata</text>
+  <text x="601.3968" y="427.8857" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">(query metadata)</text>
+  <line x1="601.3968" y1="438.8571" x2="601.3968" y2="493.7143" stroke="var(--text-dark)" stroke-width="3.6572" marker-end="url(#arrow-eo)" />
+  <rect x="349.1981" y="502.8571" width="504.3973" height="91.4286" rx="14.6286" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.6572" />
+  <text x="601.3968" y="539.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" font-weight="bold" fill="var(--text-dark)">Sink: Delta Lake</text>
+  <text x="601.3968" y="572.3429" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-muted)">ACID writes ensure no duplicates (idempotent)</text>
+  <text x="601.3968" y="640" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.9429" fill="var(--text-faint)">On failure: replay from last committed checkpoint, reprocess the batch</text>
+</svg>

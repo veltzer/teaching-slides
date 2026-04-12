@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,30 +158,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="18.2857" markerHeight="14.8235" refX="16.4571" refY="7.4118" orient="auto">
-      <ns0:polygon points="0,21.1765 6.4,0" fill="#555" />
-    </ns0:marker>
-    <ns0:marker id="arrl" markerWidth="18.2857" markerHeight="14.8235" refX="1.8286" refY="7.4118" orient="auto">
-      <ns0:polygon points="0,0 6.4,21.1765" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="586.128" y="42.6666" text-anchor="middle" font-size="23.4451" fill="var(--text-darker)" font-weight="bold">Slowloris Attack: Incomplete HTTP Headers</ns0:text>
-  <ns0:text x="200.9582" y="85.3334" text-anchor="middle" font-size="21.7704" fill="var(--danger-dk)" font-weight="bold">Attacker</ns0:text>
-  <ns0:text x="971.2978" y="85.3334" text-anchor="middle" font-size="21.7704" fill="var(--primary-dk)" font-weight="bold">Server</ns0:text>
-  <ns0:line x1="200.9582" y1="108.606" x2="200.9582" y2="620.6061" stroke="var(--text-placeholder)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239" />
-  <ns0:line x1="971.2978" y1="108.606" x2="971.2978" y2="620.6061" stroke="var(--text-placeholder)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239" />
-  <ns0:line x1="234.4512" y1="155.1516" x2="937.8048" y2="155.1516" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
-  <ns0:text x="586.128" y="135.7576" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">GET / HTTP/1.1\r\n  Host: target.com\r\n  (no blank line)</ns0:text>
-  <ns0:text x="1004.7908" y="162.9091" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">Connection #1 held open…</ns0:text>
-  <ns0:line x1="234.4512" y1="261.8182" x2="937.8048" y2="261.8182" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
-  <ns0:text x="586.128" y="242.4243" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">… 10 sec later …  X-Header-1: value\r\n</ns0:text>
-  <ns0:text x="1004.7908" y="269.5757" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">Still waiting…</ns0:text>
-  <ns0:line x1="234.4512" y1="368.4848" x2="937.8048" y2="368.4848" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
-  <ns0:text x="586.128" y="349.091" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">… 10 sec later …  X-Header-2: value\r\n</ns0:text>
-  <ns0:text x="1004.7908" y="376.2424" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">Still waiting…</ns0:text>
-  <ns0:line x1="234.4512" y1="475.1515" x2="937.8048" y2="475.1515" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
-  <ns0:text x="586.128" y="455.7576" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">(repeat for hundreds of connections simultaneously)</ns0:text>
-  <ns0:text x="1004.7908" y="482.9091" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">All slots consumed!</ns0:text>
-  <ns0:rect x="16.7465" y="585.697" width="1138.7629" height="54.303" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2.512" rx="6.6986" />
-  <ns0:text x="586.128" y="620.6061" text-anchor="middle" font-size="20.0959" fill="var(--warn-dk)" font-weight="bold">Attacker keeps connections alive by drip-feeding headers — never completes the request</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="18.2857" markerHeight="14.8235" refX="16.4571" refY="7.4118" orient="auto">
+      <polygon points="0,21.1765 6.4,0" fill="#555" />
+    </marker>
+    <marker id="arrl" markerWidth="18.2857" markerHeight="14.8235" refX="1.8286" refY="7.4118" orient="auto">
+      <polygon points="0,0 6.4,21.1765" fill="#555" />
+    </marker>
+  </defs>
+  <text x="586.128" y="42.6666" text-anchor="middle" font-size="23.4451" fill="var(--text-darker)" font-weight="bold">Slowloris Attack: Incomplete HTTP Headers</text>
+  <text x="200.9582" y="85.3334" text-anchor="middle" font-size="21.7704" fill="var(--danger-dk)" font-weight="bold">Attacker</text>
+  <text x="971.2978" y="85.3334" text-anchor="middle" font-size="21.7704" fill="var(--primary-dk)" font-weight="bold">Server</text>
+  <line x1="200.9582" y1="108.606" x2="200.9582" y2="620.6061" stroke="var(--text-placeholder)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239" />
+  <line x1="971.2978" y1="108.606" x2="971.2978" y2="620.6061" stroke="var(--text-placeholder)" stroke-width="1.6747" stroke-dasharray="6.6986 5.0239" />
+  <line x1="234.4512" y1="155.1516" x2="937.8048" y2="155.1516" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
+  <text x="586.128" y="135.7576" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">GET / HTTP/1.1\r\n  Host: target.com\r\n  (no blank line)</text>
+  <text x="1004.7908" y="162.9091" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">Connection #1 held open…</text>
+  <line x1="234.4512" y1="261.8182" x2="937.8048" y2="261.8182" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
+  <text x="586.128" y="242.4243" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">… 10 sec later …  X-Header-1: value\r\n</text>
+  <text x="1004.7908" y="269.5757" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">Still waiting…</text>
+  <line x1="234.4512" y1="368.4848" x2="937.8048" y2="368.4848" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
+  <text x="586.128" y="349.091" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">… 10 sec later …  X-Header-2: value\r\n</text>
+  <text x="1004.7908" y="376.2424" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">Still waiting…</text>
+  <line x1="234.4512" y1="475.1515" x2="937.8048" y2="475.1515" stroke="var(--text-muted)" stroke-width="2.512" marker-end="url(#arr)" />
+  <text x="586.128" y="455.7576" text-anchor="middle" font-size="18.4212" fill="var(--text-dark)" font-style="italic">(repeat for hundreds of connections simultaneously)</text>
+  <text x="1004.7908" y="482.9091" text-anchor="start" font-size="18.4212" fill="var(--danger-dk)">All slots consumed!</text>
+  <rect x="16.7465" y="585.697" width="1138.7629" height="54.303" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="2.512" rx="6.6986" />
+  <text x="586.128" y="620.6061" text-anchor="middle" font-size="20.0959" fill="var(--warn-dk)" font-weight="bold">Attacker keeps connections alive by drip-feeding headers — never completes the request</text>
+</svg>

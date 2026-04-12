@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,32 +158,32 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="asd" markerWidth="17.0667" markerHeight="11.2" refX="8.5333" refY="11.2" orient="auto">
-      <ns0:polygon points="0,16 0,8" fill="#4a90e2" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="575.2809" y="43.1461" text-anchor="middle" font-size="23.0112" font-weight="bold" fill="var(--text-dark)">Stage 3: RLHF</ns0:text>
-  <ns0:rect x="153.4083" y="71.9101" width="843.7453" height="186.9663" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
-  <ns0:text x="575.2809" y="107.8652" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">Step 1: Collect Comparison Data</ns0:text>
-  <ns0:text x="575.2809" y="143.8202" text-anchor="middle" font-size="15.8202" fill="var(--text-muted)">Prompt: "Write a haiku about coding"</ns0:text>
-  <ns0:rect x="199.4307" y="158.2022" width="368.1798" height="79.1011" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.4382" />
-  <ns0:text x="383.5206" y="186.9663" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="var(--ok-bright)">Response A (better)</ns0:text>
-  <ns0:text x="383.5206" y="212.8539" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">"Fingers on the keys / Logic</ns0:text>
-  <ns0:text x="383.5206" y="230.1124" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">flows like a river / Bug found..."</ns0:text>
-  <ns0:rect x="598.2921" y="158.2022" width="368.1798" height="79.1011" rx="7.191" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.4382" />
-  <ns0:text x="782.382" y="186.9663" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="var(--danger-bright)">Response B (worse)</ns0:text>
-  <ns0:text x="782.382" y="212.8539" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">"Code code code today / I</ns0:text>
-  <ns0:text x="782.382" y="230.1124" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">like to write the code..."</ns0:text>
-  <ns0:line x1="575.2809" y1="258.8764" x2="575.2809" y2="302.0225" stroke="var(--primary-bright)" stroke-width="2.8764" marker-end="url(#asd)" />
-  <ns0:rect x="230.1124" y="302.0225" width="690.3371" height="86.2921" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
-  <ns0:text x="575.2809" y="337.9775" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--danger-deeper)">Step 2: Train Reward Model</ns0:text>
-  <ns0:text x="575.2809" y="371.0562" text-anchor="middle" font-size="15.8202" fill="var(--text-muted)">reward_model(prompt, response) -&gt; scalar score</ns0:text>
-  <ns0:line x1="575.2809" y1="388.3146" x2="575.2809" y2="431.4607" stroke="var(--primary-bright)" stroke-width="2.8764" marker-end="url(#asd)" />
-  <ns0:rect x="230.1124" y="431.4607" width="690.3371" height="86.2921" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
-  <ns0:text x="575.2809" y="467.4157" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">Step 3: Optimize with PPO</ns0:text>
-  <ns0:text x="575.2809" y="500.4944" text-anchor="middle" font-size="15.8202" fill="var(--text-muted)">Maximize reward while staying close to SFT model</ns0:text>
-  <ns0:line x1="575.2809" y1="517.7528" x2="575.2809" y2="553.7079" stroke="var(--primary-bright)" stroke-width="2.8764" marker-end="url(#asd)" />
-  <ns0:text x="575.2809" y="586.7865" text-anchor="middle" font-size="18.6966" fill="var(--text-dark)">Human ranks: A &gt; B</ns0:text>
-  <ns0:rect x="306.8164" y="596.8539" width="536.9288" height="43.1461" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.1573" />
-  <ns0:text x="575.2809" y="625.618" text-anchor="middle" font-size="17.2584" font-weight="bold" fill="var(--ok-bright)">Result: Aligned, safe, helpful model</ns0:text>
-</ns0:svg>
+    <marker id="asd" markerWidth="17.0667" markerHeight="11.2" refX="8.5333" refY="11.2" orient="auto">
+      <polygon points="0,16 0,8" fill="#4a90e2" />
+    </marker>
+  </defs>
+  <text x="575.2809" y="43.1461" text-anchor="middle" font-size="23.0112" font-weight="bold" fill="var(--text-dark)">Stage 3: RLHF</text>
+  <rect x="153.4083" y="71.9101" width="843.7453" height="186.9663" rx="7.191" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.8764" />
+  <text x="575.2809" y="107.8652" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--primary-bright)">Step 1: Collect Comparison Data</text>
+  <text x="575.2809" y="143.8202" text-anchor="middle" font-size="15.8202" fill="var(--text-muted)">Prompt: "Write a haiku about coding"</text>
+  <rect x="199.4307" y="158.2022" width="368.1798" height="79.1011" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.4382" />
+  <text x="383.5206" y="186.9663" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="var(--ok-bright)">Response A (better)</text>
+  <text x="383.5206" y="212.8539" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">"Fingers on the keys / Logic</text>
+  <text x="383.5206" y="230.1124" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">flows like a river / Bug found..."</text>
+  <rect x="598.2921" y="158.2022" width="368.1798" height="79.1011" rx="7.191" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.4382" />
+  <text x="782.382" y="186.9663" text-anchor="middle" font-size="15.8202" font-weight="bold" fill="var(--danger-bright)">Response B (worse)</text>
+  <text x="782.382" y="212.8539" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">"Code code code today / I</text>
+  <text x="782.382" y="230.1124" text-anchor="middle" font-size="14.382" fill="var(--text-muted)">like to write the code..."</text>
+  <line x1="575.2809" y1="258.8764" x2="575.2809" y2="302.0225" stroke="var(--primary-bright)" stroke-width="2.8764" marker-end="url(#asd)" />
+  <rect x="230.1124" y="302.0225" width="690.3371" height="86.2921" rx="7.191" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.8764" />
+  <text x="575.2809" y="337.9775" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--danger-deeper)">Step 2: Train Reward Model</text>
+  <text x="575.2809" y="371.0562" text-anchor="middle" font-size="15.8202" fill="var(--text-muted)">reward_model(prompt, response) -&gt; scalar score</text>
+  <line x1="575.2809" y1="388.3146" x2="575.2809" y2="431.4607" stroke="var(--primary-bright)" stroke-width="2.8764" marker-end="url(#asd)" />
+  <rect x="230.1124" y="431.4607" width="690.3371" height="86.2921" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.8764" />
+  <text x="575.2809" y="467.4157" text-anchor="middle" font-size="18.6966" font-weight="bold" fill="var(--ok-bright)">Step 3: Optimize with PPO</text>
+  <text x="575.2809" y="500.4944" text-anchor="middle" font-size="15.8202" fill="var(--text-muted)">Maximize reward while staying close to SFT model</text>
+  <line x1="575.2809" y1="517.7528" x2="575.2809" y2="553.7079" stroke="var(--primary-bright)" stroke-width="2.8764" marker-end="url(#asd)" />
+  <text x="575.2809" y="586.7865" text-anchor="middle" font-size="18.6966" fill="var(--text-dark)">Human ranks: A &gt; B</text>
+  <rect x="306.8164" y="596.8539" width="536.9288" height="43.1461" rx="7.191" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.1573" />
+  <text x="575.2809" y="625.618" text-anchor="middle" font-size="17.2584" font-weight="bold" fill="var(--ok-bright)">Result: Aligned, safe, helpful model</text>
+</svg>

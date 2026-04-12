@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,31 +158,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="15.5152" markerHeight="13.3953" refX="11.6364" refY="5.0233" orient="auto">
-      <ns0:path d="M 0 0 L 0 10.0465 L 15.5152 5.0233 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="36.3372" y="15.6863" width="1126.454" height="185.098" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.3529" rx="6.2745" />
-  <ns0:text x="54.5058" y="43.9215" font-family="sans-serif" font-size="20.3921" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">1. Range Partitioning (most common)</ns0:text>
-  <ns0:text x="54.5058" y="65.8824" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">PARTITIONED BY (event_date)</ns0:text>
-  <ns0:text x="54.5058" y="87.8431" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/event_date=2024-01-01/</ns0:text>
-  <ns0:text x="54.5058" y="109.8039" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/event_date=2024-01-02/</ns0:text>
-  <ns0:text x="54.5058" y="131.7647" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/event_date=2024-01-03/</ns0:text>
-  <ns0:text x="54.5058" y="153.7255" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">...</ns0:text>
-  <ns0:text x="54.5058" y="175.6863" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">Best for: time-series, date-based queries</ns0:text>
-  <ns0:rect x="36.3372" y="243.1373" width="1126.454" height="163.1372" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.3529" rx="6.2745" />
-  <ns0:text x="54.5058" y="271.3725" font-family="sans-serif" font-size="20.3921" fill="var(--ok-dk)" text-anchor="start" font-weight="bold">2. List Partitioning</ns0:text>
-  <ns0:text x="54.5058" y="293.3333" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">PARTITIONED BY (region)</ns0:text>
-  <ns0:text x="54.5058" y="315.2941" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/region=us-east/</ns0:text>
-  <ns0:text x="54.5058" y="337.2549" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/region=us-west/</ns0:text>
-  <ns0:text x="54.5058" y="359.2157" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/region=eu-west/</ns0:text>
-  <ns0:text x="54.5058" y="381.1764" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">Best for: categorical, low-cardinality</ns0:text>
-  <ns0:rect x="36.3372" y="454.902" width="1126.454" height="185.098" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.3529" rx="6.2745" />
-  <ns0:text x="54.5058" y="483.1372" font-family="sans-serif" font-size="20.3921" fill="var(--warn-dk)" text-anchor="start" font-weight="bold">3. Hash Partitioning</ns0:text>
-  <ns0:text x="54.5058" y="505.098" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">PARTITIONED BY (hash(user_id, 32))</ns0:text>
-  <ns0:text x="54.5058" y="527.0589" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/user_hash=0/</ns0:text>
-  <ns0:text x="54.5058" y="549.0196" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/user_hash=1/</ns0:text>
-  <ns0:text x="54.5058" y="570.9804" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">...</ns0:text>
-  <ns0:text x="54.5058" y="592.9411" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/user_hash=31/</ns0:text>
-  <ns0:text x="54.5058" y="614.902" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">Best for: even distribution, join keys</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="15.5152" markerHeight="13.3953" refX="11.6364" refY="5.0233" orient="auto">
+      <path d="M 0 0 L 0 10.0465 L 15.5152 5.0233 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="36.3372" y="15.6863" width="1126.454" height="185.098" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="2.3529" rx="6.2745" />
+  <text x="54.5058" y="43.9215" font-family="sans-serif" font-size="20.3921" fill="var(--primary-dk)" text-anchor="start" font-weight="bold">1. Range Partitioning (most common)</text>
+  <text x="54.5058" y="65.8824" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">PARTITIONED BY (event_date)</text>
+  <text x="54.5058" y="87.8431" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/event_date=2024-01-01/</text>
+  <text x="54.5058" y="109.8039" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/event_date=2024-01-02/</text>
+  <text x="54.5058" y="131.7647" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/event_date=2024-01-03/</text>
+  <text x="54.5058" y="153.7255" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">...</text>
+  <text x="54.5058" y="175.6863" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">Best for: time-series, date-based queries</text>
+  <rect x="36.3372" y="243.1373" width="1126.454" height="163.1372" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="2.3529" rx="6.2745" />
+  <text x="54.5058" y="271.3725" font-family="sans-serif" font-size="20.3921" fill="var(--ok-dk)" text-anchor="start" font-weight="bold">2. List Partitioning</text>
+  <text x="54.5058" y="293.3333" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">PARTITIONED BY (region)</text>
+  <text x="54.5058" y="315.2941" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/region=us-east/</text>
+  <text x="54.5058" y="337.2549" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/region=us-west/</text>
+  <text x="54.5058" y="359.2157" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/region=eu-west/</text>
+  <text x="54.5058" y="381.1764" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">Best for: categorical, low-cardinality</text>
+  <rect x="36.3372" y="454.902" width="1126.454" height="185.098" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.3529" rx="6.2745" />
+  <text x="54.5058" y="483.1372" font-family="sans-serif" font-size="20.3921" fill="var(--warn-dk)" text-anchor="start" font-weight="bold">3. Hash Partitioning</text>
+  <text x="54.5058" y="505.098" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">PARTITIONED BY (hash(user_id, 32))</text>
+  <text x="54.5058" y="527.0589" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/user_hash=0/</text>
+  <text x="54.5058" y="549.0196" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/user_hash=1/</text>
+  <text x="54.5058" y="570.9804" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">...</text>
+  <text x="54.5058" y="592.9411" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">/data/events/user_hash=31/</text>
+  <text x="54.5058" y="614.902" font-family="sans-serif" font-size="17.2549" fill="var(--text-dark)" text-anchor="start">Best for: even distribution, join keys</text>
+</svg>

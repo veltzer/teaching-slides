@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,43 +158,43 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="65.536" markerHeight="252" refX="58.9824" refY="126" orient="auto">
-      <ns0:polygon points="0,360 22.9376,0" fill="#666" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="233.0169" height="640" fill="var(--surface-light)" />
-  <ns0:text x="116.5084" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Hooks: Automating Actions Around Tool Calls</ns0:text>
-  <ns0:rect x="5.8254" y="144" width="52.4288" height="144" rx="2.9127" fill="var(--danger-vivid)" stroke="var(--danger-dk)" stroke-width="0.5825" />
-  <ns0:text x="32.0398" y="195.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Pre-Hook</ns0:text>
-  <ns0:text x="32.0398" y="230.4" text-anchor="middle" fill="var(--danger-lt)" font-size="10">validate / block</ns0:text>
-  <ns0:text x="32.0398" y="264" text-anchor="middle" fill="var(--danger-lt)" font-size="10">check permissions</ns0:text>
-  <ns0:line x1="58.2542" y1="216" x2="69.9051" y2="216" stroke="var(--text-mid)" stroke-width="0.5825" marker-end="url(#arr)" />
-  <ns0:rect x="69.9051" y="144" width="69.9051" height="144" rx="2.9127" fill="var(--primary-vivid)" stroke="var(--primary-dk)" stroke-width="0.5825" />
-  <ns0:text x="104.8576" y="195.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tool Execution</ns0:text>
-  <ns0:text x="104.8576" y="230.4" text-anchor="middle" fill="var(--primary-lt)" font-size="10">file edit / shell / git</ns0:text>
-  <ns0:text x="104.8576" y="264" text-anchor="middle" fill="var(--primary-lt)" font-size="10">the actual action</ns0:text>
-  <ns0:line x1="139.8101" y1="216" x2="151.461" y2="216" stroke="var(--text-mid)" stroke-width="0.5825" marker-end="url(#arr)" />
-  <ns0:rect x="151.461" y="144" width="75.7305" height="144" rx="2.9127" fill="var(--ok-light)" stroke="var(--ok-dk)" stroke-width="0.5825" />
-  <ns0:text x="189.3262" y="195.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Post-Hook</ns0:text>
-  <ns0:text x="189.3262" y="230.4" text-anchor="middle" fill="var(--ok-lt)" font-size="10">notify / log / run tests</ns0:text>
-  <ns0:text x="189.3262" y="264" text-anchor="middle" fill="var(--ok-lt)" font-size="10">trigger downstream</ns0:text>
-  <ns0:path d="M 32.0398 288 Q 32.0398 352 104.8576 352" fill="none" stroke="var(--danger-dk)" stroke-width="0.5825" stroke-dasharray="1.4564 0.8738" marker-end="url(#arr)" />
-  <ns0:text x="66.9924" y="336" text-anchor="middle" font-size="10" fill="var(--danger-dk)">on_fail: block (stops execution)</ns0:text>
-  <ns0:rect x="5.8254" y="400" width="221.366" height="216" rx="2.9127" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.4369" />
-  <ns0:text x="116.5084" y="444.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Example Hook Configurations</ns0:text>
-  <ns0:rect x="11.6508" y="472" width="65.536" height="120" rx="2.3302" fill="var(--danger-lt)" stroke="var(--danger-dk)" />
-  <ns0:text x="44.2732" y="512" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Pre-Hook: Block Dangerous</ns0:text>
-  <ns0:text x="44.2732" y="544" text-anchor="middle" font-size="10" fill="var(--text-dark)">event: bash_command</ns0:text>
-  <ns0:text x="44.2732" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">match: "rm -rf|DROP TABLE"</ns0:text>
-  <ns0:text x="44.2732" y="596.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">action: block</ns0:text>
-  <ns0:rect x="83.5948" y="472" width="65.536" height="120" rx="2.3302" fill="var(--ok-lt)" stroke="var(--ok-dk)" />
-  <ns0:text x="116.2172" y="512" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Pre-Hook: Scan Secrets</ns0:text>
-  <ns0:text x="116.2172" y="544" text-anchor="middle" font-size="10" fill="var(--text-dark)">event: file_edit</ns0:text>
-  <ns0:text x="116.2172" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">run: scan_secrets.sh $FILE</ns0:text>
-  <ns0:text x="116.2172" y="596.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">on_fail: block</ns0:text>
-  <ns0:rect x="155.5388" y="472" width="65.536" height="120" rx="2.3302" fill="var(--primary-lt)" stroke="var(--primary-dk)" />
-  <ns0:text x="188.1611" y="512" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Post-Hook: Notify Slack</ns0:text>
-  <ns0:text x="188.1611" y="544" text-anchor="middle" font-size="10" fill="var(--text-dark)">event: pr_create</ns0:text>
-  <ns0:text x="188.1611" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">run: notify_slack.sh</ns0:text>
-  <ns0:text x="188.1611" y="596.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">$PR_NUMBER</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="65.536" markerHeight="252" refX="58.9824" refY="126" orient="auto">
+      <polygon points="0,360 22.9376,0" fill="#666" />
+    </marker>
+  </defs>
+  <rect width="233.0169" height="640" fill="var(--surface-light)" />
+  <text x="116.5084" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Hooks: Automating Actions Around Tool Calls</text>
+  <rect x="5.8254" y="144" width="52.4288" height="144" rx="2.9127" fill="var(--danger-vivid)" stroke="var(--danger-dk)" stroke-width="0.5825" />
+  <text x="32.0398" y="195.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Pre-Hook</text>
+  <text x="32.0398" y="230.4" text-anchor="middle" fill="var(--danger-lt)" font-size="10">validate / block</text>
+  <text x="32.0398" y="264" text-anchor="middle" fill="var(--danger-lt)" font-size="10">check permissions</text>
+  <line x1="58.2542" y1="216" x2="69.9051" y2="216" stroke="var(--text-mid)" stroke-width="0.5825" marker-end="url(#arr)" />
+  <rect x="69.9051" y="144" width="69.9051" height="144" rx="2.9127" fill="var(--primary-vivid)" stroke="var(--primary-dk)" stroke-width="0.5825" />
+  <text x="104.8576" y="195.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tool Execution</text>
+  <text x="104.8576" y="230.4" text-anchor="middle" fill="var(--primary-lt)" font-size="10">file edit / shell / git</text>
+  <text x="104.8576" y="264" text-anchor="middle" fill="var(--primary-lt)" font-size="10">the actual action</text>
+  <line x1="139.8101" y1="216" x2="151.461" y2="216" stroke="var(--text-mid)" stroke-width="0.5825" marker-end="url(#arr)" />
+  <rect x="151.461" y="144" width="75.7305" height="144" rx="2.9127" fill="var(--ok-light)" stroke="var(--ok-dk)" stroke-width="0.5825" />
+  <text x="189.3262" y="195.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Post-Hook</text>
+  <text x="189.3262" y="230.4" text-anchor="middle" fill="var(--ok-lt)" font-size="10">notify / log / run tests</text>
+  <text x="189.3262" y="264" text-anchor="middle" fill="var(--ok-lt)" font-size="10">trigger downstream</text>
+  <path d="M 32.0398 288 Q 32.0398 352 104.8576 352" fill="none" stroke="var(--danger-dk)" stroke-width="0.5825" stroke-dasharray="1.4564 0.8738" marker-end="url(#arr)" />
+  <text x="66.9924" y="336" text-anchor="middle" font-size="10" fill="var(--danger-dk)">on_fail: block (stops execution)</text>
+  <rect x="5.8254" y="400" width="221.366" height="216" rx="2.9127" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.4369" />
+  <text x="116.5084" y="444.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Example Hook Configurations</text>
+  <rect x="11.6508" y="472" width="65.536" height="120" rx="2.3302" fill="var(--danger-lt)" stroke="var(--danger-dk)" />
+  <text x="44.2732" y="512" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-dk)">Pre-Hook: Block Dangerous</text>
+  <text x="44.2732" y="544" text-anchor="middle" font-size="10" fill="var(--text-dark)">event: bash_command</text>
+  <text x="44.2732" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">match: "rm -rf|DROP TABLE"</text>
+  <text x="44.2732" y="596.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">action: block</text>
+  <rect x="83.5948" y="472" width="65.536" height="120" rx="2.3302" fill="var(--ok-lt)" stroke="var(--ok-dk)" />
+  <text x="116.2172" y="512" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">Pre-Hook: Scan Secrets</text>
+  <text x="116.2172" y="544" text-anchor="middle" font-size="10" fill="var(--text-dark)">event: file_edit</text>
+  <text x="116.2172" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">run: scan_secrets.sh $FILE</text>
+  <text x="116.2172" y="596.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">on_fail: block</text>
+  <rect x="155.5388" y="472" width="65.536" height="120" rx="2.3302" fill="var(--primary-lt)" stroke="var(--primary-dk)" />
+  <text x="188.1611" y="512" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Post-Hook: Notify Slack</text>
+  <text x="188.1611" y="544" text-anchor="middle" font-size="10" fill="var(--text-dark)">event: pr_create</text>
+  <text x="188.1611" y="572.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">run: notify_slack.sh</text>
+  <text x="188.1611" y="596.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">$PR_NUMBER</text>
+</svg>

@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,25 +158,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="15.0588" markerHeight="16" refX="11.2941" refY="6" orient="auto">
-      <ns0:path d="M 0 0 L 0 12 L 15.0588 6 z" fill="#555" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect x="17.2101" y="18.2857" width="1135.8655" height="621.7143" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.5815" rx="6.884" />
-  <ns0:text x="34.4202" y="54.8571" font-family="sans-serif" font-size="24.0941" fill="var(--warn-dk)" text-anchor="start" font-weight="bold">The small file problem</ns0:text>
-  <ns0:text x="34.4202" y="91.4286" font-family="sans-serif" font-size="20.6521" fill="var(--text-darker)" text-anchor="start">Cause: streaming or frequent appends create many tiny files</ns0:text>
-  <ns0:text x="48.1883" y="124.3429" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">/data/events/date=2024-06-15/</ns0:text>
-  <ns0:text x="48.1883" y="155.4286" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00000.parquet  (2 KB)</ns0:text>
-  <ns0:text x="48.1883" y="186.5143" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00001.parquet  (3 KB)</ns0:text>
-  <ns0:text x="48.1883" y="217.6" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00002.parquet  (1 KB)</ns0:text>
-  <ns0:text x="48.1883" y="248.6857" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00003.parquet  (4 KB)</ns0:text>
-  <ns0:text x="48.1883" y="279.7714" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── ... (10,000 tiny files)</ns0:text>
-  <ns0:text x="48.1883" y="310.8571" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">└── part-09999.parquet  (2 KB)</ns0:text>
-  <ns0:text x="34.4202" y="365.7143" font-family="sans-serif" font-size="20.6521" fill="var(--warn-dk)" text-anchor="start" font-weight="bold">Problems:</ns0:text>
-  <ns0:text x="48.1883" y="398.6286" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• Slow reads: metadata overhead per file</ns0:text>
-  <ns0:text x="48.1883" y="429.7143" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• HDFS/S3 listing bottleneck</ns0:text>
-  <ns0:text x="48.1883" y="460.8" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• NameNode memory pressure (HDFS)</ns0:text>
-  <ns0:text x="48.1883" y="491.8857" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• High API cost (S3)</ns0:text>
-  <ns0:text x="48.1883" y="522.9714" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• Poor predicate pushdown (stats per file)</ns0:text>
-  <ns0:text x="34.4202" y="599.7714" font-family="sans-serif" font-size="20.6521" fill="var(--danger-deeper)" text-anchor="start" font-weight="bold">Target: files of 128 MB – 1 GB</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="15.0588" markerHeight="16" refX="11.2941" refY="6" orient="auto">
+      <path d="M 0 0 L 0 12 L 15.0588 6 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="17.2101" y="18.2857" width="1135.8655" height="621.7143" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="2.5815" rx="6.884" />
+  <text x="34.4202" y="54.8571" font-family="sans-serif" font-size="24.0941" fill="var(--warn-dk)" text-anchor="start" font-weight="bold">The small file problem</text>
+  <text x="34.4202" y="91.4286" font-family="sans-serif" font-size="20.6521" fill="var(--text-darker)" text-anchor="start">Cause: streaming or frequent appends create many tiny files</text>
+  <text x="48.1883" y="124.3429" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">/data/events/date=2024-06-15/</text>
+  <text x="48.1883" y="155.4286" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00000.parquet  (2 KB)</text>
+  <text x="48.1883" y="186.5143" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00001.parquet  (3 KB)</text>
+  <text x="48.1883" y="217.6" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00002.parquet  (1 KB)</text>
+  <text x="48.1883" y="248.6857" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── part-00003.parquet  (4 KB)</text>
+  <text x="48.1883" y="279.7714" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">├── ... (10,000 tiny files)</text>
+  <text x="48.1883" y="310.8571" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">└── part-09999.parquet  (2 KB)</text>
+  <text x="34.4202" y="365.7143" font-family="sans-serif" font-size="20.6521" fill="var(--warn-dk)" text-anchor="start" font-weight="bold">Problems:</text>
+  <text x="48.1883" y="398.6286" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• Slow reads: metadata overhead per file</text>
+  <text x="48.1883" y="429.7143" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• HDFS/S3 listing bottleneck</text>
+  <text x="48.1883" y="460.8" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• NameNode memory pressure (HDFS)</text>
+  <text x="48.1883" y="491.8857" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• High API cost (S3)</text>
+  <text x="48.1883" y="522.9714" font-family="sans-serif" font-size="20.6521" fill="var(--text-dark)" text-anchor="start">• Poor predicate pushdown (stats per file)</text>
+  <text x="34.4202" y="599.7714" font-family="sans-serif" font-size="20.6521" fill="var(--danger-deeper)" text-anchor="start" font-weight="bold">Target: files of 128 MB – 1 GB</text>
+</svg>

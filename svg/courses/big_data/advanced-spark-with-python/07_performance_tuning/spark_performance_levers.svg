@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,115 +158,115 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="42.6667" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="42.6667" y="26.6667" width="199.1111" height="46.2222" fill="url(#grad-primary)" rx="10.6667" />
-  <ns0:rect x="42.6667" y="58.6667" width="199.1111" height="14.2222" fill="url(#grad-primary)" />
-  <ns0:text x="142.2222" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Partitioning</ns0:text>
-  <ns0:text x="142.2222" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</ns0:text>
-  <ns0:rect x="60.4444" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
-  <ns0:rect x="60.4444" y="104.8889" width="163.5556" height="14.2222" fill="var(--danger)" rx="7.1111" />
-  <ns0:text x="142.2222" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Very High</ns0:text>
-  <ns0:text x="60.4444" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Key settings</ns0:text>
-  <ns0:text x="60.4444" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.sql.shuffle</ns0:text>
-  <ns0:text x="60.4444" y="174.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">  .partitions</ns0:text>
-  <ns0:text x="60.4444" y="195.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">repartition(n)</ns0:text>
-  <ns0:text x="60.4444" y="213.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">coalesce(n)</ns0:text>
-  <ns0:text x="60.4444" y="240" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Best practice</ns0:text>
-  <ns0:text x="60.4444" y="257.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">2-4x cores per</ns0:text>
-  <ns0:text x="60.4444" y="272" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">partition 128-256 MB</ns0:text>
-  <ns0:text x="60.4444" y="298.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Warning</ns0:text>
-  <ns0:text x="60.4444" y="316.4444" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Too few: underuse</ns0:text>
-  <ns0:text x="60.4444" y="330.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Too many: overhead</ns0:text>
-  <ns0:rect x="256" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="256" y="26.6667" width="199.1111" height="46.2222" fill="var(--ok-mid)" rx="10.6667" />
-  <ns0:rect x="256" y="58.6667" width="199.1111" height="14.2222" fill="var(--ok-mid)" />
-  <ns0:text x="355.5556" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Caching</ns0:text>
-  <ns0:text x="355.5556" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</ns0:text>
-  <ns0:rect x="273.7778" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
-  <ns0:rect x="273.7778" y="104.8889" width="135.1111" height="14.2222" fill="var(--warn)" rx="7.1111" />
-  <ns0:text x="341.3333" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">High</ns0:text>
-  <ns0:text x="273.7778" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-dk)">Memory levels</ns0:text>
-  <ns0:text x="273.7778" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">MEMORY_ONLY</ns0:text>
-  <ns0:text x="273.7778" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">MEMORY_AND_DISK</ns0:text>
-  <ns0:text x="273.7778" y="192" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">MEMORY_ONLY_SER</ns0:text>
-  <ns0:text x="273.7778" y="208" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">DISK_ONLY</ns0:text>
-  <ns0:text x="273.7778" y="225.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">OFF_HEAP</ns0:text>
-  <ns0:text x="273.7778" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-dk)">When to cache</ns0:text>
-  <ns0:text x="273.7778" y="266.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Reused &gt; 2x times</ns0:text>
-  <ns0:text x="273.7778" y="282.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Fits in memory</ns0:text>
-  <ns0:text x="273.7778" y="298.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Expensive compute</ns0:text>
-  <ns0:text x="273.7778" y="321.7778" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-dk)">API</ns0:text>
-  <ns0:text x="273.7778" y="339.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">df.cache()</ns0:text>
-  <ns0:text x="273.7778" y="353.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">df.persist(level)</ns0:text>
-  <ns0:rect x="469.3333" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="469.3333" y="26.6667" width="199.1111" height="46.2222" fill="var(--warn-dk)" rx="10.6667" />
-  <ns0:rect x="469.3333" y="58.6667" width="199.1111" height="14.2222" fill="var(--warn-dk)" />
-  <ns0:text x="568.8889" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Shuffle Opt.</ns0:text>
-  <ns0:text x="568.8889" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</ns0:text>
-  <ns0:rect x="487.1111" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
-  <ns0:rect x="487.1111" y="104.8889" width="163.5556" height="14.2222" fill="var(--danger)" rx="7.1111" />
-  <ns0:text x="568.8889" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Very High</ns0:text>
-  <ns0:text x="487.1111" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--danger-deeper)">Reduce shuffles</ns0:text>
-  <ns0:text x="487.1111" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Avoid wide joins</ns0:text>
-  <ns0:text x="487.1111" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Salting for skew</ns0:text>
-  <ns0:text x="487.1111" y="192" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Push filters early</ns0:text>
-  <ns0:text x="487.1111" y="216.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--danger-deeper)">AQE features</ns0:text>
-  <ns0:text x="487.1111" y="234.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Auto coalesce</ns0:text>
-  <ns0:text x="487.1111" y="250.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Skew join handling</ns0:text>
-  <ns0:text x="487.1111" y="266.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Plan switching</ns0:text>
-  <ns0:text x="487.1111" y="291.5556" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--danger-deeper)">Config</ns0:text>
-  <ns0:text x="487.1111" y="309.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.sql.adaptive</ns0:text>
-  <ns0:text x="487.1111" y="323.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">  .enabled = true</ns0:text>
-  <ns0:rect x="682.6667" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="682.6667" y="26.6667" width="199.1111" height="46.2222" fill="var(--info-dk)" rx="10.6667" />
-  <ns0:rect x="682.6667" y="58.6667" width="199.1111" height="14.2222" fill="var(--info-dk)" />
-  <ns0:text x="782.2222" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Serialization</ns0:text>
-  <ns0:text x="782.2222" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</ns0:text>
-  <ns0:rect x="700.4444" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
-  <ns0:rect x="700.4444" y="104.8889" width="106.6667" height="14.2222" fill="var(--warn)" rx="7.1111" />
-  <ns0:text x="753.7778" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Medium</ns0:text>
-  <ns0:text x="700.4444" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--info-dk)">Kryo (preferred)</ns0:text>
-  <ns0:text x="700.4444" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.serializer</ns0:text>
-  <ns0:text x="700.4444" y="174.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">= KryoSerializer</ns0:text>
-  <ns0:text x="700.4444" y="190.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">10x faster vs Java</ns0:text>
-  <ns0:text x="700.4444" y="216.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--info-dk)">Register classes</ns0:text>
-  <ns0:text x="700.4444" y="234.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.kryo</ns0:text>
-  <ns0:text x="700.4444" y="248.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">  .registrationRequired</ns0:text>
-  <ns0:text x="700.4444" y="275.5556" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--info-dk)">Format matters</ns0:text>
-  <ns0:text x="700.4444" y="293.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Parquet: columnar</ns0:text>
-  <ns0:text x="700.4444" y="309.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Avro: row-based</ns0:text>
-  <ns0:text x="700.4444" y="325.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">ORC: analytics</ns0:text>
-  <ns0:rect x="896" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="896" y="26.6667" width="199.1111" height="46.2222" fill="var(--primary-strong)" rx="10.6667" />
-  <ns0:rect x="896" y="58.6667" width="199.1111" height="14.2222" fill="var(--primary-strong)" />
-  <ns0:text x="995.5556" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Broadcast Joins</ns0:text>
-  <ns0:text x="995.5556" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</ns0:text>
-  <ns0:rect x="913.7778" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
-  <ns0:rect x="913.7778" y="104.8889" width="135.1111" height="14.2222" fill="var(--warn)" rx="7.1111" />
-  <ns0:text x="981.3333" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">High</ns0:text>
-  <ns0:text x="913.7778" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">How it works</ns0:text>
-  <ns0:text x="913.7778" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Small table sent</ns0:text>
-  <ns0:text x="913.7778" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">to every executor</ns0:text>
-  <ns0:text x="913.7778" y="192" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">No shuffle needed</ns0:text>
-  <ns0:text x="913.7778" y="216.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">Threshold</ns0:text>
-  <ns0:text x="913.7778" y="234.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.sql.autoBroad</ns0:text>
-  <ns0:text x="913.7778" y="248.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">castJoinThreshold</ns0:text>
-  <ns0:text x="913.7778" y="264.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Default: 10 MB</ns0:text>
-  <ns0:text x="913.7778" y="289.7778" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">Explicit hint</ns0:text>
-  <ns0:text x="913.7778" y="307.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">broadcast(small_df)</ns0:text>
-  <ns0:text x="913.7778" y="332.4444" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">Limit</ns0:text>
-  <ns0:text x="913.7778" y="350.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Driver OOM if too big</ns0:text>
-  <ns0:rect x="42.6667" y="545.7778" width="1052.4444" height="80" fill="var(--primary-pale)" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="568.8889" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Tuning Priority Order</ns0:text>
-  <ns0:text x="568.8889" y="588.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">1. Fix partitioning &amp; shuffle   2. Add broadcast joins for small tables   3. Cache reused DataFrames</ns0:text>
-  <ns0:text x="568.8889" y="606.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">4. Switch to Kryo serialization   5. Enable AQE for automatic runtime adaptation</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="42.6667" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="42.6667" y="26.6667" width="199.1111" height="46.2222" fill="url(#grad-primary)" rx="10.6667" />
+  <rect x="42.6667" y="58.6667" width="199.1111" height="14.2222" fill="url(#grad-primary)" />
+  <text x="142.2222" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Partitioning</text>
+  <text x="142.2222" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</text>
+  <rect x="60.4444" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
+  <rect x="60.4444" y="104.8889" width="163.5556" height="14.2222" fill="var(--danger)" rx="7.1111" />
+  <text x="142.2222" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Very High</text>
+  <text x="60.4444" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Key settings</text>
+  <text x="60.4444" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.sql.shuffle</text>
+  <text x="60.4444" y="174.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">  .partitions</text>
+  <text x="60.4444" y="195.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">repartition(n)</text>
+  <text x="60.4444" y="213.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">coalesce(n)</text>
+  <text x="60.4444" y="240" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Best practice</text>
+  <text x="60.4444" y="257.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">2-4x cores per</text>
+  <text x="60.4444" y="272" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">partition 128-256 MB</text>
+  <text x="60.4444" y="298.6667" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Warning</text>
+  <text x="60.4444" y="316.4444" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Too few: underuse</text>
+  <text x="60.4444" y="330.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Too many: overhead</text>
+  <rect x="256" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="256" y="26.6667" width="199.1111" height="46.2222" fill="var(--ok-mid)" rx="10.6667" />
+  <rect x="256" y="58.6667" width="199.1111" height="14.2222" fill="var(--ok-mid)" />
+  <text x="355.5556" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Caching</text>
+  <text x="355.5556" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</text>
+  <rect x="273.7778" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
+  <rect x="273.7778" y="104.8889" width="135.1111" height="14.2222" fill="var(--warn)" rx="7.1111" />
+  <text x="341.3333" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">High</text>
+  <text x="273.7778" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-dk)">Memory levels</text>
+  <text x="273.7778" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">MEMORY_ONLY</text>
+  <text x="273.7778" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">MEMORY_AND_DISK</text>
+  <text x="273.7778" y="192" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">MEMORY_ONLY_SER</text>
+  <text x="273.7778" y="208" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">DISK_ONLY</text>
+  <text x="273.7778" y="225.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">OFF_HEAP</text>
+  <text x="273.7778" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-dk)">When to cache</text>
+  <text x="273.7778" y="266.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Reused &gt; 2x times</text>
+  <text x="273.7778" y="282.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Fits in memory</text>
+  <text x="273.7778" y="298.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Expensive compute</text>
+  <text x="273.7778" y="321.7778" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-dk)">API</text>
+  <text x="273.7778" y="339.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">df.cache()</text>
+  <text x="273.7778" y="353.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">df.persist(level)</text>
+  <rect x="469.3333" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="469.3333" y="26.6667" width="199.1111" height="46.2222" fill="var(--warn-dk)" rx="10.6667" />
+  <rect x="469.3333" y="58.6667" width="199.1111" height="14.2222" fill="var(--warn-dk)" />
+  <text x="568.8889" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Shuffle Opt.</text>
+  <text x="568.8889" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</text>
+  <rect x="487.1111" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
+  <rect x="487.1111" y="104.8889" width="163.5556" height="14.2222" fill="var(--danger)" rx="7.1111" />
+  <text x="568.8889" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Very High</text>
+  <text x="487.1111" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--danger-deeper)">Reduce shuffles</text>
+  <text x="487.1111" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Avoid wide joins</text>
+  <text x="487.1111" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Salting for skew</text>
+  <text x="487.1111" y="192" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Push filters early</text>
+  <text x="487.1111" y="216.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--danger-deeper)">AQE features</text>
+  <text x="487.1111" y="234.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Auto coalesce</text>
+  <text x="487.1111" y="250.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Skew join handling</text>
+  <text x="487.1111" y="266.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Plan switching</text>
+  <text x="487.1111" y="291.5556" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--danger-deeper)">Config</text>
+  <text x="487.1111" y="309.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.sql.adaptive</text>
+  <text x="487.1111" y="323.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">  .enabled = true</text>
+  <rect x="682.6667" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="682.6667" y="26.6667" width="199.1111" height="46.2222" fill="var(--info-dk)" rx="10.6667" />
+  <rect x="682.6667" y="58.6667" width="199.1111" height="14.2222" fill="var(--info-dk)" />
+  <text x="782.2222" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Serialization</text>
+  <text x="782.2222" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</text>
+  <rect x="700.4444" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
+  <rect x="700.4444" y="104.8889" width="106.6667" height="14.2222" fill="var(--warn)" rx="7.1111" />
+  <text x="753.7778" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Medium</text>
+  <text x="700.4444" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--info-dk)">Kryo (preferred)</text>
+  <text x="700.4444" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.serializer</text>
+  <text x="700.4444" y="174.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">= KryoSerializer</text>
+  <text x="700.4444" y="190.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">10x faster vs Java</text>
+  <text x="700.4444" y="216.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--info-dk)">Register classes</text>
+  <text x="700.4444" y="234.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.kryo</text>
+  <text x="700.4444" y="248.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">  .registrationRequired</text>
+  <text x="700.4444" y="275.5556" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--info-dk)">Format matters</text>
+  <text x="700.4444" y="293.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Parquet: columnar</text>
+  <text x="700.4444" y="309.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Avro: row-based</text>
+  <text x="700.4444" y="325.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">ORC: analytics</text>
+  <rect x="896" y="26.6667" width="199.1111" height="497.7778" fill="url(#grad-surface)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="896" y="26.6667" width="199.1111" height="46.2222" fill="var(--primary-strong)" rx="10.6667" />
+  <rect x="896" y="58.6667" width="199.1111" height="14.2222" fill="var(--primary-strong)" />
+  <text x="995.5556" y="55.1111" font-family="Arial,sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)" text-anchor="middle">Broadcast Joins</text>
+  <text x="995.5556" y="97.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-faint)" text-anchor="middle">Impact</text>
+  <rect x="913.7778" y="104.8889" width="163.5556" height="14.2222" fill="var(--border)" rx="7.1111" />
+  <rect x="913.7778" y="104.8889" width="135.1111" height="14.2222" fill="var(--warn)" rx="7.1111" />
+  <text x="981.3333" y="116.4444" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">High</text>
+  <text x="913.7778" y="142.2222" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">How it works</text>
+  <text x="913.7778" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Small table sent</text>
+  <text x="913.7778" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">to every executor</text>
+  <text x="913.7778" y="192" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">No shuffle needed</text>
+  <text x="913.7778" y="216.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">Threshold</text>
+  <text x="913.7778" y="234.6667" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">spark.sql.autoBroad</text>
+  <text x="913.7778" y="248.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">castJoinThreshold</text>
+  <text x="913.7778" y="264.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Default: 10 MB</text>
+  <text x="913.7778" y="289.7778" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">Explicit hint</text>
+  <text x="913.7778" y="307.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">broadcast(small_df)</text>
+  <text x="913.7778" y="332.4444" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-deep)">Limit</text>
+  <text x="913.7778" y="350.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Driver OOM if too big</text>
+  <rect x="42.6667" y="545.7778" width="1052.4444" height="80" fill="var(--primary-pale)" rx="8.8889" filter="url(#shadow)" />
+  <text x="568.8889" y="568.8889" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Tuning Priority Order</text>
+  <text x="568.8889" y="588.4444" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">1. Fix partitioning &amp; shuffle   2. Add broadcast joins for small tables   3. Cache reused DataFrames</text>
+  <text x="568.8889" y="606.2222" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-dark)" text-anchor="middle">4. Switch to Kryo serialization   5. Enable AQE for automatic runtime adaptation</text>
+</svg>

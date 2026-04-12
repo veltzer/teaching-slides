@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,27 +157,27 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:rect x="20.7321" y="13.0612" width="1119.5335" height="626.9388" rx="6.5306" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.6122" />
-  <ns0:text x="580.4989" y="52.2449" text-anchor="middle" font-size="20.898" font-weight="bold" fill="var(--primary-bright)">Exactly-Once Guarantee Flow (Micro-batch N)</ns0:text>
-  <ns0:rect x="82.9284" y="78.3673" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
-  <ns0:text x="114.0266" y="104.4898" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 1: Read offsets from checkpoint</ns0:text>
-  <ns0:text x="114.0266" y="130.6122" font-size="15.6735" fill="var(--text-dark)">Last committed: topic=events, partition=0, offset=1000</ns0:text>
-  <ns0:line x1="580.4989" y1="150.2041" x2="580.4989" y2="176.3265" stroke="var(--primary-bright)" stroke-width="2.6122" marker-end="url(#arrow)" />
-  <ns0:rect x="82.9284" y="176.3265" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
-  <ns0:text x="114.0266" y="202.449" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 2: Fetch data from source</ns0:text>
-  <ns0:text x="114.0266" y="228.5714" font-size="15.6735" fill="var(--text-dark)">Read offsets 1001-1500 from Kafka</ns0:text>
-  <ns0:line x1="580.4989" y1="248.1633" x2="580.4989" y2="274.2857" stroke="var(--primary-bright)" stroke-width="2.6122" marker-end="url(#arrow)" />
-  <ns0:rect x="82.9284" y="274.2857" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
-  <ns0:text x="114.0266" y="300.4082" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 3: Process and write to sink</ns0:text>
-  <ns0:text x="114.0266" y="326.5306" font-size="15.6735" fill="var(--text-dark)">Write 500 records to Delta Lake</ns0:text>
-  <ns0:line x1="580.4989" y1="346.1224" x2="580.4989" y2="372.2449" stroke="var(--primary-bright)" stroke-width="2.6122" marker-end="url(#arrow)" />
-  <ns0:rect x="82.9284" y="372.2449" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
-  <ns0:text x="114.0266" y="398.3673" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 4: Commit offsets to checkpoint</ns0:text>
-  <ns0:text x="114.0266" y="424.4898" font-size="15.6735" fill="var(--text-dark)">Update: offset=1500 (atomic)</ns0:text>
-  <ns0:rect x="82.9284" y="470.2041" width="995.141" height="143.6735" rx="6.5306" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.9592" />
-  <ns0:text x="114.0266" y="502.8571" font-size="15.6735" font-weight="bold" fill="var(--danger-deeper)">Failure Recovery:</ns0:text>
-  <ns0:text x="114.0266" y="528.9796" font-size="15.6735" fill="var(--text-dark)">• If failure at Step 3: restart replays from 1001</ns0:text>
-  <ns0:text x="114.0266" y="555.102" font-size="15.6735" fill="var(--text-dark)">• If failure at Step 4: restart replays from 1001</ns0:text>
-  <ns0:text x="114.0266" y="581.2245" font-size="15.6735" fill="var(--text-dark)">• Idempotent sink prevents duplicates</ns0:text>
-</ns0:svg>
+</defs>
+  <rect x="20.7321" y="13.0612" width="1119.5335" height="626.9388" rx="6.5306" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.6122" />
+  <text x="580.4989" y="52.2449" text-anchor="middle" font-size="20.898" font-weight="bold" fill="var(--primary-bright)">Exactly-Once Guarantee Flow (Micro-batch N)</text>
+  <rect x="82.9284" y="78.3673" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
+  <text x="114.0266" y="104.4898" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 1: Read offsets from checkpoint</text>
+  <text x="114.0266" y="130.6122" font-size="15.6735" fill="var(--text-dark)">Last committed: topic=events, partition=0, offset=1000</text>
+  <line x1="580.4989" y1="150.2041" x2="580.4989" y2="176.3265" stroke="var(--primary-bright)" stroke-width="2.6122" marker-end="url(#arrow)" />
+  <rect x="82.9284" y="176.3265" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
+  <text x="114.0266" y="202.449" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 2: Fetch data from source</text>
+  <text x="114.0266" y="228.5714" font-size="15.6735" fill="var(--text-dark)">Read offsets 1001-1500 from Kafka</text>
+  <line x1="580.4989" y1="248.1633" x2="580.4989" y2="274.2857" stroke="var(--primary-bright)" stroke-width="2.6122" marker-end="url(#arrow)" />
+  <rect x="82.9284" y="274.2857" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
+  <text x="114.0266" y="300.4082" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 3: Process and write to sink</text>
+  <text x="114.0266" y="326.5306" font-size="15.6735" fill="var(--text-dark)">Write 500 records to Delta Lake</text>
+  <line x1="580.4989" y1="346.1224" x2="580.4989" y2="372.2449" stroke="var(--primary-bright)" stroke-width="2.6122" marker-end="url(#arrow)" />
+  <rect x="82.9284" y="372.2449" width="995.141" height="71.8367" rx="6.5306" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.9592" />
+  <text x="114.0266" y="398.3673" font-size="16.9796" font-weight="bold" fill="var(--ok-bright)">Step 4: Commit offsets to checkpoint</text>
+  <text x="114.0266" y="424.4898" font-size="15.6735" fill="var(--text-dark)">Update: offset=1500 (atomic)</text>
+  <rect x="82.9284" y="470.2041" width="995.141" height="143.6735" rx="6.5306" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.9592" />
+  <text x="114.0266" y="502.8571" font-size="15.6735" font-weight="bold" fill="var(--danger-deeper)">Failure Recovery:</text>
+  <text x="114.0266" y="528.9796" font-size="15.6735" fill="var(--text-dark)">• If failure at Step 3: restart replays from 1001</text>
+  <text x="114.0266" y="555.102" font-size="15.6735" fill="var(--text-dark)">• If failure at Step 4: restart replays from 1001</text>
+  <text x="114.0266" y="581.2245" font-size="15.6735" fill="var(--text-dark)">• Idempotent sink prevents duplicates</text>
+</svg>

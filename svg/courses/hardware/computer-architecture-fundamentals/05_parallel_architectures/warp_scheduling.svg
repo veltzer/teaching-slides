@@ -1,4 +1,4 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -158,23 +158,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <ns0:text x="577.1336" y="46.3768" text-anchor="middle" font-size="26.3832" font-weight="bold" fill="var(--text-dark)">GPU Warp Scheduling</ns0:text>
-  <ns0:rect x="49.4686" y="83.4782" width="742.0289" height="55.6522" rx="8.2448" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4735" />
-  <ns0:text x="74.2029" y="120.5797" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 0: [T0 T1 T2 T3 ... T31]</ns0:text>
-  <ns0:text x="577.1336" y="120.5797" font-size="18.1385" fill="var(--ok-bright)" font-weight="bold">executing ADD</ns0:text>
-  <ns0:rect x="49.4686" y="157.6811" width="742.0289" height="55.6522" rx="8.2448" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4735" />
-  <ns0:text x="74.2029" y="194.7826" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 1: [T32 T33 T34 T35 ... T63]</ns0:text>
-  <ns0:text x="577.1336" y="194.7826" font-size="18.1385" fill="var(--danger-deeper)" font-weight="bold">waiting for memory</ns0:text>
-  <ns0:rect x="49.4686" y="231.8841" width="742.0289" height="55.6522" rx="8.2448" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4735" />
-  <ns0:text x="74.2029" y="268.9855" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 2: [T64 T65 T66 T67 ... T95]</ns0:text>
-  <ns0:text x="577.1336" y="268.9855" font-size="18.1385" fill="var(--ok-bright)" font-weight="bold">executing MUL</ns0:text>
-  <ns0:rect x="49.4686" y="306.087" width="742.0289" height="55.6522" rx="8.2448" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4735" />
-  <ns0:text x="74.2029" y="343.1884" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 3: [T96 T97 T98 T99 ... T127]</ns0:text>
-  <ns0:text x="577.1336" y="343.1884" font-size="18.1385" fill="var(--primary-bright)" font-weight="bold">ready to execute</ns0:text>
-  <ns0:rect x="164.8953" y="408.1159" width="824.4766" height="185.5073" rx="8.2448" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2979" />
-  <ns0:text x="577.1336" y="454.4927" text-anchor="middle" font-size="21.4364" font-weight="bold" fill="var(--primary-bright)">Warp Scheduler (each cycle)</ns0:text>
-  <ns0:text x="230.8535" y="497.1594" font-size="18.1385" fill="var(--text-dark)">1. Pick a warp that is READY</ns0:text>
-  <ns0:text x="230.8535" y="530.5508" font-size="18.1385" fill="var(--text-dark)">2. Issue its next instruction</ns0:text>
-  <ns0:text x="230.8535" y="563.942" font-size="18.1385" fill="var(--text-dark)">3. If warp stalls (memory wait), switch to another warp (free!)</ns0:text>
-  <ns0:text x="577.1336" y="640" text-anchor="middle" font-size="18.1385" fill="var(--text-mid)">Zero-cost context switching hides memory latency</ns0:text>
-</ns0:svg>
+  <text x="577.1336" y="46.3768" text-anchor="middle" font-size="26.3832" font-weight="bold" fill="var(--text-dark)">GPU Warp Scheduling</text>
+  <rect x="49.4686" y="83.4782" width="742.0289" height="55.6522" rx="8.2448" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4735" />
+  <text x="74.2029" y="120.5797" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 0: [T0 T1 T2 T3 ... T31]</text>
+  <text x="577.1336" y="120.5797" font-size="18.1385" fill="var(--ok-bright)" font-weight="bold">executing ADD</text>
+  <rect x="49.4686" y="157.6811" width="742.0289" height="55.6522" rx="8.2448" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.4735" />
+  <text x="74.2029" y="194.7826" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 1: [T32 T33 T34 T35 ... T63]</text>
+  <text x="577.1336" y="194.7826" font-size="18.1385" fill="var(--danger-deeper)" font-weight="bold">waiting for memory</text>
+  <rect x="49.4686" y="231.8841" width="742.0289" height="55.6522" rx="8.2448" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.4735" />
+  <text x="74.2029" y="268.9855" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 2: [T64 T65 T66 T67 ... T95]</text>
+  <text x="577.1336" y="268.9855" font-size="18.1385" fill="var(--ok-bright)" font-weight="bold">executing MUL</text>
+  <rect x="49.4686" y="306.087" width="742.0289" height="55.6522" rx="8.2448" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.4735" />
+  <text x="74.2029" y="343.1884" font-size="18.1385" font-weight="bold" fill="var(--text-dark)">Warp 3: [T96 T97 T98 T99 ... T127]</text>
+  <text x="577.1336" y="343.1884" font-size="18.1385" fill="var(--primary-bright)" font-weight="bold">ready to execute</text>
+  <rect x="164.8953" y="408.1159" width="824.4766" height="185.5073" rx="8.2448" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2979" />
+  <text x="577.1336" y="454.4927" text-anchor="middle" font-size="21.4364" font-weight="bold" fill="var(--primary-bright)">Warp Scheduler (each cycle)</text>
+  <text x="230.8535" y="497.1594" font-size="18.1385" fill="var(--text-dark)">1. Pick a warp that is READY</text>
+  <text x="230.8535" y="530.5508" font-size="18.1385" fill="var(--text-dark)">2. Issue its next instruction</text>
+  <text x="230.8535" y="563.942" font-size="18.1385" fill="var(--text-dark)">3. If warp stalls (memory wait), switch to another warp (free!)</text>
+  <text x="577.1336" y="640" text-anchor="middle" font-size="18.1385" fill="var(--text-mid)">Zero-cost context switching hides memory latency</text>
+</svg>

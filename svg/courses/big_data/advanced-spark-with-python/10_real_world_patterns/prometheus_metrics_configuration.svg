@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,35 +157,35 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:rect x="20.0015" y="12.5491" width="1120.0841" height="627.4509" rx="6.2745" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="2.5098" />
-  <ns0:text x="580.0435" y="47.6863" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="var(--primary-bright)">Spark Metrics to Prometheus</ns0:text>
-  <ns0:rect x="60.0045" y="62.7451" width="1040.078" height="288.6274" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5098" />
-  <ns0:text x="100.0075" y="94.1177" font-size="17.5686" font-weight="bold" fill="var(--primary-bright)">Spark Application</ns0:text>
-  <ns0:text x="100.0075" y="125.4902" font-size="16.3137" font-weight="bold" fill="var(--text-dark)">Driver Metrics:</ns0:text>
-  <ns0:text x="120.009" y="148.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_jvm_heap_used</ns0:text>
-  <ns0:text x="120.009" y="169.4118" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_active_tasks</ns0:text>
-  <ns0:text x="120.009" y="190.745" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_completed_tasks</ns0:text>
-  <ns0:text x="120.009" y="212.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_failed_tasks</ns0:text>
-  <ns0:text x="600.0451" y="125.4902" font-size="16.3137" font-weight="bold" fill="var(--text-dark)">Executor Metrics:</ns0:text>
-  <ns0:text x="620.0465" y="148.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_jvm_heap_used</ns0:text>
-  <ns0:text x="620.0465" y="169.4118" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_gc_time_total</ns0:text>
-  <ns0:text x="620.0465" y="190.745" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_shuffle_read_bytes</ns0:text>
-  <ns0:text x="620.0465" y="212.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_shuffle_write_bytes</ns0:text>
-  <ns0:text x="580.0435" y="326.2745" text-anchor="middle" font-size="15.0588" fill="var(--text-mid)">/metrics/prometheus endpoint</ns0:text>
-  <ns0:line x1="580.0435" y1="351.3725" x2="580.0435" y2="389.0196" stroke="var(--primary-bright)" stroke-width="2.5098" marker-end="url(#arrow)" />
-  <ns0:rect x="120.009" y="389.0196" width="280.021" height="56.4706" rx="6.2745" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5098" />
-  <ns0:text x="260.0196" y="424.1568" text-anchor="middle" font-size="16.3137" fill="var(--text-dark)">Prometheus</ns0:text>
-  <ns0:line x1="400.03" y1="416.6274" x2="480.036" y2="416.6274" stroke="var(--primary-bright)" stroke-width="2.5098" marker-end="url(#arrow)" />
-  <ns0:rect x="480.036" y="389.0196" width="280.021" height="56.4706" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5098" />
-  <ns0:text x="620.0465" y="424.1568" text-anchor="middle" font-size="16.3137" fill="var(--text-dark)">Grafana</ns0:text>
-  <ns0:line x1="760.057" y1="416.6274" x2="840.0631" y2="416.6274" stroke="var(--primary-bright)" stroke-width="2.5098" marker-end="url(#arrow)" />
-  <ns0:rect x="840.0631" y="389.0196" width="240.018" height="56.4706" rx="6.2745" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5098" />
-  <ns0:text x="960.072" y="424.1568" text-anchor="middle" font-size="16.3137" fill="var(--text-dark)">Alerts</ns0:text>
-  <ns0:rect x="60.0045" y="470.5882" width="1040.078" height="150.5882" rx="6.2745" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.8823" />
-  <ns0:text x="100.0075" y="499.4509" font-size="16.3137" font-weight="bold" fill="var(--danger-deeper)">Key alerts to set up:</ns0:text>
-  <ns0:text x="120.009" y="524.549" font-size="15.0588" fill="var(--text-dark)">• Job duration &gt; 2x historical average</ns0:text>
-  <ns0:text x="120.009" y="547.1372" font-size="15.0588" fill="var(--text-dark)">• Failed tasks &gt; 5% of total</ns0:text>
-  <ns0:text x="120.009" y="569.7255" font-size="15.0588" fill="var(--text-dark)">• Executor memory &gt; 90% usage</ns0:text>
-  <ns0:text x="120.009" y="592.3137" font-size="15.0588" fill="var(--text-dark)">• Row count anomaly (&lt; 50% of expected)</ns0:text>
-</ns0:svg>
+</defs>
+  <rect x="20.0015" y="12.5491" width="1120.0841" height="627.4509" rx="6.2745" fill="var(--surface-light)" stroke="var(--primary-bright)" stroke-width="2.5098" />
+  <text x="580.0435" y="47.6863" text-anchor="middle" font-size="20.0784" font-weight="bold" fill="var(--primary-bright)">Spark Metrics to Prometheus</text>
+  <rect x="60.0045" y="62.7451" width="1040.078" height="288.6274" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5098" />
+  <text x="100.0075" y="94.1177" font-size="17.5686" font-weight="bold" fill="var(--primary-bright)">Spark Application</text>
+  <text x="100.0075" y="125.4902" font-size="16.3137" font-weight="bold" fill="var(--text-dark)">Driver Metrics:</text>
+  <text x="120.009" y="148.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_jvm_heap_used</text>
+  <text x="120.009" y="169.4118" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_active_tasks</text>
+  <text x="120.009" y="190.745" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_completed_tasks</text>
+  <text x="120.009" y="212.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_driver_failed_tasks</text>
+  <text x="600.0451" y="125.4902" font-size="16.3137" font-weight="bold" fill="var(--text-dark)">Executor Metrics:</text>
+  <text x="620.0465" y="148.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_jvm_heap_used</text>
+  <text x="620.0465" y="169.4118" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_gc_time_total</text>
+  <text x="620.0465" y="190.745" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_shuffle_read_bytes</text>
+  <text x="620.0465" y="212.0784" font-size="13.8039" font-family="monospace" fill="var(--text-dark)">spark_executor_shuffle_write_bytes</text>
+  <text x="580.0435" y="326.2745" text-anchor="middle" font-size="15.0588" fill="var(--text-mid)">/metrics/prometheus endpoint</text>
+  <line x1="580.0435" y1="351.3725" x2="580.0435" y2="389.0196" stroke="var(--primary-bright)" stroke-width="2.5098" marker-end="url(#arrow)" />
+  <rect x="120.009" y="389.0196" width="280.021" height="56.4706" rx="6.2745" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.5098" />
+  <text x="260.0196" y="424.1568" text-anchor="middle" font-size="16.3137" fill="var(--text-dark)">Prometheus</text>
+  <line x1="400.03" y1="416.6274" x2="480.036" y2="416.6274" stroke="var(--primary-bright)" stroke-width="2.5098" marker-end="url(#arrow)" />
+  <rect x="480.036" y="389.0196" width="280.021" height="56.4706" rx="6.2745" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.5098" />
+  <text x="620.0465" y="424.1568" text-anchor="middle" font-size="16.3137" fill="var(--text-dark)">Grafana</text>
+  <line x1="760.057" y1="416.6274" x2="840.0631" y2="416.6274" stroke="var(--primary-bright)" stroke-width="2.5098" marker-end="url(#arrow)" />
+  <rect x="840.0631" y="389.0196" width="240.018" height="56.4706" rx="6.2745" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5098" />
+  <text x="960.072" y="424.1568" text-anchor="middle" font-size="16.3137" fill="var(--text-dark)">Alerts</text>
+  <rect x="60.0045" y="470.5882" width="1040.078" height="150.5882" rx="6.2745" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.8823" />
+  <text x="100.0075" y="499.4509" font-size="16.3137" font-weight="bold" fill="var(--danger-deeper)">Key alerts to set up:</text>
+  <text x="120.009" y="524.549" font-size="15.0588" fill="var(--text-dark)">• Job duration &gt; 2x historical average</text>
+  <text x="120.009" y="547.1372" font-size="15.0588" fill="var(--text-dark)">• Failed tasks &gt; 5% of total</text>
+  <text x="120.009" y="569.7255" font-size="15.0588" fill="var(--text-dark)">• Executor memory &gt; 90% usage</text>
+  <text x="120.009" y="592.3137" font-size="15.0588" fill="var(--text-dark)">• Row count anomaly (&lt; 50% of expected)</text>
+</svg>

@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,41 +158,41 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr_str" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <ns0:path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="592.5926" y="50" text-anchor="middle" font-size="23.7037" font-weight="bold">String Internal Layout (wraps Vec&lt;u8&gt;)</ns0:text>
-  <ns0:text x="217.284" y="116.6667" text-anchor="middle" font-size="21.7284" font-weight="bold">Stack: String struct</ns0:text>
-  <ns0:rect x="39.5062" y="140" width="355.5556" height="83.3333" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="217.284" y="196.6667" text-anchor="middle" font-size="19.7531">ptr: 0x7fa3...</ns0:text>
-  <ns0:rect x="39.5062" y="223.3333" width="355.5556" height="83.3333" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="217.284" y="280" text-anchor="middle" font-size="19.7531">len: 5 (bytes used)</ns0:text>
-  <ns0:rect x="39.5062" y="306.6667" width="355.5556" height="83.3333" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="217.284" y="363.3333" text-anchor="middle" font-size="19.7531">cap: 8 (bytes allocated)</ns0:text>
-  <ns0:text x="829.6296" y="116.6667" text-anchor="middle" font-size="21.7284" font-weight="bold">Heap: UTF-8 bytes</ns0:text>
-  <ns0:rect x="572.8395" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="606.4197" y="213.3333" text-anchor="middle" font-size="21.7284">h</ns0:text>
-  <ns0:rect x="641.9753" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="675.5556" y="213.3333" text-anchor="middle" font-size="21.7284">e</ns0:text>
-  <ns0:rect x="711.1111" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="744.6914" y="213.3333" text-anchor="middle" font-size="21.7284">l</ns0:text>
-  <ns0:rect x="780.2469" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="813.8271" y="213.3333" text-anchor="middle" font-size="21.7284">l</ns0:text>
-  <ns0:rect x="849.3827" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
-  <ns0:text x="882.963" y="213.3333" text-anchor="middle" font-size="21.7284">o</ns0:text>
-  <ns0:rect x="918.5185" y="150" width="69.1358" height="100" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" stroke-dasharray="5.9259 3.9506" />
-  <ns0:text x="952.0988" y="213.3333" text-anchor="middle" font-size="19.7531">--</ns0:text>
-  <ns0:rect x="987.6544" y="150" width="69.1358" height="100" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" stroke-dasharray="5.9259 3.9506" />
-  <ns0:text x="1021.2345" y="213.3333" text-anchor="middle" font-size="19.7531">--</ns0:text>
-  <ns0:rect x="1056.7901" y="150" width="69.1358" height="100" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" stroke-dasharray="5.9259 3.9506" />
-  <ns0:text x="1090.3704" y="213.3333" text-anchor="middle" font-size="19.7531">--</ns0:text>
-  <ns0:text x="790.1234" y="300" text-anchor="middle" font-size="19.7531">|-- len: 5 used --|-- cap: 3 spare --|</ns0:text>
-  <ns0:line x1="395.0618" y1="183.3333" x2="572.8395" y2="183.3333" stroke="var(--text-dark)" stroke-width="3.9506" marker-end="url(#arr_str)" />
-  <ns0:rect x="59.2593" y="416.6667" width="493.8271" height="100" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
-  <ns0:text x="306.1729" y="480" text-anchor="middle" font-size="19.7531">UTF-8 encoded: multi-byte chars possible</ns0:text>
-  <ns0:rect x="612.3456" y="416.6667" width="513.5803" height="100" fill="var(--danger-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
-  <ns0:text x="869.1358" y="480" text-anchor="middle" font-size="19.7531">No indexing by char! Use .chars() iterator</ns0:text>
-  <ns0:rect x="197.5308" y="566.6667" width="790.1234" height="73.3333" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="5.9259" />
-  <ns0:text x="592.5926" y="616.6667" text-anchor="middle" font-size="19.7531">String = Vec&lt;u8&gt; with UTF-8 guarantee; &amp;str = &amp;[u8] slice</ns0:text>
-</ns0:svg>
+    <marker id="arr_str" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    </marker>
+  </defs>
+  <text x="592.5926" y="50" text-anchor="middle" font-size="23.7037" font-weight="bold">String Internal Layout (wraps Vec&lt;u8&gt;)</text>
+  <text x="217.284" y="116.6667" text-anchor="middle" font-size="21.7284" font-weight="bold">Stack: String struct</text>
+  <rect x="39.5062" y="140" width="355.5556" height="83.3333" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="217.284" y="196.6667" text-anchor="middle" font-size="19.7531">ptr: 0x7fa3...</text>
+  <rect x="39.5062" y="223.3333" width="355.5556" height="83.3333" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="217.284" y="280" text-anchor="middle" font-size="19.7531">len: 5 (bytes used)</text>
+  <rect x="39.5062" y="306.6667" width="355.5556" height="83.3333" fill="var(--info-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="217.284" y="363.3333" text-anchor="middle" font-size="19.7531">cap: 8 (bytes allocated)</text>
+  <text x="829.6296" y="116.6667" text-anchor="middle" font-size="21.7284" font-weight="bold">Heap: UTF-8 bytes</text>
+  <rect x="572.8395" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="606.4197" y="213.3333" text-anchor="middle" font-size="21.7284">h</text>
+  <rect x="641.9753" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="675.5556" y="213.3333" text-anchor="middle" font-size="21.7284">e</text>
+  <rect x="711.1111" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="744.6914" y="213.3333" text-anchor="middle" font-size="21.7284">l</text>
+  <rect x="780.2469" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="813.8271" y="213.3333" text-anchor="middle" font-size="21.7284">l</text>
+  <rect x="849.3827" y="150" width="69.1358" height="100" fill="var(--ok-pale)" stroke="var(--text-dark)" stroke-width="1.9753" />
+  <text x="882.963" y="213.3333" text-anchor="middle" font-size="21.7284">o</text>
+  <rect x="918.5185" y="150" width="69.1358" height="100" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" stroke-dasharray="5.9259 3.9506" />
+  <text x="952.0988" y="213.3333" text-anchor="middle" font-size="19.7531">--</text>
+  <rect x="987.6544" y="150" width="69.1358" height="100" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" stroke-dasharray="5.9259 3.9506" />
+  <text x="1021.2345" y="213.3333" text-anchor="middle" font-size="19.7531">--</text>
+  <rect x="1056.7901" y="150" width="69.1358" height="100" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" stroke-dasharray="5.9259 3.9506" />
+  <text x="1090.3704" y="213.3333" text-anchor="middle" font-size="19.7531">--</text>
+  <text x="790.1234" y="300" text-anchor="middle" font-size="19.7531">|-- len: 5 used --|-- cap: 3 spare --|</text>
+  <line x1="395.0618" y1="183.3333" x2="572.8395" y2="183.3333" stroke="var(--text-dark)" stroke-width="3.9506" marker-end="url(#arr_str)" />
+  <rect x="59.2593" y="416.6667" width="493.8271" height="100" fill="var(--primary-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
+  <text x="306.1729" y="480" text-anchor="middle" font-size="19.7531">UTF-8 encoded: multi-byte chars possible</text>
+  <rect x="612.3456" y="416.6667" width="513.5803" height="100" fill="var(--danger-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="9.8766" />
+  <text x="869.1358" y="480" text-anchor="middle" font-size="19.7531">No indexing by char! Use .chars() iterator</text>
+  <rect x="197.5308" y="566.6667" width="790.1234" height="73.3333" fill="var(--warn-pale)" stroke="var(--text-dark)" stroke-width="1.9753" rx="5.9259" />
+  <text x="592.5926" y="616.6667" text-anchor="middle" font-size="19.7531">String = Vec&lt;u8&gt; with UTF-8 guarantee; &amp;str = &amp;[u8] slice</text>
+</svg>

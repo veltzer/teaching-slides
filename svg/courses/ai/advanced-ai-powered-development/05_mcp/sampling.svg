@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,42 +158,42 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="37.6124" markerHeight="125.5642" refX="33.8512" refY="62.7819" orient="auto">
-      <ns0:polygon points="0,179.377 13.1644,0" fill="#555" />
-    </ns0:marker>
-    <ns0:marker id="arrg" markerWidth="37.6124" markerHeight="125.5642" refX="33.8512" refY="62.7819" orient="auto">
-      <ns0:polygon points="0,179.377 13.1644,0" fill="#2E7D32" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="268.3953" height="640" fill="var(--surface-light)" />
-  <ns0:text x="134.1977" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">MCP Sampling: Server-Initiated LLM Calls</ns0:text>
-  <ns0:rect x="10.0648" y="128" width="73.8087" height="192" rx="3.3549" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.671" />
-  <ns0:text x="46.9692" y="180.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">MCP Server</ns0:text>
-  <ns0:text x="46.9692" y="220.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">analyze_error_logs()</ns0:text>
-  <ns0:text x="46.9692" y="252.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">fetches logs...</ns0:text>
-  <ns0:text x="46.9692" y="284.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">needs LLM reasoning</ns0:text>
-  <ns0:line x1="83.8735" y1="208" x2="124.1328" y2="208" stroke="var(--text-muted)" stroke-width="0.671" marker-end="url(#arr)" />
-  <ns0:text x="104.0032" y="188.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">sampling/</ns0:text>
-  <ns0:text x="104.0032" y="212.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">createMessage</ns0:text>
-  <ns0:rect x="124.1328" y="128" width="73.8087" height="192" rx="3.3549" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.671" />
-  <ns0:text x="161.0372" y="180.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Host</ns0:text>
-  <ns0:text x="161.0372" y="220.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Claude Desktop /</ns0:text>
-  <ns0:text x="161.0372" y="252.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Claude Code</ns0:text>
-  <ns0:text x="161.0372" y="284.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">controls model choice</ns0:text>
-  <ns0:line x1="197.9415" y1="208" x2="224.7811" y2="208" stroke="var(--text-muted)" stroke-width="0.671" marker-end="url(#arr)" />
-  <ns0:text x="211.3613" y="188.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">API call</ns0:text>
-  <ns0:rect x="224.7811" y="128" width="36.9043" height="192" rx="3.3549" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.671" />
-  <ns0:text x="243.2332" y="180.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">LLM</ns0:text>
-  <ns0:text x="243.2332" y="220.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Claude Opus</ns0:text>
-  <ns0:text x="243.2332" y="252.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">reasoning</ns0:text>
-  <ns0:text x="243.2332" y="284.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">completion</ns0:text>
-  <ns0:path d="M 197.9415 320 Q 197.9415 432 83.8735 432 Q 67.0988 432 67.0988 320" fill="none" stroke="var(--ok-dk)" stroke-width="0.671" marker-end="url(#arrg)" />
-  <ns0:text x="140.9075" y="456" text-anchor="middle" font-size="10" fill="var(--ok-dk)">completion returned to server</ns0:text>
-  <ns0:rect x="124.1328" y="344" width="73.8087" height="80" rx="2.684" fill="var(--warn-amber)" fill-opacity="0.2" stroke="var(--warn-amber)" stroke-width="0.5032" />
-  <ns0:text x="161.0372" y="384" text-anchor="middle" font-size="10" fill="var(--warn-amber)" font-weight="bold">Human Approval Gate</ns0:text>
-  <ns0:text x="161.0372" y="412.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">host may prompt user first</ns0:text>
-  <ns0:rect x="10.0648" y="496" width="248.2656" height="120" rx="3.3549" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5032" />
-  <ns0:text x="134.1977" y="540.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Why Sampling is Powerful</ns0:text>
-  <ns0:text x="16.7747" y="579.2" font-size="10" fill="var(--text-dark)">▶ Server stays stateless — delegates reasoning to the host's LLM</ns0:text>
-  <ns0:text x="16.7747" y="604.8" font-size="10" fill="var(--text-dark)">▶ Enables multi-step reasoning inside a tool call without extra round-trips</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="37.6124" markerHeight="125.5642" refX="33.8512" refY="62.7819" orient="auto">
+      <polygon points="0,179.377 13.1644,0" fill="#555" />
+    </marker>
+    <marker id="arrg" markerWidth="37.6124" markerHeight="125.5642" refX="33.8512" refY="62.7819" orient="auto">
+      <polygon points="0,179.377 13.1644,0" fill="#2E7D32" />
+    </marker>
+  </defs>
+  <rect width="268.3953" height="640" fill="var(--surface-light)" />
+  <text x="134.1977" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">MCP Sampling: Server-Initiated LLM Calls</text>
+  <rect x="10.0648" y="128" width="73.8087" height="192" rx="3.3549" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.671" />
+  <text x="46.9692" y="180.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-dk)">MCP Server</text>
+  <text x="46.9692" y="220.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">analyze_error_logs()</text>
+  <text x="46.9692" y="252.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">fetches logs...</text>
+  <text x="46.9692" y="284.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">needs LLM reasoning</text>
+  <line x1="83.8735" y1="208" x2="124.1328" y2="208" stroke="var(--text-muted)" stroke-width="0.671" marker-end="url(#arr)" />
+  <text x="104.0032" y="188.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">sampling/</text>
+  <text x="104.0032" y="212.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">createMessage</text>
+  <rect x="124.1328" y="128" width="73.8087" height="192" rx="3.3549" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="0.671" />
+  <text x="161.0372" y="180.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-dk)">Host</text>
+  <text x="161.0372" y="220.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Claude Desktop /</text>
+  <text x="161.0372" y="252.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Claude Code</text>
+  <text x="161.0372" y="284.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">controls model choice</text>
+  <line x1="197.9415" y1="208" x2="224.7811" y2="208" stroke="var(--text-muted)" stroke-width="0.671" marker-end="url(#arr)" />
+  <text x="211.3613" y="188.8" text-anchor="middle" font-size="10" fill="var(--text-dark)">API call</text>
+  <rect x="224.7811" y="128" width="36.9043" height="192" rx="3.3549" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="0.671" />
+  <text x="243.2332" y="180.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-dk)">LLM</text>
+  <text x="243.2332" y="220.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Claude Opus</text>
+  <text x="243.2332" y="252.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">reasoning</text>
+  <text x="243.2332" y="284.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">completion</text>
+  <path d="M 197.9415 320 Q 197.9415 432 83.8735 432 Q 67.0988 432 67.0988 320" fill="none" stroke="var(--ok-dk)" stroke-width="0.671" marker-end="url(#arrg)" />
+  <text x="140.9075" y="456" text-anchor="middle" font-size="10" fill="var(--ok-dk)">completion returned to server</text>
+  <rect x="124.1328" y="344" width="73.8087" height="80" rx="2.684" fill="var(--warn-amber)" fill-opacity="0.2" stroke="var(--warn-amber)" stroke-width="0.5032" />
+  <text x="161.0372" y="384" text-anchor="middle" font-size="10" fill="var(--warn-amber)" font-weight="bold">Human Approval Gate</text>
+  <text x="161.0372" y="412.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">host may prompt user first</text>
+  <rect x="10.0648" y="496" width="248.2656" height="120" rx="3.3549" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5032" />
+  <text x="134.1977" y="540.8" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Why Sampling is Powerful</text>
+  <text x="16.7747" y="579.2" font-size="10" fill="var(--text-dark)">▶ Server stays stateless — delegates reasoning to the host's LLM</text>
+  <text x="16.7747" y="604.8" font-size="10" fill="var(--text-dark)">▶ Enables multi-step reasoning inside a tool call without extra round-trips</text>
+</svg>

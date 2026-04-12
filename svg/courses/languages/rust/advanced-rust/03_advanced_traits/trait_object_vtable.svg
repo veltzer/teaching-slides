@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -157,39 +157,39 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</ns0:defs>
-  <ns0:text x="580.9929" y="40.8511" text-anchor="middle" font-size="27.234" font-weight="bold" fill="var(--text-dark)">Trait Object VTable</ns0:text>
-  <ns0:rect x="43.5745" y="81.7021" width="348.5957" height="136.1702" rx="6.8085" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.7234" />
-  <ns0:text x="217.8723" y="115.7447" text-anchor="middle" font-size="19.0638" font-weight="bold" fill="var(--text-dark)">&amp;dyn Draw (Fat Pointer)</ns0:text>
-  <ns0:rect x="65.3617" y="136.1702" width="145.2482" height="47.6596" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.0426" />
-  <ns0:text x="137.9858" y="166.1277" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">data ptr</ns0:text>
-  <ns0:rect x="225.1348" y="136.1702" width="145.2482" height="47.6596" rx="6.8085" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.0426" />
-  <ns0:text x="297.7589" y="166.1277" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">vtable ptr</ns0:text>
-  <ns0:text x="217.8723" y="204.2553" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">16 bytes (2 x usize)</ns0:text>
-  <ns0:rect x="508.3688" y="74.8936" width="290.4965" height="149.7872" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.7234" />
-  <ns0:text x="653.617" y="108.9362" text-anchor="middle" font-size="17.7021" font-weight="bold" fill="var(--text-dark)">Concrete Data</ns0:text>
-  <ns0:text x="530.156" y="138.8936" font-size="14.9787" fill="var(--text-muted)">Circle {</ns0:text>
-  <ns0:text x="544.6809" y="163.4043" font-size="14.9787" fill="var(--text-muted)">  radius: 5.0,</ns0:text>
-  <ns0:text x="544.6809" y="187.9149" font-size="14.9787" fill="var(--text-muted)">  x: 10, y: 20</ns0:text>
-  <ns0:text x="530.156" y="212.4255" font-size="14.9787" fill="var(--text-muted)">}</ns0:text>
-  <ns0:line x1="210.6099" y1="159.3191" x2="508.3688" y2="136.1702" stroke="var(--ok-bright)" stroke-width="2.7234" marker-end="url(#arrow)" />
-  <ns0:rect x="508.3688" y="272.3404" width="580.9929" height="272.3404" rx="6.8085" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.7234" />
-  <ns0:text x="798.8652" y="306.383" text-anchor="middle" font-size="19.0638" font-weight="bold" fill="var(--text-dark)">VTable (static, one per type+trait)</ns0:text>
-  <ns0:rect x="530.156" y="326.8085" width="537.4184" height="38.1277" rx="4.0851" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.3617" />
-  <ns0:text x="798.8652" y="352.6809" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">drop_in_place: fn(*mut Circle)</ns0:text>
-  <ns0:rect x="530.156" y="371.7447" width="537.4184" height="38.1277" rx="4.0851" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.3617" />
-  <ns0:text x="798.8652" y="397.617" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">size: 24 bytes</ns0:text>
-  <ns0:rect x="530.156" y="416.6809" width="537.4184" height="38.1277" rx="4.0851" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.3617" />
-  <ns0:text x="798.8652" y="442.5532" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">align: 8 bytes</ns0:text>
-  <ns0:rect x="530.156" y="461.617" width="537.4184" height="38.1277" rx="4.0851" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.0426" />
-  <ns0:text x="798.8652" y="487.4894" text-anchor="middle" font-size="14.9787" font-weight="bold" fill="var(--text-dark)">draw: fn(&amp;Circle) -- trait method</ns0:text>
-  <ns0:rect x="530.156" y="506.5532" width="537.4184" height="24.5106" rx="4.0851" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.3617" />
-  <ns0:text x="798.8652" y="525.617" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">... more trait methods ...</ns0:text>
-  <ns0:line x1="297.7589" y1="183.8298" x2="508.3688" y2="340.4255" stroke="var(--warn-yellow)" stroke-width="2.7234" marker-end="url(#arrow)" />
-  <ns0:rect x="43.5745" y="571.9149" width="493.844" height="68.0851" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.7234" />
-  <ns0:text x="290.4965" y="599.1489" text-anchor="middle" font-size="16.3404" font-weight="bold" fill="var(--text-dark)">Static Dispatch (impl Trait)</ns0:text>
-  <ns0:text x="290.4965" y="623.6596" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">Monomorphized, inlined, zero-cost</ns0:text>
-  <ns0:rect x="580.9929" y="571.9149" width="537.4184" height="68.0851" rx="6.8085" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.7234" />
-  <ns0:text x="849.7021" y="599.1489" text-anchor="middle" font-size="16.3404" font-weight="bold" fill="var(--text-dark)">Dynamic Dispatch (dyn Trait)</ns0:text>
-  <ns0:text x="849.7021" y="623.6596" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">VTable lookup, no inlining, runtime flexibility</ns0:text>
-</ns0:svg>
+</defs>
+  <text x="580.9929" y="40.8511" text-anchor="middle" font-size="27.234" font-weight="bold" fill="var(--text-dark)">Trait Object VTable</text>
+  <rect x="43.5745" y="81.7021" width="348.5957" height="136.1702" rx="6.8085" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="2.7234" />
+  <text x="217.8723" y="115.7447" text-anchor="middle" font-size="19.0638" font-weight="bold" fill="var(--text-dark)">&amp;dyn Draw (Fat Pointer)</text>
+  <rect x="65.3617" y="136.1702" width="145.2482" height="47.6596" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.0426" />
+  <text x="137.9858" y="166.1277" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">data ptr</text>
+  <rect x="225.1348" y="136.1702" width="145.2482" height="47.6596" rx="6.8085" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.0426" />
+  <text x="297.7589" y="166.1277" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">vtable ptr</text>
+  <text x="217.8723" y="204.2553" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">16 bytes (2 x usize)</text>
+  <rect x="508.3688" y="74.8936" width="290.4965" height="149.7872" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.7234" />
+  <text x="653.617" y="108.9362" text-anchor="middle" font-size="17.7021" font-weight="bold" fill="var(--text-dark)">Concrete Data</text>
+  <text x="530.156" y="138.8936" font-size="14.9787" fill="var(--text-muted)">Circle {</text>
+  <text x="544.6809" y="163.4043" font-size="14.9787" fill="var(--text-muted)">  radius: 5.0,</text>
+  <text x="544.6809" y="187.9149" font-size="14.9787" fill="var(--text-muted)">  x: 10, y: 20</text>
+  <text x="530.156" y="212.4255" font-size="14.9787" fill="var(--text-muted)">}</text>
+  <line x1="210.6099" y1="159.3191" x2="508.3688" y2="136.1702" stroke="var(--ok-bright)" stroke-width="2.7234" marker-end="url(#arrow)" />
+  <rect x="508.3688" y="272.3404" width="580.9929" height="272.3404" rx="6.8085" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.7234" />
+  <text x="798.8652" y="306.383" text-anchor="middle" font-size="19.0638" font-weight="bold" fill="var(--text-dark)">VTable (static, one per type+trait)</text>
+  <rect x="530.156" y="326.8085" width="537.4184" height="38.1277" rx="4.0851" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.3617" />
+  <text x="798.8652" y="352.6809" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">drop_in_place: fn(*mut Circle)</text>
+  <rect x="530.156" y="371.7447" width="537.4184" height="38.1277" rx="4.0851" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.3617" />
+  <text x="798.8652" y="397.617" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">size: 24 bytes</text>
+  <rect x="530.156" y="416.6809" width="537.4184" height="38.1277" rx="4.0851" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="1.3617" />
+  <text x="798.8652" y="442.5532" text-anchor="middle" font-size="14.9787" fill="var(--text-dark)">align: 8 bytes</text>
+  <rect x="530.156" y="461.617" width="537.4184" height="38.1277" rx="4.0851" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.0426" />
+  <text x="798.8652" y="487.4894" text-anchor="middle" font-size="14.9787" font-weight="bold" fill="var(--text-dark)">draw: fn(&amp;Circle) -- trait method</text>
+  <rect x="530.156" y="506.5532" width="537.4184" height="24.5106" rx="4.0851" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.3617" />
+  <text x="798.8652" y="525.617" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">... more trait methods ...</text>
+  <line x1="297.7589" y1="183.8298" x2="508.3688" y2="340.4255" stroke="var(--warn-yellow)" stroke-width="2.7234" marker-end="url(#arrow)" />
+  <rect x="43.5745" y="571.9149" width="493.844" height="68.0851" rx="6.8085" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="2.7234" />
+  <text x="290.4965" y="599.1489" text-anchor="middle" font-size="16.3404" font-weight="bold" fill="var(--text-dark)">Static Dispatch (impl Trait)</text>
+  <text x="290.4965" y="623.6596" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">Monomorphized, inlined, zero-cost</text>
+  <rect x="580.9929" y="571.9149" width="537.4184" height="68.0851" rx="6.8085" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="2.7234" />
+  <text x="849.7021" y="599.1489" text-anchor="middle" font-size="16.3404" font-weight="bold" fill="var(--text-dark)">Dynamic Dispatch (dyn Trait)</text>
+  <text x="849.7021" y="623.6596" text-anchor="middle" font-size="13.617" fill="var(--text-muted)">VTable lookup, no inlining, runtime flexibility</text>
+</svg>

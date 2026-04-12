@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,45 +158,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowhead" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
-      <ns0:polygon points="0,16.3636 5.2706,0" fill="#4a90e2" />
-    </ns0:marker>
-    <ns0:marker id="arrowhead-red" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
-      <ns0:polygon points="0,16.3636 5.2706,0" fill="#dc3545" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:text x="344.3038" y="22.0081" text-anchor="middle" font-size="12.962" font-weight="bold" fill="var(--text-dark)">Optimistic vs Pessimistic Locking</ns0:text>
-  <ns0:rect x="24.3038" y="44.0161" width="299.7468" height="246.4902" rx="4.0506" fill="none" stroke="var(--danger-bright)" stroke-width="1.6203" stroke-dasharray="6.481 3.2405" />
-  <ns0:text x="174.1772" y="66.0242" text-anchor="middle" font-size="11.3418" font-weight="bold" fill="var(--danger-bright)">Pessimistic Locking</ns0:text>
-  <ns0:rect x="93.1646" y="83.6306" width="162.0253" height="35.2129" rx="4.0506" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.6203" />
-  <ns0:text x="174.1772" y="101.237" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">1. Lock First</ns0:text>
-  <ns0:text x="174.1772" y="112.6812" text-anchor="middle" font-size="10" fill="var(--text-muted)">Acquire exclusive lock</ns0:text>
-  <ns0:line x1="174.1772" y1="118.8435" x2="174.1772" y2="130.2877" stroke="var(--danger-bright)" stroke-width="1.2152" marker-end="url(#arrow-danger)" />
-  <ns0:rect x="93.1646" y="132.0483" width="162.0253" height="35.2129" rx="4.0506" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.2152" />
-  <ns0:text x="174.1772" y="154.0564" text-anchor="middle" font-size="10" fill="var(--text-dark)">2. Perform Operation</ns0:text>
-  <ns0:line x1="174.1772" y1="167.2612" x2="174.1772" y2="178.7054" stroke="var(--danger-bright)" stroke-width="1.2152" marker-end="url(#arrow-danger)" />
-  <ns0:rect x="93.1646" y="180.466" width="162.0253" height="35.2129" rx="4.0506" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.2152" />
-  <ns0:text x="174.1772" y="202.4741" text-anchor="middle" font-size="10" fill="var(--text-dark)">3. Release Lock</ns0:text>
-  <ns0:rect x="64.8101" y="233.2854" width="218.7342" height="30.8113" rx="4.0506" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.2152" />
-  <ns0:text x="174.1772" y="252.6525" text-anchor="middle" font-size="10" fill="var(--danger-bright)">Blocks other transactions while locked</ns0:text>
-  <ns0:rect x="364.557" y="44.0161" width="299.7468" height="246.4902" rx="4.0506" fill="none" stroke="var(--ok-bright)" stroke-width="1.6203" stroke-dasharray="6.481 3.2405" />
-  <ns0:text x="514.4304" y="66.0242" text-anchor="middle" font-size="11.3418" font-weight="bold" fill="var(--ok-bright)">Optimistic Locking</ns0:text>
-  <ns0:rect x="433.4177" y="83.6306" width="162.0253" height="35.2129" rx="4.0506" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.6203" />
-  <ns0:text x="514.4304" y="101.237" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">1. Read Version</ns0:text>
-  <ns0:text x="514.4304" y="112.6812" text-anchor="middle" font-size="10" fill="var(--text-muted)">No lock acquired</ns0:text>
-  <ns0:line x1="514.4304" y1="118.8435" x2="514.4304" y2="130.2877" stroke="var(--ok-bright)" stroke-width="1.2152" marker-end="url(#arrow)" />
-  <ns0:rect x="433.4177" y="132.0483" width="162.0253" height="35.2129" rx="4.0506" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.2152" />
-  <ns0:text x="514.4304" y="154.0564" text-anchor="middle" font-size="10" fill="var(--text-dark)">2. Perform Operation</ns0:text>
-  <ns0:line x1="514.4304" y1="167.2612" x2="514.4304" y2="178.7054" stroke="var(--ok-bright)" stroke-width="1.2152" marker-end="url(#arrow)" />
-  <ns0:rect x="433.4177" y="180.466" width="162.0253" height="35.2129" rx="4.0506" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.6203" />
-  <ns0:text x="514.4304" y="198.0725" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">3. Check Version + Update</ns0:text>
-  <ns0:path d="M 595.443 198.0725 Q 640 198.0725 640 101.237 Q 640 83.6306 597.0633 83.6306" fill="none" stroke="var(--danger-bright)" stroke-width="1.2152" stroke-dasharray="4.0506 2.4304" marker-end="url(#arrow-danger)" />
-  <ns0:text x="654.5822" y="145.2532" font-size="10" fill="var(--danger-bright)">Retry on</ns0:text>
-  <ns0:text x="654.5822" y="156.6973" font-size="10" fill="var(--danger-bright)">mismatch</ns0:text>
-  <ns0:rect x="405.0633" y="233.2854" width="218.7342" height="30.8113" rx="4.0506" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.2152" />
-  <ns0:text x="514.4304" y="252.6525" text-anchor="middle" font-size="10" fill="var(--ok-bright)">No blocking, retry on conflict</ns0:text>
-  <ns0:rect x="24.3038" y="312.5144" width="640" height="61.6226" rx="4.0506" fill="var(--surface)" stroke="var(--border-softer)" stroke-width="0.8101" />
-  <ns0:text x="344.3038" y="332.7618" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">When to Use</ns0:text>
-  <ns0:text x="174.1772" y="352.1289" text-anchor="middle" font-size="10" fill="var(--danger-bright)">Pessimistic: High contention, critical data</ns0:text>
-  <ns0:text x="514.4304" y="352.1289" text-anchor="middle" font-size="10" fill="var(--ok-bright)">Optimistic: Low contention, read-heavy workloads</ns0:text>
-</ns0:svg>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
+      <polygon points="0,16.3636 5.2706,0" fill="#4a90e2" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="15.0588" markerHeight="11.4545" refX="15.0588" refY="5.7273" orient="auto">
+      <polygon points="0,16.3636 5.2706,0" fill="#dc3545" />
+    </marker>
+  </defs>
+  <text x="344.3038" y="22.0081" text-anchor="middle" font-size="12.962" font-weight="bold" fill="var(--text-dark)">Optimistic vs Pessimistic Locking</text>
+  <rect x="24.3038" y="44.0161" width="299.7468" height="246.4902" rx="4.0506" fill="none" stroke="var(--danger-bright)" stroke-width="1.6203" stroke-dasharray="6.481 3.2405" />
+  <text x="174.1772" y="66.0242" text-anchor="middle" font-size="11.3418" font-weight="bold" fill="var(--danger-bright)">Pessimistic Locking</text>
+  <rect x="93.1646" y="83.6306" width="162.0253" height="35.2129" rx="4.0506" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.6203" />
+  <text x="174.1772" y="101.237" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">1. Lock First</text>
+  <text x="174.1772" y="112.6812" text-anchor="middle" font-size="10" fill="var(--text-muted)">Acquire exclusive lock</text>
+  <line x1="174.1772" y1="118.8435" x2="174.1772" y2="130.2877" stroke="var(--danger-bright)" stroke-width="1.2152" marker-end="url(#arrow-danger)" />
+  <rect x="93.1646" y="132.0483" width="162.0253" height="35.2129" rx="4.0506" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.2152" />
+  <text x="174.1772" y="154.0564" text-anchor="middle" font-size="10" fill="var(--text-dark)">2. Perform Operation</text>
+  <line x1="174.1772" y1="167.2612" x2="174.1772" y2="178.7054" stroke="var(--danger-bright)" stroke-width="1.2152" marker-end="url(#arrow-danger)" />
+  <rect x="93.1646" y="180.466" width="162.0253" height="35.2129" rx="4.0506" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.2152" />
+  <text x="174.1772" y="202.4741" text-anchor="middle" font-size="10" fill="var(--text-dark)">3. Release Lock</text>
+  <rect x="64.8101" y="233.2854" width="218.7342" height="30.8113" rx="4.0506" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.2152" />
+  <text x="174.1772" y="252.6525" text-anchor="middle" font-size="10" fill="var(--danger-bright)">Blocks other transactions while locked</text>
+  <rect x="364.557" y="44.0161" width="299.7468" height="246.4902" rx="4.0506" fill="none" stroke="var(--ok-bright)" stroke-width="1.6203" stroke-dasharray="6.481 3.2405" />
+  <text x="514.4304" y="66.0242" text-anchor="middle" font-size="11.3418" font-weight="bold" fill="var(--ok-bright)">Optimistic Locking</text>
+  <rect x="433.4177" y="83.6306" width="162.0253" height="35.2129" rx="4.0506" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.6203" />
+  <text x="514.4304" y="101.237" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">1. Read Version</text>
+  <text x="514.4304" y="112.6812" text-anchor="middle" font-size="10" fill="var(--text-muted)">No lock acquired</text>
+  <line x1="514.4304" y1="118.8435" x2="514.4304" y2="130.2877" stroke="var(--ok-bright)" stroke-width="1.2152" marker-end="url(#arrow)" />
+  <rect x="433.4177" y="132.0483" width="162.0253" height="35.2129" rx="4.0506" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="1.2152" />
+  <text x="514.4304" y="154.0564" text-anchor="middle" font-size="10" fill="var(--text-dark)">2. Perform Operation</text>
+  <line x1="514.4304" y1="167.2612" x2="514.4304" y2="178.7054" stroke="var(--ok-bright)" stroke-width="1.2152" marker-end="url(#arrow)" />
+  <rect x="433.4177" y="180.466" width="162.0253" height="35.2129" rx="4.0506" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.6203" />
+  <text x="514.4304" y="198.0725" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">3. Check Version + Update</text>
+  <path d="M 595.443 198.0725 Q 640 198.0725 640 101.237 Q 640 83.6306 597.0633 83.6306" fill="none" stroke="var(--danger-bright)" stroke-width="1.2152" stroke-dasharray="4.0506 2.4304" marker-end="url(#arrow-danger)" />
+  <text x="654.5822" y="145.2532" font-size="10" fill="var(--danger-bright)">Retry on</text>
+  <text x="654.5822" y="156.6973" font-size="10" fill="var(--danger-bright)">mismatch</text>
+  <rect x="405.0633" y="233.2854" width="218.7342" height="30.8113" rx="4.0506" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.2152" />
+  <text x="514.4304" y="252.6525" text-anchor="middle" font-size="10" fill="var(--ok-bright)">No blocking, retry on conflict</text>
+  <rect x="24.3038" y="312.5144" width="640" height="61.6226" rx="4.0506" fill="var(--surface)" stroke="var(--border-softer)" stroke-width="0.8101" />
+  <text x="344.3038" y="332.7618" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text-dark)">When to Use</text>
+  <text x="174.1772" y="352.1289" text-anchor="middle" font-size="10" fill="var(--danger-bright)">Pessimistic: High contention, critical data</text>
+  <text x="514.4304" y="352.1289" text-anchor="middle" font-size="10" fill="var(--ok-bright)">Optimistic: Low contention, read-heavy workloads</text>
+</svg>

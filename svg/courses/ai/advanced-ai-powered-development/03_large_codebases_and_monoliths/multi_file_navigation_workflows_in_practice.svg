@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,37 +158,37 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arr" markerWidth="84.6281" markerHeight="252" refX="76.1652" refY="126" orient="auto">
-      <ns0:polygon points="0,360 29.6198,0" fill="#333333" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="300.8999" height="640" fill="var(--surface-light)" />
-  <ns0:text x="150.45" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Multi-File Navigation Workflow</ns0:text>
-  <ns0:text x="150.45" y="92.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Always locate definition → call sites → tests before making changes</ns0:text>
-  <ns0:rect x="11.2837" y="136" width="58.2994" height="136" rx="3.7612" fill="var(--primary-mid)" stroke="var(--text-dark)" stroke-width="0.7523" />
-  <ns0:text x="40.2454" y="188.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">1. Definition</ns0:text>
-  <ns0:text x="40.2454" y="224" text-anchor="middle" fill="var(--primary-pale)" font-size="10">OrderService</ns0:text>
-  <ns0:text x="40.2454" y="252.8" text-anchor="middle" fill="var(--primary-pale)" font-size="10">.submitOrder()</ns0:text>
-  <ns0:line x1="69.5831" y1="203.2" x2="80.8668" y2="203.2" stroke="var(--text-dark)" stroke-width="0.7523" marker-end="url(#arr)" />
-  <ns0:rect x="80.8668" y="136" width="58.2994" height="136" rx="3.7612" fill="var(--ok-soft)" stroke="var(--text-dark)" stroke-width="0.7523" />
-  <ns0:text x="109.8285" y="188.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">2. Call Sites</ns0:text>
-  <ns0:text x="109.8285" y="224" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">all usages of</ns0:text>
-  <ns0:text x="109.8285" y="252.8" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">submitOrder()</ns0:text>
-  <ns0:line x1="139.1662" y1="203.2" x2="150.45" y2="203.2" stroke="var(--text-dark)" stroke-width="0.7523" marker-end="url(#arr)" />
-  <ns0:rect x="150.45" y="136" width="58.2994" height="136" rx="3.7612" fill="var(--info-soft)" stroke="var(--text-dark)" stroke-width="0.7523" />
-  <ns0:text x="179.4116" y="188.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">3. Unit Tests</ns0:text>
-  <ns0:text x="179.4116" y="224" text-anchor="middle" fill="var(--info-pale)" font-size="10">test_order.py</ns0:text>
-  <ns0:text x="179.4116" y="252.8" text-anchor="middle" fill="var(--info-pale)" font-size="10">coverage check</ns0:text>
-  <ns0:line x1="208.7493" y1="203.2" x2="220.0331" y2="203.2" stroke="var(--text-dark)" stroke-width="0.7523" marker-end="url(#arr)" />
-  <ns0:rect x="220.0331" y="136" width="69.5831" height="136" rx="3.7612" fill="var(--warn-dk)" stroke="var(--text-dark)" stroke-width="0.7523" />
-  <ns0:text x="254.6365" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">4. Integration</ns0:text>
-  <ns0:text x="254.6365" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tests</ns0:text>
-  <ns0:text x="254.6365" y="248" text-anchor="middle" fill="var(--warn-lt)" font-size="10">end-to-end flows</ns0:text>
-  <ns0:rect x="11.2837" y="336" width="278.3324" height="272" rx="3.7612" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5642" />
-  <ns0:text x="150.45" y="384" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Navigation Prompt Pattern</ns0:text>
-  <ns0:text x="20.6869" y="428.8" font-size="10" fill="var(--text-dark)">1. "Find the definition of OrderService.submitOrder()"</ns0:text>
-  <ns0:text x="20.6869" y="467.2" font-size="10" fill="var(--text-dark)">2. "Show all call sites of submitOrder() across the codebase"</ns0:text>
-  <ns0:text x="20.6869" y="505.6" font-size="10" fill="var(--text-dark)">3. "Find test files that exercise submitOrder()"</ns0:text>
-  <ns0:text x="20.6869" y="544" font-size="10" fill="var(--text-dark)">4. "Are there integration tests covering the full order flow?"</ns0:text>
-  <ns0:text x="20.6869" y="582.4" font-size="10" fill="var(--text-dark)">5. "Show the database migration for the orders table"</ns0:text>
-</ns0:svg>
+    <marker id="arr" markerWidth="84.6281" markerHeight="252" refX="76.1652" refY="126" orient="auto">
+      <polygon points="0,360 29.6198,0" fill="#333333" />
+    </marker>
+  </defs>
+  <rect width="300.8999" height="640" fill="var(--surface-light)" />
+  <text x="150.45" y="56" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-deeper)">Multi-File Navigation Workflow</text>
+  <text x="150.45" y="92.8" text-anchor="middle" font-size="10" fill="var(--text-muted)">Always locate definition → call sites → tests before making changes</text>
+  <rect x="11.2837" y="136" width="58.2994" height="136" rx="3.7612" fill="var(--primary-mid)" stroke="var(--text-dark)" stroke-width="0.7523" />
+  <text x="40.2454" y="188.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">1. Definition</text>
+  <text x="40.2454" y="224" text-anchor="middle" fill="var(--primary-pale)" font-size="10">OrderService</text>
+  <text x="40.2454" y="252.8" text-anchor="middle" fill="var(--primary-pale)" font-size="10">.submitOrder()</text>
+  <line x1="69.5831" y1="203.2" x2="80.8668" y2="203.2" stroke="var(--text-dark)" stroke-width="0.7523" marker-end="url(#arr)" />
+  <rect x="80.8668" y="136" width="58.2994" height="136" rx="3.7612" fill="var(--ok-soft)" stroke="var(--text-dark)" stroke-width="0.7523" />
+  <text x="109.8285" y="188.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">2. Call Sites</text>
+  <text x="109.8285" y="224" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">all usages of</text>
+  <text x="109.8285" y="252.8" text-anchor="middle" fill="var(--ok-pale2)" font-size="10">submitOrder()</text>
+  <line x1="139.1662" y1="203.2" x2="150.45" y2="203.2" stroke="var(--text-dark)" stroke-width="0.7523" marker-end="url(#arr)" />
+  <rect x="150.45" y="136" width="58.2994" height="136" rx="3.7612" fill="var(--info-soft)" stroke="var(--text-dark)" stroke-width="0.7523" />
+  <text x="179.4116" y="188.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">3. Unit Tests</text>
+  <text x="179.4116" y="224" text-anchor="middle" fill="var(--info-pale)" font-size="10">test_order.py</text>
+  <text x="179.4116" y="252.8" text-anchor="middle" fill="var(--info-pale)" font-size="10">coverage check</text>
+  <line x1="208.7493" y1="203.2" x2="220.0331" y2="203.2" stroke="var(--text-dark)" stroke-width="0.7523" marker-end="url(#arr)" />
+  <rect x="220.0331" y="136" width="69.5831" height="136" rx="3.7612" fill="var(--warn-dk)" stroke="var(--text-dark)" stroke-width="0.7523" />
+  <text x="254.6365" y="179.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">4. Integration</text>
+  <text x="254.6365" y="211.2" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tests</text>
+  <text x="254.6365" y="248" text-anchor="middle" fill="var(--warn-lt)" font-size="10">end-to-end flows</text>
+  <rect x="11.2837" y="336" width="278.3324" height="272" rx="3.7612" fill="var(--info-indigo-lt)" stroke="var(--primary-indigo)" stroke-width="0.5642" />
+  <text x="150.45" y="384" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-indigo)">Navigation Prompt Pattern</text>
+  <text x="20.6869" y="428.8" font-size="10" fill="var(--text-dark)">1. "Find the definition of OrderService.submitOrder()"</text>
+  <text x="20.6869" y="467.2" font-size="10" fill="var(--text-dark)">2. "Show all call sites of submitOrder() across the codebase"</text>
+  <text x="20.6869" y="505.6" font-size="10" fill="var(--text-dark)">3. "Find test files that exercise submitOrder()"</text>
+  <text x="20.6869" y="544" font-size="10" fill="var(--text-dark)">4. "Are there integration tests covering the full order flow?"</text>
+  <text x="20.6869" y="582.4" font-size="10" fill="var(--text-dark)">5. "Show the database migration for the orders table"</text>
+</svg>

@@ -1,29 +1,29 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:rect x="19.961" y="33.6842" width="349.3177" height="269.4737" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="193.6218" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--primary-dk)" font-weight="bold">Database Storage</ns0:text>
-  <ns0:text x="193.6218" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">postgres_data volume</ns0:text>
-  <ns0:text x="193.6218" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v pgdata:/var/lib/postgresql</ns0:text>
-  <ns0:text x="193.6218" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Named volume for durability</ns0:text>
-  <ns0:rect x="419.1813" y="33.6842" width="349.3177" height="269.4737" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="592.8421" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--warn-dk)" font-weight="bold">Config Injection</ns0:text>
-  <ns0:text x="592.8421" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Bind mount config files</ns0:text>
-  <ns0:text x="592.8421" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v ./nginx.conf:/etc/nginx.conf</ns0:text>
-  <ns0:text x="592.8421" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Host file into container</ns0:text>
-  <ns0:rect x="818.4016" y="33.6842" width="349.3177" height="269.4737" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="992.0624" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--ok-dk)" font-weight="bold">Shared App Data</ns0:text>
-  <ns0:text x="992.0624" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Multi-container sharing</ns0:text>
-  <ns0:text x="992.0624" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">App + Sidecar share volume</ns0:text>
-  <ns0:text x="992.0624" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">logs, uploads, cache</ns0:text>
-  <ns0:rect x="239.5322" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" rx="5.9883" />
-  <ns0:text x="319.3762" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-mid)">App</ns0:text>
-  <ns0:rect x="638.7525" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" rx="5.9883" />
-  <ns0:text x="718.5965" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-mid)">Sidecar</ns0:text>
-  <ns0:rect x="399.2203" y="538.9474" width="399.2203" height="101.0526" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
-  <ns0:text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">Shared Volume: /app/logs</ns0:text>
-  <ns0:line x1="319.3762" y1="488.4211" x2="499.0253" y2="538.9474" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
-  <ns0:line x1="718.5965" y1="488.4211" x2="698.6355" y2="538.9474" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
-  <ns0:defs>
+  <rect x="19.961" y="33.6842" width="349.3177" height="269.4737" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="193.6218" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--primary-dk)" font-weight="bold">Database Storage</text>
+  <text x="193.6218" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">postgres_data volume</text>
+  <text x="193.6218" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v pgdata:/var/lib/postgresql</text>
+  <text x="193.6218" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Named volume for durability</text>
+  <rect x="419.1813" y="33.6842" width="349.3177" height="269.4737" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="592.8421" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--warn-dk)" font-weight="bold">Config Injection</text>
+  <text x="592.8421" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Bind mount config files</text>
+  <text x="592.8421" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v ./nginx.conf:/etc/nginx.conf</text>
+  <text x="592.8421" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Host file into container</text>
+  <rect x="818.4016" y="33.6842" width="349.3177" height="269.4737" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="992.0624" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--ok-dk)" font-weight="bold">Shared App Data</text>
+  <text x="992.0624" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Multi-container sharing</text>
+  <text x="992.0624" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">App + Sidecar share volume</text>
+  <text x="992.0624" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">logs, uploads, cache</text>
+  <rect x="239.5322" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" rx="5.9883" />
+  <text x="319.3762" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-mid)">App</text>
+  <rect x="638.7525" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-pale)" stroke="var(--info-mid)" stroke-width="2.9942" rx="5.9883" />
+  <text x="718.5965" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-mid)">Sidecar</text>
+  <rect x="399.2203" y="538.9474" width="399.2203" height="101.0526" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3.9922" rx="9.9805" />
+  <text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961" fill="var(--ok-dk)">Shared Volume: /app/logs</text>
+  <line x1="319.3762" y1="488.4211" x2="499.0253" y2="538.9474" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
+  <line x1="718.5965" y1="488.4211" x2="698.6355" y2="538.9474" stroke="var(--text-dark)" stroke-width="2.9942" marker-end="url(#arrowd7_08_volumes)" />
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -181,8 +181,8 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowd7_08_volumes" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <ns0:path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </ns0:marker>
-  </ns0:defs>
-</ns0:svg>
+    <marker id="arrowd7_08_volumes" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    </marker>
+  </defs>
+</svg>

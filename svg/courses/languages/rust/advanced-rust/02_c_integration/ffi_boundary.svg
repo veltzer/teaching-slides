@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,88 +158,88 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="17.7778" y="17.7778" width="391.1111" height="497.7778" fill="var(--primary-pale)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="17.7778" y="17.7778" width="391.1111" height="40.8889" fill="url(#grad-primary)" rx="10.6667" />
-  <ns0:rect x="17.7778" y="44.4444" width="391.1111" height="14.2222" fill="url(#grad-primary)" />
-  <ns0:text x="213.3333" y="44.4444" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="var(--bg)" text-anchor="middle">Rust Side</ns0:text>
-  <ns0:rect x="35.5556" y="74.6667" width="355.5556" height="71.1111" fill="var(--bg)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="53.3333" y="96" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--primary-dk)">Safe Rust code</ns0:text>
-  <ns0:text x="53.3333" y="113.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">fn compute(x: i32) -&gt; i32 {</ns0:text>
-  <ns0:text x="53.3333" y="129.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    x * 2 }</ns0:text>
-  <ns0:line x1="213.3333" y1="145.7778" x2="213.3333" y2="174.2222" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="35.5556" y="174.2222" width="355.5556" height="88.8889" fill="var(--ok-lt)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="53.3333" y="195.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--ok-dk)">extern "C" export</ns0:text>
-  <ns0:text x="53.3333" y="213.3333" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">#[no_mangle]</ns0:text>
-  <ns0:text x="53.3333" y="229.3333" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">pub extern "C" fn compute(x: i32)</ns0:text>
-  <ns0:text x="53.3333" y="245.3333" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    -&gt; i32 { ... }</ns0:text>
-  <ns0:line x1="213.3333" y1="263.1111" x2="213.3333" y2="291.5556" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="35.5556" y="291.5556" width="355.5556" height="97.7778" fill="var(--warn-pale4)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="53.3333" y="312.8889" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-mid)">unsafe block (when calling C)</ns0:text>
-  <ns0:text x="53.3333" y="330.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">extern "C" {</ns0:text>
-  <ns0:text x="53.3333" y="346.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    fn c_func(n: i32) -&gt; i32;</ns0:text>
-  <ns0:text x="53.3333" y="362.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">}</ns0:text>
-  <ns0:text x="53.3333" y="378.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--danger)">// unsafe { c_func(42) }</ns0:text>
-  <ns0:rect x="35.5556" y="405.3333" width="355.5556" height="92.4444" fill="var(--bg)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="53.3333" y="424.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Type Mapping</ns0:text>
-  <ns0:text x="53.3333" y="440.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust i32         ↔   C int</ns0:text>
-  <ns0:text x="53.3333" y="455.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust *const T    ↔   C const T*</ns0:text>
-  <ns0:text x="53.3333" y="469.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust *mut T      ↔   C T*</ns0:text>
-  <ns0:text x="53.3333" y="483.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust c_char      ↔   C char  (libc)</ns0:text>
-  <ns0:rect x="426.6667" y="17.7778" width="177.7778" height="497.7778" fill="var(--text-dark)" rx="0" filter="url(#shadow)" />
-  <ns0:text x="515.5556" y="257.7778" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle" transform="rotate(-90 580 300)">C  ABI  Boundary</ns0:text>
-  <ns0:line x1="426.6667" y1="177.7778" x2="604.4444" y2="177.7778" stroke="var(--bg)" stroke-width="2.2222" marker-end="url(#arrow-white)" />
-  <ns0:text x="513.7778" y="173.3333" font-family="Arial,sans-serif" font-size="10" fill="var(--text-placeholder)" text-anchor="middle">call</ns0:text>
-  <ns0:line x1="604.4444" y1="213.3333" x2="426.6667" y2="213.3333" stroke="var(--bg)" stroke-width="2.2222" marker-end="url(#arrow-white)" />
-  <ns0:text x="513.7778" y="229.3333" font-family="Arial,sans-serif" font-size="10" fill="var(--text-placeholder)" text-anchor="middle">return</ns0:text>
-  <ns0:text x="515.5556" y="328.8889" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• no RAII</ns0:text>
-  <ns0:text x="515.5556" y="346.6667" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• no panics</ns0:text>
-  <ns0:text x="515.5556" y="364.4444" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• raw ptrs</ns0:text>
-  <ns0:text x="515.5556" y="382.2222" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• C types</ns0:text>
-  <ns0:rect x="622.2222" y="17.7778" width="391.1111" height="497.7778" fill="var(--warn-pale3)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:rect x="622.2222" y="17.7778" width="391.1111" height="40.8889" fill="var(--warn-dk)" rx="10.6667" />
-  <ns0:rect x="622.2222" y="44.4444" width="391.1111" height="14.2222" fill="var(--warn-dk)" />
-  <ns0:text x="817.7778" y="44.4444" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="var(--bg)" text-anchor="middle">C Side</ns0:text>
-  <ns0:rect x="640" y="74.6667" width="355.5556" height="88.8889" fill="var(--bg)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="657.7778" y="96" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--danger-deeper)">C header (generated by cbindgen)</ns0:text>
-  <ns0:text x="657.7778" y="113.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">/* compute.h */</ns0:text>
-  <ns0:text x="657.7778" y="129.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">int compute(int x);</ns0:text>
-  <ns0:text x="657.7778" y="145.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">void free_string(char* s);</ns0:text>
-  <ns0:line x1="817.7778" y1="163.5556" x2="817.7778" y2="188.4444" stroke="var(--warn-dk)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:rect x="640" y="188.4444" width="355.5556" height="106.6667" fill="var(--warn-lt)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="657.7778" y="209.7778" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-dk)">C code using Rust library</ns0:text>
-  <ns0:text x="657.7778" y="227.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">#include "compute.h"</ns0:text>
-  <ns0:text x="657.7778" y="243.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">int main() {</ns0:text>
-  <ns0:text x="657.7778" y="259.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    int r = compute(21);</ns0:text>
-  <ns0:text x="657.7778" y="275.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    // r == 42 }</ns0:text>
-  <ns0:line x1="817.7778" y1="295.1111" x2="817.7778" y2="320" stroke="var(--warn-dk)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <ns0:rect x="640" y="320" width="355.5556" height="88.8889" fill="var(--danger-lt)" rx="7.1111" filter="url(#shadow)" />
-  <ns0:text x="657.7778" y="341.3333" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--danger-deeper)">Ownership at boundary</ns0:text>
-  <ns0:text x="657.7778" y="359.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Memory allocated in Rust → free in Rust</ns0:text>
-  <ns0:text x="657.7778" y="375.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Memory allocated in C   → free in C</ns0:text>
-  <ns0:text x="657.7778" y="391.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Never mix allocators!</ns0:text>
-  <ns0:rect x="17.7778" y="533.3333" width="1102.2222" height="85.3333" fill="var(--primary-pale)" rx="10.6667" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="556.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">bindgen Workflow (C → Rust)</ns0:text>
-  <ns0:rect x="44.4444" y="567.1111" width="160" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
-  <ns0:text x="124.4444" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">C header (.h)</ns0:text>
-  <ns0:line x1="204.4444" y1="584.8889" x2="248.8889" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="250.6667" y="567.1111" width="160" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
-  <ns0:text x="330.6667" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">bindgen (build.rs)</ns0:text>
-  <ns0:line x1="412.4444" y1="584.8889" x2="456.8889" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="458.6667" y="567.1111" width="177.7778" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
-  <ns0:text x="547.5556" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">bindings.rs (auto)</ns0:text>
-  <ns0:line x1="638.2222" y1="584.8889" x2="682.6667" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="684.4444" y="567.1111" width="177.7778" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
-  <ns0:text x="773.3333" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">unsafe Rust wrappers</ns0:text>
-  <ns0:line x1="864" y1="584.8889" x2="908.4444" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <ns0:rect x="910.2222" y="567.1111" width="174.2222" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
-  <ns0:text x="997.3333" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">Safe Rust API</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="17.7778" y="17.7778" width="391.1111" height="497.7778" fill="var(--primary-pale)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="17.7778" y="17.7778" width="391.1111" height="40.8889" fill="url(#grad-primary)" rx="10.6667" />
+  <rect x="17.7778" y="44.4444" width="391.1111" height="14.2222" fill="url(#grad-primary)" />
+  <text x="213.3333" y="44.4444" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="var(--bg)" text-anchor="middle">Rust Side</text>
+  <rect x="35.5556" y="74.6667" width="355.5556" height="71.1111" fill="var(--bg)" rx="7.1111" filter="url(#shadow)" />
+  <text x="53.3333" y="96" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--primary-dk)">Safe Rust code</text>
+  <text x="53.3333" y="113.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">fn compute(x: i32) -&gt; i32 {</text>
+  <text x="53.3333" y="129.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    x * 2 }</text>
+  <line x1="213.3333" y1="145.7778" x2="213.3333" y2="174.2222" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="35.5556" y="174.2222" width="355.5556" height="88.8889" fill="var(--ok-lt)" rx="7.1111" filter="url(#shadow)" />
+  <text x="53.3333" y="195.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--ok-dk)">extern "C" export</text>
+  <text x="53.3333" y="213.3333" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">#[no_mangle]</text>
+  <text x="53.3333" y="229.3333" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">pub extern "C" fn compute(x: i32)</text>
+  <text x="53.3333" y="245.3333" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    -&gt; i32 { ... }</text>
+  <line x1="213.3333" y1="263.1111" x2="213.3333" y2="291.5556" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="35.5556" y="291.5556" width="355.5556" height="97.7778" fill="var(--warn-pale4)" rx="7.1111" filter="url(#shadow)" />
+  <text x="53.3333" y="312.8889" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-mid)">unsafe block (when calling C)</text>
+  <text x="53.3333" y="330.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">extern "C" {</text>
+  <text x="53.3333" y="346.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    fn c_func(n: i32) -&gt; i32;</text>
+  <text x="53.3333" y="362.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">}</text>
+  <text x="53.3333" y="378.6667" font-family="Courier New,monospace" font-size="10.6667" fill="var(--danger)">// unsafe { c_func(42) }</text>
+  <rect x="35.5556" y="405.3333" width="355.5556" height="92.4444" fill="var(--bg)" rx="7.1111" filter="url(#shadow)" />
+  <text x="53.3333" y="424.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-dk)">Type Mapping</text>
+  <text x="53.3333" y="440.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust i32         ↔   C int</text>
+  <text x="53.3333" y="455.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust *const T    ↔   C const T*</text>
+  <text x="53.3333" y="469.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust *mut T      ↔   C T*</text>
+  <text x="53.3333" y="483.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Rust c_char      ↔   C char  (libc)</text>
+  <rect x="426.6667" y="17.7778" width="177.7778" height="497.7778" fill="var(--text-dark)" rx="0" filter="url(#shadow)" />
+  <text x="515.5556" y="257.7778" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle" transform="rotate(-90 580 300)">C  ABI  Boundary</text>
+  <line x1="426.6667" y1="177.7778" x2="604.4444" y2="177.7778" stroke="var(--bg)" stroke-width="2.2222" marker-end="url(#arrow-white)" />
+  <text x="513.7778" y="173.3333" font-family="Arial,sans-serif" font-size="10" fill="var(--text-placeholder)" text-anchor="middle">call</text>
+  <line x1="604.4444" y1="213.3333" x2="426.6667" y2="213.3333" stroke="var(--bg)" stroke-width="2.2222" marker-end="url(#arrow-white)" />
+  <text x="513.7778" y="229.3333" font-family="Arial,sans-serif" font-size="10" fill="var(--text-placeholder)" text-anchor="middle">return</text>
+  <text x="515.5556" y="328.8889" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• no RAII</text>
+  <text x="515.5556" y="346.6667" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• no panics</text>
+  <text x="515.5556" y="364.4444" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• raw ptrs</text>
+  <text x="515.5556" y="382.2222" font-family="Arial,sans-serif" font-size="10" fill="var(--warn-tint)" text-anchor="middle">• C types</text>
+  <rect x="622.2222" y="17.7778" width="391.1111" height="497.7778" fill="var(--warn-pale3)" rx="10.6667" filter="url(#shadow)" />
+  <rect x="622.2222" y="17.7778" width="391.1111" height="40.8889" fill="var(--warn-dk)" rx="10.6667" />
+  <rect x="622.2222" y="44.4444" width="391.1111" height="14.2222" fill="var(--warn-dk)" />
+  <text x="817.7778" y="44.4444" font-family="Arial,sans-serif" font-size="16.8889" font-weight="bold" fill="var(--bg)" text-anchor="middle">C Side</text>
+  <rect x="640" y="74.6667" width="355.5556" height="88.8889" fill="var(--bg)" rx="7.1111" filter="url(#shadow)" />
+  <text x="657.7778" y="96" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--danger-deeper)">C header (generated by cbindgen)</text>
+  <text x="657.7778" y="113.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">/* compute.h */</text>
+  <text x="657.7778" y="129.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">int compute(int x);</text>
+  <text x="657.7778" y="145.7778" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">void free_string(char* s);</text>
+  <line x1="817.7778" y1="163.5556" x2="817.7778" y2="188.4444" stroke="var(--warn-dk)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="640" y="188.4444" width="355.5556" height="106.6667" fill="var(--warn-lt)" rx="7.1111" filter="url(#shadow)" />
+  <text x="657.7778" y="209.7778" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-dk)">C code using Rust library</text>
+  <text x="657.7778" y="227.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">#include "compute.h"</text>
+  <text x="657.7778" y="243.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">int main() {</text>
+  <text x="657.7778" y="259.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    int r = compute(21);</text>
+  <text x="657.7778" y="275.5556" font-family="Courier New,monospace" font-size="10.6667" fill="var(--text-dark)">    // r == 42 }</text>
+  <line x1="817.7778" y1="295.1111" x2="817.7778" y2="320" stroke="var(--warn-dk)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="640" y="320" width="355.5556" height="88.8889" fill="var(--danger-lt)" rx="7.1111" filter="url(#shadow)" />
+  <text x="657.7778" y="341.3333" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--danger-deeper)">Ownership at boundary</text>
+  <text x="657.7778" y="359.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Memory allocated in Rust → free in Rust</text>
+  <text x="657.7778" y="375.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-dark)">Memory allocated in C   → free in C</text>
+  <text x="657.7778" y="391.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger)">Never mix allocators!</text>
+  <rect x="17.7778" y="533.3333" width="1102.2222" height="85.3333" fill="var(--primary-pale)" rx="10.6667" filter="url(#shadow)" />
+  <text x="568.8889" y="556.4444" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">bindgen Workflow (C → Rust)</text>
+  <rect x="44.4444" y="567.1111" width="160" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
+  <text x="124.4444" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">C header (.h)</text>
+  <line x1="204.4444" y1="584.8889" x2="248.8889" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="250.6667" y="567.1111" width="160" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
+  <text x="330.6667" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">bindgen (build.rs)</text>
+  <line x1="412.4444" y1="584.8889" x2="456.8889" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="458.6667" y="567.1111" width="177.7778" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
+  <text x="547.5556" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">bindings.rs (auto)</text>
+  <line x1="638.2222" y1="584.8889" x2="682.6667" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="684.4444" y="567.1111" width="177.7778" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
+  <text x="773.3333" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">unsafe Rust wrappers</text>
+  <line x1="864" y1="584.8889" x2="908.4444" y2="584.8889" stroke="var(--primary-dk)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <rect x="910.2222" y="567.1111" width="174.2222" height="35.5556" fill="var(--primary-dk)" rx="7.1111" />
+  <text x="997.3333" y="589.3333" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--bg)" text-anchor="middle">Safe Rust API</text>
+</svg>

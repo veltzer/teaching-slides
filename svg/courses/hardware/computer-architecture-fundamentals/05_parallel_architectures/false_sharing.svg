@@ -1,26 +1,26 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:rect x="16.856" y="23.7037" width="1146.2058" height="616.2963" rx="8.428" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.6856" />
-  <ns0:text x="589.9589" y="94.8148" text-anchor="middle" font-size="26.9695" font-weight="bold" fill="var(--text-dark)">False Sharing - Cache Line Contention</ns0:text>
-  <ns0:text x="589.9589" y="154.0741" text-anchor="middle" font-size="20.2272" fill="var(--text-mid)">Cache line (64 bytes)</ns0:text>
-  <ns0:rect x="101.1358" y="189.6296" width="977.6461" height="142.2222" rx="8.428" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.3712" />
-  <ns0:line x1="345.5473" y1="189.6296" x2="345.5473" y2="331.8519" stroke="var(--primary-bright)" stroke-width="1.6856" stroke-dasharray="6.7424" />
-  <ns0:line x1="589.9589" y1="189.6296" x2="589.9589" y2="331.8519" stroke="var(--primary-bright)" stroke-width="1.6856" stroke-dasharray="6.7424" />
-  <ns0:line x1="834.3704" y1="189.6296" x2="834.3704" y2="331.8519" stroke="var(--primary-bright)" stroke-width="1.6856" stroke-dasharray="6.7424" />
-  <ns0:text x="222.4987" y="253.6297" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="var(--danger-bright)">counter_core0</ns0:text>
-  <ns0:text x="222.4987" y="296.2963" text-anchor="middle" font-size="16.856" fill="var(--text-mid)">(8 bytes)</ns0:text>
-  <ns0:text x="468.5959" y="272.5926" text-anchor="middle" font-size="18.5416" fill="var(--text-faintest)">padding...</ns0:text>
-  <ns0:text x="711.3218" y="253.6297" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="var(--danger-bright)">counter_core1</ns0:text>
-  <ns0:text x="711.3218" y="296.2963" text-anchor="middle" font-size="16.856" fill="var(--text-mid)">(8 bytes)</ns0:text>
-  <ns0:text x="955.7334" y="272.5926" text-anchor="middle" font-size="18.5416" fill="var(--text-faintest)">padding</ns0:text>
-  <ns0:line x1="222.4987" y1="343.7037" x2="222.4987" y2="402.963" stroke="var(--ok-bright)" stroke-width="3.3712" marker-end="url(#arrowGreen)" />
-  <ns0:line x1="711.3218" y1="343.7037" x2="711.3218" y2="402.963" stroke="var(--primary-bright)" stroke-width="3.3712" marker-end="url(#arrowBlue)" />
-  <ns0:text x="222.4987" y="438.5185" text-anchor="middle" font-size="18.5416" fill="var(--ok-bright)" font-weight="bold">Core 0 writes here</ns0:text>
-  <ns0:text x="711.3218" y="438.5185" text-anchor="middle" font-size="18.5416" fill="var(--primary-bright)" font-weight="bold">Core 1 writes here</ns0:text>
-  <ns0:rect x="134.8477" y="485.926" width="910.2223" height="118.5185" rx="8.428" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5284" />
-  <ns0:text x="589.9589" y="533.3333" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="var(--danger-bright)">Both in the SAME cache line!</ns0:text>
-  <ns0:text x="589.9589" y="576" text-anchor="middle" font-size="18.5416" fill="var(--text-mid)">Every write by one core invalidates the line in the other core's cache.</ns0:text>
-  <ns0:defs>
+  <rect x="16.856" y="23.7037" width="1146.2058" height="616.2963" rx="8.428" fill="var(--surface-light)" stroke="var(--border)" stroke-width="1.6856" />
+  <text x="589.9589" y="94.8148" text-anchor="middle" font-size="26.9695" font-weight="bold" fill="var(--text-dark)">False Sharing - Cache Line Contention</text>
+  <text x="589.9589" y="154.0741" text-anchor="middle" font-size="20.2272" fill="var(--text-mid)">Cache line (64 bytes)</text>
+  <rect x="101.1358" y="189.6296" width="977.6461" height="142.2222" rx="8.428" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.3712" />
+  <line x1="345.5473" y1="189.6296" x2="345.5473" y2="331.8519" stroke="var(--primary-bright)" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <line x1="589.9589" y1="189.6296" x2="589.9589" y2="331.8519" stroke="var(--primary-bright)" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <line x1="834.3704" y1="189.6296" x2="834.3704" y2="331.8519" stroke="var(--primary-bright)" stroke-width="1.6856" stroke-dasharray="6.7424" />
+  <text x="222.4987" y="253.6297" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="var(--danger-bright)">counter_core0</text>
+  <text x="222.4987" y="296.2963" text-anchor="middle" font-size="16.856" fill="var(--text-mid)">(8 bytes)</text>
+  <text x="468.5959" y="272.5926" text-anchor="middle" font-size="18.5416" fill="var(--text-faintest)">padding...</text>
+  <text x="711.3218" y="253.6297" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="var(--danger-bright)">counter_core1</text>
+  <text x="711.3218" y="296.2963" text-anchor="middle" font-size="16.856" fill="var(--text-mid)">(8 bytes)</text>
+  <text x="955.7334" y="272.5926" text-anchor="middle" font-size="18.5416" fill="var(--text-faintest)">padding</text>
+  <line x1="222.4987" y1="343.7037" x2="222.4987" y2="402.963" stroke="var(--ok-bright)" stroke-width="3.3712" marker-end="url(#arrowGreen)" />
+  <line x1="711.3218" y1="343.7037" x2="711.3218" y2="402.963" stroke="var(--primary-bright)" stroke-width="3.3712" marker-end="url(#arrowBlue)" />
+  <text x="222.4987" y="438.5185" text-anchor="middle" font-size="18.5416" fill="var(--ok-bright)" font-weight="bold">Core 0 writes here</text>
+  <text x="711.3218" y="438.5185" text-anchor="middle" font-size="18.5416" fill="var(--primary-bright)" font-weight="bold">Core 1 writes here</text>
+  <rect x="134.8477" y="485.926" width="910.2223" height="118.5185" rx="8.428" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="2.5284" />
+  <text x="589.9589" y="533.3333" text-anchor="middle" font-size="20.2272" font-weight="bold" fill="var(--danger-bright)">Both in the SAME cache line!</text>
+  <text x="589.9589" y="576" text-anchor="middle" font-size="18.5416" fill="var(--text-mid)">Every write by one core invalidates the line in the other core's cache.</text>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -178,11 +178,11 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:marker id="arrowGreen" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
-      <ns0:path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#28a745" />
-    </ns0:marker>
-    <ns0:marker id="arrowBlue" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
-      <ns0:path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#4a90e2" />
-    </ns0:marker>
-  </ns0:defs>
-</ns0:svg>
+    <marker id="arrowGreen" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
+      <path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#28a745" />
+    </marker>
+    <marker id="arrowBlue" markerWidth="14.6286" markerHeight="15.4286" refX="14.6286" refY="7.7143" orient="auto">
+      <path d="M 0 0 L 14.6286 7.7143 L 0 15.4286" fill="#4a90e2" />
+    </marker>
+  </defs>
+</svg>

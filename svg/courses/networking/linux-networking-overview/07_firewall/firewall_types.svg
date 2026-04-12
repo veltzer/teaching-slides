@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,61 +158,61 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:text x="39.1111" y="106.6667" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">L7 App</ns0:text>
-  <ns0:text x="39.1111" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">L4 Transport</ns0:text>
-  <ns0:text x="39.1111" y="355.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">L3 Network</ns0:text>
-  <ns0:line x1="69.3333" y1="71.1111" x2="69.3333" y2="506.6667" stroke="var(--border)" stroke-width="1.3333" />
-  <ns0:text x="39.1111" y="289.7778" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)" transform="rotate(-90 44 326)">OSI Layer</ns0:text>
-  <ns0:rect x="80" y="302.2222" width="302.2222" height="195.5556" rx="7.1111" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="231.1111" y="336" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Packet Filtering</ns0:text>
-  <ns0:text x="231.1111" y="355.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Layer 3/4 only</ns0:text>
-  <ns0:line x1="80" y1="366.2222" x2="382.2222" y2="366.2222" stroke="var(--border)" stroke-width="0.8889" />
-  <ns0:text x="97.7778" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Inspects: src/dst IP, port, protocol</ns0:text>
-  <ns0:text x="97.7778" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Stateless — each packet independent</ns0:text>
-  <ns0:text x="97.7778" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Fast — minimal CPU overhead</ns0:text>
-  <ns0:text x="97.7778" y="448" font-family="monospace" font-size="11.5556" fill="var(--primary-dk)">iptables -A INPUT -p tcp --dport 22</ns0:text>
-  <ns0:text x="97.7778" y="465.7778" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">No payload inspection · blind to attacks</ns0:text>
-  <ns0:text x="97.7778" y="483.5556" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">within allowed ports</ns0:text>
-  <ns0:rect x="417.7778" y="177.7778" width="302.2222" height="320" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
-  <ns0:text x="568.8889" y="211.5556" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Stateful Inspection</ns0:text>
-  <ns0:text x="568.8889" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--primary-dk)">Layer 3/4 + connection state</ns0:text>
-  <ns0:line x1="417.7778" y1="241.7778" x2="720" y2="241.7778" stroke="var(--border)" stroke-width="0.8889" />
-  <ns0:text x="435.5556" y="263.1111" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Tracks connection state table</ns0:text>
-  <ns0:text x="435.5556" y="282.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">NEW → ESTABLISHED → RELATED</ns0:text>
-  <ns0:text x="435.5556" y="302.2222" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Allows return traffic automatically</ns0:text>
-  <ns0:text x="435.5556" y="323.5556" font-family="monospace" font-size="11.5556" fill="var(--primary-dk)">-m conntrack --ctstate ESTABLISHED</ns0:text>
-  <ns0:text x="435.5556" y="346.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Blocks spoofed packets + port scans</ns0:text>
-  <ns0:text x="435.5556" y="368" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">More CPU than packet filter</ns0:text>
-  <ns0:text x="435.5556" y="389.3333" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Still blind to payload content</ns0:text>
-  <ns0:text x="435.5556" y="410.6667" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Used by: nftables, iptables conntrack</ns0:text>
-  <ns0:text x="435.5556" y="435.5556" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Most common type for host firewalls</ns0:text>
-  <ns0:text x="435.5556" y="453.3333" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Used by: nftables, iptables conntrack</ns0:text>
-  <ns0:text x="435.5556" y="474.6667" font-family="sans-serif" font-size="11.5556" fill="var(--primary-dk)">✓ Default recommendation</ns0:text>
-  <ns0:rect x="755.5556" y="53.3333" width="355.5556" height="444.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
-  <ns0:text x="933.3333" y="87.1111" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Application Layer</ns0:text>
-  <ns0:text x="933.3333" y="106.6667" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Layer 7 deep inspection</ns0:text>
-  <ns0:line x1="755.5556" y1="117.3333" x2="1111.1111" y2="117.3333" stroke="var(--primary-deep)" stroke-width="0.8889" />
-  <ns0:text x="773.3333" y="138.6667" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">Reads HTTP/DNS/TLS payload</ns0:text>
-  <ns0:text x="773.3333" y="158.2222" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">URL filtering, content inspection</ns0:text>
-  <ns0:text x="773.3333" y="177.7778" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">Block by hostname, not just IP</ns0:text>
-  <ns0:text x="773.3333" y="199.1111" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">SSL/TLS termination + inspection</ns0:text>
-  <ns0:text x="773.3333" y="220.4444" font-family="monospace" font-size="11.5556" fill="var(--primary-tint)">WAF, squid proxy, nfqueue</ns0:text>
-  <ns0:text x="773.3333" y="243.5556" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Can detect SQL injection, XSS</ns0:text>
-  <ns0:text x="773.3333" y="264.8889" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">in HTTP traffic</ns0:text>
-  <ns0:text x="773.3333" y="286.2222" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Much higher CPU overhead</ns0:text>
-  <ns0:text x="773.3333" y="307.5556" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Can break TLS cert pinning</ns0:text>
-  <ns0:text x="773.3333" y="332.4444" font-family="sans-serif" font-size="11.5556" fill="var(--primary-tint)">Used by: AWS WAF, nginx WAF,</ns0:text>
-  <ns0:text x="773.3333" y="350.2222" font-family="sans-serif" font-size="11.5556" fill="var(--primary-tint)">ModSecurity, Cloudflare</ns0:text>
-  <ns0:text x="773.3333" y="376.8889" font-family="sans-serif" font-size="11.5556" fill="var(--primary-tint)">✓ Best for web-facing services</ns0:text>
-  <ns0:rect x="80" y="533.3333" width="1031.1111" height="37.3333" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
-  <ns0:text x="595.5556" y="556.4444" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--primary-dk)">Linux stack: <ns0:tspan font-family="monospace">iptables/nftables</ns0:tspan> (L3/4) → <ns0:tspan font-family="monospace">conntrack</ns0:tspan> (stateful) → <ns0:tspan font-family="monospace">nfqueue + userspace</ns0:tspan> (L7)</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <text x="39.1111" y="106.6667" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">L7 App</text>
+  <text x="39.1111" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">L4 Transport</text>
+  <text x="39.1111" y="355.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-disabled)">L3 Network</text>
+  <line x1="69.3333" y1="71.1111" x2="69.3333" y2="506.6667" stroke="var(--border)" stroke-width="1.3333" />
+  <text x="39.1111" y="289.7778" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)" transform="rotate(-90 44 326)">OSI Layer</text>
+  <rect x="80" y="302.2222" width="302.2222" height="195.5556" rx="7.1111" fill="url(#grad-surface)" stroke="var(--border)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="231.1111" y="336" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Packet Filtering</text>
+  <text x="231.1111" y="355.5556" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Layer 3/4 only</text>
+  <line x1="80" y1="366.2222" x2="382.2222" y2="366.2222" stroke="var(--border)" stroke-width="0.8889" />
+  <text x="97.7778" y="387.5556" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Inspects: src/dst IP, port, protocol</text>
+  <text x="97.7778" y="407.1111" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Stateless — each packet independent</text>
+  <text x="97.7778" y="426.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Fast — minimal CPU overhead</text>
+  <text x="97.7778" y="448" font-family="monospace" font-size="11.5556" fill="var(--primary-dk)">iptables -A INPUT -p tcp --dport 22</text>
+  <text x="97.7778" y="465.7778" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">No payload inspection · blind to attacks</text>
+  <text x="97.7778" y="483.5556" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">within allowed ports</text>
+  <rect x="417.7778" y="177.7778" width="302.2222" height="320" rx="7.1111" fill="url(#grad-surface)" stroke="var(--primary-dk)" stroke-width="1.3333" filter="url(#shadow)" />
+  <text x="568.8889" y="211.5556" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Stateful Inspection</text>
+  <text x="568.8889" y="231.1111" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--primary-dk)">Layer 3/4 + connection state</text>
+  <line x1="417.7778" y1="241.7778" x2="720" y2="241.7778" stroke="var(--border)" stroke-width="0.8889" />
+  <text x="435.5556" y="263.1111" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Tracks connection state table</text>
+  <text x="435.5556" y="282.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">NEW → ESTABLISHED → RELATED</text>
+  <text x="435.5556" y="302.2222" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Allows return traffic automatically</text>
+  <text x="435.5556" y="323.5556" font-family="monospace" font-size="11.5556" fill="var(--primary-dk)">-m conntrack --ctstate ESTABLISHED</text>
+  <text x="435.5556" y="346.6667" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">Blocks spoofed packets + port scans</text>
+  <text x="435.5556" y="368" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">More CPU than packet filter</text>
+  <text x="435.5556" y="389.3333" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Still blind to payload content</text>
+  <text x="435.5556" y="410.6667" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Used by: nftables, iptables conntrack</text>
+  <text x="435.5556" y="435.5556" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Most common type for host firewalls</text>
+  <text x="435.5556" y="453.3333" font-family="sans-serif" font-size="11.5556" fill="var(--text-disabled)">Used by: nftables, iptables conntrack</text>
+  <text x="435.5556" y="474.6667" font-family="sans-serif" font-size="11.5556" fill="var(--primary-dk)">✓ Default recommendation</text>
+  <rect x="755.5556" y="53.3333" width="355.5556" height="444.4444" rx="7.1111" fill="url(#grad-primary)" filter="url(#shadow)" />
+  <text x="933.3333" y="87.1111" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Application Layer</text>
+  <text x="933.3333" y="106.6667" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Layer 7 deep inspection</text>
+  <line x1="755.5556" y1="117.3333" x2="1111.1111" y2="117.3333" stroke="var(--primary-deep)" stroke-width="0.8889" />
+  <text x="773.3333" y="138.6667" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">Reads HTTP/DNS/TLS payload</text>
+  <text x="773.3333" y="158.2222" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">URL filtering, content inspection</text>
+  <text x="773.3333" y="177.7778" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">Block by hostname, not just IP</text>
+  <text x="773.3333" y="199.1111" font-family="sans-serif" font-size="12.4444" fill="var(--bg)">SSL/TLS termination + inspection</text>
+  <text x="773.3333" y="220.4444" font-family="monospace" font-size="11.5556" fill="var(--primary-tint)">WAF, squid proxy, nfqueue</text>
+  <text x="773.3333" y="243.5556" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Can detect SQL injection, XSS</text>
+  <text x="773.3333" y="264.8889" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">in HTTP traffic</text>
+  <text x="773.3333" y="286.2222" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Much higher CPU overhead</text>
+  <text x="773.3333" y="307.5556" font-family="sans-serif" font-size="12.4444" fill="var(--primary-lt)">Can break TLS cert pinning</text>
+  <text x="773.3333" y="332.4444" font-family="sans-serif" font-size="11.5556" fill="var(--primary-tint)">Used by: AWS WAF, nginx WAF,</text>
+  <text x="773.3333" y="350.2222" font-family="sans-serif" font-size="11.5556" fill="var(--primary-tint)">ModSecurity, Cloudflare</text>
+  <text x="773.3333" y="376.8889" font-family="sans-serif" font-size="11.5556" fill="var(--primary-tint)">✓ Best for web-facing services</text>
+  <rect x="80" y="533.3333" width="1031.1111" height="37.3333" rx="5.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1.3333" />
+  <text x="595.5556" y="556.4444" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--primary-dk)">Linux stack: <tspan font-family="monospace">iptables/nftables</tspan> (L3/4) → <tspan font-family="monospace">conntrack</tspan> (stateful) → <tspan font-family="monospace">nfqueue + userspace</tspan> (L7)</text>
+</svg>

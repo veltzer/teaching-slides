@@ -1,6 +1,6 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <ns0:defs>
+  <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
@@ -158,40 +158,40 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 
-    <ns0:linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0%" stop-color="#1e88e5" />
-      <ns0:stop offset="100%" stop-color="#1565c0" />
-    </ns0:linearGradient>
-    <ns0:marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <ns0:path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </ns0:marker>
-  </ns0:defs>
-  <ns0:rect width="1137.7778" height="640" fill="var(--bg)" />
-  <ns0:rect x="37.3333" y="88.8889" width="213.3333" height="133.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="144" y="144" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--primary-deep)">kmalloc()</ns0:text>
-  <ns0:text x="144" y="192" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Allocate Memory</ns0:text>
-  <ns0:rect x="320" y="88.8889" width="213.3333" height="133.3333" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="426.6667" y="144" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--ok-deep)">Use Resource</ns0:text>
-  <ns0:text x="426.6667" y="192" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Read/Write ops</ns0:text>
-  <ns0:rect x="602.6667" y="88.8889" width="213.3333" height="133.3333" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="709.3333" y="144" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--danger-deep)">kfree()</ns0:text>
-  <ns0:text x="709.3333" y="192" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Free Memory</ns0:text>
-  <ns0:rect x="37.3333" y="337.7778" width="213.3333" height="133.3333" fill="var(--warn-pale3)" stroke="var(--warn-mid)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="144" y="392.8889" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--warn-dk)">request_irq()</ns0:text>
-  <ns0:text x="144" y="440.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Register IRQ</ns0:text>
-  <ns0:rect x="320" y="337.7778" width="213.3333" height="133.3333" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="426.6667" y="392.8889" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--ok-deep)">Handle IRQs</ns0:text>
-  <ns0:text x="426.6667" y="440.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Interrupt work</ns0:text>
-  <ns0:rect x="602.6667" y="337.7778" width="213.3333" height="133.3333" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
-  <ns0:text x="709.3333" y="392.8889" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--danger-deep)">free_irq()</ns0:text>
-  <ns0:text x="709.3333" y="440.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Release IRQ</ns0:text>
-  <ns0:line x1="250.6667" y1="155.5556" x2="320" y2="155.5556" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
-  <ns0:line x1="533.3333" y1="155.5556" x2="602.6667" y2="155.5556" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
-  <ns0:line x1="250.6667" y1="404.4444" x2="320" y2="404.4444" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
-  <ns0:line x1="533.3333" y1="404.4444" x2="602.6667" y2="404.4444" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
-  <ns0:rect x="888.8889" y="142.2222" width="222.2222" height="177.7778" fill="url(#grad-surface)" stroke="var(--text-placeholder)" stroke-width="1.3333" rx="7.1111" />
-  <ns0:text x="1000" y="195.5556" text-anchor="middle" font-size="19.5556" fill="var(--text-dark)" font-weight="bold">Init / Exit</ns0:text>
-  <ns0:text x="1000" y="245.3333" text-anchor="middle" font-size="15.1111" fill="var(--text-lighter)">Acquire in init</ns0:text>
-  <ns0:text x="1000" y="277.3333" text-anchor="middle" font-size="15.1111" fill="var(--text-lighter)">Release in exit</ns0:text>
-  <ns0:text x="1000" y="309.3333" text-anchor="middle" font-size="15.1111" fill="var(--text-lighter)">Reverse order</ns0:text>
-</ns0:svg>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
+    </linearGradient>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+    </marker>
+  </defs>
+  <rect width="1137.7778" height="640" fill="var(--bg)" />
+  <rect x="37.3333" y="88.8889" width="213.3333" height="133.3333" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <text x="144" y="144" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--primary-deep)">kmalloc()</text>
+  <text x="144" y="192" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Allocate Memory</text>
+  <rect x="320" y="88.8889" width="213.3333" height="133.3333" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <text x="426.6667" y="144" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--ok-deep)">Use Resource</text>
+  <text x="426.6667" y="192" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Read/Write ops</text>
+  <rect x="602.6667" y="88.8889" width="213.3333" height="133.3333" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <text x="709.3333" y="144" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--danger-deep)">kfree()</text>
+  <text x="709.3333" y="192" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Free Memory</text>
+  <rect x="37.3333" y="337.7778" width="213.3333" height="133.3333" fill="var(--warn-pale3)" stroke="var(--warn-mid)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <text x="144" y="392.8889" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--warn-dk)">request_irq()</text>
+  <text x="144" y="440.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Register IRQ</text>
+  <rect x="320" y="337.7778" width="213.3333" height="133.3333" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <text x="426.6667" y="392.8889" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--ok-deep)">Handle IRQs</text>
+  <text x="426.6667" y="440.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Interrupt work</text>
+  <rect x="602.6667" y="337.7778" width="213.3333" height="133.3333" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="2.6667" rx="8.8889" filter="url(#shadow)" />
+  <text x="709.3333" y="392.8889" text-anchor="middle" font-size="18.6667" font-weight="bold" fill="var(--danger-deep)">free_irq()</text>
+  <text x="709.3333" y="440.8889" text-anchor="middle" font-size="15.1111" fill="var(--text-muted)">Release IRQ</text>
+  <line x1="250.6667" y1="155.5556" x2="320" y2="155.5556" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <line x1="533.3333" y1="155.5556" x2="602.6667" y2="155.5556" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <line x1="250.6667" y1="404.4444" x2="320" y2="404.4444" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <line x1="533.3333" y1="404.4444" x2="602.6667" y2="404.4444" stroke="var(--text-muted)" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <rect x="888.8889" y="142.2222" width="222.2222" height="177.7778" fill="url(#grad-surface)" stroke="var(--text-placeholder)" stroke-width="1.3333" rx="7.1111" />
+  <text x="1000" y="195.5556" text-anchor="middle" font-size="19.5556" fill="var(--text-dark)" font-weight="bold">Init / Exit</text>
+  <text x="1000" y="245.3333" text-anchor="middle" font-size="15.1111" fill="var(--text-lighter)">Acquire in init</text>
+  <text x="1000" y="277.3333" text-anchor="middle" font-size="15.1111" fill="var(--text-lighter)">Release in exit</text>
+  <text x="1000" y="309.3333" text-anchor="middle" font-size="15.1111" fill="var(--text-lighter)">Reverse order</text>
+</svg>
