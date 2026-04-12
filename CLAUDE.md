@@ -26,6 +26,7 @@
 - A slide with an SVG must contain ONLY the `##` heading and the image line. Any other content (bullets, text, code) must be moved to a separate slide before or after.
 - SVG diagrams must NOT include a title inside the SVG. The `##` slide heading serves as the title.
 - SVG content must not extend below y=630. Marp renders the `##` heading above the image, so the image is scaled to ~640px tall. Keep viewBox at 1280x720 but treat y=630 as the effective bottom boundary.
+- SVG drawing content must be exactly fitted to the usable area [40,1240]x[40,620] (enforced by `scripts/check_svg.py --fit`). Run `scripts/fit_svg_to_slide.py` to fix.
 
 ## Validation
 - Check markdown: `scripts/check_md.py` (run via `rsconstruct build --verbose -j10`)

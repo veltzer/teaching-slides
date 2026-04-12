@@ -14,11 +14,12 @@ Checks:
   --colors      Flag SVGs against their <!-- palette: path --> comment
   --words       Flag SVGs whose <text>/<tspan> content exceeds MAX_WORD_COUNT
   --fill        Flag SVGs whose bbox fills < MIN_FILL_PCT of the usable area
+  --fit         Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]
 
 Usage:
-    check_svg_quality.py file1.svg file2.svg ...
-    check_svg_quality.py --fonts --size file1.svg file2.svg ...
-    check_svg_quality.py --colors file1.svg file2.svg ...
+    check_svg.py file1.svg file2.svg ...
+    check_svg.py --fonts --size file1.svg file2.svg ...
+    check_svg.py --colors file1.svg file2.svg ...
 """
 
 import argparse
@@ -37,6 +38,9 @@ MAX_WORD_COUNT = 60
 MIN_FILL_PCT = 40.0
 USABLE_W = 1200.0
 USABLE_H = 580.0
+USABLE_X0 = 40.0
+USABLE_Y0 = 40.0
+FIT_TOL = 1.0  # px — bbox must match target to within this tolerance
 
 
 def _check_size(path: Path) -> list[str]:
@@ -303,6 +307,42 @@ def _check_fill(path: Path) -> list[str]:
     return []
 
 
+def _check_fit(path: Path) -> list[str]:
+    """Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620].
+
+    Run scripts/fit_svg_to_slide.py to fix."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "fit_svg_to_slide",
+        Path(__file__).resolve().parent / "fit_svg_to_slide.py",
+    )
+    fit = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fit)
+    try:
+        content = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    outside = re.sub(r'<defs\b.*?</defs>', '', content, flags=re.DOTALL)
+    bbox = fit.compute_bbox(outside)
+    if bbox is None:
+        return []  # no drawable content — let _check_fill handle it
+    x0, y0, x1, y1 = bbox
+    w = x1 - x0
+    h = y1 - y0
+    target_x0 = USABLE_X0
+    target_y0 = USABLE_Y0
+    target_w = USABLE_W
+    target_h = USABLE_H
+    if (abs(x0 - target_x0) > FIT_TOL or abs(y0 - target_y0) > FIT_TOL
+            or abs(w - target_w) > FIT_TOL or abs(h - target_h) > FIT_TOL):
+        return [
+            f"content not fitted: bbox ({x0:.1f},{y0:.1f})+{w:.1f}x{h:.1f}"
+            f" != target ({target_x0:.0f},{target_y0:.0f})+{target_w:.0f}x{target_h:.0f}"
+            f" — run scripts/fit_svg_to_slide.py"
+        ]
+    return []
+
+
 def _check_title(tree: ET.ElementTree) -> list[str]:
     """Flag SVGs that contain a <title> element."""
     for elem in tree.iter():
@@ -341,6 +381,8 @@ def main() -> None:
                         help=f'Flag SVGs whose <text>/<tspan> content exceeds {MAX_WORD_COUNT} words total')
     parser.add_argument('--fill', action='store_true',
                         help=f'Flag SVGs whose content bbox fills less than {MIN_FILL_PCT:.0f}% of the 1200x580 usable area')
+    parser.add_argument('--fit', action='store_true',
+                        help='Flag SVGs whose content bbox is not exactly fitted to [40,1240]x[40,620]')
     args = parser.parse_args()
 
     if not args.paths:
@@ -348,7 +390,7 @@ def main() -> None:
 
     # Default: all checks enabled when no flags are specified
     flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions,
-            args.bounds, args.title, args.colors, args.words, args.fill]
+            args.bounds, args.title, args.colors, args.words, args.fill, args.fit]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -362,6 +404,7 @@ def main() -> None:
     # limit. Flip to `args.words or not explicit` once the backlog is clean.
     do_words = args.words
     do_fill = args.fill or not explicit
+    do_fit = args.fit or not explicit
 
     failures = 0
     for path_str in args.paths:
@@ -376,6 +419,9 @@ def main() -> None:
 
         if do_fill:
             errors.extend(_check_fill(path))
+
+        if do_fit:
+            errors.extend(_check_fit(path))
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
