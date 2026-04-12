@@ -1,15 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="35.5556" y="30" width="213.3333" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="142.2222" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8">Optimization</text>
-  <rect x="320" y="30" width="213.3333" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="426.6667" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8">B</text>
-  <rect x="604.4444" y="30" width="213.3333" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="711.1111" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8">C</text>
-  <rect x="888.8889" y="30" width="213.3333" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="995.5556" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8">D</text>
-  <rect x="35.5556" y="150" width="213.3333" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="142.2222" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8">E</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -102,15 +92,63 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="142.2222" y1="60" x2="426.6667" y2="60" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="142.2222" y1="60" x2="711.1111" y2="60" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="142.2222" y1="60" x2="995.5556" y2="60" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="426.6667" y1="60" x2="142.2222" y2="180" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="711.1111" y1="60" x2="142.2222" y2="180" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="995.5556" y1="60" x2="142.2222" y2="180" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Spark SQL Performance Optimization</text>
+
+  <rect x="40" y="70" width="290" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Catalyst Optimizer</text>
+  <text x="185" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Rule-based rewriting</text>
+  <text x="185" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Predicate pushdown</text>
+  <text x="185" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Column pruning</text>
+
+  <rect x="350" y="70" width="290" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="495" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Tungsten Engine</text>
+  <text x="495" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Off-heap memory layout</text>
+  <text x="495" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Cache-aware compute</text>
+  <text x="495" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Whole-stage codegen</text>
+
+  <rect x="660" y="70" width="290" height="140" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="805" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Adaptive Query Exec</text>
+  <text x="805" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Runtime shuffle tuning</text>
+  <text x="805" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Dynamic partition pruning</text>
+  <text x="805" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Skew join handling</text>
+
+  <rect x="970" y="70" width="270" height="140" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1105" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Caching</text>
+  <text x="1105" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">.cache() / .persist()</text>
+  <text x="1105" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">MEMORY_AND_DISK</text>
+  <text x="1105" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Reuse hot DataFrames</text>
+
+  <rect x="40" y="250" width="290" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="185" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Columnar Formats</text>
+  <text x="185" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Parquet / ORC</text>
+  <text x="185" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Column-level statistics</text>
+  <text x="185" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Compressed + splittable</text>
+
+  <rect x="350" y="250" width="290" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="495" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Partitioning</text>
+  <text x="495" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">partitionBy() on write</text>
+  <text x="495" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Avoid tiny-file explosion</text>
+  <text x="495" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Balanced key cardinality</text>
+
+  <rect x="660" y="250" width="290" height="140" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="805" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Bucketing and Z-Order</text>
+  <text x="805" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">bucketBy() for joins</text>
+  <text x="805" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Co-locate related keys</text>
+  <text x="805" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Delta OPTIMIZE ZORDER</text>
+
+  <rect x="970" y="250" width="270" height="140" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1105" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Broadcast Joins</text>
+  <text x="1105" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">broadcast(smallDF)</text>
+  <text x="1105" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Skip the shuffle</text>
+  <text x="1105" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Default threshold 10MB</text>
+
+  <rect x="40" y="420" width="1200" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Watch-outs</text>
+  <text x="80" y="490" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Data skew: one partition with most of the rows blocks the whole stage. Salt keys or use AQE skew handling.</text>
+  <text x="80" y="518" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Small-file problem: thousands of tiny Parquet files kill scheduling. Coalesce or repartition before write.</text>
+  <text x="80" y="546" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">UDFs defeat Catalyst: prefer built-in functions; if you must write a UDF, mark it deterministic.</text>
+  <text x="80" y="574" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">collect() pulls all rows to the driver. Use limit() plus take(), or write the result to storage instead.</text>
+  <text x="80" y="602" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Read EXPLAIN plans: look for Exchange (shuffle) stages and for broadcast vs sort-merge join decisions.</text>
 </svg>
