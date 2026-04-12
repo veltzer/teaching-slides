@@ -101,75 +101,75 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1087.5767" height="474.8286" fill="var(--bg)" rx="5.7089" x="152.4233" y="145.1714"/>
-  <rect x="177.9133" y="158.361" width="356.8611" height="191.2504" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="356.3438" y="178.1455" text-anchor="middle" font-family="sans-serif" font-size="13.4741" font-weight="bold" fill="var(--text)">Matrix strategy definition</text>
-  <text x="194.9067" y="197.9301" font-family="monospace" font-size="11.2285" fill="var(--primary-accent)">strategy:</text>
-  <text x="194.9067" y="212.4388" font-family="monospace" font-size="11.2285" fill="var(--primary-accent)">  matrix:</text>
-  <text x="194.9067" y="226.9474" font-family="monospace" font-size="11.2285" fill="var(--text)">    os: [ubuntu, windows, macos]</text>
-  <text x="194.9067" y="241.456" font-family="monospace" font-size="11.2285" fill="var(--text)">    python: ['3.10', '3.11', '3.12']</text>
-  <line x1="194.9067" y1="252.0078" x2="517.781" y2="252.0078" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="356.3438" y="269.1544" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">3 OS × 3 versions = <tspan font-weight="bold" fill="var(--primary-accent)">9 parallel jobs</tspan>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6.6276" x="40" y="40"/>
+  <rect x="68.1249" y="56.111" width="393.75" height="233.6111" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="264.9999" y="80.2776" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">Matrix strategy definition</text>
+  <text x="86.8749" y="104.4444" font-family="monospace" font-size="13.0355" fill="var(--primary-accent)">strategy:</text>
+  <text x="86.8749" y="122.1667" font-family="monospace" font-size="13.0355" fill="var(--primary-accent)">  matrix:</text>
+  <text x="86.8749" y="139.8888" font-family="monospace" font-size="13.0355" fill="var(--text)">    os: [ubuntu, windows, macos]</text>
+  <text x="86.8749" y="157.611" font-family="monospace" font-size="13.0355" fill="var(--text)">    python: ['3.10', '3.11', '3.12']</text>
+  <line x1="86.8749" y1="170.5" x2="443.1249" y2="170.5" stroke="var(--border)" stroke-width="0.8889" />
+  <text x="264.9999" y="191.4444" text-anchor="middle" font-family="sans-serif" font-size="13.0355" fill="var(--text-muted)">3 OS × 3 versions = <tspan font-weight="bold" fill="var(--primary-accent)">9 parallel jobs</tspan>
   </text>
-  <text x="194.9067" y="290.258" font-family="monospace" font-size="10.4797" fill="var(--text-faint)">    # use in steps:</text>
-  <text x="194.9067" y="304.7665" font-family="monospace" font-size="10.4797" fill="var(--text)">runs-on: ${{ matrix.os }}</text>
-  <text x="194.9067" y="319.2752" font-family="monospace" font-size="10.4797" fill="var(--text)">python-version: ${{ matrix.python }}</text>
-  <text x="194.9067" y="339.0597" font-family="monospace" font-size="10" fill="var(--text-faint)">fail-fast: false  # run all even if one fails</text>
-  <line x1="536.4738" y1="253.9863" x2="594.2514" y2="253.9863" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="565.3625" y="247.3914" text-anchor="middle" font-family="sans-serif" font-size="10" fill="var(--primary-accent)">expands to</text>
-  <text x="696.2116" y="172.8697" text-anchor="middle" font-family="monospace" font-size="11.2285" font-weight="bold" fill="var(--text-muted)">ubuntu</text>
-  <text x="866.1455" y="172.8697" text-anchor="middle" font-family="monospace" font-size="11.2285" font-weight="bold" fill="var(--text-muted)">windows</text>
-  <text x="1036.0793" y="172.8697" text-anchor="middle" font-family="monospace" font-size="11.2285" font-weight="bold" fill="var(--text-muted)">macos</text>
-  <text x="602.748" y="211.1198" text-anchor="end" font-family="monospace" font-size="10.4797" font-weight="bold" fill="var(--text-muted)">3.10</text>
-  <text x="602.748" y="270.4734" text-anchor="end" font-family="monospace" font-size="10.4797" font-weight="bold" fill="var(--text-muted)">3.11</text>
-  <text x="602.748" y="329.827" text-anchor="end" font-family="monospace" font-size="10.4797" font-weight="bold" fill="var(--text-muted)">3.12</text>
-  <rect x="611.2446" y="182.1025" width="166.5352" height="50.1209" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="694.5122" y="204.525" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--bg)">ubuntu / 3.10</text>
-  <text x="694.5122" y="219.0337" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--primary-accent)">✓ pass</text>
-  <rect x="781.1785" y="182.1025" width="166.5352" height="50.1209" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="864.4461" y="204.525" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--bg)">windows / 3.10</text>
-  <text x="864.4461" y="219.0337" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--primary-accent)">✓ pass</text>
-  <rect x="951.1125" y="182.1025" width="166.5352" height="50.1209" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1034.38" y="204.525" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--bg)">macos / 3.10</text>
-  <text x="1034.38" y="219.0337" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--primary-accent)">✓ pass</text>
-  <rect x="611.2446" y="241.456" width="166.5352" height="50.1209" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="694.5122" y="263.8785" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--text)">ubuntu / 3.11</text>
-  <text x="694.5122" y="278.3872" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--text-muted)">✓ pass</text>
-  <rect x="781.1785" y="241.456" width="166.5352" height="50.1209" rx="5.7089" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="864.4461" y="263.8785" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--danger-accent)">windows / 3.11</text>
-  <text x="864.4461" y="278.3872" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--danger-accent)">✗ fail</text>
-  <rect x="951.1125" y="241.456" width="166.5352" height="50.1209" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="1034.38" y="263.8785" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--text)">macos / 3.11</text>
-  <text x="1034.38" y="278.3872" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--text-muted)">✓ pass</text>
-  <rect x="611.2446" y="300.8096" width="166.5352" height="50.1209" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="694.5122" y="323.2321" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--text)">ubuntu / 3.12</text>
-  <text x="694.5122" y="337.7408" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--text-muted)">✓ pass</text>
-  <rect x="781.1785" y="300.8096" width="166.5352" height="50.1209" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="864.4461" y="323.2321" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--text)">windows / 3.12</text>
-  <text x="864.4461" y="337.7408" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--text-muted)">✓ pass</text>
-  <rect x="951.1125" y="300.8096" width="166.5352" height="50.1209" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="1034.38" y="323.2321" text-anchor="middle" font-family="sans-serif" font-size="10.4797" fill="var(--text)">macos / 3.12</text>
-  <text x="1034.38" y="337.7408" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--text-muted)">✓ pass</text>
-  <rect x="611.2446" y="364.1201" width="506.4029" height="23.7414" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="864.4461" y="379.9477" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--primary-accent)">All 9 jobs run in parallel — one failure visible immediately</text>
-  <rect x="177.9133" y="402.3702" width="1036.5965" height="131.8968" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="696.2116" y="422.1547" text-anchor="middle" font-family="sans-serif" font-size="12.7255" font-weight="bold" fill="var(--text)">Fine-tuning the matrix</text>
-  <rect x="194.9067" y="432.7066" width="305.881" height="85.733" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="347.847" y="449.8531" text-anchor="middle" font-family="sans-serif" font-size="11.2285" font-weight="bold" fill="var(--text)">exclude — remove combinations</text>
-  <text x="211.9" y="465.6807" font-family="monospace" font-size="10" fill="var(--text-muted)">exclude:</text>
-  <text x="211.9" y="478.8704" font-family="monospace" font-size="10" fill="var(--text-muted)">  - os: windows</text>
-  <text x="211.9" y="492.0601" font-family="monospace" font-size="10" fill="var(--text-muted)">    python: '3.10'</text>
-  <text x="211.9" y="506.5687" font-family="sans-serif" font-size="10" fill="var(--text-faint)">removes windows/3.10 from grid</text>
-  <rect x="543.2711" y="432.7066" width="305.881" height="85.733" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="696.2116" y="449.8531" text-anchor="middle" font-family="sans-serif" font-size="11.2285" font-weight="bold" fill="var(--text)">include — add extra combinations</text>
-  <text x="560.2645" y="465.6807" font-family="monospace" font-size="10" fill="var(--text-muted)">include:</text>
-  <text x="560.2645" y="478.8704" font-family="monospace" font-size="10" fill="var(--text-muted)">  - os: ubuntu</text>
-  <text x="560.2645" y="492.0601" font-family="monospace" font-size="10" fill="var(--text-muted)">    python: '3.13-dev'</text>
-  <text x="560.2645" y="506.5687" font-family="sans-serif" font-size="10" fill="var(--text-faint)">adds one extra experimental job</text>
-  <rect x="891.6355" y="432.7066" width="305.881" height="85.733" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1044.5759" y="449.8531" text-anchor="middle" font-family="sans-serif" font-size="11.2285" font-weight="bold" fill="var(--primary-accent)">fail-fast</text>
-  <text x="908.629" y="469.6376" font-family="monospace" font-size="10" fill="var(--text-muted)">fail-fast: true   # default</text>
-  <text x="908.629" y="484.1463" font-family="sans-serif" font-size="10" fill="var(--text-muted)">cancel remaining jobs on first fail</text>
-  <text x="908.629" y="501.2928" font-family="monospace" font-size="10" fill="var(--text-muted)">fail-fast: false</text>
-  <text x="908.629" y="515.8016" font-family="sans-serif" font-size="10" fill="var(--text-muted)">run all jobs regardless</text>
+  <text x="86.8749" y="217.2223" font-family="monospace" font-size="12.1662" fill="var(--text-faint)">    # use in steps:</text>
+  <text x="86.8749" y="234.9444" font-family="monospace" font-size="12.1662" fill="var(--text)">runs-on: ${{ matrix.os }}</text>
+  <text x="86.8749" y="252.6666" font-family="monospace" font-size="12.1662" fill="var(--text)">python-version: ${{ matrix.python }}</text>
+  <text x="86.8749" y="276.8333" font-family="monospace" font-size="11.6093" fill="var(--text-faint)">fail-fast: false  # run all even if one fails</text>
+  <line x1="463.75" y1="172.9167" x2="527.5001" y2="172.9167" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <text x="495.6249" y="164.8611" text-anchor="middle" font-family="sans-serif" font-size="11.6093" fill="var(--primary-accent)">expands to</text>
+  <text x="639.9999" y="73.8333" text-anchor="middle" font-family="monospace" font-size="13.0355" font-weight="bold" fill="var(--text-muted)">ubuntu</text>
+  <text x="827.5" y="73.8333" text-anchor="middle" font-family="monospace" font-size="13.0355" font-weight="bold" fill="var(--text-muted)">windows</text>
+  <text x="1014.9999" y="73.8333" text-anchor="middle" font-family="monospace" font-size="13.0355" font-weight="bold" fill="var(--text-muted)">macos</text>
+  <text x="536.875" y="120.5555" text-anchor="end" font-family="monospace" font-size="12.1662" font-weight="bold" fill="var(--text-muted)">3.10</text>
+  <text x="536.875" y="193.0556" text-anchor="end" font-family="monospace" font-size="12.1662" font-weight="bold" fill="var(--text-muted)">3.11</text>
+  <text x="536.875" y="265.5556" text-anchor="end" font-family="monospace" font-size="12.1662" font-weight="bold" fill="var(--text-muted)">3.12</text>
+  <rect x="546.2499" y="85.1111" width="183.75" height="61.2223" rx="6.6276" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="638.1249" y="112.5" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--bg)">ubuntu / 3.10</text>
+  <text x="638.1249" y="130.2223" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--primary-accent)">✓ pass</text>
+  <rect x="733.7499" y="85.1111" width="183.75" height="61.2223" rx="6.6276" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="825.6249" y="112.5" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--bg)">windows / 3.10</text>
+  <text x="825.6249" y="130.2223" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--primary-accent)">✓ pass</text>
+  <rect x="921.2501" y="85.1111" width="183.75" height="61.2223" rx="6.6276" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1013.125" y="112.5" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--bg)">macos / 3.10</text>
+  <text x="1013.125" y="130.2223" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--primary-accent)">✓ pass</text>
+  <rect x="546.2499" y="157.611" width="183.75" height="61.2223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="638.1249" y="184.9999" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--text)">ubuntu / 3.11</text>
+  <text x="638.1249" y="202.7222" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">✓ pass</text>
+  <rect x="733.7499" y="157.611" width="183.75" height="61.2223" rx="6.6276" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="825.6249" y="184.9999" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--danger-accent)">windows / 3.11</text>
+  <text x="825.6249" y="202.7222" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--danger-accent)">✗ fail</text>
+  <rect x="921.2501" y="157.611" width="183.75" height="61.2223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1013.125" y="184.9999" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--text)">macos / 3.11</text>
+  <text x="1013.125" y="202.7222" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">✓ pass</text>
+  <rect x="546.2499" y="230.111" width="183.75" height="61.2223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="638.1249" y="257.5" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--text)">ubuntu / 3.12</text>
+  <text x="638.1249" y="275.2223" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">✓ pass</text>
+  <rect x="733.7499" y="230.111" width="183.75" height="61.2223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="825.6249" y="257.5" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--text)">windows / 3.12</text>
+  <text x="825.6249" y="275.2223" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">✓ pass</text>
+  <rect x="921.2501" y="230.111" width="183.75" height="61.2223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1013.125" y="257.5" text-anchor="middle" font-family="sans-serif" font-size="12.1662" fill="var(--text)">macos / 3.12</text>
+  <text x="1013.125" y="275.2223" text-anchor="middle" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">✓ pass</text>
+  <rect x="546.2499" y="307.4444" width="558.75" height="29" rx="6.6276" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="825.6249" y="326.7777" text-anchor="middle" font-family="sans-serif" font-size="13.0355" fill="var(--primary-accent)">All 9 jobs run in parallel — one failure visible immediately</text>
+  <rect x="68.1249" y="354.1666" width="1143.75" height="161.1111" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="639.9999" y="378.3333" text-anchor="middle" font-family="sans-serif" font-size="14.7734" font-weight="bold" fill="var(--text)">Fine-tuning the matrix</text>
+  <rect x="86.8749" y="391.2223" width="337.5001" height="104.7223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="255.6247" y="412.1667" text-anchor="middle" font-family="sans-serif" font-size="13.0355" font-weight="bold" fill="var(--text)">exclude — remove combinations</text>
+  <text x="105.6248" y="431.5" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">exclude:</text>
+  <text x="105.6248" y="447.6111" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">  - os: windows</text>
+  <text x="105.6248" y="463.7223" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">    python: '3.10'</text>
+  <text x="105.6248" y="481.4444" font-family="sans-serif" font-size="11.6093" fill="var(--text-faint)">removes windows/3.10 from grid</text>
+  <rect x="471.2499" y="391.2223" width="337.5001" height="104.7223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="639.9999" y="412.1667" text-anchor="middle" font-family="sans-serif" font-size="13.0355" font-weight="bold" fill="var(--text)">include — add extra combinations</text>
+  <text x="489.9999" y="431.5" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">include:</text>
+  <text x="489.9999" y="447.6111" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">  - os: ubuntu</text>
+  <text x="489.9999" y="463.7223" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">    python: '3.13-dev'</text>
+  <text x="489.9999" y="481.4444" font-family="sans-serif" font-size="11.6093" fill="var(--text-faint)">adds one extra experimental job</text>
+  <rect x="855.6249" y="391.2223" width="337.5001" height="104.7223" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="1024.3748" y="412.1667" text-anchor="middle" font-family="sans-serif" font-size="13.0355" font-weight="bold" fill="var(--primary-accent)">fail-fast</text>
+  <text x="874.375" y="436.3333" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">fail-fast: true   # default</text>
+  <text x="874.375" y="454.0556" font-family="sans-serif" font-size="11.6093" fill="var(--text-muted)">cancel remaining jobs on first fail</text>
+  <text x="874.375" y="474.9999" font-family="monospace" font-size="11.6093" fill="var(--text-muted)">fail-fast: false</text>
+  <text x="874.375" y="492.7223" font-family="sans-serif" font-size="11.6093" fill="var(--text-muted)">run all jobs regardless</text>
 </svg>

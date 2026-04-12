@@ -106,101 +106,101 @@
       <stop offset="100%" stop-color="#f57c00"/>
     </linearGradient>
   </defs>
-  <rect width="1087.5767" height="474.8286" fill="var(--bg)" rx="5.7089" x="152.4233" y="145.1714"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6.6276" x="40" y="40"/>
 
   <!-- Source code panel -->
-  <rect x="177.9133" y="160.0098" width="441.8281" height="430.3134" rx="5.7089" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <text x="390.3306" y="182.2674" font-family="Arial, sans-serif" font-size="12.7035" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">hello.s (GAS source)</text>
+  <rect x="68.1249" y="58.125" width="487.5001" height="525.625" rx="6.6276" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <text x="302.4999" y="85.3125" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">hello.s (GAS source)</text>
 
   <!-- .data section highlight -->
-  <rect x="186.41" y="189.6866" width="424.8346" height="81.6111" rx="5.7089" fill="var(--text)"/>
-  <text x="199.155" y="206.7507" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">.section .data</text>
-  <text x="199.155" y="223.8149" font-family="monospace" font-size="10.3217" fill="var(--ok-accent)">msg: .ascii "Hello, World!\n"</text>
-  <text x="199.155" y="240.879" font-family="monospace" font-size="10.3217" fill="var(--ok-accent)">len: .long . - msg</text>
-  <text x="199.155" y="257.9432" font-family="monospace" font-size="10" fill="var(--text-muted)"># current loc minus msg start</text>
+  <rect x="77.4999" y="94.375" width="468.7499" height="99.6874" rx="6.6276" fill="var(--text)"/>
+  <text x="91.5624" y="115.2187" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">.section .data</text>
+  <text x="91.5624" y="136.0625" font-family="monospace" font-size="11.9828" fill="var(--ok-accent)">msg: .ascii "Hello, World!\n"</text>
+  <text x="91.5624" y="156.9062" font-family="monospace" font-size="11.9828" fill="var(--ok-accent)">len: .long . - msg</text>
+  <text x="91.5624" y="177.75" font-family="monospace" font-size="11.6093" fill="var(--text-muted)"># current loc minus msg start</text>
 
   <!-- .text section highlight -->
-  <rect x="186.41" y="278.717" width="424.8346" height="59.3536" rx="5.7089" fill="var(--text)"/>
-  <text x="199.155" y="295.7811" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">.section .text</text>
-  <text x="199.155" y="312.8452" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">.globl _start</text>
-  <text x="199.155" y="329.9094" font-family="monospace" font-size="10" fill="var(--text-muted)"># exported entry point</text>
+  <rect x="77.4999" y="203.1251" width="468.7499" height="72.5" rx="6.6276" fill="var(--text)"/>
+  <text x="91.5624" y="223.9688" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">.section .text</text>
+  <text x="91.5624" y="244.8124" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">.globl _start</text>
+  <text x="91.5624" y="265.6562" font-family="monospace" font-size="11.6093" fill="var(--text-muted)"># exported entry point</text>
 
   <!-- _start / syscall sequence -->
-  <rect x="186.41" y="344.0059" width="424.8346" height="148.384" rx="5.7089" fill="var(--code-bg)"/>
-  <text x="199.155" y="361.07" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">_start:</text>
-  <text x="199.155" y="378.1342" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">  movl $4, %eax    <tspan fill="var(--text-muted)"># sys_write</tspan></text>
-  <text x="199.155" y="395.1983" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">  movl $1, %ebx    <tspan fill="var(--text-muted)"># stdout fd=1</tspan></text>
-  <text x="199.155" y="412.2625" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">  movl $msg, %ecx  <tspan fill="var(--text-muted)"># buffer addr</tspan></text>
-  <text x="199.155" y="429.3267" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">  movl len, %edx   <tspan fill="var(--text-muted)"># byte count</tspan></text>
-  <text x="199.155" y="446.3908" font-family="monospace" font-size="10.3217" fill="var(--warn-accent)">  int $0x80        <tspan fill="var(--text-muted)"># kernel call</tspan></text>
-  <text x="199.155" y="465.6807" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">  movl $1, %eax    <tspan fill="var(--text-muted)"># sys_exit</tspan></text>
-  <text x="199.155" y="482.7449" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">  movl $0, %ebx    <tspan fill="var(--text-muted)"># exit code 0</tspan></text>
-  <text x="199.155" y="499.809" font-family="monospace" font-size="10.3217" fill="var(--warn-accent)">  int $0x80        <tspan fill="var(--text-muted)"># kernel call</tspan></text>
+  <rect x="77.4999" y="282.875" width="468.7499" height="181.2501" rx="6.6276" fill="var(--code-bg)"/>
+  <text x="91.5624" y="303.7187" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">_start:</text>
+  <text x="91.5624" y="324.5625" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">  movl $4, %eax    <tspan fill="var(--text-muted)"># sys_write</tspan></text>
+  <text x="91.5624" y="345.4062" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">  movl $1, %ebx    <tspan fill="var(--text-muted)"># stdout fd=1</tspan></text>
+  <text x="91.5624" y="366.25" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">  movl $msg, %ecx  <tspan fill="var(--text-muted)"># buffer addr</tspan></text>
+  <text x="91.5624" y="387.0938" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">  movl len, %edx   <tspan fill="var(--text-muted)"># byte count</tspan></text>
+  <text x="91.5624" y="407.9375" font-family="monospace" font-size="11.9828" fill="var(--warn-accent)">  int $0x80        <tspan fill="var(--text-muted)"># kernel call</tspan></text>
+  <text x="91.5624" y="431.5" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">  movl $1, %eax    <tspan fill="var(--text-muted)"># sys_exit</tspan></text>
+  <text x="91.5624" y="452.3438" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">  movl $0, %ebx    <tspan fill="var(--text-muted)"># exit code 0</tspan></text>
+  <text x="91.5624" y="473.1875" font-family="monospace" font-size="11.9828" fill="var(--warn-accent)">  int $0x80        <tspan fill="var(--text-muted)"># kernel call</tspan></text>
 
   <!-- Annotation panel -->
-  <rect x="645.2315" y="160.0098" width="569.2785" height="430.3134" rx="5.7089" fill="var(--surface)" filter="url(#shadow)"/>
+  <rect x="583.75" y="58.125" width="628.1251" height="525.625" rx="6.6276" fill="var(--surface)" filter="url(#shadow)"/>
 
   <!-- Sections legend header -->
-  <rect x="662.2248" y="171.1387" width="535.2917" height="26.7092" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="929.8706" y="188.2027" font-family="Arial, sans-serif" font-size="13.4975" font-weight="bold" fill="var(--bg)" text-anchor="middle">ELF / GAS Program Anatomy</text>
+  <rect x="602.4999" y="71.7189" width="590.625" height="32.6251" rx="6.6276" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="897.8124" y="92.5624" font-family="Arial, sans-serif" font-size="15.6697" font-weight="bold" fill="var(--bg)" text-anchor="middle">ELF / GAS Program Anatomy</text>
 
   <!-- .data box -->
-  <rect x="662.2248" y="208.2345" width="237.9075" height="81.6111" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="781.1785" y="226.7825" font-family="Arial, sans-serif" font-size="12.7035" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">.data Section</text>
-  <text x="674.9698" y="243.8466" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Initialized data (read-write)</text>
-  <text x="674.9698" y="258.6851" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Strings, constants, variables</text>
-  <text x="674.9698" y="273.5234" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Stored in ELF data segment</text>
+  <rect x="602.4999" y="117.0312" width="262.5001" height="99.6874" rx="6.6276" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="733.7499" y="139.6874" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">.data Section</text>
+  <text x="616.5624" y="160.5311" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Initialized data (read-write)</text>
+  <text x="616.5624" y="178.6562" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Strings, constants, variables</text>
+  <text x="616.5624" y="196.7811" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Stored in ELF data segment</text>
 
   <!-- .text box -->
-  <rect x="662.2248" y="300.9745" width="237.9075" height="81.6111" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="781.1785" y="319.5225" font-family="Arial, sans-serif" font-size="12.7035" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">.text Section</text>
-  <text x="674.9698" y="336.5866" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Executable instructions</text>
-  <text x="674.9698" y="351.425" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Read-only in ELF</text>
-  <text x="674.9698" y="366.2635" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- .globl exports _start label</text>
+  <rect x="602.4999" y="230.3125" width="262.5001" height="99.6874" rx="6.6276" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="733.7499" y="252.9687" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">.text Section</text>
+  <text x="616.5624" y="273.8124" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Executable instructions</text>
+  <text x="616.5624" y="291.9374" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Read-only in ELF</text>
+  <text x="616.5624" y="310.0625" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- .globl exports _start label</text>
 
   <!-- Labels box -->
-  <rect x="662.2248" y="393.7146" width="237.9075" height="66.7728" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="781.1785" y="412.2625" font-family="Arial, sans-serif" font-size="12.7035" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Labels</text>
-  <text x="674.9698" y="429.3267" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Symbolic addresses (msg, _start)</text>
-  <text x="674.9698" y="444.1651" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">- Resolved by assembler/linker</text>
+  <rect x="602.4999" y="343.5939" width="262.5001" height="81.5625" rx="6.6276" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="733.7499" y="366.25" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Labels</text>
+  <text x="616.5624" y="387.0938" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Symbolic addresses (msg, _start)</text>
+  <text x="616.5624" y="405.2188" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">- Resolved by assembler/linker</text>
 
   <!-- Syscall box -->
-  <rect x="925.6224" y="208.2345" width="271.8943" height="148.384" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1061.5694" y="226.7825" font-family="Arial, sans-serif" font-size="12.7035" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Syscall Sequence (int 0x80)</text>
-  <text x="938.3674" y="246.0724" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">Register  Purpose</text>
-  <line x1="938.3674" y1="251.2659" x2="1189.0198" y2="251.2659" stroke="var(--info-border)" stroke-width="1"/>
-  <text x="938.3674" y="266.1043" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">%eax</text>
-  <text x="993.596" y="266.1043" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">syscall number (4=write, 1=exit)</text>
-  <text x="938.3674" y="284.6522" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">%ebx</text>
-  <text x="993.596" y="284.6522" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">arg1 (fd=1 for stdout)</text>
-  <text x="938.3674" y="303.2002" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">%ecx</text>
-  <text x="993.596" y="303.2002" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">arg2 (buffer address)</text>
-  <text x="938.3674" y="321.7482" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">%edx</text>
-  <text x="993.596" y="321.7482" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">arg3 (byte count)</text>
-  <text x="938.3674" y="340.2963" font-family="monospace" font-size="10.3217" fill="var(--warn-accent)">int $0x80</text>
-  <text x="1019.086" y="340.2963" font-family="Arial, sans-serif" font-size="10.3217" fill="var(--text)">transfers control to kernel</text>
+  <rect x="893.125" y="117.0312" width="300.0001" height="181.2501" rx="6.6276" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043.1249" y="139.6874" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Syscall Sequence (int 0x80)</text>
+  <text x="907.1875" y="163.2499" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">Register  Purpose</text>
+  <line x1="907.1875" y1="169.5937" x2="1183.75" y2="169.5937" stroke="var(--info-border)" stroke-width="1"/>
+  <text x="907.1875" y="187.7187" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">%eax</text>
+  <text x="968.1251" y="187.7187" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">syscall number (4=write, 1=exit)</text>
+  <text x="907.1875" y="210.3749" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">%ebx</text>
+  <text x="968.1251" y="210.3749" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">arg1 (fd=1 for stdout)</text>
+  <text x="907.1875" y="233.0311" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">%ecx</text>
+  <text x="968.1251" y="233.0311" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">arg2 (buffer address)</text>
+  <text x="907.1875" y="255.6874" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">%edx</text>
+  <text x="968.1251" y="255.6874" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">arg3 (byte count)</text>
+  <text x="907.1875" y="278.3438" font-family="monospace" font-size="11.9828" fill="var(--warn-accent)">int $0x80</text>
+  <text x="996.25" y="278.3438" font-family="Arial, sans-serif" font-size="11.9828" fill="var(--text)">transfers control to kernel</text>
 
   <!-- ELF structure box -->
-  <rect x="925.6224" y="367.7472" width="271.8943" height="148.384" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="1061.5694" y="386.2952" font-family="Arial, sans-serif" font-size="12.7035" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">ELF Output Structure</text>
+  <rect x="893.125" y="311.8749" width="300.0001" height="181.2501" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="1043.1249" y="334.5311" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">ELF Output Structure</text>
   <!-- ELF mini diagram -->
-  <rect x="1010.5892" y="395.9403" width="169.9338" height="20.7737" rx="5.7089" fill="var(--primary-accent)"/>
-  <text x="1095.5562" y="410.0367" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">ELF Header</text>
-  <rect x="1010.5892" y="419.6817" width="169.9338" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1095.5562" y="433.7781" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">.text segment</text>
-  <rect x="1010.5892" y="443.4231" width="169.9338" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1095.5562" y="457.5195" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">.data segment</text>
-  <rect x="1010.5892" y="467.1646" width="169.9338" height="20.7737" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1095.5562" y="481.261" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">Section headers</text>
-  <text x="938.3674" y="507.2282" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Produced by ld linker from .o object file</text>
+  <rect x="986.8749" y="346.3126" width="187.4999" height="25.3749" rx="6.6276" fill="var(--primary-accent)"/>
+  <text x="1080.625" y="363.5312" font-family="monospace" font-size="11.6093" fill="var(--bg)" text-anchor="middle">ELF Header</text>
+  <rect x="986.8749" y="375.3125" width="187.4999" height="25.3749" rx="6.6276" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1080.625" y="392.5312" font-family="monospace" font-size="11.6093" fill="var(--bg)" text-anchor="middle">.text segment</text>
+  <rect x="986.8749" y="404.3125" width="187.4999" height="25.3749" rx="6.6276" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1080.625" y="421.5311" font-family="monospace" font-size="11.6093" fill="var(--bg)" text-anchor="middle">.data segment</text>
+  <rect x="986.8749" y="433.3126" width="187.4999" height="25.3749" rx="6.6276" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1080.625" y="450.5312" font-family="monospace" font-size="11.6093" fill="var(--bg)" text-anchor="middle">Section headers</text>
+  <text x="907.1875" y="482.25" font-family="Arial, sans-serif" font-size="11.6093" fill="var(--text-muted)">Produced by ld linker from .o object file</text>
 
   <!-- Build command -->
-  <rect x="662.2248" y="475.3256" width="518.2983" height="44.5152" rx="5.7089" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <text x="674.9698" y="492.3898" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">as -o hello.o hello.s</text>
-  <text x="674.9698" y="510.9378" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">ld -o hello hello.o   <tspan fill="var(--text-muted)"># or: gcc -nostdlib -o hello hello.s</tspan></text>
+  <rect x="602.4999" y="443.2812" width="571.875" height="54.375" rx="6.6276" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <text x="616.5624" y="464.125" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">as -o hello.o hello.s</text>
+  <text x="616.5624" y="486.7812" font-family="monospace" font-size="11.9828" fill="var(--primary-accent)">ld -o hello hello.o   <tspan fill="var(--text-muted)"># or: gcc -nostdlib -o hello hello.s</tspan></text>
 
   <!-- Run command -->
-  <rect x="662.2248" y="530.9696" width="518.2983" height="37.096" rx="5.7089" fill="var(--black)" filter="url(#shadow)"/>
-  <text x="674.9698" y="548.0339" font-family="monospace" font-size="10.3217" fill="var(--ok-accent)">$ ./hello</text>
-  <text x="789.6752" y="548.0339" font-family="monospace" font-size="10.3217" fill="var(--info-accent)">Hello, World!</text>
+  <rect x="602.4999" y="511.25" width="571.875" height="45.3125" rx="6.6276" fill="var(--black)" filter="url(#shadow)"/>
+  <text x="616.5624" y="532.0939" font-family="monospace" font-size="11.9828" fill="var(--ok-accent)">$ ./hello</text>
+  <text x="743.1249" y="532.0939" font-family="monospace" font-size="11.9828" fill="var(--info-accent)">Hello, World!</text>
 </svg>

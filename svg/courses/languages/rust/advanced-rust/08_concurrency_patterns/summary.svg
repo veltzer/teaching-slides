@@ -93,45 +93,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="168.1853" y="154.4817" width="1071.8147" height="465.5183" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="704.0925" y="187.068" text-anchor="middle" font-size="18.9745" font-weight="bold" fill="var(--text)">Concurrency Patterns Cheatsheet</text>
-  <line x1="199.7091" y1="196.3783" x2="1208.476" y2="196.3783" stroke="var(--primary-border)" stroke-width="1.8823" />
-  <rect x="199.7091" y="205.6887" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="223.3521" y="224.3095" font-size="13.7037" fill="var(--text)">
+  <rect x="40" y="40" width="1200" height="580" rx="6.7426" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.9998" y="80.6" text-anchor="middle" font-size="22.4103" font-weight="bold" fill="var(--text)">Concurrency Patterns Cheatsheet</text>
+  <line x1="75.2939" y1="92.1999" x2="1204.7058" y2="92.1999" stroke="var(--primary-border)" stroke-width="1.8823" />
+  <rect x="75.2939" y="103.8" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="101.7646" y="127.0001" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">mpsc::channel</tspan> : unbounded MPSC channel</text>
-  <rect x="199.7091" y="238.275" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
-  <text x="223.3521" y="256.8958" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="144.4" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
+  <text x="101.7646" y="167.6001" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">mpsc::sync_channel</tspan> : bounded MPSC with backpressure</text>
-  <rect x="199.7091" y="270.8612" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="223.3521" y="289.482" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="184.9999" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="101.7646" y="208.2" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">crossbeam-channel</tspan> : MPMC + select! macro</text>
-  <rect x="199.7091" y="303.4475" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
-  <text x="223.3521" y="322.0683" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="225.5999" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
+  <text x="101.7646" y="248.8" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">Mutex&lt;T&gt;</tspan> : exclusive access, short locks</text>
-  <rect x="199.7091" y="336.0339" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="223.3521" y="354.6546" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="266.2001" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="101.7646" y="289.4" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">RwLock&lt;T&gt;</tspan> : many readers, one writer</text>
-  <rect x="199.7091" y="368.6201" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
-  <text x="223.3521" y="387.2409" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="306.8" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
+  <text x="101.7646" y="330.0001" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">AtomicU64/Bool</tspan> : lock-free counters and flags</text>
-  <rect x="199.7091" y="401.2064" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="223.3521" y="419.827" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="347.4" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="101.7646" y="370.5998" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">Ordering</tspan> : Relaxed &lt; Acquire/Release &lt; SeqCst</text>
-  <rect x="199.7091" y="433.7927" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
-  <text x="223.3521" y="452.4134" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="388" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
+  <text x="101.7646" y="411.2" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">rayon::par_iter</tspan> : data-parallel iterators</text>
-  <rect x="199.7091" y="466.379" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="223.3521" y="484.9997" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="428.6" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="101.7646" y="451.8" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">Arc&lt;T&gt;</tspan> : shared ownership across threads</text>
-  <rect x="199.7091" y="498.9652" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
-  <text x="223.3521" y="517.5859" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="469.1999" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--bg)" stroke="var(--border)" stroke-width="1.2549" />
+  <text x="101.7646" y="492.3999" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">DashMap</tspan> : concurrent HashMap (sharded)</text>
-  <rect x="199.7091" y="531.5516" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="223.3521" y="550.1722" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="509.8001" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="101.7646" y="532.9999" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">thread::scope</tspan> : borrow stack data in threads</text>
-  <rect x="199.7091" y="564.1378" width="1008.7668" height="27.9312" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="223.3521" y="582.7585" font-size="13.7037" fill="var(--text)">
+  <rect x="75.2939" y="550.4" width="1129.4118" height="34.8001" rx="6.7426" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="101.7646" y="573.6" font-size="16.1851" fill="var(--text)">
     <tspan font-weight="bold">Actor pattern</tspan> : message-driven, no shared state</text>
-  <rect x="199.7091" y="596.724" width="1008.7668" height="14.8966" rx="5.7089" fill="none" stroke="var(--border)" stroke-width="1"/>
-  <text x="704.0925" y="608.8276" text-anchor="middle" font-size="11.5955" fill="var(--text-muted)" font-style="italic">Lock ordering prevents deadlocks</text>
+  <rect x="75.2939" y="590.9999" width="1129.4118" height="18.56" rx="6.7426" fill="none" stroke="var(--border)" stroke-width="1"/>
+  <text x="639.9998" y="606.08" text-anchor="middle" font-size="13.6951" fill="var(--text-muted)" font-style="italic">Lock ordering prevents deadlocks</text>
 </svg>

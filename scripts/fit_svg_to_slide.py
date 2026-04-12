@@ -162,23 +162,101 @@ def _element_bbox(tag: str, attrs: dict[str, str]) -> tuple[float, float, float,
     return None
 
 
+_G_OPEN_RE = re.compile(r'<g\b([^>]*?)(/?)>', re.DOTALL)
+_G_CLOSE_RE = re.compile(r'</g\s*>')
+_TRANSLATE_RE = re.compile(r'translate\s*\(\s*(-?[\d.]+)\s*[,\s]\s*(-?[\d.]+)?\s*\)')
+_ANY_TRANSFORM_FN = re.compile(r'\b(translate|matrix|scale|rotate|skewX|skewY)\s*\(')
+
+
+def _is_non_translate_transform(transform: str) -> bool:
+    """True if the transform string contains any function other than translate()."""
+    for m in _ANY_TRANSFORM_FN.finditer(transform):
+        if m.group(1) != "translate":
+            return True
+    return False
+
+
+def _translate_offset(transform_attr: str) -> tuple[float, float]:
+    """Extract the (dx, dy) of the first translate() in a transform attribute.
+    Other transform functions (rotate, scale, matrix) are ignored — we only
+    handle the common case of a plain translate() on a <g>."""
+    if not transform_attr:
+        return (0.0, 0.0)
+    m = _TRANSLATE_RE.search(transform_attr)
+    if not m:
+        return (0.0, 0.0)
+    dx = float(m.group(1))
+    dy = float(m.group(2)) if m.group(2) is not None else 0.0
+    return (dx, dy)
+
+
 def compute_bbox(outside_defs: str) -> tuple[float, float, float, float] | None:
-    mins_x = []
-    mins_y = []
-    maxs_x = []
-    maxs_y = []
-    for m in _ELEM_RE.finditer(outside_defs):
-        tag = m.group(1)
-        attrs_str = m.group(2)
-        attrs = {am.group("name"): am.group("val") for am in _ATTR_RE.finditer(attrs_str)}
-        box = _element_bbox(tag, attrs)
-        if box is None:
-            continue
-        x0, y0, x1, y1 = box
-        mins_x.append(x0)
-        mins_y.append(y0)
-        maxs_x.append(x1)
-        maxs_y.append(y1)
+    """Return (x0, y0, x1, y1) of all drawing elements in the chunk.
+
+    Walks tags in order. Maintains a stack of accumulated translate() offsets
+    from enclosing <g transform="translate(...)"> elements. Elements with
+    other transform types (rotate, scale, matrix) contribute their untransformed
+    bbox — approximate but good enough for fit/center decisions.
+    """
+    # Combined token stream: <g openings, </g closes, and drawing elements.
+    combined = re.compile(
+        r'<g\b([^>]*?)(/?)>|</g\s*>|'
+        r'<(rect|circle|ellipse|line|text|tspan|polygon|polyline|path)\b([^>]*?)(/?)>',
+        re.DOTALL,
+    )
+
+    # Stack holds cumulative (dx, dy) after each open <g>
+    stack: list[tuple[float, float]] = [(0.0, 0.0)]
+    mins_x: list[float] = []
+    mins_y: list[float] = []
+    maxs_x: list[float] = []
+    maxs_y: list[float] = []
+
+    for m in combined.finditer(outside_defs):
+        whole = m.group(0)
+        if whole.startswith('<g'):
+            g_attrs = m.group(1) or ""
+            self_close = m.group(2)
+            # Find transform attribute
+            tm = re.search(r'\btransform="([^"]*)"', g_attrs)
+            dx, dy = _translate_offset(tm.group(1)) if tm else (0.0, 0.0)
+            cur_x, cur_y = stack[-1]
+            new_offset = (cur_x + dx, cur_y + dy)
+            if self_close:
+                # <g .../> — no children, don't push
+                continue
+            stack.append(new_offset)
+        elif whole.startswith('</g'):
+            if len(stack) > 1:
+                stack.pop()
+        else:
+            # Drawing element
+            tag = m.group(3)
+            attrs_str = m.group(4) or ""
+            attrs = {am.group("name"): am.group("val") for am in _ATTR_RE.finditer(attrs_str)}
+            # If the element has a non-trivial transform (anything other than
+            # a pure translate()), skip it. Re-positioning without
+            # understanding the transform corrupts the rendering.
+            tm = re.search(r'\btransform="([^"]*)"', attrs_str)
+            if tm is not None:
+                t = tm.group(1).strip()
+                if _is_non_translate_transform(t):
+                    continue
+                elem_dx, elem_dy = _translate_offset(t)
+            else:
+                elem_dx, elem_dy = 0.0, 0.0
+            box = _element_bbox(tag, attrs)
+            if box is None:
+                continue
+            x0, y0, x1, y1 = box
+            off_x, off_y = stack[-1]
+            off_x += elem_dx
+            off_y += elem_dy
+            mins_x.append(x0 + off_x)
+            mins_y.append(y0 + off_y)
+            maxs_x.append(x1 + off_x)
+            maxs_y.append(y1 + off_y)
+
     if not mins_x:
         return None
     return (min(mins_x), min(mins_y), max(maxs_x), max(maxs_y))
@@ -192,6 +270,13 @@ def _transform_point(x: float, y: float, sx: float, sy: float, tx: float, ty: fl
 
 def _transform_element(tag: str, attrs_str: str, sx: float, sy: float, tx: float, ty: float) -> str:
     tag = tag.lower()
+
+    # If this element has a non-trivial own transform (scale/rotate/matrix/
+    # skew), leave it alone — rewriting its coordinates without understanding
+    # the transform corrupts its final position.
+    tm = re.search(r'\btransform="([^"]*)"', attrs_str)
+    if tm is not None and _is_non_translate_transform(tm.group(1)):
+        return attrs_str
 
     def rewrite(name: str, transform_fn):
         nonlocal attrs_str

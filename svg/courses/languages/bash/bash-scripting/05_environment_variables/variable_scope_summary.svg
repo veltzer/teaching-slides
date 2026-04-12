@@ -101,24 +101,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1087.5767" height="474.8286" fill="var(--bg)" rx="5.7089" x="152.4233" y="145.1714"/>
-  <rect x="186.41" y="164.9559" width="1019.6032" height="369.3112" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="696.2116" y="197.9301" text-anchor="middle" font-size="19.4625" font-weight="bold" fill="var(--primary-accent)">Parent Shell</text>
-  <text x="220.3968" y="229.5853" font-size="16.4683" fill="var(--text)" font-family="monospace">x=1</text>
-  <text x="407.3241" y="229.5853" font-size="13.4741" fill="var(--text-muted)">shell variable — private to this shell</text>
-  <text x="220.3968" y="254.6458" font-size="16.4683" fill="var(--text)" font-family="monospace">export y=2</text>
-  <text x="407.3241" y="254.6458" font-size="13.4741" fill="var(--text-muted)">environment variable — will be inherited</text>
-  <rect x="254.3835" y="277.0682" width="849.6694" height="191.2504" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="679.2182" y="308.7234" text-anchor="middle" font-size="17.9655" font-weight="bold" fill="var(--ok-accent)">Child Process</text>
-  <rect x="288.3704" y="321.9131" width="322.8744" height="36.9311" rx="5.7089" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="449.8075" y="344.3355" text-anchor="middle" font-size="14.9713" fill="var(--danger-accent)" font-weight="bold">x is NOT visible</text>
-  <rect x="645.2315" y="321.9131" width="322.8744" height="36.9311" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="806.6686" y="344.3355" text-anchor="middle" font-size="14.9713" fill="var(--ok-accent)" font-weight="bold">y=2  (inherited)</text>
-  <text x="288.3704" y="389.1806" font-size="13.4741" fill="var(--text-muted)">Changes to y inside child do NOT affect parent.</text>
-  <text x="288.3704" y="408.9651" font-size="13.4741" fill="var(--text-muted)">Child receives a copy, not a reference.</text>
-  <text x="288.3704" y="428.7496" font-size="13.4741" fill="var(--text-muted)">Child can export new vars — only its own children will see them.</text>
-  <text x="288.3704" y="448.5341" font-size="13.4741" fill="var(--text-muted)">Variables never flow upward (child cannot modify parent).</text>
-  <text x="220.3968" y="501.2928" font-size="14.9713" fill="var(--text)" font-family="monospace">After child exits:  y is still 2 in parent  (unchanged)</text>
-  <rect x="186.41" y="547.4567" width="1019.6032" height="34.2932" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="696.2116" y="569.2198" text-anchor="middle" font-size="14.9713" fill="var(--text-muted)">Environment variables flow <tspan font-weight="bold">down</tspan> (parent to child), never up</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6.6276" x="40" y="40"/>
+  <rect x="77.4999" y="64.1666" width="1125" height="451.1112" rx="6.6276" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="639.9999" y="104.4444" text-anchor="middle" font-size="22.5946" font-weight="bold" fill="var(--primary-accent)">Parent Shell</text>
+  <text x="115" y="143.111" font-size="19.1186" fill="var(--text)" font-family="monospace">x=1</text>
+  <text x="321.25" y="143.111" font-size="15.6425" fill="var(--text-muted)">shell variable — private to this shell</text>
+  <text x="115" y="173.7223" font-size="19.1186" fill="var(--text)" font-family="monospace">export y=2</text>
+  <text x="321.25" y="173.7223" font-size="15.6425" fill="var(--text-muted)">environment variable — will be inherited</text>
+  <rect x="152.4999" y="201.1111" width="937.5001" height="233.6111" rx="6.6276" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="621.2499" y="239.7777" text-anchor="middle" font-size="20.8567" font-weight="bold" fill="var(--ok-accent)">Child Process</text>
+  <rect x="190" y="255.8888" width="356.2501" height="45.1111" rx="6.6276" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="368.1249" y="283.2776" text-anchor="middle" font-size="17.3806" fill="var(--danger-accent)" font-weight="bold">x is NOT visible</text>
+  <rect x="583.75" y="255.8888" width="356.2501" height="45.1111" rx="6.6276" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="761.8749" y="283.2776" text-anchor="middle" font-size="17.3806" fill="var(--ok-accent)" font-weight="bold">y=2  (inherited)</text>
+  <text x="190" y="338.0556" font-size="15.6425" fill="var(--text-muted)">Changes to y inside child do NOT affect parent.</text>
+  <text x="190" y="362.2223" font-size="15.6425" fill="var(--text-muted)">Child receives a copy, not a reference.</text>
+  <text x="190" y="386.3889" font-size="15.6425" fill="var(--text-muted)">Child can export new vars — only its own children will see them.</text>
+  <text x="190" y="410.5555" font-size="15.6425" fill="var(--text-muted)">Variables never flow upward (child cannot modify parent).</text>
+  <text x="115" y="474.9999" font-size="17.3806" fill="var(--text)" font-family="monospace">After child exits:  y is still 2 in parent  (unchanged)</text>
+  <rect x="77.4999" y="531.3888" width="1125" height="41.8889" rx="6.6276" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="639.9999" y="557.9723" text-anchor="middle" font-size="17.3806" fill="var(--text-muted)">Environment variables flow <tspan font-weight="bold">down</tspan> (parent to child), never up</text>
 </svg>
