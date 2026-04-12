@@ -125,6 +125,34 @@ normalize_svg_style.py` to enforce these; it's idempotent and safe to re-run.
   per-file `<marker>` elements with larger dimensions.
   `scripts/fix_svg_markers.py` caps any stray custom markers.
 
+## Placeholders
+
+If you scaffold an SVG before its real content exists (e.g. dropping in
+generic "A / B / C / D" boxes so a slide has something to reference), the
+SVG must contain the literal string **`PLACEHOLDERSVG`** somewhere inside
+it — in a comment or a text element. This makes placeholders trivially
+greppable so they can be found and finished later instead of being
+shipped by accident.
+
+```xml
+<!-- PLACEHOLDERSVG — replace with real diagram -->
+```
+
+or
+
+```xml
+<text x="40" y="40" fill="var(--text-faint)" font-size="12">PLACEHOLDERSVG</text>
+```
+
+Find all placeholders in the repo:
+
+```
+grep -rl PLACEHOLDERSVG svg/
+```
+
+Never commit a placeholder without the marker. If you see an SVG that
+looks placeholder-like but doesn't have the marker, add it.
+
 ## Fonts and readability
 
 - SVG diagrams must use `font-size` ≥ 10. Smaller is unreadable when

@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,88 +33,78 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-</defs>
-  <text x="767.7193" y="86.8421" text-anchor="middle" font-size="31.4386" font-weight="bold">After pipe() and fork()</text>
-  <rect x="80" y="153.1579" width="294.7368" height="331.5789" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="9.2105"/>
-  <text x="227.3684" y="131.0526" text-anchor="middle" font-size="23.5789">Parent FD Table</text>
-  <text x="99.6491" y="208.4211" font-size="19.6491">0: stdin</text>
-  <text x="99.6491" y="252.6316" font-size="19.6491">1: stdout</text>
-  <text x="99.6491" y="296.8421" font-size="19.6491">2: stderr</text>
-  <text x="99.6491" y="341.0526" font-size="19.6491">3: pipe_read</text>
-  <text x="99.6491" y="385.2632" font-size="19.6491">4: pipe_write</text>
-  <rect x="472.9825" y="153.1579" width="294.7368" height="331.5789" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="9.2105"/>
-  <text x="620.3509" y="131.0526" text-anchor="middle" font-size="23.5789">Child FD Table</text>
-  <text x="492.6316" y="208.4211" font-size="19.6491">0: stdin</text>
-  <text x="492.6316" y="252.6316" font-size="19.6491">1: stdout</text>
-  <text x="492.6316" y="296.8421" font-size="19.6491">2: stderr</text>
-  <text x="492.6316" y="341.0526" font-size="19.6491">3: pipe_read</text>
-  <text x="492.6316" y="385.2632" font-size="19.6491">4: pipe_write</text>
-  <rect x="964.2105" y="241.5789" width="235.7895" height="176.8421" fill="var(--text-faint)" stroke="var(--text)" stroke-width="2.56" rx="9.2105"/>
-  <text x="1082.1053" y="219.4737" text-anchor="middle" font-size="23.5789">Pipe Object</text>
-  <text x="983.8596" y="307.8947" font-size="19.6491">Read end</text>
-  <text x="983.8596" y="352.1053" font-size="19.6491">Write end</text>
-  <text x="983.8596" y="396.3158" font-size="19.6491">Buffer</text>
-  <path d="M 374.7368 341.0526 Q 669.4737 285.7895 964.2105 307.8947" stroke="var(--text)" stroke-width="1.28" stroke-dasharray="6.4 6.4" />
-  <path d="M 374.7368 385.2632 Q 669.4737 418.4211 964.2105 352.1053" stroke="var(--text)" stroke-width="1.28" stroke-dasharray="6.4 6.4" />
-  <path d="M 767.7193 341.0526 Q 865.9649 285.7895 964.2105 307.8947" stroke="var(--text)" stroke-width="1.28" stroke-dasharray="6.4 6.4" />
-  <path d="M 767.7193 385.2632 Q 865.9649 418.4211 964.2105 352.1053" stroke="var(--text)" stroke-width="1.28" stroke-dasharray="6.4 6.4" />
-  <text x="767.7193" y="573.1579" text-anchor="middle" font-size="23.5789" font-weight="bold">Must close unused ends!</text>
+  </defs>
+  <text x="509.5779" y="57.6419" text-anchor="middle" font-size="20.8675" font-weight="bold">After pipe() and fork()</text>
+  <rect x="53.1004" y="101.6594" width="195.6332" height="220.0873" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.3275" rx="6.1135" />
+  <text x="150.917" y="86.9869" text-anchor="middle" font-size="15.6506">Parent FD Table</text>
+  <text x="66.1426" y="138.3406" font-size="13.0422">0: stdin</text>
+  <text x="66.1426" y="167.6856" font-size="13.0422">1: stdout</text>
+  <text x="66.1426" y="197.0306" font-size="13.0422">2: stderr</text>
+  <text x="66.1426" y="226.3755" font-size="13.0422">3: pipe_read</text>
+  <text x="66.1426" y="255.7206" font-size="13.0422">4: pipe_write</text>
+  <rect x="313.9447" y="101.6594" width="195.6332" height="220.0873" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.3275" rx="6.1135" />
+  <text x="411.7613" y="86.9869" text-anchor="middle" font-size="15.6506">Child FD Table</text>
+  <text x="326.9869" y="138.3406" font-size="13.0422">0: stdin</text>
+  <text x="326.9869" y="167.6856" font-size="13.0422">1: stdout</text>
+  <text x="326.9869" y="197.0306" font-size="13.0422">2: stderr</text>
+  <text x="326.9869" y="226.3755" font-size="13.0422">3: pipe_read</text>
+  <text x="326.9869" y="255.7206" font-size="13.0422">4: pipe_write</text>
+  <rect x="640" y="160.3493" width="156.5066" height="117.3799" fill="var(--text-faint)" stroke="var(--text)" stroke-width="1.6992" rx="6.1135" />
+  <text x="718.2533" y="145.6769" text-anchor="middle" font-size="15.6506">Pipe Object</text>
+  <text x="653.0422" y="204.3668" font-size="13.0422">Read end</text>
+  <text x="653.0422" y="233.7118" font-size="13.0422">Write end</text>
+  <text x="653.0422" y="263.0568" font-size="13.0422">Buffer</text>
+  <path d="M 248.7336 226.3755 Q 444.3668 189.6943 640 204.3668" stroke="var(--text)" stroke-width="0.8496" stroke-dasharray="4.248 4.248" />
+  <path d="M 248.7336 255.7206 Q 444.3668 277.7293 640 233.7118" stroke="var(--text)" stroke-width="0.8496" stroke-dasharray="4.248 4.248" />
+  <path d="M 509.5779 226.3755 Q 574.7889 189.6943 640 204.3668" stroke="var(--text)" stroke-width="0.8496" stroke-dasharray="4.248 4.248" />
+  <path d="M 509.5779 255.7206 Q 574.7889 277.7293 640 233.7118" stroke="var(--text)" stroke-width="0.8496" stroke-dasharray="4.248 4.248" />
+  <text x="509.5779" y="380.4367" text-anchor="middle" font-size="15.6506" font-weight="bold">Must close unused ends!</text>
 </svg>

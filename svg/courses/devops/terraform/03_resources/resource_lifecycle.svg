@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,65 +33,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
@@ -101,22 +89,22 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="888.8888" height="500" fill="var(--bg)" rx="7.8516"/>
-  <rect x="537.2222" y="135.5556" width="205.5556" height="58.3333" rx="7.8516" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="640.0001" y="170.9722" text-anchor="middle" font-size="15.2778" font-weight="bold" fill="var(--ok-accent)">Create</text>
-  <line x1="640.0001" y1="193.8889" x2="640.0001" y2="249.4444" stroke="var(--primary-border)" stroke-width="1.592" marker-end="url(#arrow-primary)" />
-  <rect x="537.2222" y="249.4444" width="205.5556" height="58.3333" rx="7.8516" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="640.0001" y="284.8611" text-anchor="middle" font-size="15.2778" font-weight="bold" fill="var(--primary-accent)">Read</text>
-  <line x1="742.7778" y1="278.6111" x2="862.2222" y2="357.7778" stroke="var(--primary-border)" stroke-width="1.592" marker-end="url(#arrow-primary)" />
-  <line x1="537.2222" y1="278.6111" x2="417.7778" y2="357.7778" stroke="var(--primary-border)" stroke-width="1.592" marker-end="url(#arrow-primary)" />
-  <rect x="776.8055" y="357.7778" width="205.5556" height="58.3333" rx="7.8516" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="879.5833" y="393.1945" text-anchor="middle" font-size="15.2778" font-weight="bold" fill="var(--warn-accent)">Update</text>
-  <rect x="298.3333" y="357.7778" width="205.5556" height="58.3333" rx="7.8516" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="401.1112" y="393.1945" text-anchor="middle" font-size="15.2778" font-weight="bold" fill="var(--danger-accent)">Delete</text>
-  <path d="M 982.3611 386.9444 Q 1033.0555 278.6111 742.7778 278.6111" fill="none" stroke="var(--primary-border)" stroke-width="1.592" marker-end="url(#arrow-primary)" />
-  <path d="M 298.3333 386.9444 Q 246.9445 278.6111 537.2222 278.6111" fill="none" stroke="var(--primary-border)" stroke-width="1.592" marker-end="url(#arrow-primary)" />
-  <text x="640.0001" y="468.8889" text-anchor="middle" font-size="13.0859" fill="var(--text-muted)">Create: terraform apply --&gt; API call --&gt; State updated</text>
-  <text x="640.0001" y="489.7222" text-anchor="middle" font-size="13.0859" fill="var(--text-muted)">Read: terraform plan --&gt; API call --&gt; Compare to config</text>
-  <text x="640.0001" y="510.5556" text-anchor="middle" font-size="13.0859" fill="var(--text-muted)">Update: terraform apply --&gt; API call --&gt; State updated</text>
-  <text x="640.0001" y="531.3889" text-anchor="middle" font-size="13.0859" fill="var(--text-muted)">Delete: terraform destroy --&gt; API call --&gt; State updated</text>
+  <rect width="550.6856" height="309.7607" fill="var(--bg)" rx="4.8642" />
+  <rect x="332.8207" y="83.9796" width="127.3461" height="36.1387" rx="4.8642" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.239" filter="url(#shadow)" />
+  <text x="396.4938" y="105.9209" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Create</text>
+  <line x1="396.4938" y1="120.1183" x2="396.4938" y2="154.5361" stroke="var(--primary-border)" stroke-width="0.9863" marker-end="url(#arrow-primary)" />
+  <rect x="332.8207" y="154.5361" width="127.3461" height="36.1387" rx="4.8642" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6195" filter="url(#shadow)" />
+  <text x="396.4938" y="176.4776" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Read</text>
+  <line x1="460.1667" y1="172.6055" x2="534.1651" y2="221.651" stroke="var(--primary-border)" stroke-width="0.9863" marker-end="url(#arrow-primary)" />
+  <line x1="332.8207" y1="172.6055" x2="258.8223" y2="221.651" stroke="var(--primary-border)" stroke-width="0.9863" marker-end="url(#arrow-primary)" />
+  <rect x="481.2476" y="221.651" width="127.3461" height="36.1387" rx="4.8642" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.239" filter="url(#shadow)" />
+  <text x="544.9207" y="243.5924" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">Update</text>
+  <rect x="184.8239" y="221.651" width="127.3461" height="36.1387" rx="4.8642" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.239" filter="url(#shadow)" />
+  <text x="248.497" y="243.5924" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Delete</text>
+  <path d="M 608.5937 239.7203 Q 640 172.6055 460.1667 172.6055" fill="none" stroke="var(--primary-border)" stroke-width="0.9863" marker-end="url(#arrow-primary)" />
+  <path d="M 184.8239 239.7203 Q 152.9874 172.6055 332.8207 172.6055" fill="none" stroke="var(--primary-border)" stroke-width="0.9863" marker-end="url(#arrow-primary)" />
+  <text x="396.4938" y="290.4867" text-anchor="middle" font-size="10" fill="var(--text-muted)">Create: terraform apply --&gt; API call --&gt; State updated</text>
+  <text x="396.4938" y="303.3934" text-anchor="middle" font-size="10" fill="var(--text-muted)">Read: terraform plan --&gt; API call --&gt; Compare to config</text>
+  <text x="396.4938" y="316.3001" text-anchor="middle" font-size="10" fill="var(--text-muted)">Update: terraform apply --&gt; API call --&gt; State updated</text>
+  <text x="396.4938" y="329.2068" text-anchor="middle" font-size="10" fill="var(--text-muted)">Delete: terraform destroy --&gt; API call --&gt; State updated</text>
 </svg>

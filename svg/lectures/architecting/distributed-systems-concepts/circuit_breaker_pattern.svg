@@ -1,15 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <circle cx="197.8947" cy="330" r="117.8947" fill="var(--ok-fill)" stroke="var(--text)" stroke-width="3.122" />
-  <circle cx="640.0001" cy="330" r="117.8947" fill="var(--warn-fill)" stroke="var(--text)" stroke-width="3.122" />
-  <circle cx="1082.1053" cy="330" r="117.8947" fill="var(--danger-fill)" stroke="var(--text)" stroke-width="3.122" />
-  <text x="197.8947" y="354.8686" text-anchor="middle" font-size="32.4212">Closed</text>
-  <text x="640.0001" y="354.8686" text-anchor="middle" font-size="32.4212">Half-Open</text>
-  <text x="1082.1053" y="354.8686" text-anchor="middle" font-size="32.4212">Open</text>
-  <path d="M 315.7894 330 L 522.1054 330" stroke="var(--text)" stroke-width="3.122" marker-end="url(#arrow7)" />
-  <path d="M 757.8948 330 L 964.2106 330" stroke="var(--text)" stroke-width="3.122" marker-end="url(#arrow7)" />
-  <text x="418.9474" y="280.2633" font-size="29.4736">Failures</text>
-  <text x="861.0526" y="280.2633" font-size="29.4736">Timeout</text>
+  <circle cx="131.3537" cy="219.0393" r="78.2532" fill="var(--ok-fill)" stroke="var(--text)" stroke-width="2.0722" />
+  <circle cx="424.8035" cy="219.0393" r="78.2532" fill="var(--warn-fill)" stroke="var(--text)" stroke-width="2.0722" />
+  <circle cx="718.2532" cy="219.0393" r="78.2532" fill="var(--danger-fill)" stroke="var(--text)" stroke-width="2.0722" />
+  <text x="131.3537" y="235.546" text-anchor="middle" font-size="21.5197">Closed</text>
+  <text x="424.8035" y="235.546" text-anchor="middle" font-size="21.5197">Half-Open</text>
+  <text x="718.2532" y="235.546" text-anchor="middle" font-size="21.5197">Open</text>
+  <path d="M 209.6069 219.0393 L 346.5503 219.0393" stroke="var(--text)" stroke-width="2.0722" marker-end="url(#arrow7)" />
+  <path d="M 503.0568 219.0393 L 640 219.0393" stroke="var(--text)" stroke-width="2.0722" marker-end="url(#arrow7)" />
+  <text x="278.0786" y="186.0263" font-size="19.5633">Failures</text>
+  <text x="571.5283" y="186.0263" font-size="19.5633">Timeout</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -44,65 +43,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <marker id="arrow7" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>

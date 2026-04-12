@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,83 +33,72 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <marker id="apd" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <polygon points="0,18 0,9" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="640" y="80" text-anchor="middle" font-size="21.3667" font-weight="bold" fill="var(--text)">RLHF PPO Optimization Loop</text>
-  <rect x="372.916" y="108.169" width="534.1681" height="267.6056" rx="7.7621" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="147.6057" text-anchor="middle" font-size="17.3605" font-weight="bold" fill="var(--primary-accent)">PPO (Proximal Policy Optimization)</text>
-  <text x="640" y="185.6338" text-anchor="middle" font-size="16.025" fill="var(--text)">1. Sample prompt from dataset</text>
-  <text x="640" y="218.0281" text-anchor="middle" font-size="16.025" fill="var(--text)">2. Generate response with policy</text>
-  <text x="640" y="250.4226" text-anchor="middle" font-size="16.025" fill="var(--text)">3. Score with reward model</text>
-  <text x="640" y="282.8169" text-anchor="middle" font-size="16.025" fill="var(--text)">4. Compute advantage</text>
-  <text x="640" y="315.2113" text-anchor="middle" font-size="16.025" fill="var(--text)">5. Update policy (with KL penalty)</text>
-  <path d="M 907.084 206.7606 Q 967.1779 206.7606 967.1779 263.0987 Q 967.1779 319.4366 907.084 319.4366" fill="none" stroke="var(--primary-border)" stroke-width="2.0645" stroke-dasharray="5.1613 3.0968" />
-  <text x="993.8863" y="270.1409" text-anchor="middle" font-size="13.3542" fill="var(--primary-accent)">repeat</text>
-  <rect x="272.7594" y="418.0282" width="734.4811" height="70.4226" rx="7.7621" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="449.0141" text-anchor="middle" font-size="16.025" font-weight="bold" fill="var(--danger-accent)">Objective: maximize E[reward(prompt, response)]</text>
-  <text x="640" y="474.3662" text-anchor="middle" font-size="16.025" fill="var(--danger-accent)">subject to KL(policy || sft_model) &lt; delta</text>
-  <rect x="272.7594" y="516.6198" width="734.4811" height="63.3802" rx="7.7621" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="640" y="544.7888" text-anchor="middle" font-size="14.6896" fill="var(--danger-accent)">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
-  <text x="640" y="567.3241" text-anchor="middle" font-size="14.6896" fill="var(--danger-accent)">that score high on reward model but are actually low quality</text>
+  <text x="423.5002" y="52.9375" text-anchor="middle" font-size="14.1388" font-weight="bold" fill="var(--text)">RLHF PPO Optimization Loop</text>
+  <rect x="246.7656" y="71.5775" width="353.4692" height="177.0797" rx="5.1363" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.3234" />
+  <text x="423.5002" y="97.6735" text-anchor="middle" font-size="11.4878" font-weight="bold" fill="var(--primary-accent)">PPO (Proximal Policy Optimization)</text>
+  <text x="423.5002" y="122.8374" text-anchor="middle" font-size="10.604" fill="var(--text)">1. Sample prompt from dataset</text>
+  <text x="423.5002" y="144.2733" text-anchor="middle" font-size="10.604" fill="var(--text)">2. Generate response with policy</text>
+  <text x="423.5002" y="165.7094" text-anchor="middle" font-size="10.604" fill="var(--text)">3. Score with reward model</text>
+  <text x="423.5002" y="187.1453" text-anchor="middle" font-size="10.604" fill="var(--text)">4. Compute advantage</text>
+  <text x="423.5002" y="208.5813" text-anchor="middle" font-size="10.604" fill="var(--text)">5. Update policy (with KL penalty)</text>
+  <path d="M 600.2347 136.8174 Q 640 136.8174 640 174.0974 Q 640 211.3773 600.2347 211.3773" fill="none" stroke="var(--primary-border)" stroke-width="1.3661" stroke-dasharray="3.4153 2.0492" />
+  <text x="657.6735" y="178.7574" text-anchor="middle" font-size="10" fill="var(--primary-accent)">repeat</text>
+  <rect x="180.4901" y="276.6172" width="486.0201" height="46.6" rx="5.1363" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.3234" />
+  <text x="423.5002" y="297.1212" text-anchor="middle" font-size="10.604" font-weight="bold" fill="var(--danger-accent)">Objective: maximize E[reward(prompt, response)]</text>
+  <text x="423.5002" y="313.8971" text-anchor="middle" font-size="10.604" fill="var(--danger-accent)">subject to KL(policy || sft_model) &lt; delta</text>
+  <rect x="180.4901" y="341.8571" width="486.0201" height="41.9399" rx="5.1363" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.3234" />
+  <text x="423.5002" y="360.4971" text-anchor="middle" font-size="10" fill="var(--danger-accent)">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
+  <text x="423.5002" y="375.4091" text-anchor="middle" font-size="10" fill="var(--danger-accent)">that score high on reward model but are actually low quality</text>
 </svg>

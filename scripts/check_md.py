@@ -236,8 +236,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description='Unified markdown checker for Marp slides.'
     )
-    parser.add_argument('paths', nargs='*', default=['.'],
-                        help='Markdown files or directories to check')
+    parser.add_argument('paths', nargs='+',
+                        help='Markdown files or directories to check (required)')
     parser.add_argument('--links', action='store_true',
                         help='Check that local links point to existing files')
     parser.add_argument('--labels', action='store_true',

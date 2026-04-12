@@ -1,5 +1,4 @@
 <svg viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,75 +33,65 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-</defs>
-  <text x="640" y="80" text-anchor="middle" font-size="43.7607" font-weight="bold">std::string_view</text>
-  <rect x="92.9914" y="195.3845" width="547.0086" height="153.8461" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="7.9487" />
-  <text x="366.4957" y="291.5385" text-anchor="middle" font-size="32.8205">Original String Data</text>
-  <rect x="776.7521" y="195.3845" width="410.2564" height="153.8461" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.9487" />
-  <rect x="804.1026" y="233.8461" width="164.1026" height="76.9231" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="7.9487" stroke-width="2"/>
-  <text x="886.1539" y="283.8461" text-anchor="middle" font-size="27.3505">char* ptr</text>
-  <rect x="995.5556" y="233.8461" width="164.1026" height="76.9231" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="7.9487" stroke-width="2"/>
-  <text x="1077.6069" y="283.8461" text-anchor="middle" font-size="27.3505">size_t len</text>
-  <path d="M 804.1026 272.3077 L 366.4957 272.3077" stroke="var(--text-muted)" stroke-width="4.129" marker-end="url(#arrow)" stroke-dasharray="10.3226 10.3226" />
-  <text x="585.2992" y="253.0769" text-anchor="middle" font-size="27.3505">points to</text>
-  <text x="640" y="503.0769" text-anchor="middle" font-size="32.8205">No ownership, no allocation</text>
-  <text x="640" y="580" text-anchor="middle" font-size="27.3505">Danger: Original data must outlive the view!</text>
+  </defs>
+  <text x="509.3877" y="63.6735" text-anchor="middle" font-size="34.8299" font-weight="bold">std::string_view</text>
+  <rect x="74.0136" y="155.5101" width="435.3742" height="122.4489" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5918" rx="6.3265" />
+  <text x="291.7006" y="232.0408" text-anchor="middle" font-size="26.1224">Original String Data</text>
+  <rect x="618.2312" y="155.5101" width="326.5306" height="122.4489" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.5918" rx="6.3265" />
+  <rect x="640" y="186.1224" width="130.6123" height="61.2245" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="6.3265" stroke-width="1.5918" />
+  <text x="705.3061" y="225.9183" text-anchor="middle" font-size="21.7688">char* ptr</text>
+  <rect x="792.381" y="186.1224" width="130.6123" height="61.2245" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6.3265" stroke-width="1.5918" />
+  <text x="857.6871" y="225.9183" text-anchor="middle" font-size="21.7688">size_t len</text>
+  <path d="M 640 216.7347 L 291.7006 216.7347" stroke="var(--text-muted)" stroke-width="3.2863" marker-end="url(#arrow)" stroke-dasharray="8.2159 8.2159" />
+  <text x="465.8504" y="201.4285" text-anchor="middle" font-size="21.7688">points to</text>
+  <text x="509.3877" y="400.4081" text-anchor="middle" font-size="26.1224">No ownership, no allocation</text>
+  <text x="509.3877" y="461.6326" text-anchor="middle" font-size="21.7688">Danger: Original data must outlive the view!</text>
 </svg>

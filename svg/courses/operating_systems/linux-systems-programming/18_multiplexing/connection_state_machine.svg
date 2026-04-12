@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <text x="639.9999" y="80" font-size="33.3333" font-weight="bold" text-anchor="middle">Connection States</text>
-  <circle cx="259.0476" cy="222.8572" r="71.4285" fill="var(--primary-fill)" stroke="var(--black)" />
-  <text x="259.0476" y="234.7619" font-size="23.8095" text-anchor="middle">CONNECTED</text>
-  <circle cx="639.9999" cy="222.8572" r="71.4285" fill="var(--ok-fill)" stroke="var(--black)" />
-  <text x="639.9999" y="234.7619" font-size="23.8095" text-anchor="middle">READING</text>
-  <circle cx="1020.9524" cy="222.8572" r="71.4285" fill="var(--warn-fill)" stroke="var(--black)" />
-  <text x="1020.9524" y="234.7619" font-size="23.8095" text-anchor="middle">WRITING</text>
-  <circle cx="639.9999" cy="508.5715" r="71.4285" fill="var(--danger-fill)" stroke="var(--black)" />
-  <text x="639.9999" y="520.4762" font-size="23.8095" text-anchor="middle">CLOSING</text>
-  <path d="M 335.2381 222.8572 L 563.8094 222.8572" stroke="var(--black)" marker-end="url(#arrow)" />
-  <path d="M 716.1904 222.8572 L 944.7619 222.8572" stroke="var(--black)" marker-end="url(#arrow)" />
-  <path d="M 944.7619 270.4763 L 716.1904 270.4763" stroke="var(--black)" marker-end="url(#arrow)" />
-  <path d="M 639.9999 294.2858 L 639.9999 437.143" stroke="var(--black)" marker-end="url(#arrow)" />
+  <text x="433.5483" y="54.1935" font-size="22.5806" font-weight="bold" text-anchor="middle">Connection States</text>
+  <circle cx="175.4839" cy="150.9678" r="48.387" fill="var(--primary-fill)" stroke="var(--black)" />
+  <text x="175.4839" y="159.0323" font-size="16.129" text-anchor="middle">CONNECTED</text>
+  <circle cx="433.5483" cy="150.9678" r="48.387" fill="var(--ok-fill)" stroke="var(--black)" />
+  <text x="433.5483" y="159.0323" font-size="16.129" text-anchor="middle">READING</text>
+  <circle cx="691.6129" cy="150.9678" r="48.387" fill="var(--warn-fill)" stroke="var(--black)" />
+  <text x="691.6129" y="159.0323" font-size="16.129" text-anchor="middle">WRITING</text>
+  <circle cx="433.5483" cy="344.5162" r="48.387" fill="var(--danger-fill)" stroke="var(--black)" />
+  <text x="433.5483" y="352.5807" font-size="16.129" text-anchor="middle">CLOSING</text>
+  <path d="M 227.0968 150.9678 L 381.9354 150.9678" stroke="var(--black)" marker-end="url(#arrow)" />
+  <path d="M 485.1612 150.9678 L 640 150.9678" stroke="var(--black)" marker-end="url(#arrow)" />
+  <path d="M 640 183.2259 L 485.1612 183.2259" stroke="var(--black)" marker-end="url(#arrow)" />
+  <path d="M 433.5483 199.3549 L 433.5483 296.1291" stroke="var(--black)" marker-end="url(#arrow)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -47,65 +46,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <polygon points="0,24 8.96,0" fill="black" />
     </marker>

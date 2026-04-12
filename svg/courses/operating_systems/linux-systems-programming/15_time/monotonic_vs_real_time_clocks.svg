@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,77 +33,67 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-</defs>
-  <text x="670.8641" y="80" text-anchor="middle" font-size="19.7531" font-weight="bold">Clock Behavior with NTP Adjustment</text>
-  <line x1="300.4938" y1="482.7778" x2="1041.2346" y2="482.7778" stroke="var(--text)" stroke-width="2" />
-  <line x1="300.4938" y1="482.7778" x2="300.4938" y2="149.4445" stroke="var(--text)" stroke-width="2" />
-  <text x="238.7654" y="316.1112" font-size="13.5802" transform="rotate(-90, 50, 200)">Time Value</text>
-  <text x="670.8641" y="524.4445" text-anchor="middle" font-size="13.5802">Real Time →</text>
-  <path d="M 300.4938 427.2223 L 485.679 316.1112 L 485.679 371.6667 L 670.8641 260.5555 L 856.0494 149.4445" stroke="var(--danger-border)" stroke-width="3.4909" fill="none" />
-  <text x="547.4074" y="288.3334" fill="var(--danger-accent)" font-size="13.5802">CLOCK_REALTIME</text>
-  <text x="485.679" y="399.4445" fill="var(--danger-accent)" font-size="12.3457">← NTP adjustment</text>
-  <path d="M 300.4938 427.2223 L 856.0494 149.4445" stroke="var(--ok-border)" stroke-width="3.4909" fill="none" />
-  <text x="732.5926" y="232.7778" fill="var(--ok-accent)" font-size="13.5802">CLOCK_MONOTONIC</text>
-  <text x="362.2222" y="177.2223" font-size="12.3457">10:00:00</text>
-  <text x="856.0494" y="177.2223" font-size="12.3457">10:00:05</text>
-  <rect x="362.2222" y="538.3334" width="617.284" height="41.6666" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6.3657"/>
-  <text x="670.8641" y="566.1111" text-anchor="middle" font-size="12.3457">REALTIME: Can jump backward/forward (NTP, user changes)</text>
+  </defs>
+  <text x="501.5517" y="59.8096" text-anchor="middle" font-size="14.7678" font-weight="bold">Clock Behavior with NTP Adjustment</text>
+  <line x1="224.6553" y1="360.9345" x2="778.4482" y2="360.9345" stroke="var(--text)" stroke-width="1.4952" />
+  <line x1="224.6553" y1="360.9345" x2="224.6553" y2="111.7278" stroke="var(--text)" stroke-width="1.4952" />
+  <text x="178.5059" y="236.3312" font-size="10.1528" transform="rotate(-90, 50, 200)">Time Value</text>
+  <text x="501.5517" y="392.0854" text-anchor="middle" font-size="10.1528">Real Time →</text>
+  <path d="M 224.6553 319.4001 L 363.1035 236.3312 L 363.1035 277.8656 L 501.5517 194.7966 L 640 111.7278" stroke="var(--danger-border)" stroke-width="2.6099" fill="none" />
+  <text x="409.2529" y="215.5639" fill="var(--danger-accent)" font-size="10.1528">CLOCK_REALTIME</text>
+  <text x="363.1035" y="298.6329" fill="var(--danger-accent)" font-size="10">← NTP adjustment</text>
+  <path d="M 224.6553 319.4001 L 640 111.7278" stroke="var(--ok-border)" stroke-width="2.6099" fill="none" />
+  <text x="547.7012" y="174.0294" fill="var(--ok-accent)" font-size="10.1528">CLOCK_MONOTONIC</text>
+  <text x="270.8047" y="132.495" font-size="10">10:00:00</text>
+  <text x="640" y="132.495" font-size="10">10:00:05</text>
+  <rect x="270.8047" y="402.469" width="461.4941" height="31.1508" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7476" rx="4.7591" />
+  <text x="501.5517" y="423.2362" text-anchor="middle" font-size="10">REALTIME: Can jump backward/forward (NTP, user changes)</text>
 </svg>

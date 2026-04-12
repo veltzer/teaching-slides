@@ -1,5 +1,4 @@
 <svg viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,86 +33,76 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-</defs>
-  <text x="639.9999" y="80" text-anchor="middle" font-size="34.7826" font-weight="bold">Adopting C++17</text>
-  <rect x="189.1143" y="145.2174" width="257.6489" height="86.9565" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.2464" />
-  <text x="317.9387" y="199.5652" text-anchor="middle" font-size="26.087">Phase 1</text>
-  <rect x="511.1755" y="145.2174" width="257.6489" height="86.9565" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="7.2464" />
-  <text x="639.9999" y="199.5652" text-anchor="middle" font-size="26.087">Phase 2</text>
-  <rect x="833.2367" y="145.2174" width="257.6489" height="86.9565" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.2464" />
-  <text x="962.0612" y="199.5652" text-anchor="middle" font-size="26.087">Phase 3</text>
-  <text x="317.9387" y="286.5217" text-anchor="middle" font-size="21.7391">• Update compiler</text>
-  <text x="317.9387" y="319.1304" text-anchor="middle" font-size="21.7391">• Enable C++17</text>
-  <text x="317.9387" y="351.7391" text-anchor="middle" font-size="21.7391">• Basic features</text>
-  <text x="639.9999" y="286.5217" text-anchor="middle" font-size="21.7391">• Replace patterns</text>
-  <text x="639.9999" y="319.1304" text-anchor="middle" font-size="21.7391">• Use std::optional</text>
-  <text x="639.9999" y="351.7391" text-anchor="middle" font-size="21.7391">• string_view</text>
-  <text x="962.0612" y="286.5217" text-anchor="middle" font-size="21.7391">• Advanced features</text>
-  <text x="962.0612" y="319.1304" text-anchor="middle" font-size="21.7391">• Parallel algorithms</text>
-  <text x="962.0612" y="351.7391" text-anchor="middle" font-size="21.7391">• Template features</text>
-  <path d="M 446.7632 188.6957 L 511.1755 188.6957" stroke="var(--text-muted)" stroke-width="3.6" marker-end="url(#arrow)" />
-  <path d="M 768.8245 188.6957 L 833.2367 188.6957" stroke="var(--text-muted)" stroke-width="3.6" marker-end="url(#arrow)" />
-  <rect x="189.1143" y="406.087" width="901.7714" height="173.913" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="7.2464" />
-  <text x="639.9999" y="460.4348" text-anchor="middle" font-size="30.4348" font-weight="bold">Best Practices</text>
-  <text x="639.9999" y="503.913" text-anchor="middle" font-size="21.7391">• Start with safer features (optional, string_view)</text>
-  <text x="639.9999" y="536.5217" text-anchor="middle" font-size="21.7391">• Use structured bindings for readability</text>
-  <text x="639.9999" y="569.1304" text-anchor="middle" font-size="21.7391">• Leverage template argument deduction</text>
+  </defs>
+  <text x="491.5769" y="61.4471" text-anchor="middle" font-size="26.7161" font-weight="bold">Adopting C++17</text>
+  <rect x="145.2566" y="111.5399" width="197.8973" height="66.7903" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.5362" rx="5.5659" />
+  <text x="244.2052" y="153.2838" text-anchor="middle" font-size="20.0371">Phase 1</text>
+  <rect x="392.6283" y="111.5399" width="197.8973" height="66.7903" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5362" rx="5.5659" />
+  <text x="491.5769" y="153.2838" text-anchor="middle" font-size="20.0371">Phase 2</text>
+  <rect x="640" y="111.5399" width="197.8973" height="66.7903" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.5362" rx="5.5659" />
+  <text x="738.9487" y="153.2838" text-anchor="middle" font-size="20.0371">Phase 3</text>
+  <text x="244.2052" y="220.0742" text-anchor="middle" font-size="16.6976">• Update compiler</text>
+  <text x="244.2052" y="245.1206" text-anchor="middle" font-size="16.6976">• Enable C++17</text>
+  <text x="244.2052" y="270.167" text-anchor="middle" font-size="16.6976">• Basic features</text>
+  <text x="491.5769" y="220.0742" text-anchor="middle" font-size="16.6976">• Replace patterns</text>
+  <text x="491.5769" y="245.1206" text-anchor="middle" font-size="16.6976">• Use std::optional</text>
+  <text x="491.5769" y="270.167" text-anchor="middle" font-size="16.6976">• string_view</text>
+  <text x="738.9487" y="220.0742" text-anchor="middle" font-size="16.6976">• Advanced features</text>
+  <text x="738.9487" y="245.1206" text-anchor="middle" font-size="16.6976">• Parallel algorithms</text>
+  <text x="738.9487" y="270.167" text-anchor="middle" font-size="16.6976">• Template features</text>
+  <path d="M 343.1539 144.9351 L 392.6283 144.9351" stroke="var(--text-muted)" stroke-width="2.7651" marker-end="url(#arrow)" />
+  <path d="M 590.5257 144.9351 L 640 144.9351" stroke="var(--text-muted)" stroke-width="2.7651" marker-end="url(#arrow)" />
+  <rect x="145.2566" y="311.911" width="692.6408" height="133.5807" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7681" rx="5.5659" />
+  <text x="491.5769" y="353.6549" text-anchor="middle" font-size="23.3766" font-weight="bold">Best Practices</text>
+  <text x="491.5769" y="387.0501" text-anchor="middle" font-size="16.6976">• Start with safer features (optional, string_view)</text>
+  <text x="491.5769" y="412.0965" text-anchor="middle" font-size="16.6976">• Use structured bindings for readability</text>
+  <text x="491.5769" y="437.1428" text-anchor="middle" font-size="16.6976">• Leverage template argument deduction</text>
 </svg>

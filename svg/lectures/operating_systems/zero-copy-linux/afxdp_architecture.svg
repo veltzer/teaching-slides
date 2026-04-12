@@ -1,19 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="160" y="80" width="444.4445" height="160" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.4167"/>
-  <text x="382.2222" y="140" text-anchor="middle" font-size="24.889" font-weight="bold">User Space Application</text>
-  <text x="382.2222" y="189.9999" text-anchor="middle" font-size="21.3333">RX/TX/Fill/Completion Rings</text>
-  <rect x="675.5556" y="80" width="444.4445" height="160" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="7.4167"/>
-  <text x="897.7777" y="140" text-anchor="middle" font-size="24.889" font-weight="bold">UMEM</text>
-  <text x="897.7777" y="189.9999" text-anchor="middle" font-size="21.3333">Shared Packet Buffer</text>
-  <rect x="160" y="300" width="444.4445" height="120.0001" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="7.4167"/>
-  <text x="382.2222" y="369.9999" text-anchor="middle" font-size="24.889">XDP eBPF Program</text>
-  <rect x="160" y="480" width="959.9999" height="100" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="7.4167"/>
-  <text x="639.9999" y="539.9999" text-anchor="middle" font-size="24.889">NIC (DMA Engine)</text>
-  <path d="M 382.2222 240 L 382.2222 300" stroke="var(--text)" stroke-width="2.8764" marker-end="url(#zcb)" />
-  <path d="M 897.7777 240 L 897.7777 480" stroke="var(--ok-border)" stroke-width="4.3146" stroke-dasharray="11.5056 5.7528" marker-end="url(#zcb)" />
-  <text x="942.2222" y="369.9999" font-size="19.5555" fill="var(--ok-accent)">DMA direct</text>
-  <path d="M 382.2222 419.9999 L 382.2222 480" stroke="var(--text)" stroke-width="2.8764" marker-end="url(#zcb)" />
+  <rect x="114.0594" y="57.0297" width="316.8318" height="114.0594" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.4257" rx="5.2872" />
+  <text x="272.4753" y="99.802" text-anchor="middle" font-size="17.7427" font-weight="bold">User Space Application</text>
+  <text x="272.4753" y="135.4455" text-anchor="middle" font-size="15.2079">RX/TX/Fill/Completion Rings</text>
+  <rect x="481.5842" y="57.0297" width="316.8318" height="114.0594" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.4257" rx="5.2872" />
+  <text x="640" y="99.802" text-anchor="middle" font-size="17.7427" font-weight="bold">UMEM</text>
+  <text x="640" y="135.4455" text-anchor="middle" font-size="15.2079">Shared Packet Buffer</text>
+  <rect x="114.0594" y="213.8614" width="316.8318" height="85.5446" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.4257" rx="5.2872" />
+  <text x="272.4753" y="263.7623" text-anchor="middle" font-size="17.7427">XDP eBPF Program</text>
+  <rect x="114.0594" y="342.1782" width="684.3564" height="71.2871" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.4257" rx="5.2872" />
+  <text x="456.2376" y="384.9505" text-anchor="middle" font-size="17.7427">NIC (DMA Engine)</text>
+  <path d="M 272.4753 171.0891 L 272.4753 213.8614" stroke="var(--text)" stroke-width="2.0505" marker-end="url(#zcb)" />
+  <path d="M 640 171.0891 L 640 342.1782" stroke="var(--ok-border)" stroke-width="3.0758" stroke-dasharray="8.202 4.101" marker-end="url(#zcb)" />
+  <text x="671.6832" y="263.7623" font-size="13.9406" fill="var(--ok-accent)">DMA direct</text>
+  <path d="M 272.4753 299.4059 L 272.4753 342.1782" stroke="var(--text)" stroke-width="2.0505" marker-end="url(#zcb)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -48,65 +47,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <marker id="zcb" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <polygon points="0,24 7.4667,0" fill="#333" />
     </marker>

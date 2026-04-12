@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,82 +33,72 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-</defs>
-  <text x="639.9999" y="80" font-size="33.3333" font-weight="bold" text-anchor="middle">Zero Copy Data Flow</text>
-  <rect x="132.0634" y="151.4287" width="203.1747" height="71.4285" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="8.8095" stroke-width="2"/>
-  <text x="233.6508" y="199.0477" font-size="23.8095" text-anchor="middle">File</text>
-  <rect x="513.0158" y="151.4287" width="253.9683" height="71.4285" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="8.8095" stroke-width="2"/>
-  <text x="639.9999" y="199.0477" font-size="23.8095" text-anchor="middle">Pipe Buffer</text>
-  <rect x="513.0158" y="318.0953" width="253.9683" height="71.4285" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="8.8095" stroke-width="2"/>
-  <text x="639.9999" y="365.7143" font-size="23.8095" text-anchor="middle">Socket Buffer</text>
-  <rect x="944.7619" y="318.0953" width="203.1747" height="71.4285" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="8.8095" stroke-width="2"/>
-  <text x="1046.3492" y="365.7143" font-size="23.8095" text-anchor="middle">Network</text>
-  <rect x="132.0634" y="508.5715" width="203.1747" height="71.4285" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="8.8095" stroke-width="2"/>
-  <text x="233.6508" y="556.1906" font-size="23.8095" text-anchor="middle">User Buffer</text>
-  <path d="M 335.2381 187.1429 L 513.0158 187.1429" stroke="var(--ok-border)" stroke-width="3.2432" marker-end="url(#arrow)" />
-  <text x="424.1269" y="175.2382" font-size="23.8095">splice()</text>
-  <path d="M 639.9999 222.8572 L 639.9999 318.0953" stroke="var(--ok-border)" stroke-width="3.2432" marker-end="url(#arrow)" />
-  <text x="665.3968" y="282.3811" font-size="23.8095">splice()</text>
-  <path d="M 766.9841 353.8096 L 944.7619 353.8096" stroke="var(--ok-border)" stroke-width="3.2432" marker-end="url(#arrow)" />
-  <text x="855.8731" y="341.9048" font-size="23.8095">DMA</text>
-  <path d="M 335.2381 544.2857 L 513.0158 222.8572" stroke="var(--primary-border)" stroke-width="3.2432" stroke-dasharray="8.1081 8.1081" marker-end="url(#arrow)" />
-  <text x="386.0317" y="460.9525" font-size="23.8095" fill="var(--primary-accent)">vmsplice()</text>
+  </defs>
+  <text x="433.5483" y="54.1935" font-size="22.5806" font-weight="bold" text-anchor="middle">Zero Copy Data Flow</text>
+  <rect x="89.4623" y="102.5807" width="137.6345" height="48.387" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="5.9677" stroke-width="1.3548" />
+  <text x="158.2796" y="134.8388" font-size="16.129" text-anchor="middle">File</text>
+  <rect x="347.5268" y="102.5807" width="172.043" height="48.387" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9677" stroke-width="1.3548" />
+  <text x="433.5483" y="134.8388" font-size="16.129" text-anchor="middle">Pipe Buffer</text>
+  <rect x="347.5268" y="215.4839" width="172.043" height="48.387" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9677" stroke-width="1.3548" />
+  <text x="433.5483" y="247.7419" font-size="16.129" text-anchor="middle">Socket Buffer</text>
+  <rect x="640" y="215.4839" width="137.6345" height="48.387" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="5.9677" stroke-width="1.3548" />
+  <text x="708.8172" y="247.7419" font-size="16.129" text-anchor="middle">Network</text>
+  <rect x="89.4623" y="344.5162" width="137.6345" height="48.387" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="5.9677" stroke-width="1.3548" />
+  <text x="158.2796" y="376.7743" font-size="16.129" text-anchor="middle">User Buffer</text>
+  <path d="M 227.0968 126.7742 L 347.5268 126.7742" stroke="var(--ok-border)" stroke-width="2.197" marker-end="url(#arrow)" />
+  <text x="287.3118" y="118.7097" font-size="16.129">splice()</text>
+  <path d="M 433.5483 150.9678 L 433.5483 215.4839" stroke="var(--ok-border)" stroke-width="2.197" marker-end="url(#arrow)" />
+  <text x="450.7527" y="191.2904" font-size="16.129">splice()</text>
+  <path d="M 519.5699 239.6775 L 640 239.6775" stroke="var(--ok-border)" stroke-width="2.197" marker-end="url(#arrow)" />
+  <text x="579.785" y="231.6129" font-size="16.129">DMA</text>
+  <path d="M 227.0968 368.7097 L 347.5268 150.9678" stroke="var(--primary-border)" stroke-width="2.197" stroke-dasharray="5.4926 5.4926" marker-end="url(#arrow)" />
+  <text x="261.5053" y="312.2581" font-size="16.129" fill="var(--primary-accent)">vmsplice()</text>
 </svg>

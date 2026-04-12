@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,65 +33,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
@@ -101,20 +89,20 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="888.889" height="500" fill="var(--bg)" rx="7.4219"/>
-  <text x="639.9999" y="116.1111" text-anchor="middle" font-size="19.4444" font-weight="bold" fill="var(--primary-accent)">Batch Size vs Performance</text>
-  <line x1="292.7778" y1="468.889" x2="987.2222" y2="468.889" stroke="var(--text)" stroke-width="2" />
-  <line x1="292.7778" y1="468.889" x2="292.7778" y2="163.3333" stroke="var(--text)" stroke-width="2" />
-  <path d="M 292.7778 427.2223 Q 501.111 246.6666 681.6667 218.8889 T 987.2222 239.7222" stroke="var(--primary-border)" stroke-width="3.3684" fill="none" />
-  <text x="639.9999" y="510.5556" text-anchor="middle" font-size="13.8889" fill="var(--text)">Batch Size (MB)</text>
-  <text x="237.2222" y="316.1111" text-anchor="middle" font-size="13.8889" fill="var(--text)" transform="rotate(-90 60 340)">Throughput</text>
-  <circle cx="639.9999" cy="221.6667" r="11.1112" fill="var(--danger-fill)" />
-  <text x="639.9999" y="200.8333" text-anchor="middle" font-size="19.4444" font-weight="bold" fill="var(--danger-accent)">5-15 MB</text>
-  <text x="639.9999" y="182.7778" text-anchor="middle" font-size="12.5" fill="var(--text-muted)">Optimal range</text>
-  <text x="362.2221" y="489.7223" text-anchor="middle" font-size="12.3698" fill="var(--text-muted)">1 MB</text>
-  <text x="528.8889" y="489.7223" text-anchor="middle" font-size="12.3698" fill="var(--text-muted)">5 MB</text>
-  <text x="695.5555" y="489.7223" text-anchor="middle" font-size="12.3698" fill="var(--text-muted)">15 MB</text>
-  <text x="862.2223" y="489.7223" text-anchor="middle" font-size="12.3698" fill="var(--text-muted)">50 MB</text>
-  <rect x="292.7778" y="524.4444" width="694.4445" height="33.3334" rx="7.4219" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="639.9999" y="545.2779" text-anchor="middle" font-size="12.3698" fill="var(--primary-accent)">Too small: high overhead. Too large: GC pressure, timeouts. Start with 5-15 MB and tune.</text>
+  <rect width="576.2522" height="324.1418" fill="var(--bg)" rx="4.8115" />
+  <text x="414.9015" y="75.2729" text-anchor="middle" font-size="12.6055" font-weight="bold" fill="var(--primary-accent)">Batch Size vs Performance</text>
+  <line x1="189.8031" y1="303.9731" x2="640" y2="303.9731" stroke="var(--text)" stroke-width="1.2966" />
+  <line x1="189.8031" y1="303.9731" x2="189.8031" y2="105.8863" stroke="var(--text)" stroke-width="1.2966" />
+  <path d="M 189.8031 276.9612 Q 324.8621 159.9099 441.9134 141.9021 T 640 155.408" stroke="var(--primary-border)" stroke-width="2.1837" fill="none" />
+  <text x="414.9015" y="330.9848" text-anchor="middle" font-size="10" fill="var(--text)">Batch Size (MB)</text>
+  <text x="153.7873" y="204.9297" text-anchor="middle" font-size="10" fill="var(--text)" transform="rotate(-90 60 340)">Throughput</text>
+  <circle cx="414.9015" cy="143.7029" r="7.2032" fill="var(--danger-fill)" />
+  <text x="414.9015" y="130.1969" text-anchor="middle" font-size="12.6055" font-weight="bold" fill="var(--danger-accent)">5-15 MB</text>
+  <text x="414.9015" y="118.4919" text-anchor="middle" font-size="10" fill="var(--text-muted)">Optimal range</text>
+  <text x="234.8227" y="317.479" text-anchor="middle" font-size="10" fill="var(--text-muted)">1 MB</text>
+  <text x="342.87" y="317.479" text-anchor="middle" font-size="10" fill="var(--text-muted)">5 MB</text>
+  <text x="450.9173" y="317.479" text-anchor="middle" font-size="10" fill="var(--text-muted)">15 MB</text>
+  <text x="558.9646" y="317.479" text-anchor="middle" font-size="10" fill="var(--text-muted)">50 MB</text>
+  <rect x="189.8031" y="339.9887" width="450.197" height="21.6095" rx="4.8115" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6483" />
+  <text x="414.9015" y="353.4947" text-anchor="middle" font-size="10" fill="var(--primary-accent)">Too small: high overhead. Too large: GC pressure, timeouts. Start with 5-15 MB and tune.</text>
 </svg>

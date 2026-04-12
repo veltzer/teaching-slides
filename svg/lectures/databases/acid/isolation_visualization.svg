@@ -1,46 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect width="888.8889" height="500" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6.6667"/>
-  <text x="640" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)" text-anchor="middle">Dirty Read Problem - Isolation Violation</text>
-  <rect x="306.6667" y="140" width="133.3333" height="40" rx="6.6667" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="373.3333" y="165" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Transaction 1</text>
-  <line x1="373.3333" y1="180" x2="373.3333" y2="550" stroke="var(--primary-border)" stroke-width="1.8" stroke-dasharray="1.8 1.8" />
-  <rect x="573.3333" y="140" width="133.3333" height="40" rx="6.6667" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="165" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Database</text>
-  <line x1="640" y1="180" x2="640" y2="550" stroke="var(--ok-border)" stroke-width="1.8" stroke-dasharray="1.8 1.8" />
-  <rect x="840" y="140" width="133.3333" height="40" rx="6.6667" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="906.6667" y="165" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Transaction 2</text>
-  <line x1="906.6667" y1="180" x2="906.6667" y2="550" stroke="var(--info-border)" stroke-width="1.8" stroke-dasharray="1.8 1.8" />
-  <path d="M 373.3333 200 L 640 200" stroke="var(--text)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="417.7778" y="185" width="166.6667" height="25" rx="6.6667" fill="var(--bg)" stroke="var(--text)" stroke-width="0.9" />
-  <text x="501.1111" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">BEGIN TRANSACTION</text>
-  <path d="M 906.6667 230 L 640 230" stroke="var(--text)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="695.5556" y="215" width="166.6667" height="25" rx="6.6667" fill="var(--bg)" stroke="var(--text)" stroke-width="0.9" />
-  <text x="778.8889" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">BEGIN TRANSACTION</text>
-  <path d="M 373.3333 260 L 640 260" stroke="var(--text)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="428.8889" y="245" width="144.4444" height="25" rx="6.6667" fill="var(--bg)" stroke="var(--text)" stroke-width="0.9" />
-  <text x="501.1111" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Read A = 100</text>
-  <path d="M 373.3333 290 L 640 290" stroke="var(--text)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="428.8889" y="275" width="144.4444" height="25" rx="6.6667" fill="var(--bg)" stroke="var(--text)" stroke-width="0.9" />
-  <text x="501.1111" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Write A = 50</text>
-  <path d="M 906.6667 330 L 640 330" stroke="var(--danger-border)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="684.4444" y="315" width="188.8889" height="25" rx="6.6667" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="778.8889" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-accent)" font-weight="bold">Read A = 50 (Dirty Read!)</text>
-  <circle cx="884.4444" cy="330" r="12" fill="var(--danger-fill)" stroke="none" />
-  <text x="884.4444" y="335" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="16" font-weight="bold">!</text>
-  <path d="M 373.3333 370 L 640 370" stroke="var(--danger-border)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="451.1111" y="355" width="100" height="25" rx="6.6667" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="501.1111" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-accent)" font-weight="bold">ROLLBACK</text>
-  <path d="M 906.6667 410 L 640 410" stroke="var(--danger-border)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="651.1111" y="395" width="233.3333" height="25" rx="6.6667" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="767.7778" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1111" fill="var(--danger-accent)">Decision based on A=50 (Incorrect!)</text>
-  <path d="M 906.6667 450 L 640 450" stroke="var(--text)" stroke-width="1.8" fill="none" marker-end="url(#arrow)" />
-  <rect x="740" y="435" width="100" height="25" rx="6.6667" fill="var(--bg)" stroke="var(--text)" stroke-width="0.9" />
-  <text x="790" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">COMMIT</text>
-  <rect x="251.1111" y="490" width="777.7778" height="70" rx="6.6667" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Problem: Transaction 2 reads uncommitted data from Transaction 1</text>
-  <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">When T1 rolls back, T2 has already made decisions based on invalid data (A=50 instead of A=100).</text>
-  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">This violates isolation and can lead to data inconsistency.</text>
+  <rect width="627.451" height="352.9412" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7059" rx="4.7059" />
+  <text x="451.7647" y="77.6471" font-family="Arial, sans-serif" font-size="11.2941" font-weight="bold" fill="var(--text)" text-anchor="middle">Dirty Read Problem - Isolation Violation</text>
+  <rect x="216.4706" y="98.8235" width="94.1176" height="28.2353" rx="4.7059" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.4118" />
+  <text x="263.5294" y="116.4706" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Transaction 1</text>
+  <line x1="263.5294" y1="127.0588" x2="263.5294" y2="388.2353" stroke="var(--primary-border)" stroke-width="1.2706" stroke-dasharray="1.2706 1.2706" />
+  <rect x="404.7058" y="98.8235" width="94.1176" height="28.2353" rx="4.7059" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.4118" />
+  <text x="451.7647" y="116.4706" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Database</text>
+  <line x1="451.7647" y1="127.0588" x2="451.7647" y2="388.2353" stroke="var(--ok-border)" stroke-width="1.2706" stroke-dasharray="1.2706 1.2706" />
+  <rect x="592.9412" y="98.8235" width="94.1176" height="28.2353" rx="4.7059" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="1.4118" />
+  <text x="640" y="116.4706" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Transaction 2</text>
+  <line x1="640" y1="127.0588" x2="640" y2="388.2353" stroke="var(--info-border)" stroke-width="1.2706" stroke-dasharray="1.2706 1.2706" />
+  <path d="M 263.5294 141.1765 L 451.7647 141.1765" stroke="var(--text)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="294.902" y="130.5882" width="117.6471" height="17.6471" rx="4.7059" fill="var(--bg)" stroke="var(--text)" stroke-width="0.6353" />
+  <text x="353.7255" y="142.5882" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">BEGIN TRANSACTION</text>
+  <path d="M 640 162.3529 L 451.7647 162.3529" stroke="var(--text)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="490.9804" y="151.7647" width="117.6471" height="17.6471" rx="4.7059" fill="var(--bg)" stroke="var(--text)" stroke-width="0.6353" />
+  <text x="549.8039" y="163.7647" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">BEGIN TRANSACTION</text>
+  <path d="M 263.5294 183.5294 L 451.7647 183.5294" stroke="var(--text)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="302.7451" y="172.9412" width="101.9607" height="17.6471" rx="4.7059" fill="var(--bg)" stroke="var(--text)" stroke-width="0.6353" />
+  <text x="353.7255" y="184.9412" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Read A = 100</text>
+  <path d="M 263.5294 204.7059 L 451.7647 204.7059" stroke="var(--text)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="302.7451" y="194.1176" width="101.9607" height="17.6471" rx="4.7059" fill="var(--bg)" stroke="var(--text)" stroke-width="0.6353" />
+  <text x="353.7255" y="206.1176" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Write A = 50</text>
+  <path d="M 640 232.9412 L 451.7647 232.9412" stroke="var(--danger-border)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="483.1372" y="222.3529" width="133.3333" height="17.6471" rx="4.7059" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.4118" />
+  <text x="549.8039" y="234.3529" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" font-weight="bold">Read A = 50 (Dirty Read!)</text>
+  <circle cx="624.3137" cy="232.9412" r="8.4706" fill="var(--danger-fill)" stroke="none" />
+  <text x="624.3137" y="236.4706" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="11.2941" font-weight="bold">!</text>
+  <path d="M 263.5294 261.1765 L 451.7647 261.1765" stroke="var(--danger-border)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="318.4314" y="250.5882" width="70.5882" height="17.6471" rx="4.7059" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.4118" />
+  <text x="353.7255" y="262.5882" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" font-weight="bold">ROLLBACK</text>
+  <path d="M 640 289.4118 L 451.7647 289.4118" stroke="var(--danger-border)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="459.6078" y="278.8235" width="164.7059" height="17.6471" rx="4.7059" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.4118" />
+  <text x="541.9608" y="290.8235" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)">Decision based on A=50 (Incorrect!)</text>
+  <path d="M 640 317.647 L 451.7647 317.647" stroke="var(--text)" stroke-width="1.2706" fill="none" marker-end="url(#arrow)" />
+  <rect x="522.3529" y="307.0588" width="70.5882" height="17.6471" rx="4.7059" fill="var(--bg)" stroke="var(--text)" stroke-width="0.6353" />
+  <text x="557.647" y="319.0588" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">COMMIT</text>
+  <rect x="177.2549" y="345.8823" width="549.0196" height="49.4118" rx="4.7059" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.4118" />
+  <text x="451.7647" y="363.5294" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Problem: Transaction 2 reads uncommitted data from Transaction 1</text>
+  <text x="451.7647" y="377.647" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">When T1 rolls back, T2 has already made decisions based on invalid data (A=50 instead of A=100).</text>
+  <text x="451.7647" y="388.2353" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">This violates isolation and can lead to data inconsistency.</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -75,65 +74,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <polygon points="0,14.4 8,0" fill="#333" />
     </marker>

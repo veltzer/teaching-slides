@@ -1,17 +1,16 @@
 <svg viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="191.4" width="224" height="151.2" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="9.24" />
-  <text x="191.9999" y="279.5999" text-anchor="middle" font-size="26.8799">Client</text>
-  <rect x="976" y="191.4" width="224" height="151.2" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="9.24" />
-  <text x="1088.0001" y="279.5999" text-anchor="middle" font-size="26.8799">Server</text>
-  <path d="M 304 267 L 953.6001 267" stroke="var(--text)" stroke-width="2.9091" marker-end="url(#arrow)" />
-  <text x="628.8" y="254.4" text-anchor="middle" font-size="22.3999">POST + Idempotency-Key</text>
-  <path d="M 953.6001 317.4 L 304 317.4" stroke="var(--text)" stroke-width="2.9091" marker-end="url(#arrow)" />
-  <text x="628.8" y="304.7999" text-anchor="middle" font-size="22.3999">Response + Store Key</text>
-  <path d="M 304 418.2 L 953.6001 418.2" stroke="var(--text)" stroke-width="2.9091" marker-end="url(#arrow)" />
-  <text x="628.8" y="405.6" text-anchor="middle" font-size="22.3999">Same POST + Same Key</text>
-  <path d="M 953.6001 468.6 L 304 468.6" stroke="var(--text)" stroke-width="2.9091" marker-end="url(#arrow)" />
-  <text x="628.8" y="456.0001" text-anchor="middle" font-size="22.3999">Same Response (cached)</text>
+  <rect x="53.6913" y="128.4564" width="150.3356" height="101.4765" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.3423" rx="6.2013" />
+  <text x="128.859" y="187.6509" text-anchor="middle" font-size="18.0402">Client</text>
+  <rect x="655.0335" y="128.4564" width="150.3356" height="101.4765" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="1.3423" rx="6.2013" />
+  <text x="730.2013" y="187.6509" text-anchor="middle" font-size="18.0402">Server</text>
+  <path d="M 204.0268 179.1946 L 640 179.1946" stroke="var(--text)" stroke-width="1.9524" marker-end="url(#arrow)" />
+  <text x="422.0134" y="170.7382" text-anchor="middle" font-size="15.0335">POST + Idempotency-Key</text>
+  <path d="M 640 213.0201 L 204.0268 213.0201" stroke="var(--text)" stroke-width="1.9524" marker-end="url(#arrow)" />
+  <text x="422.0134" y="204.5637" text-anchor="middle" font-size="15.0335">Response + Store Key</text>
+  <path d="M 204.0268 280.6711 L 640 280.6711" stroke="var(--text)" stroke-width="1.9524" marker-end="url(#arrow)" />
+  <text x="422.0134" y="272.2147" text-anchor="middle" font-size="15.0335">Same POST + Same Key</text>
+  <path d="M 640 314.4966 L 204.0268 314.4966" stroke="var(--text)" stroke-width="1.9524" marker-end="url(#arrow)" />
+  <text x="422.0134" y="306.0403" text-anchor="middle" font-size="15.0335">Same Response (cached)</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -46,65 +45,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <polygon points="0,24 7.4667,0" fill="#333" />
     </marker>

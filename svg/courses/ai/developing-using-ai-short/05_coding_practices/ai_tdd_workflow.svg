@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,65 +33,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
@@ -105,79 +93,79 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1000" height="500" fill="var(--bg)" rx="6.665"/>
-  <text x="186.875" y="112.8125" font-family="Arial, sans-serif" font-size="14.0625" font-weight="bold" fill="var(--primary-accent)">AI-Assisted TDD Cycle</text>
-  <rect x="186.875" y="125.3125" width="156.25" height="70.3125" rx="6.665" fill="var(--danger-accent)" filter="url(#shadow)" />
-  <text x="265" y="153.4375" font-family="Arial, sans-serif" font-size="11.7188" font-weight="bold" fill="var(--bg)" text-anchor="middle">1. Write Test</text>
-  <text x="265" y="169.0625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--danger-accent)" text-anchor="middle">You define intent;</text>
-  <text x="265" y="181.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--danger-accent)" text-anchor="middle">AI suggests edge cases</text>
-  <line x1="343.1249" y1="160.4688" x2="389.9999" y2="160.4688" stroke="var(--text-muted)" stroke-width="1.4066" marker-end="url(#arrow)" />
-  <rect x="389.9999" y="125.3125" width="156.25" height="70.3125" rx="6.665" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="468.125" y="150.3125" font-family="Arial, sans-serif" font-size="11.7188" font-weight="bold" fill="var(--bg)" text-anchor="middle">2. AI Generates</text>
-  <text x="468.125" y="164.3749" font-family="Arial, sans-serif" font-size="11.7188" font-weight="bold" fill="var(--bg)" text-anchor="middle">Code</text>
-  <text x="468.125" y="181.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--primary-accent)" text-anchor="middle">Prompt AI with test + spec</text>
-  <line x1="546.25" y1="160.4688" x2="590" y2="160.4688" stroke="var(--text-muted)" stroke-width="1.4066" marker-end="url(#arrow)" />
-  <rect x="590" y="125.3125" width="140.625" height="70.3125" rx="6.665" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="660.3125" y="150.3125" font-family="Arial, sans-serif" font-size="11.7188" font-weight="bold" fill="var(--bg)" text-anchor="middle">3. Run Tests</text>
-  <text x="660.3125" y="169.0625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--warn-accent)" text-anchor="middle">Red / Green?</text>
-  <text x="660.3125" y="181.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--warn-accent)" text-anchor="middle">Verify pass/fail</text>
-  <path d="M 660.3125 195.625 Q 660.3125 224.5313 468.125 224.5313 Q 389.9999 224.5313 389.9999 195.625" stroke="var(--danger-border)" stroke-width="1.4066" fill="none" stroke-dasharray="3.5165 2.8132" marker-end="url(#arrow)" />
-  <text x="522.8125" y="236.25" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--danger-accent)" text-anchor="middle">FAIL: refine prompt</text>
-  <line x1="730.625" y1="160.4688" x2="772.8125" y2="160.4688" stroke="var(--ok-border)" stroke-width="1.4066" marker-end="url(#arrow)" />
-  <text x="751.7187" y="155" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--ok-accent)" text-anchor="middle">PASS</text>
-  <rect x="772.8125" y="125.3125" width="156.25" height="70.3125" rx="6.665" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="850.9375" y="150.3125" font-family="Arial, sans-serif" font-size="11.7188" font-weight="bold" fill="var(--bg)" text-anchor="middle">4. AI Refactors</text>
-  <text x="850.9375" y="165.9375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--ok-accent)" text-anchor="middle">Clean code, optimize,</text>
-  <text x="850.9375" y="180" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--ok-accent)" text-anchor="middle">remove duplication</text>
-  <path d="M 850.9375 195.625 Q 850.9375 255.7813 265 255.7813 Q 186.875 255.7813 186.875 195.625" stroke="var(--info-border)" stroke-width="1.4066" fill="none" stroke-dasharray="3.5165 2.8132" marker-end="url(#arrow)" />
-  <text x="530.625" y="267.5" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--info-accent)" text-anchor="middle">next feature cycle</text>
-  <text x="186.875" y="297.1875" font-family="Arial, sans-serif" font-size="13.2812" font-weight="bold" fill="var(--primary-accent)">AI Code Review</text>
-  <rect x="186.875" y="309.6875" width="421.875" height="109.375" rx="6.665" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="202.5" y="329.9999" font-family="Arial, sans-serif" font-size="11.1084" font-weight="bold" fill="var(--primary-accent)">What AI reviews well:</text>
-  <text x="202.5" y="347.1875" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">• Security vulnerabilities: SQL injection, XSS, insecure deserialization</text>
-  <text x="202.5" y="362.8125" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">• Code style and naming conventions</text>
-  <text x="202.5" y="378.4374" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">• Missing error handling and edge cases</text>
-  <text x="202.5" y="394.0625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">• Complexity and refactoring opportunities</text>
-  <text x="202.5" y="409.6875" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text-muted)">Prompt: "Review this code for security and style issues, be specific."</text>
-  <text x="655.625" y="297.1875" font-family="Arial, sans-serif" font-size="13.2812" font-weight="bold" fill="var(--ok-accent)">Debugging with AI</text>
-  <rect x="655.625" y="309.6875" width="437.5" height="109.375" rx="6.665" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="671.25" y="329.9999" font-family="Arial, sans-serif" font-size="11.1084" font-weight="bold" fill="var(--ok-accent)">Effective debug workflow:</text>
-  <text x="671.25" y="347.1875" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">1. Paste the error + stack trace in full</text>
-  <text x="671.25" y="362.8125" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">2. Include the relevant code section (not the whole file)</text>
-  <text x="671.25" y="378.4374" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">3. Describe expected vs actual behavior</text>
-  <text x="671.25" y="394.0625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">4. Ask AI to explain the root cause first, then fix</text>
-  <text x="671.25" y="409.6875" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text-muted)">Ask "why" before "how to fix" to learn, not just copy</text>
-  <text x="186.875" y="440.9375" font-family="Arial, sans-serif" font-size="13.2812" font-weight="bold" fill="var(--text-muted)">Best Practices</text>
-  <rect x="186.875" y="453.4375" width="218.75" height="109.375" rx="6.665" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="296.25" y="472.1874" font-family="Arial, sans-serif" font-size="11.1084" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Always Review AI Code</text>
-  <text x="202.5" y="489.375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Never blindly copy-paste.</text>
-  <text x="202.5" y="503.4375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Read every line, understand</text>
-  <text x="202.5" y="517.5" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">the logic, and run tests</text>
-  <text x="202.5" y="531.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">before committing to the</text>
-  <text x="202.5" y="545.625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">codebase.</text>
-  <text x="202.5" y="556.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text-muted)">You own the code, not AI.</text>
-  <rect x="436.8749" y="453.4375" width="218.75" height="109.375" rx="6.665" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="546.25" y="472.1874" font-family="Arial, sans-serif" font-size="11.1084" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Keep Tests Authoritative</text>
-  <text x="452.5" y="489.375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Write tests yourself first.</text>
-  <text x="452.5" y="503.4375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Let AI generate the impl,</text>
-  <text x="452.5" y="517.5" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">not the tests. Tests define</text>
-  <text x="452.5" y="531.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">correctness; AI should not</text>
-  <text x="452.5" y="545.625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">define what "correct" means.</text>
-  <text x="452.5" y="556.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text-muted)">Tests = specification.</text>
-  <rect x="686.875" y="453.4375" width="218.75" height="109.375" rx="6.665" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="796.25" y="472.1874" font-family="Arial, sans-serif" font-size="11.1084" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Incremental Context</text>
-  <text x="702.5" y="489.375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Give AI small, focused</text>
-  <text x="702.5" y="503.4375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">chunks of code. Avoid</text>
-  <text x="702.5" y="517.5" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">pasting entire repos.</text>
-  <text x="702.5" y="531.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Build complexity step</text>
-  <text x="702.5" y="545.625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">by step in a single chat.</text>
-  <text x="702.5" y="556.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text-muted)">Context = quality.</text>
-  <rect x="929.0625" y="453.4375" width="164.0625" height="109.375" rx="6.665" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="1011.0937" y="472.1874" font-family="Arial, sans-serif" font-size="11.1084" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Learn the Why</text>
-  <text x="944.6875" y="489.375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Ask AI to explain</text>
-  <text x="944.6875" y="503.4375" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">every fix. Build skill,</text>
-  <text x="944.6875" y="517.5" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">not just copy output.</text>
-  <text x="944.6875" y="531.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">Over time, verify AI</text>
-  <text x="944.6875" y="545.625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text)">suggestions yourself.</text>
-  <text x="944.6875" y="556.5625" font-family="Arial, sans-serif" font-size="11.1084" fill="var(--text-muted)">Understanding = mastery.</text>
+  <rect width="752.1116" height="376.0558" fill="var(--bg)" rx="5.0128" />
+  <text x="140.5509" y="84.8476" font-family="Arial, sans-serif" font-size="10.5766" font-weight="bold" fill="var(--primary-accent)">AI-Assisted TDD Cycle</text>
+  <rect x="140.5509" y="94.249" width="117.5174" height="52.8828" rx="5.0128" fill="var(--danger-accent)" filter="url(#shadow)" />
+  <text x="199.3096" y="115.4021" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">1. Write Test</text>
+  <text x="199.3096" y="127.1539" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">You define intent;</text>
+  <text x="199.3096" y="136.5553" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">AI suggests edge cases</text>
+  <line x1="258.0682" y1="120.6905" x2="293.3235" y2="120.6905" stroke="var(--text-muted)" stroke-width="1.0579" marker-end="url(#arrow)" />
+  <rect x="293.3235" y="94.249" width="117.5174" height="52.8828" rx="5.0128" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="1.5042" />
+  <text x="352.0823" y="113.0518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">2. AI Generates</text>
+  <text x="352.0823" y="123.6283" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">Code</text>
+  <text x="352.0823" y="136.5553" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle">Prompt AI with test + spec</text>
+  <line x1="410.841" y1="120.6905" x2="443.7459" y2="120.6905" stroke="var(--text-muted)" stroke-width="1.0579" marker-end="url(#arrow)" />
+  <rect x="443.7459" y="94.249" width="105.7657" height="52.8828" rx="5.0128" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="1.5042" />
+  <text x="496.6287" y="113.0518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">3. Run Tests</text>
+  <text x="496.6287" y="127.1539" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">Red / Green?</text>
+  <text x="496.6287" y="136.5553" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">Verify pass/fail</text>
+  <path d="M 496.6287 147.1318 Q 496.6287 168.8726 352.0823 168.8726 Q 293.3235 168.8726 293.3235 147.1318" stroke="var(--danger-border)" stroke-width="1.0579" fill="none" stroke-dasharray="2.6448 2.1158" marker-end="url(#arrow)" />
+  <text x="393.2134" y="177.6864" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">FAIL: refine prompt</text>
+  <line x1="549.5116" y1="120.6905" x2="581.2413" y2="120.6905" stroke="var(--ok-border)" stroke-width="1.0579" marker-end="url(#arrow)" />
+  <text x="565.3764" y="116.5773" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">PASS</text>
+  <rect x="581.2413" y="94.249" width="117.5174" height="52.8828" rx="5.0128" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="1.5042" />
+  <text x="640" y="113.0518" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)" text-anchor="middle">4. AI Refactors</text>
+  <text x="640" y="124.8035" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">Clean code, optimize,</text>
+  <text x="640" y="135.3801" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">remove duplication</text>
+  <path d="M 640 147.1318 Q 640 192.3761 199.3096 192.3761 Q 140.5509 192.3761 140.5509 147.1318" stroke="var(--info-border)" stroke-width="1.0579" fill="none" stroke-dasharray="2.6448 2.1158" marker-end="url(#arrow)" />
+  <text x="399.0892" y="201.1899" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)" text-anchor="middle">next feature cycle</text>
+  <text x="140.5509" y="223.5182" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">AI Code Review</text>
+  <rect x="140.5509" y="232.9196" width="317.2971" height="82.2622" rx="5.0128" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.5042" />
+  <text x="152.3026" y="248.1968" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">What AI reviews well:</text>
+  <text x="152.3026" y="261.1238" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">• Security vulnerabilities: SQL injection, XSS, insecure deserialization</text>
+  <text x="152.3026" y="272.8755" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">• Code style and naming conventions</text>
+  <text x="152.3026" y="284.6272" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">• Missing error handling and edge cases</text>
+  <text x="152.3026" y="296.379" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">• Complexity and refactoring opportunities</text>
+  <text x="152.3026" y="308.1307" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Prompt: "Review this code for security and style issues, be specific."</text>
+  <text x="493.1032" y="223.5182" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Debugging with AI</text>
+  <rect x="493.1032" y="232.9196" width="329.0488" height="82.2622" rx="5.0128" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.5042" />
+  <text x="504.8549" y="248.1968" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Effective debug workflow:</text>
+  <text x="504.8549" y="261.1238" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">1. Paste the error + stack trace in full</text>
+  <text x="504.8549" y="272.8755" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">2. Include the relevant code section (not the whole file)</text>
+  <text x="504.8549" y="284.6272" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">3. Describe expected vs actual behavior</text>
+  <text x="504.8549" y="296.379" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">4. Ask AI to explain the root cause first, then fix</text>
+  <text x="504.8549" y="308.1307" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Ask "why" before "how to fix" to learn, not just copy</text>
+  <text x="140.5509" y="331.6342" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-muted)">Best Practices</text>
+  <rect x="140.5509" y="341.0356" width="164.5244" height="82.2622" rx="5.0128" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7521" />
+  <text x="222.8131" y="355.1376" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Always Review AI Code</text>
+  <text x="152.3026" y="368.0646" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Never blindly copy-paste.</text>
+  <text x="152.3026" y="378.6412" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Read every line, understand</text>
+  <text x="152.3026" y="389.2178" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">the logic, and run tests</text>
+  <text x="152.3026" y="399.7943" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">before committing to the</text>
+  <text x="152.3026" y="410.3709" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">codebase.</text>
+  <text x="152.3026" y="418.5971" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">You own the code, not AI.</text>
+  <rect x="328.5787" y="341.0356" width="164.5244" height="82.2622" rx="5.0128" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7521" />
+  <text x="410.841" y="355.1376" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Keep Tests Authoritative</text>
+  <text x="340.3305" y="368.0646" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Write tests yourself first.</text>
+  <text x="340.3305" y="378.6412" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Let AI generate the impl,</text>
+  <text x="340.3305" y="389.2178" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">not the tests. Tests define</text>
+  <text x="340.3305" y="399.7943" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">correctness; AI should not</text>
+  <text x="340.3305" y="410.3709" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">define what "correct" means.</text>
+  <text x="340.3305" y="418.5971" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Tests = specification.</text>
+  <rect x="516.6067" y="341.0356" width="164.5244" height="82.2622" rx="5.0128" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7521" />
+  <text x="598.8689" y="355.1376" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Incremental Context</text>
+  <text x="528.3584" y="368.0646" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Give AI small, focused</text>
+  <text x="528.3584" y="378.6412" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">chunks of code. Avoid</text>
+  <text x="528.3584" y="389.2178" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">pasting entire repos.</text>
+  <text x="528.3584" y="399.7943" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Build complexity step</text>
+  <text x="528.3584" y="410.3709" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">by step in a single chat.</text>
+  <text x="528.3584" y="418.5971" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Context = quality.</text>
+  <rect x="698.7587" y="341.0356" width="123.3933" height="82.2622" rx="5.0128" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7521" />
+  <text x="760.4553" y="355.1376" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Learn the Why</text>
+  <text x="710.5105" y="368.0646" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Ask AI to explain</text>
+  <text x="710.5105" y="378.6412" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">every fix. Build skill,</text>
+  <text x="710.5105" y="389.2178" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">not just copy output.</text>
+  <text x="710.5105" y="399.7943" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Over time, verify AI</text>
+  <text x="710.5105" y="410.3709" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">suggestions yourself.</text>
+  <text x="710.5105" y="418.5971" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Understanding = mastery.</text>
 </svg>

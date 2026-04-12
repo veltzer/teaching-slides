@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,84 +33,74 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
-
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5f5f5" />
     </linearGradient>
-
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
-
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
-
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
-
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
-
-    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
-</defs>
-  <rect x="153.8889" y="111.25" width="972.2222" height="468.75" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="8.3333"/>
-  <text x="640" y="80" text-anchor="middle" font-size="25" font-weight="bold">Container States</text>
-  <rect x="223.3333" y="189.375" width="277.7778" height="187.5" fill="var(--primary-fill)" rx="8.3333" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="362.2222" y="236.25" text-anchor="middle" fill="var(--bg)" font-weight="bold">Waiting</text>
-  <text x="362.2222" y="275.3125" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Not yet running</text>
-  <text x="362.2222" y="306.5625" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Pulling image</text>
-  <text x="362.2222" y="337.8125" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Creating container</text>
-  <rect x="528.8889" y="189.375" width="277.7778" height="187.5" fill="var(--ok-fill)" rx="8.3333" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="667.7778" y="236.25" text-anchor="middle" fill="var(--bg)" font-weight="bold">Running</text>
-  <text x="667.7778" y="275.3125" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Executing normally</text>
-  <text x="667.7778" y="306.5625" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Started at: timestamp</text>
-  <text x="667.7778" y="337.8125" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Process active</text>
-  <rect x="834.4444" y="189.375" width="277.7778" height="187.5" fill="var(--danger-fill)" rx="8.3333" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="973.3333" y="236.25" text-anchor="middle" fill="var(--bg)" font-weight="bold">Terminated</text>
-  <text x="973.3333" y="275.3125" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Execution completed</text>
-  <text x="973.3333" y="306.5625" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Exit code: 0 or error</text>
-  <text x="973.3333" y="337.8125" text-anchor="middle" fill="var(--bg)" font-size="15.2778">Reason: OOMKilled, Error</text>
-  <path d="M 501.1111 283.125 L 521.9444 283.125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <path d="M 806.6667 283.125 L 827.5 283.125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <path d="M 973.3333 376.875 Q 667.7778 439.375 362.2222 376.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="667.7778" y="431.5625" text-anchor="middle" font-size="13.8889">Restart Policy</text>
+  </defs>
+  <rect x="101.1872" y="73.1507" width="639.2694" height="308.2192" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6575" rx="5.4794" />
+  <text x="420.8219" y="52.6027" text-anchor="middle" font-size="16.4384" font-weight="bold">Container States</text>
+  <rect x="146.8493" y="124.5206" width="182.6484" height="123.2877" fill="var(--primary-fill)" rx="5.4794" stroke="var(--primary-border)" stroke-width="1.3151" />
+  <text x="238.1735" y="155.3425" text-anchor="middle" fill="var(--bg)" font-weight="bold">Waiting</text>
+  <text x="238.1735" y="181.0274" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Not yet running</text>
+  <text x="238.1735" y="201.5753" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Pulling image</text>
+  <text x="238.1735" y="222.1233" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Creating container</text>
+  <rect x="347.7626" y="124.5206" width="182.6484" height="123.2877" fill="var(--ok-fill)" rx="5.4794" stroke="var(--ok-border)" stroke-width="1.3151" />
+  <text x="439.0868" y="155.3425" text-anchor="middle" fill="var(--bg)" font-weight="bold">Running</text>
+  <text x="439.0868" y="181.0274" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Executing normally</text>
+  <text x="439.0868" y="201.5753" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Started at: timestamp</text>
+  <text x="439.0868" y="222.1233" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Process active</text>
+  <rect x="548.6758" y="124.5206" width="182.6484" height="123.2877" fill="var(--danger-fill)" rx="5.4794" stroke="var(--danger-border)" stroke-width="1.3151" />
+  <text x="640" y="155.3425" text-anchor="middle" fill="var(--bg)" font-weight="bold">Terminated</text>
+  <text x="640" y="181.0274" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Execution completed</text>
+  <text x="640" y="201.5753" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Exit code: 0 or error</text>
+  <text x="640" y="222.1233" text-anchor="middle" fill="var(--bg)" font-size="10.0457">Reason: OOMKilled, Error</text>
+  <path d="M 329.4977 186.1644 L 343.1963 186.1644" stroke="var(--text-muted)" stroke-width="1.3151" marker-end="url(#arrow)" />
+  <path d="M 530.411 186.1644 L 544.1096 186.1644" stroke="var(--text-muted)" stroke-width="1.3151" marker-end="url(#arrow)" />
+  <path d="M 640 247.8082 Q 439.0868 288.9041 238.1735 247.8082" stroke="var(--text-muted)" stroke-width="1.3151" marker-end="url(#arrow)" />
+  <text x="439.0868" y="283.7671" text-anchor="middle" font-size="10">Restart Policy</text>
 </svg>
