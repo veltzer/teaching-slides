@@ -1,111 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
-    <style id="palette-vars">
-      :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
-      }
-    </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead17" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 7.4667,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40.635" y="257.1429" width="243.8095" height="171.4286" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="162.5397" y="360" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="28.4445">Resources</text>
-  <rect x="365.7143" y="257.1429" width="243.8095" height="171.4286" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="487.619" y="360" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="28.4445">Allocation</text>
-  <rect x="690.7936" y="257.1429" width="243.8095" height="171.4286" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="812.6984" y="360" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="28.4445">Monitoring</text>
-  <rect x="1015.873" y="257.1429" width="264.127" height="171.4286" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1147.9365" y="360" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="28.4445">Optimization</text>
-  <line x1="284.4445" y1="342.8571" x2="365.7143" y2="342.8571" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead17)" />
-  <line x1="609.5238" y1="342.8571" x2="690.7936" y2="342.8571" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead17)" />
-  <line x1="934.6031" y1="342.8571" x2="1015.873" y2="342.8571" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead17)" />
+
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--text)">Resource Management</text>
+
+  <rect x="200" y="140" width="880" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Cluster Manager</text>
+  <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">YARN · Kubernetes · Standalone</text>
+
+  <line x1="640" y1="240" x2="640" y2="275" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="280" width="340" height="120" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="250" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Executor Count</text>
+  <text x="250" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">spark.executor.instances</text>
+  <text x="250" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">or dynamic allocation</text>
+
+  <rect x="470" y="280" width="340" height="120" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Cores per Executor</text>
+  <text x="640" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">spark.executor.cores</text>
+  <text x="640" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">task parallelism per JVM</text>
+
+  <rect x="860" y="280" width="340" height="120" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1030" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Memory per Executor</text>
+  <text x="1030" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">spark.executor.memory</text>
+  <text x="1030" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">watch for OOM / GC pauses</text>
+
+  <rect x="200" y="460" width="880" height="110" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Rule of thumb</text>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">5 cores per executor · leave 1 core and ~10% memory for OS &amp; daemons</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Enable dynamic allocation so idle executors release back to the pool</text>
 </svg>
