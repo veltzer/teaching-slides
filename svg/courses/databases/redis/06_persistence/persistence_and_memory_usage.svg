@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="64" y="54" width="341.3333" height="252" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="234.6667" y="136.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Parent Process</text>
-  <text x="234.6667" y="198" text-anchor="middle" font-size="21.3333">Shared memory</text>
-  <text x="234.6667" y="259.2" text-anchor="middle" font-size="21.3333">pages: A B C D</text>
-  <rect x="64" y="378" width="341.3333" height="252" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="234.6667" y="460.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Child Process</text>
-  <text x="234.6667" y="522" text-anchor="middle" font-size="21.3333">Reads shared pages</text>
-  <text x="234.6667" y="583.2" text-anchor="middle" font-size="21.3333">for RDB dump</text>
-  <line x1="426.6667" y1="180" x2="597.3333" y2="180" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd7_05_persistence)" />
-  <text x="512" y="154.8" font-size="21.3333">write to A</text>
-  <rect x="618.6667" y="54" width="277.3333" height="252" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="757.3333" y="136.8" text-anchor="middle" font-size="23.4667" font-weight="bold">COW Copy</text>
-  <text x="757.3333" y="198" text-anchor="middle" font-size="21.3333">Page A copied</text>
-  <text x="757.3333" y="259.2" text-anchor="middle" font-size="21.3333">before write</text>
-  <rect x="938.6667" y="54" width="298.6667" height="252" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="1088" y="136.8" text-anchor="middle" font-size="21.3333">B, C, D still shared</text>
-  <text x="1088" y="198" text-anchor="middle" font-size="21.3333">Memory efficient</text>
-  <text x="1088" y="259.2" text-anchor="middle" font-size="21.3333">until modified</text>
-  <rect x="618.6667" y="396" width="618.6667" height="198" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="928" y="475.2" text-anchor="middle" font-size="21.3333">Peak memory = base + modified pages only</text>
-  <text x="928" y="540" text-anchor="middle" font-size="21.3333">High write load = more COW memory usage</text>
+  <rect x="40" y="40" width="349.0909" height="253.75" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="214.5455" y="123.375" text-anchor="middle" font-size="23.8141" font-weight="bold">Parent Process</text>
+  <text x="214.5455" y="185" text-anchor="middle" font-size="21.6491">Shared memory</text>
+  <text x="214.5455" y="246.625" text-anchor="middle" font-size="21.6491">pages: A B C D</text>
+  <rect x="40" y="366.25" width="349.0909" height="253.75" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="214.5455" y="449.625" text-anchor="middle" font-size="23.8141" font-weight="bold">Child Process</text>
+  <text x="214.5455" y="511.25" text-anchor="middle" font-size="21.6491">Reads shared pages</text>
+  <text x="214.5455" y="572.875" text-anchor="middle" font-size="21.6491">for RDB dump</text>
+  <line x1="410.9091" y1="166.875" x2="585.4545" y2="166.875" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd7_05_persistence)" />
+  <text x="498.1818" y="141.5" font-size="21.6491">write to A</text>
+  <rect x="607.2727" y="40" width="283.6363" height="253.75" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="749.0908" y="123.375" text-anchor="middle" font-size="23.8141" font-weight="bold">COW Copy</text>
+  <text x="749.0908" y="185" text-anchor="middle" font-size="21.6491">Page A copied</text>
+  <text x="749.0908" y="246.625" text-anchor="middle" font-size="21.6491">before write</text>
+  <rect x="934.5454" y="40" width="305.4546" height="253.75" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1087.2727" y="123.375" text-anchor="middle" font-size="21.6491">B, C, D still shared</text>
+  <text x="1087.2727" y="185" text-anchor="middle" font-size="21.6491">Memory efficient</text>
+  <text x="1087.2727" y="246.625" text-anchor="middle" font-size="21.6491">until modified</text>
+  <rect x="607.2727" y="384.375" width="632.7273" height="199.375" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="923.6363" y="464.125" text-anchor="middle" font-size="21.6491">Peak memory = base + modified pages only</text>
+  <text x="923.6363" y="529.375" text-anchor="middle" font-size="21.6491">High write load = more COW memory usage</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

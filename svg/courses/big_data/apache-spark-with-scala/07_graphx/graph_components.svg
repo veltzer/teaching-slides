@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Graph</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -103,13 +92,63 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.2346" font-weight="bold" fill="var(--text)">Connected Components</text>
+
+  <text x="640" y="79.0385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7856" fill="var(--text-muted)">Label each vertex with the lowest vertex id it can reach (treating the graph as undirected).</text>
+
+  <rect x="40" y="106.9231" width="580" height="513.0769" rx="6.3367" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="330" y="145.9615" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8979" font-weight="bold" fill="var(--text)">Input graph</text>
+
+  <ellipse cx="120" cy="212.8846" rx="30" ry="27.8846" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="120" y="218.4615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--primary-text)">1</text>
+
+  <ellipse cx="250" cy="212.8846" rx="30" ry="27.8846" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="250" y="218.4615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--primary-text)">2</text>
+
+  <ellipse cx="185" cy="313.2692" rx="30" ry="27.8846" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="318.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--primary-text)">3</text>
+
+  <line x1="150" y1="212.8846" x2="220" y2="212.8846" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="140" y1="237.4231" x2="170" y2="288.7308" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="230" y1="237.4231" x2="200" y2="288.7308" stroke="var(--text-muted)" stroke-width="2"/>
+
+  <ellipse cx="440" cy="212.8846" rx="30" ry="27.8846" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="440" y="218.4615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--ok-text)">4</text>
+
+  <ellipse cx="560" cy="212.8846" rx="30" ry="27.8846" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="560" y="218.4615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--ok-text)">5</text>
+
+  <line x1="470" y1="212.8846" x2="530" y2="212.8846" stroke="var(--text-muted)" stroke-width="2"/>
+
+  <ellipse cx="330" cy="458.2692" rx="30" ry="27.8846" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="330" y="463.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--warn-text)">6</text>
+
+  <text x="185" y="385.7692" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">component A</text>
+  <text x="500" y="274.2308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">component B</text>
+  <text x="330" y="525.1923" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">component C (isolated)</text>
+
+  <rect x="40" y="569.8077" width="580" height="39.0385" rx="6.3367" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="330" y="595.4615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" font-weight="bold" fill="var(--info-text)">val cc = graph.connectedComponents()</text>
+
+  <rect x="640" y="106.9231" width="600" height="513.0769" rx="6.3367" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="940" y="145.9615" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8979" font-weight="bold" fill="var(--ok-text)">Output</text>
+  <text x="940" y="179.4231" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--ok-text)">cc.vertices — VertexRDD[VertexId]</text>
+  <text x="940" y="207.3077" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">vertex id → component representative (min id)</text>
+
+  <text x="680" y="251.9231" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(1L, 1L)</text>
+  <text x="680" y="279.8077" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(2L, 1L)</text>
+  <text x="680" y="307.6923" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(3L, 1L)</text>
+  <text x="680" y="335.5769" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(4L, 4L)</text>
+  <text x="680" y="363.4615" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(5L, 4L)</text>
+  <text x="680" y="391.3462" font-family="monospace, monospace" font-size="13.7295" fill="var(--ok-text)">(6L, 6L)</text>
+
+  <text x="940" y="447.1154" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7856" font-weight="bold" fill="var(--ok-text)">Common follow-ups</text>
+  <text x="680" y="480.5769" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">• count by component — cc.vertices.map(_._2).countByValue</text>
+  <text x="680" y="508.4615" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">• largest component — same, take .max</text>
+  <text x="680" y="536.3462" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">• filter by component — cc.subgraph(vpred = (id, c) =&gt; c == 1L)</text>
+  <text x="680" y="569.8077" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">• stronglyConnectedComponents(numIter) for directed</text>
+  <text x="680" y="592.1154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">• Implementation: Pregel-style label propagation;</text>
+  <text x="680" y="608.8462" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--ok-text)">   each vertex adopts the min id from its neighbours.</text>
 </svg>

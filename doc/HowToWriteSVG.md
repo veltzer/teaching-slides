@@ -125,6 +125,65 @@ normalize_svg_style.py` to enforce these; it's idempotent and safe to re-run.
   per-file `<marker>` elements with larger dimensions.
   `scripts/fix_svg_markers.py` caps any stray custom markers.
 
+## Why circles don't stretch like rects
+
+When you run `scripts/fit_svg_to_slide.py`, every diagram gets stretched so
+its content bounding box fills the usable area exactly (`x ∈ [40, 1240]`,
+`y ∈ [40, 620]`). That works beautifully for diagrams built from rectangles
+and text. But **circles don't stretch correctly under non-uniform scaling**,
+and this is why the fit script has a fallback to uniform scale for
+circle-heavy diagrams.
+
+### The root cause
+
+An SVG `<rect>` has two independent dimensions — `width` and `height`. Scale
+the rect by `(sx=2, sy=0.8)` and it becomes 2× wider and 0.8× taller. Each
+axis is controlled separately. A 100×100 rect becomes 200×80. Clean.
+
+An SVG `<circle>` has only one dimension — `r`. A circle is "all points at
+distance r from (cx, cy)." There's no way to tell a `<circle>` to be twice
+as wide as it is tall; that shape is an **ellipse**, which is a different
+element (`<ellipse>` with `rx` and `ry`).
+
+So when the fit script encounters a `<circle>` under non-uniform scale, it
+has three bad options:
+
+1. **Average the two scales** (what the script does by default, using the
+   geometric mean). The circle stays a circle but ends up the wrong size on
+   both axes. If the original bbox had `sx=2, sy=0.8`, the circle scales by
+   `√(2 × 0.8) ≈ 1.26` — too small horizontally, too big vertically.
+2. **Use sx for radius** — circle is the right horizontal size but wrong
+   vertical size.
+3. **Use sy for radius** — mirror problem.
+
+All three leave the circle in a position where the next run of the fit
+script computes a different bbox (because the circle's contribution to the
+bbox changed), producing a different scale, oscillating forever. The fit
+script is not idempotent on circle-heavy diagrams under heavy stretch.
+
+### The fallback
+
+If the required stretch is severe (ratio of `sx` to `sy` exceeds 1.5×), the
+fit script falls back to **uniform scale**: it picks the smaller of `sx`
+and `sy` and uses it for both axes. The content is scaled uniformly and
+centered in the usable area, letterboxed on the axis it doesn't fill.
+Circles stay circles. Idempotent.
+
+The trade-off: circle-heavy diagrams don't fill the slide edge-to-edge the
+way rect-based diagrams do. If your diagram's content naturally has an
+extreme aspect ratio (e.g. a tall concentric-rings diagram), it will fit
+centered rather than stretched.
+
+### How to avoid letterboxing
+
+- Use `<ellipse>` instead of `<circle>` if you actually want the shape to
+  deform under non-uniform scaling.
+- Design diagrams with a moderate aspect ratio (wider than they are tall,
+  ideally close to 16:9) so the fit produces reasonable `sx`/`sy` values
+  without triggering the fallback.
+- Avoid making a single giant circle the dominant element — its radius
+  forces the bbox aspect ratio.
+
 ## Placeholders
 
 If you scaffold an SVG before its real content exists (e.g. dropping in
@@ -157,6 +216,46 @@ looks placeholder-like but doesn't have the marker, add it.
 
 - SVG diagrams must use `font-size` ≥ 10. Smaller is unreadable when
   projected. The `check_svg.py --fonts` check enforces this.
+
+## Word count: diagrams are not paragraphs
+
+A diagram is a picture, not a document. Audiences read a slide in seconds;
+they listen to the speaker for the rest. If a diagram contains more prose
+than a few labels and short phrases, the prose belongs in speaker notes
+or on a separate text-only slide.
+
+**Limit: 60 words** across all `<text>` and `<tspan>` content in an SVG.
+Enforced by `scripts/check_svg.py --words`.
+
+- Aim much lower when you can — the median diagram in this repo is around
+  30 words. Under 30 is ideal; under 15 is great.
+- Count with `scripts/stats_svg_words.py` (histogram + top offenders +
+  `--over N` listing).
+- The check is currently opt-in (not in the default check set) because a
+  backlog of existing SVGs still exceeds the limit. When authoring or
+  rewriting an SVG, run `scripts/check_svg.py --words FILE` before you
+  commit.
+
+### What to cut
+
+- **Long explanatory panels** ("Key ideas", "How it works", "Watch-outs"
+  blocks at the bottom). These are a paragraph pretending to be a diagram.
+  Move them to the slide's speaker notes or a separate text-only slide.
+- **Sentences inside boxes.** A box label should be 1 header + 1–2 short
+  lines (≤ 4 words each), not a sentence.
+- **Every parenthetical you could drop.** "(optional)", "(default 10MB)",
+  "(runs once per row)" — usually unnecessary in a diagram.
+- **Redundant labels.** If an arrow is obvious from context, don't label it.
+  If the box color already encodes the category, the box doesn't need a
+  category label too.
+
+### What to keep
+
+- Short labels: node names, function names, state names.
+- Single-line formulas or code fragments when they are the point of the
+  diagram.
+- A one-line caption / title at the top if the slide heading alone doesn't
+  convey what the picture shows.
 
 ## File format rules
 

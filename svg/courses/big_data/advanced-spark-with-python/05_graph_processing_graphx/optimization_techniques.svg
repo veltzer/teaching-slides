@@ -93,44 +93,44 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="604.8946" y="48.6076" text-anchor="middle" font-family="Arial" font-size="27.2203" font-weight="bold" fill="var(--primary-accent)">Graph Optimization Techniques</text>
-  <rect x="45.3671" y="89.1139" width="347.8144" height="178.2278" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="219.2743" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--primary-accent)">1. Partitioning</text>
-  <text x="68.0506" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text)">- Choose right strategy</text>
-  <text x="68.0506" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text)">- Balance partition sizes</text>
-  <text x="68.0506" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text)">- Minimize cross-partition</text>
-  <text x="68.0506" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text)">  edges (less shuffle)</text>
-  <rect x="430.9874" y="89.1139" width="347.8144" height="178.2278" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="604.8946" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--ok-accent)">2. Caching</text>
-  <text x="453.6709" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text)">- Cache before iterations</text>
-  <text x="453.6709" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text)">- Unpersist old versions</text>
-  <text x="453.6709" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text)">- Use serialized storage</text>
-  <text x="453.6709" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text)">- Checkpoint long lineages</text>
-  <rect x="816.6077" y="89.1139" width="347.8144" height="178.2278" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="990.5149" y="126.3798" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--warn-accent)">3. Serialization</text>
-  <text x="839.2912" y="162.0254" font-family="Arial" font-size="16.6346" fill="var(--text)">- Use Kryo serializer</text>
-  <text x="839.2912" y="191.1899" font-family="Arial" font-size="16.6346" fill="var(--text)">- Register graph classes</text>
-  <text x="839.2912" y="220.3545" font-family="Arial" font-size="16.6346" fill="var(--text)">- Reduce object overhead</text>
-  <text x="839.2912" y="249.519" font-family="Arial" font-size="16.6346" fill="var(--text)">- Compact data types</text>
-  <rect x="45.3671" y="315.9494" width="347.8144" height="178.2278" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="219.2743" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--info-accent)">4. Algorithm Choice</text>
-  <text x="68.0506" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text)">- Use built-in when possible</text>
-  <text x="68.0506" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text)">- Set maxIterations</text>
-  <text x="68.0506" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text)">- Tune tolerance (tol)</text>
-  <text x="68.0506" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text)">- Approximate when ok</text>
-  <rect x="430.9874" y="315.9494" width="347.8144" height="178.2278" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="604.8946" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--ok-accent)">5. Data Reduction</text>
-  <text x="453.6709" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text)">- Filter before processing</text>
-  <text x="453.6709" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text)">- Use subgraph views</text>
-  <text x="453.6709" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text)">- Remove low-degree nodes</text>
-  <text x="453.6709" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text)">- Sample large graphs</text>
-  <rect x="816.6077" y="315.9494" width="347.8144" height="178.2278" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="990.5149" y="353.2152" text-anchor="middle" font-family="Arial" font-size="19.6591" font-weight="bold" fill="var(--danger-accent)">6. Resource Tuning</text>
-  <text x="839.2912" y="388.8608" font-family="Arial" font-size="16.6346" fill="var(--text)">- Increase executor memory</text>
-  <text x="839.2912" y="418.0253" font-family="Arial" font-size="16.6346" fill="var(--text)">- Set memoryOverhead</text>
-  <text x="839.2912" y="447.19" font-family="Arial" font-size="16.6346" fill="var(--text)">- Tune parallelism</text>
-  <text x="839.2912" y="476.3545" font-family="Arial" font-size="16.6346" fill="var(--text)">- Monitor GC pressure</text>
-  <rect x="226.8355" y="550.8861" width="756.1182" height="89.1139" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="604.8946" y="586.5317" text-anchor="middle" font-family="Arial" font-size="18.1468" font-weight="bold" fill="var(--text)">Impact Order: Partitioning &gt; Caching &gt; Algorithm &gt; Resource Tuning</text>
-  <text x="604.8946" y="618.9367" text-anchor="middle" font-family="Arial" font-size="16.6346" fill="var(--text-muted)">Always profile before optimizing -- measure, don't guess</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial" font-size="27.9148" font-weight="bold" fill="var(--primary-accent)">Graph Optimization Techniques</text>
+  <rect x="40" y="79.726" width="372.973" height="174.7945" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="226.4865" y="116.274" text-anchor="middle" font-family="Arial" font-size="20.1607" font-weight="bold" fill="var(--primary-accent)">1. Partitioning</text>
+  <text x="64.3243" y="151.233" font-family="Arial" font-size="17.059" fill="var(--text)">- Choose right strategy</text>
+  <text x="64.3243" y="179.8356" font-family="Arial" font-size="17.059" fill="var(--text)">- Balance partition sizes</text>
+  <text x="64.3243" y="208.4384" font-family="Arial" font-size="17.059" fill="var(--text)">- Minimize cross-partition</text>
+  <text x="64.3243" y="237.0411" font-family="Arial" font-size="17.059" fill="var(--text)">  edges (less shuffle)</text>
+  <rect x="453.5135" y="79.726" width="372.973" height="174.7945" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="116.274" text-anchor="middle" font-family="Arial" font-size="20.1607" font-weight="bold" fill="var(--ok-accent)">2. Caching</text>
+  <text x="477.8378" y="151.233" font-family="Arial" font-size="17.059" fill="var(--text)">- Cache before iterations</text>
+  <text x="477.8378" y="179.8356" font-family="Arial" font-size="17.059" fill="var(--text)">- Unpersist old versions</text>
+  <text x="477.8378" y="208.4384" font-family="Arial" font-size="17.059" fill="var(--text)">- Use serialized storage</text>
+  <text x="477.8378" y="237.0411" font-family="Arial" font-size="17.059" fill="var(--text)">- Checkpoint long lineages</text>
+  <rect x="867.027" y="79.726" width="372.973" height="174.7945" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="1053.5135" y="116.274" text-anchor="middle" font-family="Arial" font-size="20.1607" font-weight="bold" fill="var(--warn-accent)">3. Serialization</text>
+  <text x="891.3513" y="151.233" font-family="Arial" font-size="17.059" fill="var(--text)">- Use Kryo serializer</text>
+  <text x="891.3513" y="179.8356" font-family="Arial" font-size="17.059" fill="var(--text)">- Register graph classes</text>
+  <text x="891.3513" y="208.4384" font-family="Arial" font-size="17.059" fill="var(--text)">- Reduce object overhead</text>
+  <text x="891.3513" y="237.0411" font-family="Arial" font-size="17.059" fill="var(--text)">- Compact data types</text>
+  <rect x="40" y="302.1918" width="372.973" height="174.7945" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="226.4865" y="338.7397" text-anchor="middle" font-family="Arial" font-size="20.1607" font-weight="bold" fill="var(--info-accent)">4. Algorithm Choice</text>
+  <text x="64.3243" y="373.6987" font-family="Arial" font-size="17.059" fill="var(--text)">- Use built-in when possible</text>
+  <text x="64.3243" y="402.3014" font-family="Arial" font-size="17.059" fill="var(--text)">- Set maxIterations</text>
+  <text x="64.3243" y="430.9042" font-family="Arial" font-size="17.059" fill="var(--text)">- Tune tolerance (tol)</text>
+  <text x="64.3243" y="459.5069" font-family="Arial" font-size="17.059" fill="var(--text)">- Approximate when ok</text>
+  <rect x="453.5135" y="302.1918" width="372.973" height="174.7945" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="338.7397" text-anchor="middle" font-family="Arial" font-size="20.1607" font-weight="bold" fill="var(--ok-accent)">5. Data Reduction</text>
+  <text x="477.8378" y="373.6987" font-family="Arial" font-size="17.059" fill="var(--text)">- Filter before processing</text>
+  <text x="477.8378" y="402.3014" font-family="Arial" font-size="17.059" fill="var(--text)">- Use subgraph views</text>
+  <text x="477.8378" y="430.9042" font-family="Arial" font-size="17.059" fill="var(--text)">- Remove low-degree nodes</text>
+  <text x="477.8378" y="459.5069" font-family="Arial" font-size="17.059" fill="var(--text)">- Sample large graphs</text>
+  <rect x="867.027" y="302.1918" width="372.973" height="174.7945" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1053.5135" y="338.7397" text-anchor="middle" font-family="Arial" font-size="20.1607" font-weight="bold" fill="var(--danger-accent)">6. Resource Tuning</text>
+  <text x="891.3513" y="373.6987" font-family="Arial" font-size="17.059" fill="var(--text)">- Increase executor memory</text>
+  <text x="891.3513" y="402.3014" font-family="Arial" font-size="17.059" fill="var(--text)">- Set memoryOverhead</text>
+  <text x="891.3513" y="430.9042" font-family="Arial" font-size="17.059" fill="var(--text)">- Tune parallelism</text>
+  <text x="891.3513" y="459.5069" font-family="Arial" font-size="17.059" fill="var(--text)">- Monitor GC pressure</text>
+  <rect x="234.5946" y="532.6028" width="810.8108" height="87.3972" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="640" y="567.5617" text-anchor="middle" font-family="Arial" font-size="18.6098" font-weight="bold" fill="var(--text)">Impact Order: Partitioning &gt; Caching &gt; Algorithm &gt; Resource Tuning</text>
+  <text x="640" y="599.3425" text-anchor="middle" font-family="Arial" font-size="17.059" fill="var(--text-muted)">Always profile before optimizing -- measure, don't guess</text>
 </svg>

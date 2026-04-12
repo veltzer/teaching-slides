@@ -82,107 +82,107 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
     </marker>
   </defs>
-  <rect x="82.4162" y="50.1294" width="116.8271" height="148.689" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="140.8298" y="68.7156" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Cache-Aside</text>
-  <text x="140.8298" y="79.3362" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">(Lazy Loading)</text>
-  <rect x="95.692" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.2532" />
-  <text x="111.623" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">App</text>
-  <rect x="146.1401" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="162.071" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Cache</text>
-  <rect x="119.5885" y="121.8187" width="31.862" height="15.931" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6266" />
-  <text x="135.5194" y="132.4395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB</text>
-  <line x1="127.5539" y1="97.9223" x2="146.1401" y2="97.9223" stroke="var(--primary-border)" stroke-width="0.3458" />
-  <line x1="111.623" y1="105.8879" x2="135.5194" y2="121.8187" stroke="var(--text-faint)" stroke-width="0.3458" />
-  <text x="93.0368" y="151.0255" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">App manages cache</text>
-  <text x="93.0368" y="161.6461" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Read: cache then DB</text>
-  <text x="93.0368" y="172.2669" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Write: DB then cache</text>
-  <text x="93.0368" y="185.5427" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Most common pattern</text>
-  <rect x="209.8639" y="50.1294" width="116.8271" height="148.689" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.2532" />
-  <text x="268.2775" y="68.7156" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Write-Through</text>
-  <rect x="223.1397" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.2532" />
-  <text x="239.0707" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">App</text>
-  <rect x="273.5878" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="289.5188" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Cache</text>
-  <rect x="273.5878" y="121.8187" width="31.862" height="15.931" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6266" />
-  <text x="289.5188" y="132.4395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB</text>
-  <line x1="255.0016" y1="97.9223" x2="273.5878" y2="97.9223" stroke="var(--ok-border)" stroke-width="0.3458" />
-  <line x1="289.5188" y1="105.8879" x2="289.5188" y2="121.8187" stroke="var(--ok-border)" stroke-width="0.3458" />
-  <text x="220.4844" y="151.0255" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Sync write to both</text>
-  <text x="220.4844" y="161.6461" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Data always consistent</text>
-  <text x="220.4844" y="172.2669" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Higher write latency</text>
-  <text x="220.4844" y="185.5427" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Strong consistency</text>
-  <rect x="337.3115" y="50.1294" width="116.8271" height="148.689" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.2532" />
-  <text x="395.7252" y="68.7156" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Write-Behind</text>
-  <text x="395.7252" y="79.3362" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">(Write-Back)</text>
-  <rect x="350.5874" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.2532" />
-  <text x="366.5184" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">App</text>
-  <rect x="401.0355" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="416.9665" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Cache</text>
-  <rect x="401.0355" y="121.8187" width="31.862" height="15.931" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6266" />
-  <text x="416.9665" y="132.4395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB</text>
-  <line x1="382.4493" y1="97.9223" x2="401.0355" y2="97.9223" stroke="var(--warn-border)" stroke-width="0.3458" />
-  <line x1="416.9665" y1="105.8879" x2="416.9665" y2="121.8187" stroke="var(--warn-border)" stroke-width="0.3458" stroke-dasharray="0.9222 0.4611" />
-  <text x="347.9322" y="151.0255" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Write cache first</text>
-  <text x="347.9322" y="161.6461" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Async flush to DB</text>
-  <text x="347.9322" y="172.2669" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Fast writes, risk loss</text>
-  <text x="347.9322" y="185.5427" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">High write throughput</text>
-  <rect x="464.7593" y="50.1294" width="116.8271" height="148.689" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="523.1729" y="68.7156" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Read-Through</text>
-  <rect x="478.0351" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.2532" />
-  <text x="493.966" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">App</text>
-  <rect x="528.4832" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="544.4142" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Cache</text>
-  <rect x="528.4832" y="121.8187" width="31.862" height="15.931" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6266" />
-  <text x="544.4142" y="132.4395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB</text>
-  <line x1="509.8971" y1="97.9223" x2="528.4832" y2="97.9223" stroke="var(--primary-border)" stroke-width="0.3458" />
-  <line x1="544.4142" y1="105.8879" x2="544.4142" y2="121.8187" stroke="var(--primary-border)" stroke-width="0.3458" />
-  <text x="475.3801" y="151.0255" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Cache loads from DB</text>
-  <text x="475.3801" y="161.6461" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">App only talks to cache</text>
-  <text x="475.3801" y="172.2669" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Simpler app code</text>
-  <text x="475.3801" y="185.5427" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Transparent caching</text>
-  <rect x="592.2071" y="50.1294" width="116.8271" height="148.689" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.2532" />
-  <text x="650.6205" y="68.7156" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--danger-accent)">Refresh-Ahead</text>
-  <rect x="605.4829" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2532" />
-  <text x="621.4138" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Cache</text>
-  <rect x="655.9309" y="89.9568" width="31.862" height="15.931" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6266" />
-  <text x="671.862" y="100.5775" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB</text>
-  <line x1="637.3448" y1="97.9223" x2="655.9309" y2="97.9223" stroke="var(--danger-border)" stroke-width="0.3458" />
-  <path d="M 621.4138 89.9568 C 621.4138 76.6811 640 76.6811 640 89.9568" fill="none" stroke="var(--danger-border)" stroke-width="0.3458" />
-  <text x="602.8278" y="151.0255" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Proactive refresh</text>
-  <text x="602.8278" y="161.6461" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Before TTL expires</text>
-  <text x="602.8278" y="172.2669" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">No cache misses</text>
-  <text x="602.8278" y="185.5427" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)">Lowest latency reads</text>
-  <rect x="82.4162" y="225.3701" width="637.2387" height="138.0684" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="0.6266" />
-  <text x="401.0355" y="243.9562" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Pattern Selection Guide</text>
-  <text x="167.3814" y="262.5424" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Pattern</text>
-  <text x="294.8291" y="262.5424" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Read Perf</text>
-  <text x="379.7942" y="262.5424" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Write Perf</text>
-  <text x="475.3801" y="262.5424" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Consistency</text>
-  <text x="602.8278" y="262.5424" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Best For</text>
-  <line x1="103.6575" y1="267.8526" x2="698.4136" y2="267.8526" stroke="var(--border)" stroke-width="0.2306" />
-  <text x="167.3814" y="282.7215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Cache-Aside</text>
-  <text x="294.8291" y="282.7215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Good</text>
-  <text x="379.7942" y="282.7215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">N/A</text>
-  <text x="475.3801" y="282.7215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">Eventual</text>
-  <text x="602.8278" y="282.7215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Read-heavy workloads</text>
-  <text x="167.3814" y="297.5905" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Write-Through</text>
-  <text x="294.8291" y="297.5905" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Good</text>
-  <text x="379.7942" y="297.5905" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">Slower</text>
-  <text x="475.3801" y="297.5905" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Strong</text>
-  <text x="602.8278" y="297.5905" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Data consistency critical</text>
-  <text x="167.3814" y="312.4594" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">Write-Behind</text>
-  <text x="294.8291" y="312.4594" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Good</text>
-  <text x="379.7942" y="312.4594" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Fast</text>
-  <text x="475.3801" y="312.4594" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)">Weak</text>
-  <text x="602.8278" y="312.4594" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Write-heavy workloads</text>
-  <text x="167.3814" y="327.3283" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Read-Through</text>
-  <text x="294.8291" y="327.3283" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Good</text>
-  <text x="379.7942" y="327.3283" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">N/A</text>
-  <text x="475.3801" y="327.3283" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">Eventual</text>
-  <text x="602.8278" y="327.3283" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Simpler app logic</text>
-  <text x="167.3814" y="342.1972" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)">Refresh-Ahead</text>
-  <text x="294.8291" y="342.1972" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Best</text>
-  <text x="379.7942" y="342.1972" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">N/A</text>
-  <text x="475.3801" y="342.1972" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Good</text>
-  <text x="602.8278" y="342.1972" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Predictable access patterns</text>
+  <rect x="40" y="40" width="220" height="275.2541" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="150.0001" y="74.4069" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--primary-accent)">Cache-Aside</text>
+  <text x="150.0001" y="94.0678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text-muted)">(Lazy Loading)</text>
+  <rect x="65" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="95" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">App</text>
+  <rect x="160.0001" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="189.9999" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Cache</text>
+  <rect x="110.0001" y="172.7117" width="60.0001" height="29.4916" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="140" y="192.373" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">DB</text>
+  <line x1="124.9999" y1="128.4746" x2="160.0001" y2="128.4746" stroke="var(--primary-border)" stroke-width="0.3458" />
+  <line x1="95" y1="143.2205" x2="140" y2="172.7117" stroke="var(--text-faint)" stroke-width="0.3458" />
+  <text x="59.9999" y="226.7796" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">App manages cache</text>
+  <text x="59.9999" y="246.4405" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Read: cache then DB</text>
+  <text x="59.9999" y="266.1018" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Write: DB then cache</text>
+  <text x="59.9999" y="290.678" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Most common pattern</text>
+  <rect x="279.9999" y="40" width="220" height="275.2541" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="390" y="74.4069" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--ok-accent)">Write-Through</text>
+  <rect x="304.9999" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="335" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">App</text>
+  <rect x="400" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="430" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Cache</text>
+  <rect x="400" y="172.7117" width="60.0001" height="29.4916" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="430" y="192.373" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">DB</text>
+  <line x1="364.9998" y1="128.4746" x2="400" y2="128.4746" stroke="var(--ok-border)" stroke-width="0.3458" />
+  <line x1="430" y1="143.2205" x2="430" y2="172.7117" stroke="var(--ok-border)" stroke-width="0.3458" />
+  <text x="299.9997" y="226.7796" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Sync write to both</text>
+  <text x="299.9997" y="246.4405" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Data always consistent</text>
+  <text x="299.9997" y="266.1018" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Higher write latency</text>
+  <text x="299.9997" y="290.678" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Strong consistency</text>
+  <rect x="519.9997" y="40" width="220" height="275.2541" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="629.9999" y="74.4069" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--warn-accent)">Write-Behind</text>
+  <text x="629.9999" y="94.0678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text-muted)">(Write-Back)</text>
+  <rect x="544.9998" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="574.9999" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">App</text>
+  <rect x="639.9999" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="670" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Cache</text>
+  <rect x="639.9999" y="172.7117" width="60.0001" height="29.4916" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="670" y="192.373" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">DB</text>
+  <line x1="604.9998" y1="128.4746" x2="639.9999" y2="128.4746" stroke="var(--warn-border)" stroke-width="0.3458" />
+  <line x1="670" y1="143.2205" x2="670" y2="172.7117" stroke="var(--warn-border)" stroke-width="0.3458" stroke-dasharray="0.9222 0.4611" />
+  <text x="539.9998" y="226.7796" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Write cache first</text>
+  <text x="539.9998" y="246.4405" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Async flush to DB</text>
+  <text x="539.9998" y="266.1018" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Fast writes, risk loss</text>
+  <text x="539.9998" y="290.678" font-family="Arial, sans-serif" font-size="18.671" fill="var(--warn-accent)">High write throughput</text>
+  <rect x="759.9998" y="40" width="220" height="275.2541" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="869.9999" y="74.4069" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--primary-accent)">Read-Through</text>
+  <rect x="784.9998" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="814.9996" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">App</text>
+  <rect x="879.9998" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="909.9999" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Cache</text>
+  <rect x="879.9998" y="172.7117" width="60.0001" height="29.4916" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="909.9999" y="192.373" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">DB</text>
+  <line x1="844.9999" y1="128.4746" x2="879.9998" y2="128.4746" stroke="var(--primary-border)" stroke-width="0.3458" />
+  <line x1="909.9999" y1="143.2205" x2="909.9999" y2="172.7117" stroke="var(--primary-border)" stroke-width="0.3458" />
+  <text x="780.0001" y="226.7796" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Cache loads from DB</text>
+  <text x="780.0001" y="246.4405" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">App only talks to cache</text>
+  <text x="780.0001" y="266.1018" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Simpler app code</text>
+  <text x="780.0001" y="290.678" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Transparent caching</text>
+  <rect x="999.9999" y="40" width="220" height="275.2541" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1109.9996" y="74.4069" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--danger-accent)">Refresh-Ahead</text>
+  <rect x="1024.9999" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="1054.9997" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Cache</text>
+  <rect x="1119.9998" y="113.7288" width="60.0001" height="29.4916" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="1150" y="133.3899" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">DB</text>
+  <line x1="1084.9998" y1="128.4746" x2="1119.9998" y2="128.4746" stroke="var(--danger-border)" stroke-width="0.3458" />
+  <path d="M 1054.9997 113.7288 C 1054.9997 89.1527 1089.9999 89.1527 1089.9999 113.7288" fill="none" stroke="var(--danger-border)" stroke-width="0.3458" />
+  <text x="1020" y="226.7796" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Proactive refresh</text>
+  <text x="1020" y="246.4405" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Before TTL expires</text>
+  <text x="1020" y="266.1018" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">No cache misses</text>
+  <text x="1020" y="290.678" font-family="Arial, sans-serif" font-size="18.671" fill="var(--danger-accent)">Lowest latency reads</text>
+  <rect x="40" y="364.4068" width="1200" height="255.5932" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="639.9999" y="398.8135" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--text)">Pattern Selection Guide</text>
+  <text x="200.0001" y="433.2204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--text)">Pattern</text>
+  <text x="440" y="433.2204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--text)">Read Perf</text>
+  <text x="599.9999" y="433.2204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--text)">Write Perf</text>
+  <text x="780.0001" y="433.2204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--text)">Consistency</text>
+  <text x="1020" y="433.2204" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" font-weight="bold" fill="var(--text)">Best For</text>
+  <line x1="80" y1="443.0507" x2="1200" y2="443.0507" stroke="var(--border)" stroke-width="0.2306" />
+  <text x="200.0001" y="470.5761" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Cache-Aside</text>
+  <text x="440" y="470.5761" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Good</text>
+  <text x="599.9999" y="470.5761" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text-muted)">N/A</text>
+  <text x="780.0001" y="470.5761" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--warn-accent)">Eventual</text>
+  <text x="1020" y="470.5761" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Read-heavy workloads</text>
+  <text x="200.0001" y="498.1017" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Write-Through</text>
+  <text x="440" y="498.1017" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Good</text>
+  <text x="599.9999" y="498.1017" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--warn-accent)">Slower</text>
+  <text x="780.0001" y="498.1017" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Strong</text>
+  <text x="1020" y="498.1017" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Data consistency critical</text>
+  <text x="200.0001" y="525.6271" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--warn-accent)">Write-Behind</text>
+  <text x="440" y="525.6271" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Good</text>
+  <text x="599.9999" y="525.6271" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Fast</text>
+  <text x="780.0001" y="525.6271" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--danger-accent)">Weak</text>
+  <text x="1020" y="525.6271" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Write-heavy workloads</text>
+  <text x="200.0001" y="553.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--primary-accent)">Read-Through</text>
+  <text x="440" y="553.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Good</text>
+  <text x="599.9999" y="553.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text-muted)">N/A</text>
+  <text x="780.0001" y="553.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--warn-accent)">Eventual</text>
+  <text x="1020" y="553.1525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Simpler app logic</text>
+  <text x="200.0001" y="580.678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--danger-accent)">Refresh-Ahead</text>
+  <text x="440" y="580.678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Best</text>
+  <text x="599.9999" y="580.678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text-muted)">N/A</text>
+  <text x="780.0001" y="580.678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--ok-accent)">Good</text>
+  <text x="1020" y="580.678" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.671" fill="var(--text)">Predictable access patterns</text>
 </svg>

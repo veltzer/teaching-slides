@@ -93,27 +93,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="1.7302" y="2.3443" width="1138.4851" height="637.6557" rx="6" fill="var(--bg)" stroke="var(--text)" stroke-width="2.5953" />
-  <rect x="1.7302" y="2.3443" width="1138.4851" height="79.707" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="570.9728" y="53.9195" font-size="25.9533" font-weight="bold" fill="var(--text)" text-anchor="middle">Common OAuth Vulnerabilities</text>
-  <circle cx="48.4461" cy="126.5934" r="17.3022" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
-  <text x="48.4461" y="135.9707" font-size="19.0324" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">1</text>
-  <text x="79.5901" y="135.9707" font-size="22.4928" font-weight="bold" fill="var(--text)">Open Redirect in redirect_uri</text>
-  <text x="79.5901" y="173.4799" font-size="20.7626" fill="var(--text-muted)">Attacker sets redirect_uri=https://evil.com — gets the authorization code</text>
-  <circle cx="48.4461" cy="234.4322" r="17.3022" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
-  <text x="48.4461" y="243.8096" font-size="19.0324" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">2</text>
-  <text x="79.5901" y="243.8096" font-size="22.4928" font-weight="bold" fill="var(--text)">Insufficient redirect_uri validation</text>
-  <text x="79.5901" y="281.3187" font-size="20.7626" fill="var(--text-muted)">Allows https://app.com.evil.com or https://app.com/../evil</text>
-  <circle cx="48.4461" cy="342.2711" r="17.3022" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
-  <text x="48.4461" y="351.6484" font-size="19.0324" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">3</text>
-  <text x="79.5901" y="351.6484" font-size="22.4928" font-weight="bold" fill="var(--text)">Missing state parameter (CSRF)</text>
-  <text x="79.5901" y="389.1576" font-size="20.7626" fill="var(--text-muted)">Attacker can force victim to link attacker's account</text>
-  <circle cx="48.4461" cy="450.1099" r="17.3022" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
-  <text x="48.4461" y="459.4872" font-size="19.0324" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">4</text>
-  <text x="79.5901" y="459.4872" font-size="22.4928" font-weight="bold" fill="var(--text)">Token leakage in browser history / referrer</text>
-  <text x="79.5901" y="496.9964" font-size="20.7626" fill="var(--text-muted)">Implicit flow puts token in URL fragment — visible in logs and referrer headers</text>
-  <circle cx="48.4461" cy="557.9488" r="17.3022" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
-  <text x="48.4461" y="567.326" font-size="19.0324" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">5</text>
-  <text x="79.5901" y="567.326" font-size="22.4928" font-weight="bold" fill="var(--text)">Scope escalation</text>
-  <text x="79.5901" y="604.8352" font-size="20.7626" fill="var(--text-muted)">Application requests more permissions than needed</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--bg)" stroke="var(--text)" stroke-width="2.5953" />
+  <rect x="40" y="40" width="1200" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640.0001" y="86.9119" font-size="25.4121" font-weight="bold" fill="var(--text)" text-anchor="middle">Common OAuth Vulnerabilities</text>
+  <circle cx="89.2401" cy="153.0147" r="16.9414" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
+  <text x="89.2401" y="161.5441" font-size="18.6355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">1</text>
+  <text x="122.0668" y="161.5441" font-size="22.0238" font-weight="bold" fill="var(--text)">Open Redirect in redirect_uri</text>
+  <text x="122.0668" y="195.6618" font-size="20.3296" fill="var(--text-muted)">Attacker sets redirect_uri=https://evil.com — gets the authorization code</text>
+  <circle cx="89.2401" cy="251.1029" r="16.9414" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
+  <text x="89.2401" y="259.6324" font-size="18.6355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">2</text>
+  <text x="122.0668" y="259.6324" font-size="22.0238" font-weight="bold" fill="var(--text)">Insufficient redirect_uri validation</text>
+  <text x="122.0668" y="293.75" font-size="20.3296" fill="var(--text-muted)">Allows https://app.com.evil.com or https://app.com/../evil</text>
+  <circle cx="89.2401" cy="349.1912" r="16.9414" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
+  <text x="89.2401" y="357.7206" font-size="18.6355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">3</text>
+  <text x="122.0668" y="357.7206" font-size="22.0238" font-weight="bold" fill="var(--text)">Missing state parameter (CSRF)</text>
+  <text x="122.0668" y="391.8383" font-size="20.3296" fill="var(--text-muted)">Attacker can force victim to link attacker's account</text>
+  <circle cx="89.2401" cy="447.2794" r="16.9414" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
+  <text x="89.2401" y="455.8088" font-size="18.6355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">4</text>
+  <text x="122.0668" y="455.8088" font-size="22.0238" font-weight="bold" fill="var(--text)">Token leakage in browser history / referrer</text>
+  <text x="122.0668" y="489.9265" font-size="20.3296" fill="var(--text-muted)">Implicit flow puts token in URL fragment — visible in logs and referrer headers</text>
+  <circle cx="89.2401" cy="545.3677" r="16.9414" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.7302" />
+  <text x="89.2401" y="553.8971" font-size="18.6355" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">5</text>
+  <text x="122.0668" y="553.8971" font-size="22.0238" font-weight="bold" fill="var(--text)">Scope escalation</text>
+  <text x="122.0668" y="588.0147" font-size="20.3296" fill="var(--text-muted)">Application requests more permissions than needed</text>
 </svg>

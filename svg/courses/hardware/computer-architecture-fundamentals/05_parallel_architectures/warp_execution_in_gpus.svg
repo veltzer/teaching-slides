@@ -93,55 +93,55 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="597.6207" y="38.7879" text-anchor="middle" font-size="25.8586" font-weight="bold" fill="var(--text)">Warp Execution in GPUs</text>
-  <rect x="44.8215" y="64.6465" width="1105.5982" height="232.7273" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="597.6207" y="96.9697" text-anchor="middle" font-size="19.3939" font-weight="bold" fill="var(--text)">Streaming Multiprocessor (SM)</text>
-  <rect x="74.7026" y="116.3637" width="224.1077" height="64.6465" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="186.7565" y="144.8081" text-anchor="middle" font-size="15.5152" font-weight="bold" fill="var(--text)">Warp Scheduler</text>
-  <text x="186.7565" y="165.495" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">Round-robin / GTO</text>
-  <line x1="298.8103" y1="148.6869" x2="358.5724" y2="148.6869" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="373.5129" y="109.899" width="164.3457" height="77.5757" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="455.6858" y="138.3434" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--text)">Warp 0</text>
-  <text x="455.6858" y="157.7374" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">32 threads</text>
-  <text x="455.6858" y="177.1313" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">T0-T31</text>
-  <rect x="560.2694" y="109.899" width="164.3457" height="77.5757" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="642.4422" y="138.3434" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--text)">Warp 1</text>
-  <text x="642.4422" y="157.7374" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">32 threads</text>
-  <text x="642.4422" y="177.1313" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">T32-T63</text>
-  <rect x="747.0258" y="109.899" width="164.3457" height="77.5757" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="829.1987" y="138.3434" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--text)">Warp N</text>
-  <text x="829.1987" y="157.7374" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">32 threads</text>
-  <text x="829.1987" y="177.1313" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">T(N*32)...</text>
-  <rect x="373.5129" y="206.8687" width="537.8586" height="71.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="642.4422" y="236.6061" text-anchor="middle" font-size="15.5152" font-weight="bold" fill="var(--text)">SIMT Execution Units (CUDA Cores)</text>
-  <text x="642.4422" y="258.5859" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">All 32 threads execute same instruction simultaneously</text>
-  <rect x="44.8215" y="329.697" width="522.9181" height="310.303" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="306.2806" y="362.0202" text-anchor="middle" font-size="18.101" font-weight="bold" fill="var(--text)">Warp Divergence</text>
-  <text x="306.2806" y="387.8788" text-anchor="middle" font-size="14.2223" fill="var(--text-muted)">if (threadIdx.x &lt; 16) { A } else { B }</text>
-  <rect x="74.7026" y="407.2727" width="209.1672" height="51.7172" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="179.2862" y="429.2525" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--text)">Pass 1: Branch A</text>
-  <text x="179.2862" y="448.6464" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">T0-T15 active</text>
-  <rect x="313.7508" y="407.2727" width="209.1672" height="51.7172" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="418.3345" y="429.2525" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--text)">Pass 2: Branch B</text>
-  <text x="418.3345" y="448.6464" text-anchor="middle" font-size="12.9293" fill="var(--text-muted)">T16-T31 active</text>
-  <rect x="74.7026" y="478.3839" width="448.2155" height="45.2525" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="298.8103" y="506.8283" text-anchor="middle" font-size="14.2223" fill="var(--text)">Serialized execution = 2x slower!</text>
-  <text x="104.5836" y="555.9596" font-size="12.9293" fill="var(--text-muted)">Active Mask: 1111111111111111 0000000000000000</text>
-  <text x="104.5836" y="581.8182" font-size="12.9293" fill="var(--text-muted)">Then:       0000000000000000 1111111111111111</text>
-  <text x="104.5836" y="614.1414" font-size="12.9293" font-style="italic" fill="var(--danger-accent)">Inactive threads waste execution cycles</text>
-  <rect x="612.5612" y="329.697" width="537.8586" height="310.303" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="881.4905" y="362.0202" text-anchor="middle" font-size="18.101" font-weight="bold" fill="var(--text)">Warp Lifecycle</text>
-  <rect x="642.4422" y="381.4141" width="209.1672" height="38.7879" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="747.0258" y="407.2727" text-anchor="middle" font-size="14.2223" fill="var(--text)">Ready</text>
-  <line x1="747.0258" y1="420.202" x2="747.0258" y2="446.0606" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="642.4422" y="452.5253" width="209.1672" height="38.7879" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="747.0258" y="478.3839" text-anchor="middle" font-size="14.2223" fill="var(--text)">Executing</text>
-  <line x1="747.0258" y1="491.3131" x2="747.0258" y2="517.1718" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="642.4422" y="523.6363" width="209.1672" height="38.7879" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="747.0258" y="549.4949" text-anchor="middle" font-size="14.2223" fill="var(--text)">Stalled (mem wait)</text>
-  <line x1="747.0258" y1="562.4243" x2="747.0258" y2="588.2828" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="642.4422" y="594.7475" width="209.1672" height="32.3232" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="747.0258" y="618.0203" text-anchor="middle" font-size="14.2223" fill="var(--text)">Ready (again)</text>
-  <text x="926.312" y="510.7071" font-size="12.9293" fill="var(--text-muted)">Context switch</text>
-  <text x="926.312" y="530.101" font-size="12.9293" fill="var(--text-muted)">is free (zero-cost)</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="26.4604" font-weight="bold" fill="var(--text)">Warp Execution in GPUs</text>
+  <rect x="40" y="64.9463" width="1199.9999" height="224.5162" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640.0001" y="96.129" text-anchor="middle" font-size="19.8453" font-weight="bold" fill="var(--text)">Streaming Multiprocessor (SM)</text>
+  <rect x="72.4325" y="114.8388" width="243.2432" height="62.3656" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="194.0541" y="142.2796" text-anchor="middle" font-size="15.8763" font-weight="bold" fill="var(--text)">Warp Scheduler</text>
+  <text x="194.0541" y="162.2366" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">Round-robin / GTO</text>
+  <line x1="315.6757" y1="146.0215" x2="380.5406" y2="146.0215" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="396.7568" y="108.6021" width="178.3784" height="74.8387" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="485.946" y="136.043" text-anchor="middle" font-size="14.5533" font-weight="bold" fill="var(--text)">Warp 0</text>
+  <text x="485.946" y="154.7527" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">32 threads</text>
+  <text x="485.946" y="173.4623" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">T0-T31</text>
+  <rect x="599.4595" y="108.6021" width="178.3784" height="74.8387" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="688.6486" y="136.043" text-anchor="middle" font-size="14.5533" font-weight="bold" fill="var(--text)">Warp 1</text>
+  <text x="688.6486" y="154.7527" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">32 threads</text>
+  <text x="688.6486" y="173.4623" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">T32-T63</text>
+  <rect x="802.1621" y="108.6021" width="178.3784" height="74.8387" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="891.3514" y="136.043" text-anchor="middle" font-size="14.5533" font-weight="bold" fill="var(--text)">Warp N</text>
+  <text x="891.3514" y="154.7527" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">32 threads</text>
+  <text x="891.3514" y="173.4623" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">T(N*32)...</text>
+  <rect x="396.7568" y="202.1505" width="583.7837" height="68.6021" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="688.6486" y="230.8387" text-anchor="middle" font-size="15.8763" font-weight="bold" fill="var(--text)">SIMT Execution Units (CUDA Cores)</text>
+  <text x="688.6486" y="252.043" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">All 32 threads execute same instruction simultaneously</text>
+  <rect x="40" y="320.6452" width="567.5676" height="299.3548" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="323.7838" y="351.8279" text-anchor="middle" font-size="18.5223" font-weight="bold" fill="var(--text)">Warp Divergence</text>
+  <text x="323.7838" y="376.7742" text-anchor="middle" font-size="14.5533" fill="var(--text-muted)">if (threadIdx.x &lt; 16) { A } else { B }</text>
+  <rect x="72.4325" y="395.4838" width="227.027" height="49.8925" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="185.946" y="416.6881" text-anchor="middle" font-size="14.5533" font-weight="bold" fill="var(--text)">Pass 1: Branch A</text>
+  <text x="185.946" y="435.3978" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">T0-T15 active</text>
+  <rect x="331.8919" y="395.4838" width="227.027" height="49.8925" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="445.4055" y="416.6881" text-anchor="middle" font-size="14.5533" font-weight="bold" fill="var(--text)">Pass 2: Branch B</text>
+  <text x="445.4055" y="435.3978" text-anchor="middle" font-size="13.2302" fill="var(--text-muted)">T16-T31 active</text>
+  <rect x="72.4325" y="464.0861" width="486.4865" height="43.6559" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="315.6757" y="491.5269" text-anchor="middle" font-size="14.5533" fill="var(--text)">Serialized execution = 2x slower!</text>
+  <text x="104.8649" y="538.9247" font-size="13.2302" fill="var(--text-muted)">Active Mask: 1111111111111111 0000000000000000</text>
+  <text x="104.8649" y="563.871" font-size="13.2302" fill="var(--text-muted)">Then:       0000000000000000 1111111111111111</text>
+  <text x="104.8649" y="595.0537" font-size="13.2302" font-style="italic" fill="var(--danger-accent)">Inactive threads waste execution cycles</text>
+  <rect x="656.2163" y="320.6452" width="583.7837" height="299.3548" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="948.1081" y="351.8279" text-anchor="middle" font-size="18.5223" font-weight="bold" fill="var(--text)">Warp Lifecycle</text>
+  <rect x="688.6486" y="370.5376" width="227.027" height="37.4194" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="802.1621" y="395.4838" text-anchor="middle" font-size="14.5533" fill="var(--text)">Ready</text>
+  <line x1="802.1621" y1="407.957" x2="802.1621" y2="432.9032" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="688.6486" y="439.1398" width="227.027" height="37.4194" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="802.1621" y="464.0861" text-anchor="middle" font-size="14.5533" fill="var(--text)">Executing</text>
+  <line x1="802.1621" y1="476.5591" x2="802.1621" y2="501.5055" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="688.6486" y="507.7419" width="227.027" height="37.4194" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="802.1621" y="532.6881" text-anchor="middle" font-size="14.5533" fill="var(--text)">Stalled (mem wait)</text>
+  <line x1="802.1621" y1="545.1613" x2="802.1621" y2="570.1075" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="688.6486" y="576.3441" width="227.027" height="31.1828" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="802.1621" y="598.7958" text-anchor="middle" font-size="14.5533" fill="var(--text)">Ready (again)</text>
+  <text x="996.7567" y="495.2688" font-size="13.2302" fill="var(--text-muted)">Context switch</text>
+  <text x="996.7567" y="513.9785" font-size="13.2302" fill="var(--text-muted)">is free (zero-cost)</text>
 </svg>

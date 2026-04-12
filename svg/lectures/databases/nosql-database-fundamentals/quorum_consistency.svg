@@ -93,24 +93,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="592.5926" y="60" text-anchor="middle" font-size="25.679" font-weight="bold">Quorum: W + R &gt; N = Strong Consistency</text>
-  <rect x="79.0123" y="116.6667" width="296.2963" height="233.3333" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="227.1605" y="183.3333" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--ok-accent)">Write Quorum (W=2)</text>
-  <text x="227.1605" y="240" text-anchor="middle" font-size="19.7531" fill="var(--ok-accent)">Replica A: Written</text>
-  <text x="227.1605" y="290" text-anchor="middle" font-size="19.7531" fill="var(--ok-accent)">Replica B: Written</text>
-  <text x="227.1605" y="333.3333" text-anchor="middle" font-size="19.7531" fill="var(--text-faint)">Replica C: Pending</text>
-  <rect x="444.4444" y="116.6667" width="296.2963" height="233.3333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="592.5926" y="183.3333" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--primary-accent)">Read Quorum (R=2)</text>
-  <text x="592.5926" y="240" text-anchor="middle" font-size="19.7531" fill="var(--primary-accent)">Replica A: v2</text>
-  <text x="592.5926" y="290" text-anchor="middle" font-size="19.7531" fill="var(--primary-accent)">Replica C: v1 (stale)</text>
-  <text x="592.5926" y="333.3333" text-anchor="middle" font-size="19.7531" fill="var(--primary-accent)">Pick latest: v2</text>
-  <rect x="809.8766" y="116.6667" width="335.8025" height="233.3333" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="977.7778" y="183.3333" text-anchor="middle" font-size="21.7284" font-weight="bold" fill="var(--warn-accent)">Overlap Guarantee</text>
-  <text x="977.7778" y="240" text-anchor="middle" font-size="19.7531">W + R = 2 + 2 = 4</text>
-  <text x="977.7778" y="290" text-anchor="middle" font-size="19.7531">N = 3 replicas</text>
-  <text x="977.7778" y="333.3333" text-anchor="middle" font-size="19.7531" fill="var(--ok-accent)">4 &gt; 3: Overlap exists</text>
-  <rect x="197.5308" y="400" width="790.1234" height="100" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="592.5926" y="466.6667" text-anchor="middle" font-size="19.7531" fill="var(--info-accent)">At least one node in Read set saw the latest Write = consistency guaranteed</text>
-  <text x="592.5926" y="583.3333" text-anchor="middle" font-size="19.7531" fill="var(--text-muted)">Tuning W and R: higher W+R = stronger consistency, lower = faster but weaker</text>
-  <text x="592.5926" y="640" text-anchor="middle" font-size="19.7531" fill="var(--text-muted)">Common configs: W=1,R=N (fast writes) | W=N,R=1 (fast reads) | W=R=majority (balanced)</text>
+  <text x="617.7778" y="40" text-anchor="middle" font-size="27.2367" font-weight="bold">Quorum: W + R &gt; N = Strong Consistency</text>
+  <rect x="40" y="96.6667" width="333.3333" height="233.3333" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="206.6667" y="163.3333" text-anchor="middle" font-size="23.0464" font-weight="bold" fill="var(--ok-accent)">Write Quorum (W=2)</text>
+  <text x="206.6667" y="220" text-anchor="middle" font-size="20.9513" fill="var(--ok-accent)">Replica A: Written</text>
+  <text x="206.6667" y="270" text-anchor="middle" font-size="20.9513" fill="var(--ok-accent)">Replica B: Written</text>
+  <text x="206.6667" y="313.3333" text-anchor="middle" font-size="20.9513" fill="var(--text-faint)">Replica C: Pending</text>
+  <rect x="451.1111" y="96.6667" width="333.3333" height="233.3333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="617.7778" y="163.3333" text-anchor="middle" font-size="23.0464" font-weight="bold" fill="var(--primary-accent)">Read Quorum (R=2)</text>
+  <text x="617.7778" y="220" text-anchor="middle" font-size="20.9513" fill="var(--primary-accent)">Replica A: v2</text>
+  <text x="617.7778" y="270" text-anchor="middle" font-size="20.9513" fill="var(--primary-accent)">Replica C: v1 (stale)</text>
+  <text x="617.7778" y="313.3333" text-anchor="middle" font-size="20.9513" fill="var(--primary-accent)">Pick latest: v2</text>
+  <rect x="862.2222" y="96.6667" width="377.7778" height="233.3333" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="1051.1111" y="163.3333" text-anchor="middle" font-size="23.0464" font-weight="bold" fill="var(--warn-accent)">Overlap Guarantee</text>
+  <text x="1051.1111" y="220" text-anchor="middle" font-size="20.9513">W + R = 2 + 2 = 4</text>
+  <text x="1051.1111" y="270" text-anchor="middle" font-size="20.9513">N = 3 replicas</text>
+  <text x="1051.1111" y="313.3333" text-anchor="middle" font-size="20.9513" fill="var(--ok-accent)">4 &gt; 3: Overlap exists</text>
+  <rect x="173.3333" y="380" width="888.8887" height="100" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="617.7778" y="446.6667" text-anchor="middle" font-size="20.9513" fill="var(--info-accent)">At least one node in Read set saw the latest Write = consistency guaranteed</text>
+  <text x="617.7778" y="563.3333" text-anchor="middle" font-size="20.9513" fill="var(--text-muted)">Tuning W and R: higher W+R = stronger consistency, lower = faster but weaker</text>
+  <text x="617.7778" y="620" text-anchor="middle" font-size="20.9513" fill="var(--text-muted)">Common configs: W=1,R=N (fast writes) | W=N,R=1 (fast reads) | W=R=majority (balanced)</text>
 </svg>

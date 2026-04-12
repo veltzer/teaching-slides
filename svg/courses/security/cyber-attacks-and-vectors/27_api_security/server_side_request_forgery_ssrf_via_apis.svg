@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="17.9531" y="16.4103" width="1131.0454" height="623.5897" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="583.4758" y="65.641" text-anchor="middle" font-size="29.5385" font-weight="bold" fill="var(--text)">SSRF via API</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="85.7894" text-anchor="middle" font-size="29.3429" font-weight="bold" fill="var(--text)">SSRF via API</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -102,26 +102,26 @@
       <polygon points="0,18 6.8923,0" fill="#dc3545" />
     </marker>
   </defs>
-  <rect x="53.8593" y="90.2564" width="502.6868" height="73.8462" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="71.8124" y="118.1538" font-size="18.0513" fill="var(--text)">POST /api/fetch-url</text>
-  <text x="71.8124" y="144.4103" font-size="18.0513" fill="var(--text-muted)">{ "url": "https://example.com/image.png" }</text>
-  <rect x="592.4524" y="90.2564" width="520.6399" height="73.8462" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="610.4055" y="118.1538" font-size="18.0513" fill="var(--text)">Attacker sends:</text>
-  <text x="610.4055" y="144.4103" font-size="18.0513" fill="var(--danger-accent)">{ "url": "http://169.254.169.254/meta-data/" }</text>
-  <rect x="71.8124" y="213.3333" width="233.3903" height="98.4615" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="188.5075" y="270.7692" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-accent)">Attacker</text>
-  <rect x="448.8275" y="213.3333" width="233.3903" height="98.4615" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="565.5227" y="259.2821" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-accent)">API</text>
-  <text x="565.5227" y="287.1795" text-anchor="middle" font-size="19.6923" fill="var(--text-muted)">Server</text>
-  <rect x="825.8427" y="196.9231" width="278.2731" height="131.2821" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="964.0815" y="242.8718" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="var(--danger-accent)">AWS IMDS</text>
-  <text x="964.0815" y="275.6923" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">169.254.169.254</text>
-  <text x="964.0815" y="303.5897" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">(IAM credentials)</text>
-  <line x1="305.2027" y1="246.1538" x2="439.8509" y2="246.1538" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
-  <line x1="682.2178" y1="246.1538" x2="816.8661" y2="246.1538" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
-  <line x1="816.8661" y1="287.1795" x2="682.2178" y2="287.1795" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
-  <line x1="439.8509" y1="287.1795" x2="305.2027" y2="287.1795" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
-  <rect x="71.8124" y="377.4359" width="1032.3033" height="82.0513" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="583.4758" y="413.5385" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-accent)">Result: Attacker gets AWS IAM temporary credentials</text>
-  <text x="583.4758" y="443.0769" text-anchor="middle" font-size="21.3333" fill="var(--text-muted)">via the API server's network access!</text>
+  <rect x="78.0952" y="108.6842" width="533.3333" height="68.6843" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="97.1429" y="134.6315" font-size="17.9318" fill="var(--text)">POST /api/fetch-url</text>
+  <text x="97.1429" y="159.0526" font-size="17.9318" fill="var(--text-muted)">{ "url": "https://example.com/image.png" }</text>
+  <rect x="649.5239" y="108.6842" width="552.3809" height="68.6843" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="668.5715" y="134.6315" font-size="17.9318" fill="var(--text)">Attacker sends:</text>
+  <text x="668.5715" y="159.0526" font-size="17.9318" fill="var(--danger-accent)">{ "url": "http://169.254.169.254/meta-data/" }</text>
+  <rect x="97.1429" y="223.1578" width="247.619" height="91.5789" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="220.9523" y="276.5789" text-anchor="middle" font-size="22.8223" font-weight="bold" fill="var(--danger-accent)">Attacker</text>
+  <rect x="497.1428" y="223.1578" width="247.619" height="91.5789" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="620.9524" y="265.8948" text-anchor="middle" font-size="22.8223" font-weight="bold" fill="var(--danger-accent)">API</text>
+  <text x="620.9524" y="291.8421" text-anchor="middle" font-size="19.5619" fill="var(--text-muted)">Server</text>
+  <rect x="897.1429" y="207.8947" width="295.2381" height="122.1053" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1043.8095" y="250.6316" text-anchor="middle" font-size="21.1921" font-weight="bold" fill="var(--danger-accent)">AWS IMDS</text>
+  <text x="1043.8095" y="281.1579" text-anchor="middle" font-size="17.9318" fill="var(--text-muted)">169.254.169.254</text>
+  <text x="1043.8095" y="307.1052" text-anchor="middle" font-size="17.9318" fill="var(--text-muted)">(IAM credentials)</text>
+  <line x1="344.7619" y1="253.6841" x2="487.619" y2="253.6841" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <line x1="744.7618" y1="253.6841" x2="887.619" y2="253.6841" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <line x1="887.619" y1="291.8421" x2="744.7618" y2="291.8421" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <line x1="487.619" y1="291.8421" x2="344.7619" y2="291.8421" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <rect x="97.1429" y="375.7895" width="1095.2381" height="76.3158" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="640" y="409.3684" text-anchor="middle" font-size="22.8223" font-weight="bold" fill="var(--danger-accent)">Result: Attacker gets AWS IAM temporary credentials</text>
+  <text x="640" y="436.8421" text-anchor="middle" font-size="21.1921" fill="var(--text-muted)">via the API server's network access!</text>
 </svg>

@@ -104,179 +104,179 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#f57c00"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Header -->
-  <rect x="20" y="12" width="1240" height="42" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="40" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">GDB Debugging Workflow for Assembly</text>
+  <rect x="58.75" y="50.875" width="1162.5" height="38.0625" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="76.25" text-anchor="middle" font-family="sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)">GDB Debugging Workflow for Assembly</text>
 
   <!-- === FLOWCHART (left column) === -->
   <!-- Step 1: Compile with -g -->
-  <rect x="30" y="70" width="200" height="56" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="130" y="95" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">1. Compile with -g</text>
-  <text x="130" y="114" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--primary-accent)">as -g prog.s -o prog.o</text>
+  <rect x="68.125" y="103.4375" width="187.5" height="50.75" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="161.875" y="126.0938" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">1. Compile with -g</text>
+  <text x="161.875" y="143.3125" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)">as -g prog.s -o prog.o</text>
   <!-- arrow -->
-  <line x1="130" y1="126" x2="130" y2="150" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="161.875" y1="154.1875" x2="161.875" y2="175.9375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2: Run GDB -->
-  <rect x="30" y="150" width="200" height="56" rx="6" fill="var(--primary-accent)" filter="url(#shadow)"/>
-  <text x="130" y="175" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">2. Run GDB</text>
-  <text x="130" y="194" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--primary-accent)">gdb ./program</text>
+  <rect x="68.125" y="175.9375" width="187.5" height="50.75" rx="6" fill="var(--primary-accent)" filter="url(#shadow)"/>
+  <text x="161.875" y="198.5938" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">2. Run GDB</text>
+  <text x="161.875" y="215.8125" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)">gdb ./program</text>
   <!-- arrow -->
-  <line x1="130" y1="206" x2="130" y2="230" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="161.875" y1="226.6875" x2="161.875" y2="248.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3: Set Breakpoint -->
-  <rect x="30" y="230" width="200" height="56" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="130" y="254" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">3. Set Breakpoint</text>
-  <text x="130" y="273" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--primary-accent)">break _start</text>
+  <rect x="68.125" y="248.4375" width="187.5" height="50.75" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="161.875" y="270.1875" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">3. Set Breakpoint</text>
+  <text x="161.875" y="287.4062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)">break _start</text>
   <!-- arrow -->
-  <line x1="130" y1="286" x2="130" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="161.875" y1="299.1875" x2="161.875" y2="320.9375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 4: Run -->
-  <rect x="30" y="310" width="200" height="56" rx="6" fill="var(--ok-accent)" filter="url(#shadow)"/>
-  <text x="130" y="334" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">4. Run Program</text>
-  <text x="130" y="353" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--ok-accent)">run</text>
+  <rect x="68.125" y="320.9375" width="187.5" height="50.75" rx="6" fill="var(--ok-accent)" filter="url(#shadow)"/>
+  <text x="161.875" y="342.6875" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">4. Run Program</text>
+  <text x="161.875" y="359.9062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)">run</text>
   <!-- arrow -->
-  <line x1="130" y1="366" x2="130" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="161.875" y1="371.6875" x2="161.875" y2="393.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 5: Examine (diamond decision) -->
-  <polygon points="130,390 200,430 130,470 60,430" fill="var(--warn-fill)" filter="url(#shadow)"/>
-  <text x="130" y="426" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">Examine</text>
-  <text x="130" y="443" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--bg)">state</text>
+  <polygon points="161.875,393.4375 227.5,429.6875 161.875,465.9375 96.25,429.6875" fill="var(--warn-fill)" filter="url(#shadow)"/>
+  <text x="161.875" y="426.0625" text-anchor="middle" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--bg)">Examine</text>
+  <text x="161.875" y="441.4688" text-anchor="middle" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--bg)">state</text>
   <!-- arrow down -->
-  <line x1="130" y1="470" x2="130" y2="494" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="161.875" y1="465.9375" x2="161.875" y2="487.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 6: Step/Next -->
-  <rect x="30" y="494" width="200" height="56" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="130" y="518" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">5. Step / Next</text>
-  <text x="130" y="537" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--info-accent)">stepi / nexti</text>
+  <rect x="68.125" y="487.6875" width="187.5" height="50.75" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="161.875" y="509.4375" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">5. Step / Next</text>
+  <text x="161.875" y="526.6562" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--info-accent)">stepi / nexti</text>
 
   <!-- Feedback loop arrow: back to examine -->
-  <line x1="30" y1="522" x2="15" y2="522" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="15" y1="522" x2="15" y2="430" stroke="var(--warn-border)" stroke-width="2"/>
-  <line x1="15" y1="430" x2="60" y2="430" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
-  <text x="10" y="478" font-family="sans-serif" font-size="10" fill="var(--warn-accent)" font-weight="bold" transform="rotate(-90 10 478)">loop</text>
+  <line x1="68.125" y1="513.0625" x2="54.0625" y2="513.0625" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="54.0625" y1="513.0625" x2="54.0625" y2="429.6875" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="54.0625" y1="429.6875" x2="96.25" y2="429.6875" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow-warn)"/>
+  <text x="49.375" y="473.1875" font-family="sans-serif" font-size="10" fill="var(--warn-accent)" font-weight="bold" transform="rotate(-90 10 478)">loop</text>
 
   <!-- Bug found arrow -->
-  <line x1="130" y1="550" x2="130" y2="580" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="161.875" y1="538.4375" x2="161.875" y2="565.625" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <!-- Step 7: Fix bug -->
-  <rect x="30" y="580" width="200" height="40" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="130" y="598" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--bg)">6. Fix Bug &amp; Repeat</text>
-  <text x="130" y="614" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--danger-accent)">quit -> edit -> rebuild</text>
+  <rect x="68.125" y="565.625" width="187.5" height="36.25" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="161.875" y="581.9375" text-anchor="middle" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)">6. Fix Bug &amp; Repeat</text>
+  <text x="161.875" y="596.4375" text-anchor="middle" font-family="monospace" font-size="10" fill="var(--danger-accent)">quit -> edit -> rebuild</text>
 
   <!-- === COMMANDS REFERENCE (right column) === -->
-  <rect x="255" y="68" width="1005" height="554" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="255" y="68" width="1005" height="40" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="255" y="94" width="1005" height="14" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="757" y="98" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Key GDB Commands for Assembly Debugging</text>
+  <rect x="279.0625" y="101.625" width="942.1875" height="502.0625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="279.0625" y="101.625" width="942.1875" height="36.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="279.0625" y="125.1875" width="942.1875" height="12.6875" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="749.6875" y="128.8125" text-anchor="middle" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)">Key GDB Commands for Assembly Debugging</text>
 
   <!-- Column headings -->
-  <rect x="270" y="115" width="480" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="510" y="133" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Command</text>
+  <rect x="293.125" y="144.2188" width="450" height="25.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="518.125" y="160.5312" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">Command</text>
 
-  <rect x="760" y="115" width="490" height="28" rx="6" fill="var(--primary-accent)"/>
-  <text x="1005" y="133" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">What it does</text>
+  <rect x="752.5" y="144.2188" width="459.375" height="25.375" rx="6" fill="var(--primary-accent)"/>
+  <text x="982.1875" y="160.5312" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">What it does</text>
 
   <!-- == Startup / Control section == -->
-  <rect x="270" y="148" width="480" height="22" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="760" y="148" width="490" height="22" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="290" y="164" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">STARTUP &amp; CONTROL</text>
+  <rect x="293.125" y="174.125" width="450" height="19.9375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="752.5" y="174.125" width="459.375" height="19.9375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="311.875" y="188.625" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--primary-accent)">STARTUP &amp; CONTROL</text>
 
-  <rect x="270" y="170" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="170" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="186" font-family="monospace" font-size="12" fill="var(--text)">run</text>
-  <text x="780" y="186" font-family="monospace" font-size="12" fill="var(--text-muted)">Start the program from beginning</text>
+  <rect x="293.125" y="194.0625" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="194.0625" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="208.5625" font-family="monospace" font-size="11.0609" fill="var(--text)">run</text>
+  <text x="771.25" y="208.5625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Start the program from beginning</text>
 
-  <rect x="270" y="194" width="480" height="24" fill="var(--surface)" rx="6"/>
-  <rect x="760" y="194" width="490" height="24" fill="var(--surface)" rx="6"/>
-  <text x="290" y="210" font-family="monospace" font-size="12" fill="var(--text)">continue  (c)</text>
-  <text x="780" y="210" font-family="monospace" font-size="12" fill="var(--text-muted)">Continue until next breakpoint</text>
+  <rect x="293.125" y="215.8125" width="450" height="21.75" fill="var(--surface)" rx="6"/>
+  <rect x="752.5" y="215.8125" width="459.375" height="21.75" fill="var(--surface)" rx="6"/>
+  <text x="311.875" y="230.3125" font-family="monospace" font-size="11.0609" fill="var(--text)">continue  (c)</text>
+  <text x="771.25" y="230.3125" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Continue until next breakpoint</text>
 
-  <rect x="270" y="218" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="218" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="234" font-family="monospace" font-size="12" fill="var(--text)">quit  (q)</text>
-  <text x="780" y="234" font-family="monospace" font-size="12" fill="var(--text-muted)">Exit GDB</text>
+  <rect x="293.125" y="237.5625" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="237.5625" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="252.0625" font-family="monospace" font-size="11.0609" fill="var(--text)">quit  (q)</text>
+  <text x="771.25" y="252.0625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Exit GDB</text>
 
   <!-- == Breakpoints section == -->
-  <rect x="270" y="242" width="480" height="22" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="760" y="242" width="490" height="22" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="290" y="258" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--ok-accent)">BREAKPOINTS</text>
+  <rect x="293.125" y="259.3125" width="450" height="19.9375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="752.5" y="259.3125" width="459.375" height="19.9375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="311.875" y="273.8125" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--ok-accent)">BREAKPOINTS</text>
 
-  <rect x="270" y="264" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="264" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="280" font-family="monospace" font-size="12" fill="var(--text)">break _start</text>
-  <text x="780" y="280" font-family="monospace" font-size="12" fill="var(--text-muted)">Set breakpoint at label _start</text>
+  <rect x="293.125" y="279.25" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="279.25" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="293.75" font-family="monospace" font-size="11.0609" fill="var(--text)">break _start</text>
+  <text x="771.25" y="293.75" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Set breakpoint at label _start</text>
 
-  <rect x="270" y="288" width="480" height="24" fill="var(--surface)" rx="6"/>
-  <rect x="760" y="288" width="490" height="24" fill="var(--surface)" rx="6"/>
-  <text x="290" y="304" font-family="monospace" font-size="12" fill="var(--text)">break *0x08048080</text>
-  <text x="780" y="304" font-family="monospace" font-size="12" fill="var(--text-muted)">Breakpoint at specific address</text>
+  <rect x="293.125" y="301" width="450" height="21.75" fill="var(--surface)" rx="6"/>
+  <rect x="752.5" y="301" width="459.375" height="21.75" fill="var(--surface)" rx="6"/>
+  <text x="311.875" y="315.5" font-family="monospace" font-size="11.0609" fill="var(--text)">break *0x08048080</text>
+  <text x="771.25" y="315.5" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Breakpoint at specific address</text>
 
-  <rect x="270" y="312" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="312" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="328" font-family="monospace" font-size="12" fill="var(--text)">info breakpoints</text>
-  <text x="780" y="328" font-family="monospace" font-size="12" fill="var(--text-muted)">List all breakpoints</text>
+  <rect x="293.125" y="322.75" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="322.75" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="337.25" font-family="monospace" font-size="11.0609" fill="var(--text)">info breakpoints</text>
+  <text x="771.25" y="337.25" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">List all breakpoints</text>
 
   <!-- == Stepping section == -->
-  <rect x="270" y="336" width="480" height="22" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="760" y="336" width="490" height="22" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="290" y="352" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)">STEPPING (ASSEMBLY-LEVEL)</text>
+  <rect x="293.125" y="344.5" width="450" height="19.9375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="752.5" y="344.5" width="459.375" height="19.9375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="311.875" y="359" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)">STEPPING (ASSEMBLY-LEVEL)</text>
 
-  <rect x="270" y="358" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="358" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="374" font-family="monospace" font-size="12" fill="var(--danger-accent)" font-weight="bold">stepi  (si)</text>
-  <text x="780" y="374" font-family="monospace" font-size="12" fill="var(--text-muted)">Step one instruction (follows calls)</text>
+  <rect x="293.125" y="364.4375" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="364.4375" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="378.9375" font-family="monospace" font-size="11.0609" fill="var(--danger-accent)" font-weight="bold">stepi  (si)</text>
+  <text x="771.25" y="378.9375" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Step one instruction (follows calls)</text>
 
-  <rect x="270" y="382" width="480" height="24" fill="var(--surface)" rx="6"/>
-  <rect x="760" y="382" width="490" height="24" fill="var(--surface)" rx="6"/>
-  <text x="290" y="398" font-family="monospace" font-size="12" fill="var(--danger-accent)" font-weight="bold">nexti  (ni)</text>
-  <text x="780" y="398" font-family="monospace" font-size="12" fill="var(--text-muted)">Step over one instruction (skips calls)</text>
+  <rect x="293.125" y="386.1875" width="450" height="21.75" fill="var(--surface)" rx="6"/>
+  <rect x="752.5" y="386.1875" width="459.375" height="21.75" fill="var(--surface)" rx="6"/>
+  <text x="311.875" y="400.6875" font-family="monospace" font-size="11.0609" fill="var(--danger-accent)" font-weight="bold">nexti  (ni)</text>
+  <text x="771.25" y="400.6875" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Step over one instruction (skips calls)</text>
 
-  <rect x="270" y="406" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="406" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="422" font-family="monospace" font-size="12" fill="var(--text)">finish</text>
-  <text x="780" y="422" font-family="monospace" font-size="12" fill="var(--text-muted)">Run until end of current function</text>
+  <rect x="293.125" y="407.9375" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="407.9375" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="422.4375" font-family="monospace" font-size="11.0609" fill="var(--text)">finish</text>
+  <text x="771.25" y="422.4375" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Run until end of current function</text>
 
   <!-- == Registers section == -->
-  <rect x="270" y="430" width="480" height="22" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="760" y="430" width="490" height="22" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="290" y="446" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--danger-accent)">REGISTERS</text>
+  <rect x="293.125" y="429.6875" width="450" height="19.9375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="752.5" y="429.6875" width="459.375" height="19.9375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="311.875" y="444.1875" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--danger-accent)">REGISTERS</text>
 
-  <rect x="270" y="452" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="452" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="468" font-family="monospace" font-size="12" fill="var(--danger-accent)" font-weight="bold">info registers</text>
-  <text x="780" y="468" font-family="monospace" font-size="12" fill="var(--text-muted)">Show all register values</text>
+  <rect x="293.125" y="449.625" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="449.625" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="464.125" font-family="monospace" font-size="11.0609" fill="var(--danger-accent)" font-weight="bold">info registers</text>
+  <text x="771.25" y="464.125" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Show all register values</text>
 
-  <rect x="270" y="476" width="480" height="24" fill="var(--surface)" rx="6"/>
-  <rect x="760" y="476" width="490" height="24" fill="var(--surface)" rx="6"/>
-  <text x="290" y="492" font-family="monospace" font-size="12" fill="var(--text)">print $eax</text>
-  <text x="780" y="492" font-family="monospace" font-size="12" fill="var(--text-muted)">Print value of EAX register</text>
+  <rect x="293.125" y="471.375" width="450" height="21.75" fill="var(--surface)" rx="6"/>
+  <rect x="752.5" y="471.375" width="459.375" height="21.75" fill="var(--surface)" rx="6"/>
+  <text x="311.875" y="485.875" font-family="monospace" font-size="11.0609" fill="var(--text)">print $eax</text>
+  <text x="771.25" y="485.875" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Print value of EAX register</text>
 
-  <rect x="270" y="500" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="500" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="516" font-family="monospace" font-size="12" fill="var(--text)">set $eax = 42</text>
-  <text x="780" y="516" font-family="monospace" font-size="12" fill="var(--text-muted)">Modify register value</text>
+  <rect x="293.125" y="493.125" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="493.125" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="507.625" font-family="monospace" font-size="11.0609" fill="var(--text)">set $eax = 42</text>
+  <text x="771.25" y="507.625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Modify register value</text>
 
   <!-- == Memory section == -->
-  <rect x="270" y="524" width="480" height="22" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="760" y="524" width="490" height="22" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="290" y="540" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--info-accent)">MEMORY EXAMINATION</text>
+  <rect x="293.125" y="514.875" width="450" height="19.9375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="752.5" y="514.875" width="459.375" height="19.9375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="311.875" y="529.375" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--info-accent)">MEMORY EXAMINATION</text>
 
-  <rect x="270" y="546" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="546" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="562" font-family="monospace" font-size="12" fill="var(--info-accent)" font-weight="bold">x/10xw $esp</text>
-  <text x="780" y="562" font-family="monospace" font-size="12" fill="var(--text-muted)">10 words from ESP in hex</text>
+  <rect x="293.125" y="534.8125" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="534.8125" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="549.3125" font-family="monospace" font-size="11.0609" fill="var(--info-accent)" font-weight="bold">x/10xw $esp</text>
+  <text x="771.25" y="549.3125" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">10 words from ESP in hex</text>
 
-  <rect x="270" y="570" width="480" height="24" fill="var(--surface)" rx="6"/>
-  <rect x="760" y="570" width="490" height="24" fill="var(--surface)" rx="6"/>
-  <text x="290" y="586" font-family="monospace" font-size="12" fill="var(--info-accent)" font-weight="bold">x/10i $eip</text>
-  <text x="780" y="586" font-family="monospace" font-size="12" fill="var(--text-muted)">Show next 10 instructions at EIP</text>
+  <rect x="293.125" y="556.5625" width="450" height="21.75" fill="var(--surface)" rx="6"/>
+  <rect x="752.5" y="556.5625" width="459.375" height="21.75" fill="var(--surface)" rx="6"/>
+  <text x="311.875" y="571.0625" font-family="monospace" font-size="11.0609" fill="var(--info-accent)" font-weight="bold">x/10i $eip</text>
+  <text x="771.25" y="571.0625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Show next 10 instructions at EIP</text>
 
-  <rect x="270" y="594" width="480" height="24" fill="var(--bg)" rx="6"/>
-  <rect x="760" y="594" width="490" height="24" fill="var(--bg)" rx="6"/>
-  <text x="290" y="610" font-family="monospace" font-size="12" fill="var(--info-accent)" font-weight="bold">disassemble</text>
-  <text x="780" y="610" font-family="monospace" font-size="12" fill="var(--text-muted)">Disassemble current function</text>
+  <rect x="293.125" y="578.3125" width="450" height="21.75" fill="var(--bg)" rx="6"/>
+  <rect x="752.5" y="578.3125" width="459.375" height="21.75" fill="var(--bg)" rx="6"/>
+  <text x="311.875" y="592.8125" font-family="monospace" font-size="11.0609" fill="var(--info-accent)" font-weight="bold">disassemble</text>
+  <text x="771.25" y="592.8125" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">Disassemble current function</text>
 
   <!-- divider between command and desc columns -->
-  <line x1="750" y1="115" x2="750" y2="618" stroke="var(--border)" stroke-width="1"/>
+  <line x1="743.125" y1="144.2188" x2="743.125" y2="600.0625" stroke="var(--border)" stroke-width="1"/>
 </svg>

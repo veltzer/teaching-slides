@@ -94,63 +94,63 @@
     </marker>
 </defs>
 
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Chart area -->
-  <text x="640" y="40" font-family="Arial, sans-serif" font-size="18" fill="var(--text)" text-anchor="middle" font-weight="bold">Storage Cost per GB/month (USD)</text>
+  <text x="640" y="76.25" font-family="Arial, sans-serif" font-size="16.5914" fill="var(--text)" text-anchor="middle" font-weight="bold">Storage Cost per GB/month (USD)</text>
 
   <!-- Y axis -->
-  <line x1="280" y1="70" x2="280" y2="540" stroke="var(--border)" stroke-width="2"/>
+  <line x1="302.5" y1="103.4375" x2="302.5" y2="529.375" stroke="var(--border)" stroke-width="2"/>
 
   <!-- X axis -->
-  <line x1="280" y1="540" x2="1240" y2="540" stroke="var(--border)" stroke-width="2"/>
+  <line x1="302.5" y1="529.375" x2="1202.5" y2="529.375" stroke="var(--border)" stroke-width="2"/>
 
   <!-- Scale: max = $0.30 (EFS), chart width = 940px. Factor = 940/0.30 = 3133 px per $ -->
 
   <!-- Bar 1: EFS - $0.30 -->
-  <rect x="300" y="80" width="940" height="70" rx="6" fill="var(--danger-fill)" opacity="0.85" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="310" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" font-weight="bold">EFS (Elastic File System)</text>
-  <text x="310" y="125" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Shared POSIX filesystem | NFS protocol</text>
-  <text x="1200" y="120" font-family="Arial, sans-serif" font-size="16" fill="var(--bg)" text-anchor="end" font-weight="bold">$0.30</text>
+  <rect x="321.25" y="112.5" width="881.25" height="63.4375" rx="6" fill="var(--danger-fill)" opacity="0.85" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330.625" y="135.1562" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--bg)" font-weight="bold">EFS (Elastic File System)</text>
+  <text x="330.625" y="153.2812" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--bg)">Shared POSIX filesystem | NFS protocol</text>
+  <text x="1165" y="148.75" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--bg)" text-anchor="end" font-weight="bold">$0.30</text>
 
   <!-- Bar 2: EBS gp3 - $0.08 -->
-  <rect x="300" y="170" width="250" height="70" rx="6" fill="var(--warn-fill)" opacity="0.85" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="310" y="195" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" font-weight="bold">EBS gp3</text>
-  <text x="310" y="215" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">Block storage | 3K IOPS base</text>
-  <text x="560" y="210" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-accent)" font-weight="bold">$0.08</text>
+  <rect x="321.25" y="194.0625" width="234.375" height="63.4375" rx="6" fill="var(--warn-fill)" opacity="0.85" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="330.625" y="216.7188" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--bg)" font-weight="bold">EBS gp3</text>
+  <text x="330.625" y="234.8438" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--bg)">Block storage | 3K IOPS base</text>
+  <text x="565" y="230.3125" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--warn-accent)" font-weight="bold">$0.08</text>
 
   <!-- Bar 3: S3 Standard - $0.023 -->
-  <rect x="300" y="260" width="72" height="70" rx="6" fill="var(--primary-fill)" opacity="0.85" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="385" y="285" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-accent)" font-weight="bold">S3 Standard</text>
-  <text x="385" y="305" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Object storage | 3 AZ | Millisecond access</text>
-  <text x="385" y="325" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-accent)" font-weight="bold">$0.023</text>
+  <rect x="321.25" y="275.625" width="67.5" height="63.4375" rx="6" fill="var(--primary-fill)" opacity="0.85" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="400.9375" y="298.2812" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--primary-accent)" font-weight="bold">S3 Standard</text>
+  <text x="400.9375" y="316.4062" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Object storage | 3 AZ | Millisecond access</text>
+  <text x="400.9375" y="334.5312" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--primary-accent)" font-weight="bold">$0.023</text>
 
   <!-- Bar 4: S3 IA - $0.0125 -->
-  <rect x="300" y="350" width="39" height="70" rx="6" fill="var(--info-fill)" opacity="0.85" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="355" y="375" font-family="Arial, sans-serif" font-size="14" fill="var(--info-accent)" font-weight="bold">S3 Infrequent Access</text>
-  <text x="355" y="395" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Object storage | Retrieval fee | 30-day min</text>
-  <text x="355" y="415" font-family="Arial, sans-serif" font-size="16" fill="var(--info-accent)" font-weight="bold">$0.0125</text>
+  <rect x="321.25" y="357.1875" width="36.5625" height="63.4375" rx="6" fill="var(--info-fill)" opacity="0.85" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="372.8125" y="379.8438" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--info-accent)" font-weight="bold">S3 Infrequent Access</text>
+  <text x="372.8125" y="397.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Object storage | Retrieval fee | 30-day min</text>
+  <text x="372.8125" y="416.0938" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--info-accent)" font-weight="bold">$0.0125</text>
 
   <!-- Bar 5: Glacier - $0.004 -->
-  <rect x="300" y="440" width="13" height="70" rx="6" fill="var(--ok-fill)" opacity="0.85" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="330" y="465" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)" font-weight="bold">S3 Glacier Instant Retrieval</text>
-  <text x="330" y="485" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Archive | 90-day min | Millisecond retrieval</text>
-  <text x="330" y="505" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-accent)" font-weight="bold">$0.004</text>
+  <rect x="321.25" y="438.75" width="12.1875" height="63.4375" rx="6" fill="var(--ok-fill)" opacity="0.85" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="349.375" y="461.4062" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--ok-accent)" font-weight="bold">S3 Glacier Instant Retrieval</text>
+  <text x="349.375" y="479.5312" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Archive | 90-day min | Millisecond retrieval</text>
+  <text x="349.375" y="497.6562" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--ok-accent)" font-weight="bold">$0.004</text>
 
   <!-- Grid lines -->
-  <line x1="613" y1="70" x2="613" y2="540" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="613" y="560" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">$0.10</text>
+  <line x1="614.6875" y1="103.4375" x2="614.6875" y2="529.375" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="614.6875" y="547.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">$0.10</text>
 
-  <line x1="927" y1="70" x2="927" y2="540" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="927" y="560" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">$0.20</text>
+  <line x1="909.0625" y1="103.4375" x2="909.0625" y2="529.375" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="909.0625" y="547.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">$0.20</text>
 
-  <line x1="1240" y1="70" x2="1240" y2="540" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>
-  <text x="1240" y="560" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">$0.30</text>
+  <line x1="1202.5" y1="103.4375" x2="1202.5" y2="529.375" stroke="var(--border)" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="1202.5" y="547.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">$0.30</text>
 
-  <text x="300" y="560" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">$0.00</text>
+  <text x="321.25" y="547.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">$0.00</text>
 
   <!-- Key insight -->
-  <rect x="40" y="580" width="1200" height="45" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="605" font-family="Arial, sans-serif" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="bold">Key insight: EFS is 13x more expensive than S3 Standard, but provides shared POSIX filesystem access</text>
-  <text x="640" y="620" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Choose the cheapest storage that meets your access pattern requirements</text>
+  <rect x="77.5" y="565.625" width="1125" height="40.7812" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="588.2812" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle" font-weight="bold">Key insight: EFS is 13x more expensive than S3 Standard, but provides shared POSIX filesystem access</text>
+  <text x="640" y="601.875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Choose the cheapest storage that meets your access pattern requirements</text>
 </svg>

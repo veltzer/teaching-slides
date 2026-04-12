@@ -100,22 +100,22 @@
       <polygon points="0,0 6.4,18" fill="#555" />
     </marker>
   </defs>
-  <text x="583.4758" y="36.1026" text-anchor="middle" font-size="22.9744" fill="var(--text)" font-weight="bold">Kaminsky DNS Cache Poisoning Attack</text>
-  <rect x="16.6707" y="62.359" width="1133.6101" height="577.641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="36.6756" y="106.6667" text-anchor="start" font-size="21.3333" fill="var(--warn-accent)" font-weight="bold">1.</text>
-  <text x="91.689" y="106.6667" text-anchor="start" font-size="19.6923" fill="var(--text)">Attacker queries resolver for random.example.com</text>
-  <text x="91.689" y="136.2051" text-anchor="start" font-size="18.0513" fill="var(--text-muted)">(a subdomain that does NOT exist in cache)</text>
-  <text x="36.6756" y="182.1538" text-anchor="start" font-size="21.3333" fill="var(--warn-accent)" font-weight="bold">2.</text>
-  <text x="91.689" y="182.1538" text-anchor="start" font-size="19.6923" fill="var(--text)">Resolver sends query to authoritative server for example.com</text>
-  <text x="36.6756" y="228.1026" text-anchor="start" font-size="21.3333" fill="var(--warn-accent)" font-weight="bold">3.</text>
-  <text x="91.689" y="228.1026" text-anchor="start" font-size="19.6923" fill="var(--text)">Before real response arrives, attacker floods resolver with</text>
-  <text x="91.689" y="257.641" text-anchor="start" font-size="18.0513" fill="var(--text-muted)">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</text>
-  <text x="36.6756" y="303.5897" text-anchor="start" font-size="21.3333" fill="var(--warn-accent)" font-weight="bold">4.</text>
-  <text x="91.689" y="303.5897" text-anchor="start" font-size="19.6923" fill="var(--text)">If forged response arrives FIRST and ID matches:</text>
-  <text x="91.689" y="333.1282" text-anchor="start" font-size="18.0513" fill="var(--text-muted)">Resolver caches:  example.com NS  →  EVIL_IP</text>
-  <text x="36.6756" y="379.0769" text-anchor="start" font-size="21.3333" fill="var(--warn-accent)" font-weight="bold">5.</text>
-  <text x="91.689" y="379.0769" text-anchor="start" font-size="19.6923" fill="var(--text)">ALL future queries for *.example.com are redirected to attacker!</text>
-  <text x="36.6756" y="425.0256" text-anchor="start" font-size="21.3333" fill="var(--warn-accent)" font-weight="bold">Key:</text>
-  <text x="91.689" y="425.0256" text-anchor="start" font-size="19.6923" fill="var(--text)">Attacker retries with different random subdomains until one succeeds</text>
-  <text x="91.689" y="454.5641" text-anchor="start" font-size="18.0513" fill="var(--text-muted)">— thousands of attempts possible per second</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="23.1652" fill="var(--text)" font-weight="bold">Kaminsky DNS Cache Poisoning Attack</text>
+  <rect x="40" y="65.2174" width="1200" height="554.7826" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="61.1765" y="107.7717" text-anchor="start" font-size="21.5104" fill="var(--warn-accent)" font-weight="bold">1.</text>
+  <text x="119.4117" y="107.7717" text-anchor="start" font-size="19.8558" fill="var(--text)">Attacker queries resolver for random.example.com</text>
+  <text x="119.4117" y="136.1412" text-anchor="start" font-size="18.2012" fill="var(--text-muted)">(a subdomain that does NOT exist in cache)</text>
+  <text x="61.1765" y="180.2717" text-anchor="start" font-size="21.5104" fill="var(--warn-accent)" font-weight="bold">2.</text>
+  <text x="119.4117" y="180.2717" text-anchor="start" font-size="19.8558" fill="var(--text)">Resolver sends query to authoritative server for example.com</text>
+  <text x="61.1765" y="224.4022" text-anchor="start" font-size="21.5104" fill="var(--warn-accent)" font-weight="bold">3.</text>
+  <text x="119.4117" y="224.4022" text-anchor="start" font-size="19.8558" fill="var(--text)">Before real response arrives, attacker floods resolver with</text>
+  <text x="119.4117" y="252.7717" text-anchor="start" font-size="18.2012" fill="var(--text-muted)">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</text>
+  <text x="61.1765" y="296.9021" text-anchor="start" font-size="21.5104" fill="var(--warn-accent)" font-weight="bold">4.</text>
+  <text x="119.4117" y="296.9021" text-anchor="start" font-size="19.8558" fill="var(--text)">If forged response arrives FIRST and ID matches:</text>
+  <text x="119.4117" y="325.2717" text-anchor="start" font-size="18.2012" fill="var(--text-muted)">Resolver caches:  example.com NS  →  EVIL_IP</text>
+  <text x="61.1765" y="369.4021" text-anchor="start" font-size="21.5104" fill="var(--warn-accent)" font-weight="bold">5.</text>
+  <text x="119.4117" y="369.4021" text-anchor="start" font-size="19.8558" fill="var(--text)">ALL future queries for *.example.com are redirected to attacker!</text>
+  <text x="61.1765" y="413.5326" text-anchor="start" font-size="21.5104" fill="var(--warn-accent)" font-weight="bold">Key:</text>
+  <text x="119.4117" y="413.5326" text-anchor="start" font-size="19.8558" fill="var(--text)">Attacker retries with different random subdomains until one succeeds</text>
+  <text x="119.4117" y="441.9022" text-anchor="start" font-size="18.2012" fill="var(--text-muted)">— thousands of attempts possible per second</text>
 </svg>

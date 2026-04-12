@@ -101,89 +101,89 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <text x="568.8889" y="37.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--text)">API Server Request Pipeline (every request passes through all stages)</text>
-  <rect x="35.5556" y="53.3333" width="124.4444" height="62.2222" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="97.7778" y="80" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-accent)">Requester</text>
-  <text x="97.7778" y="96" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">user / pod /</text>
-  <text x="97.7778" y="108.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">service account</text>
-  <line x1="160" y1="84.4444" x2="195.5556" y2="84.4444" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="195.5556" y="44.4444" width="177.7778" height="248.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="195.5556" y="44.4444" width="177.7778" height="40.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="195.5556" y="74.6667" width="177.7778" height="10.6667" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="284.4444" y="72.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)">1. Authentication</text>
-  <text x="284.4444" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--primary-accent)">Who are you?</text>
-  <text x="213.3333" y="128" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">X.509 Client Certs</text>
-  <text x="213.3333" y="145.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Bearer Tokens</text>
-  <text x="213.3333" y="163.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">ServiceAccount Tokens</text>
-  <text x="213.3333" y="181.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">OpenID Connect (OIDC)</text>
-  <text x="213.3333" y="199.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Webhook Token Auth</text>
-  <text x="213.3333" y="222.2222" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Bootstrap Tokens</text>
-  <rect x="204.4444" y="240" width="160" height="39.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="284.4444" y="259.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--primary-accent)">→ username, groups</text>
-  <text x="284.4444" y="273.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">401 if unrecognized</text>
-  <line x1="373.3333" y1="84.4444" x2="408.8889" y2="84.4444" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="408.8889" y="44.4444" width="186.6667" height="302.2222" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="408.8889" y="44.4444" width="186.6667" height="40.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="408.8889" y="74.6667" width="186.6667" height="10.6667" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="502.2222" y="72.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)">2. Authorization</text>
-  <text x="502.2222" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-accent)">What can you do?</text>
-  <text x="502.2222" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--text-muted)">RBAC (default)</text>
-  <text x="426.6667" y="145.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Role + RoleBinding</text>
-  <text x="426.6667" y="163.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">ClusterRole + ClusterRoleBinding</text>
-  <line x1="426.6667" y1="176" x2="586.6667" y2="176" stroke="var(--ok-border)" stroke-width="0.8889" stroke-dasharray="3.5556 1.7778" />
-  <text x="502.2222" y="193.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" font-weight="bold" fill="var(--text-muted)">ABAC, Webhook</text>
-  <text x="426.6667" y="211.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Attribute-based / external</text>
-  <rect x="423.1111" y="229.3333" width="71.1111" height="26.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="458.6667" y="246.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">Role</text>
-  <line x1="494.2222" y1="242.6667" x2="512" y2="242.6667" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="512" y="229.3333" width="71.1111" height="26.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="547.5556" y="246.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">Binding</text>
-  <rect x="423.1111" y="273.7778" width="163.5556" height="39.1111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="504.8889" y="293.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--ok-accent)">→ allow / deny</text>
-  <text x="504.8889" y="307.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">403 if not authorized</text>
-  <line x1="595.5556" y1="84.4444" x2="631.1111" y2="84.4444" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="631.1111" y="44.4444" width="213.3333" height="355.5556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="631.1111" y="44.4444" width="213.3333" height="40.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="631.1111" y="74.6667" width="213.3333" height="10.6667" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="737.7778" y="72.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)">3. Admission Control</text>
-  <text x="737.7778" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--warn-accent)">Is it a valid request?</text>
-  <text x="737.7778" y="124.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" font-weight="bold" fill="var(--text-muted)">Mutating Webhooks (modify)</text>
-  <text x="648.8889" y="144" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Inject sidecar containers</text>
-  <text x="648.8889" y="160" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Add default resource limits</text>
-  <text x="648.8889" y="176" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Set security contexts</text>
-  <line x1="648.8889" y1="186.6667" x2="835.5556" y2="186.6667" stroke="var(--warn-border)" stroke-width="0.8889" stroke-dasharray="3.5556 1.7778" />
-  <text x="737.7778" y="206.2222" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" font-weight="bold" fill="var(--text-muted)">Validating Webhooks (check)</text>
-  <text x="648.8889" y="225.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">ResourceQuota enforcement</text>
-  <text x="648.8889" y="241.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">LimitRange enforcement</text>
-  <text x="648.8889" y="257.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Pod Security Admission</text>
-  <text x="648.8889" y="273.7778" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">OPA / Gatekeeper / Kyverno</text>
-  <rect x="645.3333" y="288" width="184.8889" height="39.1111" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="737.7778" y="307.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--danger-accent)">→ pass / reject / mutate</text>
-  <text x="737.7778" y="321.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">400/422 if rejected</text>
-  <rect x="645.3333" y="337.7778" width="184.8889" height="49.7778" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="737.7778" y="355.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" font-weight="bold" fill="var(--warn-accent)">Schema Validation</text>
-  <text x="737.7778" y="371.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">OpenAPI schema check</text>
-  <text x="737.7778" y="385.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">required fields, types</text>
-  <line x1="844.4444" y1="84.4444" x2="880" y2="84.4444" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="880" y="44.4444" width="213.3333" height="177.7778" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <rect x="880" y="44.4444" width="213.3333" height="40.8889" rx="6" fill="var(--text-muted)" />
-  <rect x="880" y="74.6667" width="213.3333" height="10.6667" fill="var(--text-muted)" rx="6"/>
-  <text x="986.6667" y="72.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--bg)">4. etcd</text>
-  <text x="986.6667" y="103.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--text-muted)">Persist to cluster store</text>
-  <text x="897.7778" y="131.5556" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Object stored in etcd</text>
-  <text x="897.7778" y="149.3333" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Watch events fired</text>
-  <text x="897.7778" y="167.1111" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">Controllers reconcile</text>
-  <text x="897.7778" y="184.8889" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">kubelet picks up work</text>
-  <rect x="894.2222" y="193.7778" width="184.8889" height="21.3333" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="986.6667" y="208" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" font-weight="bold" fill="var(--ok-accent)">201 Created / 200 OK</text>
-  <rect x="35.5556" y="391.1111" width="800" height="71.1111" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="44.4444" y="410.6667" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--danger-accent)">Rejection outcomes</text>
-  <text x="53.3333" y="432" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">401 Unauthorized — no valid credentials (Authn failed)</text>
-  <text x="53.3333" y="449.7778" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">403 Forbidden — authenticated but not allowed (Authz failed)    |    400/422 — bad request (Admission rejected)</text>
-  <rect x="35.5556" y="471.1111" width="1066.6667" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="44.4444" y="488.8889" font-family="Arial,sans-serif" font-size="11.5556" font-weight="bold" fill="var(--ok-accent)">RBAC Quick Reference</text>
-  <text x="53.3333" y="504.8889" font-family="monospace" font-size="10" fill="var(--text-muted)">Role — namespace-scoped permissions    ClusterRole — cluster-scoped permissions (nodes, PVs)</text>
-  <text x="53.3333" y="520.8889" font-family="monospace" font-size="10" fill="var(--text-muted)">RoleBinding — binds Role/ClusterRole to subject in a namespace</text>
-  <text x="53.3333" y="536.8889" font-family="monospace" font-size="10" fill="var(--text-muted)">ClusterRoleBinding — binds ClusterRole cluster-wide    Subject — User | Group | ServiceAccount</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <text x="640" y="73.8333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">API Server Request Pipeline (every request passes through all stages)</text>
+  <rect x="77.5" y="88.3333" width="131.25" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="143.125" y="112.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--warn-accent)">Requester</text>
+  <text x="143.125" y="127" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">user / pod /</text>
+  <text x="143.125" y="138.2777" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">service account</text>
+  <line x1="208.75" y1="116.5277" x2="246.25" y2="116.5277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="246.25" y="80.2777" width="187.5" height="225.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="246.25" y="80.2777" width="187.5" height="37.0556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="246.25" y="107.6667" width="187.5" height="9.6667" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="339.9999" y="106.0556" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)">1. Authentication</text>
+  <text x="339.9999" y="133.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--primary-accent)">Who are you?</text>
+  <text x="265" y="156" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">X.509 Client Certs</text>
+  <text x="265" y="172.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Bearer Tokens</text>
+  <text x="265" y="188.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">ServiceAccount Tokens</text>
+  <text x="265" y="204.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">OpenID Connect (OIDC)</text>
+  <text x="265" y="220.4444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Webhook Token Auth</text>
+  <text x="265" y="241.3889" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Bootstrap Tokens</text>
+  <rect x="255.6249" y="257.5" width="168.75" height="35.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="339.9999" y="275.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">→ username, groups</text>
+  <text x="339.9999" y="288.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--primary-accent)">401 if unrecognized</text>
+  <line x1="433.75" y1="116.5277" x2="471.25" y2="116.5277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="471.25" y="80.2777" width="196.875" height="273.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="471.25" y="80.2777" width="196.875" height="37.0556" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="471.25" y="107.6667" width="196.875" height="9.6667" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="569.6875" y="106.0556" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)">2. Authorization</text>
+  <text x="569.6875" y="133.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)">What can you do?</text>
+  <text x="569.6875" y="152.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)">RBAC (default)</text>
+  <text x="490" y="172.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Role + RoleBinding</text>
+  <text x="490" y="188.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">ClusterRole + ClusterRoleBinding</text>
+  <line x1="490" y1="199.5" x2="658.75" y2="199.5" stroke="var(--ok-border)" stroke-width="0.8889" stroke-dasharray="3.5556 1.7778" />
+  <text x="569.6875" y="215.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--text-muted)">ABAC, Webhook</text>
+  <text x="490" y="231.7223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Attribute-based / external</text>
+  <rect x="486.25" y="247.8333" width="75" height="24.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="523.75" y="263.1389" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">Role</text>
+  <line x1="561.25" y1="259.9167" x2="580" y2="259.9167" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <rect x="580" y="247.8333" width="75" height="24.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="617.5" y="263.1389" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">Binding</text>
+  <rect x="486.25" y="288.1111" width="172.5" height="35.4444" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="572.5" y="305.8333" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)">→ allow / deny</text>
+  <text x="572.5" y="318.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--ok-accent)">403 if not authorized</text>
+  <line x1="668.125" y1="116.5277" x2="705.625" y2="116.5277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="705.625" y="80.2777" width="225" height="322.2223" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="705.625" y="80.2777" width="225" height="37.0556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="705.625" y="107.6667" width="225" height="9.6667" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="818.125" y="106.0556" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)">3. Admission Control</text>
+  <text x="818.125" y="133.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--warn-accent)">Is it a valid request?</text>
+  <text x="818.125" y="152.7777" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--text-muted)">Mutating Webhooks (modify)</text>
+  <text x="724.375" y="170.5" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Inject sidecar containers</text>
+  <text x="724.375" y="185" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Add default resource limits</text>
+  <text x="724.375" y="199.5" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Set security contexts</text>
+  <line x1="724.375" y1="209.1667" x2="921.25" y2="209.1667" stroke="var(--warn-border)" stroke-width="0.8889" stroke-dasharray="3.5556 1.7778" />
+  <text x="818.125" y="226.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--text-muted)">Validating Webhooks (check)</text>
+  <text x="724.375" y="244.6111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">ResourceQuota enforcement</text>
+  <text x="724.375" y="259.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">LimitRange enforcement</text>
+  <text x="724.375" y="273.6111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Pod Security Admission</text>
+  <text x="724.375" y="288.1111" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">OPA / Gatekeeper / Kyverno</text>
+  <rect x="720.625" y="301" width="195" height="35.4444" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="818.125" y="318.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--danger-accent)">→ pass / reject / mutate</text>
+  <text x="818.125" y="331.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--danger-accent)">400/422 if rejected</text>
+  <rect x="720.625" y="346.1111" width="195" height="45.1111" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="818.125" y="362.2223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--warn-accent)">Schema Validation</text>
+  <text x="818.125" y="376.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">OpenAPI schema check</text>
+  <text x="818.125" y="389.6111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">required fields, types</text>
+  <line x1="930.6249" y1="116.5277" x2="968.125" y2="116.5277" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="968.125" y="80.2777" width="225" height="161.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <rect x="968.125" y="80.2777" width="225" height="37.0556" rx="6" fill="var(--text-muted)" />
+  <rect x="968.125" y="107.6667" width="225" height="9.6667" fill="var(--text-muted)" rx="6"/>
+  <text x="1080.625" y="106.0556" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--bg)">4. etcd</text>
+  <text x="1080.625" y="133.4444" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--text-muted)">Persist to cluster store</text>
+  <text x="986.875" y="159.2223" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Object stored in etcd</text>
+  <text x="986.875" y="175.3333" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Watch events fired</text>
+  <text x="986.875" y="191.4444" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">Controllers reconcile</text>
+  <text x="986.875" y="207.5556" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">kubelet picks up work</text>
+  <rect x="983.125" y="215.6111" width="195" height="19.3333" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1080.625" y="228.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" font-weight="bold" fill="var(--ok-accent)">201 Created / 200 OK</text>
+  <rect x="77.5" y="394.4444" width="843.75" height="64.4444" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="86.875" y="412.1667" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--danger-accent)">Rejection outcomes</text>
+  <text x="96.25" y="431.5" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">401 Unauthorized — no valid credentials (Authn failed)</text>
+  <text x="96.25" y="447.6111" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">403 Forbidden — authenticated but not allowed (Authz failed)    |    400/422 — bad request (Admission rejected)</text>
+  <rect x="77.5" y="466.9444" width="1125" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="86.875" y="483.0556" font-family="Arial,sans-serif" font-size="11.2974" font-weight="bold" fill="var(--ok-accent)">RBAC Quick Reference</text>
+  <text x="96.25" y="497.5556" font-family="monospace" font-size="10" fill="var(--text-muted)">Role — namespace-scoped permissions    ClusterRole — cluster-scoped permissions (nodes, PVs)</text>
+  <text x="96.25" y="512.0556" font-family="monospace" font-size="10" fill="var(--text-muted)">RoleBinding — binds Role/ClusterRole to subject in a namespace</text>
+  <text x="96.25" y="526.5556" font-family="monospace" font-size="10" fill="var(--text-muted)">ClusterRoleBinding — binds ClusterRole cluster-wide    Subject — User | Group | ServiceAccount</text>
 </svg>

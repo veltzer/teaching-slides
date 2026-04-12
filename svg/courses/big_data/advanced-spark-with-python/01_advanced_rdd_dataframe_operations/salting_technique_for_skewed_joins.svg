@@ -93,30 +93,30 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="574.412" y="31.068" text-anchor="middle" font-size="19.8835" font-weight="bold" fill="var(--text)">Salting Technique for Skewed Joins</text>
-  <text x="61.5441" y="68.3495" font-size="17.398" font-weight="bold" fill="var(--danger-accent)">Before Salting (Skewed)</text>
-  <rect x="41.0294" y="80.7767" width="1046.2505" height="55.9223" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="71.8015" y="114.3301" font-size="14.9126" fill="var(--text)">Partition 0: key=1 (5M rows)</text>
-  <text x="718.015" y="114.3301" font-size="14.9126" font-weight="bold" fill="var(--danger-accent)">← HOT PARTITION</text>
-  <rect x="41.0294" y="142.9126" width="1046.2505" height="43.4951" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="71.8015" y="170.2524" font-size="14.9126" fill="var(--text)">Partition 1: key=2 (100 rows)</text>
-  <rect x="41.0294" y="192.6214" width="1046.2505" height="43.4951" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="71.8015" y="219.9611" font-size="14.9126" fill="var(--text)">Partition 2: key=3 (200 rows)</text>
-  <text x="574.412" y="267.1844" text-anchor="middle" font-size="29.8253" fill="var(--ok-accent)">▼</text>
-  <text x="574.412" y="292.0388" text-anchor="middle" font-size="14.9126" font-weight="bold" fill="var(--ok-accent)">Apply Salting (factor=10)</text>
-  <text x="61.5441" y="329.3204" font-size="17.398" font-weight="bold" fill="var(--ok-accent)">After Salting (Balanced)</text>
-  <rect x="41.0294" y="341.7475" width="1046.2505" height="37.2816" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="71.8015" y="366.6019" font-size="13.6699" fill="var(--text)">Partition 0: key=1_0 (500K)</text>
-  <rect x="41.0294" y="382.7572" width="1046.2505" height="37.2816" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="71.8015" y="407.6116" font-size="13.6699" fill="var(--text)">Partition 1: key=1_1 (500K)</text>
-  <rect x="41.0294" y="423.7669" width="1046.2505" height="37.2816" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="71.8015" y="448.6214" font-size="13.6699" fill="var(--text-muted)">...</text>
-  <rect x="41.0294" y="464.7767" width="1046.2505" height="37.2816" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="71.8015" y="489.631" font-size="13.6699" fill="var(--text)">Partition 9: key=1_9 (500K)</text>
-  <rect x="41.0294" y="505.7864" width="1046.2505" height="37.2816" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="71.8015" y="530.6407" font-size="13.6699" fill="var(--text)">Partition 10: key=2 (100)</text>
-  <rect x="41.0294" y="546.7961" width="1046.2505" height="37.2816" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="71.8015" y="571.6504" font-size="13.6699" fill="var(--text)">Partition 11: key=3 (200)</text>
-  <rect x="41.0294" y="602.7184" width="1046.2505" height="37.2816" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="574.412" y="627.5728" text-anchor="middle" font-size="13.6699" font-weight="bold" fill="var(--danger-accent)">Result: Hot partition split into 10 even partitions</text>
+  <text x="651.7647" y="40" text-anchor="middle" font-size="20.7824" font-weight="bold" fill="var(--text)">Salting Technique for Skewed Joins</text>
+  <text x="63.5294" y="75.5102" font-size="18.1845" font-weight="bold" fill="var(--danger-accent)">Before Salting (Skewed)</text>
+  <rect x="40" y="87.3469" width="1200" height="53.2653" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="75.2941" y="119.3061" font-size="15.5868" fill="var(--text)">Partition 0: key=1 (5M rows)</text>
+  <text x="816.4706" y="119.3061" font-size="15.5868" font-weight="bold" fill="var(--danger-accent)">← HOT PARTITION</text>
+  <rect x="40" y="146.5306" width="1200" height="41.4285" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="75.2941" y="172.5714" font-size="15.5868" fill="var(--text)">Partition 1: key=2 (100 rows)</text>
+  <rect x="40" y="193.8776" width="1200" height="41.4285" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="75.2941" y="219.9183" font-size="15.5868" fill="var(--text)">Partition 2: key=3 (200 rows)</text>
+  <text x="651.7647" y="264.8979" text-anchor="middle" font-size="31.1736" fill="var(--ok-accent)">▼</text>
+  <text x="651.7647" y="288.5714" text-anchor="middle" font-size="15.5868" font-weight="bold" fill="var(--ok-accent)">Apply Salting (factor=10)</text>
+  <text x="63.5294" y="324.0816" font-size="18.1845" font-weight="bold" fill="var(--ok-accent)">After Salting (Balanced)</text>
+  <rect x="40" y="335.9183" width="1200" height="35.5103" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="75.2941" y="359.5918" font-size="14.2879" fill="var(--text)">Partition 0: key=1_0 (500K)</text>
+  <rect x="40" y="374.9795" width="1200" height="35.5103" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="75.2941" y="398.653" font-size="14.2879" fill="var(--text)">Partition 1: key=1_1 (500K)</text>
+  <rect x="40" y="414.0407" width="1200" height="35.5103" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="75.2941" y="437.7143" font-size="14.2879" fill="var(--text-muted)">...</text>
+  <rect x="40" y="453.102" width="1200" height="35.5103" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="75.2941" y="476.7754" font-size="14.2879" fill="var(--text)">Partition 9: key=1_9 (500K)</text>
+  <rect x="40" y="492.1632" width="1200" height="35.5103" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="75.2941" y="515.8367" font-size="14.2879" fill="var(--text)">Partition 10: key=2 (100)</text>
+  <rect x="40" y="531.2245" width="1200" height="35.5103" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="75.2941" y="554.8979" font-size="14.2879" fill="var(--text)">Partition 11: key=3 (200)</text>
+  <rect x="40" y="584.4897" width="1200" height="35.5103" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="651.7647" y="608.1632" text-anchor="middle" font-size="14.2879" font-weight="bold" fill="var(--danger-accent)">Result: Hot partition split into 10 even partitions</text>
 </svg>

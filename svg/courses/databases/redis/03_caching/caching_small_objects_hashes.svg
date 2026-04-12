@@ -97,28 +97,28 @@
       <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <text x="307.5075" y="62.2703" text-anchor="middle" font-size="22.5506" font-weight="bold">String Keys (wasteful)</text>
-  <rect x="41.001" y="86.4865" width="533.013" height="345.9459" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" opacity="0.3" />
-  <rect x="61.5015" y="110.7027" width="492.012" height="69.1892" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="307.5075" y="162.5946" text-anchor="middle" font-size="20.5005">user:42:name = "Alice"</text>
-  <rect x="61.5015" y="197.1892" width="492.012" height="69.1892" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="307.5075" y="249.0811" text-anchor="middle" font-size="20.5005">user:42:email = "a@b.com"</text>
-  <rect x="61.5015" y="283.6757" width="492.012" height="69.1892" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="307.5075" y="335.5676" text-anchor="middle" font-size="20.5005">user:42:role = "admin"</text>
-  <text x="307.5075" y="415.1351" text-anchor="middle" font-size="20.5005" fill="var(--danger-accent)">3 keys x overhead each</text>
-  <text x="922.5225" y="62.2703" text-anchor="middle" font-size="22.5506" font-weight="bold">Hash (efficient)</text>
-  <rect x="656.016" y="86.4865" width="533.013" height="345.9459" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" opacity="0.3" />
-  <rect x="676.5165" y="110.7027" width="492.012" height="294.0541" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="922.5225" y="172.973" text-anchor="middle" font-size="20.5005" font-weight="bold">HSET user:42</text>
-  <rect x="707.2673" y="200.6486" width="205.005" height="62.2703" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="809.7698" y="245.6216" text-anchor="middle" font-size="20.5005">name: "Alice"</text>
-  <rect x="707.2673" y="269.8378" width="205.005" height="62.2703" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="809.7698" y="314.8108" text-anchor="middle" font-size="20.5005">email: "a@b.com"</text>
-  <rect x="932.7728" y="200.6486" width="205.005" height="62.2703" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="1035.2752" y="245.6216" text-anchor="middle" font-size="20.5005">role: "admin"</text>
-  <text x="922.5225" y="415.1351" text-anchor="middle" font-size="20.5005" fill="var(--ok-accent)">1 key, ziplist encoding</text>
-  <line x1="574.014" y1="259.4595" x2="651.9159" y2="259.4595" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd13_02_caching)" />
-  <rect x="307.5075" y="484.3243" width="615.015" height="155.6757" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="615.015" y="546.5946" text-anchor="middle" font-size="20.5005" font-weight="bold">Memory savings: up to 10x fewer bytes</text>
-  <text x="615.015" y="605.4054" text-anchor="middle" font-size="20.5005">HGETALL user:42 retrieves all fields at once</text>
+  <text x="318.5714" y="40" text-anchor="middle" font-size="23.1006" font-weight="bold">String Keys (wasteful)</text>
+  <rect x="40" y="64.3114" width="557.1429" height="347.3054" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" opacity="0.3" />
+  <rect x="61.4286" y="88.6227" width="514.2857" height="69.4611" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="318.5714" y="140.7185" text-anchor="middle" font-size="21.0005">user:42:name = "Alice"</text>
+  <rect x="61.4286" y="175.4491" width="514.2857" height="69.4611" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="318.5714" y="227.5449" text-anchor="middle" font-size="21.0005">user:42:email = "a@b.com"</text>
+  <rect x="61.4286" y="262.2755" width="514.2857" height="69.4611" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="318.5714" y="314.3713" text-anchor="middle" font-size="21.0005">user:42:role = "admin"</text>
+  <text x="318.5714" y="394.2515" text-anchor="middle" font-size="21.0005" fill="var(--danger-accent)">3 keys x overhead each</text>
+  <text x="961.4286" y="40" text-anchor="middle" font-size="23.1006" font-weight="bold">Hash (efficient)</text>
+  <rect x="682.8571" y="64.3114" width="557.1429" height="347.3054" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" opacity="0.3" />
+  <rect x="704.2857" y="88.6227" width="514.2857" height="295.2096" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="961.4286" y="151.1377" text-anchor="middle" font-size="21.0005" font-weight="bold">HSET user:42</text>
+  <rect x="736.4286" y="178.9221" width="214.2857" height="62.515" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="843.5715" y="224.0718" text-anchor="middle" font-size="21.0005">name: "Alice"</text>
+  <rect x="736.4286" y="248.3832" width="214.2857" height="62.515" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="843.5715" y="293.5329" text-anchor="middle" font-size="21.0005">email: "a@b.com"</text>
+  <rect x="972.1429" y="178.9221" width="214.2857" height="62.515" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="1079.2857" y="224.0718" text-anchor="middle" font-size="21.0005">role: "admin"</text>
+  <text x="961.4286" y="394.2515" text-anchor="middle" font-size="21.0005" fill="var(--ok-accent)">1 key, ziplist encoding</text>
+  <line x1="597.1429" y1="237.9641" x2="678.5714" y2="237.9641" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd13_02_caching)" />
+  <rect x="318.5714" y="463.7125" width="642.8571" height="156.2875" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="640" y="526.2275" text-anchor="middle" font-size="21.0005" font-weight="bold">Memory savings: up to 10x fewer bytes</text>
+  <text x="640" y="585.2695" text-anchor="middle" font-size="21.0005">HGETALL user:42 retrieves all fields at once</text>
 </svg>

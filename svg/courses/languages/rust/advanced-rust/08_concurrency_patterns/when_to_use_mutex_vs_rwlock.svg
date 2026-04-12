@@ -93,45 +93,45 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="583.4758" y="49.2308" text-anchor="middle" font-size="28.0068" font-weight="bold" fill="var(--text)">When to Use Mutex vs RwLock</text>
-  <rect x="31.1187" y="82.0513" width="311.1871" height="65.641" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="186.7123" y="123.0769" text-anchor="middle" font-size="21.7831" font-weight="bold" fill="var(--bg)">Property</text>
-  <rect x="342.3058" y="82.0513" width="373.4245" height="65.641" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="529.0181" y="123.0769" text-anchor="middle" font-size="21.7831" font-weight="bold" fill="var(--text)">Mutex</text>
-  <rect x="715.7303" y="82.0513" width="420.1026" height="65.641" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="925.7816" y="123.0769" text-anchor="middle" font-size="21.7831" font-weight="bold" fill="var(--bg)">RwLock</text>
-  <rect x="31.1187" y="155.8974" width="311.1871" height="57.4359" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="342.3058" y="155.8974" width="373.4245" height="57.4359" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="715.7303" y="155.8974" width="420.1026" height="57.4359" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="46.6781" y="192" font-size="18.6712" fill="var(--text)">Read concurrency</text>
-  <text x="357.8651" y="192" font-size="18.6712" fill="var(--text)">One at a time</text>
-  <text x="731.2896" y="192" font-size="18.6712" fill="var(--ok-accent)">Many concurrent reads</text>
-  <rect x="31.1187" y="221.5385" width="311.1871" height="57.4359" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="342.3058" y="221.5385" width="373.4245" height="57.4359" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="715.7303" y="221.5385" width="420.1026" height="57.4359" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="46.6781" y="257.641" font-size="18.6712" fill="var(--text)">Write concurrency</text>
-  <text x="357.8651" y="257.641" font-size="18.6712" fill="var(--text)">One at a time</text>
-  <text x="731.2896" y="257.641" font-size="18.6712" fill="var(--text)">One at a time</text>
-  <rect x="31.1187" y="287.1795" width="311.1871" height="57.4359" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="342.3058" y="287.1795" width="373.4245" height="57.4359" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <rect x="715.7303" y="287.1795" width="420.1026" height="57.4359" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="46.6781" y="323.2821" font-size="18.6712" fill="var(--text)">Overhead</text>
-  <text x="357.8651" y="323.2821" font-size="18.6712" fill="var(--ok-accent)">Lower</text>
-  <text x="731.2896" y="323.2821" font-size="18.6712" fill="var(--danger-accent)">Higher (tracking)</text>
-  <rect x="31.1187" y="352.8205" width="311.1871" height="57.4359" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="342.3058" y="352.8205" width="373.4245" height="57.4359" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="715.7303" y="352.8205" width="420.1026" height="57.4359" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="46.6781" y="388.9231" font-size="18.6712" fill="var(--text)">Best for</text>
-  <text x="357.8651" y="388.9231" font-size="18.6712" fill="var(--text)">Write-heavy / short sections</text>
-  <text x="731.2896" y="388.9231" font-size="18.6712" fill="var(--ok-accent)">Read-heavy workloads</text>
-  <rect x="31.1187" y="418.4615" width="311.1871" height="57.4359" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="342.3058" y="418.4615" width="373.4245" height="57.4359" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <rect x="715.7303" y="418.4615" width="420.1026" height="57.4359" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="46.6781" y="454.5641" font-size="18.6712" fill="var(--text)">Starvation risk</text>
-  <text x="357.8651" y="454.5641" font-size="18.6712" fill="var(--ok-accent)">No</text>
-  <text x="731.2896" y="454.5641" font-size="18.6712" fill="var(--danger-accent)">Writers can starve</text>
-  <rect x="31.1187" y="508.7179" width="1104.7141" height="131.2821" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="62.2374" y="549.7436" font-size="21.7831" font-weight="bold" fill="var(--primary-accent)">Rule of thumb:</text>
-  <text x="62.2374" y="587.4872" font-size="20.2272" fill="var(--text)">Mostly reads, few writes =&gt; RwLock</text>
-  <text x="62.2374" y="620.3077" font-size="20.2272" fill="var(--text)">Frequent writes or very short locks =&gt; Mutex</text>
+  <text x="640" y="40" text-anchor="middle" font-size="28.9224" font-weight="bold" fill="var(--text)">When to Use Mutex vs RwLock</text>
+  <rect x="40" y="72.2222" width="338.0282" height="64.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="209.0141" y="112.5" text-anchor="middle" font-size="22.4952" font-weight="bold" fill="var(--bg)">Property</text>
+  <rect x="378.0282" y="72.2222" width="405.6338" height="64.4444" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="580.8451" y="112.5" text-anchor="middle" font-size="22.4952" font-weight="bold" fill="var(--text)">Mutex</text>
+  <rect x="783.662" y="72.2222" width="456.338" height="64.4444" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1011.831" y="112.5" text-anchor="middle" font-size="22.4952" font-weight="bold" fill="var(--bg)">RwLock</text>
+  <rect x="40" y="144.7222" width="338.0282" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0282" y="144.7222" width="405.6338" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="783.662" y="144.7222" width="456.338" height="56.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="180.1666" font-size="19.2816" fill="var(--text)">Read concurrency</text>
+  <text x="394.9295" y="180.1666" font-size="19.2816" fill="var(--text)">One at a time</text>
+  <text x="800.5633" y="180.1666" font-size="19.2816" fill="var(--ok-accent)">Many concurrent reads</text>
+  <rect x="40" y="209.1667" width="338.0282" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0282" y="209.1667" width="405.6338" height="56.3889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="783.662" y="209.1667" width="456.338" height="56.3889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="56.9015" y="244.6111" font-size="19.2816" fill="var(--text)">Write concurrency</text>
+  <text x="394.9295" y="244.6111" font-size="19.2816" fill="var(--text)">One at a time</text>
+  <text x="800.5633" y="244.6111" font-size="19.2816" fill="var(--text)">One at a time</text>
+  <rect x="40" y="273.6111" width="338.0282" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0282" y="273.6111" width="405.6338" height="56.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="783.662" y="273.6111" width="456.338" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="56.9015" y="309.0556" font-size="19.2816" fill="var(--text)">Overhead</text>
+  <text x="394.9295" y="309.0556" font-size="19.2816" fill="var(--ok-accent)">Lower</text>
+  <text x="800.5633" y="309.0556" font-size="19.2816" fill="var(--danger-accent)">Higher (tracking)</text>
+  <rect x="40" y="338.0555" width="338.0282" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0282" y="338.0555" width="405.6338" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="783.662" y="338.0555" width="456.338" height="56.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="373.5" font-size="19.2816" fill="var(--text)">Best for</text>
+  <text x="394.9295" y="373.5" font-size="19.2816" fill="var(--text)">Write-heavy / short sections</text>
+  <text x="800.5633" y="373.5" font-size="19.2816" fill="var(--ok-accent)">Read-heavy workloads</text>
+  <rect x="40" y="402.5" width="338.0282" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0282" y="402.5" width="405.6338" height="56.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <rect x="783.662" y="402.5" width="456.338" height="56.3889" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="56.9015" y="437.9444" font-size="19.2816" fill="var(--text)">Starvation risk</text>
+  <text x="394.9295" y="437.9444" font-size="19.2816" fill="var(--ok-accent)">No</text>
+  <text x="800.5633" y="437.9444" font-size="19.2816" fill="var(--danger-accent)">Writers can starve</text>
+  <rect x="40" y="491.1111" width="1199.9999" height="128.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="73.8028" y="531.3889" font-size="22.4952" font-weight="bold" fill="var(--primary-accent)">Rule of thumb:</text>
+  <text x="73.8028" y="568.4445" font-size="20.8885" fill="var(--text)">Mostly reads, few writes =&gt; RwLock</text>
+  <text x="73.8028" y="600.6667" font-size="20.8885" fill="var(--text)">Frequent writes or very short locks =&gt; Mutex</text>
 </svg>

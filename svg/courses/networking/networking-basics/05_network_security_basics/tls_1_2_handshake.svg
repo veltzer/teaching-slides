@@ -1,39 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="611.0288" y="29.6296" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="var(--text)">TLS 1.2 Handshake</text>
-  <rect x="101.8382" y="47.4074" width="203.6762" height="47.4074" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="203.6762" y="77.0371" text-anchor="middle" font-size="16.5926" font-weight="bold" fill="var(--text)">Client</text>
-  <line x1="203.6762" y1="94.8148" x2="203.6762" y2="640" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="4.7407 4.7407" />
-  <rect x="916.5432" y="47.4074" width="203.6762" height="47.4074" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1018.3814" y="77.0371" text-anchor="middle" font-size="16.5926" font-weight="bold" fill="var(--text)">Server</text>
-  <line x1="1018.3814" y1="94.8148" x2="1018.3814" y2="640" stroke="var(--ok-border)" stroke-width="1.7778" stroke-dasharray="4.7407 4.7407" />
-  <line x1="203.6762" y1="118.5185" x2="1018.3814" y2="118.5185" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="611.0288" y="112.5926" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--primary-accent)">ClientHello</text>
-  <text x="611.0288" y="132.7408" text-anchor="middle" font-size="11.8519" fill="var(--text-muted)">TLS version, cipher suites, client random</text>
-  <line x1="1018.3814" y1="165.9259" x2="203.6762" y2="165.9259" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="611.0288" y="160" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--ok-accent)">ServerHello</text>
-  <text x="611.0288" y="183.7037" text-anchor="middle" font-size="11.8519" fill="var(--text-muted)">chosen cipher, server random</text>
-  <line x1="1018.3814" y1="207.4074" x2="203.6762" y2="207.4074" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="611.0288" y="201.4815" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--ok-accent)">Certificate</text>
-  <text x="611.0288" y="222.8148" text-anchor="middle" font-size="11.8519" fill="var(--text-muted)">server's X.509 certificate</text>
-  <line x1="1018.3814" y1="248.8889" x2="203.6762" y2="248.8889" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="611.0288" y="242.963" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--ok-accent)">ServerKeyExchange</text>
-  <line x1="1018.3814" y1="284.4444" x2="203.6762" y2="284.4444" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="611.0288" y="278.5185" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--ok-accent)">ServerHelloDone</text>
-  <line x1="203.6762" y1="331.8519" x2="1018.3814" y2="331.8519" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="611.0288" y="325.9259" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--primary-accent)">ClientKeyExchange</text>
-  <text x="611.0288" y="349.6296" text-anchor="middle" font-size="11.8519" fill="var(--text-muted)">pre-master secret, encrypted</text>
-  <line x1="203.6762" y1="379.2593" x2="1018.3814" y2="379.2593" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="611.0288" y="373.3334" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--primary-accent)">ChangeCipherSpec</text>
-  <line x1="203.6762" y1="420.7408" x2="1018.3814" y2="420.7408" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
-  <text x="611.0288" y="414.8149" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--primary-accent)">Finished (encrypted)</text>
-  <line x1="1018.3814" y1="462.2222" x2="203.6762" y2="462.2222" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="611.0288" y="456.2963" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--ok-accent)">ChangeCipherSpec</text>
-  <line x1="1018.3814" y1="503.7037" x2="203.6762" y2="503.7037" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="611.0288" y="497.7778" text-anchor="middle" font-size="14.2223" font-weight="bold" fill="var(--ok-accent)">Finished (encrypted)</text>
-  <rect x="162.9411" y="545.1852" width="896.1757" height="41.4815" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="611.0288" y="571.2593" text-anchor="middle" font-size="15.4074" font-weight="bold" fill="var(--ok-accent)">Encrypted Application Data</text>
-  <text x="611.0288" y="616.2963" text-anchor="middle" font-size="14.2223" fill="var(--text-muted)">2 round trips before first application data</text>
+  <text x="640" y="40" text-anchor="middle" font-size="22.5741" font-weight="bold" fill="var(--text)">TLS 1.2 Handshake</text>
+  <rect x="40" y="56.8932" width="240" height="45.0485" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="159.9999" y="85.0486" text-anchor="middle" font-size="17.5577" font-weight="bold" fill="var(--text)">Client</text>
+  <line x1="159.9999" y1="101.9418" x2="159.9999" y2="620" stroke="var(--primary-border)" stroke-width="1.7778" stroke-dasharray="4.7407 4.7407" />
+  <rect x="1000" y="56.8932" width="240" height="45.0485" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1120.0001" y="85.0486" text-anchor="middle" font-size="17.5577" font-weight="bold" fill="var(--text)">Server</text>
+  <line x1="1120.0001" y1="101.9418" x2="1120.0001" y2="620" stroke="var(--ok-border)" stroke-width="1.7778" stroke-dasharray="4.7407 4.7407" />
+  <line x1="159.9999" y1="124.466" x2="1120.0001" y2="124.466" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <text x="640" y="118.835" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--primary-accent)">ClientHello</text>
+  <text x="640" y="137.9807" text-anchor="middle" font-size="12.5412" fill="var(--text-muted)">TLS version, cipher suites, client random</text>
+  <line x1="1120.0001" y1="169.5146" x2="159.9999" y2="169.5146" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="640" y="163.8835" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--ok-accent)">ServerHello</text>
+  <text x="640" y="186.4078" text-anchor="middle" font-size="12.5412" fill="var(--text-muted)">chosen cipher, server random</text>
+  <line x1="1120.0001" y1="208.9321" x2="159.9999" y2="208.9321" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="640" y="203.301" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--ok-accent)">Certificate</text>
+  <text x="640" y="223.5728" text-anchor="middle" font-size="12.5412" fill="var(--text-muted)">server's X.509 certificate</text>
+  <line x1="1120.0001" y1="248.3495" x2="159.9999" y2="248.3495" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="640" y="242.7185" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--ok-accent)">ServerKeyExchange</text>
+  <line x1="1120.0001" y1="282.1359" x2="159.9999" y2="282.1359" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="640" y="276.5049" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--ok-accent)">ServerHelloDone</text>
+  <line x1="159.9999" y1="327.1845" x2="1120.0001" y2="327.1845" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <text x="640" y="321.5534" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--primary-accent)">ClientKeyExchange</text>
+  <text x="640" y="344.0777" text-anchor="middle" font-size="12.5412" fill="var(--text-muted)">pre-master secret, encrypted</text>
+  <line x1="159.9999" y1="372.2331" x2="1120.0001" y2="372.2331" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <text x="640" y="366.602" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--primary-accent)">ChangeCipherSpec</text>
+  <line x1="159.9999" y1="411.6506" x2="1120.0001" y2="411.6506" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)" />
+  <text x="640" y="406.0195" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--primary-accent)">Finished (encrypted)</text>
+  <line x1="1120.0001" y1="451.0679" x2="159.9999" y2="451.0679" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="640" y="445.4369" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--ok-accent)">ChangeCipherSpec</text>
+  <line x1="1120.0001" y1="490.4854" x2="159.9999" y2="490.4854" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="640" y="484.8544" text-anchor="middle" font-size="15.0495" font-weight="bold" fill="var(--ok-accent)">Finished (encrypted)</text>
+  <rect x="112" y="529.9029" width="1056.0003" height="39.4175" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="554.6797" text-anchor="middle" font-size="16.3035" font-weight="bold" fill="var(--ok-accent)">Encrypted Application Data</text>
+  <text x="640" y="597.4757" text-anchor="middle" font-size="15.0495" fill="var(--text-muted)">2 round trips before first application data</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

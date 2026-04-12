@@ -101,35 +101,35 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <rect x="17.7778" y="44.4444" width="248.8889" height="151.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="142.2222" y="108.4444" font-size="23.1111" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">command1</text>
-  <text x="142.2222" y="142.2222" font-size="17.7778" fill="var(--text)" text-anchor="middle" font-family="monospace">stdout = fd 1</text>
-  <text x="142.2222" y="174.2222" font-size="14.2222" fill="var(--text-muted)" text-anchor="middle">writes to pipe</text>
-  <line x1="266.6667" y1="120" x2="344.8889" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="346.6667" y="44.4444" width="444.4444" height="151.1111" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="568.8889" y="97.7778" font-size="21.3333" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">pipe buffer</text>
-  <text x="568.8889" y="133.3333" font-size="17.7778" fill="var(--text-muted)" text-anchor="middle">4 KB - 64 KB  (kernel memory)</text>
-  <text x="568.8889" y="165.3333" font-size="14.2222" fill="var(--text-faint)" text-anchor="middle">managed by the kernel automatically</text>
-  <line x1="791.1111" y1="120" x2="869.3333" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="871.1111" y="44.4444" width="248.8889" height="151.1111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="995.5556" y="108.4444" font-size="23.1111" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">command2</text>
-  <text x="995.5556" y="142.2222" font-size="17.7778" fill="var(--text)" text-anchor="middle" font-family="monospace">stdin = fd 0</text>
-  <text x="995.5556" y="174.2222" font-size="14.2222" fill="var(--text-muted)" text-anchor="middle">reads from pipe</text>
-  <rect x="17.7778" y="229.3333" width="1102.2222" height="302.2222" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <circle cx="44.4444" cy="273.7778" r="14.2222" fill="url(#grad-primary)" />
-  <text x="44.4444" y="279.1111" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle">1</text>
-  <text x="71.1111" y="279.1111" font-size="19.5556" fill="var(--text)">Shell calls pipe() — kernel returns two file descriptors: read end and write end</text>
-  <circle cx="44.4444" cy="327.1111" r="14.2222" fill="url(#grad-primary)" />
-  <text x="44.4444" y="332.4444" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle">2</text>
-  <text x="71.1111" y="332.4444" font-size="19.5556" fill="var(--text)">Shell forks command1, connects its stdout (fd 1) to the pipe write end</text>
-  <circle cx="44.4444" cy="380.4444" r="14.2222" fill="url(#grad-primary)" />
-  <text x="44.4444" y="385.7778" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle">3</text>
-  <text x="71.1111" y="385.7778" font-size="19.5556" fill="var(--text)">Shell forks command2, connects its stdin (fd 0) to the pipe read end</text>
-  <circle cx="44.4444" cy="433.7778" r="14.2222" fill="url(#grad-primary)" />
-  <text x="44.4444" y="439.1111" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle">4</text>
-  <text x="71.1111" y="439.1111" font-size="19.5556" fill="var(--text)">Both commands run <tspan font-weight="bold" fill="var(--primary-accent)">concurrently</tspan> — they do not wait for each other</text>
-  <circle cx="44.4444" cy="487.1111" r="14.2222" fill="url(#grad-primary)" />
-  <text x="44.4444" y="492.4444" font-size="14.2222" font-weight="bold" fill="var(--bg)" text-anchor="middle">5</text>
-  <text x="71.1111" y="492.4444" font-size="19.5556" fill="var(--text)">Kernel manages back-pressure: command1 blocks when buffer is full</text>
+  <rect width="1087.5767" height="474.8286" fill="var(--bg)" rx="5.7089" x="152.4233" y="145.1714"/>
+  <rect x="169.4166" y="178.1455" width="237.9075" height="112.1123" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="288.3704" y="225.6284" font-size="19.4625" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">command1</text>
+  <text x="288.3704" y="250.6888" font-size="14.9713" fill="var(--text)" text-anchor="middle" font-family="monospace">stdout = fd 1</text>
+  <text x="288.3704" y="274.4303" font-size="11.9769" fill="var(--text-muted)" text-anchor="middle">writes to pipe</text>
+  <line x1="407.3241" y1="234.2017" x2="482.0949" y2="234.2017" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="483.7943" y="178.1455" width="424.8345" height="112.1123" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="696.2116" y="217.7146" font-size="17.9655" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">pipe buffer</text>
+  <text x="696.2116" y="244.094" font-size="14.9713" fill="var(--text-muted)" text-anchor="middle">4 KB - 64 KB  (kernel memory)</text>
+  <text x="696.2116" y="267.8354" font-size="11.9769" fill="var(--text-faint)" text-anchor="middle">managed by the kernel automatically</text>
+  <line x1="908.629" y1="234.2017" x2="983.3998" y2="234.2017" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="985.0992" y="178.1455" width="237.9075" height="112.1123" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="1104.0529" y="225.6284" font-size="19.4625" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">command2</text>
+  <text x="1104.0529" y="250.6888" font-size="14.9713" fill="var(--text)" text-anchor="middle" font-family="monospace">stdin = fd 0</text>
+  <text x="1104.0529" y="274.4303" font-size="11.9769" fill="var(--text-muted)" text-anchor="middle">reads from pipe</text>
+  <rect x="169.4166" y="315.3183" width="1053.59" height="224.2246" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <circle cx="194.9067" cy="348.2925" r="11.9769" fill="url(#grad-primary)" />
+  <text x="194.9067" y="352.2494" font-size="11.9769" font-weight="bold" fill="var(--bg)" text-anchor="middle">1</text>
+  <text x="220.3968" y="352.2494" font-size="16.4683" fill="var(--text)">Shell calls pipe() — kernel returns two file descriptors: read end and write end</text>
+  <circle cx="194.9067" cy="387.8615" r="11.9769" fill="url(#grad-primary)" />
+  <text x="194.9067" y="391.8184" font-size="11.9769" font-weight="bold" fill="var(--bg)" text-anchor="middle">2</text>
+  <text x="220.3968" y="391.8184" font-size="16.4683" fill="var(--text)">Shell forks command1, connects its stdout (fd 1) to the pipe write end</text>
+  <circle cx="194.9067" cy="427.4306" r="11.9769" fill="url(#grad-primary)" />
+  <text x="194.9067" y="431.3875" font-size="11.9769" font-weight="bold" fill="var(--bg)" text-anchor="middle">3</text>
+  <text x="220.3968" y="431.3875" font-size="16.4683" fill="var(--text)">Shell forks command2, connects its stdin (fd 0) to the pipe read end</text>
+  <circle cx="194.9067" cy="466.9996" r="11.9769" fill="url(#grad-primary)" />
+  <text x="194.9067" y="470.9565" font-size="11.9769" font-weight="bold" fill="var(--bg)" text-anchor="middle">4</text>
+  <text x="220.3968" y="470.9565" font-size="16.4683" fill="var(--text)">Both commands run <tspan font-weight="bold" fill="var(--primary-accent)">concurrently</tspan> — they do not wait for each other</text>
+  <circle cx="194.9067" cy="506.5687" r="11.9769" fill="url(#grad-primary)" />
+  <text x="194.9067" y="510.5256" font-size="11.9769" font-weight="bold" fill="var(--bg)" text-anchor="middle">5</text>
+  <text x="220.3968" y="510.5256" font-size="16.4683" fill="var(--text)">Kernel manages back-pressure: command1 blocks when buffer is full</text>
 </svg>

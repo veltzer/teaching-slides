@@ -97,26 +97,26 @@
       <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">Async Resource Management</text>
-  <rect x="39.9221" y="101.0526" width="339.3373" height="202.1053" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="209.5906" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Semaphore</text>
-  <text x="209.5906" y="212.2105" text-anchor="middle" font-size="19.961">Limit concurrent access</text>
-  <text x="209.5906" y="262.7368" text-anchor="middle" font-size="19.961">tokio::sync::Semaphore</text>
-  <rect x="429.1618" y="101.0526" width="339.3373" height="202.1053" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="598.8304" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">JoinSet</text>
-  <text x="598.8304" y="212.2105" text-anchor="middle" font-size="19.961">Manage task groups</text>
-  <text x="598.8304" y="262.7368" text-anchor="middle" font-size="19.961">Collect results, cancel all</text>
-  <rect x="818.4016" y="101.0526" width="339.3373" height="202.1053" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="988.0702" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">CancellationToken</text>
-  <text x="988.0702" y="212.2105" text-anchor="middle" font-size="19.961">Graceful shutdown signal</text>
-  <text x="988.0702" y="262.7368" text-anchor="middle" font-size="19.961">tokio_util::sync</text>
-  <rect x="39.9221" y="353.6842" width="538.9474" height="134.7368" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="309.3957" y="404.2105" text-anchor="middle" font-size="19.961" font-weight="bold">tokio::sync::Mutex (async-aware)</text>
-  <text x="309.3957" y="454.7368" text-anchor="middle" font-size="19.961">Use when lock is held across .await points</text>
-  <rect x="618.7914" y="353.6842" width="538.9474" height="134.7368" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="888.2651" y="404.2105" text-anchor="middle" font-size="19.961" font-weight="bold">std::sync::Mutex (sync)</text>
-  <text x="888.2651" y="454.7368" text-anchor="middle" font-size="19.961">Use for short critical sections without .await</text>
-  <rect x="159.6881" y="538.9474" width="878.2846" height="101.0526" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="598.8304" y="589.4737" text-anchor="middle" font-size="19.961">RAII still works: Drop runs when task completes or is cancelled</text>
-  <text x="598.8304" y="633.2632" text-anchor="middle" font-size="19.961">Use timeout() to prevent tasks from running forever</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="24.6179" font-weight="bold">Async Resource Management</text>
+  <rect x="40" y="89.7143" width="364.2858" height="198.8572" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="222.1427" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Semaphore</text>
+  <text x="222.1427" y="199.0857" text-anchor="middle" font-size="20.5149">Limit concurrent access</text>
+  <text x="222.1427" y="248.8" text-anchor="middle" font-size="20.5149">tokio::sync::Semaphore</text>
+  <rect x="457.8571" y="89.7143" width="364.2858" height="198.8572" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="639.9999" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">JoinSet</text>
+  <text x="639.9999" y="199.0857" text-anchor="middle" font-size="20.5149">Manage task groups</text>
+  <text x="639.9999" y="248.8" text-anchor="middle" font-size="20.5149">Collect results, cancel all</text>
+  <rect x="875.7142" y="89.7143" width="364.2858" height="198.8572" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1057.8571" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">CancellationToken</text>
+  <text x="1057.8571" y="199.0857" text-anchor="middle" font-size="20.5149">Graceful shutdown signal</text>
+  <text x="1057.8571" y="248.8" text-anchor="middle" font-size="20.5149">tokio_util::sync</text>
+  <rect x="40" y="338.2857" width="578.5714" height="132.5714" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="329.2856" y="388" text-anchor="middle" font-size="20.5149" font-weight="bold">tokio::sync::Mutex (async-aware)</text>
+  <text x="329.2856" y="437.7142" text-anchor="middle" font-size="20.5149">Use when lock is held across .await points</text>
+  <rect x="661.4284" y="338.2857" width="578.5714" height="132.5714" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="950.7142" y="388" text-anchor="middle" font-size="20.5149" font-weight="bold">std::sync::Mutex (sync)</text>
+  <text x="950.7142" y="437.7142" text-anchor="middle" font-size="20.5149">Use for short critical sections without .await</text>
+  <rect x="168.5713" y="520.5715" width="942.8571" height="99.4285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="639.9999" y="570.2857" text-anchor="middle" font-size="20.5149">RAII still works: Drop runs when task completes or is cancelled</text>
+  <text x="639.9999" y="613.3715" text-anchor="middle" font-size="20.5149">Use timeout() to prevent tasks from running forever</text>
 </svg>

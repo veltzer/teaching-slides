@@ -93,21 +93,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="635.0388" y="44.6512" text-anchor="middle" font-size="26.7907" font-weight="bold" fill="var(--text)">Deadlock Prevention Strategies</text>
-  <rect x="54.4319" y="74.4186" width="1161.2137" height="96.7442" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="90.7199" y="111.6279" font-size="20.8372" font-weight="bold" fill="var(--primary-accent)">1. Lock Ordering</text>
-  <text x="90.7199" y="148.8372" font-size="19.3488" fill="var(--text)">Always acquire locks in the same order (e.g., by address or ID).</text>
-  <rect x="54.4319" y="186.0465" width="1161.2137" height="96.7442" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="90.7199" y="223.2558" font-size="20.8372" font-weight="bold" fill="var(--ok-accent)">2. try_lock with Backoff</text>
-  <text x="90.7199" y="260.4651" font-size="19.3488" fill="var(--text)">Use try_lock() to avoid blocking. If it fails, release all locks and retry.</text>
-  <rect x="54.4319" y="297.6744" width="1161.2137" height="96.7442" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="90.7199" y="334.8837" font-size="20.8372" font-weight="bold" fill="var(--primary-accent)">3. Single Lock</text>
-  <text x="90.7199" y="372.093" font-size="19.3488" fill="var(--text)">Combine related data under one Mutex to eliminate ordering issues.</text>
-  <rect x="54.4319" y="409.3023" width="1161.2137" height="96.7442" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="90.7199" y="446.5116" font-size="20.8372" font-weight="bold" fill="var(--ok-accent)">4. Message Passing</text>
-  <text x="90.7199" y="483.7209" font-size="19.3488" fill="var(--text)">Replace shared state with channels. Actors never deadlock.</text>
-  <rect x="54.4319" y="520.9302" width="1161.2137" height="119.0698" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="90.7199" y="558.1395" font-size="20.8372" font-weight="bold" fill="var(--danger-accent)">5. Lock Hierarchies</text>
-  <text x="90.7199" y="595.3488" font-size="19.3488" fill="var(--text)">Assign a numeric level to each lock. A thread holding level N</text>
-  <text x="90.7199" y="622.1395" font-size="19.3488" fill="var(--text)">may only acquire locks at level N+1 or higher.</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="26.8811" font-weight="bold" fill="var(--text)">Deadlock Prevention Strategies</text>
+  <rect x="40" y="69" width="1200" height="94.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="77.5001" y="105.25" font-size="20.9075" font-weight="bold" fill="var(--primary-accent)">1. Lock Ordering</text>
+  <text x="77.5001" y="141.5" font-size="19.4141" fill="var(--text)">Always acquire locks in the same order (e.g., by address or ID).</text>
+  <rect x="40" y="177.75" width="1200" height="94.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="77.5001" y="214" font-size="20.9075" font-weight="bold" fill="var(--ok-accent)">2. try_lock with Backoff</text>
+  <text x="77.5001" y="250.25" font-size="19.4141" fill="var(--text)">Use try_lock() to avoid blocking. If it fails, release all locks and retry.</text>
+  <rect x="40" y="286.5" width="1200" height="94.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="77.5001" y="322.75" font-size="20.9075" font-weight="bold" fill="var(--primary-accent)">3. Single Lock</text>
+  <text x="77.5001" y="359" font-size="19.4141" fill="var(--text)">Combine related data under one Mutex to eliminate ordering issues.</text>
+  <rect x="40" y="395.25" width="1200" height="94.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="77.5001" y="431.5" font-size="20.9075" font-weight="bold" fill="var(--ok-accent)">4. Message Passing</text>
+  <text x="77.5001" y="467.75" font-size="19.4141" fill="var(--text)">Replace shared state with channels. Actors never deadlock.</text>
+  <rect x="40" y="504" width="1200" height="116" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="77.5001" y="540.25" font-size="20.9075" font-weight="bold" fill="var(--danger-accent)">5. Lock Hierarchies</text>
+  <text x="77.5001" y="576.5" font-size="19.4141" fill="var(--text)">Assign a numeric level to each lock. A thread holding level N</text>
+  <text x="77.5001" y="602.6" font-size="19.4141" fill="var(--text)">may only acquire locks at level N+1 or higher.</text>
 </svg>

@@ -93,26 +93,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="624.6623" y="62.7451" text-anchor="middle" font-size="28.5559" font-weight="bold">Layer Optimization: Before vs After</text>
-  <rect x="53.5424" y="112.9412" width="535.4248" height="527.0588" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="321.2549" y="163.1373" text-anchor="middle" font-size="23.2017" font-weight="bold" fill="var(--danger-accent)">Before (5 layers, 450 MB)</text>
-  <rect x="89.2375" y="200.7843" width="464.0349" height="75.2942" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="321.2549" y="250.9804" text-anchor="middle" font-size="17.8475">RUN apt-get update</text>
-  <rect x="89.2375" y="288.6275" width="464.0349" height="75.2942" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="321.2549" y="338.8236" text-anchor="middle" font-size="17.8475">RUN apt-get install gcc</text>
-  <rect x="89.2375" y="376.4706" width="464.0349" height="75.2942" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="321.2549" y="426.6667" text-anchor="middle" font-size="17.8475">RUN pip install deps</text>
-  <rect x="89.2375" y="464.3137" width="464.0349" height="75.2942" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="321.2549" y="514.5098" text-anchor="middle" font-size="17.8475">RUN apt-get remove gcc</text>
-  <rect x="89.2375" y="552.1569" width="464.0349" height="62.7451" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="321.2549" y="594.8235" text-anchor="middle" font-size="17.8475">gcc still in earlier layer!</text>
-  <rect x="678.2047" y="112.9412" width="535.4248" height="527.0588" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="945.9172" y="163.1373" text-anchor="middle" font-size="23.2017" font-weight="bold" fill="var(--ok-accent)">After (2 layers, 120 MB)</text>
-  <rect x="713.8998" y="200.7843" width="464.0349" height="200.7843" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="945.9172" y="276.0784" text-anchor="middle" font-size="17.8475">RUN apt-get update &amp;&amp;</text>
-  <text x="945.9172" y="313.7255" text-anchor="middle" font-size="17.8475">apt-get install gcc &amp;&amp;</text>
-  <text x="945.9172" y="351.3725" text-anchor="middle" font-size="17.8475">pip install deps &amp;&amp; apt-get remove gcc</text>
-  <rect x="713.8998" y="426.6667" width="464.0349" height="87.8431" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="945.9172" y="481.8824" text-anchor="middle" font-size="17.8475">COPY app /app</text>
-  <text x="945.9172" y="577.2549" text-anchor="middle" font-size="21.417" fill="var(--ok-accent)">gcc removed in same layer = gone</text>
+  <text x="630.7693" y="40" text-anchor="middle" font-size="29.112" font-weight="bold">Layer Optimization: Before vs After</text>
+  <rect x="40" y="90.4348" width="553.8461" height="529.5652" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="316.9232" y="140.8696" text-anchor="middle" font-size="23.6535" font-weight="bold" fill="var(--danger-accent)">Before (5 layers, 450 MB)</text>
+  <rect x="76.9232" y="178.6956" width="480.0001" height="75.6523" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="316.9232" y="229.1304" text-anchor="middle" font-size="18.195">RUN apt-get update</text>
+  <rect x="76.9232" y="266.9566" width="480.0001" height="75.6523" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="316.9232" y="317.3914" text-anchor="middle" font-size="18.195">RUN apt-get install gcc</text>
+  <rect x="76.9232" y="355.2174" width="480.0001" height="75.6523" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="316.9232" y="405.6522" text-anchor="middle" font-size="18.195">RUN pip install deps</text>
+  <rect x="76.9232" y="443.4782" width="480.0001" height="75.6523" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="316.9232" y="493.913" text-anchor="middle" font-size="18.195">RUN apt-get remove gcc</text>
+  <rect x="76.9232" y="531.7392" width="480.0001" height="63.0435" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="316.9232" y="574.6087" text-anchor="middle" font-size="18.195">gcc still in earlier layer!</text>
+  <rect x="686.1539" y="90.4348" width="553.8461" height="529.5652" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="963.077" y="140.8696" text-anchor="middle" font-size="23.6535" font-weight="bold" fill="var(--ok-accent)">After (2 layers, 120 MB)</text>
+  <rect x="723.0771" y="178.6956" width="480.0001" height="201.7391" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="963.077" y="254.3478" text-anchor="middle" font-size="18.195">RUN apt-get update &amp;&amp;</text>
+  <text x="963.077" y="292.1739" text-anchor="middle" font-size="18.195">apt-get install gcc &amp;&amp;</text>
+  <text x="963.077" y="329.9999" text-anchor="middle" font-size="18.195">pip install deps &amp;&amp; apt-get remove gcc</text>
+  <rect x="723.0771" y="405.6522" width="480.0001" height="88.2608" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="963.077" y="461.1305" text-anchor="middle" font-size="18.195">COPY app /app</text>
+  <text x="963.077" y="556.9565" text-anchor="middle" font-size="21.834" fill="var(--ok-accent)">gcc removed in same layer = gone</text>
 </svg>

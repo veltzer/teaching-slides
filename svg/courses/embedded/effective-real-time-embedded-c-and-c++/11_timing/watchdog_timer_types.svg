@@ -101,39 +101,39 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <rect x="53.3333" y="35.5556" width="320" height="177.7778" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="213.3333" y="78.2222" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--bg)">Independent WDT</text>
-  <text x="213.3333" y="104.8889" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-accent)">Separate RC clock</text>
-  <text x="213.3333" y="128" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-accent)">Runs even if main clock fails</text>
-  <text x="213.3333" y="151.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-accent)">Must be kicked before timeout</text>
-  <text x="213.3333" y="174.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--primary-accent)">→ catch complete hangs</text>
-  <text x="213.3333" y="195.5556" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="var(--primary-accent)">IWDG_KR = 0xAAAA (kick)</text>
-  <rect x="408.8889" y="35.5556" width="320" height="177.7778" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="568.8889" y="78.2222" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">Window WDT</text>
-  <text x="568.8889" y="104.8889" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Must kick within a time window</text>
-  <text x="568.8889" y="128" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Too early = reset. Too late = reset</text>
-  <text x="568.8889" y="151.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Enforces correct timing</text>
-  <text x="568.8889" y="174.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-faint)">→ catch runaway/too-fast loops</text>
-  <text x="568.8889" y="195.5556" text-anchor="middle" font-family="monospace" font-size="12.4444" fill="var(--text-faint)">min_time &lt; kick &lt; max_time</text>
-  <rect x="764.4444" y="35.5556" width="320" height="177.7778" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="924.4444" y="78.2222" text-anchor="middle" font-family="sans-serif" font-size="23.1111" font-weight="bold" fill="var(--text)">System WDT</text>
-  <text x="924.4444" y="104.8889" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Uses CPU/APB clock</text>
-  <text x="924.4444" y="128" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Software-configurable</text>
-  <text x="924.4444" y="151.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">May stop in low-power modes</text>
-  <text x="924.4444" y="174.2222" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-faint)">→ general-purpose watchdog</text>
-  <rect x="160" y="257.7778" width="817.7778" height="177.7778" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="568.8889" y="284.4444" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Window WDT kick timing</text>
-  <line x1="195.5556" y1="337.7778" x2="942.2222" y2="337.7778" stroke="var(--border)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <rect x="195.5556" y="311.1111" width="248.8889" height="53.3333" rx="6" fill="var(--danger-fill)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="320" y="341.3333" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--danger-accent)">Too early → reset</text>
-  <rect x="444.4444" y="311.1111" width="248.8889" height="53.3333" rx="6" fill="var(--ok-fill)" opacity="0.8" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="568.8889" y="341.3333" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--ok-accent)" font-weight="bold">✓ Valid window</text>
-  <rect x="693.3333" y="311.1111" width="222.2222" height="53.3333" rx="6" fill="var(--danger-fill)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="804.4444" y="341.3333" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--danger-accent)">Too late → reset</text>
-  <line x1="444.4444" y1="302.2222" x2="444.4444" y2="373.3333" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <line x1="693.3333" y1="302.2222" x2="693.3333" y2="373.3333" stroke="var(--text-muted)" stroke-width="1.7778" />
-  <text x="444.4444" y="298.6667" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">t_min</text>
-  <text x="693.3333" y="298.6667" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-muted)">t_max</text>
-  <text x="568.8889" y="547.5556" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--text-muted)">Always kick watchdog from the main application loop — not from an ISR alone</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <rect x="96.25" y="72.2223" width="337.5" height="161.1111" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="265" y="110.8889" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--bg)">Independent WDT</text>
+  <text x="265" y="135.0556" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--primary-accent)">Separate RC clock</text>
+  <text x="265" y="156" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--primary-accent)">Runs even if main clock fails</text>
+  <text x="265" y="176.9444" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--primary-accent)">Must be kicked before timeout</text>
+  <text x="265" y="197.8889" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--primary-accent)">→ catch complete hangs</text>
+  <text x="265" y="217.2223" text-anchor="middle" font-family="monospace" font-size="12.1663" fill="var(--primary-accent)">IWDG_KR = 0xAAAA (kick)</text>
+  <rect x="471.25" y="72.2223" width="337.5" height="161.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="110.8889" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--text)">Window WDT</text>
+  <text x="640" y="135.0556" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Must kick within a time window</text>
+  <text x="640" y="156" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Too early = reset. Too late = reset</text>
+  <text x="640" y="176.9444" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Enforces correct timing</text>
+  <text x="640" y="197.8889" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-faint)">→ catch runaway/too-fast loops</text>
+  <text x="640" y="217.2223" text-anchor="middle" font-family="monospace" font-size="12.1663" fill="var(--text-faint)">min_time &lt; kick &lt; max_time</text>
+  <rect x="846.2499" y="72.2223" width="337.5" height="161.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1014.9999" y="110.8889" text-anchor="middle" font-family="sans-serif" font-size="22.5947" font-weight="bold" fill="var(--text)">System WDT</text>
+  <text x="1014.9999" y="135.0556" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Uses CPU/APB clock</text>
+  <text x="1014.9999" y="156" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Software-configurable</text>
+  <text x="1014.9999" y="176.9444" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">May stop in low-power modes</text>
+  <text x="1014.9999" y="197.8889" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-faint)">→ general-purpose watchdog</text>
+  <rect x="208.75" y="273.6111" width="862.5" height="161.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="640" y="297.7777" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">Window WDT kick timing</text>
+  <line x1="246.25" y1="346.1111" x2="1033.75" y2="346.1111" stroke="var(--border)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <rect x="246.25" y="321.9444" width="262.5" height="48.3333" rx="6" fill="var(--danger-fill)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="377.5" y="349.3333" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--danger-accent)">Too early → reset</text>
+  <rect x="508.7499" y="321.9444" width="262.5" height="48.3333" rx="6" fill="var(--ok-fill)" opacity="0.8" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="349.3333" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--ok-accent)" font-weight="bold">✓ Valid window</text>
+  <rect x="771.25" y="321.9444" width="234.375" height="48.3333" rx="6" fill="var(--danger-fill)" opacity="0.6" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="888.4374" y="349.3333" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--danger-accent)">Too late → reset</text>
+  <line x1="508.7499" y1="313.8889" x2="508.7499" y2="378.3333" stroke="var(--text-muted)" stroke-width="1.7778" />
+  <line x1="771.25" y1="313.8889" x2="771.25" y2="378.3333" stroke="var(--text-muted)" stroke-width="1.7778" />
+  <text x="508.7499" y="310.6667" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">t_min</text>
+  <text x="771.25" y="310.6667" text-anchor="middle" font-family="sans-serif" font-size="11.2974" fill="var(--text-muted)">t_max</text>
+  <text x="640" y="536.2223" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--text-muted)">Always kick watchdog from the main application loop — not from an ISR alone</text>
 </svg>

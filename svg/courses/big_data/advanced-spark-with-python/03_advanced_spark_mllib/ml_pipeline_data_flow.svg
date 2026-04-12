@@ -97,46 +97,46 @@
       <polygon points="0,13.8462 6.4,0" fill="#333" />
     </marker>
   </defs>
-  <rect x="109.7143" y="6.9231" width="292.5714" height="62.3077" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="256" y="34.6154" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" font-weight="bold" fill="var(--text)">Raw Data</text>
-  <text x="256" y="55.3846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8462" fill="var(--text-muted)">(CSV/Parquet)</text>
-  <line x1="256" y1="69.2308" x2="256" y2="90" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="96.9231" width="292.5714" height="48.4615" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="256" y="127.3846" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" fill="var(--text)">Imputer</text>
-  <line x1="402.2857" y1="120.4615" x2="493.7143" y2="120.4615" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="502.8571" y="99.6923" width="676.5714" height="41.5385" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="841.1429" y="127.3846" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2308" fill="var(--text-muted)">Fill nulls with median</text>
-  <line x1="256" y1="145.3846" x2="256" y2="166.1538" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="173.0769" width="292.5714" height="48.4615" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="256" y="203.5385" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" fill="var(--text)">StringIndexer</text>
-  <line x1="402.2857" y1="196.6154" x2="493.7143" y2="196.6154" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="502.8571" y="175.8462" width="676.5714" height="41.5385" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="841.1429" y="203.5385" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2308" fill="var(--text-muted)">"Gold" -&gt; 0, "Silver" -&gt; 1</text>
-  <line x1="256" y1="221.5385" x2="256" y2="242.3077" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="249.2308" width="292.5714" height="48.4615" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="256" y="279.6923" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" fill="var(--text)">OneHotEncoder</text>
-  <line x1="402.2857" y1="272.7692" x2="493.7143" y2="272.7692" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="502.8571" y="252" width="676.5714" height="41.5385" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="841.1429" y="279.6923" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2308" fill="var(--text-muted)">0 -&gt; [1,0,0], 1 -&gt; [0,1,0]</text>
-  <line x1="256" y1="297.6923" x2="256" y2="318.4615" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="325.3846" width="292.5714" height="48.4615" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="256" y="355.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" fill="var(--text)">VectorAssembler</text>
-  <line x1="402.2857" y1="348.9231" x2="493.7143" y2="348.9231" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="502.8571" y="328.1538" width="676.5714" height="41.5385" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="841.1429" y="355.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2308" fill="var(--text-muted)">Combine all into [0.5, 1.2, 3.4, 1, 0, 0]</text>
-  <line x1="256" y1="373.8462" x2="256" y2="394.6154" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="401.5385" width="292.5714" height="48.4615" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="256" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" fill="var(--text)">StandardScaler</text>
-  <line x1="402.2857" y1="425.0769" x2="493.7143" y2="425.0769" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="502.8571" y="404.3077" width="676.5714" height="41.5385" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="841.1429" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2308" fill="var(--text-muted)">Normalize: mean=0, std=1</text>
-  <line x1="256" y1="450" x2="256" y2="470.7692" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="477.6923" width="292.5714" height="48.4615" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="256" y="508.1538" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" fill="var(--text)">Classifier</text>
-  <line x1="402.2857" y1="501.2308" x2="493.7143" y2="501.2308" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="502.8571" y="480.4615" width="676.5714" height="41.5385" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="841.1429" y="508.1538" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2308" fill="var(--text-muted)">RandomForest / GBT / LR</text>
-  <line x1="256" y1="526.1538" x2="256" y2="546.9231" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
-  <rect x="109.7143" y="553.8462" width="292.5714" height="48.4615" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="256" y="584.3077" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.6154" font-weight="bold" fill="var(--text)">Predictions</text>
+  <rect x="40" y="40" width="328.2051" height="60.6977" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="204.1026" y="66.9767" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" font-weight="bold" fill="var(--text)">Raw Data</text>
+  <text x="204.1026" y="87.2093" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.4745" fill="var(--text-muted)">(CSV/Parquet)</text>
+  <line x1="204.1026" y1="100.6977" x2="204.1026" y2="120.9302" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="127.6744" width="328.2051" height="47.2093" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="204.1026" y="157.3488" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" fill="var(--text)">Imputer</text>
+  <line x1="368.2051" y1="150.6046" x2="470.7693" y2="150.6046" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="481.0256" y="130.3721" width="758.9744" height="40.4652" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="860.5129" y="157.3488" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.9219" fill="var(--text-muted)">Fill nulls with median</text>
+  <line x1="204.1026" y1="174.8837" x2="204.1026" y2="195.1162" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="201.8604" width="328.2051" height="47.2093" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="204.1026" y="231.5349" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" fill="var(--text)">StringIndexer</text>
+  <line x1="368.2051" y1="224.7907" x2="470.7693" y2="224.7907" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="481.0256" y="204.5582" width="758.9744" height="40.4652" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="860.5129" y="231.5349" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.9219" fill="var(--text-muted)">"Gold" -&gt; 0, "Silver" -&gt; 1</text>
+  <line x1="204.1026" y1="249.0698" x2="204.1026" y2="269.3023" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="276.0465" width="328.2051" height="47.2093" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="204.1026" y="305.7209" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" fill="var(--text)">OneHotEncoder</text>
+  <line x1="368.2051" y1="298.9767" x2="470.7693" y2="298.9767" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="481.0256" y="278.7442" width="758.9744" height="40.4652" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="860.5129" y="305.7209" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.9219" fill="var(--text-muted)">0 -&gt; [1,0,0], 1 -&gt; [0,1,0]</text>
+  <line x1="204.1026" y1="323.2558" x2="204.1026" y2="343.4883" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="350.2325" width="328.2051" height="47.2093" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="204.1026" y="379.907" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" fill="var(--text)">VectorAssembler</text>
+  <line x1="368.2051" y1="373.1628" x2="470.7693" y2="373.1628" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="481.0256" y="352.9302" width="758.9744" height="40.4652" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="860.5129" y="379.907" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.9219" fill="var(--text-muted)">Combine all into [0.5, 1.2, 3.4, 1, 0, 0]</text>
+  <line x1="204.1026" y1="397.4419" x2="204.1026" y2="417.6744" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="424.4186" width="328.2051" height="47.2093" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="204.1026" y="454.093" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" fill="var(--text)">StandardScaler</text>
+  <line x1="368.2051" y1="447.3488" x2="470.7693" y2="447.3488" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="481.0256" y="427.1163" width="758.9744" height="40.4652" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="860.5129" y="454.093" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.9219" fill="var(--text-muted)">Normalize: mean=0, std=1</text>
+  <line x1="204.1026" y1="471.6279" x2="204.1026" y2="491.8604" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="498.6046" width="328.2051" height="47.2093" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="204.1026" y="528.279" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" fill="var(--text)">Classifier</text>
+  <line x1="368.2051" y1="521.5349" x2="470.7693" y2="521.5349" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="481.0256" y="501.3023" width="758.9744" height="40.4652" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="860.5129" y="528.279" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.9219" fill="var(--text-muted)">RandomForest / GBT / LR</text>
+  <line x1="204.1026" y1="545.8139" x2="204.1026" y2="566.0465" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-ml)" />
+  <rect x="40" y="572.7907" width="328.2051" height="47.2093" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="204.1026" y="602.4651" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.3693" font-weight="bold" fill="var(--text)">Predictions</text>
 </svg>

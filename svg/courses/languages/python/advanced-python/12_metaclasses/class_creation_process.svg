@@ -112,129 +112,129 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#f57c00"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="1280" height="52" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Class Creation Pipeline</text>
+  <rect x="40" y="40" width="1200" height="47.125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="70.8125" font-family="sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Class Creation Pipeline</text>
 
   <!-- Section labels -->
-  <text x="380" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Class Creation (metaclass.__new__ / __call__)</text>
-  <text x="960" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Instance Creation (Foo())</text>
+  <text x="396.25" y="107.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Class Creation (metaclass.__new__ / __call__)</text>
+  <text x="940" y="107.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Instance Creation (Foo())</text>
 
   <!-- Vertical divider -->
-  <line x1="680" y1="60" x2="680" y2="620" stroke="var(--border)" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="677.5" y1="94.375" x2="677.5" y2="601.875" stroke="var(--border)" stroke-width="2" stroke-dasharray="6,4"/>
 
   <!-- ===== CLASS CREATION PIPELINE (left) ===== -->
 
   <!-- Step 1 -->
-  <rect x="60" y="88" width="300" height="48" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="210" y="108" font-family="monospace" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">class Foo(Base):</text>
-  <text x="210" y="126" font-family="sans-serif" font-size="12" fill="var(--primary-accent)" text-anchor="middle">Python sees a class statement</text>
+  <rect x="96.25" y="119.75" width="281.25" height="43.5" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="236.875" y="137.875" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">class Foo(Base):</text>
+  <text x="236.875" y="154.1875" font-family="sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">Python sees a class statement</text>
 
-  <line x1="210" y1="136" x2="210" y2="162" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="163.25" x2="236.875" y2="186.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2 -->
-  <rect x="60" y="162" width="300" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="210" y="183" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Find metaclass</text>
-  <text x="210" y="200" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">type (default) or custom Meta</text>
+  <rect x="96.25" y="186.8125" width="281.25" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="236.875" y="205.8438" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Find metaclass</text>
+  <text x="236.875" y="221.25" font-family="monospace" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">type (default) or custom Meta</text>
 
   <!-- type label -->
-  <rect x="390" y="170" width="170" height="32" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="475" y="186" font-family="monospace" font-size="12" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">default: type</text>
-  <text x="475" y="199" font-family="sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">class Foo(metaclass=Meta)</text>
-  <line x1="390" y1="186" x2="360" y2="186" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
+  <rect x="405.625" y="194.0625" width="159.375" height="29" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="485.3125" y="208.5625" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">default: type</text>
+  <text x="485.3125" y="220.3438" font-family="sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">class Foo(metaclass=Meta)</text>
+  <line x1="405.625" y1="208.5625" x2="377.5" y2="208.5625" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
 
-  <line x1="210" y1="210" x2="210" y2="236" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="230.3125" x2="236.875" y2="253.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3 -->
-  <rect x="60" y="236" width="300" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="210" y="257" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">metaclass.__prepare__(name, bases)</text>
-  <text x="210" y="274" font-family="sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">returns namespace dict for class body</text>
+  <rect x="96.25" y="253.875" width="281.25" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="236.875" y="272.9062" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">metaclass.__prepare__(name, bases)</text>
+  <text x="236.875" y="288.3125" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">returns namespace dict for class body</text>
 
-  <line x1="210" y1="284" x2="210" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="297.375" x2="236.875" y2="320.9375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 4 -->
-  <rect x="60" y="310" width="300" height="48" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="210" y="331" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">exec(class body)</text>
-  <text x="210" y="348" font-family="sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">populates namespace dict with attrs/methods</text>
+  <rect x="96.25" y="320.9375" width="281.25" height="43.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="236.875" y="339.9688" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">exec(class body)</text>
+  <text x="236.875" y="355.375" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">populates namespace dict with attrs/methods</text>
 
-  <line x1="210" y1="358" x2="210" y2="384" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="364.4375" x2="236.875" y2="388" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 5 -->
-  <rect x="60" y="384" width="300" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="210" y="405" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">metaclass.__new__(mcs, name,</text>
-  <text x="210" y="422" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">  bases, namespace)</text>
+  <rect x="96.25" y="388" width="281.25" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="236.875" y="407.0312" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">metaclass.__new__(mcs, name,</text>
+  <text x="236.875" y="422.4375" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">  bases, namespace)</text>
 
-  <line x1="210" y1="432" x2="210" y2="458" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="431.5" x2="236.875" y2="455.0625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 6 -->
-  <rect x="60" y="458" width="300" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="210" y="479" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">metaclass.__init__(cls, name,</text>
-  <text x="210" y="496" font-family="monospace" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">  bases, namespace)</text>
+  <rect x="96.25" y="455.0625" width="281.25" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="236.875" y="474.0938" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">metaclass.__init__(cls, name,</text>
+  <text x="236.875" y="489.5" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">  bases, namespace)</text>
 
-  <line x1="210" y1="506" x2="210" y2="532" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="236.875" y1="498.5625" x2="236.875" y2="522.125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Result: class object -->
-  <rect x="80" y="532" width="260" height="44" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="210" y="553" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">class object Foo created</text>
-  <text x="210" y="568" font-family="sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">bound to name "Foo" in namespace</text>
+  <rect x="115" y="522.125" width="243.75" height="39.875" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="236.875" y="541.1562" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">class object Foo created</text>
+  <text x="236.875" y="554.75" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">bound to name "Foo" in namespace</text>
 
   <!-- ===== INSTANCE CREATION PIPELINE (right) ===== -->
 
   <!-- Step A -->
-  <rect x="720" y="88" width="280" height="48" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="860" y="108" font-family="monospace" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Foo(arg1, arg2)</text>
-  <text x="860" y="126" font-family="sans-serif" font-size="12" fill="var(--surface)" text-anchor="middle">calling the class object</text>
+  <rect x="715" y="119.75" width="262.5" height="43.5" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="846.25" y="137.875" font-family="monospace" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Foo(arg1, arg2)</text>
+  <text x="846.25" y="154.1875" font-family="sans-serif" font-size="11.0609" fill="var(--surface)" text-anchor="middle">calling the class object</text>
 
-  <line x1="860" y1="136" x2="860" y2="162" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="163.25" x2="846.25" y2="186.8125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step B -->
-  <rect x="720" y="162" width="280" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="860" y="183" font-family="monospace" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">type.__call__(cls, *args)</text>
-  <text x="860" y="200" font-family="sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">metaclass __call__ orchestrates creation</text>
+  <rect x="715" y="186.8125" width="262.5" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="846.25" y="205.8438" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">type.__call__(cls, *args)</text>
+  <text x="846.25" y="221.25" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">metaclass __call__ orchestrates creation</text>
 
-  <line x1="860" y1="210" x2="860" y2="236" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="230.3125" x2="846.25" y2="253.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step C -->
-  <rect x="720" y="236" width="280" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="860" y="257" font-family="monospace" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Foo.__new__(cls, *args)</text>
-  <text x="860" y="274" font-family="sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">allocates memory, creates raw instance</text>
+  <rect x="715" y="253.875" width="262.5" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="846.25" y="272.9062" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Foo.__new__(cls, *args)</text>
+  <text x="846.25" y="288.3125" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">allocates memory, creates raw instance</text>
 
-  <line x1="860" y1="284" x2="860" y2="310" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="297.375" x2="846.25" y2="320.9375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step D -->
-  <rect x="720" y="310" width="280" height="48" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="860" y="331" font-family="monospace" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Foo.__init__(self, *args)</text>
-  <text x="860" y="348" font-family="sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">initializes instance attributes</text>
+  <rect x="715" y="320.9375" width="262.5" height="43.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="846.25" y="339.9688" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Foo.__init__(self, *args)</text>
+  <text x="846.25" y="355.375" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">initializes instance attributes</text>
 
-  <line x1="860" y1="358" x2="860" y2="384" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="846.25" y1="364.4375" x2="846.25" y2="388" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Result: instance -->
-  <rect x="740" y="384" width="240" height="44" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="860" y="405" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">instance returned</text>
-  <text x="860" y="420" font-family="sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">type(instance) == Foo</text>
+  <rect x="733.75" y="388" width="225" height="39.875" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="846.25" y="407.0312" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">instance returned</text>
+  <text x="846.25" y="420.625" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">type(instance) == Foo</text>
 
   <!-- Type hierarchy diagram -->
-  <rect x="720" y="448" width="500" height="154" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="970" y="468" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--text)" text-anchor="middle">Type Hierarchy</text>
+  <rect x="715" y="446" width="468.75" height="139.5625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="949.375" y="464.125" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)" text-anchor="middle">Type Hierarchy</text>
   <!-- boxes -->
-  <rect x="830" y="478" width="140" height="34" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="900" y="499" font-family="monospace" font-size="12" fill="var(--primary-accent)" text-anchor="middle">type</text>
-  <rect x="730" y="530" width="140" height="34" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="800" y="551" font-family="monospace" font-size="12" fill="var(--ok-accent)" text-anchor="middle">Foo (class)</text>
-  <rect x="930" y="530" width="140" height="34" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1000" y="551" font-family="monospace" font-size="12" fill="var(--warn-accent)" text-anchor="middle">instance</text>
+  <rect x="818.125" y="473.1875" width="131.25" height="30.8125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="883.75" y="492.2188" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">type</text>
+  <rect x="724.375" y="520.3125" width="131.25" height="30.8125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="790" y="539.3438" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle">Foo (class)</text>
+  <rect x="911.875" y="520.3125" width="131.25" height="30.8125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="977.5" y="539.3438" font-family="monospace" font-size="11.0609" fill="var(--warn-accent)" text-anchor="middle">instance</text>
   <!-- connecting lines -->
-  <line x1="870" y1="512" x2="800" y2="530" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="930" y1="512" x2="1000" y2="530" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="790" y="525" font-family="sans-serif" font-size="10" fill="var(--text-muted)">type(Foo)</text>
-  <text x="935" y="525" font-family="sans-serif" font-size="10" fill="var(--text-muted)">type(inst)</text>
-  <text x="735" y="580" font-family="monospace" font-size="10" fill="var(--text-muted)">= type</text>
-  <text x="935" y="580" font-family="monospace" font-size="10" fill="var(--text-muted)">= Foo</text>
-  <text x="750" y="596" font-family="sans-serif" font-size="10" fill="var(--text-muted)">type(type) = type</text>
+  <line x1="855.625" y1="504" x2="790" y2="520.3125" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="911.875" y1="504" x2="977.5" y2="520.3125" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="780.625" y="515.7812" font-family="sans-serif" font-size="10" fill="var(--text-muted)">type(Foo)</text>
+  <text x="916.5625" y="515.7812" font-family="sans-serif" font-size="10" fill="var(--text-muted)">type(inst)</text>
+  <text x="729.0625" y="565.625" font-family="monospace" font-size="10" fill="var(--text-muted)">= type</text>
+  <text x="916.5625" y="565.625" font-family="monospace" font-size="10" fill="var(--text-muted)">= Foo</text>
+  <text x="743.125" y="580.125" font-family="sans-serif" font-size="10" fill="var(--text-muted)">type(type) = type</text>
 
   <!-- Bottom info -->
-  <rect x="60" y="592" width="580" height="30" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="350" y="612" font-family="monospace" font-size="12" fill="var(--ok-accent)" text-anchor="middle">class MyMeta(type): ...   class Foo(Base, metaclass=MyMeta): ...</text>
+  <rect x="96.25" y="576.5" width="543.75" height="27.1875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="368.125" y="594.625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)" text-anchor="middle">class MyMeta(type): ...   class Foo(Base, metaclass=MyMeta): ...</text>
 </svg>

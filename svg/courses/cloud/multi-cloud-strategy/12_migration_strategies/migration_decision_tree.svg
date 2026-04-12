@@ -93,64 +93,64 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
   <!-- Start: Assess Workload -->
-  <rect x="480" y="30" width="320" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="68" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Assess Workload</text>
+  <rect x="490" y="67.1875" width="300" height="54.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="101.625" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Assess Workload</text>
   <!-- Arrow down -->
-  <line x1="640" y1="90" x2="640" y2="140" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="121.5625" x2="640" y2="166.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <!-- Decision 1: Cloud-specific dependencies? -->
-  <polygon points="640,140 840,220 640,300 440,220" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Cloud-specific</text>
-  <text x="640" y="232" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">dependencies?</text>
+  <polygon points="640,166.875 827.5,239.375 640,311.875 452.5,239.375" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="230.3125" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Cloud-specific</text>
+  <text x="640" y="250.25" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">dependencies?</text>
   <!-- High -> Stay -->
-  <line x1="840" y1="220" x2="1020" y2="220" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="920" y="210" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger-accent)">High</text>
-  <rect x="1020" y="185" width="220" height="70" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1130" y="218" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Stay</text>
-  <text x="1130" y="242" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Keep on current cloud</text>
+  <line x1="827.5" y1="239.375" x2="996.25" y2="239.375" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="902.5" y="230.3125" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--danger-accent)">High</text>
+  <rect x="996.25" y="207.6562" width="206.25" height="63.4375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1099.375" y="237.5625" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Stay</text>
+  <text x="1099.375" y="259.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Keep on current cloud</text>
   <!-- Low -> next decision -->
-  <line x1="640" y1="300" x2="640" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="665" y="330" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)">Low</text>
+  <line x1="640" y1="311.875" x2="640" y2="357.1875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="663.4375" y="339.0625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)">Low</text>
   <!-- Decision 2: Performance sensitive? -->
-  <polygon points="640,350 840,430 640,510 440,430" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="640" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Performance</text>
-  <text x="640" y="442" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">sensitive?</text>
+  <polygon points="640,357.1875 827.5,429.6875 640,502.1875 452.5,429.6875" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="420.625" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Performance</text>
+  <text x="640" y="440.5625" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">sensitive?</text>
   <!-- Yes -> Replatform -->
-  <line x1="840" y1="430" x2="1020" y2="430" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="920" y="420" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-accent)">Yes</text>
-  <rect x="1020" y="395" width="220" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1130" y="428" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Replatform</text>
-  <text x="1130" y="452" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Adapt to target platform</text>
+  <line x1="827.5" y1="429.6875" x2="996.25" y2="429.6875" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="902.5" y="420.625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--warn-accent)">Yes</text>
+  <rect x="996.25" y="397.9688" width="206.25" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1099.375" y="427.875" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Replatform</text>
+  <text x="1099.375" y="449.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Adapt to target platform</text>
   <!-- No -> next decision -->
-  <line x1="440" y1="430" x2="320" y2="430" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="380" y="420" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)">No</text>
+  <line x1="452.5" y1="429.6875" x2="340" y2="429.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="396.25" y="420.625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)">No</text>
   <!-- Decision 3: Standard workload? -->
-  <polygon points="200,350 320,430 200,510 80,430" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="200" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Standard</text>
-  <text x="200" y="442" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">workload?</text>
+  <polygon points="227.5,357.1875 340,429.6875 227.5,502.1875 115,429.6875" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="227.5" y="420.625" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Standard</text>
+  <text x="227.5" y="440.5625" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">workload?</text>
   <!-- Yes -> Rehost -->
-  <line x1="200" y1="350" x2="200" y2="300" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="220" y="330" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)">Yes</text>
-  <rect x="90" y="230" width="220" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="200" y="263" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Rehost</text>
-  <text x="200" y="287" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Lift and shift (easiest)</text>
+  <line x1="227.5" y1="357.1875" x2="227.5" y2="311.875" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="246.25" y="339.0625" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)">Yes</text>
+  <rect x="124.375" y="248.4375" width="206.25" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="227.5" y="278.3438" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Rehost</text>
+  <text x="227.5" y="300.0938" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Lift and shift (easiest)</text>
   <!-- No -> Refactor -->
-  <line x1="200" y1="510" x2="200" y2="555" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="220" y="540" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-accent)">No</text>
-  <rect x="90" y="555" width="220" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="200" y="588" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Refactor</text>
-  <text x="200" y="612" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Re-architect for portability</text>
+  <line x1="227.5" y1="502.1875" x2="227.5" y2="542.9688" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="246.25" y="529.375" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--info-accent)">No</text>
+  <rect x="124.375" y="542.9688" width="206.25" height="63.4375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="227.5" y="572.875" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Refactor</text>
+  <text x="227.5" y="594.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Re-architect for portability</text>
   <!-- Legend -->
-  <rect x="800" y="530" width="440" height="90" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1020" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)" text-anchor="middle">Outcomes:</text>
-  <rect x="820" y="565" width="14" height="14" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="845" y="577" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Stay</text>
-  <rect x="900" y="565" width="14" height="14" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="925" y="577" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Rehost</text>
-  <rect x="990" y="565" width="14" height="14" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1015" y="577" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Replatform</text>
-  <rect x="1100" y="565" width="14" height="14" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1125" y="577" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Refactor</text>
-  <text x="1020" y="605" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">Cost and effort increase left to right</text>
+  <rect x="790" y="520.3125" width="412.5" height="81.5625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="996.25" y="542.9688" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text)" text-anchor="middle">Outcomes:</text>
+  <rect x="808.75" y="552.0312" width="13.125" height="12.6875" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="832.1875" y="562.9062" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Stay</text>
+  <rect x="883.75" y="552.0312" width="13.125" height="12.6875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="907.1875" y="562.9062" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Rehost</text>
+  <rect x="968.125" y="552.0312" width="13.125" height="12.6875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="991.5625" y="562.9062" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Replatform</text>
+  <rect x="1071.25" y="552.0312" width="13.125" height="12.6875" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1094.6875" y="562.9062" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Refactor</text>
+  <text x="996.25" y="588.2812" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">Cost and effort increase left to right</text>
 </svg>

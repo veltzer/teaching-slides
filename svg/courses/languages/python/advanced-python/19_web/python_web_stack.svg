@@ -110,111 +110,111 @@
       <stop offset="100%" stop-color="#0d47a1"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="1280" height="52" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Web Stack: Layers &amp; Technologies</text>
+  <rect x="40" y="40" width="1200" height="47.125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="70.8125" font-family="sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Web Stack: Layers &amp; Technologies</text>
 
   <!-- Left label: Request flow -->
-  <text x="30" y="340" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--text-faint)" text-anchor="middle" transform="rotate(-90 30 340)">REQUEST ↓</text>
+  <text x="68.125" y="348.125" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text-faint)" text-anchor="middle" transform="rotate(-90 30 340)">REQUEST ↓</text>
   <!-- Right label: Response flow -->
-  <text x="1255" y="340" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--text-faint)" text-anchor="middle" transform="rotate(90 1255 340)">RESPONSE ↑</text>
+  <text x="1216.5625" y="348.125" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text-faint)" text-anchor="middle" transform="rotate(90 1255 340)">RESPONSE ↑</text>
 
   <!-- ===== LAYER 1: Browser ===== -->
-  <rect x="60" y="64" width="1160" height="66" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="260" y="98" font-family="sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Browser / Client</text>
-  <text x="640" y="88" font-family="monospace" font-size="12" fill="var(--primary-accent)" text-anchor="middle">Chrome, Firefox, curl, fetch(), httpx, requests</text>
-  <text x="640" y="108" font-family="sans-serif" font-size="12" fill="var(--primary-accent)" text-anchor="middle">Renders HTML/CSS/JS · Sends HTTP requests · Parses responses · Manages cookies &amp; sessions</text>
-  <rect x="60" y="64" width="188" height="66" rx="6" fill="var(--primary-accent)"/>
-  <text x="154" y="95" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 1</text>
-  <text x="154" y="114" font-family="sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">Browser / Client</text>
+  <rect x="96.25" y="98" width="1087.5" height="59.8125" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="283.75" y="128.8125" font-family="sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)" text-anchor="middle">Browser / Client</text>
+  <text x="640" y="119.75" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">Chrome, Firefox, curl, fetch(), httpx, requests</text>
+  <text x="640" y="137.875" font-family="sans-serif" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">Renders HTML/CSS/JS · Sends HTTP requests · Parses responses · Manages cookies &amp; sessions</text>
+  <rect x="96.25" y="98" width="176.25" height="59.8125" rx="6" fill="var(--primary-accent)"/>
+  <text x="184.375" y="126.0938" font-family="sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 1</text>
+  <text x="184.375" y="143.3125" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">Browser / Client</text>
 
   <!-- Arrow 1→2 -->
-  <line x1="640" y1="130" x2="640" y2="148" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="670" y="143" font-family="monospace" font-size="11" fill="var(--text-muted)">HTTP/HTTPS Request (GET /api/data)</text>
+  <line x1="640" y1="157.8125" x2="640" y2="174.125" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="668.125" y="169.5938" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">HTTP/HTTPS Request (GET /api/data)</text>
 
   <!-- ===== LAYER 2: HTTP Request/Response ===== -->
-  <rect x="60" y="150" width="1160" height="54" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="60" y="150" width="188" height="54" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="154" y="172" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 2</text>
-  <text x="154" y="190" font-family="sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">HTTP Protocol</text>
-  <text x="640" y="172" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">HTTP / HTTPS Request &amp; Response</text>
-  <text x="640" y="192" font-family="monospace" font-size="11" fill="var(--primary-accent)" text-anchor="middle">Methods: GET POST PUT DELETE PATCH  ·  Status: 200 201 400 401 403 404 500  ·  Headers, Body, JSON, Forms</text>
+  <rect x="96.25" y="175.9375" width="1087.5" height="48.9375" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="96.25" y="175.9375" width="176.25" height="48.9375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="184.375" y="195.875" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 2</text>
+  <text x="184.375" y="212.1875" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">HTTP Protocol</text>
+  <text x="640" y="195.875" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">HTTP / HTTPS Request &amp; Response</text>
+  <text x="640" y="214" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">Methods: GET POST PUT DELETE PATCH  ·  Status: 200 201 400 401 403 404 500  ·  Headers, Body, JSON, Forms</text>
 
   <!-- Arrow 2→3 -->
-  <line x1="640" y1="204" x2="640" y2="220" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="224.875" x2="640" y2="239.375" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ===== LAYER 3: Web Server ===== -->
-  <rect x="60" y="222" width="1160" height="60" rx="6" fill="var(--primary-accent)" filter="url(#shadow)"/>
-  <rect x="60" y="222" width="188" height="60" rx="6" fill="var(--primary-accent)"/>
-  <text x="154" y="246" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 3</text>
-  <text x="154" y="265" font-family="sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">Web Server</text>
-  <text x="640" y="244" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Server (Production WSGI/ASGI Server)</text>
-  <text x="640" y="264" font-family="monospace" font-size="12" fill="var(--primary-accent)" text-anchor="middle">Gunicorn  ·  uWSGI  ·  Daphne  ·  Hypercorn  ·  Uvicorn</text>
-  <text x="950" y="244" font-family="sans-serif" font-size="11" fill="var(--primary-accent)">Manages worker processes · SSL termination</text>
-  <text x="950" y="262" font-family="sans-serif" font-size="11" fill="var(--primary-accent)">Load balancing · Static file serving</text>
+  <rect x="96.25" y="241.1875" width="1087.5" height="54.375" rx="6" fill="var(--primary-accent)" filter="url(#shadow)"/>
+  <rect x="96.25" y="241.1875" width="176.25" height="54.375" rx="6" fill="var(--primary-accent)"/>
+  <text x="184.375" y="262.9375" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 3</text>
+  <text x="184.375" y="280.1562" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">Web Server</text>
+  <text x="640" y="261.125" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Server (Production WSGI/ASGI Server)</text>
+  <text x="640" y="279.25" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">Gunicorn  ·  uWSGI  ·  Daphne  ·  Hypercorn  ·  Uvicorn</text>
+  <text x="930.625" y="261.125" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)">Manages worker processes · SSL termination</text>
+  <text x="930.625" y="277.4375" font-family="sans-serif" font-size="10.1392" fill="var(--primary-accent)">Load balancing · Static file serving</text>
 
   <!-- Arrow 3→4 -->
-  <line x1="640" y1="282" x2="640" y2="298" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="680" y="293" font-family="monospace" font-size="11" fill="var(--text-muted)">WSGI / ASGI callable interface</text>
+  <line x1="640" y1="295.5625" x2="640" y2="310.0625" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="677.5" y="305.5312" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">WSGI / ASGI callable interface</text>
 
   <!-- ===== LAYER 4: WSGI/ASGI Interface ===== -->
-  <rect x="60" y="300" width="1160" height="54" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="60" y="300" width="188" height="54" rx="6" fill="var(--warn-accent)"/>
-  <text x="154" y="322" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 4</text>
-  <text x="154" y="342" font-family="sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle">WSGI / ASGI</text>
-  <text x="640" y="322" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">WSGI / ASGI Interface  (PEP 3333 / PEP 3422)</text>
-  <text x="640" y="342" font-family="monospace" font-size="12" fill="var(--warn-accent)" text-anchor="middle">def app(environ, start_response): ...   |   async def app(scope, receive, send): ...</text>
+  <rect x="96.25" y="311.875" width="1087.5" height="48.9375" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="96.25" y="311.875" width="176.25" height="48.9375" rx="6" fill="var(--warn-accent)"/>
+  <text x="184.375" y="331.8125" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 4</text>
+  <text x="184.375" y="349.9375" font-family="sans-serif" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">WSGI / ASGI</text>
+  <text x="640" y="331.8125" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">WSGI / ASGI Interface  (PEP 3333 / PEP 3422)</text>
+  <text x="640" y="349.9375" font-family="monospace" font-size="11.0609" fill="var(--warn-accent)" text-anchor="middle">def app(environ, start_response): ...   |   async def app(scope, receive, send): ...</text>
 
   <!-- Arrow 4→5 -->
-  <line x1="640" y1="354" x2="640" y2="370" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="360.8125" x2="640" y2="375.3125" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ===== LAYER 5: Framework ===== -->
-  <rect x="60" y="372" width="1160" height="62" rx="6" fill="var(--ok-accent)" filter="url(#shadow)"/>
-  <rect x="60" y="372" width="188" height="62" rx="6" fill="var(--ok-accent)"/>
-  <text x="154" y="396" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 5</text>
-  <text x="154" y="416" font-family="sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">Framework</text>
-  <text x="640" y="393" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Framework</text>
-  <text x="640" y="411" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">Flask  ·  Django  ·  FastAPI  ·  Tornado  ·  Starlette  ·  Falcon</text>
-  <text x="640" y="427" font-family="sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">Routing · Middleware · Auth · Templates · ORM · Serialization · Validation</text>
+  <rect x="96.25" y="377.125" width="1087.5" height="56.1875" rx="6" fill="var(--ok-accent)" filter="url(#shadow)"/>
+  <rect x="96.25" y="377.125" width="176.25" height="56.1875" rx="6" fill="var(--ok-accent)"/>
+  <text x="184.375" y="398.875" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 5</text>
+  <text x="184.375" y="417" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">Framework</text>
+  <text x="640" y="396.1562" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Web Framework</text>
+  <text x="640" y="412.4688" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">Flask  ·  Django  ·  FastAPI  ·  Tornado  ·  Starlette  ·  Falcon</text>
+  <text x="640" y="426.9688" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">Routing · Middleware · Auth · Templates · ORM · Serialization · Validation</text>
 
   <!-- Arrow 5→6 -->
-  <line x1="640" y1="434" x2="640" y2="450" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="433.3125" x2="640" y2="447.8125" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ===== LAYER 6: Application Code ===== -->
-  <rect x="60" y="452" width="1160" height="60" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <rect x="60" y="452" width="188" height="60" rx="6" fill="var(--info-accent)"/>
-  <text x="154" y="476" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 6</text>
-  <text x="154" y="496" font-family="sans-serif" font-size="11" fill="var(--info-accent)" text-anchor="middle">App Code</text>
-  <text x="640" y="474" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Application Code (Business Logic)</text>
-  <text x="640" y="492" font-family="monospace" font-size="12" fill="var(--info-accent)" text-anchor="middle">View functions · Class-Based Views · API endpoints · Services · Models</text>
-  <text x="950" y="474" font-family="sans-serif" font-size="11" fill="var(--info-accent)">Celery tasks · Background jobs</text>
-  <text x="950" y="492" font-family="sans-serif" font-size="11" fill="var(--info-accent)">Caching (Redis) · Auth checks</text>
+  <rect x="96.25" y="449.625" width="1087.5" height="54.375" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="96.25" y="449.625" width="176.25" height="54.375" rx="6" fill="var(--info-accent)"/>
+  <text x="184.375" y="471.375" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 6</text>
+  <text x="184.375" y="489.5" font-family="sans-serif" font-size="10.1392" fill="var(--info-accent)" text-anchor="middle">App Code</text>
+  <text x="640" y="469.5625" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Application Code (Business Logic)</text>
+  <text x="640" y="485.875" font-family="monospace" font-size="11.0609" fill="var(--info-accent)" text-anchor="middle">View functions · Class-Based Views · API endpoints · Services · Models</text>
+  <text x="930.625" y="469.5625" font-family="sans-serif" font-size="10.1392" fill="var(--info-accent)">Celery tasks · Background jobs</text>
+  <text x="930.625" y="485.875" font-family="sans-serif" font-size="10.1392" fill="var(--info-accent)">Caching (Redis) · Auth checks</text>
 
   <!-- Arrow 6→7 -->
-  <line x1="640" y1="512" x2="640" y2="528" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="504" x2="640" y2="518.5" stroke="var(--text-faint)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- ===== LAYER 7: Database ===== -->
-  <rect x="60" y="530" width="1160" height="62" rx="6" fill="var(--text-muted)" filter="url(#shadow)"/>
-  <rect x="60" y="530" width="188" height="62" rx="6" fill="var(--text)"/>
-  <text x="154" y="554" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 7</text>
-  <text x="154" y="574" font-family="sans-serif" font-size="11" fill="var(--border)" text-anchor="middle">Database</text>
-  <text x="640" y="552" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Database / Persistence Layer</text>
-  <text x="640" y="570" font-family="monospace" font-size="12" fill="var(--border)" text-anchor="middle">SQLAlchemy ORM  ·  psycopg2  ·  PyMongo  ·  redis-py  ·  Django ORM</text>
-  <text x="640" y="586" font-family="sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">PostgreSQL · MySQL · SQLite · MongoDB · Redis · Elasticsearch</text>
+  <rect x="96.25" y="520.3125" width="1087.5" height="56.1875" rx="6" fill="var(--text-muted)" filter="url(#shadow)"/>
+  <rect x="96.25" y="520.3125" width="176.25" height="56.1875" rx="6" fill="var(--text)"/>
+  <text x="184.375" y="542.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--bg)" text-anchor="middle">Layer 7</text>
+  <text x="184.375" y="560.1875" font-family="sans-serif" font-size="10.1392" fill="var(--border)" text-anchor="middle">Database</text>
+  <text x="640" y="540.25" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Database / Persistence Layer</text>
+  <text x="640" y="556.5625" font-family="monospace" font-size="11.0609" fill="var(--border)" text-anchor="middle">SQLAlchemy ORM  ·  psycopg2  ·  PyMongo  ·  redis-py  ·  Django ORM</text>
+  <text x="640" y="571.0625" font-family="sans-serif" font-size="10.1392" fill="var(--text-faint)" text-anchor="middle">PostgreSQL · MySQL · SQLite · MongoDB · Redis · Elasticsearch</text>
 
   <!-- Side annotation: request/response double arrow -->
-  <line x1="44" y1="64" x2="44" y2="592" stroke="var(--primary-border)" stroke-width="2"/>
-  <polygon points="44,64 38,76 50,76" fill="var(--primary-fill)"/>
-  <polygon points="44,592 38,580 50,580" fill="var(--primary-fill)"/>
+  <line x1="81.25" y1="98" x2="81.25" y2="576.5" stroke="var(--primary-border)" stroke-width="2"/>
+  <polygon points="81.25,98 75.625,108.875 86.875,108.875" fill="var(--primary-fill)"/>
+  <polygon points="81.25,576.5 75.625,565.625 86.875,565.625" fill="var(--primary-fill)"/>
 
   <!-- Bottom legend -->
-  <rect x="60" y="602" width="1160" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="170" y="621" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">WSGI (sync):</text>
-  <text x="260" y="621" font-family="monospace" font-size="11" fill="var(--text)">Flask, Django ↔ Gunicorn/uWSGI</text>
-  <text x="580" y="621" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">ASGI (async):</text>
-  <text x="670" y="621" font-family="monospace" font-size="11" fill="var(--text)">FastAPI, Starlette ↔ Uvicorn/Daphne</text>
-  <text x="960" y="621" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Dev server:</text>
-  <text x="1040" y="621" font-family="monospace" font-size="11" fill="var(--text)">flask run / manage.py runserver</text>
+  <rect x="96.25" y="585.5625" width="1087.5" height="25.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="199.375" y="602.7812" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--primary-accent)">WSGI (sync):</text>
+  <text x="283.75" y="602.7812" font-family="monospace" font-size="10.1392" fill="var(--text)">Flask, Django ↔ Gunicorn/uWSGI</text>
+  <text x="583.75" y="602.7812" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--primary-accent)">ASGI (async):</text>
+  <text x="668.125" y="602.7812" font-family="monospace" font-size="10.1392" fill="var(--text)">FastAPI, Starlette ↔ Uvicorn/Daphne</text>
+  <text x="940" y="602.7812" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--primary-accent)">Dev server:</text>
+  <text x="1015" y="602.7812" font-family="monospace" font-size="10.1392" fill="var(--text)">flask run / manage.py runserver</text>
 </svg>

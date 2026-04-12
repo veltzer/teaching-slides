@@ -98,101 +98,101 @@
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Variable Types Column -->
-  <rect x="30" y="20" width="370" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="215" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Variable Types</text>
+  <rect x="68.125" y="58.125" width="346.875" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="241.5625" y="83.5" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)" text-anchor="middle">Variable Types</text>
 
   <!-- Normal Variable -->
-  <rect x="30" y="76" width="370" height="80" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="45" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Normal Variable</text>
-  <text x="45" y="120" font-family="monospace" font-size="12" fill="var(--text)">set(MY_VAR "hello")</text>
-  <text x="45" y="138" font-family="monospace" font-size="12" fill="var(--text)">message(${MY_VAR})</text>
+  <rect x="68.125" y="108.875" width="346.875" height="72.5" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="82.1875" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Normal Variable</text>
+  <text x="82.1875" y="148.75" font-family="monospace" font-size="11.0609" fill="var(--text)">set(MY_VAR "hello")</text>
+  <text x="82.1875" y="165.0625" font-family="monospace" font-size="11.0609" fill="var(--text)">message(${MY_VAR})</text>
 
   <!-- Cache Variable -->
-  <rect x="30" y="168" width="370" height="90" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="45" y="192" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">Cache Variable</text>
-  <text x="45" y="212" font-family="monospace" font-size="12" fill="var(--text)">set(MYOPT "OFF"</text>
-  <text x="45" y="230" font-family="monospace" font-size="12" fill="var(--text)">  CACHE BOOL "Enable opt")</text>
-  <text x="45" y="248" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Persists in CMakeCache.txt</text>
+  <rect x="68.125" y="192.25" width="346.875" height="81.5625" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="82.1875" y="214" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">Cache Variable</text>
+  <text x="82.1875" y="232.125" font-family="monospace" font-size="11.0609" fill="var(--text)">set(MYOPT "OFF"</text>
+  <text x="82.1875" y="248.4375" font-family="monospace" font-size="11.0609" fill="var(--text)">  CACHE BOOL "Enable opt")</text>
+  <text x="82.1875" y="264.75" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Persists in CMakeCache.txt</text>
 
   <!-- Environment Variable -->
-  <rect x="30" y="270" width="370" height="80" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="45" y="294" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">Environment Variable</text>
-  <text x="45" y="314" font-family="monospace" font-size="12" fill="var(--text)">set(ENV{PATH} "/opt/bin")</text>
-  <text x="45" y="332" font-family="monospace" font-size="12" fill="var(--text)">message($ENV{HOME})</text>
+  <rect x="68.125" y="284.6875" width="346.875" height="72.5" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="82.1875" y="306.4375" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">Environment Variable</text>
+  <text x="82.1875" y="324.5625" font-family="monospace" font-size="11.0609" fill="var(--text)">set(ENV{PATH} "/opt/bin")</text>
+  <text x="82.1875" y="340.875" font-family="monospace" font-size="11.0609" fill="var(--text)">message($ENV{HOME})</text>
 
   <!-- Variable Expansion -->
-  <rect x="30" y="362" width="370" height="105" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="45" y="386" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-accent)">Variable Expansion</text>
-  <text x="45" y="406" font-family="monospace" font-size="12" fill="var(--text)">${VAR}      - normal</text>
-  <text x="45" y="424" font-family="monospace" font-size="12" fill="var(--text)">$ENV{VAR}  - environment</text>
-  <text x="45" y="442" font-family="monospace" font-size="12" fill="var(--text)">$CACHE{VAR}- cache</text>
-  <text x="45" y="460" font-family="monospace" font-size="12" fill="var(--text)">${${VAR}}  - indirect ref</text>
+  <rect x="68.125" y="368.0625" width="346.875" height="95.1562" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="82.1875" y="389.8125" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--info-accent)">Variable Expansion</text>
+  <text x="82.1875" y="407.9375" font-family="monospace" font-size="11.0609" fill="var(--text)">${VAR}      - normal</text>
+  <text x="82.1875" y="424.25" font-family="monospace" font-size="11.0609" fill="var(--text)">$ENV{VAR}  - environment</text>
+  <text x="82.1875" y="440.5625" font-family="monospace" font-size="11.0609" fill="var(--text)">$CACHE{VAR}- cache</text>
+  <text x="82.1875" y="456.875" font-family="monospace" font-size="11.0609" fill="var(--text)">${${VAR}}  - indirect ref</text>
 
   <!-- Control Flow Column -->
-  <rect x="440" y="20" width="380" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="630" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Control Flow</text>
+  <rect x="452.5" y="58.125" width="356.25" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="630.625" y="83.5" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)" text-anchor="middle">Control Flow</text>
 
   <!-- if/elseif/else -->
-  <rect x="440" y="76" width="380" height="110" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="455" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">if / elseif / else</text>
-  <text x="455" y="120" font-family="monospace" font-size="12" fill="var(--text)">if(UNIX)</text>
-  <text x="455" y="138" font-family="monospace" font-size="12" fill="var(--text)">  set(PLAT "linux")</text>
-  <text x="455" y="156" font-family="monospace" font-size="12" fill="var(--text)">elseif(WIN32)</text>
-  <text x="455" y="174" font-family="monospace" font-size="12" fill="var(--text)">  set(PLAT "win")</text>
-  <text x="455" y="177" font-family="monospace" font-size="12" fill="var(--text)">endif()</text>
+  <rect x="452.5" y="108.875" width="356.25" height="99.6875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="466.5625" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">if / elseif / else</text>
+  <text x="466.5625" y="148.75" font-family="monospace" font-size="11.0609" fill="var(--text)">if(UNIX)</text>
+  <text x="466.5625" y="165.0625" font-family="monospace" font-size="11.0609" fill="var(--text)">  set(PLAT "linux")</text>
+  <text x="466.5625" y="181.375" font-family="monospace" font-size="11.0609" fill="var(--text)">elseif(WIN32)</text>
+  <text x="466.5625" y="197.6875" font-family="monospace" font-size="11.0609" fill="var(--text)">  set(PLAT "win")</text>
+  <text x="466.5625" y="200.4062" font-family="monospace" font-size="11.0609" fill="var(--text)">endif()</text>
 
   <!-- foreach -->
-  <rect x="440" y="198" width="380" height="95" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="455" y="222" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">foreach</text>
-  <text x="455" y="242" font-family="monospace" font-size="12" fill="var(--text)">foreach(file ${SRCS})</text>
-  <text x="455" y="260" font-family="monospace" font-size="12" fill="var(--text)">  message("File: ${file}")</text>
-  <text x="455" y="278" font-family="monospace" font-size="12" fill="var(--text)">endforeach()</text>
+  <rect x="452.5" y="219.4375" width="356.25" height="86.0938" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="466.5625" y="241.1875" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">foreach</text>
+  <text x="466.5625" y="259.3125" font-family="monospace" font-size="11.0609" fill="var(--text)">foreach(file ${SRCS})</text>
+  <text x="466.5625" y="275.625" font-family="monospace" font-size="11.0609" fill="var(--text)">  message("File: ${file}")</text>
+  <text x="466.5625" y="291.9375" font-family="monospace" font-size="11.0609" fill="var(--text)">endforeach()</text>
 
   <!-- while -->
-  <rect x="440" y="305" width="380" height="95" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="455" y="329" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">while</text>
-  <text x="455" y="349" font-family="monospace" font-size="12" fill="var(--text)">set(i 0)</text>
-  <text x="455" y="367" font-family="monospace" font-size="12" fill="var(--text)">while(i LESS 5)</text>
-  <text x="455" y="385" font-family="monospace" font-size="12" fill="var(--text)">  math(EXPR i "${i}+1")</text>
-  <text x="455" y="392" font-family="monospace" font-size="12" fill="var(--text)">endwhile()</text>
+  <rect x="452.5" y="316.4062" width="356.25" height="86.0938" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="466.5625" y="338.1562" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">while</text>
+  <text x="466.5625" y="356.2812" font-family="monospace" font-size="11.0609" fill="var(--text)">set(i 0)</text>
+  <text x="466.5625" y="372.5938" font-family="monospace" font-size="11.0609" fill="var(--text)">while(i LESS 5)</text>
+  <text x="466.5625" y="388.9062" font-family="monospace" font-size="11.0609" fill="var(--text)">  math(EXPR i "${i}+1")</text>
+  <text x="466.5625" y="395.25" font-family="monospace" font-size="11.0609" fill="var(--text)">endwhile()</text>
 
   <!-- Macros vs Functions Column -->
-  <rect x="860" y="20" width="390" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1055" y="48" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Macros vs Functions</text>
+  <rect x="846.25" y="58.125" width="365.625" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1029.0625" y="83.5" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)" text-anchor="middle">Macros vs Functions</text>
 
   <!-- macro -->
-  <rect x="860" y="76" width="390" height="110" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="875" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-accent)">macro()</text>
-  <text x="875" y="120" font-family="monospace" font-size="12" fill="var(--text)">macro(greet name)</text>
-  <text x="875" y="138" font-family="monospace" font-size="12" fill="var(--text)">  message("Hi ${name}")</text>
-  <text x="875" y="156" font-family="monospace" font-size="12" fill="var(--text)">endmacro()</text>
-  <text x="875" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">No scope - caller variables modified</text>
+  <rect x="846.25" y="108.875" width="365.625" height="99.6875" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="860.3125" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">macro()</text>
+  <text x="860.3125" y="148.75" font-family="monospace" font-size="11.0609" fill="var(--text)">macro(greet name)</text>
+  <text x="860.3125" y="165.0625" font-family="monospace" font-size="11.0609" fill="var(--text)">  message("Hi ${name}")</text>
+  <text x="860.3125" y="181.375" font-family="monospace" font-size="11.0609" fill="var(--text)">endmacro()</text>
+  <text x="860.3125" y="198.5938" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">No scope - caller variables modified</text>
 
   <!-- function -->
-  <rect x="860" y="198" width="390" height="110" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="875" y="222" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">function()</text>
-  <text x="875" y="242" font-family="monospace" font-size="12" fill="var(--text)">function(greet name)</text>
-  <text x="875" y="260" font-family="monospace" font-size="12" fill="var(--text)">  message("Hi ${name}")</text>
-  <text x="875" y="278" font-family="monospace" font-size="12" fill="var(--text)">endfunction()</text>
-  <text x="875" y="297" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Own scope - caller vars protected</text>
+  <rect x="846.25" y="219.4375" width="365.625" height="99.6875" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="860.3125" y="241.1875" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">function()</text>
+  <text x="860.3125" y="259.3125" font-family="monospace" font-size="11.0609" fill="var(--text)">function(greet name)</text>
+  <text x="860.3125" y="275.625" font-family="monospace" font-size="11.0609" fill="var(--text)">  message("Hi ${name}")</text>
+  <text x="860.3125" y="291.9375" font-family="monospace" font-size="11.0609" fill="var(--text)">endfunction()</text>
+  <text x="860.3125" y="309.1562" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Own scope - caller vars protected</text>
 
   <!-- Generator Expressions -->
-  <rect x="860" y="320" width="390" height="135" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="875" y="344" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Generator Expressions $&lt;&gt;</text>
-  <text x="875" y="366" font-family="monospace" font-size="12" fill="var(--text)">$&lt;BUILD_INTERFACE:path&gt;</text>
-  <text x="875" y="384" font-family="monospace" font-size="12" fill="var(--text)">$&lt;INSTALL_INTERFACE:path&gt;</text>
-  <text x="875" y="402" font-family="monospace" font-size="12" fill="var(--text)">$&lt;CONFIG:Release&gt;</text>
-  <text x="875" y="420" font-family="monospace" font-size="12" fill="var(--text)">$&lt;TARGET_FILE:mylib&gt;</text>
-  <text x="875" y="440" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Evaluated at build/install time</text>
+  <rect x="846.25" y="330" width="365.625" height="122.3438" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="860.3125" y="351.75" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Generator Expressions $&lt;&gt;</text>
+  <text x="860.3125" y="371.6875" font-family="monospace" font-size="11.0609" fill="var(--text)">$&lt;BUILD_INTERFACE:path&gt;</text>
+  <text x="860.3125" y="388" font-family="monospace" font-size="11.0609" fill="var(--text)">$&lt;INSTALL_INTERFACE:path&gt;</text>
+  <text x="860.3125" y="404.3125" font-family="monospace" font-size="11.0609" fill="var(--text)">$&lt;CONFIG:Release&gt;</text>
+  <text x="860.3125" y="420.625" font-family="monospace" font-size="11.0609" fill="var(--text)">$&lt;TARGET_FILE:mylib&gt;</text>
+  <text x="860.3125" y="438.75" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">Evaluated at build/install time</text>
 
   <!-- Bottom legend -->
-  <rect x="30" y="500" width="1220" height="120" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="640" y="524" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)" text-anchor="middle">Key Rules</text>
-  <text x="50" y="548" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Truthiness: FALSE, OFF, NO, 0, "" or *-NOTFOUND are false; everything else is true</text>
-  <text x="50" y="570" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Lists: semicolon-separated strings  set(L a b c) == "a;b;c"</text>
-  <text x="50" y="592" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">cmake_parse_arguments() parses keyword/multi-value args inside functions</text>
-  <text x="50" y="614" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">PARENT_SCOPE in set() propagates a variable out of a function into the caller</text>
+  <rect x="68.125" y="493.125" width="1143.75" height="108.75" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="640" y="514.875" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text)" text-anchor="middle">Key Rules</text>
+  <text x="86.875" y="536.625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Truthiness: FALSE, OFF, NO, 0, "" or *-NOTFOUND are false; everything else is true</text>
+  <text x="86.875" y="556.5625" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Lists: semicolon-separated strings  set(L a b c) == "a;b;c"</text>
+  <text x="86.875" y="576.5" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">cmake_parse_arguments() parses keyword/multi-value args inside functions</text>
+  <text x="86.875" y="596.4375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">PARENT_SCOPE in set() propagates a variable out of a function into the caller</text>
 </svg>

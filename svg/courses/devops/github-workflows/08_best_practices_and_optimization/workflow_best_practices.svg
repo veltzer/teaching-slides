@@ -102,79 +102,79 @@
       <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
-  <rect x="30" y="14" width="1220" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)" text-anchor="middle">Workflow Best Practices</text>
+  <rect x="68.125" y="52.6875" width="1143.75" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="78.0625" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--bg)" text-anchor="middle">Workflow Best Practices</text>
 
   <!-- Reusable workflows -->
-  <rect x="30" y="74" width="590" height="196" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="325" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Reusable Workflows (workflow_call)</text>
-  <text x="45" y="120" font-family="monospace" font-size="11" fill="var(--text-faint)"># .github/workflows/reusable-ci.yml</text>
-  <text x="45" y="138" font-family="monospace" font-size="11" fill="var(--text)">on:</text>
-  <text x="60" y="156" font-family="monospace" font-size="11" fill="var(--text)">  workflow_call:</text>
-  <text x="75" y="174" font-family="monospace" font-size="11" fill="var(--text)">    inputs:</text>
-  <text x="90" y="192" font-family="monospace" font-size="11" fill="var(--text)">      node-version: {type: string}</text>
-  <text x="75" y="210" font-family="monospace" font-size="11" fill="var(--text)">    secrets:</text>
-  <text x="90" y="228" font-family="monospace" font-size="11" fill="var(--text)">      NPM_TOKEN: {required: true}</text>
-  <text x="45" y="252" font-family="monospace" font-size="11" fill="var(--text-faint)"># caller workflow</text>
-  <text x="45" y="270" font-family="monospace" font-size="11" fill="var(--text)">uses: org/repo/.github/workflows/ci.yml@main</text>
+  <rect x="68.125" y="107.0625" width="553.125" height="177.625" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="344.6875" y="128.8125" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Reusable Workflows (workflow_call)</text>
+  <text x="82.1875" y="148.75" font-family="monospace" font-size="10.1392" fill="var(--text-faint)"># .github/workflows/reusable-ci.yml</text>
+  <text x="82.1875" y="165.0625" font-family="monospace" font-size="10.1392" fill="var(--text)">on:</text>
+  <text x="96.25" y="181.375" font-family="monospace" font-size="10.1392" fill="var(--text)">  workflow_call:</text>
+  <text x="110.3125" y="197.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">    inputs:</text>
+  <text x="124.375" y="214" font-family="monospace" font-size="10.1392" fill="var(--text)">      node-version: {type: string}</text>
+  <text x="110.3125" y="230.3125" font-family="monospace" font-size="10.1392" fill="var(--text)">    secrets:</text>
+  <text x="124.375" y="246.625" font-family="monospace" font-size="10.1392" fill="var(--text)">      NPM_TOKEN: {required: true}</text>
+  <text x="82.1875" y="268.375" font-family="monospace" font-size="10.1392" fill="var(--text-faint)"># caller workflow</text>
+  <text x="82.1875" y="284.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">uses: org/repo/.github/workflows/ci.yml@main</text>
 
   <!-- Caching -->
-  <rect x="660" y="74" width="590" height="196" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="955" y="98" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Caching Dependencies</text>
-  <text x="675" y="120" font-family="monospace" font-size="11" fill="var(--text)">- uses: actions/cache@v4</text>
-  <text x="690" y="138" font-family="monospace" font-size="11" fill="var(--text)">  with:</text>
-  <text x="705" y="156" font-family="monospace" font-size="11" fill="var(--text)">    path: ~/.npm</text>
-  <text x="705" y="174" font-family="monospace" font-size="11" fill="var(--text)">    key: npm-${{ runner.os }}-</text>
-  <text x="720" y="192" font-family="monospace" font-size="11" fill="var(--text)">      ${{ hashFiles('**/package-lock.json') }}</text>
-  <text x="705" y="210" font-family="monospace" font-size="11" fill="var(--text)">    restore-keys: npm-${{ runner.os }}-</text>
-  <text x="675" y="234" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">setup-* actions have built-in cache: option</text>
-  <text x="675" y="254" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Cache key includes file hash - invalidated on change</text>
-  <text x="675" y="274" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">restore-keys provide fallback partial matches</text>
+  <rect x="658.75" y="107.0625" width="553.125" height="177.625" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="935.3125" y="128.8125" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Caching Dependencies</text>
+  <text x="672.8125" y="148.75" font-family="monospace" font-size="10.1392" fill="var(--text)">- uses: actions/cache@v4</text>
+  <text x="686.875" y="165.0625" font-family="monospace" font-size="10.1392" fill="var(--text)">  with:</text>
+  <text x="700.9375" y="181.375" font-family="monospace" font-size="10.1392" fill="var(--text)">    path: ~/.npm</text>
+  <text x="700.9375" y="197.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">    key: npm-${{ runner.os }}-</text>
+  <text x="715" y="214" font-family="monospace" font-size="10.1392" fill="var(--text)">      ${{ hashFiles('**/package-lock.json') }}</text>
+  <text x="700.9375" y="230.3125" font-family="monospace" font-size="10.1392" fill="var(--text)">    restore-keys: npm-${{ runner.os }}-</text>
+  <text x="672.8125" y="252.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">setup-* actions have built-in cache: option</text>
+  <text x="672.8125" y="270.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Cache key includes file hash - invalidated on change</text>
+  <text x="672.8125" y="288.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">restore-keys provide fallback partial matches</text>
 
   <!-- Concurrency -->
-  <rect x="30" y="288" width="390" height="196" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="225" y="312" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Concurrency Control</text>
-  <text x="45" y="336" font-family="monospace" font-size="11" fill="var(--text)">concurrency:</text>
-  <text x="60" y="354" font-family="monospace" font-size="11" fill="var(--text)">  group: ${{ github.workflow }}-</text>
-  <text x="75" y="372" font-family="monospace" font-size="11" fill="var(--text)">    ${{ github.ref }}</text>
-  <text x="60" y="390" font-family="monospace" font-size="11" fill="var(--text)">  cancel-in-progress: true</text>
-  <text x="45" y="414" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Cancels old PR runs when new push arrives</text>
-  <text x="45" y="434" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Prevents duplicate deploys</text>
-  <text x="45" y="454" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Set cancel-in-progress: false on main branch</text>
-  <text x="45" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Saves runner minutes and reduces conflicts</text>
+  <rect x="68.125" y="301" width="365.625" height="177.625" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="250.9375" y="322.75" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Concurrency Control</text>
+  <text x="82.1875" y="344.5" font-family="monospace" font-size="10.1392" fill="var(--text)">concurrency:</text>
+  <text x="96.25" y="360.8125" font-family="monospace" font-size="10.1392" fill="var(--text)">  group: ${{ github.workflow }}-</text>
+  <text x="110.3125" y="377.125" font-family="monospace" font-size="10.1392" fill="var(--text)">    ${{ github.ref }}</text>
+  <text x="96.25" y="393.4375" font-family="monospace" font-size="10.1392" fill="var(--text)">  cancel-in-progress: true</text>
+  <text x="82.1875" y="415.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Cancels old PR runs when new push arrives</text>
+  <text x="82.1875" y="433.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Prevents duplicate deploys</text>
+  <text x="82.1875" y="451.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Set cancel-in-progress: false on main branch</text>
+  <text x="82.1875" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Saves runner minutes and reduces conflicts</text>
 
   <!-- Security -->
-  <rect x="440" y="288" width="400" height="196" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="640" y="312" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Security: Tokens and Secrets</text>
-  <text x="455" y="336" font-family="monospace" font-size="11" fill="var(--text)">permissions:</text>
-  <text x="470" y="354" font-family="monospace" font-size="11" fill="var(--text)">  contents: read</text>
-  <text x="470" y="372" font-family="monospace" font-size="11" fill="var(--text)">  pull-requests: write</text>
-  <text x="455" y="394" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">GITHUB_TOKEN: auto-created per job</text>
-  <text x="455" y="414" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Limit GITHUB_TOKEN permissions at top level</text>
-  <text x="455" y="434" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Never print secrets to logs</text>
-  <text x="455" y="454" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Use secrets.NAME - never hardcode in YAML</text>
-  <text x="455" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Environment protection rules for prod secrets</text>
+  <rect x="452.5" y="301" width="375" height="177.625" rx="6" fill="var(--danger-fill)" filter="url(#shadow)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="322.75" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Security: Tokens and Secrets</text>
+  <text x="466.5625" y="344.5" font-family="monospace" font-size="10.1392" fill="var(--text)">permissions:</text>
+  <text x="480.625" y="360.8125" font-family="monospace" font-size="10.1392" fill="var(--text)">  contents: read</text>
+  <text x="480.625" y="377.125" font-family="monospace" font-size="10.1392" fill="var(--text)">  pull-requests: write</text>
+  <text x="466.5625" y="397.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">GITHUB_TOKEN: auto-created per job</text>
+  <text x="466.5625" y="415.1875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Limit GITHUB_TOKEN permissions at top level</text>
+  <text x="466.5625" y="433.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Never print secrets to logs</text>
+  <text x="466.5625" y="451.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Use secrets.NAME - never hardcode in YAML</text>
+  <text x="466.5625" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Environment protection rules for prod secrets</text>
 
   <!-- Matrix strategy -->
-  <rect x="860" y="288" width="390" height="196" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1055" y="312" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Matrix Strategy</text>
-  <text x="875" y="336" font-family="monospace" font-size="11" fill="var(--text)">strategy:</text>
-  <text x="890" y="354" font-family="monospace" font-size="11" fill="var(--text)">  matrix:</text>
-  <text x="905" y="372" font-family="monospace" font-size="11" fill="var(--text)">    os: [ubuntu, macos, windows]</text>
-  <text x="905" y="390" font-family="monospace" font-size="11" fill="var(--text)">    python: ["3.11", "3.12"]</text>
-  <text x="890" y="408" font-family="monospace" font-size="11" fill="var(--text)">  fail-fast: false</text>
-  <text x="890" y="426" font-family="monospace" font-size="11" fill="var(--text)">  max-parallel: 4</text>
-  <text x="875" y="450" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">3 x 2 = 6 parallel jobs</text>
-  <text x="875" y="470" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">include/exclude to adjust matrix cells</text>
-  <text x="875" y="490" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">fail-fast: false - all cells run to completion</text>
+  <rect x="846.25" y="301" width="365.625" height="177.625" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1029.0625" y="322.75" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Matrix Strategy</text>
+  <text x="860.3125" y="344.5" font-family="monospace" font-size="10.1392" fill="var(--text)">strategy:</text>
+  <text x="874.375" y="360.8125" font-family="monospace" font-size="10.1392" fill="var(--text)">  matrix:</text>
+  <text x="888.4375" y="377.125" font-family="monospace" font-size="10.1392" fill="var(--text)">    os: [ubuntu, macos, windows]</text>
+  <text x="888.4375" y="393.4375" font-family="monospace" font-size="10.1392" fill="var(--text)">    python: ["3.11", "3.12"]</text>
+  <text x="874.375" y="409.75" font-family="monospace" font-size="10.1392" fill="var(--text)">  fail-fast: false</text>
+  <text x="874.375" y="426.0625" font-family="monospace" font-size="10.1392" fill="var(--text)">  max-parallel: 4</text>
+  <text x="860.3125" y="447.8125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">3 x 2 = 6 parallel jobs</text>
+  <text x="860.3125" y="465.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">include/exclude to adjust matrix cells</text>
+  <text x="860.3125" y="484.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">fail-fast: false - all cells run to completion</text>
 
   <!-- Bottom tips -->
-  <rect x="30" y="502" width="1220" height="118" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="640" y="526" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)" text-anchor="middle">Optimization Tips</text>
-  <text x="50" y="548" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Use needs: to express job dependencies and run independent jobs in parallel</text>
-  <text x="50" y="568" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Use if: github.event_name == 'push' to skip expensive steps on PR builds</text>
-  <text x="50" y="588" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Use paths: filter to skip workflows when unrelated files change (e.g. docs-only changes)</text>
-  <text x="50" y="608" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Upload test results as artifacts; use continue-on-error: true on flaky steps</text>
+  <rect x="68.125" y="494.9375" width="1143.75" height="106.9375" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="640" y="516.6875" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text)" text-anchor="middle">Optimization Tips</text>
+  <text x="86.875" y="536.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Use needs: to express job dependencies and run independent jobs in parallel</text>
+  <text x="86.875" y="554.75" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Use if: github.event_name == 'push' to skip expensive steps on PR builds</text>
+  <text x="86.875" y="572.875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Use paths: filter to skip workflows when unrelated files change (e.g. docs-only changes)</text>
+  <text x="86.875" y="591" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Upload test results as artifacts; use continue-on-error: true on flaky steps</text>
 </svg>

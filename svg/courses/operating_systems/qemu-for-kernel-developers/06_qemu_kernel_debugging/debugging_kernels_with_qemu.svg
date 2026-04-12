@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">GDB + QEMU Kernel Debug Setup</text>
-  <rect x="42.6667" y="108" width="341.3333" height="324" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="213.3333" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">GDB (Host)</text>
-  <rect x="64" y="208.8" width="298.6667" height="79.2" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="213.3333" y="266.4" text-anchor="middle" font-size="21.3333">target remote :1234</text>
-  <rect x="64" y="306" width="298.6667" height="79.2" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="213.3333" y="363.6" text-anchor="middle" font-size="21.3333">vmlinux (symbols)</text>
-  <rect x="490.6667" y="108" width="149.3333" height="324" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="565.3333" y="198" text-anchor="middle" font-size="21.3333" font-weight="bold">GDB</text>
-  <text x="565.3333" y="252" text-anchor="middle" font-size="21.3333">Stub</text>
-  <text x="565.3333" y="306" text-anchor="middle" font-size="21.3333">:1234</text>
-  <rect x="725.3333" y="90" width="490.6667" height="360" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="970.6667" y="162" text-anchor="middle" font-size="23.4667" font-weight="bold">QEMU VM</text>
-  <rect x="746.6667" y="198" width="213.3333" height="108" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="853.3333" y="270" text-anchor="middle" font-size="21.3333">Guest Kernel</text>
-  <rect x="981.3333" y="198" width="213.3333" height="108" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="1088" y="270" text-anchor="middle" font-size="21.3333">vCPU (paused)</text>
-  <text x="970.6667" y="396" text-anchor="middle" font-size="21.3333">qemu-system-x86_64 -s -S -kernel vmlinux</text>
-  <line x1="384" y1="270" x2="490.6667" y2="270" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_05_qemu_kernel_debugging)" />
-  <line x1="640" y1="270" x2="725.3333" y2="270" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_05_qemu_kernel_debugging)" />
-  <text x="437.3333" y="244.8" text-anchor="middle" font-size="21.3333" fill="var(--text-muted)">TCP</text>
-  <text x="640" y="540" text-anchor="middle" font-size="21.3333" fill="var(--text-muted)">-s = gdbserver on :1234 | -S = freeze CPU at startup</text>
+  <text x="650.9091" y="40" text-anchor="middle" font-size="28.2824" font-weight="bold">GDB + QEMU Kernel Debug Setup</text>
+  <rect x="40" y="104.4444" width="349.0909" height="386.6667" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="214.5454" y="190.3704" text-anchor="middle" font-size="25.9255" font-weight="bold">GDB (Host)</text>
+  <rect x="61.8181" y="224.7407" width="305.4546" height="94.5185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="214.5454" y="293.4815" text-anchor="middle" font-size="23.5686">target remote :1234</text>
+  <rect x="61.8181" y="340.7407" width="305.4546" height="94.5185" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="214.5454" y="409.4815" text-anchor="middle" font-size="23.5686">vmlinux (symbols)</text>
+  <rect x="498.1818" y="104.4444" width="152.7272" height="386.6667" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="574.5454" y="211.8519" text-anchor="middle" font-size="23.5686" font-weight="bold">GDB</text>
+  <text x="574.5454" y="276.2963" text-anchor="middle" font-size="23.5686">Stub</text>
+  <text x="574.5454" y="340.7407" text-anchor="middle" font-size="23.5686">:1234</text>
+  <rect x="738.1818" y="82.963" width="501.8182" height="429.6296" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="989.0909" y="168.8889" text-anchor="middle" font-size="25.9255" font-weight="bold">QEMU VM</text>
+  <rect x="760" y="211.8519" width="218.1818" height="128.8889" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="869.0909" y="297.7778" text-anchor="middle" font-size="23.5686">Guest Kernel</text>
+  <rect x="1000" y="211.8519" width="218.1818" height="128.8889" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="1109.0909" y="297.7778" text-anchor="middle" font-size="23.5686">vCPU (paused)</text>
+  <text x="989.0909" y="448.1481" text-anchor="middle" font-size="23.5686">qemu-system-x86_64 -s -S -kernel vmlinux</text>
+  <line x1="389.0909" y1="297.7778" x2="498.1818" y2="297.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_05_qemu_kernel_debugging)" />
+  <line x1="650.9091" y1="297.7778" x2="738.1818" y2="297.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_05_qemu_kernel_debugging)" />
+  <text x="443.6363" y="267.7037" text-anchor="middle" font-size="23.5686" fill="var(--text-muted)">TCP</text>
+  <text x="650.9091" y="620" text-anchor="middle" font-size="23.5686" fill="var(--text-muted)">-s = gdbserver on :1234 | -S = freeze CPU at startup</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

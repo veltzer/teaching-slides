@@ -93,23 +93,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="537.284" y="39.1111" text-anchor="middle" font-size="22.1234" fill="var(--text)" font-weight="bold">I/O Multiplexing: select / poll / epoll</text>
-  <rect x="15.8024" y="71.1111" width="1042.963" height="135.1111" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="134.321" y="110.2222" text-anchor="middle" font-size="20.5432" fill="var(--code-bg)" font-weight="bold">select()</text>
-  <line x1="252.8395" y1="78.2223" x2="252.8395" y2="199.1111" stroke="var(--text-faint)" stroke-width="1.5803" />
-  <text x="268.642" y="110.2222" text-anchor="start" font-size="18.9629" fill="var(--text)">Pass ALL fds every time → kernel scans all → returns ready ones</text>
-  <text x="268.642" y="142.2223" text-anchor="start" font-size="17.3827" fill="var(--text-muted)">Works on ~1024 fds max. O(n) scan per call.</text>
-  <rect x="15.8024" y="213.3333" width="1042.963" height="135.1111" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="134.321" y="252.4445" text-anchor="middle" font-size="20.5432" fill="var(--code-bg)" font-weight="bold">poll()</text>
-  <line x1="252.8395" y1="220.4444" x2="252.8395" y2="341.3333" stroke="var(--text-faint)" stroke-width="1.5803" />
-  <text x="268.642" y="252.4445" text-anchor="start" font-size="18.9629" fill="var(--text)">Similar to select() but no fd limit.</text>
-  <text x="268.642" y="284.4444" text-anchor="start" font-size="17.3827" fill="var(--text-muted)">Still O(n) — kernel scans the whole list each call.</text>
-  <rect x="15.8024" y="355.5556" width="1042.963" height="135.1111" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="134.321" y="394.6666" text-anchor="middle" font-size="20.5432" fill="var(--code-bg)" font-weight="bold">epoll()</text>
-  <line x1="252.8395" y1="362.6667" x2="252.8395" y2="483.5556" stroke="var(--text-faint)" stroke-width="1.5803" />
-  <text x="268.642" y="394.6666" text-anchor="start" font-size="18.9629" fill="var(--text)">Register fds once; kernel notifies only about ready fds.</text>
-  <text x="268.642" y="426.6667" text-anchor="start" font-size="17.3827" fill="var(--text-muted)">O(1) for returning events. Scales to millions of connections.</text>
-  <rect x="126.4197" y="515.5555" width="821.7284" height="124.4445" fill="var(--text-muted)" stroke="var(--ok-border)" stroke-width="2.3703" rx="6" />
-  <text x="537.284" y="554.6667" text-anchor="middle" font-size="18.9629" fill="var(--ok-accent)" font-weight="bold">Kernel (epoll): monitors registered fds efficiently</text>
-  <text x="537.284" y="593.7778" text-anchor="middle" font-size="17.3827" fill="var(--ok-accent)">Notifies userspace only about fds with actual events</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="23.3144" fill="var(--text)" font-weight="bold">I/O Multiplexing: select / poll / epoll</text>
+  <rect x="40" y="70.8876" width="1200" height="130.4142" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="176.3637" y="108.639" text-anchor="middle" font-size="21.6492" fill="var(--code-bg)" font-weight="bold">select()</text>
+  <line x1="312.7273" y1="77.7516" x2="312.7273" y2="194.4379" stroke="var(--text-faint)" stroke-width="1.5803" />
+  <text x="330.9092" y="108.639" text-anchor="start" font-size="19.9838" fill="var(--text)">Pass ALL fds every time → kernel scans all → returns ready ones</text>
+  <text x="330.9092" y="139.5267" text-anchor="start" font-size="18.3185" fill="var(--text-muted)">Works on ~1024 fds max. O(n) scan per call.</text>
+  <rect x="40" y="208.1657" width="1200" height="130.4142" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="176.3637" y="245.9172" text-anchor="middle" font-size="21.6492" fill="var(--code-bg)" font-weight="bold">poll()</text>
+  <line x1="312.7273" y1="215.0296" x2="312.7273" y2="331.7159" stroke="var(--text-faint)" stroke-width="1.5803" />
+  <text x="330.9092" y="245.9172" text-anchor="start" font-size="19.9838" fill="var(--text)">Similar to select() but no fd limit.</text>
+  <text x="330.9092" y="276.8047" text-anchor="start" font-size="18.3185" fill="var(--text-muted)">Still O(n) — kernel scans the whole list each call.</text>
+  <rect x="40" y="345.4438" width="1200" height="130.4142" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="176.3637" y="383.1952" text-anchor="middle" font-size="21.6492" fill="var(--code-bg)" font-weight="bold">epoll()</text>
+  <line x1="312.7273" y1="352.3077" x2="312.7273" y2="468.9941" stroke="var(--text-faint)" stroke-width="1.5803" />
+  <text x="330.9092" y="383.1952" text-anchor="start" font-size="19.9838" fill="var(--text)">Register fds once; kernel notifies only about ready fds.</text>
+  <text x="330.9092" y="414.0829" text-anchor="start" font-size="18.3185" fill="var(--text-muted)">O(1) for returning events. Scales to millions of connections.</text>
+  <rect x="167.2727" y="499.8816" width="945.4545" height="120.1184" fill="var(--text-muted)" stroke="var(--ok-border)" stroke-width="2.3703" rx="6" />
+  <text x="640.0001" y="537.6332" text-anchor="middle" font-size="19.9838" fill="var(--ok-accent)" font-weight="bold">Kernel (epoll): monitors registered fds efficiently</text>
+  <text x="640.0001" y="575.3846" text-anchor="middle" font-size="18.3185" fill="var(--ok-accent)">Notifies userspace only about fds with actual events</text>
 </svg>

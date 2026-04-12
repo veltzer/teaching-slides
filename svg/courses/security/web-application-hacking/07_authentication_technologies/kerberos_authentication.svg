@@ -93,24 +93,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="1137.7778" height="640" fill="var(--surface)" rx="6" stroke="var(--border)" stroke-width="1" />
-  <text x="568.8889" y="46.5454" font-family="sans-serif" font-size="25.8586" font-weight="bold" fill="var(--text)" text-anchor="middle">Kerberos Flow (Windows / AD Environments)</text>
-  <rect x="34.4781" y="73.697" width="517.1717" height="290.9091" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="51.7172" y="116.3636" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="var(--primary-accent)">Authentication Flow</text>
-  <text x="51.7172" y="155.1516" font-family="sans-serif" font-size="20.6868" fill="var(--text)">1. User → KDC: "I am user X" (AS-REQ)</text>
-  <text x="51.7172" y="190.0606" font-family="sans-serif" font-size="20.6868" fill="var(--text)">2. KDC → User: Ticket Granting Ticket (AS-REP)</text>
-  <text x="51.7172" y="224.9697" font-family="sans-serif" font-size="20.6868" fill="var(--text)">3. User → KDC: TGT + "Access Service Y" (TGS-REQ)</text>
-  <text x="51.7172" y="259.8788" font-family="sans-serif" font-size="20.6868" fill="var(--text)">4. KDC → User: Service Ticket (TGS-REP)</text>
-  <text x="51.7172" y="294.7879" font-family="sans-serif" font-size="20.6868" fill="var(--text)">5. User → Service: Service Ticket (AP-REQ)</text>
-  <text x="51.7172" y="329.697" font-family="sans-serif" font-size="20.6868" fill="var(--text)">6. Service → User: Access granted (AP-REP)</text>
-  <rect x="586.1279" y="73.697" width="517.1717" height="290.9091" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="603.367" y="116.3636" font-family="sans-serif" font-size="22.4108" font-weight="bold" fill="var(--danger-accent)">Known Attacks</text>
-  <text x="603.367" y="155.1516" font-family="sans-serif" font-size="20.6868" fill="var(--text)">AS-REP Roasting: Request TGT, crack offline</text>
-  <text x="603.367" y="190.0606" font-family="sans-serif" font-size="20.6868" fill="var(--text)">Kerberoasting: Request svc tickets, crack offline</text>
-  <text x="603.367" y="224.9697" font-family="sans-serif" font-size="20.6868" fill="var(--text)">Golden Ticket: Forge TGTs with krbtgt hash</text>
-  <text x="603.367" y="259.8788" font-family="sans-serif" font-size="20.6868" fill="var(--text)">Silver Ticket: Forge service tickets with svc hash</text>
-  <text x="603.367" y="294.7879" font-family="sans-serif" font-size="20.6868" fill="var(--text)">Pass-the-Ticket: Reuse stolen tickets</text>
-  <rect x="34.4781" y="397.5757" width="1068.8215" height="96.9697" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="568.8889" y="436.3636" font-family="sans-serif" font-size="20.6868" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Key Components</text>
-  <text x="568.8889" y="475.1516" font-family="sans-serif" font-size="20.6868" fill="var(--text-muted)" text-anchor="middle">KDC (Key Distribution Center) contains: AS (Authentication Service) + TGS (Ticket Granting Service)</text>
+  <rect width="1200" height="580" fill="var(--surface)" rx="6" stroke="var(--border)" stroke-width="1" x="40" y="40"/>
+  <text x="640" y="82.1818" font-family="sans-serif" font-size="25.2808" font-weight="bold" fill="var(--text)" text-anchor="middle">Kerberos Flow (Windows / AD Environments)</text>
+  <rect x="76.3636" y="106.7879" width="545.4545" height="263.6364" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="94.5455" y="145.4545" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--primary-accent)">Authentication Flow</text>
+  <text x="94.5455" y="180.6061" font-family="sans-serif" font-size="20.2246" fill="var(--text)">1. User → KDC: "I am user X" (AS-REQ)</text>
+  <text x="94.5455" y="212.2424" font-family="sans-serif" font-size="20.2246" fill="var(--text)">2. KDC → User: Ticket Granting Ticket (AS-REP)</text>
+  <text x="94.5455" y="243.8788" font-family="sans-serif" font-size="20.2246" fill="var(--text)">3. User → KDC: TGT + "Access Service Y" (TGS-REQ)</text>
+  <text x="94.5455" y="275.5152" font-family="sans-serif" font-size="20.2246" fill="var(--text)">4. KDC → User: Service Ticket (TGS-REP)</text>
+  <text x="94.5455" y="307.1515" font-family="sans-serif" font-size="20.2246" fill="var(--text)">5. User → Service: Service Ticket (AP-REQ)</text>
+  <text x="94.5455" y="338.7879" font-family="sans-serif" font-size="20.2246" fill="var(--text)">6. Service → User: Access granted (AP-REP)</text>
+  <rect x="658.1818" y="106.7879" width="545.4545" height="263.6364" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="676.3636" y="145.4545" font-family="sans-serif" font-size="21.91" font-weight="bold" fill="var(--danger-accent)">Known Attacks</text>
+  <text x="676.3636" y="180.6061" font-family="sans-serif" font-size="20.2246" fill="var(--text)">AS-REP Roasting: Request TGT, crack offline</text>
+  <text x="676.3636" y="212.2424" font-family="sans-serif" font-size="20.2246" fill="var(--text)">Kerberoasting: Request svc tickets, crack offline</text>
+  <text x="676.3636" y="243.8788" font-family="sans-serif" font-size="20.2246" fill="var(--text)">Golden Ticket: Forge TGTs with krbtgt hash</text>
+  <text x="676.3636" y="275.5152" font-family="sans-serif" font-size="20.2246" fill="var(--text)">Silver Ticket: Forge service tickets with svc hash</text>
+  <text x="676.3636" y="307.1515" font-family="sans-serif" font-size="20.2246" fill="var(--text)">Pass-the-Ticket: Reuse stolen tickets</text>
+  <rect x="76.3636" y="400.303" width="1127.2727" height="87.8788" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="640" y="435.4545" font-family="sans-serif" font-size="20.2246" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Key Components</text>
+  <text x="640" y="470.6061" font-family="sans-serif" font-size="20.2246" fill="var(--text-muted)" text-anchor="middle">KDC (Key Distribution Center) contains: AS (Authentication Service) + TGS (Ticket Granting Service)</text>
 </svg>

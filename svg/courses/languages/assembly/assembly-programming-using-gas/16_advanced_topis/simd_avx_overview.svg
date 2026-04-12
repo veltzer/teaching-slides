@@ -106,195 +106,195 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1087.5767" height="474.8286" fill="var(--bg)" rx="5.7089" x="152.4233" y="145.1714"/>
 
   <!-- Title bar -->
-  <rect x="30" y="15" width="1220" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)" text-anchor="middle">SIMD and AVX: Vector Registers and Data Parallelism</text>
+  <rect x="177.9133" y="156.3002" width="1036.5966" height="32.6445" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="696.2116" y="177.0739" font-family="Arial, sans-serif" font-size="15.8795" font-weight="bold" fill="var(--bg)" text-anchor="middle">SIMD and AVX: Vector Registers and Data Parallelism</text>
 
   <!-- Register hierarchy -->
   <!-- ZMM (512-bit) -->
-  <rect x="30" y="75" width="1220" height="44" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="55" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">ZMM0 (512-bit, AVX-512):</text>
+  <rect x="177.9133" y="200.8154" width="1036.5966" height="32.6445" rx="5.7089" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="199.155" y="219.3633" font-family="Arial, sans-serif" font-size="11.1155" font-weight="bold" fill="var(--bg)">ZMM0 (512-bit, AVX-512):</text>
   <!-- 16 floats -->
-  <rect x="280" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="305" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f0</text>
-  <rect x="332" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="357" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f1</text>
-  <rect x="384" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="409" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f2</text>
-  <rect x="436" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="461" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f3</text>
-  <rect x="488" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="513" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f4</text>
-  <rect x="540" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="565" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f5</text>
-  <rect x="592" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="617" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f6</text>
-  <rect x="644" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="669" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f7</text>
-  <rect x="696" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="721" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f8</text>
-  <rect x="748" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="773" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f9</text>
-  <rect x="800" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="825" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f10</text>
-  <rect x="852" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="877" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f11</text>
-  <rect x="904" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="929" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f12</text>
-  <rect x="956" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="981" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f13</text>
-  <rect x="1008" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1033" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f14</text>
-  <rect x="1060" y="79" width="50" height="36" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1085" y="102" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f15</text>
-  <text x="1130" y="100" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">16 x float32</text>
+  <rect x="390.3306" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="411.5724" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f0</text>
+  <rect x="434.5135" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="455.7552" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f1</text>
+  <rect x="478.6963" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="499.9379" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f2</text>
+  <rect x="522.879" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="544.1208" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f3</text>
+  <rect x="567.0619" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="588.3036" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f4</text>
+  <rect x="611.2446" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="632.4865" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f5</text>
+  <rect x="655.4275" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="676.6692" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f6</text>
+  <rect x="699.6103" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="720.852" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f7</text>
+  <rect x="743.7931" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="765.0348" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f8</text>
+  <rect x="787.9759" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="809.2177" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f9</text>
+  <rect x="832.1587" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="853.4005" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f10</text>
+  <rect x="876.3415" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="897.5833" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f11</text>
+  <rect x="920.5244" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="941.766" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f12</text>
+  <rect x="964.7071" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="985.9489" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f13</text>
+  <rect x="1008.89" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1030.1317" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f14</text>
+  <rect x="1053.0727" y="203.783" width="42.4835" height="26.7092" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1074.3145" y="220.8472" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f15</text>
+  <text x="1112.5496" y="219.3633" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">16 x float32</text>
 
   <!-- YMM (256-bit) -->
-  <rect x="30" y="133" width="1220" height="44" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="55" y="158" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">YMM0 (256-bit, AVX):</text>
+  <rect x="177.9133" y="243.8466" width="1036.5966" height="32.6445" rx="5.7089" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="199.155" y="262.3947" font-family="Arial, sans-serif" font-size="11.1155" font-weight="bold" fill="var(--bg)">YMM0 (256-bit, AVX):</text>
   <!-- 8 floats -->
-  <rect x="280" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="330" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f0</text>
-  <rect x="382" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="432" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f1</text>
-  <rect x="484" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="534" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f2</text>
-  <rect x="586" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="636" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f3</text>
-  <rect x="688" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="738" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f4</text>
-  <rect x="790" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="840" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f5</text>
-  <rect x="892" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="942" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f6</text>
-  <rect x="994" y="137" width="100" height="36" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1044" y="160" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f7</text>
-  <text x="1120" y="158" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">8 x float32</text>
+  <rect x="390.3306" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="432.8141" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f0</text>
+  <rect x="476.9969" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="519.4804" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f1</text>
+  <rect x="563.6632" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="606.1466" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f2</text>
+  <rect x="650.3295" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="692.813" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f3</text>
+  <rect x="736.9957" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="779.4792" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f4</text>
+  <rect x="823.6619" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="866.1455" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f5</text>
+  <rect x="910.3284" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="952.8117" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f6</text>
+  <rect x="996.9946" y="246.8143" width="84.967" height="26.7092" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1039.4781" y="263.8785" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f7</text>
+  <text x="1104.0529" y="262.3947" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">8 x float32</text>
 
   <!-- XMM (128-bit) -->
-  <rect x="30" y="191" width="1220" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="55" y="216" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">XMM0 (128-bit, SSE):</text>
+  <rect x="177.9133" y="286.878" width="1036.5966" height="32.6445" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="199.155" y="305.426" font-family="Arial, sans-serif" font-size="11.1155" font-weight="bold" fill="var(--bg)">XMM0 (128-bit, SSE):</text>
   <!-- 4 floats -->
-  <rect x="280" y="195" width="200" height="36" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="380" y="218" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f0</text>
-  <rect x="482" y="195" width="200" height="36" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="582" y="218" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f1</text>
-  <rect x="684" y="195" width="200" height="36" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="784" y="218" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f2</text>
-  <rect x="886" y="195" width="200" height="36" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="986" y="218" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">f3</text>
-  <text x="1120" y="216" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)">4 x float32</text>
+  <rect x="390.3306" y="289.8458" width="169.9338" height="26.7092" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="475.2976" y="306.9099" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f0</text>
+  <rect x="561.9639" y="289.8458" width="169.9338" height="26.7092" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="646.9308" y="306.9099" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f1</text>
+  <rect x="733.5971" y="289.8458" width="169.9338" height="26.7092" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="818.564" y="306.9099" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f2</text>
+  <rect x="905.2303" y="289.8458" width="169.9338" height="26.7092" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="990.1972" y="306.9099" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">f3</text>
+  <text x="1104.0529" y="305.426" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">4 x float32</text>
 
   <!-- Packed operation diagram -->
-  <rect x="30" y="255" width="600" height="230" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="330" y="278" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Packed Operation: vaddps ymm0, ymm1, ymm2</text>
+  <rect x="177.9133" y="334.3609" width="509.8016" height="170.6415" rx="5.7089" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="432.8141" y="351.425" font-family="Arial, sans-serif" font-size="11.9095" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Packed Operation: vaddps ymm0, ymm1, ymm2</text>
 
   <!-- ymm1 -->
-  <text x="50" y="305" font-family="monospace" font-size="12" fill="var(--text-muted)">ymm1:</text>
-  <rect x="120" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="150" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">1.0</text>
-  <rect x="182" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="212" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">2.0</text>
-  <rect x="244" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="274" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">3.0</text>
-  <rect x="306" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="336" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">4.0</text>
-  <rect x="368" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="398" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">5.0</text>
-  <rect x="430" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="460" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">6.0</text>
-  <rect x="492" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="522" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">7.0</text>
-  <rect x="554" y="290" width="60" height="28" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="584" y="309" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">8.0</text>
+  <text x="194.9067" y="371.4568" font-family="monospace" font-size="10" fill="var(--text-muted)">ymm1:</text>
+  <rect x="254.3835" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="279.8736" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">1.0</text>
+  <rect x="307.063" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="332.5531" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">2.0</text>
+  <rect x="359.7425" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="385.2326" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">3.0</text>
+  <rect x="412.422" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="437.9122" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">4.0</text>
+  <rect x="465.1015" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="490.5917" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">5.0</text>
+  <rect x="517.781" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="543.2711" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">6.0</text>
+  <rect x="570.4605" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="595.9506" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">7.0</text>
+  <rect x="623.14" y="360.3281" width="50.9802" height="20.7737" rx="5.7089" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="648.6301" y="374.4245" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">8.0</text>
 
   <!-- ymm2 -->
-  <text x="50" y="342" font-family="monospace" font-size="12" fill="var(--text-muted)">ymm2:</text>
-  <rect x="120" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="150" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">10</text>
-  <rect x="182" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="212" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">20</text>
-  <rect x="244" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="274" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">30</text>
-  <rect x="306" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="336" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">40</text>
-  <rect x="368" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="398" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">50</text>
-  <rect x="430" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="460" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">60</text>
-  <rect x="492" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="522" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">70</text>
-  <rect x="554" y="328" width="60" height="28" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="584" y="347" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">80</text>
+  <text x="194.9067" y="398.9079" font-family="monospace" font-size="10" fill="var(--text-muted)">ymm2:</text>
+  <rect x="254.3835" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="279.8736" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">10</text>
+  <rect x="307.063" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="332.5531" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">20</text>
+  <rect x="359.7425" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="385.2326" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">30</text>
+  <rect x="412.422" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="437.9122" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">40</text>
+  <rect x="465.1015" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="490.5917" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">50</text>
+  <rect x="517.781" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="543.2711" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">60</text>
+  <rect x="570.4605" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="595.9506" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">70</text>
+  <rect x="623.14" y="388.521" width="50.9802" height="20.7737" rx="5.7089" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="648.6301" y="402.6175" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">80</text>
 
   <!-- Arrow -->
-  <line x1="355" y1="360" x2="355" y2="388" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="370" y="380" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">vaddps (8 adds simultaneously)</text>
+  <line x1="454.0558" y1="412.2625" x2="454.0558" y2="433.0363" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="466.8009" y="427.1009" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">vaddps (8 adds simultaneously)</text>
 
   <!-- Result ymm0 -->
-  <text x="50" y="415" font-family="monospace" font-size="12" fill="var(--text-muted)">ymm0:</text>
-  <rect x="120" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="150" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">11</text>
-  <rect x="182" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="212" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">22</text>
-  <rect x="244" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="274" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">33</text>
-  <rect x="306" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="336" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">44</text>
-  <rect x="368" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="398" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">55</text>
-  <rect x="430" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="460" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">66</text>
-  <rect x="492" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="522" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">77</text>
-  <rect x="554" y="400" width="60" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="584" y="419" font-family="monospace" font-size="11" fill="var(--bg)" text-anchor="middle">88</text>
+  <text x="194.9067" y="453.068" font-family="monospace" font-size="10" fill="var(--text-muted)">ymm0:</text>
+  <rect x="254.3835" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="279.8736" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">11</text>
+  <rect x="307.063" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="332.5531" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">22</text>
+  <rect x="359.7425" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="385.2326" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">33</text>
+  <rect x="412.422" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="437.9122" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">44</text>
+  <rect x="465.1015" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="490.5917" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">55</text>
+  <rect x="517.781" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="543.2711" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">66</text>
+  <rect x="570.4605" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="595.9506" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">77</text>
+  <rect x="623.14" y="441.9393" width="50.9802" height="20.7737" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="648.6301" y="456.0358" font-family="monospace" font-size="10" fill="var(--bg)" text-anchor="middle">88</text>
 
-  <text x="330" y="462" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">8 additions in one instruction (vs 8 scalar addss)</text>
+  <text x="432.8141" y="487.9383" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">8 additions in one instruction (vs 8 scalar addss)</text>
 
   <!-- Right panel: common instructions and usage -->
-  <rect x="650" y="255" width="600" height="230" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="950" y="278" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Common SIMD Instructions</text>
+  <rect x="704.7083" y="334.3609" width="509.8016" height="170.6415" rx="5.7089" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="959.6091" y="351.425" font-family="Arial, sans-serif" font-size="11.9095" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Common SIMD Instructions</text>
 
   <!-- Table -->
-  <rect x="665" y="285" width="570" height="28" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="680" y="304" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Instruction</text>
-  <text x="840" y="304" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Operation</text>
-  <text x="1060" y="304" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Width</text>
+  <rect x="717.4533" y="356.6184" width="484.3116" height="20.7737" rx="5.7089" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="730.1984" y="370.715" font-family="Arial, sans-serif" font-size="10.3217" font-weight="bold" fill="var(--text)">Instruction</text>
+  <text x="866.1455" y="370.715" font-family="Arial, sans-serif" font-size="10.3217" font-weight="bold" fill="var(--text)">Operation</text>
+  <text x="1053.0727" y="370.715" font-family="Arial, sans-serif" font-size="10.3217" font-weight="bold" fill="var(--text)">Width</text>
 
-  <text x="680" y="328" font-family="monospace" font-size="12" fill="var(--info-accent)">vaddps</text>
-  <text x="840" y="328" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Packed float add</text>
-  <text x="1060" y="328" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">YMM/ZMM</text>
+  <text x="730.1984" y="388.521" font-family="monospace" font-size="10" fill="var(--info-accent)">vaddps</text>
+  <text x="866.1455" y="388.521" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Packed float add</text>
+  <text x="1053.0727" y="388.521" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="680" y="350" font-family="monospace" font-size="12" fill="var(--info-accent)">vmulps</text>
-  <text x="840" y="350" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Packed float multiply</text>
-  <text x="1060" y="350" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">YMM/ZMM</text>
+  <text x="730.1984" y="404.8432" font-family="monospace" font-size="10" fill="var(--info-accent)">vmulps</text>
+  <text x="866.1455" y="404.8432" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Packed float multiply</text>
+  <text x="1053.0727" y="404.8432" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="680" y="372" font-family="monospace" font-size="12" fill="var(--info-accent)">vmovaps</text>
-  <text x="840" y="372" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Aligned move</text>
-  <text x="1060" y="372" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">YMM/ZMM</text>
+  <text x="730.1984" y="421.1655" font-family="monospace" font-size="10" fill="var(--info-accent)">vmovaps</text>
+  <text x="866.1455" y="421.1655" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Aligned move</text>
+  <text x="1053.0727" y="421.1655" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="680" y="394" font-family="monospace" font-size="12" fill="var(--info-accent)">vpand</text>
-  <text x="840" y="394" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Bitwise AND</text>
-  <text x="1060" y="394" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">YMM/ZMM</text>
+  <text x="730.1984" y="437.4878" font-family="monospace" font-size="10" fill="var(--info-accent)">vpand</text>
+  <text x="866.1455" y="437.4878" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Bitwise AND</text>
+  <text x="1053.0727" y="437.4878" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="680" y="416" font-family="monospace" font-size="12" fill="var(--info-accent)">vpcmpeqd</text>
-  <text x="840" y="416" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Packed int compare</text>
-  <text x="1060" y="416" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">YMM/ZMM</text>
+  <text x="730.1984" y="453.81" font-family="monospace" font-size="10" fill="var(--info-accent)">vpcmpeqd</text>
+  <text x="866.1455" y="453.81" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Packed int compare</text>
+  <text x="1053.0727" y="453.81" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="680" y="438" font-family="monospace" font-size="12" fill="var(--info-accent)">vfmadd231ps</text>
-  <text x="840" y="438" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Fused multiply-add</text>
-  <text x="1060" y="438" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">YMM/ZMM</text>
+  <text x="730.1984" y="470.1322" font-family="monospace" font-size="10" fill="var(--info-accent)">vfmadd231ps</text>
+  <text x="866.1455" y="470.1322" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Fused multiply-add</text>
+  <text x="1053.0727" y="470.1322" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">YMM/ZMM</text>
 
-  <text x="950" y="465" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">Registers: XMM0-XMM15 (SSE), YMM0-YMM15 (AVX), ZMM0-ZMM31 (AVX-512)</text>
+  <text x="959.6091" y="490.164" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">Registers: XMM0-XMM15 (SSE), YMM0-YMM15 (AVX), ZMM0-ZMM31 (AVX-512)</text>
 
   <!-- GCC vectorization hint -->
-  <rect x="30" y="500" width="1220" height="110" rx="6" fill="var(--code-bg)" filter="url(#shadow)"/>
-  <text x="640" y="522" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Using SIMD in GAS / GCC</text>
-  <text x="50" y="546" font-family="monospace" font-size="13" fill="var(--primary-accent)">vmovaps (%rsi), %ymm1          <tspan fill="var(--text-muted)">; load 8 floats from aligned memory</tspan></text>
-  <text x="50" y="566" font-family="monospace" font-size="13" fill="var(--primary-accent)">vmovaps (%rdx), %ymm2          <tspan fill="var(--text-muted)">; load 8 more floats</tspan></text>
-  <text x="50" y="586" font-family="monospace" font-size="13" fill="var(--ok-accent)">vaddps  %ymm2, %ymm1, %ymm0    <tspan fill="var(--text-muted)">; add them together (8 ops at once)</tspan></text>
-  <text x="50" y="606" font-family="monospace" font-size="13" fill="var(--primary-accent)">vmovaps %ymm0, (%rdi)          <tspan fill="var(--text-muted)">; store 8 results</tspan></text>
+  <rect x="177.9133" y="516.1313" width="1036.5966" height="81.6111" rx="5.7089" fill="var(--code-bg)" filter="url(#shadow)"/>
+  <text x="696.2116" y="532.4535" font-family="Arial, sans-serif" font-size="11.1155" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Using SIMD in GAS / GCC</text>
+  <text x="194.9067" y="550.2596" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">vmovaps (%rsi), %ymm1          <tspan fill="var(--text-muted)">; load 8 floats from aligned memory</tspan></text>
+  <text x="194.9067" y="565.0979" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">vmovaps (%rdx), %ymm2          <tspan fill="var(--text-muted)">; load 8 more floats</tspan></text>
+  <text x="194.9067" y="579.9364" font-family="monospace" font-size="10.3217" fill="var(--ok-accent)">vaddps  %ymm2, %ymm1, %ymm0    <tspan fill="var(--text-muted)">; add them together (8 ops at once)</tspan></text>
+  <text x="194.9067" y="594.7748" font-family="monospace" font-size="10.3217" fill="var(--primary-accent)">vmovaps %ymm0, (%rdi)          <tspan fill="var(--text-muted)">; store 8 results</tspan></text>
 </svg>

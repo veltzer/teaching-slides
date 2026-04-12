@@ -1,36 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="var(--text)">Hardware Interrupt Flow</text>
-  <text x="220.6897" y="94.7368" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">1. Device asserts</text>
-  <text x="220.6897" y="119.3684" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">interrupt signal</text>
-  <text x="640" y="94.7368" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">2. Interrupt controller</text>
-  <text x="640" y="119.3684" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">routes it</text>
-  <text x="1037.2414" y="94.7368" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">3. CPU saves state</text>
-  <text x="1037.2414" y="119.3684" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">and jumps to ISR</text>
-  <rect x="66.2069" y="151.5789" width="286.8966" height="104.2105" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="209.6552" y="198.9474" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="var(--text)">Device</text>
-  <text x="209.6552" y="233.0526" text-anchor="middle" font-size="18.9474" fill="var(--text-muted)">(e.g. NIC)</text>
-  <rect x="485.5172" y="151.5789" width="308.9655" height="104.2105" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="198.9474" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="var(--text)">APIC</text>
-  <text x="640" y="233.0526" text-anchor="middle" font-size="18.9474" fill="var(--text-muted)">(Advanced PIC)</text>
-  <rect x="882.7586" y="151.5789" width="331.0345" height="198.9474" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1048.2759" y="195.1579" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="var(--text)">CPU</text>
-  <text x="926.8966" y="233.0526" font-size="18.9474" fill="var(--text-muted)">Save RIP</text>
-  <text x="926.8966" y="261.4737" font-size="18.9474" fill="var(--text-muted)">Save RFLAGS</text>
-  <text x="926.8966" y="289.8947" font-size="18.9474" fill="var(--text-muted)">Save RSP</text>
-  <text x="926.8966" y="318.3158" font-size="18.9474" fill="var(--text-muted)">Jump to ISR</text>
-  <line x1="353.1034" y1="202.7368" x2="481.1034" y2="202.7368" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#hia)" />
-  <text x="419.3103" y="189.4737" font-size="18.9474" fill="var(--warn-accent)">IRQ</text>
-  <line x1="794.4828" y1="202.7368" x2="878.3448" y2="202.7368" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#hib)" />
-  <text x="838.6207" y="189.4737" font-size="18.9474" fill="var(--primary-accent)">INT</text>
-  <line x1="1048.2759" y1="350.5263" x2="1048.2759" y2="416.8421" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#hib)" />
-  <rect x="860.6897" y="416.8421" width="375.1724" height="208.4211" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1048.2759" y="464.2105" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="var(--text)">ISR</text>
-  <text x="1048.2759" y="498.3158" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">(Interrupt Service</text>
-  <text x="1048.2759" y="526.7368" text-anchor="middle" font-size="20.8421" fill="var(--text-muted)">Routine)</text>
-  <text x="904.8276" y="568.4211" font-size="18.9474" fill="var(--text-muted)">Handle event</text>
-  <text x="904.8276" y="596.8421" font-size="18.9474" fill="var(--text-muted)">ACK to APIC</text>
-  <text x="904.8276" y="625.2632" font-size="18.9474" fill="var(--text-muted)">IRET</text>
+  <text x="628.6792" y="40" text-anchor="middle" font-size="30.7624" font-weight="bold" fill="var(--text)">Hardware Interrupt Flow</text>
+  <text x="198.4906" y="87.541" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">1. Device asserts</text>
+  <text x="198.4906" y="112.2623" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">interrupt signal</text>
+  <text x="628.6792" y="87.541" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">2. Interrupt controller</text>
+  <text x="628.6792" y="112.2623" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">routes it</text>
+  <text x="1036.2264" y="87.541" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">3. CPU saves state</text>
+  <text x="1036.2264" y="112.2623" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">and jumps to ISR</text>
+  <rect x="40" y="144.5901" width="294.3397" height="104.5901" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="187.1698" y="192.1312" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)">Device</text>
+  <text x="187.1698" y="226.3606" text-anchor="middle" font-size="19.2265" fill="var(--text-muted)">(e.g. NIC)</text>
+  <rect x="470.1886" y="144.5901" width="316.9811" height="104.5901" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="628.6792" y="192.1312" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)">APIC</text>
+  <text x="628.6792" y="226.3606" text-anchor="middle" font-size="19.2265" fill="var(--text-muted)">(Advanced PIC)</text>
+  <rect x="877.7358" y="144.5901" width="339.6227" height="199.6721" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="1047.5472" y="188.3279" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)">CPU</text>
+  <text x="923.0189" y="226.3606" font-size="19.2265" fill="var(--text-muted)">Save RIP</text>
+  <text x="923.0189" y="254.8853" font-size="19.2265" fill="var(--text-muted)">Save RFLAGS</text>
+  <text x="923.0189" y="283.4098" font-size="19.2265" fill="var(--text-muted)">Save RSP</text>
+  <text x="923.0189" y="311.9344" font-size="19.2265" fill="var(--text-muted)">Jump to ISR</text>
+  <line x1="334.3396" y1="195.9344" x2="465.6603" y2="195.9344" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#hia)" />
+  <text x="402.2641" y="182.623" font-size="19.2265" fill="var(--warn-accent)">IRQ</text>
+  <line x1="787.1698" y1="195.9344" x2="873.2075" y2="195.9344" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#hib)" />
+  <text x="832.4528" y="182.623" font-size="19.2265" fill="var(--primary-accent)">INT</text>
+  <line x1="1047.5472" y1="344.2623" x2="1047.5472" y2="410.8196" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#hib)" />
+  <rect x="855.0944" y="410.8196" width="384.9056" height="209.1804" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1047.5472" y="458.3606" text-anchor="middle" font-size="24.9945" font-weight="bold" fill="var(--text)">ISR</text>
+  <text x="1047.5472" y="492.5901" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">(Interrupt Service</text>
+  <text x="1047.5472" y="521.1147" text-anchor="middle" font-size="21.1491" fill="var(--text-muted)">Routine)</text>
+  <text x="900.3773" y="562.9508" font-size="19.2265" fill="var(--text-muted)">Handle event</text>
+  <text x="900.3773" y="591.4754" font-size="19.2265" fill="var(--text-muted)">ACK to APIC</text>
+  <text x="900.3773" y="620" font-size="19.2265" fill="var(--text-muted)">IRET</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

@@ -119,143 +119,143 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#f57c00"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title bar -->
-  <rect x="0" y="0" width="1280" height="52" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="34" font-family="sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Descriptor Protocol: Lookup Chain &amp; Priority</text>
+  <rect x="40" y="40" width="1200" height="47.125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="70.8125" font-family="sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python Descriptor Protocol: Lookup Chain &amp; Priority</text>
 
   <!-- ===== TOP: Attribute lookup flowchart ===== -->
-  <text x="440" y="74" font-family="sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Attribute Lookup: obj.attr</text>
+  <text x="452.5" y="107.0625" font-family="sans-serif" font-size="13.8261" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Attribute Lookup: obj.attr</text>
 
   <!-- Start -->
-  <rect x="260" y="84" width="360" height="38" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="440" y="108" font-family="monospace" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">obj.attr  (read access)</text>
+  <rect x="283.75" y="116.125" width="337.5" height="34.4375" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="452.5" y="137.875" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">obj.attr  (read access)</text>
 
-  <line x1="440" y1="122" x2="440" y2="142" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="452.5" y1="150.5625" x2="452.5" y2="168.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Decision 1 -->
-  <polygon points="440,142 540,168 440,194 340,168" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="440" y="163" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Data descriptor</text>
-  <text x="440" y="178" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">in type(obj)?</text>
+  <polygon points="452.5,168.6875 546.25,192.25 452.5,215.8125 358.75,192.25" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="452.5" y="187.7188" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Data descriptor</text>
+  <text x="452.5" y="201.3125" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">in type(obj)?</text>
 
   <!-- Yes → data descriptor wins -->
-  <line x1="540" y1="168" x2="680" y2="168" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="610" y="160" font-family="sans-serif" font-size="11" fill="var(--ok-accent)">YES (priority 1)</text>
-  <rect x="680" y="148" width="220" height="40" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="790" y="168" font-family="monospace" font-size="12" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">descriptor.__get__(obj, type)</text>
-  <text x="790" y="183" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">has __get__ AND __set__/__delete__</text>
+  <line x1="546.25" y1="192.25" x2="677.5" y2="192.25" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="611.875" y="185" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)">YES (priority 1)</text>
+  <rect x="677.5" y="174.125" width="206.25" height="36.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="780.625" y="192.25" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">descriptor.__get__(obj, type)</text>
+  <text x="780.625" y="205.8438" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">has __get__ AND __set__/__delete__</text>
 
   <!-- No → check instance dict -->
-  <line x1="440" y1="194" x2="440" y2="214" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="458" y="210" font-family="sans-serif" font-size="11" fill="var(--text-faint)">NO</text>
+  <line x1="452.5" y1="215.8125" x2="452.5" y2="233.9375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="469.375" y="230.3125" font-family="sans-serif" font-size="10.1392" fill="var(--text-faint)">NO</text>
 
   <!-- Decision 2 -->
-  <polygon points="440,214 540,240 440,266 340,240" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="440" y="235" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">attr in</text>
-  <text x="440" y="250" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">obj.__dict__?</text>
+  <polygon points="452.5,233.9375 546.25,257.5 452.5,281.0625 358.75,257.5" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="452.5" y="252.9688" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">attr in</text>
+  <text x="452.5" y="266.5625" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">obj.__dict__?</text>
 
   <!-- Yes → instance dict -->
-  <line x1="540" y1="240" x2="680" y2="240" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="610" y="232" font-family="sans-serif" font-size="11" fill="var(--ok-accent)">YES (priority 2)</text>
-  <rect x="680" y="220" width="220" height="40" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="790" y="240" font-family="monospace" font-size="12" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">obj.__dict__['attr']</text>
-  <text x="790" y="255" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">instance variable wins here</text>
+  <line x1="546.25" y1="257.5" x2="677.5" y2="257.5" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="611.875" y="250.25" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)">YES (priority 2)</text>
+  <rect x="677.5" y="239.375" width="206.25" height="36.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="780.625" y="257.5" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">obj.__dict__['attr']</text>
+  <text x="780.625" y="271.0938" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">instance variable wins here</text>
 
   <!-- No → non-data descriptor -->
-  <line x1="440" y1="266" x2="440" y2="286" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="458" y="282" font-family="sans-serif" font-size="11" fill="var(--text-faint)">NO</text>
+  <line x1="452.5" y1="281.0625" x2="452.5" y2="299.1875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="469.375" y="295.5625" font-family="sans-serif" font-size="10.1392" fill="var(--text-faint)">NO</text>
 
   <!-- Decision 3 -->
-  <polygon points="440,286 540,312 440,338 340,312" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="440" y="307" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Non-data descriptor</text>
-  <text x="440" y="322" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">in type(obj)?</text>
+  <polygon points="452.5,299.1875 546.25,322.75 452.5,346.3125 358.75,322.75" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="452.5" y="318.2188" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Non-data descriptor</text>
+  <text x="452.5" y="331.8125" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">in type(obj)?</text>
 
   <!-- Yes → non-data descriptor -->
-  <line x1="540" y1="312" x2="680" y2="312" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="610" y="304" font-family="sans-serif" font-size="11" fill="var(--ok-accent)">YES (priority 3)</text>
-  <rect x="680" y="292" width="220" height="40" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="790" y="312" font-family="monospace" font-size="12" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">descriptor.__get__(obj, type)</text>
-  <text x="790" y="327" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">has __get__ only (e.g. methods)</text>
+  <line x1="546.25" y1="322.75" x2="677.5" y2="322.75" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="611.875" y="315.5" font-family="sans-serif" font-size="10.1392" fill="var(--ok-accent)">YES (priority 3)</text>
+  <rect x="677.5" y="304.625" width="206.25" height="36.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="780.625" y="322.75" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">descriptor.__get__(obj, type)</text>
+  <text x="780.625" y="336.3438" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">has __get__ only (e.g. methods)</text>
 
   <!-- No → class variable -->
-  <line x1="440" y1="338" x2="440" y2="358" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="458" y="354" font-family="sans-serif" font-size="11" fill="var(--text-faint)">NO</text>
+  <line x1="452.5" y1="346.3125" x2="452.5" y2="364.4375" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="469.375" y="360.8125" font-family="sans-serif" font-size="10.1392" fill="var(--text-faint)">NO</text>
 
-  <rect x="300" y="358" width="280" height="38" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="440" y="376" font-family="monospace" font-size="12" fill="var(--primary-accent)" text-anchor="middle">class attribute or AttributeError</text>
-  <text x="440" y="390" font-family="sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">(priority 4)</text>
+  <rect x="321.25" y="364.4375" width="262.5" height="34.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="452.5" y="380.75" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">class attribute or AttributeError</text>
+  <text x="452.5" y="393.4375" font-family="sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">(priority 4)</text>
 
   <!-- ===== RIGHT: Method signatures ===== -->
-  <rect x="920" y="64" width="340" height="188" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="86" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Descriptor Method Signatures</text>
-  <text x="940" y="110" font-family="monospace" font-size="12" font-weight="bold" fill="var(--primary-accent)">__get__(self, obj, objtype)</text>
-  <text x="940" y="128" font-family="sans-serif" font-size="11" fill="var(--text-muted)">  obj=None when accessed from class</text>
-  <text x="940" y="146" font-family="sans-serif" font-size="11" fill="var(--text-muted)">  returns the attribute value</text>
-  <text x="940" y="168" font-family="monospace" font-size="12" font-weight="bold" fill="var(--primary-accent)">__set__(self, obj, value)</text>
-  <text x="940" y="186" font-family="sans-serif" font-size="11" fill="var(--text-muted)">  called on obj.attr = value</text>
-  <text x="940" y="206" font-family="monospace" font-size="12" font-weight="bold" fill="var(--primary-accent)">__delete__(self, obj)</text>
-  <text x="940" y="224" font-family="sans-serif" font-size="11" fill="var(--text-muted)">  called on del obj.attr</text>
+  <rect x="902.5" y="98" width="318.75" height="170.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1061.875" y="117.9375" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Descriptor Method Signatures</text>
+  <text x="921.25" y="139.6875" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">__get__(self, obj, objtype)</text>
+  <text x="921.25" y="156" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)">  obj=None when accessed from class</text>
+  <text x="921.25" y="172.3125" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)">  returns the attribute value</text>
+  <text x="921.25" y="192.25" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">__set__(self, obj, value)</text>
+  <text x="921.25" y="208.5625" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)">  called on obj.attr = value</text>
+  <text x="921.25" y="226.6875" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">__delete__(self, obj)</text>
+  <text x="921.25" y="243" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)">  called on del obj.attr</text>
 
   <!-- ===== BOTTOM: Priority table ===== -->
-  <rect x="30" y="414" width="860" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="460" y="436" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--text)" text-anchor="middle">Data Descriptor vs Non-Data Descriptor</text>
+  <rect x="68.125" y="415.1875" width="806.25" height="181.25" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="471.25" y="435.125" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--text)" text-anchor="middle">Data Descriptor vs Non-Data Descriptor</text>
 
   <!-- Table header -->
-  <rect x="50" y="444" width="820" height="30" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="170" y="463" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--bg)" text-anchor="middle">Type</text>
-  <text x="380" y="463" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--bg)" text-anchor="middle">Methods Required</text>
-  <text x="580" y="463" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--bg)" text-anchor="middle">Priority</text>
-  <text x="780" y="463" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--bg)" text-anchor="middle">Examples</text>
+  <rect x="86.875" y="442.375" width="768.75" height="27.1875" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="199.375" y="459.5938" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Type</text>
+  <text x="396.25" y="459.5938" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Methods Required</text>
+  <text x="583.75" y="459.5938" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Priority</text>
+  <text x="771.25" y="459.5938" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--bg)" text-anchor="middle">Examples</text>
 
   <!-- Row 1: Data descriptor -->
-  <rect x="50" y="474" width="820" height="38" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="170" y="496" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Data descriptor</text>
-  <text x="380" y="490" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">__get__ + __set__</text>
-  <text x="380" y="506" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">and/or __delete__</text>
-  <text x="580" y="496" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">HIGHEST (beats instance dict)</text>
-  <text x="780" y="490" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">property, slots,</text>
-  <text x="780" y="506" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">ORM fields</text>
+  <rect x="86.875" y="469.5625" width="768.75" height="34.4375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="199.375" y="489.5" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Data descriptor</text>
+  <text x="396.25" y="484.0625" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">__get__ + __set__</text>
+  <text x="396.25" y="498.5625" font-family="monospace" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">and/or __delete__</text>
+  <text x="583.75" y="489.5" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">HIGHEST (beats instance dict)</text>
+  <text x="771.25" y="484.0625" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">property, slots,</text>
+  <text x="771.25" y="498.5625" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">ORM fields</text>
 
   <!-- Row 2: Instance dict -->
-  <rect x="50" y="512" width="820" height="34" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="170" y="533" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Instance __dict__</text>
-  <text x="380" y="533" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">obj.__dict__['attr'] = val</text>
-  <text x="580" y="533" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">MIDDLE</text>
-  <text x="780" y="533" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">self.name = "Alice"</text>
+  <rect x="86.875" y="504" width="768.75" height="30.8125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="199.375" y="523.0312" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Instance __dict__</text>
+  <text x="396.25" y="523.0312" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">obj.__dict__['attr'] = val</text>
+  <text x="583.75" y="523.0312" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">MIDDLE</text>
+  <text x="771.25" y="523.0312" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">self.name = "Alice"</text>
 
   <!-- Row 3: Non-data descriptor -->
-  <rect x="50" y="546" width="820" height="38" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="170" y="568" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Non-data descriptor</text>
-  <text x="380" y="562" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">__get__ only</text>
-  <text x="380" y="578" font-family="monospace" font-size="11" fill="var(--text-muted)" text-anchor="middle">(no __set__)</text>
-  <text x="580" y="568" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">LOWEST (instance dict overrides)</text>
-  <text x="780" y="562" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">functions/methods,</text>
-  <text x="780" y="578" font-family="monospace" font-size="11" fill="var(--text)" text-anchor="middle">staticmethod</text>
+  <rect x="86.875" y="534.8125" width="768.75" height="34.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="199.375" y="554.75" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Non-data descriptor</text>
+  <text x="396.25" y="549.3125" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">__get__ only</text>
+  <text x="396.25" y="563.8125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">(no __set__)</text>
+  <text x="583.75" y="554.75" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">LOWEST (instance dict overrides)</text>
+  <text x="771.25" y="549.3125" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">functions/methods,</text>
+  <text x="771.25" y="563.8125" font-family="monospace" font-size="10.1392" fill="var(--text)" text-anchor="middle">staticmethod</text>
 
-  <line x1="260" y1="474" x2="260" y2="584" stroke="var(--border)" stroke-width="1"/>
-  <line x1="480" y1="474" x2="480" y2="584" stroke="var(--border)" stroke-width="1"/>
-  <line x1="670" y1="474" x2="670" y2="584" stroke="var(--border)" stroke-width="1"/>
+  <line x1="283.75" y1="469.5625" x2="283.75" y2="569.25" stroke="var(--border)" stroke-width="1"/>
+  <line x1="490" y1="469.5625" x2="490" y2="569.25" stroke="var(--border)" stroke-width="1"/>
+  <line x1="668.125" y1="469.5625" x2="668.125" y2="569.25" stroke="var(--border)" stroke-width="1"/>
 
   <!-- __set_name__ box -->
-  <rect x="920" y="264" width="340" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1090" y="284" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">__set_name__ (Python 3.6+)</text>
-  <text x="935" y="304" font-family="monospace" font-size="11" fill="var(--text)">def __set_name__(self, owner, name):</text>
-  <text x="935" y="322" font-family="monospace" font-size="11" fill="var(--text-muted)">    self.name = name</text>
-  <text x="935" y="342" font-family="sans-serif" font-size="11" fill="var(--text-muted)">Called when descriptor defined in class</text>
+  <rect x="902.5" y="279.25" width="318.75" height="81.5625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1061.875" y="297.375" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">__set_name__ (Python 3.6+)</text>
+  <text x="916.5625" y="315.5" font-family="monospace" font-size="10.1392" fill="var(--text)">def __set_name__(self, owner, name):</text>
+  <text x="916.5625" y="331.8125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">    self.name = name</text>
+  <text x="916.5625" y="349.9375" font-family="sans-serif" font-size="10.1392" fill="var(--text-muted)">Called when descriptor defined in class</text>
 
   <!-- Code example box -->
-  <rect x="920" y="368" width="340" height="148" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1090" y="388" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--text)" text-anchor="middle">Usage Example</text>
-  <text x="935" y="408" font-family="monospace" font-size="11" fill="var(--primary-accent)">class Validated:</text>
-  <text x="935" y="424" font-family="monospace" font-size="11" fill="var(--text)">  def __set_name__(self,own,nm):</text>
-  <text x="935" y="440" font-family="monospace" font-size="11" fill="var(--text)">    self.name = nm</text>
-  <text x="935" y="456" font-family="monospace" font-size="11" fill="var(--text)">  def __get__(self, obj, t=None):</text>
-  <text x="935" y="472" font-family="monospace" font-size="11" fill="var(--text)">    return obj.__dict__[self.name]</text>
-  <text x="935" y="488" font-family="monospace" font-size="11" fill="var(--text)">  def __set__(self, obj, val):</text>
-  <text x="935" y="504" font-family="monospace" font-size="11" fill="var(--text)">    obj.__dict__[self.name] = val</text>
+  <rect x="902.5" y="373.5" width="318.75" height="134.125" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1061.875" y="391.625" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--text)" text-anchor="middle">Usage Example</text>
+  <text x="916.5625" y="409.75" font-family="monospace" font-size="10.1392" fill="var(--primary-accent)">class Validated:</text>
+  <text x="916.5625" y="424.25" font-family="monospace" font-size="10.1392" fill="var(--text)">  def __set_name__(self,own,nm):</text>
+  <text x="916.5625" y="438.75" font-family="monospace" font-size="10.1392" fill="var(--text)">    self.name = nm</text>
+  <text x="916.5625" y="453.25" font-family="monospace" font-size="10.1392" fill="var(--text)">  def __get__(self, obj, t=None):</text>
+  <text x="916.5625" y="467.75" font-family="monospace" font-size="10.1392" fill="var(--text)">    return obj.__dict__[self.name]</text>
+  <text x="916.5625" y="482.25" font-family="monospace" font-size="10.1392" fill="var(--text)">  def __set__(self, obj, val):</text>
+  <text x="916.5625" y="496.75" font-family="monospace" font-size="10.1392" fill="var(--text)">    obj.__dict__[self.name] = val</text>
 
   <!-- Bottom note -->
-  <rect x="30" y="620" width="860" height="14" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="440" y="631" font-family="sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle">Write access (obj.attr = val): data descriptor __set__ always wins over instance __dict__</text>
+  <rect x="68.125" y="601.875" width="806.25" height="12.6875" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="452.5" y="611.8438" font-family="sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle">Write access (obj.attr = val): data descriptor __set__ always wins over instance __dict__</text>
 </svg>

@@ -93,35 +93,35 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="610.5149" y="46.8293" text-anchor="middle" font-size="28.0975" font-weight="bold" fill="var(--text)">The Problem: Full Fine-Tuning is Expensive</text>
-  <text x="610.5149" y="85.8537" text-anchor="middle" font-size="21.8537" fill="var(--text-muted)">Full fine-tuning of a 70B parameter model</text>
-  <rect x="52.3298" y="117.0732" width="523.2985" height="359.0244" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="313.9791" y="156.0976" text-anchor="middle" font-size="23.4147" font-weight="bold" fill="var(--danger-accent)">Memory Needed</text>
-  <text x="87.2164" y="202.9269" font-size="18.7317" fill="var(--text)">Model weights (FP16):</text>
-  <text x="470.9686" y="202.9269" text-anchor="end" font-size="18.7317" font-weight="bold" fill="var(--text)">140 GB</text>
-  <text x="87.2164" y="241.9513" font-size="18.7317" fill="var(--text)">Gradients (FP16):</text>
-  <text x="470.9686" y="241.9513" text-anchor="end" font-size="18.7317" font-weight="bold" fill="var(--text)">140 GB</text>
-  <text x="87.2164" y="280.9756" font-size="18.7317" fill="var(--text)">Optimizer states (FP32):</text>
-  <text x="470.9686" y="280.9756" text-anchor="end" font-size="18.7317" font-weight="bold" fill="var(--text)">280 GB</text>
-  <text x="87.2164" y="320" font-size="18.7317" fill="var(--text)">Activations:</text>
-  <text x="470.9686" y="320" text-anchor="end" font-size="18.7317" font-weight="bold" fill="var(--text)">50+ GB</text>
-  <line x1="87.2164" y1="335.6098" x2="488.4119" y2="335.6098" stroke="var(--danger-border)" stroke-width="1.561" />
-  <text x="87.2164" y="374.6342" font-size="21.8537" font-weight="bold" fill="var(--danger-accent)">Total:</text>
-  <text x="470.9686" y="374.6342" text-anchor="end" font-size="21.8537" font-weight="bold" fill="var(--danger-accent)">~610 GB</text>
-  <text x="313.9791" y="421.4634" text-anchor="middle" font-size="17.1707" fill="var(--danger-accent)">Need 8x A100 80GB!</text>
-  <rect x="645.4014" y="117.0732" width="523.2985" height="359.0244" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="907.0507" y="156.0976" text-anchor="middle" font-size="23.4147" font-weight="bold" fill="var(--danger-accent)">Cost</text>
-  <text x="680.2881" y="210.7317" font-size="18.7317" fill="var(--text)">Hardware:</text>
-  <text x="1064.0403" y="210.7317" text-anchor="end" font-size="18.7317" fill="var(--text)">8x A100 80GB</text>
-  <text x="680.2881" y="257.561" font-size="18.7317" fill="var(--text)">Cloud cost:</text>
-  <text x="1064.0403" y="257.561" text-anchor="end" font-size="18.7317" fill="var(--text)">~$25/hour</text>
-  <text x="680.2881" y="304.3902" font-size="18.7317" fill="var(--text)">Training time:</text>
-  <text x="1064.0403" y="304.3902" text-anchor="end" font-size="18.7317" fill="var(--text)">1-3 days</text>
-  <line x1="680.2881" y1="327.8049" x2="1081.4835" y2="327.8049" stroke="var(--warn-border)" stroke-width="1.561" />
-  <text x="680.2881" y="374.6342" font-size="21.8537" font-weight="bold" fill="var(--danger-accent)">Total:</text>
-  <text x="1064.0403" y="374.6342" text-anchor="end" font-size="21.8537" font-weight="bold" fill="var(--danger-accent)">$600 - $1,800</text>
-  <text x="907.0507" y="421.4634" text-anchor="middle" font-size="17.1707" fill="var(--danger-accent)">per training run</text>
-  <rect x="139.5462" y="515.1219" width="941.9373" height="124.8781" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="610.5149" y="561.9512" text-anchor="middle" font-size="20.2927" font-weight="bold" fill="var(--danger-accent)">AND you get a full copy of the model (140 GB to store)</text>
-  <text x="610.5149" y="600.9756" text-anchor="middle" font-size="20.2927" fill="var(--text)">for each fine-tuned variant</text>
+  <text x="640.0001" y="40" text-anchor="middle" font-size="28.8057" font-weight="bold" fill="var(--text)">The Problem: Full Fine-Tuning is Expensive</text>
+  <text x="640.0001" y="78.1579" text-anchor="middle" font-size="22.4045" fill="var(--text-muted)">Full fine-tuning of a 70B parameter model</text>
+  <rect x="40" y="108.6842" width="562.5" height="351.0527" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="321.2501" y="146.8421" text-anchor="middle" font-size="24.0049" font-weight="bold" fill="var(--danger-accent)">Memory Needed</text>
+  <text x="77.5" y="192.6316" font-size="19.2038" fill="var(--text)">Model weights (FP16):</text>
+  <text x="490" y="192.6316" text-anchor="end" font-size="19.2038" font-weight="bold" fill="var(--text)">140 GB</text>
+  <text x="77.5" y="230.7895" font-size="19.2038" fill="var(--text)">Gradients (FP16):</text>
+  <text x="490" y="230.7895" text-anchor="end" font-size="19.2038" font-weight="bold" fill="var(--text)">140 GB</text>
+  <text x="77.5" y="268.9473" font-size="19.2038" fill="var(--text)">Optimizer states (FP32):</text>
+  <text x="490" y="268.9473" text-anchor="end" font-size="19.2038" font-weight="bold" fill="var(--text)">280 GB</text>
+  <text x="77.5" y="307.1052" font-size="19.2038" fill="var(--text)">Activations:</text>
+  <text x="490" y="307.1052" text-anchor="end" font-size="19.2038" font-weight="bold" fill="var(--text)">50+ GB</text>
+  <line x1="77.5" y1="322.3684" x2="508.75" y2="322.3684" stroke="var(--danger-border)" stroke-width="1.561" />
+  <text x="77.5" y="360.5264" font-size="22.4045" font-weight="bold" fill="var(--danger-accent)">Total:</text>
+  <text x="490" y="360.5264" text-anchor="end" font-size="22.4045" font-weight="bold" fill="var(--danger-accent)">~610 GB</text>
+  <text x="321.2501" y="406.3158" text-anchor="middle" font-size="17.6035" fill="var(--danger-accent)">Need 8x A100 80GB!</text>
+  <rect x="677.5" y="108.6842" width="562.5" height="351.0527" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="958.75" y="146.8421" text-anchor="middle" font-size="24.0049" font-weight="bold" fill="var(--danger-accent)">Cost</text>
+  <text x="715.0001" y="200.2631" font-size="19.2038" fill="var(--text)">Hardware:</text>
+  <text x="1127.5001" y="200.2631" text-anchor="end" font-size="19.2038" fill="var(--text)">8x A100 80GB</text>
+  <text x="715.0001" y="246.0526" font-size="19.2038" fill="var(--text)">Cloud cost:</text>
+  <text x="1127.5001" y="246.0526" text-anchor="end" font-size="19.2038" fill="var(--text)">~$25/hour</text>
+  <text x="715.0001" y="291.842" font-size="19.2038" fill="var(--text)">Training time:</text>
+  <text x="1127.5001" y="291.842" text-anchor="end" font-size="19.2038" fill="var(--text)">1-3 days</text>
+  <line x1="715.0001" y1="314.7368" x2="1146.25" y2="314.7368" stroke="var(--warn-border)" stroke-width="1.561" />
+  <text x="715.0001" y="360.5264" font-size="22.4045" font-weight="bold" fill="var(--danger-accent)">Total:</text>
+  <text x="1127.5001" y="360.5264" text-anchor="end" font-size="22.4045" font-weight="bold" fill="var(--danger-accent)">$600 - $1,800</text>
+  <text x="958.75" y="406.3158" text-anchor="middle" font-size="17.6035" fill="var(--danger-accent)">per training run</text>
+  <rect x="133.75" y="497.8947" width="1012.5" height="122.1053" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="640.0001" y="543.6842" text-anchor="middle" font-size="20.8042" font-weight="bold" fill="var(--danger-accent)">AND you get a full copy of the model (140 GB to store)</text>
+  <text x="640.0001" y="581.8421" text-anchor="middle" font-size="20.8042" fill="var(--text)">for each fine-tuned variant</text>
 </svg>

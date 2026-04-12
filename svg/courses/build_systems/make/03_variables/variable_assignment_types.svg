@@ -98,65 +98,65 @@
       <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <rect x="26.6667" y="17.7778" width="142.2222" height="39.1111" rx="6" fill="var(--text)" />
-  <text x="97.7778" y="42.6667" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="var(--bg)">Operator</text>
-  <rect x="177.7778" y="17.7778" width="177.7778" height="39.1111" rx="6" fill="var(--text)" />
-  <text x="266.6667" y="42.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)">Name</text>
-  <rect x="364.4444" y="17.7778" width="373.3333" height="39.1111" rx="6" fill="var(--text)" />
-  <text x="551.1111" y="42.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)">Behaviour</text>
-  <rect x="746.6667" y="17.7778" width="373.3333" height="39.1111" rx="6" fill="var(--text)" />
-  <text x="933.3333" y="42.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" font-weight="bold" fill="var(--bg)">Example</text>
-  <rect x="26.6667" y="65.7778" width="142.2222" height="88.8889" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="97.7778" y="117.3333" text-anchor="middle" font-family="monospace" font-size="32" font-weight="bold" fill="var(--bg)">=</text>
-  <rect x="177.7778" y="65.7778" width="177.7778" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="266.6667" y="106.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">Recursive</text>
-  <text x="266.6667" y="126.2222" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">expand</text>
-  <rect x="364.4444" y="65.7778" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="551.1111" y="99.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Expanded every time it is used.</text>
-  <text x="551.1111" y="119.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Can reference variables defined later.</text>
-  <text x="551.1111" y="138.6667" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-faint)">Risk: infinite recursion if self-referential</text>
-  <rect x="746.6667" y="65.7778" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="764.4444" y="99.5556" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">CC = gcc</text>
-  <text x="764.4444" y="120.8889" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">CFLAGS = $(EXTRA)</text>
-  <text x="764.4444" y="142.2222" font-family="sans-serif" font-size="11.5556" fill="var(--text-faint)">EXTRA can be set later</text>
-  <rect x="26.6667" y="163.5556" width="142.2222" height="88.8889" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="97.7778" y="215.1111" text-anchor="middle" font-family="monospace" font-size="32" font-weight="bold" fill="var(--bg)">:=</text>
-  <rect x="177.7778" y="163.5556" width="177.7778" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="266.6667" y="204.4444" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">Simple</text>
-  <text x="266.6667" y="224" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">expand</text>
-  <rect x="364.4444" y="163.5556" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="551.1111" y="197.3333" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Expanded once at definition time.</text>
-  <text x="551.1111" y="216.8889" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Safe — no recursion possible.</text>
-  <text x="551.1111" y="236.4444" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-faint)">Preferred for performance</text>
-  <rect x="746.6667" y="163.5556" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="764.4444" y="197.3333" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">SRC := $(wildcard *.c)</text>
-  <text x="764.4444" y="218.6667" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">OBJ := $(SRC:.c=.o)</text>
-  <rect x="26.6667" y="261.3333" width="142.2222" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="97.7778" y="312.8889" text-anchor="middle" font-family="monospace" font-size="32" font-weight="bold" fill="var(--primary-accent)">?=</text>
-  <rect x="177.7778" y="261.3333" width="177.7778" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="266.6667" y="302.2222" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">Conditional</text>
-  <text x="266.6667" y="321.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">assign</text>
-  <rect x="364.4444" y="261.3333" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="551.1111" y="295.1111" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Only assigns if variable is not</text>
-  <text x="551.1111" y="314.6667" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">already set (or set via environment).</text>
-  <text x="551.1111" y="334.2222" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-faint)">Great for defaults users can override</text>
-  <rect x="746.6667" y="261.3333" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="764.4444" y="295.1111" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">CC ?= gcc</text>
-  <text x="764.4444" y="316.4444" font-family="sans-serif" font-size="12.4444" fill="var(--text-faint)">User can override:</text>
-  <text x="764.4444" y="334.2222" font-family="monospace" font-size="14.2222" fill="var(--text-muted)">make CC=clang</text>
-  <rect x="26.6667" y="359.1111" width="142.2222" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="97.7778" y="410.6667" text-anchor="middle" font-family="monospace" font-size="32" font-weight="bold" fill="var(--primary-accent)">+=</text>
-  <rect x="177.7778" y="359.1111" width="177.7778" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="266.6667" y="400" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text)">Append</text>
-  <rect x="364.4444" y="359.1111" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="551.1111" y="392.8889" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">Appends to existing value</text>
-  <text x="551.1111" y="412.4444" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">with a space separator.</text>
-  <text x="551.1111" y="432" text-anchor="middle" font-family="sans-serif" font-size="11.5556" fill="var(--text-faint)">Inherits expansion type of original</text>
-  <rect x="746.6667" y="359.1111" width="373.3333" height="88.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="764.4444" y="392.8889" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">CFLAGS := -Wall</text>
-  <text x="764.4444" y="414.2222" font-family="monospace" font-size="14.2222" fill="var(--primary-accent)">CFLAGS += -O2</text>
-  <text x="764.4444" y="435.5556" font-family="sans-serif" font-size="12.4444" fill="var(--text-faint)">result: -Wall -O2</text>
-  <rect x="26.6667" y="469.3333" width="1084.4444" height="39.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="568.8889" y="493.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-accent)">Prefer <tspan font-family="monospace">:=</tspan> for most variables — it is faster and avoids unexpected re-expansion</text>
+  <rect width="1087.5767" height="474.8286" fill="var(--bg)" rx="5.7089" x="152.4233" y="145.1714"/>
+  <rect x="177.9133" y="158.361" width="135.9471" height="29.0173" rx="5.7089" fill="var(--text)" />
+  <text x="245.8869" y="176.8266" text-anchor="middle" font-family="monospace" font-size="13.4741" font-weight="bold" fill="var(--bg)">Operator</text>
+  <rect x="322.3571" y="158.361" width="169.9338" height="29.0173" rx="5.7089" fill="var(--text)" />
+  <text x="407.3241" y="176.8266" text-anchor="middle" font-family="sans-serif" font-size="12.7255" font-weight="bold" fill="var(--bg)">Name</text>
+  <rect x="500.7876" y="158.361" width="356.8611" height="29.0173" rx="5.7089" fill="var(--text)" />
+  <text x="679.2182" y="176.8266" text-anchor="middle" font-family="sans-serif" font-size="12.7255" font-weight="bold" fill="var(--bg)">Behaviour</text>
+  <rect x="866.1455" y="158.361" width="356.8611" height="29.0173" rx="5.7089" fill="var(--text)" />
+  <text x="1044.5759" y="176.8266" text-anchor="middle" font-family="sans-serif" font-size="12.7255" font-weight="bold" fill="var(--bg)">Example</text>
+  <rect x="177.9133" y="193.9732" width="135.9471" height="65.9485" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="245.8869" y="232.2232" text-anchor="middle" font-family="monospace" font-size="26.9482" font-weight="bold" fill="var(--bg)">=</text>
+  <rect x="322.3571" y="193.9732" width="169.9338" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="407.3241" y="224.3095" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">Recursive</text>
+  <text x="407.3241" y="238.8181" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">expand</text>
+  <rect x="500.7876" y="193.9732" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="679.2182" y="219.0337" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">Expanded every time it is used.</text>
+  <text x="679.2182" y="233.5422" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">Can reference variables defined later.</text>
+  <text x="679.2182" y="248.0509" text-anchor="middle" font-family="sans-serif" font-size="10" fill="var(--text-faint)">Risk: infinite recursion if self-referential</text>
+  <rect x="866.1455" y="193.9732" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="883.1388" y="219.0337" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">CC = gcc</text>
+  <text x="883.1388" y="234.8613" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">CFLAGS = $(EXTRA)</text>
+  <text x="883.1388" y="250.6888" font-family="sans-serif" font-size="10" fill="var(--text-faint)">EXTRA can be set later</text>
+  <rect x="177.9133" y="266.5165" width="135.9471" height="65.9485" rx="5.7089" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="245.8869" y="304.7665" text-anchor="middle" font-family="monospace" font-size="26.9482" font-weight="bold" fill="var(--bg)">:=</text>
+  <rect x="322.3571" y="266.5165" width="169.9338" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="407.3241" y="296.8527" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">Simple</text>
+  <text x="407.3241" y="311.3614" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">expand</text>
+  <rect x="500.7876" y="266.5165" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="679.2182" y="291.5768" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">Expanded once at definition time.</text>
+  <text x="679.2182" y="306.0855" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">Safe — no recursion possible.</text>
+  <text x="679.2182" y="320.5941" text-anchor="middle" font-family="sans-serif" font-size="10" fill="var(--text-faint)">Preferred for performance</text>
+  <rect x="866.1455" y="266.5165" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="883.1388" y="291.5768" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">SRC := $(wildcard *.c)</text>
+  <text x="883.1388" y="307.4045" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">OBJ := $(SRC:.c=.o)</text>
+  <rect x="177.9133" y="339.0597" width="135.9471" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="245.8869" y="377.3098" text-anchor="middle" font-family="monospace" font-size="26.9482" font-weight="bold" fill="var(--primary-accent)">?=</text>
+  <rect x="322.3571" y="339.0597" width="169.9338" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="407.3241" y="369.396" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">Conditional</text>
+  <text x="407.3241" y="383.9046" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">assign</text>
+  <rect x="500.7876" y="339.0597" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="679.2182" y="364.1201" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">Only assigns if variable is not</text>
+  <text x="679.2182" y="378.6288" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">already set (or set via environment).</text>
+  <text x="679.2182" y="393.1374" text-anchor="middle" font-family="sans-serif" font-size="10" fill="var(--text-faint)">Great for defaults users can override</text>
+  <rect x="866.1455" y="339.0597" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="883.1388" y="364.1201" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">CC ?= gcc</text>
+  <text x="883.1388" y="379.9477" font-family="sans-serif" font-size="10.4797" fill="var(--text-faint)">User can override:</text>
+  <text x="883.1388" y="393.1374" font-family="monospace" font-size="11.9769" fill="var(--text-muted)">make CC=clang</text>
+  <rect x="177.9133" y="411.6029" width="135.9471" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="245.8869" y="449.8531" text-anchor="middle" font-family="monospace" font-size="26.9482" font-weight="bold" fill="var(--primary-accent)">+=</text>
+  <rect x="322.3571" y="411.6029" width="169.9338" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="407.3241" y="441.9393" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--text)">Append</text>
+  <rect x="500.7876" y="411.6029" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="679.2182" y="436.6634" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">Appends to existing value</text>
+  <text x="679.2182" y="451.172" text-anchor="middle" font-family="sans-serif" font-size="11.2285" fill="var(--text-muted)">with a space separator.</text>
+  <text x="679.2182" y="465.6807" text-anchor="middle" font-family="sans-serif" font-size="10" fill="var(--text-faint)">Inherits expansion type of original</text>
+  <rect x="866.1455" y="411.6029" width="356.8611" height="65.9485" rx="5.7089" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="883.1388" y="436.6634" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">CFLAGS := -Wall</text>
+  <text x="883.1388" y="452.491" font-family="monospace" font-size="11.9769" fill="var(--primary-accent)">CFLAGS += -O2</text>
+  <text x="883.1388" y="468.3187" font-family="sans-serif" font-size="10.4797" fill="var(--text-faint)">result: -Wall -O2</text>
+  <rect x="177.9133" y="493.379" width="1036.5965" height="29.0173" rx="5.7089" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="696.2116" y="511.1851" text-anchor="middle" font-family="sans-serif" font-size="12.7255" fill="var(--primary-accent)">Prefer <tspan font-family="monospace">:=</tspan> for most variables — it is faster and avoids unexpected re-expansion</text>
 </svg>

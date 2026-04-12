@@ -97,26 +97,26 @@
       <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <rect x="20.5005" y="172.973" width="164.004" height="138.3784" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="102.5025" y="256" text-anchor="middle" font-size="20.5005" font-weight="bold">Client</text>
-  <rect x="328.008" y="86.4865" width="348.5085" height="311.3514" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="502.2623" y="155.6757" text-anchor="middle" font-size="22.5506" font-weight="bold">Redis Counter</text>
-  <text x="502.2623" y="214.4865" text-anchor="middle" font-size="20.5005">rate:user42:1710000</text>
-  <rect x="358.7587" y="242.1622" width="287.007" height="62.2703" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="502.2623" y="290.5946" text-anchor="middle" font-size="20.5005">INCR = 3 (limit: 5)</text>
-  <text x="502.2623" y="373.6216" text-anchor="middle" font-size="20.5005" fill="var(--warn-accent)">EXPIRE 60s (window)</text>
-  <rect x="861.021" y="172.973" width="164.004" height="138.3784" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="943.023" y="256" text-anchor="middle" font-size="20.5005" font-weight="bold">API</text>
-  <line x1="184.5045" y1="224.8649" x2="323.9079" y2="207.5676" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd14_02_caching)" />
-  <text x="256.2563" y="190.2703" text-anchor="middle" font-size="20.5005">Request</text>
-  <line x1="676.5165" y1="207.5676" x2="856.9209" y2="224.8649" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd14_02_caching)" />
-  <text x="768.7688" y="190.2703" text-anchor="middle" font-size="20.5005" fill="var(--ok-accent)">count &lt; limit</text>
-  <rect x="328.008" y="449.7297" width="348.5085" height="190.2703" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="502.2623" y="518.9189" text-anchor="middle" font-size="20.5005" font-weight="bold" fill="var(--danger-accent)">When count &gt;= limit:</text>
-  <text x="502.2623" y="581.1892" text-anchor="middle" font-size="20.5005" fill="var(--danger-accent)">HTTP 429 Too Many Requests</text>
-  <text x="502.2623" y="622.7027" text-anchor="middle" font-size="20.5005">Retry-After: remaining TTL</text>
-  <rect x="861.021" y="449.7297" width="328.008" height="190.2703" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" opacity="0.5" />
-  <text x="1025.0251" y="512" text-anchor="middle" font-size="20.5005" font-weight="bold">Sliding Window:</text>
-  <text x="1025.0251" y="563.8919" text-anchor="middle" font-size="20.5005">INCR + EXPIRE = atomic</text>
-  <text x="1025.0251" y="615.7838" text-anchor="middle" font-size="20.5005">counter per time window</text>
+  <rect x="40" y="130.625" width="168.4211" height="145" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="124.2105" y="217.625" text-anchor="middle" font-size="21.266" font-weight="bold">Client</text>
+  <rect x="355.7895" y="40" width="357.8947" height="326.2501" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="534.7369" y="112.5" text-anchor="middle" font-size="23.3926" font-weight="bold">Redis Counter</text>
+  <text x="534.7369" y="174.125" text-anchor="middle" font-size="21.266">rate:user42:1710000</text>
+  <rect x="387.3684" y="203.125" width="294.7368" height="65.25" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="534.7369" y="253.875" text-anchor="middle" font-size="21.266">INCR = 3 (limit: 5)</text>
+  <text x="534.7369" y="340.875" text-anchor="middle" font-size="21.266" fill="var(--warn-accent)">EXPIRE 60s (window)</text>
+  <rect x="903.1579" y="130.625" width="168.4211" height="145" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="987.3684" y="217.625" text-anchor="middle" font-size="21.266" font-weight="bold">API</text>
+  <line x1="208.4211" y1="185" x2="351.5789" y2="166.875" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd14_02_caching)" />
+  <text x="282.1053" y="148.75" text-anchor="middle" font-size="21.266">Request</text>
+  <line x1="713.6842" y1="166.875" x2="898.9474" y2="185" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd14_02_caching)" />
+  <text x="808.4211" y="148.75" text-anchor="middle" font-size="21.266" fill="var(--ok-accent)">count &lt; limit</text>
+  <rect x="355.7895" y="420.625" width="357.8947" height="199.375" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="534.7369" y="493.125" text-anchor="middle" font-size="21.266" font-weight="bold" fill="var(--danger-accent)">When count &gt;= limit:</text>
+  <text x="534.7369" y="558.375" text-anchor="middle" font-size="21.266" fill="var(--danger-accent)">HTTP 429 Too Many Requests</text>
+  <text x="534.7369" y="601.875" text-anchor="middle" font-size="21.266">Retry-After: remaining TTL</text>
+  <rect x="903.1579" y="420.625" width="336.8421" height="199.375" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" opacity="0.5" />
+  <text x="1071.5791" y="485.875" text-anchor="middle" font-size="21.266" font-weight="bold">Sliding Window:</text>
+  <text x="1071.5791" y="540.25" text-anchor="middle" font-size="21.266">INCR + EXPIRE = atomic</text>
+  <text x="1071.5791" y="594.625" text-anchor="middle" font-size="21.266">counter per time window</text>
 </svg>

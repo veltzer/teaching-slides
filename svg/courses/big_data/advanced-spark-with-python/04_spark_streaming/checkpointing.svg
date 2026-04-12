@@ -97,41 +97,41 @@
       <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-  <text x="591.0534" y="41.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.6421" font-weight="bold" fill="var(--text)">Checkpointing Mechanism</text>
-  <rect x="73.8817" y="83.1169" width="295.5267" height="99.7403" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="221.645" y="124.6753" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2092" font-weight="bold" fill="var(--primary-accent)">Streaming Query</text>
-  <text x="221.645" y="157.9221" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">Processing micro-batches</text>
-  <line x1="369.4084" y1="132.987" x2="458.0664" y2="132.987" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
-  <text x="413.7374" y="119.6883" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-faint)">write</text>
-  <rect x="472.8427" y="66.4935" width="517.1717" height="265.974" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="731.4286" y="108.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--warn-accent)">Checkpoint Directory</text>
-  <rect x="502.3954" y="132.987" width="206.8687" height="58.1818" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="605.8297" y="169.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--text)">offsets/</text>
-  <rect x="502.3954" y="199.4805" width="206.8687" height="58.1818" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="605.8297" y="236.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--text)">commits/</text>
-  <rect x="753.5931" y="132.987" width="206.8687" height="58.1818" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="857.0274" y="169.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--text)">state/</text>
-  <rect x="753.5931" y="199.4805" width="206.8687" height="58.1818" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="857.0274" y="236.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--text)">metadata</text>
-  <text x="605.8297" y="299.2208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-faint)">Source offsets per batch</text>
-  <text x="857.0274" y="299.2208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7763" fill="var(--text-faint)">Operator state snapshots</text>
-  <text x="591.0534" y="390.6494" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.6869" font-weight="bold" fill="var(--text)">Recovery Flow on Failure</text>
-  <rect x="44.329" y="423.8961" width="229.0332" height="91.4286" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="158.1068" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--danger-accent)">1. Failure</text>
-  <text x="158.1068" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">Query crashes</text>
-  <line x1="273.3622" y1="468.7792" x2="317.6912" y2="468.7792" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
-  <rect x="332.4675" y="423.8961" width="229.0332" height="91.4286" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="446.2453" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--warn-accent)">2. Read Checkpoint</text>
-  <text x="446.2453" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">Load last state</text>
-  <line x1="561.5007" y1="468.7792" x2="605.8297" y2="468.7792" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
-  <rect x="620.6061" y="423.8961" width="229.0332" height="91.4286" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="734.3838" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--primary-accent)">3. Replay Batch</text>
-  <text x="734.3838" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">From last offset</text>
-  <line x1="849.6392" y1="468.7792" x2="893.9683" y2="468.7792" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
-  <rect x="908.7446" y="423.8961" width="229.0332" height="91.4286" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1022.5224" y="462.1299" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--ok-accent)">4. Resume</text>
-  <text x="1022.5224" y="492.0519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.254" fill="var(--text-muted)">Continue processing</text>
-  <rect x="73.8817" y="548.5714" width="1034.3434" height="91.4286" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="591.0534" y="585.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" font-weight="bold" fill="var(--ok-accent)">Key Guarantees</text>
-  <text x="591.0534" y="618.3896" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7316" fill="var(--text-muted)">Exactly-once processing | No data loss | Automatic state recovery | Idempotent sinks recommended</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.3826" font-weight="bold" fill="var(--text)">Checkpointing Mechanism</text>
+  <rect x="72.4325" y="80.2778" width="324.3243" height="96.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="234.5946" y="120.5556" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8109" font-weight="bold" fill="var(--primary-accent)">Streaming Query</text>
+  <text x="234.5946" y="152.7778" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--text-muted)">Processing micro-batches</text>
+  <line x1="396.7568" y1="128.6111" x2="494.0541" y2="128.6111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
+  <text x="445.4054" y="115.7222" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2391" fill="var(--text-faint)">write</text>
+  <rect x="510.2702" y="64.1667" width="567.5675" height="257.7777" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="794.0541" y="104.4444" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3349" font-weight="bold" fill="var(--warn-accent)">Checkpoint Directory</text>
+  <rect x="542.7027" y="128.6111" width="227.027" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="656.2162" y="164.0555" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--text)">offsets/</text>
+  <rect x="542.7027" y="193.0556" width="227.027" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="656.2162" y="228.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--text)">commits/</text>
+  <rect x="818.3784" y="128.6111" width="227.027" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="931.8919" y="164.0555" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--text)">state/</text>
+  <rect x="818.3784" y="193.0556" width="227.027" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="931.8919" y="228.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--text)">metadata</text>
+  <text x="656.2162" y="289.7223" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2391" fill="var(--text-faint)">Source offsets per batch</text>
+  <text x="931.8919" y="289.7223" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2391" fill="var(--text-faint)">Operator state snapshots</text>
+  <text x="640" y="378.3334" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3349" font-weight="bold" fill="var(--text)">Recovery Flow on Failure</text>
+  <rect x="40" y="410.5556" width="251.3514" height="88.6111" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="164.8649" y="447.6112" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--danger-accent)">1. Failure</text>
+  <text x="164.8649" y="476.6111" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--text-muted)">Query crashes</text>
+  <line x1="291.3514" y1="454.0555" x2="340" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
+  <rect x="356.2162" y="410.5556" width="251.3514" height="88.6111" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="481.0811" y="447.6112" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--warn-accent)">2. Read Checkpoint</text>
+  <text x="481.0811" y="476.6111" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--text-muted)">Load last state</text>
+  <line x1="607.5675" y1="454.0555" x2="656.2162" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
+  <rect x="672.4325" y="410.5556" width="251.3514" height="88.6111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="797.2972" y="447.6112" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--primary-accent)">3. Replay Batch</text>
+  <text x="797.2972" y="476.6111" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--text-muted)">From last offset</text>
+  <line x1="923.7837" y1="454.0555" x2="972.4325" y2="454.0555" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cp)" />
+  <rect x="988.6486" y="410.5556" width="251.3514" height="88.6111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1113.5135" y="447.6112" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--ok-accent)">4. Resume</text>
+  <text x="1113.5135" y="476.6111" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7631" fill="var(--text-muted)">Continue processing</text>
+  <rect x="72.4325" y="531.3889" width="1135.1351" height="88.6111" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="566.8334" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" font-weight="bold" fill="var(--ok-accent)">Key Guarantees</text>
+  <text x="640" y="599.0555" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.287" fill="var(--text-muted)">Exactly-once processing | No data loss | Automatic state recovery | Idempotent sinks recommended</text>
 </svg>

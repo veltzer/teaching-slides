@@ -94,103 +94,103 @@
     </marker>
 </defs>
 
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Client -->
-  <rect x="30" y="220" width="140" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="100" y="255" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="bold">Client</text>
-  <text x="100" y="275" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">SDK / CLI</text>
-  <text x="100" y="295" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle">PUT/GET by key</text>
+  <rect x="68.125" y="239.375" width="131.25" height="90.625" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="133.75" y="271.0938" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)" text-anchor="middle" font-weight="bold">Client</text>
+  <text x="133.75" y="289.2188" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">SDK / CLI</text>
+  <text x="133.75" y="307.3438" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle">PUT/GET by key</text>
 
   <!-- Arrow Client -> API -->
-  <line x1="170" y1="270" x2="240" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="205" y="260" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">HTTPS</text>
+  <line x1="199.375" y1="284.6875" x2="265" y2="284.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="232.1875" y="275.625" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">HTTPS</text>
 
   <!-- HTTP API Layer -->
-  <rect x="245" y="180" width="180" height="180" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="335" y="215" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">HTTP API</text>
-  <text x="335" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">REST / S3 API</text>
-  <rect x="265" y="255" width="140" height="30" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="335" y="275" font-family="Arial, sans-serif" font-size="10" fill="var(--text)" text-anchor="middle">PUT bucket/key → object</text>
-  <rect x="265" y="295" width="140" height="30" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="335" y="315" font-family="Arial, sans-serif" font-size="10" fill="var(--text)" text-anchor="middle">GET bucket/key → data</text>
+  <rect x="269.6875" y="203.125" width="168.75" height="163.125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="354.0625" y="234.8438" font-family="Arial, sans-serif" font-size="13.8261" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">HTTP API</text>
+  <text x="354.0625" y="257.5" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">REST / S3 API</text>
+  <rect x="288.4375" y="271.0938" width="131.25" height="27.1875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="354.0625" y="289.2188" font-family="Arial, sans-serif" font-size="10" fill="var(--text)" text-anchor="middle">PUT bucket/key → object</text>
+  <rect x="288.4375" y="307.3438" width="131.25" height="27.1875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="354.0625" y="325.4688" font-family="Arial, sans-serif" font-size="10" fill="var(--text)" text-anchor="middle">GET bucket/key → data</text>
 
   <!-- Arrow API -> Routing -->
-  <line x1="425" y1="270" x2="490" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="457" y="260" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">Route</text>
+  <line x1="438.4375" y1="284.6875" x2="499.375" y2="284.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="468.4375" y="275.625" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">Route</text>
 
   <!-- Routing / Partitioning Layer -->
-  <rect x="495" y="195" width="160" height="150" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="575" y="225" font-family="Arial, sans-serif" font-size="13" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Partition</text>
-  <text x="575" y="245" font-family="Arial, sans-serif" font-size="13" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Router</text>
-  <text x="575" y="275" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Hash(key) → node</text>
-  <text x="575" y="295" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Consistent hashing</text>
-  <text x="575" y="315" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">for distribution</text>
+  <rect x="504.0625" y="216.7188" width="150" height="135.9375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="579.0625" y="243.9062" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Partition</text>
+  <text x="579.0625" y="262.0312" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Router</text>
+  <text x="579.0625" y="289.2188" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Hash(key) → node</text>
+  <text x="579.0625" y="307.3438" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Consistent hashing</text>
+  <text x="579.0625" y="325.4688" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">for distribution</text>
 
   <!-- Arrows to AZs -->
-  <line x1="655" y1="240" x2="730" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="655" y1="270" x2="730" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="655" y1="310" x2="730" y2="480" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="654.0625" y1="257.5" x2="724.375" y2="148.75" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="654.0625" y1="284.6875" x2="724.375" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="654.0625" y1="320.9375" x2="724.375" y2="475" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- AZ 1 -->
-  <rect x="735" y="40" width="510" height="150" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="990" y="65" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Availability Zone 1</text>
+  <rect x="729.0625" y="76.25" width="478.125" height="135.9375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="968.125" y="98.9062" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Availability Zone 1</text>
 
-  <rect x="760" y="80" width="90" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="805" y="105" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 1</text>
-  <text x="805" y="125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition A</text>
-  <text x="805" y="140" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition D</text>
+  <rect x="752.5" y="112.5" width="84.375" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="794.6875" y="135.1562" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 1</text>
+  <text x="794.6875" y="153.2812" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition A</text>
+  <text x="794.6875" y="166.875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition D</text>
 
-  <rect x="870" y="80" width="90" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="915" y="105" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 2</text>
-  <text x="915" y="125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition B</text>
-  <text x="915" y="140" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition E</text>
+  <rect x="855.625" y="112.5" width="84.375" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="897.8125" y="135.1562" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 2</text>
+  <text x="897.8125" y="153.2812" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition B</text>
+  <text x="897.8125" y="166.875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition E</text>
 
-  <rect x="980" y="80" width="90" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1025" y="105" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 3</text>
-  <text x="1025" y="125" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition C</text>
-  <text x="1025" y="140" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition F</text>
+  <rect x="958.75" y="112.5" width="84.375" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1000.9375" y="135.1562" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Node 3</text>
+  <text x="1000.9375" y="153.2812" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition C</text>
+  <text x="1000.9375" y="166.875" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Partition F</text>
 
   <!-- AZ 2 -->
-  <rect x="735" y="220" width="510" height="150" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="990" y="245" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Availability Zone 2 (Replica)</text>
+  <rect x="729.0625" y="239.375" width="478.125" height="135.9375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="968.125" y="262.0312" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Availability Zone 2 (Replica)</text>
 
-  <rect x="760" y="260" width="90" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="805" y="285" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 4</text>
-  <text x="805" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
+  <rect x="752.5" y="275.625" width="84.375" height="63.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="794.6875" y="298.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 4</text>
+  <text x="794.6875" y="320.9375" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
 
-  <rect x="870" y="260" width="90" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="915" y="285" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 5</text>
-  <text x="915" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
+  <rect x="855.625" y="275.625" width="84.375" height="63.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="897.8125" y="298.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 5</text>
+  <text x="897.8125" y="320.9375" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
 
-  <rect x="980" y="260" width="90" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="1025" y="285" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 6</text>
-  <text x="1025" y="310" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
+  <rect x="958.75" y="275.625" width="84.375" height="63.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1000.9375" y="298.2812" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Node 6</text>
+  <text x="1000.9375" y="320.9375" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
 
   <!-- AZ 3 -->
-  <rect x="735" y="400" width="510" height="150" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="990" y="425" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Availability Zone 3 (Replica)</text>
+  <rect x="729.0625" y="402.5" width="478.125" height="135.9375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="968.125" y="425.1562" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Availability Zone 3 (Replica)</text>
 
-  <rect x="760" y="440" width="90" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="805" y="465" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 7</text>
-  <text x="805" y="490" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
+  <rect x="752.5" y="438.75" width="84.375" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="794.6875" y="461.4062" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 7</text>
+  <text x="794.6875" y="484.0625" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">A, D copy</text>
 
-  <rect x="870" y="440" width="90" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="915" y="465" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 8</text>
-  <text x="915" y="490" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
+  <rect x="855.625" y="438.75" width="84.375" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="897.8125" y="461.4062" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 8</text>
+  <text x="897.8125" y="484.0625" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">B, E copy</text>
 
-  <rect x="980" y="440" width="90" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1025" y="465" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 9</text>
-  <text x="1025" y="490" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
+  <rect x="958.75" y="438.75" width="84.375" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1000.9375" y="461.4062" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Node 9</text>
+  <text x="1000.9375" y="484.0625" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">C, F copy</text>
 
   <!-- Replication arrows between AZs -->
-  <line x1="1100" y1="190" x2="1100" y2="218" stroke="var(--info-border)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <line x1="1100" y1="370" x2="1100" y2="398" stroke="var(--info-border)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="1160" y="205" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)">Replicate</text>
-  <text x="1160" y="385" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)">Replicate</text>
+  <line x1="1071.25" y1="212.1875" x2="1071.25" y2="237.5625" stroke="var(--info-border)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <line x1="1071.25" y1="375.3125" x2="1071.25" y2="400.6875" stroke="var(--info-border)" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="1127.5" y="225.7812" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)">Replicate</text>
+  <text x="1127.5" y="388.9062" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)">Replicate</text>
 
   <!-- Bottom: Key properties -->
-  <rect x="40" y="570" width="1200" height="55" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="595" font-family="Arial, sans-serif" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="bold">S3: 11 nines durability (99.999999999%) | 3 AZ replication | Key-value access (bucket + key) | Unlimited scale</text>
-  <text x="640" y="615" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Objects stored as flat namespace, no hierarchy. Prefix-based partitioning for performance.</text>
+  <rect x="77.5" y="556.5625" width="1125" height="49.8438" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="579.2188" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)" text-anchor="middle" font-weight="bold">S3: 11 nines durability (99.999999999%) | 3 AZ replication | Key-value access (bucket + key) | Unlimited scale</text>
+  <text x="640" y="597.3438" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)" text-anchor="middle">Objects stored as flat namespace, no hierarchy. Prefix-based partitioning for performance.</text>
 </svg>

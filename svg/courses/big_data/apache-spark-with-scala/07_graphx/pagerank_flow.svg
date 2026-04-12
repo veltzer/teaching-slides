@@ -1,14 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Initial Rank</text>
-  <rect x="378.6666" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -101,13 +92,47 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="330" x2="490.6667" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="330" x2="789.3333" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="330" x2="1088.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="330" x2="490.6667" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2901" font-weight="bold" fill="var(--text)">PageRank Iteration</text>
+
+  <text x="640" y="75.9292" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.1846" fill="var(--text-muted)">Each iteration, every vertex sends its rank/out-degree to neighbours, then updates itself.</text>
+
+  <rect x="40" y="101.5929" width="380" height="287.4336" rx="6.0791" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="132.3894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--primary-text)">Step 1 — send</text>
+  <text x="230" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">Every vertex v splits its current rank</text>
+  <text x="230" y="188.8496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">equally among its outgoing edges:</text>
+  <text x="230" y="224.7788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--primary-text)">send(v → u) = rank(v) / outDeg(v)</text>
+  <text x="230" y="265.8407" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">A vertex with 4 out-edges and rank 1.0</text>
+  <text x="230" y="286.3717" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">sends 0.25 along each edge.</text>
+  <text x="230" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">dangling nodes (no out-edges)</text>
+  <text x="230" y="347.9646" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--primary-text)">lose their rank unless teleported.</text>
+
+  <rect x="450" y="101.5929" width="380" height="287.4336" rx="6.0791" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="132.3894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--ok-text)">Step 2 — aggregate</text>
+  <text x="640" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">At each destination vertex u,</text>
+  <text x="640" y="188.8496" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">sum all incoming rank fragments:</text>
+  <text x="640" y="224.7788" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--ok-text)">inbox(u) = Σ send(v → u)</text>
+  <text x="640" y="265.8407" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">In GraphX this is aggregateMessages:</text>
+  <text x="640" y="296.6372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">sendMsg: EdgeContext =&gt; send along ctx</text>
+  <text x="640" y="317.1681" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">mergeMsg: (a, b) =&gt; a + b</text>
+  <text x="640" y="358.2301" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--ok-text)">one shuffle per iteration</text>
+
+  <rect x="860" y="101.5929" width="380" height="287.4336" rx="6.0791" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1050" y="132.3894" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--warn-text)">Step 3 — update</text>
+  <text x="1050" y="168.3186" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">Mix teleport and neighbour mass:</text>
+  <text x="1050" y="204.2478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--warn-text)">rank'(u) = (1 - d)/N + d · inbox(u)</text>
+  <text x="1050" y="245.3097" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">d = damping (usually 0.85)</text>
+  <text x="1050" y="265.8407" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">the teleport term models a random</text>
+  <text x="1050" y="286.3717" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">surfer jumping to any page.</text>
+  <text x="1050" y="327.4336" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">Convergence: |rank' - rank| &lt; tol</text>
+  <text x="1050" y="347.9646" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.1582" fill="var(--warn-text)">typically 20-40 iterations.</text>
+
+  <rect x="40" y="414.6903" width="1200" height="205.3097" rx="6.0791" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="450.6195" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.211" font-weight="bold" fill="var(--text)">GraphX API</text>
+  <text x="80" y="484.4956" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">val ranks = graph.pageRank(tol = 0.0001).vertices</text>
+  <text x="80" y="507.0796" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">    // iterates until rank vector stabilizes within tol</text>
+  <text x="80" y="532.7434" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">val fixedIters = graph.staticPageRank(numIter = 20).vertices</text>
+  <text x="80" y="555.3274" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">    // fixed iteration count — cheaper and deterministic</text>
+  <text x="80" y="589.2035" font-family="Arial, sans-serif" font-size="13.1714" fill="var(--text-muted)">ranks.join(users).top(10)(Ordering.by(_._2._1)) — the 10 most influential vertices</text>
 </svg>

@@ -88,30 +88,30 @@
       <polygon points="0,18 5.6,0" fill="#999" />
     </marker>
   </defs>
-  <text x="408.3733" y="47.6688" text-anchor="middle" font-size="12.3534" font-weight="bold" fill="var(--text)">Amazon SQS Architecture</text>
-  <rect x="122.7004" y="130.1858" width="92.6507" height="39.087" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.1917" />
-  <text x="169.0257" y="153.6379" text-anchor="middle" font-size="10" fill="var(--text)">Producer</text>
-  <rect x="277.1181" y="112.8138" width="138.976" height="69.488" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="1.1917" />
-  <text x="346.6061" y="143.2148" text-anchor="middle" font-size="10.8093" font-weight="bold" fill="var(--text)">SQS Queue</text>
-  <text x="346.6061" y="160.5868" text-anchor="middle" font-size="10" fill="var(--text-muted)">Messages in flight</text>
-  <rect x="493.303" y="78.0698" width="100.3715" height="30.401" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.1917" />
-  <text x="543.4888" y="97.179" text-anchor="middle" font-size="10" fill="var(--text)">Consumer 1</text>
-  <rect x="493.303" y="121.4998" width="100.3715" height="30.401" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.1917" />
-  <text x="543.4888" y="140.6089" text-anchor="middle" font-size="10" fill="var(--text)">Consumer 2</text>
-  <rect x="493.303" y="164.9297" width="100.3715" height="30.401" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.1917" />
-  <text x="543.4888" y="184.039" text-anchor="middle" font-size="10" fill="var(--text)">Consumer N</text>
-  <rect x="292.5599" y="251.7898" width="138.976" height="43.43" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.1917" />
-  <text x="362.0479" y="277.8478" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Dead Letter Queue</text>
-  <line x1="215.3511" y1="149.295" x2="275.574" y2="147.5578" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <line x1="416.0942" y1="130.1858" x2="491.7589" y2="93.7046" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <line x1="416.0942" y1="147.5578" x2="491.7589" y2="136.266" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <line x1="416.0942" y1="164.9297" x2="491.7589" y2="179.696" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <path d="M 543.4888 108.4708 Q 640 108.4708 640 147.5578 Q 640 199.6738 408.3733 199.6738 Q 369.7688 199.6738 369.7688 184.039" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)" />
-  <text x="640" y="164.9297" font-size="10" fill="var(--text-faint)">Visibility Timeout</text>
-  <path d="M 543.4888 151.9008 Q 624.5582 151.9008 624.5582 164.9297 Q 624.5582 208.3598 400.6523 208.3598 Q 373.6293 208.3598 373.6293 184.039" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" />
-  <text x="624.5582" y="208.3598" font-size="10" fill="var(--ok-accent)">Delete Message</text>
-  <line x1="346.6061" y1="182.3018" x2="362.0479" y2="250.0526" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
-  <text x="315.7226" y="225.7318" font-size="10" fill="var(--danger-accent)">Failed messages</text>
-  <text x="408.3733" y="329.9638" text-anchor="middle" font-size="10" fill="var(--text-faint)" font-style="italic">SQS uses visibility timeout to prevent duplicate processing.</text>
-  <text x="408.3733" y="345.5986" text-anchor="middle" font-size="10" fill="var(--text-faint)" font-style="italic">Failed messages move to the Dead Letter Queue after max retries.</text>
+  <text x="702.6865" y="40" text-anchor="middle" font-size="26.252" font-weight="bold" fill="var(--text)">Amazon SQS Architecture</text>
+  <rect x="40" y="200.6414" width="214.9254" height="76.0933" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="147.4626" y="246.2972" text-anchor="middle" font-size="21.2509" fill="var(--text)">Producer</text>
+  <rect x="398.2087" y="166.8222" width="322.388" height="135.277" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="559.4028" y="226.0058" text-anchor="middle" font-size="22.9707" font-weight="bold" fill="var(--text)">SQS Queue</text>
+  <text x="559.4028" y="259.8251" text-anchor="middle" font-size="21.2509" fill="var(--text-muted)">Messages in flight</text>
+  <rect x="899.7013" y="99.1837" width="232.8357" height="59.1837" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1016.1192" y="136.3848" text-anchor="middle" font-size="21.2509" fill="var(--text)">Consumer 1</text>
+  <rect x="899.7013" y="183.7318" width="232.8357" height="59.1837" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1016.1192" y="220.9327" text-anchor="middle" font-size="21.2509" fill="var(--text)">Consumer 2</text>
+  <rect x="899.7013" y="268.2797" width="232.8357" height="59.1837" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1016.1192" y="305.481" text-anchor="middle" font-size="21.2509" fill="var(--text)">Consumer N</text>
+  <rect x="434.0297" y="437.3761" width="322.388" height="84.5481" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="595.2237" y="488.105" text-anchor="middle" font-size="21.2509" font-weight="bold" fill="var(--danger-accent)">Dead Letter Queue</text>
+  <line x1="254.9254" y1="237.8426" x2="394.6268" y2="234.4606" stroke="var(--primary-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
+  <line x1="720.597" y1="200.6414" x2="896.1194" y2="129.621" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
+  <line x1="720.597" y1="234.4606" x2="896.1194" y2="212.4781" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
+  <line x1="720.597" y1="268.2797" x2="896.1194" y2="297.0262" stroke="var(--ok-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
+  <path d="M 1016.1192 158.3673 Q 1240 158.3673 1240 234.4606 Q 1240 335.9184 702.6865 335.9184 Q 613.1342 335.9184 613.1342 305.481" stroke="var(--text-faint)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" marker-end="url(#arrow)" />
+  <text x="1240" y="268.2797" font-size="21.2509" fill="var(--text-faint)">Visibility Timeout</text>
+  <path d="M 1016.1192 242.9155 Q 1204.1791 242.9155 1204.1791 268.2797 Q 1204.1791 352.828 684.7758 352.828 Q 622.0895 352.828 622.0895 305.481" stroke="var(--ok-border)" stroke-width="0.3246" stroke-dasharray="1.6231 0.9739" fill="none" />
+  <text x="1204.1791" y="352.828" font-size="21.2509" fill="var(--ok-accent)">Delete Message</text>
+  <line x1="559.4028" y1="302.0991" x2="595.2237" y2="433.9942" stroke="var(--danger-border)" stroke-width="0.4869" marker-end="url(#arrow)" />
+  <text x="487.7611" y="386.6472" font-size="21.2509" fill="var(--danger-accent)">Failed messages</text>
+  <text x="702.6865" y="589.5627" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic">SQS uses visibility timeout to prevent duplicate processing.</text>
+  <text x="702.6865" y="620" text-anchor="middle" font-size="21.2509" fill="var(--text-faint)" font-style="italic">Failed messages move to the Dead Letter Queue after max retries.</text>
 </svg>

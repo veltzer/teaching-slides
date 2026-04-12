@@ -95,101 +95,101 @@
 </defs>
 
   <!-- Background -->
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Pipeline track -->
-  <rect x="40" y="200" rx="6" width="1200" height="200" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="77.5" y="221.25" rx="6" width="1125" height="181.25" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
 
   <!-- Step 1: Write Code -->
-  <rect x="60" y="230" rx="6" width="160" height="140" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="60" y="230" rx="6" width="160" height="35" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="140" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">1. Write Code</text>
-  <text x="140" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Terraform /</text>
-  <text x="140" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">CloudFormation</text>
-  <text x="140" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Version controlled</text>
+  <rect x="96.25" y="248.4375" rx="6" width="150" height="126.875" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="96.25" y="248.4375" rx="6" width="150" height="31.7188" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="171.25" y="269.2812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">1. Write Code</text>
+  <text x="171.25" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Terraform /</text>
+  <text x="171.25" y="319.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">CloudFormation</text>
+  <text x="171.25" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)">Version controlled</text>
 
   <!-- Arrow 1->2 -->
-  <line x1="220" y1="300" x2="260" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="246.25" y1="311.875" x2="283.75" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2: PR Review -->
-  <rect x="268" y="230" rx="6" width="160" height="140" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="268" y="230" rx="6" width="160" height="35" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="348" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">2. PR Review</text>
-  <text x="348" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Peer review</text>
-  <text x="348" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">of changes</text>
-  <text x="348" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Collaboration</text>
+  <rect x="291.25" y="248.4375" rx="6" width="150" height="126.875" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="291.25" y="248.4375" rx="6" width="150" height="31.7188" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="366.25" y="269.2812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">2. PR Review</text>
+  <text x="366.25" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Peer review</text>
+  <text x="366.25" y="319.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">of changes</text>
+  <text x="366.25" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)">Collaboration</text>
 
   <!-- Arrow 2->3 -->
-  <line x1="428" y1="300" x2="468" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="441.25" y1="311.875" x2="478.75" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3: CI Plan -->
-  <rect x="476" y="230" rx="6" width="160" height="140" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="476" y="230" rx="6" width="160" height="35" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="556" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">3. CI Plan</text>
-  <text x="556" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Automated</text>
-  <text x="556" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">plan output</text>
-  <text x="556" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Preview changes</text>
+  <rect x="486.25" y="248.4375" rx="6" width="150" height="126.875" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="486.25" y="248.4375" rx="6" width="150" height="31.7188" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="561.25" y="269.2812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">3. CI Plan</text>
+  <text x="561.25" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Automated</text>
+  <text x="561.25" y="319.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">plan output</text>
+  <text x="561.25" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)">Preview changes</text>
 
   <!-- Arrow 3->4 -->
-  <line x1="636" y1="300" x2="676" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="636.25" y1="311.875" x2="673.75" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 4: Approve -->
-  <rect x="684" y="230" rx="6" width="160" height="140" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="684" y="230" rx="6" width="160" height="35" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="764" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">4. Approve</text>
-  <text x="764" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Manual gate</text>
-  <text x="764" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">approval</text>
-  <text x="764" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Safety check</text>
+  <rect x="681.25" y="248.4375" rx="6" width="150" height="126.875" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="681.25" y="248.4375" rx="6" width="150" height="31.7188" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="756.25" y="269.2812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">4. Approve</text>
+  <text x="756.25" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Manual gate</text>
+  <text x="756.25" y="319.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">approval</text>
+  <text x="756.25" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)">Safety check</text>
 
   <!-- Arrow 4->5 -->
-  <line x1="844" y1="300" x2="884" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="831.25" y1="311.875" x2="868.75" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 5: Apply -->
-  <rect x="892" y="230" rx="6" width="160" height="140" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="892" y="230" rx="6" width="160" height="35" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="972" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">5. Apply</text>
-  <text x="972" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Execute</text>
-  <text x="972" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">changes</text>
-  <text x="972" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Provision infra</text>
+  <rect x="876.25" y="248.4375" rx="6" width="150" height="126.875" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="876.25" y="248.4375" rx="6" width="150" height="31.7188" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="951.25" y="269.2812" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--bg)">5. Apply</text>
+  <text x="951.25" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Execute</text>
+  <text x="951.25" y="319.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">changes</text>
+  <text x="951.25" y="339.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-faint)">Provision infra</text>
 
   <!-- Arrow 5->6 -->
-  <line x1="1052" y1="300" x2="1092" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1026.25" y1="311.875" x2="1063.75" y2="311.875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 6: Infrastructure -->
-  <rect x="1100" y="230" rx="6" width="120" height="140" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1160" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Live</text>
-  <text x="1160" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Infra</text>
+  <rect x="1071.25" y="248.4375" rx="6" width="112.5" height="126.875" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.5" y="302.8125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Live</text>
+  <text x="1127.5" y="320.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Infra</text>
 
   <!-- Top labels -->
-  <text x="640" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Infrastructure as Code Pipeline</text>
+  <text x="640" y="85.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Infrastructure as Code Pipeline</text>
 
   <!-- Phase labels above pipeline -->
-  <rect x="60" y="160" rx="6" width="366" height="28" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="243" y="179" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Development Phase</text>
+  <rect x="96.25" y="185" rx="6" width="343.125" height="25.375" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="267.8125" y="202.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Development Phase</text>
 
-  <rect x="476" y="160" rx="6" width="366" height="28" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="659" y="179" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Validation Phase</text>
+  <rect x="486.25" y="185" rx="6" width="343.125" height="25.375" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="657.8125" y="202.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Validation Phase</text>
 
-  <rect x="892" y="160" rx="6" width="328" height="28" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1056" y="179" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Deployment Phase</text>
+  <rect x="876.25" y="185" rx="6" width="307.5" height="25.375" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="1030" y="202.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Deployment Phase</text>
 
   <!-- Bottom: Key benefits -->
-  <rect x="120" y="450" rx="6" width="220" height="60" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="230" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)">Reproducible</text>
-  <text x="230" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Same code = same infra</text>
+  <rect x="152.5" y="447.8125" rx="6" width="206.25" height="54.375" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="255.625" y="473.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Reproducible</text>
+  <text x="255.625" y="491.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Same code = same infra</text>
 
-  <rect x="390" y="450" rx="6" width="220" height="60" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="500" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Auditable</text>
-  <text x="500" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Full change history</text>
+  <rect x="405.625" y="447.8125" rx="6" width="206.25" height="54.375" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="508.75" y="473.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Auditable</text>
+  <text x="508.75" y="491.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Full change history</text>
 
-  <rect x="660" y="450" rx="6" width="220" height="60" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="770" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Scalable</text>
-  <text x="770" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Manage 1000s of resources</text>
+  <rect x="658.75" y="447.8125" rx="6" width="206.25" height="54.375" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="761.875" y="473.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">Scalable</text>
+  <text x="761.875" y="491.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Manage 1000s of resources</text>
 
-  <rect x="930" y="450" rx="6" width="220" height="60" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1040" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--info-accent)">Rollback</text>
-  <text x="1040" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Revert to any version</text>
+  <rect x="911.875" y="447.8125" rx="6" width="206.25" height="54.375" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1015" y="473.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--info-accent)">Rollback</text>
+  <text x="1015" y="491.3125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Revert to any version</text>
 
   <!-- Tools listed -->
-  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Tools: Terraform | Pulumi | AWS CloudFormation | Azure Bicep | Google Deployment Manager</text>
+  <text x="640" y="556.5625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)">Tools: Terraform | Pulumi | AWS CloudFormation | Azure Bicep | Google Deployment Manager</text>
 </svg>

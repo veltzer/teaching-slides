@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="17.9312" y="15.6098" width="1129.666" height="624.3902" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="582.7642" y="70.2439" text-anchor="middle" font-size="28.0975" font-weight="bold" fill="var(--text)">Virtual Patching</text>
-  <rect x="53.7936" y="93.6585" width="1057.9412" height="124.8781" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="582.7642" y="128" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="var(--danger-accent)">When you CAN'T patch immediately:</text>
-  <text x="89.656" y="159.2195" font-size="18.7317" fill="var(--text-muted)">- Legacy systems that cannot be updated</text>
-  <text x="89.656" y="184.1951" font-size="18.7317" fill="var(--text-muted)">- Patch not yet available (zero-day)</text>
-  <text x="627.5922" y="159.2195" font-size="18.7317" fill="var(--text-muted)">- Testing/change control delays</text>
-  <text x="582.7642" y="257.5609" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="var(--text)">Solution: Block the exploit at the network/WAF level</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="90.75" text-anchor="middle" font-size="27.9106" font-weight="bold" fill="var(--text)">Virtual Patching</text>
+  <rect x="78.0952" y="112.4999" width="1123.8096" height="116.0001" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="640" y="144.4" text-anchor="middle" font-size="21.7083" font-weight="bold" fill="var(--danger-accent)">When you CAN'T patch immediately:</text>
+  <text x="116.1904" y="173.4" font-size="18.6071" fill="var(--text-muted)">- Legacy systems that cannot be updated</text>
+  <text x="116.1904" y="196.5999" font-size="18.6071" fill="var(--text-muted)">- Patch not yet available (zero-day)</text>
+  <text x="687.619" y="173.4" font-size="18.6071" fill="var(--text-muted)">- Testing/change control delays</text>
+  <text x="640" y="264.7499" text-anchor="middle" font-size="21.7083" font-weight="bold" fill="var(--text)">Solution: Block the exploit at the network/WAF level</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,23 +105,23 @@
       <polygon points="0,17.1429 6.8923,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <rect x="89.656" y="296.5854" width="215.1745" height="78.0488" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="197.2433" y="343.4146" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="var(--danger-accent)">Attacker</text>
-  <line x1="304.8305" y1="335.6097" x2="430.3489" y2="335.6097" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="367.5897" y="320" text-anchor="middle" font-size="17.1707" fill="var(--danger-accent)">Exploit</text>
-  <rect x="439.3145" y="288.7805" width="268.9681" height="93.6585" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="573.7985" y="327.8049" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="var(--ok-accent)">WAF</text>
-  <text x="573.7985" y="355.9024" text-anchor="middle" font-size="17.1707" fill="var(--text-muted)">(virtual patch)</text>
-  <line x1="708.2827" y1="335.6097" x2="788.973" y2="335.6097" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="806.9042" y="327.8049" font-size="37.4635" font-weight="bold" fill="var(--danger-accent)">X</text>
-  <line x1="842.7667" y1="335.6097" x2="878.6291" y2="335.6097" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6.2439 4.683" />
-  <rect x="887.5946" y="296.5854" width="179.3121" height="78.0488" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="977.2507" y="343.4146" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="var(--primary-accent)">App</text>
-  <rect x="53.7936" y="421.4633" width="1057.9412" height="187.3171" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="582.7642" y="460.4878" text-anchor="middle" font-size="21.8537" font-weight="bold" fill="var(--ok-accent)">Tools</text>
-  <text x="143.4497" y="499.5121" font-size="18.7317" fill="var(--text)">- Web Application Firewall (WAF) rules</text>
-  <text x="143.4497" y="530.7316" font-size="18.7317" fill="var(--text)">- IPS signatures</text>
-  <text x="143.4497" y="561.9512" font-size="18.7317" fill="var(--text)">- Network segmentation</text>
-  <text x="663.4546" y="499.5121" font-size="18.7317" fill="var(--text)">- Snort/Suricata rules</text>
-  <text x="663.4546" y="530.7316" font-size="18.7317" fill="var(--text)">- ModSecurity CRS</text>
+  <rect x="116.1904" y="301" width="228.5715" height="72.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="230.4762" y="344.4999" text-anchor="middle" font-size="21.7083" font-weight="bold" fill="var(--danger-accent)">Attacker</text>
+  <line x1="344.7619" y1="337.2499" x2="478.0952" y2="337.2499" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arr)" />
+  <text x="411.4285" y="322.75" text-anchor="middle" font-size="17.0565" fill="var(--danger-accent)">Exploit</text>
+  <rect x="487.619" y="293.75" width="285.7143" height="87" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="630.4761" y="330" text-anchor="middle" font-size="21.7083" font-weight="bold" fill="var(--ok-accent)">WAF</text>
+  <text x="630.4761" y="356.0999" text-anchor="middle" font-size="17.0565" fill="var(--text-muted)">(virtual patch)</text>
+  <line x1="773.3334" y1="337.2499" x2="859.0475" y2="337.2499" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="878.0952" y="330" font-size="37.2143" font-weight="bold" fill="var(--danger-accent)">X</text>
+  <line x1="916.1905" y1="337.2499" x2="954.2857" y2="337.2499" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6.2439 4.683" />
+  <rect x="963.8094" y="301" width="190.4762" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="1059.0476" y="344.4999" text-anchor="middle" font-size="21.7083" font-weight="bold" fill="var(--primary-accent)">App</text>
+  <rect x="78.0952" y="416.9999" width="1123.8096" height="174" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="453.25" text-anchor="middle" font-size="21.7083" font-weight="bold" fill="var(--ok-accent)">Tools</text>
+  <text x="173.3334" y="489.4999" font-size="18.6071" fill="var(--text)">- Web Application Firewall (WAF) rules</text>
+  <text x="173.3334" y="518.4999" font-size="18.6071" fill="var(--text)">- IPS signatures</text>
+  <text x="173.3334" y="547.5" font-size="18.6071" fill="var(--text)">- Network segmentation</text>
+  <text x="725.7143" y="489.4999" font-size="18.6071" fill="var(--text)">- Snort/Suricata rules</text>
+  <text x="725.7143" y="518.4999" font-size="18.6071" fill="var(--text)">- ModSecurity CRS</text>
 </svg>

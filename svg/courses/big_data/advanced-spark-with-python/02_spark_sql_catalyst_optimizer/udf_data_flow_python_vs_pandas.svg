@@ -97,49 +97,49 @@
       <polygon points="0,20 6.2222,0" fill="#333" />
     </marker>
   </defs>
-  <text x="604.4444" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.8889" font-weight="bold" fill="var(--danger-accent)">Python UDF (row-by-row)</text>
-  <rect x="53.3333" y="70" width="248.8889" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="177.7778" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3333" fill="var(--text)">JVM</text>
-  <text x="177.7778" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" fill="var(--text-muted)">Row 1</text>
-  <line x1="302.2222" y1="110" x2="391.1111" y2="110" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="400" y="70" width="248.8889" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="524.4444" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3333" fill="var(--text)">Serialize</text>
-  <text x="524.4444" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" fill="var(--text-muted)">(pickle)</text>
-  <line x1="648.8889" y1="110" x2="737.7778" y2="110" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="746.6667" y="70" width="248.8889" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="871.1111" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3333" fill="var(--text)">Python func()</text>
-  <line x1="871.1111" y1="150" x2="871.1111" y2="190" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="746.6667" y="200" width="248.8889" height="60" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="871.1111" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--text)">Result</text>
-  <line x1="746.6667" y1="230" x2="648.8889" y2="230" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="400" y="200" width="248.8889" height="60" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="524.4444" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--text)">Deserialize</text>
-  <line x1="400" y1="230" x2="302.2222" y2="230" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="53.3333" y="200" width="248.8889" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="177.7778" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--text)">JVM Result</text>
-  <text x="1084.4444" y="160" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--danger-accent)" font-weight="bold">x N rows</text>
-  <text x="1084.4444" y="190" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--danger-accent)">(very slow!)</text>
-  <text x="604.4444" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.8889" font-weight="bold" fill="var(--ok-accent)">Pandas UDF (batch)</text>
-  <rect x="53.3333" y="370" width="248.8889" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="177.7778" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3333" fill="var(--text)">JVM Batch</text>
-  <text x="177.7778" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" fill="var(--text-muted)">(10K rows)</text>
-  <line x1="302.2222" y1="420" x2="391.1111" y2="420" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="400" y="370" width="248.8889" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="524.4444" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3333" fill="var(--text)">Arrow</text>
-  <text x="524.4444" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" fill="var(--text-muted)">(zero-copy)</text>
-  <line x1="648.8889" y1="420" x2="737.7778" y2="420" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="746.6667" y="370" width="248.8889" height="100" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="871.1111" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.3333" fill="var(--text)">Python pandas</text>
-  <text x="871.1111" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.7778" fill="var(--text-muted)">vectorized</text>
-  <line x1="871.1111" y1="470" x2="871.1111" y2="510" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="746.6667" y="520" width="248.8889" height="60" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="871.1111" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--text)">Result Series</text>
-  <line x1="746.6667" y1="550" x2="648.8889" y2="550" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="400" y="520" width="248.8889" height="60" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="524.4444" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--text)">Arrow</text>
-  <line x1="400" y1="550" x2="302.2222" y2="550" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
-  <rect x="53.3333" y="520" width="248.8889" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="177.7778" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--text)">JVM Result</text>
-  <text x="1084.4444" y="480" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--ok-accent)" font-weight="bold">x N/10K batches</text>
-  <text x="1084.4444" y="510" font-family="Arial, sans-serif" font-size="19.5556" fill="var(--ok-accent)">(much faster!)</text>
+  <text x="681.3793" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.8266" font-weight="bold" fill="var(--danger-accent)">Python UDF (row-by-row)</text>
+  <rect x="40" y="72.2222" width="289.6552" height="85.9259" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="184.8277" y="115.1852" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8514" fill="var(--text)">JVM</text>
+  <text x="184.8277" y="143.1111" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8762" fill="var(--text-muted)">Row 1</text>
+  <line x1="329.6552" y1="115.1852" x2="433.1035" y2="115.1852" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="443.4483" y="72.2222" width="289.6552" height="85.9259" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="588.2759" y="115.1852" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8514" fill="var(--text)">Serialize</text>
+  <text x="588.2759" y="143.1111" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8762" fill="var(--text-muted)">(pickle)</text>
+  <line x1="733.1035" y1="115.1852" x2="836.5518" y2="115.1852" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="846.8966" y="72.2222" width="289.6552" height="85.9259" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="991.7242" y="115.1852" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8514" fill="var(--text)">Python func()</text>
+  <line x1="991.7242" y1="158.1481" x2="991.7242" y2="201.1111" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="846.8966" y="211.8519" width="289.6552" height="64.4444" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="991.7242" y="254.8148" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--text)">Result</text>
+  <line x1="846.8966" y1="244.0741" x2="733.1035" y2="244.0741" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="443.4483" y="211.8519" width="289.6552" height="64.4444" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="588.2759" y="254.8148" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--text)">Deserialize</text>
+  <line x1="443.4483" y1="244.0741" x2="329.6552" y2="244.0741" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="40" y="211.8519" width="289.6552" height="64.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="184.8277" y="254.8148" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--text)">JVM Result</text>
+  <text x="1240" y="168.8889" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--danger-accent)" font-weight="bold">x N rows</text>
+  <text x="1240" y="201.1111" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--danger-accent)">(very slow!)</text>
+  <text x="681.3793" y="362.2222" text-anchor="middle" font-family="Arial, sans-serif" font-size="27.8266" font-weight="bold" fill="var(--ok-accent)">Pandas UDF (batch)</text>
+  <rect x="40" y="394.4444" width="289.6552" height="107.4074" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="184.8277" y="437.4074" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8514" fill="var(--text)">JVM Batch</text>
+  <text x="184.8277" y="473.9259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8762" fill="var(--text-muted)">(10K rows)</text>
+  <line x1="329.6552" y1="448.1481" x2="433.1035" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="443.4483" y="394.4444" width="289.6552" height="107.4074" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="588.2759" y="437.4074" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8514" fill="var(--text)">Arrow</text>
+  <text x="588.2759" y="473.9259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8762" fill="var(--text-muted)">(zero-copy)</text>
+  <line x1="733.1035" y1="448.1481" x2="836.5518" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="846.8966" y="394.4444" width="289.6552" height="107.4074" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="991.7242" y="437.4074" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8514" fill="var(--text)">Python pandas</text>
+  <text x="991.7242" y="473.9259" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8762" fill="var(--text-muted)">vectorized</text>
+  <line x1="991.7242" y1="501.8519" x2="991.7242" y2="544.8148" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="846.8966" y="555.5556" width="289.6552" height="64.4444" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="991.7242" y="598.5185" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--text)">Result Series</text>
+  <line x1="846.8966" y1="587.7778" x2="733.1035" y2="587.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="443.4483" y="555.5556" width="289.6552" height="64.4444" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="588.2759" y="598.5185" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--text)">Arrow</text>
+  <line x1="443.4483" y1="587.7778" x2="329.6552" y2="587.7778" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-udf)" />
+  <rect x="40" y="555.5556" width="289.6552" height="64.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="184.8277" y="598.5185" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--text)">JVM Result</text>
+  <text x="1240" y="512.5926" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--ok-accent)" font-weight="bold">x N/10K batches</text>
+  <text x="1240" y="544.8148" font-family="Arial, sans-serif" font-size="21.8638" fill="var(--ok-accent)">(much faster!)</text>
 </svg>

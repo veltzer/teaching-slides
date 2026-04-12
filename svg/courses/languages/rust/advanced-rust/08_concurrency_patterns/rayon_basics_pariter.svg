@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="598.8304" y="50.5263" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="var(--text)">Rayon par_iter: Work-Stealing Parallelism</text>
-  <text x="598.8304" y="109.4737" text-anchor="middle" font-size="25.2632" font-weight="bold" fill="var(--primary-accent)">Sequential</text>
-  <rect x="85.5472" y="126.3158" width="1026.5665" height="75.7895" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="136.8755" y="171.7895" font-size="20.2105" fill="var(--text)">[1, 2, 3, 4, 5, 6, 7, 8]</text>
-  <text x="479.0643" y="171.7895" font-size="20.2105" fill="var(--text-muted)">--&gt; map --&gt; map --&gt; map --&gt; ... --&gt; sum</text>
-  <text x="598.8304" y="261.0526" text-anchor="middle" font-size="25.2632" font-weight="bold" fill="var(--ok-accent)">Parallel (rayon work-stealing)</text>
-  <rect x="256.6416" y="286.3158" width="684.3776" height="58.9474" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="598.8304" y="325.0526" text-anchor="middle" font-size="21.8947" fill="var(--text)">[1, 2, 3, 4, 5, 6, 7, 8]</text>
-  <line x1="461.9549" y1="345.2632" x2="342.1888" y2="387.3684" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
-  <line x1="735.7059" y1="345.2632" x2="855.472" y2="387.3684" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
-  <rect x="171.0944" y="387.3684" width="342.1888" height="117.8947" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="342.1888" y="429.4737" text-anchor="middle" font-size="21.8947" font-weight="bold" fill="var(--text)">Thread 1</text>
-  <text x="342.1888" y="463.1579" text-anchor="middle" font-size="20.2105" fill="var(--text-muted)">[1, 2, 3, 4] map+sum</text>
-  <rect x="684.3776" y="387.3684" width="342.1888" height="117.8947" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="855.472" y="429.4737" text-anchor="middle" font-size="21.8947" font-weight="bold" fill="var(--text)">Thread 2</text>
-  <text x="855.472" y="463.1579" text-anchor="middle" font-size="20.2105" fill="var(--text-muted)">[5, 6, 7, 8] map+sum</text>
-  <line x1="342.1888" y1="505.2632" x2="547.5021" y2="572.6316" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
-  <line x1="855.472" y1="505.2632" x2="650.1587" y2="572.6316" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
-  <rect x="496.1738" y="572.6316" width="205.3133" height="67.3684" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="598.8304" y="614.7368" text-anchor="middle" font-size="23.5789" font-weight="bold" fill="var(--text)">combine</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="32.5123" font-weight="bold" fill="var(--text)">Rayon par_iter: Work-Stealing Parallelism</text>
+  <text x="639.9999" y="98" text-anchor="middle" font-size="27.0936" font-weight="bold" fill="var(--primary-accent)">Sequential</text>
+  <rect x="40" y="114.5715" width="1200" height="74.5715" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="100" y="159.3143" font-size="21.6748" fill="var(--text)">[1, 2, 3, 4, 5, 6, 7, 8]</text>
+  <text x="499.9999" y="159.3143" font-size="21.6748" fill="var(--text-muted)">--&gt; map --&gt; map --&gt; map --&gt; ... --&gt; sum</text>
+  <text x="639.9999" y="247.1428" text-anchor="middle" font-size="27.0936" font-weight="bold" fill="var(--ok-accent)">Parallel (rayon work-stealing)</text>
+  <rect x="240" y="272" width="799.9999" height="58" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="639.9999" y="310.1143" text-anchor="middle" font-size="23.4811" fill="var(--text)">[1, 2, 3, 4, 5, 6, 7, 8]</text>
+  <line x1="480" y1="330" x2="340" y2="371.4286" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
+  <line x1="799.9999" y1="330" x2="939.9999" y2="371.4286" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
+  <rect x="140" y="371.4286" width="400" height="116" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="340" y="412.8572" text-anchor="middle" font-size="23.4811" font-weight="bold" fill="var(--text)">Thread 1</text>
+  <text x="340" y="446" text-anchor="middle" font-size="21.6748" fill="var(--text-muted)">[1, 2, 3, 4] map+sum</text>
+  <rect x="739.9999" y="371.4286" width="400" height="116" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="939.9999" y="412.8572" text-anchor="middle" font-size="23.4811" font-weight="bold" fill="var(--text)">Thread 2</text>
+  <text x="939.9999" y="446" text-anchor="middle" font-size="21.6748" fill="var(--text-muted)">[5, 6, 7, 8] map+sum</text>
+  <line x1="340" y1="487.4286" x2="580" y2="553.7143" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
+  <line x1="939.9999" y1="487.4286" x2="699.9999" y2="553.7143" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowG)" />
+  <rect x="520" y="553.7143" width="240" height="66.2857" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.9999" y="595.1428" text-anchor="middle" font-size="25.2873" font-weight="bold" fill="var(--text)">combine</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

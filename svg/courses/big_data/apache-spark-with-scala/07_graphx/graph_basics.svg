@@ -1,18 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">A((V1))</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B((V2))</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C((V3))</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">A</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,12 +92,59 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="393" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3894" font-weight="bold" fill="var(--text)">GraphX Basics</text>
+
+  <text x="640" y="76.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" fill="var(--text-muted)">A Graph[VD, ED] is a property graph: vertices and edges both carry typed data.</text>
+
+  <rect x="40" y="102.1429" width="600" height="310.7143" rx="6.1062" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="340" y="138.3929" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--text)">Example — social graph</text>
+
+  <ellipse cx="150" cy="221.25" rx="55" ry="36.25" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="150" y="218.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--primary-text)">1: Alice</text>
+  <text x="150" y="235.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--primary-text)">age 29</text>
+
+  <ellipse cx="350" cy="179.8214" rx="55" ry="36.25" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="350" y="176.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--primary-text)">2: Bob</text>
+  <text x="350" y="194.3214" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--primary-text)">age 35</text>
+
+  <ellipse cx="550" cy="221.25" rx="55" ry="36.25" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="550" y="218.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--primary-text)">3: Carol</text>
+  <text x="550" y="235.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--primary-text)">age 41</text>
+
+  <ellipse cx="350" cy="345.5357" rx="55" ry="36.25" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="350" y="342.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--primary-text)">4: Dan</text>
+  <text x="350" y="360.0357" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--primary-text)">age 22</text>
+
+  <line x1="205" y1="216.0714" x2="295" y2="190.1786" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="238" y="190.1786" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--text-muted)">follows</text>
+
+  <line x1="405" y1="195.3571" x2="495" y2="216.0714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="438" y="190.1786" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--text-muted)">follows</text>
+
+  <line x1="205" y1="231.6071" x2="295" y2="335.1786" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="225" y="298.9286" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--text-muted)">manages</text>
+
+  <line x1="550" y1="257.5" x2="405" y2="345.5357" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="450" y="319.6429" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--text-muted)">mentors</text>
+
+  <rect x="660" y="102.1429" width="580" height="310.7143" rx="6.1062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="138.3929" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--ok-text)">Data model</text>
+  <text x="950" y="169.4643" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">Vertex — VertexRDD[(VertexId, VD)]</text>
+  <text x="950" y="190.1786" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">id is a Long; VD is the user's type</text>
+  <text x="950" y="216.0714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">(1L, ("Alice", 29))</text>
+  <text x="950" y="247.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">Edge — EdgeRDD[Edge[ED]]</text>
+  <text x="950" y="267.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">directed: srcId, dstId, ED attribute</text>
+  <text x="950" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">Edge(1L, 2L, "follows")</text>
+  <text x="950" y="324.8214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">Triplet — EdgeTriplet[VD, ED]</text>
+  <text x="950" y="345.5357" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">(srcId, srcAttr, dstId, dstAttr, attr)</text>
+  <text x="950" y="376.6071" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--ok-text)">join of vertex + edge RDDs for algorithms</text>
+
+  <rect x="40" y="433.5714" width="1200" height="186.4286" rx="6.1062" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="469.8214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--warn-text)">Building a Graph</text>
+  <text x="80" y="506.0714" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">val users: RDD[(Long, (String, Int))] = sc.parallelize(Seq((1L, ("Alice", 29)), (2L, ("Bob", 35)), ...))</text>
+  <text x="80" y="531.9643" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">val edges: RDD[Edge[String]] = sc.parallelize(Seq(Edge(1L, 2L, "follows"), Edge(2L, 3L, "follows"), ...))</text>
+  <text x="80" y="557.8571" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">val graph = Graph(users, edges)</text>
+  <text x="80" y="594.1071" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">graph.vertices.count, graph.edges.count, graph.triplets.filter(t =&gt; t.attr == "follows")</text>
 </svg>

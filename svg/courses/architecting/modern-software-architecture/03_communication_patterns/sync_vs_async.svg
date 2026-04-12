@@ -101,82 +101,82 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <line x1="568.8889" y1="26.6667" x2="568.8889" y2="586.6667" stroke="var(--border)" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
-  <text x="284.4444" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="var(--primary-accent)">Synchronous (REST / gRPC)</text>
-  <rect x="53.3333" y="71.1111" width="133.3333" height="44.4444" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="120" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)">Client</text>
-  <rect x="391.1111" y="71.1111" width="133.3333" height="44.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="457.7778" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--text)">Server</text>
-  <line x1="186.6667" y1="87.1111" x2="389.3333" y2="87.1111" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="288" y="80.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--primary-accent)">HTTP GET /orders</text>
-  <line x1="389.3333" y1="104.8889" x2="186.6667" y2="104.8889" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="288" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">200 OK { data }</text>
-  <rect x="53.3333" y="137.7778" width="133.3333" height="26.6667" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="120" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--warn-accent)">⏳ Waiting…</text>
-  <rect x="53.3333" y="191.1111" width="471.1111" height="71.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="80" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text)">gRPC (binary, typed)</text>
-  <text x="80" y="231.1111" font-family="monospace" font-size="11.5556" fill="var(--primary-accent)">stub.GetOrder(GetOrderRequest{id: 1})</text>
-  <text x="80" y="248.8889" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">← Blocks until server responds</text>
-  <rect x="53.3333" y="284.4444" width="471.1111" height="142.2222" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="288.8889" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--primary-accent)">Characteristics</text>
-  <text x="71.1111" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Simple request/response model</text>
-  <text x="71.1111" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Easy to debug and trace</text>
-  <text x="71.1111" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Immediate error feedback</text>
-  <text x="71.1111" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− Temporal coupling (both must be up)</text>
-  <text x="71.1111" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− Caller blocked while waiting</text>
-  <rect x="53.3333" y="444.4444" width="142.2222" height="39.1111" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" filter="url(#shadow)" />
-  <text x="124.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">REST / HTTP</text>
-  <rect x="208.8889" y="444.4444" width="142.2222" height="39.1111" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" filter="url(#shadow)" />
-  <text x="280" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">gRPC</text>
-  <rect x="364.4444" y="444.4444" width="160" height="39.1111" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" filter="url(#shadow)" />
-  <text x="444.4444" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">GraphQL</text>
-  <text x="853.3333" y="48.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.5556" font-weight="bold" fill="var(--primary-accent)">Asynchronous (Queue / Event Bus)</text>
-  <rect x="586.6667" y="71.1111" width="133.3333" height="44.4444" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="653.3333" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--bg)">Producer</text>
-  <rect x="760" y="62.2222" width="177.7778" height="62.2222" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="848.8889" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--warn-accent)">Message Queue</text>
-  <rect x="771.5556" y="93.3333" width="26.6667" height="21.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="803.5556" y="93.3333" width="26.6667" height="21.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="835.5556" y="93.3333" width="26.6667" height="21.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="867.5556" y="93.3333" width="26.6667" height="21.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="977.7778" y="71.1111" width="133.3333" height="44.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="1044.4444" y="98.6667" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.2222" font-weight="bold" fill="var(--text)">Consumer</text>
-  <line x1="720" y1="93.3333" x2="758.2222" y2="93.3333" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
-  <text x="738.6667" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--primary-accent)">publish</text>
-  <line x1="937.7778" y1="93.3333" x2="976" y2="93.3333" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
-  <text x="956.4444" y="87.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text-muted)">consume</text>
-  <rect x="586.6667" y="137.7778" width="133.3333" height="26.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="653.3333" y="155.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--ok-accent)">✓ Free to continue</text>
-  <rect x="586.6667" y="191.1111" width="515.5556" height="71.1111" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="613.3333" y="211.5556" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text)">Event Bus (Pub/Sub)</text>
-  <rect x="622.2222" y="224" width="106.6667" height="26.6667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="675.5556" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text)">Publisher</text>
-  <rect x="764.4444" y="217.7778" width="115.5556" height="39.1111" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="822.2222" y="233.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--warn-accent)">Kafka / SNS</text>
-  <text x="822.2222" y="248.8889" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">Event Bus</text>
-  <rect x="915.5556" y="224" width="88.8889" height="26.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="960" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text)">Subscriber</text>
-  <rect x="1013.3333" y="224" width="88.8889" height="26.6667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1057.7778" y="241.7778" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.6667" fill="var(--text)">Subscriber</text>
-  <line x1="728.8889" y1="237.3333" x2="762.6667" y2="237.3333" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
-  <line x1="880" y1="237.3333" x2="913.7778" y2="237.3333" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <line x1="880" y1="237.3333" x2="1011.5556" y2="237.3333" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
-  <rect x="586.6667" y="284.4444" width="515.5556" height="142.2222" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="844.4444" y="309.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.3333" font-weight="bold" fill="var(--ok-accent)">Characteristics</text>
-  <text x="604.4444" y="330.6667" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Temporal decoupling (sender not blocked)</text>
-  <text x="604.4444" y="351.1111" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Resilience (messages buffered)</text>
-  <text x="604.4444" y="371.5556" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">+ Fan-out / broadcast to many consumers</text>
-  <text x="604.4444" y="392" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− No immediate response / harder to debug</text>
-  <text x="604.4444" y="412.4444" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">− Eventual consistency challenges</text>
-  <rect x="586.6667" y="444.4444" width="151.1111" height="39.1111" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778" filter="url(#shadow)" />
-  <text x="662.2222" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">RabbitMQ</text>
-  <rect x="749.3333" y="444.4444" width="151.1111" height="39.1111" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778" filter="url(#shadow)" />
-  <text x="824.8889" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">Kafka</text>
-  <rect x="912" y="444.4444" width="151.1111" height="39.1111" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778" filter="url(#shadow)" />
-  <text x="987.5556" y="469.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" fill="var(--text)">AWS SQS/SNS</text>
-  <rect x="53.3333" y="515.5556" width="1031.1111" height="40.8889" rx="6" fill="var(--surface)" />
-  <text x="568.8889" y="531.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.4444" font-weight="bold" fill="var(--text)">When to choose?</text>
-  <text x="284.4444" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">Sync: real-time query, user-facing, simple flows</text>
-  <text x="853.3333" y="549.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.5556" fill="var(--text-muted)">Async: background jobs, fan-out, decoupled services</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <line x1="640" y1="64.1667" x2="640" y2="571.6667" stroke="var(--border)" stroke-width="1.7778" stroke-dasharray="5.3333 3.5556" />
+  <text x="339.9999" y="84.3056" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Synchronous (REST / gRPC)</text>
+  <rect x="96.25" y="104.4444" width="140.625" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="166.5625" y="129.4167" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--bg)">Client</text>
+  <rect x="452.5" y="104.4444" width="140.625" height="40.2777" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="522.8125" y="129.4167" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">Server</text>
+  <line x1="236.875" y1="118.9444" x2="450.625" y2="118.9444" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <text x="343.75" y="113.3056" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--primary-accent)">HTTP GET /orders</text>
+  <line x1="450.625" y1="135.0556" x2="236.875" y2="135.0556" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="343.75" y="148.75" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">200 OK { data }</text>
+  <rect x="96.25" y="164.8611" width="140.625" height="24.1667" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="166.5625" y="180.9723" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--warn-accent)">⏳ Waiting…</text>
+  <rect x="96.25" y="213.1944" width="496.875" height="64.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="124.375" y="231.7223" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text)">gRPC (binary, typed)</text>
+  <text x="124.375" y="249.4444" font-family="monospace" font-size="11.2974" fill="var(--primary-accent)">stub.GetOrder(GetOrderRequest{id: 1})</text>
+  <text x="124.375" y="265.5556" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">← Blocks until server responds</text>
+  <rect x="96.25" y="297.7777" width="496.875" height="128.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="344.6875" y="320.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--primary-accent)">Characteristics</text>
+  <text x="115" y="339.6667" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">+ Simple request/response model</text>
+  <text x="115" y="358.1944" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">+ Easy to debug and trace</text>
+  <text x="115" y="376.7223" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">+ Immediate error feedback</text>
+  <text x="115" y="395.25" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">− Temporal coupling (both must be up)</text>
+  <text x="115" y="413.7777" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">− Caller blocked while waiting</text>
+  <rect x="96.25" y="442.7777" width="150" height="35.4444" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="171.25" y="465.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">REST / HTTP</text>
+  <rect x="260.3125" y="442.7777" width="150" height="35.4444" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="335.3125" y="465.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">gRPC</text>
+  <rect x="424.3749" y="442.7777" width="168.75" height="35.4444" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="508.7499" y="465.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">GraphQL</text>
+  <text x="939.9999" y="84.3056" text-anchor="middle" font-family="Arial,sans-serif" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Asynchronous (Queue / Event Bus)</text>
+  <rect x="658.75" y="104.4444" width="140.625" height="40.2777" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="729.0625" y="129.4167" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--bg)">Producer</text>
+  <rect x="841.5625" y="96.3889" width="187.5" height="56.3889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="935.3125" y="118.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--warn-accent)">Message Queue</text>
+  <rect x="853.75" y="124.5833" width="28.125" height="19.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="887.5" y="124.5833" width="28.125" height="19.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="921.25" y="124.5833" width="28.125" height="19.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="955" y="124.5833" width="28.125" height="19.3333" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="1071.25" y="104.4444" width="140.625" height="40.2777" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1141.5624" y="129.4167" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.9044" font-weight="bold" fill="var(--text)">Consumer</text>
+  <line x1="799.375" y1="124.5833" x2="839.6875" y2="124.5833" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
+  <text x="819.0625" y="118.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--primary-accent)">publish</text>
+  <line x1="1029.0625" y1="124.5833" x2="1069.375" y2="124.5833" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#arrow)" />
+  <text x="1048.7499" y="118.9444" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text-muted)">consume</text>
+  <rect x="658.75" y="164.8611" width="140.625" height="24.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="729.0625" y="180.9723" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--ok-accent)">✓ Free to continue</text>
+  <rect x="658.75" y="213.1944" width="543.75" height="64.4444" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="686.875" y="231.7223" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text)">Event Bus (Pub/Sub)</text>
+  <rect x="696.25" y="243" width="112.5" height="24.1667" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="752.5" y="259.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">Publisher</text>
+  <rect x="846.2499" y="237.3611" width="121.875" height="35.4444" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="907.1875" y="251.8611" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--warn-accent)">Kafka / SNS</text>
+  <text x="907.1875" y="265.5556" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="var(--text-muted)">Event Bus</text>
+  <rect x="1005.625" y="243" width="93.75" height="24.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1052.5" y="259.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">Subscriber</text>
+  <rect x="1108.7499" y="243" width="93.75" height="24.1667" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1155.625" y="259.1111" text-anchor="middle" font-family="Arial,sans-serif" font-size="10.4284" fill="var(--text)">Subscriber</text>
+  <line x1="808.75" y1="255.0833" x2="844.375" y2="255.0833" stroke="var(--primary-border)" stroke-width="1.3333" marker-end="url(#arrow-primary)" />
+  <line x1="968.125" y1="255.0833" x2="1003.75" y2="255.0833" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <line x1="968.125" y1="255.0833" x2="1106.875" y2="255.0833" stroke="var(--text-muted)" stroke-width="1.3333" marker-end="url(#arrow)" />
+  <rect x="658.75" y="297.7777" width="543.75" height="128.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="930.6249" y="320.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0354" font-weight="bold" fill="var(--ok-accent)">Characteristics</text>
+  <text x="677.4999" y="339.6667" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">+ Temporal decoupling (sender not blocked)</text>
+  <text x="677.4999" y="358.1944" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">+ Resilience (messages buffered)</text>
+  <text x="677.4999" y="376.7223" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">+ Fan-out / broadcast to many consumers</text>
+  <text x="677.4999" y="395.25" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">− No immediate response / harder to debug</text>
+  <text x="677.4999" y="413.7777" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">− Eventual consistency challenges</text>
+  <rect x="658.75" y="442.7777" width="159.375" height="35.4444" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="738.4375" y="465.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">RabbitMQ</text>
+  <rect x="830.3124" y="442.7777" width="159.375" height="35.4444" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="910" y="465.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">Kafka</text>
+  <rect x="1001.875" y="442.7777" width="159.375" height="35.4444" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.7778" filter="url(#shadow)" />
+  <text x="1081.5625" y="465.3333" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" fill="var(--text)">AWS SQS/SNS</text>
+  <rect x="96.25" y="507.2223" width="1087.5" height="37.0556" rx="6" fill="var(--surface)" />
+  <text x="640" y="521.7223" text-anchor="middle" font-family="Arial,sans-serif" font-size="12.1663" font-weight="bold" fill="var(--text)">When to choose?</text>
+  <text x="339.9999" y="537.8333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">Sync: real-time query, user-facing, simple flows</text>
+  <text x="939.9999" y="537.8333" text-anchor="middle" font-family="Arial,sans-serif" font-size="11.2974" fill="var(--text-muted)">Async: background jobs, fan-out, decoupled services</text>
 </svg>

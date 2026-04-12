@@ -97,48 +97,48 @@
       <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-  <text x="583.4758" y="49.2308" text-anchor="middle" font-family="Arial" font-size="29.1738" font-weight="bold" fill="var(--primary-accent)">Dynamic Partition Pruning</text>
-  <text x="277.151" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="var(--danger-accent)">Without DPP</text>
-  <rect x="131.2821" y="123.0769" width="291.7379" height="57.4359" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="277.151" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="var(--text)">SELECT * FROM fact JOIN dim</text>
-  <rect x="72.9345" y="213.3333" width="80.2279" height="180.5128" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="112.3191" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-accent)">P1</text>
-  <rect x="167.7493" y="213.3333" width="80.2279" height="180.5128" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="207.1339" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-accent)">P2</text>
-  <rect x="262.5641" y="213.3333" width="80.2279" height="180.5128" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="301.9487" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-accent)">P3</text>
-  <rect x="357.3789" y="213.3333" width="80.2279" height="180.5128" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="396.7635" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-accent)">P4</text>
-  <rect x="452.1937" y="213.3333" width="80.2279" height="180.5128" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="491.5783" y="311.7949" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--danger-accent)">P5</text>
-  <text x="277.151" y="434.8718" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="var(--danger-accent)">All 5 partitions scanned</text>
-  <text x="277.151" y="467.6923" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="var(--danger-accent)">Slow: reads unnecessary data</text>
-  <line x1="554.302" y1="295.3846" x2="612.6496" y2="295.3846" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="583.4758" y="278.9744" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="var(--primary-accent)">DPP</text>
-  <text x="889.8006" y="98.4615" text-anchor="middle" font-family="Arial" font-size="23.339" font-weight="bold" fill="var(--ok-accent)">With DPP</text>
-  <rect x="641.8234" y="123.0769" width="291.7379" height="57.4359" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="787.6923" y="160.8205" text-anchor="middle" font-family="Arial" font-size="16.0456" fill="var(--ok-accent)">dim filter: region = 'North'</text>
-  <line x1="787.6923" y1="180.5128" x2="787.6923" y2="213.3333" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="670.9972" y="213.3333" width="233.3903" height="49.2308" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="787.6923" y="246.1538" text-anchor="middle" font-family="Arial" font-size="16.0456" font-weight="bold" fill="var(--warn-accent)">Broadcast filter values</text>
-  <rect x="641.8234" y="295.3846" width="80.2279" height="180.5128" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
-  <text x="681.208" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--text-faint)">P1</text>
-  <line x1="641.8234" y1="295.3846" x2="722.0513" y2="475.8974" stroke="var(--danger-border)" stroke-width="2" />
-  <line x1="722.0513" y1="295.3846" x2="641.8234" y2="475.8974" stroke="var(--danger-border)" stroke-width="2" />
-  <rect x="736.6382" y="295.3846" width="80.2279" height="180.5128" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="776.0228" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" font-weight="bold" fill="var(--ok-accent)">P2</text>
-  <rect x="831.453" y="295.3846" width="80.2279" height="180.5128" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
-  <text x="870.8376" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--text-faint)">P3</text>
-  <line x1="831.453" y1="295.3846" x2="911.6809" y2="475.8974" stroke="var(--danger-border)" stroke-width="2" />
-  <line x1="911.6809" y1="295.3846" x2="831.453" y2="475.8974" stroke="var(--danger-border)" stroke-width="2" />
-  <rect x="926.2678" y="295.3846" width="80.2279" height="180.5128" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="965.6524" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" font-weight="bold" fill="var(--ok-accent)">P4</text>
-  <rect x="1021.0826" y="295.3846" width="80.2279" height="180.5128" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
-  <text x="1060.4672" y="393.8462" text-anchor="middle" font-family="Arial" font-size="14.5869" fill="var(--text-faint)">P5</text>
-  <line x1="1021.0826" y1="295.3846" x2="1101.3105" y2="475.8974" stroke="var(--danger-border)" stroke-width="2" />
-  <line x1="1101.3105" y1="295.3846" x2="1021.0826" y2="475.8974" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="889.8006" y="516.9231" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="var(--ok-accent)">Only 2 of 5 partitions scanned</text>
-  <text x="889.8006" y="549.7436" text-anchor="middle" font-family="Arial" font-size="17.5043" font-weight="bold" fill="var(--ok-accent)">Fast: skips irrelevant partitions</text>
-  <rect x="145.8689" y="590.7692" width="875.2137" height="49.2308" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="583.4758" y="623.5897" text-anchor="middle" font-family="Arial" font-size="17.5043" fill="var(--primary-accent)">DPP uses dimension-side filter results to prune fact-table partitions at runtime</text>
+  <text x="635.7447" y="40" text-anchor="middle" font-family="Arial" font-size="31.2257" font-weight="bold" fill="var(--primary-accent)">Dynamic Partition Pruning</text>
+  <text x="278.2979" y="88.3333" text-anchor="middle" font-family="Arial" font-size="24.9805" font-weight="bold" fill="var(--danger-accent)">Without DPP</text>
+  <rect x="108.0851" y="112.5" width="340.4256" height="56.3889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="278.2979" y="149.5555" text-anchor="middle" font-family="Arial" font-size="17.1742" fill="var(--text)">SELECT * FROM fact JOIN dim</text>
+  <rect x="40" y="201.1111" width="93.617" height="177.2222" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="85.9574" y="297.7778" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--danger-accent)">P1</text>
+  <rect x="150.6383" y="201.1111" width="93.617" height="177.2222" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="196.5957" y="297.7778" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--danger-accent)">P2</text>
+  <rect x="261.2766" y="201.1111" width="93.617" height="177.2222" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="307.234" y="297.7778" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--danger-accent)">P3</text>
+  <rect x="371.9149" y="201.1111" width="93.617" height="177.2222" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="417.8723" y="297.7778" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--danger-accent)">P4</text>
+  <rect x="482.5532" y="201.1111" width="93.617" height="177.2222" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="528.5106" y="297.7778" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--danger-accent)">P5</text>
+  <text x="278.2979" y="418.6111" text-anchor="middle" font-family="Arial" font-size="18.7355" fill="var(--danger-accent)">All 5 partitions scanned</text>
+  <text x="278.2979" y="450.8333" text-anchor="middle" font-family="Arial" font-size="18.7355" font-weight="bold" fill="var(--danger-accent)">Slow: reads unnecessary data</text>
+  <line x1="601.7021" y1="281.6666" x2="669.7873" y2="281.6666" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="635.7447" y="265.5556" text-anchor="middle" font-family="Arial" font-size="17.1742" font-weight="bold" fill="var(--primary-accent)">DPP</text>
+  <text x="993.1916" y="88.3333" text-anchor="middle" font-family="Arial" font-size="24.9805" font-weight="bold" fill="var(--ok-accent)">With DPP</text>
+  <rect x="703.8298" y="112.5" width="340.4256" height="56.3889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="874.0426" y="149.5555" text-anchor="middle" font-family="Arial" font-size="17.1742" fill="var(--ok-accent)">dim filter: region = 'North'</text>
+  <line x1="874.0426" y1="168.8888" x2="874.0426" y2="201.1111" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="737.8724" y="201.1111" width="272.3404" height="48.3334" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="874.0426" y="233.3333" text-anchor="middle" font-family="Arial" font-size="17.1742" font-weight="bold" fill="var(--warn-accent)">Broadcast filter values</text>
+  <rect x="703.8298" y="281.6666" width="93.617" height="177.2222" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
+  <text x="749.7873" y="378.3334" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--text-faint)">P1</text>
+  <line x1="703.8298" y1="281.6666" x2="797.4468" y2="458.8888" stroke="var(--danger-border)" stroke-width="2" />
+  <line x1="797.4468" y1="281.6666" x2="703.8298" y2="458.8888" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="814.4681" y="281.6666" width="93.617" height="177.2222" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="860.4256" y="378.3334" text-anchor="middle" font-family="Arial" font-size="15.6129" font-weight="bold" fill="var(--ok-accent)">P2</text>
+  <rect x="925.1064" y="281.6666" width="93.617" height="177.2222" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
+  <text x="971.0639" y="378.3334" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--text-faint)">P3</text>
+  <line x1="925.1064" y1="281.6666" x2="1018.7234" y2="458.8888" stroke="var(--danger-border)" stroke-width="2" />
+  <line x1="1018.7234" y1="281.6666" x2="925.1064" y2="458.8888" stroke="var(--danger-border)" stroke-width="2" />
+  <rect x="1035.7447" y="281.6666" width="93.617" height="177.2222" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1081.7021" y="378.3334" text-anchor="middle" font-family="Arial" font-size="15.6129" font-weight="bold" fill="var(--ok-accent)">P4</text>
+  <rect x="1146.383" y="281.6666" width="93.617" height="177.2222" rx="6" fill="var(--border)" stroke="var(--text-faint)" stroke-width="1.4587" stroke-dasharray="4.3761 4.3761" />
+  <text x="1192.3404" y="378.3334" text-anchor="middle" font-family="Arial" font-size="15.6129" fill="var(--text-faint)">P5</text>
+  <line x1="1146.383" y1="281.6666" x2="1240" y2="458.8888" stroke="var(--danger-border)" stroke-width="2" />
+  <line x1="1240" y1="281.6666" x2="1146.383" y2="458.8888" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="993.1916" y="499.1667" text-anchor="middle" font-family="Arial" font-size="18.7355" fill="var(--ok-accent)">Only 2 of 5 partitions scanned</text>
+  <text x="993.1916" y="531.3889" text-anchor="middle" font-family="Arial" font-size="18.7355" font-weight="bold" fill="var(--ok-accent)">Fast: skips irrelevant partitions</text>
+  <rect x="125.1063" y="571.6666" width="1021.2767" height="48.3334" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="635.7447" y="603.8888" text-anchor="middle" font-family="Arial" font-size="18.7355" fill="var(--primary-accent)">DPP uses dimension-side filter results to prune fact-table partitions at runtime</text>
 </svg>

@@ -93,23 +93,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="16.5727" y="12.5491" width="1126.9417" height="627.4509" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="580.0435" y="56.4706" text-anchor="middle" font-size="22.5883" font-weight="bold" fill="var(--text)">PEFT Training Best Practices</text>
-  <rect x="49.718" y="81.5686" width="1060.651" height="87.8432" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="82.8634" y="110.4314" font-size="17.5686" font-weight="bold" fill="var(--text)">1. START WITH r=16, adjust based on results</text>
-  <text x="116.0087" y="138.0392" font-size="15.0588" fill="var(--text-muted)">Increase if underfitting | Decrease if overfitting</text>
-  <rect x="49.718" y="181.9607" width="1060.651" height="87.8432" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="82.8634" y="210.8235" font-size="17.5686" font-weight="bold" fill="var(--text)">2. TARGET ALL LINEAR LAYERS</text>
-  <text x="116.0087" y="238.4313" font-size="15.0588" fill="var(--text-muted)">target_modules="all-linear" is a good default | More targets = better quality</text>
-  <rect x="49.718" y="282.353" width="1060.651" height="87.8432" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="82.8634" y="311.2156" font-size="17.5686" font-weight="bold" fill="var(--text)">3. LEARNING RATE</text>
-  <text x="116.0087" y="338.8235" font-size="15.0588" fill="var(--text-muted)">LoRA: 1e-4 to 3e-4 (higher than full FT) | Prompt Tuning: 3e-2 to 3e-1</text>
-  <rect x="49.718" y="382.7451" width="1060.651" height="87.8432" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="82.8634" y="411.6078" font-size="17.5686" font-weight="bold" fill="var(--text)">4. USE GRADIENT CHECKPOINTING</text>
-  <text x="116.0087" y="439.2157" font-size="15.0588" fill="var(--text-muted)">Trades compute for memory | model.gradient_checkpointing_enable()</text>
-  <rect x="49.718" y="483.1372" width="1060.651" height="138.0392" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="82.8634" y="512" font-size="17.5686" font-weight="bold" fill="var(--text)">5. MONITOR TRAINING LOSS</text>
-  <text x="116.0087" y="543.3725" font-size="15.0588" fill="var(--text-muted)">Loss should decrease steadily</text>
-  <text x="116.0087" y="570.9803" font-size="15.0588" fill="var(--danger-accent)">Sudden increase = learning rate too high</text>
-  <text x="116.0087" y="598.5882" font-size="15.0588" fill="var(--warn-accent)">Flat loss = learning rate too low</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.9999" y="80.5999" text-anchor="middle" font-size="22.4103" font-weight="bold" fill="var(--text)">PEFT Training Best Practices</text>
+  <rect x="75.2941" y="103.7999" width="1129.4118" height="81.2001" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="110.5882" y="130.48" font-size="17.4302" font-weight="bold" fill="var(--text)">1. START WITH r=16, adjust based on results</text>
+  <text x="145.8823" y="155.9999" font-size="14.9401" fill="var(--text-muted)">Increase if underfitting | Decrease if overfitting</text>
+  <rect x="75.2941" y="196.5999" width="1129.4118" height="81.2001" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="110.5882" y="223.2799" font-size="17.4302" font-weight="bold" fill="var(--text)">2. TARGET ALL LINEAR LAYERS</text>
+  <text x="145.8823" y="248.7999" font-size="14.9401" fill="var(--text-muted)">target_modules="all-linear" is a good default | More targets = better quality</text>
+  <rect x="75.2941" y="289.4" width="1129.4118" height="81.2001" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="110.5882" y="316.0799" font-size="17.4302" font-weight="bold" fill="var(--text)">3. LEARNING RATE</text>
+  <text x="145.8823" y="341.5999" font-size="14.9401" fill="var(--text-muted)">LoRA: 1e-4 to 3e-4 (higher than full FT) | Prompt Tuning: 3e-2 to 3e-1</text>
+  <rect x="75.2941" y="382.2" width="1129.4118" height="81.2001" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="110.5882" y="408.8799" font-size="17.4302" font-weight="bold" fill="var(--text)">4. USE GRADIENT CHECKPOINTING</text>
+  <text x="145.8823" y="434.4" font-size="14.9401" fill="var(--text-muted)">Trades compute for memory | model.gradient_checkpointing_enable()</text>
+  <rect x="75.2941" y="474.9999" width="1129.4118" height="127.6" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="110.5882" y="501.68" font-size="17.4302" font-weight="bold" fill="var(--text)">5. MONITOR TRAINING LOSS</text>
+  <text x="145.8823" y="530.6799" font-size="14.9401" fill="var(--text-muted)">Loss should decrease steadily</text>
+  <text x="145.8823" y="556.1999" font-size="14.9401" fill="var(--danger-accent)">Sudden increase = learning rate too high</text>
+  <text x="145.8823" y="581.72" font-size="14.9401" fill="var(--warn-accent)">Flat loss = learning rate too low</text>
 </svg>

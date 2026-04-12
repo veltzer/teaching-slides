@@ -1,42 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="631.579" y="63.4398" text-anchor="middle" font-size="26.9474" font-weight="bold" fill="var(--text)">Virtual Address (48 bits used of 64)</text>
-  <rect x="50.5263" y="114.1917" width="168.4211" height="126.8797" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="134.7368" y="164.9437" text-anchor="middle" font-size="21.8948" font-weight="bold" fill="var(--text)">PML4</text>
-  <text x="134.7368" y="208.0827" text-anchor="middle" font-size="18.5263" fill="var(--text-muted)">9 bits</text>
-  <rect x="235.7895" y="114.1917" width="168.4211" height="126.8797" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="320" y="164.9437" text-anchor="middle" font-size="21.8948" font-weight="bold" fill="var(--text)">PDPT</text>
-  <text x="320" y="208.0827" text-anchor="middle" font-size="18.5263" fill="var(--text-muted)">9 bits</text>
-  <rect x="421.0527" y="114.1917" width="168.4211" height="126.8797" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="505.2632" y="164.9437" text-anchor="middle" font-size="21.8948" font-weight="bold" fill="var(--text)">PD</text>
-  <text x="505.2632" y="208.0827" text-anchor="middle" font-size="18.5263" fill="var(--text-muted)">9 bits</text>
-  <rect x="606.3158" y="114.1917" width="168.4211" height="126.8797" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="690.5263" y="164.9437" text-anchor="middle" font-size="21.8948" font-weight="bold" fill="var(--text)">PT</text>
-  <text x="690.5263" y="208.0827" text-anchor="middle" font-size="18.5263" fill="var(--text-muted)">9 bits</text>
-  <rect x="791.579" y="114.1917" width="185.2631" height="126.8797" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="884.2106" y="164.9437" text-anchor="middle" font-size="21.8948" font-weight="bold" fill="var(--text)">Offset</text>
-  <text x="884.2106" y="208.0827" text-anchor="middle" font-size="18.5263" fill="var(--text-muted)">12 bits</text>
-  <rect x="993.6842" y="114.1917" width="185.2631" height="126.8797" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1086.3158" y="164.9437" text-anchor="middle" font-size="21.8948" font-weight="bold" fill="var(--text-muted)">Unused</text>
-  <text x="1086.3158" y="208.0827" text-anchor="middle" font-size="18.5263" fill="var(--text-muted)">16 bits</text>
-  <text x="631.579" y="355.2632" text-anchor="middle" font-size="25.2632" font-weight="bold" fill="var(--primary-accent)">CR3 → PML4 → PDPT → PD → PT → Physical Page</text>
-  <rect x="84.2105" y="406.0151" width="101.0526" height="88.8158" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="134.7368" y="464.3797" text-anchor="middle" font-size="18.5263" fill="var(--text)">CR3</text>
-  <rect x="269.4737" y="406.0151" width="134.7368" height="88.8158" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="336.8421" y="464.3797" text-anchor="middle" font-size="18.5263" fill="var(--text)">PML4</text>
-  <rect x="488.421" y="406.0151" width="134.7368" height="88.8158" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="555.7895" y="464.3797" text-anchor="middle" font-size="18.5263" fill="var(--text)">PDPT</text>
-  <rect x="707.3685" y="406.0151" width="134.7368" height="88.8158" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="774.7369" y="464.3797" text-anchor="middle" font-size="18.5263" fill="var(--text)">PD</text>
-  <rect x="926.3159" y="406.0151" width="134.7368" height="88.8158" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="993.6842" y="464.3797" text-anchor="middle" font-size="18.5263" fill="var(--text)">PT</text>
-  <rect x="1145.2632" y="406.0151" width="134.7368" height="88.8158" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1212.6316" y="464.3797" text-anchor="middle" font-size="18.5263" fill="var(--text)">Page</text>
-  <line x1="185.2631" y1="449.1542" x2="269.4737" y2="449.1542" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
-  <line x1="404.2105" y1="449.1542" x2="488.421" y2="449.1542" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
-  <line x1="623.158" y1="449.1542" x2="707.3685" y2="449.1542" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
-  <line x1="842.1053" y1="449.1542" x2="926.3159" y2="449.1542" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
-  <line x1="1061.0527" y1="449.1542" x2="1145.2632" y2="449.1542" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
+  <text x="607.1233" y="40" text-anchor="middle" font-size="30.8693" font-weight="bold" fill="var(--text)">Virtual Address (48 bits used of 64)</text>
+  <rect x="40" y="108.2353" width="164.3836" height="170.5882" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="122.1918" y="176.4707" text-anchor="middle" font-size="25.0813" font-weight="bold" fill="var(--text)">PML4</text>
+  <text x="122.1918" y="234.4706" text-anchor="middle" font-size="21.2226" fill="var(--text-muted)">9 bits</text>
+  <rect x="220.822" y="108.2353" width="164.3836" height="170.5882" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="303.0137" y="176.4707" text-anchor="middle" font-size="25.0813" font-weight="bold" fill="var(--text)">PDPT</text>
+  <text x="303.0137" y="234.4706" text-anchor="middle" font-size="21.2226" fill="var(--text-muted)">9 bits</text>
+  <rect x="401.6439" y="108.2353" width="164.3836" height="170.5882" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="483.8357" y="176.4707" text-anchor="middle" font-size="25.0813" font-weight="bold" fill="var(--text)">PD</text>
+  <text x="483.8357" y="234.4706" text-anchor="middle" font-size="21.2226" fill="var(--text-muted)">9 bits</text>
+  <rect x="582.4658" y="108.2353" width="164.3836" height="170.5882" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="664.6575" y="176.4707" text-anchor="middle" font-size="25.0813" font-weight="bold" fill="var(--text)">PT</text>
+  <text x="664.6575" y="234.4706" text-anchor="middle" font-size="21.2226" fill="var(--text-muted)">9 bits</text>
+  <rect x="763.2877" y="108.2353" width="180.8219" height="170.5882" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="853.6987" y="176.4707" text-anchor="middle" font-size="25.0813" font-weight="bold" fill="var(--text)">Offset</text>
+  <text x="853.6987" y="234.4706" text-anchor="middle" font-size="21.2226" fill="var(--text-muted)">12 bits</text>
+  <rect x="960.5479" y="108.2353" width="180.8219" height="170.5882" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="1050.9589" y="176.4707" text-anchor="middle" font-size="25.0813" font-weight="bold" fill="var(--text-muted)">Unused</text>
+  <text x="1050.9589" y="234.4706" text-anchor="middle" font-size="21.2226" fill="var(--text-muted)">16 bits</text>
+  <text x="607.1233" y="432.353" text-anchor="middle" font-size="28.9399" font-weight="bold" fill="var(--primary-accent)">CR3 → PML4 → PDPT → PD → PT → Physical Page</text>
+  <rect x="72.8767" y="500.5883" width="98.6301" height="119.4117" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="122.1918" y="579.0587" text-anchor="middle" font-size="21.2226" fill="var(--text)">CR3</text>
+  <rect x="253.6987" y="500.5883" width="131.5068" height="119.4117" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="319.4521" y="579.0587" text-anchor="middle" font-size="21.2226" fill="var(--text)">PML4</text>
+  <rect x="467.3972" y="500.5883" width="131.5068" height="119.4117" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="533.1507" y="579.0587" text-anchor="middle" font-size="21.2226" fill="var(--text)">PDPT</text>
+  <rect x="681.096" y="500.5883" width="131.5068" height="119.4117" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="746.8494" y="579.0587" text-anchor="middle" font-size="21.2226" fill="var(--text)">PD</text>
+  <rect x="894.7946" y="500.5883" width="131.5068" height="119.4117" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="960.5479" y="579.0587" text-anchor="middle" font-size="21.2226" fill="var(--text)">PT</text>
+  <rect x="1108.4932" y="500.5883" width="131.5068" height="119.4117" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1174.2466" y="579.0587" text-anchor="middle" font-size="21.2226" fill="var(--text)">Page</text>
+  <line x1="171.5068" y1="558.5882" x2="253.6987" y2="558.5882" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
+  <line x1="385.2055" y1="558.5882" x2="467.3972" y2="558.5882" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
+  <line x1="598.9042" y1="558.5882" x2="681.096" y2="558.5882" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
+  <line x1="812.6028" y1="558.5882" x2="894.7946" y2="558.5882" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
+  <line x1="1026.3014" y1="558.5882" x2="1108.4932" y2="558.5882" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar1)" />
   <defs>
     <style id="palette-vars">
       :root, svg {

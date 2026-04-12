@@ -93,31 +93,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold" fill="var(--text)">KV Cache: Speeding Up Inference</text>
-  <rect x="48" y="99" width="576" height="540" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="336" y="144" text-anchor="middle" font-size="22.4" font-weight="bold" fill="var(--danger-accent)">Without KV Cache (naive)</text>
-  <rect x="80" y="180" width="512" height="81" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.6" />
-  <text x="336" y="212.4" text-anchor="middle" font-size="17.6" fill="var(--text)">Step 1: Process ["The"]</text>
-  <text x="336" y="244.8" text-anchor="middle" font-size="16" fill="var(--danger-accent)">Compute K,V for all</text>
-  <rect x="80" y="288" width="512" height="81" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.6" />
-  <text x="336" y="320.4" text-anchor="middle" font-size="17.6" fill="var(--text)">Step 2: Process ["The", "cat"]</text>
-  <text x="336" y="352.8" text-anchor="middle" font-size="16" fill="var(--danger-accent)">RECOMPUTE K,V for all</text>
-  <rect x="80" y="396" width="512" height="81" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.6" />
-  <text x="336" y="428.4" text-anchor="middle" font-size="17.6" fill="var(--text)">Step 3: Process ["The", "cat", "sat"]</text>
-  <text x="336" y="460.8" text-anchor="middle" font-size="16" fill="var(--danger-accent)">RECOMPUTE again</text>
-  <rect x="144" y="504" width="384" height="54" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="336" y="540" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--danger-accent)">Quadratic complexity!</text>
-  <rect x="656" y="99" width="576" height="540" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="944" y="144" text-anchor="middle" font-size="22.4" font-weight="bold" fill="var(--ok-accent)">With KV Cache</text>
-  <rect x="688" y="180" width="512" height="81" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.6" />
-  <text x="944" y="212.4" text-anchor="middle" font-size="17.6" fill="var(--text)">Step 1: Process ["The"]</text>
-  <text x="944" y="244.8" text-anchor="middle" font-size="16" fill="var(--ok-accent)">Cache K1, V1</text>
-  <rect x="688" y="288" width="512" height="81" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.6" />
-  <text x="944" y="320.4" text-anchor="middle" font-size="17.6" fill="var(--text)">Step 2: Process ["cat"]</text>
-  <text x="944" y="352.8" text-anchor="middle" font-size="16" fill="var(--ok-accent)">Cache K2, V2 (reuse K1, V1)</text>
-  <rect x="688" y="396" width="512" height="81" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.6" />
-  <text x="944" y="428.4" text-anchor="middle" font-size="17.6" fill="var(--text)">Step 3: Process ["sat"]</text>
-  <text x="944" y="460.8" text-anchor="middle" font-size="16" fill="var(--ok-accent)">Cache K3, V3 (reuse all)</text>
-  <rect x="752" y="504" width="384" height="54" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="944" y="540" text-anchor="middle" font-size="19.2" font-weight="bold" fill="var(--ok-accent)">Linear complexity per token!</text>
+  <text x="640" y="40" text-anchor="middle" font-size="25.662" font-weight="bold" fill="var(--text)">KV Cache: Speeding Up Inference</text>
+  <rect x="40" y="84.6154" width="583.7838" height="535.3846" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="331.8919" y="129.2308" text-anchor="middle" font-size="22.4543" font-weight="bold" fill="var(--danger-accent)">Without KV Cache (naive)</text>
+  <rect x="72.4324" y="164.9231" width="518.9189" height="80.3077" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.6" />
+  <text x="331.8919" y="197.0462" text-anchor="middle" font-size="17.6426" fill="var(--text)">Step 1: Process ["The"]</text>
+  <text x="331.8919" y="229.1692" text-anchor="middle" font-size="16.0388" fill="var(--danger-accent)">Compute K,V for all</text>
+  <rect x="72.4324" y="272" width="518.9189" height="80.3077" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.6" />
+  <text x="331.8919" y="304.1231" text-anchor="middle" font-size="17.6426" fill="var(--text)">Step 2: Process ["The", "cat"]</text>
+  <text x="331.8919" y="336.2462" text-anchor="middle" font-size="16.0388" fill="var(--danger-accent)">RECOMPUTE K,V for all</text>
+  <rect x="72.4324" y="379.0769" width="518.9189" height="80.3077" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.6" />
+  <text x="331.8919" y="411.2" text-anchor="middle" font-size="17.6426" fill="var(--text)">Step 3: Process ["The", "cat", "sat"]</text>
+  <text x="331.8919" y="443.3231" text-anchor="middle" font-size="16.0388" fill="var(--danger-accent)">RECOMPUTE again</text>
+  <rect x="137.2973" y="486.1538" width="389.1892" height="53.5385" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="331.8919" y="521.8462" text-anchor="middle" font-size="19.2465" font-weight="bold" fill="var(--danger-accent)">Quadratic complexity!</text>
+  <rect x="656.2162" y="84.6154" width="583.7838" height="535.3846" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="948.1081" y="129.2308" text-anchor="middle" font-size="22.4543" font-weight="bold" fill="var(--ok-accent)">With KV Cache</text>
+  <rect x="688.6486" y="164.9231" width="518.9189" height="80.3077" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.6" />
+  <text x="948.1081" y="197.0462" text-anchor="middle" font-size="17.6426" fill="var(--text)">Step 1: Process ["The"]</text>
+  <text x="948.1081" y="229.1692" text-anchor="middle" font-size="16.0388" fill="var(--ok-accent)">Cache K1, V1</text>
+  <rect x="688.6486" y="272" width="518.9189" height="80.3077" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.6" />
+  <text x="948.1081" y="304.1231" text-anchor="middle" font-size="17.6426" fill="var(--text)">Step 2: Process ["cat"]</text>
+  <text x="948.1081" y="336.2462" text-anchor="middle" font-size="16.0388" fill="var(--ok-accent)">Cache K2, V2 (reuse K1, V1)</text>
+  <rect x="688.6486" y="379.0769" width="518.9189" height="80.3077" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1.6" />
+  <text x="948.1081" y="411.2" text-anchor="middle" font-size="17.6426" fill="var(--text)">Step 3: Process ["sat"]</text>
+  <text x="948.1081" y="443.3231" text-anchor="middle" font-size="16.0388" fill="var(--ok-accent)">Cache K3, V3 (reuse all)</text>
+  <rect x="753.5135" y="486.1538" width="389.1892" height="53.5385" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="948.1081" y="521.8462" text-anchor="middle" font-size="19.2465" font-weight="bold" fill="var(--ok-accent)">Linear complexity per token!</text>
 </svg>

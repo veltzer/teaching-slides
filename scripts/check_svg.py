@@ -31,6 +31,7 @@ MIN_ELEMENTS = 5
 MIN_FONT_SIZE = 10
 REQUIRED_VIEWBOX = "0 0 1280 720"
 MAX_Y_BOUND = 640
+MAX_WORD_COUNT = 60
 
 
 def _check_size(path: Path) -> list[str]:
@@ -55,6 +56,32 @@ def _check_elements(tree: ET.ElementTree) -> list[str]:
     count = sum(1 for _ in tree.iter())
     if count < MIN_ELEMENTS:
         return [f"too few elements ({count}, min {MIN_ELEMENTS})"]
+    return []
+
+
+_WORDS_TEXT_RE = re.compile(r'<(?:text|tspan)[^>]*?>(.*?)</(?:text|tspan)>', re.DOTALL)
+_WORDS_DEFS_RE = re.compile(r'<defs\b.*?</defs>', re.DOTALL)
+_WORDS_TAG_RE = re.compile(r'<[^>]+>')
+_WORDS_WORD_RE = re.compile(r"[A-Za-z0-9_.@#+\-/()'\"]+")
+
+
+def _check_words(path: Path) -> list[str]:
+    """Flag SVGs whose total visible text exceeds MAX_WORD_COUNT.
+
+    Counts words across <text>/<tspan> elements outside <defs>. Heavy-text
+    diagrams belong in prose slides or speaker notes, not inside a diagram.
+    """
+    try:
+        content = path.read_text(encoding="utf-8")
+    except Exception:
+        return []
+    outside = _WORDS_DEFS_RE.sub('', content)
+    total = 0
+    for m in _WORDS_TEXT_RE.finditer(outside):
+        plain = _WORDS_TAG_RE.sub(' ', m.group(1))
+        total += len(_WORDS_WORD_RE.findall(plain))
+    if total > MAX_WORD_COUNT:
+        return [f"too many words in text elements ({total}, max {MAX_WORD_COUNT}) — move prose to speaker notes or a separate slide"]
     return []
 
 
@@ -273,13 +300,15 @@ def main() -> None:
                         help='Flag SVGs that contain a <title> element')
     parser.add_argument('--colors', action='store_true',
                         help='Flag SVGs against their <!-- palette: path --> comment (default: palette_diagram)')
+    parser.add_argument('--words', action='store_true',
+                        help=f'Flag SVGs whose <text>/<tspan> content exceeds {MAX_WORD_COUNT} words total')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
     # Default: all checks enabled when no flags are specified
-    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title, args.colors]
+    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title, args.colors, args.words]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -289,6 +318,9 @@ def main() -> None:
     do_bounds = args.bounds or not explicit
     do_title = args.title or not explicit
     do_colors = args.colors or not explicit
+    # Words check is opt-in only for now; too many existing SVGs exceed the
+    # limit. Flip to `args.words or not explicit` once the backlog is clean.
+    do_words = args.words
 
     failures = 0
     for path_str in args.paths:
@@ -297,6 +329,9 @@ def main() -> None:
 
         if do_size:
             errors.extend(_check_size(path))
+
+        if do_words:
+            errors.extend(_check_words(path))
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None

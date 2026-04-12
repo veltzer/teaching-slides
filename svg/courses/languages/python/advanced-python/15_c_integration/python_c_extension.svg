@@ -110,111 +110,111 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title -->
-  <rect x="30" y="15" width="1220" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python-C Integration Methods</text>
+  <rect x="68.125" y="53.5938" width="1143.75" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="78.9688" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Python-C Integration Methods</text>
 
   <!-- Method 1: ctypes -->
-  <rect x="30" y="75" width="370" height="300" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="75" width="370" height="38" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="215" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">ctypes (stdlib)</text>
-  <text x="50" y="128" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Load shared libraries directly:</text>
-  <rect x="40" y="136" width="350" height="155" rx="6" fill="var(--code-bg)"/>
-  <text x="55" y="158" font-family="monospace" font-size="12" fill="var(--info-accent)">from ctypes import cdll, c_int</text>
-  <text x="55" y="178" font-family="monospace" font-size="12" fill="var(--primary-accent)">lib = cdll.LoadLibrary("./mylib.so")</text>
-  <text x="55" y="198" font-family="monospace" font-size="12" fill="var(--primary-accent)">lib.add.restype = c_int</text>
-  <text x="55" y="218" font-family="monospace" font-size="12" fill="var(--primary-accent)">lib.add.argtypes = [c_int, c_int]</text>
-  <text x="55" y="242" font-family="monospace" font-size="12" fill="var(--ok-accent)">result = lib.add(3, 4)  # 7</text>
-  <text x="55" y="275" font-family="monospace" font-size="12" fill="var(--text-muted)"># No compilation step required</text>
-  <text x="50" y="305" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Pros: no compile, stdlib, works with any .so</text>
-  <text x="50" y="325" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Cons: manual type mapping, error-prone</text>
-  <text x="50" y="345" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Best for: quick .so calls, legacy libraries</text>
-  <text x="50" y="363" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Use: ctypes.POINTER, Structure for structs</text>
+  <rect x="68.125" y="107.9688" width="346.875" height="271.875" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="68.125" y="107.9688" width="346.875" height="34.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="241.5625" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">ctypes (stdlib)</text>
+  <text x="86.875" y="156" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Load shared libraries directly:</text>
+  <rect x="77.5" y="163.25" width="328.125" height="140.4688" rx="6" fill="var(--code-bg)"/>
+  <text x="91.5625" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--info-accent)">from ctypes import cdll, c_int</text>
+  <text x="91.5625" y="201.3125" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">lib = cdll.LoadLibrary("./mylib.so")</text>
+  <text x="91.5625" y="219.4375" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">lib.add.restype = c_int</text>
+  <text x="91.5625" y="237.5625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">lib.add.argtypes = [c_int, c_int]</text>
+  <text x="91.5625" y="259.3125" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">result = lib.add(3, 4)  # 7</text>
+  <text x="91.5625" y="289.2188" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># No compilation step required</text>
+  <text x="86.875" y="316.4062" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Pros: no compile, stdlib, works with any .so</text>
+  <text x="86.875" y="334.5312" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Cons: manual type mapping, error-prone</text>
+  <text x="86.875" y="352.6562" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Best for: quick .so calls, legacy libraries</text>
+  <text x="86.875" y="368.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Use: ctypes.POINTER, Structure for structs</text>
 
   <!-- Method 2: cffi -->
-  <rect x="420" y="75" width="370" height="300" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="420" y="75" width="370" height="38" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="605" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">cffi (C Foreign Function Interface)</text>
-  <text x="440" y="128" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Declare C API in Python:</text>
-  <rect x="430" y="136" width="350" height="155" rx="6" fill="var(--code-bg)"/>
-  <text x="445" y="158" font-family="monospace" font-size="12" fill="var(--info-accent)">from cffi import FFI</text>
-  <text x="445" y="178" font-family="monospace" font-size="12" fill="var(--primary-accent)">ffi = FFI()</text>
-  <text x="445" y="198" font-family="monospace" font-size="12" fill="var(--primary-accent)">ffi.cdef("int add(int a, int b);")</text>
-  <text x="445" y="218" font-family="monospace" font-size="12" fill="var(--primary-accent)">lib = ffi.dlopen("./mylib.so")</text>
-  <text x="445" y="242" font-family="monospace" font-size="12" fill="var(--ok-accent)">result = lib.add(3, 4)</text>
-  <text x="445" y="266" font-family="monospace" font-size="12" fill="var(--text-muted)"># Also: ffi.verify() for inline C</text>
-  <text x="440" y="305" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Pros: cleaner API, ABI + API modes</text>
-  <text x="440" y="325" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Cons: external dependency</text>
-  <text x="440" y="345" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Best for: wrapping C libraries cleanly</text>
-  <text x="440" y="363" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Used by: PyPy, cryptography, bcrypt</text>
+  <rect x="433.75" y="107.9688" width="346.875" height="271.875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="433.75" y="107.9688" width="346.875" height="34.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="607.1875" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">cffi (C Foreign Function Interface)</text>
+  <text x="452.5" y="156" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Declare C API in Python:</text>
+  <rect x="443.125" y="163.25" width="328.125" height="140.4688" rx="6" fill="var(--code-bg)"/>
+  <text x="457.1875" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--info-accent)">from cffi import FFI</text>
+  <text x="457.1875" y="201.3125" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">ffi = FFI()</text>
+  <text x="457.1875" y="219.4375" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">ffi.cdef("int add(int a, int b);")</text>
+  <text x="457.1875" y="237.5625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">lib = ffi.dlopen("./mylib.so")</text>
+  <text x="457.1875" y="259.3125" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">result = lib.add(3, 4)</text>
+  <text x="457.1875" y="281.0625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Also: ffi.verify() for inline C</text>
+  <text x="452.5" y="316.4062" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Pros: cleaner API, ABI + API modes</text>
+  <text x="452.5" y="334.5312" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Cons: external dependency</text>
+  <text x="452.5" y="352.6562" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Best for: wrapping C libraries cleanly</text>
+  <text x="452.5" y="368.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Used by: PyPy, cryptography, bcrypt</text>
 
   <!-- Method 3: Cython -->
-  <rect x="810" y="75" width="440" height="300" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="810" y="75" width="440" height="38" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1030" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cython</text>
-  <text x="830" y="128" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Python superset compiled to C:</text>
-  <rect x="820" y="136" width="420" height="155" rx="6" fill="var(--code-bg)"/>
-  <text x="835" y="158" font-family="monospace" font-size="12" fill="var(--text-muted)"># hello.pyx</text>
-  <text x="835" y="178" font-family="monospace" font-size="12" fill="var(--info-accent)">def add(int a, int b):</text>
-  <text x="835" y="198" font-family="monospace" font-size="12" fill="var(--ok-accent)">    return a + b</text>
-  <text x="835" y="222" font-family="monospace" font-size="12" fill="var(--text-muted)"># cdef for pure C speed:</text>
-  <text x="835" y="242" font-family="monospace" font-size="12" fill="var(--info-accent)">cdef int fast_add(int a, int b):</text>
-  <text x="835" y="262" font-family="monospace" font-size="12" fill="var(--ok-accent)">    return a + b</text>
-  <text x="830" y="305" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Pros: near-C speed, Python-compatible</text>
-  <text x="830" y="325" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Cons: compile step, new syntax to learn</text>
-  <text x="830" y="345" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Best for: speed-critical numerical code</text>
-  <text x="830" y="363" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Used by: NumPy, pandas, lxml, scikit-learn</text>
+  <rect x="799.375" y="107.9688" width="412.5" height="271.875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="799.375" y="107.9688" width="412.5" height="34.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1005.625" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Cython</text>
+  <text x="818.125" y="156" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Python superset compiled to C:</text>
+  <rect x="808.75" y="163.25" width="393.75" height="140.4688" rx="6" fill="var(--code-bg)"/>
+  <text x="822.8125" y="183.1875" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># hello.pyx</text>
+  <text x="822.8125" y="201.3125" font-family="monospace" font-size="11.0609" fill="var(--info-accent)">def add(int a, int b):</text>
+  <text x="822.8125" y="219.4375" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    return a + b</text>
+  <text x="822.8125" y="241.1875" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># cdef for pure C speed:</text>
+  <text x="822.8125" y="259.3125" font-family="monospace" font-size="11.0609" fill="var(--info-accent)">cdef int fast_add(int a, int b):</text>
+  <text x="822.8125" y="277.4375" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    return a + b</text>
+  <text x="818.125" y="316.4062" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Pros: near-C speed, Python-compatible</text>
+  <text x="818.125" y="334.5312" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Cons: compile step, new syntax to learn</text>
+  <text x="818.125" y="352.6562" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Best for: speed-critical numerical code</text>
+  <text x="818.125" y="368.9688" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Used by: NumPy, pandas, lxml, scikit-learn</text>
 
   <!-- Bottom: C extensions + comparison table -->
-  <rect x="30" y="390" width="600" height="220" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="390" width="600" height="38" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="330" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">C Extension Module (Python/C API)</text>
-  <rect x="40" y="435" width="580" height="165" rx="6" fill="var(--code-bg)"/>
-  <text x="55" y="456" font-family="monospace" font-size="12" fill="var(--text-muted)">// mymodule.c</text>
-  <text x="55" y="474" font-family="monospace" font-size="12" fill="var(--primary-accent)">#include &lt;Python.h&gt;</text>
-  <text x="55" y="492" font-family="monospace" font-size="12" fill="var(--primary-accent)">static PyObject* py_add(PyObject* self, PyObject* args) {</text>
-  <text x="55" y="510" font-family="monospace" font-size="12" fill="var(--primary-accent)">    int a, b;</text>
-  <text x="55" y="528" font-family="monospace" font-size="12" fill="var(--ok-accent)">    PyArg_ParseTuple(args, "ii", &amp;a, &amp;b);</text>
-  <text x="55" y="546" font-family="monospace" font-size="12" fill="var(--ok-accent)">    return PyLong_FromLong(a + b);</text>
-  <text x="55" y="564" font-family="monospace" font-size="12" fill="var(--primary-accent)">}</text>
-  <text x="55" y="584" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Pros: maximum control  Cons: verbose, reference counting manual</text>
+  <rect x="68.125" y="393.4375" width="562.5" height="199.375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="68.125" y="393.4375" width="562.5" height="34.4375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="349.375" y="416.0938" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">C Extension Module (Python/C API)</text>
+  <rect x="77.5" y="434.2188" width="543.75" height="149.5312" rx="6" fill="var(--code-bg)"/>
+  <text x="91.5625" y="453.25" font-family="monospace" font-size="11.0609" fill="var(--text-muted)">// mymodule.c</text>
+  <text x="91.5625" y="469.5625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">#include &lt;Python.h&gt;</text>
+  <text x="91.5625" y="485.875" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">static PyObject* py_add(PyObject* self, PyObject* args) {</text>
+  <text x="91.5625" y="502.1875" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">    int a, b;</text>
+  <text x="91.5625" y="518.5" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    PyArg_ParseTuple(args, "ii", &amp;a, &amp;b);</text>
+  <text x="91.5625" y="534.8125" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    return PyLong_FromLong(a + b);</text>
+  <text x="91.5625" y="551.125" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">}</text>
+  <text x="91.5625" y="569.25" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Pros: maximum control  Cons: verbose, reference counting manual</text>
 
   <!-- Comparison table -->
-  <rect x="650" y="390" width="600" height="220" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="650" y="390" width="600" height="38" rx="6" fill="var(--text-muted)"/>
-  <text x="950" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Comparison</text>
-  <rect x="660" y="432" width="580" height="28" rx="6" fill="var(--surface)"/>
-  <text x="670" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text)">Method</text>
-  <text x="790" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text)">Compile?</text>
-  <text x="890" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text)">Speed</text>
-  <text x="970" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text)">Complexity</text>
-  <text x="1100" y="451" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text)">Best for</text>
-  <text x="670" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-accent)">ctypes</text>
-  <text x="790" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">No</text>
-  <text x="890" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-accent)">Medium</text>
-  <text x="970" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Low</text>
-  <text x="1100" y="474" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Quick .so calls</text>
-  <text x="670" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-accent)">cffi</text>
-  <text x="790" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Optional</text>
-  <text x="890" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-accent)">Medium</text>
-  <text x="970" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Low</text>
-  <text x="1100" y="496" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Library wrapping</text>
-  <text x="670" y="518" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-accent)">Cython</text>
-  <text x="790" y="518" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Yes</text>
-  <text x="890" y="518" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-accent)">High</text>
-  <text x="970" y="518" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Medium</text>
-  <text x="1100" y="518" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Numeric speed</text>
-  <text x="670" y="540" font-family="Arial, sans-serif" font-size="12" fill="var(--info-accent)">C Extension</text>
-  <text x="790" y="540" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Yes</text>
-  <text x="890" y="540" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-accent)">Highest</text>
-  <text x="970" y="540" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">High</text>
-  <text x="1100" y="540" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Full control</text>
-  <text x="670" y="562" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">pybind11</text>
-  <text x="790" y="562" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Yes</text>
-  <text x="890" y="562" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-accent)">High</text>
-  <text x="970" y="562" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">Medium</text>
-  <text x="1100" y="562" font-family="Arial, sans-serif" font-size="12" fill="var(--text)">C++ / modern C</text>
-  <text x="660" y="595" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Rule of thumb: profile first; only optimize confirmed hot spots with C</text>
+  <rect x="649.375" y="393.4375" width="562.5" height="199.375" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="649.375" y="393.4375" width="562.5" height="34.4375" rx="6" fill="var(--text-muted)"/>
+  <text x="930.625" y="416.0938" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Comparison</text>
+  <rect x="658.75" y="431.5" width="543.75" height="25.375" rx="6" fill="var(--surface)"/>
+  <text x="668.125" y="448.7188" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text)">Method</text>
+  <text x="780.625" y="448.7188" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text)">Compile?</text>
+  <text x="874.375" y="448.7188" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text)">Speed</text>
+  <text x="949.375" y="448.7188" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text)">Complexity</text>
+  <text x="1071.25" y="448.7188" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text)">Best for</text>
+  <text x="668.125" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--primary-accent)">ctypes</text>
+  <text x="780.625" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">No</text>
+  <text x="874.375" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">Medium</text>
+  <text x="949.375" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Low</text>
+  <text x="1071.25" y="469.5625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Quick .so calls</text>
+  <text x="668.125" y="489.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">cffi</text>
+  <text x="780.625" y="489.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Optional</text>
+  <text x="874.375" y="489.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">Medium</text>
+  <text x="949.375" y="489.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Low</text>
+  <text x="1071.25" y="489.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Library wrapping</text>
+  <text x="668.125" y="509.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--warn-accent)">Cython</text>
+  <text x="780.625" y="509.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Yes</text>
+  <text x="874.375" y="509.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">High</text>
+  <text x="949.375" y="509.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Medium</text>
+  <text x="1071.25" y="509.4375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Numeric speed</text>
+  <text x="668.125" y="529.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)">C Extension</text>
+  <text x="780.625" y="529.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Yes</text>
+  <text x="874.375" y="529.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">Highest</text>
+  <text x="949.375" y="529.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">High</text>
+  <text x="1071.25" y="529.375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Full control</text>
+  <text x="668.125" y="549.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">pybind11</text>
+  <text x="780.625" y="549.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Yes</text>
+  <text x="874.375" y="549.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--ok-accent)">High</text>
+  <text x="949.375" y="549.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">Medium</text>
+  <text x="1071.25" y="549.3125" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text)">C++ / modern C</text>
+  <text x="658.75" y="579.2188" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Rule of thumb: profile first; only optimize confirmed hot spots with C</text>
 </svg>

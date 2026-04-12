@@ -97,30 +97,30 @@
       <path d="M 0 0 L 0 17.28 L 19.2 8.64 z" fill="#333" />
     </marker>
   </defs>
-  <text x="605.2009" y="40.8511" text-anchor="middle" font-size="24.208" font-weight="bold" fill="var(--text)">Cache Invalidation via Pub/Sub</text>
-  <rect x="20.1733" y="108.9362" width="221.907" height="122.5532" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="131.1269" y="157.9574" text-anchor="middle" font-size="22.1907" font-weight="bold">Write Service</text>
-  <text x="131.1269" y="198.8085" text-anchor="middle" font-size="20.1733" fill="var(--text-muted)">updates DB</text>
-  <rect x="443.814" y="95.3191" width="262.2537" height="149.7872" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="574.9409" y="155.234" text-anchor="middle" font-size="22.1907" font-weight="bold">Redis Pub/Sub</text>
-  <text x="574.9409" y="198.8085" text-anchor="middle" font-size="20.1733">cache:invalidate</text>
-  <rect x="917.8881" y="68.0851" width="221.907" height="95.3191" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="1028.8416" y="128" text-anchor="middle" font-size="20.1733">App Server 1</text>
-  <rect x="917.8881" y="185.1915" width="221.907" height="95.3191" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="1028.8416" y="245.1064" text-anchor="middle" font-size="20.1733">App Server 2</text>
-  <line x1="242.0804" y1="168.8511" x2="439.7794" y2="168.8511" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
-  <text x="342.9472" y="149.7872" text-anchor="middle" font-size="20.1733" fill="var(--primary-accent)">1. PUBLISH</text>
-  <line x1="706.0678" y1="141.617" x2="913.8534" y2="114.383" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
-  <line x1="706.0678" y1="185.1915" x2="913.8534" y2="231.4894" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
-  <text x="806.9346" y="122.5532" text-anchor="middle" font-size="20.1733" fill="var(--ok-accent)">2. notify</text>
-  <rect x="927.9748" y="313.1915" width="201.7336" height="95.3191" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="1028.8416" y="354.0426" text-anchor="middle" font-size="20.1733" fill="var(--danger-accent)">Local Cache</text>
-  <text x="1028.8416" y="389.4468" text-anchor="middle" font-size="22.1907" fill="var(--danger-accent)" font-weight="bold">DEL key</text>
-  <line x1="1028.8416" y1="280.5106" x2="1028.8416" y2="307.7447" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
-  <text x="1099.4484" y="305.0213" font-size="20.1733" fill="var(--danger-accent)">3.</text>
-  <rect x="60.5201" y="381.2766" width="685.8944" height="258.7234" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="100.8669" y="441.1915" font-size="20.1733" fill="var(--text)">1. Write service updates DB and publishes invalidation</text>
-  <text x="100.8669" y="490.2128" font-size="20.1733" fill="var(--text)">2. Redis delivers to all subscribed app servers</text>
-  <text x="100.8669" y="539.234" font-size="20.1733" fill="var(--text)">3. Each server evicts stale key from local cache</text>
-  <text x="100.8669" y="599.1489" font-size="20.1733" fill="var(--text-muted)">Result: all caches stay consistent without polling</text>
+  <text x="667.027" y="40" text-anchor="middle" font-size="24.6581" font-weight="bold" fill="var(--text)">Cache Invalidation via Pub/Sub</text>
+  <rect x="40" y="105.9091" width="237.8378" height="118.6364" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="158.919" y="153.3636" text-anchor="middle" font-size="22.6033" font-weight="bold">Write Service</text>
+  <text x="158.919" y="192.9091" text-anchor="middle" font-size="20.5484" fill="var(--text-muted)">updates DB</text>
+  <rect x="494.0541" y="92.7272" width="281.081" height="145" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="634.5946" y="150.7272" text-anchor="middle" font-size="22.6033" font-weight="bold">Redis Pub/Sub</text>
+  <text x="634.5946" y="192.9091" text-anchor="middle" font-size="20.5484">cache:invalidate</text>
+  <rect x="1002.1622" y="66.3636" width="237.8378" height="92.2727" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1121.0811" y="124.3636" text-anchor="middle" font-size="20.5484">App Server 1</text>
+  <rect x="1002.1622" y="179.7273" width="237.8378" height="92.2727" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1121.0811" y="237.7273" text-anchor="middle" font-size="20.5484">App Server 2</text>
+  <line x1="277.8379" y1="163.9091" x2="489.7298" y2="163.9091" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
+  <text x="385.946" y="145.4545" text-anchor="middle" font-size="20.5484" fill="var(--primary-accent)">1. PUBLISH</text>
+  <line x1="775.1352" y1="137.5454" x2="997.8378" y2="111.1818" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
+  <line x1="775.1352" y1="179.7273" x2="997.8378" y2="224.5455" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
+  <text x="883.2433" y="119.0909" text-anchor="middle" font-size="20.5484" fill="var(--ok-accent)">2. notify</text>
+  <rect x="1012.973" y="303.6364" width="216.2162" height="92.2727" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="1121.0811" y="343.1818" text-anchor="middle" font-size="20.5484" fill="var(--danger-accent)">Local Cache</text>
+  <text x="1121.0811" y="377.4545" text-anchor="middle" font-size="22.6033" fill="var(--danger-accent)" font-weight="bold">DEL key</text>
+  <line x1="1121.0811" y1="271.9999" x2="1121.0811" y2="298.3636" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrowd5_03_pubsub)" />
+  <text x="1196.7568" y="295.7273" font-size="20.5484" fill="var(--danger-accent)">3.</text>
+  <rect x="83.2433" y="369.5454" width="735.1351" height="250.4546" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="126.4866" y="427.5455" font-size="20.5484" fill="var(--text)">1. Write service updates DB and publishes invalidation</text>
+  <text x="126.4866" y="475" font-size="20.5484" fill="var(--text)">2. Redis delivers to all subscribed app servers</text>
+  <text x="126.4866" y="522.4545" font-size="20.5484" fill="var(--text)">3. Each server evicts stale key from local cache</text>
+  <text x="126.4866" y="580.4545" font-size="20.5484" fill="var(--text-muted)">Result: all caches stay consistent without polling</text>
 </svg>

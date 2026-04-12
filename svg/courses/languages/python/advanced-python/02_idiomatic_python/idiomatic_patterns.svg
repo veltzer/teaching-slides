@@ -110,92 +110,92 @@
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title -->
-  <rect x="30" y="15" width="1220" height="44" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--bg)" text-anchor="middle">Idiomatic Python Patterns</text>
+  <rect x="68.125" y="53.5938" width="1143.75" height="39.875" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="78.9688" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--bg)" text-anchor="middle">Idiomatic Python Patterns</text>
 
   <!-- Comprehensions -->
-  <rect x="30" y="75" width="380" height="260" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="75" width="380" height="38" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="220" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Comprehensions</text>
-  <rect x="40" y="120" width="360" height="200" rx="6" fill="var(--code-bg)"/>
-  <text x="55" y="144" font-family="monospace" font-size="12" fill="var(--text-muted)"># Non-idiomatic:</text>
-  <text x="55" y="164" font-family="monospace" font-size="12" fill="var(--primary-accent)">result = []</text>
-  <text x="55" y="184" font-family="monospace" font-size="12" fill="var(--primary-accent)">for x in data:</text>
-  <text x="55" y="204" font-family="monospace" font-size="12" fill="var(--primary-accent)">    result.append(x*2)</text>
-  <text x="55" y="230" font-family="monospace" font-size="12" fill="var(--text-muted)"># Idiomatic:</text>
-  <text x="55" y="250" font-family="monospace" font-size="12" fill="var(--ok-accent)">result = [x*2 for x in data]</text>
-  <text x="55" y="278" font-family="monospace" font-size="12" fill="var(--ok-accent)">evens  = {x for x in d if x%2==0}</text>
-  <text x="55" y="298" font-family="monospace" font-size="12" fill="var(--ok-accent)">sq_map = {k: k**2 for k in range(5)}</text>
+  <rect x="68.125" y="107.9688" width="356.25" height="235.625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="68.125" y="107.9688" width="356.25" height="34.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="246.25" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Comprehensions</text>
+  <rect x="77.5" y="148.75" width="337.5" height="181.25" rx="6" fill="var(--code-bg)"/>
+  <text x="91.5625" y="170.5" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Non-idiomatic:</text>
+  <text x="91.5625" y="188.625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">result = []</text>
+  <text x="91.5625" y="206.75" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">for x in data:</text>
+  <text x="91.5625" y="224.875" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">    result.append(x*2)</text>
+  <text x="91.5625" y="248.4375" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Idiomatic:</text>
+  <text x="91.5625" y="266.5625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">result = [x*2 for x in data]</text>
+  <text x="91.5625" y="291.9375" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">evens  = {x for x in d if x%2==0}</text>
+  <text x="91.5625" y="310.0625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">sq_map = {k: k**2 for k in range(5)}</text>
 
   <!-- Context managers -->
-  <rect x="430" y="75" width="380" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="430" y="75" width="380" height="38" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="620" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Context Managers</text>
-  <rect x="440" y="120" width="360" height="200" rx="6" fill="var(--code-bg)"/>
-  <text x="455" y="144" font-family="monospace" font-size="12" fill="var(--text-muted)"># Non-idiomatic:</text>
-  <text x="455" y="164" font-family="monospace" font-size="12" fill="var(--primary-accent)">f = open("file.txt")</text>
-  <text x="455" y="184" font-family="monospace" font-size="12" fill="var(--primary-accent)">data = f.read()</text>
-  <text x="455" y="204" font-family="monospace" font-size="12" fill="var(--primary-accent)">f.close()</text>
-  <text x="455" y="230" font-family="monospace" font-size="12" fill="var(--text-muted)"># Idiomatic:</text>
-  <text x="455" y="250" font-family="monospace" font-size="12" fill="var(--ok-accent)">with open("file.txt") as f:</text>
-  <text x="455" y="270" font-family="monospace" font-size="12" fill="var(--ok-accent)">    data = f.read()</text>
-  <text x="455" y="295" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Calls __enter__ / __exit__ automatically</text>
+  <rect x="443.125" y="107.9688" width="356.25" height="235.625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="443.125" y="107.9688" width="356.25" height="34.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="621.25" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Context Managers</text>
+  <rect x="452.5" y="148.75" width="337.5" height="181.25" rx="6" fill="var(--code-bg)"/>
+  <text x="466.5625" y="170.5" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Non-idiomatic:</text>
+  <text x="466.5625" y="188.625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">f = open("file.txt")</text>
+  <text x="466.5625" y="206.75" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">data = f.read()</text>
+  <text x="466.5625" y="224.875" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">f.close()</text>
+  <text x="466.5625" y="248.4375" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Idiomatic:</text>
+  <text x="466.5625" y="266.5625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">with open("file.txt") as f:</text>
+  <text x="466.5625" y="284.6875" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    data = f.read()</text>
+  <text x="466.5625" y="307.3438" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Calls __enter__ / __exit__ automatically</text>
 
   <!-- Generators -->
-  <rect x="830" y="75" width="420" height="260" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="830" y="75" width="420" height="38" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="1040" y="100" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Generators</text>
-  <rect x="840" y="120" width="400" height="200" rx="6" fill="var(--code-bg)"/>
-  <text x="855" y="144" font-family="monospace" font-size="12" fill="var(--text-muted)"># Lazy sequence (memory efficient):</text>
-  <text x="855" y="164" font-family="monospace" font-size="12" fill="var(--info-accent)">def squares(n):</text>
-  <text x="855" y="184" font-family="monospace" font-size="12" fill="var(--primary-accent)">    for i in range(n):</text>
-  <text x="855" y="204" font-family="monospace" font-size="12" fill="var(--warn-accent)">        yield i * i</text>
-  <text x="855" y="228" font-family="monospace" font-size="12" fill="var(--text-muted)"># Generator expression:</text>
-  <text x="855" y="248" font-family="monospace" font-size="12" fill="var(--ok-accent)">g = (x*x for x in range(1000))</text>
-  <text x="855" y="272" font-family="monospace" font-size="12" fill="var(--ok-accent)">total = sum(x*x for x in data)</text>
-  <text x="855" y="295" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Values produced on demand -- no list built</text>
+  <rect x="818.125" y="107.9688" width="393.75" height="235.625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="818.125" y="107.9688" width="393.75" height="34.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1015" y="130.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Generators</text>
+  <rect x="827.5" y="148.75" width="375" height="181.25" rx="6" fill="var(--code-bg)"/>
+  <text x="841.5625" y="170.5" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Lazy sequence (memory efficient):</text>
+  <text x="841.5625" y="188.625" font-family="monospace" font-size="11.0609" fill="var(--info-accent)">def squares(n):</text>
+  <text x="841.5625" y="206.75" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">    for i in range(n):</text>
+  <text x="841.5625" y="224.875" font-family="monospace" font-size="11.0609" fill="var(--warn-accent)">        yield i * i</text>
+  <text x="841.5625" y="246.625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Generator expression:</text>
+  <text x="841.5625" y="264.75" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">g = (x*x for x in range(1000))</text>
+  <text x="841.5625" y="286.5" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">total = sum(x*x for x in data)</text>
+  <text x="841.5625" y="307.3438" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Values produced on demand -- no list built</text>
 
   <!-- Bottom row -->
   <!-- Unpacking -->
-  <rect x="30" y="355" width="380" height="255" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="355" width="380" height="38" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="220" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">Unpacking</text>
-  <rect x="40" y="400" width="360" height="195" rx="6" fill="var(--code-bg)"/>
-  <text x="55" y="422" font-family="monospace" font-size="12" fill="var(--text-muted)"># Tuple unpacking:</text>
-  <text x="55" y="442" font-family="monospace" font-size="12" fill="var(--ok-accent)">a, b, c = (1, 2, 3)</text>
-  <text x="55" y="462" font-family="monospace" font-size="12" fill="var(--ok-accent)">first, *rest = [1, 2, 3, 4]</text>
-  <text x="55" y="482" font-family="monospace" font-size="12" fill="var(--ok-accent)">*init, last = [1, 2, 3, 4]</text>
-  <text x="55" y="506" font-family="monospace" font-size="12" fill="var(--text-muted)"># Swap without temp:</text>
-  <text x="55" y="526" font-family="monospace" font-size="12" fill="var(--ok-accent)">a, b = b, a</text>
-  <text x="55" y="550" font-family="monospace" font-size="12" fill="var(--text-muted)"># Unpack in loop:</text>
-  <text x="55" y="570" font-family="monospace" font-size="12" fill="var(--ok-accent)">for k, v in d.items(): ...</text>
+  <rect x="68.125" y="361.7188" width="356.25" height="231.0938" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="68.125" y="361.7188" width="356.25" height="34.4375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="246.25" y="384.375" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">Unpacking</text>
+  <rect x="77.5" y="402.5" width="337.5" height="176.7188" rx="6" fill="var(--code-bg)"/>
+  <text x="91.5625" y="422.4375" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Tuple unpacking:</text>
+  <text x="91.5625" y="440.5625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">a, b, c = (1, 2, 3)</text>
+  <text x="91.5625" y="458.6875" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">first, *rest = [1, 2, 3, 4]</text>
+  <text x="91.5625" y="476.8125" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">*init, last = [1, 2, 3, 4]</text>
+  <text x="91.5625" y="498.5625" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Swap without temp:</text>
+  <text x="91.5625" y="516.6875" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">a, b = b, a</text>
+  <text x="91.5625" y="538.4375" font-family="monospace" font-size="11.0609" fill="var(--text-muted)"># Unpack in loop:</text>
+  <text x="91.5625" y="556.5625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">for k, v in d.items(): ...</text>
 
   <!-- EAFP vs LBYL -->
-  <rect x="430" y="355" width="820" height="255" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="430" y="355" width="820" height="38" rx="6" fill="var(--text-muted)"/>
-  <text x="840" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">EAFP vs LBYL Philosophy</text>
+  <rect x="443.125" y="361.7188" width="768.75" height="231.0938" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="443.125" y="361.7188" width="768.75" height="34.4375" rx="6" fill="var(--text-muted)"/>
+  <text x="827.5" y="384.375" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">EAFP vs LBYL Philosophy</text>
 
   <!-- LBYL left -->
-  <rect x="440" y="400" width="385" height="195" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="632" y="424" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">LBYL -- Look Before You Leap (non-Pythonic)</text>
-  <rect x="450" y="432" width="365" height="110" rx="6" fill="var(--code-bg)"/>
-  <text x="465" y="454" font-family="monospace" font-size="12" fill="var(--primary-accent)">if key in d:</text>
-  <text x="465" y="474" font-family="monospace" font-size="12" fill="var(--primary-accent)">    value = d[key]</text>
-  <text x="465" y="494" font-family="monospace" font-size="12" fill="var(--primary-accent)">else:</text>
-  <text x="465" y="514" font-family="monospace" font-size="12" fill="var(--primary-accent)">    value = default</text>
-  <text x="450" y="558" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Race condition risk; verbose; checks twice</text>
+  <rect x="452.5" y="402.5" width="360.9375" height="176.7188" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="632.5" y="424.25" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">LBYL -- Look Before You Leap (non-Pythonic)</text>
+  <rect x="461.875" y="431.5" width="342.1875" height="99.6875" rx="6" fill="var(--code-bg)"/>
+  <text x="475.9375" y="451.4375" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">if key in d:</text>
+  <text x="475.9375" y="469.5625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">    value = d[key]</text>
+  <text x="475.9375" y="487.6875" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">else:</text>
+  <text x="475.9375" y="505.8125" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">    value = default</text>
+  <text x="461.875" y="545.6875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Race condition risk; verbose; checks twice</text>
 
   <!-- EAFP right -->
-  <rect x="840" y="400" width="390" height="195" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1035" y="424" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">EAFP -- Easier to Ask Forgiveness (Pythonic)</text>
-  <rect x="850" y="432" width="370" height="110" rx="6" fill="var(--code-bg)"/>
-  <text x="865" y="454" font-family="monospace" font-size="12" fill="var(--primary-accent)">try:</text>
-  <text x="865" y="474" font-family="monospace" font-size="12" fill="var(--ok-accent)">    value = d[key]</text>
-  <text x="865" y="494" font-family="monospace" font-size="12" fill="var(--primary-accent)">except KeyError:</text>
-  <text x="865" y="514" font-family="monospace" font-size="12" fill="var(--ok-accent)">    value = default</text>
-  <text x="850" y="558" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Cleaner; no race; Pythonic; uses exceptions</text>
-  <text x="840" y="583" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Or even: value = d.get(key, default)</text>
+  <rect x="827.5" y="402.5" width="365.625" height="176.7188" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1010.3125" y="424.25" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">EAFP -- Easier to Ask Forgiveness (Pythonic)</text>
+  <rect x="836.875" y="431.5" width="346.875" height="99.6875" rx="6" fill="var(--code-bg)"/>
+  <text x="850.9375" y="451.4375" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">try:</text>
+  <text x="850.9375" y="469.5625" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    value = d[key]</text>
+  <text x="850.9375" y="487.6875" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">except KeyError:</text>
+  <text x="850.9375" y="505.8125" font-family="monospace" font-size="11.0609" fill="var(--ok-accent)">    value = default</text>
+  <text x="836.875" y="545.6875" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Cleaner; no race; Pythonic; uses exceptions</text>
+  <text x="827.5" y="568.3438" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)">Or even: value = d.get(key, default)</text>
 </svg>

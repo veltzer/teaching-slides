@@ -1,14 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Skew</text>
-  <rect x="378.6666" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -101,12 +92,53 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="330" x2="490.6667" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="330" x2="789.3333" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="330" x2="1088.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">Data Skew</text>
+
+  <text x="640" y="76.5766" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">One partition has orders-of-magnitude more rows than the others. That one task blocks the whole stage.</text>
+
+  <!-- Symptom panel -->
+  <rect x="40" y="102.7027" width="580" height="313.5135" rx="6.1336" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330" y="139.2793" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--danger-text)">Symptom</text>
+
+  <rect x="70" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <text x="100" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">50 MB</text>
+  <rect x="140" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <text x="170" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">45 MB</text>
+  <rect x="210" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <text x="240" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">52 MB</text>
+  <rect x="280" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <text x="310" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">48 MB</text>
+  <rect x="350" y="170.6306" width="260" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="2"/>
+  <text x="480" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" font-weight="bold" fill="var(--text)">12 GB — partition 4 (hot key)</text>
+
+  <text x="330" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" font-weight="bold" fill="var(--danger-text)">Spark UI tells you</text>
+  <text x="330" y="275.1351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">• stage runtime dominated by one task</text>
+  <text x="330" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">• task "shuffle read size / records" 10-100x others</text>
+  <text x="330" y="316.9369" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">• max vs median partition size way off</text>
+  <text x="330" y="348.2883" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">• OOM or disk spill on the one hot task</text>
+  <text x="330" y="379.6396" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">• long GC pauses on one executor</text>
+
+  <!-- Causes -->
+  <rect x="640" y="102.7027" width="600" height="313.5135" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="940" y="139.2793" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Causes</text>
+  <text x="670" y="175.8559" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">• Power-law keys: one user / product / country</text>
+  <text x="670" y="196.7568" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">   accounts for most of the traffic.</text>
+  <text x="670" y="228.1081" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">• Null / default keys pooling together</text>
+  <text x="670" y="249.009" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">   (userId = NULL for logged-out traffic).</text>
+  <text x="670" y="280.3604" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">• Sentinel date: "1970-01-01" for missing data.</text>
+  <text x="670" y="311.7117" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">• Wrong partition key — chose something</text>
+  <text x="670" y="332.6126" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">   with low cardinality (year, country).</text>
+  <text x="670" y="363.964" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">• groupByKey on an already-skewed key without</text>
+  <text x="670" y="384.8649" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">   map-side combine (use reduceByKey).</text>
+
+  <!-- Fixes -->
+  <rect x="40" y="431.8919" width="1200" height="188.1081" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="468.4685" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Fixes</text>
+  <text x="80" y="502.955" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• AQE skew handling: spark.sql.adaptive.skewJoin.enabled = true (default on 3.x) — splits the hot partition.</text>
+  <text x="80" y="529.0811" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• Salting: add a random suffix to the hot key, group, then strip the salt. Spreads the hot key across N partitions.</text>
+  <text x="80" y="555.2072" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• Broadcast the dimension side of the join if it fits — side-steps shuffle entirely.</text>
+  <text x="80" y="581.3333" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• Filter out nulls / sentinels before the join; handle them separately and union the results back.</text>
+  <text x="80" y="607.4595" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• Raise spark.sql.shuffle.partitions so even a skewed key has smaller absolute size per partition.</text>
 </svg>

@@ -104,113 +104,113 @@
       <path d="M2,9 L5,1 L8,9 Z" fill="#2e7d32"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Left panel: vertical memory map -->
   <!-- Address axis -->
-  <line x1="58" y1="45" x2="58" y2="615" stroke="var(--border)" stroke-width="2"/>
-  <polygon points="58,35 52,52 64,52" fill="var(--text-faint)"/>
-  <text x="58" y="28" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--text-faint)">High</text>
-  <text x="58" y="625" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--text-faint)">Low</text>
-  <text x="30" y="335" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--text-muted)" transform="rotate(-90 30 335)">Virtual Address Space</text>
+  <line x1="94.375" y1="80.7812" x2="94.375" y2="597.3438" stroke="var(--border)" stroke-width="2"/>
+  <polygon points="94.375,71.7188 88.75,87.125 100,87.125" fill="var(--text-faint)"/>
+  <text x="94.375" y="65.375" text-anchor="middle" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--text-faint)">High</text>
+  <text x="94.375" y="606.4062" text-anchor="middle" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--text-faint)">Low</text>
+  <text x="68.125" y="343.5938" text-anchor="middle" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text-muted)" transform="rotate(-90 30 335)">Virtual Address Space</text>
 
   <!-- Kernel boundary (above stack) -->
-  <text x="75" y="50" font-family="monospace" font-size="10" fill="var(--text-faint)">0xC000 0000</text>
-  <line x1="70" y1="55" x2="505" y2="55" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="510" y="59" font-family="monospace" font-size="10" fill="var(--danger-accent)">↑ kernel</text>
+  <text x="110.3125" y="85.3125" font-family="monospace" font-size="10" fill="var(--text-faint)">0xC000 0000</text>
+  <line x1="105.625" y1="89.8438" x2="513.4375" y2="89.8438" stroke="var(--danger-border)" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="518.125" y="93.4688" font-family="monospace" font-size="10" fill="var(--danger-accent)">↑ kernel</text>
 
   <!-- STACK segment y=60 h=90 -->
-  <rect x="70" y="60" width="430" height="90" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="285" y="94" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="var(--danger-accent)">Stack</text>
-  <text x="285" y="115" text-anchor="middle" font-family="sans-serif" font-size="12" fill="var(--danger-accent)">local vars · call frames · saved registers</text>
+  <rect x="105.625" y="94.375" width="403.125" height="81.5625" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.1875" y="125.1875" text-anchor="middle" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--danger-accent)">Stack</text>
+  <text x="307.1875" y="144.2188" text-anchor="middle" font-family="sans-serif" font-size="11.0609" fill="var(--danger-accent)">local vars · call frames · saved registers</text>
   <!-- ESP points here -->
-  <text x="75" y="143" font-family="monospace" font-size="10" fill="var(--danger-accent)">ESP →</text>
+  <text x="110.3125" y="169.5938" font-family="monospace" font-size="10" fill="var(--danger-accent)">ESP →</text>
 
   <!-- grows-down arrow -->
-  <line x1="285" y1="152" x2="285" y2="183" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-down)"/>
-  <text x="305" y="172" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--danger-accent)">grows down</text>
+  <line x1="307.1875" y1="177.75" x2="307.1875" y2="205.8438" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-down)"/>
+  <text x="325.9375" y="195.875" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--danger-accent)">grows down</text>
 
   <!-- FREE space y=190 h=80 -->
-  <rect x="70" y="190" width="430" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="7,4"/>
-  <text x="285" y="235" text-anchor="middle" font-family="sans-serif" font-size="14" fill="var(--text-faint)" font-style="italic">free / unmapped region</text>
+  <rect x="105.625" y="212.1875" width="403.125" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="7,4"/>
+  <text x="307.1875" y="252.9688" text-anchor="middle" font-family="sans-serif" font-size="12.9044" fill="var(--text-faint)" font-style="italic">free / unmapped region</text>
 
   <!-- grows-up arrow -->
-  <line x1="285" y1="270" x2="285" y2="299" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-up)"/>
-  <text x="305" y="288" font-family="sans-serif" font-size="11" font-weight="bold" fill="var(--ok-accent)">grows up</text>
+  <line x1="307.1875" y1="284.6875" x2="307.1875" y2="310.9688" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arr-up)"/>
+  <text x="325.9375" y="301" font-family="sans-serif" font-size="10.1392" font-weight="bold" fill="var(--ok-accent)">grows up</text>
 
   <!-- HEAP segment y=300 h=80 -->
-  <rect x="70" y="300" width="430" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="285" y="334" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">Heap</text>
-  <text x="285" y="357" text-anchor="middle" font-family="sans-serif" font-size="12" fill="var(--ok-accent)">dynamic allocation · brk / mmap</text>
+  <rect x="105.625" y="311.875" width="403.125" height="72.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.1875" y="342.6875" text-anchor="middle" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--ok-accent)">Heap</text>
+  <text x="307.1875" y="363.5312" text-anchor="middle" font-family="sans-serif" font-size="11.0609" fill="var(--ok-accent)">dynamic allocation · brk / mmap</text>
   <!-- program break label -->
-  <text x="75" y="299" font-family="monospace" font-size="10" fill="var(--ok-accent)">brk →</text>
+  <text x="110.3125" y="310.9688" font-family="monospace" font-size="10" fill="var(--ok-accent)">brk →</text>
 
   <!-- BSS segment y=390 h=60 -->
-  <rect x="70" y="390" width="430" height="60" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="285" y="415" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="var(--warn-accent)">BSS</text>
-  <text x="285" y="440" text-anchor="middle" font-family="sans-serif" font-size="11" fill="var(--danger-accent)">uninitialised static data · zero-filled</text>
+  <rect x="105.625" y="393.4375" width="403.125" height="54.375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.1875" y="416.0938" text-anchor="middle" font-family="sans-serif" font-size="15.6696" font-weight="bold" fill="var(--warn-accent)">BSS</text>
+  <text x="307.1875" y="438.75" text-anchor="middle" font-family="sans-serif" font-size="10.1392" fill="var(--danger-accent)">uninitialised static data · zero-filled</text>
 
   <!-- DATA segment y=458 h=60 -->
-  <rect x="70" y="458" width="430" height="60" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="285" y="483" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="var(--info-accent)">Data</text>
-  <text x="285" y="506" text-anchor="middle" font-family="sans-serif" font-size="11" fill="var(--info-accent)">initialised globals · read-write</text>
+  <rect x="105.625" y="455.0625" width="403.125" height="54.375" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.1875" y="477.7188" text-anchor="middle" font-family="sans-serif" font-size="15.6696" font-weight="bold" fill="var(--info-accent)">Data</text>
+  <text x="307.1875" y="498.5625" text-anchor="middle" font-family="sans-serif" font-size="10.1392" fill="var(--info-accent)">initialised globals · read-write</text>
 
   <!-- TEXT/CODE segment y=526 h=80 -->
-  <rect x="70" y="526" width="430" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="285" y="558" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)">Text (Code)</text>
-  <text x="285" y="578" text-anchor="middle" font-family="sans-serif" font-size="12" fill="var(--primary-accent)">machine instructions · read-only · shared</text>
-  <text x="75" y="528" font-family="monospace" font-size="10" fill="var(--primary-accent)">_start →</text>
+  <rect x="105.625" y="516.6875" width="403.125" height="72.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="307.1875" y="545.6875" text-anchor="middle" font-family="sans-serif" font-size="18.4349" font-weight="bold" fill="var(--primary-accent)">Text (Code)</text>
+  <text x="307.1875" y="563.8125" text-anchor="middle" font-family="sans-serif" font-size="11.0609" fill="var(--primary-accent)">machine instructions · read-only · shared</text>
+  <text x="110.3125" y="518.5" font-family="monospace" font-size="10" fill="var(--primary-accent)">_start →</text>
 
   <!-- Low address marker -->
-  <text x="75" y="614" font-family="monospace" font-size="10" fill="var(--text-faint)">0x0804 8000</text>
+  <text x="110.3125" y="596.4375" font-family="monospace" font-size="10" fill="var(--text-faint)">0x0804 8000</text>
 
   <!-- Right panel: detailed annotations -->
-  <rect x="545" y="35" width="710" height="575" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="545" y="35" width="710" height="40" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="545" y="60" width="710" height="15" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="900" y="62" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Segment Reference</text>
+  <rect x="550.9375" y="71.7188" width="665.625" height="521.0938" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="550.9375" y="71.7188" width="665.625" height="36.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="550.9375" y="94.375" width="665.625" height="13.5938" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="883.75" y="96.1875" text-anchor="middle" font-family="sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)">Segment Reference</text>
 
   <!-- Stack detail -->
-  <rect x="560" y="88" width="680" height="88" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="580" y="108" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--danger-accent)">Stack</text>
-  <text x="580" y="126" font-family="monospace" font-size="11" fill="var(--text)">• ESP points to top; push decrements ESP, pop increments</text>
-  <text x="580" y="142" font-family="monospace" font-size="11" fill="var(--text)">• Function frames: return addr, saved regs, local variables</text>
-  <text x="580" y="158" font-family="monospace" font-size="11" fill="var(--text-muted)">  allocate:  sub $16, %esp    free:  add $16, %esp</text>
-  <text x="580" y="170" font-family="monospace" font-size="10" fill="var(--text-faint)">  default limit 8 MB (ulimit -s); overflow → segfault</text>
+  <rect x="565" y="119.75" width="637.5" height="79.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="583.75" y="137.875" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)">Stack</text>
+  <text x="583.75" y="154.1875" font-family="monospace" font-size="10.1392" fill="var(--text)">• ESP points to top; push decrements ESP, pop increments</text>
+  <text x="583.75" y="168.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">• Function frames: return addr, saved regs, local variables</text>
+  <text x="583.75" y="183.1875" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  allocate:  sub $16, %esp    free:  add $16, %esp</text>
+  <text x="583.75" y="194.0625" font-family="monospace" font-size="10" fill="var(--text-faint)">  default limit 8 MB (ulimit -s); overflow → segfault</text>
 
   <!-- Heap detail -->
-  <rect x="560" y="184" width="680" height="88" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="580" y="204" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">Heap</text>
-  <text x="580" y="222" font-family="monospace" font-size="11" fill="var(--text)">• Runtime allocation — size unknown at compile time</text>
-  <text x="580" y="238" font-family="monospace" font-size="11" fill="var(--text)">• sys_brk (EAX=45) moves program break up or down</text>
-  <text x="580" y="254" font-family="monospace" font-size="11" fill="var(--text-muted)">  mmap (EAX=192) also maps anonymous pages</text>
-  <text x="580" y="266" font-family="monospace" font-size="10" fill="var(--text-faint)">  C: malloc/calloc/free use brk/mmap internally</text>
+  <rect x="565" y="206.75" width="637.5" height="79.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="583.75" y="224.875" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">Heap</text>
+  <text x="583.75" y="241.1875" font-family="monospace" font-size="10.1392" fill="var(--text)">• Runtime allocation — size unknown at compile time</text>
+  <text x="583.75" y="255.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">• sys_brk (EAX=45) moves program break up or down</text>
+  <text x="583.75" y="270.1875" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  mmap (EAX=192) also maps anonymous pages</text>
+  <text x="583.75" y="281.0625" font-family="monospace" font-size="10" fill="var(--text-faint)">  C: malloc/calloc/free use brk/mmap internally</text>
 
   <!-- BSS detail -->
-  <rect x="560" y="280" width="680" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="580" y="300" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">BSS  (Block Started by Symbol)</text>
-  <text x="580" y="318" font-family="monospace" font-size="11" fill="var(--text)">• Uninitialized global/static vars — NOT stored in binary</text>
-  <text x="580" y="334" font-family="monospace" font-size="11" fill="var(--text)">• OS zero-fills this region at load time (cheap)</text>
-  <text x="580" y="350" font-family="monospace" font-size="11" fill="var(--text-muted)">  GAS:   buffer: .space 1024   (in .bss section)</text>
+  <rect x="565" y="293.75" width="637.5" height="72.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="583.75" y="311.875" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)">BSS  (Block Started by Symbol)</text>
+  <text x="583.75" y="328.1875" font-family="monospace" font-size="10.1392" fill="var(--text)">• Uninitialized global/static vars — NOT stored in binary</text>
+  <text x="583.75" y="342.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">• OS zero-fills this region at load time (cheap)</text>
+  <text x="583.75" y="357.1875" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  GAS:   buffer: .space 1024   (in .bss section)</text>
 
   <!-- Data detail -->
-  <rect x="560" y="368" width="680" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="580" y="388" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--info-accent)">Data Segment</text>
-  <text x="580" y="406" font-family="monospace" font-size="11" fill="var(--text)">• Initialized globals/statics — stored in executable file</text>
-  <text x="580" y="422" font-family="monospace" font-size="11" fill="var(--text)">• Read-write; fixed size at compile time</text>
-  <text x="580" y="438" font-family="monospace" font-size="11" fill="var(--text-muted)">  GAS:   msg: .asciz "hello"   (in .data section)</text>
+  <rect x="565" y="373.5" width="637.5" height="72.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="583.75" y="391.625" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--info-accent)">Data Segment</text>
+  <text x="583.75" y="407.9375" font-family="monospace" font-size="10.1392" fill="var(--text)">• Initialized globals/statics — stored in executable file</text>
+  <text x="583.75" y="422.4375" font-family="monospace" font-size="10.1392" fill="var(--text)">• Read-write; fixed size at compile time</text>
+  <text x="583.75" y="436.9375" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  GAS:   msg: .asciz "hello"   (in .data section)</text>
 
   <!-- Text detail -->
-  <rect x="560" y="456" width="680" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="580" y="476" font-family="sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Text / Code Segment</text>
-  <text x="580" y="494" font-family="monospace" font-size="11" fill="var(--text)">• Read-only machine instructions (enforced by MMU)</text>
-  <text x="580" y="510" font-family="monospace" font-size="11" fill="var(--text)">• Shared among all processes running the same binary</text>
-  <text x="580" y="526" font-family="monospace" font-size="11" fill="var(--text-muted)">  Entry point: _start label (.globl _start)</text>
-  <text x="580" y="540" font-family="monospace" font-size="10" fill="var(--text-faint)">  Typical start address: 0x08048000 (32-bit ELF)</text>
+  <rect x="565" y="453.25" width="637.5" height="81.5625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="583.75" y="471.375" font-family="sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Text / Code Segment</text>
+  <text x="583.75" y="487.6875" font-family="monospace" font-size="10.1392" fill="var(--text)">• Read-only machine instructions (enforced by MMU)</text>
+  <text x="583.75" y="502.1875" font-family="monospace" font-size="10.1392" fill="var(--text)">• Shared among all processes running the same binary</text>
+  <text x="583.75" y="516.6875" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">  Entry point: _start label (.globl _start)</text>
+  <text x="583.75" y="529.375" font-family="monospace" font-size="10" fill="var(--text-faint)">  Typical start address: 0x08048000 (32-bit ELF)</text>
 
   <!-- Gas directives summary box -->
-  <rect x="560" y="554" width="680" height="50" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="580" y="573" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--primary-accent)">GAS Sections:  </text>
-  <text x="700" y="573" font-family="monospace" font-size="12" fill="var(--primary-accent)">.text  (code)   .data  (init data)   .bss  (uninit data)</text>
-  <text x="580" y="594" font-family="monospace" font-size="11" fill="var(--text-muted)">Stack &amp; heap are runtime — not declared in GAS source</text>
+  <rect x="565" y="542.0625" width="637.5" height="45.3125" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="583.75" y="559.2812" font-family="sans-serif" font-size="11.0609" font-weight="bold" fill="var(--primary-accent)">GAS Sections:  </text>
+  <text x="696.25" y="559.2812" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">.text  (code)   .data  (init data)   .bss  (uninit data)</text>
+  <text x="583.75" y="578.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">Stack &amp; heap are runtime — not declared in GAS source</text>
 </svg>

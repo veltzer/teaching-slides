@@ -100,27 +100,27 @@
       <polygon points="0,0 6.4,20" fill="#555" />
     </marker>
   </defs>
-  <text x="640" y="44" text-anchor="middle" font-size="25.6" fill="var(--text)" font-weight="bold">async/await → State Machine</text>
-  <rect x="36.5714" y="80" width="566.8571" height="560" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="54.8571" y="136" text-anchor="start" font-size="21.9429" fill="var(--code-bg)" font-weight="bold">async fn example() {</text>
-  <text x="54.8571" y="180" text-anchor="start" font-size="21.9429" fill="var(--code-bg)">    let a = foo().await;</text>
-  <text x="54.8571" y="224" text-anchor="start" font-size="21.9429" fill="var(--code-bg)">    let b = bar(a).await;</text>
-  <text x="54.8571" y="268" text-anchor="start" font-size="21.9429" fill="var(--code-bg)">    a + b</text>
-  <text x="54.8571" y="312" text-anchor="start" font-size="21.9429" fill="var(--code-bg)">}</text>
-  <text x="54.8571" y="356" text-anchor="start" font-size="21.9429" fill="var(--code-bg)" />
-  <text x="54.8571" y="400" text-anchor="start" font-size="21.9429" fill="var(--code-bg)">Each .await = potential yield point</text>
-  <text x="54.8571" y="444" text-anchor="start" font-size="21.9429" fill="var(--code-bg)">(future saves state, resumes later)</text>
-  <rect x="713.1429" y="120" width="402.2857" height="120" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="914.2857" y="172" text-anchor="middle" font-size="23.7714" fill="var(--text)" font-weight="bold">Start</text>
-  <text x="914.2857" y="212" text-anchor="middle" font-size="23.7714" fill="var(--text)">poll foo()</text>
-  <rect x="713.1429" y="300" width="402.2857" height="120" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="914.2857" y="352" text-anchor="middle" font-size="23.7714" fill="var(--text)" font-weight="bold">State 1</text>
-  <text x="914.2857" y="392" text-anchor="middle" font-size="23.7714" fill="var(--text)">poll bar(a)</text>
-  <rect x="713.1429" y="480" width="402.2857" height="120" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="914.2857" y="532" text-anchor="middle" font-size="23.7714" fill="var(--text)" font-weight="bold">Complete</text>
-  <text x="914.2857" y="572" text-anchor="middle" font-size="23.7714" fill="var(--text)">return a+b</text>
-  <line x1="914.2857" y1="240" x2="914.2857" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="932.5714" y="278" text-anchor="start" font-size="20.1143" fill="var(--text-muted)">Ready(a)</text>
-  <line x1="914.2857" y1="420" x2="914.2857" y2="480" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="932.5714" y="458" text-anchor="start" font-size="20.1143" fill="var(--text-muted)">Ready(b)</text>
+  <text x="711.1864" y="40" text-anchor="middle" font-size="26.6342" fill="var(--text)" font-weight="bold">async/await → State Machine</text>
+  <rect x="40" y="75.0336" width="630.5084" height="544.9664" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="60.339" y="129.5302" text-anchor="start" font-size="22.8293" fill="var(--code-bg)" font-weight="bold">async fn example() {</text>
+  <text x="60.339" y="172.349" text-anchor="start" font-size="22.8293" fill="var(--code-bg)">    let a = foo().await;</text>
+  <text x="60.339" y="215.1678" text-anchor="start" font-size="22.8293" fill="var(--code-bg)">    let b = bar(a).await;</text>
+  <text x="60.339" y="257.9866" text-anchor="start" font-size="22.8293" fill="var(--code-bg)">    a + b</text>
+  <text x="60.339" y="300.8054" text-anchor="start" font-size="22.8293" fill="var(--code-bg)">}</text>
+  <text x="60.339" y="343.6242" text-anchor="start" font-size="22.8293" fill="var(--code-bg)" />
+  <text x="60.339" y="386.443" text-anchor="start" font-size="22.8293" fill="var(--code-bg)">Each .await = potential yield point</text>
+  <text x="60.339" y="429.2617" text-anchor="start" font-size="22.8293" fill="var(--code-bg)">(future saves state, resumes later)</text>
+  <rect x="792.5424" y="113.9597" width="447.4576" height="116.7785" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="1016.2712" y="164.5638" text-anchor="middle" font-size="24.7317" fill="var(--text)" font-weight="bold">Start</text>
+  <text x="1016.2712" y="203.4899" text-anchor="middle" font-size="24.7317" fill="var(--text)">poll foo()</text>
+  <rect x="792.5424" y="289.1275" width="447.4576" height="116.7785" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1016.2712" y="339.7315" text-anchor="middle" font-size="24.7317" fill="var(--text)" font-weight="bold">State 1</text>
+  <text x="1016.2712" y="378.6577" text-anchor="middle" font-size="24.7317" fill="var(--text)">poll bar(a)</text>
+  <rect x="792.5424" y="464.2953" width="447.4576" height="116.7785" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="1016.2712" y="514.8993" text-anchor="middle" font-size="24.7317" fill="var(--text)" font-weight="bold">Complete</text>
+  <text x="1016.2712" y="553.8255" text-anchor="middle" font-size="24.7317" fill="var(--text)">return a+b</text>
+  <line x1="1016.2712" y1="230.7383" x2="1016.2712" y2="289.1275" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
+  <text x="1036.6101" y="267.7181" text-anchor="start" font-size="20.9269" fill="var(--text-muted)">Ready(a)</text>
+  <line x1="1016.2712" y1="405.906" x2="1016.2712" y2="464.2953" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
+  <text x="1036.6101" y="442.8859" text-anchor="start" font-size="20.9269" fill="var(--text-muted)">Ready(b)</text>
 </svg>

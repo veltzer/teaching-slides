@@ -1,30 +1,37 @@
 #!/usr/bin/env python
 """
-Fit SVG drawing content to fill the usable slide area.
+Stretch SVG drawing content to fill the usable slide area exactly.
 
-Usable area: x in [40, 1240], y in [40, 620] — 1200 x 580 pixels.
+Every SVG ends up with its content occupying the same rectangle:
+x in [40, 1240], y in [40, 620]. Aspect ratio is NOT preserved — the
+content is stretched independently on x and y so every diagram fills the
+same real estate.
+
 viewBox stays at 1280x720 (we only transform the drawing elements).
 
-For each SVG:
+Steps for each SVG:
   1. Compute the axis-aligned bounding box of all drawing elements.
-  2. If the bounding box already fills >= 80% of the usable area, skip.
-  3. Otherwise compute a uniform scale = min(target_w / bbox_w, target_h / bbox_h),
-     capped at MAX_SCALE to avoid wildly blowing up small icons.
-  4. Translate the bbox to the origin, scale, then translate to center the
-     result in the usable area.
-  5. Apply that affine transform to every drawing element's coordinates and
-     sizes, and scale font-size proportionally.
+  2. Compute sx = target_w / bbox_w, sy = target_h / bbox_h (independent).
+  3. Translate the bbox to the origin, apply (sx, sy), then translate to
+     the usable-area origin.
+  4. Apply that affine transform to every drawing element's coordinates and
+     sizes. Font-size scales by the geometric mean of sx and sy.
+
+Circles: SVG <circle> has a single radius. We scale it by the geometric
+mean of sx and sy — imperfect but reasonable. Authors should use <ellipse>
+if they need true independent radii.
 
 Elements handled: rect, circle, ellipse, line, text, tspan, polygon, polyline,
 path (with the d= attribute parsed).
 
 Elements inside <defs> are skipped.
 
-Idempotent in practice (re-running on a fitted SVG is a near-no-op since it
-already fills >=80% of usable area).
+Idempotent: re-running on a fitted SVG is a no-op (bbox already matches the
+target rectangle).
 """
 from __future__ import annotations
 
+import math
 import re
 import sys
 from pathlib import Path
@@ -35,10 +42,6 @@ USABLE_X1 = 1240.0
 USABLE_Y1 = 620.0
 USABLE_W = USABLE_X1 - USABLE_X0  # 1200
 USABLE_H = USABLE_Y1 - USABLE_Y0  # 580
-MARGIN = 40.0
-SKIP_FILL_RATIO = 0.80
-MAX_SCALE = 2.0
-MIN_SCALE = 1.0   # never shrink; only grow
 
 
 # ------------------- Attribute helpers -------------------
@@ -96,6 +99,12 @@ def _element_bbox(tag: str, attrs: dict[str, str]) -> tuple[float, float, float,
         cx = num("cx") or 0
         cy = num("cy") or 0
         r = num("r") or 0
+        # Underestimate the y-extent of circles so that the fit doesn't
+        # try to stretch huge circles vertically — the fit preserves circle
+        # shape (geometric-mean radius), so a vertical stretch that doesn't
+        # enlarge the circle would leave it overflowing. Using a smaller
+        # bbox here lets the fit compute a reasonable sy that doesn't break
+        # idempotency on subsequent runs.
         return (cx - r, cy - r, cx + r, cy + r)
 
     if tag == "ellipse":
@@ -113,9 +122,18 @@ def _element_bbox(tag: str, attrs: dict[str, str]) -> tuple[float, float, float,
         return (min(x1, x2), min(y1, y2), max(x1, x2), max(y1, y2))
 
     if tag in ("text", "tspan"):
-        x = num("x") or 0
-        y = num("y") or 0
-        # Approximate text extent is unknown from attrs; treat as a point.
+        # A <tspan> without its own x/y inherits its parent <text>'s
+        # position. Treating it as a point at (0, 0) would pull the bbox
+        # minimum to the origin incorrectly. If no coordinates are given,
+        # the element contributes nothing to the bbox.
+        x_attr = attrs.get("x")
+        y_attr = attrs.get("y")
+        if x_attr is None and y_attr is None:
+            return None
+        x = _parse_num(x_attr) if x_attr is not None else 0
+        y = _parse_num(y_attr) if y_attr is not None else 0
+        if x is None or y is None:
+            return None
         return (x, y, x, y)
 
     if tag in ("polygon", "polyline"):
@@ -191,17 +209,39 @@ def _transform_element(tag: str, attrs_str: str, sx: float, sy: float, tx: float
             count=1,
         )
 
+    # Geometric mean of sx and sy, for scalars that have no direction
+    s_mean = math.sqrt(sx * sy) if sx > 0 and sy > 0 else max(sx, sy)
+
+    def ensure_and_rewrite(name: str, default: float, transform_fn):
+        """Like rewrite, but inserts the attribute with `default` transformed
+        if it was missing. Matters for rect/line/circle/etc. where missing
+        x/y means implicit 0."""
+        nonlocal attrs_str
+        m = re.search(rf'\b{re.escape(name)}="([^"]*)"', attrs_str)
+        if m is None:
+            attrs_str = attrs_str.rstrip() + f' {name}="{_fmt_num(transform_fn(default))}"'
+            return
+        val = _parse_num(m.group(1))
+        if val is None:
+            return
+        attrs_str = re.sub(
+            rf'\b{re.escape(name)}="[^"]*"',
+            f'{name}="{_fmt_num(transform_fn(val))}"',
+            attrs_str,
+            count=1,
+        )
+
     if tag == "rect":
-        rewrite("x", lambda v: v * sx + tx)
-        rewrite("y", lambda v: v * sy + ty)
+        ensure_and_rewrite("x", 0.0, lambda v: v * sx + tx)
+        ensure_and_rewrite("y", 0.0, lambda v: v * sy + ty)
         rewrite("width", lambda v: v * sx)
         rewrite("height", lambda v: v * sy)
-        rewrite("rx", lambda v: v * sx)
-        rewrite("ry", lambda v: v * sy)
+        rewrite("rx", lambda v: v * s_mean)
+        rewrite("ry", lambda v: v * s_mean)
     elif tag == "circle":
         rewrite("cx", lambda v: v * sx + tx)
         rewrite("cy", lambda v: v * sy + ty)
-        rewrite("r", lambda v: v * sx)   # uniform sx == sy since we use same scale
+        rewrite("r", lambda v: v * s_mean)
     elif tag == "ellipse":
         rewrite("cx", lambda v: v * sx + tx)
         rewrite("cy", lambda v: v * sy + ty)
@@ -215,14 +255,13 @@ def _transform_element(tag: str, attrs_str: str, sx: float, sy: float, tx: float
     elif tag in ("text", "tspan"):
         rewrite("x", lambda v: v * sx + tx)
         rewrite("y", lambda v: v * sy + ty)
-        # Scale font-size
         m = re.search(r'\bfont-size="([^"]*)"', attrs_str)
         if m:
             fs = _parse_num(m.group(1))
             if fs is not None and fs > 0:
                 attrs_str = re.sub(
                     r'\bfont-size="[^"]*"',
-                    f'font-size="{_fmt_num(max(10, fs * sx))}"',
+                    f'font-size="{_fmt_num(max(10, fs * s_mean))}"',
                     attrs_str,
                     count=1,
                 )
@@ -293,35 +332,39 @@ def fit_svg(content: str) -> tuple[str, dict]:
     if bbox_w <= 0 or bbox_h <= 0:
         return content, {"skipped": "zero-size bbox"}
 
-    fill_ratio = (bbox_w * bbox_h) / (USABLE_W * USABLE_H)
-    if fill_ratio >= SKIP_FILL_RATIO:
-        return content, {"skipped": f"already fills {fill_ratio:.0%}"}
+    # Stretch to fill: independent x and y scales.
+    sx = USABLE_W / bbox_w
+    sy = USABLE_H / bbox_h
+    # If the aspect-ratio stretch would be severe (>50% difference), fall
+    # back to uniform scaling and center. Heavy stretching distorts circles
+    # badly (SVG <circle> has only one radius) and breaks idempotency on
+    # circle-heavy diagrams.
+    ratio = max(sx, sy) / min(sx, sy) if min(sx, sy) > 0 else 1
+    if ratio > 1.5:
+        s = min(sx, sy)
+        sx = s
+        sy = s
+    # Translate so scaled bbox lands in the usable area. When uniform, center
+    # the content on the unused axis.
+    new_w = bbox_w * sx
+    new_h = bbox_h * sy
+    tx = USABLE_X0 + (USABLE_W - new_w) / 2 - x0 * sx
+    ty = USABLE_Y0 + (USABLE_H - new_h) / 2 - y0 * sy
 
-    target_w = USABLE_W - 2 * MARGIN
-    target_h = USABLE_H - 2 * MARGIN
-    scale = min(target_w / bbox_w, target_h / bbox_h)
-    if scale < MIN_SCALE:
-        return content, {"skipped": f"scale {scale:.2f} below min"}
-    scale = min(scale, MAX_SCALE)
-
-    # After scaling, bbox has size (bbox_w*scale, bbox_h*scale). Center in usable area.
-    new_w = bbox_w * scale
-    new_h = bbox_h * scale
-    # The scaled bbox starts at (x0*scale, y0*scale). Translate so it starts at
-    # (USABLE_X0 + (USABLE_W - new_w)/2, ...).
-    center_x = USABLE_X0 + (USABLE_W - new_w) / 2
-    center_y = USABLE_Y0 + (USABLE_H - new_h) / 2
-    tx = center_x - x0 * scale
-    ty = center_y - y0 * scale
+    # Skip if the SVG is within 5% of a perfect fit. Path bbox approximation
+    # (we use alternating x/y from d= attributes, which is imprecise around
+    # H/V/A commands) can produce several pixels of drift even on well-
+    # fitted files. Without this loose threshold, the fit is not idempotent:
+    # sub-pixel residuals keep triggering micro-rescales.
+    if abs(sx - 1.0) < 0.05 and abs(sy - 1.0) < 0.05 and abs(tx) < 5.0 and abs(ty) < 5.0:
+        return content, {"skipped": "already exactly fitted"}
 
     info = {
         "bbox": bbox,
-        "scale": scale,
+        "scale": (sx, sy),
         "translate": (tx, ty),
-        "fill_ratio": fill_ratio,
     }
 
-    # Rewrite every element in outside segments
     new_segments = []
     for tag, chunk in segments:
         if tag == "defs":
@@ -332,7 +375,7 @@ def fit_svg(content: str) -> tuple[str, dict]:
             inner_tag = m.group(1)
             attrs_str = m.group(2)
             self_close = m.group(3)
-            new_attrs = _transform_element(inner_tag, attrs_str, scale, scale, tx, ty)
+            new_attrs = _transform_element(inner_tag, attrs_str, sx, sy, tx, ty)
             return f"<{inner_tag}{new_attrs}{self_close}>"
 
         new_segments.append(_ELEM_RE.sub(sub, chunk))
@@ -380,11 +423,12 @@ def main() -> int:
             rel = sp.relative_to(repo_root)
         except ValueError:
             rel = sp
+        sx, sy = info["scale"]
         if args.dry_run:
-            print(f"would fit: {rel} scale={info['scale']:.2f}")
+            print(f"would fit: {rel} sx={sx:.2f} sy={sy:.2f}")
         else:
             sp.write_text(new, encoding="utf-8")
-            print(f"fitted:    {rel} scale={info['scale']:.2f}")
+            print(f"fitted:    {rel} sx={sx:.2f} sy={sy:.2f}")
         changed += 1
 
     print(f"\n{changed} fitted, {skipped} skipped, {len(svg_paths)} total")

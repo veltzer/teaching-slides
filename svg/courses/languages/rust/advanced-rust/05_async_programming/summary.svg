@@ -100,42 +100,42 @@
       <polygon points="0,0 7,19.6721" fill="#555" />
     </marker>
   </defs>
-  <rect x="18.2772" y="17.9775" width="1133.1836" height="61.1236" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2.6966" rx="6" />
-  <text x="584.869" y="57.5281" text-anchor="middle" font-size="25.1686" fill="var(--bg)" font-weight="bold">Async Programming Cheatsheet</text>
-  <rect x="18.2772" y="79.1012" width="1133.1836" height="46.7415" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="36.5543" y="109.6629" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">Future::poll()</text>
-  <text x="438.6517" y="109.6629" text-anchor="start" font-size="21.5731" fill="var(--text)">returns Pending or Ready(T)</text>
-  <rect x="18.2772" y="125.8427" width="1133.1836" height="46.7415" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="36.5543" y="156.4045" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">async fn</text>
-  <text x="438.6517" y="156.4045" text-anchor="start" font-size="21.5731" fill="var(--text)">generates a state machine</text>
-  <rect x="18.2772" y="172.5843" width="1133.1836" height="46.7415" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="36.5543" y="203.1461" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">.await</text>
-  <text x="438.6517" y="203.1461" text-anchor="start" font-size="21.5731" fill="var(--text)">yield point (state transition)</text>
-  <rect x="18.2772" y="219.3259" width="1133.1836" height="46.7415" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="36.5543" y="249.8876" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">Pin&lt;&amp;mut F&gt;</text>
-  <text x="438.6517" y="249.8876" text-anchor="start" font-size="21.5731" fill="var(--text)">prevents moving self-referential futures</text>
-  <rect x="18.2772" y="266.0674" width="1133.1836" height="46.7415" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="36.5543" y="296.6293" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">Unpin</text>
-  <text x="438.6517" y="296.6293" text-anchor="start" font-size="21.5731" fill="var(--text)">opt-out of pinning restrictions</text>
-  <rect x="18.2772" y="312.809" width="1133.1836" height="46.7415" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="36.5543" y="343.3708" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">tokio::spawn</text>
-  <text x="438.6517" y="343.3708" text-anchor="start" font-size="21.5731" fill="var(--text)">run a Send + 'static future</text>
-  <rect x="18.2772" y="359.5506" width="1133.1836" height="46.7415" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="36.5543" y="390.1124" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">spawn_blocking</text>
-  <text x="438.6517" y="390.1124" text-anchor="start" font-size="21.5731" fill="var(--text)">run blocking code off the async runtime</text>
-  <rect x="18.2772" y="406.2922" width="1133.1836" height="46.7415" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="36.5543" y="436.854" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">join!</text>
-  <text x="438.6517" y="436.854" text-anchor="start" font-size="21.5731" fill="var(--text)">run all futures concurrently</text>
-  <rect x="18.2772" y="453.0337" width="1133.1836" height="46.7415" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="36.5543" y="483.5955" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">select!</text>
-  <text x="438.6517" y="483.5955" text-anchor="start" font-size="21.5731" fill="var(--text)">race futures, first one wins</text>
-  <rect x="18.2772" y="499.7753" width="1133.1836" height="46.7415" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="36.5543" y="530.3372" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">Stream</text>
-  <text x="438.6517" y="530.3372" text-anchor="start" font-size="21.5731" fill="var(--text)">async iterator</text>
-  <rect x="18.2772" y="546.5169" width="1133.1836" height="46.7415" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="36.5543" y="577.0787" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">Cancellation-safe</text>
-  <text x="438.6517" y="577.0787" text-anchor="start" font-size="21.5731" fill="var(--text)">no partial state lost on cancel</text>
-  <rect x="18.2772" y="593.2585" width="1133.1836" height="46.7415" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="36.5543" y="623.8203" text-anchor="start" font-size="21.5731" fill="var(--primary-accent)" font-weight="bold">async_trait</text>
-  <text x="438.6517" y="623.8203" text-anchor="start" font-size="21.5731" fill="var(--text)">async fn in dyn trait objects</text>
+  <rect x="40" y="40" width="1200" height="56.9942" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="2.6966" rx="6" />
+  <text x="640" y="76.8786" text-anchor="middle" font-size="25.0098" fill="var(--bg)" font-weight="bold">Async Programming Cheatsheet</text>
+  <rect x="40" y="96.9943" width="1200" height="43.5837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="59.3548" y="125.4913" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">Future::poll()</text>
+  <text x="485.1612" y="125.4913" text-anchor="start" font-size="21.437" fill="var(--text)">returns Pending or Ready(T)</text>
+  <rect x="40" y="140.5781" width="1200" height="43.5837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="59.3548" y="169.0752" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">async fn</text>
+  <text x="485.1612" y="169.0752" text-anchor="start" font-size="21.437" fill="var(--text)">generates a state machine</text>
+  <rect x="40" y="184.1619" width="1200" height="43.5837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="59.3548" y="212.659" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">.await</text>
+  <text x="485.1612" y="212.659" text-anchor="start" font-size="21.437" fill="var(--text)">yield point (state transition)</text>
+  <rect x="40" y="227.7457" width="1200" height="43.5837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="59.3548" y="256.2428" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">Pin&lt;&amp;mut F&gt;</text>
+  <text x="485.1612" y="256.2428" text-anchor="start" font-size="21.437" fill="var(--text)">prevents moving self-referential futures</text>
+  <rect x="40" y="271.3295" width="1200" height="43.5837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="59.3548" y="299.8267" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">Unpin</text>
+  <text x="485.1612" y="299.8267" text-anchor="start" font-size="21.437" fill="var(--text)">opt-out of pinning restrictions</text>
+  <rect x="40" y="314.9133" width="1200" height="43.5837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="59.3548" y="343.4104" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">tokio::spawn</text>
+  <text x="485.1612" y="343.4104" text-anchor="start" font-size="21.437" fill="var(--text)">run a Send + 'static future</text>
+  <rect x="40" y="358.4972" width="1200" height="43.5837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="59.3548" y="386.9943" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">spawn_blocking</text>
+  <text x="485.1612" y="386.9943" text-anchor="start" font-size="21.437" fill="var(--text)">run blocking code off the async runtime</text>
+  <rect x="40" y="402.081" width="1200" height="43.5837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="59.3548" y="430.5781" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">join!</text>
+  <text x="485.1612" y="430.5781" text-anchor="start" font-size="21.437" fill="var(--text)">run all futures concurrently</text>
+  <rect x="40" y="445.6647" width="1200" height="43.5837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="59.3548" y="474.1619" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">select!</text>
+  <text x="485.1612" y="474.1619" text-anchor="start" font-size="21.437" fill="var(--text)">race futures, first one wins</text>
+  <rect x="40" y="489.2486" width="1200" height="43.5837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="59.3548" y="517.7458" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">Stream</text>
+  <text x="485.1612" y="517.7458" text-anchor="start" font-size="21.437" fill="var(--text)">async iterator</text>
+  <rect x="40" y="532.8324" width="1200" height="43.5837" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
+  <text x="59.3548" y="561.3295" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">Cancellation-safe</text>
+  <text x="485.1612" y="561.3295" text-anchor="start" font-size="21.437" fill="var(--text)">no partial state lost on cancel</text>
+  <rect x="40" y="576.4163" width="1200" height="43.5837" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="59.3548" y="604.9134" text-anchor="start" font-size="21.437" fill="var(--primary-accent)" font-weight="bold">async_trait</text>
+  <text x="485.1612" y="604.9134" text-anchor="start" font-size="21.437" fill="var(--text)">async fn in dyn trait objects</text>
 </svg>

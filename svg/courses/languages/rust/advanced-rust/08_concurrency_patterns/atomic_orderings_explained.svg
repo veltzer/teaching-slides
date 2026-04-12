@@ -93,31 +93,31 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="16.1387" y="13.617" width="1129.7084" height="626.383" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="580.9929" y="61.2766" text-anchor="middle" font-size="24.5106" font-weight="bold" fill="var(--text)">Memory Orderings</text>
-  <line x1="48.416" y1="74.8936" x2="1113.5698" y2="74.8936" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="48.416" y="88.5106" width="1065.1536" height="95.3191" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="72.6241" y="122.5532" font-size="19.0638" font-weight="bold" fill="var(--text)">Relaxed</text>
-  <text x="274.3577" y="122.5532" font-size="17.7021" fill="var(--text)">No ordering guarantees between threads.</text>
-  <text x="274.3577" y="147.0638" font-size="17.7021" fill="var(--text)">Only guarantees atomicity of the operation.</text>
-  <text x="274.3577" y="171.5745" font-size="17.7021" fill="var(--text-muted)">Use for: counters, flags where order does not matter.</text>
-  <rect x="48.416" y="197.4468" width="1065.1536" height="95.3191" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="72.6241" y="231.4894" font-size="19.0638" font-weight="bold" fill="var(--text)">Acquire</text>
-  <text x="274.3577" y="231.4894" font-size="17.7021" fill="var(--text)">All reads/writes after this load see writes before</text>
-  <text x="274.3577" y="256" font-size="17.7021" fill="var(--text)">the corresponding Release store.</text>
-  <text x="274.3577" y="280.5106" font-size="17.7021" fill="var(--text-muted)">Use for: loading a lock/flag.</text>
-  <rect x="48.416" y="306.383" width="1065.1536" height="95.3191" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="72.6241" y="340.4255" font-size="19.0638" font-weight="bold" fill="var(--text)">Release</text>
-  <text x="274.3577" y="340.4255" font-size="17.7021" fill="var(--text)">All prior reads/writes are visible to threads</text>
-  <text x="274.3577" y="364.9362" font-size="17.7021" fill="var(--text)">that do an Acquire load.</text>
-  <text x="274.3577" y="389.4468" font-size="17.7021" fill="var(--text-muted)">Use for: storing a lock/flag.</text>
-  <rect x="48.416" y="415.3191" width="1065.1536" height="74.8936" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="72.6241" y="449.3617" font-size="19.0638" font-weight="bold" fill="var(--text)">AcqRel</text>
-  <text x="274.3577" y="449.3617" font-size="17.7021" fill="var(--text)">Acquire + Release combined.</text>
-  <text x="274.3577" y="473.8723" font-size="17.7021" fill="var(--text-muted)">Use for: read-modify-write operations (e.g., compare_exchange).</text>
-  <rect x="48.416" y="503.8298" width="1065.1536" height="95.3191" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="72.6241" y="537.8723" font-size="19.0638" font-weight="bold" fill="var(--text)">SeqCst</text>
-  <text x="274.3577" y="537.8723" font-size="17.7021" fill="var(--text)">Strongest ordering. Total global order.</text>
-  <text x="274.3577" y="562.383" font-size="17.7021" fill="var(--text)">All threads agree on the order of all SeqCst operations.</text>
-  <text x="274.3577" y="586.8936" font-size="17.7021" fill="var(--text-muted)">Use when: you need total ordering guarantees.</text>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="84.1305" text-anchor="middle" font-size="24.3083" font-weight="bold" fill="var(--text)">Memory Orderings</text>
+  <line x1="74.2856" y1="96.7391" x2="1205.7144" y2="96.7391" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="74.2856" y="109.3478" width="1131.4285" height="88.2608" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="100" y="140.8696" font-size="18.9065" font-weight="bold" fill="var(--text)">Relaxed</text>
+  <text x="314.2856" y="140.8696" font-size="17.556" fill="var(--text)">No ordering guarantees between threads.</text>
+  <text x="314.2856" y="163.5652" font-size="17.556" fill="var(--text)">Only guarantees atomicity of the operation.</text>
+  <text x="314.2856" y="186.2609" font-size="17.556" fill="var(--text-muted)">Use for: counters, flags where order does not matter.</text>
+  <rect x="74.2856" y="210.2174" width="1131.4285" height="88.2608" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="100" y="241.7392" font-size="18.9065" font-weight="bold" fill="var(--text)">Acquire</text>
+  <text x="314.2856" y="241.7392" font-size="17.556" fill="var(--text)">All reads/writes after this load see writes before</text>
+  <text x="314.2856" y="264.4348" font-size="17.556" fill="var(--text)">the corresponding Release store.</text>
+  <text x="314.2856" y="287.1304" font-size="17.556" fill="var(--text-muted)">Use for: loading a lock/flag.</text>
+  <rect x="74.2856" y="311.087" width="1131.4285" height="88.2608" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="100" y="342.6087" font-size="18.9065" font-weight="bold" fill="var(--text)">Release</text>
+  <text x="314.2856" y="342.6087" font-size="17.556" fill="var(--text)">All prior reads/writes are visible to threads</text>
+  <text x="314.2856" y="365.3044" font-size="17.556" fill="var(--text)">that do an Acquire load.</text>
+  <text x="314.2856" y="388" font-size="17.556" fill="var(--text-muted)">Use for: storing a lock/flag.</text>
+  <rect x="74.2856" y="411.9565" width="1131.4285" height="69.3478" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="100" y="443.4783" font-size="18.9065" font-weight="bold" fill="var(--text)">AcqRel</text>
+  <text x="314.2856" y="443.4783" font-size="17.556" fill="var(--text)">Acquire + Release combined.</text>
+  <text x="314.2856" y="466.1739" font-size="17.556" fill="var(--text-muted)">Use for: read-modify-write operations (e.g., compare_exchange).</text>
+  <rect x="74.2856" y="493.9131" width="1131.4285" height="88.2608" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="100" y="525.4347" font-size="18.9065" font-weight="bold" fill="var(--text)">SeqCst</text>
+  <text x="314.2856" y="525.4347" font-size="17.556" fill="var(--text)">Strongest ordering. Total global order.</text>
+  <text x="314.2856" y="548.1305" font-size="17.556" fill="var(--text)">All threads agree on the order of all SeqCst operations.</text>
+  <text x="314.2856" y="570.8261" font-size="17.556" fill="var(--text-muted)">Use when: you need total ordering guarantees.</text>
 </svg>

@@ -52,12 +52,19 @@ def get_actual_bounds(tree):
                 x_max = max(x1, x2)
                 y_max = max(y1, y2)
             elif tag == 'path':
-                # very crude, just parse all numbers
+                # Path d= is a mix of command letters and numbers. Coordinates
+                # come in (x, y) pairs, so split every other number into xs/ys.
+                # This approximates bboxes — H/V/A commands bend the rule, but
+                # it's close enough for our use.
                 d = elem.get('d', '')
                 nums = [float(n) for n in re.findall(r'[-+]?(?:\d+\.?\d*|\.\d+)', d)]
                 if nums:
-                    x_max = max(nums)
-                    y_max = max(nums) # Crude but safeish if they are interleaved
+                    xs = nums[0::2]
+                    ys = nums[1::2]
+                    if xs:
+                        x_max = max(xs)
+                    if ys:
+                        y_max = max(ys)
         except ValueError:
             pass
         

@@ -97,25 +97,25 @@
       <path d="M 0 0 L 0 9.3913 L 15.0588 4.6957 z" fill="#555" />
     </marker>
   </defs>
-  <rect x="17.1038" y="14.2222" width="1128.8539" height="625.7778" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="34.2077" y="42.6666" font-family="sans-serif" font-size="19.9111" fill="var(--info-accent)" text-anchor="start" font-weight="bold">#[inline] Guidelines</text>
-  <rect x="27.3661" y="68.2666" width="1108.3293" height="119.4667" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.0493" y="93.8666" font-family="sans-serif" font-size="17.0667" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">#[inline] — USE FOR:</text>
-  <text x="41.0493" y="110.9334" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Small functions in library crates (enables cross-crate inlining without LTO)</text>
-  <text x="41.0493" y="136.5333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Wrapper / delegation functions</text>
-  <text x="41.0493" y="162.1333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Hot-path functions identified by profiling</text>
-  <rect x="27.3661" y="196.2666" width="1108.3293" height="119.4667" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="41.0493" y="221.8666" font-family="sans-serif" font-size="17.0667" fill="var(--warn-accent)" text-anchor="start" font-weight="bold">#[inline(always)] — USE FOR:</text>
-  <text x="41.0493" y="238.9333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Very small functions (1–3 lines) that MUST be fast</text>
-  <text x="41.0493" y="264.5333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Functions in performance-critical inner loops</text>
-  <text x="41.0493" y="290.1333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Only when benchmarks prove it helps</text>
-  <rect x="27.3661" y="324.2667" width="1108.3293" height="119.4667" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="41.0493" y="349.8666" font-family="sans-serif" font-size="17.0667" fill="var(--primary-accent)" text-anchor="start" font-weight="bold">#[inline(never)] — USE FOR:</text>
-  <text x="41.0493" y="366.9333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Error handling paths (keeps hot path small)</text>
-  <text x="41.0493" y="392.5333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Functions you want to see in profiler output</text>
-  <text x="41.0493" y="418.1333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Large functions called from many places (reduce code bloat)</text>
-  <rect x="27.3661" y="452.2666" width="1108.3293" height="93.8666" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="41.0493" y="477.8666" font-family="sans-serif" font-size="17.0667" fill="var(--danger-accent)" text-anchor="start" font-weight="bold">DO NOT USE when:</text>
-  <text x="41.0493" y="494.9333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• On every function 'just in case' (hurts compile time, may increase binary size)</text>
-  <text x="41.0493" y="520.5333" font-family="sans-serif" font-size="15.6445" fill="var(--text)" text-anchor="start">• Without profiling data to justify it</text>
+  <rect x="40" y="40" width="1200" height="580" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="58.1819" y="66.3636" font-family="sans-serif" font-size="19.7638" fill="var(--info-accent)" text-anchor="start" font-weight="bold">#[inline] Guidelines</text>
+  <rect x="50.9091" y="90.0909" width="1178.1818" height="110.7273" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="113.8181" font-family="sans-serif" font-size="16.9405" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">#[inline] — USE FOR:</text>
+  <text x="65.4547" y="129.6364" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Small functions in library crates (enables cross-crate inlining without LTO)</text>
+  <text x="65.4547" y="153.3636" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Wrapper / delegation functions</text>
+  <text x="65.4547" y="177.0909" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Hot-path functions identified by profiling</text>
+  <rect x="50.9091" y="208.7272" width="1178.1818" height="110.7273" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="232.4545" font-family="sans-serif" font-size="16.9405" fill="var(--warn-accent)" text-anchor="start" font-weight="bold">#[inline(always)] — USE FOR:</text>
+  <text x="65.4547" y="248.2727" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Very small functions (1–3 lines) that MUST be fast</text>
+  <text x="65.4547" y="272" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Functions in performance-critical inner loops</text>
+  <text x="65.4547" y="295.7273" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Only when benchmarks prove it helps</text>
+  <rect x="50.9091" y="327.3637" width="1178.1818" height="110.7273" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="351.0909" font-family="sans-serif" font-size="16.9405" fill="var(--primary-accent)" text-anchor="start" font-weight="bold">#[inline(never)] — USE FOR:</text>
+  <text x="65.4547" y="366.9091" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Error handling paths (keeps hot path small)</text>
+  <text x="65.4547" y="390.6363" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Functions you want to see in profiler output</text>
+  <text x="65.4547" y="414.3636" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Large functions called from many places (reduce code bloat)</text>
+  <rect x="50.9091" y="445.9999" width="1178.1818" height="86.9999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="469.7272" font-family="sans-serif" font-size="16.9405" fill="var(--danger-accent)" text-anchor="start" font-weight="bold">DO NOT USE when:</text>
+  <text x="65.4547" y="485.5454" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• On every function 'just in case' (hurts compile time, may increase binary size)</text>
+  <text x="65.4547" y="509.2727" font-family="sans-serif" font-size="15.5288" fill="var(--text)" text-anchor="start">• Without profiling data to justify it</text>
 </svg>

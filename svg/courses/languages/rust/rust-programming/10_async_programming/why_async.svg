@@ -97,27 +97,27 @@
       <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <text x="598.8304" y="50.5263" text-anchor="middle" font-size="23.9532" font-weight="bold">Sync vs Async Execution Model</text>
-  <rect x="39.9221" y="101.0526" width="339.3373" height="218.9474" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="209.5906" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Synchronous</text>
-  <text x="209.5906" y="212.2105" text-anchor="middle" font-size="19.961">1 thread per connection</text>
-  <text x="209.5906" y="256" text-anchor="middle" font-size="19.961">Blocks on I/O (idle CPU)</text>
-  <text x="209.5906" y="299.7895" text-anchor="middle" font-size="19.961">10K threads = high overhead</text>
-  <rect x="429.1618" y="101.0526" width="339.3373" height="218.9474" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="598.8304" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Async (Rust)</text>
-  <text x="598.8304" y="212.2105" text-anchor="middle" font-size="19.961">Many tasks on few threads</text>
-  <text x="598.8304" y="256" text-anchor="middle" font-size="19.961">Yields on .await (no block)</text>
-  <text x="598.8304" y="299.7895" text-anchor="middle" font-size="19.961">100K+ tasks, low overhead</text>
-  <rect x="818.4016" y="101.0526" width="339.3373" height="218.9474" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="988.0702" y="161.6842" text-anchor="middle" font-size="19.961" font-weight="bold">Tokio Runtime</text>
-  <text x="988.0702" y="212.2105" text-anchor="middle" font-size="19.961">Executor: polls Futures</text>
-  <text x="988.0702" y="256" text-anchor="middle" font-size="19.961">Reactor: watches I/O</text>
-  <text x="988.0702" y="299.7895" text-anchor="middle" font-size="19.961">Work-stealing scheduler</text>
-  <line x1="379.2592" y1="208.8421" x2="429.1618" y2="208.8421" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_async)" />
-  <line x1="768.499" y1="208.8421" x2="818.4016" y2="208.8421" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_async)" />
-  <rect x="99.8051" y="370.5263" width="998.0507" height="117.8947" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="598.8304" y="421.0526" text-anchor="middle" font-size="19.961" font-weight="bold">async fn -&gt; impl Future: compiler transforms to state machine</text>
-  <text x="598.8304" y="468.2105" text-anchor="middle" font-size="19.961">Each .await is a yield point. No threads blocked. No callback hell.</text>
-  <rect x="199.6101" y="538.9474" width="798.4405" height="101.0526" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961">Use async for I/O-bound work; use threads for CPU-bound work</text>
+  <text x="639.9999" y="40" text-anchor="middle" font-size="24.6179" font-weight="bold">Sync vs Async Execution Model</text>
+  <rect x="40" y="89.7143" width="364.2858" height="215.4286" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="222.1427" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Synchronous</text>
+  <text x="222.1427" y="199.0857" text-anchor="middle" font-size="20.5149">1 thread per connection</text>
+  <text x="222.1427" y="242.1714" text-anchor="middle" font-size="20.5149">Blocks on I/O (idle CPU)</text>
+  <text x="222.1427" y="285.2572" text-anchor="middle" font-size="20.5149">10K threads = high overhead</text>
+  <rect x="457.8571" y="89.7143" width="364.2858" height="215.4286" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="639.9999" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Async (Rust)</text>
+  <text x="639.9999" y="199.0857" text-anchor="middle" font-size="20.5149">Many tasks on few threads</text>
+  <text x="639.9999" y="242.1714" text-anchor="middle" font-size="20.5149">Yields on .await (no block)</text>
+  <text x="639.9999" y="285.2572" text-anchor="middle" font-size="20.5149">100K+ tasks, low overhead</text>
+  <rect x="875.7142" y="89.7143" width="364.2858" height="215.4286" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="1057.8571" y="149.3714" text-anchor="middle" font-size="20.5149" font-weight="bold">Tokio Runtime</text>
+  <text x="1057.8571" y="199.0857" text-anchor="middle" font-size="20.5149">Executor: polls Futures</text>
+  <text x="1057.8571" y="242.1714" text-anchor="middle" font-size="20.5149">Reactor: watches I/O</text>
+  <text x="1057.8571" y="285.2572" text-anchor="middle" font-size="20.5149">Work-stealing scheduler</text>
+  <line x1="404.2856" y1="195.7714" x2="457.8571" y2="195.7714" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_async)" />
+  <line x1="822.1427" y1="195.7714" x2="875.7142" y2="195.7714" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_async)" />
+  <rect x="104.2857" y="354.8571" width="1071.4286" height="116" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="639.9999" y="404.5714" text-anchor="middle" font-size="20.5149" font-weight="bold">async fn -&gt; impl Future: compiler transforms to state machine</text>
+  <text x="639.9999" y="450.9714" text-anchor="middle" font-size="20.5149">Each .await is a yield point. No threads blocked. No callback hell.</text>
+  <rect x="211.4284" y="520.5715" width="857.1428" height="99.4285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="639.9999" y="586.8572" text-anchor="middle" font-size="20.5149">Use async for I/O-bound work; use threads for CPU-bound work</text>
 </svg>

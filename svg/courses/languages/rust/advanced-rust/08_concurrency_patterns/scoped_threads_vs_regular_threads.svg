@@ -93,46 +93,46 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="597.3333" y="48" text-anchor="middle" font-size="28.672" font-weight="bold" fill="var(--text)">Scoped Threads vs Regular Threads</text>
-  <rect x="31.8577" y="80" width="318.5777" height="64" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.1467" y="120" text-anchor="middle" font-size="22.3004" font-weight="bold" fill="var(--bg)">Property</text>
-  <rect x="350.4356" y="80" width="382.2933" height="64" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="541.5822" y="120" text-anchor="middle" font-size="22.3004" font-weight="bold" fill="var(--text)">thread::spawn</text>
-  <rect x="732.7289" y="80" width="430.08" height="64" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="947.7689" y="120" text-anchor="middle" font-size="22.3004" font-weight="bold" fill="var(--bg)">thread::scope</text>
-  <rect x="31.8577" y="152" width="318.5777" height="56" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="350.4356" y="152" width="382.2933" height="56" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="732.7289" y="152" width="430.08" height="56" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="47.7867" y="187.2" font-size="19.1147" fill="var(--text)">Lifetime bounds</text>
-  <text x="366.3644" y="187.2" font-size="19.1147" fill="var(--text)">'static required</text>
-  <text x="748.6577" y="187.2" font-size="19.1147" fill="var(--ok-accent)">Can borrow locals</text>
-  <rect x="31.8577" y="216" width="318.5777" height="56" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="350.4356" y="216" width="382.2933" height="56" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="732.7289" y="216" width="430.08" height="56" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="47.7867" y="251.2" font-size="19.1147" fill="var(--text)">Sharing data</text>
-  <text x="366.3644" y="251.2" font-size="19.1147" fill="var(--text)">Arc&lt;T&gt; needed</text>
-  <text x="748.6577" y="251.2" font-size="19.1147" fill="var(--ok-accent)">&amp;T works directly</text>
-  <rect x="31.8577" y="280" width="318.5777" height="56" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="350.4356" y="280" width="382.2933" height="56" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="732.7289" y="280" width="430.08" height="56" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="47.7867" y="315.2" font-size="19.1147" fill="var(--text)">Mutable sharing</text>
-  <text x="366.3644" y="315.2" font-size="19.1147" fill="var(--text)">Arc&lt;Mutex&lt;T&gt;&gt;</text>
-  <text x="748.6577" y="315.2" font-size="19.1147" fill="var(--ok-accent)">Split borrows work</text>
-  <rect x="31.8577" y="344" width="318.5777" height="56" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="350.4356" y="344" width="382.2933" height="56" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <rect x="732.7289" y="344" width="430.08" height="56" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="47.7867" y="379.2" font-size="19.1147" fill="var(--text)">Join behavior</text>
-  <text x="366.3644" y="379.2" font-size="19.1147" fill="var(--text)">Manual join</text>
-  <text x="748.6577" y="379.2" font-size="19.1147" fill="var(--ok-accent)">Auto-joined at scope</text>
-  <rect x="31.8577" y="408" width="318.5777" height="56" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <rect x="350.4356" y="408" width="382.2933" height="56" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <rect x="732.7289" y="408" width="430.08" height="56" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="47.7867" y="443.2" font-size="19.1147" fill="var(--text)">Error handling</text>
-  <text x="366.3644" y="443.2" font-size="19.1147" fill="var(--text)">JoinHandle result</text>
-  <text x="748.6577" y="443.2" font-size="19.1147" fill="var(--ok-accent)">Panics propagate</text>
-  <rect x="31.8577" y="496" width="1130.9511" height="144" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="63.7156" y="536" font-size="22.3004" font-weight="bold" fill="var(--primary-accent)">Use thread::scope when:</text>
-  <text x="63.7156" y="572.8" font-size="20.7076" fill="var(--text)">- You need to borrow data from the stack</text>
-  <text x="63.7156" y="604.8" font-size="20.7076" fill="var(--text)">- You want guaranteed cleanup (all threads join)</text>
-  <text x="63.7156" y="636.8" font-size="20.7076" fill="var(--text)">- The threads should not outlive the calling function</text>
+  <text x="640" y="40" text-anchor="middle" font-size="29.2334" font-weight="bold" fill="var(--text)">Scoped Threads vs Regular Threads</text>
+  <rect x="40" y="71.3514" width="338.0281" height="62.7027" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="209.0142" y="110.5405" text-anchor="middle" font-size="22.7371" font-weight="bold" fill="var(--bg)">Property</text>
+  <rect x="378.0283" y="71.3514" width="405.6337" height="62.7027" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="580.8451" y="110.5405" text-anchor="middle" font-size="22.7371" font-weight="bold" fill="var(--text)">thread::spawn</text>
+  <rect x="783.662" y="71.3514" width="456.338" height="62.7027" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="1011.831" y="110.5405" text-anchor="middle" font-size="22.7371" font-weight="bold" fill="var(--bg)">thread::scope</text>
+  <rect x="40" y="141.8919" width="338.0281" height="54.8649" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0283" y="141.8919" width="405.6337" height="54.8649" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="783.662" y="141.8919" width="456.338" height="54.8649" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="176.3784" font-size="19.489" fill="var(--text)">Lifetime bounds</text>
+  <text x="394.9296" y="176.3784" font-size="19.489" fill="var(--text)">'static required</text>
+  <text x="800.5633" y="176.3784" font-size="19.489" fill="var(--ok-accent)">Can borrow locals</text>
+  <rect x="40" y="204.5946" width="338.0281" height="54.8649" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0283" y="204.5946" width="405.6337" height="54.8649" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="783.662" y="204.5946" width="456.338" height="54.8649" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="239.0811" font-size="19.489" fill="var(--text)">Sharing data</text>
+  <text x="394.9296" y="239.0811" font-size="19.489" fill="var(--text)">Arc&lt;T&gt; needed</text>
+  <text x="800.5633" y="239.0811" font-size="19.489" fill="var(--ok-accent)">&amp;T works directly</text>
+  <rect x="40" y="267.2973" width="338.0281" height="54.8649" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0283" y="267.2973" width="405.6337" height="54.8649" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="783.662" y="267.2973" width="456.338" height="54.8649" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="301.7838" font-size="19.489" fill="var(--text)">Mutable sharing</text>
+  <text x="394.9296" y="301.7838" font-size="19.489" fill="var(--text)">Arc&lt;Mutex&lt;T&gt;&gt;</text>
+  <text x="800.5633" y="301.7838" font-size="19.489" fill="var(--ok-accent)">Split borrows work</text>
+  <rect x="40" y="330" width="338.0281" height="54.8649" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0283" y="330" width="405.6337" height="54.8649" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="783.662" y="330" width="456.338" height="54.8649" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="364.4865" font-size="19.489" fill="var(--text)">Join behavior</text>
+  <text x="394.9296" y="364.4865" font-size="19.489" fill="var(--text)">Manual join</text>
+  <text x="800.5633" y="364.4865" font-size="19.489" fill="var(--ok-accent)">Auto-joined at scope</text>
+  <rect x="40" y="392.7027" width="338.0281" height="54.8649" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <rect x="378.0283" y="392.7027" width="405.6337" height="54.8649" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <rect x="783.662" y="392.7027" width="456.338" height="54.8649" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="56.9015" y="427.1892" font-size="19.489" fill="var(--text)">Error handling</text>
+  <text x="394.9296" y="427.1892" font-size="19.489" fill="var(--text)">JoinHandle result</text>
+  <text x="800.5633" y="427.1892" font-size="19.489" fill="var(--ok-accent)">Panics propagate</text>
+  <rect x="40" y="478.9189" width="1199.9999" height="141.0811" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="73.8029" y="518.1081" font-size="22.7371" font-weight="bold" fill="var(--primary-accent)">Use thread::scope when:</text>
+  <text x="73.8029" y="554.1622" font-size="21.1131" fill="var(--text)">- You need to borrow data from the stack</text>
+  <text x="73.8029" y="585.5135" font-size="21.1131" fill="var(--text)">- You want guaranteed cleanup (all threads join)</text>
+  <text x="73.8029" y="616.8649" font-size="21.1131" fill="var(--text)">- The threads should not outlive the calling function</text>
 </svg>

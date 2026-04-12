@@ -97,52 +97,52 @@
       <path d="M 0 0 L 0 10.8 L 15.0588 5.4 z" fill="#555" />
     </marker>
   </defs>
-  <rect x="17.161" y="16.4103" width="1132.6294" height="623.5897" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="34.3221" y="49.2308" font-family="sans-serif" font-size="22.9744" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">Performance Optimization Cheatsheet</text>
-  <rect x="27.4576" y="68.9231" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="91.8974" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">Zero-cost abstractions</text>
-  <text x="394.7042" y="91.8974" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Iterators, generics, Option&lt;&amp;T&gt;</text>
-  <rect x="27.4576" y="103.3846" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="126.359" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">LLVM passes</text>
-  <text x="394.7042" y="126.359" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Inlining, vectorization, DCE</text>
-  <rect x="27.4576" y="137.8462" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="160.8205" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">opt-level = 3</text>
-  <text x="394.7042" y="160.8205" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Maximum runtime optimization</text>
-  <rect x="27.4576" y="172.3077" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="195.2821" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">perf + flamegraph</text>
-  <text x="394.7042" y="195.2821" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Find bottlenecks before optimizing</text>
-  <rect x="27.4576" y="206.7692" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="229.7436" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">criterion</text>
-  <text x="394.7042" y="229.7436" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Statistical benchmarking</text>
-  <rect x="27.4576" y="241.2308" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="264.2051" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">jemalloc / mimalloc</text>
-  <text x="394.7042" y="264.2051" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Faster multi-threaded allocation</text>
-  <rect x="27.4576" y="275.6923" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="298.6667" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">SIMD</text>
-  <text x="394.7042" y="298.6667" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">4–16× throughput for data-parallel work</text>
-  <rect x="27.4576" y="310.1538" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="333.1282" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">SoA layout</text>
-  <text x="394.7042" y="333.1282" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Cache-friendly field access</text>
-  <rect x="27.4576" y="344.6154" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="367.5897" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">Arena alloc</text>
-  <text x="394.7042" y="367.5897" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Cache-friendly graph/tree traversal</text>
-  <rect x="27.4576" y="379.0769" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="402.0513" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">const fn</text>
-  <text x="394.7042" y="402.0513" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Move computation to compile time</text>
-  <rect x="27.4576" y="413.5385" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="436.5128" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">const generics</text>
-  <text x="394.7042" y="436.5128" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Type-safe compile-time parameters</text>
-  <rect x="27.4576" y="448" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="470.9744" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">LTO</text>
-  <text x="394.7042" y="470.9744" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Cross-crate optimization (10–20%)</text>
-  <rect x="27.4576" y="482.4615" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="505.4359" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">PGO</text>
-  <text x="394.7042" y="505.4359" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Workload-guided optimization</text>
-  <rect x="27.4576" y="516.9231" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="539.8974" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">#[inline]</text>
-  <text x="394.7042" y="539.8974" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Cross-crate inlining hint</text>
-  <rect x="27.4576" y="551.3846" width="1112.0362" height="34.4615" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="41.1866" y="574.359" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start" font-weight="bold">codegen-units = 1</text>
-  <text x="394.7042" y="574.359" font-family="sans-serif" font-size="18.0513" fill="var(--text)" text-anchor="start">Better optimization, slower compile</text>
-  <text x="34.3221" y="615.3846" font-family="sans-serif" font-size="19.6923" fill="var(--danger-accent)" text-anchor="start" font-weight="bold">Golden rule: MEASURE FIRST. Profile, benchmark, then optimize.</text>
+  <rect x="40" y="40" width="1200" height="580" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="58.1819" y="70.5263" font-family="sans-serif" font-size="22.8063" fill="var(--ok-accent)" text-anchor="start" font-weight="bold">Performance Optimization Cheatsheet</text>
+  <rect x="50.9091" y="88.8421" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="110.2105" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">Zero-cost abstractions</text>
+  <text x="440.0001" y="110.2105" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Iterators, generics, Option&lt;&amp;T&gt;</text>
+  <rect x="50.9091" y="120.8947" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="142.2631" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">LLVM passes</text>
+  <text x="440.0001" y="142.2631" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Inlining, vectorization, DCE</text>
+  <rect x="50.9091" y="152.9474" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="174.3157" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">opt-level = 3</text>
+  <text x="440.0001" y="174.3157" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Maximum runtime optimization</text>
+  <rect x="50.9091" y="185" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="206.3684" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">perf + flamegraph</text>
+  <text x="440.0001" y="206.3684" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Find bottlenecks before optimizing</text>
+  <rect x="50.9091" y="217.0526" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="238.421" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">criterion</text>
+  <text x="440.0001" y="238.421" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Statistical benchmarking</text>
+  <rect x="50.9091" y="249.1053" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="270.4736" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">jemalloc / mimalloc</text>
+  <text x="440.0001" y="270.4736" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Faster multi-threaded allocation</text>
+  <rect x="50.9091" y="281.1579" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="302.5263" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">SIMD</text>
+  <text x="440.0001" y="302.5263" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">4–16× throughput for data-parallel work</text>
+  <rect x="50.9091" y="313.2105" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="334.5789" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">SoA layout</text>
+  <text x="440.0001" y="334.5789" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Cache-friendly field access</text>
+  <rect x="50.9091" y="345.2632" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="366.6315" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">Arena alloc</text>
+  <text x="440.0001" y="366.6315" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Cache-friendly graph/tree traversal</text>
+  <rect x="50.9091" y="377.3158" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="398.6842" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">const fn</text>
+  <text x="440.0001" y="398.6842" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Move computation to compile time</text>
+  <rect x="50.9091" y="409.3684" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="430.7368" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">const generics</text>
+  <text x="440.0001" y="430.7368" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Type-safe compile-time parameters</text>
+  <rect x="50.9091" y="441.421" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="462.7895" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">LTO</text>
+  <text x="440.0001" y="462.7895" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Cross-crate optimization (10–20%)</text>
+  <rect x="50.9091" y="473.4736" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="494.8421" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">PGO</text>
+  <text x="440.0001" y="494.8421" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Workload-guided optimization</text>
+  <rect x="50.9091" y="505.5263" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="526.8947" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">#[inline]</text>
+  <text x="440.0001" y="526.8947" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Cross-crate inlining hint</text>
+  <rect x="50.9091" y="537.5789" width="1178.1819" height="32.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="65.4547" y="558.9474" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start" font-weight="bold">codegen-units = 1</text>
+  <text x="440.0001" y="558.9474" font-family="sans-serif" font-size="17.9192" fill="var(--text)" text-anchor="start">Better optimization, slower compile</text>
+  <text x="58.1819" y="597.1052" font-family="sans-serif" font-size="19.5482" fill="var(--danger-accent)" text-anchor="start" font-weight="bold">Golden rule: MEASURE FIRST. Profile, benchmark, then optimize.</text>
 </svg>

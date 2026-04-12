@@ -108,110 +108,110 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- LEFT: Flowchart -->
   <!-- Start -->
-  <rect x="40" y="20" width="680" height="610" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="380" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">if / elif / else Flow</text>
+  <rect x="77.5" y="58.125" width="637.5" height="552.8125" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="396.25" y="85.3125" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">if / elif / else Flow</text>
 
   <!-- if condition diamond -->
-  <polygon points="380,70 480,120 380,170 280,120" fill="url(#blueGrad)" filter="url(#shadow)"/>
-  <text x="380" y="116" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">if condition</text>
-  <text x="380" y="132" font-family="monospace" font-size="12" fill="var(--primary-accent)" text-anchor="middle">return code == 0?</text>
+  <polygon points="396.25,103.4375 490,148.75 396.25,194.0625 302.5,148.75" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="396.25" y="145.125" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">if condition</text>
+  <text x="396.25" y="159.625" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)" text-anchor="middle">return code == 0?</text>
 
   <!-- True branch (right) -->
-  <line x1="480" y1="120" x2="580" y2="120" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="525" y="113" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)" text-anchor="middle">true (rc=0)</text>
+  <line x1="490" y1="148.75" x2="583.75" y2="148.75" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="532.1875" y="142.4062" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">true (rc=0)</text>
 
-  <rect x="580" y="95" width="120" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="117" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">then block</text>
-  <text x="640" y="135" font-family="monospace" font-size="11" fill="var(--ok-accent)" text-anchor="middle">executes</text>
+  <rect x="583.75" y="126.0938" width="112.5" height="45.3125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="146.0312" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">then block</text>
+  <text x="640" y="162.3438" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">executes</text>
 
   <!-- False branch down -->
-  <line x1="380" y1="170" x2="380" y2="210" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="393" y="195" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">false</text>
+  <line x1="396.25" y1="194.0625" x2="396.25" y2="230.3125" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="408.4375" y="216.7188" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--danger-accent)">false</text>
 
   <!-- elif diamond -->
-  <polygon points="380,210 480,260 380,310 280,260" fill="var(--warn-fill)" filter="url(#shadow)"/>
-  <text x="380" y="256" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)" text-anchor="middle">elif condition</text>
-  <text x="380" y="272" font-family="monospace" font-size="12" fill="var(--warn-accent)" text-anchor="middle">return code == 0?</text>
+  <polygon points="396.25,230.3125 490,275.625 396.25,320.9375 302.5,275.625" fill="var(--warn-fill)" filter="url(#shadow)"/>
+  <text x="396.25" y="272" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--bg)" text-anchor="middle">elif condition</text>
+  <text x="396.25" y="286.5" font-family="monospace" font-size="11.0609" fill="var(--warn-accent)" text-anchor="middle">return code == 0?</text>
 
   <!-- elif true branch -->
-  <line x1="480" y1="260" x2="580" y2="260" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="525" y="253" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)" text-anchor="middle">true</text>
+  <line x1="490" y1="275.625" x2="583.75" y2="275.625" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="532.1875" y="269.2812" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">true</text>
 
-  <rect x="580" y="235" width="120" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="257" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">elif block</text>
-  <text x="640" y="275" font-family="monospace" font-size="11" fill="var(--warn-accent)" text-anchor="middle">executes</text>
+  <rect x="583.75" y="252.9688" width="112.5" height="45.3125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="272.9062" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">elif block</text>
+  <text x="640" y="289.2188" font-family="monospace" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">executes</text>
 
   <!-- elif false branch -->
-  <line x1="380" y1="310" x2="380" y2="350" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="393" y="335" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">false</text>
+  <line x1="396.25" y1="320.9375" x2="396.25" y2="357.1875" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="408.4375" y="343.5938" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--danger-accent)">false</text>
 
   <!-- (can have many elif) -->
-  <text x="150" y="370" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" font-style="italic">... more elif (optional) ...</text>
-  <line x1="380" y1="350" x2="380" y2="395" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="180.625" y="375.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" font-style="italic">... more elif (optional) ...</text>
+  <line x1="396.25" y1="357.1875" x2="396.25" y2="397.9688" stroke="var(--text-faint)" stroke-width="1" stroke-dasharray="6,4"/>
 
   <!-- else box -->
-  <rect x="280" y="395" width="200" height="60" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="380" y="420" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">else block</text>
-  <text x="380" y="440" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-accent)" text-anchor="middle">(optional fallback)</text>
+  <rect x="302.5" y="397.9688" width="187.5" height="54.375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="396.25" y="420.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">else block</text>
+  <text x="396.25" y="438.75" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--danger-accent)" text-anchor="middle">(optional fallback)</text>
 
   <!-- merge lines -->
-  <line x1="640" y1="145" x2="640" y2="480" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <line x1="640" y1="285" x2="640" y2="480" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <line x1="380" y1="455" x2="380" y2="480" stroke="var(--text-muted)" stroke-width="1.5"/>
-  <line x1="380" y1="480" x2="640" y2="480" stroke="var(--text-muted)" stroke-width="1.5"/>
-  <line x1="640" y1="480" x2="640" y2="510" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="171.4062" x2="640" y2="475" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="640" y1="298.2812" x2="640" y2="475" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="396.25" y1="452.3438" x2="396.25" y2="475" stroke="var(--text-muted)" stroke-width="1.5"/>
+  <line x1="396.25" y1="475" x2="640" y2="475" stroke="var(--text-muted)" stroke-width="1.5"/>
+  <line x1="640" y1="475" x2="640" y2="502.1875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- fi / end box -->
-  <rect x="565" y="510" width="150" height="50" rx="6" fill="var(--text)" filter="url(#shadow)"/>
-  <text x="640" y="540" font-family="monospace" font-size="18" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">fi</text>
+  <rect x="569.6875" y="502.1875" width="140.625" height="45.3125" rx="6" fill="var(--text)" filter="url(#shadow)"/>
+  <text x="640" y="529.375" font-family="monospace" font-size="16.5914" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">fi</text>
 
   <!-- Arrow to continue -->
-  <line x1="640" y1="560" x2="640" y2="590" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="565" y="590" width="150" height="45" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="618" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-accent)" text-anchor="middle">Continue script</text>
+  <line x1="640" y1="547.5" x2="640" y2="574.6875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="569.6875" y="574.6875" width="140.625" height="40.7812" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="600.0625" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--primary-accent)" text-anchor="middle">Continue script</text>
 
   <!-- RIGHT: Syntax reference -->
-  <rect x="740" y="20" width="510" height="610" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="995" y="48" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Syntax Reference</text>
+  <rect x="733.75" y="58.125" width="478.125" height="552.8125" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="972.8125" y="83.5" font-family="Arial, sans-serif" font-size="15.6696" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Syntax Reference</text>
 
   <!-- Basic if -->
-  <rect x="760" y="58" width="470" height="118" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="780" y="78" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Basic if</text>
-  <text x="780" y="98" font-family="monospace" font-size="13" fill="var(--text)">if command; then</text>
-  <text x="800" y="116" font-family="monospace" font-size="13" fill="var(--text)">  echo "success"</text>
-  <text x="780" y="134" font-family="monospace" font-size="13" fill="var(--text)">fi</text>
-  <text x="780" y="152" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">0 = true, non-zero = false. Works with ANY command.</text>
+  <rect x="752.5" y="92.5625" width="440.625" height="106.9375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="771.25" y="110.6875" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)">Basic if</text>
+  <text x="771.25" y="128.8125" font-family="monospace" font-size="11.9827" fill="var(--text)">if command; then</text>
+  <text x="790" y="145.125" font-family="monospace" font-size="11.9827" fill="var(--text)">  echo "success"</text>
+  <text x="771.25" y="161.4375" font-family="monospace" font-size="11.9827" fill="var(--text)">fi</text>
+  <text x="771.25" y="177.75" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--ok-accent)">0 = true, non-zero = false. Works with ANY command.</text>
 
   <!-- if/elif/else -->
-  <rect x="760" y="184" width="470" height="148" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="780" y="202" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)">if / elif / else</text>
-  <text x="780" y="220" font-family="monospace" font-size="12" fill="var(--text)">if [ "$1" = "start" ]; then</text>
-  <text x="800" y="237" font-family="monospace" font-size="12" fill="var(--text)">  start_service</text>
-  <text x="780" y="254" font-family="monospace" font-size="12" fill="var(--text)">elif [ "$1" = "stop" ]; then</text>
-  <text x="800" y="271" font-family="monospace" font-size="12" fill="var(--text)">  stop_service</text>
-  <text x="780" y="288" font-family="monospace" font-size="12" fill="var(--text)">else</text>
-  <text x="800" y="305" font-family="monospace" font-size="12" fill="var(--text)">  echo "Usage..."</text>
-  <text x="780" y="322" font-family="monospace" font-size="12" fill="var(--text)">fi</text>
+  <rect x="752.5" y="206.75" width="440.625" height="134.125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="771.25" y="223.0625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">if / elif / else</text>
+  <text x="771.25" y="239.375" font-family="monospace" font-size="11.0609" fill="var(--text)">if [ "$1" = "start" ]; then</text>
+  <text x="790" y="254.7812" font-family="monospace" font-size="11.0609" fill="var(--text)">  start_service</text>
+  <text x="771.25" y="270.1875" font-family="monospace" font-size="11.0609" fill="var(--text)">elif [ "$1" = "stop" ]; then</text>
+  <text x="790" y="285.5938" font-family="monospace" font-size="11.0609" fill="var(--text)">  stop_service</text>
+  <text x="771.25" y="301" font-family="monospace" font-size="11.0609" fill="var(--text)">else</text>
+  <text x="790" y="316.4062" font-family="monospace" font-size="11.0609" fill="var(--text)">  echo "Usage..."</text>
+  <text x="771.25" y="331.8125" font-family="monospace" font-size="11.0609" fill="var(--text)">fi</text>
 
   <!-- [ ] vs [[ ]] -->
-  <rect x="760" y="340" width="470" height="148" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="780" y="360" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">[ ] vs [[ ]] — test commands</text>
-  <text x="780" y="380" font-family="monospace" font-size="12" fill="var(--text)">[ "$f" = "foo" ]    # POSIX, word-splits</text>
-  <text x="780" y="398" font-family="monospace" font-size="12" fill="var(--text)">[[ $f = "foo" ]]    # bash, safer</text>
-  <text x="780" y="416" font-family="monospace" font-size="12" fill="var(--text)">[[ $f == *.txt ]]   # glob patterns</text>
-  <text x="780" y="434" font-family="monospace" font-size="12" fill="var(--text)">[[ $f =~ ^[0-9]+$ ]] # regex</text>
-  <text x="780" y="452" font-family="monospace" font-size="12" fill="var(--text)">(( x > 0 ))         # arithmetic</text>
-  <text x="780" y="470" font-family="monospace" font-size="12" fill="var(--text)">command             # any command's rc</text>
+  <rect x="752.5" y="348.125" width="440.625" height="134.125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="771.25" y="366.25" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">[ ] vs [[ ]] — test commands</text>
+  <text x="771.25" y="384.375" font-family="monospace" font-size="11.0609" fill="var(--text)">[ "$f" = "foo" ]    # POSIX, word-splits</text>
+  <text x="771.25" y="400.6875" font-family="monospace" font-size="11.0609" fill="var(--text)">[[ $f = "foo" ]]    # bash, safer</text>
+  <text x="771.25" y="417" font-family="monospace" font-size="11.0609" fill="var(--text)">[[ $f == *.txt ]]   # glob patterns</text>
+  <text x="771.25" y="433.3125" font-family="monospace" font-size="11.0609" fill="var(--text)">[[ $f =~ ^[0-9]+$ ]] # regex</text>
+  <text x="771.25" y="449.625" font-family="monospace" font-size="11.0609" fill="var(--text)">(( x > 0 ))         # arithmetic</text>
+  <text x="771.25" y="465.9375" font-family="monospace" font-size="11.0609" fill="var(--text)">command             # any command's rc</text>
 
   <!-- Negation + chaining -->
-  <rect x="760" y="496" width="470" height="112" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="780" y="516" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)">Negation &amp; Short-circuit</text>
-  <text x="780" y="536" font-family="monospace" font-size="12" fill="var(--text)">if ! grep -q "error" log; then</text>
-  <text x="780" y="554" font-family="monospace" font-size="12" fill="var(--text)">mkdir /tmp/dir &amp;&amp; echo "created"</text>
-  <text x="780" y="572" font-family="monospace" font-size="12" fill="var(--text)">mkdir /tmp/dir || echo "failed"</text>
-  <text x="780" y="590" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)">! negates return code; &amp;&amp; / || chain on rc</text>
+  <rect x="752.5" y="489.5" width="440.625" height="101.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="771.25" y="507.625" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Negation &amp; Short-circuit</text>
+  <text x="771.25" y="525.75" font-family="monospace" font-size="11.0609" fill="var(--text)">if ! grep -q "error" log; then</text>
+  <text x="771.25" y="542.0625" font-family="monospace" font-size="11.0609" fill="var(--text)">mkdir /tmp/dir &amp;&amp; echo "created"</text>
+  <text x="771.25" y="558.375" font-family="monospace" font-size="11.0609" fill="var(--text)">mkdir /tmp/dir || echo "failed"</text>
+  <text x="771.25" y="574.6875" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--danger-accent)">! negates return code; &amp;&amp; / || chain on rc</text>
 </svg>

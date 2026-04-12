@@ -101,27 +101,27 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <text x="568.8889" y="39.1111" text-anchor="middle" font-size="24.8889" font-weight="bold" fill="var(--primary-accent)">Copy-on-Write (CoW) Explained</text>
-  <text x="60.4444" y="80" font-size="19.5556" font-weight="bold" fill="var(--primary-accent)">Read operation:</text>
-  <rect x="60.4444" y="92.4444" width="453.3333" height="53.3333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="287.1111" y="124.4444" text-anchor="middle" font-size="17.7778" fill="var(--text)">Upper (R/W)</text>
-  <text x="555.5556" y="124.4444" font-size="14.2222" fill="var(--text-muted)">file not found - look in lower</text>
-  <rect x="60.4444" y="151.1111" width="453.3333" height="53.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="287.1111" y="183.1111" text-anchor="middle" font-size="17.7778" fill="var(--text)">Lower (RO)</text>
-  <text x="555.5556" y="183.1111" font-size="14.2222" fill="var(--primary-accent)">file found here, read directly</text>
-  <text x="60.4444" y="238.2222" font-size="19.5556" font-weight="bold" fill="var(--primary-accent)">Write operation (existing file):</text>
-  <rect x="60.4444" y="250.6667" width="453.3333" height="53.3333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="287.1111" y="282.6667" text-anchor="middle" font-size="17.7778" fill="var(--text)">Upper (R/W)</text>
-  <text x="555.5556" y="282.6667" font-size="14.2222" fill="var(--primary-accent)">file copied here, then modified</text>
-  <rect x="60.4444" y="309.3333" width="453.3333" height="53.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="287.1111" y="341.3333" text-anchor="middle" font-size="17.7778" fill="var(--text)">Lower (RO)</text>
-  <text x="555.5556" y="341.3333" font-size="14.2222" fill="var(--text-muted)">original unchanged</text>
-  <text x="60.4444" y="400" font-size="19.5556" font-weight="bold" fill="var(--danger-accent)">Delete operation:</text>
-  <rect x="60.4444" y="412.4444" width="453.3333" height="53.3333" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <text x="287.1111" y="444.4444" text-anchor="middle" font-size="17.7778" fill="var(--text)">Upper (R/W)</text>
-  <text x="555.5556" y="444.4444" font-size="14.2222" fill="var(--danger-accent)">whiteout file created</text>
-  <rect x="60.4444" y="471.1111" width="453.3333" height="53.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="287.1111" y="503.1111" text-anchor="middle" font-size="17.7778" fill="var(--text)">Lower (RO)</text>
-  <text x="555.5556" y="503.1111" font-size="14.2222" fill="var(--text-muted)">original still exists but hidden</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <text x="640" y="75.4444" text-anchor="middle" font-size="24.3328" font-weight="bold" fill="var(--primary-accent)">Copy-on-Write (CoW) Explained</text>
+  <text x="103.75" y="112.5" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Read operation:</text>
+  <rect x="103.75" y="123.7777" width="478.125" height="48.3333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="342.8125" y="152.7777" text-anchor="middle" font-size="17.3806" fill="var(--text)">Upper (R/W)</text>
+  <text x="625.9375" y="152.7777" font-size="13.9044" fill="var(--text-muted)">file not found - look in lower</text>
+  <rect x="103.75" y="176.9444" width="478.125" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="342.8125" y="205.9444" text-anchor="middle" font-size="17.3806" fill="var(--text)">Lower (RO)</text>
+  <text x="625.9375" y="205.9444" font-size="13.9044" fill="var(--primary-accent)">file found here, read directly</text>
+  <text x="103.75" y="255.8889" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Write operation (existing file):</text>
+  <rect x="103.75" y="267.1667" width="478.125" height="48.3333" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="342.8125" y="296.1667" text-anchor="middle" font-size="17.3806" fill="var(--text)">Upper (R/W)</text>
+  <text x="625.9375" y="296.1667" font-size="13.9044" fill="var(--primary-accent)">file copied here, then modified</text>
+  <rect x="103.75" y="320.3333" width="478.125" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="342.8125" y="349.3333" text-anchor="middle" font-size="17.3806" fill="var(--text)">Lower (RO)</text>
+  <text x="625.9375" y="349.3333" font-size="13.9044" fill="var(--text-muted)">original unchanged</text>
+  <text x="103.75" y="402.5" font-size="19.1186" font-weight="bold" fill="var(--danger-accent)">Delete operation:</text>
+  <rect x="103.75" y="413.7777" width="478.125" height="48.3333" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="342.8125" y="442.7777" text-anchor="middle" font-size="17.3806" fill="var(--text)">Upper (R/W)</text>
+  <text x="625.9375" y="442.7777" font-size="13.9044" fill="var(--danger-accent)">whiteout file created</text>
+  <rect x="103.75" y="466.9444" width="478.125" height="48.3333" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="342.8125" y="495.9444" text-anchor="middle" font-size="17.3806" fill="var(--text)">Lower (RO)</text>
+  <text x="625.9375" y="495.9444" font-size="13.9044" fill="var(--text-muted)">original still exists but hidden</text>
 </svg>

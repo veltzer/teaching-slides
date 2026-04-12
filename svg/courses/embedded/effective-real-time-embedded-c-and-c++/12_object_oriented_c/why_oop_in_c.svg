@@ -101,29 +101,29 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <rect x="71.1111" y="44.4444" width="444.4444" height="142.2222" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="293.3333" y="99.5556" text-anchor="middle" font-family="sans-serif" font-size="24.8889" font-weight="bold" fill="var(--bg)">Code Reuse</text>
-  <text x="293.3333" y="128" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-accent)">Driver works for UART1, UART2, UART3</text>
-  <text x="293.3333" y="149.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--primary-accent)">without copy-paste</text>
-  <text x="293.3333" y="170.6667" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--primary-accent)">uart_init(&amp;uart1, ...);</text>
-  <rect x="622.2222" y="44.4444" width="444.4444" height="142.2222" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="844.4444" y="99.5556" text-anchor="middle" font-family="sans-serif" font-size="24.8889" font-weight="bold" fill="var(--text)">Modularity</text>
-  <text x="844.4444" y="128" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Each peripheral is a self-contained</text>
-  <text x="844.4444" y="149.3333" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">struct with its own state</text>
-  <text x="844.4444" y="170.6667" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-faint)">struct UART { reg, baud, ... };</text>
-  <rect x="71.1111" y="222.2222" width="444.4444" height="142.2222" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="293.3333" y="277.3333" text-anchor="middle" font-family="sans-serif" font-size="24.8889" font-weight="bold" fill="var(--text)">Abstraction</text>
-  <text x="293.3333" y="305.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Caller doesn't know register details</text>
-  <text x="293.3333" y="327.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">just calls the API</text>
-  <text x="293.3333" y="348.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-faint)">uart_send(&amp;uart1, buf, len);</text>
-  <rect x="622.2222" y="222.2222" width="444.4444" height="142.2222" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="844.4444" y="277.3333" text-anchor="middle" font-family="sans-serif" font-size="24.8889" font-weight="bold" fill="var(--text)">Maintainability</text>
-  <text x="844.4444" y="305.7778" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">Change implementation without</text>
-  <text x="844.4444" y="327.1111" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">touching callers</text>
-  <text x="844.4444" y="348.4444" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-faint)">stable API across hardware revisions</text>
-  <rect x="177.7778" y="407.1111" width="782.2222" height="62.2222" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="568.8889" y="433.7778" text-anchor="middle" font-family="sans-serif" font-size="19.5556" font-weight="bold" fill="var(--primary-accent)">Without C++ overhead!</text>
-  <text x="568.8889" y="458.6667" text-anchor="middle" font-family="sans-serif" font-size="15.1111" fill="var(--text-muted)">C structs + function pointers give you encapsulation and polymorphism at zero runtime cost</text>
-  <text x="568.8889" y="524.4444" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--text-faint)">Technique: pass struct* as first argument (the "this" pointer) to all related functions</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <rect x="115" y="80.2777" width="468.7499" height="128.8889" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="349.375" y="130.2223" text-anchor="middle" font-family="sans-serif" font-size="24.3328" font-weight="bold" fill="var(--bg)">Code Reuse</text>
+  <text x="349.375" y="156" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--primary-accent)">Driver works for UART1, UART2, UART3</text>
+  <text x="349.375" y="175.3333" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--primary-accent)">without copy-paste</text>
+  <text x="349.375" y="194.6667" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--primary-accent)">uart_init(&amp;uart1, ...);</text>
+  <rect x="696.25" y="80.2777" width="468.7499" height="128.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="930.6249" y="130.2223" text-anchor="middle" font-family="sans-serif" font-size="24.3328" font-weight="bold" fill="var(--text)">Modularity</text>
+  <text x="930.6249" y="156" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Each peripheral is a self-contained</text>
+  <text x="930.6249" y="175.3333" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">struct with its own state</text>
+  <text x="930.6249" y="194.6667" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-faint)">struct UART { reg, baud, ... };</text>
+  <rect x="115" y="241.3889" width="468.7499" height="128.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="349.375" y="291.3333" text-anchor="middle" font-family="sans-serif" font-size="24.3328" font-weight="bold" fill="var(--text)">Abstraction</text>
+  <text x="349.375" y="317.1111" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Caller doesn't know register details</text>
+  <text x="349.375" y="336.4444" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">just calls the API</text>
+  <text x="349.375" y="355.7777" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-faint)">uart_send(&amp;uart1, buf, len);</text>
+  <rect x="696.25" y="241.3889" width="468.7499" height="128.8889" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="930.6249" y="291.3333" text-anchor="middle" font-family="sans-serif" font-size="24.3328" font-weight="bold" fill="var(--text)">Maintainability</text>
+  <text x="930.6249" y="317.1111" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">Change implementation without</text>
+  <text x="930.6249" y="336.4444" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">touching callers</text>
+  <text x="930.6249" y="355.7777" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-faint)">stable API across hardware revisions</text>
+  <rect x="227.5" y="408.9444" width="825" height="56.3889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="433.1111" text-anchor="middle" font-family="sans-serif" font-size="19.1186" font-weight="bold" fill="var(--primary-accent)">Without C++ overhead!</text>
+  <text x="640" y="455.6667" text-anchor="middle" font-family="sans-serif" font-size="14.7735" fill="var(--text-muted)">C structs + function pointers give you encapsulation and polymorphism at zero runtime cost</text>
+  <text x="640" y="515.2777" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--text-faint)">Technique: pass struct* as first argument (the "this" pointer) to all related functions</text>
 </svg>

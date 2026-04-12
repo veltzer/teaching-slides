@@ -109,171 +109,171 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- User Space zone -->
-  <rect x="30" y="20" width="560" height="240" rx="6" fill="url(#grad-user)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="20" width="560" height="38" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="30" y="44" width="560" height="14" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="310" y="46" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="var(--bg)">USER SPACE</text>
+  <rect x="68.125" y="58.125" width="525" height="217.5" rx="6" fill="url(#grad-user)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="68.125" y="58.125" width="525" height="34.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="68.125" y="79.875" width="525" height="12.6875" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="330.625" y="81.6875" text-anchor="middle" font-family="monospace" font-size="16.5914" font-weight="bold" fill="var(--bg)">USER SPACE</text>
 
   <!-- User program box -->
-  <rect x="60" y="75" width="200" height="160" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="160" y="100" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="var(--primary-accent)">User Program</text>
-  <text x="160" y="122" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">mov $4, %eax</text>
-  <text x="160" y="138" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">mov $1, %ebx</text>
-  <text x="160" y="154" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">mov $msg, %ecx</text>
-  <text x="160" y="170" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">mov $len, %edx</text>
-  <rect x="90" y="182" width="140" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="160" y="200" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)">int $0x80</text>
-  <text x="160" y="226" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">← triggers trap</text>
+  <rect x="96.25" y="107.9688" width="187.5" height="145" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="130.625" text-anchor="middle" font-family="monospace" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">User Program</text>
+  <text x="190" y="150.5625" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">mov $4, %eax</text>
+  <text x="190" y="165.0625" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">mov $1, %ebx</text>
+  <text x="190" y="179.5625" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">mov $msg, %ecx</text>
+  <text x="190" y="194.0625" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">mov $len, %edx</text>
+  <rect x="124.375" y="204.9375" width="131.25" height="25.375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="221.25" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">int $0x80</text>
+  <text x="190" y="244.8125" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">← triggers trap</text>
 
   <!-- Register table in user space -->
-  <rect x="285" y="75" width="285" height="170" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="427" y="97" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)">Register Assignments</text>
-  <line x1="285" y1="103" x2="570" y2="103" stroke="var(--primary-border)" stroke-width="1"/>
+  <rect x="307.1875" y="107.9688" width="267.1875" height="154.0625" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="440.3125" y="127.9062" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)">Register Assignments</text>
+  <line x1="307.1875" y1="133.3438" x2="574.375" y2="133.3438" stroke="var(--primary-border)" stroke-width="1"/>
   <!-- header -->
-  <text x="340" y="120" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="var(--text-muted)">Register</text>
-  <text x="490" y="120" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="var(--text-muted)">Purpose</text>
-  <line x1="285" y1="126" x2="570" y2="126" stroke="var(--primary-border)" stroke-width="1"/>
+  <text x="358.75" y="148.75" text-anchor="middle" font-family="monospace" font-size="10.1392" font-weight="bold" fill="var(--text-muted)">Register</text>
+  <text x="499.375" y="148.75" text-anchor="middle" font-family="monospace" font-size="10.1392" font-weight="bold" fill="var(--text-muted)">Purpose</text>
+  <line x1="307.1875" y1="154.1875" x2="574.375" y2="154.1875" stroke="var(--primary-border)" stroke-width="1"/>
   <!-- rows -->
-  <text x="330" y="143" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--danger-accent)" font-weight="bold">EAX</text>
-  <text x="470" y="143" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">syscall number</text>
-  <text x="330" y="160" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--primary-accent)">EBX</text>
-  <text x="470" y="160" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">argument 1</text>
-  <text x="330" y="177" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--primary-accent)">ECX</text>
-  <text x="470" y="177" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">argument 2</text>
-  <text x="330" y="194" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--primary-accent)">EDX</text>
-  <text x="470" y="194" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">argument 3</text>
-  <text x="330" y="211" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--primary-accent)">ESI</text>
-  <text x="470" y="211" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">argument 4</text>
-  <text x="330" y="228" text-anchor="middle" font-family="monospace" font-size="12" fill="var(--primary-accent)">EDI</text>
-  <text x="470" y="228" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">argument 5</text>
+  <text x="349.375" y="169.5938" text-anchor="middle" font-family="monospace" font-size="11.0609" fill="var(--danger-accent)" font-weight="bold">EAX</text>
+  <text x="480.625" y="169.5938" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">syscall number</text>
+  <text x="349.375" y="185" text-anchor="middle" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">EBX</text>
+  <text x="480.625" y="185" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">argument 1</text>
+  <text x="349.375" y="200.4062" text-anchor="middle" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">ECX</text>
+  <text x="480.625" y="200.4062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">argument 2</text>
+  <text x="349.375" y="215.8125" text-anchor="middle" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">EDX</text>
+  <text x="480.625" y="215.8125" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">argument 3</text>
+  <text x="349.375" y="231.2188" text-anchor="middle" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">ESI</text>
+  <text x="480.625" y="231.2188" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">argument 4</text>
+  <text x="349.375" y="246.625" text-anchor="middle" font-family="monospace" font-size="11.0609" fill="var(--primary-accent)">EDI</text>
+  <text x="480.625" y="246.625" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">argument 5</text>
 
   <!-- int 0x80 trap arrow -->
-  <line x1="310" y1="310" x2="310" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="230" y="310" width="160" height="26" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="310" y="327" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="var(--warn-accent)">CPU trap / int 0x80</text>
+  <line x1="330.625" y1="320.9375" x2="330.625" y2="357.1875" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="255.625" y="320.9375" width="150" height="23.5625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="330.625" y="336.3438" text-anchor="middle" font-family="monospace" font-size="11.0609" font-weight="bold" fill="var(--warn-accent)">CPU trap / int 0x80</text>
 
   <!-- Kernel Space zone -->
-  <rect x="30" y="360" width="560" height="240" rx="6" fill="url(#grad-kernel)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="30" y="360" width="560" height="38" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="30" y="384" width="560" height="14" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="310" y="386" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="var(--bg)">KERNEL SPACE</text>
+  <rect x="68.125" y="366.25" width="525" height="217.5" rx="6" fill="url(#grad-kernel)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="68.125" y="366.25" width="525" height="34.4375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="68.125" y="388" width="525" height="12.6875" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330.625" y="389.8125" text-anchor="middle" font-family="monospace" font-size="16.5914" font-weight="bold" fill="var(--bg)">KERNEL SPACE</text>
 
   <!-- syscall dispatch box -->
-  <rect x="60" y="410" width="220" height="170" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="170" y="432" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">syscall_table[EAX]</text>
-  <line x1="60" y1="438" x2="280" y2="438" stroke="var(--danger-border)" stroke-width="1"/>
-  <text x="170" y="456" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">Dispatches to handler</text>
-  <text x="170" y="472" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">sys_write() / sys_read()</text>
-  <text x="170" y="488" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">sys_open() / sys_exit()</text>
-  <text x="170" y="508" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">Executes kernel logic</text>
-  <text x="170" y="524" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">Copies data if needed</text>
-  <text x="170" y="543" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-muted)">Return value → EAX</text>
-  <text x="170" y="562" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">(negative = error)</text>
+  <rect x="96.25" y="411.5625" width="206.25" height="154.0625" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="199.375" y="431.5" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">syscall_table[EAX]</text>
+  <line x1="96.25" y1="436.9375" x2="302.5" y2="436.9375" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="199.375" y="453.25" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">Dispatches to handler</text>
+  <text x="199.375" y="467.75" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">sys_write() / sys_read()</text>
+  <text x="199.375" y="482.25" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">sys_open() / sys_exit()</text>
+  <text x="199.375" y="500.375" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">Executes kernel logic</text>
+  <text x="199.375" y="514.875" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">Copies data if needed</text>
+  <text x="199.375" y="532.0938" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">Return value → EAX</text>
+  <text x="199.375" y="549.3125" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">(negative = error)</text>
 
   <!-- return arrow -->
-  <line x1="310" y1="350" x2="310" y2="310" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-ret)"/>
-  <text x="355" y="336" font-family="monospace" font-size="11" fill="var(--ok-accent)">return value</text>
-  <text x="355" y="350" font-family="monospace" font-size="11" fill="var(--ok-accent)">in EAX</text>
+  <line x1="330.625" y1="357.1875" x2="330.625" y2="320.9375" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-ret)"/>
+  <text x="372.8125" y="344.5" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)">return value</text>
+  <text x="372.8125" y="357.1875" font-family="monospace" font-size="10.1392" fill="var(--ok-accent)">in EAX</text>
 
   <!-- Common syscalls table - right side -->
-  <rect x="640" y="20" width="610" height="590" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <rect x="640" y="20" width="610" height="42" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="640" y="48" width="610" height="14" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="945" y="50" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="var(--bg)">Common Linux System Calls (x86)</text>
+  <rect x="640" y="58.125" width="571.875" height="534.6875" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="640" y="58.125" width="571.875" height="38.0625" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="640" y="83.5" width="571.875" height="12.6875" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="925.9375" y="85.3125" text-anchor="middle" font-family="sans-serif" font-size="15.6696" font-weight="bold" fill="var(--bg)">Common Linux System Calls (x86)</text>
 
   <!-- Table header -->
-  <rect x="655" y="75" width="580" height="32" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="715" y="96" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)">EAX</text>
-  <text x="790" y="96" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)">Name</text>
-  <text x="940" y="96" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)">EBX</text>
-  <text x="1080" y="96" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)">ECX</text>
-  <text x="1185" y="96" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)">EDX</text>
+  <rect x="654.0625" y="107.9688" width="543.75" height="29" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="710.3125" y="127" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">EAX</text>
+  <text x="780.625" y="127" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">Name</text>
+  <text x="921.25" y="127" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">EBX</text>
+  <text x="1052.5" y="127" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">ECX</text>
+  <text x="1150.9375" y="127" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--bg)">EDX</text>
 
   <!-- rows data -->
   <!-- exit -->
-  <rect x="655" y="107" width="580" height="34" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="715" y="129" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">1</text>
-  <text x="790" y="129" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_exit</text>
-  <text x="940" y="129" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">exit code</text>
-  <text x="1080" y="129" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1185" y="129" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
+  <rect x="654.0625" y="136.9688" width="543.75" height="30.8125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="710.3125" y="156.9062" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">1</text>
+  <text x="780.625" y="156.9062" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_exit</text>
+  <text x="921.25" y="156.9062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">exit code</text>
+  <text x="1052.5" y="156.9062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1150.9375" y="156.9062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
   <!-- fork -->
-  <rect x="655" y="141" width="580" height="34" fill="var(--bg)" rx="6"/>
-  <text x="715" y="163" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">2</text>
-  <text x="790" y="163" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_fork</text>
-  <text x="940" y="163" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1080" y="163" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1185" y="163" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
+  <rect x="654.0625" y="167.7812" width="543.75" height="30.8125" fill="var(--bg)" rx="6"/>
+  <text x="710.3125" y="187.7188" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">2</text>
+  <text x="780.625" y="187.7188" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_fork</text>
+  <text x="921.25" y="187.7188" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1052.5" y="187.7188" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1150.9375" y="187.7188" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
   <!-- read -->
-  <rect x="655" y="175" width="580" height="34" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="715" y="197" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">3</text>
-  <text x="790" y="197" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_read</text>
-  <text x="940" y="197" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">fd</text>
-  <text x="1080" y="197" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">buf ptr</text>
-  <text x="1185" y="197" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">count</text>
+  <rect x="654.0625" y="198.5938" width="543.75" height="30.8125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="710.3125" y="218.5312" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">3</text>
+  <text x="780.625" y="218.5312" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_read</text>
+  <text x="921.25" y="218.5312" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">fd</text>
+  <text x="1052.5" y="218.5312" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">buf ptr</text>
+  <text x="1150.9375" y="218.5312" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">count</text>
   <!-- write -->
-  <rect x="655" y="209" width="580" height="34" fill="var(--bg)" rx="6"/>
-  <text x="715" y="231" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">4</text>
-  <text x="790" y="231" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_write</text>
-  <text x="940" y="231" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">fd</text>
-  <text x="1080" y="231" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">buf ptr</text>
-  <text x="1185" y="231" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">count</text>
+  <rect x="654.0625" y="229.4062" width="543.75" height="30.8125" fill="var(--bg)" rx="6"/>
+  <text x="710.3125" y="249.3438" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">4</text>
+  <text x="780.625" y="249.3438" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_write</text>
+  <text x="921.25" y="249.3438" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">fd</text>
+  <text x="1052.5" y="249.3438" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">buf ptr</text>
+  <text x="1150.9375" y="249.3438" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">count</text>
   <!-- open -->
-  <rect x="655" y="243" width="580" height="34" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="715" y="265" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">5</text>
-  <text x="790" y="265" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_open</text>
-  <text x="940" y="265" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">filename</text>
-  <text x="1080" y="265" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">flags</text>
-  <text x="1185" y="265" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">mode</text>
+  <rect x="654.0625" y="260.2188" width="543.75" height="30.8125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="710.3125" y="280.1562" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">5</text>
+  <text x="780.625" y="280.1562" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_open</text>
+  <text x="921.25" y="280.1562" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">filename</text>
+  <text x="1052.5" y="280.1562" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">flags</text>
+  <text x="1150.9375" y="280.1562" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">mode</text>
   <!-- close -->
-  <rect x="655" y="277" width="580" height="34" fill="var(--bg)" rx="6"/>
-  <text x="715" y="299" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">6</text>
-  <text x="790" y="299" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_close</text>
-  <text x="940" y="299" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">fd</text>
-  <text x="1080" y="299" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1185" y="299" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
+  <rect x="654.0625" y="291.0312" width="543.75" height="30.8125" fill="var(--bg)" rx="6"/>
+  <text x="710.3125" y="310.9688" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">6</text>
+  <text x="780.625" y="310.9688" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_close</text>
+  <text x="921.25" y="310.9688" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">fd</text>
+  <text x="1052.5" y="310.9688" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1150.9375" y="310.9688" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
   <!-- waitpid -->
-  <rect x="655" y="311" width="580" height="34" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="715" y="333" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">7</text>
-  <text x="790" y="333" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_waitpid</text>
-  <text x="940" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">pid</text>
-  <text x="1080" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">stat_addr</text>
-  <text x="1185" y="333" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">options</text>
+  <rect x="654.0625" y="321.8438" width="543.75" height="30.8125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="710.3125" y="341.7812" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">7</text>
+  <text x="780.625" y="341.7812" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_waitpid</text>
+  <text x="921.25" y="341.7812" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">pid</text>
+  <text x="1052.5" y="341.7812" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">stat_addr</text>
+  <text x="1150.9375" y="341.7812" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">options</text>
   <!-- getpid -->
-  <rect x="655" y="345" width="580" height="34" fill="var(--bg)" rx="6"/>
-  <text x="715" y="367" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">20</text>
-  <text x="790" y="367" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_getpid</text>
-  <text x="940" y="367" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1080" y="367" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1185" y="367" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
+  <rect x="654.0625" y="352.6562" width="543.75" height="30.8125" fill="var(--bg)" rx="6"/>
+  <text x="710.3125" y="372.5938" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">20</text>
+  <text x="780.625" y="372.5938" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_getpid</text>
+  <text x="921.25" y="372.5938" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1052.5" y="372.5938" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1150.9375" y="372.5938" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
   <!-- brk -->
-  <rect x="655" y="379" width="580" height="34" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="715" y="401" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--danger-accent)">45</text>
-  <text x="790" y="401" text-anchor="middle" font-family="monospace" font-size="13" fill="var(--primary-accent)">sys_brk</text>
-  <text x="940" y="401" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text)">new brk addr</text>
-  <text x="1080" y="401" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
-  <text x="1185" y="401" text-anchor="middle" font-family="monospace" font-size="11" fill="var(--text-faint)">—</text>
+  <rect x="654.0625" y="383.4688" width="543.75" height="30.8125" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="710.3125" y="403.4062" text-anchor="middle" font-family="monospace" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">45</text>
+  <text x="780.625" y="403.4062" text-anchor="middle" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">sys_brk</text>
+  <text x="921.25" y="403.4062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text)">new brk addr</text>
+  <text x="1052.5" y="403.4062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
+  <text x="1150.9375" y="403.4062" text-anchor="middle" font-family="monospace" font-size="10.1392" fill="var(--text-faint)">—</text>
 
   <!-- column dividers in table -->
-  <line x1="746" y1="75" x2="746" y2="413" stroke="var(--primary-border)" stroke-width="1"/>
-  <line x1="844" y1="75" x2="844" y2="413" stroke="var(--primary-border)" stroke-width="1"/>
-  <line x1="1030" y1="75" x2="1030" y2="413" stroke="var(--primary-border)" stroke-width="1"/>
-  <line x1="1140" y1="75" x2="1140" y2="413" stroke="var(--primary-border)" stroke-width="1"/>
+  <line x1="739.375" y1="107.9688" x2="739.375" y2="414.2812" stroke="var(--primary-border)" stroke-width="1"/>
+  <line x1="831.25" y1="107.9688" x2="831.25" y2="414.2812" stroke="var(--primary-border)" stroke-width="1"/>
+  <line x1="1005.625" y1="107.9688" x2="1005.625" y2="414.2812" stroke="var(--primary-border)" stroke-width="1"/>
+  <line x1="1108.75" y1="107.9688" x2="1108.75" y2="414.2812" stroke="var(--primary-border)" stroke-width="1"/>
 
   <!-- Note box -->
-  <rect x="655" y="425" width="580" height="85" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="945" y="447" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Flow Summary</text>
-  <text x="670" y="466" font-family="monospace" font-size="11" fill="var(--text-muted)">1. Load syscall number into EAX</text>
-  <text x="670" y="482" font-family="monospace" font-size="11" fill="var(--text-muted)">2. Load arguments into EBX, ECX, EDX, ESI, EDI</text>
-  <text x="670" y="498" font-family="monospace" font-size="11" fill="var(--text-muted)">3. Execute  int $0x80  →  CPU switches to ring 0 (kernel mode)</text>
+  <rect x="654.0625" y="425.1562" width="543.75" height="77.0312" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="925.9375" y="445.0938" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)">Flow Summary</text>
+  <text x="668.125" y="462.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">1. Load syscall number into EAX</text>
+  <text x="668.125" y="476.8125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">2. Load arguments into EBX, ECX, EDX, ESI, EDI</text>
+  <text x="668.125" y="491.3125" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">3. Execute  int $0x80  →  CPU switches to ring 0 (kernel mode)</text>
 
   <!-- Error note box -->
-  <rect x="655" y="520" width="580" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="945" y="542" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)">Return Values</text>
-  <text x="670" y="561" font-family="monospace" font-size="11" fill="var(--text-muted)">EAX ≥ 0 : success (result value)</text>
-  <text x="670" y="577" font-family="monospace" font-size="11" fill="var(--text-muted)">EAX &lt; 0 : error (EAX = -errno, e.g. -2 = ENOENT)</text>
-  <text x="670" y="593" font-family="monospace" font-size="11" fill="var(--text-muted)">Check with:  cmp $0, %eax  /  jl error_handler</text>
+  <rect x="654.0625" y="511.25" width="543.75" height="72.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="925.9375" y="531.1875" text-anchor="middle" font-family="sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)">Return Values</text>
+  <text x="668.125" y="548.4062" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">EAX ≥ 0 : success (result value)</text>
+  <text x="668.125" y="562.9062" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">EAX &lt; 0 : error (EAX = -errno, e.g. -2 = ENOENT)</text>
+  <text x="668.125" y="577.4062" font-family="monospace" font-size="10.1392" fill="var(--text-muted)">Check with:  cmp $0, %eax  /  jl error_handler</text>
 </svg>

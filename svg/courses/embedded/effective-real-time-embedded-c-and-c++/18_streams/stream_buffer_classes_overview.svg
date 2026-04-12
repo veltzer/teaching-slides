@@ -101,37 +101,37 @@
       <polygon points="1,1 13,7 1,13" fill="#ffffff" stroke="#555555" stroke-width="1.5" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <rect x="391.1111" y="17.7778" width="355.5556" height="80" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="568.8889" y="64" text-anchor="middle" font-family="monospace" font-size="23.1111" font-weight="bold" fill="var(--bg)">std::streambuf</text>
-  <text x="568.8889" y="87.1111" text-anchor="middle" font-family="sans-serif" font-size="14.2222" fill="var(--primary-accent)">abstract buffer base</text>
-  <line x1="471.1111" y1="99.5556" x2="231.1111" y2="188.4444" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
-  <rect x="53.3333" y="190.2222" width="320" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="213.3333" y="234.6667" text-anchor="middle" font-family="monospace" font-size="19.5556" font-weight="bold" fill="var(--text)">filebuf</text>
-  <text x="213.3333" y="256" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">backed by a file on disk</text>
-  <line x1="568.8889" y1="99.5556" x2="568.8889" y2="188.4444" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
-  <rect x="408.8889" y="190.2222" width="320" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="568.8889" y="234.6667" text-anchor="middle" font-family="monospace" font-size="19.5556" font-weight="bold" fill="var(--text)">stringbuf</text>
-  <text x="568.8889" y="256" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">backed by std::string</text>
-  <line x1="666.6667" y1="99.5556" x2="906.6667" y2="188.4444" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
-  <rect x="764.4444" y="190.2222" width="320" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="924.4444" y="234.6667" text-anchor="middle" font-family="monospace" font-size="19.5556" font-weight="bold" fill="var(--text)">custom buffer</text>
-  <text x="924.4444" y="256" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-muted)">backed by serial / DMA</text>
-  <text x="568.8889" y="320" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Buffer Areas (inside streambuf)</text>
-  <rect x="71.1111" y="341.3333" width="231.1111" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="186.6667" y="376.8889" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="var(--primary-accent)">get area</text>
-  <text x="186.6667" y="401.7778" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">eback · gptr · egptr</text>
-  <rect x="337.7778" y="341.3333" width="231.1111" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="453.3333" y="376.8889" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="var(--primary-accent)">put area</text>
-  <text x="453.3333" y="401.7778" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">pbase · pptr · epptr</text>
-  <rect x="604.4444" y="341.3333" width="231.1111" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="720" y="376.8889" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="var(--text)">overflow()</text>
-  <text x="720" y="401.7778" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">called when put area full</text>
-  <rect x="871.1111" y="341.3333" width="231.1111" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
-  <text x="986.6667" y="376.8889" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="var(--text)">underflow()</text>
-  <text x="986.6667" y="401.7778" text-anchor="middle" font-family="sans-serif" font-size="12.4444" fill="var(--text-muted)">called when get area empty</text>
-  <rect x="177.7778" y="462.2222" width="782.2222" height="71.1111" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="568.8889" y="490.6667" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="var(--primary-accent)">Embedded use: override overflow() and underflow() to connect to UART / SPI</text>
-  <text x="568.8889" y="513.7778" text-anchor="middle" font-family="monospace" font-size="13.3333" fill="var(--text-muted)">int overflow(int c) { UART_send(c); return c; }</text>
-  <text x="568.8889" y="531.5556" text-anchor="middle" font-family="sans-serif" font-size="13.3333" fill="var(--text-faint)">then wrap in ostream for full operator&lt;&lt; support</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <rect x="452.5" y="56.1111" width="375" height="72.5" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="98" text-anchor="middle" font-family="monospace" font-size="22.5947" font-weight="bold" fill="var(--bg)">std::streambuf</text>
+  <text x="640" y="118.9444" text-anchor="middle" font-family="sans-serif" font-size="13.9044" fill="var(--primary-accent)">abstract buffer base</text>
+  <line x1="536.875" y1="130.2223" x2="283.75" y2="210.7777" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <rect x="96.25" y="212.3889" width="337.5" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="265" y="252.6667" text-anchor="middle" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--text)">filebuf</text>
+  <text x="265" y="272" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-muted)">backed by a file on disk</text>
+  <line x1="640" y1="130.2223" x2="640" y2="210.7777" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <rect x="471.25" y="212.3889" width="337.5" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="640" y="252.6667" text-anchor="middle" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--text)">stringbuf</text>
+  <text x="640" y="272" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-muted)">backed by std::string</text>
+  <line x1="743.125" y1="130.2223" x2="996.25" y2="210.7777" stroke="var(--text-muted)" stroke-width="1.7778" marker-end="url(#inherit)" />
+  <rect x="846.2499" y="212.3889" width="337.5" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1014.9999" y="252.6667" text-anchor="middle" font-family="monospace" font-size="19.1186" font-weight="bold" fill="var(--text)">custom buffer</text>
+  <text x="1014.9999" y="272" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-muted)">backed by serial / DMA</text>
+  <text x="640" y="330" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--text)">Buffer Areas (inside streambuf)</text>
+  <rect x="115" y="349.3333" width="243.75" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="236.875" y="381.5556" text-anchor="middle" font-family="monospace" font-size="15.6425" font-weight="bold" fill="var(--primary-accent)">get area</text>
+  <text x="236.875" y="404.1111" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">eback · gptr · egptr</text>
+  <rect x="396.25" y="349.3333" width="243.75" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="518.125" y="381.5556" text-anchor="middle" font-family="monospace" font-size="15.6425" font-weight="bold" fill="var(--primary-accent)">put area</text>
+  <text x="518.125" y="404.1111" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">pbase · pptr · epptr</text>
+  <rect x="677.4999" y="349.3333" width="243.75" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="799.375" y="381.5556" text-anchor="middle" font-family="monospace" font-size="15.6425" font-weight="bold" fill="var(--text)">overflow()</text>
+  <text x="799.375" y="404.1111" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">called when put area full</text>
+  <rect x="958.75" y="349.3333" width="243.75" height="72.5" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
+  <text x="1080.625" y="381.5556" text-anchor="middle" font-family="monospace" font-size="15.6425" font-weight="bold" fill="var(--text)">underflow()</text>
+  <text x="1080.625" y="404.1111" text-anchor="middle" font-family="sans-serif" font-size="12.1663" fill="var(--text-muted)">called when get area empty</text>
+  <rect x="227.5" y="458.8889" width="825" height="64.4444" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="484.6667" text-anchor="middle" font-family="sans-serif" font-size="15.6425" font-weight="bold" fill="var(--primary-accent)">Embedded use: override overflow() and underflow() to connect to UART / SPI</text>
+  <text x="640" y="505.6111" text-anchor="middle" font-family="monospace" font-size="13.0354" fill="var(--text-muted)">int overflow(int c) { UART_send(c); return c; }</text>
+  <text x="640" y="521.7223" text-anchor="middle" font-family="sans-serif" font-size="13.0354" fill="var(--text-faint)">then wrap in ostream for full operator&lt;&lt; support</text>
 </svg>

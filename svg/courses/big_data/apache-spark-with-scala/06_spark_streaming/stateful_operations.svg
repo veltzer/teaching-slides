@@ -1,14 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">State</text>
-  <rect x="378.6666" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="298.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="336.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -101,13 +92,46 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="330" x2="490.6667" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="330" x2="789.3333" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="330" x2="1088.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="330" x2="490.6667" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">Stateful Stream Operations</text>
+
+  <rect x="40" y="81.8018" width="390" height="240.3604" rx="6.1336" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">Aggregations</text>
+  <text x="235" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">df.groupBy(window(...), "userId")</text>
+  <text x="235" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">  .agg(count("*"), sum("amount"))</text>
+  <text x="235" y="217.6577" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">State: partial aggregate per key+window</text>
+  <text x="235" y="238.5586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">each batch merges new data into state</text>
+  <text x="235" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">output grows unbounded without a</text>
+  <text x="235" y="301.2613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">watermark — see panel below.</text>
+
+  <rect x="445" y="81.8018" width="390" height="240.3604" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Stream-stream joins</text>
+  <text x="640" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">clicks.join(impressions,</text>
+  <text x="640" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">  expr("clickId = impId AND"</text>
+  <text x="640" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">    + " clickTime BETWEEN impTime ..."))</text>
+  <text x="640" y="238.5586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">State: buffered rows from each side</text>
+  <text x="640" y="259.4595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">until the time-range can no longer match</text>
+  <text x="640" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">BOTH streams need watermarks +</text>
+  <text x="640" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">a time-bound predicate in the join.</text>
+
+  <rect x="850" y="81.8018" width="390" height="240.3604" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1045" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Arbitrary state</text>
+  <text x="1045" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">mapGroupsWithState</text>
+  <text x="1045" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">flatMapGroupsWithState</text>
+  <text x="1045" y="217.6577" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">You define a per-key state machine.</text>
+  <text x="1045" y="238.5586" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">Each group of rows for a key is fed</text>
+  <text x="1045" y="259.4595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">to your function along with current state.</text>
+  <text x="1045" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">Configure timeouts to evict stale state;</text>
+  <text x="1045" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">otherwise memory grows forever.</text>
+
+  <rect x="40" y="348.2883" width="1200" height="271.7117" rx="6.1336" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="384.8649" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4009" font-weight="bold" fill="var(--text)">Watermarks: the key to bounded state</text>
+  <text x="80" y="421.4414" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">• A watermark declares "we will not accept events older than (max observed time − delay)".</text>
+  <text x="80" y="447.5676" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">• Spark drops late events and discards state whose windows / ranges have fully closed.</text>
+  <text x="80" y="473.6937" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">• Without a watermark, every window, join buffer, or per-key state grows unbounded.</text>
+  <text x="80" y="510.2703" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">  df.withWatermark("eventTime", "10 minutes")</text>
+  <text x="80" y="536.3964" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">      .groupBy(window($"eventTime", "5 minutes"), $"userId")</text>
+  <text x="80" y="562.5225" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">      .agg(count("*"))</text>
+  <text x="80" y="599.0991" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">• State is persisted to the checkpoint directory. After a restart, processing resumes exactly where it left off.</text>
 </svg>

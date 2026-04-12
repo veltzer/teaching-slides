@@ -119,136 +119,136 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
     </marker>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title row labels -->
-  <text x="640" y="38" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">map / filter / reduce — Data Pipeline Transformations</text>
+  <text x="640" y="74.4375" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">map / filter / reduce — Data Pipeline Transformations</text>
 
   <!-- === MAP ROW === -->
-  <text x="50" y="90" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-accent)">map()</text>
+  <text x="86.875" y="121.5625" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)">map()</text>
 
   <!-- Input data -->
-  <rect x="50" y="100" width="180" height="56" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="140" y="122" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">[1, 2, 3, 4, 5]</text>
-  <text x="140" y="144" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">input iterable</text>
+  <rect x="86.875" y="130.625" width="168.75" height="50.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="171.25" y="150.5625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">[1, 2, 3, 4, 5]</text>
+  <text x="171.25" y="170.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">input iterable</text>
 
-  <line x1="230" y1="128" x2="280" y2="128" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="255.625" y1="156" x2="302.5" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- map box -->
-  <rect x="280" y="96" width="180" height="64" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="370" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)" text-anchor="middle">map()</text>
-  <text x="370" y="142" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">lambda x: x**2</text>
-  <text x="370" y="155" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">applies function to every element</text>
+  <rect x="302.5" y="127" width="168.75" height="58" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="386.875" y="150.5625" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)" text-anchor="middle">map()</text>
+  <text x="386.875" y="168.6875" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">lambda x: x**2</text>
+  <text x="386.875" y="180.4688" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--primary-accent)" text-anchor="middle">applies function to every element</text>
 
-  <line x1="460" y1="128" x2="510" y2="128" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="471.25" y1="156" x2="518.125" y2="156" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- map output -->
-  <rect x="510" y="100" width="200" height="56" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="610" y="122" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">[1, 4, 9, 16, 25]</text>
-  <text x="610" y="144" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">same length, transformed</text>
+  <rect x="518.125" y="130.625" width="187.5" height="50.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="150.5625" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">[1, 4, 9, 16, 25]</text>
+  <text x="611.875" y="170.5" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">same length, transformed</text>
 
   <!-- map description -->
-  <text x="760" y="115" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Applies a function to each element.</text>
-  <text x="760" y="135" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Output has the same length as input.</text>
-  <text x="760" y="155" font-family="monospace" font-size="13" fill="var(--primary-accent)">list(map(lambda x: x**2, [1,2,3,4,5]))</text>
+  <text x="752.5" y="144.2188" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Applies a function to each element.</text>
+  <text x="752.5" y="162.3438" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Output has the same length as input.</text>
+  <text x="752.5" y="180.4688" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)">list(map(lambda x: x**2, [1,2,3,4,5]))</text>
 
   <!-- === FILTER ROW === -->
-  <text x="50" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)">filter()</text>
+  <text x="86.875" y="234.8438" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)">filter()</text>
 
-  <rect x="50" y="225" width="180" height="56" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="140" y="247" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">[1, 2, 3, 4, 5, 6]</text>
-  <text x="140" y="269" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">input iterable</text>
+  <rect x="86.875" y="243.9062" width="168.75" height="50.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="171.25" y="263.8438" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">[1, 2, 3, 4, 5, 6]</text>
+  <text x="171.25" y="283.7812" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">input iterable</text>
 
-  <line x1="230" y1="253" x2="280" y2="253" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="255.625" y1="269.2812" x2="302.5" y2="269.2812" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- filter box -->
-  <rect x="280" y="221" width="180" height="64" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="370" y="247" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)" text-anchor="middle">filter()</text>
-  <text x="370" y="267" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">lambda x: x%2==0</text>
-  <text x="370" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">keeps elements where True</text>
+  <rect x="302.5" y="240.2812" width="168.75" height="58" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="386.875" y="263.8438" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)" text-anchor="middle">filter()</text>
+  <text x="386.875" y="281.9688" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">lambda x: x%2==0</text>
+  <text x="386.875" y="293.75" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--ok-accent)" text-anchor="middle">keeps elements where True</text>
 
-  <line x1="460" y1="253" x2="510" y2="253" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="471.25" y1="269.2812" x2="518.125" y2="269.2812" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- filter output -->
-  <rect x="510" y="225" width="200" height="56" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="610" y="247" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">[2, 4, 6]</text>
-  <text x="610" y="269" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">only matching elements</text>
+  <rect x="518.125" y="243.9062" width="187.5" height="50.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="263.8438" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">[2, 4, 6]</text>
+  <text x="611.875" y="283.7812" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">only matching elements</text>
 
-  <text x="760" y="240" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Keeps elements where predicate is True.</text>
-  <text x="760" y="260" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Output can be shorter than input.</text>
-  <text x="760" y="280" font-family="monospace" font-size="13" fill="var(--ok-accent)">list(filter(lambda x: x%2==0, [1,2,3,4,5,6]))</text>
+  <text x="752.5" y="257.5" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Keeps elements where predicate is True.</text>
+  <text x="752.5" y="275.625" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Output can be shorter than input.</text>
+  <text x="752.5" y="293.75" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)">list(filter(lambda x: x%2==0, [1,2,3,4,5,6]))</text>
 
   <!-- === REDUCE ROW === -->
-  <text x="50" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-accent)">reduce()</text>
+  <text x="86.875" y="348.125" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)">reduce()</text>
 
-  <rect x="50" y="350" width="180" height="56" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
-  <text x="140" y="372" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">[1, 2, 3, 4, 5]</text>
-  <text x="140" y="394" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">input iterable</text>
+  <rect x="86.875" y="357.1875" width="168.75" height="50.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="171.25" y="377.125" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">[1, 2, 3, 4, 5]</text>
+  <text x="171.25" y="397.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">input iterable</text>
 
-  <line x1="230" y1="378" x2="280" y2="378" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="255.625" y1="382.5625" x2="302.5" y2="382.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- reduce box -->
-  <rect x="280" y="346" width="180" height="64" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="370" y="372" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)" text-anchor="middle">reduce()</text>
-  <text x="370" y="392" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">lambda acc, x: acc+x</text>
-  <text x="370" y="405" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle">accumulates to a single value</text>
+  <rect x="302.5" y="353.5625" width="168.75" height="58" rx="6" fill="var(--warn-fill)" filter="url(#shadow)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="386.875" y="377.125" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--bg)" text-anchor="middle">reduce()</text>
+  <text x="386.875" y="395.25" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">lambda acc, x: acc+x</text>
+  <text x="386.875" y="407.0312" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--warn-accent)" text-anchor="middle">accumulates to a single value</text>
 
-  <line x1="460" y1="378" x2="510" y2="378" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="471.25" y1="382.5625" x2="518.125" y2="382.5625" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- reduce output -->
-  <rect x="510" y="350" width="200" height="56" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="610" y="372" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">15</text>
-  <text x="610" y="394" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)" text-anchor="middle">single accumulated value</text>
+  <rect x="518.125" y="357.1875" width="187.5" height="50.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="611.875" y="377.125" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">15</text>
+  <text x="611.875" y="397.0625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-faint)" text-anchor="middle">single accumulated value</text>
 
-  <text x="760" y="365" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Folds list into a single value.</text>
-  <text x="760" y="385" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Uses running accumulator.</text>
-  <text x="760" y="405" font-family="monospace" font-size="13" fill="var(--warn-accent)">from functools import reduce</text>
-  <text x="760" y="420" font-family="monospace" font-size="13" fill="var(--warn-accent)">reduce(lambda acc, x: acc+x, [1,2,3,4,5])</text>
+  <text x="752.5" y="370.7812" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Folds list into a single value.</text>
+  <text x="752.5" y="388.9062" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text-muted)">Uses running accumulator.</text>
+  <text x="752.5" y="407.0312" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">from functools import reduce</text>
+  <text x="752.5" y="420.625" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)">reduce(lambda acc, x: acc+x, [1,2,3,4,5])</text>
 
   <!-- Step-by-step reduce visualization -->
-  <rect x="50" y="435" width="660" height="120" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="380" y="458" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">reduce step-by-step: [1, 2, 3, 4, 5]</text>
+  <rect x="86.875" y="434.2188" width="618.75" height="108.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="396.25" y="455.0625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">reduce step-by-step: [1, 2, 3, 4, 5]</text>
 
   <!-- Steps -->
-  <rect x="75" y="468" width="80" height="30" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="115" y="488" font-family="monospace" font-size="13" fill="var(--text)" text-anchor="middle">1+2=3</text>
-  <line x1="155" y1="483" x2="175" y2="483" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="110.3125" y="464.125" width="75" height="27.1875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="147.8125" y="482.25" font-family="monospace" font-size="11.9827" fill="var(--text)" text-anchor="middle">1+2=3</text>
+  <line x1="185.3125" y1="477.7188" x2="204.0625" y2="477.7188" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="175" y="468" width="80" height="30" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="215" y="488" font-family="monospace" font-size="13" fill="var(--text)" text-anchor="middle">3+3=6</text>
-  <line x1="255" y1="483" x2="275" y2="483" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="204.0625" y="464.125" width="75" height="27.1875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="241.5625" y="482.25" font-family="monospace" font-size="11.9827" fill="var(--text)" text-anchor="middle">3+3=6</text>
+  <line x1="279.0625" y1="477.7188" x2="297.8125" y2="477.7188" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="275" y="468" width="80" height="30" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="315" y="488" font-family="monospace" font-size="13" fill="var(--text)" text-anchor="middle">6+4=10</text>
-  <line x1="355" y1="483" x2="375" y2="483" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="297.8125" y="464.125" width="75" height="27.1875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="335.3125" y="482.25" font-family="monospace" font-size="11.9827" fill="var(--text)" text-anchor="middle">6+4=10</text>
+  <line x1="372.8125" y1="477.7188" x2="391.5625" y2="477.7188" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="375" y="468" width="80" height="30" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="415" y="488" font-family="monospace" font-size="13" fill="var(--bg)" text-anchor="middle">10+5=15</text>
-  <line x1="455" y1="483" x2="475" y2="483" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="391.5625" y="464.125" width="75" height="27.1875" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="429.0625" y="482.25" font-family="monospace" font-size="11.9827" fill="var(--bg)" text-anchor="middle">10+5=15</text>
+  <line x1="466.5625" y1="477.7188" x2="485.3125" y2="477.7188" stroke="var(--text-faint)" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="475" y="468" width="60" height="30" rx="6" fill="var(--warn-accent)"/>
-  <text x="505" y="488" font-family="monospace" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">15</text>
+  <rect x="485.3125" y="464.125" width="56.25" height="27.1875" rx="6" fill="var(--warn-accent)"/>
+  <text x="513.4375" y="482.25" font-family="monospace" font-size="12.9044" fill="var(--bg)" text-anchor="middle" font-weight="bold">15</text>
 
-  <text x="380" y="540" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Accumulator grows left-to-right through the list</text>
+  <text x="396.25" y="529.375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Accumulator grows left-to-right through the list</text>
 
   <!-- Chaining pipeline -->
-  <rect x="760" y="435" width="480" height="185" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="456" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Chaining Operations</text>
+  <rect x="752.5" y="434.2188" width="450" height="167.6562" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="977.5" y="453.25" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Chaining Operations</text>
 
-  <rect x="780" y="464" width="440" height="28" rx="6" fill="var(--code-bg)"/>
-  <text x="1000" y="483" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">numbers = range(1, 11)</text>
+  <rect x="771.25" y="460.5" width="412.5" height="25.375" rx="6" fill="var(--code-bg)"/>
+  <text x="977.5" y="477.7188" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">numbers = range(1, 11)</text>
 
-  <rect x="780" y="498" width="440" height="28" rx="6" fill="var(--code-bg)"/>
-  <text x="1000" y="517" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">evens = filter(lambda x: x%2==0, numbers)</text>
+  <rect x="771.25" y="491.3125" width="412.5" height="25.375" rx="6" fill="var(--code-bg)"/>
+  <text x="977.5" y="508.5312" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">evens = filter(lambda x: x%2==0, numbers)</text>
 
-  <rect x="780" y="532" width="440" height="28" rx="6" fill="var(--code-bg)"/>
-  <text x="1000" y="551" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">squared = map(lambda x: x**2, evens)</text>
+  <rect x="771.25" y="522.125" width="412.5" height="25.375" rx="6" fill="var(--code-bg)"/>
+  <text x="977.5" y="539.3438" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">squared = map(lambda x: x**2, evens)</text>
 
-  <rect x="780" y="566" width="440" height="28" rx="6" fill="var(--code-bg)"/>
-  <text x="1000" y="585" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">total = reduce(lambda a,b: a+b, squared)</text>
+  <rect x="771.25" y="552.9375" width="412.5" height="25.375" rx="6" fill="var(--code-bg)"/>
+  <text x="977.5" y="570.1562" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">total = reduce(lambda a,b: a+b, squared)</text>
 
-  <text x="1000" y="612" font-family="Arial, sans-serif" font-size="12" fill="var(--info-accent)" text-anchor="middle">[2,4,6,8,10] → [4,16,36,64,100] → 220</text>
+  <text x="977.5" y="594.625" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--info-accent)" text-anchor="middle">[2,4,6,8,10] → [4,16,36,64,100] → 220</text>
 
   <!-- Divider line -->
-  <line x1="50" y1="425" x2="1230" y2="425" stroke="var(--border)" stroke-width="1"/>
+  <line x1="86.875" y1="425.1562" x2="1193.125" y2="425.1562" stroke="var(--border)" stroke-width="1"/>
 </svg>

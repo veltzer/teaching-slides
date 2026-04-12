@@ -100,147 +100,147 @@
   </defs>
 
   <!-- Background -->
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
 
   <!-- Title banner -->
-  <rect x="30" y="15" width="1220" height="50" rx="6" fill="url(#blueGrad)" filter="url(#shadow)"/>
-  <text x="640" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Bash Expansion Order — Applied Left to Right Before Command Execution</text>
+  <rect x="68.125" y="53.5938" width="1143.75" height="45.3125" rx="6" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="640" y="83.5" font-family="Arial, sans-serif" font-size="20.2783" font-weight="bold" fill="var(--bg)" text-anchor="middle">Bash Expansion Order — Applied Left to Right Before Command Execution</text>
 
   <!-- Input box -->
-  <rect x="30" y="85" width="220" height="60" rx="6" fill="var(--text)" filter="url(#shadow)"/>
-  <text x="140" y="108" font-family="Arial, sans-serif" font-size="14" fill="var(--border)" text-anchor="middle">Raw command line</text>
-  <text x="140" y="132" font-family="monospace" font-size="16" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">echo {a,b}~/*.txt</text>
+  <rect x="68.125" y="117.0312" width="206.25" height="54.375" rx="6" fill="var(--text)" filter="url(#shadow)"/>
+  <text x="171.25" y="137.875" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--border)" text-anchor="middle">Raw command line</text>
+  <text x="171.25" y="159.625" font-family="monospace" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">echo {a,b}~/*.txt</text>
 
   <!-- Arrow 0 -->
-  <line x1="250" y1="115" x2="278" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="274.375" y1="144.2188" x2="300.625" y2="144.2188" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step boxes - arranged horizontally with two rows -->
   <!-- Row 1: steps 1-5 -->
 
   <!-- Step 1: Brace -->
-  <rect x="280" y="80" width="170" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="365" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">① Brace Expansion</text>
-  <text x="365" y="123" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">{a,b,c}</text>
-  <text x="365" y="141" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  a  b  c</text>
+  <rect x="302.5" y="112.5" width="159.375" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="382.1875" y="135.1562" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">① Brace Expansion</text>
+  <text x="382.1875" y="151.4688" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">{a,b,c}</text>
+  <text x="382.1875" y="167.7812" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  a  b  c</text>
 
   <!-- Arrow 1-2 -->
-  <line x1="450" y1="115" x2="478" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="461.875" y1="144.2188" x2="488.125" y2="144.2188" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 2: Tilde -->
-  <rect x="480" y="80" width="165" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="563" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">② Tilde Expansion</text>
-  <text x="563" y="123" font-family="monospace" font-size="13" fill="var(--ok-accent)" text-anchor="middle">~  ~user</text>
-  <text x="563" y="141" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  /home/mark</text>
+  <rect x="490" y="112.5" width="154.6875" height="63.4375" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="567.8125" y="135.1562" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">② Tilde Expansion</text>
+  <text x="567.8125" y="151.4688" font-family="monospace" font-size="11.9827" fill="var(--ok-accent)" text-anchor="middle">~  ~user</text>
+  <text x="567.8125" y="167.7812" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  /home/mark</text>
 
   <!-- Arrow 2-3 -->
-  <line x1="645" y1="115" x2="673" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="644.6875" y1="144.2188" x2="670.9375" y2="144.2188" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3: Parameter -->
-  <rect x="675" y="80" width="175" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="763" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">③ Parameter Expansion</text>
-  <text x="763" y="123" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">$var  ${var}</text>
-  <text x="763" y="141" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  value of var</text>
+  <rect x="672.8125" y="112.5" width="164.0625" height="63.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="755.3125" y="135.1562" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">③ Parameter Expansion</text>
+  <text x="755.3125" y="151.4688" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">$var  ${var}</text>
+  <text x="755.3125" y="167.7812" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  value of var</text>
 
   <!-- Arrow 3-4 -->
-  <line x1="850" y1="115" x2="878" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="836.875" y1="144.2188" x2="863.125" y2="144.2188" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 4: Command subst -->
-  <rect x="880" y="80" width="175" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="968" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">④ Command Substitution</text>
-  <text x="968" y="123" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">$(cmd)</text>
-  <text x="968" y="141" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  stdout of cmd</text>
+  <rect x="865" y="112.5" width="164.0625" height="63.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947.5" y="135.1562" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">④ Command Substitution</text>
+  <text x="947.5" y="151.4688" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">$(cmd)</text>
+  <text x="947.5" y="167.7812" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  stdout of cmd</text>
 
   <!-- Arrow 4-5 -->
-  <line x1="1055" y1="115" x2="1083" y2="115" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1029.0625" y1="144.2188" x2="1055.3125" y2="144.2188" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 5: Arithmetic -->
-  <rect x="1085" y="80" width="165" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1168" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">⑤ Arithmetic Expansion</text>
-  <text x="1168" y="123" font-family="monospace" font-size="13" fill="var(--primary-accent)" text-anchor="middle">$((expr))</text>
-  <text x="1168" y="141" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  numeric result</text>
+  <rect x="1057.1875" y="112.5" width="154.6875" height="63.4375" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1135" y="135.1562" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">⑤ Arithmetic Expansion</text>
+  <text x="1135" y="151.4688" font-family="monospace" font-size="11.9827" fill="var(--primary-accent)" text-anchor="middle">$((expr))</text>
+  <text x="1135" y="167.7812" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  numeric result</text>
 
   <!-- Arrow down from step 5 -->
-  <line x1="1168" y1="150" x2="1168" y2="178" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1135" y1="175.9375" x2="1135" y2="201.3125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Row 2 (right to left): steps 6-9 -->
 
   <!-- Step 6: Process subst -->
-  <rect x="1085" y="180" width="165" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1168" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">⑥ Process Substitution</text>
-  <text x="1168" y="223" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">&lt;(cmd) &gt;(cmd)</text>
-  <text x="1168" y="241" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  /dev/fd/N</text>
+  <rect x="1057.1875" y="203.125" width="154.6875" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1135" y="225.7812" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">⑥ Process Substitution</text>
+  <text x="1135" y="242.0938" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">&lt;(cmd) &gt;(cmd)</text>
+  <text x="1135" y="258.4062" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  /dev/fd/N</text>
 
   <!-- Arrow 6-7 -->
-  <line x1="1085" y1="215" x2="1057" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1057.1875" y1="234.8438" x2="1030.9375" y2="234.8438" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 7: Word splitting -->
-  <rect x="880" y="180" width="175" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="968" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">⑦ Word Splitting</text>
-  <text x="968" y="223" font-family="monospace" font-size="13" fill="var(--warn-accent)" text-anchor="middle">$IFS chars</text>
-  <text x="968" y="241" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">splits unquoted results</text>
+  <rect x="865" y="203.125" width="164.0625" height="63.4375" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="947.5" y="225.7812" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">⑦ Word Splitting</text>
+  <text x="947.5" y="242.0938" font-family="monospace" font-size="11.9827" fill="var(--warn-accent)" text-anchor="middle">$IFS chars</text>
+  <text x="947.5" y="258.4062" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">splits unquoted results</text>
 
   <!-- Arrow 7-8 -->
-  <line x1="880" y1="215" x2="852" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="865" y1="234.8438" x2="838.75" y2="234.8438" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 8: Filename expansion -->
-  <rect x="675" y="180" width="175" height="70" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="763" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">⑧ Filename Expansion</text>
-  <text x="763" y="223" font-family="monospace" font-size="13" fill="var(--danger-accent)" text-anchor="middle">*.txt  ?.sh</text>
-  <text x="763" y="241" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">→  matching filenames</text>
+  <rect x="672.8125" y="203.125" width="164.0625" height="63.4375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="755.3125" y="225.7812" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">⑧ Filename Expansion</text>
+  <text x="755.3125" y="242.0938" font-family="monospace" font-size="11.9827" fill="var(--danger-accent)" text-anchor="middle">*.txt  ?.sh</text>
+  <text x="755.3125" y="258.4062" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">→  matching filenames</text>
 
   <!-- Arrow 8-9 -->
-  <line x1="675" y1="215" x2="647" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="672.8125" y1="234.8438" x2="646.5625" y2="234.8438" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 9: Quote removal -->
-  <rect x="480" y="180" width="165" height="70" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="563" y="205" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">⑨ Quote Removal</text>
-  <text x="563" y="223" font-family="monospace" font-size="13" fill="var(--danger-accent)" text-anchor="middle">" ' \</text>
-  <text x="563" y="241" font-family="monospace" font-size="12" fill="var(--text-muted)" text-anchor="middle">removes quoting chars</text>
+  <rect x="490" y="203.125" width="154.6875" height="63.4375" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="567.8125" y="225.7812" font-family="Arial, sans-serif" font-size="11.9827" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">⑨ Quote Removal</text>
+  <text x="567.8125" y="242.0938" font-family="monospace" font-size="11.9827" fill="var(--danger-accent)" text-anchor="middle">" ' \</text>
+  <text x="567.8125" y="258.4062" font-family="monospace" font-size="11.0609" fill="var(--text-muted)" text-anchor="middle">removes quoting chars</text>
 
   <!-- Arrow 9 → execute -->
-  <line x1="480" y1="215" x2="452" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="490" y1="234.8438" x2="463.75" y2="234.8438" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Execute box -->
-  <rect x="280" y="180" width="170" height="70" rx="6" fill="var(--text)" filter="url(#shadow)"/>
-  <text x="365" y="208" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Command</text>
-  <text x="365" y="228" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Execution</text>
-  <text x="365" y="246" font-family="Arial, sans-serif" font-size="12" fill="var(--border)" text-anchor="middle">fork + exec</text>
+  <rect x="302.5" y="203.125" width="159.375" height="63.4375" rx="6" fill="var(--text)" filter="url(#shadow)"/>
+  <text x="382.1875" y="228.5" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Command</text>
+  <text x="382.1875" y="246.625" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Execution</text>
+  <text x="382.1875" y="262.9375" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--border)" text-anchor="middle">fork + exec</text>
 
   <!-- KEY NOTES section -->
-  <rect x="30" y="275" width="1220" height="325" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
-  <text x="640" y="302" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Key Rules &amp; Examples</text>
+  <rect x="68.125" y="289.2188" width="1143.75" height="294.5312" rx="6" fill="var(--surface)" filter="url(#shadow)"/>
+  <text x="640" y="313.6875" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Key Rules &amp; Examples</text>
 
   <!-- Rule boxes -->
   <!-- Rule 1 -->
-  <rect x="50" y="315" width="560" height="120" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="330" y="338" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Brace expansion BEFORE variable expansion</text>
-  <text x="70" y="362" font-family="monospace" font-size="14" fill="var(--text)">x=3</text>
-  <text x="70" y="382" font-family="monospace" font-size="14" fill="var(--danger-accent)">echo {1..$x}    # WRONG: prints literal {1..3}</text>
-  <text x="70" y="402" font-family="monospace" font-size="14" fill="var(--ok-accent)">seq 1 "$x"       # CORRECT: prints 1 2 3</text>
-  <text x="70" y="422" font-family="monospace" font-size="14" fill="var(--ok-accent)">eval "echo {1..$x}"  # also works</text>
+  <rect x="86.875" y="325.4688" width="525" height="108.75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="349.375" y="346.3125" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Brace expansion BEFORE variable expansion</text>
+  <text x="105.625" y="368.0625" font-family="monospace" font-size="12.9044" fill="var(--text)">x=3</text>
+  <text x="105.625" y="386.1875" font-family="monospace" font-size="12.9044" fill="var(--danger-accent)">echo {1..$x}    # WRONG: prints literal {1..3}</text>
+  <text x="105.625" y="404.3125" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">seq 1 "$x"       # CORRECT: prints 1 2 3</text>
+  <text x="105.625" y="422.4375" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">eval "echo {1..$x}"  # also works</text>
 
   <!-- Rule 2 -->
-  <rect x="650" y="315" width="580" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="940" y="338" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Quoting prevents most expansions</text>
-  <text x="670" y="362" font-family="monospace" font-size="14" fill="var(--text)">var="*.txt"</text>
-  <text x="670" y="382" font-family="monospace" font-size="14" fill="var(--warn-accent)">echo $var      # expands glob → file1.txt file2.txt</text>
-  <text x="670" y="402" font-family="monospace" font-size="14" fill="var(--ok-accent)">echo "$var"    # prints literal: *.txt</text>
-  <text x="670" y="422" font-family="monospace" font-size="14" fill="var(--ok-accent)">echo '$var'    # prints literal: $var</text>
+  <rect x="649.375" y="325.4688" width="543.75" height="108.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="921.25" y="346.3125" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Quoting prevents most expansions</text>
+  <text x="668.125" y="368.0625" font-family="monospace" font-size="12.9044" fill="var(--text)">var="*.txt"</text>
+  <text x="668.125" y="386.1875" font-family="monospace" font-size="12.9044" fill="var(--warn-accent)">echo $var      # expands glob → file1.txt file2.txt</text>
+  <text x="668.125" y="404.3125" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">echo "$var"    # prints literal: *.txt</text>
+  <text x="668.125" y="422.4375" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">echo '$var'    # prints literal: $var</text>
 
   <!-- Rule 3 -->
-  <rect x="50" y="450" width="560" height="130" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="330" y="472" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Word splitting splits on $IFS (default: space, tab, newline)</text>
-  <text x="70" y="496" font-family="monospace" font-size="14" fill="var(--text)">files=$(ls *.txt)       # one string</text>
-  <text x="70" y="516" font-family="monospace" font-size="14" fill="var(--danger-accent)">for f in $files; do    # splits on spaces → BUGGY</text>
-  <text x="70" y="536" font-family="monospace" font-size="14" fill="var(--ok-accent)">mapfile -t files &lt; &lt;(ls *.txt)  # SAFE</text>
-  <text x="70" y="556" font-family="monospace" font-size="14" fill="var(--ok-accent)">for f in "${files[@]}"; do         # SAFE</text>
-  <text x="70" y="574" font-family="monospace" font-size="14" fill="var(--text)">done</text>
+  <rect x="86.875" y="447.8125" width="525" height="117.8125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="349.375" y="467.75" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Word splitting splits on $IFS (default: space, tab, newline)</text>
+  <text x="105.625" y="489.5" font-family="monospace" font-size="12.9044" fill="var(--text)">files=$(ls *.txt)       # one string</text>
+  <text x="105.625" y="507.625" font-family="monospace" font-size="12.9044" fill="var(--danger-accent)">for f in $files; do    # splits on spaces → BUGGY</text>
+  <text x="105.625" y="525.75" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">mapfile -t files &lt; &lt;(ls *.txt)  # SAFE</text>
+  <text x="105.625" y="543.875" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">for f in "${files[@]}"; do         # SAFE</text>
+  <text x="105.625" y="560.1875" font-family="monospace" font-size="12.9044" fill="var(--text)">done</text>
 
   <!-- Rule 4 -->
-  <rect x="650" y="450" width="580" height="130" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="940" y="472" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Filename expansion only matches existing files</text>
-  <text x="670" y="496" font-family="monospace" font-size="14" fill="var(--text)">echo *.txt   # if no .txt files exist:</text>
-  <text x="670" y="516" font-family="monospace" font-size="14" fill="var(--danger-accent)">             # prints literal *.txt  (not empty!)</text>
-  <text x="670" y="536" font-family="monospace" font-size="14" fill="var(--ok-accent)">shopt -s nullglob   # → prints nothing</text>
-  <text x="670" y="556" font-family="monospace" font-size="14" fill="var(--ok-accent)">shopt -s failglob   # → error on no match</text>
+  <rect x="649.375" y="447.8125" width="543.75" height="117.8125" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="921.25" y="467.75" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Filename expansion only matches existing files</text>
+  <text x="668.125" y="489.5" font-family="monospace" font-size="12.9044" fill="var(--text)">echo *.txt   # if no .txt files exist:</text>
+  <text x="668.125" y="507.625" font-family="monospace" font-size="12.9044" fill="var(--danger-accent)">             # prints literal *.txt  (not empty!)</text>
+  <text x="668.125" y="525.75" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">shopt -s nullglob   # → prints nothing</text>
+  <text x="668.125" y="543.875" font-family="monospace" font-size="12.9044" fill="var(--ok-accent)">shopt -s failglob   # → error on no match</text>
 </svg>

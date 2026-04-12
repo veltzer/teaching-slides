@@ -97,27 +97,27 @@
       <polygon points="0,10.5882 7.2258,0" fill="#333" />
     </marker>
   </defs>
-  <rect x="227.0968" y="5.2941" width="825.8065" height="42.3529" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="31.7647" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.8235" font-weight="bold" fill="var(--text)">SQL Query / DataFrame API</text>
-  <line x1="640" y1="47.6471" x2="640" y2="68.8235" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
-  <rect x="123.871" y="74.1176" width="1032.2581" height="74.1176" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="100.5882" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7647" font-weight="bold" fill="var(--text)">Phase 1: PARSING</text>
-  <text x="640" y="127.0588" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6471" fill="var(--text-muted)">SQL string --&gt; Unresolved Logical Plan (names as strings, no types)</text>
-  <line x1="640" y1="148.2353" x2="640" y2="169.4118" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
-  <rect x="123.871" y="174.7059" width="1032.2581" height="74.1176" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="201.1765" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7647" font-weight="bold" fill="var(--text)">Phase 2: ANALYSIS</text>
-  <text x="640" y="227.6471" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6471" fill="var(--text-muted)">Resolve columns, tables, functions using Catalog</text>
-  <line x1="640" y1="248.8235" x2="640" y2="270" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
-  <rect x="123.871" y="275.2941" width="1032.2581" height="95.2941" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="304.9412" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7647" font-weight="bold" fill="var(--text)">Phase 3: LOGICAL OPTIMIZATION</text>
-  <text x="640" y="330.3529" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6471" fill="var(--text-muted)">Predicate pushdown, Column pruning,</text>
-  <text x="640" y="351.5294" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6471" fill="var(--text-muted)">Constant folding, Boolean simplification</text>
-  <line x1="640" y1="370.5882" x2="640" y2="391.7647" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
-  <rect x="123.871" y="397.0588" width="1032.2581" height="74.1176" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="640" y="423.5294" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7647" font-weight="bold" fill="var(--text)">Phase 4: PHYSICAL PLANNING</text>
-  <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6471" fill="var(--text-muted)">Generate physical plans; CBO selects cheapest</text>
-  <line x1="640" y1="471.1765" x2="640" y2="492.3529" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
-  <rect x="123.871" y="497.6471" width="1032.2581" height="74.1176" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="524.1176" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7647" font-weight="bold" fill="var(--text)">Phase 5: CODE GENERATION (Tungsten)</text>
-  <text x="640" y="550.5882" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.6471" fill="var(--text-muted)">Whole-stage codegen: Java bytecode for CPU-efficient execution</text>
+  <rect x="160" y="40" width="960" height="43.3644" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.9999" y="67.1028" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.1723" font-weight="bold" fill="var(--text)">SQL Query / DataFrame API</text>
+  <line x1="639.9999" y1="83.3645" x2="639.9999" y2="105.0467" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
+  <rect x="40" y="110.4673" width="1200" height="75.8878" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="639.9999" y="137.5701" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0172" font-weight="bold" fill="var(--text)">Phase 1: PARSING</text>
+  <text x="639.9999" y="164.6729" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.7069" fill="var(--text-muted)">SQL string --&gt; Unresolved Logical Plan (names as strings, no types)</text>
+  <line x1="639.9999" y1="186.3552" x2="639.9999" y2="208.0374" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
+  <rect x="40" y="213.458" width="1200" height="75.8878" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="639.9999" y="240.5608" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0172" font-weight="bold" fill="var(--text)">Phase 2: ANALYSIS</text>
+  <text x="639.9999" y="267.6636" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.7069" fill="var(--text-muted)">Resolve columns, tables, functions using Catalog</text>
+  <line x1="639.9999" y1="289.3458" x2="639.9999" y2="311.028" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
+  <rect x="40" y="316.4486" width="1200" height="97.5701" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="639.9999" y="346.8038" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0172" font-weight="bold" fill="var(--text)">Phase 3: LOGICAL OPTIMIZATION</text>
+  <text x="639.9999" y="372.8224" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.7069" fill="var(--text-muted)">Predicate pushdown, Column pruning,</text>
+  <text x="639.9999" y="394.5047" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.7069" fill="var(--text-muted)">Constant folding, Boolean simplification</text>
+  <line x1="639.9999" y1="414.0187" x2="639.9999" y2="435.7009" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
+  <rect x="40" y="441.1215" width="1200" height="75.8878" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="639.9999" y="468.2243" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0172" font-weight="bold" fill="var(--text)">Phase 4: PHYSICAL PLANNING</text>
+  <text x="639.9999" y="495.3271" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.7069" fill="var(--text-muted)">Generate physical plans; CBO selects cheapest</text>
+  <line x1="639.9999" y1="517.0094" x2="639.9999" y2="538.6916" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow-cat)" />
+  <rect x="40" y="544.1122" width="1200" height="75.8878" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="639.9999" y="571.2149" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0172" font-weight="bold" fill="var(--text)">Phase 5: CODE GENERATION (Tungsten)</text>
+  <text x="639.9999" y="598.3177" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.7069" fill="var(--text-muted)">Whole-stage codegen: Java bytecode for CPU-efficient execution</text>
 </svg>

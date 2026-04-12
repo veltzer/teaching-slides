@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="592.2679" y="43.8356" text-anchor="middle" font-size="28.0548" font-weight="bold" fill="var(--text)">DMA Scatter-Gather</text>
-  <rect x="22.7795" y="70.137" width="1138.9768" height="157.8082" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="68.3386" y="110.4657" font-size="22.7945" font-weight="bold" fill="var(--danger-accent)">Without scatter-gather:</text>
-  <text x="68.3386" y="140.2739" font-size="19.2877" fill="var(--text-muted)">Data must be in one contiguous buffer</text>
-  <rect x="91.1181" y="157.8082" width="1002.2995" height="43.8356" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="592.2679" y="187.6164" text-anchor="middle" font-size="19.2877" fill="var(--text)">One big buffer (must copy data here first)</text>
-  <rect x="22.7795" y="254.2466" width="1138.9768" height="385.7534" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="68.3386" y="294.5754" font-size="22.7945" font-weight="bold" fill="var(--ok-accent)">With scatter-gather:</text>
-  <text x="68.3386" y="324.3836" font-size="19.2877" fill="var(--text-muted)">DMA reads a list of (address, length) pairs</text>
-  <rect x="91.1181" y="350.685" width="182.2363" height="70.137" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="182.2363" y="382.2466" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="var(--text)">Buf A</text>
-  <text x="182.2363" y="408.548" text-anchor="middle" font-size="17.5343" fill="var(--text-muted)">512B</text>
-  <rect x="364.4726" y="350.685" width="227.7953" height="70.137" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="478.3703" y="382.2466" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="var(--text)">Buf B</text>
-  <text x="478.3703" y="408.548" text-anchor="middle" font-size="17.5343" fill="var(--text-muted)">1024B</text>
-  <rect x="683.386" y="350.685" width="341.6931" height="70.137" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="854.2326" y="382.2466" text-anchor="middle" font-size="19.2877" font-weight="bold" fill="var(--text)">Buf C</text>
-  <text x="854.2326" y="408.548" text-anchor="middle" font-size="17.5343" fill="var(--text-muted)">2048B</text>
-  <line x1="182.2363" y1="420.8219" x2="182.2363" y2="482.1918" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
-  <line x1="478.3703" y1="420.8219" x2="478.3703" y2="482.1918" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
-  <line x1="854.2326" y1="420.8219" x2="854.2326" y2="482.1918" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
-  <rect x="91.1181" y="482.1918" width="956.7405" height="131.5069" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="569.4884" y="517.2603" text-anchor="middle" font-size="21.0411" font-weight="bold" fill="var(--text)">Scatter-Gather List</text>
-  <text x="182.2363" y="552.3288" font-size="17.5343" fill="var(--text-muted)">Entry 0: addr=A, len=512</text>
-  <text x="182.2363" y="578.6302" font-size="17.5343" fill="var(--text-muted)">Entry 1: addr=B, len=1024</text>
-  <text x="182.2363" y="604.9315" font-size="17.5343" fill="var(--text-muted)">Entry 2: addr=C, len=2048</text>
+  <text x="640" y="40" text-anchor="middle" font-size="28.4035" font-weight="bold" fill="var(--text)">DMA Scatter-Gather</text>
+  <rect x="40" y="65.5883" width="1200" height="153.5294" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="88" y="104.8235" font-size="23.0778" font-weight="bold" fill="var(--danger-accent)">Without scatter-gather:</text>
+  <text x="88" y="133.8235" font-size="19.5274" fill="var(--text-muted)">Data must be in one contiguous buffer</text>
+  <rect x="112" y="150.8823" width="1055.9999" height="42.647" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="179.8823" text-anchor="middle" font-size="19.5274" fill="var(--text)">One big buffer (must copy data here first)</text>
+  <rect x="40" y="244.7059" width="1200" height="375.2941" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="88" y="283.9412" font-size="23.0778" font-weight="bold" fill="var(--ok-accent)">With scatter-gather:</text>
+  <text x="88" y="312.9412" font-size="19.5274" fill="var(--text-muted)">DMA reads a list of (address, length) pairs</text>
+  <rect x="112" y="338.5295" width="192" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="208.0001" y="369.2353" text-anchor="middle" font-size="19.5274" font-weight="bold" fill="var(--text)">Buf A</text>
+  <text x="208.0001" y="394.8236" text-anchor="middle" font-size="17.7522" fill="var(--text-muted)">512B</text>
+  <rect x="400.0001" y="338.5295" width="239.9999" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="520.0001" y="369.2353" text-anchor="middle" font-size="19.5274" font-weight="bold" fill="var(--text)">Buf B</text>
+  <text x="520.0001" y="394.8236" text-anchor="middle" font-size="17.7522" fill="var(--text-muted)">1024B</text>
+  <rect x="736" y="338.5295" width="360.0001" height="68.2353" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="916" y="369.2353" text-anchor="middle" font-size="19.5274" font-weight="bold" fill="var(--text)">Buf C</text>
+  <text x="916" y="394.8236" text-anchor="middle" font-size="17.7522" fill="var(--text-muted)">2048B</text>
+  <line x1="208.0001" y1="406.7647" x2="208.0001" y2="466.4706" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
+  <line x1="520.0001" y1="406.7647" x2="520.0001" y2="466.4706" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
+  <line x1="916" y1="406.7647" x2="916" y2="466.4706" stroke="var(--ok-border)" stroke-width="1.7534" marker-end="url(#sga)" />
+  <rect x="112" y="466.4706" width="1008" height="127.9412" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="616" y="500.5883" text-anchor="middle" font-size="21.3026" font-weight="bold" fill="var(--text)">Scatter-Gather List</text>
+  <text x="208.0001" y="534.7059" font-size="17.7522" fill="var(--text-muted)">Entry 0: addr=A, len=512</text>
+  <text x="208.0001" y="560.2942" font-size="17.7522" fill="var(--text-muted)">Entry 1: addr=B, len=1024</text>
+  <text x="208.0001" y="585.8823" font-size="17.7522" fill="var(--text-muted)">Entry 2: addr=C, len=2048</text>
   <defs>
     <style id="palette-vars">
       :root, svg {

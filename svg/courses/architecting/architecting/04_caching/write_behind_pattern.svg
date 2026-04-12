@@ -100,29 +100,29 @@
       <polygon points="0,18.9474 5.6,0" fill="#28a745" />
     </marker>
   </defs>
-  <text x="600.4939" y="44.4444" text-anchor="middle" font-size="24.0198" font-weight="bold" fill="var(--text)">Write-Behind (Write-Back) Pattern</text>
-  <rect x="75.0617" y="231.1111" width="180.1482" height="88.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="165.1358" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text)">Application</text>
-  <rect x="375.3087" y="231.1111" width="180.1482" height="88.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="465.3828" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text)">Cache</text>
-  <rect x="675.5556" y="231.1111" width="180.1482" height="88.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="765.6297" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text)">Queue</text>
-  <rect x="975.8026" y="231.1111" width="180.1482" height="88.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1065.8766" y="284.4445" text-anchor="middle" font-size="19.5161" fill="var(--text)">Database</text>
-  <line x1="255.2099" y1="263.1112" x2="372.3062" y2="263.1112" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="315.2593" y="248.889" text-anchor="middle" font-size="16.5136" fill="var(--primary-accent)">1. Write</text>
-  <line x1="372.3062" y1="298.6667" x2="258.2124" y2="298.6667" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
-  <text x="315.2593" y="334.2222" text-anchor="middle" font-size="16.5136" fill="var(--ok-accent)">2. Confirm</text>
-  <line x1="555.4568" y1="275.5556" x2="672.5531" y2="275.5556" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="615.5062" y="257.7778" text-anchor="middle" font-size="16.5136" fill="var(--danger-accent)">3. Queue</text>
-  <rect x="660.5433" y="373.3333" width="210.1729" height="62.2222" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="765.6297" y="412.4444" text-anchor="middle" font-size="16.5136" fill="var(--text)">Async processing</text>
-  <line x1="765.6297" y1="320" x2="765.6297" y2="369.7778" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="6.0049 4.5037" />
-  <line x1="855.7038" y1="275.5556" x2="972.8001" y2="275.5556" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="915.7532" y="257.7778" text-anchor="middle" font-size="16.5136" fill="var(--primary-accent)">4. Write (later)</text>
-  <rect x="75.0617" y="497.7778" width="1080.889" height="142.2222" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="600.4939" y="533.3334" text-anchor="middle" font-size="18.0148" font-weight="bold" fill="var(--text)">Key Characteristics</text>
-  <text x="112.5926" y="568.889" font-size="16.5136" fill="var(--text-muted)">- Immediate response to app (write confirmed at cache level)</text>
-  <text x="112.5926" y="600.889" font-size="16.5136" fill="var(--text-muted)">- Database updated asynchronously via queue (eventual consistency)</text>
-  <text x="112.5926" y="631.1112" font-size="16.5136" fill="var(--danger-accent)">- Risk: data loss if cache/queue fails before DB write</text>
+  <text x="623.3333" y="40" text-anchor="middle" font-size="24.976" font-weight="bold" fill="var(--text)">Write-Behind (Write-Back) Pattern</text>
+  <rect x="40" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="140" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Application</text>
+  <rect x="373.3334" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="473.3334" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Cache</text>
+  <rect x="706.6666" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="806.6666" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Queue</text>
+  <rect x="1040" y="221.7911" width="200" height="86.5672" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="1139.9999" y="273.7314" text-anchor="middle" font-size="20.293" fill="var(--text)">Database</text>
+  <line x1="240" y1="252.9553" x2="370" y2="252.9553" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="306.6667" y="239.1046" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)">1. Write</text>
+  <line x1="370" y1="287.5821" x2="243.3334" y2="287.5821" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)" />
+  <text x="306.6667" y="322.209" text-anchor="middle" font-size="17.171" fill="var(--ok-accent)">2. Confirm</text>
+  <line x1="573.3333" y1="265.0747" x2="703.3333" y2="265.0747" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="639.9999" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--danger-accent)">3. Queue</text>
+  <rect x="690" y="360.2985" width="233.3334" height="60.597" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="806.6666" y="398.388" text-anchor="middle" font-size="17.171" fill="var(--text)">Async processing</text>
+  <line x1="806.6666" y1="308.3582" x2="806.6666" y2="356.8359" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="6.0049 4.5037" />
+  <line x1="906.6666" y1="265.0747" x2="1036.6666" y2="265.0747" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="973.3333" y="247.7612" text-anchor="middle" font-size="17.171" fill="var(--primary-accent)">4. Write (later)</text>
+  <rect x="40" y="481.4926" width="1199.9999" height="138.5074" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="623.3333" y="516.1195" text-anchor="middle" font-size="18.7319" font-weight="bold" fill="var(--text)">Key Characteristics</text>
+  <text x="81.6667" y="550.7464" font-size="17.171" fill="var(--text-muted)">- Immediate response to app (write confirmed at cache level)</text>
+  <text x="81.6667" y="581.9106" font-size="17.171" fill="var(--text-muted)">- Database updated asynchronously via queue (eventual consistency)</text>
+  <text x="81.6667" y="611.3434" font-size="17.171" fill="var(--danger-accent)">- Risk: data loss if cache/queue fails before DB write</text>
 </svg>

@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="19.961" y="33.6842" width="349.3177" height="269.4737" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="193.6218" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--primary-accent)" font-weight="bold">Database Storage</text>
-  <text x="193.6218" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">postgres_data volume</text>
-  <text x="193.6218" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v pgdata:/var/lib/postgresql</text>
-  <text x="193.6218" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Named volume for durability</text>
-  <rect x="419.1813" y="33.6842" width="349.3177" height="269.4737" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="592.8421" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--warn-accent)" font-weight="bold">Config Injection</text>
-  <text x="592.8421" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Bind mount config files</text>
-  <text x="592.8421" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">-v ./nginx.conf:/etc/nginx.conf</text>
-  <text x="592.8421" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">Host file into container</text>
-  <rect x="818.4016" y="33.6842" width="349.3177" height="269.4737" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="992.0624" y="101.0526" text-anchor="middle" font-size="21.9571" fill="var(--ok-accent)" font-weight="bold">Shared App Data</text>
-  <text x="992.0624" y="161.6842" text-anchor="middle" font-size="19.961" fill="var(--text-muted)">Multi-container sharing</text>
-  <text x="992.0624" y="215.5789" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">App + Sidecar share volume</text>
-  <text x="992.0624" y="269.4737" text-anchor="middle" font-size="19.961" fill="var(--text-faint)">logs, uploads, cache</text>
-  <rect x="239.5322" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="319.3762" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-accent)">App</text>
-  <rect x="638.7525" y="370.5263" width="159.6881" height="117.8947" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="718.5965" y="444.6316" text-anchor="middle" font-size="19.961" fill="var(--info-accent)">Sidecar</text>
-  <rect x="399.2203" y="538.9474" width="399.2203" height="101.0526" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="598.8304" y="606.3158" text-anchor="middle" font-size="19.961" fill="var(--ok-accent)">Shared Volume: /app/logs</text>
-  <line x1="319.3762" y1="488.4211" x2="499.0253" y2="538.9474" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd7_08_volumes)" />
-  <line x1="718.5965" y1="488.4211" x2="698.6355" y2="538.9474" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd7_08_volumes)" />
+  <rect x="40" y="40" width="365.2173" height="257.7778" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="221.5652" y="104.4444" text-anchor="middle" font-size="21.9586" fill="var(--primary-accent)" font-weight="bold">Database Storage</text>
+  <text x="221.5652" y="162.4444" text-anchor="middle" font-size="19.9624" fill="var(--text-muted)">postgres_data volume</text>
+  <text x="221.5652" y="214" text-anchor="middle" font-size="19.9624" fill="var(--text-faint)">-v pgdata:/var/lib/postgresql</text>
+  <text x="221.5652" y="265.5556" text-anchor="middle" font-size="19.9624" fill="var(--text-faint)">Named volume for durability</text>
+  <rect x="457.3913" y="40" width="365.2173" height="257.7778" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="638.9565" y="104.4444" text-anchor="middle" font-size="21.9586" fill="var(--warn-accent)" font-weight="bold">Config Injection</text>
+  <text x="638.9565" y="162.4444" text-anchor="middle" font-size="19.9624" fill="var(--text-muted)">Bind mount config files</text>
+  <text x="638.9565" y="214" text-anchor="middle" font-size="19.9624" fill="var(--text-faint)">-v ./nginx.conf:/etc/nginx.conf</text>
+  <text x="638.9565" y="265.5556" text-anchor="middle" font-size="19.9624" fill="var(--text-faint)">Host file into container</text>
+  <rect x="874.7827" y="40" width="365.2173" height="257.7778" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1056.3478" y="104.4444" text-anchor="middle" font-size="21.9586" fill="var(--ok-accent)" font-weight="bold">Shared App Data</text>
+  <text x="1056.3478" y="162.4444" text-anchor="middle" font-size="19.9624" fill="var(--text-muted)">Multi-container sharing</text>
+  <text x="1056.3478" y="214" text-anchor="middle" font-size="19.9624" fill="var(--text-faint)">App + Sidecar share volume</text>
+  <text x="1056.3478" y="265.5556" text-anchor="middle" font-size="19.9624" fill="var(--text-faint)">logs, uploads, cache</text>
+  <rect x="269.5653" y="362.2222" width="166.9565" height="112.7777" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="353.0435" y="433.1111" text-anchor="middle" font-size="19.9624" fill="var(--info-accent)">App</text>
+  <rect x="686.9566" y="362.2222" width="166.9565" height="112.7777" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="770.4348" y="433.1111" text-anchor="middle" font-size="19.9624" fill="var(--info-accent)">Sidecar</text>
+  <rect x="436.5218" y="523.3334" width="417.3913" height="96.6666" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="645.2174" y="587.7778" text-anchor="middle" font-size="19.9624" fill="var(--ok-accent)">Shared Volume: /app/logs</text>
+  <line x1="353.0435" y1="475" x2="540.8695" y2="523.3334" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd7_08_volumes)" />
+  <line x1="770.4348" y1="475" x2="749.5652" y2="523.3334" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd7_08_volumes)" />
   <defs>
     <style id="palette-vars">
       :root, svg {

@@ -1,18 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">RDD</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,14 +92,56 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="393" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3894" font-weight="bold" fill="var(--text)">Spark Execution Model: Job → Stages → Tasks</text>
+
+  <rect x="40" y="81.4286" width="300" height="538.5714" rx="6.1062" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--primary-text)">Application</text>
+  <text x="190" y="153.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--primary-text)">one SparkContext</text>
+  <text x="190" y="174.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--primary-text)">one set of executors</text>
+  <text x="190" y="210.8929" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--primary-text)">contains many...</text>
+
+  <line x1="340" y1="350.7143" x2="378" y2="350.7143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="380" y="81.4286" width="300" height="538.5714" rx="6.1062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="530" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--ok-text)">Job</text>
+  <text x="530" y="153.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">one per action</text>
+  <text x="530" y="174.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">(collect / count / save...)</text>
+  <text x="530" y="210.8929" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--ok-text)">DAGScheduler receives it,</text>
+  <text x="530" y="231.6071" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">walks lineage back to sources,</text>
+  <text x="530" y="252.3214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">cuts at shuffle boundaries</text>
+  <text x="530" y="293.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--ok-text)">contains many...</text>
+
+  <line x1="680" y1="350.7143" x2="718" y2="350.7143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="720" y="81.4286" width="260" height="538.5714" rx="6.1062" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="850" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--warn-text)">Stage</text>
+  <text x="850" y="153.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">between two shuffle points</text>
+  <text x="850" y="190.1786" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">all transforms inside a stage</text>
+  <text x="850" y="210.8929" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">are narrow — pipelined</text>
+  <text x="850" y="252.3214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">stages run sequentially:</text>
+  <text x="850" y="273.0357" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">stage N blocks on stage N-1</text>
+  <text x="850" y="314.4643" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--warn-text)">contains many...</text>
+
+  <line x1="980" y1="350.7143" x2="1018" y2="350.7143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1020" y="81.4286" width="220" height="538.5714" rx="6.1062" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1130" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--info-text)">Task</text>
+  <text x="1130" y="159.1071" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--info-text)">one per partition</text>
+  <text x="1130" y="195.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">unit of execution on</text>
+  <text x="1130" y="216.0714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">one executor core</text>
+  <text x="1130" y="257.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">TaskScheduler sends</text>
+  <text x="1130" y="278.2143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">to a free executor core</text>
+  <text x="1130" y="319.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">runs serialized closure</text>
+  <text x="1130" y="340.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">+ broadcast vars</text>
+  <text x="1130" y="371.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">failure → retry</text>
+  <text x="1130" y="392.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">(spark.task.maxFailures)</text>
+
+  <rect x="380" y="449.1071" width="860" height="155.3571" rx="6.1062" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="810" y="485.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--text)">Example: rdd.filter(...).map(...).groupByKey().count()</text>
+  <text x="410" y="521.6071" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--text-muted)">One action (count) → one Job.</text>
+  <text x="410" y="547.5" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--text-muted)">groupByKey is a wide transformation → the Job is cut into 2 Stages.</text>
+  <text x="410" y="573.3929" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--text-muted)">Stage 1: filter + map (narrow, pipelined).  Stage 2: groupByKey + count (post-shuffle).</text>
+  <text x="410" y="599.2857" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--text-muted)">Each Stage runs one Task per input partition.</text>
 </svg>

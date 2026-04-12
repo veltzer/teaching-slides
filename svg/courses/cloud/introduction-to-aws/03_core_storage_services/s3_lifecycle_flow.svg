@@ -99,86 +99,86 @@
   </defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="1280" height="640" rx="6" fill="var(--bg)"/>
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--bg)"/>
 
   <!-- Cost gradient bar at bottom -->
-  <rect x="60" y="530" width="1160" height="30" rx="6" fill="url(#grad-cost)" opacity="0.3"/>
-  <text x="60" y="585" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Higher Cost</text>
-  <text x="1220" y="585" text-anchor="end" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">Lower Cost</text>
-  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Cost per GB decreases as data moves right</text>
+  <rect x="96.25" y="520.3125" width="1087.5" height="27.1875" rx="6" fill="url(#grad-cost)" opacity="0.3"/>
+  <text x="96.25" y="570.1562" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">Higher Cost</text>
+  <text x="1183.75" y="570.1562" text-anchor="end" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">Lower Cost</text>
+  <text x="640" y="570.1562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">Cost per GB decreases as data moves right</text>
 
   <!-- Stage 1: S3 Standard -->
-  <rect x="40" y="80" width="200" height="160" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="140" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--primary-accent)">S3 Standard</text>
-  <line x1="65" y1="135" x2="215" y2="135" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="140" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Frequent access</text>
-  <text x="140" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Low latency</text>
-  <text x="140" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">$0.023/GB</text>
-  <text x="140" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Day 0</text>
+  <rect x="77.5" y="112.5" width="187.5" height="145" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="171.25" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6696" font-weight="bold" fill="var(--primary-accent)">S3 Standard</text>
+  <line x1="100.9375" y1="162.3438" x2="241.5625" y2="162.3438" stroke="var(--primary-border)" stroke-width="1.5"/>
+  <text x="171.25" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Frequent access</text>
+  <text x="171.25" y="203.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Low latency</text>
+  <text x="171.25" y="225.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">$0.023/GB</text>
+  <text x="171.25" y="243.9062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Day 0</text>
 
   <!-- Arrow 1 -->
-  <line x1="240" y1="160" x2="290" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="245" y="130" width="80" height="24" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="285" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text-muted)">30 days</text>
+  <line x1="265" y1="185" x2="311.875" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="269.6875" y="157.8125" width="75" height="21.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="307.1875" y="173.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text-muted)">30 days</text>
 
   <!-- Stage 2: S3 IA -->
-  <rect x="300" y="80" width="200" height="160" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-accent)">S3 Standard-IA</text>
-  <line x1="325" y1="130" x2="475" y2="130" stroke="var(--primary-border)" stroke-width="1.5"/>
-  <text x="400" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Infrequent access</text>
-  <text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Retrieval fee</text>
-  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">$0.0125/GB</text>
-  <text x="400" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Day 30</text>
+  <rect x="321.25" y="112.5" width="187.5" height="145" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="415" y="144.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--primary-accent)">S3 Standard-IA</text>
+  <line x1="344.6875" y1="157.8125" x2="485.3125" y2="157.8125" stroke="var(--primary-border)" stroke-width="1.5"/>
+  <text x="415" y="180.4688" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Infrequent access</text>
+  <text x="415" y="198.5938" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Retrieval fee</text>
+  <text x="415" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--primary-accent)">$0.0125/GB</text>
+  <text x="415" y="243.9062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Day 30</text>
 
   <!-- Arrow 2 -->
-  <line x1="500" y1="160" x2="550" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="505" y="130" width="80" height="24" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="545" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text-muted)">90 days</text>
+  <line x1="508.75" y1="185" x2="555.625" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="513.4375" y="157.8125" width="75" height="21.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="550.9375" y="173.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text-muted)">90 days</text>
 
   <!-- Stage 3: Glacier -->
-  <rect x="560" y="80" width="200" height="160" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="660" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--ok-accent)">Glacier</text>
-  <line x1="585" y1="135" x2="735" y2="135" stroke="var(--ok-border)" stroke-width="1.5"/>
-  <text x="660" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Archive storage</text>
-  <text x="660" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Min to hours retrieval</text>
-  <text x="660" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">$0.004/GB</text>
-  <text x="660" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Day 120</text>
+  <rect x="565" y="112.5" width="187.5" height="145" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="658.75" y="148.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6696" font-weight="bold" fill="var(--ok-accent)">Glacier</text>
+  <line x1="588.4375" y1="162.3438" x2="729.0625" y2="162.3438" stroke="var(--ok-border)" stroke-width="1.5"/>
+  <text x="658.75" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Archive storage</text>
+  <text x="658.75" y="203.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Min to hours retrieval</text>
+  <text x="658.75" y="225.7812" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">$0.004/GB</text>
+  <text x="658.75" y="243.9062" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Day 120</text>
 
   <!-- Arrow 3 -->
-  <line x1="760" y1="160" x2="810" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="763" y="130" width="84" height="24" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="805" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--text-muted)">365 days</text>
+  <line x1="752.5" y1="185" x2="799.375" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="755.3125" y="157.8125" width="78.75" height="21.75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="794.6875" y="173.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" font-weight="bold" fill="var(--text-muted)">365 days</text>
 
   <!-- Stage 4: Deep Archive -->
-  <rect x="820" y="80" width="200" height="160" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="920" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)">Glacier Deep</text>
-  <text x="920" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-accent)">Archive</text>
-  <line x1="845" y1="148" x2="995" y2="148" stroke="var(--ok-border)" stroke-width="1.5"/>
-  <text x="920" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Coldest storage</text>
-  <text x="920" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">12-48 hour retrieval</text>
-  <text x="920" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">$0.00099/GB</text>
-  <text x="920" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Day 485+</text>
+  <rect x="808.75" y="112.5" width="187.5" height="145" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="902.5" y="144.2188" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)">Glacier Deep</text>
+  <text x="902.5" y="162.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.8261" font-weight="bold" fill="var(--ok-accent)">Archive</text>
+  <line x1="832.1875" y1="174.125" x2="972.8125" y2="174.125" stroke="var(--ok-border)" stroke-width="1.5"/>
+  <text x="902.5" y="194.0625" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">Coldest storage</text>
+  <text x="902.5" y="212.1875" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text)">12-48 hour retrieval</text>
+  <text x="902.5" y="234.8438" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" font-weight="bold" fill="var(--ok-accent)">$0.00099/GB</text>
+  <text x="902.5" y="251.1562" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0609" fill="var(--text-muted)">Day 485+</text>
 
   <!-- Arrow 4 (optional delete) -->
-  <line x1="1020" y1="160" x2="1070" y2="160" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
-  <text x="1045" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">optional</text>
+  <line x1="996.25" y1="185" x2="1043.125" y2="185" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="1019.6875" y="171.4062" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.1392" fill="var(--text-muted)">optional</text>
 
   <!-- Stage 5: Delete -->
-  <rect x="1080" y="100" width="160" height="120" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1160" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">Delete</text>
-  <text x="1160" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Expiration rule</text>
-  <text x="1160" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">removes object</text>
+  <rect x="1052.5" y="130.625" width="150" height="108.75" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1127.5" y="175.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5914" font-weight="bold" fill="var(--danger-accent)">Delete</text>
+  <text x="1127.5" y="198.5938" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">Expiration rule</text>
+  <text x="1127.5" y="221.25" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">removes object</text>
 
   <!-- Timeline bar -->
-  <rect x="60" y="310" width="1160" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">S3 Lifecycle Policy Timeline</text>
+  <rect x="96.25" y="320.9375" width="1087.5" height="45.3125" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="349.9375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--text)">S3 Lifecycle Policy Timeline</text>
 
   <!-- Savings summary -->
-  <rect x="60" y="390" width="1160" height="110" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)">Cost Savings Summary</text>
-  <text x="200" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Standard: $0.023</text>
-  <text x="430" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">IA: 46% savings</text>
-  <text x="660" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Glacier: 83% savings</text>
-  <text x="940" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Deep Archive: 96% savings</text>
-  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Lifecycle policies automate transitions -- set once, save continuously</text>
+  <rect x="96.25" y="393.4375" width="1087.5" height="99.6875" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="420.625" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)">Cost Savings Summary</text>
+  <text x="227.5" y="452.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)">Standard: $0.023</text>
+  <text x="443.125" y="452.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)">IA: 46% savings</text>
+  <text x="658.75" y="452.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)">Glacier: 83% savings</text>
+  <text x="921.25" y="452.3438" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.9044" fill="var(--text)">Deep Archive: 96% savings</text>
+  <text x="640" y="479.5312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-muted)">Lifecycle policies automate transitions -- set once, save continuously</text>
 </svg>

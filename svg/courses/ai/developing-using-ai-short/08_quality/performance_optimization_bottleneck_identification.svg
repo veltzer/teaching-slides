@@ -101,23 +101,23 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--bg)" rx="6"/>
-  <rect x="71.1111" y="44.4444" width="995.5556" height="53.3333" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="568.8889" y="80" text-anchor="middle" fill="var(--bg)" font-size="23.1111" font-weight="bold" font-family="Arial, sans-serif">Common Performance Bottlenecks</text>
-  <rect x="71.1111" y="124.4444" width="995.5556" height="88.8889" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="71.1111" y="124.4444" width="7.1111" height="88.8889" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="97.7778" y="164.4444" font-size="17.7778" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">N+1 Queries</text>
-  <text x="97.7778" y="193.7778" font-size="15.1111" fill="var(--text)" font-family="Arial, sans-serif">100ms x 100 records = 10 seconds! — Fix: eager-load with JOIN or batch fetch</text>
-  <rect x="71.1111" y="231.1111" width="995.5556" height="88.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="71.1111" y="231.1111" width="7.1111" height="88.8889" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="97.7778" y="271.1111" font-size="17.7778" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Synchronous I/O</text>
-  <text x="97.7778" y="300.4444" font-size="15.1111" fill="var(--text)" font-family="Arial, sans-serif">Blocking operations stall the thread — Fix: async/await, non-blocking I/O</text>
-  <rect x="71.1111" y="337.7778" width="995.5556" height="88.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="71.1111" y="337.7778" width="7.1111" height="88.8889" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="97.7778" y="377.7778" font-size="17.7778" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">No Caching</text>
-  <text x="97.7778" y="407.1111" font-size="15.1111" fill="var(--text)" font-family="Arial, sans-serif">Repeated expensive operations — Fix: Redis/Memcached for hot data</text>
-  <rect x="71.1111" y="444.4444" width="995.5556" height="88.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
-  <rect x="71.1111" y="444.4444" width="7.1111" height="88.8889" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="97.7778" y="484.4444" font-size="17.7778" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Inefficient Algorithms</text>
-  <text x="97.7778" y="513.7778" font-size="15.1111" fill="var(--text)" font-family="Arial, sans-serif">O(n^2) when O(n) exists — Fix: profile first, then optimise hot paths</text>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
+  <rect x="115" y="80.2777" width="1050" height="48.3333" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="112.5" text-anchor="middle" fill="var(--bg)" font-size="22.5947" font-weight="bold" font-family="Arial, sans-serif">Common Performance Bottlenecks</text>
+  <rect x="115" y="152.7777" width="1050" height="80.5556" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="115" y="152.7777" width="7.5" height="80.5556" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="143.125" y="189.0277" font-size="17.3806" font-weight="bold" fill="var(--danger-accent)" font-family="Arial, sans-serif">N+1 Queries</text>
+  <text x="143.125" y="215.6111" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">100ms x 100 records = 10 seconds! — Fix: eager-load with JOIN or batch fetch</text>
+  <rect x="115" y="249.4444" width="1050" height="80.5556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="115" y="249.4444" width="7.5" height="80.5556" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="143.125" y="285.6944" font-size="17.3806" font-weight="bold" fill="var(--warn-accent)" font-family="Arial, sans-serif">Synchronous I/O</text>
+  <text x="143.125" y="312.2777" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">Blocking operations stall the thread — Fix: async/await, non-blocking I/O</text>
+  <rect x="115" y="346.1111" width="1050" height="80.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="115" y="346.1111" width="7.5" height="80.5556" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="143.125" y="382.3611" font-size="17.3806" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">No Caching</text>
+  <text x="143.125" y="408.9444" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">Repeated expensive operations — Fix: Redis/Memcached for hot data</text>
+  <rect x="115" y="442.7777" width="1050" height="80.5556" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="115" y="442.7777" width="7.5" height="80.5556" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="143.125" y="479.0277" font-size="17.3806" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">Inefficient Algorithms</text>
+  <text x="143.125" y="505.6111" font-size="14.7735" fill="var(--text)" font-family="Arial, sans-serif">O(n^2) when O(n) exists — Fix: profile first, then optimise hot paths</text>
 </svg>

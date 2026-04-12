@@ -93,36 +93,36 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="640" y="37.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--text)">Speculative Decoding</text>
-  <rect x="48" y="67.5" width="544" height="180" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="320" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5" font-weight="bold" fill="var(--danger-accent)">Standard Decoding (Slow)</text>
-  <rect x="80" y="120" width="160" height="52.5" rx="6" fill="var(--bg)" stroke="var(--danger-border)" />
-  <text x="160" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text)">70B Model</text>
-  <line x1="240" y1="145.5" x2="288" y2="145.5" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="352" y="138" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text-muted)">1 token</text>
-  <line x1="400" y1="145.5" x2="448" y2="145.5" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="504" y="138" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text-muted)">1 token</text>
-  <text x="320" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text-muted)">Each token = 1 full forward pass of 70B</text>
-  <text x="320" y="232.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-faint)">Very slow for long sequences</text>
-  <rect x="640" y="67.5" width="592" height="255" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="936" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.5" font-weight="bold" fill="var(--ok-accent)">Speculative Decoding (Fast)</text>
-  <rect x="672" y="120" width="208" height="52.5" rx="6" fill="var(--bg)" stroke="var(--ok-border)" />
-  <text x="776" y="142.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text)">Step 1: Draft</text>
-  <text x="776" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">7B model, K tokens</text>
-  <line x1="880" y1="145.5" x2="912" y2="145.5" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="920" y="120" width="280" height="52.5" rx="6" fill="var(--bg)" stroke="var(--ok-border)" />
-  <text x="1059.2" y="142.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text)">Step 2: Verify all K at once</text>
-  <text x="1059.2" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">70B model, 1 pass</text>
-  <text x="936" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text)">Step 3: Accept correct, reject wrong, continue</text>
-  <text x="672" y="247.5" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Draft: "The capital of France is Paris"</text>
-  <text x="672" y="270" font-family="monospace" font-size="15" fill="var(--ok-accent)">"The" ok "capital" ok "of" ok "France" ok "is" ok "Paris" ok</text>
-  <text x="672" y="300" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-accent)">6 tokens for ~2 large model passes!</text>
-  <rect x="240" y="360" width="800" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="397.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="var(--primary-accent)">Example Verification</text>
-  <text x="640" y="427.5" text-anchor="middle" font-family="monospace" font-size="16.5" fill="var(--text)">"The" ✓ "capital" ✓ "of" ✓ "France" ✓ "is" ✓ "Paris" ✓</text>
-  <text x="640" y="457.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text-muted)">All 6 tokens verified in ONE forward pass of the large model</text>
-  <rect x="288" y="510" width="704" height="105" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="547.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="var(--ok-accent)">Speedup: 2-3x with NO quality loss!</text>
-  <text x="640" y="580.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">Quality is identical -- only verified tokens are used</text>
-  <text x="640" y="604.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5" fill="var(--text-muted)">The large model always has the final say</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.2139" font-weight="bold" fill="var(--text)">Speculative Decoding</text>
+  <rect x="40" y="70.1299" width="551.3514" height="180.7792" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="315.6757" y="104.7792" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.6738" font-weight="bold" fill="var(--danger-accent)">Standard Decoding (Slow)</text>
+  <rect x="72.4324" y="122.8571" width="162.1622" height="52.7273" rx="6" fill="var(--bg)" stroke="var(--danger-border)" />
+  <text x="153.5135" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text)">70B Model</text>
+  <line x1="234.5946" y1="148.4675" x2="283.2432" y2="148.4675" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="348.1081" y="140.9351" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text-muted)">1 token</text>
+  <line x1="396.7568" y1="148.4675" x2="445.4054" y2="148.4675" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="502.1622" y="140.9351" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text-muted)">1 token</text>
+  <text x="315.6757" y="213.2468" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text-muted)">Each token = 1 full forward pass of 70B</text>
+  <text x="315.6757" y="235.8442" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1337" fill="var(--text-faint)">Very slow for long sequences</text>
+  <rect x="640" y="70.1299" width="600" height="256.1039" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="940" y="104.7792" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.6738" font-weight="bold" fill="var(--ok-accent)">Speculative Decoding (Fast)</text>
+  <rect x="672.4324" y="122.8571" width="210.8108" height="52.7273" rx="6" fill="var(--bg)" stroke="var(--ok-border)" />
+  <text x="777.8378" y="145.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1337" font-weight="bold" fill="var(--text)">Step 1: Draft</text>
+  <text x="777.8378" y="165.039" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1337" fill="var(--text-muted)">7B model, K tokens</text>
+  <line x1="883.2432" y1="148.4675" x2="915.6757" y2="148.4675" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
+  <rect x="923.7838" y="122.8571" width="283.7838" height="52.7273" rx="6" fill="var(--bg)" stroke="var(--ok-border)" />
+  <text x="1064.8649" y="145.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1337" font-weight="bold" fill="var(--text)">Step 2: Verify all K at once</text>
+  <text x="1064.8649" y="165.039" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1337" fill="var(--text-muted)">70B model, 1 pass</text>
+  <text x="940" y="213.2468" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text)">Step 3: Accept correct, reject wrong, continue</text>
+  <text x="672.4324" y="250.9091" font-family="Arial, sans-serif" font-size="15.1337" fill="var(--text-muted)">Draft: "The capital of France is Paris"</text>
+  <text x="672.4324" y="273.5065" font-family="monospace" font-size="15.1337" fill="var(--ok-accent)">"The" ok "capital" ok "of" ok "France" ok "is" ok "Paris" ok</text>
+  <text x="672.4324" y="303.6364" font-family="Arial, sans-serif" font-size="15.1337" fill="var(--ok-accent)">6 tokens for ~2 large model passes!</text>
+  <rect x="234.5946" y="363.8961" width="810.8108" height="120.5195" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="401.5584" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.1871" font-weight="bold" fill="var(--primary-accent)">Example Verification</text>
+  <text x="640" y="431.6883" text-anchor="middle" font-family="monospace" font-size="16.647" fill="var(--text)">"The" ✓ "capital" ✓ "of" ✓ "France" ✓ "is" ✓ "Paris" ✓</text>
+  <text x="640" y="461.8182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text-muted)">All 6 tokens verified in ONE forward pass of the large model</text>
+  <rect x="283.2432" y="514.5455" width="713.5135" height="105.4545" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="552.2078" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.1871" font-weight="bold" fill="var(--ok-accent)">Speedup: 2-3x with NO quality loss!</text>
+  <text x="640" y="585.3506" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.1604" fill="var(--text-muted)">Quality is identical -- only verified tokens are used</text>
+  <text x="640" y="609.4545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.647" fill="var(--text-muted)">The large model always has the final say</text>
 </svg>

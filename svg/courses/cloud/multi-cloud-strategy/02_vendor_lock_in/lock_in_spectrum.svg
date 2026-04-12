@@ -97,43 +97,43 @@
       <stop offset="0%" stop-color="#43a047"/><stop offset="50%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e53935"/>
     </linearGradient>
   </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
+  <rect width="1200" height="580" fill="var(--bg)" rx="6" x="40" y="40"/>
   <!-- Spectrum bar -->
-  <rect x="100" y="300" width="1080" height="40" rx="6" fill="url(#grad-spectrum)" filter="url(#shadow)"/>
+  <rect x="133.75" y="311.875" width="1012.5" height="36.25" rx="6" fill="url(#grad-spectrum)" filter="url(#shadow)"/>
   <!-- Arrow showing increasing lock-in -->
-  <line x1="120" y1="370" x2="1160" y2="370" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640" y="395" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)" text-anchor="middle">Lock-in increases →</text>
+  <line x1="152.5" y1="375.3125" x2="1127.5" y2="375.3125" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="397.9688" font-family="Arial, sans-serif" font-size="14.7479" fill="var(--text-muted)" text-anchor="middle">Lock-in increases →</text>
   <!-- Labels at ends -->
-  <text x="100" y="290" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)" text-anchor="start">Portable</text>
-  <text x="1180" y="290" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-accent)" text-anchor="end">Locked In</text>
+  <text x="133.75" y="302.8125" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--ok-accent)" text-anchor="start">Portable</text>
+  <text x="1146.25" y="302.8125" font-family="Arial, sans-serif" font-size="18.4349" font-weight="bold" fill="var(--danger-accent)" text-anchor="end">Locked In</text>
   <!-- Item 1: Linux VMs -->
-  <line x1="190" y1="240" x2="190" y2="300" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="110" y="130" width="160" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="168" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Linux VMs</text>
-  <text x="190" y="192" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Standard compute</text>
-  <text x="190" y="210" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Easy to migrate</text>
+  <line x1="218.125" y1="257.5" x2="218.125" y2="311.875" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="143.125" y="157.8125" width="150" height="90.625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="218.125" y="192.25" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Linux VMs</text>
+  <text x="218.125" y="214" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Standard compute</text>
+  <text x="218.125" y="230.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Easy to migrate</text>
   <!-- Item 2: Kubernetes -->
-  <line x1="410" y1="240" x2="410" y2="300" stroke="var(--ok-border)" stroke-width="2"/>
-  <rect x="320" y="130" width="180" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="410" y="168" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Kubernetes</text>
-  <text x="410" y="192" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Mostly portable</text>
-  <text x="410" y="210" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Some cloud add-ons</text>
+  <line x1="424.375" y1="257.5" x2="424.375" y2="311.875" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="340" y="157.8125" width="168.75" height="90.625" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="424.375" y="192.25" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Kubernetes</text>
+  <text x="424.375" y="214" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Mostly portable</text>
+  <text x="424.375" y="230.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Some cloud add-ons</text>
   <!-- Item 3: Managed DBs -->
-  <line x1="640" y1="350" x2="640" y2="440" stroke="var(--warn-border)" stroke-width="2"/>
-  <rect x="540" y="440" width="200" height="100" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="478" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Managed Databases</text>
-  <text x="640" y="502" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Moderate lock-in</text>
-  <text x="640" y="520" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Data migration costly</text>
+  <line x1="640" y1="357.1875" x2="640" y2="438.75" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="546.25" y="438.75" width="187.5" height="90.625" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="473.1875" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--warn-accent)" text-anchor="middle">Managed Databases</text>
+  <text x="640" y="494.9375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Moderate lock-in</text>
+  <text x="640" y="511.25" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Data migration costly</text>
   <!-- Item 4: Serverless -->
-  <line x1="870" y1="350" x2="870" y2="440" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="770" y="440" width="200" height="100" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="870" y="478" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Serverless</text>
-  <text x="870" y="502" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">High lock-in</text>
-  <text x="870" y="520" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Proprietary triggers/APIs</text>
+  <line x1="855.625" y1="357.1875" x2="855.625" y2="438.75" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="761.875" y="438.75" width="187.5" height="90.625" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="855.625" y="473.1875" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Serverless</text>
+  <text x="855.625" y="494.9375" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">High lock-in</text>
+  <text x="855.625" y="511.25" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Proprietary triggers/APIs</text>
   <!-- Item 5: Proprietary AI -->
-  <line x1="1090" y1="240" x2="1090" y2="300" stroke="var(--danger-border)" stroke-width="2"/>
-  <rect x="990" y="130" width="200" height="100" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1090" y="168" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Proprietary AI</text>
-  <text x="1090" y="192" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Very locked in</text>
-  <text x="1090" y="210" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)" text-anchor="middle">Custom models/APIs</text>
+  <line x1="1061.875" y1="257.5" x2="1061.875" y2="311.875" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="968.125" y="157.8125" width="187.5" height="90.625" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1061.875" y="192.25" font-family="Arial, sans-serif" font-size="14.7479" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">Proprietary AI</text>
+  <text x="1061.875" y="214" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Very locked in</text>
+  <text x="1061.875" y="230.3125" font-family="Arial, sans-serif" font-size="11.9827" fill="var(--text-faint)" text-anchor="middle">Custom models/APIs</text>
 </svg>

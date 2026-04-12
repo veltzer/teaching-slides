@@ -1,18 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Data</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,16 +92,62 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="393" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.0954" font-weight="bold" fill="var(--text)">K-Fold Cross-Validation (k=5)</text>
+
+  <text x="640" y="75.3043" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.0607" fill="var(--text-muted)">Split the training set into k folds. Train on k-1, evaluate on the held-out one. Repeat k times, average the scores.</text>
+
+  <!-- Fold 1 -->
+  <rect x="40" y="100.5217" width="1200" height="60.5217" rx="6.026" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70" y="135.8261" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--text)">Fold 1</text>
+  <rect x="140" y="110.6087" width="200" height="40.3478" rx="6.026" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="240" y="135.8261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--danger-text)">test</text>
+  <rect x="350" y="110.6087" width="880" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="790" y="135.8261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+
+  <!-- Fold 2 -->
+  <rect x="40" y="171.1304" width="1200" height="60.5217" rx="6.026" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70" y="206.4348" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--text)">Fold 2</text>
+  <rect x="140" y="181.2174" width="200" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="240" y="206.4348" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+  <rect x="350" y="181.2174" width="200" height="40.3478" rx="6.026" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="450" y="206.4348" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--danger-text)">test</text>
+  <rect x="560" y="181.2174" width="670" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="895" y="206.4348" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+
+  <!-- Fold 3 -->
+  <rect x="40" y="241.7391" width="1200" height="60.5217" rx="6.026" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70" y="277.0435" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--text)">Fold 3</text>
+  <rect x="140" y="251.8261" width="410" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="345" y="277.0435" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+  <rect x="560" y="251.8261" width="200" height="40.3478" rx="6.026" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="660" y="277.0435" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--danger-text)">test</text>
+  <rect x="770" y="251.8261" width="460" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1000" y="277.0435" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+
+  <!-- Fold 4 -->
+  <rect x="40" y="312.3478" width="1200" height="60.5217" rx="6.026" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70" y="347.6522" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--text)">Fold 4</text>
+  <rect x="140" y="322.4348" width="620" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="450" y="347.6522" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+  <rect x="770" y="322.4348" width="200" height="40.3478" rx="6.026" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="870" y="347.6522" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--danger-text)">test</text>
+  <rect x="980" y="322.4348" width="250" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1105" y="347.6522" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+
+  <!-- Fold 5 -->
+  <rect x="40" y="382.9565" width="1200" height="60.5217" rx="6.026" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="70" y="418.2609" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--text)">Fold 5</text>
+  <rect x="140" y="393.0435" width="830" height="40.3478" rx="6.026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="555" y="418.2609" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--ok-text)">train</text>
+  <rect x="980" y="393.0435" width="250" height="40.3478" rx="6.026" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1105" y="418.2609" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.0521" font-weight="bold" fill="var(--danger-text)">test</text>
+
+  <rect x="40" y="463.6522" width="1200" height="156.3478" rx="6.026" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="498.9565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.0694" font-weight="bold" fill="var(--info-text)">CrossValidator in MLlib</text>
+  <text x="80" y="529.2174" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--info-text)">val paramGrid = new ParamGridBuilder().addGrid(lr.regParam, Array(0.01, 0.1, 1.0)).build()</text>
+  <text x="80" y="552.4174" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--info-text)">val cv = new CrossValidator().setEstimator(pipeline).setEstimatorParamMaps(paramGrid)</text>
+  <text x="80" y="572.5913" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--info-text)">  .setEvaluator(new BinaryClassificationEvaluator()).setNumFolds(5)</text>
+  <text x="80" y="602.8522" font-family="Arial, sans-serif" font-size="13.0564" fill="var(--info-text)">val best = cv.fit(trainDF)    // runs 5 × |paramGrid| jobs in parallel; best.bestModel is the winner</text>
 </svg>

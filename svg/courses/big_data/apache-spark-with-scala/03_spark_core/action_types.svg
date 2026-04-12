@@ -1,20 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Actions</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
-  <rect x="677.3333" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">G</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -107,15 +92,52 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="789.3333" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">RDD Actions</text>
+
+  <text x="640" y="76.5766" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">Transformations are lazy. An action triggers the DAG and returns a value (or writes to storage).</text>
+
+  <rect x="40" y="107.9279" width="300" height="240.3604" rx="6.1336" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">Materialize</text>
+  <text x="190" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">collect()  → Array[T]</text>
+  <text x="190" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">pulls every row to the driver</text>
+  <text x="190" y="228.1081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">take(n)   → Array[T]</text>
+  <text x="190" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">first n rows — safe</text>
+  <text x="190" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">first()   → T</text>
+  <text x="190" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">takeSample(withReplace, n)</text>
+
+  <rect x="360" y="107.9279" width="300" height="240.3604" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="510" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Count / Reduce</text>
+  <text x="510" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">count()        → Long</text>
+  <text x="510" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">total rows across partitions</text>
+  <text x="510" y="228.1081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">countByKey()   → Map[K, Long]</text>
+  <text x="510" y="259.4595" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">reduce(f)      → T</text>
+  <text x="510" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">f must be associative and commutative</text>
+  <text x="510" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">fold(zero)(f), aggregate(...)</text>
+
+  <rect x="680" y="107.9279" width="300" height="240.3604" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="830" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Iterate</text>
+  <text x="830" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">foreach(f)</text>
+  <text x="830" y="199.8919" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">f runs once per row on executors</text>
+  <text x="830" y="228.1081" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">foreachPartition(f)</text>
+  <text x="830" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">f receives Iterator[T] per partition</text>
+  <text x="830" y="275.1351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">good for setting up a connection once</text>
+  <text x="830" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">side effects only — no return value</text>
+
+  <rect x="1000" y="107.9279" width="240" height="240.3604" rx="6.1336" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1120" y="144.5045" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--info-text)">Save</text>
+  <text x="1120" y="181.0811" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsTextFile(path)</text>
+  <text x="1120" y="212.4324" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsSequenceFile</text>
+  <text x="1120" y="243.7838" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--info-text)">saveAsObjectFile</text>
+  <text x="1120" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">writes one file per partition</text>
+  <text x="1120" y="301.2613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--info-text)">to HDFS / S3 / local</text>
+
+  <rect x="40" y="379.6396" width="1200" height="240.3604" rx="6.1336" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="416.2162" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4009" font-weight="bold" fill="var(--text)">Common pitfalls</text>
+  <text x="80" y="452.7928" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• collect() on a large RDD: OOMs the driver. Always use take(n) or write to storage instead.</text>
+  <text x="80" y="484.1441" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• foreach(println) prints on the executor stdout — you will not see it in the driver console.</text>
+  <text x="80" y="515.4955" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• count() runs the whole DAG. If you only need "is the result non-empty" use isEmpty() or take(1).length &gt; 0.</text>
+  <text x="80" y="546.8468" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• Multiple actions on the same RDD recompute from the source. Call .cache() if you will act more than once.</text>
+  <text x="80" y="578.1982" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• reduce with a non-associative f (e.g. subtraction) gives non-deterministic results — partitions combine in arbitrary order.</text>
 </svg>

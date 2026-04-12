@@ -1,18 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Spark SQL</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,14 +92,50 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">Spark SQL Data Sources</text>
+
+  <rect x="40" y="81.8018" width="390" height="271.7117" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="235" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Columnar (recommended)</text>
+  <text x="235" y="149.7297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--ok-text)">Parquet</text>
+  <text x="235" y="170.6306" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">schema, stats, predicate pushdown</text>
+  <text x="235" y="201.982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--ok-text)">ORC</text>
+  <text x="235" y="222.8829" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">similar; Hive's native format</text>
+  <text x="235" y="254.2342" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--ok-text)">Delta / Iceberg / Hudi</text>
+  <text x="235" y="275.1351" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">table formats on top of Parquet:</text>
+  <text x="235" y="296.036" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">ACID, time travel, schema evolution</text>
+  <text x="235" y="327.3874" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">spark.read.parquet("path")</text>
+
+  <rect x="445" y="81.8018" width="390" height="271.7117" rx="6.1336" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">Text / Semi-structured</text>
+  <text x="640" y="149.7297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--primary-text)">JSON</text>
+  <text x="640" y="170.6306" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">schema inferred or supplied</text>
+  <text x="640" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--primary-text)">CSV</text>
+  <text x="640" y="217.6577" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">no types; schema inference is slow</text>
+  <text x="640" y="243.7838" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--primary-text)">Avro</text>
+  <text x="640" y="264.6847" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">row-based; good for streaming / Kafka</text>
+  <text x="640" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--primary-text)">Text (raw)</text>
+  <text x="640" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">one row per line</text>
+  <text x="640" y="337.8378" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">spark.read.json("path")</text>
+
+  <rect x="850" y="81.8018" width="390" height="271.7117" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1045" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">External systems</text>
+  <text x="1045" y="149.7297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--warn-text)">JDBC</text>
+  <text x="1045" y="170.6306" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">MySQL, Postgres, Oracle...</text>
+  <text x="1045" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--warn-text)">Hive Metastore</text>
+  <text x="1045" y="217.6577" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">spark.sql("SELECT * FROM db.t")</text>
+  <text x="1045" y="243.7838" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--warn-text)">Kafka (streaming)</text>
+  <text x="1045" y="264.6847" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">readStream.format("kafka")</text>
+  <text x="1045" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--warn-text)">Cassandra / Mongo / Elastic</text>
+  <text x="1045" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">third-party DataSource connectors</text>
+  <text x="1045" y="343.0631" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">spark.read.format("jdbc").option(...)</text>
+
+  <rect x="40" y="379.6396" width="1200" height="240.3604" rx="6.1336" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="416.2162" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4009" font-weight="bold" fill="var(--text)">Key pickings</text>
+  <text x="80" y="452.7928" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• Always prefer Parquet/ORC/Delta for analytical data. They cut read time 10-100× via column pruning and predicate pushdown.</text>
+  <text x="80" y="484.1441" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• CSV and JSON look easy but are slow: Spark must scan every row to infer the schema. Supply a StructType.</text>
+  <text x="80" y="515.4955" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• JDBC: use partitionColumn + numPartitions to parallelize. Single-partition JDBC reads serialize the whole job.</text>
+  <text x="80" y="546.8468" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• DataSource V2 API (modern) replaces V1: it supports streaming, pruning, and custom partitioning uniformly.</text>
+  <text x="80" y="578.1982" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">• df.write.mode("overwrite") vs "append" vs "errorifexists" — the default is "errorifexists", which will refuse to write.</text>
 </svg>

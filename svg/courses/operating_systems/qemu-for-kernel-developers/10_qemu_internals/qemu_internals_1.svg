@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">QEMU Main Loop / Event Loop</text>
-  <rect x="42.6667" y="108" width="256" height="198" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="170.6667" y="180" text-anchor="middle" font-size="21.3333" font-weight="bold">I/O Handlers</text>
-  <text x="170.6667" y="234" text-anchor="middle" font-size="21.3333">fd read/write</text>
-  <text x="170.6667" y="280.8" text-anchor="middle" font-size="21.3333">select/poll/epoll</text>
-  <rect x="341.3333" y="108" width="256" height="198" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="469.3333" y="180" text-anchor="middle" font-size="21.3333" font-weight="bold">Timers</text>
-  <text x="469.3333" y="234" text-anchor="middle" font-size="21.3333">QEMU clocks</text>
-  <text x="469.3333" y="280.8" text-anchor="middle" font-size="21.3333">ns resolution</text>
-  <rect x="640" y="108" width="256" height="198" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
-  <text x="768" y="180" text-anchor="middle" font-size="21.3333" font-weight="bold">BH (Bottom</text>
-  <text x="768" y="234" text-anchor="middle" font-size="21.3333">Halves)</text>
-  <text x="768" y="280.8" text-anchor="middle" font-size="21.3333">Deferred work</text>
-  <rect x="938.6667" y="108" width="256" height="198" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="1066.6667" y="180" text-anchor="middle" font-size="21.3333" font-weight="bold">vCPU Threads</text>
-  <text x="1066.6667" y="234" text-anchor="middle" font-size="21.3333">TCG or KVM</text>
-  <text x="1066.6667" y="280.8" text-anchor="middle" font-size="21.3333">Per-CPU thread</text>
-  <rect x="213.3333" y="396" width="853.3333" height="144" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="640" y="460.8" text-anchor="middle" font-size="23.4667" font-weight="bold">main_loop_wait()</text>
-  <text x="640" y="514.8" text-anchor="middle" font-size="21.3333">Poll fds, run timers, execute BHs, dispatch events</text>
-  <line x1="170.6667" y1="306" x2="170.6667" y2="396" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
-  <line x1="469.3333" y1="306" x2="469.3333" y2="396" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
-  <line x1="768" y1="306" x2="768" y2="396" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
-  <line x1="1066.6667" y1="306" x2="1066.6667" y2="396" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
+  <text x="662.2222" y="40" text-anchor="middle" font-size="28.543" font-weight="bold">QEMU Main Loop / Event Loop</text>
+  <rect x="40" y="104.4444" width="266.6667" height="236.2963" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
+  <text x="173.3333" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">I/O Handlers</text>
+  <text x="173.3333" y="254.8148" text-anchor="middle" font-size="23.7858">fd read/write</text>
+  <text x="173.3333" y="310.6667" text-anchor="middle" font-size="23.7858">select/poll/epoll</text>
+  <rect x="351.111" y="104.4444" width="266.6667" height="236.2963" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
+  <text x="484.4444" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">Timers</text>
+  <text x="484.4444" y="254.8148" text-anchor="middle" font-size="23.7858">QEMU clocks</text>
+  <text x="484.4444" y="310.6667" text-anchor="middle" font-size="23.7858">ns resolution</text>
+  <rect x="662.2222" y="104.4444" width="266.6667" height="236.2963" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6" />
+  <text x="795.5555" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">BH (Bottom</text>
+  <text x="795.5555" y="254.8148" text-anchor="middle" font-size="23.7858">Halves)</text>
+  <text x="795.5555" y="310.6667" text-anchor="middle" font-size="23.7858">Deferred work</text>
+  <rect x="973.3333" y="104.4444" width="266.6667" height="236.2963" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
+  <text x="1106.6667" y="190.3704" text-anchor="middle" font-size="23.7858" font-weight="bold">vCPU Threads</text>
+  <text x="1106.6667" y="254.8148" text-anchor="middle" font-size="23.7858">TCG or KVM</text>
+  <text x="1106.6667" y="310.6667" text-anchor="middle" font-size="23.7858">Per-CPU thread</text>
+  <rect x="217.7777" y="448.1481" width="888.8889" height="171.8519" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
+  <text x="662.2222" y="525.4815" text-anchor="middle" font-size="26.1645" font-weight="bold">main_loop_wait()</text>
+  <text x="662.2222" y="589.9259" text-anchor="middle" font-size="23.7858">Poll fds, run timers, execute BHs, dispatch events</text>
+  <line x1="173.3333" y1="340.7407" x2="173.3333" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
+  <line x1="484.4444" y1="340.7407" x2="484.4444" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
+  <line x1="795.5555" y1="340.7407" x2="795.5555" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
+  <line x1="1106.6667" y1="340.7407" x2="1106.6667" y2="448.1481" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd0_09_qemu_internals)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
