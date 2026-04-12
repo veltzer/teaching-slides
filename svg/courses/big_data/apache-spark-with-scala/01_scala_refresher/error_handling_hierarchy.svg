@@ -1,25 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">ErrorHandling</text>
-  <rect x="359.9999" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">TryObject</text>
-  <rect x="680" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Either</text>
-  <rect x="1000" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Option</text>
-  <rect x="40" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Success</text>
-  <rect x="359.9999" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Failure</text>
-  <rect x="680" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Left</text>
-  <rect x="1000" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Right</text>
-  <rect x="40" y="431.4" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="471.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Some</text>
-  <rect x="359.9999" y="431.4" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="471.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">None</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -54,76 +34,52 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="194.8" x2="480" y2="194.8" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="194.8" x2="800" y2="194.8" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="194.8" x2="1120.0001" y2="194.8" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="480" y1="194.8" x2="159.9999" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="480" y1="194.8" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="194.8" x2="800" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="194.8" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1120.0001" y1="194.8" x2="159.9999" y2="465.2" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1120.0001" y1="194.8" x2="480" y2="465.2" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Error Handling: Three Levels of Safety</text>
+
+  <rect x="40" y="130" width="390" height="210" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="235" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--danger-text)">throw / try-catch</text>
+  <text x="235" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">JVM exceptions</text>
+  <text x="235" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">unchecked in Scala</text>
+  <text x="235" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">side channel, breaks flow</text>
+  <text x="235" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">interop with Java only</text>
+
+  <rect x="445" y="130" width="390" height="210" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">Try[T]</text>
+  <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Success(value)</text>
+  <text x="640" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Failure(throwable)</text>
+  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">wraps exceptions as values</text>
+  <text x="640" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">composes with map/flatMap</text>
+
+  <rect x="850" y="130" width="390" height="210" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Either[L, R]</text>
+  <text x="1045" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Left(error)</text>
+  <text x="1045" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Right(value)</text>
+  <text x="1045" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">typed error, no stack trace</text>
+  <text x="1045" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">right-biased in 2.12+</text>
+
+  <rect x="40" y="360" width="390" height="120" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="235" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Option[T]</text>
+  <text x="235" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Some(x) / None</text>
+  <text x="235" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">for absence, not errors</text>
+
+  <rect x="445" y="360" width="390" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Future[T]</text>
+  <text x="640" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">async Try[T]</text>
+  <text x="640" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">onComplete / recover</text>
+
+  <rect x="850" y="360" width="390" height="120" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1045" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Validated / IO</text>
+  <text x="1045" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">cats, ZIO ecosystems</text>
+  <text x="1045" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">accumulate errors</text>
+
+  <rect x="40" y="500" width="1200" height="120" rx="6" fill="var(--code-bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Prefer Try and Either over exceptions for business logic</text>
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-faint)">exceptions are expensive, non-local, and invisible in signatures</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">Either encodes the failure type in the signature itself</text>
 </svg>

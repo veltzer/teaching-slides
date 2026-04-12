@@ -1,26 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="227.6957" width="240" height="188.8696" rx="5.9979" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="160" y="306.3913" text-anchor="middle" fill="var(--bg)" font-size="23.9917" font-weight="bold">Build</text>
-  <text x="160" y="369.3478" text-anchor="middle" fill="var(--bg)" font-size="21.9924">Unit Tests</text>
-  <rect x="360" y="227.6957" width="240" height="188.8696" rx="5.9979" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="479.9999" y="306.3913" text-anchor="middle" fill="var(--bg)" font-size="23.9917" font-weight="bold">Dev Repo</text>
-  <text x="479.9999" y="369.3478" text-anchor="middle" fill="var(--bg)" font-size="21.9924">Snapshot</text>
-  <rect x="680.0001" y="227.6957" width="240" height="188.8696" rx="5.9979" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="800.0001" y="306.3913" text-anchor="middle" fill="var(--bg)" font-size="23.9917" font-weight="bold">Staging Repo</text>
-  <text x="800.0001" y="369.3478" text-anchor="middle" fill="var(--bg)" font-size="21.9924">Integration</text>
-  <rect x="1000" y="227.6957" width="240" height="188.8696" rx="5.9979" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1120" y="306.3913" text-anchor="middle" fill="var(--bg)" font-size="23.9917" font-weight="bold">Prod Repo</text>
-  <text x="1120" y="369.3478" text-anchor="middle" fill="var(--bg)" font-size="21.9924">Release</text>
-  <line x1="280" y1="322.1304" x2="360" y2="322.1304" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="599.9999" y1="322.1304" x2="680.0001" y2="322.1304" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="920.0001" y1="322.1304" x2="1000" y2="322.1304" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="460" y="511" text-anchor="middle" fill="var(--text-muted)" font-size="19.9931">promote</text>
-  <text x="780" y="511" text-anchor="middle" fill="var(--text-muted)" font-size="19.9931">promote</text>
-  <text x="1100" y="511" text-anchor="middle" fill="var(--text-muted)" font-size="19.9931">promote</text>
-  <text x="320" y="149" text-anchor="middle" fill="var(--text)" font-size="19.9931">auto</text>
-  <text x="640.0001" y="149" text-anchor="middle" fill="var(--text)" font-size="19.9931">gate: tests pass</text>
-  <text x="960" y="149" text-anchor="middle" fill="var(--text)" font-size="19.9931">gate: approval</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -55,67 +34,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-      <path d="M 0 0 L 18.2857 14.4 L 0 28.8 z" fill="#333" />
-    </marker>
   </defs>
+
+  <text x="640" y="75" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">Artifact Promotion Pipeline</text>
+  <text x="640" y="115" text-anchor="middle" font-size="18" fill="var(--text-muted)">Build once, promote through environments — never rebuild</text>
+
+  <rect x="40" y="160" width="280" height="360" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="230" text-anchor="middle" fill="var(--primary-text)" font-size="26" font-weight="bold">Build</text>
+  <text x="180" y="290" text-anchor="middle" fill="var(--primary-text)" font-size="18">Compile</text>
+  <text x="180" y="325" text-anchor="middle" fill="var(--primary-text)" font-size="18">Unit tests</text>
+  <text x="180" y="360" text-anchor="middle" fill="var(--primary-text)" font-size="18">SBOM + sign</text>
+  <text x="180" y="430" text-anchor="middle" fill="var(--primary-text)" font-size="16">Output: artifact</text>
+  <text x="180" y="460" text-anchor="middle" fill="var(--primary-text)" font-size="16">with SHA + tag</text>
+
+  <rect x="340" y="160" width="280" height="360" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="480" y="230" text-anchor="middle" fill="var(--warn-text)" font-size="26" font-weight="bold">Dev Repo</text>
+  <text x="480" y="290" text-anchor="middle" fill="var(--warn-text)" font-size="18">Snapshot</text>
+  <text x="480" y="325" text-anchor="middle" fill="var(--warn-text)" font-size="18">Smoke tests</text>
+  <text x="480" y="360" text-anchor="middle" fill="var(--warn-text)" font-size="18">Auto-promote</text>
+  <text x="480" y="430" text-anchor="middle" fill="var(--warn-text)" font-size="16">Gate: tests pass</text>
+  <text x="480" y="460" text-anchor="middle" fill="var(--warn-text)" font-size="16">no manual step</text>
+
+  <rect x="640" y="160" width="280" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="780" y="230" text-anchor="middle" fill="var(--danger-text)" font-size="26" font-weight="bold">Staging</text>
+  <text x="780" y="290" text-anchor="middle" fill="var(--danger-text)" font-size="18">Integration</text>
+  <text x="780" y="325" text-anchor="middle" fill="var(--danger-text)" font-size="18">Perf + security</text>
+  <text x="780" y="360" text-anchor="middle" fill="var(--danger-text)" font-size="18">UAT sign-off</text>
+  <text x="780" y="430" text-anchor="middle" fill="var(--danger-text)" font-size="16">Gate: approval</text>
+  <text x="780" y="460" text-anchor="middle" fill="var(--danger-text)" font-size="16">change ticket</text>
+
+  <rect x="940" y="160" width="300" height="360" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="230" text-anchor="middle" fill="var(--ok-text)" font-size="26" font-weight="bold">Prod Repo</text>
+  <text x="1090" y="290" text-anchor="middle" fill="var(--ok-text)" font-size="18">Immutable</text>
+  <text x="1090" y="325" text-anchor="middle" fill="var(--ok-text)" font-size="18">Release</text>
+  <text x="1090" y="360" text-anchor="middle" fill="var(--ok-text)" font-size="18">Audit log</text>
+  <text x="1090" y="430" text-anchor="middle" fill="var(--ok-text)" font-size="16">Same SHA as dev</text>
+  <text x="1090" y="460" text-anchor="middle" fill="var(--ok-text)" font-size="16">Rollback-ready</text>
+
+  <line x1="320" y1="340" x2="340" y2="340" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="340" x2="640" y2="340" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="920" y1="340" x2="940" y2="340" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="570" text-anchor="middle" font-size="18" fill="var(--text-muted)">Same artifact flows left to right — gates differ, bits do not.</text>
+  <text x="640" y="605" text-anchor="middle" font-size="16" fill="var(--text-faint)">promote = retag, never rebuild</text>
 </svg>

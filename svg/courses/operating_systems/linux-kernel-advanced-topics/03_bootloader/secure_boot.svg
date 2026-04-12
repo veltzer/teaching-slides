@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="182.5" width="327.2727" height="196.6667" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="6.0046" stroke-width="2"/>
-  <text x="203.6364" y="293.1251" text-anchor="middle">ROM</text>
-  <rect x="476.3636" y="182.5" width="327.2727" height="196.6667" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="6.0046" stroke-width="2"/>
-  <text x="640" y="293.1251" text-anchor="middle">SPL (signed)</text>
-  <rect x="912.7273" y="182.5" width="327.2727" height="196.6667" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="6.0046" stroke-width="2"/>
-  <text x="1076.3636" y="293.1251" text-anchor="middle">U-Boot (signed)</text>
-  <text x="203.6364" y="477.5">Verify SPL</text>
-  <text x="640" y="477.5">Verify U-Boot</text>
-  <text x="1076.3636" y="477.5">Verify Kernel</text>
-  <line x1="367.2727" y1="280.8333" x2="476.3636" y2="280.8333" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#greenarrow)" />
-  <line x1="803.6364" y1="280.8333" x2="912.7273" y2="280.8333" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#greenarrow)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -45,67 +34,37 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="greenarrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.8,0" fill="green" />
-    </marker>
   </defs>
+  <text x="640" y="60" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Secure Boot Chain of Trust</text>
+  <rect x="40" y="110" width="265" height="410" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="172.5" y="280" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--danger-text)">ROM</text>
+  <text x="172.5" y="340" text-anchor="middle" font-size="18" fill="var(--danger-text)">Root of trust</text>
+  <line x1="310" y1="315" x2="320" y2="315" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
+  <text x="315.0" y="305" text-anchor="middle" font-size="14" fill="var(--text-muted)">verifies</text>
+  <rect x="325" y="110" width="265" height="410" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="457.5" y="280" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--primary-text)">SPL</text>
+  <text x="457.5" y="340" text-anchor="middle" font-size="18" fill="var(--primary-text)">signed, verified</text>
+  <line x1="595" y1="315" x2="605" y2="315" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
+  <text x="600.0" y="305" text-anchor="middle" font-size="14" fill="var(--text-muted)">verifies</text>
+  <rect x="610" y="110" width="265" height="410" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="742.5" y="280" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--info-text)">U-Boot</text>
+  <text x="742.5" y="340" text-anchor="middle" font-size="18" fill="var(--info-text)">signed, verified</text>
+  <line x1="880" y1="315" x2="890" y2="315" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
+  <text x="885.0" y="305" text-anchor="middle" font-size="14" fill="var(--text-muted)">verifies</text>
+  <rect x="895" y="110" width="265" height="410" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1027.5" y="280" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--ok-text)">Kernel</text>
+  <text x="1027.5" y="340" text-anchor="middle" font-size="18" fill="var(--ok-text)">signed, verified</text>
+  <text x="640" y="580" text-anchor="middle" font-size="18" fill="var(--text-muted)">Each stage verifies the signature of the next</text>
 </svg>

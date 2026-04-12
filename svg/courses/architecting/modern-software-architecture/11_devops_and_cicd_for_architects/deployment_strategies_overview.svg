@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,89 +34,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,24 5.9733,0" fill="#4a90e2" />
-    </marker>
   </defs>
-  <rect x="434.2857" y="149" width="377.1429" height="120.6666" rx="6.0033" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="622.8572" y="221.4001" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.013" font-weight="bold">Deployment Strategies</text>
-  <rect x="40" y="390.3334" width="222.8572" height="120.6666" rx="6.0033" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="151.4285" y="443.4267" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5826" font-weight="bold">Recreate</text>
-  <text x="151.4285" y="482.04" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1522" fill="var(--text-muted)">Downtime</text>
-  <rect x="314.2858" y="390.3334" width="222.8572" height="120.6666" rx="6.0033" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="425.7143" y="443.4267" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5826" font-weight="bold">Rolling Update</text>
-  <text x="425.7143" y="482.04" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1522" fill="var(--text-muted)">Zero downtime</text>
-  <rect x="588.5714" y="390.3334" width="222.8572" height="120.6666" rx="6.0033" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="700.0001" y="443.4267" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5826" font-weight="bold">Blue/Green</text>
-  <text x="700.0001" y="482.04" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1522" fill="var(--text-muted)">Instant switch</text>
-  <rect x="862.8572" y="390.3334" width="188.5714" height="120.6666" rx="6.0033" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="957.1429" y="443.4267" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5826" font-weight="bold">Canary</text>
-  <text x="957.1429" y="482.04" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1522" fill="var(--text-muted)">Gradual rollout</text>
-  <rect x="1102.8572" y="390.3334" width="137.1428" height="120.6666" rx="6.0033" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="1171.4286" y="443.4267" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5826" font-weight="bold">A/B</text>
-  <text x="1171.4286" y="482.04" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1522" fill="var(--text-muted)">Testing</text>
-  <line x1="502.8572" y1="269.6666" x2="177.1428" y2="385.5066" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="554.2857" y1="269.6666" x2="434.2857" y2="385.5066" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="622.8572" y1="269.6666" x2="700.0001" y2="385.5066" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="708.5715" y1="269.6666" x2="948.5714" y2="385.5066" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="760" y1="269.6666" x2="1162.8572" y2="385.5066" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="90" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)">Deployment Strategies</text>
+  <text x="640" y="130" text-anchor="middle" font-size="18" fill="var(--primary-text)">Trade downtime, risk, and cost</text>
+
+  <line x1="640" y1="160" x2="640" y2="215" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="220" width="230" height="400" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="155" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Recreate</text>
+  <text x="155" y="350" text-anchor="middle" font-size="16" fill="var(--danger-text)">Stop old</text>
+  <text x="155" y="380" text-anchor="middle" font-size="16" fill="var(--danger-text)">Start new</text>
+  <text x="155" y="440" text-anchor="middle" font-size="16" fill="var(--danger-text)">Downtime</text>
+  <text x="155" y="500" text-anchor="middle" font-size="16" fill="var(--danger-text)">Simplest</text>
+  <text x="155" y="560" text-anchor="middle" font-size="16" fill="var(--danger-text)">Batch jobs</text>
+
+  <rect x="280" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="395" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Rolling</text>
+  <text x="395" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)">Update</text>
+  <text x="395" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">pods in waves</text>
+  <text x="395" y="440" text-anchor="middle" font-size="16" fill="var(--ok-text)">Zero downtime</text>
+  <text x="395" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">Mixed versions</text>
+  <text x="395" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">K8s default</text>
+
+  <rect x="520" y="220" width="230" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="635" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Blue/Green</text>
+  <text x="635" y="350" text-anchor="middle" font-size="16" fill="var(--ok-text)">Two stacks</text>
+  <text x="635" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">switch router</text>
+  <text x="635" y="440" text-anchor="middle" font-size="16" fill="var(--ok-text)">Instant swap</text>
+  <text x="635" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">2x capacity</text>
+  <text x="635" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">Easy rollback</text>
+
+  <rect x="760" y="220" width="230" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="875" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Canary</text>
+  <text x="875" y="350" text-anchor="middle" font-size="16" fill="var(--warn-text)">1% → 10%</text>
+  <text x="875" y="380" text-anchor="middle" font-size="16" fill="var(--warn-text)">→ 50% → 100%</text>
+  <text x="875" y="440" text-anchor="middle" font-size="16" fill="var(--warn-text)">Limit blast</text>
+  <text x="875" y="500" text-anchor="middle" font-size="16" fill="var(--warn-text)">Watch metrics</text>
+  <text x="875" y="560" text-anchor="middle" font-size="16" fill="var(--warn-text)">Auto-rollback</text>
+
+  <rect x="1000" y="220" width="240" height="400" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1120" y="270" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">A/B Test</text>
+  <text x="1120" y="350" text-anchor="middle" font-size="16" fill="var(--info-text)">Route by user</text>
+  <text x="1120" y="380" text-anchor="middle" font-size="16" fill="var(--info-text)">compare KPI</text>
+  <text x="1120" y="440" text-anchor="middle" font-size="16" fill="var(--info-text)">Product intent</text>
+  <text x="1120" y="500" text-anchor="middle" font-size="16" fill="var(--info-text)">not infra</text>
+  <text x="1120" y="560" text-anchor="middle" font-size="16" fill="var(--info-text)">Measure lift</text>
 </svg>

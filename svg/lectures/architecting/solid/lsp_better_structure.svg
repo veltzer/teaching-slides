@@ -1,29 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="424.7221" y="40" width="258.3334" height="105.4545" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0009" stroke-dasharray="3.3658 3.3658" />
-  <text x="553.8889" y="77.6622" text-anchor="middle" font-family="Arial" font-size="18.0806" font-style="italic">«interface»</text>
-  <text x="553.8889" y="107.792" text-anchor="middle" font-family="Arial" font-size="24.1075" font-weight="bold">Bird</text>
-  <line x1="424.7221" y1="115.3247" x2="683.0557" y2="115.3247" stroke="var(--primary-border)" stroke-width="0.6732" />
-  <text x="553.8889" y="137.922" text-anchor="middle" font-family="Arial" font-size="18.0806">+ move()</text>
-  <rect x="769.1666" y="175.5842" width="258.3334" height="135.5845" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0009" stroke-dasharray="3.3658 3.3658" />
-  <text x="898.3335" y="213.2466" text-anchor="middle" font-family="Arial" font-size="18.0806" font-style="italic">«interface»</text>
-  <text x="898.3335" y="243.3766" text-anchor="middle" font-family="Arial" font-size="24.1075" font-weight="bold">FlyingBird</text>
-  <line x1="769.1666" y1="258.4414" x2="1027.5" y2="258.4414" stroke="var(--primary-border)" stroke-width="0.6732" />
-  <text x="898.3335" y="281.0389" text-anchor="middle" font-family="Arial" font-size="18.0806">+ move()</text>
-  <text x="898.3335" y="303.6362" text-anchor="middle" font-family="Arial" font-size="18.0806">+ fly()</text>
-  <rect x="648.6112" y="386.4933" width="206.6666" height="150.6494" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0009" />
-  <text x="751.9446" y="424.1558" text-anchor="middle" font-family="Arial" font-size="24.1075" font-weight="bold">Sparrow</text>
-  <line x1="648.6112" y1="439.2207" x2="855.2779" y2="439.2207" stroke="var(--ok-border)" stroke-width="0.6732" />
-  <text x="665.8333" y="469.3506" font-family="Arial" font-size="18.0806">+ move()</text>
-  <text x="665.8333" y="499.4803" font-family="Arial" font-size="18.0806">+ fly()</text>
-  <rect x="252.5" y="386.4933" width="206.6666" height="150.6494" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0009" />
-  <text x="355.8333" y="424.1558" text-anchor="middle" font-family="Arial" font-size="24.1075" font-weight="bold">Penguin</text>
-  <line x1="252.5" y1="439.2207" x2="459.1666" y2="439.2207" stroke="var(--ok-border)" stroke-width="0.6732" />
-  <text x="269.7223" y="469.3506" font-family="Arial" font-size="18.0806">+ move()</text>
-  <path d="M 683.0557 145.4543 L 769.1666 175.5842" stroke="var(--primary-border)" stroke-width="1.3463" marker-end="url(#arrow-primary)" />
-  <path d="M 751.9446 386.4933 L 855.2779 311.1688" stroke="var(--ok-border)" stroke-width="1.3463" stroke-dasharray="3.3658 3.3658" />
-  <polygon points="855.2779,311.1688 846.6666,326.2337 863.8891,326.2337" fill="none" stroke="var(--ok-border)" stroke-width="1.3463" />
-  <path d="M 355.8333 386.4933 L 493.611 145.4543" stroke="var(--ok-border)" stroke-width="1.3463" stroke-dasharray="3.3658 3.3658" />
-  <polygon points="493.611,145.4543 485.0001,160.5192 502.2223,160.5192" fill="none" stroke="var(--ok-border)" stroke-width="1.3463" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -58,58 +34,48 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,16 5.4857,0" fill="#0277bd" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
   </defs>
-  <text x="596.9445" y="597.4026" text-anchor="middle" font-family="Arial" font-size="16.5739" fill="var(--ok-accent)">Correct hierarchy - Penguins can substitute Birds</text>
-  <text x="596.9445" y="620" text-anchor="middle" font-family="Arial" font-size="16.5739" fill="var(--ok-accent)">Sparrows can substitute FlyingBirds</text>
+
+  <rect x="40" y="40" width="380" height="160" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="80" text-anchor="middle" font-size="16" font-style="italic" fill="var(--primary-text)">«interface»</text>
+  <text x="230" y="115" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Bird</text>
+  <line x1="40" y1="135" x2="420" y2="135" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="170" text-anchor="middle" font-size="18" fill="var(--primary-text)">+ move()</text>
+
+  <rect x="860" y="40" width="380" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1050" y="80" text-anchor="middle" font-size="16" font-style="italic" fill="var(--info-text)">«interface»</text>
+  <text x="1050" y="115" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--info-text)">FlyingBird extends Bird</text>
+  <line x1="860" y1="135" x2="1240" y2="135" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1050" y="170" text-anchor="middle" font-size="18" fill="var(--info-text)">+ fly()</text>
+
+  <line x1="860" y1="120" x2="420" y2="120" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="640" y="112" text-anchor="middle" font-size="14" fill="var(--text-muted)">extends</text>
+
+  <rect x="40" y="260" width="580" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="330" y="300" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--ok-text)">Penguin implements Bird</text>
+  <line x1="40" y1="320" x2="620" y2="320" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="330" y="360" text-anchor="middle" font-size="18" fill="var(--ok-text)">+ move() — waddle, swim</text>
+  <text x="330" y="395" text-anchor="middle" font-size="15" fill="var(--ok-text)">Flightless; never promised fly()</text>
+  <text x="330" y="425" text-anchor="middle" font-size="15" fill="var(--ok-text)">Safe substitution for any Bird</text>
+
+  <rect x="660" y="260" width="580" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="300" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--ok-text)">Sparrow implements FlyingBird</text>
+  <line x1="660" y1="320" x2="1240" y2="320" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="360" text-anchor="middle" font-size="18" fill="var(--ok-text)">+ move(), + fly()</text>
+  <text x="950" y="395" text-anchor="middle" font-size="15" fill="var(--ok-text)">Honors fly() contract</text>
+  <text x="950" y="425" text-anchor="middle" font-size="15" fill="var(--ok-text)">Safe substitution for FlyingBird</text>
+
+  <line x1="330" y1="260" x2="330" y2="200" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <line x1="950" y1="260" x2="950" y2="200" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+
+  <rect x="40" y="490" width="1200" height="130" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="525" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">LSP satisfied</text>
+  <text x="640" y="560" text-anchor="middle" font-size="15" fill="var(--text-muted)">Capability split into two interfaces — every subtype keeps every method it inherits</text>
+  <text x="640" y="590" text-anchor="middle" font-size="15" fill="var(--text-muted)">Code written against Bird or FlyingBird works for every subtype without surprises</text>
 </svg>

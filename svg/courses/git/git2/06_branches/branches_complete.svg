@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,76 +33,43 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
+  <rect x="40" y="40" width="1200" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="var(--ok-text)">Branch Master Achieved!</text>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="160" width="385" height="210" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="232.5" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Work in Parallel</text>
+  <text x="232.5" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">Multiple features isolated</text>
+  <text x="232.5" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">on independent branches</text>
+  <text x="232.5" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-text)">No stepping on each other</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="447.5" y="160" width="385" height="210" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Collaborate Effectively</text>
+  <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Push, pull request, review,</text>
+  <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">merge — share work safely</text>
+  <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">Remote branches sync teams</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="855" y="160" width="385" height="210" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1047.5" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Clean History</text>
+  <text x="1047.5" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Merge or rebase to keep</text>
+  <text x="1047.5" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">commits readable and linear</text>
+  <text x="1047.5" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Tags and releases are easy</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="40" y="390" width="1200" height="140" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Choose the Right Workflow</text>
+  <text x="640" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Trunk-based: tiny branches, continuous merge — best for CI/CD teams</text>
+  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">GitHub Flow: feature branch + PR — great default for most projects</text>
+  <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Git Flow: release + hotfix branches — suits versioned releases</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="40" y="550" width="385" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="232.5" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">git branch</text>
+  <text x="232.5" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Create and list branches</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="447.5" y="550" width="385" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">git merge / rebase</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Integrate changes</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="56.4677" font-weight="bold" fill="var(--ok-accent)">Branch Master Achieved!</text>
-  <rect x="287" y="119.3904" width="706" height="396.9515" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0013" />
-  <text x="640.0001" y="208.7045" text-anchor="middle" font-size="35.2923">You can now:</text>
-  <text x="640.0001" y="268.2472" text-anchor="middle" font-size="28.2338">• Work on multiple features</text>
-  <text x="640.0001" y="317.8662" text-anchor="middle" font-size="28.2338">• Collaborate effectively</text>
-  <text x="640.0001" y="367.485" text-anchor="middle" font-size="28.2338">• Maintain clean history</text>
-  <text x="640.0001" y="417.1041" text-anchor="middle" font-size="28.2338">• Choose the right workflow</text>
-  <circle cx="375.2501" cy="575.8846" r="44.1154" fill="var(--primary-fill)" />
-  <text x="375.2501" y="589.778" text-anchor="middle" font-size="35.2923">🌳</text>
-  <circle cx="640.0001" cy="575.8846" r="44.1154" fill="var(--warn-fill)" />
-  <text x="640.0001" y="589.778" text-anchor="middle" font-size="35.2923">🔀</text>
-  <circle cx="904.75" cy="575.8846" r="44.1154" fill="var(--info-fill)" />
-  <text x="904.75" y="589.778" text-anchor="middle" font-size="35.2923">✨</text>
+  <rect x="855" y="550" width="385" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1047.5" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-text)">git switch</text>
+  <text x="1047.5" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Move between branches</text>
 </svg>

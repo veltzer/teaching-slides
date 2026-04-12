@@ -1,13 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <circle cx="166.2935" cy="273.2932" r="126.2935" fill="var(--primary-fill)" stroke="var(--text)" stroke-width="1.3754" />
-  <circle cx="1113.7065" cy="273.2932" r="126.2935" fill="var(--primary-fill)" stroke="var(--text)" stroke-width="1.3754" />
-  <text x="166.2935" y="299.9273" text-anchor="middle" font-size="37.8882">Sender</text>
-  <text x="1113.7065" y="299.9273" text-anchor="middle" font-size="37.8882">Receiver</text>
-  <path d="M 292.615 273.2932 L 608.4195 273.2932" stroke="var(--ok-border)" stroke-width="1.3754" marker-end="url(#arrow)" />
-  <path d="M 671.5803 273.2932 L 987.3848 273.2932" stroke="var(--danger-border)" stroke-width="1.3754" stroke-dasharray="3.4386 3.4386" />
-  <text x="640.0001" y="220.0248" text-anchor="middle" font-size="31.5734">Message</text>
-  <text x="640.0001" y="433.0978" text-anchor="middle" font-size="34.7308">✓ Sent</text>
-  <text x="640.0001" y="513.0003" text-anchor="middle" font-size="34.7308">✗ Lost</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -42,56 +34,46 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#2ecc71" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
   </defs>
+
+  <text x="640" y="75" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--text)">Fallacy #1: The Network is Reliable</text>
+
+  <!-- Sender box -->
+  <rect x="40" y="150" width="300" height="340" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="250" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)">Sender</text>
+  <text x="190" y="320" text-anchor="middle" font-size="18" fill="var(--primary-text)">calls send(msg)</text>
+  <text x="190" y="360" text-anchor="middle" font-size="18" fill="var(--primary-text)">no crash locally</text>
+  <text x="190" y="400" text-anchor="middle" font-size="18" fill="var(--primary-text)">assumes delivery</text>
+  <text x="190" y="450" text-anchor="middle" font-size="16" fill="var(--primary-text)">but cannot verify</text>
+
+  <!-- Receiver box -->
+  <rect x="940" y="150" width="300" height="340" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1090" y="250" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--primary-text)">Receiver</text>
+  <text x="1090" y="320" text-anchor="middle" font-size="18" fill="var(--primary-text)">may be down</text>
+  <text x="1090" y="360" text-anchor="middle" font-size="18" fill="var(--primary-text)">partitioned</text>
+  <text x="1090" y="400" text-anchor="middle" font-size="18" fill="var(--primary-text)">or slow</text>
+  <text x="1090" y="450" text-anchor="middle" font-size="16" fill="var(--primary-text)">sender cannot tell</text>
+
+  <!-- Successful message -->
+  <line x1="340" y1="240" x2="940" y2="240" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
+  <rect x="530" y="200" width="220" height="32" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="640" y="224" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--ok-text)">delivered — ack</text>
+
+  <!-- Lost message -->
+  <line x1="340" y1="410" x2="700" y2="410" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="10,6"/>
+  <text x="740" y="418" font-size="40" font-weight="bold" fill="var(--danger-border)">✗</text>
+  <rect x="530" y="370" width="220" height="32" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="640" y="394" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--danger-text)">dropped — no ack</text>
+
+  <!-- Bottom guidance -->
+  <rect x="40" y="520" width="1200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="555" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">Packets are lost, duplicated, or reordered. Links fail.</text>
+  <text x="640" y="585" text-anchor="middle" font-size="16" fill="var(--text-muted)">Design for retries with timeouts, idempotent handlers, and explicit acks.</text>
+  <text x="640" y="610" text-anchor="middle" font-size="16" fill="var(--text-muted)">Never assume send() means delivered.</text>
 </svg>

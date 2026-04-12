@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,95 +34,55 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="65" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">Bitmap: User Online Status Tracking</text>
+  <text x="640" y="105" text-anchor="middle" font-size="18" fill="var(--text-muted)">key "online:2024-03-23" — each bit is one user ID</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <!-- Bit index row -->
+  <text x="140" y="175" text-anchor="middle" font-size="16" fill="var(--text-muted)">bit offset</text>
+  <g font-size="20" font-weight="bold" fill="var(--text)" text-anchor="middle">
+    <text x="255" y="175">0</text>
+    <text x="375" y="175">1</text>
+    <text x="495" y="175">2</text>
+    <text x="615" y="175">3</text>
+    <text x="735" y="175">4</text>
+    <text x="855" y="175">5</text>
+    <text x="975" y="175">6</text>
+    <text x="1095" y="175">7</text>
+  </g>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <!-- Bit cells -->
+  <rect x="210" y="200" width="90" height="240" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="255" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--ok-text)">1</text>
+  <rect x="330" y="200" width="90" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="375" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--danger-text)">0</text>
+  <rect x="450" y="200" width="90" height="240" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="495" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--ok-text)">1</text>
+  <rect x="570" y="200" width="90" height="240" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="615" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--ok-text)">1</text>
+  <rect x="690" y="200" width="90" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="735" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--danger-text)">0</text>
+  <rect x="810" y="200" width="90" height="240" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="855" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--ok-text)">1</text>
+  <rect x="930" y="200" width="90" height="240" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="975" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--danger-text)">0</text>
+  <rect x="1050" y="200" width="90" height="240" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1095" y="340" text-anchor="middle" font-size="90" font-weight="bold" fill="var(--ok-text)">1</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <!-- Legend row -->
+  <rect x="1170" y="200" width="70" height="110" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1205" y="265" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--ok-text)">online</text>
+  <rect x="1170" y="330" width="70" height="110" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1205" y="395" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">offline</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="796.6534" y="40" text-anchor="middle" font-size="26.2803" font-weight="bold" fill="var(--text)">Bitmap: User Online Status Tracking</text>
-  <text x="796.6534" y="108.2353" text-anchor="middle" font-size="20.2156" fill="var(--text-muted)">Key: "online:2024-03-23" -- each bit = one user ID</text>
-  <text x="261" y="231.0588" text-anchor="middle" font-size="20.2156" fill="var(--text)">Bit offset:</text>
-  <text x="412.6" y="231.0588" text-anchor="middle" font-size="20.2156">0</text>
-  <text x="493.4533" y="231.0588" text-anchor="middle" font-size="20.2156">1</text>
-  <text x="574.3066" y="231.0588" text-anchor="middle" font-size="20.2156">2</text>
-  <text x="655.16" y="231.0588" text-anchor="middle" font-size="20.2156">3</text>
-  <text x="736.0133" y="231.0588" text-anchor="middle" font-size="20.2156">4</text>
-  <text x="816.8667" y="231.0588" text-anchor="middle" font-size="20.2156">5</text>
-  <text x="897.7202" y="231.0588" text-anchor="middle" font-size="20.2156">6</text>
-  <text x="978.5735" y="231.0588" text-anchor="middle" font-size="20.2156">7</text>
-  <rect x="372.1734" y="254.9412" width="80.8533" height="102.3529" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9993"/>
-  <text x="412.6" y="323.1765" text-anchor="middle" font-size="24.2587" font-weight="bold" fill="var(--ok-accent)">1</text>
-  <rect x="453.0267" y="254.9412" width="80.8533" height="102.3529" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9993"/>
-  <text x="493.4533" y="323.1765" text-anchor="middle" font-size="24.2587" fill="var(--danger-accent)">0</text>
-  <rect x="533.8801" y="254.9412" width="80.8533" height="102.3529" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9993"/>
-  <text x="574.3066" y="323.1765" text-anchor="middle" font-size="24.2587" font-weight="bold" fill="var(--ok-accent)">1</text>
-  <rect x="614.7334" y="254.9412" width="80.8533" height="102.3529" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9993"/>
-  <text x="655.16" y="323.1765" text-anchor="middle" font-size="24.2587" font-weight="bold" fill="var(--ok-accent)">1</text>
-  <rect x="695.5866" y="254.9412" width="80.8533" height="102.3529" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9993"/>
-  <text x="736.0133" y="323.1765" text-anchor="middle" font-size="24.2587" fill="var(--danger-accent)">0</text>
-  <rect x="776.44" y="254.9412" width="80.8533" height="102.3529" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9993"/>
-  <text x="816.8667" y="323.1765" text-anchor="middle" font-size="24.2587" font-weight="bold" fill="var(--ok-accent)">1</text>
-  <rect x="857.2934" y="254.9412" width="80.8533" height="102.3529" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9993"/>
-  <text x="897.7202" y="323.1765" text-anchor="middle" font-size="24.2587" fill="var(--danger-accent)">0</text>
-  <rect x="938.1467" y="254.9412" width="80.8533" height="102.3529" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9993"/>
-  <text x="978.5735" y="323.1765" text-anchor="middle" font-size="24.2587" font-weight="bold" fill="var(--ok-accent)">1</text>
-  <text x="412.6" y="408.4706" text-anchor="middle" font-size="20.2156" fill="var(--ok-accent)">online</text>
-  <text x="493.4533" y="408.4706" text-anchor="middle" font-size="20.2156" fill="var(--danger-accent)">offline</text>
-  <text x="796.6534" y="493.7647" text-anchor="middle" font-size="20.2156" fill="var(--text)">SETBIT online:2024-03-23 0 1  -- mark user 0 as online</text>
-  <text x="796.6534" y="551.7647" text-anchor="middle" font-size="20.2156" fill="var(--text)">BITCOUNT online:2024-03-23    -- returns 5 (users online)</text>
-  <text x="796.6534" y="620" text-anchor="middle" font-size="20.2156" fill="var(--text-muted)">1 million users = only 125 KB of memory</text>
+  <!-- Commands/info -->
+  <rect x="40" y="470" width="1200" height="150" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="510" font-size="18" font-family="monospace" fill="var(--text)">SETBIT online:2024-03-23 0 1</text>
+  <text x="600" y="510" font-size="16" fill="var(--text-muted)">— mark user 0 as online</text>
+  <text x="60" y="545" font-size="18" font-family="monospace" fill="var(--text)">BITCOUNT online:2024-03-23</text>
+  <text x="600" y="545" font-size="16" fill="var(--text-muted)">— returns 5 (users online)</text>
+  <text x="60" y="580" font-size="18" font-family="monospace" fill="var(--text)">BITOP AND / OR / XOR ...</text>
+  <text x="600" y="580" font-size="16" fill="var(--text-muted)">— combine days for multi-day analytics</text>
+  <text x="640" y="612" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--primary-accent)">1 million users ≈ 125 KB of memory</text>
 </svg>

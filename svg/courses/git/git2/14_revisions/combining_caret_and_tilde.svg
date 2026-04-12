@@ -34,82 +34,36 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">Caret vs Tilde Navigation</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <circle cx="640" cy="180" r="50" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="3"/>
+  <text x="640" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-text)">M</text>
+  <text x="640" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">HEAD — merge commit</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <line x1="600" y1="220" x2="340" y2="380" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="680" y1="220" x2="940" y2="380" stroke="var(--text-muted)" stroke-width="2"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <circle cx="300" cy="420" r="50" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="3"/>
+  <text x="300" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--primary-text)">A</text>
+  <text x="300" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">HEAD^  ==  HEAD^1</text>
+  <text x="300" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">first parent</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <circle cx="980" cy="420" r="50" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="3"/>
+  <text x="980" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">B</text>
+  <text x="980" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">HEAD^2</text>
+  <text x="980" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">second parent (merged branch)</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <line x1="260" y1="448" x2="120" y2="555" stroke="var(--text-muted)" stroke-width="2"/>
+  <circle cx="90" cy="580" r="30" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="3"/>
+  <text x="90" y="588" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">C</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="752.1233" y="40" text-anchor="middle" font-size="35.872" font-weight="bold">Caret vs Tilde Navigation</text>
-  <circle cx="752.1233" cy="191.3043" r="33.6301" fill="var(--danger-fill)" />
-  <text x="752.1233" y="203.913" text-anchor="middle" fill="var(--bg)" font-size="22.42">M</text>
-  <text x="752.1233" y="266.9565" text-anchor="middle" font-size="22.42">HEAD</text>
-  <circle cx="527.8768" cy="367.8261" r="33.6301" fill="var(--primary-fill)" />
-  <text x="527.8768" y="380.4348" text-anchor="middle" fill="var(--bg)" font-size="22.42">A</text>
-  <text x="527.8768" y="443.4783" text-anchor="middle" font-size="22.42">HEAD^</text>
-  <circle cx="976.3699" cy="367.8261" r="33.6301" fill="var(--ok-fill)" />
-  <text x="976.3699" y="380.4348" text-anchor="middle" fill="var(--bg)" font-size="22.42">B</text>
-  <text x="976.3699" y="443.4783" text-anchor="middle" font-size="22.42">HEAD^2</text>
-  <circle cx="303.6301" cy="544.3478" r="33.6301" fill="var(--warn-fill)" />
-  <text x="303.6301" y="556.9565" text-anchor="middle" fill="var(--bg)" font-size="22.42">C</text>
-  <text x="303.6301" y="620" text-anchor="middle" font-size="22.42">HEAD~2</text>
-  <line x1="718.4863" y1="216.5217" x2="561.5138" y2="342.6087" stroke="var(--text)" stroke-width="2" />
-  <line x1="785.7603" y1="216.5217" x2="942.7329" y2="342.6087" stroke="var(--text)" stroke-width="2" />
-  <line x1="494.2398" y1="393.0435" x2="337.2671" y2="519.1304" stroke="var(--text)" stroke-width="2" />
-  <text x="617.5754" y="292.1739" font-size="22.42">^1 (first parent)</text>
-  <text x="864.2467" y="292.1739" font-size="22.42">^2 (second parent)</text>
-  <text x="393.3288" y="468.6957" font-size="22.42">~2 (2 generations)</text>
+  <rect x="170" y="560" width="330" height="55" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="335" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">HEAD~2  ==  HEAD^^</text>
+  <text x="335" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">two generations up first-parent chain</text>
+
+  <rect x="560" y="560" width="680" height="55" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="900" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text)">Combine: HEAD~2^2  =  go back 2, then take the second parent</text>
+  <text x="900" y="604" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">~n walks linearly; ^n picks among parents of a merge</text>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,81 +34,36 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,90 7.2258,0" fill="#555" />
-    </marker>
   </defs>
-  <rect x="40" y="150.5" width="183.2061" height="359" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9967" />
-  <text x="131.603" y="379.8611" font-size="29.7545" font-weight="bold" fill="var(--text)" text-anchor="middle">UEFI</text>
-  <line x1="223.2061" y1="329.9999" x2="259.8473" y2="329.9999" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="264.4274" y="150.5" width="297.7099" height="359" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9967" />
-  <text x="413.2824" y="329.9999" font-size="29.7545" font-weight="bold" fill="var(--text)" text-anchor="middle">Shim</text>
-  <text x="413.2824" y="469.6112" font-size="25.1769" fill="var(--text-muted)" text-anchor="middle">(signed)</text>
-  <line x1="562.1374" y1="329.9999" x2="598.7786" y2="329.9999" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="603.3588" y="150.5" width="297.7099" height="359" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9967" />
-  <text x="752.2137" y="329.9999" font-size="29.7545" font-weight="bold" fill="var(--text)" text-anchor="middle">GRUB</text>
-  <text x="752.2137" y="469.6112" font-size="25.1769" fill="var(--text-muted)" text-anchor="middle">(signed)</text>
-  <line x1="901.0687" y1="329.9999" x2="937.7099" y2="329.9999" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arr)" />
-  <rect x="942.2901" y="150.5" width="297.7099" height="359" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9967" />
-  <text x="1091.145" y="329.9999" font-size="29.7545" font-weight="bold" fill="var(--text)" text-anchor="middle">Kernel</text>
-  <text x="1091.145" y="469.6112" font-size="25.1769" fill="var(--text-muted)" text-anchor="middle">(signed)</text>
+
+  <rect x="40" y="40" width="280" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--primary-text)">UEFI</text>
+  <text x="180" y="320" text-anchor="middle" font-size="18" fill="var(--primary-text)">Firmware</text>
+  <text x="180" y="350" text-anchor="middle" font-size="18" fill="var(--primary-text)">verifies Shim</text>
+  <text x="180" y="380" text-anchor="middle" font-size="16" fill="var(--primary-text)">Microsoft key</text>
+
+  <rect x="340" y="40" width="280" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="480" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)">Shim</text>
+  <text x="480" y="320" text-anchor="middle" font-size="18" fill="var(--ok-text)">MS-signed</text>
+  <text x="480" y="350" text-anchor="middle" font-size="18" fill="var(--ok-text)">loads GRUB</text>
+  <text x="480" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">uses distro key</text>
+
+  <rect x="660" y="40" width="280" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="800" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--warn-text)">GRUB</text>
+  <text x="800" y="320" text-anchor="middle" font-size="18" fill="var(--warn-text)">distro-signed</text>
+  <text x="800" y="350" text-anchor="middle" font-size="18" fill="var(--warn-text)">picks kernel</text>
+  <text x="800" y="380" text-anchor="middle" font-size="16" fill="var(--warn-text)">verifies kernel</text>
+
+  <rect x="960" y="40" width="280" height="580" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1100" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--danger-text)">Kernel</text>
+  <text x="1100" y="320" text-anchor="middle" font-size="18" fill="var(--danger-text)">signed image</text>
+  <text x="1100" y="350" text-anchor="middle" font-size="18" fill="var(--danger-text)">boots Linux</text>
+  <text x="1100" y="380" text-anchor="middle" font-size="16" fill="var(--danger-text)">Secure Boot OK</text>
+
+  <line x1="320" y1="330" x2="340" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="330" x2="660" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="940" y1="330" x2="960" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

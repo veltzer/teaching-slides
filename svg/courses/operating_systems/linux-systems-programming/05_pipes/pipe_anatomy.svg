@@ -1,25 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="40" y="206.4117" width="300" height="224.706" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9961" />
-  <text x="190" y="161.4706" text-anchor="middle" font-size="27.9817" font-weight="bold">Writer Process</text>
-  <text x="190" y="318.7648" text-anchor="middle" fill="var(--bg)" font-size="23.9841">write(fd[1])</text>
-  <rect x="539.9999" y="183.9412" width="199.9999" height="269.647" fill="var(--text-faint)" stroke="var(--text)" stroke-width="1.1263" rx="5.9961" />
-  <text x="639.9998" y="139" text-anchor="middle" font-size="27.9817" font-weight="bold">Kernel Buffer</text>
-  <rect x="559.9999" y="206.4117" width="159.9999" height="44.9412" fill="var(--danger-fill)" rx="5.9961" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="639.9998" y="240.1176" text-anchor="middle" fill="var(--bg)" font-size="19.9869">data</text>
-  <rect x="559.9999" y="251.3531" width="159.9999" height="44.9412" fill="var(--danger-fill)" rx="5.9961" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="639.9998" y="285.0588" text-anchor="middle" fill="var(--bg)" font-size="19.9869">data</text>
-  <rect x="559.9999" y="296.2942" width="159.9999" height="44.9412" fill="var(--danger-fill)" rx="5.9961" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="639.9998" y="329.9998" text-anchor="middle" fill="var(--bg)" font-size="19.9869">data</text>
-  <rect x="559.9999" y="341.2354" width="159.9999" height="89.8823" fill="var(--surface)" rx="5.9961" />
-  <text x="639.9998" y="386.1766" text-anchor="middle" font-size="19.9869">empty</text>
-  <rect x="940" y="206.4117" width="300" height="224.706" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9961" />
-  <text x="1089.9998" y="161.4706" text-anchor="middle" font-size="27.9817" font-weight="bold">Reader Process</text>
-  <text x="1089.9998" y="318.7648" text-anchor="middle" fill="var(--bg)" font-size="23.9841">read(fd[0])</text>
-  <path d="M 340 318.7648 L 539.9999 318.7648" stroke="var(--text)" stroke-width="1.6894" marker-end="url(#arrow8)" />
-  <path d="M 740.0001 318.7648 L 940 318.7648" stroke="var(--text)" stroke-width="1.6894" marker-end="url(#arrow8)" />
-  <text x="439.9999" y="296.2942" text-anchor="middle" font-size="21.9855">fd[1]</text>
-  <text x="840.0001" y="296.2942" text-anchor="middle" font-size="21.9855">fd[0]</text>
-  <text x="639.9998" y="521" text-anchor="middle" font-size="23.9841">64KB buffer (PIPE_BUF = 4KB atomic)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -54,56 +34,67 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrow8" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 5.6,0" fill="#333" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
+
+  <rect x="40" y="40" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">Anatomy of a Pipe</text>
+
+  <rect x="40" y="150" width="320" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Writer Process</text>
+  <text x="200" y="300" text-anchor="middle" font-size="20" fill="var(--primary-text)">write(fd[1], buf, n)</text>
+  <text x="200" y="370" text-anchor="middle" font-size="17" fill="var(--primary-text)">blocks if buffer full</text>
+  <text x="200" y="400" text-anchor="middle" font-size="17" fill="var(--primary-text)">returns bytes written</text>
+  <text x="200" y="470" text-anchor="middle" font-size="15" fill="var(--primary-text)">SIGPIPE if reader</text>
+  <text x="200" y="495" text-anchor="middle" font-size="15" fill="var(--primary-text)">closed its end</text>
+
+  <line x1="370" y1="350" x2="450" y2="350" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="410" y="335" text-anchor="middle" font-size="17" fill="var(--text-muted)">fd[1]</text>
+
+  <rect x="460" y="150" width="360" height="400" rx="6" fill="var(--surface)" stroke="var(--text)" stroke-width="2"/>
+  <text x="640" y="195" text-anchor="middle" font-size="24" font-weight="bold" fill="var(--text)">Kernel Buffer</text>
+  <text x="640" y="225" text-anchor="middle" font-size="16" fill="var(--text-muted)">64 KB circular ring</text>
+  <rect x="500" y="250" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="283" text-anchor="middle" font-size="18" fill="var(--danger-text)">data</text>
+  <rect x="500" y="305" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="338" text-anchor="middle" font-size="18" fill="var(--danger-text)">data</text>
+  <rect x="500" y="360" width="280" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="393" text-anchor="middle" font-size="18" fill="var(--danger-text)">data</text>
+  <rect x="500" y="415" width="280" height="100" rx="6" fill="var(--border)"/>
+  <text x="640" y="470" text-anchor="middle" font-size="18" fill="var(--text-muted)">empty</text>
+
+  <line x1="830" y1="350" x2="910" y2="350" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="870" y="335" text-anchor="middle" font-size="17" fill="var(--text-muted)">fd[0]</text>
+
+  <rect x="920" y="150" width="320" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1080" y="210" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--ok-text)">Reader Process</text>
+  <text x="1080" y="300" text-anchor="middle" font-size="20" fill="var(--ok-text)">read(fd[0], buf, n)</text>
+  <text x="1080" y="370" text-anchor="middle" font-size="17" fill="var(--ok-text)">blocks if buffer empty</text>
+  <text x="1080" y="400" text-anchor="middle" font-size="17" fill="var(--ok-text)">returns 0 on EOF</text>
+  <text x="1080" y="470" text-anchor="middle" font-size="15" fill="var(--ok-text)">EOF fires when</text>
+  <text x="1080" y="495" text-anchor="middle" font-size="15" fill="var(--ok-text)">all writers close fd[1]</text>
+
+  <rect x="40" y="570" width="1200" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="600" text-anchor="middle" font-size="17" fill="var(--text-muted)">PIPE_BUF (4 KB): writes up to that size are atomic, even with multiple writers.</text>
+
 </svg>

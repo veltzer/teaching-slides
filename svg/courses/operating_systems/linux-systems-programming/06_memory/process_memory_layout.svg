@@ -34,83 +34,34 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">Virtual Address Space (x86_64)</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="40" y="90" width="1200" height="70" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Kernel Space</text>
+  <text x="1200" y="132" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">0xFFFF...</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="40" y="170" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Stack (grows down)</text>
+  <text x="1200" y="212" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">0x7FFF...</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="40" y="250" width="1200" height="65" rx="6" fill="var(--text-faint)" stroke="var(--text)" stroke-width="2"/>
+  <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)">Memory Mapped Region (mmap)</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="40" y="325" width="1200" height="65" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Shared Libraries (libc, etc.)</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="40" y="400" width="1200" height="75" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Heap (grows up)</text>
+  <text x="1200" y="445" text-anchor="end" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">brk</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="318" y="67.619" width="613.3335" height="552.381" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="5.9979"/>
-  <text x="624.6667" y="40" text-anchor="middle" font-size="22.0877" font-weight="bold">Virtual Address Space (x86_64)</text>
-  <rect x="318" y="67.619" width="613.3335" height="69.0476" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9979"/>
-  <text x="624.6667" y="109.0476" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Kernel Space (0xFFFF...)</text>
-  <rect x="318" y="136.6666" width="613.3335" height="82.8571" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9979"/>
-  <text x="624.6667" y="185" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Stack (grows ↓)</text>
-  <text x="962" y="185" font-size="13.8047">~0x7FFF...</text>
-  <rect x="318" y="219.5238" width="613.3335" height="55.2381" fill="var(--text-faint)" stroke="var(--text)" stroke-width="2.8444" rx="5.9979"/>
-  <text x="624.6667" y="254.0476" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Memory Mapped Region</text>
-  <rect x="318" y="274.7618" width="613.3335" height="55.2381" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="5.9979"/>
-  <text x="624.6667" y="309.2857" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Shared Libraries</text>
-  <rect x="318" y="330" width="613.3335" height="110.4762" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9979"/>
-  <text x="624.6667" y="392.1428" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Heap (grows ↑)</text>
-  <text x="962" y="392.1428" font-size="13.8047">brk</text>
-  <rect x="318" y="440.4762" width="613.3335" height="55.2381" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9979"/>
-  <text x="624.6667" y="475" text-anchor="middle" fill="var(--black)" font-size="16.5658">BSS (uninitialized)</text>
-  <rect x="318" y="495.7143" width="613.3335" height="55.2381" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9979"/>
-  <text x="624.6667" y="530.2381" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Data (initialized)</text>
-  <rect x="318" y="550.9524" width="613.3335" height="69.0476" fill="var(--text-muted)" stroke="var(--text)" stroke-width="2.8444" rx="5.9979"/>
-  <text x="624.6667" y="592.381" text-anchor="middle" fill="var(--bg)" font-size="16.5658">Text (code) - 0x400000</text>
+  <rect x="40" y="485" width="1200" height="55" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">BSS (uninitialized data)</text>
+
+  <rect x="40" y="550" width="1200" height="35" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Data (initialized)</text>
+
+  <rect x="40" y="590" width="1200" height="30" rx="6" fill="var(--text-muted)" stroke="var(--text)" stroke-width="2"/>
+  <text x="640" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--bg)">Text (code) — 0x400000</text>
 </svg>

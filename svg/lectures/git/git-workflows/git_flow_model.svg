@@ -34,71 +34,40 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Git Flow Branching Model</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <text x="50" y="130" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-accent)">main</text>
+  <line x1="160" y1="125" x2="1240" y2="125" stroke="var(--danger-border)" stroke-width="3"/>
+  <circle cx="260" cy="125" r="10" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <circle cx="680" cy="125" r="10" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <circle cx="1100" cy="125" r="10" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="260" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">v1.0</text>
+  <text x="680" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">v1.1</text>
+  <text x="1100" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">v2.0</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <text x="50" y="260" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-accent)">release</text>
+  <line x1="580" y1="250" x2="1100" y2="250" stroke="var(--warn-border)" stroke-width="3"/>
+  <line x1="580" y1="250" x2="580" y2="125" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="1100" y1="250" x2="1100" y2="135" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="820" cy="250" r="9" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <text x="50" y="390" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-accent)">develop</text>
+  <line x1="200" y1="380" x2="1240" y2="380" stroke="var(--primary-border)" stroke-width="3"/>
+  <line x1="580" y1="380" x2="580" y2="250" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="1100" y1="250" x2="1240" y2="380" stroke="var(--primary-border)" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="340" cy="380" r="10" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <circle cx="480" cy="380" r="10" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <circle cx="900" cy="380" r="10" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <text x="50" y="540" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-accent)">feature</text>
+  <line x1="340" y1="380" x2="480" y2="530" stroke="var(--ok-border)" stroke-width="2.5"/>
+  <line x1="480" y1="530" x2="780" y2="530" stroke="var(--ok-border)" stroke-width="3"/>
+  <line x1="780" y1="530" x2="900" y2="380" stroke="var(--ok-border)" stroke-width="2.5"/>
+  <circle cx="600" cy="530" r="9" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <circle cx="720" cy="530" r="9" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <line x1="86.1539" y1="174" x2="1240" y2="174" stroke="var(--text)" stroke-width="2" />
-  <line x1="86.1539" y1="303.9999" x2="1240" y2="303.9999" stroke="var(--primary-border)" stroke-width="2" />
-  <line x1="316.923" y1="303.9999" x2="432.3077" y2="434.0001" stroke="var(--ok-border)" stroke-width="2" />
-  <line x1="432.3077" y1="434.0001" x2="547.6923" y2="434.0001" stroke="var(--ok-border)" stroke-width="2" />
-  <line x1="547.6923" y1="434.0001" x2="663.077" y2="303.9999" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="40" y="187" font-size="27.7129">main</text>
-  <text x="40" y="317" font-size="27.7129">develop</text>
-  <text x="490" y="486" font-size="27.7129">feature</text>
+  <rect x="40" y="580" width="1200" height="40" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">features branch off develop, release stabilizes, main holds tagged versions</text>
 </svg>

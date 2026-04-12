@@ -1,17 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="170" width="252.6316" height="177.7778" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0025" />
-  <text x="166.3158" y="276.6666" text-anchor="middle" font-size="23.1674">1990s: Waterfall</text>
-  <rect x="355.7895" y="170" width="252.6316" height="177.7778" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0025" />
-  <text x="482.1053" y="276.6666" text-anchor="middle" font-size="23.1674">2001: Agile</text>
-  <rect x="671.5789" y="170" width="252.6316" height="177.7778" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0025" />
-  <text x="797.8947" y="276.6666" text-anchor="middle" font-size="23.1674">2008: DevOps</text>
-  <rect x="987.3684" y="170" width="252.6316" height="177.7778" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0025" />
-  <text x="1113.6842" y="276.6666" text-anchor="middle" font-size="23.1674">2015+: DevSecOps</text>
-  <line x1="292.6316" y1="258.8889" x2="355.7895" y2="258.8889" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_hist)" />
-  <line x1="608.4211" y1="258.8889" x2="671.5789" y2="258.8889" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_hist)" />
-  <line x1="924.2105" y1="258.8889" x2="987.3684" y2="258.8889" stroke="var(--text)" stroke-width="2" marker-end="url(#arr_hist)" />
-  <text x="629.4737" y="490" text-anchor="middle" font-size="21.0613" fill="var(--text-muted)">Evolution from siloed teams to integrated DevOps culture</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -46,67 +34,48 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr_hist" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
+
+  <rect x="40" y="40" width="285" height="420" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="182" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">1990s</text>
+  <text x="182" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Waterfall</text>
+  <text x="182" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Long release cycles</text>
+  <text x="182" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Heavy documentation</text>
+  <text x="182" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Sequential phases</text>
+  <text x="182" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Siloed teams</text>
+
+  <rect x="355" y="40" width="285" height="420" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="497" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--info-text)">2001</text>
+  <text x="497" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">Agile</text>
+  <text x="497" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Iterative sprints</text>
+  <text x="497" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Customer feedback</text>
+  <text x="497" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Manifesto values</text>
+  <text x="497" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Dev-only focus</text>
+
+  <rect x="670" y="40" width="285" height="420" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="812" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">2008</text>
+  <text x="812" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">DevOps</text>
+  <text x="812" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Dev + Ops unite</text>
+  <text x="812" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">CI/CD pipelines</text>
+  <text x="812" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Automation</text>
+  <text x="812" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Shared ownership</text>
+
+  <rect x="985" y="40" width="255" height="420" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1112" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--warn-text)">2015+</text>
+  <text x="1112" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--warn-text)">DevSecOps</text>
+  <text x="1112" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Security shifts left</text>
+  <text x="1112" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">SAST in pipelines</text>
+  <text x="1112" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Policy as code</text>
+  <text x="1112" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Compliance baked in</text>
+
+  <line x1="325" y1="250" x2="355" y2="250" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="250" x2="670" y2="250" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="955" y1="250" x2="985" y2="250" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="490" width="1200" height="110" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">From siloed teams to integrated, security-aware culture</text>
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">Each era solved pain from the previous one</text>
 </svg>

@@ -34,69 +34,49 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <ellipse cx="248.6956" cy="330" rx="208.6956" ry="156.5" fill="var(--warn-fill)" opacity="0.7" />
-  <ellipse cx="640" cy="330" rx="208.6956" ry="156.5" fill="var(--ok-fill)" opacity="0.7" />
-  <ellipse cx="1031.3044" cy="330" rx="208.6956" ry="156.5" fill="var(--primary-fill)" opacity="0.7" />
-  <text x="248.6956" y="352.0078" text-anchor="middle" font-size="31.3022">Start Simple</text>
-  <text x="640" y="352.0078" text-anchor="middle" font-size="31.3022">Add Structure</text>
-  <text x="1031.3044" y="352.0078" text-anchor="middle" font-size="31.3022">Optimize</text>
+  </defs>
+
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--text)">Evolution of Branching Strategy</text>
+
+  <rect x="40" y="100" width="370" height="490" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="225" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--warn-text)">1. Start Simple</text>
+  <text x="225" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Solo or tiny team</text>
+  <text x="225" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Commit straight to main</text>
+  <text x="225" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">No ceremony needed</text>
+  <text x="225" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">Fast iteration</text>
+  <text x="225" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Breaks down when:</text>
+  <text x="225" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--warn-text)">team grows past 2–3</text>
+  <text x="225" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--warn-text)">conflicts multiply</text>
+  <text x="225" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--warn-text)">no review loop</text>
+  <text x="225" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--warn-text)">releases hurt</text>
+
+  <rect x="455" y="100" width="370" height="490" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">2. Add Structure</text>
+  <text x="640" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Feature branches</text>
+  <text x="640" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Pull request reviews</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">CI gates on merge</text>
+  <text x="640" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Protected main</text>
+  <text x="640" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Breaks down when:</text>
+  <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">releases need coordination</text>
+  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">hotfixes get messy</text>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">long-lived work stalls</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-text)">trunk drifts</text>
+
+  <rect x="870" y="100" width="370" height="490" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1055" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">3. Optimize</text>
+  <text x="1055" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Pick a named model</text>
+  <text x="1055" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">trunk-based or git-flow</text>
+  <text x="1055" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Release trains</text>
+  <text x="1055" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Feature flags</text>
+  <text x="1055" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Fits best when:</text>
+  <text x="1055" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--primary-text)">multiple release channels</text>
+  <text x="1055" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--primary-text)">dozens of contributors</text>
+  <text x="1055" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--primary-text)">strict CI/CD pipelines</text>
+  <text x="1055" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="var(--primary-text)">continuous deploys</text>
+
+  <line x1="410" y1="345" x2="455" y2="345" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="825" y1="345" x2="870" y2="345" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
 </svg>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,90 +34,65 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" font-size="30.0765" fill="var(--text)" font-weight="bold">TCP Socket Lifecycle</text>
-  <text x="248.5" y="87.2593" text-anchor="middle" font-size="27.9281" fill="var(--text)" font-weight="bold">Server</text>
-  <text x="1031.5" y="87.2593" text-anchor="middle" font-size="27.9281" fill="var(--text)" font-weight="bold">Client</text>
-  <line x1="248.5" y1="110.889" x2="248.5" y2="615.7037" stroke="var(--text-faint)" stroke-width="1.7561" stroke-dasharray="7.0244 5.2683" />
-  <line x1="1031.5" y1="110.889" x2="1031.5" y2="615.7037" stroke="var(--text-faint)" stroke-width="1.7561" stroke-dasharray="7.0244 5.2683" />
-  <text x="248.5" y="151.7037" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">socket()</text>
-  <text x="1031.5" y="151.7037" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">socket()</text>
-  <text x="248.5" y="205.4075" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">bind()</text>
-  <text x="248.5" y="259.1111" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">listen()</text>
-  <text x="248.5" y="334.2963" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">accept()</text>
-  <text x="1031.5" y="334.2963" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">connect()</text>
-  <line x1="317.5882" y1="347.1852" x2="962.4118" y2="347.1852" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="962.4118" y1="372.963" x2="317.5882" y2="372.963" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="340.7408" text-anchor="middle" font-size="23.6315" fill="var(--text-muted)" font-style="italic">3-way handshake (SYN→SYN-ACK→ACK)</text>
-  <text x="248.5" y="430.9629" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">recv()</text>
-  <text x="1031.5" y="430.9629" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">send()</text>
-  <line x1="962.4118" y1="443.8519" x2="317.5882" y2="443.8519" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="437.4074" text-anchor="middle" font-size="23.6315" fill="var(--text-muted)" font-style="italic">data</text>
-  <text x="248.5" y="506.1481" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">send()</text>
-  <text x="1031.5" y="506.1481" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">recv()</text>
-  <line x1="317.5882" y1="519.0371" x2="962.4118" y2="519.0371" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="512.5926" text-anchor="middle" font-size="23.6315" fill="var(--text-muted)" font-style="italic">data</text>
-  <text x="248.5" y="581.3333" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">close()</text>
-  <text x="1031.5" y="581.3333" text-anchor="middle" font-size="25.7799" fill="var(--text)" font-weight="bold">close()</text>
-  <line x1="317.5882" y1="594.2221" x2="962.4118" y2="594.2221" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="962.4118" y1="620" x2="317.5882" y2="620" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="587.7778" text-anchor="middle" font-size="23.6315" fill="var(--text-muted)" font-style="italic">FIN handshake</text>
+  </defs>
+
+  <text x="640" y="70" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">TCP Socket Lifecycle</text>
+
+  <rect x="60" y="90" width="220" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="170" y="128" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Server</text>
+
+  <rect x="1000" y="90" width="220" height="60" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1110" y="128" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">Client</text>
+
+  <line x1="170" y1="160" x2="170" y2="615" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="1110" y1="160" x2="1110" y2="615" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- server steps -->
+  <rect x="40" y="175" width="260" height="44" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="170" y="204" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">socket() → bind()</text>
+
+  <rect x="40" y="230" width="260" height="44" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="170" y="259" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">listen()</text>
+
+  <rect x="40" y="285" width="260" height="44" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="170" y="314" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--ok-text)">accept()</text>
+
+  <!-- client steps -->
+  <rect x="980" y="175" width="260" height="44" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1110" y="204" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">socket()</text>
+
+  <rect x="980" y="285" width="260" height="44" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1110" y="314" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--ok-text)">connect()</text>
+
+  <!-- 3-way handshake -->
+  <line x1="300" y1="355" x2="980" y2="355" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="348" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text-muted)">SYN</text>
+  <line x1="980" y1="385" x2="300" y2="385" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="378" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text-muted)">SYN + ACK</text>
+  <line x1="300" y1="415" x2="980" y2="415" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="408" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text-muted)">ACK — connection established</text>
+
+  <!-- data exchange -->
+  <rect x="40" y="440" width="260" height="44" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="170" y="469" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">recv() / send()</text>
+  <rect x="980" y="440" width="260" height="44" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1110" y="469" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">send() / recv()</text>
+
+  <line x1="980" y1="505" x2="300" y2="505" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="498" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text-muted)">request bytes</text>
+
+  <line x1="300" y1="540" x2="980" y2="540" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="533" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text-muted)">response bytes</text>
+
+  <!-- close -->
+  <rect x="40" y="560" width="260" height="44" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="170" y="589" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">close()</text>
+  <rect x="980" y="560" width="260" height="44" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1110" y="589" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">close()</text>
+
+  <line x1="300" y1="615" x2="980" y2="615" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="608" text-anchor="middle" font-size="16" font-style="italic" fill="var(--text-muted)">FIN handshake (FIN / ACK / FIN / ACK)</text>
 </svg>

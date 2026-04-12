@@ -34,83 +34,52 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="182.8571%" y2="0%">
-      <stop offset="0%" style="stop-color:#1565c0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7b1fa2;stop-opacity:1" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="301.0263" width="1200" height="46.3579" rx="6.0022" fill="url(#grad1)" opacity="0.3" />
-  <rect x="75.2941" y="146.5" width="229.4118" height="231.7894" rx="6.0022" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="190" y="243.079" text-anchor="middle" font-size="19.419" font-weight="bold" fill="var(--primary-accent)">VMs / Bare Metal</text>
-  <text x="190" y="320.3421" text-anchor="middle" font-size="17.6535" fill="var(--text)">Full control</text>
-  <rect x="357.6471" y="146.5" width="229.4118" height="231.7894" rx="6.0022" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="472.3529" y="243.079" text-anchor="middle" font-size="19.419" font-weight="bold" fill="var(--primary-accent)">Self-Managed K8s</text>
-  <text x="472.3529" y="320.3421" text-anchor="middle" font-size="17.6535" fill="var(--text)">Orchestrated containers</text>
-  <rect x="640" y="146.5" width="229.4118" height="231.7894" rx="6.0022" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="754.7058" y="243.079" text-anchor="middle" font-size="19.419" font-weight="bold" fill="var(--info-accent)">Managed K8s</text>
-  <text x="754.7058" y="320.3421" text-anchor="middle" font-size="17.6535" fill="var(--text)">EKS, AKS, GKE</text>
-  <rect x="922.3529" y="146.5" width="229.4118" height="231.7894" rx="6.0022" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="1037.0588" y="243.079" text-anchor="middle" font-size="19.419" font-weight="bold" fill="var(--danger-accent)">Serverless</text>
-  <text x="1037.0588" y="320.3421" text-anchor="middle" font-size="17.6535" fill="var(--text)">Lambda, Cloud Run</text>
-  <text x="190" y="513.5" text-anchor="middle" font-size="17.6535" fill="var(--text-muted)">More Control</text>
-  <text x="1037.0588" y="513.5" text-anchor="middle" font-size="17.6535" fill="var(--text-muted)">Less Control</text>
+
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--text)">The Compute Spectrum</text>
+
+  <rect x="40" y="100" width="290" height="360" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">VMs / Bare Metal</text>
+  <text x="185" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Full OS control</text>
+  <text x="185" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Any workload</text>
+  <text x="185" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Patch everything</text>
+  <text x="185" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Capacity planning</text>
+  <text x="185" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Slow to scale</text>
+  <text x="185" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--primary-text)">EC2, GCE, on-prem</text>
+
+  <rect x="340" y="100" width="290" height="360" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="485" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Self-Managed K8s</text>
+  <text x="485" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">You run control plane</text>
+  <text x="485" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Full tunability</text>
+  <text x="485" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Heavy ops burden</text>
+  <text x="485" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Upgrades are risky</text>
+  <text x="485" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Need platform team</text>
+  <text x="485" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--info-text)">kubeadm, rke2</text>
+
+  <rect x="640" y="100" width="290" height="360" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="785" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Managed K8s</text>
+  <text x="785" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Cloud runs masters</text>
+  <text x="785" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Standard Kubernetes</text>
+  <text x="785" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Still run workers</text>
+  <text x="785" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Autoscale nodes</text>
+  <text x="785" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">Sane default today</text>
+  <text x="785" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--ok-text)">EKS, GKE, AKS</text>
+
+  <rect x="940" y="100" width="300" height="360" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1090" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Serverless</text>
+  <text x="1090" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">No servers to manage</text>
+  <text x="1090" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Scale to zero</text>
+  <text x="1090" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Per-request pricing</text>
+  <text x="1090" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Cold starts</text>
+  <text x="1090" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--danger-text)">Vendor lock-in</text>
+  <text x="1090" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--danger-text)">Lambda, Cloud Run</text>
+
+  <rect x="40" y="490" width="1200" height="130" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--text)">Pick by workload shape, not novelty</text>
+  <line x1="80" y1="560" x2="1200" y2="560" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="120" y="595" text-anchor="start" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">More control, more ops</text>
+  <text x="1160" y="595" text-anchor="end" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Less control, less ops</text>
 </svg>

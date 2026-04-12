@@ -34,78 +34,27 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--danger-accent)">God Class Anti-Pattern</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="40" y="90" width="1200" height="440" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--danger-text)">Order</text>
+  <line x1="40" y1="165" x2="1240" y2="165" stroke="var(--danger-border)" stroke-width="2"/>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <text x="80" y="210" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">- items: List&lt;Item&gt;</text>
+  <text x="80" y="245" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">- customer: Customer</text>
+  <line x1="40" y1="265" x2="1240" y2="265" stroke="var(--danger-border)" stroke-width="2"/>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <text x="80" y="305" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ addItem(Item)                       inventory concern</text>
+  <text x="80" y="340" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ calculateTotal()                    pricing concern</text>
+  <text x="80" y="375" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ processPayment()              payment concern</text>
+  <text x="80" y="410" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ saveToDatabase()               persistence concern</text>
+  <text x="80" y="445" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ sendConfirmationEmail()   notification concern</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ generateInvoice()               reporting concern</text>
+  <text x="80" y="515" font-family="Arial, sans-serif" font-size="22" fill="var(--danger-text)">+ shipOrder()                            logistics concern</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="318" y="130.625" width="644" height="362.5" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9979"/>
-  <text x="640" y="185" text-anchor="middle" font-family="Arial" font-size="32.6137" font-weight="bold">Order</text>
-  <line x1="318" y1="203.125" x2="962" y2="203.125" stroke="var(--danger-border)" stroke-width="1.7297" />
-  <text x="339.4667" y="239.375" font-family="Arial" font-size="21.7425">- items: List&lt;Item&gt;</text>
-  <line x1="318" y1="257.5" x2="962" y2="257.5" stroke="var(--danger-border)" stroke-width="1.7297" />
-  <text x="339.4667" y="293.7499" font-family="Arial" font-size="21.7425">+ addItem(Item)</text>
-  <text x="339.4667" y="329.9999" font-family="Arial" font-size="21.7425">+ calculateTotal()</text>
-  <text x="339.4667" y="366.25" font-family="Arial" font-size="21.7425">+ processPayment()</text>
-  <text x="339.4667" y="402.5" font-family="Arial" font-size="21.7425">+ saveToDatabase()</text>
-  <text x="339.4667" y="438.75" font-family="Arial" font-size="21.7425">+ sendConfirmationEmail()</text>
-  <text x="339.4667" y="475" font-family="Arial" font-size="21.7425">+ generateInvoice()</text>
-  <text x="640" y="40" text-anchor="middle" font-family="Arial" font-size="36.2375" font-weight="bold" fill="var(--danger-accent)">God Class Anti-Pattern</text>
-  <text x="640" y="565.625" text-anchor="middle" font-family="Arial" font-size="19.9306" fill="var(--danger-accent)">Multiple responsibilities in a single class</text>
-  <text x="640" y="592.8125" text-anchor="middle" font-family="Arial" font-size="19.9306" fill="var(--danger-accent)">Violates: SRP, OCP, DIP</text>
-  <text x="640" y="620" text-anchor="middle" font-family="Arial" font-size="19.9306" fill="var(--danger-accent)">Hard to test, maintain, and extend</text>
+  <rect x="40" y="545" width="1200" height="75" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-accent)">Violates SRP, OCP, DIP</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">One class touches every concern — hard to test, maintain, or extend</text>
 </svg>

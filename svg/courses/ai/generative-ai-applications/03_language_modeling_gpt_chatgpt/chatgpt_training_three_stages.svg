@@ -34,86 +34,62 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrDn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,15 0,7.5" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="22.627" font-weight="bold" fill="var(--text)">ChatGPT Training: Three Stages</text>
-  <rect x="263" y="68.2927" width="754" height="155.6098" rx="5.9981" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="103.6585" text-anchor="middle" font-size="19.7986" font-weight="bold" fill="var(--primary-accent)">Stage 1: PRE-TRAINING (unsupervised)</text>
-  <text x="640" y="139.0243" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Predict next token on web text</text>
-  <text x="640" y="164.4878" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Billions of parameters, Trillions of tokens</text>
-  <text x="640" y="206.9268" text-anchor="middle" font-size="15.5561" fill="var(--danger-accent)">Result: capable but unaligned</text>
-  <line x1="640" y1="223.9024" x2="640" y2="259.2683" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrDn)" />
-  <rect x="263" y="259.2683" width="754" height="155.6098" rx="5.9981" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="294.6341" text-anchor="middle" font-size="19.7986" font-weight="bold" fill="var(--ok-accent)">Stage 2: SUPERVISED FINE-TUNING (SFT)</text>
-  <text x="640" y="330" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Human-written ideal responses</text>
-  <text x="640" y="355.4634" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Prompt to desired response pairs (~100K examples)</text>
-  <text x="640" y="397.9025" text-anchor="middle" font-size="15.5561" fill="var(--danger-accent)">Result: follows instructions</text>
-  <line x1="640" y1="414.878" x2="640" y2="450.2438" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrDn)" />
-  <rect x="263" y="450.2438" width="754" height="169.7562" rx="5.9981" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="485.6098" text-anchor="middle" font-size="19.7986" font-weight="bold" fill="var(--danger-accent)">Stage 3: RLHF</text>
-  <text x="640" y="518.1463" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Humans rank model outputs</text>
-  <text x="640" y="543.6097" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Train reward model on rankings</text>
-  <text x="640" y="569.0732" text-anchor="middle" font-size="16.9703" fill="var(--text-muted)">Optimize policy with PPO</text>
-  <text x="640" y="605.8536" text-anchor="middle" font-size="15.5561" fill="var(--danger-accent)">Result: aligned, safe, helpful</text>
+
+  <!-- Stage 1 -->
+  <rect x="40" y="40" width="380" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Stage 1</text>
+  <text x="230" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Pre-Training</text>
+  <text x="230" y="175" text-anchor="middle" font-size="16" fill="var(--primary-text)">(unsupervised)</text>
+  <rect x="70" y="210" width="320" height="240" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="250" text-anchor="middle" font-size="16" fill="var(--text-muted)">Predict next token</text>
+  <text x="230" y="285" text-anchor="middle" font-size="16" fill="var(--text-muted)">on trillions of tokens</text>
+  <text x="230" y="320" text-anchor="middle" font-size="16" fill="var(--text-muted)">from the web</text>
+  <text x="230" y="370" text-anchor="middle" font-size="14" fill="var(--text-muted)">billions of parameters</text>
+  <text x="230" y="405" text-anchor="middle" font-size="14" fill="var(--text-muted)">massive compute</text>
+  <text x="230" y="500" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--primary-text)">Result</text>
+  <text x="230" y="540" text-anchor="middle" font-size="16" fill="var(--primary-text)">capable but</text>
+  <text x="230" y="575" text-anchor="middle" font-size="16" fill="var(--primary-text)">unaligned base model</text>
+
+  <!-- arrow 1 -->
+  <line x1="420" y1="330" x2="460" y2="330" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2 -->
+  <rect x="470" y="40" width="380" height="580" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="660" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--ok-text)">Stage 2</text>
+  <text x="660" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Supervised FT</text>
+  <text x="660" y="175" text-anchor="middle" font-size="16" fill="var(--ok-text)">(SFT)</text>
+  <rect x="500" y="210" width="320" height="240" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="660" y="250" text-anchor="middle" font-size="16" fill="var(--text-muted)">Human-written</text>
+  <text x="660" y="285" text-anchor="middle" font-size="16" fill="var(--text-muted)">ideal responses</text>
+  <text x="660" y="335" text-anchor="middle" font-size="14" fill="var(--text-muted)">prompt → response pairs</text>
+  <text x="660" y="370" text-anchor="middle" font-size="14" fill="var(--text-muted)">around 100K examples</text>
+  <text x="660" y="405" text-anchor="middle" font-size="14" fill="var(--text-muted)">supervised loss</text>
+  <text x="660" y="500" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--ok-text)">Result</text>
+  <text x="660" y="540" text-anchor="middle" font-size="16" fill="var(--ok-text)">follows instructions</text>
+  <text x="660" y="575" text-anchor="middle" font-size="16" fill="var(--ok-text)">helpful assistant tone</text>
+
+  <!-- arrow 2 -->
+  <line x1="850" y1="330" x2="890" y2="330" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3 -->
+  <rect x="900" y="40" width="340" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1070" y="100" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--warn-text)">Stage 3</text>
+  <text x="1070" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">RLHF</text>
+  <text x="1070" y="175" text-anchor="middle" font-size="16" fill="var(--warn-text)">reward learning</text>
+  <rect x="930" y="210" width="280" height="240" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1070" y="250" text-anchor="middle" font-size="14" fill="var(--text-muted)">Humans rank outputs</text>
+  <text x="1070" y="290" text-anchor="middle" font-size="14" fill="var(--text-muted)">Train reward model</text>
+  <text x="1070" y="330" text-anchor="middle" font-size="14" fill="var(--text-muted)">on those rankings</text>
+  <text x="1070" y="380" text-anchor="middle" font-size="14" fill="var(--text-muted)">Optimize policy</text>
+  <text x="1070" y="415" text-anchor="middle" font-size="14" fill="var(--text-muted)">with PPO</text>
+  <text x="1070" y="500" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--warn-text)">Result</text>
+  <text x="1070" y="540" text-anchor="middle" font-size="16" fill="var(--warn-text)">aligned and safe</text>
+  <text x="1070" y="575" text-anchor="middle" font-size="16" fill="var(--warn-text)">production ChatGPT</text>
 </svg>

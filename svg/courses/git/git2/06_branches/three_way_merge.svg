@@ -1,23 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="662.7446" y="40" text-anchor="middle" font-size="36.3913" font-weight="bold">Three-Way Merge Process</text>
-  <circle cx="359.4892" cy="312.9413" r="45.4892" fill="var(--ok-fill)" />
-  <text x="359.4892" y="321.4704" text-anchor="middle" font-size="18.1957" fill="var(--bg)">Base</text>
-  <text x="359.4892" y="381.1765" text-anchor="middle" font-size="18.1957">Common ancestor</text>
-  <circle cx="586.9308" cy="176.4706" r="45.4892" fill="var(--primary-fill)" />
-  <text x="586.9308" y="185.0001" text-anchor="middle" font-size="18.1957" fill="var(--bg)">Ours</text>
-  <text x="586.9308" y="125.2941" text-anchor="middle" font-size="18.1957">main branch</text>
-  <circle cx="586.9308" cy="449.4118" r="45.4892" fill="var(--warn-fill)" />
-  <text x="586.9308" y="457.9413" text-anchor="middle" font-size="18.1957" fill="var(--bg)">Theirs</text>
-  <text x="586.9308" y="517.6471" text-anchor="middle" font-size="18.1957">feature branch</text>
-  <circle cx="890.186" cy="312.9413" r="53.0707" fill="var(--info-fill)" />
-  <text x="890.186" y="321.4704" text-anchor="middle" font-size="21.2284" fill="var(--bg)">Merge</text>
-  <text x="890.186" y="398.2354" text-anchor="middle" font-size="18.1957">Combined result</text>
-  <path d="M 404.9774 287.3531 L 541.4426 202.059" stroke="var(--text)" stroke-width="1.5518" marker-end="url(#arrow)" />
-  <path d="M 404.9774 338.5294 L 541.4426 423.8235" stroke="var(--text)" stroke-width="1.5518" marker-end="url(#arrow)" />
-  <path d="M 632.4192 176.4706 L 837.1164 287.3531" stroke="var(--text)" stroke-width="1.5518" marker-end="url(#arrow)" />
-  <path d="M 632.4192 449.4118 L 837.1164 338.5294" stroke="var(--text)" stroke-width="1.5518" marker-end="url(#arrow)" />
-  <rect x="359.4892" y="551.7647" width="606.5108" height="68.2353" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="5.9999" />
-  <text x="662.7446" y="594.4119" text-anchor="middle" font-size="18.1957">Git finds common ancestor and combines changes from both branches</text>
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -52,56 +34,38 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.8,0" fill="#333" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
   </defs>
+
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--text)">Three-Way Merge Process</text>
+
+  <rect x="40" y="220" width="300" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="190" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-text)">Base</text>
+  <text x="190" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Common ancestor</text>
+  <text x="190" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">git merge-base</text>
+
+  <rect x="460" y="100" width="300" height="200" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="610" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Ours</text>
+  <text x="610" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">main branch tip</text>
+  <text x="610" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">your changes</text>
+
+  <rect x="460" y="340" width="300" height="200" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="610" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">Theirs</text>
+  <text x="610" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">feature branch tip</text>
+  <text x="610" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">their changes</text>
+
+  <rect x="880" y="220" width="360" height="200" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1060" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--info-text)">Merge</text>
+  <text x="1060" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Combined result</text>
+  <text x="1060" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">two-parent commit</text>
+
+  <line x1="340" y1="290" x2="460" y2="200" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="350" x2="460" y2="440" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="760" y1="200" x2="880" y2="290" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="760" y1="440" x2="880" y2="350" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="560" width="1200" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="598" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">Git finds the common ancestor and blends both sides' changes into one new commit</text>
 </svg>

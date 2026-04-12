@@ -1,17 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="564.1249" y="40" width="151.75" height="102.353" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="6.0023" stroke-width="2"/>
-  <text x="640" y="108.2353" text-anchor="middle" font-size="36.406">Base</text>
-  <rect x="336.5" y="278.8235" width="151.75" height="102.353" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="6.0023" stroke-width="2"/>
-  <text x="412.3749" y="347.0588" text-anchor="middle" font-size="36.406">Left</text>
-  <rect x="791.75" y="278.8235" width="151.75" height="102.353" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="6.0023" stroke-width="2"/>
-  <text x="867.625" y="347.0588" text-anchor="middle" font-size="36.406">Right</text>
-  <rect x="564.1249" y="517.647" width="151.75" height="102.353" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="6.0023" stroke-width="2"/>
-  <text x="640" y="585.8823" text-anchor="middle" font-size="36.406">Derived</text>
-  <line x1="640" y1="142.3529" x2="412.3749" y2="278.8235" stroke="var(--black)" marker-end="url(#arrow)" />
-  <line x1="640" y1="142.3529" x2="867.625" y2="278.8235" stroke="var(--black)" marker-end="url(#arrow)" />
-  <line x1="412.3749" y1="381.1764" x2="640" y2="517.647" stroke="var(--black)" marker-end="url(#arrow)" />
-  <line x1="867.625" y1="381.1764" x2="640" y2="517.647" stroke="var(--black)" marker-end="url(#arrow)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -46,67 +34,34 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 11.2,0" fill="black" />
-    </marker>
   </defs>
+  <text x="640" y="55" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">The Diamond Problem</text>
+  <rect x="500" y="90" width="280" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="140" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--primary-text)">Base</text>
+  <text x="640" y="180" text-anchor="middle" font-size="16" fill="var(--primary-text)">shared ancestor</text>
+  <rect x="60" y="280" width="420" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="270" y="335" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)">Left</text>
+  <text x="270" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">inherits Base</text>
+  <rect x="800" y="280" width="420" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1010" y="335" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)">Right</text>
+  <text x="1010" y="380" text-anchor="middle" font-size="16" fill="var(--ok-text)">inherits Base</text>
+  <rect x="500" y="490" width="280" height="130" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="540" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--danger-text)">Derived</text>
+  <text x="640" y="580" text-anchor="middle" font-size="16" fill="var(--danger-text)">two Base copies!</text>
+  <line x1="550" y1="210" x2="330" y2="280" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="730" y1="210" x2="950" y2="280" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="330" y1="420" x2="550" y2="490" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="420" x2="730" y2="490" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

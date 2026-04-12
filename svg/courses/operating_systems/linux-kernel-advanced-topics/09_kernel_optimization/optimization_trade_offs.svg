@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,43 +34,6 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,15 +55,24 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <polygon points="640,102.7141 361.2141,494.5974 918.7859,494.5974" fill="none" stroke="var(--text)" stroke-width="3.3684" />
-  <circle cx="640" cy="102.7141" r="62.7141" fill="var(--danger-fill)" />
-  <text x="640" y="110.5519" text-anchor="middle" font-size="21.9498" fill="var(--bg)">Speed</text>
-  <circle cx="361.2141" cy="494.5974" r="62.7141" fill="var(--ok-fill)" />
-  <text x="361.2141" y="502.435" text-anchor="middle" font-size="21.9498" fill="var(--bg)">Size</text>
-  <circle cx="918.7859" cy="494.5974" r="62.7141" fill="var(--primary-fill)" />
-  <text x="918.7859" y="502.435" text-anchor="middle" font-size="21.9498" fill="var(--bg)">Features</text>
-  <circle cx="640" cy="337.844" r="47.0355" fill="var(--warn-fill)" />
-  <text x="640" y="345.6818" text-anchor="middle" font-size="18.8142" fill="var(--bg)">Balance</text>
-  <text x="640" y="620" text-anchor="middle" font-size="25.0857" font-weight="bold">Choose Two</text>
+  </defs>
+  <text x="640" y="70" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--text)">Optimization Trade-offs: Pick Two</text>
+  <rect x="40" y="100" width="385" height="420" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="232" y="170" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--danger-text)">Speed</text>
+  <text x="232" y="240" text-anchor="middle" font-size="20" fill="var(--danger-text)">Fast hot paths</text>
+  <text x="232" y="300" text-anchor="middle" font-size="18" fill="var(--danger-text)">low latency</text>
+  <text x="232" y="400" text-anchor="middle" font-size="16" fill="var(--danger-text)">inline, prefetch, cache</text>
+  <rect x="445" y="100" width="385" height="420" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="637" y="170" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--ok-text)">Size</text>
+  <text x="637" y="240" text-anchor="middle" font-size="20" fill="var(--ok-text)">Small footprint</text>
+  <text x="637" y="300" text-anchor="middle" font-size="18" fill="var(--ok-text)">fits in cache or ROM</text>
+  <text x="637" y="400" text-anchor="middle" font-size="16" fill="var(--ok-text)">tight loops, shared code</text>
+  <rect x="850" y="100" width="385" height="420" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1042" y="170" text-anchor="middle" font-size="32" font-weight="bold" fill="var(--primary-text)">Features</text>
+  <text x="1042" y="240" text-anchor="middle" font-size="20" fill="var(--primary-text)">Rich capability</text>
+  <text x="1042" y="300" text-anchor="middle" font-size="18" fill="var(--primary-text)">many knobs, options</text>
+  <text x="1042" y="400" text-anchor="middle" font-size="16" fill="var(--primary-text)">more branches, more code</text>
+  <rect x="40" y="540" width="1200" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="575" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">Choose any two. Optimising one axis almost always costs another.</text>
+  <text x="640" y="605" text-anchor="middle" font-size="15" fill="var(--text-muted)">Inlining grows code size; features add branches; compact code slows hot paths.</text>
 </svg>

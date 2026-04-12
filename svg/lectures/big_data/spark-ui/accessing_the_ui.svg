@@ -34,78 +34,35 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead0" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 5.6,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="309.5" y="239.375" width="193.4634" height="181.25" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="406.2318" y="348.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.5632" fill="var(--text)">Spark App</text>
-  <rect x="728.6708" y="40" width="241.8292" height="145" rx="6.002" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="849.5855" y="130.625" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.5632" fill="var(--text)">localhost:4040</text>
-  <rect x="728.6708" y="257.5" width="241.8292" height="145" rx="6.002" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="849.5855" y="348.125" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.5632" fill="var(--text)">localhost:4041</text>
-  <rect x="728.6708" y="475" width="241.8292" height="145" rx="6.002" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="849.5855" y="565.625" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.5632" fill="var(--text)">localhost:4042</text>
-  <line x1="502.9635" y1="293.75" x2="728.6708" y2="112.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead0)" />
-  <line x1="502.9635" y1="330.0001" x2="728.6708" y2="330.0001" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead0)" />
-  <line x1="502.9635" y1="366.25" x2="728.6708" y2="547.5" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead0)" />
+
+  <rect x="40" y="40" width="360" height="560" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="220" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="var(--primary-text)">Spark Driver</text>
+  <text x="220" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">spark-submit</text>
+  <text x="220" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">pyspark shell</text>
+  <text x="220" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">spark-shell</text>
+  <text x="220" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Each running app</text>
+  <text x="220" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">starts its own UI</text>
+  <text x="220" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Auto-increments</text>
+  <text x="220" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">port if in use</text>
+  <text x="220" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Open browser to:</text>
+
+  <rect x="720" y="40" width="520" height="160" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="980" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="var(--warn-text)">localhost:4040</text>
+  <text x="980" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">First Spark application</text>
+
+  <rect x="720" y="240" width="520" height="160" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="980" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="var(--warn-text)">localhost:4041</text>
+  <text x="980" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Second application</text>
+
+  <rect x="720" y="440" width="520" height="160" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="980" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="var(--warn-text)">localhost:4042</text>
+  <text x="980" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Third application</text>
+
+  <line x1="400" y1="200" x2="720" y2="120" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="320" x2="720" y2="320" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="440" x2="720" y2="520" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

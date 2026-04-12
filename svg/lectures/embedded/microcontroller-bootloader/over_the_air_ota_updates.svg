@@ -1,23 +1,5 @@
-<svg viewBox="0 0 1280 720">
-  <ellipse cx="158.0328" cy="280.1896" rx="118.0328" ry="78.7128" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1.2266" />
-  <text x="158.0328" y="291.2587" text-anchor="middle" font-size="23.6102">Update Server</text>
-  <path d="M 315.4099 280.1896 Q 453.1147 191.6378 590.8197 280.1896" stroke="var(--text)" stroke-width="1.8399" fill="none" />
-  <path d="M 315.4099 280.1896 Q 453.1147 235.9138 590.8197 280.1896" stroke="var(--text)" stroke-width="1.8399" fill="none" />
-  <path d="M 315.4099 280.1896 Q 453.1147 324.4656 590.8197 280.1896" stroke="var(--text)" stroke-width="1.8399" fill="none" />
-  <text x="453.1147" y="368.7414" text-anchor="middle" font-size="19.6753">WiFi/Cellular</text>
-  <rect x="649.8361" y="213.7758" width="157.377" height="132.8276" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0009" />
-  <text x="728.5246" y="291.2587" text-anchor="middle" font-size="23.6102">IoT Device</text>
-  <rect x="944.918" y="169.5" width="295.082" height="55.3447" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0009" />
-  <text x="1092.4589" y="207.1346" text-anchor="middle" font-size="19.6753">1. Check for updates</text>
-  <rect x="944.918" y="235.9138" width="295.082" height="55.3447" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0009" />
-  <text x="1092.4589" y="273.5484" text-anchor="middle" font-size="19.6753">2. Download firmware</text>
-  <rect x="944.918" y="302.3276" width="295.082" height="55.3447" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0009" />
-  <text x="1092.4589" y="339.9622" text-anchor="middle" font-size="19.6753">3. Verify signature</text>
-  <rect x="944.918" y="368.7414" width="295.082" height="55.3447" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.0009" />
-  <text x="1092.4589" y="406.3762" text-anchor="middle" font-size="19.6753">4. Install &amp; reboot</text>
-  <rect x="944.918" y="435.1553" width="295.082" height="55.3447" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0009" />
-  <text x="1092.4589" y="472.7898" text-anchor="middle" font-size="19.6753">5. Confirm success</text>
-  <path d="M 807.2132 280.1896 L 944.918 280.1896" stroke="var(--text)" stroke-width="1.2266" marker-end="url(#arrow)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -52,56 +34,41 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 6.4,0" fill="#333" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
   </defs>
+
+  <rect x="40" y="40" width="320" height="580" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="200" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Update Server</text>
+  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Signed firmware</text>
+  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Version metadata</text>
+  <text x="200" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Rollout controls</text>
+  <text x="200" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">WiFi / Cellular</text>
+  <text x="200" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">HTTPS delivery</text>
+
+  <rect x="410" y="40" width="280" height="580" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="550" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">IoT Device</text>
+  <text x="550" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Dual-bank flash</text>
+  <text x="550" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">A/B slots</text>
+  <text x="550" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Bootloader</text>
+  <text x="550" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Rollback on fail</text>
+
+  <rect x="740" y="40" width="500" height="108" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="990" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">1. Check for updates</text>
+
+  <rect x="740" y="160" width="500" height="108" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="990" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">2. Download firmware</text>
+
+  <rect x="740" y="280" width="500" height="108" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="990" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">3. Verify signature</text>
+
+  <rect x="740" y="400" width="500" height="108" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="990" y="463" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">4. Install and reboot</text>
+
+  <rect x="740" y="520" width="500" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="990" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">5. Confirm success</text>
+
+  <line x1="360" y1="330" x2="410" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="690" y1="330" x2="740" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

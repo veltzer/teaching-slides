@@ -34,79 +34,31 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="336.5" y="74.1177" width="607" height="545.8823" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6.0023"/>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="24.2707" font-weight="bold">Process Structure</text>
-  <rect x="366.8501" y="108.2353" width="546.3" height="68.2353" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="150.8823" text-anchor="middle" fill="var(--bg)" font-size="18.2031">Process Control Block (PCB)</text>
-  <rect x="366.8501" y="193.5294" width="257.975" height="51.1765" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.0023"/>
-  <text x="495.8375" y="227.6471" text-anchor="middle" fill="var(--bg)" font-size="16.6861">PID, PPID, State</text>
-  <rect x="655.1751" y="193.5294" width="257.975" height="51.1765" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.0023"/>
-  <text x="784.1626" y="227.6471" text-anchor="middle" fill="var(--bg)" font-size="16.6861">Credentials (UID, GID)</text>
-  <rect x="366.8501" y="261.7647" width="546.3" height="68.2353" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="304.4118" text-anchor="middle" fill="var(--bg)" font-size="18.2031">Memory Management Info</text>
-  <rect x="366.8501" y="347.0588" width="546.3" height="68.2353" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="389.7059" text-anchor="middle" fill="var(--black)" font-size="18.2031">File Descriptors Table</text>
-  <rect x="366.8501" y="432.3529" width="546.3" height="68.2353" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="475" text-anchor="middle" fill="var(--bg)" font-size="18.2031">Signal Handlers</text>
-  <rect x="366.8501" y="517.647" width="546.3" height="68.2353" fill="var(--text-muted)" stroke="var(--text)" stroke-width="3.0751" rx="6.0023"/>
-  <text x="640.0001" y="560.2942" text-anchor="middle" fill="var(--bg)" font-size="18.2031">CPU Context (Registers)</text>
+  </defs>
+  <text x="640" y="60" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Process Components (PCB)</text>
+  <rect x="40" y="90" width="1200" height="530" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="70" y="115" width="1140" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="163.0" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">PID, PPID, State</text>
+  <rect x="70" y="200" width="1140" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="248.0" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Credentials (UID, GID)</text>
+  <rect x="70" y="285" width="1140" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="333.0" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Memory Management Info</text>
+  <rect x="70" y="370" width="1140" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="418.0" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">File Descriptors Table</text>
+  <rect x="70" y="455" width="1140" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="503.0" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">Signal Handlers</text>
+  <rect x="70" y="540" width="1140" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-accent)" stroke-width="2"/>
+  <text x="640" y="588.0" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">CPU Context (Registers)</text>
 </svg>

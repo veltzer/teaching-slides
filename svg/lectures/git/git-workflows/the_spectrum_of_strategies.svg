@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,69 +33,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Workflow Complexity Spectrum</text>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="110" width="285" height="250" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="182.5" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Centralized</text>
+  <text x="182.5" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Single shared branch</text>
+  <text x="182.5" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Commits go straight to trunk</text>
+  <text x="182.5" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Low ceremony, high risk</text>
+  <text x="182.5" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Conflicts surface late</text>
+  <text x="182.5" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Fits very small teams</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="340" y="110" width="285" height="250" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="482.5" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Feature Branch</text>
+  <text x="482.5" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Each change on its branch</text>
+  <text x="482.5" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Merge to main when ready</text>
+  <text x="482.5" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Review via pull request</text>
+  <text x="482.5" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Isolation plus visibility</text>
+  <text x="482.5" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Most common today</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="640" y="110" width="285" height="250" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="782.5" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">GitHub Flow</text>
+  <text x="782.5" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Main is always deployable</text>
+  <text x="782.5" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Short-lived topic branches</text>
+  <text x="782.5" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">CI/CD gates every merge</text>
+  <text x="782.5" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Deploy after each PR</text>
+  <text x="782.5" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Best for web / SaaS</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="940" y="110" width="300" height="250" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1090" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Git Flow</text>
+  <text x="1090" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">develop / main split</text>
+  <text x="1090" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Release + hotfix branches</text>
+  <text x="1090" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Long-lived integration</text>
+  <text x="1090" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Heavy but disciplined</text>
+  <text x="1090" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Versioned desktop / embedded</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="40" y="395" width="1200" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <line x1="80" y1="420" x2="1200" y2="420" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="120" y="425" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">simple</text>
+  <text x="1150" y="425" text-anchor="end" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">more process</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="73.9686" y="234.4444" width="1132.0629" height="152.8889" fill="var(--border)" stroke="var(--text)" stroke-width="4.2667" rx="6.0012"/>
-  <circle cx="73.9686" cy="310.8889" r="33.9686" fill="var(--danger-fill)" />
-  <circle cx="1206.0314" cy="310.8889" r="33.9686" fill="var(--ok-fill)" />
-  <text x="73.9686" y="158" text-anchor="middle" font-size="31.7041" font-weight="bold">Centralized</text>
-  <text x="1206.0314" y="158" text-anchor="middle" font-size="31.7041" font-weight="bold">Distributed</text>
-  <text x="640" y="502" text-anchor="middle" font-size="36.2332">Workflow Complexity</text>
+  <rect x="40" y="465" width="1200" height="155" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Picking a Strategy</text>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Match process to team size, deploy cadence, and risk tolerance.</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Shorter branches mean fewer conflicts and faster feedback.</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Heavier workflows pay off only when releases are versioned and audited.</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Start simple, add ceremony only when the team genuinely needs it.</text>
 </svg>

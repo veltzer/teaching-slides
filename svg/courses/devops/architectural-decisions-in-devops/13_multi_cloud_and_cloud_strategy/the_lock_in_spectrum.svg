@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,82 +33,54 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="lockgrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="50%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e74c3c"/>
     </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <linearGradient id="lockgrad" x1="0%" y1="0%" x2="160%" y2="0%">
-      <stop offset="0%" style="stop-color:#4caf50" />
-      <stop offset="50%" style="stop-color:#ff9800" />
-      <stop offset="100%" style="stop-color:#f44336" />
-    </linearGradient>
   </defs>
-  <rect x="40" y="214.2" width="1200" height="115.8" rx="6.0022" fill="url(#lockgrad)" />
-  <text x="40" y="137" font-size="20.579" fill="var(--text)">Low Lock-in</text>
-  <text x="1120" y="137" font-size="20.579" fill="var(--text)">High Lock-in</text>
-  <line x1="160" y1="330" x2="160" y2="445.8" stroke="var(--text)" stroke-width="2" />
-  <text x="160" y="523" text-anchor="middle" font-size="18.8641" fill="var(--text)">VMs / IaaS</text>
-  <line x1="382.8571" y1="330" x2="382.8571" y2="445.8" stroke="var(--text)" stroke-width="2" />
-  <text x="382.8571" y="523" text-anchor="middle" font-size="18.8641" fill="var(--text)">Kubernetes</text>
-  <line x1="640" y1="330" x2="640" y2="445.8" stroke="var(--text)" stroke-width="2" />
-  <text x="640" y="523" text-anchor="middle" font-size="18.8641" fill="var(--text)">Managed DB</text>
-  <line x1="897.1429" y1="330" x2="897.1429" y2="445.8" stroke="var(--text)" stroke-width="2" />
-  <text x="897.1429" y="523" text-anchor="middle" font-size="18.8641" fill="var(--text)">Serverless</text>
-  <line x1="1120" y1="330" x2="1120" y2="445.8" stroke="var(--text)" stroke-width="2" />
-  <text x="1120" y="523" text-anchor="middle" font-size="18.8641" fill="var(--text)">Proprietary AI/ML</text>
+  <text x="640" y="70" text-anchor="middle" font-size="30" font-weight="bold" fill="var(--text)">The Lock-in Spectrum</text>
+
+  <text x="40" y="130" font-size="22" font-weight="bold" fill="var(--ok-accent)">Low Lock-in</text>
+  <text x="1240" y="130" text-anchor="end" font-size="22" font-weight="bold" fill="var(--danger-accent)">High Lock-in</text>
+
+  <rect x="40" y="150" width="1200" height="120" rx="6" fill="url(#lockgrad)"/>
+
+  <line x1="160" y1="270" x2="160" y2="320" stroke="var(--text)" stroke-width="2"/>
+  <rect x="40" y="325" width="240" height="290" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="160" y="385" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">VMs / IaaS</text>
+  <text x="160" y="450" text-anchor="middle" font-size="16" fill="var(--ok-text)">Raw compute</text>
+  <text x="160" y="500" text-anchor="middle" font-size="16" fill="var(--ok-text)">Portable images</text>
+  <text x="160" y="560" text-anchor="middle" font-size="16" fill="var(--ok-text)">Easy migration</text>
+
+  <line x1="400" y1="270" x2="400" y2="320" stroke="var(--text)" stroke-width="2"/>
+  <rect x="290" y="325" width="240" height="290" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="410" y="385" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Kubernetes</text>
+  <text x="410" y="450" text-anchor="middle" font-size="16" fill="var(--primary-text)">Standard API</text>
+  <text x="410" y="500" text-anchor="middle" font-size="16" fill="var(--primary-text)">Portable workloads</text>
+  <text x="410" y="560" text-anchor="middle" font-size="16" fill="var(--primary-text)">Ingress varies</text>
+
+  <line x1="660" y1="270" x2="660" y2="320" stroke="var(--text)" stroke-width="2"/>
+  <rect x="540" y="325" width="240" height="290" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="660" y="385" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Managed DB</text>
+  <text x="660" y="450" text-anchor="middle" font-size="16" fill="var(--warn-text)">RDS, Aurora</text>
+  <text x="660" y="500" text-anchor="middle" font-size="16" fill="var(--warn-text)">Portable SQL</text>
+  <text x="660" y="560" text-anchor="middle" font-size="16" fill="var(--warn-text)">Heavy migration</text>
+
+  <line x1="910" y1="270" x2="910" y2="320" stroke="var(--text)" stroke-width="2"/>
+  <rect x="790" y="325" width="240" height="290" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="910" y="385" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">Serverless</text>
+  <text x="910" y="450" text-anchor="middle" font-size="16" fill="var(--info-text)">Lambda, Functions</text>
+  <text x="910" y="500" text-anchor="middle" font-size="16" fill="var(--info-text)">Trigger-bound</text>
+  <text x="910" y="560" text-anchor="middle" font-size="16" fill="var(--info-text)">Rewrite required</text>
+
+  <line x1="1160" y1="270" x2="1160" y2="320" stroke="var(--text)" stroke-width="2"/>
+  <rect x="1040" y="325" width="200" height="290" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1140" y="385" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--danger-text)">Proprietary AI</text>
+  <text x="1140" y="450" text-anchor="middle" font-size="16" fill="var(--danger-text)">Bedrock, Vertex</text>
+  <text x="1140" y="500" text-anchor="middle" font-size="16" fill="var(--danger-text)">Unique models</text>
+  <text x="1140" y="560" text-anchor="middle" font-size="16" fill="var(--danger-text)">Strongest moat</text>
 </svg>

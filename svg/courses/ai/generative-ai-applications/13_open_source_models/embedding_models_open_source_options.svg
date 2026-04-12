@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,122 +33,81 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">Embedding Models — Open Source Options</text>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="95" width="1200" height="40" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="220" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Model</text>
+  <text x="700" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Dims</text>
+  <text x="900" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">MTEB</text>
+  <text x="1060" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Size</text>
+  <text x="1190" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Type</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="40" y="140" width="1200" height="38" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="165" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">all-MiniLM-L6-v2</text>
+  <text x="700" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">384</text>
+  <text x="900" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">56.3</text>
+  <text x="1060" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">80 MB</text>
+  <text x="1190" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">Open</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="40" y="183" width="1200" height="38" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="208" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">bge-large-en-v1.5</text>
+  <text x="700" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">1024</text>
+  <text x="900" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">64.2</text>
+  <text x="1060" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">1.3 GB</text>
+  <text x="1190" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">Open</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="40" y="226" width="1200" height="38" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="251" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">e5-large-v2</text>
+  <text x="700" y="251" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">1024</text>
+  <text x="900" y="251" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">62.0</text>
+  <text x="1060" y="251" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">1.3 GB</text>
+  <text x="1190" y="251" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">Open</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="40" y="269" width="1200" height="38" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="294" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">gte-Qwen2-7B-instruct</text>
+  <text x="700" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">3584</text>
+  <text x="900" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">72.1</text>
+  <text x="1060" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">14 GB</text>
+  <text x="1190" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">Open</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="40" y="312" width="1200" height="38" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="60" y="337" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">nomic-embed-text-v1.5</text>
+  <text x="700" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">768</text>
+  <text x="900" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">62.3</text>
+  <text x="1060" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">548 MB</text>
+  <text x="1190" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">Open</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="789.6765" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.8004" font-weight="bold" fill="var(--text)">Embedding Models: Open Source Options</text>
-  <rect x="276.5" y="62.8948" width="356.3726" height="45.7895" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="632.8726" y="62.8948" width="114.0392" height="45.7895" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="746.9118" y="62.8948" width="128.2941" height="45.7895" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <rect x="875.2059" y="62.8948" width="128.2941" height="45.7895" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="454.6862" y="93.4211" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1004" font-weight="bold" fill="var(--bg)">Model</text>
-  <text x="689.8922" y="93.4211" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1004" font-weight="bold" fill="var(--bg)">Dims</text>
-  <text x="811.0588" y="93.4211" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1004" font-weight="bold" fill="var(--bg)">MTEB Avg</text>
-  <text x="939.353" y="93.4211" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1004" font-weight="bold" fill="var(--bg)">Size</text>
-  <rect x="276.5" y="108.6843" width="727" height="42.7368" fill="var(--surface)" stroke="var(--border)" rx="6.002" stroke-width="1"/>
-  <text x="290.7549" y="136.1579" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">all-MiniLM-L6-v2</text>
-  <text x="689.8922" y="136.1579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">384</text>
-  <text x="811.0588" y="136.1579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">56.3</text>
-  <text x="939.353" y="136.1579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">80 MB</text>
-  <rect x="276.5" y="151.4211" width="727" height="42.7368" fill="var(--bg)" stroke="var(--border)" rx="6.002"/>
-  <text x="290.7549" y="178.8947" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">bge-large-en-v1.5</text>
-  <text x="689.8922" y="178.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">1024</text>
-  <text x="811.0588" y="178.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">64.2</text>
-  <text x="939.353" y="178.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">1.3 GB</text>
-  <rect x="276.5" y="194.1579" width="727" height="42.7368" fill="var(--surface)" stroke="var(--border)" rx="6.002" stroke-width="1"/>
-  <text x="290.7549" y="221.6316" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">e5-large-v2</text>
-  <text x="689.8922" y="221.6316" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">1024</text>
-  <text x="811.0588" y="221.6316" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">62.0</text>
-  <text x="939.353" y="221.6316" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">1.3 GB</text>
-  <rect x="276.5" y="236.8948" width="727" height="42.7368" fill="var(--bg)" stroke="var(--border)" rx="6.002"/>
-  <text x="290.7549" y="264.3684" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">gte-Qwen2-7B-instruct</text>
-  <text x="689.8922" y="264.3684" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">3584</text>
-  <text x="811.0588" y="264.3684" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">72.1</text>
-  <text x="939.353" y="264.3684" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">14 GB</text>
-  <rect x="276.5" y="279.6316" width="727" height="42.7368" fill="var(--surface)" stroke="var(--border)" rx="6.002" stroke-width="1"/>
-  <text x="290.7549" y="307.1052" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">nomic-embed-text-v1.5</text>
-  <text x="689.8922" y="307.1052" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">768</text>
-  <text x="811.0588" y="307.1052" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">62.3</text>
-  <text x="939.353" y="307.1052" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">548 MB</text>
-  <rect x="276.5" y="322.3685" width="727" height="42.7368" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6.002" stroke-width="2"/>
-  <text x="290.7549" y="349.8421" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">text-embedding-3-small (OpenAI)</text>
-  <text x="689.8922" y="349.8421" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">1536</text>
-  <text x="811.0588" y="349.8421" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">62.3</text>
-  <text x="939.353" y="349.8421" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text-faint)">API only</text>
-  <rect x="276.5" y="365.1053" width="727" height="42.7368" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6.002" stroke-width="2"/>
-  <text x="290.7549" y="392.579" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">text-embedding-3-large (OpenAI)</text>
-  <text x="689.8922" y="392.579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">3072</text>
-  <text x="811.0588" y="392.579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">64.6</text>
-  <text x="939.353" y="392.579" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text-faint)">API only</text>
-  <rect x="276.5" y="436.8422" width="727" height="68.6843" rx="6.002" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="467.3684" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.1004" font-weight="bold" fill="var(--ok-accent)">Key Insight</text>
-  <text x="640" y="493.3158" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" fill="var(--text)">Open source models match or exceed OpenAI on many tasks -- zero API cost</text>
-  <rect x="276.5" y="528.4211" width="235.2059" height="91.5789" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="393.3903" y="558.9474" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" font-weight="bold" fill="var(--primary-accent)">Budget</text>
-  <text x="393.3903" y="584.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2502" fill="var(--text-muted)">all-MiniLM-L6-v2</text>
-  <text x="393.3903" y="607.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2502" fill="var(--text-muted)">Fast, decent quality</text>
-  <rect x="525.9608" y="528.4211" width="235.2059" height="91.5789" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="642.8511" y="558.9474" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" font-weight="bold" fill="var(--primary-accent)">Quality</text>
-  <text x="642.8511" y="584.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2502" fill="var(--text-muted)">bge-large-en-v1.5</text>
-  <text x="642.8511" y="607.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2502" fill="var(--text-muted)">Best quality/size ratio</text>
-  <rect x="775.4216" y="528.4211" width="228.0784" height="91.5789" rx="6.002" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="889.4609" y="558.9474" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6753" font-weight="bold" fill="var(--primary-accent)">Maximum</text>
-  <text x="889.4609" y="584.8947" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2502" fill="var(--text-muted)">gte-Qwen2-7B</text>
-  <text x="889.4609" y="607.7895" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2502" fill="var(--text-muted)">Highest quality, needs GPU</text>
+  <rect x="40" y="355" width="1200" height="38" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="60" y="380" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">text-embedding-3-small (OpenAI)</text>
+  <text x="700" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">1536</text>
+  <text x="900" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">62.3</text>
+  <text x="1060" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">API</text>
+  <text x="1190" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Hosted</text>
+
+  <rect x="40" y="398" width="1200" height="38" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="60" y="423" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">text-embedding-3-large (OpenAI)</text>
+  <text x="700" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">3072</text>
+  <text x="900" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">64.6</text>
+  <text x="1060" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">API</text>
+  <text x="1190" y="423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Hosted</text>
+
+  <rect x="40" y="455" width="1200" height="60" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Key Insight</text>
+  <text x="640" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Open models match or beat OpenAI on many tasks — zero API cost, full privacy</text>
+
+  <rect x="40" y="530" width="390" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Budget — MiniLM-L6</text>
+  <text x="235" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Tiny, CPU-fast, decent quality</text>
+  <text x="235" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Great default for prototypes</text>
+
+  <rect x="445" y="530" width="390" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Quality — bge-large</text>
+  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Best quality-per-GB we ship</text>
+  <text x="640" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Recommended production pick</text>
+
+  <rect x="850" y="530" width="390" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1045" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Maximum — gte-Qwen2-7B</text>
+  <text x="1045" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Top-of-MTEB quality, GPU only</text>
+  <text x="1045" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Worth it for retrieval at scale</text>
 </svg>

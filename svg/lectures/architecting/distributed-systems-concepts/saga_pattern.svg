@@ -34,74 +34,41 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="182.5" width="200" height="168.5715" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9968"/>
-  <rect x="290" y="182.5" width="200" height="168.5715" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9968"/>
-  <rect x="539.9999" y="182.5" width="200" height="168.5715" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9968"/>
-  <rect x="790" y="182.5" width="200" height="168.5715" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9968"/>
-  <rect x="1040" y="182.5" width="200" height="168.5715" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9968"/>
-  <text x="140" y="279.4286" text-anchor="middle" font-size="24.9868">T1</text>
-  <text x="389.9999" y="279.4286" text-anchor="middle" font-size="24.9868">T2</text>
-  <text x="640" y="279.4286" text-anchor="middle" font-size="24.9868">T3 fail</text>
-  <text x="890" y="279.4286" text-anchor="middle" font-size="24.9868">C2</text>
-  <text x="1139.9999" y="279.4286" text-anchor="middle" font-size="24.9868">C1</text>
-  <text x="640" y="477.5" text-anchor="middle" font-size="27.4855">Forward recovery or compensating transactions</text>
+  </defs>
+  <text x="640" y="55" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Saga Pattern: Compensating Transactions</text>
+  <rect x="40" y="90" width="240" height="320" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="160.0" y="220" text-anchor="middle" font-size="56" font-weight="bold" fill="var(--ok-text)">T1</text>
+  <text x="160.0" y="290" text-anchor="middle" font-size="22" fill="var(--ok-text)">Reserve</text>
+  <line x1="284" y1="250" x2="276" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="280" y="90" width="240" height="320" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="400.0" y="220" text-anchor="middle" font-size="56" font-weight="bold" fill="var(--ok-text)">T2</text>
+  <text x="400.0" y="290" text-anchor="middle" font-size="22" fill="var(--ok-text)">Charge</text>
+  <line x1="524" y1="250" x2="516" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="90" width="240" height="320" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640.0" y="220" text-anchor="middle" font-size="56" font-weight="bold" fill="var(--danger-text)">T3</text>
+  <text x="640.0" y="290" text-anchor="middle" font-size="22" fill="var(--danger-text)">Ship fails</text>
+  <line x1="764" y1="250" x2="756" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="760" y="90" width="240" height="320" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="880.0" y="220" text-anchor="middle" font-size="56" font-weight="bold" fill="var(--warn-text)">C2</text>
+  <text x="880.0" y="290" text-anchor="middle" font-size="22" fill="var(--warn-text)">Refund</text>
+  <line x1="1004" y1="250" x2="996" y2="250" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="1000" y="90" width="240" height="320" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1120.0" y="220" text-anchor="middle" font-size="56" font-weight="bold" fill="var(--warn-text)">C1</text>
+  <text x="1120.0" y="290" text-anchor="middle" font-size="22" fill="var(--warn-text)">Release</text>
+  <rect x="40" y="450" width="1200" height="170" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="500" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text)">On failure, run compensating transactions in reverse</text>
+  <text x="640" y="550" text-anchor="middle" font-size="18" fill="var(--text-muted)">Each step is locally atomic; the saga is eventually consistent</text>
+  <text x="640" y="595" text-anchor="middle" font-size="18" fill="var(--text-muted)">Alternative to distributed two-phase commit</text>
 </svg>

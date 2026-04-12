@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,43 +34,6 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,19 +55,37 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <line x1="40" y1="222.9117" x2="1240" y2="222.9117" stroke="var(--text)" stroke-width="2" />
-  <text x="640" y="164.5" text-anchor="middle" font-size="25.8457" font-weight="bold">Spectrum of Branching Strategies</text>
-  <circle cx="169.2308" cy="222.9117" r="14.769" fill="var(--ok-fill)" />
-  <text x="169.2308" y="359.2059" text-anchor="middle" font-size="20.3073">Trunk-Based</text>
-  <text x="169.2308" y="417.6176" text-anchor="middle" font-size="18.4613">(simplest)</text>
-  <circle cx="520" cy="222.9117" r="14.769" fill="var(--warn-fill)" />
-  <text x="520" y="359.2059" text-anchor="middle" font-size="20.3073">GitHub Flow</text>
-  <circle cx="833.8462" cy="222.9117" r="14.769" fill="var(--warn-fill)" />
-  <text x="833.8462" y="359.2059" text-anchor="middle" font-size="20.3073">GitLab Flow</text>
-  <circle cx="1129.2308" cy="222.9117" r="14.769" fill="var(--danger-fill)" />
-  <text x="1129.2308" y="359.2059" text-anchor="middle" font-size="20.3073">Git Flow</text>
-  <text x="1129.2308" y="417.6176" text-anchor="middle" font-size="18.4613">(most complex)</text>
-  <text x="169.2308" y="495.5" text-anchor="middle" font-size="18.4613" fill="var(--text-muted)">High CI/CD maturity</text>
-  <text x="1129.2308" y="495.5" text-anchor="middle" font-size="18.4613" fill="var(--text-muted)">Versioned releases</text>
+  </defs>
+  <text x="640" y="70" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Branching Strategies: Spectrum of Complexity</text>
+  <rect x="40" y="100" width="285" height="440" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="182" y="150" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Trunk-Based</text>
+  <text x="182" y="185" text-anchor="middle" font-size="15" fill="var(--ok-text)">Simplest</text>
+  <text x="182" y="250" text-anchor="middle" font-size="15" fill="var(--ok-text)">One main branch</text>
+  <text x="182" y="295" text-anchor="middle" font-size="15" fill="var(--ok-text)">Short-lived branches</text>
+  <text x="182" y="340" text-anchor="middle" font-size="15" fill="var(--ok-text)">Strong CI/CD</text>
+  <text x="182" y="410" text-anchor="middle" font-size="14" fill="var(--ok-text)">Fast feedback</text>
+  <rect x="345" y="100" width="285" height="440" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="487" y="150" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">GitHub Flow</text>
+  <text x="487" y="185" text-anchor="middle" font-size="15" fill="var(--primary-text)">Lightweight</text>
+  <text x="487" y="250" text-anchor="middle" font-size="15" fill="var(--primary-text)">main + features</text>
+  <text x="487" y="295" text-anchor="middle" font-size="15" fill="var(--primary-text)">PR then merge</text>
+  <text x="487" y="340" text-anchor="middle" font-size="15" fill="var(--primary-text)">Continuous deploy</text>
+  <text x="487" y="410" text-anchor="middle" font-size="14" fill="var(--primary-text)">Small web teams</text>
+  <rect x="650" y="100" width="285" height="440" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="792" y="150" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">GitLab Flow</text>
+  <text x="792" y="185" text-anchor="middle" font-size="15" fill="var(--warn-text)">Env-aware</text>
+  <text x="792" y="250" text-anchor="middle" font-size="15" fill="var(--warn-text)">main + staging + prod</text>
+  <text x="792" y="295" text-anchor="middle" font-size="15" fill="var(--warn-text)">Upstream merges</text>
+  <text x="792" y="340" text-anchor="middle" font-size="15" fill="var(--warn-text)">Release trains</text>
+  <text x="792" y="410" text-anchor="middle" font-size="14" fill="var(--warn-text)">Medium teams</text>
+  <rect x="955" y="100" width="285" height="440" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1097" y="150" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Git Flow</text>
+  <text x="1097" y="185" text-anchor="middle" font-size="15" fill="var(--danger-text)">Most complex</text>
+  <text x="1097" y="250" text-anchor="middle" font-size="15" fill="var(--danger-text)">main + develop + ...</text>
+  <text x="1097" y="295" text-anchor="middle" font-size="15" fill="var(--danger-text)">release, hotfix</text>
+  <text x="1097" y="340" text-anchor="middle" font-size="15" fill="var(--danger-text)">Versioned releases</text>
+  <text x="1097" y="410" text-anchor="middle" font-size="14" fill="var(--danger-text)">Large or regulated</text>
+  <line x1="40" y1="580" x2="1240" y2="580" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="100" y="615" text-anchor="middle" font-size="15" fill="var(--text-muted)">High CI/CD maturity</text>
+  <text x="1180" y="615" text-anchor="middle" font-size="15" fill="var(--text-muted)">Heavier process</text>
 </svg>

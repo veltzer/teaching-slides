@@ -34,72 +34,39 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">SELECT ... FROM orders JOIN customers ON ...</text>
+  <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Planner considers candidate join algorithms and picks the cheapest</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="40" y="160" width="390" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="235" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Plan A: Nested Loop</text>
+  <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">For each outer row,</text>
+  <text x="235" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">scan inner table</text>
+  <text x="235" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Good for small outer</text>
+  <text x="235" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">and indexed inner</text>
+  <text x="235" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Cost: 1000</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="445" y="160" width="390" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Plan B: Hash Join</text>
+  <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Build hash on smaller</text>
+  <text x="640" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">table, probe with other</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Best for equality joins</text>
+  <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">on large unsorted data</text>
+  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Cost: 100  chosen</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="850" y="160" width="390" height="260" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1045" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Plan C: Merge Join</text>
+  <text x="1045" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sort both inputs,</text>
+  <text x="1045" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">then walk in lockstep</text>
+  <text x="1045" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Wins when both sides</text>
+  <text x="1045" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">already sorted on key</text>
+  <text x="1045" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Cost: 500</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="271.5" y="40" width="368.5" height="165.7142" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.002"/>
-  <rect x="271.5" y="247.1428" width="368.5" height="165.7142" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.002"/>
-  <rect x="271.5" y="454.2858" width="368.5" height="165.7142" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.002"/>
-  <text x="455.7499" y="143.5714" text-anchor="middle" font-size="27.0143">Plan A: Nested Loop</text>
-  <text x="455.7499" y="350.7142" text-anchor="middle" font-size="27.0143">Plan B: Hash Join</text>
-  <text x="455.7499" y="557.8572" text-anchor="middle" font-size="27.0143">Plan C: Merge Join</text>
-  <text x="1008.5" y="143.5714" text-anchor="middle" font-size="29.4701">Cost: 1000</text>
-  <text x="1008.5" y="350.7142" text-anchor="middle" font-size="29.4701" font-weight="bold">Cost: 100 ✓</text>
-  <text x="1008.5" y="557.8572" text-anchor="middle" font-size="29.4701">Cost: 500</text>
+  <rect x="40" y="450" width="1200" height="170" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Cost-based optimization</text>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Cost uses statistics: row counts, distinct values, index selectivity.</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Stale stats lead to bad plans; ANALYZE refreshes them.</text>
+  <text x="640" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">EXPLAIN shows the chosen plan; EXPLAIN ANALYZE adds real timings.</text>
 </svg>

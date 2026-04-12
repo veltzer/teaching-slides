@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,43 +33,6 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -89,21 +51,25 @@
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
     </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="161.5" width="334.4262" height="337" rx="5.9993" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="207.2131" y="307.5334" font-size="25.5709" fill="var(--text)" text-anchor="middle">www.example.com</text>
-  <text x="207.2131" y="408.6334" font-size="23.6039" fill="var(--text-muted)" text-anchor="middle">(alias)</text>
-  <line x1="374.4262" y1="330.0001" x2="468.8524" y2="330.0001" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="421.6394" y="285.0667" font-size="21.6369" fill="var(--text-muted)" text-anchor="middle">CNAME</text>
-  <rect x="472.7869" y="161.5" width="334.4262" height="337" rx="5.9993" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="307.5334" font-size="25.5709" fill="var(--text)" text-anchor="middle">example.com</text>
-  <text x="640" y="408.6334" font-size="23.6039" fill="var(--text-muted)" text-anchor="middle">(canonical)</text>
-  <line x1="807.2131" y1="330.0001" x2="901.6393" y2="330.0001" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="854.4262" y="285.0667" font-size="21.6369" fill="var(--text-muted)" text-anchor="middle">A</text>
-  <rect x="905.5738" y="161.5" width="334.4262" height="337" rx="5.9993" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1072.7869" y="307.5334" font-size="25.5709" fill="var(--text)" text-anchor="middle">93.184.216.34</text>
-  <text x="1072.7869" y="408.6334" font-size="23.6039" fill="var(--text-muted)" text-anchor="middle">(IP address)</text>
+  </defs>
+<text x="640" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">How CNAME Records Resolve</text>
+<rect x="40" y="100" width="380" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+<text x="230" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--primary-text)">www.example.com</text>
+<text x="230" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--primary-text)">alias name</text>
+<text x="230" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">(CNAME)</text>
+<rect x="440" y="100" width="380" height="400" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+<text x="630" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--warn-text)">example.com</text>
+<text x="630" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--warn-text)">canonical name</text>
+<text x="630" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">(A record target)</text>
+<rect x="840" y="100" width="380" height="400" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+<text x="1030" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--ok-text)">93.184.216.34</text>
+<text x="1030" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="var(--ok-text)">IPv4 address</text>
+<text x="1030" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">(final answer)</text>
+<line x1="420" y1="300" x2="440" y2="300" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="430" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">CNAME</text>
+<line x1="820" y1="300" x2="840" y2="300" stroke="var(--text)" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="830" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">A</text>
+<rect x="40" y="530" width="1200" height="90" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+<text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Resolver chases each CNAME until it hits an A or AAAA record.</text>
+<text x="640" y="602" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">Each hop is an extra DNS lookup, so deep chains slow resolution.</text>
 </svg>

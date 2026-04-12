@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,81 +34,47 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" font-size="25.3211" fill="var(--text)" font-weight="bold">UDP Socket Lifecycle</text>
-  <text x="332.5" y="98.5321" text-anchor="middle" font-size="23.5125" fill="var(--text)" font-weight="bold">Server</text>
-  <text x="947.5" y="98.5321" text-anchor="middle" font-size="23.5125" fill="var(--text)" font-weight="bold">Client</text>
-  <line x1="332.5" y1="127.7982" x2="332.5" y2="620" stroke="var(--text-faint)" stroke-width="1.8127" stroke-dasharray="7.2505 5.4379" />
-  <line x1="947.5" y1="127.7982" x2="947.5" y2="620" stroke="var(--text-faint)" stroke-width="1.8127" stroke-dasharray="7.2505 5.4379" />
-  <text x="332.5" y="178.3487" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">socket()</text>
-  <text x="947.5" y="178.3487" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">socket()</text>
-  <text x="332.5" y="244.8623" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">bind()</text>
-  <text x="332.5" y="337.9816" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">recvfrom()</text>
-  <text x="947.5" y="337.9816" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">sendto()</text>
-  <line x1="875.1471" y1="353.9449" x2="404.853" y2="353.9449" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="345.9633" text-anchor="middle" font-size="19.8952" fill="var(--text-muted)" font-style="italic">datagram</text>
-  <text x="332.5" y="444.4037" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">sendto()</text>
-  <text x="947.5" y="444.4037" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">recvfrom()</text>
-  <line x1="404.853" y1="460.367" x2="875.1471" y2="460.367" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="640" y="452.3852" text-anchor="middle" font-size="19.8952" fill="var(--text-muted)" font-style="italic">datagram</text>
-  <text x="332.5" y="550.8257" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">close()</text>
-  <text x="947.5" y="550.8257" text-anchor="middle" font-size="21.7038" fill="var(--text)" font-weight="bold">close()</text>
+  </defs>
+  <text x="640" y="55" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">UDP Socket Lifecycle</text>
+  <rect x="40" y="90" width="300" height="530" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="140" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Server</text>
+  <rect x="940" y="90" width="300" height="530" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="140" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--ok-text)">Client</text>
+  <line x1="190" y1="160" x2="190" y2="615" stroke="var(--bg)" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="1090" y1="160" x2="1090" y2="615" stroke="var(--bg)" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="60" y="175" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="206" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-border)">socket()</text>
+  <rect x="60" y="245" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="276" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-border)">bind()</text>
+  <rect x="60" y="335" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="366" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-border)">recvfrom()</text>
+  <rect x="60" y="455" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="486" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-border)">sendto()</text>
+  <rect x="60" y="555" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="586" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--primary-border)">close()</text>
+  <rect x="960" y="175" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="206" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-border)">socket()</text>
+  <rect x="960" y="335" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="366" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-border)">sendto()</text>
+  <rect x="960" y="455" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="486" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-border)">recvfrom()</text>
+  <rect x="960" y="555" width="260" height="46" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="586" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-border)">close()</text>
+  <line x1="960" y1="360" x2="340" y2="360" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="350" text-anchor="middle" font-size="18" font-style="italic" fill="var(--text-muted)">datagram</text>
+  <line x1="340" y1="480" x2="960" y2="480" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="470" text-anchor="middle" font-size="18" font-style="italic" fill="var(--text-muted)">datagram</text>
+  <text x="640" y="200" text-anchor="middle" font-size="20" fill="var(--text)">No connect() / accept() -- connectionless</text>
 </svg>

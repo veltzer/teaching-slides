@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,84 +34,32 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="391.3333" y="40" width="497.3334" height="55.2381" rx="6.0011" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="74.5238" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5747" fill="var(--text)">"Show me the top 5 customers by revenue this quarter"</text>
-  <line x1="640" y1="95.2381" x2="640" y2="136.6667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="432.7777" y="136.6667" width="414.4445" height="110.4762" rx="6.0011" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="171.1905" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.337" font-weight="bold" fill="var(--text)">LLM-Powered Database Interface</text>
-  <text x="640" y="205.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5747" fill="var(--text-muted)">NL &gt; SQL &gt; Execute &gt; NL</text>
-  <text x="640" y="230.5715" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">Natural Language to SQL Pipeline</text>
-  <line x1="640" y1="247.1428" x2="640" y2="288.5714" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="267" y="288.5714" width="746" height="165.7143" rx="6.0011" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="294.6296" y="318.9524" font-family="monospace" font-size="15.1934" fill="var(--text)">Generated SQL:</text>
-  <text x="294.6296" y="343.8096" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">SELECT c.name, SUM(o.amount) as total_revenue</text>
-  <text x="294.6296" y="364.5239" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">FROM customers c</text>
-  <text x="294.6296" y="385.2381" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">JOIN orders o ON c.id = o.customer_id</text>
-  <text x="294.6296" y="405.9524" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">WHERE o.date &gt;= DATE_TRUNC('quarter', CURRENT_DATE)</text>
-  <text x="294.6296" y="426.6667" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">GROUP BY c.name ORDER BY total_revenue DESC LIMIT 5;</text>
-  <line x1="640" y1="454.2857" x2="640" y2="495.7143" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="322.2593" y="495.7143" width="635.4816" height="124.2857" rx="6.0011" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="349.8889" y="530.2381" font-family="Arial, sans-serif" font-size="16.5747" font-weight="bold" fill="var(--text)">Natural Language Response:</text>
-  <text x="349.8889" y="557.8572" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">"The top 5 customers by revenue this quarter are:</text>
-  <text x="363.7036" y="581.3334" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">1. Acme Corp -- $245,000</text>
-  <text x="363.7036" y="604.8095" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">2. TechStart Inc -- $198,000 ..."</text>
+  </defs>
+
+  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="85" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">User asks in English</text>
+  <text x="640" y="125" text-anchor="middle" font-size="18" fill="var(--primary-text)">"Show me the top 5 customers by revenue this quarter"</text>
+
+  <line x1="640" y1="160" x2="640" y2="195" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="200" width="1200" height="120" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="245" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--info-text)">LLM-Powered Database Interface</text>
+  <text x="640" y="285" text-anchor="middle" font-size="18" fill="var(--info-text)">NL → SQL → Execute → NL (schema-aware prompting)</text>
+
+  <line x1="640" y1="320" x2="640" y2="355" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="360" width="1200" height="170" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="60" y="395" font-family="monospace" font-size="17" font-weight="bold" fill="var(--warn-text)">Generated SQL:</text>
+  <text x="60" y="425" font-family="monospace" font-size="16" fill="var(--warn-text)">SELECT c.name, SUM(o.amount) AS revenue</text>
+  <text x="60" y="452" font-family="monospace" font-size="16" fill="var(--warn-text)">FROM customers c JOIN orders o ON c.id = o.customer_id</text>
+  <text x="60" y="479" font-family="monospace" font-size="16" fill="var(--warn-text)">WHERE o.date &gt;= DATE_TRUNC('quarter', CURRENT_DATE)</text>
+  <text x="60" y="506" font-family="monospace" font-size="16" fill="var(--warn-text)">GROUP BY c.name ORDER BY revenue DESC LIMIT 5;</text>
+
+  <line x1="640" y1="530" x2="640" y2="565" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="570" width="1200" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="603" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--ok-text)">Reply: "Acme $245K, TechStart $198K, …"</text>
 </svg>

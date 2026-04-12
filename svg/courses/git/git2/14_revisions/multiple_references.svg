@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,80 +34,57 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="70" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Revision Ranges: A..B vs A...B</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <!-- Shared ancestor row -->
+  <line x1="80" y1="260" x2="1240" y2="260" stroke="var(--text-faint)" stroke-width="2"/>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="80" y="230" width="100" height="60" rx="6" fill="var(--text-faint)" stroke="var(--text-muted)" stroke-width="2"/>
+  <text x="130" y="267" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--bg)">base</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <!-- Branch A (top) -->
+  <rect x="260" y="150" width="100" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="310" y="187" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">a1</text>
+  <rect x="420" y="150" width="100" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="470" y="187" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">a2</text>
+  <rect x="580" y="150" width="100" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="630" y="187" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-text)">A</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <line x1="180" y1="260" x2="260" y2="210" stroke="var(--text)" stroke-width="2"/>
+  <line x1="360" y1="180" x2="420" y2="180" stroke="var(--text)" stroke-width="2"/>
+  <line x1="520" y1="180" x2="580" y2="180" stroke="var(--text)" stroke-width="2"/>
+  <text x="130" y="140" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-accent)">Branch A</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <!-- Branch B (bottom) -->
+  <rect x="260" y="310" width="100" height="60" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="310" y="347" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">b1</text>
+  <rect x="420" y="310" width="100" height="60" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="470" y="347" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">b2</text>
+  <rect x="580" y="310" width="100" height="60" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="630" y="347" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">B</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="706.6218" y="40" text-anchor="middle" font-size="34.3786" font-weight="bold">Revision Ranges</text>
-  <circle cx="276.784" cy="272" r="25.784" fill="var(--primary-fill)" />
-  <circle cx="384.2435" cy="272" r="25.784" fill="var(--primary-fill)" />
-  <circle cx="491.7029" cy="272" r="25.784" fill="var(--primary-fill)" />
-  <text x="384.2435" y="359" text-anchor="middle" font-size="25.784">Branch A</text>
-  <circle cx="491.7029" cy="272" r="25.784" fill="var(--text-faint)" />
-  <circle cx="599.1623" cy="417" r="25.784" fill="var(--danger-fill)" />
-  <circle cx="706.6218" cy="417" r="25.784" fill="var(--danger-fill)" />
-  <circle cx="814.0813" cy="417" r="25.784" fill="var(--danger-fill)" />
-  <text x="706.6218" y="504" text-anchor="middle" font-size="25.784">Branch B</text>
-  <line x1="302.5743" y1="272" x2="358.4532" y2="272" stroke="var(--text)" />
-  <line x1="410.0338" y1="272" x2="465.9127" y2="272" stroke="var(--text)" />
-  <line x1="491.7029" y1="306.8" x2="577.6704" y2="388" stroke="var(--text)" />
-  <line x1="624.9525" y1="417" x2="680.8315" y2="417" stroke="var(--text)" />
-  <line x1="732.412" y1="417" x2="788.291" y2="417" stroke="var(--text)" />
-  <text x="384.2435" y="620" text-anchor="middle" font-size="25.784">A..B shows commits in red</text>
-  <text x="1029" y="620" text-anchor="middle" font-size="25.784">A...B shows commits in red and blue</text>
+  <line x1="180" y1="260" x2="260" y2="310" stroke="var(--text)" stroke-width="2"/>
+  <line x1="360" y1="340" x2="420" y2="340" stroke="var(--text)" stroke-width="2"/>
+  <line x1="520" y1="340" x2="580" y2="340" stroke="var(--text)" stroke-width="2"/>
+  <text x="130" y="380" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-accent)">Branch B</text>
+
+  <!-- Explanations -->
+  <rect x="740" y="130" width="500" height="110" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="990" y="165" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--danger-text)">A..B</text>
+  <text x="990" y="195" text-anchor="middle" font-size="15" fill="var(--danger-text)">Commits reachable from B</text>
+  <text x="990" y="220" text-anchor="middle" font-size="15" fill="var(--danger-text)">but not from A — { b1, b2, B }</text>
+
+  <rect x="740" y="280" width="500" height="110" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="990" y="315" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--info-text)">A...B</text>
+  <text x="990" y="345" text-anchor="middle" font-size="15" fill="var(--info-text)">Symmetric difference — commits</text>
+  <text x="990" y="370" text-anchor="middle" font-size="15" fill="var(--info-text)">on either side, not on both</text>
+
+  <rect x="40" y="440" width="1200" height="180" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="480" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">Mental model</text>
+  <text x="640" y="515" text-anchor="middle" font-size="15" fill="var(--text-muted)">A..B  ≡  B minus the commits already in A</text>
+  <text x="640" y="545" text-anchor="middle" font-size="15" fill="var(--text-muted)">A...B ≡  (A ∪ B) minus their merge base</text>
+  <text x="640" y="580" text-anchor="middle" font-size="15" fill="var(--text-muted)">Use two dots for "what's new on B"; three dots for "how they diverged"</text>
+  <text x="640" y="610" text-anchor="middle" font-size="14" font-style="italic" fill="var(--text-faint)">git log A..B   |   git log A...B --left-right</text>
 </svg>

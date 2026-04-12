@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="max-width: 100%; height: auto;">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,78 +33,67 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead4" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 9.9556,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="280" y="247.1429" width="261.8182" height="165.7143" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9994" />
-  <text x="410.9091" y="350.7143" text-anchor="middle" font-family="Arial" font-size="45.8226">Resources</text>
-  <rect x="770.9091" y="40" width="229.0909" height="165.7143" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9994" />
-  <text x="885.4546" y="143.5714" text-anchor="middle" font-family="Arial" font-size="45.8226">Memory</text>
-  <rect x="770.9091" y="247.1429" width="229.0909" height="165.7143" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9994" />
-  <text x="885.4546" y="350.7143" text-anchor="middle" font-family="Arial" font-size="45.8226">CPU</text>
-  <rect x="770.9091" y="454.2857" width="229.0909" height="165.7143" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9994" />
-  <text x="885.4546" y="557.8571" text-anchor="middle" font-family="Arial" font-size="45.8226">Storage</text>
-  <line x1="541.8183" y1="288.5714" x2="770.9091" y2="122.8571" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead4)" />
-  <line x1="541.8183" y1="330" x2="770.9091" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead4)" />
-  <line x1="541.8183" y1="371.4286" x2="770.9091" y2="537.1429" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead4)" />
+  <text x="640" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Notebook Resource Management</text>
+
+  <rect x="40" y="105" width="340" height="510" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="210" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Spark Session</text>
+  <text x="210" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Single entry point per kernel</text>
+  <text x="210" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Holds driver + executors</text>
+  <text x="210" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Shared across cells</text>
+  <text x="210" y="280" text-anchor="middle" font-family="monospace" font-size="14" fill="var(--ok-text)">SparkSession.builder</text>
+  <text x="210" y="305" text-anchor="middle" font-family="monospace" font-size="14" fill="var(--ok-text)">.getOrCreate()</text>
+  <text x="210" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Lives until kernel dies</text>
+  <text x="210" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">or spark.stop() is called</text>
+  <text x="210" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Set configs at create time</text>
+  <text x="210" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Most cannot change later</text>
+  <text x="210" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Restart kernel to reconfigure</text>
+  <text x="210" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">cluster resources</text>
+  <text x="210" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Idle sessions still hold</text>
+  <text x="210" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">cluster slots — stop when done</text>
+
+  <line x1="380" y1="200" x2="420" y2="200" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="360" x2="420" y2="360" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="520" x2="420" y2="520" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="430" y="105" width="400" height="160" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="630" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Memory</text>
+  <text x="630" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Driver heap — collected results</text>
+  <text x="630" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Executor heap — shuffled data</text>
+  <text x="630" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Watch collect() and toPandas()</text>
+  <text x="630" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Unpersist when done with a cache</text>
+
+  <rect x="430" y="275" width="400" height="160" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="630" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">CPU</text>
+  <text x="630" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Executors run tasks in parallel</text>
+  <text x="630" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Cores per executor tune throughput</text>
+  <text x="630" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Match partitions to cores</text>
+  <text x="630" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">Notebooks share the cluster fairly</text>
+
+  <rect x="430" y="445" width="400" height="170" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="630" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Storage</text>
+  <text x="630" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Cache hot DataFrames, not all</text>
+  <text x="630" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Disk spill when memory runs out</text>
+  <text x="630" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Checkpoint long lineages</text>
+  <text x="630" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Clear caches between experiments</text>
+
+  <rect x="850" y="105" width="390" height="510" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1045" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Habits</text>
+  <text x="1045" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Run the SparkUI during work</text>
+  <text x="1045" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Port 4040 — jobs, stages, storage</text>
+  <text x="1045" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Prefer sample() + limit() first</text>
+  <text x="1045" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Scale up only once logic works</text>
+  <text x="1045" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Tune shuffle.partitions per job</text>
+  <text x="1045" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">200 is a poor one-size default</text>
+  <text x="1045" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Shutdown idle kernels nightly</text>
+  <text x="1045" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Leaked sessions waste compute</text>
+  <text x="1045" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Use dynamic allocation if</text>
+  <text x="1045" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">workload is bursty</text>
+  <text x="1045" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Read the plan: explain(true)</text>
+  <text x="1045" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Fix skew before growing cluster</text>
+  <text x="1045" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Log metrics, not just results —</text>
+  <text x="1045" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">notebooks are easy to forget</text>
 </svg>

@@ -34,81 +34,78 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowd1_03_images" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="180" width="266.6667" height="300" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6" />
-  <text x="173.3333" y="311.25" text-anchor="middle" font-size="24.4445" font-weight="bold">Dockerfile</text>
-  <text x="173.3333" y="386.25" text-anchor="middle" font-size="22.2222" fill="var(--text-muted)">Instructions</text>
-  <rect x="506.6667" y="180" width="266.6667" height="300" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6" />
-  <text x="640" y="292.5" text-anchor="middle" font-size="24.4445" font-weight="bold">docker build</text>
-  <text x="640" y="367.5" text-anchor="middle" font-size="22.2222" fill="var(--text-muted)">Layer by layer</text>
-  <text x="640" y="423.75" text-anchor="middle" font-size="22.2222" fill="var(--text-muted)">execution</text>
-  <rect x="973.3333" y="180" width="266.6667" height="300" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="1106.6667" y="311.25" text-anchor="middle" font-size="24.4445" font-weight="bold">Image</text>
-  <text x="1106.6667" y="386.25" text-anchor="middle" font-size="22.2222" fill="var(--text-muted)">Ready to run</text>
-  <line x1="306.6667" y1="330" x2="502.2222" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd1_03_images)" />
-  <line x1="773.3333" y1="330" x2="968.8889" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowd1_03_images)" />
-  <text x="406.6667" y="292.5" text-anchor="middle" font-size="22.2222" fill="var(--text-muted)">parse</text>
-  <text x="873.3333" y="292.5" text-anchor="middle" font-size="22.2222" fill="var(--text-muted)">create</text>
+
+  <rect x="40" y="40" width="360" height="290" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="220" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Dockerfile</text>
+  <text x="220" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">FROM python:3.12-slim</text>
+  <text x="220" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">WORKDIR /app</text>
+  <text x="220" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">COPY requirements.txt .</text>
+  <text x="220" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">RUN pip install -r ...</text>
+  <text x="220" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">COPY . .</text>
+  <text x="220" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">CMD ["python", "app.py"]</text>
+  <text x="220" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">declarative recipe</text>
+
+  <rect x="460" y="40" width="360" height="290" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">docker build</text>
+  <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">parse instructions</text>
+  <text x="640" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">run each in container</text>
+  <text x="640" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">commit layer on success</text>
+  <text x="640" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">reuse cache when inputs</text>
+  <text x="640" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">have not changed</text>
+  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">BuildKit parallelizes</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">layer-by-layer engine</text>
+
+  <rect x="880" y="40" width="360" height="290" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1060" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Image</text>
+  <text x="1060" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">stack of read-only</text>
+  <text x="1060" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">layers (tarballs)</text>
+  <text x="1060" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">content-addressed by</text>
+  <text x="1060" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">sha256 digest</text>
+  <text x="1060" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">push to registry,</text>
+  <text x="1060" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--ok-text)">pull and run anywhere</text>
+  <text x="1060" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">portable artifact</text>
+
+  <line x1="400" y1="185" x2="458" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="185" x2="878" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="429" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">parse</text>
+  <text x="849" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">commit</text>
+
+  <rect x="40" y="360" width="1200" height="260" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)">Layer caching is the whole point</text>
+
+  <rect x="70" y="425" width="275" height="175" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="207" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)">Order matters</text>
+  <text x="207" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">put stable steps first</text>
+  <text x="207" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">volatile code last</text>
+  <text x="207" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">COPY deps before</text>
+  <text x="207" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">COPY source</text>
+  <text x="207" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">avoid cache busts</text>
+
+  <rect x="365" y="425" width="275" height="175" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="502" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)">Smaller is better</text>
+  <text x="502" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">slim/alpine base</text>
+  <text x="502" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">multi-stage builds</text>
+  <text x="502" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">delete build tooling</text>
+  <text x="502" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">use .dockerignore</text>
+  <text x="502" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">avoid secrets in layers</text>
+
+  <rect x="660" y="425" width="275" height="175" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="797" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)">Reproducible</text>
+  <text x="797" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">pin base tag digest</text>
+  <text x="797" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">pin package versions</text>
+  <text x="797" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">same input → same sha</text>
+  <text x="797" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">signed provenance</text>
+  <text x="797" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">SBOM attached</text>
+
+  <rect x="955" y="425" width="255" height="175" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
+  <text x="1082" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-accent)">Distribute</text>
+  <text x="1082" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">push to registry</text>
+  <text x="1082" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">tag by version</text>
+  <text x="1082" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">scan before release</text>
+  <text x="1082" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">sign with cosign</text>
+  <text x="1082" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">pull anywhere</text>
 </svg>

@@ -1,27 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="40" y="152.5" width="252.6315" height="118.3333" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9978" />
-  <text x="166.3159" y="223.4997" text-anchor="middle" font-size="25.2539">do_fetch</text>
-  <rect x="355.7896" y="152.5" width="252.6315" height="118.3333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9978" />
-  <text x="482.1053" y="223.4997" text-anchor="middle" font-size="25.2539">do_unpack</text>
-  <rect x="671.5789" y="152.5" width="252.6315" height="118.3333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9978" />
-  <text x="797.8949" y="223.4997" text-anchor="middle" font-size="25.2539">do_patch</text>
-  <rect x="987.3685" y="152.5" width="252.6315" height="118.3333" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9978" />
-  <text x="1113.6842" y="223.4997" text-anchor="middle" font-size="25.2539">do_configure</text>
-  <rect x="40" y="389.1667" width="252.6315" height="118.3333" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="5.9978" />
-  <text x="166.3159" y="460.1667" text-anchor="middle" font-size="25.2539">do_compile</text>
-  <rect x="355.7896" y="389.1667" width="252.6315" height="118.3333" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9978" />
-  <text x="482.1053" y="460.1667" text-anchor="middle" font-size="25.2539">do_install</text>
-  <rect x="671.5789" y="389.1667" width="252.6315" height="118.3333" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9978" />
-  <text x="797.8949" y="460.1667" text-anchor="middle" font-size="25.2539">do_package</text>
-  <rect x="987.3685" y="389.1667" width="252.6315" height="118.3333" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9978" />
-  <text x="1113.6842" y="460.1667" text-anchor="middle" font-size="25.2539">do_package_write</text>
-  <path d="M 292.6317 211.6667 L 355.7896 211.6667" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
-  <path d="M 608.4211 211.6667 L 671.5789 211.6667" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
-  <path d="M 924.2106 211.6667 L 987.3685 211.6667" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
-  <path d="M 1113.6842 270.8331 L 166.3159 389.1667" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
-  <path d="M 292.6317 448.3333 L 355.7896 448.3333" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
-  <path d="M 608.4211 448.3333 L 671.5789 448.3333" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
-  <path d="M 924.2106 448.3333 L 987.3685 448.3333" stroke="var(--text)" stroke-width="0.367" marker-end="url(#ar)" />
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -56,56 +34,66 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,18 4.8,0" fill="#333" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
   </defs>
+
+  <rect x="40" y="40" width="280" height="130" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="180" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">do_fetch</text>
+  <text x="180" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">download sources</text>
+  <text x="180" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">from SRC_URI</text>
+
+  <rect x="360" y="40" width="280" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="500" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">do_unpack</text>
+  <text x="500" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">extract tarballs</text>
+  <text x="500" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">into WORKDIR</text>
+
+  <rect x="680" y="40" width="280" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="820" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">do_patch</text>
+  <text x="820" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">apply patches</text>
+  <text x="820" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">from recipe</text>
+
+  <rect x="1000" y="40" width="240" height="130" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1120" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">do_configure</text>
+  <text x="1120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">autotools,</text>
+  <text x="1120" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">cmake, meson</text>
+
+  <line x1="320" y1="105" x2="360" y2="105" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="105" x2="680" y2="105" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="960" y1="105" x2="1000" y2="105" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="1120" y1="170" x2="1120" y2="220" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="1120" y1="220" x2="180" y2="220" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="180" y1="220" x2="180" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="300" width="280" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="180" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">do_compile</text>
+  <text x="180" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">build binaries</text>
+  <text x="180" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">make, ninja</text>
+
+  <rect x="360" y="300" width="280" height="130" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="500" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">do_install</text>
+  <text x="500" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">stage files</text>
+  <text x="500" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">into ${D}</text>
+
+  <rect x="680" y="300" width="280" height="130" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="820" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">do_package</text>
+  <text x="820" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">split into</text>
+  <text x="820" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">PACKAGES</text>
+
+  <rect x="1000" y="300" width="240" height="130" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1120" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">do_package_write</text>
+  <text x="1120" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">emit ipk/rpm/deb</text>
+  <text x="1120" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">feed</text>
+
+  <line x1="320" y1="365" x2="360" y2="365" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="365" x2="680" y2="365" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="960" y1="365" x2="1000" y2="365" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="465" width="1200" height="155" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="502" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Task execution</text>
+  <text x="640" y="538" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Each task has a signature hash; identical inputs reuse sstate-cache output.</text>
+  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">BB_NUMBER_THREADS controls parallel tasks; PARALLEL_MAKE sets make -j.</text>
+  <text x="640" y="602" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">Override or extend with do_foo_prepend / _append in your recipe.</text>
 </svg>

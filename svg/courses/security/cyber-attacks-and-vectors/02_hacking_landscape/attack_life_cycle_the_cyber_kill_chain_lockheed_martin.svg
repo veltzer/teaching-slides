@@ -34,43 +34,6 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,33 +55,28 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" font-size="22.3054" font-weight="bold" fill="var(--text)">Cyber Kill Chain (Lockheed Martin)</text>
-  <rect x="243.5" y="67.8846" width="793" height="66.9231" rx="5.9994" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="283.15" y="99.9519" font-size="18.1231" font-weight="bold" fill="var(--text)">1. Reconnaissance</text>
-  <text x="580.525" y="99.9519" font-size="16.7291" fill="var(--text-muted)">Gather information about the target</text>
-  <rect x="243.5" y="148.75" width="793" height="66.9231" rx="5.9994" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="283.15" y="180.8173" font-size="18.1231" font-weight="bold" fill="var(--text)">2. Weaponization</text>
-  <text x="570.6124" y="180.8173" font-size="16.7291" fill="var(--text-muted)">Create exploit + payload (e.g., malicious PDF)</text>
-  <rect x="243.5" y="229.6154" width="793" height="66.9231" rx="5.9994" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="283.15" y="261.6827" font-size="18.1231" font-weight="bold" fill="var(--text)">3. Delivery</text>
-  <text x="471.4875" y="261.6827" font-size="16.7291" fill="var(--text-muted)">Send weapon to target (email, USB, web)</text>
-  <rect x="243.5" y="310.4807" width="793" height="66.9231" rx="5.9994" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="283.15" y="342.5481" font-size="18.1231" font-weight="bold" fill="var(--text)">4. Exploitation</text>
-  <text x="550.7875" y="342.5481" font-size="16.7291" fill="var(--text-muted)">Trigger the vulnerability</text>
-  <rect x="243.5" y="391.3462" width="793" height="66.9231" rx="5.9994" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="283.15" y="423.4134" font-size="18.1231" font-weight="bold" fill="var(--text)">5. Installation</text>
-  <text x="550.7875" y="423.4134" font-size="16.7291" fill="var(--text-muted)">Install backdoor/malware on target</text>
-  <rect x="243.5" y="472.2115" width="793" height="66.9231" rx="5.9994" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="283.15" y="504.2789" font-size="18.1231" font-weight="bold" fill="var(--text)">6. C2 (C&amp;C)</text>
-  <text x="501.225" y="504.2789" font-size="16.7291" fill="var(--text-muted)">Establish command and control channel</text>
-  <rect x="243.5" y="553.0769" width="793" height="66.9231" rx="5.9994" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="283.15" y="585.1442" font-size="18.1231" font-weight="bold" fill="var(--text)">7. Actions</text>
-  <text x="481.4" y="585.1442" font-size="16.7291" fill="var(--text-muted)">Achieve objectives (exfil, destroy, pivot)</text>
-  <line x1="640" y1="134.8077" x2="640" y2="148.75" stroke="var(--text)" stroke-width="2" />
-  <line x1="640" y1="215.673" x2="640" y2="229.6154" stroke="var(--text)" stroke-width="2" />
-  <line x1="640" y1="296.5385" x2="640" y2="310.4807" stroke="var(--text)" stroke-width="2" />
-  <line x1="640" y1="377.4038" x2="640" y2="391.3462" stroke="var(--text)" stroke-width="2" />
-  <line x1="640" y1="458.2692" x2="640" y2="472.2115" stroke="var(--text)" stroke-width="2" />
-  <line x1="640" y1="539.1346" x2="640" y2="553.0769" stroke="var(--text)" stroke-width="2" />
+  </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Cyber Kill Chain (Lockheed Martin)</text>
+  <rect x="40" y="60" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="60" y="92" font-size="22" font-weight="bold" fill="var(--primary-text)">1. Reconnaissance</text>
+  <text x="60" y="118" font-size="17" fill="var(--primary-text)">Gather public data, scan targets, identify victims and exposed services</text>
+  <rect x="40" y="140" width="1200" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="60" y="172" font-size="22" font-weight="bold" fill="var(--ok-text)">2. Weaponization</text>
+  <text x="60" y="198" font-size="17" fill="var(--ok-text)">Bundle exploit with payload (malicious PDF, Office macro, implant)</text>
+  <rect x="40" y="220" width="1200" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="60" y="252" font-size="22" font-weight="bold" fill="var(--warn-text)">3. Delivery</text>
+  <text x="60" y="278" font-size="17" fill="var(--warn-text)">Transmit weapon: phishing email, USB drop, watering-hole website</text>
+  <rect x="40" y="300" width="1200" height="70" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="60" y="332" font-size="22" font-weight="bold" fill="var(--danger-text)">4. Exploitation</text>
+  <text x="60" y="358" font-size="17" fill="var(--danger-text)">Trigger the vulnerability on target, gain code execution</text>
+  <rect x="40" y="380" width="1200" height="70" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="60" y="412" font-size="22" font-weight="bold" fill="var(--danger-text)">5. Installation</text>
+  <text x="60" y="438" font-size="17" fill="var(--danger-text)">Install persistent backdoor, RAT, or rootkit on the compromised host</text>
+  <rect x="40" y="460" width="1200" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="60" y="492" font-size="22" font-weight="bold" fill="var(--primary-text)">6. Command and Control</text>
+  <text x="60" y="518" font-size="17" fill="var(--primary-text)">Open outbound C2 channel — attacker drives from inside the network</text>
+  <rect x="40" y="540" width="1200" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="60" y="572" font-size="22" font-weight="bold" fill="var(--warn-text)">7. Actions on Objectives</text>
+  <text x="60" y="598" font-size="17" fill="var(--warn-text)">Exfiltrate data, destroy, encrypt for ransom, or pivot deeper</text>
 </svg>

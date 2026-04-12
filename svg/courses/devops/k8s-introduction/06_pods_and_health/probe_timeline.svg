@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,43 +34,6 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,28 +55,64 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <text x="644.9565" y="140.5" text-anchor="middle" font-size="31.7214" font-weight="bold">Probe Execution Timeline</text>
-  <line x1="49.913" y1="296.5588" x2="1240" y2="296.5588" stroke="var(--text)" stroke-width="2" />
-  <text x="49.913" y="274.2647" text-anchor="start" font-size="23.7911">Container Start</text>
-  <circle cx="49.913" cy="296.5588" r="9.913" fill="var(--text)" />
-  <rect x="49.913" y="341.147" width="297.5218" height="89.1765" fill="var(--text-faint)" rx="5.9973" />
-  <text x="198.6739" y="396.8823" text-anchor="middle" fill="var(--bg)" font-size="21.8084">Initial Delay (30s)</text>
-  <circle cx="347.4347" cy="296.5588" r="9.913" fill="var(--primary-fill)" />
-  <text x="347.4347" y="263.1177" text-anchor="middle" font-size="19.8258">Probe 1</text>
-  <rect x="347.4347" y="341.147" width="119.0087" height="66.8823" fill="var(--primary-fill)" rx="5.9973" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="406.939" y="385.7353" text-anchor="middle" fill="var(--bg)" font-size="19.8258">Period</text>
-  <circle cx="466.4435" cy="296.5588" r="9.913" fill="var(--primary-fill)" />
-  <text x="466.4435" y="263.1177" text-anchor="middle" font-size="19.8258">Probe 2</text>
-  <rect x="466.4435" y="341.147" width="119.0087" height="66.8823" fill="var(--primary-fill)" rx="5.9973" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="525.9478" y="385.7353" text-anchor="middle" fill="var(--bg)" font-size="19.8258">Period</text>
-  <circle cx="585.4521" cy="296.5588" r="9.913" fill="var(--danger-fill)" />
-  <text x="585.4521" y="263.1177" text-anchor="middle" font-size="19.8258">Fail 1</text>
-  <circle cx="704.4608" cy="296.5588" r="9.913" fill="var(--danger-fill)" />
-  <text x="704.4608" y="263.1177" text-anchor="middle" font-size="19.8258">Fail 2</text>
-  <circle cx="823.4696" cy="296.5588" r="9.913" fill="var(--danger-fill)" />
-  <text x="823.4696" y="263.1177" text-anchor="middle" font-size="19.8258">Fail 3</text>
-  <rect x="823.4696" y="341.147" width="198.3478" height="89.1765" fill="var(--danger-fill)" rx="5.9973" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="922.6435" y="396.8823" text-anchor="middle" fill="var(--bg)" font-size="21.8084">Action Taken</text>
-  <text x="644.9565" y="519.5" text-anchor="middle" font-size="23.7911">Timeline: Initial Delay → Periodic Checks → Failure Threshold → Action</text>
+  </defs>
+
+  <rect x="40" y="40" width="1200" height="580" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+
+  <rect x="60" y="60" width="280" height="540" rx="6" fill="var(--text-faint)" stroke="var(--border)" stroke-width="2"/>
+  <text x="200" y="110" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--bg)">Stage 1</text>
+  <text x="200" y="150" text-anchor="middle" font-size="22" fill="var(--bg)">Container Start</text>
+  <text x="200" y="250" text-anchor="middle" font-size="20" fill="var(--bg)">initialDelaySeconds</text>
+  <text x="200" y="290" text-anchor="middle" font-size="48" font-weight="bold" fill="var(--bg)">30s</text>
+  <text x="200" y="360" text-anchor="middle" font-size="18" fill="var(--bg)">wait before the first</text>
+  <text x="200" y="385" text-anchor="middle" font-size="18" fill="var(--bg)">probe is executed</text>
+  <text x="200" y="470" text-anchor="middle" font-size="16" fill="var(--bg)">app gets time</text>
+  <text x="200" y="492" text-anchor="middle" font-size="16" fill="var(--bg)">to warm up</text>
+  <text x="200" y="560" text-anchor="middle" font-size="14" fill="var(--bg)">no probes run yet</text>
+
+  <rect x="360" y="60" width="420" height="540" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="570" y="110" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--primary-text)">Stage 2</text>
+  <text x="570" y="150" text-anchor="middle" font-size="22" fill="var(--primary-text)">Periodic Checks</text>
+
+  <circle cx="430" cy="230" r="22" fill="var(--primary-text)"/>
+  <text x="430" y="238" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-accent)">1</text>
+  <circle cx="530" cy="230" r="22" fill="var(--primary-text)"/>
+  <text x="530" y="238" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-accent)">2</text>
+  <circle cx="630" cy="230" r="22" fill="var(--primary-text)"/>
+  <text x="630" y="238" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-accent)">3</text>
+  <circle cx="730" cy="230" r="22" fill="var(--primary-text)"/>
+  <text x="730" y="238" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--primary-accent)">4</text>
+
+  <line x1="452" y1="230" x2="508" y2="230" stroke="var(--primary-text)" stroke-width="3"/>
+  <line x1="552" y1="230" x2="608" y2="230" stroke="var(--primary-text)" stroke-width="3"/>
+  <line x1="652" y1="230" x2="708" y2="230" stroke="var(--primary-text)" stroke-width="3"/>
+
+  <text x="570" y="320" text-anchor="middle" font-size="20" fill="var(--primary-text)">periodSeconds = 10</text>
+  <text x="570" y="360" text-anchor="middle" font-size="18" fill="var(--primary-text)">probe runs every N seconds</text>
+  <text x="570" y="420" text-anchor="middle" font-size="18" fill="var(--primary-text)">timeoutSeconds = 1</text>
+  <text x="570" y="450" text-anchor="middle" font-size="16" fill="var(--primary-text)">probe fails if no response</text>
+  <text x="570" y="520" text-anchor="middle" font-size="18" fill="var(--primary-text)">successThreshold = 1</text>
+  <text x="570" y="560" text-anchor="middle" font-size="14" fill="var(--primary-text)">one success resets failure count</text>
+
+  <rect x="800" y="60" width="220" height="540" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="910" y="110" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--warn-text)">Stage 3</text>
+  <text x="910" y="150" text-anchor="middle" font-size="22" fill="var(--warn-text)">Failures</text>
+  <text x="910" y="230" text-anchor="middle" font-size="18" fill="var(--warn-text)">Fail 1</text>
+  <text x="910" y="280" text-anchor="middle" font-size="18" fill="var(--warn-text)">Fail 2</text>
+  <text x="910" y="330" text-anchor="middle" font-size="18" fill="var(--warn-text)">Fail 3</text>
+  <text x="910" y="420" text-anchor="middle" font-size="20" fill="var(--warn-text)">failureThreshold</text>
+  <text x="910" y="470" text-anchor="middle" font-size="48" font-weight="bold" fill="var(--warn-text)">3</text>
+  <text x="910" y="560" text-anchor="middle" font-size="15" fill="var(--warn-text)">consecutive failures</text>
+
+  <rect x="1040" y="60" width="180" height="540" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1130" y="110" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--danger-text)">Stage 4</text>
+  <text x="1130" y="150" text-anchor="middle" font-size="22" fill="var(--danger-text)">Action</text>
+  <text x="1130" y="240" text-anchor="middle" font-size="18" fill="var(--danger-text)">liveness:</text>
+  <text x="1130" y="270" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--danger-text)">restart</text>
+  <text x="1130" y="360" text-anchor="middle" font-size="18" fill="var(--danger-text)">readiness:</text>
+  <text x="1130" y="390" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--danger-text)">drop from</text>
+  <text x="1130" y="420" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--danger-text)">endpoints</text>
+  <text x="1130" y="520" text-anchor="middle" font-size="15" fill="var(--danger-text)">kubelet drives</text>
+  <text x="1130" y="545" text-anchor="middle" font-size="15" fill="var(--danger-text)">the decision</text>
+
 </svg>

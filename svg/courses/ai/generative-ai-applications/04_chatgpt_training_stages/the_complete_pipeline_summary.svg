@@ -34,89 +34,34 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="acp" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,14.4 0,7.2" fill="#4a90e2" />
-    </marker>
   </defs>
-  <text x="640" y="40" text-anchor="middle" font-size="20.3051" font-weight="bold" fill="var(--text)">The Complete Pipeline Summary</text>
-  <rect x="414.4" y="59.0372" width="451.2" height="44.4201" rx="5.9997" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="88.2276" text-anchor="middle" font-size="15.2288" fill="var(--text-muted)">RAW TEXT (Internet, books, code)</text>
-  <line x1="640" y1="103.4574" x2="640" y2="128.8403" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#acp)" />
-  <rect x="264" y="128.8403" width="752" height="114.2232" rx="5.9997" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="158.0307" text-anchor="middle" font-size="16.4979" font-weight="bold" fill="var(--primary-accent)">1. PRE-TRAINING</text>
-  <text x="640" y="185.9519" text-anchor="middle" font-size="13.9598" fill="var(--text-muted)">Objective: Next token prediction | Data: ~2T tokens</text>
-  <text x="640" y="208.7965" text-anchor="middle" font-size="13.9598" fill="var(--text-muted)">Duration: Weeks-months</text>
-  <text x="640" y="231.6411" text-anchor="middle" font-size="13.9598" fill="var(--danger-accent)">Result: Knowledgeable but unaligned</text>
-  <line x1="640" y1="243.0635" x2="640" y2="274.7922" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#acp)" />
-  <rect x="264" y="274.7922" width="752" height="114.2232" rx="5.9997" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="303.9825" text-anchor="middle" font-size="16.4979" font-weight="bold" fill="var(--ok-accent)">2. SUPERVISED FINE-TUNING (SFT)</text>
-  <text x="640" y="331.9037" text-anchor="middle" font-size="13.9598" fill="var(--text-muted)">Data: ~100K human-written examples | Duration: Days</text>
-  <text x="640" y="376.3238" text-anchor="middle" font-size="13.9598" fill="var(--danger-accent)">Result: Follows instructions</text>
-  <line x1="640" y1="389.0153" x2="640" y2="420.744" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#acp)" />
-  <rect x="264" y="420.744" width="752" height="114.2232" rx="5.9997" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="449.9344" text-anchor="middle" font-size="16.4979" font-weight="bold" fill="var(--danger-accent)">3. RLHF / DPO / RLAIF</text>
-  <text x="640" y="477.8556" text-anchor="middle" font-size="13.9598" fill="var(--text-muted)">Data: ~300K preference comparisons | Duration: Days</text>
-  <text x="640" y="522.2757" text-anchor="middle" font-size="13.9598" fill="var(--danger-accent)">Result: Aligned, safe, helpful</text>
-  <line x1="640" y1="534.9671" x2="640" y2="566.6959" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#acp)" />
-  <rect x="414.4" y="569.2342" width="451.2" height="50.7658" rx="5.9997" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="602.232" text-anchor="middle" font-size="17.767" font-weight="bold" fill="var(--ok-accent)">DEPLOYED MODEL</text>
+
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="85" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--text-muted)">Raw Text: Internet, books, code</text>
+
+  <line x1="640" y1="110" x2="640" y2="140" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="145" width="1200" height="125" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="180" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">1. Pre-Training</text>
+  <text x="640" y="215" text-anchor="middle" font-size="17" fill="var(--primary-text)">Next-token objective, ~2T tokens, weeks on GPU clusters</text>
+  <text x="640" y="245" text-anchor="middle" font-size="17" fill="var(--primary-text)">Result: a knowledgeable but unaligned base model</text>
+
+  <line x1="640" y1="270" x2="640" y2="300" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="305" width="1200" height="125" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="340" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">2. Supervised Fine-Tuning (SFT)</text>
+  <text x="640" y="375" text-anchor="middle" font-size="17" fill="var(--ok-text)">~100K human-written prompts + ideal answers, days</text>
+  <text x="640" y="405" text-anchor="middle" font-size="17" fill="var(--ok-text)">Result: the model learns to follow instructions</text>
+
+  <line x1="640" y1="430" x2="640" y2="460" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="465" width="1200" height="125" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="500" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">3. RLHF / DPO / RLAIF</text>
+  <text x="640" y="535" text-anchor="middle" font-size="17" fill="var(--warn-text)">~300K preference comparisons, reward model + policy update</text>
+  <text x="640" y="565" text-anchor="middle" font-size="17" fill="var(--warn-text)">Result: aligned, safer, more helpful outputs</text>
+
+  <rect x="40" y="600" width="1200" height="20" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
 </svg>

@@ -34,77 +34,66 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="125.7143" y="160.5" width="1028.5714" height="123.2727" fill="var(--text)" stroke="var(--text)" stroke-width="2.88" rx="5.9962"/>
-  <text x="640" y="229.8409" text-anchor="middle" fill="var(--bg)" font-size="27.7539">GRUB Core</text>
-  <rect x="40" y="360.8181" width="257.1429" height="92.4545" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9962"/>
-  <text x="168.5714" y="414.75" text-anchor="middle" fill="var(--bg)" font-size="21.5864">Stage 1</text>
-  <rect x="382.8571" y="360.8181" width="257.1429" height="92.4545" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="5.9962"/>
-  <text x="511.4286" y="414.75" text-anchor="middle" fill="var(--bg)" font-size="21.5864">Stage 1.5</text>
-  <rect x="725.7143" y="360.8181" width="257.1429" height="92.4545" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9962"/>
-  <text x="854.2857" y="414.75" text-anchor="middle" fill="var(--bg)" font-size="21.5864">Stage 2</text>
-  <rect x="1068.5714" y="360.8181" width="171.4286" height="92.4545" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9962"/>
-  <text x="1154.2857" y="414.75" text-anchor="middle" fill="var(--bg)" font-size="21.5864">Kernel</text>
-  <text x="168.5714" y="499.5" text-anchor="middle" font-size="18.5026">MBR/GPT</text>
-  <text x="511.4286" y="499.5" text-anchor="middle" font-size="18.5026">File System</text>
-  <text x="854.2857" y="499.5" text-anchor="middle" font-size="18.5026">Menu/Config</text>
-  <text x="1154.2857" y="499.5" text-anchor="middle" font-size="18.5026">vmlinuz</text>
+  </defs>
+
+  <rect x="40" y="40" width="1200" height="90" rx="6" fill="var(--text)" stroke="var(--text)" stroke-width="2"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--bg)">GRUB — GRand Unified Bootloader</text>
+  <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)">multi-stage boot from firmware to kernel</text>
+
+  <rect x="40" y="160" width="285" height="380" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="182" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-text)">Stage 1</text>
+  <text x="182" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">boot.img in MBR</text>
+  <text x="182" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">or GPT protective MBR</text>
+  <text x="182" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">exactly 446 bytes of code</text>
+  <text x="182" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">BIOS loads first sector</text>
+  <text x="182" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">jumps to 0x7c00</text>
+  <text x="182" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">only job: find and</text>
+  <text x="182" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">load Stage 1.5</text>
+  <text x="182" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">no filesystem support</text>
+  <text x="182" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">UEFI skips this stage</text>
+
+  <rect x="345" y="160" width="285" height="380" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="487" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Stage 1.5</text>
+  <text x="487" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">core.img in MBR gap</text>
+  <text x="487" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">or EFI partition</text>
+  <text x="487" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">filesystem drivers</text>
+  <text x="487" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">ext4, xfs, btrfs, fat</text>
+  <text x="487" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">LVM and RAID modules</text>
+  <text x="487" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">mounts /boot by path,</text>
+  <text x="487" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">loads Stage 2 files</text>
+  <text x="487" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">decompresses modules</text>
+  <text x="487" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">hands off to Stage 2</text>
+
+  <rect x="650" y="160" width="285" height="380" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="792" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-text)">Stage 2</text>
+  <text x="792" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">/boot/grub/grub.cfg</text>
+  <text x="792" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">menu and modules</text>
+  <text x="792" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">interactive menu UI</text>
+  <text x="792" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">keyboard, VGA, serial</text>
+  <text x="792" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">password and signatures</text>
+  <text x="792" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">picks kernel + initrd,</text>
+  <text x="792" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">builds cmdline</text>
+  <text x="792" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">scripting via BASH-like</text>
+  <text x="792" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">chain-loads other OSes</text>
+
+  <rect x="955" y="160" width="285" height="380" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1097" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Kernel Handoff</text>
+  <text x="1097" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">vmlinuz + initramfs</text>
+  <text x="1097" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">into memory</text>
+  <text x="1097" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">decompresses the kernel</text>
+  <text x="1097" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">sets up boot_params</text>
+  <text x="1097" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">passes cmdline + initrd</text>
+  <text x="1097" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">jumps to kernel entry</text>
+  <text x="1097" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">at startup_32 / _64</text>
+  <text x="1097" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">kernel takes over</text>
+  <text x="1097" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">GRUB is gone forever</text>
+
+  <line x1="325" y1="350" x2="345" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="630" y1="350" x2="650" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="935" y1="350" x2="955" y2="350" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Each stage exists only to load the next, until the kernel is running</text>
 </svg>

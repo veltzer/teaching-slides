@@ -1,17 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="260.1428" width="248.2759" height="232.8572" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0013"/>
-  <text x="164.1379" y="399.8572" text-anchor="middle" font-size="22.7635">Handler A</text>
-  <rect x="371.0346" y="260.1428" width="248.2759" height="232.8572" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0013"/>
-  <text x="495.1725" y="399.8572" text-anchor="middle" font-size="22.7635">Handler B</text>
-  <rect x="702.069" y="260.1428" width="248.2759" height="232.8572" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0013"/>
-  <text x="826.207" y="399.8572" text-anchor="middle" font-size="22.7635">Handler C</text>
-  <rect x="1033.1035" y="260.1428" width="206.8965" height="232.8572" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.0013"/>
-  <text x="1136.5518" y="399.8572" text-anchor="middle" font-size="22.7635">Default</text>
-  <line x1="288.2759" y1="376.5714" x2="371.0346" y2="376.5714" stroke="var(--text)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="619.3104" y1="376.5714" x2="702.069" y2="376.5714" stroke="var(--text)" stroke-width="2" marker-end="url(#arr)" />
-  <line x1="950.3449" y1="376.5714" x2="1033.1035" y2="376.5714" stroke="var(--text)" stroke-width="2" marker-end="url(#arr)" />
-  <text x="640" y="167" text-anchor="middle" font-size="24.8329">Request passes along the chain</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -46,67 +34,43 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,48 7.4667,0" fill="#333" />
-    </marker>
   </defs>
+
+  <rect x="40" y="40" width="1200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">Request passes along the chain until one handler accepts it</text>
+  <text x="640" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">Sender is decoupled from the receiver</text>
+
+  <rect x="40" y="180" width="290" height="420" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Handler A</text>
+  <text x="185" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">handle(req)</text>
+  <text x="185" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">setNext(next)</text>
+  <text x="185" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">If can handle:</text>
+  <text x="185" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">return result</text>
+  <text x="185" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">else forward</text>
+
+  <rect x="360" y="180" width="290" height="420" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="505" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-text)">Handler B</text>
+  <text x="505" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">handle(req)</text>
+  <text x="505" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">setNext(next)</text>
+  <text x="505" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">Inherits same</text>
+  <text x="505" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">interface</text>
+
+  <rect x="680" y="180" width="290" height="420" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="825" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">Handler C</text>
+  <text x="825" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">handle(req)</text>
+  <text x="825" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">setNext(next)</text>
+  <text x="825" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Order matters</text>
+
+  <rect x="1000" y="180" width="240" height="420" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1120" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--danger-text)">Default</text>
+  <text x="1120" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Catch-all</text>
+  <text x="1120" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Ends chain</text>
+  <text x="1120" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Always replies</text>
+
+  <line x1="330" y1="390" x2="360" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="390" x2="680" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="970" y1="390" x2="1000" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

@@ -1,23 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Cluster Managers</text>
-  <rect x="359.9999" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Standalone</text>
-  <rect x="680" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">YARN</text>
-  <rect x="1000" y="161" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="201.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">K8s</text>
-  <rect x="40" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">Mesos</text>
-  <rect x="359.9999" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">SA</text>
-  <rect x="680" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">YA</text>
-  <rect x="1000" y="296.2" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.76" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">KA</text>
-  <rect x="40" y="431.4" width="240" height="67.6" rx="6.0044" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="471.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.914">MA</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -52,75 +33,58 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="194.8" x2="480" y2="194.8" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="194.8" x2="800" y2="194.8" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="194.8" x2="1120.0001" y2="194.8" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="194.8" x2="159.9999" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="480" y1="194.8" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="194.8" x2="800" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1120.0001" y1="194.8" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="330" x2="159.9999" y2="465.2" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <!-- palette: resources/palette_diagram.yaml -->
+
+  <rect x="40" y="40" width="290" height="450" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Standalone</text>
+  <text x="185" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Built-in manager</text>
+  <text x="185" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Master + workers</text>
+  <text x="185" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Simplest setup</text>
+  <text x="185" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Dev and small</text>
+  <text x="185" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">prod clusters</text>
+  <text x="185" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">No extra deps</text>
+  <text x="185" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Ships with Spark</text>
+  <text x="185" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">FIFO scheduler</text>
+
+  <rect x="340" y="40" width="290" height="450" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="485" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">YARN</text>
+  <text x="485" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Hadoop resource</text>
+  <text x="485" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">manager</text>
+  <text x="485" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Client or cluster</text>
+  <text x="485" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Shares HDFS</text>
+  <text x="485" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Queues + ACLs</text>
+  <text x="485" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Kerberos auth</text>
+  <text x="485" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Common on-prem</text>
+  <text x="485" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">Dynamic alloc</text>
+
+  <rect x="640" y="40" width="290" height="450" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="785" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Kubernetes</text>
+  <text x="785" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Driver + execs</text>
+  <text x="785" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">run as pods</text>
+  <text x="785" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Container images</text>
+  <text x="785" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Cloud-native</text>
+  <text x="785" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Namespaces iso</text>
+  <text x="785" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">GA since 3.1</text>
+  <text x="785" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Shared infra</text>
+  <text x="785" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">Elastic scaling</text>
+
+  <rect x="940" y="40" width="300" height="450" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1090" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Mesos (legacy)</text>
+  <text x="1090" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">General-purpose</text>
+  <text x="1090" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">cluster manager</text>
+  <text x="1090" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Fine-grain offers</text>
+  <text x="1090" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Deprecated in</text>
+  <text x="1090" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Spark 3.x</text>
+  <text x="1090" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Rarely chosen</text>
+  <text x="1090" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">for new work</text>
+  <text x="1090" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">Prefer K8s</text>
+
+  <rect x="40" y="510" width="1200" height="110" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Pick by environment</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Dev: standalone. Hadoop shops: YARN. Cloud-native: Kubernetes.</text>
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Spark abstracts the choice — application code stays the same.</text>
 </svg>

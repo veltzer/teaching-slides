@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -34,43 +34,6 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -92,15 +55,36 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-</defs>
-  <rect x="40" y="139.5" width="352.9412" height="158.7499" fill="var(--ok-fill)" rx="5.9986" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="216.4706" y="234.75" text-anchor="middle" fill="var(--bg)">Painless</text>
-  <rect x="498.8235" y="139.5" width="352.9412" height="158.7499" fill="var(--primary-fill)" rx="5.9986" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="675.2941" y="234.75" text-anchor="middle" fill="var(--bg)">Pipelines</text>
-  <rect x="40" y="361.7501" width="352.9412" height="158.7499" fill="var(--warn-fill)" rx="5.9986" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="216.4706" y="456.9999" text-anchor="middle" fill="var(--bg)">Percolator</text>
-  <rect x="498.8235" y="361.7501" width="352.9412" height="158.7499" fill="var(--info-fill)" rx="5.9986" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="675.2941" y="456.9999" text-anchor="middle" fill="var(--bg)">Data Streams</text>
-  <rect x="957.6471" y="250.6251" width="282.3529" height="158.7499" fill="var(--danger-fill)" rx="5.9986" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="1098.8235" y="345.8749" text-anchor="middle" fill="var(--bg)">ILM</text>
+  </defs>
+
+  <rect x="40" y="40" width="590" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="335.0" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)">Painless</text>
+  <text x="335.0" y="140" text-anchor="middle" font-size="18" fill="var(--ok-text)">scripting language</text>
+  <text x="335.0" y="172" text-anchor="middle" font-size="18" fill="var(--ok-text)">sandboxed, fast, typed</text>
+  <text x="335.0" y="204" text-anchor="middle" font-size="18" fill="var(--ok-text)">used in updates,</text>
+  <text x="335.0" y="236" text-anchor="middle" font-size="18" fill="var(--ok-text)">aggregations, reindex</text>
+  <rect x="650" y="40" width="590" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="945.0" y="90" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--primary-text)">Pipelines</text>
+  <text x="945.0" y="140" text-anchor="middle" font-size="18" fill="var(--primary-text)">ingest-time transforms</text>
+  <text x="945.0" y="172" text-anchor="middle" font-size="18" fill="var(--primary-text)">enrich, grok, rename</text>
+  <text x="945.0" y="204" text-anchor="middle" font-size="18" fill="var(--primary-text)">runs on ingest nodes</text>
+  <text x="945.0" y="236" text-anchor="middle" font-size="18" fill="var(--primary-text)">before indexing</text>
+  <rect x="40" y="340" width="390" height="280" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="235.0" y="390" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--warn-text)">Percolator</text>
+  <text x="235.0" y="440" text-anchor="middle" font-size="18" fill="var(--warn-text)">stored queries</text>
+  <text x="235.0" y="472" text-anchor="middle" font-size="18" fill="var(--warn-text)">match documents</text>
+  <text x="235.0" y="504" text-anchor="middle" font-size="18" fill="var(--warn-text)">against saved queries</text>
+  <text x="235.0" y="536" text-anchor="middle" font-size="18" fill="var(--warn-text)">reverse search</text>
+  <rect x="440" y="340" width="390" height="280" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="635.0" y="390" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--info-text)">Data Streams</text>
+  <text x="635.0" y="440" text-anchor="middle" font-size="18" fill="var(--info-text)">append-only series</text>
+  <text x="635.0" y="472" text-anchor="middle" font-size="18" fill="var(--info-text)">auto-rollover indices</text>
+  <text x="635.0" y="504" text-anchor="middle" font-size="18" fill="var(--info-text)">hides index naming</text>
+  <text x="635.0" y="536" text-anchor="middle" font-size="18" fill="var(--info-text)">pairs with ILM</text>
+  <rect x="840" y="340" width="400" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1040.0" y="390" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--danger-text)">ILM</text>
+  <text x="1040.0" y="440" text-anchor="middle" font-size="18" fill="var(--danger-text)">lifecycle management</text>
+  <text x="1040.0" y="472" text-anchor="middle" font-size="18" fill="var(--danger-text)">hot / warm / cold</text>
+  <text x="1040.0" y="504" text-anchor="middle" font-size="18" fill="var(--danger-text)">age + size policies</text>
+  <text x="1040.0" y="536" text-anchor="middle" font-size="18" fill="var(--danger-text)">automated tiering</text>
 </svg>

@@ -1,25 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="400.4937" y="40" width="187.8481" height="72.4999" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.9982" />
-  <text x="494.4176" y="85.3124" text-anchor="middle" font-size="21.7434">Constructor</text>
-  <rect x="344.1391" y="166.875" width="300.557" height="72.4999" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="5.9982" />
-  <text x="494.4176" y="212.1874" text-anchor="middle" font-size="21.7434">onAttachedToWindow</text>
-  <rect x="400.4937" y="293.75" width="187.8481" height="72.4999" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.9982" />
-  <text x="494.4176" y="339.0623" text-anchor="middle" font-size="21.7434">onMeasure</text>
-  <rect x="400.4937" y="420.6248" width="187.8481" height="72.4999" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.9982" />
-  <text x="494.4176" y="465.9372" text-anchor="middle" font-size="21.7434">onLayout</text>
-  <rect x="776.1898" y="293.75" width="187.8481" height="72.4999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9982" />
-  <text x="870.1139" y="339.0623" text-anchor="middle" font-size="21.7434">onDraw</text>
-  <rect x="306.5694" y="547.5001" width="375.6963" height="72.4999" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.9982" />
-  <text x="494.4176" y="592.8121" text-anchor="middle" font-size="21.7434">onDetachedFromWindow</text>
-  <line x1="494.4176" y1="112.5001" x2="494.4176" y2="166.875" stroke="var(--text)" stroke-width="0.9356" marker-end="url(#arrow)" />
-  <line x1="494.4176" y1="239.3747" x2="494.4176" y2="293.75" stroke="var(--text)" stroke-width="0.9356" marker-end="url(#arrow)" />
-  <line x1="494.4176" y1="366.2499" x2="494.4176" y2="420.6248" stroke="var(--text)" stroke-width="0.9356" marker-end="url(#arrow)" />
-  <line x1="588.3417" y1="329.9998" x2="776.1898" y2="329.9998" stroke="var(--text)" stroke-width="0.9356" marker-end="url(#arrow)" />
-  <line x1="494.4176" y1="493.1249" x2="494.4176" y2="547.5001" stroke="var(--text)" stroke-width="0.9356" marker-end="url(#arrow)" />
-  <path d="M 438.0632 293.75 Q 344.1391 257.4997 344.1391 329.9998 Q 344.1391 366.2499 438.0632 366.2499" stroke="var(--text-muted)" stroke-width="1.0311" fill="none" stroke-dasharray="2.5777 2.5777" marker-end="url(#arrow)" />
-  <text x="269" y="339.0623" font-size="18.1195" fill="var(--text-muted)">repeat</text>
-  <path d="M 926.4684 293.75 Q 982.8228 257.4997 982.8228 329.9998 Q 982.8228 366.2499 926.4684 366.2499" stroke="var(--text-muted)" stroke-width="1.0311" fill="none" stroke-dasharray="2.5777 2.5777" marker-end="url(#arrow)" />
-  <text x="1011" y="339.0623" font-size="18.1195" fill="var(--text-muted)">repeat</text>
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -54,56 +34,62 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 12.3429 L 19.2 6.1714 z" fill="#333" />
+    <marker id="arrow-muted" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#888888"/>
     </marker>
   </defs>
+
+  <rect x="40" y="40" width="260" height="110" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="170" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Constructor</text>
+  <text x="170" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">read attrs, allocate</text>
+  <text x="170" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Paint objects</text>
+
+  <rect x="340" y="40" width="300" height="110" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="490" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">onAttachedToWindow</text>
+  <text x="490" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">register listeners,</text>
+  <text x="490" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">start animations</text>
+
+  <rect x="680" y="40" width="260" height="110" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="810" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">onMeasure</text>
+  <text x="810" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">compute width/height</text>
+  <text x="810" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">from MeasureSpec</text>
+
+  <rect x="980" y="40" width="260" height="110" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1110" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">onLayout</text>
+  <text x="1110" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">position children</text>
+  <text x="1110" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">(ViewGroup only)</text>
+
+  <line x1="300" y1="95" x2="340" y2="95" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="95" x2="680" y2="95" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="940" y1="95" x2="980" y2="95" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="1110" y1="150" x2="1110" y2="200" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="1110" y1="200" x2="810" y2="200" stroke="var(--text-muted)" stroke-width="2"/>
+  <line x1="810" y1="200" x2="810" y2="250" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="680" y="260" width="260" height="120" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="810" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">onDraw</text>
+  <text x="810" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">canvas.drawRect/Path/Text</text>
+  <text x="810" y="362" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">no allocations on hot path</text>
+
+  <path d="M 940 290 Q 1040 260 1040 320 Q 1040 370 940 350" stroke="var(--text-muted)" stroke-width="2" fill="none" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+  <text x="1060" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">invalidate()</text>
+  <text x="1060" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">redraws</text>
+
+  <path d="M 680 290 Q 580 260 580 320 Q 580 370 680 350" stroke="var(--text-muted)" stroke-width="2" fill="none" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+  <text x="430" y="325" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">requestLayout()</text>
+  <text x="430" y="345" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">re-measures</text>
+
+  <line x1="810" y1="380" x2="810" y2="430" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="320" y="440" width="980" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="810" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Touch &amp; events</text>
+  <text x="810" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">onTouchEvent / onKeyDown — handle interaction, then invalidate</text>
+
+  <rect x="40" y="540" width="1200" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">onDetachedFromWindow</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">unregister listeners, cancel animations, release resources</text>
 </svg>

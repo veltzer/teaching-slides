@@ -34,78 +34,39 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="182.5" width="360" height="168.5715" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="5.9968" stroke-width="2"/>
-  <text x="220" y="252.738" text-anchor="middle">No Guarantee</text>
-  <text x="220" y="308.9285" text-anchor="middle">(Unsafe)</text>
-  <rect x="460" y="182.5" width="360" height="168.5715" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="5.9968" stroke-width="2"/>
-  <text x="640" y="252.738" text-anchor="middle">Basic</text>
-  <text x="640" y="308.9285" text-anchor="middle">Guarantee</text>
-  <rect x="880" y="182.5" width="360" height="168.5715" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="5.9968" stroke-width="2"/>
-  <text x="1060" y="252.738" text-anchor="middle">Strong</text>
-  <text x="1060" y="308.9285" text-anchor="middle">Guarantee</text>
-  <text x="220" y="435.3572">Corruption</text>
-  <text x="220" y="477.5">possible</text>
-  <text x="640" y="435.3572">No corruption</text>
-  <text x="640" y="477.5">but changes</text>
-  <text x="1060" y="435.3572">Commit or</text>
-  <text x="1060" y="477.5">rollback</text>
+  </defs>
+  <text x="640" y="60" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Exception Safety Levels</text>
+  <rect x="40" y="90" width="260" height="510" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="170.0" y="180" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--danger-text)">No Guarantee</text>
+  <line x1="80" y1="210" x2="260" y2="210" stroke="var(--danger-text)" stroke-width="2"/>
+  <text x="170.0" y="320" text-anchor="middle" font-size="20" fill="var(--danger-text)">May corrupt state</text>
+  <text x="170.0" y="420" text-anchor="middle" font-size="18" fill="var(--danger-text)">Avoid</text>
+  <rect x="340" y="90" width="260" height="510" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="470.0" y="180" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--warn-text)">Basic</text>
+  <line x1="380" y1="210" x2="560" y2="210" stroke="var(--warn-text)" stroke-width="2"/>
+  <text x="470.0" y="320" text-anchor="middle" font-size="20" fill="var(--warn-text)">Invariants hold</text>
+  <text x="470.0" y="420" text-anchor="middle" font-size="18" fill="var(--warn-text)">Partial changes OK</text>
+  <rect x="640" y="90" width="260" height="510" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="770.0" y="180" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--primary-text)">Strong</text>
+  <line x1="680" y1="210" x2="860" y2="210" stroke="var(--primary-text)" stroke-width="2"/>
+  <text x="770.0" y="320" text-anchor="middle" font-size="20" fill="var(--primary-text)">Commit or rollback</text>
+  <text x="770.0" y="420" text-anchor="middle" font-size="18" fill="var(--primary-text)">Atomic operations</text>
+  <rect x="940" y="90" width="260" height="510" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1070.0" y="180" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--ok-text)">No-throw</text>
+  <line x1="980" y1="210" x2="1160" y2="210" stroke="var(--ok-text)" stroke-width="2"/>
+  <text x="1070.0" y="320" text-anchor="middle" font-size="20" fill="var(--ok-text)">Cannot fail</text>
+  <text x="1070.0" y="420" text-anchor="middle" font-size="18" fill="var(--ok-text)">Dtors, swap, move</text>
+  <text x="640" y="590" text-anchor="middle" font-size="18" fill="var(--text-muted)">weaker --- stronger guarantees</text>
 </svg>

@@ -34,79 +34,45 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="336.5" y="74.1177" width="607" height="545.8823" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6.0023"/>
-  <text x="640.0001" y="40" text-anchor="middle" font-size="21.2368" font-weight="bold">Process Address Space</text>
-  <rect x="366.8501" y="108.2353" width="546.3" height="68.2353" fill="var(--text-muted)" stroke="var(--text)" stroke-width="3.0751" rx="6.0023"/>
-  <text x="640.0001" y="150.8823" text-anchor="middle" fill="var(--bg)" font-size="16.6861">Code Segment (Shared)</text>
-  <rect x="366.8501" y="193.5294" width="546.3" height="68.2353" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="236.1765" text-anchor="middle" fill="var(--bg)" font-size="16.6861">Data/BSS (Shared)</text>
-  <rect x="366.8501" y="278.8236" width="546.3" height="102.353" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="338.5294" text-anchor="middle" fill="var(--bg)" font-size="16.6861">Heap (Shared)</text>
-  <rect x="366.8501" y="398.2353" width="166.925" height="85.2941" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0023"/>
-  <text x="450.3125" y="449.4117" text-anchor="middle" fill="var(--bg)" font-size="15.1692">Thread 1 Stack</text>
-  <rect x="556.5376" y="398.2353" width="166.925" height="85.2941" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6.0023"/>
-  <text x="640.0001" y="449.4117" text-anchor="middle" fill="var(--bg)" font-size="15.1692">Thread 2 Stack</text>
-  <rect x="746.2251" y="398.2353" width="166.925" height="85.2941" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0023"/>
-  <text x="829.6876" y="449.4117" text-anchor="middle" fill="var(--bg)" font-size="15.1692">Thread 3 Stack</text>
-  <text x="640.0001" y="534.7059" text-anchor="middle" font-size="15.1692">Each thread: Own stack, registers, signal mask</text>
-  <text x="640.0001" y="568.8235" text-anchor="middle" font-size="15.1692">Shared: Heap, globals, code, file descriptors</text>
+  </defs>
+  <text x="640" y="55" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Thread Memory Layout</text>
+  <rect x="40" y="80" width="580" height="540" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="330" y="110" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)">Shared (process-wide)</text>
+  <rect x="60" y="130" width="540" height="110" rx="6" fill="var(--text-muted)" stroke="var(--text)" stroke-width="2"/>
+  <text x="330" y="195" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--bg)">Code Segment</text>
+  <rect x="60" y="250" width="540" height="110" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="330" y="315" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--bg)">Data / BSS</text>
+  <rect x="60" y="370" width="540" height="110" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="330" y="435" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--bg)">Heap</text>
+  <rect x="60" y="490" width="540" height="110" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="330" y="555" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--bg)">File Descriptors</text>
+  <rect x="640" y="80" width="600" height="540" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="940" y="110" text-anchor="middle" font-size="20" font-weight="bold" fill="var(--text)">Per-Thread (private)</text>
+  <rect x="660" y="130" width="180" height="460" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="750" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--bg)">Thread 1</text>
+  <text x="750" y="340" text-anchor="middle" font-size="16" fill="var(--bg)">Stack</text>
+  <text x="750" y="380" text-anchor="middle" font-size="16" fill="var(--bg)">Registers</text>
+  <text x="750" y="420" text-anchor="middle" font-size="16" fill="var(--bg)">Signal mask</text>
+  <rect x="860" y="130" width="180" height="460" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="950" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--bg)">Thread 2</text>
+  <text x="950" y="340" text-anchor="middle" font-size="16" fill="var(--bg)">Stack</text>
+  <text x="950" y="380" text-anchor="middle" font-size="16" fill="var(--bg)">Registers</text>
+  <text x="950" y="420" text-anchor="middle" font-size="16" fill="var(--bg)">Signal mask</text>
+  <rect x="1060" y="130" width="180" height="460" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1150" y="170" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--bg)">Thread 3</text>
+  <text x="1150" y="340" text-anchor="middle" font-size="16" fill="var(--bg)">Stack</text>
+  <text x="1150" y="380" text-anchor="middle" font-size="16" fill="var(--bg)">Registers</text>
+  <text x="1150" y="420" text-anchor="middle" font-size="16" fill="var(--bg)">Signal mask</text>
 </svg>
