@@ -36,71 +36,71 @@
     </style>
   </defs>
 
-  <rect x="40" y="40" width="290" height="560" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="185" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">POSIX AIO</text>
-  <text x="185" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--danger-text)">Slow — avoid</text>
-  <rect x="70" y="145" width="230" height="30" rx="4" fill="var(--bg)" stroke="var(--danger-border)"/>
-  <rect x="70" y="145" width="50" height="30" fill="var(--danger-border)"/>
-  <text x="185" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">glibc user-space threads</text>
-  <text x="185" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">one worker per request</text>
-  <text x="185" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">kernel bypass gives no</text>
-  <text x="185" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">real parallelism</text>
-  <text x="185" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">high context-switch cost</text>
-  <text x="185" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">signals for completion</text>
-  <text x="185" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">limited fd types</text>
-  <text x="185" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">essentially never used</text>
-  <text x="185" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">in modern code</text>
-  <text x="185" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-text)">~10k IOPS</text>
-  <text x="185" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">baseline</text>
+  <rect x="40" y="40" width="290" height="580" rx="6.106203" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="185" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389411" font-weight="bold" fill="var(--danger-text)">POSIX AIO</text>
+  <text x="185" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507" font-weight="bold" fill="var(--danger-text)">Slow — avoid</text>
+  <rect x="70" y="148.75" width="230" height="31.071429" rx="4.070802" fill="var(--bg)" stroke="var(--danger-border)"/>
+  <rect x="70" y="148.75" width="50" height="31.071429" fill="var(--danger-border)"/>
+  <text x="185" y="205.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">glibc user-space threads</text>
+  <text x="185" y="231.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">one worker per request</text>
+  <text x="185" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">kernel bypass gives no</text>
+  <text x="185" y="288.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">real parallelism</text>
+  <text x="185" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">high context-switch cost</text>
+  <text x="185" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">signals for completion</text>
+  <text x="185" y="412.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">limited fd types</text>
+  <text x="185" y="454.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">essentially never used</text>
+  <text x="185" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--danger-text)">in modern code</text>
+  <text x="185" y="537.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--danger-text)">~10k IOPS</text>
+  <text x="185" y="578.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--danger-text)">baseline</text>
 
-  <rect x="340" y="40" width="290" height="560" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="485" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Native AIO (libaio)</text>
-  <text x="485" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Better for O_DIRECT</text>
-  <rect x="370" y="145" width="230" height="30" rx="4" fill="var(--bg)" stroke="var(--warn-border)"/>
-  <rect x="370" y="145" width="110" height="30" fill="var(--warn-border)"/>
-  <text x="485" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">io_submit / io_getevents</text>
-  <text x="485" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">kernel-side queueing</text>
-  <text x="485" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">requires O_DIRECT for</text>
-  <text x="485" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">true async behaviour</text>
-  <text x="485" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">falls back to sync for</text>
-  <text x="485" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">buffered I/O</text>
-  <text x="485" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">niche use in databases</text>
-  <text x="485" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">two syscalls per I/O</text>
-  <text x="485" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">superseded by io_uring</text>
-  <text x="485" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-text)">~100k IOPS</text>
-  <text x="485" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">10× POSIX AIO</text>
+  <rect x="340" y="40" width="290" height="580" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="485" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389411" font-weight="bold" fill="var(--warn-text)">Native AIO (libaio)</text>
+  <text x="485" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507" font-weight="bold" fill="var(--warn-text)">Better for O_DIRECT</text>
+  <rect x="370" y="148.75" width="230" height="31.071429" rx="4.070802" fill="var(--bg)" stroke="var(--warn-border)"/>
+  <rect x="370" y="148.75" width="110" height="31.071429" fill="var(--warn-border)"/>
+  <text x="485" y="205.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">io_submit / io_getevents</text>
+  <text x="485" y="231.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">kernel-side queueing</text>
+  <text x="485" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">requires O_DIRECT for</text>
+  <text x="485" y="288.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">true async behaviour</text>
+  <text x="485" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">falls back to sync for</text>
+  <text x="485" y="350.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">buffered I/O</text>
+  <text x="485" y="392.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">niche use in databases</text>
+  <text x="485" y="433.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">two syscalls per I/O</text>
+  <text x="485" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--warn-text)">superseded by io_uring</text>
+  <text x="485" y="537.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--warn-text)">~100k IOPS</text>
+  <text x="485" y="578.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--warn-text)">10× POSIX AIO</text>
 
-  <rect x="640" y="40" width="290" height="560" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="785" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">epoll</text>
-  <text x="785" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Good for sockets</text>
-  <rect x="670" y="145" width="230" height="30" rx="4" fill="var(--bg)" stroke="var(--primary-border)"/>
-  <rect x="670" y="145" width="170" height="30" fill="var(--primary-border)"/>
-  <text x="785" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">readiness notification</text>
-  <text x="785" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">not true async I/O</text>
-  <text x="785" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">epoll_ctl + epoll_wait</text>
-  <text x="785" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">edge or level trigger</text>
-  <text x="785" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">scales to 100k+ fds</text>
-  <text x="785" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">still the default for</text>
-  <text x="785" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">nginx, Redis, Envoy</text>
-  <text x="785" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">one syscall per batch</text>
-  <text x="785" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">network-focused</text>
-  <text x="785" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">~1M events/s</text>
-  <text x="785" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">sockets only</text>
+  <rect x="640" y="40" width="290" height="580" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="785" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389411" font-weight="bold" fill="var(--primary-text)">epoll</text>
+  <text x="785" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507" font-weight="bold" fill="var(--primary-text)">Good for sockets</text>
+  <rect x="670" y="148.75" width="230" height="31.071429" rx="4.070802" fill="var(--bg)" stroke="var(--primary-border)"/>
+  <rect x="670" y="148.75" width="170" height="31.071429" fill="var(--primary-border)"/>
+  <text x="785" y="205.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">readiness notification</text>
+  <text x="785" y="231.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">not true async I/O</text>
+  <text x="785" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">epoll_ctl + epoll_wait</text>
+  <text x="785" y="288.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">edge or level trigger</text>
+  <text x="785" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">scales to 100k+ fds</text>
+  <text x="785" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">still the default for</text>
+  <text x="785" y="392.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">nginx, Redis, Envoy</text>
+  <text x="785" y="433.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">one syscall per batch</text>
+  <text x="785" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--primary-text)">network-focused</text>
+  <text x="785" y="537.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--primary-text)">~1M events/s</text>
+  <text x="785" y="578.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">sockets only</text>
 
-  <rect x="940" y="40" width="300" height="560" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="1090" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">io_uring</text>
-  <text x="1090" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Fastest — Linux 5.1+</text>
-  <rect x="970" y="145" width="240" height="30" rx="4" fill="var(--bg)" stroke="var(--ok-border)"/>
-  <rect x="970" y="145" width="240" height="30" fill="var(--ok-border)"/>
-  <text x="1090" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">shared submit/complete</text>
-  <text x="1090" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">rings in mapped memory</text>
-  <text x="1090" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">zero-syscall hot path</text>
-  <text x="1090" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">with SQPOLL kernel thread</text>
-  <text x="1090" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">works for files, sockets,</text>
-  <text x="1090" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">pipes, timers uniformly</text>
-  <text x="1090" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">linked ops, fixed buffers</text>
-  <text x="1090" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">used by ScyllaDB, RocksDB</text>
-  <text x="1090" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">the new standard</text>
-  <text x="1090" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">~2M+ IOPS</text>
-  <text x="1090" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">20× libaio on NVMe</text>
+  <rect x="940" y="40" width="300" height="580" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1090" y="86.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.389411" font-weight="bold" fill="var(--ok-text)">io_uring</text>
+  <text x="1090" y="122.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.265507" font-weight="bold" fill="var(--ok-text)">Fastest — Linux 5.1+</text>
+  <rect x="970" y="148.75" width="240" height="31.071429" rx="4.070802" fill="var(--bg)" stroke="var(--ok-border)"/>
+  <rect x="970" y="148.75" width="240" height="31.071429" fill="var(--ok-border)"/>
+  <text x="1090" y="205.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">shared submit/complete</text>
+  <text x="1090" y="226.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">rings in mapped memory</text>
+  <text x="1090" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">zero-syscall hot path</text>
+  <text x="1090" y="288.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">with SQPOLL kernel thread</text>
+  <text x="1090" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">works for files, sockets,</text>
+  <text x="1090" y="350.714286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">pipes, timers uniformly</text>
+  <text x="1090" y="392.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">linked ops, fixed buffers</text>
+  <text x="1090" y="433.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">used by ScyllaDB, RocksDB</text>
+  <text x="1090" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--ok-text)">the new standard</text>
+  <text x="1090" y="537.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--ok-text)">~2M+ IOPS</text>
+  <text x="1090" y="578.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--ok-text)">20× libaio on NVMe</text>
 </svg>

@@ -39,38 +39,38 @@
     </marker>
   </defs>
 
-  <rect x="40" y="40" width="1200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">Request passes along the chain until one handler accepts it</text>
-  <text x="640" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text-muted)">Sender is decoupled from the receiver</text>
+  <rect x="40" y="40" width="1200" height="103.571429" rx="6.106203" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="91.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.460213" font-weight="bold" fill="var(--text)">Request passes along the chain until one handler accepts it</text>
+  <text x="640" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" fill="var(--text-muted)">Sender is decoupled from the receiver</text>
 
-  <rect x="40" y="180" width="290" height="420" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="185" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-text)">Handler A</text>
-  <text x="185" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">handle(req)</text>
-  <text x="185" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">setNext(next)</text>
-  <text x="185" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">If can handle:</text>
-  <text x="185" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">return result</text>
-  <text x="185" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">else forward</text>
+  <rect x="40" y="185" width="290" height="435" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--primary-text)">Handler A</text>
+  <text x="185" y="361.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">handle(req)</text>
+  <text x="185" y="423.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">setNext(next)</text>
+  <text x="185" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">If can handle:</text>
+  <text x="185" y="557.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">return result</text>
+  <text x="185" y="599.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--primary-text)">else forward</text>
 
-  <rect x="360" y="180" width="290" height="420" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="505" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-text)">Handler B</text>
-  <text x="505" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">handle(req)</text>
-  <text x="505" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">setNext(next)</text>
-  <text x="505" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">Inherits same</text>
-  <text x="505" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--ok-text)">interface</text>
+  <rect x="360" y="185" width="290" height="435" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="505" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--ok-text)">Handler B</text>
+  <text x="505" y="361.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">handle(req)</text>
+  <text x="505" y="423.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">setNext(next)</text>
+  <text x="505" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">Inherits same</text>
+  <text x="505" y="557.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--ok-text)">interface</text>
 
-  <rect x="680" y="180" width="290" height="420" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="825" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-text)">Handler C</text>
-  <text x="825" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">handle(req)</text>
-  <text x="825" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">setNext(next)</text>
-  <text x="825" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--warn-text)">Order matters</text>
+  <rect x="680" y="185" width="290" height="435" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="825" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--warn-text)">Handler C</text>
+  <text x="825" y="361.071429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--warn-text)">handle(req)</text>
+  <text x="825" y="423.214286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--warn-text)">setNext(next)</text>
+  <text x="825" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--warn-text)">Order matters</text>
 
-  <rect x="1000" y="180" width="240" height="420" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="1120" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--danger-text)">Default</text>
-  <text x="1120" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Catch-all</text>
-  <text x="1120" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Ends chain</text>
-  <text x="1120" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--danger-text)">Always replies</text>
+  <rect x="1000" y="185" width="240" height="435" rx="6.106203" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1120" y="267.857143" text-anchor="middle" font-family="Arial, sans-serif" font-size="32.566416" font-weight="bold" fill="var(--danger-text)">Default</text>
+  <text x="1120" y="371.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--danger-text)">Catch-all</text>
+  <text x="1120" y="433.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--danger-text)">Ends chain</text>
+  <text x="1120" y="516.428571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" fill="var(--danger-text)">Always replies</text>
 
-  <line x1="330" y1="390" x2="360" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="650" y1="390" x2="680" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="970" y1="390" x2="1000" y2="390" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="330" y1="402.5" x2="360" y2="402.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="402.5" x2="680" y2="402.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="970" y1="402.5" x2="1000" y2="402.5" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

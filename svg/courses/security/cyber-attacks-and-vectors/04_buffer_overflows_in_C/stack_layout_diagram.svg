@@ -56,26 +56,26 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
-  <text x="640" y="70" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">Stack Memory Layout (grows downward)</text>
-  <text x="80" y="115" text-anchor="middle" font-size="14" fill="var(--text-faint)">High addr</text>
-  <rect x="170" y="110" width="760" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="550" y="158" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--primary-text)">Function Arguments</text>
-  <rect x="170" y="195" width="760" height="80" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="550" y="243" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--danger-text)">Return Address</text>
-  <text x="950" y="243" text-anchor="start" font-size="18" fill="var(--danger-accent)">&lt;- Attacker's target</text>
-  <rect x="170" y="280" width="760" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="550" y="328" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Saved Frame Pointer</text>
-  <text x="950" y="328" text-anchor="start" font-size="18" fill="var(--danger-accent)">&lt;- Can be overwritten</text>
-  <rect x="170" y="365" width="760" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="550" y="413" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--ok-text)">Stack Canary</text>
-  <text x="950" y="413" text-anchor="start" font-size="18" fill="var(--danger-accent)">&lt;- Protection mechanism</text>
-  <rect x="170" y="450" width="760" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="550" y="498" text-anchor="middle" font-size="22" fill="var(--text)">Local Variables</text>
-  <rect x="170" y="535" width="760" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="550" y="583" text-anchor="middle" font-size="22" font-weight="bold" fill="var(--warn-text)">Buffer[64]</text>
-  <text x="950" y="583" text-anchor="start" font-size="18" fill="var(--danger-accent)">&lt;- Overflow starts here</text>
-  <line x1="80" y1="140" x2="80" y2="580" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="80" y="610" text-anchor="middle" font-size="14" fill="var(--text-faint)">Low addr</text>
-  <text x="1200" y="115" text-anchor="end" font-size="14" fill="var(--text-faint)">%rbp / %rsp</text>
-  <text x="1200" y="610" text-anchor="end" font-size="14" fill="var(--text-faint)">buffer overflow writes upward</text>
+  <text x="640" y="40" text-anchor="middle" font-size="27.763276" font-weight="bold" fill="var(--text)">Stack Memory Layout (grows downward)</text>
+  <text x="40" y="87.889908" text-anchor="middle" font-size="14.949456" fill="var(--text-faint)">High addr</text>
+  <rect x="136.428571" y="82.568807" width="814.285714" height="85.137615" rx="6.40691" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="543.571429" y="133.651376" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--primary-text)">Function Arguments</text>
+  <rect x="136.428571" y="173.027523" width="814.285714" height="85.137615" rx="6.40691" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="543.571429" y="224.110092" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--danger-text)">Return Address</text>
+  <text x="972.142857" y="224.110092" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Attacker's target</text>
+  <rect x="136.428571" y="263.486239" width="814.285714" height="85.137615" rx="6.40691" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="543.571429" y="314.568807" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--warn-text)">Saved Frame Pointer</text>
+  <text x="972.142857" y="314.568807" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Can be overwritten</text>
+  <rect x="136.428571" y="353.944954" width="814.285714" height="85.137615" rx="6.40691" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="543.571429" y="405.027523" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--ok-text)">Stack Canary</text>
+  <text x="972.142857" y="405.027523" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Protection mechanism</text>
+  <rect x="136.428571" y="444.40367" width="814.285714" height="85.137615" rx="6.40691" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="543.571429" y="495.486239" text-anchor="middle" font-size="23.492002" fill="var(--text)">Local Variables</text>
+  <rect x="136.428571" y="534.862385" width="814.285714" height="85.137615" rx="6.40691" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="543.571429" y="585.944954" text-anchor="middle" font-size="23.492002" font-weight="bold" fill="var(--warn-text)">Buffer[64]</text>
+  <text x="972.142857" y="585.944954" text-anchor="start" font-size="19.220729" fill="var(--danger-accent)">&lt;- Overflow starts here</text>
+  <line x1="40" y1="114.495413" x2="40" y2="582.752294" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="40" y="614.678899" text-anchor="middle" font-size="14.949456" fill="var(--text-faint)">Low addr</text>
+  <text x="1240" y="87.889908" text-anchor="end" font-size="14.949456" fill="var(--text-faint)">%rbp / %rsp</text>
+  <text x="1240" y="614.678899" text-anchor="end" font-size="14.949456" fill="var(--text-faint)">buffer overflow writes upward</text>
 </svg>

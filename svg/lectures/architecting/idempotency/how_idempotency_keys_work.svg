@@ -47,21 +47,21 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
   </defs>
-  <text x="640" y="55" text-anchor="middle" font-size="26" font-weight="bold" fill="var(--text)">How Idempotency Keys Work</text>
-  <rect x="40" y="90" width="240" height="530" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="160" y="140" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--primary-text)">Client</text>
-  <rect x="1000" y="90" width="240" height="530" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="1120" y="140" text-anchor="middle" font-size="28" font-weight="bold" fill="var(--info-text)">Server</text>
-  <line x1="160" y1="160" x2="160" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
-  <line x1="1120" y1="160" x2="1120" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
-  <line x1="290" y1="200" x2="990" y2="200" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="640" y="190" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">POST /payment + Idempotency-Key: abc</text>
-  <line x1="990" y1="300" x2="290" y2="300" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
-  <text x="640" y="290" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">201 Created, key stored with result</text>
-  <line x1="290" y1="430" x2="990" y2="430" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="640" y="420" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">Retry: POST /payment + same Key: abc</text>
-  <line x1="990" y1="540" x2="290" y2="540" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <text x="640" y="530" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--text)">Same cached 201 response (no dup charge)</text>
-  <rect x="320" y="580" width="640" height="40" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="640" y="607" text-anchor="middle" font-size="16" fill="var(--text-muted)">Same key -> same outcome</text>
+  <text x="640" y="40" text-anchor="middle" font-size="26.342872" font-weight="bold" fill="var(--text)">How Idempotency Keys Work</text>
+  <rect x="40" y="75.929204" width="240" height="544.070796" rx="6.079124" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="160" y="127.256637" text-anchor="middle" font-size="28.369247" font-weight="bold" fill="var(--primary-text)">Client</text>
+  <rect x="1000" y="75.929204" width="240" height="544.070796" rx="6.079124" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1120" y="127.256637" text-anchor="middle" font-size="28.369247" font-weight="bold" fill="var(--info-text)">Server</text>
+  <line x1="160" y1="147.787611" x2="160" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="1120" y1="147.787611" x2="1120" y2="620" stroke="var(--text-faint)" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="290" y1="188.849558" x2="990" y2="188.849558" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="640" y="178.584071" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--text)">POST /payment + Idempotency-Key: abc</text>
+  <line x1="990" y1="291.504425" x2="290" y2="291.504425" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="640" y="281.238938" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--text)">201 Created, key stored with result</text>
+  <line x1="290" y1="424.955752" x2="990" y2="424.955752" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="414.690265" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--text)">Retry: POST /payment + same Key: abc</text>
+  <line x1="990" y1="537.876106" x2="290" y2="537.876106" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="640" y="527.610619" text-anchor="middle" font-size="18.237373" font-weight="bold" fill="var(--text)">Same cached 201 response (no dup charge)</text>
+  <rect x="320" y="578.938053" width="640" height="41.061947" rx="6.079124" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="606.654867" text-anchor="middle" font-size="16.210998" fill="var(--text-muted)">Same key -> same outcome</text>
 </svg>
