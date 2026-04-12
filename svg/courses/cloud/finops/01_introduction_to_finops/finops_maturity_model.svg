@@ -1,91 +1,150 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
 
   <!-- Maturity bars (growing upward) -->
-  <rect x="140" y="380" width="100" height="120" rx="4" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="2"/>
-  <rect x="490" y="300" width="100" height="200" rx="4" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="2"/>
-  <rect x="840" y="200" width="100" height="300" rx="4" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="2"/>
+  <rect x="140" y="380" width="100" height="120" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="490" y="300" width="100" height="200" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="840" y="200" width="100" height="300" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
 
   <!-- Arrows between stages -->
-  <line x1="380" y1="340" x2="450" y2="340" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="730" y1="340" x2="800" y2="340" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="380" y1="340" x2="450" y2="340" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="730" y1="340" x2="800" y2="340" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Stage 1: Crawl -->
-  <rect x="60" y="30" width="340" height="310" rx="12" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="230" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-dk)">Crawl</text>
-  <line x1="80" y1="78" x2="380" y2="78" stroke="var(--danger-lt)" stroke-width="1"/>
-  <text x="90" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Reactive cost management</text>
-  <text x="90" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Basic tagging in place</text>
-  <text x="90" y="159" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Monthly cost reviews</text>
-  <text x="90" y="186" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Limited visibility</text>
-  <text x="90" y="213" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Spreadsheet-based tracking</text>
+  <rect x="60" y="30" width="340" height="310" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-accent)">Crawl</text>
+  <line x1="80" y1="78" x2="380" y2="78" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="90" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Reactive cost management</text>
+  <text x="90" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Basic tagging in place</text>
+  <text x="90" y="159" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Monthly cost reviews</text>
+  <text x="90" y="186" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Limited visibility</text>
+  <text x="90" y="213" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Spreadsheet-based tracking</text>
   <text x="90" y="248" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Typical: 0-6 months</text>
 
   <!-- Stage 2: Walk -->
-  <rect x="420" y="30" width="340" height="310" rx="12" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="590" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-dk)">Walk</text>
-  <line x1="440" y1="78" x2="740" y2="78" stroke="var(--warn-lt)" stroke-width="1"/>
-  <text x="450" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Proactive optimization</text>
-  <text x="450" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Consistent tagging policy</text>
-  <text x="450" y="159" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Weekly cost reviews</text>
-  <text x="450" y="186" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Automated alerts</text>
-  <text x="450" y="213" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Commitment-based savings</text>
+  <rect x="420" y="30" width="340" height="310" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="590" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--warn-accent)">Walk</text>
+  <line x1="440" y1="78" x2="740" y2="78" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="450" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Proactive optimization</text>
+  <text x="450" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Consistent tagging policy</text>
+  <text x="450" y="159" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Weekly cost reviews</text>
+  <text x="450" y="186" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Automated alerts</text>
+  <text x="450" y="213" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Commitment-based savings</text>
   <text x="450" y="248" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Typical: 6-18 months</text>
 
   <!-- Stage 3: Run -->
-  <rect x="780" y="30" width="340" height="310" rx="12" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="950" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-dk)">Run</text>
-  <line x1="800" y1="78" x2="1100" y2="78" stroke="var(--ok-lt)" stroke-width="1"/>
-  <text x="810" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Continuous optimization</text>
-  <text x="810" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Full automation &amp; governance</text>
-  <text x="810" y="159" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Real-time cost awareness</text>
-  <text x="810" y="186" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Engineering-driven culture</text>
-  <text x="810" y="213" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Predictive cost modeling</text>
+  <rect x="780" y="30" width="340" height="310" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-accent)">Run</text>
+  <line x1="800" y1="78" x2="1100" y2="78" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="810" y="105" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Continuous optimization</text>
+  <text x="810" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Full automation &amp; governance</text>
+  <text x="810" y="159" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Real-time cost awareness</text>
+  <text x="810" y="186" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Engineering-driven culture</text>
+  <text x="810" y="213" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Predictive cost modeling</text>
   <text x="810" y="248" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Typical: 18+ months</text>
 
   <!-- Bottom axis line -->
-  <line x1="100" y1="530" x2="1000" y2="530" stroke="var(--border-strong)" stroke-width="2"/>
+  <line x1="100" y1="530" x2="1000" y2="530" stroke="var(--border)" stroke-width="2"/>
   <text x="550" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text-muted)">Maturity Progression</text>
 
   <!-- Bar labels -->
-  <text x="190" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger)">Low</text>
-  <text x="540" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn)">Medium</text>
-  <text x="890" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok)">High</text>
+  <text x="190" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)">Low</text>
+  <text x="540" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Medium</text>
+  <text x="890" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">High</text>
 </svg>

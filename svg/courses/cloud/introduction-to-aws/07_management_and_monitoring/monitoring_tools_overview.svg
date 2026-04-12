@@ -1,114 +1,182 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-  </defs>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="1280" height="640" rx="8" fill="var(--surface)"/>
+  <rect x="0" y="0" width="1280" height="640" rx="6" fill="var(--surface)"/>
 
   <!-- Central hub: CloudWatch -->
   <circle cx="640" cy="300" r="90" fill="url(#grad-primary)" filter="url(#shadow)"/>
   <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">Amazon</text>
   <text x="640" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">CloudWatch</text>
-  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-pale)">Metrics, Logs, Alarms</text>
+  <text x="640" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-accent)">Metrics, Logs, Alarms</text>
 
   <!-- Spoke 1: CloudTrail (top-left) -->
-  <line x1="570" y1="235" x2="370" y2="110" stroke="var(--ok)" stroke-width="2.5"/>
+  <line x1="570" y1="235" x2="370" y2="110" stroke="var(--ok-border)" stroke-width="2"/>
   <circle cx="310" cy="80" r="65" fill="url(#grad-ok)" filter="url(#shadow)"/>
   <text x="310" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">CloudTrail</text>
-  <text x="310" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-pale)">API Audit Logs</text>
+  <text x="310" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">API Audit Logs</text>
   <!-- Description -->
-  <rect x="120" y="155" width="220" height="55" rx="6" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="230" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)">Who did what, when, where</text>
+  <rect x="120" y="155" width="220" height="55" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="230" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">Who did what, when, where</text>
   <text x="230" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Governance and compliance</text>
 
   <!-- Spoke 2: Config (top-right) -->
-  <line x1="710" y1="235" x2="910" y2="110" stroke="var(--warn)" stroke-width="2.5"/>
+  <line x1="710" y1="235" x2="910" y2="110" stroke="var(--warn-border)" stroke-width="2"/>
   <circle cx="970" cy="80" r="65" fill="url(#grad-warn)" filter="url(#shadow)"/>
   <text x="970" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">AWS Config</text>
-  <text x="970" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-pale)">Resource Tracking</text>
+  <text x="970" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Resource Tracking</text>
   <!-- Description -->
-  <rect x="860" y="155" width="220" height="55" rx="6" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="970" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Configuration change history</text>
+  <rect x="860" y="155" width="220" height="55" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="970" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Configuration change history</text>
   <text x="970" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Compliance rules evaluation</text>
 
   <!-- Spoke 3: Trusted Advisor (right) -->
-  <line x1="730" y1="300" x2="960" y2="300" stroke="var(--info)" stroke-width="2.5"/>
+  <line x1="730" y1="300" x2="960" y2="300" stroke="var(--info-border)" stroke-width="2"/>
   <circle cx="1040" cy="300" r="65" fill="url(#grad-info)" filter="url(#shadow)"/>
   <text x="1040" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Trusted</text>
   <text x="1040" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Advisor</text>
   <!-- Description -->
-  <rect x="1115" y="270" width="150" height="60" rx="6" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
-  <text x="1190" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)">Best practice checks</text>
+  <rect x="1115" y="270" width="150" height="60" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1190" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)">Best practice checks</text>
   <text x="1190" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Cost, security, perf</text>
 
   <!-- Spoke 4: Systems Manager (bottom-right) -->
-  <line x1="710" y1="365" x2="910" y2="490" stroke="var(--primary-dk)" stroke-width="2.5"/>
-  <circle cx="970" cy="530" r="65" fill="var(--primary-dk)" filter="url(#shadow)"/>
+  <line x1="710" y1="365" x2="910" y2="490" stroke="var(--primary-border)" stroke-width="2"/>
+  <circle cx="970" cy="530" r="65" fill="var(--primary-accent)" filter="url(#shadow)"/>
   <text x="970" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Systems</text>
   <text x="970" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Manager</text>
   <!-- Description -->
-  <rect x="860" y="465" width="220" height="40" rx="6" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="1"/>
-  <text x="970" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Operational management</text>
+  <rect x="860" y="465" width="220" height="40" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="970" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Operational management</text>
 
   <!-- Spoke 5: Health Dashboard (bottom-left) -->
-  <line x1="570" y1="365" x2="370" y2="490" stroke="var(--danger)" stroke-width="2.5"/>
+  <line x1="570" y1="365" x2="370" y2="490" stroke="var(--danger-border)" stroke-width="2"/>
   <circle cx="310" cy="530" r="65" fill="url(#grad-danger)" filter="url(#shadow)"/>
   <text x="310" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Health</text>
   <text x="310" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">Dashboard</text>
   <!-- Description -->
-  <rect x="120" y="465" width="220" height="40" rx="6" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="1"/>
-  <text x="230" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)">Service health and events</text>
+  <rect x="120" y="465" width="220" height="40" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="230" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)">Service health and events</text>
 
   <!-- Spoke 6: X-Ray (left) -->
-  <line x1="550" y1="300" x2="320" y2="300" stroke="var(--text-muted)" stroke-width="2.5"/>
+  <line x1="550" y1="300" x2="320" y2="300" stroke="var(--text-muted)" stroke-width="2"/>
   <circle cx="240" cy="300" r="65" fill="var(--text-muted)" filter="url(#shadow)"/>
   <text x="240" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">AWS</text>
   <text x="240" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--bg)">X-Ray</text>
   <!-- Description -->
   <rect x="60" y="270" width="115" height="60" rx="6" fill="var(--bg)" stroke="var(--text-muted)" stroke-width="1"/>
-  <text x="117" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">Distributed</text>
-  <text x="117" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-dark)">tracing</text>
+  <text x="117" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text)">Distributed</text>
+  <text x="117" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text)">tracing</text>
 
   <!-- CloudWatch sub-features around center -->
-  <rect x="530" y="400" width="100" height="28" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="580" y="419" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">Metrics</text>
+  <rect x="530" y="400" width="100" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="580" y="419" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Metrics</text>
 
-  <rect x="650" y="400" width="100" height="28" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="700" y="419" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">Logs</text>
+  <rect x="650" y="400" width="100" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="700" y="419" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Logs</text>
 
-  <rect x="530" y="440" width="100" height="28" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="580" y="459" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">Alarms</text>
+  <rect x="530" y="440" width="100" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="580" y="459" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Alarms</text>
 
-  <rect x="650" y="440" width="100" height="28" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="700" y="459" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">Dashboards</text>
+  <rect x="650" y="440" width="100" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="700" y="459" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Dashboards</text>
 
-  <rect x="530" y="480" width="100" height="28" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="580" y="499" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">Events</text>
+  <rect x="530" y="480" width="100" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="580" y="499" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Events</text>
 
-  <rect x="650" y="480" width="100" height="28" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="700" y="499" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">Insights</text>
+  <rect x="650" y="480" width="100" height="28" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="700" y="499" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">Insights</text>
 </svg>

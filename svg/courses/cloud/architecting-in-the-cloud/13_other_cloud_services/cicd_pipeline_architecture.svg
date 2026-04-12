@@ -1,98 +1,157 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
   <!-- Pipeline flow line -->
-  <line x1="60" y1="200" x2="1240" y2="200" stroke="var(--border)" stroke-width="4" stroke-dasharray="10,5"/>
+  <line x1="60" y1="200" x2="1240" y2="200" stroke="var(--border)" stroke-width="2" stroke-dasharray="10,5"/>
   <!-- Stage 1: Code Repo -->
-  <rect x="30" y="120" width="140" height="80" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Code Repo</text>
+  <rect x="30" y="120" width="140" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Code Repo</text>
   <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Git Push</text>
   <line x1="170" y1="160" x2="200" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="100" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">CodeCommit</text>
   <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">GitHub</text>
   <!-- Stage 2: Build -->
-  <rect x="210" y="120" width="140" height="80" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="280" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Build</text>
+  <rect x="210" y="120" width="140" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">Build</text>
   <text x="280" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Compile, Package</text>
   <line x1="350" y1="160" x2="380" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="280" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">CodeBuild</text>
   <!-- Stage 3: Unit Tests -->
-  <rect x="390" y="120" width="140" height="80" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="460" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-dk)">Unit Tests</text>
+  <rect x="390" y="120" width="140" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-accent)">Unit Tests</text>
   <text x="460" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Automated</text>
   <line x1="530" y1="160" x2="560" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="460" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">CodeBuild</text>
   <!-- Stage 4: Stage Deploy -->
-  <rect x="570" y="120" width="140" height="80" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Stage</text>
-  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Deploy</text>
+  <rect x="570" y="120" width="140" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Stage</text>
+  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Deploy</text>
   <line x1="710" y1="160" x2="740" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">CodeDeploy</text>
   <!-- Stage 5: Integration Tests -->
-  <rect x="750" y="120" width="140" height="80" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="820" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--info-dk)">Integration</text>
-  <text x="820" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--info-dk)">Tests</text>
+  <rect x="750" y="120" width="140" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="820" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--info-accent)">Integration</text>
+  <text x="820" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--info-accent)">Tests</text>
   <line x1="890" y1="160" x2="920" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="820" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">CodeBuild</text>
   <!-- Stage 6: Approval Gate -->
-  <rect x="930" y="120" width="140" height="80" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-dk)">Approval</text>
-  <text x="1000" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-dk)">Gate</text>
+  <rect x="930" y="120" width="140" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Approval</text>
+  <text x="1000" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Gate</text>
   <line x1="1070" y1="160" x2="1100" y2="160" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="1000" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">Manual/Auto</text>
   <!-- Stage 7: Prod Deploy -->
-  <rect x="1110" y="120" width="140" height="80" rx="10" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="3" filter="url(#shadow)"/>
-  <text x="1180" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Production</text>
-  <text x="1180" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Deploy</text>
+  <rect x="1110" y="120" width="140" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1180" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Production</text>
+  <text x="1180" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Deploy</text>
   <text x="1180" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)">CodeDeploy</text>
   <!-- Orchestrator bar -->
-  <rect x="30" y="310" width="1220" height="50" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
-  <text x="640" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">AWS CodePipeline - Orchestration Layer</text>
+  <rect x="30" y="310" width="1220" height="50" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-accent)">AWS CodePipeline - Orchestration Layer</text>
   <!-- Deployment strategies -->
-  <rect x="100" y="410" width="250" height="100" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="225" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Blue/Green</text>
+  <rect x="100" y="410" width="250" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="225" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">Blue/Green</text>
   <text x="225" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Zero downtime swap</text>
   <text x="225" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">between environments</text>
-  <rect x="400" y="410" width="250" height="100" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="525" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">Canary</text>
+  <rect x="400" y="410" width="250" height="100" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="525" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">Canary</text>
   <text x="525" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Gradual rollout</text>
   <text x="525" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">10% -> 50% -> 100%</text>
-  <rect x="700" y="410" width="250" height="100" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="825" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">Rolling</text>
+  <rect x="700" y="410" width="250" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="825" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">Rolling</text>
   <text x="825" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Update instances</text>
   <text x="825" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">in batches</text>
   <text x="640" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-muted)">Deployment Strategies</text>

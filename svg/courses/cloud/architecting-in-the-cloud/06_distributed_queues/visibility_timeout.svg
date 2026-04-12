@@ -1,45 +1,104 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <rect width="1280" height="640" fill="var(--bg)"/>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
 
   <!-- Scenario 1: Happy Path (top) -->
-  <rect x="30" y="20" width="1220" height="260" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
-  <text x="640" y="50" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Scenario 1: Success - Message Deleted Before Timeout</text>
+  <rect x="30" y="20" width="1220" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="50" font-family="Arial, sans-serif" font-size="17" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Scenario 1: Success - Message Deleted Before Timeout</text>
 
   <!-- Time axis 1 -->
   <line x1="80" y1="220" x2="1200" y2="220" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -59,32 +118,32 @@
   <text x="1000" y="245" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">t=30s</text>
 
   <!-- Message in queue -->
-  <rect x="80" y="80" width="70" height="35" rx="4" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
-  <text x="115" y="102" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Msg</text>
+  <rect x="80" y="80" width="70" height="35" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="115" y="102" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Msg</text>
   <text x="115" y="65" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">In queue</text>
 
   <!-- ReceiveMessage -->
-  <rect x="150" y="80" width="90" height="35" rx="4" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
-  <text x="195" y="102" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Receive</text>
-  <text x="195" y="65" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle">Consumer polls</text>
+  <rect x="150" y="80" width="90" height="35" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="195" y="102" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Receive</text>
+  <text x="195" y="65" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">Consumer polls</text>
 
   <!-- Invisible period -->
-  <rect x="250" y="80" width="450" height="35" rx="4" fill="var(--info-lt)" stroke="var(--info)" stroke-width="2"/>
-  <text x="475" y="102" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Message Invisible (Visibility Timeout = 30s)</text>
+  <rect x="250" y="80" width="450" height="35" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="475" y="102" font-family="Arial, sans-serif" font-size="12" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Message Invisible (Visibility Timeout = 30s)</text>
 
   <!-- Processing -->
-  <rect x="250" y="130" width="300" height="35" rx="4" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
-  <text x="400" y="152" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Consumer Processing...</text>
+  <rect x="250" y="130" width="300" height="35" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="400" y="152" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Consumer Processing...</text>
 
   <!-- Delete -->
-  <rect x="560" y="130" width="100" height="35" rx="4" fill="var(--ok)" stroke="var(--ok-dk)" stroke-width="1.5"/>
+  <rect x="560" y="130" width="100" height="35" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="610" y="152" font-family="Arial, sans-serif" font-size="12" fill="var(--bg)" text-anchor="middle" font-weight="bold">Delete!</text>
 
-  <text x="750" y="150" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" font-weight="bold">Done - message removed from queue</text>
+  <text x="750" y="150" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)" font-weight="bold">Done - message removed from queue</text>
 
   <!-- Scenario 2: Timeout (bottom) -->
-  <rect x="30" y="300" width="1220" height="320" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2"/>
-  <text x="640" y="330" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Scenario 2: Failure - Timeout Expires Before Delete</text>
+  <rect x="30" y="300" width="1220" height="320" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="330" font-family="Arial, sans-serif" font-size="17" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Scenario 2: Failure - Timeout Expires Before Delete</text>
 
   <!-- Time axis 2 -->
   <line x1="80" y1="510" x2="1200" y2="510" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -104,40 +163,40 @@
   <text x="1050" y="535" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)" text-anchor="middle">t=35s</text>
 
   <!-- Message in queue -->
-  <rect x="80" y="360" width="70" height="35" rx="4" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
-  <text x="115" y="382" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Msg</text>
+  <rect x="80" y="360" width="70" height="35" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="115" y="382" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Msg</text>
 
   <!-- ReceiveMessage -->
-  <rect x="150" y="360" width="90" height="35" rx="4" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
-  <text x="195" y="382" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Receive</text>
+  <rect x="150" y="360" width="90" height="35" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="195" y="382" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Receive</text>
 
   <!-- Invisible period with timeout -->
-  <rect x="250" y="360" width="500" height="35" rx="4" fill="var(--info-lt)" stroke="var(--info)" stroke-width="2"/>
-  <text x="500" y="382" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Message Invisible (Visibility Timeout = 30s)</text>
+  <rect x="250" y="360" width="500" height="35" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="500" y="382" font-family="Arial, sans-serif" font-size="12" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Message Invisible (Visibility Timeout = 30s)</text>
 
   <!-- Processing (consumer slow/crashed) -->
-  <rect x="250" y="410" width="500" height="35" rx="4" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1.5"/>
-  <text x="500" y="432" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Consumer Processing... (crashed or slow)</text>
+  <rect x="250" y="410" width="500" height="35" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="500" y="432" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Consumer Processing... (crashed or slow)</text>
 
   <!-- Timeout expires! -->
-  <line x1="750" y1="360" x2="750" y2="340" stroke="var(--danger)" stroke-width="2.5"/>
-  <text x="750" y="336" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Timeout Expires!</text>
+  <line x1="750" y1="360" x2="750" y2="340" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="750" y="336" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Timeout Expires!</text>
 
   <!-- Message reappears -->
-  <rect x="760" y="360" width="180" height="35" rx="4" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="2"/>
-  <text x="850" y="382" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Message Reappears!</text>
+  <rect x="760" y="360" width="180" height="35" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="850" y="382" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Message Reappears!</text>
 
   <!-- Another consumer picks up -->
-  <rect x="960" y="360" width="100" height="35" rx="4" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
-  <text x="1010" y="382" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Consumer B</text>
-  <text x="1010" y="410" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle">picks up msg</text>
+  <rect x="960" y="360" width="100" height="35" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1010" y="382" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer B</text>
+  <text x="1010" y="410" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">picks up msg</text>
 
   <!-- Warning -->
-  <rect x="750" y="455" width="460" height="40" rx="6" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5"/>
-  <text x="980" y="480" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Risk: Duplicate processing if Consumer A eventually succeeds!</text>
+  <rect x="750" y="455" width="460" height="40" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="980" y="480" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Risk: Duplicate processing if Consumer A eventually succeeds!</text>
 
   <!-- Best Practices -->
-  <rect x="40" y="560" width="1200" height="50" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
-  <text x="640" y="585" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Best Practices: Set timeout &gt; processing time | Make consumers idempotent | Use heartbeat to extend timeout | Set up DLQ for retries</text>
+  <rect x="40" y="560" width="1200" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="585" font-family="Arial, sans-serif" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="bold">Best Practices: Set timeout &gt; processing time | Make consumers idempotent | Use heartbeat to extend timeout | Set up DLQ for retries</text>
   <text x="640" y="603" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Default: 30 seconds | Range: 0 seconds to 12 hours</text>
 </svg>

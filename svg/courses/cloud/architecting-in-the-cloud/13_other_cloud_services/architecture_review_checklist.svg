@@ -1,63 +1,122 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
   <!-- Row 1 -->
   <!-- Box 1: Multi-AZ -->
-  <rect x="60" y="40" width="360" height="260" rx="14" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary)">&#10004;</text>
-  <text x="240" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)">Multi-AZ</text>
+  <rect x="60" y="40" width="360" height="260" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-accent)">&#10004;</text>
+  <text x="240" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)">Multi-AZ</text>
   <text x="240" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Deploy across multiple</text>
   <text x="240" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Availability Zones</text>
   <text x="240" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">No single point of failure</text>
   <text x="240" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Automatic failover</text>
   <text x="240" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Data replication</text>
   <!-- Box 2: Scalable -->
-  <rect x="460" y="40" width="360" height="260" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--ok)">&#10004;</text>
-  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)">Scalable</text>
+  <rect x="460" y="40" width="360" height="260" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--ok-accent)">&#10004;</text>
+  <text x="640" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">Scalable</text>
   <text x="640" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Auto-scaling configured</text>
   <text x="640" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">for all tiers</text>
   <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Horizontal scaling preferred</text>
   <text x="640" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Load tested under peak</text>
   <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Serverless where possible</text>
   <!-- Box 3: State Externalized -->
-  <rect x="860" y="40" width="360" height="260" rx="14" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1040" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--warn)">&#10004;</text>
-  <text x="1040" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-dk)">State Externalized</text>
+  <rect x="860" y="40" width="360" height="260" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--warn-accent)">&#10004;</text>
+  <text x="1040" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-accent)">State Externalized</text>
   <text x="1040" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">No local state on</text>
   <text x="1040" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">compute instances</text>
   <text x="1040" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Sessions in Redis/DynamoDB</text>
@@ -65,27 +124,27 @@
   <text x="1040" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Stateless compute</text>
   <!-- Row 2 -->
   <!-- Box 4: Security Layered -->
-  <rect x="60" y="340" width="360" height="260" rx="14" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="240" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--danger)">&#10004;</text>
-  <text x="240" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-dk)">Security Layered</text>
+  <rect x="60" y="340" width="360" height="260" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="240" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--danger-accent)">&#10004;</text>
+  <text x="240" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-accent)">Security Layered</text>
   <text x="240" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Defense in depth with</text>
   <text x="240" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">multiple security layers</text>
   <text x="240" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">WAF, Security Groups</text>
   <text x="240" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">IAM least privilege</text>
   <text x="240" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Encryption at rest + transit</text>
   <!-- Box 5: Cost Monitored -->
-  <rect x="460" y="340" width="360" height="260" rx="14" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--info)">&#10004;</text>
-  <text x="640" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)">Cost Monitored</text>
+  <rect x="460" y="340" width="360" height="260" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--info-accent)">&#10004;</text>
+  <text x="640" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)">Cost Monitored</text>
   <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Budget alerts and cost</text>
   <text x="640" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">optimization in place</text>
   <text x="640" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Resource tagging strategy</text>
   <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Reserved/Spot instances</text>
   <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Right-sizing reviews</text>
   <!-- Box 6: DR Planned -->
-  <rect x="860" y="340" width="360" height="260" rx="14" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1040" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-dk)">&#10004;</text>
-  <text x="1040" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)">DR Planned</text>
+  <rect x="860" y="340" width="360" height="260" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="var(--primary-accent)">&#10004;</text>
+  <text x="1040" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)">DR Planned</text>
   <text x="1040" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Disaster recovery strategy</text>
   <text x="1040" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">defined and tested</text>
   <text x="1040" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">RPO/RTO defined</text>

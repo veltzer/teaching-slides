@@ -1,89 +1,143 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="847.1562" height="423.5781" fill="var(--bg)" rx="0" />
-  <line x1="423.5781" y1="19.8552" x2="423.5781" y2="403.7229" stroke="var(--border-strong)" stroke-width="1.3237" stroke-dasharray="5.2947 3.971" />
-  <text x="211.789" y="33.092" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8552" font-weight="bold" fill="var(--primary-dk)">Encryption at Rest</text>
-  <rect x="79.4209" y="66.1841" width="264.7363" height="185.3154" rx="10.5895" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.6546" filter="url(#shadow)" />
-  <rect x="112.5129" y="92.6577" width="198.5522" height="39.7104" rx="5.2947" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="0.9928" />
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="847.1562" height="423.5781" fill="var(--bg)" rx="6" />
+  <line x1="423.5781" y1="19.8552" x2="423.5781" y2="403.7229" stroke="var(--border)" stroke-width="1.3237" stroke-dasharray="5.2947 3.971" />
+  <text x="211.789" y="33.092" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8552" font-weight="bold" fill="var(--primary-accent)">Encryption at Rest</text>
+  <rect x="79.4209" y="66.1841" width="264.7363" height="185.3154" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <rect x="112.5129" y="92.6577" width="198.5522" height="39.7104" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="211.789" y="117.8077" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" fill="var(--text-muted)">Encrypted Database</text>
-  <rect x="112.5129" y="145.605" width="198.5522" height="39.7104" rx="5.2947" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="0.9928" />
+  <rect x="112.5129" y="145.605" width="198.5522" height="39.7104" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="211.789" y="170.7549" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" fill="var(--text-muted)">Encrypted Object Storage</text>
-  <rect x="112.5129" y="198.5522" width="198.5522" height="39.7104" rx="5.2947" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="0.9928" />
+  <rect x="112.5129" y="198.5522" width="198.5522" height="39.7104" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="211.789" y="223.7022" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" fill="var(--text-muted)">Encrypted Block Volume</text>
-  <circle cx="211.789" cy="284.5915" r="23.1644" fill="var(--primary)" opacity="0.15" stroke="var(--primary)" stroke-width="1.3237" />
-  <rect x="198.5522" y="281.2823" width="26.4736" height="18.5315" rx="2.6474" fill="var(--primary)" />
-  <path d="M 203.8469 281.2823 L 203.8469 274.6639 C 203.8469 266.7218 219.7311 266.7218 219.7311 274.6639 L 219.7311 281.2823" fill="none" stroke="var(--primary)" stroke-width="2.6474" stroke-linecap="round" />
+  <circle cx="211.789" cy="284.5915" r="23.1644" fill="var(--primary-fill)" opacity="0.15" stroke="var(--primary-border)" stroke-width="1.3237" />
+  <rect x="198.5522" y="281.2823" width="26.4736" height="18.5315" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <path d="M 203.8469 281.2823 L 203.8469 274.6639 C 203.8469 266.7218 219.7311 266.7218 219.7311 274.6639 L 219.7311 281.2823" fill="none" stroke="var(--primary-border)" stroke-width="2.6474" stroke-linecap="round" />
   <circle cx="211.789" cy="289.2244" r="2.6474" fill="var(--bg)" />
-  <text x="211.789" y="324.302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9131" font-weight="bold" fill="var(--primary-dk)">AES-256 Encryption</text>
+  <text x="211.789" y="324.302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9131" font-weight="bold" fill="var(--primary-accent)">AES-256 Encryption</text>
   <text x="211.789" y="344.1572" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Data encrypted on disk</text>
   <text x="211.789" y="360.7032" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Managed keys (KMS)</text>
   <text x="211.789" y="377.2492" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Transparent to applications</text>
-  <text x="635.3671" y="33.092" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8552" font-weight="bold" fill="var(--ok-dk)">Encryption in Transit</text>
-  <rect x="463.2885" y="86.0393" width="92.6577" height="66.1841" rx="7.9421" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.3237" filter="url(#shadow)" />
-  <text x="509.6174" y="115.8221" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--ok-dk)">Client</text>
+  <text x="635.3671" y="33.092" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.8552" font-weight="bold" fill="var(--ok-accent)">Encryption in Transit</text>
+  <rect x="463.2885" y="86.0393" width="92.6577" height="66.1841" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="509.6174" y="115.8221" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--ok-accent)">Client</text>
   <text x="509.6174" y="132.3681" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Browser/App</text>
-  <rect x="714.788" y="86.0393" width="92.6577" height="66.1841" rx="7.9421" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.3237" filter="url(#shadow)" />
-  <text x="761.1169" y="115.8221" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--ok-dk)">Server</text>
+  <rect x="714.788" y="86.0393" width="92.6577" height="66.1841" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="761.1169" y="115.8221" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--ok-accent)">Server</text>
   <text x="761.1169" y="132.3681" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Cloud Service</text>
-  <rect x="549.3278" y="95.9669" width="172.0786" height="46.3289" rx="23.1644" fill="none" stroke="var(--ok)" stroke-width="1.9855" stroke-dasharray="6.6184 3.3092" />
-  <line x1="565.8738" y1="112.5129" x2="701.5512" y2="112.5129" stroke="var(--ok)" stroke-width="1.3237" marker-end="url(#arrow)" />
-  <line x1="701.5512" y1="125.7497" x2="565.8738" y2="125.7497" stroke="var(--ok)" stroke-width="1.3237" marker-end="url(#arrow)" />
-  <circle cx="635.3671" cy="119.1313" r="13.2368" fill="var(--ok)" opacity="0.2" />
-  <rect x="628.0869" y="116.484" width="14.5605" height="10.5895" rx="1.9855" fill="var(--ok)" />
-  <path d="M 630.7342 116.484 L 630.7342 112.5129 C 630.7342 107.88 640 107.88 640 112.5129 L 640 116.484" fill="none" stroke="var(--ok)" stroke-width="1.9855" stroke-linecap="round" />
-  <text x="635.3671" y="172.0786" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9131" font-weight="bold" fill="var(--ok-dk)">TLS/SSL Encrypted Tunnel</text>
-  <rect x="469.9069" y="205.1706" width="330.9204" height="119.1313" rx="7.9421" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="0.9928" filter="url(#shadow)" />
-  <text x="496.3806" y="234.9535" font-family="Arial, sans-serif" font-size="10" fill="var(--text-dark)">Plaintext</text>
+  <rect x="549.3278" y="95.9669" width="172.0786" height="46.3289" rx="6" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="6.6184 3.3092" />
+  <line x1="565.8738" y1="112.5129" x2="701.5512" y2="112.5129" stroke="var(--ok-border)" stroke-width="1.3237" marker-end="url(#arrow)" />
+  <line x1="701.5512" y1="125.7497" x2="565.8738" y2="125.7497" stroke="var(--ok-border)" stroke-width="1.3237" marker-end="url(#arrow)" />
+  <circle cx="635.3671" cy="119.1313" r="13.2368" fill="var(--ok-fill)" opacity="0.2" />
+  <rect x="628.0869" y="116.484" width="14.5605" height="10.5895" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <path d="M 630.7342 116.484 L 630.7342 112.5129 C 630.7342 107.88 640 107.88 640 112.5129 L 640 116.484" fill="none" stroke="var(--ok-border)" stroke-width="1.9855" stroke-linecap="round" />
+  <text x="635.3671" y="172.0786" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.9131" font-weight="bold" fill="var(--ok-accent)">TLS/SSL Encrypted Tunnel</text>
+  <rect x="469.9069" y="205.1706" width="330.9204" height="119.1313" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="496.3806" y="234.9535" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Plaintext</text>
   <line x1="540.062" y1="230.9824" x2="566.5357" y2="230.9824" stroke="var(--text-muted)" stroke-width="0.9928" marker-end="url(#arrow)" />
-  <rect x="569.183" y="221.7166" width="52.9473" height="19.8552" rx="3.971" fill="var(--ok)" opacity="0.2" stroke="var(--ok)" stroke-width="0.6618" />
-  <text x="595.6567" y="234.9535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)">Encrypt</text>
+  <rect x="569.183" y="221.7166" width="52.9473" height="19.8552" rx="6" fill="var(--ok-fill)" opacity="0.2" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="595.6567" y="234.9535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Encrypt</text>
   <line x1="624.7777" y1="230.9824" x2="651.2513" y2="230.9824" stroke="var(--text-muted)" stroke-width="0.9928" marker-end="url(#arrow)" />
-  <text x="655.2223" y="234.9535" font-family="Arial, sans-serif" font-size="10" fill="var(--text-dark)">Ciphertext</text>
+  <text x="655.2223" y="234.9535" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Ciphertext</text>
   <line x1="709.4933" y1="230.9824" x2="735.9669" y2="230.9824" stroke="var(--text-muted)" stroke-width="0.9928" marker-end="url(#arrow)" />
-  <rect x="738.6143" y="221.7166" width="52.9473" height="19.8552" rx="3.971" fill="var(--ok)" opacity="0.2" stroke="var(--ok)" stroke-width="0.6618" />
-  <text x="765.0879" y="234.9535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)">Decrypt</text>
+  <rect x="738.6143" y="221.7166" width="52.9473" height="19.8552" rx="6" fill="var(--ok-fill)" opacity="0.2" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="765.0879" y="234.9535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Decrypt</text>
   <text x="635.3671" y="271.3547" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">TLS 1.3 / mTLS for service-to-service</text>
   <text x="635.3671" y="287.9007" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">HTTPS for web traffic</text>
   <text x="635.3671" y="304.4467" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">VPN for private connectivity</text>
-  <text x="211.789" y="403.7229" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--primary)">Protects stored data</text>
-  <text x="635.3671" y="403.7229" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--ok)">Protects data in motion</text>
+  <text x="211.789" y="403.7229" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--primary-accent)">Protects stored data</text>
+  <text x="635.3671" y="403.7229" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5895" font-weight="bold" fill="var(--ok-accent)">Protects data in motion</text>
 </svg>

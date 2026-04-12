@@ -1,95 +1,146 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-  </defs>
-  <rect x="0" y="0" width="706.2069" height="353.1034" rx="0" fill="var(--bg)" />
-  <rect x="22.069" y="11.0345" width="320" height="331.0345" rx="8.8276" fill="var(--danger-pale)" stroke="var(--danger-dk)" stroke-width="1.1034" filter="url(#shadow)" />
-  <text x="182.069" y="33.1034" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2414" font-weight="bold" fill="var(--danger-dk)">Traditional IT</text>
-  <rect x="44.1379" y="49.6552" width="275.8621" height="55.1724" rx="5.5172" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="0.8276" />
-  <text x="55.1724" y="65.1034" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Provisioning Time</text>
-  <rect x="55.1724" y="74.4828" width="242.7586" height="16.5517" rx="3.3103" fill="var(--danger)" />
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect x="0" y="0" width="706.2069" height="353.1034" rx="6" fill="var(--bg)" />
+  <rect x="22.069" y="11.0345" width="320" height="331.0345" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="182.069" y="33.1034" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2414" font-weight="bold" fill="var(--danger-accent)">Traditional IT</text>
+  <rect x="44.1379" y="49.6552" width="275.8621" height="55.1724" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="55.1724" y="65.1034" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Provisioning Time</text>
+  <rect x="55.1724" y="74.4828" width="242.7586" height="16.5517" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="176.5517" y="86.069" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Weeks to Months</text>
   <text x="55.1724" y="99.3103" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Hardware procurement, setup, configuration...</text>
-  <rect x="44.1379" y="115.8621" width="275.8621" height="55.1724" rx="5.5172" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="0.8276" />
-  <text x="55.1724" y="131.3103" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Cost Model: CapEx</text>
+  <rect x="44.1379" y="115.8621" width="275.8621" height="55.1724" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="55.1724" y="131.3103" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Cost Model: CapEx</text>
   <text x="55.1724" y="144.5517" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Large upfront investment</text>
   <text x="55.1724" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Depreciation over 3-5 years</text>
   <text x="55.1724" y="166.6207" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Must predict future needs</text>
-  <rect x="44.1379" y="182.069" width="275.8621" height="77.2414" rx="5.5172" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="0.8276" />
-  <text x="55.1724" y="197.5172" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Fixed Capacity</text>
-  <rect x="66.2069" y="206.8966" width="231.7241" height="16.5517" rx="2.2069" fill="var(--danger)" opacity="0.7" />
+  <rect x="44.1379" y="182.069" width="275.8621" height="77.2414" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="55.1724" y="197.5172" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Fixed Capacity</text>
+  <rect x="66.2069" y="206.8966" width="231.7241" height="16.5517" rx="6" fill="var(--danger-fill)" opacity="0.7" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="182.069" y="218.4828" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--bg)">Provisioned Capacity (constant)</text>
-  <path d="M 66.2069 231.7241 Q 99.3103 220.6897 132.4138 237.2414 Q 165.5172 253.7931 198.6207 228.9655 Q 231.7241 209.6552 264.8276 242.7586 L 297.931 234.4828" fill="none" stroke="var(--text-dark)" stroke-width="1.3793" stroke-dasharray="3.3103 2.2069" />
+  <path d="M 66.2069 231.7241 Q 99.3103 220.6897 132.4138 237.2414 Q 165.5172 253.7931 198.6207 228.9655 Q 231.7241 209.6552 264.8276 242.7586 L 297.931 234.4828" fill="none" stroke="var(--text)" stroke-width="1.3793" stroke-dasharray="3.3103 2.2069" />
   <text x="242.7586" y="252.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Actual Demand</text>
-  <text x="66.2069" y="252.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)">Waste or shortage</text>
-  <rect x="44.1379" y="270.3448" width="275.8621" height="60.6897" rx="5.5172" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="0.8276" />
-  <text x="55.1724" y="285.7931" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Scaling Challenges</text>
+  <text x="66.2069" y="252.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)">Waste or shortage</text>
+  <rect x="44.1379" y="270.3448" width="275.8621" height="60.6897" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="55.1724" y="285.7931" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Scaling Challenges</text>
   <text x="55.1724" y="299.0345" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Manual scaling only</text>
   <text x="55.1724" y="310.069" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Risk of over/under provisioning</text>
   <text x="55.1724" y="321.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Hardware lifecycle management</text>
   <circle cx="353.1034" cy="171.0345" r="16.5517" fill="var(--text)" />
   <text x="353.1034" y="175.4483" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.0345" font-weight="bold" fill="var(--bg)">VS</text>
-  <rect x="364.1379" y="11.0345" width="320" height="331.0345" rx="8.8276" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.1034" filter="url(#shadow)" />
-  <text x="524.1379" y="33.1034" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2414" font-weight="bold" fill="var(--ok-dk)">Cloud (AWS)</text>
-  <rect x="386.2069" y="49.6552" width="275.8621" height="55.1724" rx="5.5172" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="397.2414" y="65.1034" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Provisioning Time</text>
-  <rect x="397.2414" y="74.4828" width="55.1724" height="16.5517" rx="3.3103" fill="var(--ok)" />
+  <rect x="364.1379" y="11.0345" width="320" height="331.0345" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="524.1379" y="33.1034" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2414" font-weight="bold" fill="var(--ok-accent)">Cloud (AWS)</text>
+  <rect x="386.2069" y="49.6552" width="275.8621" height="55.1724" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="397.2414" y="65.1034" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Provisioning Time</text>
+  <rect x="397.2414" y="74.4828" width="55.1724" height="16.5517" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="424.8276" y="86.069" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--bg)">Minutes</text>
   <text x="397.2414" y="99.3103" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">API call, instant provisioning, global reach</text>
-  <rect x="386.2069" y="115.8621" width="275.8621" height="55.1724" rx="5.5172" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="397.2414" y="131.3103" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Cost Model: OpEx</text>
+  <rect x="386.2069" y="115.8621" width="275.8621" height="55.1724" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="397.2414" y="131.3103" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Cost Model: OpEx</text>
   <text x="397.2414" y="144.5517" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Pay-as-you-go pricing</text>
   <text x="397.2414" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">No upfront commitment</text>
   <text x="397.2414" y="166.6207" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Scale costs with actual usage</text>
-  <rect x="386.2069" y="182.069" width="275.8621" height="77.2414" rx="5.5172" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="397.2414" y="197.5172" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Elastic Capacity</text>
-  <path d="M 408.2759 231.7241 Q 441.3793 220.6897 474.4828 237.2414 Q 507.5862 253.7931 540.6897 228.9655 Q 573.7931 209.6552 606.8966 242.7586 L 640 234.4828" fill="none" stroke="var(--ok)" stroke-width="1.6552" />
-  <path d="M 408.2759 231.7241 Q 441.3793 220.6897 474.4828 237.2414 Q 507.5862 253.7931 540.6897 228.9655 Q 573.7931 209.6552 606.8966 242.7586 L 640 234.4828" fill="none" stroke="var(--text-dark)" stroke-width="1.3793" stroke-dasharray="3.3103 2.2069" />
+  <rect x="386.2069" y="182.069" width="275.8621" height="77.2414" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="397.2414" y="197.5172" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Elastic Capacity</text>
+  <path d="M 408.2759 231.7241 Q 441.3793 220.6897 474.4828 237.2414 Q 507.5862 253.7931 540.6897 228.9655 Q 573.7931 209.6552 606.8966 242.7586 L 640 234.4828" fill="none" stroke="var(--ok-border)" stroke-width="1.6552" />
+  <path d="M 408.2759 231.7241 Q 441.3793 220.6897 474.4828 237.2414 Q 507.5862 253.7931 540.6897 228.9655 Q 573.7931 209.6552 606.8966 242.7586 L 640 234.4828" fill="none" stroke="var(--text)" stroke-width="1.3793" stroke-dasharray="3.3103 2.2069" />
   <text x="584.8276" y="252.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Actual Demand</text>
-  <text x="408.2759" y="252.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)">Capacity matches demand</text>
-  <text x="408.2759" y="215.1724" font-family="Arial, sans-serif" font-size="10" fill="var(--ok)">Auto-scaled Capacity</text>
-  <rect x="386.2069" y="270.3448" width="275.8621" height="60.6897" rx="5.5172" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="397.2414" y="285.7931" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text-dark)">Auto Scaling</text>
+  <text x="408.2759" y="252.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Capacity matches demand</text>
+  <text x="408.2759" y="215.1724" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Auto-scaled Capacity</text>
+  <rect x="386.2069" y="270.3448" width="275.8621" height="60.6897" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="397.2414" y="285.7931" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--text)">Auto Scaling</text>
   <text x="397.2414" y="299.0345" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Automatic scale up and down</text>
   <text x="397.2414" y="310.069" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">200+ services at your fingertips</text>
   <text x="397.2414" y="321.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Global deployment in minutes</text>

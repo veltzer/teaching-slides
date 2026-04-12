@@ -1,103 +1,124 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_intro.yaml -->
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-dark: #f0f0f0;
-        --black: #000000;
-        --border-faint: #cccccc;
-        --border-strong: #bdbdbd;
-        --code-bg: #1a1a2e;
+        --border: #e0e0e0;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-bright: #4a90e2;
-        --primary-tint: #90caf9;
-        --primary-google: #4285f4;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --ok-dk: #2e7d32;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-google: #34a853;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-soft: #27ae60;
-        --ok-pale2: #d4edda;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-yellow: #ffc107;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-pale: #ffebee;
-        --info-vivid: #673ab7;
-        --info-indigo: #3f51b5;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-deep: #4a148c;
-        --info-tint: #e1bee7;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
     <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
     <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
     <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
 </defs>
-  <rect width="1137.7778" height="640" fill="var(--code-bg)" />
-  <rect x="113.7778" y="160" width="256" height="224" rx="11.3778" fill="var(--code-bg)" stroke="var(--danger-bright)" stroke-width="3.5556" />
-  <text x="184.8889" y="288" font-family="monospace" font-size="39.8222" fill="var(--danger-bright)" font-weight="bold">CPU</text>
-  <rect x="142.2222" y="320" width="85.3333" height="40" rx="4.2667" fill="var(--primary-deeper)" stroke="var(--primary-tint)" stroke-width="1.4222" />
-  <text x="156.4444" y="348.8" font-family="monospace" font-size="17.0667" fill="var(--primary-tint)">ALU</text>
-  <rect x="256" y="320" width="85.3333" height="40" rx="4.2667" fill="var(--primary-deeper)" stroke="var(--primary-tint)" stroke-width="1.4222" />
-  <text x="263.1111" y="348.8" font-family="monospace" font-size="17.0667" fill="var(--primary-tint)">REG</text>
-  <rect x="113.7778" y="432" width="910.2222" height="32" rx="5.6889" fill="var(--primary-deeper)" stroke="var(--warn-amber)" stroke-width="2.8444" />
-  <text x="483.5556" y="456" font-family="monospace" font-size="17.0667" fill="var(--warn-amber)">SYSTEM BUS</text>
-  <line x1="241.7778" y1="384" x2="241.7778" y2="432" stroke="var(--warn-amber)" stroke-width="2.8444" />
-  <line x1="611.5556" y1="384" x2="611.5556" y2="432" stroke="var(--warn-amber)" stroke-width="2.8444" />
-  <line x1="896" y1="336" x2="896" y2="432" stroke="var(--warn-amber)" stroke-width="2.8444" />
-  <rect x="497.7778" y="160" width="227.5556" height="224" rx="11.3778" fill="var(--code-bg)" stroke="var(--ok-vivid)" stroke-width="3.5556" />
-  <text x="533.3333" y="232" font-family="monospace" font-size="28.4444" fill="var(--ok-vivid)" font-weight="bold">Memory</text>
-  <rect x="526.2222" y="256" width="170.6667" height="24" rx="2.8444" fill="var(--primary-deeper)" stroke="var(--ok-vivid)" stroke-width="1.4222" />
-  <rect x="526.2222" y="288" width="170.6667" height="24" rx="2.8444" fill="var(--primary-deeper)" stroke="var(--ok-vivid)" stroke-width="1.4222" />
-  <rect x="526.2222" y="320" width="170.6667" height="24" rx="2.8444" fill="var(--primary-deeper)" stroke="var(--ok-vivid)" stroke-width="1.4222" />
-  <rect x="526.2222" y="352" width="170.6667" height="24" rx="2.8444" fill="var(--primary-deeper)" stroke="var(--ok-vivid)" stroke-width="1.4222" />
-  <rect x="810.6667" y="160" width="213.3333" height="176" rx="11.3778" fill="var(--code-bg)" stroke="var(--primary-tint)" stroke-width="3.5556" />
-  <text x="867.5556" y="232" font-family="monospace" font-size="28.4444" fill="var(--primary-tint)" font-weight="bold">I/O</text>
-  <circle cx="853.3333" cy="280" r="11.3778" fill="var(--primary-tint)" opacity="0.6" />
-  <circle cx="896" cy="280" r="11.3778" fill="var(--primary-tint)" opacity="0.6" />
-  <circle cx="938.6667" cy="280" r="11.3778" fill="var(--primary-tint)" opacity="0.6" />
-  <circle cx="981.3333" cy="280" r="11.3778" fill="var(--primary-tint)" opacity="0.6" />
-  <rect x="142.2222" y="192" width="64" height="32" rx="4.2667" fill="var(--danger-bright)" opacity="0.4" />
+  <rect width="1137.7778" height="640" fill="var(--code-bg)" rx="6"/>
+  <rect x="113.7778" y="160" width="256" height="224" rx="6" fill="var(--code-bg)" stroke="var(--danger-border)" stroke-width="3.5556" />
+  <text x="184.8889" y="288" font-family="monospace" font-size="39.8222" fill="var(--danger-accent)" font-weight="bold">CPU</text>
+  <rect x="142.2222" y="320" width="85.3333" height="40" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="1.4222" />
+  <text x="156.4444" y="348.8" font-family="monospace" font-size="17.0667" fill="var(--primary-accent)">ALU</text>
+  <rect x="256" y="320" width="85.3333" height="40" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="1.4222" />
+  <text x="263.1111" y="348.8" font-family="monospace" font-size="17.0667" fill="var(--primary-accent)">REG</text>
+  <rect x="113.7778" y="432" width="910.2222" height="32" rx="6" fill="var(--primary-accent)" stroke="var(--warn-border)" stroke-width="2.8444" />
+  <text x="483.5556" y="456" font-family="monospace" font-size="17.0667" fill="var(--warn-accent)">SYSTEM BUS</text>
+  <line x1="241.7778" y1="384" x2="241.7778" y2="432" stroke="var(--warn-border)" stroke-width="2" />
+  <line x1="611.5556" y1="384" x2="611.5556" y2="432" stroke="var(--warn-border)" stroke-width="2" />
+  <line x1="896" y1="336" x2="896" y2="432" stroke="var(--warn-border)" stroke-width="2" />
+  <rect x="497.7778" y="160" width="227.5556" height="224" rx="6" fill="var(--code-bg)" stroke="var(--ok-border)" stroke-width="3.5556" />
+  <text x="533.3333" y="232" font-family="monospace" font-size="28.4444" fill="var(--ok-accent)" font-weight="bold">Memory</text>
+  <rect x="526.2222" y="256" width="170.6667" height="24" rx="6" fill="var(--primary-accent)" stroke="var(--ok-border)" stroke-width="1.4222" />
+  <rect x="526.2222" y="288" width="170.6667" height="24" rx="6" fill="var(--primary-accent)" stroke="var(--ok-border)" stroke-width="1.4222" />
+  <rect x="526.2222" y="320" width="170.6667" height="24" rx="6" fill="var(--primary-accent)" stroke="var(--ok-border)" stroke-width="1.4222" />
+  <rect x="526.2222" y="352" width="170.6667" height="24" rx="6" fill="var(--primary-accent)" stroke="var(--ok-border)" stroke-width="1.4222" />
+  <rect x="810.6667" y="160" width="213.3333" height="176" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="3.5556" />
+  <text x="867.5556" y="232" font-family="monospace" font-size="28.4444" fill="var(--primary-accent)" font-weight="bold">I/O</text>
+  <circle cx="853.3333" cy="280" r="11.3778" fill="var(--primary-fill)" opacity="0.6" />
+  <circle cx="896" cy="280" r="11.3778" fill="var(--primary-fill)" opacity="0.6" />
+  <circle cx="938.6667" cy="280" r="11.3778" fill="var(--primary-fill)" opacity="0.6" />
+  <circle cx="981.3333" cy="280" r="11.3778" fill="var(--primary-fill)" opacity="0.6" />
+  <rect x="142.2222" y="192" width="64" height="32" rx="6" fill="var(--danger-fill)" opacity="0.4" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="146.4889" y="216" font-family="monospace" font-size="14.2222" fill="var(--bg)">L1</text>
-  <text x="142.2222" y="544" font-family="monospace" font-size="15.6444" fill="var(--primary-deeper)">0x0000 0x0004 0x0008 0x000C 0x0010 0x0014 0x0018 0x001C 0x0020</text>
-  <text x="142.2222" y="576" font-family="monospace" font-size="15.6444" fill="var(--primary-deeper)">0xFF00 0xFF04 0xFF08 0xFF0C 0xFF10 0xFF14 0xFF18 0xFF1C 0xFF20</text>
+  <text x="142.2222" y="544" font-family="monospace" font-size="15.6444" fill="var(--primary-accent)">0x0000 0x0004 0x0008 0x000C 0x0010 0x0014 0x0018 0x001C 0x0020</text>
+  <text x="142.2222" y="576" font-family="monospace" font-size="15.6444" fill="var(--primary-accent)">0xFF00 0xFF04 0xFF08 0xFF0C 0xFF10 0xFF14 0xFF18 0xFF1C 0xFF20</text>
 </svg>

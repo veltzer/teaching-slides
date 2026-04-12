@@ -1,72 +1,131 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect width="1280" height="640" fill="var(--surface)" rx="0"/>
+  <rect width="1280" height="640" fill="var(--surface)" rx="6"/>
 
   <!-- Dashboard outer frame -->
-  <rect x="30" y="10" width="1220" height="620" rx="12" fill="var(--bg)" stroke="var(--border-strong)" stroke-width="2"/>
+  <rect x="30" y="10" width="1220" height="620" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
 
   <!-- Top KPI Row -->
   <!-- KPI 1: Total Spend -->
-  <rect x="60" y="30" width="360" height="100" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="60" y="30" width="360" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="80" y="60" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Total Monthly Spend</text>
-  <text x="80" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-dk)">$142,850</text>
-  <text x="280" y="95" font-family="Arial, sans-serif" font-size="14" fill="var(--danger)">+8.2% MoM</text>
+  <text x="80" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--primary-accent)">$142,850</text>
+  <text x="280" y="95" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">+8.2% MoM</text>
 
   <!-- KPI 2: Savings Rate -->
-  <rect x="450" y="30" width="360" height="100" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="450" y="30" width="360" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="470" y="60" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Savings Rate</text>
-  <text x="470" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-dk)">32%</text>
-  <text x="570" y="95" font-family="Arial, sans-serif" font-size="14" fill="var(--ok)">$67,200 saved</text>
+  <text x="470" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--ok-accent)">32%</text>
+  <text x="570" y="95" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">$67,200 saved</text>
 
   <!-- KPI 3: Coverage -->
-  <rect x="840" y="30" width="380" height="100" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="840" y="30" width="380" height="100" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="860" y="60" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">RI/SP Coverage</text>
-  <text x="860" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-dk)">68%</text>
-  <text x="960" y="95" font-family="Arial, sans-serif" font-size="14" fill="var(--warn)">Target: 80%</text>
+  <text x="860" y="95" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="var(--warn-accent)">68%</text>
+  <text x="960" y="95" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-accent)">Target: 80%</text>
 
   <!-- Middle Row: Spend Trend Line Chart -->
-  <rect x="60" y="150" width="1160" height="220" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="80" y="178" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Monthly Spend Trend (Last 12 Months)</text>
+  <rect x="60" y="150" width="1160" height="220" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="80" y="178" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Monthly Spend Trend (Last 12 Months)</text>
 
   <!-- Chart axes -->
-  <line x1="120" y1="195" x2="120" y2="345" stroke="var(--border-strong)" stroke-width="1"/>
-  <line x1="120" y1="345" x2="1180" y2="345" stroke="var(--border-strong)" stroke-width="1"/>
+  <line x1="120" y1="195" x2="120" y2="345" stroke="var(--border)" stroke-width="1"/>
+  <line x1="120" y1="345" x2="1180" y2="345" stroke="var(--border)" stroke-width="1"/>
 
   <!-- Y-axis labels -->
   <text x="110" y="205" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">$160k</text>
@@ -80,21 +139,21 @@
   <line x1="120" y1="285" x2="1180" y2="285" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="3,3"/>
 
   <!-- Spend line (trending slightly up) -->
-  <polyline points="168,310 256,300 344,285 432,290 520,275 608,260 696,265 784,250 872,240 960,235 1048,225 1136,215" fill="none" stroke="var(--primary)" stroke-width="3"/>
+  <polyline points="168,310 256,300 344,285 432,290 520,275 608,260 696,265 784,250 872,240 960,235 1048,225 1136,215" fill="none" stroke="var(--primary-border)" stroke-width="3"/>
 
   <!-- Data dots -->
-  <circle cx="168" cy="310" r="4" fill="var(--primary)"/>
-  <circle cx="256" cy="300" r="4" fill="var(--primary)"/>
-  <circle cx="344" cy="285" r="4" fill="var(--primary)"/>
-  <circle cx="432" cy="290" r="4" fill="var(--primary)"/>
-  <circle cx="520" cy="275" r="4" fill="var(--primary)"/>
-  <circle cx="608" cy="260" r="4" fill="var(--primary)"/>
-  <circle cx="696" cy="265" r="4" fill="var(--primary)"/>
-  <circle cx="784" cy="250" r="4" fill="var(--primary)"/>
-  <circle cx="872" cy="240" r="4" fill="var(--primary)"/>
-  <circle cx="960" cy="235" r="4" fill="var(--primary)"/>
-  <circle cx="1048" cy="225" r="4" fill="var(--primary)"/>
-  <circle cx="1136" cy="215" r="4" fill="var(--primary)"/>
+  <circle cx="168" cy="310" r="4" fill="var(--primary-fill)"/>
+  <circle cx="256" cy="300" r="4" fill="var(--primary-fill)"/>
+  <circle cx="344" cy="285" r="4" fill="var(--primary-fill)"/>
+  <circle cx="432" cy="290" r="4" fill="var(--primary-fill)"/>
+  <circle cx="520" cy="275" r="4" fill="var(--primary-fill)"/>
+  <circle cx="608" cy="260" r="4" fill="var(--primary-fill)"/>
+  <circle cx="696" cy="265" r="4" fill="var(--primary-fill)"/>
+  <circle cx="784" cy="250" r="4" fill="var(--primary-fill)"/>
+  <circle cx="872" cy="240" r="4" fill="var(--primary-fill)"/>
+  <circle cx="960" cy="235" r="4" fill="var(--primary-fill)"/>
+  <circle cx="1048" cy="225" r="4" fill="var(--primary-fill)"/>
+  <circle cx="1136" cy="215" r="4" fill="var(--primary-fill)"/>
 
   <!-- Month labels -->
   <text x="168" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">Jan</text>
@@ -105,32 +164,32 @@
   <text x="1048" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">Nov</text>
 
   <!-- Bottom Row: Bar Chart by Team -->
-  <rect x="60" y="390" width="1160" height="220" rx="10" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="80" y="418" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Spend by Team (Current Month)</text>
+  <rect x="60" y="390" width="1160" height="220" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="80" y="418" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Spend by Team (Current Month)</text>
 
   <!-- Bar chart -->
-  <line x1="200" y1="435" x2="200" y2="585" stroke="var(--border-strong)" stroke-width="1"/>
-  <line x1="200" y1="585" x2="1180" y2="585" stroke="var(--border-strong)" stroke-width="1"/>
+  <line x1="200" y1="435" x2="200" y2="585" stroke="var(--border)" stroke-width="1"/>
+  <line x1="200" y1="585" x2="1180" y2="585" stroke="var(--border)" stroke-width="1"/>
 
   <!-- Bars -->
-  <rect x="240" y="445" width="120" height="140" rx="4" fill="var(--primary)" opacity="0.85"/>
-  <text x="300" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">$48.2k</text>
+  <rect x="240" y="445" width="120" height="140" rx="6" fill="var(--primary-fill)" opacity="0.85" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="300" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">$48.2k</text>
   <text x="300" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Platform</text>
 
-  <rect x="400" y="475" width="120" height="110" rx="4" fill="var(--primary)" opacity="0.7"/>
-  <text x="460" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">$38.1k</text>
+  <rect x="400" y="475" width="120" height="110" rx="6" fill="var(--primary-fill)" opacity="0.7" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="460" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">$38.1k</text>
   <text x="460" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Backend</text>
 
-  <rect x="560" y="505" width="120" height="80" rx="4" fill="var(--primary)" opacity="0.55"/>
-  <text x="620" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">$27.5k</text>
+  <rect x="560" y="505" width="120" height="80" rx="6" fill="var(--primary-fill)" opacity="0.55" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="620" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">$27.5k</text>
   <text x="620" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Data</text>
 
-  <rect x="720" y="525" width="120" height="60" rx="4" fill="var(--primary)" opacity="0.4"/>
-  <text x="780" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">$18.3k</text>
+  <rect x="720" y="525" width="120" height="60" rx="6" fill="var(--primary-fill)" opacity="0.4" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="780" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">$18.3k</text>
   <text x="780" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">ML/AI</text>
 
-  <rect x="880" y="555" width="120" height="30" rx="4" fill="var(--primary)" opacity="0.3"/>
-  <text x="940" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-dk)">$10.8k</text>
+  <rect x="880" y="555" width="120" height="30" rx="6" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="940" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--primary-accent)">$10.8k</text>
   <text x="940" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Frontend</text>
 
   <!-- Team labels on Y-axis area -->

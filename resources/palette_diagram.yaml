@@ -1,127 +1,70 @@
 # Canonical color palette for all course SVG diagrams.
 #
-# Structure: semantic groups -> named roles -> hex color
-# Every hex color used in an SVG fill/stroke/stop-color/flood-color
-# attribute must appear here. Use semantic role names in comments,
-# never raw hex values.
+# Only semantic role names are allowed. Every role describes WHAT a color
+# is used for (fill, border, text on fill, accent), never what it LOOKS
+# LIKE (vivid, pale, soft). To retune the visual theme, edit the hex
+# values here; role names stay the same so every SVG follows automatically.
 #
-# To change the visual theme, edit the hex values here. The role
-# names stay the same so all SVGs follow automatically.
+# Roles per semantic family (primary, ok, warn, danger, info):
+#   {family}-fill    - the box background fill
+#   {family}-border  - matching border / stroke
+#   {family}-text    - text drawn on top of the fill (always readable)
+#   {family}-accent  - deeper shade for emphasis, lines, marker heads
+#
+# Neutrals have their own role set (bg, surface, border, text, text-muted,
+# text-faint, code-bg, shadow, black).
+#
+# check_svg.py --colors validates every SVG attribute against this file.
 
 colors:
   neutrals:
-    bg: "#ffffff"                  # slide/page background
+    bg: "#ffffff"                 # slide/page background
     surface: "#f5f5f5"            # neutral box fills, panel backgrounds
-    surface-alt: "#eeeeee"        # alternate rows, inset panels
-    surface-light: "#f9f9f9"      # very light fill
-    surface-dark: "#f0f0f0"       # slightly darker surface
-    border: "#e0e0e0"             # box strokes, dividers
-    border-strong: "#bdbdbd"      # emphasized borders
-    border-faint: "#cccccc"       # subtle borders, disabled
-    border-softer: "#dddddd"      # mid-weight borders
+    border: "#e0e0e0"             # dividers, default box strokes
     text: "#212121"               # primary body text
-    text-dark: "#333333"          # slightly lighter than text
-    text-darker: "#222222"        # near-black text
     text-muted: "#555555"         # secondary text, annotations
-    text-mid: "#666666"           # mid-grey text
     text-faint: "#888888"         # placeholder, minor labels
-    text-lighter: "#777777"       # light secondary text
-    text-faintest: "#999999"      # very faint labels
-    text-disabled: "#9e9e9e"      # disabled text
-    text-placeholder: "#aaaaaa"   # placeholder text
     code-bg: "#1a1a2e"            # dark code-block background
     shadow: "#00000022"           # feDropShadow flood-color
     black: "#000000"              # pure black (use sparingly)
 
   primary:
-    primary: "#1e88e5"            # accent boxes, key steps (gradient top)
-    primary-dk: "#1565c0"         # accent gradient bottom / dark
-    primary-mid: "#1976d2"        # medium blue
-    primary-bright: "#4a90e2"     # bright/light blue variant
-    primary-vivid: "#2196f3"      # vivid blue
-    primary-soft: "#3498db"       # soft blue
-    primary-deep: "#0d47a1"       # deep navy blue
-    primary-deeper: "#1a237e"     # deeper navy
-    primary-strong: "#0277bd"     # strong blue
-    primary-lt: "#bbdefb"         # tint (text on dark primary bg)
-    primary-tint: "#90caf9"       # lighter tint
-    primary-pale: "#e3f2fd"       # very light primary fill
-    primary-pale2: "#e8f4f8"      # alternate pale primary fill
-    primary-pale3: "#e1f5fe"      # pale cyan-blue fill
-    primary-indigo: "#3949ab"     # indigo variant
-    primary-indigo-dk: "#283593"  # dark indigo
-    primary-google: "#4285f4"     # google-blue variant
+    primary-fill: "#2196f3"       # saturated blue box fill
+    primary-border: "#1565c0"     # matching border / stroke
+    primary-text: "#ffffff"       # text on primary fill
+    primary-accent: "#0d47a1"     # deeper shade for emphasis
 
   ok:
-    ok: "#43a047"                 # success, positive (gradient top)
-    ok-dk: "#2e7d32"              # gradient bottom / dark green
-    ok-mid: "#388e3c"             # medium green
-    ok-light: "#4caf50"           # light green
-    ok-bright: "#28a745"          # bright green (bootstrap)
-    ok-vivid: "#2ecc71"           # vivid green
-    ok-soft: "#27ae60"            # soft green
-    ok-google: "#34a853"          # google green
-    ok-deep: "#1b5e20"            # deep dark green
-    ok-lt: "#c8e6c9"              # tint (text on dark ok bg)
-    ok-tint: "#a5d6a7"            # lighter tint
-    ok-pale: "#e8f5e9"            # very light ok fill
-    ok-pale2: "#d4edda"           # alternate pale ok fill (bootstrap)
-    ok-pale3: "#e8f5e8"           # near-identical pale variant
+    ok-fill: "#4caf50"            # saturated green box fill
+    ok-border: "#2e7d32"          # matching border / stroke
+    ok-text: "#ffffff"            # text on ok fill
+    ok-accent: "#1b5e20"          # deeper shade for emphasis
 
   warn:
-    warn: "#fb8c00"               # warning, caution (gradient top)
-    warn-dk: "#e65100"            # gradient bottom / dark orange
-    warn-mid: "#f57c00"           # medium orange
-    warn-amber: "#f9a825"         # amber
-    warn-yellow: "#ffc107"        # yellow-amber
-    warn-orange: "#ff9800"        # orange
-    warn-gold: "#f39c12"          # gold
-    warn-bright: "#fbbc04"        # bright yellow (google)
-    warn-deep: "#ef6c00"          # deep orange
-    warn-lt: "#ffe0b2"            # tint
-    warn-tint: "#ffcc80"          # lighter tint
-    warn-pale: "#fff3e0"          # very light warn fill
-    warn-pale2: "#fff3cd"         # alternate pale (bootstrap)
-    warn-pale3: "#fff8e1"         # pale yellow fill
-    warn-pale4: "#fff9c4"         # pale lemon fill
+    warn-fill: "#ff9800"          # saturated orange box fill
+    warn-border: "#e65100"        # matching border / stroke
+    warn-text: "#ffffff"          # text on warn fill
+    warn-accent: "#bf360c"        # deeper shade for emphasis
 
   danger:
-    danger: "#e53935"             # error, destructive (gradient top)
-    danger-dk: "#c62828"          # gradient bottom / dark red
-    danger-mid: "#d32f2f"         # medium red
-    danger-light: "#e74c3c"       # lighter red
-    danger-vivid: "#f44336"       # vivid red
-    danger-bright: "#dc3545"      # bright red (bootstrap)
-    danger-google: "#ea4335"      # google red
-    danger-deep: "#b71c1c"        # deep dark red
-    danger-deeper: "#bf360c"      # deeper red-orange
-    danger-pink: "#c2185b"        # pink-red
-    danger-lt: "#ffcdd2"          # tint
-    danger-pale: "#ffebee"        # very light danger fill
-    danger-pale2: "#f8d7da"       # alternate pale (bootstrap)
-    danger-pale3: "#fce4ec"       # pale pink fill
+    danger-fill: "#e74c3c"        # saturated red box fill
+    danger-border: "#c62828"      # matching border / stroke
+    danger-text: "#ffffff"        # text on danger fill
+    danger-accent: "#b71c1c"      # deeper shade for emphasis
 
   info:
-    info: "#8e24aa"               # informational, purple (gradient top)
-    info-dk: "#6a1b9a"            # gradient bottom / dark purple
-    info-mid: "#7b1fa2"           # medium purple
-    info-light: "#9c27b0"         # lighter purple
-    info-vivid: "#673ab7"         # violet
-    info-deep: "#4a148c"          # deep purple
-    info-soft: "#9b59b6"          # soft purple
-    info-lt: "#ce93d8"            # tint
-    info-tint: "#e1bee7"          # lighter tint
-    info-pale: "#f3e5f5"          # very light info fill
-    info-indigo: "#3f51b5"        # indigo
-    info-indigo-lt: "#e8eaf6"     # light indigo fill
+    info-fill: "#9c27b0"          # saturated purple box fill
+    info-border: "#6a1b9a"        # matching border / stroke
+    info-text: "#ffffff"          # text on info fill
+    info-accent: "#4a148c"        # deeper shade for emphasis
 
 gradients:
   grad-primary:
     direction: vertical
     stops:
-      - color: "#1e88e5"          # primary
+      - color: "#2196f3"          # primary-fill
         offset: "0%"
-      - color: "#1565c0"          # primary-dk
+      - color: "#1565c0"          # primary-border
         offset: "100%"
   grad-surface:
     direction: vertical
@@ -133,30 +76,30 @@ gradients:
   grad-ok:
     direction: vertical
     stops:
-      - color: "#43a047"          # ok
+      - color: "#4caf50"          # ok-fill
         offset: "0%"
-      - color: "#2e7d32"          # ok-dk
+      - color: "#2e7d32"          # ok-border
         offset: "100%"
   grad-warn:
     direction: vertical
     stops:
-      - color: "#fb8c00"          # warn
+      - color: "#ff9800"          # warn-fill
         offset: "0%"
-      - color: "#e65100"          # warn-dk
+      - color: "#e65100"          # warn-border
         offset: "100%"
   grad-danger:
     direction: vertical
     stops:
-      - color: "#e53935"          # danger
+      - color: "#e74c3c"          # danger-fill
         offset: "0%"
-      - color: "#c62828"          # danger-dk
+      - color: "#c62828"          # danger-border
         offset: "100%"
   grad-info:
     direction: vertical
     stops:
-      - color: "#8e24aa"          # info
+      - color: "#9c27b0"          # info-fill
         offset: "0%"
-      - color: "#6a1b9a"          # info-dk
+      - color: "#6a1b9a"          # info-border
         offset: "100%"
 
 filters:
@@ -170,15 +113,54 @@ filters:
 markers:
   arrow:
     fill: "#555555"               # text-muted
+    markerWidth: 10
+    markerHeight: 10
   arrow-primary:
-    fill: "#1565c0"               # primary-dk
+    fill: "#1565c0"               # primary-border
+    markerWidth: 10
+    markerHeight: 10
   arrow-ok:
-    fill: "#2e7d32"               # ok-dk
+    fill: "#2e7d32"               # ok-border
+    markerWidth: 10
+    markerHeight: 10
   arrow-warn:
-    fill: "#e65100"               # warn-dk
+    fill: "#e65100"               # warn-border
+    markerWidth: 10
+    markerHeight: 10
   arrow-danger:
-    fill: "#c62828"               # danger-dk
+    fill: "#c62828"               # danger-border
+    markerWidth: 10
+    markerHeight: 10
   arrow-info:
-    fill: "#6a1b9a"               # info-dk
+    fill: "#6a1b9a"               # info-border
+    markerWidth: 10
+    markerHeight: 10
   arrow-white:
     fill: "#ffffff"               # bg
+    markerWidth: 10
+    markerHeight: 10
+
+# Shape primitives. Every <rect>/<circle>/<ellipse> in an SVG must match
+# one of these. The normalize_svg_style.py script enforces them; the
+# check_svg.py --shapes flag validates compliance.
+shapes:
+  box:
+    rx: 6                         # corner radius for all boxes
+    stroke-width: 2               # when fill is a semantic family color
+    stroke-width-neutral: 1       # when fill is --surface or --bg
+    # When fill is var(--{family}-fill), stroke MUST be var(--{family}-border)
+    # When fill is var(--surface) or none, stroke MUST be var(--border)
+    # When text is placed inside a family-filled box, text fill MUST be
+    # var(--{family}-text)
+
+# Line primitives. Every <line>/<path> used as a connector must match
+# one of these.
+lines:
+  connector:
+    stroke: "#555555"             # text-muted
+    stroke-width: 2
+    marker-end: "url(#arrow)"
+  emphasis:
+    stroke: "#212121"             # text
+    stroke-width: 3
+    marker-end: "url(#arrow)"

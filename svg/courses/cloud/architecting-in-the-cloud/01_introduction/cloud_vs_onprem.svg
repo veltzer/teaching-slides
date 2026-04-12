@@ -1,72 +1,126 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="706.2069" height="353.1034" fill="var(--bg)" rx="0" />
-  <rect x="22.069" y="16.5517" width="320" height="325.5172" rx="6.6207" fill="var(--danger-pale)" stroke="var(--border)" stroke-width="0.8276" />
-  <text x="182.069" y="35.8621" font-family="Arial, sans-serif" font-size="12.1379" font-weight="bold" fill="var(--danger-dk)" text-anchor="middle">On-Premises (Fixed Capacity)</text>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="706.2069" height="353.1034" fill="var(--bg)" rx="6" />
+  <rect x="22.069" y="16.5517" width="320" height="325.5172" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="182.069" y="35.8621" font-family="Arial, sans-serif" font-size="12.1379" font-weight="bold" fill="var(--danger-accent)" text-anchor="middle">On-Premises (Fixed Capacity)</text>
   <line x1="55.1724" y1="66.2069" x2="55.1724" y2="286.8966" stroke="var(--text-muted)" stroke-width="1.1034" />
   <line x1="55.1724" y1="286.8966" x2="308.9655" y2="286.8966" stroke="var(--text-muted)" stroke-width="1.1034" />
   <text x="33.1034" y="176.5517" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle" transform="rotate(-90,60,320)">Capacity / Demand</text>
   <text x="182.069" y="303.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Time</text>
-  <line x1="55.1724" y1="110.3448" x2="308.9655" y2="110.3448" stroke="var(--danger)" stroke-width="1.6552" stroke-dasharray="4.4138 2.2069" />
-  <text x="311.7241" y="107.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)">Peak Capacity</text>
-  <path d="M 55.1724 231.7241 C 88.2759 220.6897 110.3448 193.1034 132.4138 165.5172 C 154.4828 137.931 165.5172 99.3103 187.5862 88.2759 C 209.6552 99.3103 220.6897 137.931 242.7586 193.1034 C 253.7931 220.6897 275.8621 237.2414 297.931 226.2069" fill="none" stroke="var(--primary)" stroke-width="1.6552" />
-  <text x="300.6897" y="223.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)">Demand</text>
-  <path d="M 55.1724 110.3448 L 55.1724 231.7241 C 88.2759 220.6897 110.3448 193.1034 132.4138 165.5172 C 154.4828 137.931 165.5172 110.3448 165.5172 110.3448 Z" fill="var(--danger-lt)" opacity="0.4" />
-  <text x="99.3103" y="160" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle">Wasted</text>
-  <text x="99.3103" y="169.931" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle">capacity</text>
-  <path d="M 165.5172 110.3448 C 165.5172 110.3448 165.5172 99.3103 187.5862 88.2759 C 209.6552 99.3103 209.6552 110.3448 209.6552 110.3448 Z" fill="var(--warn-lt)" opacity="0.5" />
-  <text x="187.5862" y="85.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle">Unmet demand!</text>
-  <rect x="364.1379" y="16.5517" width="320" height="325.5172" rx="6.6207" fill="var(--ok-pale)" stroke="var(--border)" stroke-width="0.8276" />
-  <text x="524.1379" y="35.8621" font-family="Arial, sans-serif" font-size="12.1379" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Cloud (Elastic Scaling)</text>
+  <line x1="55.1724" y1="110.3448" x2="308.9655" y2="110.3448" stroke="var(--danger-border)" stroke-width="1.6552" stroke-dasharray="4.4138 2.2069" />
+  <text x="311.7241" y="107.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)">Peak Capacity</text>
+  <path d="M 55.1724 231.7241 C 88.2759 220.6897 110.3448 193.1034 132.4138 165.5172 C 154.4828 137.931 165.5172 99.3103 187.5862 88.2759 C 209.6552 99.3103 220.6897 137.931 242.7586 193.1034 C 253.7931 220.6897 275.8621 237.2414 297.931 226.2069" fill="none" stroke="var(--primary-border)" stroke-width="1.6552" />
+  <text x="300.6897" y="223.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Demand</text>
+  <path d="M 55.1724 110.3448 L 55.1724 231.7241 C 88.2759 220.6897 110.3448 193.1034 132.4138 165.5172 C 154.4828 137.931 165.5172 110.3448 165.5172 110.3448 Z" fill="var(--danger-fill)" opacity="0.4" />
+  <text x="99.3103" y="160" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">Wasted</text>
+  <text x="99.3103" y="169.931" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">capacity</text>
+  <path d="M 165.5172 110.3448 C 165.5172 110.3448 165.5172 99.3103 187.5862 88.2759 C 209.6552 99.3103 209.6552 110.3448 209.6552 110.3448 Z" fill="var(--warn-fill)" opacity="0.5" />
+  <text x="187.5862" y="85.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">Unmet demand!</text>
+  <rect x="364.1379" y="16.5517" width="320" height="325.5172" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="524.1379" y="35.8621" font-family="Arial, sans-serif" font-size="12.1379" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Cloud (Elastic Scaling)</text>
   <line x1="397.2414" y1="66.2069" x2="397.2414" y2="286.8966" stroke="var(--text-muted)" stroke-width="1.1034" />
   <line x1="397.2414" y1="286.8966" x2="651.0345" y2="286.8966" stroke="var(--text-muted)" stroke-width="1.1034" />
   <text x="375.1724" y="176.5517" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle" transform="rotate(-90,680,320)">Capacity / Demand</text>
   <text x="524.1379" y="303.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Time</text>
-  <path d="M 397.2414 231.7241 C 430.3448 220.6897 452.4138 193.1034 474.4828 165.5172 C 496.5517 137.931 507.5862 99.3103 529.6552 88.2759 C 551.7241 99.3103 562.7586 137.931 584.8276 193.1034 C 595.8621 220.6897 617.931 237.2414 640 226.2069" fill="none" stroke="var(--primary)" stroke-width="1.6552" />
-  <text x="642.7586" y="223.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)">Demand</text>
-  <path d="M 397.2414 226.2069 C 430.3448 215.1724 452.4138 187.5862 474.4828 160 C 496.5517 132.4138 507.5862 93.7931 529.6552 82.7586 C 551.7241 93.7931 562.7586 132.4138 584.8276 187.5862 C 595.8621 215.1724 617.931 231.7241 640 220.6897" fill="none" stroke="var(--ok)" stroke-width="1.6552" stroke-dasharray="4.4138 2.2069" />
-  <text x="642.7586" y="217.931" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)">Capacity</text>
-  <path d="M 397.2414 226.2069 C 430.3448 215.1724 452.4138 187.5862 474.4828 160 C 496.5517 132.4138 507.5862 93.7931 529.6552 82.7586 C 551.7241 93.7931 562.7586 132.4138 584.8276 187.5862 C 595.8621 215.1724 617.931 231.7241 640 220.6897 L 640 226.2069 C 617.931 237.2414 595.8621 220.6897 584.8276 193.1034 C 562.7586 137.931 551.7241 99.3103 529.6552 88.2759 C 507.5862 99.3103 496.5517 137.931 474.4828 165.5172 C 452.4138 193.1034 430.3448 220.6897 397.2414 231.7241 Z" fill="var(--ok-lt)" opacity="0.4" />
-  <text x="524.1379" y="154.4828" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle">Minimal waste</text>
-  <text x="524.1379" y="325.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Pay only for what you use</text>
-  <text x="182.069" y="325.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Pay for peak, waste the rest</text>
+  <path d="M 397.2414 231.7241 C 430.3448 220.6897 452.4138 193.1034 474.4828 165.5172 C 496.5517 137.931 507.5862 99.3103 529.6552 88.2759 C 551.7241 99.3103 562.7586 137.931 584.8276 193.1034 C 595.8621 220.6897 617.931 237.2414 640 226.2069" fill="none" stroke="var(--primary-border)" stroke-width="1.6552" />
+  <text x="642.7586" y="223.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">Demand</text>
+  <path d="M 397.2414 226.2069 C 430.3448 215.1724 452.4138 187.5862 474.4828 160 C 496.5517 132.4138 507.5862 93.7931 529.6552 82.7586 C 551.7241 93.7931 562.7586 132.4138 584.8276 187.5862 C 595.8621 215.1724 617.931 231.7241 640 220.6897" fill="none" stroke="var(--ok-border)" stroke-width="1.6552" stroke-dasharray="4.4138 2.2069" />
+  <text x="642.7586" y="217.931" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">Capacity</text>
+  <path d="M 397.2414 226.2069 C 430.3448 215.1724 452.4138 187.5862 474.4828 160 C 496.5517 132.4138 507.5862 93.7931 529.6552 82.7586 C 551.7241 93.7931 562.7586 132.4138 584.8276 187.5862 C 595.8621 215.1724 617.931 231.7241 640 220.6897 L 640 226.2069 C 617.931 237.2414 595.8621 220.6897 584.8276 193.1034 C 562.7586 137.931 551.7241 99.3103 529.6552 88.2759 C 507.5862 99.3103 496.5517 137.931 474.4828 165.5172 C 452.4138 193.1034 430.3448 220.6897 397.2414 231.7241 Z" fill="var(--ok-fill)" opacity="0.4" />
+  <text x="524.1379" y="154.4828" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">Minimal waste</text>
+  <text x="524.1379" y="325.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Pay only for what you use</text>
+  <text x="182.069" y="325.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Pay for peak, waste the rest</text>
 </svg>

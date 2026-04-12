@@ -1,76 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_intro.yaml -->
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-dark: #f0f0f0;
-        --black: #000000;
-        --border-faint: #cccccc;
-        --border-strong: #bdbdbd;
-        --code-bg: #1a1a2e;
+        --border: #e0e0e0;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-bright: #4a90e2;
-        --primary-tint: #90caf9;
-        --primary-google: #4285f4;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --ok-dk: #2e7d32;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-google: #34a853;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-soft: #27ae60;
-        --ok-pale2: #d4edda;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-yellow: #ffc107;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-pale: #ffebee;
-        --info-vivid: #673ab7;
-        --info-indigo: #3f51b5;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-deep: #4a148c;
-        --info-tint: #e1bee7;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
     <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
     <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
     <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
 
     <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <stop offset="0%" style="stop-color:#1a1a2e" />
@@ -81,7 +102,7 @@
       <stop offset="100%" style="stop-color:#f5a623" />
     </linearGradient>
   </defs>
-  <rect width="731.4286" height="411.4286" fill="url(#bg)" />
+  <rect width="731.4286" height="411.4286" fill="url(#bg)" rx="6"/>
   <g opacity="0.08" stroke="var(--bg)" stroke-width="0.4571">
     <line x1="0" y1="51.4286" x2="731.4286" y2="51.4286" />
     <line x1="0" y1="102.8571" x2="731.4286" y2="102.8571" />
@@ -102,37 +123,37 @@
     <polygon points="54.8571,0 18.2857,92.5714 45.7143,92.5714 27.4286,164.5714 91.4286,61.7143 59.4286,61.7143 82.2857,0" fill="url(#spark)" opacity="0.9" />
   </g>
   <g transform="translate(560, 100)">
-    <rect x="0" y="0" width="73.1429" height="20.5714" rx="1.8286" fill="var(--danger-mid)" opacity="0.85" />
-    <rect x="0" y="25.7143" width="73.1429" height="20.5714" rx="1.8286" fill="var(--danger-mid)" opacity="0.7" />
-    <rect x="0" y="51.4286" width="73.1429" height="20.5714" rx="1.8286" fill="var(--danger-mid)" opacity="0.55" />
-    <path d="M 0 0 L 73.1429 10.2857 L 73.1429 20.5714 L 0 20.5714 Z" fill="var(--danger-mid)" opacity="0.3" />
-    <path d="M 0 25.7143 L 73.1429 36 L 73.1429 46.2857 L 0 46.2857 Z" fill="var(--danger-mid)" opacity="0.2" />
-    <path d="M 0 51.4286 L 73.1429 61.7143 L 73.1429 72 L 0 72 Z" fill="var(--danger-mid)" opacity="0.15" />
+    <rect x="0" y="0" width="73.1429" height="20.5714" rx="6" fill="var(--danger-fill)" opacity="0.85" stroke="var(--danger-border)" stroke-width="2"/>
+    <rect x="0" y="25.7143" width="73.1429" height="20.5714" rx="6" fill="var(--danger-fill)" opacity="0.7" stroke="var(--danger-border)" stroke-width="2"/>
+    <rect x="0" y="51.4286" width="73.1429" height="20.5714" rx="6" fill="var(--danger-fill)" opacity="0.55" stroke="var(--danger-border)" stroke-width="2"/>
+    <path d="M 0 0 L 73.1429 10.2857 L 73.1429 20.5714 L 0 20.5714 Z" fill="var(--danger-fill)" opacity="0.3" />
+    <path d="M 0 25.7143 L 73.1429 36 L 73.1429 46.2857 L 0 46.2857 Z" fill="var(--danger-fill)" opacity="0.2" />
+    <path d="M 0 51.4286 L 73.1429 61.7143 L 73.1429 72 L 0 72 Z" fill="var(--danger-fill)" opacity="0.15" />
   </g>
   <g transform="translate(350, 120)">
-    <path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 45.7143 0" fill="none" stroke="var(--text-dark)" stroke-width="7.3143" stroke-linecap="round" />
-    <path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 32 -37.0286" fill="none" stroke="var(--ok-vivid)" stroke-width="7.3143" stroke-linecap="round" />
-    <line x1="0" y1="0" x2="22.8571" y2="-41.1429" stroke="var(--danger-light)" stroke-width="2.7429" stroke-linecap="round" />
-    <circle cx="0" cy="0" r="4.5714" fill="var(--danger-light)" />
+    <path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 45.7143 0" fill="none" stroke="var(--text)" stroke-width="7.3143" stroke-linecap="round" />
+    <path d="M -45.7143 0 A 45.7143 45.7143 0 0 1 32 -37.0286" fill="none" stroke="var(--ok-border)" stroke-width="7.3143" stroke-linecap="round" />
+    <line x1="0" y1="0" x2="22.8571" y2="-41.1429" stroke="var(--danger-border)" stroke-width="2" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="4.5714" fill="var(--danger-fill)" />
   </g>
   <g transform="translate(250, 250)" opacity="0.6">
-    <circle cx="0" cy="0" r="10.9714" fill="var(--ok-vivid)" />
-    <circle cx="73.1429" cy="-20.5714" r="10.9714" fill="var(--ok-vivid)" />
-    <circle cx="73.1429" cy="20.5714" r="10.9714" fill="var(--ok-vivid)" />
-    <circle cx="146.2857" cy="0" r="10.9714" fill="var(--warn-amber)" />
-    <circle cx="219.4286" cy="0" r="10.9714" fill="var(--danger-light)" />
-    <line x1="10.9714" y1="-4.1143" x2="62.1714" y2="-18.5143" stroke="var(--ok-vivid)" stroke-width="1.8286" />
-    <line x1="10.9714" y1="4.1143" x2="62.1714" y2="18.5143" stroke="var(--ok-vivid)" stroke-width="1.8286" />
-    <line x1="84.1143" y1="-16.4571" x2="135.3143" y2="-4.1143" stroke="var(--ok-vivid)" stroke-width="1.8286" />
-    <line x1="84.1143" y1="16.4571" x2="135.3143" y2="4.1143" stroke="var(--ok-vivid)" stroke-width="1.8286" />
-    <line x1="157.2571" y1="0" x2="208.4571" y2="0" stroke="var(--warn-amber)" stroke-width="1.8286" />
+    <circle cx="0" cy="0" r="10.9714" fill="var(--ok-fill)" />
+    <circle cx="73.1429" cy="-20.5714" r="10.9714" fill="var(--ok-fill)" />
+    <circle cx="73.1429" cy="20.5714" r="10.9714" fill="var(--ok-fill)" />
+    <circle cx="146.2857" cy="0" r="10.9714" fill="var(--warn-fill)" />
+    <circle cx="219.4286" cy="0" r="10.9714" fill="var(--danger-fill)" />
+    <line x1="10.9714" y1="-4.1143" x2="62.1714" y2="-18.5143" stroke="var(--ok-border)" stroke-width="1.8286" />
+    <line x1="10.9714" y1="4.1143" x2="62.1714" y2="18.5143" stroke="var(--ok-border)" stroke-width="1.8286" />
+    <line x1="84.1143" y1="-16.4571" x2="135.3143" y2="-4.1143" stroke="var(--ok-border)" stroke-width="1.8286" />
+    <line x1="84.1143" y1="16.4571" x2="135.3143" y2="4.1143" stroke="var(--ok-border)" stroke-width="1.8286" />
+    <line x1="157.2571" y1="0" x2="208.4571" y2="0" stroke="var(--warn-border)" stroke-width="1.8286" />
   </g>
   <g opacity="0.25">
-    <path d="M 91.4286 339.4286 Q 182.8571 318.8571 274.2857 339.4286 Q 365.7143 360 457.1429 339.4286 Q 548.5714 318.8571 640 339.4286" fill="none" stroke="var(--ok-vivid)" stroke-width="1.8286" />
-    <path d="M 91.4286 360 Q 182.8571 339.4286 274.2857 360 Q 365.7143 380.5714 457.1429 360 Q 548.5714 339.4286 640 360" fill="none" stroke="var(--danger-light)" stroke-width="1.8286" />
+    <path d="M 91.4286 339.4286 Q 182.8571 318.8571 274.2857 339.4286 Q 365.7143 360 457.1429 339.4286 Q 548.5714 318.8571 640 339.4286" fill="none" stroke="var(--ok-border)" stroke-width="1.8286" />
+    <path d="M 91.4286 360 Q 182.8571 339.4286 274.2857 360 Q 365.7143 380.5714 457.1429 360 Q 548.5714 339.4286 640 360" fill="none" stroke="var(--danger-border)" stroke-width="1.8286" />
   </g>
-  <circle cx="45.7143" cy="51.4286" r="2.7429" fill="var(--ok-vivid)" opacity="0.4" />
-  <circle cx="685.7143" cy="51.4286" r="2.7429" fill="var(--danger-light)" opacity="0.4" />
-  <circle cx="45.7143" cy="360" r="2.7429" fill="var(--danger-mid)" opacity="0.4" />
-  <circle cx="685.7143" cy="360" r="2.7429" fill="var(--warn-amber)" opacity="0.4" />
+  <circle cx="45.7143" cy="51.4286" r="2.7429" fill="var(--ok-fill)" opacity="0.4" />
+  <circle cx="685.7143" cy="51.4286" r="2.7429" fill="var(--danger-fill)" opacity="0.4" />
+  <circle cx="45.7143" cy="360" r="2.7429" fill="var(--danger-fill)" opacity="0.4" />
+  <circle cx="685.7143" cy="360" r="2.7429" fill="var(--warn-fill)" opacity="0.4" />
 </svg>

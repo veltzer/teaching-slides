@@ -1,126 +1,182 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-  </defs>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="1280" height="640" rx="0" fill="var(--bg)"/>
+  <rect x="0" y="0" width="1280" height="640" rx="6" fill="var(--bg)"/>
 
   <!-- Users -->
-  <rect x="30" y="200" width="100" height="100" rx="12" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="200" width="100" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="80" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="var(--text-muted)">&#128100;</text>
-  <text x="80" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text-dark)">Users</text>
+  <text x="80" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Users</text>
 
   <!-- Arrow: Users -> ALB -->
   <line x1="130" y1="250" x2="200" y2="250" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="165" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">HTTPS</text>
 
   <!-- Application Load Balancer -->
-  <rect x="210" y="190" width="180" height="120" rx="12" fill="url(#grad-primary)" stroke="var(--primary-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="210" y="190" width="180" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="300" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Application</text>
   <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">Load Balancer</text>
-  <text x="300" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-lt)">(ALB)</text>
+  <text x="300" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-accent)">(ALB)</text>
 
   <!-- Arrows: ALB -> AZ1 instances -->
-  <line x1="390" y1="230" x2="490" y2="160" stroke="var(--primary-dk)" stroke-width="2" marker-end="url(#arrow-primary)"/>
-  <line x1="390" y1="270" x2="490" y2="370" stroke="var(--primary-dk)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="390" y1="230" x2="490" y2="160" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <line x1="390" y1="270" x2="490" y2="370" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
 
   <!-- Auto Scaling Group box -->
-  <rect x="470" y="30" width="620" height="580" rx="16" fill="var(--bg)" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="10,5"/>
-  <text x="780" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-dk)">Auto Scaling Group</text>
+  <rect x="470" y="30" width="620" height="580" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2.5" stroke-dasharray="10,5"/>
+  <text x="780" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-accent)">Auto Scaling Group</text>
 
   <!-- AZ 1 -->
-  <rect x="500" y="85" width="270" height="230" rx="12" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <rect x="500" y="85" width="270" height="230" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="635" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text-muted)">Availability Zone 1</text>
 
   <!-- EC2 instances in AZ1 -->
-  <rect x="525" y="130" width="100" height="70" rx="8" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="575" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">EC2</text>
+  <rect x="525" y="130" width="100" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">EC2</text>
   <text x="575" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Instance 1</text>
 
-  <rect x="645" y="130" width="100" height="70" rx="8" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="695" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">EC2</text>
+  <rect x="645" y="130" width="100" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="695" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">EC2</text>
   <text x="695" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Instance 2</text>
 
   <!-- Scaling indicator in AZ1 -->
-  <rect x="525" y="220" width="220" height="70" rx="8" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="635" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)">EC2 (scales up)</text>
+  <rect x="525" y="220" width="220" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="635" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-accent)">EC2 (scales up)</text>
   <text x="635" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Added when demand increases</text>
 
   <!-- AZ 2 -->
-  <rect x="500" y="340" width="270" height="230" rx="12" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <rect x="500" y="340" width="270" height="230" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="635" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text-muted)">Availability Zone 2</text>
 
   <!-- EC2 instances in AZ2 -->
-  <rect x="525" y="385" width="100" height="70" rx="8" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="575" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">EC2</text>
+  <rect x="525" y="385" width="100" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">EC2</text>
   <text x="575" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Instance 3</text>
 
-  <rect x="645" y="385" width="100" height="70" rx="8" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="695" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">EC2</text>
+  <rect x="645" y="385" width="100" height="70" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="695" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">EC2</text>
   <text x="695" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Instance 4</text>
 
   <!-- Scaling indicator in AZ2 -->
-  <rect x="525" y="475" width="220" height="70" rx="8" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="635" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)">EC2 (scales up)</text>
+  <rect x="525" y="475" width="220" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="635" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-accent)">EC2 (scales up)</text>
   <text x="635" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Added when demand increases</text>
 
   <!-- CloudWatch -->
-  <rect x="830" y="140" width="220" height="120" rx="12" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-dk)">CloudWatch</text>
+  <rect x="830" y="140" width="220" height="120" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--info-accent)">CloudWatch</text>
   <text x="940" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">CPU &gt; 70%: Scale Out</text>
   <text x="940" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">CPU &lt; 30%: Scale In</text>
 
   <!-- Arrow: CloudWatch -> ASG -->
-  <line x1="940" y1="260" x2="940" y2="330" stroke="var(--info-dk)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="960" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)">Alarm</text>
+  <line x1="940" y1="260" x2="940" y2="330" stroke="var(--info-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="960" y="300" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)">Alarm</text>
 
   <!-- Scaling Policy box -->
-  <rect x="830" y="340" width="220" height="90" rx="12" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-dk)">Scaling Policy</text>
+  <rect x="830" y="340" width="220" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-accent)">Scaling Policy</text>
   <text x="940" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Min: 2 | Desired: 4 | Max: 8</text>
 
   <!-- Arrow: Scaling Policy -> AZ instances -->
-  <line x1="830" y1="410" x2="770" y2="430" stroke="var(--warn-dk)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="830" y1="410" x2="770" y2="430" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Health check note -->
-  <rect x="830" y="470" width="220" height="80" rx="12" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.5"/>
-  <text x="940" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-dk)">Health Checks</text>
+  <rect x="830" y="470" width="220" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="940" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">Health Checks</text>
   <text x="940" y="522" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">EC2 + ELB health checks</text>
   <text x="940" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Replace unhealthy instances</text>
 </svg>

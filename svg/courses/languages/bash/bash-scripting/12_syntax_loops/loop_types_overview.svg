@@ -1,151 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-light: #f9f9f9;
-        --surface-dark: #f0f0f0;
         --border: #e0e0e0;
-        --border-strong: #bdbdbd;
-        --border-faint: #cccccc;
-        --border-softer: #dddddd;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-lighter: #777777;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
         --code-bg: #1a1a2e;
         --shadow: #00000022;
         --black: #000000;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-bright: #4a90e2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-lt: #bbdefb;
-        --primary-tint: #90caf9;
-        --primary-pale: #e3f2fd;
-        --primary-pale2: #e8f4f8;
-        --primary-pale3: #e1f5fe;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --primary-google: #4285f4;
-        --ok: #43a047;
-        --ok-dk: #2e7d32;
-        --ok-mid: #388e3c;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-soft: #27ae60;
-        --ok-google: #34a853;
-        --ok-deep: #1b5e20;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-pale2: #d4edda;
-        --ok-pale3: #e8f5e8;
-        --warn: #fb8c00;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-yellow: #ffc107;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --warn-pale: #fff3e0;
-        --warn-pale2: #fff3cd;
-        --warn-pale3: #fff8e1;
-        --warn-pale4: #fff9c4;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-google: #ea4335;
-        --danger-deep: #b71c1c;
-        --danger-deeper: #bf360c;
-        --danger-pink: #c2185b;
-        --danger-lt: #ffcdd2;
-        --danger-pale: #ffebee;
-        --danger-pale2: #f8d7da;
-        --danger-pale3: #fce4ec;
-        --info: #8e24aa;
-        --info-dk: #6a1b9a;
-        --info-mid: #7b1fa2;
-        --info-light: #9c27b0;
-        --info-vivid: #673ab7;
-        --info-deep: #4a148c;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-tint: #e1bee7;
-        --info-pale: #f3e5f5;
-        --info-indigo: #3f51b5;
-        --info-indigo-lt: #e8eaf6;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
       <stop offset="100%" stop-color="#1565c0" />
@@ -163,99 +110,99 @@
       <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
   </defs>
-  <rect width="688.4034" height="344.2017" fill="var(--bg)" />
-  <rect x="21.5126" y="16.1345" width="198.9916" height="311.9328" rx="6.4538" fill="url(#grad-surface)" filter="url(#shadow)" />
-  <rect x="21.5126" y="16.1345" width="198.9916" height="32.2689" rx="6.4538" fill="url(#grad-while)" />
-  <rect x="21.5126" y="41.9496" width="198.9916" height="6.4538" fill="url(#grad-while)" />
+  <rect width="688.4034" height="344.2017" fill="var(--bg)" rx="6"/>
+  <rect x="21.5126" y="16.1345" width="198.9916" height="311.9328" rx="6" fill="var(--surface)" filter="url(#shadow)" />
+  <rect x="21.5126" y="16.1345" width="198.9916" height="32.2689" rx="6" fill="url(#grad-while)" />
+  <rect x="21.5126" y="41.9496" width="198.9916" height="6.4538" fill="url(#grad-while)" rx="6"/>
   <text x="121.0084" y="37.1092" font-family="monospace" font-size="15.0588" font-weight="bold" fill="var(--bg)" text-anchor="middle">while</text>
   <text x="121.0084" y="64.5378" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Loops WHILE condition is true</text>
-  <rect x="77.9832" y="75.2941" width="86.0504" height="23.6639" rx="11.8319" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.0756" />
-  <text x="121.0084" y="89.8151" font-family="monospace" font-size="10" fill="var(--primary-dk)" text-anchor="middle">condition?</text>
+  <rect x="77.9832" y="75.2941" width="86.0504" height="23.6639" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="121.0084" y="89.8151" font-family="monospace" font-size="10" fill="var(--primary-accent)" text-anchor="middle">condition?</text>
   <line x1="121.0084" y1="98.958" x2="121.0084" y2="112.9412" stroke="var(--text-muted)" stroke-width="1.0756" marker-end="url(#arrow)" />
-  <text x="129.0756" y="107.563" font-family="sans-serif" font-size="10" fill="var(--ok-dk)">true</text>
-  <rect x="77.9832" y="112.9412" width="86.0504" height="23.6639" rx="4.3025" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.0756" />
-  <text x="121.0084" y="127.4622" font-family="monospace" font-size="10" fill="var(--ok-dk)" text-anchor="middle">do body</text>
+  <text x="129.0756" y="107.563" font-family="sans-serif" font-size="10" fill="var(--ok-accent)">true</text>
+  <rect x="77.9832" y="112.9412" width="86.0504" height="23.6639" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="121.0084" y="127.4622" font-family="monospace" font-size="10" fill="var(--ok-accent)" text-anchor="middle">do body</text>
   <path d="M 164.0336 124.7731 Q 193.6134 124.7731 193.6134 87.1261 Q 193.6134 49.479 121.0084 49.479" stroke="var(--text-muted)" stroke-width="1.0756" fill="none" marker-end="url(#arrow)" />
   <line x1="77.9832" y1="87.1261" x2="48.4034" y2="87.1261" stroke="var(--text-muted)" stroke-width="1.0756" marker-end="url(#arrow)" />
-  <text x="44.1008" y="84.9748" font-family="sans-serif" font-size="10" fill="var(--danger)" text-anchor="end">false</text>
-  <rect x="32.2689" y="93.042" width="43.0252" height="16.1345" rx="3.2269" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="0.8067" />
-  <text x="53.7815" y="103.7983" font-family="sans-serif" font-size="10" fill="var(--danger)" text-anchor="middle">exit loop</text>
-  <rect x="32.2689" y="150.5882" width="177.479" height="80.6723" rx="4.3025" fill="var(--code-bg)" stroke="var(--primary)" stroke-width="0.8067" />
-  <text x="43.0252" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-tint)">while</text>
-  <text x="64.5378" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-lt)"> [ $count -le 5 ]; </text>
-  <text x="43.0252" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-tint)">while</text>
-  <text x="43.0252" y="174.7899" font-family="monospace" font-size="10" fill="var(--primary-tint)">do</text>
-  <text x="53.7815" y="185.5462" font-family="monospace" font-size="10" fill="var(--primary-lt)">  echo $count</text>
-  <text x="53.7815" y="196.3025" font-family="monospace" font-size="10" fill="var(--primary-lt)">  ((count++))</text>
-  <text x="43.0252" y="207.0588" font-family="monospace" font-size="10" fill="var(--primary-tint)">done</text>
-  <text x="37.6471" y="242.0168" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">Use cases:</text>
-  <text x="37.6471" y="253.8487" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Wait for a condition</text>
-  <text x="37.6471" y="264.605" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Read input line by line</text>
-  <text x="37.6471" y="275.3613" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Retry until success</text>
-  <text x="37.6471" y="286.1176" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Daemon / polling loops</text>
-  <rect x="244.7059" y="16.1345" width="198.9916" height="311.9328" rx="6.4538" fill="url(#grad-surface)" filter="url(#shadow)" />
-  <rect x="244.7059" y="16.1345" width="198.9916" height="32.2689" rx="6.4538" fill="url(#grad-for)" />
-  <rect x="244.7059" y="41.9496" width="198.9916" height="6.4538" fill="url(#grad-for)" />
+  <text x="44.1008" y="84.9748" font-family="sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="end">false</text>
+  <rect x="32.2689" y="93.042" width="43.0252" height="16.1345" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="53.7815" y="103.7983" font-family="sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">exit loop</text>
+  <rect x="32.2689" y="150.5882" width="177.479" height="80.6723" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.8067" />
+  <text x="43.0252" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-accent)">while</text>
+  <text x="64.5378" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-accent)"> [ $count -le 5 ]; </text>
+  <text x="43.0252" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-accent)">while</text>
+  <text x="43.0252" y="174.7899" font-family="monospace" font-size="10" fill="var(--primary-accent)">do</text>
+  <text x="53.7815" y="185.5462" font-family="monospace" font-size="10" fill="var(--primary-accent)">  echo $count</text>
+  <text x="53.7815" y="196.3025" font-family="monospace" font-size="10" fill="var(--primary-accent)">  ((count++))</text>
+  <text x="43.0252" y="207.0588" font-family="monospace" font-size="10" fill="var(--primary-accent)">done</text>
+  <text x="37.6471" y="242.0168" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Use cases:</text>
+  <text x="37.6471" y="253.8487" font-family="sans-serif" font-size="10" fill="var(--text)">• Wait for a condition</text>
+  <text x="37.6471" y="264.605" font-family="sans-serif" font-size="10" fill="var(--text)">• Read input line by line</text>
+  <text x="37.6471" y="275.3613" font-family="sans-serif" font-size="10" fill="var(--text)">• Retry until success</text>
+  <text x="37.6471" y="286.1176" font-family="sans-serif" font-size="10" fill="var(--text)">• Daemon / polling loops</text>
+  <rect x="244.7059" y="16.1345" width="198.9916" height="311.9328" rx="6" fill="var(--surface)" filter="url(#shadow)" />
+  <rect x="244.7059" y="16.1345" width="198.9916" height="32.2689" rx="6" fill="url(#grad-for)" />
+  <rect x="244.7059" y="41.9496" width="198.9916" height="6.4538" fill="url(#grad-for)" rx="6"/>
   <text x="344.2017" y="37.1092" font-family="monospace" font-size="15.0588" font-weight="bold" fill="var(--bg)" text-anchor="middle">for</text>
   <text x="344.2017" y="64.5378" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Iterates over a list or range</text>
-  <rect x="301.1765" y="75.2941" width="86.0504" height="23.6639" rx="11.8319" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.0756" />
-  <text x="344.2017" y="86.0504" font-family="monospace" font-size="10" fill="var(--ok-dk)" text-anchor="middle">more items</text>
-  <text x="344.2017" y="95.1933" font-family="monospace" font-size="10" fill="var(--ok-dk)" text-anchor="middle">in list?</text>
+  <rect x="301.1765" y="75.2941" width="86.0504" height="23.6639" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="344.2017" y="86.0504" font-family="monospace" font-size="10" fill="var(--ok-accent)" text-anchor="middle">more items</text>
+  <text x="344.2017" y="95.1933" font-family="monospace" font-size="10" fill="var(--ok-accent)" text-anchor="middle">in list?</text>
   <line x1="344.2017" y1="98.958" x2="344.2017" y2="112.9412" stroke="var(--text-muted)" stroke-width="1.0756" marker-end="url(#arrow)" />
-  <text x="352.2689" y="107.563" font-family="sans-serif" font-size="10" fill="var(--ok-dk)">yes</text>
-  <rect x="301.1765" y="112.9412" width="86.0504" height="23.6639" rx="4.3025" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="1.0756" />
-  <text x="344.2017" y="127.4622" font-family="monospace" font-size="10" fill="var(--ok-dk)" text-anchor="middle">do body</text>
+  <text x="352.2689" y="107.563" font-family="sans-serif" font-size="10" fill="var(--ok-accent)">yes</text>
+  <rect x="301.1765" y="112.9412" width="86.0504" height="23.6639" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="344.2017" y="127.4622" font-family="monospace" font-size="10" fill="var(--ok-accent)" text-anchor="middle">do body</text>
   <path d="M 387.2269 124.7731 Q 416.8067 124.7731 416.8067 87.1261 Q 416.8067 49.479 344.2017 49.479" stroke="var(--text-muted)" stroke-width="1.0756" fill="none" marker-end="url(#arrow)" />
   <line x1="301.1765" y1="87.1261" x2="271.5966" y2="87.1261" stroke="var(--text-muted)" stroke-width="1.0756" marker-end="url(#arrow)" />
-  <text x="267.2941" y="84.9748" font-family="sans-serif" font-size="10" fill="var(--danger)" text-anchor="end">no</text>
-  <rect x="255.4622" y="93.042" width="43.0252" height="16.1345" rx="3.2269" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="0.8067" />
-  <text x="276.9748" y="103.7983" font-family="sans-serif" font-size="10" fill="var(--danger)" text-anchor="middle">exit loop</text>
-  <rect x="255.4622" y="150.5882" width="177.479" height="91.4286" rx="4.3025" fill="var(--code-bg)" stroke="var(--ok-dk)" stroke-width="0.8067" />
-  <text x="266.2185" y="164.0336" font-family="monospace" font-size="10" fill="var(--ok-tint)">for</text>
-  <text x="280.7395" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-lt)"> fruit in apple banana; </text>
-  <text x="266.2185" y="174.7899" font-family="monospace" font-size="10" fill="var(--ok-tint)">do</text>
-  <text x="266.2185" y="185.5462" font-family="monospace" font-size="10" fill="var(--primary-lt)">  echo "$fruit"</text>
-  <text x="266.2185" y="196.3025" font-family="monospace" font-size="10" fill="var(--ok-tint)">done</text>
-  <text x="266.2185" y="209.7479" font-family="monospace" font-size="10" fill="var(--text-mid)"># C-style:</text>
-  <text x="266.2185" y="219.4286" font-family="monospace" font-size="10" fill="var(--ok-tint)">for</text>
-  <text x="280.7395" y="219.4286" font-family="monospace" font-size="10" fill="var(--primary-lt)"> ((i=0; i&lt;10; i++)); </text>
-  <text x="266.2185" y="229.1092" font-family="monospace" font-size="10" fill="var(--ok-tint)">do</text>
-  <text x="266.2185" y="238.7899" font-family="monospace" font-size="10" fill="var(--primary-lt)">  echo $i</text>
-  <text x="260.8403" y="252.7731" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--ok-dk)">Use cases:</text>
-  <text x="260.8403" y="264.605" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Process a list of items</text>
-  <text x="260.8403" y="275.3613" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Iterate over files (glob)</text>
-  <text x="260.8403" y="286.1176" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Counted repetitions</text>
-  <text x="260.8403" y="296.8739" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Loop over array elements</text>
-  <rect x="467.8992" y="16.1345" width="198.9916" height="311.9328" rx="6.4538" fill="url(#grad-surface)" filter="url(#shadow)" />
-  <rect x="467.8992" y="16.1345" width="198.9916" height="32.2689" rx="6.4538" fill="url(#grad-until)" />
-  <rect x="467.8992" y="41.9496" width="198.9916" height="6.4538" fill="url(#grad-until)" />
+  <text x="267.2941" y="84.9748" font-family="sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="end">no</text>
+  <rect x="255.4622" y="93.042" width="43.0252" height="16.1345" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="276.9748" y="103.7983" font-family="sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle">exit loop</text>
+  <rect x="255.4622" y="150.5882" width="177.479" height="91.4286" rx="6" fill="var(--code-bg)" stroke="var(--ok-border)" stroke-width="0.8067" />
+  <text x="266.2185" y="164.0336" font-family="monospace" font-size="10" fill="var(--ok-accent)">for</text>
+  <text x="280.7395" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-accent)"> fruit in apple banana; </text>
+  <text x="266.2185" y="174.7899" font-family="monospace" font-size="10" fill="var(--ok-accent)">do</text>
+  <text x="266.2185" y="185.5462" font-family="monospace" font-size="10" fill="var(--primary-accent)">  echo "$fruit"</text>
+  <text x="266.2185" y="196.3025" font-family="monospace" font-size="10" fill="var(--ok-accent)">done</text>
+  <text x="266.2185" y="209.7479" font-family="monospace" font-size="10" fill="var(--text-muted)"># C-style:</text>
+  <text x="266.2185" y="219.4286" font-family="monospace" font-size="10" fill="var(--ok-accent)">for</text>
+  <text x="280.7395" y="219.4286" font-family="monospace" font-size="10" fill="var(--primary-accent)"> ((i=0; i&lt;10; i++)); </text>
+  <text x="266.2185" y="229.1092" font-family="monospace" font-size="10" fill="var(--ok-accent)">do</text>
+  <text x="266.2185" y="238.7899" font-family="monospace" font-size="10" fill="var(--primary-accent)">  echo $i</text>
+  <text x="260.8403" y="252.7731" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Use cases:</text>
+  <text x="260.8403" y="264.605" font-family="sans-serif" font-size="10" fill="var(--text)">• Process a list of items</text>
+  <text x="260.8403" y="275.3613" font-family="sans-serif" font-size="10" fill="var(--text)">• Iterate over files (glob)</text>
+  <text x="260.8403" y="286.1176" font-family="sans-serif" font-size="10" fill="var(--text)">• Counted repetitions</text>
+  <text x="260.8403" y="296.8739" font-family="sans-serif" font-size="10" fill="var(--text)">• Loop over array elements</text>
+  <rect x="467.8992" y="16.1345" width="198.9916" height="311.9328" rx="6" fill="var(--surface)" filter="url(#shadow)" />
+  <rect x="467.8992" y="16.1345" width="198.9916" height="32.2689" rx="6" fill="url(#grad-until)" />
+  <rect x="467.8992" y="41.9496" width="198.9916" height="6.4538" fill="url(#grad-until)" rx="6"/>
   <text x="567.395" y="37.1092" font-family="monospace" font-size="15.0588" font-weight="bold" fill="var(--bg)" text-anchor="middle">until</text>
   <text x="567.395" y="64.5378" font-family="sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Loops UNTIL condition is true</text>
-  <rect x="524.3697" y="75.2941" width="86.0504" height="23.6639" rx="11.8319" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="1.0756" />
-  <text x="567.395" y="89.8151" font-family="monospace" font-size="10" fill="var(--warn-dk)" text-anchor="middle">condition?</text>
+  <rect x="524.3697" y="75.2941" width="86.0504" height="23.6639" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="567.395" y="89.8151" font-family="monospace" font-size="10" fill="var(--warn-accent)" text-anchor="middle">condition?</text>
   <line x1="567.395" y1="98.958" x2="567.395" y2="112.9412" stroke="var(--text-muted)" stroke-width="1.0756" marker-end="url(#arrow)" />
-  <text x="575.4622" y="107.563" font-family="sans-serif" font-size="10" fill="var(--danger)">false</text>
-  <rect x="524.3697" y="112.9412" width="86.0504" height="23.6639" rx="4.3025" fill="var(--warn-pale)" stroke="var(--warn-mid)" stroke-width="1.0756" />
-  <text x="567.395" y="127.4622" font-family="monospace" font-size="10" fill="var(--warn-dk)" text-anchor="middle">do body</text>
+  <text x="575.4622" y="107.563" font-family="sans-serif" font-size="10" fill="var(--danger-accent)">false</text>
+  <rect x="524.3697" y="112.9412" width="86.0504" height="23.6639" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="567.395" y="127.4622" font-family="monospace" font-size="10" fill="var(--warn-accent)" text-anchor="middle">do body</text>
   <path d="M 610.4202 124.7731 Q 640 124.7731 640 87.1261 Q 640 49.479 567.395 49.479" stroke="var(--text-muted)" stroke-width="1.0756" fill="none" marker-end="url(#arrow)" />
   <line x1="524.3697" y1="87.1261" x2="494.7899" y2="87.1261" stroke="var(--text-muted)" stroke-width="1.0756" marker-end="url(#arrow)" />
-  <text x="490.4874" y="84.9748" font-family="sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="end">true</text>
-  <rect x="478.6555" y="93.042" width="43.0252" height="16.1345" rx="3.2269" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="0.8067" />
-  <text x="500.1681" y="103.7983" font-family="sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle">exit loop</text>
-  <rect x="478.6555" y="150.5882" width="177.479" height="80.6723" rx="4.3025" fill="var(--code-bg)" stroke="var(--warn-mid)" stroke-width="0.8067" />
-  <text x="489.4118" y="164.0336" font-family="monospace" font-size="10" fill="var(--warn-tint)">until</text>
-  <text x="513.6134" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-lt)"> [ $count -gt 5 ]; </text>
-  <text x="489.4118" y="174.7899" font-family="monospace" font-size="10" fill="var(--warn-tint)">do</text>
-  <text x="500.1681" y="185.5462" font-family="monospace" font-size="10" fill="var(--primary-lt)">  echo $count</text>
-  <text x="500.1681" y="196.3025" font-family="monospace" font-size="10" fill="var(--primary-lt)">  ((count++))</text>
-  <text x="489.4118" y="207.0588" font-family="monospace" font-size="10" fill="var(--warn-tint)">done</text>
-  <text x="484.0336" y="242.0168" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--warn-dk)">Use cases:</text>
-  <text x="484.0336" y="253.8487" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Wait for service to start</text>
-  <text x="484.0336" y="264.605" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Retry until success</text>
-  <text x="484.0336" y="275.3613" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Opposite logic to while</text>
-  <text x="484.0336" y="286.1176" font-family="sans-serif" font-size="10" fill="var(--text-dark)">• Poll until condition met</text>
-  <rect x="21.5126" y="336.1345" width="645.3782" height="2.1513" rx="1.0756" fill="var(--border)" />
-  <rect x="21.5126" y="336.1345" width="209.7479" height="2.1513" rx="1.0756" fill="var(--primary)" />
-  <rect x="242.0168" y="336.1345" width="209.7479" height="2.1513" rx="1.0756" fill="var(--ok-dk)" />
-  <rect x="462.521" y="336.1345" width="204.3697" height="2.1513" rx="1.0756" fill="var(--warn-mid)" />
+  <text x="490.4874" y="84.9748" font-family="sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="end">true</text>
+  <rect x="478.6555" y="93.042" width="43.0252" height="16.1345" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="500.1681" y="103.7983" font-family="sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle">exit loop</text>
+  <rect x="478.6555" y="150.5882" width="177.479" height="80.6723" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="0.8067" />
+  <text x="489.4118" y="164.0336" font-family="monospace" font-size="10" fill="var(--warn-accent)">until</text>
+  <text x="513.6134" y="164.0336" font-family="monospace" font-size="10" fill="var(--primary-accent)"> [ $count -gt 5 ]; </text>
+  <text x="489.4118" y="174.7899" font-family="monospace" font-size="10" fill="var(--warn-accent)">do</text>
+  <text x="500.1681" y="185.5462" font-family="monospace" font-size="10" fill="var(--primary-accent)">  echo $count</text>
+  <text x="500.1681" y="196.3025" font-family="monospace" font-size="10" fill="var(--primary-accent)">  ((count++))</text>
+  <text x="489.4118" y="207.0588" font-family="monospace" font-size="10" fill="var(--warn-accent)">done</text>
+  <text x="484.0336" y="242.0168" font-family="sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Use cases:</text>
+  <text x="484.0336" y="253.8487" font-family="sans-serif" font-size="10" fill="var(--text)">• Wait for service to start</text>
+  <text x="484.0336" y="264.605" font-family="sans-serif" font-size="10" fill="var(--text)">• Retry until success</text>
+  <text x="484.0336" y="275.3613" font-family="sans-serif" font-size="10" fill="var(--text)">• Opposite logic to while</text>
+  <text x="484.0336" y="286.1176" font-family="sans-serif" font-size="10" fill="var(--text)">• Poll until condition met</text>
+  <rect x="21.5126" y="336.1345" width="645.3782" height="2.1513" rx="6" fill="var(--border)" />
+  <rect x="21.5126" y="336.1345" width="209.7479" height="2.1513" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="242.0168" y="336.1345" width="209.7479" height="2.1513" rx="6" fill="var(--ok-accent)" />
+  <rect x="462.521" y="336.1345" width="204.3697" height="2.1513" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
 </svg>

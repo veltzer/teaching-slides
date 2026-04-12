@@ -1,23 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
@@ -27,47 +80,59 @@
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
-  </defs>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="1280" height="640" rx="8" fill="var(--surface)"/>
+  <rect x="0" y="0" width="1280" height="640" rx="6" fill="var(--surface)"/>
 
   <!-- DNS Endpoint at top -->
-  <rect x="440" y="15" width="400" height="55" rx="10" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <rect x="440" y="15" width="400" height="55" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--bg)">RDS DNS Endpoint</text>
-  <text x="640" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-pale)">mydb.abc123.us-east-1.rds.amazonaws.com</text>
+  <text x="640" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-accent)">mydb.abc123.us-east-1.rds.amazonaws.com</text>
 
   <!-- Application -->
-  <rect x="480" y="85" width="320" height="40" rx="8" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Application connects via DNS endpoint</text>
+  <rect x="480" y="85" width="320" height="40" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Application connects via DNS endpoint</text>
 
   <!-- Arrow from DNS to AZ-1 primary (normal state) -->
-  <line x1="540" y1="125" x2="320" y2="200" stroke="var(--primary-dk)" stroke-width="2.5" marker-end="url(#arrow-primary)"/>
-  <text x="395" y="160" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-dk)">Active</text>
+  <line x1="540" y1="125" x2="320" y2="200" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow-primary)"/>
+  <text x="395" y="160" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-accent)">Active</text>
 
   <!-- AZ-1 -->
-  <rect x="60" y="200" width="500" height="280" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
-  <text x="310" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">Availability Zone 1</text>
+  <rect x="60" y="200" width="500" height="280" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="310" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-accent)">Availability Zone 1</text>
 
   <!-- Primary DB -->
-  <rect x="140" y="250" width="340" height="100" rx="12" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="140" y="250" width="340" height="100" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="310" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--bg)">Primary DB Instance</text>
-  <text x="310" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-pale)">Read + Write operations</text>
+  <text x="310" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-accent)">Read + Write operations</text>
 
   <!-- EBS volume -->
-  <rect x="180" y="370" width="260" height="45" rx="6" fill="var(--bg)" stroke="var(--primary-dk)" stroke-width="1.5"/>
-  <text x="310" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-dk)">EBS Volume (Primary)</text>
+  <rect x="180" y="370" width="260" height="45" rx="6" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="1.5"/>
+  <text x="310" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-accent)">EBS Volume (Primary)</text>
 
   <!-- Failover dashed arrow -->
-  <line x1="740" y1="125" x2="920" y2="200" stroke="var(--danger)" stroke-width="2.5" stroke-dasharray="8,5"/>
-  <text x="880" y="160" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger)">Failover</text>
+  <line x1="740" y1="125" x2="920" y2="200" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="880" y="160" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-accent)">Failover</text>
 
   <!-- AZ-2 -->
-  <rect x="720" y="200" width="500" height="280" rx="12" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <rect x="720" y="200" width="500" height="280" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="970" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text-muted)">Availability Zone 2</text>
 
   <!-- Standby DB -->
-  <rect x="800" y="250" width="340" height="100" rx="12" fill="var(--surface)" stroke="var(--border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="800" y="250" width="340" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
   <text x="970" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-muted)">Standby DB Instance</text>
   <text x="970" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">No read/write (hot standby)</text>
 
@@ -76,34 +141,34 @@
   <text x="970" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">EBS Volume (Standby)</text>
 
   <!-- Synchronous replication arrow -->
-  <line x1="480" y1="300" x2="800" y2="300" stroke="var(--warn)" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="560" y="275" width="200" height="24" rx="4" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="660" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Synchronous Replication</text>
+  <line x1="480" y1="300" x2="800" y2="300" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="560" y="275" width="200" height="24" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="660" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Synchronous Replication</text>
 
   <!-- After failover section -->
-  <rect x="60" y="500" width="1160" height="120" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
-  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">After Failover (Automatic)</text>
+  <rect x="60" y="500" width="1160" height="120" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)">After Failover (Automatic)</text>
 
-  <rect x="100" y="545" width="200" height="50" rx="8" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="1.5"/>
-  <text x="200" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-dk)">Old Primary (AZ-1)</text>
-  <text x="200" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)">Failed / Demoted</text>
+  <rect x="100" y="545" width="200" height="50" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="200" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--danger-accent)">Old Primary (AZ-1)</text>
+  <text x="200" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)">Failed / Demoted</text>
 
-  <line x1="300" y1="570" x2="460" y2="570" stroke="var(--danger)" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="380" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--danger)">DNS update</text>
+  <line x1="300" y1="570" x2="460" y2="570" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="380" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)">DNS update</text>
 
-  <rect x="460" y="545" width="200" height="50" rx="8" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <rect x="460" y="545" width="200" height="50" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="560" y="568" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">DNS Endpoint</text>
-  <text x="560" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-pale)">Points to new primary</text>
+  <text x="560" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)">Points to new primary</text>
 
-  <line x1="660" y1="570" x2="820" y2="570" stroke="var(--ok)" stroke-width="2.5" marker-end="url(#arrow-ok)"/>
-  <text x="740" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--ok-dk)">Now active</text>
+  <line x1="660" y1="570" x2="820" y2="570" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
+  <text x="740" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="var(--ok-accent)">Now active</text>
 
-  <rect x="820" y="545" width="200" height="50" rx="8" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <rect x="820" y="545" width="200" height="50" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="920" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--bg)">New Primary (AZ-2)</text>
-  <text x="920" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-pale)">Promoted automatically</text>
+  <text x="920" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">Promoted automatically</text>
 
   <!-- Failover time -->
-  <rect x="1060" y="545" width="140" height="50" rx="8" fill="var(--bg)" stroke="var(--warn)" stroke-width="1.5"/>
-  <text x="1130" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Failover time:</text>
-  <text x="1130" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-dk)">60-120 sec</text>
+  <rect x="1060" y="545" width="140" height="50" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1.5"/>
+  <text x="1130" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Failover time:</text>
+  <text x="1130" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--warn-accent)">60-120 sec</text>
 </svg>

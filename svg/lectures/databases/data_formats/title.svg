@@ -1,76 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_intro.yaml -->
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-dark: #f0f0f0;
-        --black: #000000;
-        --border-faint: #cccccc;
-        --border-strong: #bdbdbd;
-        --code-bg: #1a1a2e;
+        --border: #e0e0e0;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-bright: #4a90e2;
-        --primary-tint: #90caf9;
-        --primary-google: #4285f4;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --ok-dk: #2e7d32;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-google: #34a853;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-soft: #27ae60;
-        --ok-pale2: #d4edda;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-yellow: #ffc107;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-pale: #ffebee;
-        --info-vivid: #673ab7;
-        --info-indigo: #3f51b5;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-deep: #4a148c;
-        --info-tint: #e1bee7;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
     <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
     <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
     <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
 
     <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
@@ -81,7 +102,7 @@
       <stop offset="100%" style="stop-color:#533483;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="1137.7778" height="640" fill="url(#bg)" />
+  <rect width="1137.7778" height="640" fill="url(#bg)" rx="6"/>
   <g stroke="var(--bg)" stroke-opacity="0.05" stroke-width="1.4222">
     <line x1="0" y1="128" x2="1137.7778" y2="128" />
     <line x1="0" y1="256" x2="1137.7778" y2="256" />
@@ -93,64 +114,64 @@
     <line x1="910.2222" y1="0" x2="910.2222" y2="640" />
   </g>
   <g transform="translate(60, 60)">
-    <rect width="142.2222" height="192" rx="11.3778" fill="var(--danger-bright)" fill-opacity="0.15" stroke="var(--danger-bright)" stroke-width="2.8444" />
-    <text x="71.1111" y="64" text-anchor="middle" fill="var(--danger-bright)" font-family="monospace" font-size="19.9111" font-weight="bold">{ }</text>
-    <text x="71.1111" y="104" text-anchor="middle" fill="var(--danger-bright)" font-family="monospace" font-size="14.2222">"key":</text>
-    <text x="71.1111" y="131.2" text-anchor="middle" fill="var(--danger-bright)" font-family="monospace" font-size="14.2222">"val"</text>
-    <text x="71.1111" y="176" text-anchor="middle" fill="var(--danger-bright)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">JSON</text>
+    <rect width="142.2222" height="192" rx="6" fill="var(--danger-fill)" fill-opacity="0.15" stroke="var(--danger-border)" stroke-width="2" />
+    <text x="71.1111" y="64" text-anchor="middle" fill="var(--danger-accent)" font-family="monospace" font-size="19.9111" font-weight="bold">{ }</text>
+    <text x="71.1111" y="104" text-anchor="middle" fill="var(--danger-accent)" font-family="monospace" font-size="14.2222">"key":</text>
+    <text x="71.1111" y="131.2" text-anchor="middle" fill="var(--danger-accent)" font-family="monospace" font-size="14.2222">"val"</text>
+    <text x="71.1111" y="176" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">JSON</text>
   </g>
   <g transform="translate(200, 220)">
-    <rect width="142.2222" height="192" rx="11.3778" fill="var(--primary-vivid)" fill-opacity="0.15" stroke="var(--primary-vivid)" stroke-width="2.8444" />
-    <text x="71.1111" y="56" text-anchor="middle" fill="var(--primary-vivid)" font-family="monospace" font-size="14.2222">a,b,c</text>
-    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--primary-vivid)" font-family="monospace" font-size="14.2222">1,2,3</text>
-    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--primary-vivid)" font-family="monospace" font-size="14.2222">4,5,6</text>
-    <text x="71.1111" y="176" text-anchor="middle" fill="var(--primary-vivid)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">CSV</text>
+    <rect width="142.2222" height="192" rx="6" fill="var(--primary-fill)" fill-opacity="0.15" stroke="var(--primary-border)" stroke-width="2" />
+    <text x="71.1111" y="56" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="14.2222">a,b,c</text>
+    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="14.2222">1,2,3</text>
+    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="14.2222">4,5,6</text>
+    <text x="71.1111" y="176" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">CSV</text>
   </g>
   <g transform="translate(200, 50)">
-    <rect width="142.2222" height="192" rx="11.3778" fill="var(--primary-soft)" fill-opacity="0.15" stroke="var(--primary-soft)" stroke-width="2.8444" />
-    <text x="71.1111" y="56" text-anchor="middle" fill="var(--primary-soft)" font-family="monospace" font-size="14.2222">name: val</text>
-    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--primary-soft)" font-family="monospace" font-size="14.2222">list:</text>
-    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--primary-soft)" font-family="monospace" font-size="14.2222">  - item</text>
-    <text x="71.1111" y="176" text-anchor="middle" fill="var(--primary-soft)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">YAML</text>
+    <rect width="142.2222" height="192" rx="6" fill="var(--primary-fill)" fill-opacity="0.15" stroke="var(--primary-border)" stroke-width="2" />
+    <text x="71.1111" y="56" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="14.2222">name: val</text>
+    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="14.2222">list:</text>
+    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--primary-accent)" font-family="monospace" font-size="14.2222">  - item</text>
+    <text x="71.1111" y="176" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">YAML</text>
   </g>
   <g transform="translate(60, 230)">
-    <rect width="142.2222" height="192" rx="11.3778" fill="var(--text-faintest)" fill-opacity="0.15" stroke="var(--text-faintest)" stroke-width="2.8444" />
-    <text x="71.1111" y="56" text-anchor="middle" fill="var(--text-faintest)" font-family="monospace" font-size="14.2222">[section]</text>
-    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--text-faintest)" font-family="monospace" font-size="14.2222">key = "v"</text>
-    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--text-faintest)" font-family="monospace" font-size="14.2222">n = 42</text>
-    <text x="71.1111" y="176" text-anchor="middle" fill="var(--text-faintest)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">TOML</text>
+    <rect width="142.2222" height="192" rx="6" fill="var(--text-faint)" fill-opacity="0.15" stroke="var(--text-faint)" stroke-width="2.8444" />
+    <text x="71.1111" y="56" text-anchor="middle" fill="var(--text-faint)" font-family="monospace" font-size="14.2222">[section]</text>
+    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--text-faint)" font-family="monospace" font-size="14.2222">key = "v"</text>
+    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--text-faint)" font-family="monospace" font-size="14.2222">n = 42</text>
+    <text x="71.1111" y="176" text-anchor="middle" fill="var(--text-faint)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">TOML</text>
   </g>
   <g transform="translate(630, 50)">
-    <rect width="156.4444" height="192" rx="11.3778" fill="var(--warn-tint)" fill-opacity="0.15" stroke="var(--warn-tint)" stroke-width="2.8444" />
-    <rect x="21.3333" y="40" width="25.6" height="88" rx="4.2667" fill="var(--warn-tint)" fill-opacity="0.5" />
-    <rect x="54.0444" y="40" width="25.6" height="88" rx="4.2667" fill="var(--warn-tint)" fill-opacity="0.7" />
-    <rect x="86.7556" y="40" width="25.6" height="88" rx="4.2667" fill="var(--warn-tint)" fill-opacity="0.5" />
-    <rect x="119.4667" y="40" width="25.6" height="88" rx="4.2667" fill="var(--warn-tint)" fill-opacity="0.7" />
-    <text x="78.2222" y="176" text-anchor="middle" fill="var(--warn-tint)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">Parquet</text>
+    <rect width="156.4444" height="192" rx="6" fill="var(--warn-fill)" fill-opacity="0.15" stroke="var(--warn-border)" stroke-width="2" />
+    <rect x="21.3333" y="40" width="25.6" height="88" rx="6" fill="var(--warn-fill)" fill-opacity="0.5" stroke="var(--warn-border)" stroke-width="2"/>
+    <rect x="54.0444" y="40" width="25.6" height="88" rx="6" fill="var(--warn-fill)" fill-opacity="0.7" stroke="var(--warn-border)" stroke-width="2"/>
+    <rect x="86.7556" y="40" width="25.6" height="88" rx="6" fill="var(--warn-fill)" fill-opacity="0.5" stroke="var(--warn-border)" stroke-width="2"/>
+    <rect x="119.4667" y="40" width="25.6" height="88" rx="6" fill="var(--warn-fill)" fill-opacity="0.7" stroke="var(--warn-border)" stroke-width="2"/>
+    <text x="78.2222" y="176" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">Parquet</text>
   </g>
   <g transform="translate(640, 230)">
-    <rect width="156.4444" height="192" rx="11.3778" fill="var(--info-lt)" fill-opacity="0.15" stroke="var(--info-lt)" stroke-width="2.8444" />
-    <ellipse cx="78.2222" cy="56" rx="42.6667" ry="14.2222" fill="none" stroke="var(--info-lt)" stroke-width="2.1333" />
-    <line x1="35.5556" y1="56" x2="35.5556" y2="104" stroke="var(--info-lt)" stroke-width="2.1333" />
-    <line x1="120.8889" y1="56" x2="120.8889" y2="104" stroke="var(--info-lt)" stroke-width="2.1333" />
-    <ellipse cx="78.2222" cy="104" rx="42.6667" ry="14.2222" fill="none" stroke="var(--info-lt)" stroke-width="2.1333" />
-    <text x="78.2222" y="176" text-anchor="middle" fill="var(--info-lt)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">SQLite</text>
+    <rect width="156.4444" height="192" rx="6" fill="var(--info-fill)" fill-opacity="0.15" stroke="var(--info-border)" stroke-width="2" />
+    <ellipse cx="78.2222" cy="56" rx="42.6667" ry="14.2222" fill="none" stroke="var(--info-border)" stroke-width="2.1333" />
+    <line x1="35.5556" y1="56" x2="35.5556" y2="104" stroke="var(--info-border)" stroke-width="2" />
+    <line x1="120.8889" y1="56" x2="120.8889" y2="104" stroke="var(--info-border)" stroke-width="2" />
+    <ellipse cx="78.2222" cy="104" rx="42.6667" ry="14.2222" fill="none" stroke="var(--info-border)" stroke-width="2.1333" />
+    <text x="78.2222" y="176" text-anchor="middle" fill="var(--info-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">SQLite</text>
   </g>
   <g transform="translate(500, 230)">
-    <rect width="142.2222" height="192" rx="11.3778" fill="var(--info-lt)" fill-opacity="0.15" stroke="var(--info-lt)" stroke-width="2.8444" />
-    <text x="71.1111" y="56" text-anchor="middle" fill="var(--info-lt)" font-family="monospace" font-size="14.2222">&lt;root&gt;</text>
-    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--info-lt)" font-family="monospace" font-size="14.2222"> &lt;el/&gt;</text>
-    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--info-lt)" font-family="monospace" font-size="14.2222">&lt;/root&gt;</text>
-    <text x="71.1111" y="176" text-anchor="middle" fill="var(--info-lt)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">XML</text>
+    <rect width="142.2222" height="192" rx="6" fill="var(--info-fill)" fill-opacity="0.15" stroke="var(--info-border)" stroke-width="2" />
+    <text x="71.1111" y="56" text-anchor="middle" fill="var(--info-accent)" font-family="monospace" font-size="14.2222">&lt;root&gt;</text>
+    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--info-accent)" font-family="monospace" font-size="14.2222"> &lt;el/&gt;</text>
+    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--info-accent)" font-family="monospace" font-size="14.2222">&lt;/root&gt;</text>
+    <text x="71.1111" y="176" text-anchor="middle" fill="var(--info-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">XML</text>
   </g>
   <g transform="translate(500, 50)">
-    <rect width="142.2222" height="192" rx="11.3778" fill="var(--warn-tint)" fill-opacity="0.15" stroke="var(--warn-tint)" stroke-width="2.8444" />
-    <text x="71.1111" y="56" text-anchor="middle" fill="var(--warn-tint)" font-family="monospace" font-size="14.2222">[db]</text>
-    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--warn-tint)" font-family="monospace" font-size="14.2222">host=srv</text>
-    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--warn-tint)" font-family="monospace" font-size="14.2222">port=5432</text>
-    <text x="71.1111" y="176" text-anchor="middle" fill="var(--warn-tint)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">INI</text>
+    <rect width="142.2222" height="192" rx="6" fill="var(--warn-fill)" fill-opacity="0.15" stroke="var(--warn-border)" stroke-width="2" />
+    <text x="71.1111" y="56" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="14.2222">[db]</text>
+    <text x="71.1111" y="83.2" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="14.2222">host=srv</text>
+    <text x="71.1111" y="110.4" text-anchor="middle" fill="var(--warn-accent)" font-family="monospace" font-size="14.2222">port=5432</text>
+    <text x="71.1111" y="176" text-anchor="middle" fill="var(--warn-accent)" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold">INI</text>
   </g>
-  <rect x="469.3333" y="192" width="284.4444" height="256" rx="17.0667" fill="url(#glow)" fill-opacity="0.6" stroke="var(--bg)" stroke-width="1.4222" stroke-opacity="0.3" />
+  <rect x="469.3333" y="192" width="284.4444" height="256" rx="6" fill="url(#glow)" fill-opacity="0.6" stroke="var(--bg)" stroke-width="1.4222" stroke-opacity="0.3" />
   <text x="611.5556" y="280" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="39.8222" font-weight="bold">Data</text>
   <text x="611.5556" y="344" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="39.8222" font-weight="bold">Formats</text>
   <text x="611.5556" y="400" text-anchor="middle" fill="var(--bg)" font-family="Arial, sans-serif" font-size="17.0667" fill-opacity="0.6">choosing the right one</text>

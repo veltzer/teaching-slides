@@ -1,53 +1,107 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="706.2069" height="353.1034" fill="var(--bg)" />
-  <rect x="11.0345" y="11.0345" width="220.6897" height="331.0345" rx="6.6207" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.1034" />
-  <text x="121.3793" y="28.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Work Queue</text>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="706.2069" height="353.1034" fill="var(--bg)" rx="6"/>
+  <rect x="11.0345" y="11.0345" width="220.6897" height="331.0345" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="121.3793" y="28.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Work Queue</text>
   <text x="121.3793" y="39.7241" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">1 producer, N competing consumers</text>
-  <rect x="33.1034" y="55.1724" width="55.1724" height="27.5862" rx="4.4138" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="0.8276" filter="url(#shadow)" />
-  <text x="60.6897" y="71.7241" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Producer</text>
+  <rect x="33.1034" y="55.1724" width="55.1724" height="27.5862" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="60.6897" y="71.7241" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Producer</text>
   <line x1="88.2759" y1="68.9655" x2="110.3448" y2="68.9655" stroke="var(--text-muted)" stroke-width="1.1034" marker-end="url(#arrow)" />
-  <rect x="113.1034" y="52.4138" width="93.7931" height="33.1034" rx="3.3103" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1034" />
-  <text x="160" y="66.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">SQS Queue</text>
+  <rect x="113.1034" y="52.4138" width="93.7931" height="33.1034" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="160" y="66.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">SQS Queue</text>
   <text x="160" y="77.2414" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">FIFO or Standard</text>
   <line x1="160" y1="85.5172" x2="160" y2="110.3448" stroke="var(--text-muted)" stroke-width="0.8276" />
   <line x1="160" y1="110.3448" x2="66.2069" y2="110.3448" stroke="var(--text-muted)" stroke-width="0.8276" />
@@ -56,66 +110,66 @@
   <line x1="66.2069" y1="110.3448" x2="66.2069" y2="126.8966" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
   <line x1="126.8966" y1="110.3448" x2="126.8966" y2="126.8966" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
   <line x1="193.1034" y1="110.3448" x2="193.1034" y2="126.8966" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
-  <rect x="33.1034" y="129.6552" width="60.6897" height="27.5862" rx="4.4138" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="63.4483" y="146.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Consumer 1</text>
-  <rect x="96.5517" y="129.6552" width="60.6897" height="27.5862" rx="4.4138" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="126.8966" y="146.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Consumer 2</text>
-  <rect x="160" y="129.6552" width="60.6897" height="27.5862" rx="4.4138" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="190.3448" y="146.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Consumer 3</text>
+  <rect x="33.1034" y="129.6552" width="60.6897" height="27.5862" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="63.4483" y="146.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer 1</text>
+  <rect x="96.5517" y="129.6552" width="60.6897" height="27.5862" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="126.8966" y="146.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer 2</text>
+  <rect x="160" y="129.6552" width="60.6897" height="27.5862" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="190.3448" y="146.2069" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer 3</text>
   <text x="121.3793" y="176.5517" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Each message processed by exactly</text>
   <text x="121.3793" y="186.4828" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">one consumer (load distribution)</text>
-  <rect x="242.7586" y="11.0345" width="220.6897" height="331.0345" rx="6.6207" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.1034" />
-  <text x="353.1034" y="28.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Fan-Out (SNS + SQS)</text>
+  <rect x="242.7586" y="11.0345" width="220.6897" height="331.0345" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="353.1034" y="28.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Fan-Out (SNS + SQS)</text>
   <text x="353.1034" y="39.7241" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">1 message to N subscribers</text>
-  <rect x="320" y="49.6552" width="66.2069" height="24.8276" rx="4.4138" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="0.8276" filter="url(#shadow)" />
-  <text x="353.1034" y="65.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Producer</text>
+  <rect x="320" y="49.6552" width="66.2069" height="24.8276" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="353.1034" y="65.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Producer</text>
   <line x1="353.1034" y1="74.4828" x2="353.1034" y2="85.5172" stroke="var(--text-muted)" stroke-width="1.1034" marker-end="url(#arrow)" />
-  <rect x="317.2414" y="88.2759" width="71.7241" height="27.5862" rx="4.4138" fill="var(--info-lt)" stroke="var(--info)" stroke-width="1.1034" filter="url(#shadow)" />
-  <text x="353.1034" y="102.069" font-family="Arial, sans-serif" font-size="10" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">SNS Topic</text>
+  <rect x="317.2414" y="88.2759" width="71.7241" height="27.5862" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="353.1034" y="102.069" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">SNS Topic</text>
   <text x="353.1034" y="111.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Pub/Sub</text>
   <line x1="325.5172" y1="115.8621" x2="286.8966" y2="137.931" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
   <line x1="353.1034" y1="115.8621" x2="353.1034" y2="137.931" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
   <line x1="380.6897" y1="115.8621" x2="419.3103" y2="137.931" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
-  <rect x="259.3103" y="140.6897" width="60.6897" height="24.8276" rx="3.3103" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="0.8276" />
-  <text x="289.6552" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">SQS - Email</text>
-  <rect x="322.7586" y="140.6897" width="60.6897" height="24.8276" rx="3.3103" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="0.8276" />
-  <text x="353.1034" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">SQS - Search</text>
-  <rect x="386.2069" y="140.6897" width="60.6897" height="24.8276" rx="3.3103" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="0.8276" />
-  <text x="416.5517" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">SQS - Analytics</text>
+  <rect x="259.3103" y="140.6897" width="60.6897" height="24.8276" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="289.6552" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">SQS - Email</text>
+  <rect x="322.7586" y="140.6897" width="60.6897" height="24.8276" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="353.1034" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">SQS - Search</text>
+  <rect x="386.2069" y="140.6897" width="60.6897" height="24.8276" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="416.5517" y="155.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">SQS - Analytics</text>
   <text x="353.1034" y="187.5862" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Same message delivered to all</text>
   <text x="353.1034" y="197.5172" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">subscribers independently</text>
-  <rect x="474.4828" y="11.0345" width="220.6897" height="331.0345" rx="6.6207" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="1.1034" />
-  <text x="584.8276" y="28.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Dead Letter Queue</text>
+  <rect x="474.4828" y="11.0345" width="220.6897" height="331.0345" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="584.8276" y="28.6897" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Dead Letter Queue</text>
   <text x="584.8276" y="39.7241" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Handling failed messages</text>
-  <rect x="507.5862" y="55.1724" width="88.2759" height="30.3448" rx="4.4138" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1034" filter="url(#shadow)" />
-  <text x="551.7241" y="68.9655" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Main Queue</text>
+  <rect x="507.5862" y="55.1724" width="88.2759" height="30.3448" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="551.7241" y="68.9655" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Main Queue</text>
   <text x="551.7241" y="80" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">maxReceiveCount=3</text>
   <line x1="551.7241" y1="85.5172" x2="551.7241" y2="99.3103" stroke="var(--text-muted)" stroke-width="0.8276" marker-end="url(#arrow)" />
-  <rect x="507.5862" y="102.069" width="88.2759" height="24.8276" rx="3.3103" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="0.8276" />
-  <text x="551.7241" y="116.9655" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Consumer</text>
-  <path d="M 595.8621 114.2069 L 617.931 114.2069 L 617.931 70.069 L 596.9655 70.069" fill="none" stroke="var(--warn)" stroke-width="1.1034" marker-end="url(#arrow)" />
-  <text x="634.4828" y="91.0345" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle">Retry 1</text>
-  <path d="M 617.931 114.2069 L 640 114.2069 L 640 70.069 L 619.0345 70.069" fill="none" stroke="var(--warn)" stroke-width="1.1034" marker-end="url(#arrow)" />
-  <text x="656.5517" y="91.0345" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle">Retry 2</text>
-  <text x="551.7241" y="143.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">After 3 failed attempts...</text>
-  <line x1="551.7241" y1="148.9655" x2="551.7241" y2="165.5172" stroke="var(--danger)" stroke-width="1.3793" marker-end="url(#arrow)" />
-  <rect x="507.5862" y="168.2759" width="88.2759" height="30.3448" rx="4.4138" fill="var(--danger-lt)" stroke="var(--danger)" stroke-width="1.3793" filter="url(#shadow)" />
-  <text x="551.7241" y="182.069" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Dead Letter</text>
-  <text x="551.7241" y="193.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">Queue (DLQ)</text>
+  <rect x="507.5862" y="102.069" width="88.2759" height="24.8276" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="551.7241" y="116.9655" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Consumer</text>
+  <path d="M 595.8621 114.2069 L 617.931 114.2069 L 617.931 70.069 L 596.9655 70.069" fill="none" stroke="var(--warn-border)" stroke-width="1.1034" marker-end="url(#arrow)" />
+  <text x="634.4828" y="91.0345" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">Retry 1</text>
+  <path d="M 617.931 114.2069 L 640 114.2069 L 640 70.069 L 619.0345 70.069" fill="none" stroke="var(--warn-border)" stroke-width="1.1034" marker-end="url(#arrow)" />
+  <text x="656.5517" y="91.0345" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle">Retry 2</text>
+  <text x="551.7241" y="143.4483" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">After 3 failed attempts...</text>
+  <line x1="551.7241" y1="148.9655" x2="551.7241" y2="165.5172" stroke="var(--danger-border)" stroke-width="1.3793" marker-end="url(#arrow)" />
+  <rect x="507.5862" y="168.2759" width="88.2759" height="30.3448" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="551.7241" y="182.069" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Dead Letter</text>
+  <text x="551.7241" y="193.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">Queue (DLQ)</text>
   <text x="584.8276" y="215.1724" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Messages held for</text>
   <text x="584.8276" y="225.1034" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">inspection &amp; debugging</text>
-  <rect x="22.069" y="270.3448" width="204.1379" height="60.6897" rx="4.4138" fill="var(--surface)" stroke="var(--border)" stroke-width="0.8276" />
-  <text x="124.1379" y="284.1379" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">Work Queue Use Cases</text>
+  <rect x="22.069" y="270.3448" width="204.1379" height="60.6897" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="124.1379" y="284.1379" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Work Queue Use Cases</text>
   <text x="33.1034" y="297.931" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Background job processing</text>
   <text x="33.1034" y="307.8621" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Image/video encoding</text>
   <text x="33.1034" y="317.7931" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Order processing pipeline</text>
-  <rect x="251.0345" y="270.3448" width="204.1379" height="60.6897" rx="4.4138" fill="var(--surface)" stroke="var(--border)" stroke-width="0.8276" />
-  <text x="353.1034" y="284.1379" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Fan-Out Use Cases</text>
+  <rect x="251.0345" y="270.3448" width="204.1379" height="60.6897" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="353.1034" y="284.1379" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Fan-Out Use Cases</text>
   <text x="262.069" y="297.931" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Notify multiple services of event</text>
   <text x="262.069" y="307.8621" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Parallel processing pipelines</text>
   <text x="262.069" y="317.7931" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Decoupled microservices</text>
-  <rect x="480" y="270.3448" width="204.1379" height="60.6897" rx="4.4138" fill="var(--surface)" stroke="var(--border)" stroke-width="0.8276" />
-  <text x="582.069" y="284.1379" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-dk)" text-anchor="middle" font-weight="bold">DLQ Use Cases</text>
+  <rect x="480" y="270.3448" width="204.1379" height="60.6897" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="582.069" y="284.1379" font-family="Arial, sans-serif" font-size="10" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold">DLQ Use Cases</text>
   <text x="491.0345" y="297.931" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Poison message handling</text>
   <text x="491.0345" y="307.8621" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- Debugging failed processing</text>
   <text x="491.0345" y="317.7931" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">- CloudWatch alarms on DLQ depth</text>

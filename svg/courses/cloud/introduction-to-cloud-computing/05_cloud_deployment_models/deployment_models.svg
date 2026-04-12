@@ -1,100 +1,159 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect width="1280" height="640" fill="var(--bg)"/>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
 
   <!-- Dividers -->
-  <line x1="640" y1="20" x2="640" y2="620" stroke="var(--border-strong)" stroke-width="1.5"/>
-  <line x1="40" y1="320" x2="1240" y2="320" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <line x1="640" y1="20" x2="640" y2="620" stroke="var(--border)" stroke-width="1.5"/>
+  <line x1="40" y1="320" x2="1240" y2="320" stroke="var(--border)" stroke-width="1.5"/>
 
   <!-- Quadrant 1: Public Cloud (top-left) -->
-  <rect x="50" y="25" rx="12" ry="12" width="580" height="285" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)">Public Cloud</text>
-  <line x1="120" y1="72" x2="560" y2="72" stroke="var(--primary-lt)" stroke-width="1.5"/>
-  <circle cx="100" cy="108" r="6" fill="var(--primary)"/>
-  <text x="118" y="113" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Shared infrastructure, multi-tenant</text>
-  <circle cx="100" cy="148" r="6" fill="var(--primary)"/>
-  <text x="118" y="153" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Pay-per-use pricing model</text>
-  <circle cx="100" cy="188" r="6" fill="var(--primary)"/>
-  <text x="118" y="193" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Virtually unlimited scalability</text>
-  <circle cx="100" cy="228" r="6" fill="var(--primary)"/>
-  <text x="118" y="233" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">No hardware management needed</text>
+  <rect x="50" y="25" rx="6" width="580" height="285" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)">Public Cloud</text>
+  <line x1="120" y1="72" x2="560" y2="72" stroke="var(--primary-border)" stroke-width="1.5"/>
+  <circle cx="100" cy="108" r="6" fill="var(--primary-fill)"/>
+  <text x="118" y="113" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Shared infrastructure, multi-tenant</text>
+  <circle cx="100" cy="148" r="6" fill="var(--primary-fill)"/>
+  <text x="118" y="153" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Pay-per-use pricing model</text>
+  <circle cx="100" cy="188" r="6" fill="var(--primary-fill)"/>
+  <text x="118" y="193" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Virtually unlimited scalability</text>
+  <circle cx="100" cy="228" r="6" fill="var(--primary-fill)"/>
+  <text x="118" y="233" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">No hardware management needed</text>
   <text x="340" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Examples: AWS, Azure, GCP</text>
 
   <!-- Quadrant 2: Private Cloud (top-right) -->
-  <rect x="650" y="25" rx="12" ry="12" width="580" height="285" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-dk)">Private Cloud</text>
-  <line x1="720" y1="72" x2="1160" y2="72" stroke="var(--danger-lt)" stroke-width="1.5"/>
-  <circle cx="700" cy="108" r="6" fill="var(--danger)"/>
-  <text x="718" y="113" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Dedicated single-tenant infrastructure</text>
-  <circle cx="700" cy="148" r="6" fill="var(--danger)"/>
-  <text x="718" y="153" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Full control over security and compliance</text>
-  <circle cx="700" cy="188" r="6" fill="var(--danger)"/>
-  <text x="718" y="193" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">On-premises or hosted privately</text>
-  <circle cx="700" cy="228" r="6" fill="var(--danger)"/>
-  <text x="718" y="233" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Higher cost, predictable performance</text>
+  <rect x="650" y="25" rx="6" width="580" height="285" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--danger-accent)">Private Cloud</text>
+  <line x1="720" y1="72" x2="1160" y2="72" stroke="var(--danger-border)" stroke-width="1.5"/>
+  <circle cx="700" cy="108" r="6" fill="var(--danger-fill)"/>
+  <text x="718" y="113" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Dedicated single-tenant infrastructure</text>
+  <circle cx="700" cy="148" r="6" fill="var(--danger-fill)"/>
+  <text x="718" y="153" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Full control over security and compliance</text>
+  <circle cx="700" cy="188" r="6" fill="var(--danger-fill)"/>
+  <text x="718" y="193" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">On-premises or hosted privately</text>
+  <circle cx="700" cy="228" r="6" fill="var(--danger-fill)"/>
+  <text x="718" y="233" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Higher cost, predictable performance</text>
   <text x="940" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Examples: OpenStack, VMware vSphere</text>
 
   <!-- Quadrant 3: Hybrid Cloud (bottom-left) -->
-  <rect x="50" y="330" rx="12" ry="12" width="580" height="285" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="340" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-dk)">Hybrid Cloud</text>
-  <line x1="120" y1="377" x2="560" y2="377" stroke="var(--warn-lt)" stroke-width="1.5"/>
-  <circle cx="100" cy="413" r="6" fill="var(--warn)"/>
-  <text x="118" y="418" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Mix of public and private cloud</text>
-  <circle cx="100" cy="453" r="6" fill="var(--warn)"/>
-  <text x="118" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Workload portability between environments</text>
-  <circle cx="100" cy="493" r="6" fill="var(--warn)"/>
-  <text x="118" y="498" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Sensitive data stays on-premises</text>
-  <circle cx="100" cy="533" r="6" fill="var(--warn)"/>
-  <text x="118" y="538" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Burst to cloud for peak demand</text>
+  <rect x="50" y="330" rx="6" width="580" height="285" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-accent)">Hybrid Cloud</text>
+  <line x1="120" y1="377" x2="560" y2="377" stroke="var(--warn-border)" stroke-width="1.5"/>
+  <circle cx="100" cy="413" r="6" fill="var(--warn-fill)"/>
+  <text x="118" y="418" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Mix of public and private cloud</text>
+  <circle cx="100" cy="453" r="6" fill="var(--warn-fill)"/>
+  <text x="118" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Workload portability between environments</text>
+  <circle cx="100" cy="493" r="6" fill="var(--warn-fill)"/>
+  <text x="118" y="498" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Sensitive data stays on-premises</text>
+  <circle cx="100" cy="533" r="6" fill="var(--warn-fill)"/>
+  <text x="118" y="538" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Burst to cloud for peak demand</text>
   <text x="340" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Examples: Azure Arc, AWS Outposts</text>
 
   <!-- Quadrant 4: Multi-Cloud (bottom-right) -->
-  <rect x="650" y="330" rx="12" ry="12" width="580" height="285" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="940" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)">Multi-Cloud</text>
-  <line x1="720" y1="377" x2="1160" y2="377" stroke="var(--info-lt)" stroke-width="1.5"/>
-  <circle cx="700" cy="413" r="6" fill="var(--info)"/>
-  <text x="718" y="418" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Multiple public cloud providers</text>
-  <circle cx="700" cy="453" r="6" fill="var(--info)"/>
-  <text x="718" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Avoid vendor lock-in</text>
-  <circle cx="700" cy="493" r="6" fill="var(--info)"/>
-  <text x="718" y="498" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Best-of-breed service selection</text>
-  <circle cx="700" cy="533" r="6" fill="var(--info)"/>
-  <text x="718" y="538" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)">Geographic and compliance flexibility</text>
+  <rect x="650" y="330" rx="6" width="580" height="285" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="940" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)">Multi-Cloud</text>
+  <line x1="720" y1="377" x2="1160" y2="377" stroke="var(--info-border)" stroke-width="1.5"/>
+  <circle cx="700" cy="413" r="6" fill="var(--info-fill)"/>
+  <text x="718" y="418" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Multiple public cloud providers</text>
+  <circle cx="700" cy="453" r="6" fill="var(--info-fill)"/>
+  <text x="718" y="458" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Avoid vendor lock-in</text>
+  <circle cx="700" cy="493" r="6" fill="var(--info-fill)"/>
+  <text x="718" y="498" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Best-of-breed service selection</text>
+  <circle cx="700" cy="533" r="6" fill="var(--info-fill)"/>
+  <text x="718" y="538" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">Geographic and compliance flexibility</text>
   <text x="940" y="583" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-faint)">Examples: AWS + Azure + GCP</text>
 </svg>

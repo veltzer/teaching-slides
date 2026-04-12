@@ -1,108 +1,129 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_intro.yaml -->
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-dark: #f0f0f0;
-        --black: #000000;
-        --border-faint: #cccccc;
-        --border-strong: #bdbdbd;
-        --code-bg: #1a1a2e;
+        --border: #e0e0e0;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-bright: #4a90e2;
-        --primary-tint: #90caf9;
-        --primary-google: #4285f4;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --ok-dk: #2e7d32;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-google: #34a853;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-soft: #27ae60;
-        --ok-pale2: #d4edda;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-yellow: #ffc107;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-pale: #ffebee;
-        --info-vivid: #673ab7;
-        --info-indigo: #3f51b5;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-deep: #4a148c;
-        --info-tint: #e1bee7;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
     <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
     <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
     <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
 
     <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
       <stop offset="0%" style="stop-color:#1a1a2e" />
       <stop offset="100%" style="stop-color:#16213e" />
     </linearGradient>
   </defs>
-  <rect width="1137.7778" height="640" fill="url(#bg)" />
+  <rect width="1137.7778" height="640" fill="url(#bg)" rx="6"/>
   <g transform="translate(150,80)">
-    <rect x="0" y="0" width="170.6667" height="128" rx="11.3778" fill="none" stroke="var(--danger-bright)" stroke-width="4.2667" />
-    <rect x="21.3333" y="24" width="49.7778" height="40" rx="4.2667" fill="var(--danger-bright)" opacity="0.3" />
-    <rect x="85.3333" y="24" width="49.7778" height="40" rx="4.2667" fill="var(--danger-bright)" opacity="0.3" />
-    <rect x="21.3333" y="76.8" width="49.7778" height="40" rx="4.2667" fill="var(--danger-bright)" opacity="0.3" />
-    <text x="85.3333" y="168" text-anchor="middle" fill="var(--danger-bright)" font-family="Arial,sans-serif" font-size="17.0667">Container</text>
+    <rect x="0" y="0" width="170.6667" height="128" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
+    <rect x="21.3333" y="24" width="49.7778" height="40" rx="6" fill="var(--danger-fill)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2"/>
+    <rect x="85.3333" y="24" width="49.7778" height="40" rx="6" fill="var(--danger-fill)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2"/>
+    <rect x="21.3333" y="76.8" width="49.7778" height="40" rx="6" fill="var(--danger-fill)" opacity="0.3" stroke="var(--danger-border)" stroke-width="2"/>
+    <text x="85.3333" y="168" text-anchor="middle" fill="var(--danger-accent)" font-family="Arial,sans-serif" font-size="17.0667">Container</text>
   </g>
   <g transform="translate(340,80)">
-    <rect x="0" y="0" width="170.6667" height="128" rx="11.3778" fill="none" stroke="var(--primary-vivid)" stroke-width="4.2667" />
-    <rect x="21.3333" y="24" width="49.7778" height="40" rx="4.2667" fill="var(--primary-vivid)" opacity="0.3" />
-    <rect x="85.3333" y="24" width="49.7778" height="40" rx="4.2667" fill="var(--primary-vivid)" opacity="0.3" />
-    <text x="85.3333" y="168" text-anchor="middle" fill="var(--primary-vivid)" font-family="Arial,sans-serif" font-size="17.0667">VM</text>
+    <rect x="0" y="0" width="170.6667" height="128" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
+    <rect x="21.3333" y="24" width="49.7778" height="40" rx="6" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2"/>
+    <rect x="85.3333" y="24" width="49.7778" height="40" rx="6" fill="var(--primary-fill)" opacity="0.3" stroke="var(--primary-border)" stroke-width="2"/>
+    <text x="85.3333" y="168" text-anchor="middle" fill="var(--primary-accent)" font-family="Arial,sans-serif" font-size="17.0667">VM</text>
   </g>
   <g transform="translate(530,80)">
-    <rect x="0" y="0" width="170.6667" height="128" rx="11.3778" fill="none" stroke="var(--info-deep)" stroke-width="4.2667" />
-    <circle cx="85.3333" cy="64" r="28.4444" fill="none" stroke="var(--info-deep)" stroke-width="2.8444" />
-    <path d="M 71.1111 56 l 7.1111 16 l 21.3333 -24" fill="none" stroke="var(--info-deep)" stroke-width="3.5556" />
-    <text x="85.3333" y="168" text-anchor="middle" fill="var(--info-deep)" font-family="Arial,sans-serif" font-size="17.0667">Sandbox</text>
+    <rect x="0" y="0" width="170.6667" height="128" rx="6" fill="none" stroke="var(--border)" stroke-width="1" />
+    <circle cx="85.3333" cy="64" r="28.4444" fill="none" stroke="var(--info-border)" stroke-width="2.8444" />
+    <path d="M 71.1111 56 l 7.1111 16 l 21.3333 -24" fill="none" stroke="var(--info-border)" stroke-width="3.5556" />
+    <text x="85.3333" y="168" text-anchor="middle" fill="var(--info-accent)" font-family="Arial,sans-serif" font-size="17.0667">Sandbox</text>
   </g>
-  <line x1="405.3333" y1="112" x2="405.3333" y2="304" stroke="var(--warn-orange)" stroke-width="4.2667" stroke-dasharray="11.3778 5.6889" />
-  <line x1="675.5556" y1="112" x2="675.5556" y2="304" stroke="var(--warn-orange)" stroke-width="4.2667" stroke-dasharray="11.3778 5.6889" />
+  <line x1="405.3333" y1="112" x2="405.3333" y2="304" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="11.3778 5.6889" />
+  <line x1="675.5556" y1="112" x2="675.5556" y2="304" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="11.3778 5.6889" />
   <g transform="translate(370,200)">
-    <path d="M 0 -48 l 42.6667 -24 l 42.6667 24 v 40 a 49.7778 49.7778 0 0 1 -85.3333 0 z" fill="none" stroke="var(--primary-deeper)" stroke-width="3.5556" />
-    <path d="M 28.4444 -16 l 7.1111 12.8 l 17.0667 -24" fill="none" stroke="var(--primary-deeper)" stroke-width="3.5556" />
+    <path d="M 0 -48 l 42.6667 -24 l 42.6667 24 v 40 a 49.7778 49.7778 0 0 1 -85.3333 0 z" fill="none" stroke="var(--primary-border)" stroke-width="3.5556" />
+    <path d="M 28.4444 -16 l 7.1111 12.8 l 17.0667 -24" fill="none" stroke="var(--primary-border)" stroke-width="3.5556" />
   </g>
-  <text x="568.8889" y="496" text-anchor="middle" fill="var(--surface-alt)" font-family="Arial,sans-serif" font-size="42.6667" font-weight="bold">Isolation in Computing</text>
+  <text x="568.8889" y="496" text-anchor="middle" fill="var(--surface)" font-family="Arial,sans-serif" font-size="42.6667" font-weight="bold">Isolation in Computing</text>
   <text x="568.8889" y="552" text-anchor="middle" fill="var(--text-faint)" font-family="Arial,sans-serif" font-size="22.7556">Separation, Security, and Boundaries</text>
 </svg>

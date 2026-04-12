@@ -1,88 +1,139 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-  </defs>
-  <rect x="0" y="0" width="1222.6866" height="611.3433" rx="0" fill="var(--bg)" />
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect x="0" y="0" width="1222.6866" height="611.3433" rx="6" fill="var(--bg)" />
   <circle cx="76.4179" cy="191.0448" r="22.9254" fill="var(--text)" />
   <text x="76.4179" y="196.7761" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4627" font-weight="bold" fill="var(--bg)">Start</text>
   <text x="76.4179" y="236.8955" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4179" fill="var(--text-muted)">Launch</text>
   <line x1="99.3433" y1="191.0448" x2="162.3881" y2="191.0448" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
-  <rect x="171.9403" y="162.3881" width="152.8358" height="57.3134" rx="19.1045" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="1.9104" filter="url(#shadow)" />
-  <text x="248.3582" y="196.7761" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2388" font-weight="bold" fill="var(--warn-dk)">Pending</text>
+  <rect x="171.9403" y="162.3881" width="152.8358" height="57.3134" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="248.3582" y="196.7761" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2388" font-weight="bold" fill="var(--warn-accent)">Pending</text>
   <line x1="324.7761" y1="191.0448" x2="401.194" y2="191.0448" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
-  <rect x="410.7463" y="152.8358" width="191.0448" height="76.4179" rx="19.1045" fill="url(#grad-primary)" stroke="var(--primary-dk)" stroke-width="1.9104" filter="url(#shadow)" />
+  <rect x="410.7463" y="152.8358" width="191.0448" height="76.4179" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
   <text x="506.2687" y="196.7761" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.1045" font-weight="bold" fill="var(--bg)">Running</text>
   <line x1="458.5075" y1="229.2537" x2="362.9851" y2="362.9851" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
   <text x="382.0896" y="296.1194" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--text-muted)">Stop</text>
   <line x1="554.0299" y1="229.2537" x2="668.6567" y2="362.9851" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
   <text x="630.4478" y="296.1194" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--text-muted)">Terminate</text>
-  <rect x="267.4627" y="372.5373" width="171.9403" height="57.3134" rx="19.1045" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="1.9104" filter="url(#shadow)" />
-  <text x="353.4328" y="406.9254" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2388" font-weight="bold" fill="var(--warn-dk)">Stopping</text>
+  <rect x="267.4627" y="372.5373" width="171.9403" height="57.3134" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="353.4328" y="406.9254" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2388" font-weight="bold" fill="var(--warn-accent)">Stopping</text>
   <line x1="353.4328" y1="429.8507" x2="353.4328" y2="477.6119" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
-  <rect x="267.4627" y="487.1642" width="171.9403" height="57.3134" rx="19.1045" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.9104" filter="url(#shadow)" />
+  <rect x="267.4627" y="487.1642" width="171.9403" height="57.3134" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
   <text x="353.4328" y="521.5522" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2388" font-weight="bold" fill="var(--text-muted)">Stopped</text>
-  <path d="M 267.4627 506.2687 Q 133.7313 506.2687 133.7313 286.5672 Q 133.7313 191.0448 171.9403 191.0448" fill="none" stroke="var(--ok)" stroke-width="1.9104" marker-end="url(#arrow)" />
-  <text x="105.0746" y="353.4328" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--ok)">Start</text>
+  <path d="M 267.4627 506.2687 Q 133.7313 506.2687 133.7313 286.5672 Q 133.7313 191.0448 171.9403 191.0448" fill="none" stroke="var(--ok-border)" stroke-width="1.9104" marker-end="url(#arrow)" />
+  <text x="105.0746" y="353.4328" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--ok-accent)">Start</text>
   <line x1="439.403" y1="515.8209" x2="620.8955" y2="515.8209" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
   <text x="530.1493" y="506.2687" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--text-muted)">Terminate</text>
-  <rect x="630.4478" y="372.5373" width="191.0448" height="57.3134" rx="19.1045" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="1.9104" filter="url(#shadow)" />
-  <text x="725.9701" y="406.9254" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2836" font-weight="bold" fill="var(--warn-dk)">Shutting Down</text>
+  <rect x="630.4478" y="372.5373" width="191.0448" height="57.3134" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="725.9701" y="406.9254" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2836" font-weight="bold" fill="var(--warn-accent)">Shutting Down</text>
   <line x1="725.9701" y1="429.8507" x2="725.9701" y2="477.6119" stroke="var(--text-muted)" stroke-width="1.9104" marker-end="url(#arrow)" />
-  <rect x="630.4478" y="487.1642" width="191.0448" height="57.3134" rx="19.1045" fill="url(#grad-danger)" stroke="var(--danger-dk)" stroke-width="1.9104" filter="url(#shadow)" />
+  <rect x="630.4478" y="487.1642" width="191.0448" height="57.3134" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)" />
   <text x="725.9701" y="521.5522" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2388" font-weight="bold" fill="var(--bg)">Terminated</text>
-  <rect x="888.3582" y="133.7313" width="296.1194" height="248.3582" rx="11.4627" fill="var(--surface)" stroke="var(--border)" stroke-width="0.9552" />
+  <rect x="888.3582" y="133.7313" width="296.1194" height="248.3582" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="1036.4179" y="167.1642" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2836" font-weight="bold" fill="var(--text)">State Legend</text>
-  <rect x="917.0149" y="186.2687" width="22.9254" height="15.2836" rx="5.7313" fill="var(--primary)" />
-  <text x="953.3134" y="199.6418" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text-dark)">Running (billing active)</text>
-  <rect x="917.0149" y="214.9254" width="22.9254" height="15.2836" rx="5.7313" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="0.9552" />
-  <text x="953.3134" y="228.2985" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text-dark)">Transitioning</text>
-  <rect x="917.0149" y="243.5821" width="22.9254" height="15.2836" rx="5.7313" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="0.9552" />
-  <text x="953.3134" y="256.9552" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text-dark)">Stopped (no billing)</text>
-  <rect x="917.0149" y="272.2388" width="22.9254" height="15.2836" rx="5.7313" fill="var(--danger)" />
-  <text x="953.3134" y="285.6119" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text-dark)">Terminated (deleted)</text>
+  <rect x="917.0149" y="186.2687" width="22.9254" height="15.2836" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="953.3134" y="199.6418" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text)">Running (billing active)</text>
+  <rect x="917.0149" y="214.9254" width="22.9254" height="15.2836" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="953.3134" y="228.2985" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text)">Transitioning</text>
+  <rect x="917.0149" y="243.5821" width="22.9254" height="15.2836" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="953.3134" y="256.9552" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text)">Stopped (no billing)</text>
+  <rect x="917.0149" y="272.2388" width="22.9254" height="15.2836" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="953.3134" y="285.6119" font-family="Arial, sans-serif" font-size="13.3731" fill="var(--text)">Terminated (deleted)</text>
   <text x="1036.4179" y="324.7761" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--text-muted)">EBS-backed instances can</text>
   <text x="1036.4179" y="341.9701" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--text-muted)">be stopped and restarted.</text>
   <text x="1036.4179" y="359.1642" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4627" fill="var(--text-muted)">Termination is permanent.</text>
-  <path d="M 506.2687 152.8358 Q 506.2687 95.5224 573.1343 95.5224 Q 640 95.5224 640 152.8358" fill="none" stroke="var(--primary-dk)" stroke-width="1.9104" marker-end="url(#arrow-primary)" />
-  <text x="573.1343" y="81.194" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4179" fill="var(--primary-dk)">Reboot</text>
+  <path d="M 506.2687 152.8358 Q 506.2687 95.5224 573.1343 95.5224 Q 640 95.5224 640 152.8358" fill="none" stroke="var(--primary-border)" stroke-width="1.9104" marker-end="url(#arrow-primary)" />
+  <text x="573.1343" y="81.194" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.4179" fill="var(--primary-accent)">Reboot</text>
 </svg>

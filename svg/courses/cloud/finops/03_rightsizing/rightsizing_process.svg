@@ -1,118 +1,172 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="691.308" height="345.654" fill="var(--bg)" rx="0" />
-  <rect x="16.2025" y="32.4051" width="91.8143" height="43.2068" rx="6.481" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.3502" filter="url(#shadow)" />
-  <text x="62.1097" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">1. Collect Data</text>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="691.308" height="345.654" fill="var(--bg)" rx="6" />
+  <rect x="16.2025" y="32.4051" width="91.8143" height="43.2068" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="62.1097" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">1. Collect Data</text>
   <text x="62.1097" y="63.73" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">CPU, Memory, I/O</text>
   <line x1="108.0169" y1="54.0084" x2="128.5401" y2="54.0084" stroke="var(--text-muted)" stroke-width="1.3502" marker-end="url(#arrow)" />
-  <rect x="133.9409" y="32.4051" width="91.8143" height="43.2068" rx="6.481" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.3502" filter="url(#shadow)" />
-  <text x="179.8481" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">2. Identify</text>
+  <rect x="133.9409" y="32.4051" width="91.8143" height="43.2068" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="179.8481" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">2. Identify</text>
   <text x="179.8481" y="63.73" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Find candidates</text>
   <line x1="225.7553" y1="54.0084" x2="246.2785" y2="54.0084" stroke="var(--text-muted)" stroke-width="1.3502" marker-end="url(#arrow)" />
-  <rect x="251.6793" y="32.4051" width="91.8143" height="43.2068" rx="6.481" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.3502" filter="url(#shadow)" />
-  <text x="297.5865" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-dk)">3. Validate</text>
+  <rect x="251.6793" y="32.4051" width="91.8143" height="43.2068" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="297.5865" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">3. Validate</text>
   <text x="297.5865" y="63.73" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Check with owners</text>
   <line x1="343.4937" y1="54.0084" x2="364.0169" y2="54.0084" stroke="var(--text-muted)" stroke-width="1.3502" marker-end="url(#arrow)" />
-  <rect x="369.4177" y="32.4051" width="91.8143" height="43.2068" rx="6.481" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.3502" filter="url(#shadow)" />
-  <text x="415.3249" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-dk)">4. Test</text>
+  <rect x="369.4177" y="32.4051" width="91.8143" height="43.2068" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="415.3249" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">4. Test</text>
   <text x="415.3249" y="63.73" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Staging first</text>
   <line x1="461.2321" y1="54.0084" x2="481.7553" y2="54.0084" stroke="var(--text-muted)" stroke-width="1.3502" marker-end="url(#arrow)" />
-  <rect x="487.1561" y="32.4051" width="91.8143" height="43.2068" rx="6.481" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.3502" filter="url(#shadow)" />
-  <text x="533.0633" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-dk)">5. Apply</text>
+  <rect x="487.1561" y="32.4051" width="91.8143" height="43.2068" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="533.0633" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">5. Apply</text>
   <text x="533.0633" y="63.73" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Resize instances</text>
   <line x1="578.9705" y1="54.0084" x2="599.4937" y2="54.0084" stroke="var(--text-muted)" stroke-width="1.3502" marker-end="url(#arrow)" />
-  <rect x="604.8945" y="32.4051" width="70.211" height="43.2068" rx="6.481" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.3502" filter="url(#shadow)" />
-  <text x="640" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-dk)">6. Monitor</text>
+  <rect x="604.8945" y="32.4051" width="70.211" height="43.2068" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="640" y="51.308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">6. Monitor</text>
   <text x="640" y="63.73" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Ongoing</text>
   <path d="M 640 75.6118 L 640 97.2152 Q 640 108.0169 629.1983 108.0169 L 62.1097 108.0169 Q 51.308 108.0169 51.308 97.2152 L 51.308 78.3122" fill="none" stroke="var(--text-faint)" stroke-width="1.0802" stroke-dasharray="3.2405 2.1603" marker-end="url(#arrow)" />
   <text x="345.654" y="118.8186" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">Continuous cycle - repeat regularly</text>
-  <rect x="16.2025" y="140.4219" width="102.616" height="108.0169" rx="4.3207" fill="var(--surface)" stroke="var(--primary)" stroke-width="0.8101" />
-  <text x="67.5105" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">Collect Data</text>
+  <rect x="16.2025" y="140.4219" width="102.616" height="108.0169" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="67.5105" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Collect Data</text>
   <text x="24.3038" y="168.5063" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">CloudWatch metrics</text>
   <text x="24.3038" y="179.308" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">14-30 day window</text>
   <text x="24.3038" y="190.1097" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">CPU, memory, network</text>
   <text x="24.3038" y="200.9114" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Disk I/O patterns</text>
   <text x="24.3038" y="211.7131" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Peak vs average usage</text>
-  <text x="24.3038" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary)">Tool: Compute Optimizer</text>
-  <rect x="129.6203" y="140.4219" width="102.616" height="108.0169" rx="4.3207" fill="var(--surface)" stroke="var(--primary)" stroke-width="0.8101" />
-  <text x="180.9283" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">Identify</text>
+  <text x="24.3038" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Tool: Compute Optimizer</text>
+  <rect x="129.6203" y="140.4219" width="102.616" height="108.0169" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="180.9283" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Identify</text>
   <text x="137.7215" y="168.5063" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">CPU &lt; 20% avg</text>
   <text x="137.7215" y="179.308" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Memory &lt; 30% avg</text>
   <text x="137.7215" y="190.1097" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Rank by savings</text>
   <text x="137.7215" y="200.9114" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Flag idle resources</text>
   <text x="137.7215" y="211.7131" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Suggest target size</text>
-  <text x="137.7215" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary)">Output: Candidate list</text>
-  <rect x="243.038" y="140.4219" width="102.616" height="108.0169" rx="4.3207" fill="var(--surface)" stroke="var(--warn)" stroke-width="0.8101" />
-  <text x="294.346" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-dk)">Validate</text>
+  <text x="137.7215" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Output: Candidate list</text>
+  <rect x="243.038" y="140.4219" width="102.616" height="108.0169" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="294.346" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Validate</text>
   <text x="251.1392" y="168.5063" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Review with app team</text>
   <text x="251.1392" y="179.308" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Check burst patterns</text>
   <text x="251.1392" y="190.1097" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Seasonal workloads?</text>
   <text x="251.1392" y="200.9114" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Dependencies check</text>
   <text x="251.1392" y="211.7131" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Risk assessment</text>
-  <text x="251.1392" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn)">Gate: Owner approval</text>
-  <rect x="356.4557" y="140.4219" width="102.616" height="108.0169" rx="4.3207" fill="var(--surface)" stroke="var(--warn)" stroke-width="0.8101" />
-  <text x="407.7637" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-dk)">Test</text>
+  <text x="251.1392" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Gate: Owner approval</text>
+  <rect x="356.4557" y="140.4219" width="102.616" height="108.0169" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="407.7637" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Test</text>
   <text x="364.557" y="168.5063" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Apply in non-prod first</text>
   <text x="364.557" y="179.308" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Load test new size</text>
   <text x="364.557" y="190.1097" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Monitor for 48-72h</text>
   <text x="364.557" y="200.9114" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Compare performance</text>
   <text x="364.557" y="211.7131" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Rollback plan ready</text>
-  <text x="364.557" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn)">Gate: Test passes</text>
-  <rect x="469.8734" y="140.4219" width="102.616" height="108.0169" rx="4.3207" fill="var(--surface)" stroke="var(--ok)" stroke-width="0.8101" />
-  <text x="521.1814" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-dk)">Apply</text>
+  <text x="364.557" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--warn-accent)">Gate: Test passes</text>
+  <rect x="469.8734" y="140.4219" width="102.616" height="108.0169" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="521.1814" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Apply</text>
   <text x="477.9747" y="168.5063" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Schedule downtime</text>
   <text x="477.9747" y="179.308" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Resize in production</text>
   <text x="477.9747" y="190.1097" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Use automation (IaC)</text>
   <text x="477.9747" y="200.9114" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Update documentation</text>
   <text x="477.9747" y="211.7131" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Track actual savings</text>
-  <text x="477.9747" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok)">Output: Savings realized</text>
-  <rect x="583.2911" y="140.4219" width="91.8143" height="108.0169" rx="4.3207" fill="var(--surface)" stroke="var(--ok)" stroke-width="0.8101" />
-  <text x="629.1983" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-dk)">Monitor</text>
+  <text x="477.9747" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Output: Savings realized</text>
+  <rect x="583.2911" y="140.4219" width="91.8143" height="108.0169" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="629.1983" y="155.5443" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Monitor</text>
   <text x="591.3924" y="168.5063" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Track performance</text>
   <text x="591.3924" y="179.308" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Validate savings</text>
   <text x="591.3924" y="190.1097" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Set alerts for drift</text>
   <text x="591.3924" y="200.9114" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Monthly review</text>
   <text x="591.3924" y="211.7131" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">Report to leadership</text>
-  <text x="591.3924" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok)">Continuous process</text>
-  <rect x="183.6287" y="270.0422" width="324.0506" height="24.3038" rx="4.3207" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="0.8101" />
-  <text x="345.654" y="285.7046" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-dk)">Best Practice: Run rightsizing reviews every 30-60 days</text>
+  <text x="591.3924" y="226.8354" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--ok-accent)">Continuous process</text>
+  <rect x="183.6287" y="270.0422" width="324.0506" height="24.3038" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="345.654" y="285.7046" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="var(--primary-accent)">Best Practice: Run rightsizing reviews every 30-60 days</text>
 </svg>

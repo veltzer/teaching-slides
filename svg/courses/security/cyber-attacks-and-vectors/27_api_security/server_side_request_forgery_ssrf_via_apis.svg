@@ -1,109 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="17.9531" y="16.4103" width="1131.0454" height="623.5897" rx="8.2051" fill="var(--primary-pale2)" stroke="var(--primary-bright)" stroke-width="3.2821" />
-  <text x="583.4758" y="65.641" text-anchor="middle" font-size="29.5385" font-weight="bold" fill="var(--text-dark)">SSRF via API</text>
+  <rect x="17.9531" y="16.4103" width="1131.0454" height="623.5897" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="583.4758" y="65.641" text-anchor="middle" font-size="29.5385" font-weight="bold" fill="var(--text)">SSRF via API</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-light: #f9f9f9;
-        --surface-dark: #f0f0f0;
         --border: #e0e0e0;
-        --border-strong: #bdbdbd;
-        --border-faint: #cccccc;
-        --border-softer: #dddddd;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-lighter: #777777;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
         --code-bg: #1a1a2e;
         --shadow: #00000022;
         --black: #000000;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-bright: #4a90e2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-lt: #bbdefb;
-        --primary-tint: #90caf9;
-        --primary-pale: #e3f2fd;
-        --primary-pale2: #e8f4f8;
-        --primary-pale3: #e1f5fe;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --primary-google: #4285f4;
-        --ok: #43a047;
-        --ok-dk: #2e7d32;
-        --ok-mid: #388e3c;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-soft: #27ae60;
-        --ok-google: #34a853;
-        --ok-deep: #1b5e20;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-pale2: #d4edda;
-        --ok-pale3: #e8f5e8;
-        --warn: #fb8c00;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-yellow: #ffc107;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --warn-pale: #fff3e0;
-        --warn-pale2: #fff3cd;
-        --warn-pale3: #fff8e1;
-        --warn-pale4: #fff9c4;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-google: #ea4335;
-        --danger-deep: #b71c1c;
-        --danger-deeper: #bf360c;
-        --danger-pink: #c2185b;
-        --danger-lt: #ffcdd2;
-        --danger-pale: #ffebee;
-        --danger-pale2: #f8d7da;
-        --danger-pale3: #fce4ec;
-        --info: #8e24aa;
-        --info-dk: #6a1b9a;
-        --info-mid: #7b1fa2;
-        --info-light: #9c27b0;
-        --info-vivid: #673ab7;
-        --info-deep: #4a148c;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-tint: #e1bee7;
-        --info-pale: #f3e5f5;
-        --info-indigo: #3f51b5;
-        --info-indigo-lt: #e8eaf6;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
     <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="0%" stop-color="#2196f3"/>
       <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
 
@@ -113,22 +48,22 @@
     </linearGradient>
 
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="0%" stop-color="#4caf50"/>
       <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
 
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="0%" stop-color="#ff9800"/>
       <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
 
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
       <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
 
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
       <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
 
@@ -167,26 +102,26 @@
       <polygon points="0,18 6.8923,0" fill="#dc3545" />
     </marker>
   </defs>
-  <rect x="53.8593" y="90.2564" width="502.6868" height="73.8462" rx="8.2051" fill="var(--ok-pale2)" stroke="var(--ok-bright)" stroke-width="1.641" />
-  <text x="71.8124" y="118.1538" font-size="18.0513" fill="var(--text-dark)">POST /api/fetch-url</text>
-  <text x="71.8124" y="144.4103" font-size="18.0513" fill="var(--text-mid)">{ "url": "https://example.com/image.png" }</text>
-  <rect x="592.4524" y="90.2564" width="520.6399" height="73.8462" rx="8.2051" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="1.641" />
-  <text x="610.4055" y="118.1538" font-size="18.0513" fill="var(--text-dark)">Attacker sends:</text>
-  <text x="610.4055" y="144.4103" font-size="18.0513" fill="var(--danger-bright)">{ "url": "http://169.254.169.254/meta-data/" }</text>
-  <rect x="71.8124" y="213.3333" width="233.3903" height="98.4615" rx="8.2051" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.2821" />
-  <text x="188.5075" y="270.7692" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-bright)">Attacker</text>
-  <rect x="448.8275" y="213.3333" width="233.3903" height="98.4615" rx="8.2051" fill="var(--warn-pale2)" stroke="var(--warn-yellow)" stroke-width="3.2821" />
-  <text x="565.5227" y="259.2821" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-deeper)">API</text>
-  <text x="565.5227" y="287.1795" text-anchor="middle" font-size="19.6923" fill="var(--text-mid)">Server</text>
-  <rect x="825.8427" y="196.9231" width="278.2731" height="131.2821" rx="8.2051" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.2821" />
-  <text x="964.0815" y="242.8718" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="var(--danger-bright)">AWS IMDS</text>
-  <text x="964.0815" y="275.6923" text-anchor="middle" font-size="18.0513" fill="var(--text-mid)">169.254.169.254</text>
-  <text x="964.0815" y="303.5897" text-anchor="middle" font-size="18.0513" fill="var(--text-mid)">(IAM credentials)</text>
-  <line x1="305.2027" y1="246.1538" x2="439.8509" y2="246.1538" stroke="var(--danger-bright)" stroke-width="3.2821" marker-end="url(#arrRed)" />
-  <line x1="682.2178" y1="246.1538" x2="816.8661" y2="246.1538" stroke="var(--danger-bright)" stroke-width="3.2821" marker-end="url(#arrRed)" />
-  <line x1="816.8661" y1="287.1795" x2="682.2178" y2="287.1795" stroke="var(--danger-bright)" stroke-width="3.2821" marker-end="url(#arrRed)" />
-  <line x1="439.8509" y1="287.1795" x2="305.2027" y2="287.1795" stroke="var(--danger-bright)" stroke-width="3.2821" marker-end="url(#arrRed)" />
-  <rect x="71.8124" y="377.4359" width="1032.3033" height="82.0513" rx="8.2051" fill="var(--danger-pale2)" stroke="var(--danger-bright)" stroke-width="3.2821" />
-  <text x="583.4758" y="413.5385" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-bright)">Result: Attacker gets AWS IAM temporary credentials</text>
-  <text x="583.4758" y="443.0769" text-anchor="middle" font-size="21.3333" fill="var(--text-mid)">via the API server's network access!</text>
+  <rect x="53.8593" y="90.2564" width="502.6868" height="73.8462" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="71.8124" y="118.1538" font-size="18.0513" fill="var(--text)">POST /api/fetch-url</text>
+  <text x="71.8124" y="144.4103" font-size="18.0513" fill="var(--text-muted)">{ "url": "https://example.com/image.png" }</text>
+  <rect x="592.4524" y="90.2564" width="520.6399" height="73.8462" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="610.4055" y="118.1538" font-size="18.0513" fill="var(--text)">Attacker sends:</text>
+  <text x="610.4055" y="144.4103" font-size="18.0513" fill="var(--danger-accent)">{ "url": "http://169.254.169.254/meta-data/" }</text>
+  <rect x="71.8124" y="213.3333" width="233.3903" height="98.4615" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="188.5075" y="270.7692" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-accent)">Attacker</text>
+  <rect x="448.8275" y="213.3333" width="233.3903" height="98.4615" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="565.5227" y="259.2821" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-accent)">API</text>
+  <text x="565.5227" y="287.1795" text-anchor="middle" font-size="19.6923" fill="var(--text-muted)">Server</text>
+  <rect x="825.8427" y="196.9231" width="278.2731" height="131.2821" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="964.0815" y="242.8718" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="var(--danger-accent)">AWS IMDS</text>
+  <text x="964.0815" y="275.6923" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">169.254.169.254</text>
+  <text x="964.0815" y="303.5897" text-anchor="middle" font-size="18.0513" fill="var(--text-muted)">(IAM credentials)</text>
+  <line x1="305.2027" y1="246.1538" x2="439.8509" y2="246.1538" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <line x1="682.2178" y1="246.1538" x2="816.8661" y2="246.1538" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <line x1="816.8661" y1="287.1795" x2="682.2178" y2="287.1795" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <line x1="439.8509" y1="287.1795" x2="305.2027" y2="287.1795" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrRed)" />
+  <rect x="71.8124" y="377.4359" width="1032.3033" height="82.0513" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
+  <text x="583.4758" y="413.5385" text-anchor="middle" font-size="22.9744" font-weight="bold" fill="var(--danger-accent)">Result: Attacker gets AWS IAM temporary credentials</text>
+  <text x="583.4758" y="443.0769" text-anchor="middle" font-size="21.3333" fill="var(--text-muted)">via the API server's network access!</text>
 </svg>

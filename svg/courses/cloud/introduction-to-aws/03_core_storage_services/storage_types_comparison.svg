@@ -1,168 +1,224 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-  </defs>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
   <!-- Background -->
-  <rect x="0" y="0" width="1280" height="640" rx="0" fill="var(--bg)"/>
+  <rect x="0" y="0" width="1280" height="640" rx="6" fill="var(--bg)"/>
 
   <!-- Column 1: Object Storage (S3) -->
-  <rect x="40" y="20" width="280" height="600" rx="14" fill="var(--primary-pale)" stroke="var(--primary-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="20" width="280" height="600" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Bucket icon -->
-  <ellipse cx="180" cy="80" rx="50" ry="20" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="2"/>
-  <path d="M130,80 L130,140 Q180,170 230,140 L230,80" fill="var(--primary-lt)" stroke="var(--primary-dk)" stroke-width="2"/>
-  <ellipse cx="180" cy="140" rx="50" ry="20" fill="none" stroke="var(--primary-dk)" stroke-width="2"/>
-  <text x="180" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-dk)">S3</text>
+  <ellipse cx="180" cy="80" rx="50" ry="20" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <path d="M130,80 L130,140 Q180,170 230,140 L230,80" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <ellipse cx="180" cy="140" rx="50" ry="20" fill="none" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-accent)">S3</text>
 
-  <text x="180" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)">Object Storage</text>
-  <text x="180" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-dark)">Amazon S3</text>
+  <text x="180" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)">Object Storage</text>
+  <text x="180" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Amazon S3</text>
 
-  <line x1="70" y1="235" x2="290" y2="235" stroke="var(--primary-lt)" stroke-width="1.5"/>
+  <line x1="70" y1="235" x2="290" y2="235" stroke="var(--primary-border)" stroke-width="1.5"/>
 
-  <text x="180" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Access Pattern</text>
+  <text x="180" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Access Pattern</text>
   <text x="180" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">HTTP/HTTPS API</text>
   <text x="180" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Key-value pairs</text>
 
-  <line x1="70" y1="330" x2="290" y2="330" stroke="var(--primary-lt)" stroke-width="1.5"/>
+  <line x1="70" y1="330" x2="290" y2="330" stroke="var(--primary-border)" stroke-width="1.5"/>
 
-  <text x="180" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Use Cases</text>
+  <text x="180" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Use Cases</text>
   <text x="180" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Static websites</text>
   <text x="180" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Data lakes</text>
   <text x="180" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Backups, media</text>
 
-  <line x1="70" y1="445" x2="290" y2="445" stroke="var(--primary-lt)" stroke-width="1.5"/>
+  <line x1="70" y1="445" x2="290" y2="445" stroke="var(--primary-border)" stroke-width="1.5"/>
 
-  <text x="180" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Cost</text>
-  <rect x="110" y="490" width="140" height="24" rx="6" fill="var(--primary)"/>
+  <text x="180" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Cost</text>
+  <rect x="110" y="490" width="140" height="24" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="180" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">$0.023/GB</text>
   <text x="180" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Virtually unlimited</text>
   <text x="180" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">11 nines durability</text>
 
   <!-- Column 2: Block Storage (EBS) -->
-  <rect x="350" y="20" width="280" height="600" rx="14" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="350" y="20" width="280" height="600" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Disk icon -->
-  <rect x="145" y="55" width="70" height="50" rx="6" fill="var(--ok-lt)" stroke="var(--ok-dk)" stroke-width="2" transform="translate(325,0)"/>
-  <rect x="155" y="65" width="50" height="10" rx="3" fill="var(--ok)" transform="translate(325,0)"/>
-  <rect x="155" y="82" width="50" height="10" rx="3" fill="var(--ok)" transform="translate(325,0)"/>
+  <rect x="145" y="55" width="70" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" transform="translate(325,0)"/>
+  <rect x="155" y="65" width="50" height="10" rx="6" fill="var(--ok-fill)" transform="translate(325,0)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="155" y="82" width="50" height="10" rx="6" fill="var(--ok-fill)" transform="translate(325,0)" stroke="var(--ok-border)" stroke-width="2"/>
 
-  <text x="490" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)">Block Storage</text>
-  <text x="490" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-dark)">Amazon EBS</text>
+  <text x="490" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">Block Storage</text>
+  <text x="490" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Amazon EBS</text>
 
-  <line x1="380" y1="235" x2="600" y2="235" stroke="var(--ok-lt)" stroke-width="1.5"/>
+  <line x1="380" y1="235" x2="600" y2="235" stroke="var(--ok-border)" stroke-width="1.5"/>
 
-  <text x="490" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Access Pattern</text>
+  <text x="490" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Access Pattern</text>
   <text x="490" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Mounted as volume</text>
   <text x="490" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Block-level I/O</text>
 
-  <line x1="380" y1="330" x2="600" y2="330" stroke="var(--ok-lt)" stroke-width="1.5"/>
+  <line x1="380" y1="330" x2="600" y2="330" stroke="var(--ok-border)" stroke-width="1.5"/>
 
-  <text x="490" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Use Cases</text>
+  <text x="490" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Use Cases</text>
   <text x="490" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Boot volumes</text>
   <text x="490" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Databases</text>
   <text x="490" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Transaction logs</text>
 
-  <line x1="380" y1="445" x2="600" y2="445" stroke="var(--ok-lt)" stroke-width="1.5"/>
+  <line x1="380" y1="445" x2="600" y2="445" stroke="var(--ok-border)" stroke-width="1.5"/>
 
-  <text x="490" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Cost</text>
-  <rect x="410" y="490" width="160" height="24" rx="6" fill="var(--ok)"/>
+  <text x="490" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Cost</text>
+  <rect x="410" y="490" width="160" height="24" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="490" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">$0.08/GB (gp3)</text>
   <text x="490" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Single AZ attached</text>
   <text x="490" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Snapshot for backup</text>
 
   <!-- Column 3: File Storage (EFS) -->
-  <rect x="660" y="20" width="280" height="600" rx="14" fill="var(--warn-pale)" stroke="var(--warn-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="20" width="280" height="600" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Shared folder icon -->
-  <rect x="140" y="55" width="80" height="55" rx="6" fill="var(--warn-lt)" stroke="var(--warn-dk)" stroke-width="2" transform="translate(640,0)"/>
-  <rect x="140" y="50" width="40" height="15" rx="4" fill="var(--warn)" stroke="var(--warn-dk)" stroke-width="1.5" transform="translate(640,0)"/>
+  <rect x="140" y="55" width="80" height="55" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" transform="translate(640,0)"/>
+  <rect x="140" y="50" width="40" height="15" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" transform="translate(640,0)"/>
 
-  <text x="800" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-dk)">File Storage</text>
-  <text x="800" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-dark)">Amazon EFS</text>
+  <text x="800" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-accent)">File Storage</text>
+  <text x="800" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">Amazon EFS</text>
 
-  <line x1="690" y1="235" x2="910" y2="235" stroke="var(--warn-lt)" stroke-width="1.5"/>
+  <line x1="690" y1="235" x2="910" y2="235" stroke="var(--warn-border)" stroke-width="1.5"/>
 
-  <text x="800" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Access Pattern</text>
+  <text x="800" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Access Pattern</text>
   <text x="800" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">NFS protocol</text>
   <text x="800" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Shared file system</text>
 
-  <line x1="690" y1="330" x2="910" y2="330" stroke="var(--warn-lt)" stroke-width="1.5"/>
+  <line x1="690" y1="330" x2="910" y2="330" stroke="var(--warn-border)" stroke-width="1.5"/>
 
-  <text x="800" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Use Cases</text>
+  <text x="800" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Use Cases</text>
   <text x="800" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Shared content</text>
   <text x="800" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">CMS, web serving</text>
   <text x="800" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Dev environments</text>
 
-  <line x1="690" y1="445" x2="910" y2="445" stroke="var(--warn-lt)" stroke-width="1.5"/>
+  <line x1="690" y1="445" x2="910" y2="445" stroke="var(--warn-border)" stroke-width="1.5"/>
 
-  <text x="800" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Cost</text>
-  <rect x="720" y="490" width="160" height="24" rx="6" fill="var(--warn)"/>
+  <text x="800" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Cost</text>
+  <rect x="720" y="490" width="160" height="24" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="800" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">$0.30/GB</text>
   <text x="800" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Multi-AZ by default</text>
   <text x="800" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Auto-scaling capacity</text>
 
   <!-- Column 4: Archive (Glacier) -->
-  <rect x="970" y="20" width="280" height="600" rx="14" fill="var(--info-pale)" stroke="var(--info-dk)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="970" y="20" width="280" height="600" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <!-- Snowflake/archive icon -->
-  <line x1="1110" y1="55" x2="1110" y2="105" stroke="var(--info)" stroke-width="3"/>
-  <line x1="1085" y1="80" x2="1135" y2="80" stroke="var(--info)" stroke-width="3"/>
-  <line x1="1090" y1="60" x2="1130" y2="100" stroke="var(--info)" stroke-width="2"/>
-  <line x1="1130" y1="60" x2="1090" y2="100" stroke="var(--info)" stroke-width="2"/>
-  <circle cx="1110" cy="80" r="8" fill="var(--info-lt)"/>
+  <line x1="1110" y1="55" x2="1110" y2="105" stroke="var(--info-border)" stroke-width="2"/>
+  <line x1="1085" y1="80" x2="1135" y2="80" stroke="var(--info-border)" stroke-width="2"/>
+  <line x1="1090" y1="60" x2="1130" y2="100" stroke="var(--info-border)" stroke-width="2"/>
+  <line x1="1130" y1="60" x2="1090" y2="100" stroke="var(--info-border)" stroke-width="2"/>
+  <circle cx="1110" cy="80" r="8" fill="var(--info-fill)"/>
 
-  <text x="1110" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)">Archive</text>
-  <text x="1110" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-dark)">S3 Glacier</text>
+  <text x="1110" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)">Archive</text>
+  <text x="1110" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text)">S3 Glacier</text>
 
-  <line x1="1000" y1="235" x2="1220" y2="235" stroke="var(--info-lt)" stroke-width="1.5"/>
+  <line x1="1000" y1="235" x2="1220" y2="235" stroke="var(--info-border)" stroke-width="1.5"/>
 
-  <text x="1110" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Access Pattern</text>
+  <text x="1110" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Access Pattern</text>
   <text x="1110" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Retrieval requests</text>
   <text x="1110" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Minutes to hours</text>
 
-  <line x1="1000" y1="330" x2="1220" y2="330" stroke="var(--info-lt)" stroke-width="1.5"/>
+  <line x1="1000" y1="330" x2="1220" y2="330" stroke="var(--info-border)" stroke-width="1.5"/>
 
-  <text x="1110" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Use Cases</text>
+  <text x="1110" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Use Cases</text>
   <text x="1110" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Compliance archives</text>
   <text x="1110" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Long-term backups</text>
   <text x="1110" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Regulatory data</text>
 
-  <line x1="1000" y1="445" x2="1220" y2="445" stroke="var(--info-lt)" stroke-width="1.5"/>
+  <line x1="1000" y1="445" x2="1220" y2="445" stroke="var(--info-border)" stroke-width="1.5"/>
 
-  <text x="1110" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-dark)">Cost</text>
-  <rect x="1040" y="490" width="140" height="24" rx="6" fill="var(--info)"/>
+  <text x="1110" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Cost</text>
+  <rect x="1040" y="490" width="140" height="24" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1110" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--bg)">$0.004/GB</text>
   <text x="1110" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Lowest cost storage</text>
   <text x="1110" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Retrieval fees apply</text>

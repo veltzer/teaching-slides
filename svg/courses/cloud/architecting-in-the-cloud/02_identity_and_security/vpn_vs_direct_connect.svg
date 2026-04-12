@@ -1,112 +1,171 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <rect width="1280" height="640" fill="var(--bg)"/>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
 
   <!-- On-Premises (left) -->
-  <rect x="40" y="120" width="250" height="400" rx="12" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="165" y="155" font-family="Arial, sans-serif" font-size="18" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">On-Premises</text>
+  <rect x="40" y="120" width="250" height="400" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)"/>
+  <text x="165" y="155" font-family="Arial, sans-serif" font-size="18" fill="var(--text)" text-anchor="middle" font-weight="bold">On-Premises</text>
   <text x="165" y="175" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">Data Center</text>
 
-  <rect x="70" y="200" width="190" height="45" rx="6" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5"/>
-  <text x="165" y="228" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-dk)" text-anchor="middle">Servers &amp; Apps</text>
+  <rect x="70" y="200" width="190" height="45" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="165" y="228" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-accent)" text-anchor="middle">Servers &amp; Apps</text>
 
-  <rect x="70" y="260" width="190" height="45" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
-  <text x="165" y="288" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-dk)" text-anchor="middle">Customer Gateway</text>
+  <rect x="70" y="260" width="190" height="45" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="165" y="288" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-accent)" text-anchor="middle">Customer Gateway</text>
 
-  <rect x="70" y="380" width="190" height="45" rx="6" fill="var(--info-lt)" stroke="var(--info)" stroke-width="1.5"/>
-  <text x="165" y="408" font-family="Arial, sans-serif" font-size="13" fill="var(--info-dk)" text-anchor="middle">DX Router</text>
+  <rect x="70" y="380" width="190" height="45" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="165" y="408" font-family="Arial, sans-serif" font-size="13" fill="var(--info-accent)" text-anchor="middle">DX Router</text>
 
   <!-- Cloud (right) -->
-  <rect x="990" y="120" width="250" height="400" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1115" y="155" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">AWS Cloud</text>
+  <rect x="990" y="120" width="250" height="400" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1115" y="155" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">AWS Cloud</text>
   <text x="1115" y="175" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">VPC</text>
 
-  <rect x="1020" y="200" width="190" height="45" rx="6" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5"/>
-  <text x="1115" y="228" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle">EC2 / Services</text>
+  <rect x="1020" y="200" width="190" height="45" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1115" y="228" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)" text-anchor="middle">EC2 / Services</text>
 
-  <rect x="1020" y="260" width="190" height="45" rx="6" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5"/>
-  <text x="1115" y="288" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-dk)" text-anchor="middle">Virtual Private GW</text>
+  <rect x="1020" y="260" width="190" height="45" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1115" y="288" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-accent)" text-anchor="middle">Virtual Private GW</text>
 
-  <rect x="1020" y="380" width="190" height="45" rx="6" fill="var(--info-lt)" stroke="var(--info)" stroke-width="1.5"/>
-  <text x="1115" y="408" font-family="Arial, sans-serif" font-size="13" fill="var(--info-dk)" text-anchor="middle">DX Gateway</text>
+  <rect x="1020" y="380" width="190" height="45" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1115" y="408" font-family="Arial, sans-serif" font-size="13" fill="var(--info-accent)" text-anchor="middle">DX Gateway</text>
 
   <!-- Path 1: VPN (top) -->
-  <rect x="380" y="50" width="520" height="180" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="8,4"/>
-  <text x="640" y="78" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">Site-to-Site VPN</text>
+  <rect x="380" y="50" width="520" height="180" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="640" y="78" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">Site-to-Site VPN</text>
 
   <!-- Internet cloud -->
-  <rect x="470" y="100" width="340" height="50" rx="25" fill="var(--surface-alt)" stroke="var(--border-strong)" stroke-width="1.5"/>
+  <rect x="470" y="100" width="340" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="132" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)" text-anchor="middle">Public Internet (encrypted IPsec tunnel)</text>
 
   <!-- VPN arrows -->
-  <line x1="260" y1="280" x2="468" y2="125" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrow)"/>
-  <line x1="812" y1="125" x2="1018" y2="280" stroke="var(--warn)" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrow)"/>
+  <line x1="260" y1="280" x2="468" y2="125" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arrow)"/>
+  <line x1="812" y1="125" x2="1018" y2="280" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#arrow)"/>
 
   <!-- VPN properties -->
-  <text x="440" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Bandwidth: ~1.25 Gbps</text>
-  <text x="440" y="192" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Latency: Variable</text>
-  <text x="440" y="209" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Cost: Low ($0.05/hr)</text>
-  <text x="680" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Setup: Hours</text>
-  <text x="680" y="192" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Reliability: Internet-dependent</text>
-  <text x="680" y="209" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)">Encryption: IPsec</text>
+  <text x="440" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Bandwidth: ~1.25 Gbps</text>
+  <text x="440" y="192" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Latency: Variable</text>
+  <text x="440" y="209" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Cost: Low ($0.05/hr)</text>
+  <text x="680" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Setup: Hours</text>
+  <text x="680" y="192" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Reliability: Internet-dependent</text>
+  <text x="680" y="209" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">Encryption: IPsec</text>
 
   <!-- Path 2: Direct Connect (bottom) -->
-  <rect x="380" y="330" width="520" height="180" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5"/>
-  <text x="640" y="360" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">AWS Direct Connect</text>
+  <rect x="380" y="330" width="520" height="180" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="360" font-family="Arial, sans-serif" font-size="16" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">AWS Direct Connect</text>
 
   <!-- Dedicated fiber -->
-  <rect x="470" y="380" width="340" height="50" rx="25" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="2"/>
-  <text x="640" y="412" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)" text-anchor="middle">Dedicated Fiber Connection</text>
+  <rect x="470" y="380" width="340" height="50" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="412" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-accent)" text-anchor="middle">Dedicated Fiber Connection</text>
 
   <!-- DX arrows -->
-  <line x1="260" y1="400" x2="468" y2="405" stroke="var(--primary)" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="812" y1="405" x2="1018" y2="400" stroke="var(--primary)" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="260" y1="400" x2="468" y2="405" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="812" y1="405" x2="1018" y2="400" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- DX properties -->
-  <text x="440" y="455" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Bandwidth: 1-100 Gbps</text>
-  <text x="440" y="472" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Latency: Consistent &amp; low</text>
-  <text x="440" y="489" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Cost: High (port + data)</text>
-  <text x="680" y="455" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Setup: Weeks to months</text>
-  <text x="680" y="472" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Reliability: Dedicated line</text>
-  <text x="680" y="489" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)">Encryption: Optional (MACsec)</text>
+  <text x="440" y="455" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Bandwidth: 1-100 Gbps</text>
+  <text x="440" y="472" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Latency: Consistent &amp; low</text>
+  <text x="440" y="489" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Cost: High (port + data)</text>
+  <text x="680" y="455" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Setup: Weeks to months</text>
+  <text x="680" y="472" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Reliability: Dedicated line</text>
+  <text x="680" y="489" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)">Encryption: Optional (MACsec)</text>
 
   <!-- Recommendation -->
-  <rect x="300" y="555" width="680" height="60" rx="8" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5"/>
-  <text x="640" y="578" font-family="Arial, sans-serif" font-size="13" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Best Practice: Use Direct Connect as primary + VPN as backup for redundancy</text>
+  <rect x="300" y="555" width="680" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="578" font-family="Arial, sans-serif" font-size="13" fill="var(--text)" text-anchor="middle" font-weight="bold">Best Practice: Use Direct Connect as primary + VPN as backup for redundancy</text>
   <text x="640" y="598" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)" text-anchor="middle">VPN can be provisioned immediately while waiting for Direct Connect setup</text>
 </svg>

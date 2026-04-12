@@ -1,120 +1,179 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
 
-  <rect width="1280" height="640" fill="var(--bg)"/>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
 
   <!-- Foundation bar -->
-  <rect x="40" y="560" width="1200" height="50" rx="8" fill="var(--surface-alt)" stroke="var(--border-strong)" stroke-width="2"/>
-  <text x="640" y="592" font-family="Arial, sans-serif" font-size="18" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">AWS Well-Architected Framework</text>
+  <rect x="40" y="560" width="1200" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="592" font-family="Arial, sans-serif" font-size="18" fill="var(--text)" text-anchor="middle" font-weight="bold">AWS Well-Architected Framework</text>
 
   <!-- Pillar 1: Operational Excellence (primary) -->
-  <rect x="55" y="80" width="175" height="470" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="55" y="80" width="175" height="55" rx="10" fill="url(#grad-primary)"/>
-  <rect x="55" y="110" width="175" height="25" fill="url(#grad-primary)"/>
+  <rect x="55" y="80" width="175" height="470" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="55" y="80" width="175" height="55" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="55" y="110" width="175" height="25" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="142" y="115" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Operational</text>
   <text x="142" y="130" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Excellence</text>
   <text x="142" y="170" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Run &amp; monitor</text>
   <text x="142" y="186" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">systems</text>
-  <text x="142" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle">● IaC</text>
-  <text x="142" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle">● Observability</text>
-  <text x="142" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle">● CI/CD</text>
-  <text x="142" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-dk)" text-anchor="middle">● Runbooks</text>
+  <text x="142" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">● IaC</text>
+  <text x="142" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">● Observability</text>
+  <text x="142" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">● CI/CD</text>
+  <text x="142" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--primary-accent)" text-anchor="middle">● Runbooks</text>
 
   <!-- Pillar 2: Security (danger) -->
-  <rect x="250" y="80" width="175" height="470" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="250" y="80" width="175" height="55" rx="10" fill="url(#grad-danger)"/>
-  <rect x="250" y="110" width="175" height="25" fill="url(#grad-danger)"/>
+  <rect x="250" y="80" width="175" height="470" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="250" y="80" width="175" height="55" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="250" y="110" width="175" height="25" fill="var(--danger-fill)" rx="6" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="337" y="115" font-family="Arial, sans-serif" font-size="15" fill="var(--bg)" text-anchor="middle" font-weight="bold">Security</text>
   <text x="337" y="170" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Protect data &amp;</text>
   <text x="337" y="186" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">systems</text>
-  <text x="337" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle">● IAM</text>
-  <text x="337" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle">● Encryption</text>
-  <text x="337" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle">● Network security</text>
-  <text x="337" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-dk)" text-anchor="middle">● Least privilege</text>
+  <text x="337" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)" text-anchor="middle">● IAM</text>
+  <text x="337" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)" text-anchor="middle">● Encryption</text>
+  <text x="337" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)" text-anchor="middle">● Network security</text>
+  <text x="337" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--danger-accent)" text-anchor="middle">● Least privilege</text>
 
   <!-- Pillar 3: Reliability (ok) -->
-  <rect x="445" y="80" width="175" height="470" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="445" y="80" width="175" height="55" rx="10" fill="url(#grad-ok)"/>
-  <rect x="445" y="110" width="175" height="25" fill="url(#grad-ok)"/>
+  <rect x="445" y="80" width="175" height="470" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="445" y="80" width="175" height="55" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="110" width="175" height="25" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="532" y="115" font-family="Arial, sans-serif" font-size="15" fill="var(--bg)" text-anchor="middle" font-weight="bold">Reliability</text>
   <text x="532" y="170" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Recover from</text>
   <text x="532" y="186" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">failures</text>
-  <text x="532" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Multi-AZ</text>
-  <text x="532" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Auto recovery</text>
-  <text x="532" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Backups</text>
-  <text x="532" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Chaos testing</text>
+  <text x="532" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Multi-AZ</text>
+  <text x="532" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Auto recovery</text>
+  <text x="532" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Backups</text>
+  <text x="532" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Chaos testing</text>
 
   <!-- Pillar 4: Performance Efficiency (warn) -->
-  <rect x="640" y="80" width="175" height="470" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="640" y="80" width="175" height="55" rx="10" fill="url(#grad-warn)"/>
-  <rect x="640" y="110" width="175" height="25" fill="url(#grad-warn)"/>
+  <rect x="640" y="80" width="175" height="470" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="80" width="175" height="55" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="110" width="175" height="25" fill="var(--warn-fill)" rx="6" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="727" y="115" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Performance</text>
   <text x="727" y="130" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Efficiency</text>
   <text x="727" y="170" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Use resources</text>
   <text x="727" y="186" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">efficiently</text>
-  <text x="727" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle">● Right-sizing</text>
-  <text x="727" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle">● Caching</text>
-  <text x="727" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle">● Serverless</text>
-  <text x="727" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-dk)" text-anchor="middle">● CDN</text>
+  <text x="727" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle">● Right-sizing</text>
+  <text x="727" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle">● Caching</text>
+  <text x="727" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle">● Serverless</text>
+  <text x="727" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)" text-anchor="middle">● CDN</text>
 
   <!-- Pillar 5: Cost Optimization (info) -->
-  <rect x="835" y="80" width="175" height="470" rx="10" fill="var(--info-pale)" stroke="var(--info)" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="835" y="80" width="175" height="55" rx="10" fill="url(#grad-info)"/>
-  <rect x="835" y="110" width="175" height="25" fill="url(#grad-info)"/>
+  <rect x="835" y="80" width="175" height="470" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="835" y="80" width="175" height="55" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="835" y="110" width="175" height="25" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
   <text x="922" y="115" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Cost</text>
   <text x="922" y="130" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Optimization</text>
   <text x="922" y="170" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Avoid unnecessary</text>
   <text x="922" y="186" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">costs</text>
-  <text x="922" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)" text-anchor="middle">● Reserved instances</text>
-  <text x="922" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)" text-anchor="middle">● Spot instances</text>
-  <text x="922" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)" text-anchor="middle">● Auto scaling</text>
-  <text x="922" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--info-dk)" text-anchor="middle">● Cost Explorer</text>
+  <text x="922" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)" text-anchor="middle">● Reserved instances</text>
+  <text x="922" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)" text-anchor="middle">● Spot instances</text>
+  <text x="922" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)" text-anchor="middle">● Auto scaling</text>
+  <text x="922" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--info-accent)" text-anchor="middle">● Cost Explorer</text>
 
   <!-- Pillar 6: Sustainability (ok secondary shade) -->
-  <rect x="1030" y="80" width="175" height="470" rx="10" fill="var(--ok-pale)" stroke="var(--ok-dk)" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="1030" y="80" width="175" height="55" rx="10" fill="url(#grad-ok)"/>
-  <rect x="1030" y="110" width="175" height="25" fill="url(#grad-ok)"/>
+  <rect x="1030" y="80" width="175" height="470" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1030" y="80" width="175" height="55" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="1030" y="110" width="175" height="25" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1117" y="115" font-family="Arial, sans-serif" font-size="14" fill="var(--bg)" text-anchor="middle" font-weight="bold">Sustainability</text>
   <text x="1117" y="170" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Minimize</text>
   <text x="1117" y="186" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">environmental impact</text>
-  <text x="1117" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Region selection</text>
-  <text x="1117" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Efficient code</text>
-  <text x="1117" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Right-sizing</text>
-  <text x="1117" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-dk)" text-anchor="middle">● Managed services</text>
+  <text x="1117" y="220" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Region selection</text>
+  <text x="1117" y="240" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Efficient code</text>
+  <text x="1117" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Right-sizing</text>
+  <text x="1117" y="280" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)" text-anchor="middle">● Managed services</text>
 
   <!-- Top label -->
   <text x="640" y="50" font-family="Arial, sans-serif" font-size="20" fill="var(--text-faint)" text-anchor="middle">Six Pillars</text>

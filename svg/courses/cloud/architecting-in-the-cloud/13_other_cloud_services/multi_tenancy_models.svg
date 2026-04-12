@@ -1,111 +1,170 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
   <!-- Panel 1: Silo Model -->
-  <rect x="40" y="40" width="370" height="440" rx="14" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="225" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-dk)">Silo Model</text>
+  <rect x="40" y="40" width="370" height="440" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="225" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-accent)">Silo Model</text>
   <text x="225" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Separate resources per tenant</text>
   <!-- Tenant A resources -->
-  <rect x="70" y="130" width="140" height="170" rx="8" fill="var(--bg)" stroke="var(--danger)" stroke-width="1"/>
-  <text x="140" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger)">Tenant A</text>
-  <rect x="85" y="165" width="110" height="25" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <rect x="70" y="130" width="140" height="170" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="140" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)">Tenant A</text>
+  <rect x="85" y="165" width="110" height="25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="140" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Compute</text>
-  <rect x="85" y="200" width="110" height="25" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <rect x="85" y="200" width="110" height="25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="140" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Database</text>
-  <rect x="85" y="235" width="110" height="25" rx="4" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <rect x="85" y="235" width="110" height="25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="140" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Storage</text>
   <!-- Tenant B resources -->
-  <rect x="230" y="130" width="140" height="170" rx="8" fill="var(--bg)" stroke="var(--danger)" stroke-width="1"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger)">Tenant B</text>
-  <rect x="245" y="165" width="110" height="25" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <rect x="230" y="130" width="140" height="170" rx="6" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="1"/>
+  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--danger-accent)">Tenant B</text>
+  <rect x="245" y="165" width="110" height="25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="300" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Compute</text>
-  <rect x="245" y="200" width="110" height="25" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <rect x="245" y="200" width="110" height="25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="300" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Database</text>
-  <rect x="245" y="235" width="110" height="25" rx="4" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <rect x="245" y="235" width="110" height="25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="300" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Storage</text>
   <!-- Trade-offs -->
-  <text x="225" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Maximum isolation</text>
-  <text x="225" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Easy compliance</text>
-  <text x="225" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Highest cost</text>
-  <text x="225" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Complex management</text>
-  <text x="225" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Poor resource utilization</text>
+  <text x="225" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Maximum isolation</text>
+  <text x="225" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Easy compliance</text>
+  <text x="225" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Highest cost</text>
+  <text x="225" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Complex management</text>
+  <text x="225" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Poor resource utilization</text>
   <!-- Panel 2: Pool Model -->
-  <rect x="450" y="40" width="370" height="440" rx="14" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="635" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-dk)">Pool Model</text>
+  <rect x="450" y="40" width="370" height="440" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="635" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-accent)">Pool Model</text>
   <text x="635" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Shared resources, logical isolation</text>
   <!-- Shared resources with tenant labels -->
-  <rect x="480" y="130" width="310" height="170" rx="8" fill="var(--bg)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="635" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok)">Shared Infrastructure</text>
-  <rect x="495" y="165" width="280" height="25" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <rect x="480" y="130" width="310" height="170" rx="6" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="1"/>
+  <text x="635" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Shared Infrastructure</text>
+  <rect x="495" y="165" width="280" height="25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="635" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Shared Compute (A + B + C)</text>
-  <rect x="495" y="200" width="280" height="25" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <rect x="495" y="200" width="280" height="25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="635" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Shared Database (tenant_id column)</text>
-  <rect x="495" y="235" width="280" height="25" rx="4" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <rect x="495" y="235" width="280" height="25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="635" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Shared Storage (prefix-based)</text>
   <!-- Trade-offs -->
-  <text x="635" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Most cost efficient</text>
-  <text x="635" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Simple management</text>
-  <text x="635" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Noisy neighbor risk</text>
-  <text x="635" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Cross-tenant data risk</text>
-  <text x="635" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Complex data isolation</text>
+  <text x="635" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Most cost efficient</text>
+  <text x="635" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Simple management</text>
+  <text x="635" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Noisy neighbor risk</text>
+  <text x="635" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Cross-tenant data risk</text>
+  <text x="635" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Complex data isolation</text>
   <!-- Panel 3: Bridge Model -->
-  <rect x="860" y="40" width="370" height="440" rx="14" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1045" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-dk)">Bridge Model</text>
+  <rect x="860" y="40" width="370" height="440" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1045" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-accent)">Bridge Model</text>
   <text x="1045" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Mix of silo and pool</text>
   <!-- Shared compute, separate DB -->
-  <rect x="890" y="130" width="310" height="170" rx="8" fill="var(--bg)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="1045" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn)">Hybrid Approach</text>
-  <rect x="905" y="165" width="280" height="25" rx="4" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <rect x="890" y="130" width="310" height="170" rx="6" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="1"/>
+  <text x="1045" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-accent)">Hybrid Approach</text>
+  <rect x="905" y="165" width="280" height="25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="1045" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Shared Compute (pooled)</text>
-  <rect x="905" y="200" width="130" height="25" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <rect x="905" y="200" width="130" height="25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="970" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB: Tenant A</text>
-  <rect x="1055" y="200" width="130" height="25" rx="4" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <rect x="1055" y="200" width="130" height="25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1120" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">DB: Tenant B</text>
-  <rect x="905" y="235" width="280" height="25" rx="4" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <rect x="905" y="235" width="280" height="25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="var(--text)">Shared Storage (isolated buckets)</text>
   <!-- Trade-offs -->
-  <text x="1045" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Balanced cost</text>
-  <text x="1045" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Good data isolation</text>
-  <text x="1045" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">+ Flexible per-tier</text>
-  <text x="1045" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- More complex arch</text>
-  <text x="1045" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger)">- Tier management</text>
+  <text x="1045" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Balanced cost</text>
+  <text x="1045" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Good data isolation</text>
+  <text x="1045" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">+ Flexible per-tier</text>
+  <text x="1045" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- More complex arch</text>
+  <text x="1045" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">- Tier management</text>
   <!-- Bottom spectrum -->
-  <rect x="100" y="520" width="1080" height="50" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="225" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger)">High Isolation</text>
+  <rect x="100" y="520" width="1080" height="50" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="225" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--danger-accent)">High Isolation</text>
   <text x="640" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text-muted)">←  Trade-off Spectrum  →</text>
-  <text x="1045" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok)">High Efficiency</text>
+  <text x="1045" y="552" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-accent)">High Efficiency</text>
 </svg>

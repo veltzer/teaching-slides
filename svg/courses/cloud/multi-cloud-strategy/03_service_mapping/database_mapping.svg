@@ -1,83 +1,142 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
   <!-- Headers -->
-  <rect x="60" y="40" width="200" height="70" rx="10" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2"/>
-  <text x="160" y="84" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Database Type</text>
-  <rect x="280" y="40" width="290" height="70" rx="10" fill="url(#grad-primary)" filter="url(#shadow)"/>
+  <rect x="60" y="40" width="200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="160" y="84" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--text)" text-anchor="middle">Database Type</text>
+  <rect x="280" y="40" width="290" height="70" rx="6" fill="var(--primary-fill)" filter="url(#shadow)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="425" y="84" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">AWS</text>
-  <rect x="590" y="40" width="290" height="70" rx="10" fill="url(#grad-info)" filter="url(#shadow)"/>
+  <rect x="590" y="40" width="290" height="70" rx="6" fill="var(--info-fill)" filter="url(#shadow)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="735" y="84" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">Azure</text>
-  <rect x="900" y="40" width="290" height="70" rx="10" fill="url(#grad-ok)" filter="url(#shadow)"/>
+  <rect x="900" y="40" width="290" height="70" rx="6" fill="var(--ok-fill)" filter="url(#shadow)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="1045" y="84" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--bg)" text-anchor="middle">GCP</text>
   <!-- Row 1: Relational -->
-  <rect x="60" y="130" width="200" height="100" rx="8" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1"/>
-  <text x="160" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Relational</text>
-  <rect x="280" y="130" width="290" height="100" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="425" y="178" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">RDS / Aurora</text>
-  <rect x="590" y="130" width="290" height="100" rx="8" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
-  <text x="735" y="185" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Azure SQL</text>
-  <rect x="900" y="130" width="290" height="100" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="1045" y="185" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Cloud SQL</text>
+  <rect x="60" y="130" width="200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="160" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)" text-anchor="middle">Relational</text>
+  <rect x="280" y="130" width="290" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="425" y="178" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">RDS / Aurora</text>
+  <rect x="590" y="130" width="290" height="100" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="735" y="185" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Azure SQL</text>
+  <rect x="900" y="130" width="290" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1045" y="185" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Cloud SQL</text>
   <!-- Row 2: NoSQL -->
-  <rect x="60" y="250" width="200" height="100" rx="8" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1"/>
-  <text x="160" y="305" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">NoSQL</text>
-  <rect x="280" y="250" width="290" height="100" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="425" y="305" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">DynamoDB</text>
-  <rect x="590" y="250" width="290" height="100" rx="8" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
-  <text x="735" y="305" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Cosmos DB</text>
-  <rect x="900" y="250" width="290" height="100" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="1045" y="305" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Firestore</text>
+  <rect x="60" y="250" width="200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="160" y="305" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)" text-anchor="middle">NoSQL</text>
+  <rect x="280" y="250" width="290" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="425" y="305" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">DynamoDB</text>
+  <rect x="590" y="250" width="290" height="100" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="735" y="305" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Cosmos DB</text>
+  <rect x="900" y="250" width="290" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1045" y="305" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Firestore</text>
   <!-- Row 3: Cache -->
-  <rect x="60" y="370" width="200" height="100" rx="8" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1"/>
-  <text x="160" y="425" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Cache</text>
-  <rect x="280" y="370" width="290" height="100" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="425" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">ElastiCache</text>
-  <rect x="590" y="370" width="290" height="100" rx="8" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
-  <text x="735" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Azure Cache</text>
-  <rect x="900" y="370" width="290" height="100" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="1045" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">Memorystore</text>
+  <rect x="60" y="370" width="200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="160" y="425" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)" text-anchor="middle">Cache</text>
+  <rect x="280" y="370" width="290" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="425" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">ElastiCache</text>
+  <rect x="590" y="370" width="290" height="100" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="735" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Azure Cache</text>
+  <rect x="900" y="370" width="290" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1045" y="425" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">Memorystore</text>
   <!-- Row 4: Warehouse -->
-  <rect x="60" y="490" width="200" height="100" rx="8" fill="var(--surface-alt)" stroke="var(--border)" stroke-width="1"/>
-  <text x="160" y="545" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text-dark)" text-anchor="middle">Warehouse</text>
-  <rect x="280" y="490" width="290" height="100" rx="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
-  <text x="425" y="545" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-dk)" text-anchor="middle">Redshift</text>
-  <rect x="590" y="490" width="290" height="100" rx="8" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
-  <text x="735" y="545" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-dk)" text-anchor="middle">Synapse</text>
-  <rect x="900" y="490" width="290" height="100" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
-  <text x="1045" y="545" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-dk)" text-anchor="middle">BigQuery</text>
+  <rect x="60" y="490" width="200" height="100" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="160" y="545" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)" text-anchor="middle">Warehouse</text>
+  <rect x="280" y="490" width="290" height="100" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="425" y="545" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--primary-accent)" text-anchor="middle">Redshift</text>
+  <rect x="590" y="490" width="290" height="100" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="735" y="545" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-accent)" text-anchor="middle">Synapse</text>
+  <rect x="900" y="490" width="290" height="100" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1045" y="545" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)" text-anchor="middle">BigQuery</text>
 </svg>

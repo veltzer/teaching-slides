@@ -1,104 +1,163 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="1280" height="640" fill="var(--bg)" rx="0"/>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="1280" height="640" fill="var(--bg)" rx="6"/>
   <!-- Center: Cloud Region -->
-  <circle cx="640" cy="300" r="100" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="3" filter="url(#shadow)"/>
-  <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">Cloud Region</text>
+  <circle cx="640" cy="300" r="100" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-accent)">Cloud Region</text>
   <text x="640" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Heavy Processing</text>
   <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">ML Training, Analytics</text>
   <!-- Middle Ring: Edge Locations -->
   <!-- Edge Top -->
-  <rect x="560" y="80" width="160" height="60" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Edge Location</text>
+  <rect x="560" y="80" width="160" height="60" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Edge Location</text>
   <text x="640" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">CDN, Lambda@Edge</text>
-  <line x1="640" y1="140" x2="640" y2="198" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="660" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--ok)">~20ms</text>
+  <line x1="640" y1="140" x2="640" y2="198" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="175" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">~20ms</text>
   <!-- Edge Left -->
-  <rect x="200" y="220" width="160" height="60" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="280" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Edge Location</text>
+  <rect x="200" y="220" width="160" height="60" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Edge Location</text>
   <text x="280" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Caching, WAF</text>
-  <line x1="360" y1="260" x2="538" y2="280" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="440" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok)">~20ms</text>
+  <line x1="360" y1="260" x2="538" y2="280" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="440" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">~20ms</text>
   <!-- Edge Right -->
-  <rect x="920" y="220" width="160" height="60" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1000" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Edge Location</text>
+  <rect x="920" y="220" width="160" height="60" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1000" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Edge Location</text>
   <text x="1000" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">IoT Processing</text>
-  <line x1="920" y1="260" x2="742" y2="280" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="820" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok)">~20ms</text>
+  <line x1="920" y1="260" x2="742" y2="280" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="820" y="260" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">~20ms</text>
   <!-- Edge Bottom -->
-  <rect x="560" y="460" width="160" height="60" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-dk)">Edge Location</text>
+  <rect x="560" y="460" width="160" height="60" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-accent)">Edge Location</text>
   <text x="640" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)">Real-time Filter</text>
-  <line x1="640" y1="460" x2="640" y2="402" stroke="var(--ok)" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="660" y="435" font-family="Arial, sans-serif" font-size="11" fill="var(--ok)">~20ms</text>
+  <line x1="640" y1="460" x2="640" y2="402" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="660" y="435" font-family="Arial, sans-serif" font-size="11" fill="var(--ok-accent)">~20ms</text>
   <!-- Outer Ring: End Users/Devices -->
   <!-- User Top Left -->
-  <rect x="80" y="40" width="140" height="50" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="150" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Mobile Users</text>
-  <line x1="220" y1="70" x2="560" y2="100" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="350" y="72" font-family="Arial, sans-serif" font-size="11" fill="var(--warn)">~5ms</text>
+  <rect x="80" y="40" width="140" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="150" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Mobile Users</text>
+  <line x1="220" y1="70" x2="560" y2="100" stroke="var(--warn-border)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="350" y="72" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">~5ms</text>
   <!-- User Top Right -->
-  <rect x="1060" y="40" width="140" height="50" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="1130" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Web Clients</text>
-  <line x1="1060" y1="70" x2="720" y2="100" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="920" y="72" font-family="Arial, sans-serif" font-size="11" fill="var(--warn)">~5ms</text>
+  <rect x="1060" y="40" width="140" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1130" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Web Clients</text>
+  <line x1="1060" y1="70" x2="720" y2="100" stroke="var(--warn-border)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="920" y="72" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">~5ms</text>
   <!-- User Left -->
-  <rect x="30" y="340" width="140" height="50" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="100" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">IoT Devices</text>
-  <line x1="170" y1="360" x2="200" y2="270" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="160" y="310" font-family="Arial, sans-serif" font-size="11" fill="var(--warn)">~5ms</text>
+  <rect x="30" y="340" width="140" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="100" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">IoT Devices</text>
+  <line x1="170" y1="360" x2="200" y2="270" stroke="var(--warn-border)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="160" y="310" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">~5ms</text>
   <!-- User Right -->
-  <rect x="1110" y="340" width="140" height="50" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="1180" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Sensors</text>
-  <line x1="1110" y1="360" x2="1080" y2="270" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="1110" y="310" font-family="Arial, sans-serif" font-size="11" fill="var(--warn)">~5ms</text>
+  <rect x="1110" y="340" width="140" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1180" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Sensors</text>
+  <line x1="1110" y1="360" x2="1080" y2="270" stroke="var(--warn-border)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="1110" y="310" font-family="Arial, sans-serif" font-size="11" fill="var(--warn-accent)">~5ms</text>
   <!-- User Bottom -->
-  <rect x="360" y="560" width="140" height="50" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="430" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Vehicles</text>
-  <line x1="430" y1="560" x2="580" y2="510" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <rect x="780" y="560" width="140" height="50" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
-  <text x="850" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-dk)">Cameras</text>
-  <line x1="850" y1="560" x2="700" y2="510" stroke="var(--warn)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <rect x="360" y="560" width="140" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="430" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Vehicles</text>
+  <line x1="430" y1="560" x2="580" y2="510" stroke="var(--warn-border)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <rect x="780" y="560" width="140" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="850" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-accent)">Cameras</text>
+  <line x1="850" y1="560" x2="700" y2="510" stroke="var(--warn-border)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
   <!-- Legend -->
   <rect x="40" y="470" width="150" height="80" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <circle cx="65" cy="495" r="8" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1"/>
+  <circle cx="65" cy="495" r="8" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="1"/>
   <text x="85" y="500" font-family="Arial, sans-serif" font-size="11" fill="var(--text)">Cloud (100ms+)</text>
-  <circle cx="65" cy="520" r="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1"/>
+  <circle cx="65" cy="520" r="8" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1"/>
   <text x="85" y="525" font-family="Arial, sans-serif" font-size="11" fill="var(--text)">Edge (~20ms)</text>
-  <circle cx="65" cy="540" r="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1"/>
+  <circle cx="65" cy="540" r="8" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1"/>
   <text x="85" y="545" font-family="Arial, sans-serif" font-size="11" fill="var(--text)">Device (~5ms)</text>
 </svg>

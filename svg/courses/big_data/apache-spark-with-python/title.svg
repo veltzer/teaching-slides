@@ -1,76 +1,97 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_intro.yaml -->
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
         --bg: #ffffff;
         --surface: #f5f5f5;
-        --surface-alt: #eeeeee;
-        --surface-dark: #f0f0f0;
-        --black: #000000;
-        --border-faint: #cccccc;
-        --border-strong: #bdbdbd;
-        --code-bg: #1a1a2e;
+        --border: #e0e0e0;
         --text: #212121;
-        --text-dark: #333333;
-        --text-darker: #222222;
         --text-muted: #555555;
-        --text-mid: #666666;
         --text-faint: #888888;
-        --text-faintest: #999999;
-        --text-disabled: #9e9e9e;
-        --text-placeholder: #aaaaaa;
-        --primary: #1e88e5;
-        --primary-dk: #1565c0;
-        --primary-mid: #1976d2;
-        --primary-vivid: #2196f3;
-        --primary-soft: #3498db;
-        --primary-deep: #0d47a1;
-        --primary-deeper: #1a237e;
-        --primary-strong: #0277bd;
-        --primary-bright: #4a90e2;
-        --primary-tint: #90caf9;
-        --primary-google: #4285f4;
-        --primary-indigo: #3949ab;
-        --primary-indigo-dk: #283593;
-        --ok-dk: #2e7d32;
-        --ok-light: #4caf50;
-        --ok-bright: #28a745;
-        --ok-vivid: #2ecc71;
-        --ok-google: #34a853;
-        --ok-lt: #c8e6c9;
-        --ok-tint: #a5d6a7;
-        --ok-pale: #e8f5e9;
-        --ok-soft: #27ae60;
-        --ok-pale2: #d4edda;
-        --warn-dk: #e65100;
-        --warn-mid: #f57c00;
-        --warn-amber: #f9a825;
-        --warn-orange: #ff9800;
-        --warn-gold: #f39c12;
-        --warn-bright: #fbbc04;
-        --warn-deep: #ef6c00;
-        --warn-yellow: #ffc107;
-        --warn-lt: #ffe0b2;
-        --warn-tint: #ffcc80;
-        --danger: #e53935;
-        --danger-dk: #c62828;
-        --danger-mid: #d32f2f;
-        --danger-light: #e74c3c;
-        --danger-vivid: #f44336;
-        --danger-bright: #dc3545;
-        --danger-pale: #ffebee;
-        --info-vivid: #673ab7;
-        --info-indigo: #3f51b5;
-        --info-soft: #9b59b6;
-        --info-lt: #ce93d8;
-        --info-deep: #4a148c;
-        --info-tint: #e1bee7;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
     <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
     <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
     <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
 
     <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1e88e5" />
@@ -80,24 +101,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
     </marker>
   </defs>
-  <rect width="1137.7778" height="640" fill="var(--code-bg)" />
-  <polygon points="568.8889,53.3333 504.8889,275.5556 576,275.5556 512,577.7778 640,235.5556 568.8889,235.5556 625.7778,53.3333" fill="var(--warn-dk)" opacity="0.85" />
-  <circle cx="170.6667" cy="128" r="35.5556" fill="var(--warn-deep)" opacity="0.5" />
-  <circle cx="967.1111" cy="128" r="35.5556" fill="var(--warn-deep)" opacity="0.5" />
-  <circle cx="170.6667" cy="512" r="35.5556" fill="var(--warn-deep)" opacity="0.5" />
-  <circle cx="967.1111" cy="512" r="35.5556" fill="var(--warn-deep)" opacity="0.5" />
-  <circle cx="142.2222" cy="320" r="28.4444" fill="var(--warn-deep)" opacity="0.4" />
-  <circle cx="995.5556" cy="320" r="28.4444" fill="var(--warn-deep)" opacity="0.4" />
-  <line x1="206.2222" y1="128" x2="512" y2="266.6667" stroke="var(--warn-deep)" stroke-width="1.7778" opacity="0.3" />
-  <line x1="931.5556" y1="128" x2="625.7778" y2="235.5556" stroke="var(--warn-deep)" stroke-width="1.7778" opacity="0.3" />
-  <line x1="206.2222" y1="512" x2="519.1111" y2="435.5556" stroke="var(--warn-deep)" stroke-width="1.7778" opacity="0.3" />
-  <line x1="931.5556" y1="512" x2="625.7778" y2="435.5556" stroke="var(--warn-deep)" stroke-width="1.7778" opacity="0.3" />
-  <path d="M 284.4444 256 Q 284.4444 224 312.8889 224 L 369.7778 224 Q 398.2222 224 398.2222 256 L 398.2222 320 Q 398.2222 352 369.7778 352 L 312.8889 352 Q 284.4444 352 284.4444 320 Z" fill="var(--info-indigo)" opacity="0.7" />
-  <circle cx="320" cy="248" r="7.1111" fill="var(--warn-amber)" opacity="0.9" />
-  <circle cx="362.6667" cy="328" r="7.1111" fill="var(--warn-amber)" opacity="0.9" />
-  <line x1="739.5556" y1="192" x2="824.8889" y2="192" stroke="var(--primary-tint)" stroke-width="3.5556" opacity="0.5" />
-  <line x1="753.7778" y1="235.5556" x2="867.5556" y2="235.5556" stroke="var(--primary-tint)" stroke-width="3.5556" opacity="0.4" />
-  <line x1="739.5556" y1="279.1111" x2="839.1111" y2="279.1111" stroke="var(--primary-tint)" stroke-width="3.5556" opacity="0.5" />
-  <line x1="768" y1="322.6667" x2="881.7778" y2="322.6667" stroke="var(--primary-tint)" stroke-width="3.5556" opacity="0.4" />
-  <text x="568.8889" y="613.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.1111" fill="var(--border-strong)" letter-spacing="3">APACHE SPARK WITH PYTHON</text>
+  <rect width="1137.7778" height="640" fill="var(--code-bg)" rx="6"/>
+  <polygon points="568.8889,53.3333 504.8889,275.5556 576,275.5556 512,577.7778 640,235.5556 568.8889,235.5556 625.7778,53.3333" fill="var(--warn-accent)" opacity="0.85" />
+  <circle cx="170.6667" cy="128" r="35.5556" fill="var(--warn-accent)" opacity="0.5" />
+  <circle cx="967.1111" cy="128" r="35.5556" fill="var(--warn-accent)" opacity="0.5" />
+  <circle cx="170.6667" cy="512" r="35.5556" fill="var(--warn-accent)" opacity="0.5" />
+  <circle cx="967.1111" cy="512" r="35.5556" fill="var(--warn-accent)" opacity="0.5" />
+  <circle cx="142.2222" cy="320" r="28.4444" fill="var(--warn-accent)" opacity="0.4" />
+  <circle cx="995.5556" cy="320" r="28.4444" fill="var(--warn-accent)" opacity="0.4" />
+  <line x1="206.2222" y1="128" x2="512" y2="266.6667" stroke="var(--warn-border)" stroke-width="1.7778" opacity="0.3" />
+  <line x1="931.5556" y1="128" x2="625.7778" y2="235.5556" stroke="var(--warn-border)" stroke-width="1.7778" opacity="0.3" />
+  <line x1="206.2222" y1="512" x2="519.1111" y2="435.5556" stroke="var(--warn-border)" stroke-width="1.7778" opacity="0.3" />
+  <line x1="931.5556" y1="512" x2="625.7778" y2="435.5556" stroke="var(--warn-border)" stroke-width="1.7778" opacity="0.3" />
+  <path d="M 284.4444 256 Q 284.4444 224 312.8889 224 L 369.7778 224 Q 398.2222 224 398.2222 256 L 398.2222 320 Q 398.2222 352 369.7778 352 L 312.8889 352 Q 284.4444 352 284.4444 320 Z" fill="var(--info-fill)" opacity="0.7" />
+  <circle cx="320" cy="248" r="7.1111" fill="var(--warn-fill)" opacity="0.9" />
+  <circle cx="362.6667" cy="328" r="7.1111" fill="var(--warn-fill)" opacity="0.9" />
+  <line x1="739.5556" y1="192" x2="824.8889" y2="192" stroke="var(--primary-border)" stroke-width="2" opacity="0.5" />
+  <line x1="753.7778" y1="235.5556" x2="867.5556" y2="235.5556" stroke="var(--primary-border)" stroke-width="2" opacity="0.4" />
+  <line x1="739.5556" y1="279.1111" x2="839.1111" y2="279.1111" stroke="var(--primary-border)" stroke-width="2" opacity="0.5" />
+  <line x1="768" y1="322.6667" x2="881.7778" y2="322.6667" stroke="var(--primary-border)" stroke-width="2" opacity="0.4" />
+  <text x="568.8889" y="613.3333" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.1111" fill="var(--border)" letter-spacing="3">APACHE SPARK WITH PYTHON</text>
 </svg>

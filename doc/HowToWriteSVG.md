@@ -45,28 +45,85 @@ used in our Marp-rendered slides.
 
 ## Colors: use the palette, always
 
-All SVGs share a single color palette defined in `resources/svg_palette.svg`.
-The palette declares CSS custom properties (CSS variables) for every semantic
-role: `--primary`, `--ok`, `--warn`, `--danger`, `--info`, plus neutrals and
-many tonal variants. See `resources/svg_palette.svg` for the complete list
-and hex mappings.
+All SVGs share a single color palette defined in `resources/palette_diagram.yaml`
+(and `resources/palette_intro.yaml` for title slides). The palette uses
+**semantic role names only** — never appearance-based names like "vivid",
+"pale", "bright", or "soft". Role names describe WHAT a color is used for,
+not what it LOOKS LIKE. This lets us retune the whole visual theme by
+editing hex values in one YAML file; every SVG follows automatically.
 
-**Always** use palette variables for color, not raw hex:
+### The role set
+
+Five semantic families: `primary`, `ok`, `warn`, `danger`, `info`. Each
+family has four roles:
+
+- `--{family}-fill` — the box background fill
+- `--{family}-border` — matching border / stroke
+- `--{family}-text` — text drawn on top of the fill (always readable)
+- `--{family}-accent` — deeper shade for emphasis, lines, marker heads
+
+Plus neutrals: `--bg`, `--surface`, `--border`, `--text`, `--text-muted`,
+`--text-faint`, `--code-bg`, `--shadow`, `--black`.
+
+### Usage
+
+**Always** use palette variables, not raw hex:
 
 ```xml
-<rect fill="var(--primary-pale2)" stroke="var(--primary-bright)"/>
-<text fill="var(--text-muted)">label</text>
+<rect fill="var(--primary-fill)" stroke="var(--primary-border)"/>
+<text fill="var(--primary-text)">label on fill</text>
+<line stroke="var(--primary-accent)" marker-end="url(#arrow-primary)"/>
 ```
 
 NOT:
 
 ```xml
-<rect fill="#e8f4f8" stroke="#4a90e2"/>
+<rect fill="#2196f3" stroke="#1565c0"/>
 ```
 
-This keeps the look consistent across every diagram and lets us retune the
-palette in one place. Use `scripts/install_palette.py` to push the canonical
-`<defs>` block into every SVG.
+AND NOT appearance-named variants (which no longer exist):
+
+```xml
+<rect fill="var(--primary-pale2)" stroke="var(--primary-bright)"/>
+```
+
+The `check_svg.py --colors` check validates every fill/stroke/color
+attribute against the palette YAML. Use `scripts/install_palette.py` to
+push the canonical `<defs>` block into every SVG.
+
+## Shape primitives: one canonical way to draw
+
+Colors aren't the only thing that must be uniform. Every rect, circle, and
+line in every SVG must share the same visual primitives. Use `scripts/
+normalize_svg_style.py` to enforce these; it's idempotent and safe to re-run.
+
+### Rects (boxes)
+
+- **Corner radius:** always `rx="6"`. No sharp boxes, no extra-round boxes.
+- **Family-filled box** (fill is `var(--{family}-fill)`):
+  - `stroke="var(--{family}-border)"` — matches family
+  - `stroke-width="2"`
+- **Neutral box** (fill is `var(--surface)`, `var(--bg)`, `none`, or missing):
+  - `stroke="var(--border)"` — standard neutral divider
+  - `stroke-width="1"`
+- Never use gradient fills. `url(#grad-primary)` etc. are flattened to
+  `var(--primary-fill)` by the normalizer.
+
+### Lines (connectors)
+
+- Standard connector: `stroke="var(--text-muted)" stroke-width="2"
+  marker-end="url(#arrow)"`.
+- Emphasis line: `stroke="var(--text)" stroke-width="3"`. Use sparingly.
+- `stroke-width` capped at 2 by the normalizer unless explicitly overridden.
+
+### Arrow markers
+
+- Use only the palette markers: `url(#arrow)`, `url(#arrow-primary)`,
+  `url(#arrow-ok)`, `url(#arrow-warn)`, `url(#arrow-danger)`,
+  `url(#arrow-info)`, `url(#arrow-white)`.
+- All palette markers are 10x10. No oversized arrowheads — don't define
+  per-file `<marker>` elements with larger dimensions.
+  `scripts/fix_svg_markers.py` caps any stray custom markers.
 
 ## Fonts and readability
 

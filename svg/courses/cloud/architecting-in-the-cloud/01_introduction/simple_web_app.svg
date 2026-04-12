@@ -1,89 +1,143 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff; --surface: #f5f5f5; --surface-alt: #eeeeee;
-        --border: #e0e0e0; --border-strong: #bdbdbd;
-        --text: #212121; --text-dark: #333333; --text-muted: #555555; --text-faint: #888888;
-        --primary: #1e88e5; --primary-dk: #1565c0; --primary-lt: #bbdefb; --primary-pale: #e3f2fd;
-        --ok: #43a047; --ok-dk: #2e7d32; --ok-lt: #c8e6c9; --ok-pale: #e8f5e9;
-        --warn: #fb8c00; --warn-dk: #e65100; --warn-lt: #ffe0b2; --warn-pale: #fff3e0;
-        --danger: #e53935; --danger-dk: #c62828; --danger-lt: #ffcdd2; --danger-pale: #ffebee;
-        --info: #8e24aa; --info-dk: #6a1b9a; --info-lt: #ce93d8; --info-pale: #f3e5f5;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-  </defs>
-  <rect width="989.372" height="494.686" fill="var(--bg)" />
-  <rect x="23.1884" y="170.0483" width="92.7536" height="61.8357" rx="7.7295" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5459" filter="url(#shadow)" />
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+</defs>
+  <rect width="989.372" height="494.686" fill="var(--bg)" rx="6"/>
+  <rect x="23.1884" y="170.0483" width="92.7536" height="61.8357" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" filter="url(#shadow)" />
   <text x="69.5652" y="193.2367" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--text)" text-anchor="middle" font-weight="bold">Users</text>
   <text x="69.5652" y="208.6957" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)" text-anchor="middle">👤👤👤</text>
   <line x1="115.942" y1="200.9662" x2="170.0483" y2="200.9662" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
-  <rect x="173.913" y="170.0483" width="108.2126" height="61.8357" rx="7.7295" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5459" filter="url(#shadow)" />
-  <text x="228.0193" y="194.7826" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">ALB</text>
+  <rect x="173.913" y="170.0483" width="108.2126" height="61.8357" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="228.0193" y="194.7826" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">ALB</text>
   <text x="228.0193" y="210.2415" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Application</text>
   <text x="228.0193" y="221.0628" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Load Balancer</text>
-  <rect x="324.6377" y="46.3768" width="216.4251" height="170.0483" rx="6.1836" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.1594" stroke-dasharray="4.6377 2.3188" />
-  <text x="432.8502" y="65.7005" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone A</text>
-  <rect x="347.8261" y="77.2947" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="386.4734" y="96.6184" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <rect x="324.6377" y="46.3768" width="216.4251" height="170.0483" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="4.6377 2.3188" />
+  <text x="432.8502" y="65.7005" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Availability Zone A</text>
+  <rect x="347.8261" y="77.2947" width="77.2947" height="46.3768" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="386.4734" y="96.6184" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EC2</text>
   <text x="386.4734" y="109.7585" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-  <rect x="440.5797" y="77.2947" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="479.2271" y="96.6184" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <rect x="440.5797" y="77.2947" width="77.2947" height="46.3768" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="479.2271" y="96.6184" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EC2</text>
   <text x="479.2271" y="109.7585" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-  <rect x="371.0145" y="146.8599" width="92.7536" height="46.3768" rx="6.1836" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="417.3913" y="166.1836" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">RDS Primary</text>
+  <rect x="371.0145" y="146.8599" width="92.7536" height="46.3768" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="417.3913" y="166.1836" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">RDS Primary</text>
   <text x="417.3913" y="181.6425" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">MySQL/Postgres</text>
-  <rect x="324.6377" y="239.6135" width="216.4251" height="170.0483" rx="6.1836" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.1594" stroke-dasharray="4.6377 2.3188" />
-  <text x="432.8502" y="258.9372" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone B</text>
-  <rect x="347.8261" y="270.5314" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="386.4734" y="289.8551" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <rect x="324.6377" y="239.6135" width="216.4251" height="170.0483" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="4.6377 2.3188" />
+  <text x="432.8502" y="258.9372" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">Availability Zone B</text>
+  <rect x="347.8261" y="270.5314" width="77.2947" height="46.3768" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="386.4734" y="289.8551" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EC2</text>
   <text x="386.4734" y="302.9952" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-  <rect x="440.5797" y="270.5314" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="479.2271" y="289.8551" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <rect x="440.5797" y="270.5314" width="77.2947" height="46.3768" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="479.2271" y="289.8551" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">EC2</text>
   <text x="479.2271" y="302.9952" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-  <rect x="371.0145" y="340.0966" width="92.7536" height="46.3768" rx="6.1836" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.1594" stroke-dasharray="3.8647 2.3188" filter="url(#shadow)" />
-  <text x="417.3913" y="359.4203" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">RDS Standby</text>
+  <rect x="371.0145" y="340.0966" width="92.7536" height="46.3768" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" stroke-dasharray="3.8647 2.3188" filter="url(#shadow)" />
+  <text x="417.3913" y="359.4203" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold">RDS Standby</text>
   <text x="417.3913" y="374.8792" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Sync Replication</text>
-  <line x1="417.3913" y1="193.2367" x2="417.3913" y2="340.0966" stroke="var(--warn)" stroke-width="1.5459" stroke-dasharray="3.0918 3.0918" />
-  <text x="428.9855" y="266.6667" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)">Sync</text>
+  <line x1="417.3913" y1="193.2367" x2="417.3913" y2="340.0966" stroke="var(--warn-border)" stroke-width="1.5459" stroke-dasharray="3.0918 3.0918" />
+  <text x="428.9855" y="266.6667" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">Sync</text>
   <line x1="282.1256" y1="189.372" x2="346.2802" y2="100.4831" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
   <line x1="282.1256" y1="197.1014" x2="346.2802" y2="100.4831" stroke="var(--text-muted)" stroke-width="0" marker-end="url(#arrow)" />
   <line x1="282.1256" y1="208.6957" x2="346.2802" y2="293.7198" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
-  <rect x="332.3671" y="417.3913" width="200.9662" height="23.1884" rx="4.6377" fill="var(--info-pale)" stroke="var(--info)" stroke-width="0.7729" />
-  <text x="432.8502" y="432.8502" font-family="Arial, sans-serif" font-size="10" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Auto Scaling Group</text>
-  <rect x="618.3575" y="46.3768" width="340.0966" height="193.2367" rx="7.7295" fill="var(--surface)" stroke="var(--border)" stroke-width="1.1594" />
-  <text x="788.4058" y="69.5652" font-family="Arial, sans-serif" font-size="11.5942" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Static Assets</text>
-  <rect x="641.5459" y="85.0242" width="123.6715" height="46.3768" rx="6.1836" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="703.3816" y="104.3478" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">CloudFront</text>
+  <rect x="332.3671" y="417.3913" width="200.9662" height="23.1884" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="432.8502" y="432.8502" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Auto Scaling Group</text>
+  <rect x="618.3575" y="46.3768" width="340.0966" height="193.2367" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="788.4058" y="69.5652" font-family="Arial, sans-serif" font-size="11.5942" fill="var(--text)" text-anchor="middle" font-weight="bold">Static Assets</text>
+  <rect x="641.5459" y="85.0242" width="123.6715" height="46.3768" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="703.3816" y="104.3478" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">CloudFront</text>
   <text x="703.3816" y="119.8068" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">CDN (Edge Locations)</text>
-  <rect x="811.5942" y="85.0242" width="123.6715" height="46.3768" rx="6.1836" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.1594" filter="url(#shadow)" />
-  <text x="873.43" y="104.3478" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">S3 Bucket</text>
+  <rect x="811.5942" y="85.0242" width="123.6715" height="46.3768" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)" />
+  <text x="873.43" y="104.3478" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">S3 Bucket</text>
   <text x="873.43" y="119.8068" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Static Files</text>
   <line x1="765.2174" y1="108.2126" x2="810.0483" y2="108.2126" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
   <path d="M 69.5652 170.0483 L 69.5652 38.6473 L 640 38.6473 L 640 100.4831" fill="none" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" stroke-dasharray="4.6377 2.3188" />
@@ -91,12 +145,12 @@
   <text x="135.2657" y="193.2367" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">HTTPS</text>
   <line x1="386.4734" y1="123.6715" x2="386.4734" y2="145.314" stroke="var(--text-muted)" stroke-width="1.1594" marker-end="url(#arrow)" />
   <line x1="386.4734" y1="270.5314" x2="386.4734" y2="338.5507" stroke="var(--text-muted)" stroke-width="1.1594" marker-end="url(#arrow)" />
-  <rect x="618.3575" y="278.2609" width="340.0966" height="193.2367" rx="7.7295" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7729" />
-  <text x="788.4058" y="301.4493" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Architecture Highlights</text>
-  <text x="641.5459" y="324.6377" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-dk)">● Multi-AZ deployment for high availability</text>
-  <text x="641.5459" y="343.9614" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-dk)">● Auto Scaling adjusts to traffic</text>
-  <text x="641.5459" y="363.285" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)">● RDS Multi-AZ with sync replication</text>
-  <text x="641.5459" y="382.6087" font-family="Arial, sans-serif" font-size="10" fill="var(--info-dk)">● CloudFront caches static content</text>
+  <rect x="618.3575" y="278.2609" width="340.0966" height="193.2367" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
+  <text x="788.4058" y="301.4493" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--text)" text-anchor="middle" font-weight="bold">Architecture Highlights</text>
+  <text x="641.5459" y="324.6377" font-family="Arial, sans-serif" font-size="10" fill="var(--primary-accent)">● Multi-AZ deployment for high availability</text>
+  <text x="641.5459" y="343.9614" font-family="Arial, sans-serif" font-size="10" fill="var(--ok-accent)">● Auto Scaling adjusts to traffic</text>
+  <text x="641.5459" y="363.285" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-accent)">● RDS Multi-AZ with sync replication</text>
+  <text x="641.5459" y="382.6087" font-family="Arial, sans-serif" font-size="10" fill="var(--info-accent)">● CloudFront caches static content</text>
   <text x="641.5459" y="401.9324" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">● ALB distributes traffic across AZs</text>
   <text x="641.5459" y="421.256" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)">● S3 stores static assets durably</text>
 </svg>
