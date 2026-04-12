@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:#1a1a2e">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,106 +33,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,518.4 11.0617,0" fill="#dc3545" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" fill="var(--bg)" font-size="10.0549" font-weight="bold">Breaking Complex Tasks into Stages</text>
-  <text x="639.9999" y="80.1153" text-anchor="middle" fill="var(--text-faint)" font-size="10.0549">Each stage gets a focused prompt — failures are isolated and retriable</text>
-  <rect x="601.2767" y="126.9165" width="16.8141" height="167.147" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.2027" />
-  <text x="609.6328" y="180.4035" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0549" font-weight="bold">Stage 1</text>
-  <text x="609.6328" y="217.1758" text-anchor="middle" fill="var(--border)" font-size="10.0549">Extract Facts</text>
-  <text x="609.6328" y="252.2767" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0549">cheap model</text>
-  <text x="609.6328" y="280.6917" text-anchor="middle" fill="var(--text-muted)" font-size="10.0549">→ structured data</text>
-  <line x1="618.0907" y1="210.49" x2="621.1479" y2="210.49" stroke="var(--danger-border)" stroke-width="0.2027" marker-end="url(#arr)" />
-  <rect x="621.1479" y="126.9165" width="16.8141" height="167.147" rx="6" fill="var(--code-bg)" stroke="var(--info-border)" stroke-width="0.2027" />
-  <text x="629.5039" y="180.4035" text-anchor="middle" fill="var(--info-accent)" font-size="10.0549" font-weight="bold">Stage 2</text>
-  <text x="629.5039" y="217.1758" text-anchor="middle" fill="var(--border)" font-size="10.0549">Analyze Risk</text>
-  <text x="629.5039" y="252.2767" text-anchor="middle" fill="var(--info-accent)" font-size="10.0549">strong model</text>
-  <text x="629.5039" y="280.6917" text-anchor="middle" fill="var(--text-muted)" font-size="10.0549">→ risk assessment</text>
-  <line x1="637.9619" y1="210.49" x2="641.019" y2="210.49" stroke="var(--danger-border)" stroke-width="0.2027" marker-end="url(#arr)" />
-  <rect x="641.019" y="126.9165" width="16.8141" height="167.147" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.2027" />
-  <text x="649.3751" y="180.4035" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0549" font-weight="bold">Stage 3</text>
-  <text x="649.3751" y="217.1758" text-anchor="middle" fill="var(--border)" font-size="10.0549">Generate Code</text>
-  <text x="649.3751" y="252.2767" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0549">mid-tier model</text>
-  <text x="649.3751" y="280.6917" text-anchor="middle" fill="var(--text-muted)" font-size="10.0549">→ implementation</text>
-  <line x1="657.8331" y1="210.49" x2="660.8902" y2="210.49" stroke="var(--danger-border)" stroke-width="0.2027" marker-end="url(#arr)" />
-  <rect x="660.8902" y="126.9165" width="17.8331" height="167.147" rx="6" fill="var(--code-bg)" stroke="var(--danger-border)" stroke-width="0.2027" />
-  <text x="669.7557" y="180.4035" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0549" font-weight="bold">Stage 4</text>
-  <text x="669.7557" y="217.1758" text-anchor="middle" fill="var(--border)" font-size="10.0549">Validate Output</text>
-  <text x="669.7557" y="252.2767" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0549">JSON schema check</text>
-  <text x="669.7557" y="280.6917" text-anchor="middle" fill="var(--text-muted)" font-size="10.0549">→ verified result</text>
-  <rect x="601.2767" y="360.9222" width="77.4465" height="259.0778" rx="6" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="0.152" />
-  <text x="639.9999" y="411.0663" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0549" font-weight="bold">Why Prompt Chaining Works</text>
-  <rect x="603.3148" y="441.1528" width="22.4188" height="150.4323" rx="6" fill="var(--code-bg)" stroke="var(--primary-border)" />
-  <text x="614.5242" y="486.2824" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0549" font-weight="bold">Focused Responsibility</text>
-  <text x="614.5242" y="519.7118" text-anchor="middle" fill="var(--border)" font-size="10.0549">each stage does</text>
-  <text x="614.5242" y="549.7983" text-anchor="middle" fill="var(--border)" font-size="10.0549">one thing well</text>
-  <rect x="628.7906" y="441.1528" width="22.4188" height="150.4323" rx="6" fill="var(--code-bg)" stroke="var(--info-border)" />
-  <text x="639.9999" y="486.2824" text-anchor="middle" fill="var(--info-accent)" font-size="10.0549" font-weight="bold">Model Flexibility</text>
-  <text x="639.9999" y="519.7118" text-anchor="middle" fill="var(--border)" font-size="10.0549">cheap model for extract</text>
-  <text x="639.9999" y="549.7983" text-anchor="middle" fill="var(--border)" font-size="10.0549">strong model for reason</text>
-  <rect x="654.2665" y="441.1528" width="22.4188" height="150.4323" rx="6" fill="var(--code-bg)" stroke="var(--danger-border)" />
-  <text x="665.4758" y="486.2824" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0549" font-weight="bold">Isolated Failures</text>
-  <text x="665.4758" y="519.7118" text-anchor="middle" fill="var(--border)" font-size="10.0549">retry only the</text>
-  <text x="665.4758" y="549.7983" text-anchor="middle" fill="var(--border)" font-size="10.0549">failing stage</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">Chain focused stages — isolate failures, retry cheaply</text>
+
+  <rect x="40" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Stage 1</text>
+  <text x="180" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--primary-text)">Extract Facts</text>
+  <text x="180" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">cheap model</text>
+  <text x="180" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">→ structured data</text>
+
+  <line x1="330" y1="198.181818" x2="360" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="370" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="510" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Stage 2</text>
+  <text x="510" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--info-text)">Analyze Risk</text>
+  <text x="510" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">strong model</text>
+  <text x="510" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">→ risk assessment</text>
+
+  <line x1="660" y1="198.181818" x2="690" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="840" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Stage 3</text>
+  <text x="840" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">Generate Code</text>
+  <text x="840" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">mid-tier model</text>
+  <text x="840" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">→ implementation</text>
+
+  <line x1="990" y1="198.181818" x2="1020" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1030" y="82.181818" width="210" height="232" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1135" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Stage 4</text>
+  <text x="1135" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--warn-text)">Validate</text>
+  <text x="1135" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">schema check</text>
+  <text x="1135" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">→ verified</text>
+
+  <rect x="40" y="356.363636" width="1200" height="263.636364" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="403.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">Why prompt chaining works</text>
+  <text x="240" y="467.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-accent)">Focused responsibility</text>
+  <text x="240" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">each stage does one thing</text>
+  <text x="640" y="467.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-accent)">Model flexibility</text>
+  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">cheap for extract, strong for reason</text>
+  <text x="1040" y="467.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-accent)">Isolated failures</text>
+  <text x="1040" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">retry only the failing stage</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">A single mega-prompt fails whole; staged prompts fail locally and resume.</text>
 </svg>

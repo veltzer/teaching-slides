@@ -93,25 +93,25 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect x="391.4286" y="40" width="497.1429" height="55.2381" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="74.5238" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5715" fill="var(--text)">"Show me the top 5 customers by revenue this quarter"</text>
+  <rect x="391.3333" y="40" width="497.3334" height="55.2381" rx="6.0011" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="74.5238" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5747" fill="var(--text)">"Show me the top 5 customers by revenue this quarter"</text>
   <line x1="640" y1="95.2381" x2="640" y2="136.6667" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="432.8571" y="136.6667" width="414.2857" height="110.4762" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="640" y="171.1905" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.3333" font-weight="bold" fill="var(--text)">LLM-Powered Database Interface</text>
-  <text x="640" y="205.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5715" fill="var(--text-muted)">NL &gt; SQL &gt; Execute &gt; NL</text>
-  <text x="640" y="230.5715" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1905" fill="var(--text-muted)">Natural Language to SQL Pipeline</text>
+  <rect x="432.7777" y="136.6667" width="414.4445" height="110.4762" rx="6.0011" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="640" y="171.1905" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.337" font-weight="bold" fill="var(--text)">LLM-Powered Database Interface</text>
+  <text x="640" y="205.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5747" fill="var(--text-muted)">NL &gt; SQL &gt; Execute &gt; NL</text>
+  <text x="640" y="230.5715" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">Natural Language to SQL Pipeline</text>
   <line x1="640" y1="247.1428" x2="640" y2="288.5714" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="267.1429" y="288.5714" width="745.7142" height="165.7143" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="294.7619" y="318.9524" font-family="monospace" font-size="15.1905" fill="var(--text)">Generated SQL:</text>
-  <text x="294.7619" y="343.8096" font-family="monospace" font-size="13.8095" fill="var(--text-muted)">SELECT c.name, SUM(o.amount) as total_revenue</text>
-  <text x="294.7619" y="364.5239" font-family="monospace" font-size="13.8095" fill="var(--text-muted)">FROM customers c</text>
-  <text x="294.7619" y="385.2381" font-family="monospace" font-size="13.8095" fill="var(--text-muted)">JOIN orders o ON c.id = o.customer_id</text>
-  <text x="294.7619" y="405.9524" font-family="monospace" font-size="13.8095" fill="var(--text-muted)">WHERE o.date &gt;= DATE_TRUNC('quarter', CURRENT_DATE)</text>
-  <text x="294.7619" y="426.6667" font-family="monospace" font-size="13.8095" fill="var(--text-muted)">GROUP BY c.name ORDER BY total_revenue DESC LIMIT 5;</text>
+  <rect x="267" y="288.5714" width="746" height="165.7143" rx="6.0011" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="294.6296" y="318.9524" font-family="monospace" font-size="15.1934" fill="var(--text)">Generated SQL:</text>
+  <text x="294.6296" y="343.8096" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">SELECT c.name, SUM(o.amount) as total_revenue</text>
+  <text x="294.6296" y="364.5239" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">FROM customers c</text>
+  <text x="294.6296" y="385.2381" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">JOIN orders o ON c.id = o.customer_id</text>
+  <text x="294.6296" y="405.9524" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">WHERE o.date &gt;= DATE_TRUNC('quarter', CURRENT_DATE)</text>
+  <text x="294.6296" y="426.6667" font-family="monospace" font-size="13.8121" fill="var(--text-muted)">GROUP BY c.name ORDER BY total_revenue DESC LIMIT 5;</text>
   <line x1="640" y1="454.2857" x2="640" y2="495.7143" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="322.381" y="495.7143" width="635.2381" height="124.2857" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="350" y="530.2381" font-family="Arial, sans-serif" font-size="16.5715" font-weight="bold" fill="var(--text)">Natural Language Response:</text>
-  <text x="350" y="557.8572" font-family="Arial, sans-serif" font-size="15.1905" fill="var(--text-muted)">"The top 5 customers by revenue this quarter are:</text>
-  <text x="363.8095" y="581.3334" font-family="Arial, sans-serif" font-size="15.1905" fill="var(--text-muted)">1. Acme Corp -- $245,000</text>
-  <text x="363.8095" y="604.8095" font-family="Arial, sans-serif" font-size="15.1905" fill="var(--text-muted)">2. TechStart Inc -- $198,000 ..."</text>
+  <rect x="322.2593" y="495.7143" width="635.4816" height="124.2857" rx="6.0011" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="349.8889" y="530.2381" font-family="Arial, sans-serif" font-size="16.5747" font-weight="bold" fill="var(--text)">Natural Language Response:</text>
+  <text x="349.8889" y="557.8572" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">"The top 5 customers by revenue this quarter are:</text>
+  <text x="363.7036" y="581.3334" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">1. Acme Corp -- $245,000</text>
+  <text x="363.7036" y="604.8095" font-family="Arial, sans-serif" font-size="15.1934" fill="var(--text-muted)">2. TechStart Inc -- $198,000 ..."</text>
 </svg>

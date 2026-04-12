@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,99 +33,44 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,640 22.9376,0" fill="#333" />
-    </marker>
   </defs>
-  <rect width="118.784" height="580" fill="var(--surface)" rx="6" x="580.608" y="40"/>
-  <text x="640" y="95.1" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Tool Versioning: Evolution Without Breaking Agents</text>
-  <rect x="585.0624" y="163.25" width="23.0144" height="159.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="596.4954" y="206.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">v1.0</text>
-  <text x="596.4954" y="243" text-anchor="middle" font-size="10" fill="var(--text)">Initial release</text>
-  <text x="596.4954" y="272" text-anchor="middle" font-size="10" fill="var(--text-muted)">required: pattern</text>
-  <text x="596.4954" y="301" text-anchor="middle" font-size="10" fill="var(--ok-accent)">stable API</text>
-  <line x1="608.0768" y1="243" x2="613.2736" y2="243" stroke="var(--text)" stroke-width="0.3277" marker-end="url(#arr)" />
-  <rect x="613.2736" y="163.25" width="23.0144" height="159.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="624.7066" y="206.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">v1.1</text>
-  <text x="624.7066" y="243" text-anchor="middle" font-size="10" fill="var(--text)">Add optional params</text>
-  <text x="624.7066" y="272" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ max_results</text>
-  <text x="624.7066" y="301" text-anchor="middle" font-size="10" fill="var(--ok-accent)">backward-compat</text>
-  <line x1="636.288" y1="243" x2="641.4848" y2="243" stroke="var(--text)" stroke-width="0.3277" marker-end="url(#arr)" />
-  <rect x="641.4848" y="163.25" width="23.0144" height="159.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="652.9178" y="206.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">v2.0</text>
-  <text x="652.9178" y="243" text-anchor="middle" font-size="10" fill="var(--text)">Breaking change</text>
-  <text x="652.9178" y="272" text-anchor="middle" font-size="10" fill="var(--danger-accent)">rename required</text>
-  <text x="652.9178" y="301" text-anchor="middle" font-size="10" fill="var(--text-muted)">param</text>
-  <line x1="664.4992" y1="243" x2="669.696" y2="243" stroke="var(--text)" stroke-width="0.3277" marker-end="url(#arr)" />
-  <rect x="669.696" y="163.25" width="25.984" height="159.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="682.6138" y="206.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Deprecate</text>
-  <text x="682.6138" y="243" text-anchor="middle" font-size="10" fill="var(--text)">v1.x sunset</text>
-  <text x="682.6138" y="272" text-anchor="middle" font-size="10" fill="var(--text-muted)">warn in description</text>
-  <text x="682.6138" y="301" text-anchor="middle" font-size="10" fill="var(--text-muted)">track usage</text>
-  <rect x="585.0624" y="388" width="109.8752" height="210.25" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="428.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Versioning Rules for Tool Authors</text>
-  <text x="588.032" y="467.75" font-size="10" fill="var(--text)">▶ Never remove or rename required parameters — always add optional ones</text>
-  <text x="588.032" y="501.1" font-size="10" fill="var(--text)">▶ Use semantic versioning: MAJOR.MINOR.PATCH</text>
-  <text x="588.032" y="534.45" font-size="10" fill="var(--text)">▶ Mark deprecated tools in description: "[DEPRECATED: use search_code_v2]"</text>
-  <text x="588.032" y="567.8" font-size="10" fill="var(--text)">▶ Monitor tool call success rates and latency after every update</text>
-  <text x="588.032" y="591" font-size="10" fill="var(--text-muted)">▶ Support multiple versions concurrently during migration periods</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">Evolve tools without breaking agents in the wild</text>
+
+  <rect x="40" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">v1.0</text>
+  <text x="180" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">Initial release</text>
+  <text x="180" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">required: pattern</text>
+  <text x="180" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">stable API</text>
+  <line x1="330" y1="198.181818" x2="360" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="370" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="510" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">v1.1</text>
+  <text x="510" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">Add optional params</text>
+  <text x="510" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">+ max_results</text>
+  <text x="510" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">backward-compat</text>
+  <line x1="660" y1="198.181818" x2="690" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="840" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">v2.0</text>
+  <text x="840" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--warn-text)">Breaking change</text>
+  <text x="840" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">rename required</text>
+  <text x="840" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">param</text>
+  <line x1="990" y1="198.181818" x2="1020" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1030" y="82.181818" width="210" height="232" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1135" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--danger-text)">Deprecate</text>
+  <text x="1135" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-text)">v1.x sunset</text>
+  <text x="1135" y="229.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">warn in schema</text>
+  <text x="1135" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">track usage</text>
+
+  <rect x="40" y="356.363636" width="1200" height="263.636364" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="403.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">Versioning rules</text>
+  <text x="640" y="451.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Never remove or rename required params — add optional ones instead.</text>
+  <text x="640" y="493.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Use semver. Mark deprecated tools in description: [DEPRECATED: use search_v2].</text>
+  <text x="640" y="535.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Monitor tool call success rates and latency after every change.</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Support multiple versions concurrently during migrations.</text>
 </svg>

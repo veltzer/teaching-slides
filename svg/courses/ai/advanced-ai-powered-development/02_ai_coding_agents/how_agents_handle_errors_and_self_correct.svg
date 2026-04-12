@@ -97,34 +97,34 @@
       <polygon points="0,160 8.96,0" fill="white" />
     </marker>
   </defs>
-  <rect width="185.6" height="580" fill="var(--code-bg)" rx="6" x="547.2" y="40"/>
-  <text x="640" y="90.75" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">How Agents Handle Errors and Self-Correct</text>
-  <rect x="551.84" y="156" width="38.28" height="123.25" fill="var(--danger-accent)" rx="6" />
-  <text x="570.864" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">1. Error</text>
-  <text x="570.864" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Occurs</text>
-  <text x="570.864" y="264.75" text-anchor="middle" fill="var(--warn-accent)" font-size="10">test fails / crash</text>
-  <line x1="590.12" y1="216.9" x2="597.08" y2="216.9" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="597.08" y="156" width="38.28" height="123.25" fill="var(--primary-accent)" rx="6" />
-  <text x="616.104" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">2. Read</text>
-  <text x="616.104" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Output</text>
-  <text x="616.104" y="264.75" text-anchor="middle" fill="var(--primary-accent)" font-size="10">parse error message</text>
-  <line x1="635.36" y1="216.9" x2="642.32" y2="216.9" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="642.32" y="156" width="38.28" height="123.25" fill="var(--info-fill)" rx="6" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="661.344" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">3. Diagnose</text>
-  <text x="661.344" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Root Cause</text>
-  <text x="661.344" y="264.75" text-anchor="middle" fill="var(--info-accent)" font-size="10">LLM reasons why</text>
-  <line x1="680.6" y1="216.9" x2="687.56" y2="216.9" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="687.56" y="156" width="40.6" height="123.25" fill="var(--ok-fill)" rx="6" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="707.744" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">4. Fix + Retry</text>
-  <text x="707.744" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Tool Call</text>
-  <text x="707.744" y="264.75" text-anchor="middle" fill="var(--ok-accent)" font-size="10">edit + re-run</text>
-  <path d="M 707.744 279.25 Q 707.744 373.5 640 373.5 Q 616.104 373.5 616.104 279.25" fill="none" stroke="var(--bg)" stroke-width="0.512" stroke-dasharray="1.536 0.768" marker-end="url(#arr)" />
-  <text x="663.2" y="402.5" text-anchor="middle" fill="var(--warn-accent)" font-size="10">retry loop (up to max iterations)</text>
-  <rect x="616.8" y="438.75" width="46.4" height="87" fill="var(--ok-accent)" rx="6" />
-  <text x="640" y="479.35" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">Done</text>
-  <text x="640" y="508.35" text-anchor="middle" fill="var(--ok-accent)" font-size="10">test passes</text>
-  <line x1="707.744" y1="279.25" x2="663.2" y2="438.75" stroke="var(--ok-border)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="551.84" y="540.25" width="176.32" height="65.25" rx="6" fill="var(--warn-fill)" fill-opacity="0.15" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="573.6" text-anchor="middle" fill="var(--warn-accent)" font-size="10">Key principles: cap retries, detect loops, log each attempt for debugging</text>
-  <text x="640" y="596.8" text-anchor="middle" fill="var(--border)" font-size="10">Good agents set a max_turns limit and surface partial results on failure</text>
+  <rect width="186" height="580" fill="var(--code-bg)" rx="6.0065" x="547" y="40"/>
+  <text x="640" y="90.75" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">How Agents Handle Errors and Self-Correct</text>
+  <rect x="551.65" y="156" width="38.3625" height="123.25" fill="var(--danger-accent)" rx="6.0065" />
+  <text x="570.715" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">1. Error</text>
+  <text x="570.715" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">Occurs</text>
+  <text x="570.715" y="264.75" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0108">test fails / crash</text>
+  <line x1="590.0125" y1="216.9" x2="596.9875" y2="216.9" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="596.9875" y="156" width="38.3625" height="123.25" fill="var(--primary-accent)" rx="6.0065" />
+  <text x="616.0525" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">2. Read</text>
+  <text x="616.0525" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">Output</text>
+  <text x="616.0525" y="264.75" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0108">parse error message</text>
+  <line x1="635.35" y1="216.9" x2="642.325" y2="216.9" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="642.325" y="156" width="38.3625" height="123.25" fill="var(--info-fill)" rx="6.0065" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="661.39" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">3. Diagnose</text>
+  <text x="661.39" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">Root Cause</text>
+  <text x="661.39" y="264.75" text-anchor="middle" fill="var(--info-accent)" font-size="10.0108">LLM reasons why</text>
+  <line x1="680.6875" y1="216.9" x2="687.6625" y2="216.9" stroke="var(--bg)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="687.6625" y="156" width="40.6875" height="123.25" fill="var(--ok-fill)" rx="6.0065" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="707.89" y="202.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">4. Fix + Retry</text>
+  <text x="707.89" y="231.4" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">Tool Call</text>
+  <text x="707.89" y="264.75" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0108">edit + re-run</text>
+  <path d="M 707.89 279.25 Q 707.89 373.5 640 373.5 Q 616.0525 373.5 616.0525 279.25" fill="none" stroke="var(--bg)" stroke-width="0.512" stroke-dasharray="1.536 0.768" marker-end="url(#arr)" />
+  <text x="663.25" y="402.5" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0108">retry loop (up to max iterations)</text>
+  <rect x="616.75" y="438.75" width="46.5" height="87" fill="var(--ok-accent)" rx="6.0065" />
+  <text x="640" y="479.35" text-anchor="middle" fill="var(--bg)" font-size="10.0108" font-weight="bold">Done</text>
+  <text x="640" y="508.35" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0108">test passes</text>
+  <line x1="707.89" y1="279.25" x2="663.25" y2="438.75" stroke="var(--ok-border)" stroke-width="0.512" marker-end="url(#arr)" />
+  <rect x="551.65" y="540.25" width="176.7" height="65.25" rx="6.0065" fill="var(--warn-fill)" fill-opacity="0.15" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="640" y="573.6" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0108">Key principles: cap retries, detect loops, log each attempt for debugging</text>
+  <text x="640" y="596.8" text-anchor="middle" fill="var(--border)" font-size="10.0108">Good agents set a max_turns limit and surface partial results on failure</text>
 </svg>

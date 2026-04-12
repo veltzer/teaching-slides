@@ -107,37 +107,14 @@ def main() -> int:
 
     widths = [r["w"] for r in results]
     heights = [r["h"] for r in results]
-    fills = [r["fill_pct"] for r in results]
-    dx_abs = [abs(r["dx"]) for r in results]
-    dy_abs = [abs(r["dy"]) for r in results]
 
-    def pct(xs: list[float], p: float) -> float:
-        xs = sorted(xs)
-        return xs[min(len(xs) - 1, int(len(xs) * p))]
+    w_min, w_max = min(widths), max(widths)
+    h_min, h_max = min(heights), max(heights)
 
     print(f"Analyzed {total} SVGs  ({no_bbox} had no bbox)")
     print()
-    print(f"Bbox width  — mean: {sum(widths) / total:7.1f}  median: {pct(widths, 0.5):7.1f}  p95: {pct(widths, 0.95):7.1f}  max: {max(widths):7.1f}")
-    print(f"Bbox height — mean: {sum(heights) / total:7.1f}  median: {pct(heights, 0.5):7.1f}  p95: {pct(heights, 0.95):7.1f}  max: {max(heights):7.1f}")
-    print(f"Fill %      — mean: {sum(fills) / total:6.1f}%  median: {pct(fills, 0.5):6.1f}%  p10: {pct(fills, 0.10):6.1f}%  min: {min(fills):6.1f}%")
-    print(f"|dx|        — mean: {sum(dx_abs) / total:6.2f}  median: {pct(dx_abs, 0.5):6.2f}  p95: {pct(dx_abs, 0.95):6.2f}  max: {max(dx_abs):6.2f}")
-    print(f"|dy|        — mean: {sum(dy_abs) / total:6.2f}  median: {pct(dy_abs, 0.5):6.2f}  p95: {pct(dy_abs, 0.95):6.2f}  max: {max(dy_abs):6.2f}")
-    print()
-
-    print(f"Horizontal centering (|dx| from usable-area center x={int(CENTER_X)}):")
-    histogram(dx_abs,
-              [(0, 2), (2, 10), (10, 30), (30, 100), (100, 10**9)],
-              lambda lo, hi: f"|dx| [{int(lo):3d}..{('inf' if hi > 1e6 else str(int(hi))):>3s})")
-    print()
-    print(f"Vertical centering (|dy| from usable-area center y={int(CENTER_Y)}):")
-    histogram(dy_abs,
-              [(0, 2), (2, 10), (10, 30), (30, 100), (100, 10**9)],
-              lambda lo, hi: f"|dy| [{int(lo):3d}..{('inf' if hi > 1e6 else str(int(hi))):>3s})")
-    print()
-    print("Fill ratio (content area / 1200x580 usable area):")
-    histogram(fills,
-              [(0, 10), (10, 25), (25, 50), (50, 75), (75, 90), (90, 101)],
-              lambda lo, hi: f"fill [{int(lo):3d}..{int(hi):3d}%)")
+    print(f"Width : min={w_min:.4f}  max={w_max:.4f}  {'MATCH' if w_min == w_max else 'DIFFER'}")
+    print(f"Height: min={h_min:.4f}  max={h_max:.4f}  {'MATCH' if h_min == h_max else 'DIFFER'}")
     print()
 
     def show(rows: list[dict], label: str) -> None:

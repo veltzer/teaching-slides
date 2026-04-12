@@ -62,10 +62,12 @@ def _parse_num(val: str | None) -> float | None:
 
 
 def _fmt_num(v: float) -> str:
-    """Format without exponent notation, trim trailing zeros."""
+    """Format without exponent notation, trim trailing zeros.
+    6-decimal precision keeps the re-parsed bbox stable to well under 1e-3px,
+    which is what the fit loop needs to converge to an exact center."""
     if v != v:  # NaN
         return "0"
-    out = f"{v:.4f}".rstrip("0").rstrip(".")
+    out = f"{v:.6f}".rstrip("0").rstrip(".")
     return out if out else "0"
 
 
@@ -391,8 +393,32 @@ def _transform_element(tag: str, attrs_str: str, sx: float, sy: float, tx: float
 
 # ------------------- Main fitting logic -------------------
 
+def _apply_transform(segments: list[tuple[str, str]], sx: float, sy: float, tx: float, ty: float) -> list[tuple[str, str]]:
+    out = []
+    for tag, chunk in segments:
+        if tag == "defs":
+            out.append((tag, chunk))
+            continue
+
+        def sub(m: re.Match) -> str:
+            inner_tag = m.group(1)
+            attrs_str = m.group(2)
+            self_close = m.group(3)
+            new_attrs = _transform_element(inner_tag, attrs_str, sx, sy, tx, ty)
+            return f"<{inner_tag}{new_attrs}{self_close}>"
+
+        out.append((tag, _ELEM_RE.sub(sub, chunk)))
+    return out
+
+
 def fit_svg(content: str) -> tuple[str, dict]:
-    """Return (new_content, info)."""
+    """Return (new_content, info).
+
+    Strategy: compute the ideal scale+translate, apply it, then re-measure
+    the output's bbox and apply a residual correction. Iterate until the
+    re-measured bbox matches the target to sub-1e-6 precision. This absorbs
+    the rounding loss from writing coords at 6-decimal precision and gets
+    the center to land exactly on (640, 330)."""
     defs_matches = list(_DEFS_RE.finditer(content))
     if defs_matches:
         segments = []
@@ -405,7 +431,6 @@ def fit_svg(content: str) -> tuple[str, dict]:
     else:
         segments = [("outside", content)]
 
-    # Compute bbox across all outside-defs chunks
     outside_full = "".join(s for tag, s in segments if tag == "outside")
     bbox = compute_bbox(outside_full)
     if bbox is None:
@@ -417,56 +442,68 @@ def fit_svg(content: str) -> tuple[str, dict]:
     if bbox_w <= 0 or bbox_h <= 0:
         return content, {"skipped": "zero-size bbox"}
 
-    # Stretch to fill: independent x and y scales.
-    sx = USABLE_W / bbox_w
-    sy = USABLE_H / bbox_h
-    # If the aspect-ratio stretch would be severe (>50% difference), fall
-    # back to uniform scaling and center. Heavy stretching distorts circles
-    # badly (SVG <circle> has only one radius) and breaks idempotency on
-    # circle-heavy diagrams.
-    ratio = max(sx, sy) / min(sx, sy) if min(sx, sy) > 0 else 1
-    if ratio > 1.5:
-        s = min(sx, sy)
-        sx = s
-        sy = s
-    # Translate so scaled bbox lands in the usable area. When uniform, center
-    # the content on the unused axis.
-    new_w = bbox_w * sx
-    new_h = bbox_h * sy
-    tx = USABLE_X0 + (USABLE_W - new_w) / 2 - x0 * sx
-    ty = USABLE_Y0 + (USABLE_H - new_h) / 2 - y0 * sy
+    # Decide target dimensions.
+    sx_ideal = USABLE_W / bbox_w
+    sy_ideal = USABLE_H / bbox_h
+    ratio = max(sx_ideal, sy_ideal) / min(sx_ideal, sy_ideal) if min(sx_ideal, sy_ideal) > 0 else 1
+    uniform = ratio > 1.5
+    if uniform:
+        # Pick a single scale so circles stay circular.
+        s = min(sx_ideal, sy_ideal)
+        target_w = bbox_w * s
+        target_h = bbox_h * s
+    else:
+        target_w = float(USABLE_W)
+        target_h = float(USABLE_H)
 
-    # Skip if the SVG is within 5% of a perfect fit in scale AND within
-    # 2px in translation. Path bbox approximation can produce a few
-    # pixels of scale drift even on well-fitted files, but translation
-    # drift is a real off-center problem the user can see. The scale
-    # tolerance keeps idempotency; the tight translation tolerance keeps
-    # content centered.
-    if abs(sx - 1.0) < 0.05 and abs(sy - 1.0) < 0.05 and abs(tx) < 2.0 and abs(ty) < 2.0:
+    # Center: may be half-pixel for odd target dims — that's what "exact" means.
+    target_x0 = USABLE_X0 + (USABLE_W - target_w) / 2.0
+    target_y0 = USABLE_Y0 + (USABLE_H - target_h) / 2.0
+
+    # If the current bbox already matches target exactly, no-op.
+    def _matches() -> bool:
+        return (abs(x0 - target_x0) < 1e-6 and abs(y0 - target_y0) < 1e-6
+                and abs(bbox_w - target_w) < 1e-6 and abs(bbox_h - target_h) < 1e-6)
+
+    if _matches():
         return content, {"skipped": "already exactly fitted"}
+
+    # Iterate: apply transform, re-measure, correct residual.
+    cur_segments = segments
+    cur_x0, cur_y0, cur_w, cur_h = x0, y0, bbox_w, bbox_h
+    first_sx = first_sy = first_tx = first_ty = None
+
+    for _ in range(6):
+        sx = target_w / cur_w
+        sy = target_h / cur_h
+        if uniform:
+            sx = sy = min(sx, sy)
+        tx = target_x0 - cur_x0 * sx
+        ty = target_y0 - cur_y0 * sy
+        if first_sx is None:
+            first_sx, first_sy, first_tx, first_ty = sx, sy, tx, ty
+
+        cur_segments = _apply_transform(cur_segments, sx, sy, tx, ty)
+
+        # Re-measure
+        new_outside = "".join(s for tg, s in cur_segments if tg == "outside")
+        new_bbox = compute_bbox(new_outside)
+        if new_bbox is None:
+            break
+        cur_x0, cur_y0, nx1, ny1 = new_bbox
+        cur_w = nx1 - cur_x0
+        cur_h = ny1 - cur_y0
+        if (abs(cur_x0 - target_x0) < 1e-6 and abs(cur_y0 - target_y0) < 1e-6
+                and abs(cur_w - target_w) < 1e-6 and abs(cur_h - target_h) < 1e-6):
+            break
 
     info = {
         "bbox": bbox,
-        "scale": (sx, sy),
-        "translate": (tx, ty),
+        "scale": (first_sx, first_sy),
+        "translate": (first_tx, first_ty),
+        "final_bbox": (cur_x0, cur_y0, cur_x0 + cur_w, cur_y0 + cur_h),
     }
-
-    new_segments = []
-    for tag, chunk in segments:
-        if tag == "defs":
-            new_segments.append(chunk)
-            continue
-
-        def sub(m: re.Match) -> str:
-            inner_tag = m.group(1)
-            attrs_str = m.group(2)
-            self_close = m.group(3)
-            new_attrs = _transform_element(inner_tag, attrs_str, sx, sy, tx, ty)
-            return f"<{inner_tag}{new_attrs}{self_close}>"
-
-        new_segments.append(_ELEM_RE.sub(sub, chunk))
-
-    return "".join(new_segments), info
+    return "".join(s for _t, s in cur_segments), info
 
 
 def fit_file(path: Path) -> dict:

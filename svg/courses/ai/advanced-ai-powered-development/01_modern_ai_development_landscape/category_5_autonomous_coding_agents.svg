@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,109 +33,48 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,360 11.7029,0" fill="#333" />
-    </marker>
   </defs>
-  <rect width="107.7406" height="580" fill="var(--surface)" rx="6" x="586.1297" y="40"/>
-  <text x="640" y="95.1" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Autonomous Coding Agents: End-to-End Workflow</text>
-  <rect x="588.8232" y="185" width="17.5078" height="101.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="597.5772" y="225.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Read</text>
-  <text x="597.5772" y="251.7" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Issue</text>
-  <text x="597.5772" y="276.35" text-anchor="middle" font-size="10" fill="var(--text-muted)">GitHub/Jira</text>
-  <line x1="606.3311" y1="235.75" x2="611.0447" y2="235.75" stroke="var(--text)" stroke-width="0.2972" marker-end="url(#ah)" />
-  <rect x="611.0447" y="185" width="17.5078" height="101.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="619.7986" y="225.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Plan</text>
-  <text x="619.7986" y="251.7" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Steps</text>
-  <text x="619.7986" y="276.35" text-anchor="middle" font-size="10" fill="var(--text-muted)">task breakdown</text>
-  <line x1="628.5525" y1="235.75" x2="633.2662" y2="235.75" stroke="var(--text)" stroke-width="0.2972" marker-end="url(#ah)" />
-  <rect x="633.2662" y="185" width="17.5078" height="101.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="642.0201" y="225.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">Write</text>
-  <text x="642.0201" y="251.7" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">Code</text>
-  <text x="642.0201" y="276.35" text-anchor="middle" font-size="10" fill="var(--text-muted)">edit files</text>
-  <line x1="650.774" y1="235.75" x2="655.4877" y2="235.75" stroke="var(--text)" stroke-width="0.2972" marker-end="url(#ah)" />
-  <rect x="655.4877" y="185" width="17.5078" height="101.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="664.2416" y="225.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Run</text>
-  <text x="664.2416" y="251.7" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Tests</text>
-  <text x="664.2416" y="276.35" text-anchor="middle" font-size="10" fill="var(--text-muted)">iterate on fail</text>
-  <line x1="672.9956" y1="235.75" x2="677.7092" y2="235.75" stroke="var(--text)" stroke-width="0.2972" marker-end="url(#ah)" />
-  <rect x="677.7092" y="185" width="13.4676" height="101.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="684.443" y="225.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-accent)">Push</text>
-  <text x="684.443" y="251.7" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-accent)">PR</text>
-  <text x="684.443" y="276.35" text-anchor="middle" font-size="10" fill="var(--text-muted)">git ops</text>
-  <path d="M 664.2416 286.5 Q 664.2416 359 642.0201 359 Q 633.2662 359 633.2662 286.5" fill="none" stroke="var(--danger-border)" stroke-width="0.2229" stroke-dasharray="0.743 0.4458" marker-end="url(#ah)" />
-  <text x="648.7539" y="380.75" text-anchor="middle" font-size="10" fill="var(--danger-accent)">self-correct on failure</text>
-  <rect x="588.8232" y="431.5" width="102.3536" height="159.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="472.1" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Capabilities of Autonomous Agents</text>
-  <rect x="591.5167" y="489.5" width="20.2014" height="79.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="601.6174" y="525.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Browse Docs</text>
-  <text x="601.6174" y="554.75" text-anchor="middle" font-size="10" fill="var(--text)">fetch + parse</text>
-  <rect x="614.4116" y="489.5" width="20.2014" height="79.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="624.5123" y="525.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Install Deps</text>
-  <text x="624.5123" y="554.75" text-anchor="middle" font-size="10" fill="var(--text)">pip/npm/cargo</text>
-  <rect x="637.3064" y="489.5" width="20.2014" height="79.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="647.4071" y="525.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Run CI Checks</text>
-  <text x="647.4071" y="554.75" text-anchor="middle" font-size="10" fill="var(--text)">lint + test</text>
-  <rect x="660.2013" y="489.5" width="28.2819" height="79.75" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="674.3423" y="525.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">SWE-bench: ~40-50%</text>
-  <text x="674.3423" y="554.75" text-anchor="middle" font-size="10" fill="var(--text)">real-world issue solve rate</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">Autonomous coding agent: read → plan → code → test → push</text>
+
+  <rect x="40" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="150" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Read Issue</text>
+  <text x="150" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">GitHub / Jira</text>
+  <line x1="270" y1="177.090909" x2="290" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="300" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="410" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Plan Steps</text>
+  <text x="410" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">task breakdown</text>
+  <line x1="530" y1="177.090909" x2="550" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="560" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="670" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Write Code</text>
+  <text x="670" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">edit files</text>
+  <line x1="790" y1="177.090909" x2="810" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="820" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="930" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Run Tests</text>
+  <text x="930" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">iterate on fail</text>
+  <line x1="1050" y1="177.090909" x2="1070" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1080" y="82.181818" width="160" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1160" y="140.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Push PR</text>
+  <text x="1160" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">git ops</text>
+
+  <path d="M 930 272 Q 930 345.818182 670 345.818182 Q 410 345.818182 410 272" fill="none" stroke="var(--danger-border)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-danger)"/>
+  <text x="670" y="377.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--danger-accent)">self-correct on failure</text>
+
+  <rect x="40" y="409.090909" width="1200" height="210.909091" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">What they can do</text>
+  <text x="200" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Browse docs</text>
+  <text x="460" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Install deps</text>
+  <text x="720" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--text-muted)">Run CI checks</text>
+  <text x="1060" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--warn-accent)">SWE-bench ~40–50%</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-faint)">Real-world issue solve rate on the SWE-bench benchmark, leading models.</text>
 </svg>

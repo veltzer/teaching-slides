@@ -93,48 +93,48 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <rect width="515.5556" height="580" fill="var(--surface)" rx="6" x="382.2222" y="40"/>
-  <text x="640" y="90.75" text-anchor="middle" font-size="12.8889" font-weight="bold" fill="var(--primary-accent)">RAG Architecture for Code</text>
-  <rect x="395.1111" y="127" width="489.7777" height="43.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="156" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Ingestion Pipeline (offline)</text>
-  <rect x="401.5555" y="185" width="77.3333" height="87" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="440.2222" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10">Codebase</text>
-  <text x="440.2222" y="253.15" text-anchor="middle" fill="var(--info-accent)" font-size="10">source files</text>
-  <line x1="478.8889" y1="228.5" x2="501.4445" y2="228.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="501.4445" y="185" width="77.3333" height="87" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="540.1111" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10">Chunking</text>
-  <text x="540.1111" y="253.15" text-anchor="middle" fill="var(--warn-accent)" font-size="10">AST-based</text>
-  <line x1="578.7778" y1="228.5" x2="601.3333" y2="228.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="601.3333" y="185" width="83.7777" height="87" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="643.2222" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10">Embedding</text>
-  <text x="643.2222" y="253.15" text-anchor="middle" fill="var(--primary-accent)" font-size="10">voyage-code-3</text>
-  <line x1="685.1111" y1="228.5" x2="707.6667" y2="228.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="707.6667" y="185" width="77.3333" height="87" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="746.3333" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10">Vector DB</text>
-  <text x="746.3333" y="253.15" text-anchor="middle" fill="var(--ok-accent)" font-size="10">ChromaDB</text>
-  <rect x="395.1111" y="330" width="489.7777" height="43.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640" y="359" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Query Pipeline (real-time)</text>
-  <rect x="401.5555" y="388" width="77.3333" height="87" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="440.2222" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10">User Query</text>
-  <text x="440.2222" y="456.15" text-anchor="middle" fill="var(--primary-accent)" font-size="10">"fix the auth bug"</text>
-  <line x1="478.8889" y1="431.5" x2="501.4445" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="501.4445" y="388" width="77.3333" height="87" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="540.1111" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10">Embed</text>
-  <text x="540.1111" y="456.15" text-anchor="middle" fill="var(--warn-accent)" font-size="10">query vector</text>
-  <line x1="578.7778" y1="431.5" x2="601.3333" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="601.3333" y="388" width="83.7777" height="87" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="643.2222" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10">Retrieve</text>
-  <text x="643.2222" y="456.15" text-anchor="middle" fill="var(--ok-accent)" font-size="10">top-K chunks</text>
-  <line x1="685.1111" y1="431.5" x2="707.6667" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="707.6667" y="388" width="77.3333" height="87" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="746.3333" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10">Re-rank</text>
-  <text x="746.3333" y="456.15" text-anchor="middle" fill="var(--warn-accent)" font-size="10">cross-encoder</text>
-  <line x1="785" y1="431.5" x2="807.5555" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
-  <rect x="807.5555" y="388" width="70.8889" height="87" rx="6" fill="var(--danger-accent)" stroke="var(--danger-border)" stroke-width="1.0667" />
-  <text x="843" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10">LLM</text>
-  <text x="843" y="456.15" text-anchor="middle" fill="var(--danger-accent)" font-size="10">generates answer</text>
-  <path d="M 746.3333 272 Q 746.3333 315.5 643.2222 388" fill="none" stroke="var(--ok-border)" stroke-width="1.0667" stroke-dasharray="3.5556 2.1333" marker-end="url(#arrow)" />
-  <rect x="395.1111" y="525.75" width="489.7777" height="79.75" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="640" y="559.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">Index once, query many times — incremental updates via git diff</text>
-  <text x="640" y="588.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">Code-specific embeddings outperform general models by 15-30% on code retrieval</text>
+  <rect width="516" height="580" fill="var(--surface)" rx="6.0026" x="382" y="40"/>
+  <text x="640" y="90.75" text-anchor="middle" font-size="12.8945" font-weight="bold" fill="var(--primary-accent)">RAG Architecture for Code</text>
+  <rect x="394.9" y="127" width="490.1999" height="43.5" rx="6.0026" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="640" y="156" text-anchor="middle" font-size="10.0043" font-weight="bold" fill="var(--primary-accent)">Ingestion Pipeline (offline)</text>
+  <rect x="401.35" y="185" width="77.4" height="87" rx="6.0026" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
+  <text x="440.05" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Codebase</text>
+  <text x="440.05" y="253.15" text-anchor="middle" fill="var(--info-accent)" font-size="10.0043">source files</text>
+  <line x1="478.75" y1="228.5" x2="501.3251" y2="228.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="501.3251" y="185" width="77.4" height="87" rx="6.0026" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="540.025" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Chunking</text>
+  <text x="540.025" y="253.15" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0043">AST-based</text>
+  <line x1="578.725" y1="228.5" x2="601.3" y2="228.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="601.3" y="185" width="83.8499" height="87" rx="6.0026" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="643.225" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Embedding</text>
+  <text x="643.225" y="253.15" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0043">voyage-code-3</text>
+  <line x1="685.15" y1="228.5" x2="707.725" y2="228.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="707.725" y="185" width="77.4" height="87" rx="6.0026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="746.425" y="224.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Vector DB</text>
+  <text x="746.425" y="253.15" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0043">ChromaDB</text>
+  <rect x="394.9" y="330" width="490.1999" height="43.5" rx="6.0026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="640" y="359" text-anchor="middle" font-size="10.0043" font-weight="bold" fill="var(--ok-accent)">Query Pipeline (real-time)</text>
+  <rect x="401.35" y="388" width="77.4" height="87" rx="6.0026" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
+  <text x="440.05" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">User Query</text>
+  <text x="440.05" y="456.15" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0043">"fix the auth bug"</text>
+  <line x1="478.75" y1="431.5" x2="501.3251" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="501.3251" y="388" width="77.4" height="87" rx="6.0026" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="540.025" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Embed</text>
+  <text x="540.025" y="456.15" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0043">query vector</text>
+  <line x1="578.725" y1="431.5" x2="601.3" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="601.3" y="388" width="83.8499" height="87" rx="6.0026" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
+  <text x="643.225" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Retrieve</text>
+  <text x="643.225" y="456.15" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0043">top-K chunks</text>
+  <line x1="685.15" y1="431.5" x2="707.725" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="707.725" y="388" width="77.4" height="87" rx="6.0026" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="746.425" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">Re-rank</text>
+  <text x="746.425" y="456.15" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0043">cross-encoder</text>
+  <line x1="785.125" y1="431.5" x2="807.6999" y2="431.5" stroke="var(--text)" stroke-width="1.4222" marker-end="url(#arrow)" />
+  <rect x="807.6999" y="388" width="70.95" height="87" rx="6.0026" fill="var(--danger-accent)" stroke="var(--danger-border)" stroke-width="1.0667" />
+  <text x="843.175" y="427.15" text-anchor="middle" fill="var(--bg)" font-size="10.0043">LLM</text>
+  <text x="843.175" y="456.15" text-anchor="middle" fill="var(--danger-accent)" font-size="10.0043">generates answer</text>
+  <path d="M 746.425 272 Q 746.425 315.5 643.225 388" fill="none" stroke="var(--ok-border)" stroke-width="1.0667" stroke-dasharray="3.5556 2.1333" marker-end="url(#arrow)" />
+  <rect x="394.9" y="525.75" width="490.1999" height="79.75" rx="6.0026" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
+  <text x="640" y="559.1" text-anchor="middle" font-size="10.0043" fill="var(--text-muted)">Index once, query many times — incremental updates via git diff</text>
+  <text x="640" y="588.1" text-anchor="middle" font-size="10.0043" fill="var(--text-muted)">Code-specific embeddings outperform general models by 15-30% on code retrieval</text>
 </svg>

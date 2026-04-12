@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,111 +33,64 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,518.4 15.929,0" fill="#666" />
-    </marker>
   </defs>
-  <rect width="101.8381" height="580" fill="var(--surface)" rx="6" x="589.0809" y="40"/>
-  <text x="640" y="90.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Skill Composition: /ship-it Pipeline</text>
-  <rect x="591.6269" y="156" width="15.2758" height="101.5" rx="6" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="0.2809" />
-  <text x="599.2647" y="199.5" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">/ship-it</text>
-  <text x="599.2647" y="232.85" text-anchor="middle" fill="var(--primary-accent)" font-size="10">trigger</text>
-  <line x1="606.9026" y1="206.75" x2="611.358" y2="206.75" stroke="var(--text-muted)" stroke-width="0.2809" marker-end="url(#arr)" />
-  <rect x="611.358" y="156" width="16.5487" height="101.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="619.6323" y="196.6" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">1. lint</text>
-  <text x="619.6323" y="225.6" text-anchor="middle" fill="var(--primary-accent)" font-size="10">code style</text>
-  <text x="619.6323" y="247.35" text-anchor="middle" fill="var(--primary-accent)" font-size="10">on_fail: abort</text>
-  <line x1="627.9068" y1="206.75" x2="632.3622" y2="206.75" stroke="var(--text-muted)" stroke-width="0.2809" marker-end="url(#arr)" />
-  <rect x="632.3622" y="156" width="16.5487" height="101.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="640.6365" y="196.6" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">2. review</text>
-  <text x="640.6365" y="225.6" text-anchor="middle" fill="var(--ok-accent)" font-size="10">security focus</text>
-  <text x="640.6365" y="247.35" text-anchor="middle" fill="var(--ok-accent)" font-size="10">on_fail: abort</text>
-  <line x1="648.9108" y1="206.75" x2="653.3662" y2="206.75" stroke="var(--text-muted)" stroke-width="0.2809" marker-end="url(#arr)" />
-  <rect x="653.3662" y="156" width="16.5487" height="101.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="661.6406" y="196.6" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">3. commit</text>
-  <text x="661.6406" y="225.6" text-anchor="middle" fill="var(--warn-accent)" font-size="10">auto message</text>
-  <text x="661.6406" y="247.35" text-anchor="middle" fill="var(--warn-accent)" font-size="10">on_fail: abort</text>
-  <line x1="669.915" y1="206.75" x2="674.3704" y2="206.75" stroke="var(--text-muted)" stroke-width="0.2809" marker-end="url(#arr)" />
-  <rect x="674.3704" y="156" width="14.0027" height="101.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="681.3717" y="193.7" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">4. create-</text>
-  <text x="681.3717" y="219.8" text-anchor="middle" fill="var(--bg)" font-size="10" font-weight="bold">pr</text>
-  <text x="681.3717" y="247.35" text-anchor="middle" fill="var(--info-accent)" font-size="10">on_fail: warn</text>
-  <text x="640" y="293.75" text-anchor="middle" font-size="10" fill="var(--text-muted)">context flows from each step to the next</text>
-  <rect x="592.8999" y="359" width="94.2002" height="232" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="402.5" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">on_fail Strategies</text>
-  <rect x="596.0823" y="428.6" width="19.7311" height="130.5" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="605.8843" y="469.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">abort</text>
-  <text x="605.8843" y="501.1" text-anchor="middle" font-size="10" fill="var(--text)">stop chain</text>
-  <text x="605.8843" y="530.1" text-anchor="middle" font-size="10" fill="var(--text)">immediately</text>
-  <rect x="618.1048" y="428.6" width="19.7311" height="130.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="627.9068" y="469.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">skip</text>
-  <text x="627.9068" y="501.1" text-anchor="middle" font-size="10" fill="var(--text)">log failure,</text>
-  <text x="627.9068" y="530.1" text-anchor="middle" font-size="10" fill="var(--text)">continue next</text>
-  <rect x="640.1273" y="428.6" width="19.7311" height="130.5" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="649.9292" y="469.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">warn</text>
-  <text x="649.9292" y="501.1" text-anchor="middle" font-size="10" fill="var(--text)">display warning,</text>
-  <text x="649.9292" y="530.1" text-anchor="middle" font-size="10" fill="var(--text)">continue</text>
-  <rect x="662.1498" y="428.6" width="22.9136" height="130.5" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="673.6066" y="469.2" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">retry</text>
-  <text x="673.6066" y="501.1" text-anchor="middle" font-size="10" fill="var(--text)">retry N times</text>
-  <text x="673.6066" y="530.1" text-anchor="middle" font-size="10" fill="var(--text)">with backoff</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">/ship-it pipeline — compose small skills into a workflow</text>
+
+  <rect x="40" y="82.181818" width="180" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="130" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">/ship-it</text>
+  <text x="130" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">trigger</text>
+
+  <line x1="230" y1="177.090909" x2="260" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="270" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="380" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">1. lint</text>
+  <text x="380" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">code style</text>
+  <text x="380" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">on_fail: abort</text>
+
+  <line x1="500" y1="177.090909" x2="530" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="540" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="650" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">2. review</text>
+  <text x="650" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">security focus</text>
+  <text x="650" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">on_fail: abort</text>
+
+  <line x1="770" y1="177.090909" x2="800" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="810" y="82.181818" width="220" height="189.818182" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="920" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">3. commit</text>
+  <text x="920" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">auto message</text>
+  <text x="920" y="219.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">on_fail: abort</text>
+
+  <line x1="1040" y1="177.090909" x2="1070" y2="177.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="1080" y="82.181818" width="160" height="189.818182" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1160" y="134.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">4. create-pr</text>
+  <text x="1160" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--info-text)">on_fail: warn</text>
+
+  <rect x="40" y="324.727273" width="1200" height="295.272727" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="372.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--text)">on_fail strategies</text>
+
+  <rect x="90" y="409.090909" width="260" height="168.727273" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="220" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">abort</text>
+  <text x="220" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">stop chain</text>
+  <text x="220" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">immediately</text>
+
+  <rect x="390" y="409.090909" width="260" height="168.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="520" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">skip</text>
+  <text x="520" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">log failure</text>
+  <text x="520" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--warn-text)">continue next</text>
+
+  <rect x="690" y="409.090909" width="260" height="168.727273" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="820" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">warn</text>
+  <text x="820" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">display warning</text>
+  <text x="820" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">continue</text>
+
+  <rect x="990" y="409.090909" width="200" height="168.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1090" y="461.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">retry</text>
+  <text x="1090" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">N times</text>
+  <text x="1090" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--primary-text)">with backoff</text>
 </svg>

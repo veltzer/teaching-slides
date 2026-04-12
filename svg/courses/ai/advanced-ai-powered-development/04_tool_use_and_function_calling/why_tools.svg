@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,104 +33,42 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="580" height="280" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--danger-text)">Without Tools</text>
+  <text x="330" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Generates text only</text>
+  <text x="330" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Cannot read files or run code</text>
+  <text x="330" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">No access to live data</text>
+  <text x="330" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">Stateless, no external actions</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="660" y="40" width="580" height="280" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--ok-text)">With Tools</text>
+  <text x="950" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Reads and edits files</text>
+  <text x="950" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Executes shell commands</text>
+  <text x="950" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Queries databases and APIs</text>
+  <text x="950" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Acts autonomously</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="40" y="360" width="1200" height="260" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Tool-Use Round-Trip</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="80" y="440" width="200" height="140" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">User Prompt</text>
+  <text x="180" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">task + context</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="320" y="440" width="200" height="140" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="420" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">LLM Decides</text>
+  <text x="420" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--warn-text)">tool + arguments</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="560" y="440" width="200" height="140" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="660" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Execute Tool</text>
+  <text x="660" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-text)">your code runs</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect width="65.1764" height="580" fill="var(--surface)" rx="6" x="607.4118" y="40"/>
-  <text x="640" y="95.1" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Why LLMs Need Tools</text>
-  <rect x="609.0412" y="141.5" width="28.5147" height="203" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="623.2985" y="185" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Without Tools</text>
-  <text x="610.6706" y="225.6" font-size="10" fill="var(--text)">▶ Generates text only</text>
-  <text x="610.6706" y="257.5" font-size="10" fill="var(--text)">▶ Cannot read files or run code</text>
-  <text x="610.6706" y="289.4" font-size="10" fill="var(--text)">▶ No access to live data</text>
-  <text x="610.6706" y="321.3" font-size="10" fill="var(--text)">▶ Stateless, no external actions</text>
-  <rect x="642.4441" y="141.5" width="28.5147" height="203" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="656.7015" y="185" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">With Tools</text>
-  <text x="644.0735" y="225.6" font-size="10" fill="var(--text)">▶ Reads and edits files</text>
-  <text x="644.0735" y="257.5" font-size="10" fill="var(--text)">▶ Executes shell commands</text>
-  <text x="644.0735" y="289.4" font-size="10" fill="var(--text)">▶ Queries databases and APIs</text>
-  <text x="644.0735" y="321.3" font-size="10" fill="var(--text)">▶ Acts autonomously on the world</text>
-  <text x="640" y="254.6" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text)">→</text>
-  <rect x="609.0412" y="402.5" width="61.9176" height="188.5" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="443.1" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Tool-Use Round-Trip</text>
-  <rect x="610.6706" y="467.75" width="10.5912" height="94.25" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="615.9662" y="506.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">User Prompt</text>
-  <text x="615.9662" y="535.9" text-anchor="middle" font-size="10" fill="var(--text-muted)">task description</text>
-  <text x="615.9662" y="559.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ context</text>
-  <line x1="621.2617" y1="514.15" x2="624.1133" y2="514.15" stroke="var(--text)" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <rect x="624.1133" y="467.75" width="10.5912" height="94.25" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="629.4088" y="506.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">LLM Decides</text>
-  <text x="629.4088" y="535.9" text-anchor="middle" font-size="10" fill="var(--text-muted)">which tool</text>
-  <text x="629.4088" y="559.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">+ arguments</text>
-  <line x1="634.7044" y1="514.15" x2="637.5558" y2="514.15" stroke="var(--text)" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <rect x="637.5558" y="467.75" width="10.5912" height="94.25" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="642.8514" y="506.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Execute Tool</text>
-  <text x="642.8514" y="535.9" text-anchor="middle" font-size="10" fill="var(--text-muted)">your code runs</text>
-  <text x="642.8514" y="559.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">the function</text>
-  <line x1="648.147" y1="514.15" x2="650.9985" y2="514.15" stroke="var(--text)" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <rect x="650.9985" y="467.75" width="10.5912" height="94.25" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="656.2941" y="506.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger-accent)">Return Result</text>
-  <text x="656.2941" y="535.9" text-anchor="middle" font-size="10" fill="var(--text-muted)">structured data</text>
-  <text x="656.2941" y="559.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">back to LLM</text>
-  <line x1="661.5897" y1="514.15" x2="664.4411" y2="514.15" stroke="var(--text)" stroke-width="0.1798" marker-end="url(#arrow)" />
-  <rect x="664.4411" y="467.75" width="5.7029" height="94.25" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="667.2926" y="506.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-accent)">Reason</text>
-  <text x="667.2926" y="535.9" text-anchor="middle" font-size="10" fill="var(--text-muted)">next</text>
-  <text x="667.2926" y="559.1" text-anchor="middle" font-size="10" fill="var(--text-muted)">step</text>
+  <rect x="800" y="440" width="200" height="140" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="900" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Return Result</text>
+  <text x="900" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-text)">structured data</text>
+
+  <rect x="1040" y="440" width="160" height="140" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1120" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Reason</text>
+  <text x="1120" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--info-text)">next step</text>
 </svg>
