@@ -30,10 +30,10 @@
       }
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#333333"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text)"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
     </marker>
   </defs>
 
@@ -45,7 +45,7 @@
   <text x="150" y="325" text-anchor="middle" font-size="14" fill="var(--primary-text)">API caller</text>
   <text x="150" y="350" text-anchor="middle" font-size="14" fill="var(--primary-text)">agent / user</text>
 
-  <line x1="230" y1="310" x2="265" y2="310" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="230" y1="310" x2="265" y2="310" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="270" y="240" width="170" height="140" rx="8" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="355" y="285" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--warn-text)">API Gateway</text>
@@ -53,7 +53,7 @@
   <text x="355" y="338" text-anchor="middle" font-size="13" fill="var(--warn-text)">validation</text>
   <text x="355" y="361" text-anchor="middle" font-size="13" fill="var(--warn-text)">routing</text>
 
-  <line x1="440" y1="310" x2="475" y2="310" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="440" y1="310" x2="475" y2="310" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="480" y="240" width="170" height="140" rx="8" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="565" y="285" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--ok-text)">LLM</text>
@@ -61,7 +61,7 @@
   <text x="565" y="338" text-anchor="middle" font-size="13" fill="var(--ok-text)">reasoning</text>
   <text x="565" y="361" text-anchor="middle" font-size="13" fill="var(--ok-text)">tool selection</text>
 
-  <line x1="650" y1="310" x2="685" y2="310" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="310" x2="685" y2="310" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="690" y="240" width="170" height="140" rx="8" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="775" y="285" text-anchor="middle" font-size="18" font-weight="bold" fill="var(--danger-text)">Tools</text>
@@ -84,10 +84,10 @@
   <text x="1040" y="480" text-anchor="middle" font-size="13" fill="var(--warn-text)">audit trail</text>
   <text x="1040" y="503" text-anchor="middle" font-size="13" fill="var(--warn-text)">every invocation</text>
 
-  <line x1="775" y1="240" x2="900" y2="155" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <line x1="860" y1="310" x2="900" y2="310" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
-  <line x1="775" y1="380" x2="900" y2="465" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="775" y1="240" x2="900" y2="155" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="860" y1="310" x2="900" y2="310" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="775" y1="380" x2="900" y2="465" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
 
-  <path d="M 775 380 Q 775 570 565 570 Q 480 570 480 380" fill="none" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-ok)"/>
+  <path d="M 775 380 Q 775 570 565 570 Q 480 570 480 380" fill="none" stroke="var(--ok-border)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-ok)"/>
   <text x="625" y="605" text-anchor="middle" font-size="15" font-weight="bold" fill="var(--ok-accent)">tool results flow back to LLM</text>
 </svg>

@@ -26,10 +26,10 @@
       }
     </style>
     <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#333333"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text)"/>
     </marker>
     <marker id="arrw" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
     </marker>
   </defs>
 
@@ -52,7 +52,7 @@
   <text x="225" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="var(--danger-text)">shared deploy</text>
 
   <!-- Arrow to Phase 2 -->
-  <line x1="375" y1="300" x2="430" y2="300" stroke="#333" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="375" y1="300" x2="430" y2="300" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arr)"/>
 
   <!-- Phase 2: Shrinking monolith + proxy + new service -->
   <rect x="435" y="140" width="130" height="320" rx="8" fill="var(--danger-fill)" fill-opacity="0.5" stroke="var(--danger-border)" stroke-width="2"/>
@@ -74,11 +74,11 @@
   <text x="780" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">own deploy</text>
   <text x="780" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">own DB</text>
 
-  <line x1="565" y1="300" x2="575" y2="300" stroke="#e65100" stroke-width="2"/>
-  <line x1="705" y1="260" x2="715" y2="260" stroke="#e65100" stroke-width="2" marker-end="url(#arrw)"/>
+  <line x1="565" y1="300" x2="575" y2="300" stroke="var(--warn-border)" stroke-width="2"/>
+  <line x1="705" y1="260" x2="715" y2="260" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrw)"/>
 
   <!-- Arrow to Phase 3 -->
-  <line x1="855" y1="300" x2="910" y2="300" stroke="#333" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="855" y1="300" x2="910" y2="300" stroke="var(--text)" stroke-width="2.5" marker-end="url(#arr)"/>
 
   <!-- Phase 3: Independent services -->
   <rect x="915" y="140" width="280" height="95" rx="8" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>

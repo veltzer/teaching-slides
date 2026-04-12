@@ -22,7 +22,7 @@
       }
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
     </marker>
   </defs>
 
@@ -50,11 +50,11 @@
   <text x="335" y="327.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--ok-text)">default for pair RDDs after shuffle</text>
   <text x="335" y="358.738739" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">partition = (key.hashCode mod numPartitions)</text>
 
-  <rect x="70" y="384.864865" width="240" height="62.702703" rx="4.089098" fill="#ffffff" stroke="var(--ok-border)"/>
+  <rect x="70" y="384.864865" width="240" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--ok-border)"/>
   <text x="190" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">keys spread evenly</text>
   <text x="190" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">good for groupByKey, join</text>
 
-  <rect x="330" y="384.864865" width="270" height="62.702703" rx="4.089098" fill="#ffffff" stroke="var(--ok-border)"/>
+  <rect x="330" y="384.864865" width="270" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--ok-border)"/>
   <text x="465" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">skew if keys cluster</text>
   <text x="465" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">"hot key" → one straggler task</text>
 
@@ -68,11 +68,11 @@
   <text x="945" y="327.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">used by sortByKey, orderBy</text>
   <text x="945" y="358.738739" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--info-text)">samples keys, picks split points for roughly equal ranges</text>
 
-  <rect x="680" y="384.864865" width="240" height="62.702703" rx="4.089098" fill="#ffffff" stroke="var(--info-border)"/>
+  <rect x="680" y="384.864865" width="240" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--info-border)"/>
   <text x="800" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">p0: keys &lt; a</text>
   <text x="800" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">p1: a..b, p2: b..c, ...</text>
 
-  <rect x="940" y="384.864865" width="270" height="62.702703" rx="4.089098" fill="#ffffff" stroke="var(--info-border)"/>
+  <rect x="940" y="384.864865" width="270" height="62.702703" rx="4.089098" fill="var(--bg)" stroke="var(--info-border)"/>
   <text x="1075" y="410.990991" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text)">preserves sort order</text>
   <text x="1075" y="431.891892" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">reservoir sampling at setup</text>
 

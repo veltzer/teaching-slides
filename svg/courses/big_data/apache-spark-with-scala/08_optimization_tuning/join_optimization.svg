@@ -26,25 +26,25 @@
       }
     </style>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--warn-border)"/>
     </marker>
   </defs>
 
   <rect x="40" y="40" width="590" height="437.54386" rx="6.052403" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="335" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--ok-text)">Broadcast Hash Join</text>
 
-  <rect x="70" y="95.964912" width="150" height="55.964912" rx="4.034935" fill="white" stroke="var(--ok-border)"/>
+  <rect x="70" y="95.964912" width="150" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
   <text x="145" y="121.403509" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--text)">Driver</text>
   <text x="145" y="139.719298" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.096072" fill="var(--text-muted)">small table</text>
 
-  <rect x="260" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="white" stroke="var(--ok-border)"/>
+  <rect x="260" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
   <text x="315" y="126.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Executor 1</text>
-  <rect x="385" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="white" stroke="var(--ok-border)"/>
+  <rect x="385" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
   <text x="440" y="126.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Executor 2</text>
-  <rect x="510" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="white" stroke="var(--ok-border)"/>
+  <rect x="510" y="95.964912" width="110" height="55.964912" rx="4.034935" fill="var(--bg)" stroke="var(--ok-border)"/>
   <text x="565" y="126.491228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Executor 3</text>
 
   <line x1="220" y1="123.438596" x2="258" y2="123.438596" stroke="var(--ok-border)" stroke-width="2" marker-end="url(#arrow-ok)"/>
@@ -68,13 +68,13 @@
   <rect x="650" y="40" width="590" height="437.54386" rx="6.052403" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="72.561404" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.157208" font-weight="bold" fill="var(--warn-text)">Shuffle Sort-Merge Join</text>
 
-  <rect x="680" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="white" stroke="var(--warn-border)"/>
+  <rect x="680" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
   <text x="735" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition A1</text>
-  <rect x="800" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="white" stroke="var(--warn-border)"/>
+  <rect x="800" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
   <text x="855" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition A2</text>
-  <rect x="920" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="white" stroke="var(--warn-border)"/>
+  <rect x="920" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
   <text x="975" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition B1</text>
-  <rect x="1040" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="white" stroke="var(--warn-border)"/>
+  <rect x="1040" y="95.964912" width="110" height="45.789474" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)"/>
   <text x="1095" y="123.438596" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.104805" fill="var(--text)">Partition B2</text>
 
   <line x1="735" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
@@ -82,7 +82,7 @@
   <line x1="975" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
   <line x1="1095" y1="141.754386" x2="855" y2="177.368421" stroke="var(--warn-border)" stroke-width="1.5" marker-end="url(#arrow-warn)"/>
 
-  <rect x="800" y="182.45614" width="290" height="40.701754" rx="4.034935" fill="white" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="800" y="182.45614" width="290" height="40.701754" rx="4.034935" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="945" y="207.894737" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" font-weight="bold" fill="var(--text)">Shuffle: hash(key) -> partition</text>
 
   <text x="945" y="253.684211" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.113539" fill="var(--warn-text)">Both sides re-partitioned on join key</text>

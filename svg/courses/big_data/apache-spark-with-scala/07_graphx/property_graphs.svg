@@ -21,7 +21,7 @@
       }
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
     </marker>
   </defs>
 
@@ -40,11 +40,11 @@
     <text x="500" y="288.571429" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">3 : Carol</text>
     <text x="500" y="307.214286" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)">age=41</text>
 
-    <line x1="242" y1="202.607143" x2="458" y2="164.285714" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="242" y1="202.607143" x2="458" y2="164.285714" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
     <text x="340" y="174.642857" text-anchor="middle" font-size="11.194705" fill="var(--warn-border)" font-weight="bold">follows since=2020</text>
-    <line x1="242" y1="223.321429" x2="458" y2="288.571429" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="242" y1="223.321429" x2="458" y2="288.571429" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
     <text x="340" y="278.214286" text-anchor="middle" font-size="11.194705" fill="var(--warn-border)" font-weight="bold">likes weight=0.8</text>
-    <line x1="500" y1="202.607143" x2="500" y2="250.25" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="500" y1="202.607143" x2="500" y2="250.25" stroke="var(--warn-border)" stroke-width="2" marker-end="url(#arrow)"/>
     <text x="538" y="229.535714" font-size="11.194705" fill="var(--warn-border)" font-weight="bold">mgr_of</text>
   </g>
 
@@ -66,7 +66,7 @@
   <rect x="40" y="366.25" width="1200" height="253.75" rx="8.141604" fill="var(--surface)" stroke="var(--border)"/>
   <text x="640" y="397.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--text)">Construction and Views</text>
 
-  <rect x="70" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <rect x="70" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
   <text x="255" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Build</text>
   <text x="255" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph(vertices, edges)</text>
   <text x="255" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph.fromEdges(edges, default)</text>
@@ -74,7 +74,7 @@
   <text x="255" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">VD and ED stored separately,</text>
   <text x="255" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">joined on demand</text>
 
-  <rect x="460" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <rect x="460" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
   <text x="645" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Transform</text>
   <text x="645" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">mapVertices / mapEdges / mapTriplets</text>
   <text x="645" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">subgraph(epred, vpred)</text>
@@ -82,7 +82,7 @@
   <text x="645" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">outerJoinVertices merges external tables</text>
   <text x="645" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">into VD without rebuild</text>
 
-  <rect x="850" y="423.214286" width="360" height="176.071429" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <rect x="850" y="423.214286" width="360" height="176.071429" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
   <text x="1030" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Query</text>
   <text x="1030" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">numVertices, numEdges</text>
   <text x="1030" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">inDegrees, outDegrees, degrees</text>

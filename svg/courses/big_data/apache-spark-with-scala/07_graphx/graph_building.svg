@@ -30,12 +30,12 @@
   <text x="235" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">when you have typed attrs</text>
 
   <rect x="60" y="163.518519" width="350" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
-  <text x="75" y="190.37037" font-family="monospace" font-size="12.436505" fill="#80d8ff">val v = sc.parallelize(Seq(</text>
-  <text x="75" y="211.851852" font-family="monospace" font-size="12.436505" fill="#fff">  (1L, ("Alice", 28)),</text>
-  <text x="75" y="233.333333" font-family="monospace" font-size="12.436505" fill="#fff">  (2L, ("Bob", 27))))</text>
-  <text x="75" y="256.962963" font-family="monospace" font-size="12.436505" fill="#80d8ff">val e = sc.parallelize(Seq(</text>
-  <text x="75" y="278.444444" font-family="monospace" font-size="12.436505" fill="#fff">  Edge(1L, 2L, "friend")))</text>
-  <text x="75" y="297.777778" font-family="monospace" font-size="12.436505" fill="#80ff80">Graph(v, e)</text>
+  <text x="75" y="190.37037" font-family="monospace" font-size="12.436505" fill="var(--primary-fill)">val v = sc.parallelize(Seq(</text>
+  <text x="75" y="211.851852" font-family="monospace" font-size="12.436505" fill="var(--bg)">  (1L, ("Alice", 28)),</text>
+  <text x="75" y="233.333333" font-family="monospace" font-size="12.436505" fill="var(--bg)">  (2L, ("Bob", 27))))</text>
+  <text x="75" y="256.962963" font-family="monospace" font-size="12.436505" fill="var(--primary-fill)">val e = sc.parallelize(Seq(</text>
+  <text x="75" y="278.444444" font-family="monospace" font-size="12.436505" fill="var(--bg)">  Edge(1L, 2L, "friend")))</text>
+  <text x="75" y="297.777778" font-family="monospace" font-size="12.436505" fill="var(--ok-fill)">Graph(v, e)</text>
 
   <text x="235" y="346.111111" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--primary-border)">inputs</text>
   <text x="235" y="378.333333" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[(VertexId, VD)]</text>
@@ -53,11 +53,11 @@
   <text x="645" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">edges only, default vtx attr</text>
 
   <rect x="470" y="163.518519" width="350" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
-  <text x="485" y="190.37037" font-family="monospace" font-size="12.436505" fill="#80d8ff">val e = sc.parallelize(Seq(</text>
-  <text x="485" y="211.851852" font-family="monospace" font-size="12.436505" fill="#fff">  Edge(1L, 2L, 0.5),</text>
-  <text x="485" y="233.333333" font-family="monospace" font-size="12.436505" fill="#fff">  Edge(2L, 3L, 0.8)))</text>
-  <text x="485" y="270.925926" font-family="monospace" font-size="12.436505" fill="#80ff80">Graph.fromEdges(e,</text>
-  <text x="485" y="292.407407" font-family="monospace" font-size="12.436505" fill="#80ff80">  defaultValue = 1)</text>
+  <text x="485" y="190.37037" font-family="monospace" font-size="12.436505" fill="var(--primary-fill)">val e = sc.parallelize(Seq(</text>
+  <text x="485" y="211.851852" font-family="monospace" font-size="12.436505" fill="var(--bg)">  Edge(1L, 2L, 0.5),</text>
+  <text x="485" y="233.333333" font-family="monospace" font-size="12.436505" fill="var(--bg)">  Edge(2L, 3L, 0.8)))</text>
+  <text x="485" y="270.925926" font-family="monospace" font-size="12.436505" fill="var(--ok-fill)">Graph.fromEdges(e,</text>
+  <text x="485" y="292.407407" font-family="monospace" font-size="12.436505" fill="var(--ok-fill)">  defaultValue = 1)</text>
 
   <text x="645" y="346.111111" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--ok-border)">inputs</text>
   <text x="645" y="378.333333" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[Edge[ED]]</text>
@@ -75,12 +75,12 @@
   <text x="1050" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">src/dst pairs, no attrs</text>
 
   <rect x="880" y="163.518519" width="340" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
-  <text x="895" y="190.37037" font-family="monospace" font-size="12.436505" fill="#80d8ff">val pairs =</text>
-  <text x="895" y="211.851852" font-family="monospace" font-size="12.436505" fill="#fff">  sc.parallelize(Seq(</text>
-  <text x="895" y="233.333333" font-family="monospace" font-size="12.436505" fill="#fff">    (1L, 2L),</text>
-  <text x="895" y="254.814815" font-family="monospace" font-size="12.436505" fill="#fff">    (2L, 3L)))</text>
-  <text x="895" y="287.037037" font-family="monospace" font-size="12.436505" fill="#80ff80">Graph.fromEdgeTuples(</text>
-  <text x="895" y="303.148148" font-family="monospace" font-size="12.436505" fill="#80ff80">  pairs, defaultValue=1)</text>
+  <text x="895" y="190.37037" font-family="monospace" font-size="12.436505" fill="var(--primary-fill)">val pairs =</text>
+  <text x="895" y="211.851852" font-family="monospace" font-size="12.436505" fill="var(--bg)">  sc.parallelize(Seq(</text>
+  <text x="895" y="233.333333" font-family="monospace" font-size="12.436505" fill="var(--bg)">    (1L, 2L),</text>
+  <text x="895" y="254.814815" font-family="monospace" font-size="12.436505" fill="var(--bg)">    (2L, 3L)))</text>
+  <text x="895" y="287.037037" font-family="monospace" font-size="12.436505" fill="var(--ok-fill)">Graph.fromEdgeTuples(</text>
+  <text x="895" y="303.148148" font-family="monospace" font-size="12.436505" fill="var(--ok-fill)">  pairs, defaultValue=1)</text>
 
   <text x="1050" y="346.111111" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--warn-border)">inputs</text>
   <text x="1050" y="378.333333" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[(VertexId, VertexId)]</text>

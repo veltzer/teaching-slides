@@ -34,10 +34,10 @@
       }
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--ok-border)"/>
     </marker>
   </defs>
 
@@ -50,7 +50,7 @@
   <text x="230" y="300" text-anchor="middle" font-size="16" fill="var(--ok-text)">fetches logs</text>
   <text x="230" y="340" text-anchor="middle" font-size="16" fill="var(--ok-text)">needs LLM reasoning</text>
 
-  <line x1="370" y1="260" x2="490" y2="260" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="370" y1="260" x2="490" y2="260" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="430" y="245" text-anchor="middle" font-size="14" fill="var(--text-muted)">sampling/createMessage</text>
 
   <rect x="500" y="160" width="280" height="220" rx="8" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
@@ -59,7 +59,7 @@
   <text x="640" y="300" text-anchor="middle" font-size="16" fill="var(--primary-text)">controls model choice</text>
   <text x="640" y="340" text-anchor="middle" font-size="16" fill="var(--primary-text)">token limits</text>
 
-  <line x1="780" y1="260" x2="900" y2="260" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="780" y1="260" x2="900" y2="260" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="840" y="245" text-anchor="middle" font-size="14" fill="var(--text-muted)">API call</text>
 
   <rect x="910" y="160" width="280" height="220" rx="8" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
@@ -68,7 +68,7 @@
   <text x="1050" y="300" text-anchor="middle" font-size="16" fill="var(--warn-text)">reasoning</text>
   <text x="1050" y="340" text-anchor="middle" font-size="16" fill="var(--warn-text)">completion</text>
 
-  <path d="M 1050 380 Q 1050 450 640 450 Q 230 450 230 380" fill="none" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-ok)"/>
+  <path d="M 1050 380 Q 1050 450 640 450 Q 230 450 230 380" fill="none" stroke="var(--ok-border)" stroke-width="2.5" marker-end="url(#arrow-ok)"/>
   <text x="640" y="440" text-anchor="middle" font-size="16" font-weight="bold" fill="var(--ok-accent)">completion returned to server</text>
 
   <rect x="340" y="490" width="600" height="110" rx="8" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>

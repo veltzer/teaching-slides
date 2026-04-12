@@ -21,7 +21,7 @@
       }
     </style>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="var(--text-muted)"/>
     </marker>
   </defs>
 
@@ -61,29 +61,29 @@
   <text x="1090" y="283.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">no races, deterministic</text>
   <text x="1090" y="309.285714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">slowest worker = step latency</text>
 
-  <line x1="320" y1="236.785714" x2="340" y2="236.785714" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="620" y1="236.785714" x2="640" y2="236.785714" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="920" y1="236.785714" x2="940" y2="236.785714" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="320" y1="236.785714" x2="340" y2="236.785714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="236.785714" x2="640" y2="236.785714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="920" y1="236.785714" x2="940" y2="236.785714" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="40" y="355.892857" width="1200" height="264.107143" rx="8.141604" fill="var(--surface)" stroke="var(--border)"/>
   <text x="640" y="386.964286" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--text)">Convergence</text>
   <text x="640" y="415.964286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" fill="var(--text-muted)">Loop stops when (a) no messages are sent, or (b) maxIterations reached</text>
 
-  <rect x="70" y="443.928571" width="350" height="155.357143" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <rect x="70" y="443.928571" width="350" height="155.357143" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
   <text x="245" y="472.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Example: Shortest Path</text>
   <text x="245" y="498.821429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">vprog: math.min(dist, inMsg)</text>
   <text x="245" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">sendMsg: if newDist &lt; dst.dist emit</text>
   <text x="245" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">mergeMsg: math.min</text>
   <text x="245" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">halts in ≤ diameter steps</text>
 
-  <rect x="440" y="443.928571" width="350" height="155.357143" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <rect x="440" y="443.928571" width="350" height="155.357143" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
   <text x="615" y="472.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Active vs Inactive</text>
   <text x="615" y="498.821429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">a vertex is active if it got a message</text>
   <text x="615" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">inactive vertices skip vprog</text>
   <text x="615" y="544.392857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">active set shrinks each superstep</text>
   <text x="615" y="575.464286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">activity tracked by bitmask</text>
 
-  <rect x="810" y="443.928571" width="400" height="155.357143" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <rect x="810" y="443.928571" width="400" height="155.357143" rx="6.106203" fill="var(--bg)" stroke="var(--border)"/>
   <text x="1010" y="472.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">Why BSP?</text>
   <text x="1010" y="498.821429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">reasoning simpler than async actors</text>
   <text x="1010" y="521.607143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">fits Spark's stage model directly</text>
