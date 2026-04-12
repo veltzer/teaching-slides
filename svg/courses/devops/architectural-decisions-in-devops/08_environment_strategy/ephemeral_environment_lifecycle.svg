@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,86 +33,71 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M 0 0 L 0 27 L 16.4571 13.5 z" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="221.5" width="194.1177" height="217" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="5.998" />
-  <text x="137.0588" y="308.3" text-anchor="middle" font-size="19.4055" font-weight="bold">PR Created</text>
-  <text x="137.0588" y="373.4" text-anchor="middle" font-size="17.6412" fill="var(--text-muted)">Trigger</text>
-  <line x1="234.1177" y1="330" x2="295.8824" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="304.7059" y="221.5" width="194.1177" height="217" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="5.998" />
-  <text x="401.7648" y="308.3" text-anchor="middle" font-size="19.4055" font-weight="bold">Provision</text>
-  <text x="401.7648" y="373.4" text-anchor="middle" font-size="17.6412" fill="var(--text-muted)">Infra + App</text>
-  <line x1="498.8235" y1="330" x2="560.5883" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="569.4117" y="221.5" width="194.1177" height="217" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="5.998" />
-  <text x="666.4706" y="308.3" text-anchor="middle" font-size="19.4055" font-weight="bold">Active</text>
-  <text x="666.4706" y="373.4" text-anchor="middle" font-size="17.6412" fill="var(--text-muted)">Test + Review</text>
-  <line x1="763.5294" y1="330" x2="825.2941" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="834.1177" y="221.5" width="194.1177" height="217" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="5.998" />
-  <text x="931.1765" y="308.3" text-anchor="middle" font-size="19.4055" font-weight="bold">PR Merged</text>
-  <text x="931.1765" y="373.4" text-anchor="middle" font-size="17.6412" fill="var(--text-muted)">Trigger</text>
-  <line x1="1028.2353" y1="330" x2="1090" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="1098.8235" y="221.5" width="141.1765" height="217" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="5.998" />
-  <text x="1169.4117" y="308.3" text-anchor="middle" font-size="19.4055" font-weight="bold">Destroy</text>
-  <text x="1169.4117" y="373.4" text-anchor="middle" font-size="17.6412" fill="var(--text-muted)">Cleanup</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--text)">Ephemeral Environment Lifecycle</text>
+
+  <rect x="40" y="82.962963" width="225" height="247.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="152" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">1. PR Opened</text>
+  <text x="152" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Push branch</text>
+  <text x="152" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">CI trigger fires</text>
+  <text x="152" y="249.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">Label or command</text>
+  <text x="152" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">requests a preview</text>
+
+  <rect x="285" y="82.962963" width="225" height="247.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="397" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--warn-text)">2. Provision</text>
+  <text x="397" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Terraform or Helm</text>
+  <text x="397" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Namespace per PR</text>
+  <text x="397" y="249.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Seed test data</text>
+  <text x="397" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--warn-text)">Unique DNS name</text>
+
+  <rect x="530" y="82.962963" width="225" height="247.037037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="642" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--info-text)">3. Validate</text>
+  <text x="642" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Run integration tests</text>
+  <text x="642" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Reviewers click link</text>
+  <text x="642" y="249.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">QA and product demo</text>
+  <text x="642" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--info-text)">Record status on PR</text>
+
+  <rect x="775" y="82.962963" width="225" height="247.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="887" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">4. Merge</text>
+  <text x="887" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Changes approved</text>
+  <text x="887" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Branch merged to main</text>
+  <text x="887" y="249.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">Pipeline promotes</text>
+  <text x="887" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">artifact to staging</text>
+
+  <rect x="1020" y="82.962963" width="220" height="247.037037" rx="6.218253" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1130" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.727509" font-weight="bold" fill="var(--danger-text)">5. Destroy</text>
+  <text x="1130" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Close PR triggers</text>
+  <text x="1130" y="217.222222" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">teardown job</text>
+  <text x="1130" y="249.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">Delete namespace,</text>
+  <text x="1130" y="281.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--danger-text)">DB, and DNS record</text>
+
+  <line x1="265" y1="206.481481" x2="285" y2="206.481481" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="510" y1="206.481481" x2="530" y2="206.481481" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="755" y1="206.481481" x2="775" y2="206.481481" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1000" y1="206.481481" x2="1020" y2="206.481481" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="415.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--text)">Why Ephemeral Wins</text>
+
+  <rect x="80" y="442.777778" width="360" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="260" y="485.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--ok-accent)">Isolated</text>
+  <text x="260" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">Each PR gets its own sandbox</text>
+  <text x="260" y="555.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">Reviewers never step on</text>
+  <text x="260" y="582.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">each other's changes</text>
+
+  <rect x="460" y="442.777778" width="360" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="485.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--primary-accent)">Cheap</text>
+  <text x="640" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">Only alive while needed</text>
+  <text x="640" y="555.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">No long-lived staging</text>
+  <text x="640" y="582.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">drift or snowflake pets</text>
+
+  <rect x="840" y="442.777778" width="360" height="161.111111" rx="6.218253" fill="var(--bg)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1020" y="485.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" font-weight="bold" fill="var(--info-accent)">Confidence</text>
+  <text x="1020" y="523.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">Reviewers touch real systems,</text>
+  <text x="1020" y="555.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">not just code diffs,</text>
+  <text x="1020" y="582.407407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text)">before anything merges</text>
 </svg>

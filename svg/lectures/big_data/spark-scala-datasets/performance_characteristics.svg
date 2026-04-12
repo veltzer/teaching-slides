@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,78 +33,47 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,48 8.96,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="234.5" width="204.2553" height="191" rx="5.9923" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="142.1277" y="353.875" text-anchor="middle" fill="var(--text)" font-family="Arial" font-size="35.699">Input</text>
-  <rect x="371.9149" y="234.5" width="204.2553" height="191" rx="5.9923" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="474.0426" y="353.875" text-anchor="middle" fill="var(--text)" font-family="Arial" font-size="35.699">Encoder</text>
-  <rect x="703.8298" y="234.5" width="204.2553" height="191" rx="5.9923" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="805.9574" y="353.875" text-anchor="middle" fill="var(--text)" font-family="Arial" font-size="35.699">Processing</text>
-  <rect x="1035.7447" y="234.5" width="204.2553" height="191" rx="5.9923" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="1137.8723" y="353.875" text-anchor="middle" fill="var(--text)" font-family="Arial" font-size="35.699">Results</text>
-  <line x1="244.2553" y1="330" x2="371.9149" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead2)" />
-  <line x1="576.1702" y1="330" x2="703.8298" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead2)" />
-  <line x1="908.0851" y1="330" x2="1035.7447" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead2)" />
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Performance: RDD vs DataFrame vs Dataset</text>
+
+  <rect x="40" y="82.181818" width="390" height="316.363636" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="235" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">RDD</text>
+  <text x="235" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Java objects on JVM heap</text>
+  <text x="235" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">No Catalyst optimizer</text>
+  <text x="235" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">No Tungsten memory layout</text>
+  <text x="235" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Higher GC pressure</text>
+  <text x="235" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Slowest typical queries</text>
+  <text x="235" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Use: custom partitioning,</text>
+  <text x="235" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">unstructured data</text>
+  <text x="235" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Type-safe but slow</text>
+
+  <rect x="445" y="82.181818" width="390" height="316.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">DataFrame</text>
+  <text x="640" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Row-based, untyped</text>
+  <text x="640" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Full Catalyst optimization</text>
+  <text x="640" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Tungsten off-heap memory</text>
+  <text x="640" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Whole-stage codegen</text>
+  <text x="640" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Fastest in most cases</text>
+  <text x="640" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Use: SQL-style analytics,</text>
+  <text x="640" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">column operations</text>
+  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">No compile-time checks</text>
+
+  <rect x="850" y="82.181818" width="390" height="316.363636" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1045" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Dataset[T]</text>
+  <text x="1045" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Typed, case-class rows</text>
+  <text x="1045" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Catalyst on column ops</text>
+  <text x="1045" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Encoder serialization</text>
+  <text x="1045" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Lambda ops are opaque</text>
+  <text x="1045" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Slight overhead vs DF</text>
+  <text x="1045" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Use: Scala type safety,</text>
+  <text x="1045" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">domain objects</text>
+  <text x="1045" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Best balance</text>
+
+  <rect x="40" y="419.636364" width="1200" height="200.363636" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Guidelines</text>
+  <text x="640" y="493.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Prefer DataFrame or typed Dataset column expressions over RDD transformations</text>
+  <text x="640" y="525.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Lambdas on Dataset (map, filter with closure) break whole-stage codegen</text>
+  <text x="640" y="556.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Encoder cost matters for tight Dataset pipelines; use DF when types not needed</text>
+  <text x="640" y="593.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Measure with Spark UI — theory rarely matches reality at scale</text>
 </svg>

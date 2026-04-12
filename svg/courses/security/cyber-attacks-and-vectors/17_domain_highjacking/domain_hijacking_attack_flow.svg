@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,93 +33,60 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" font-size="22.3497" font-weight="bold" fill="var(--text)">Domain Hijacking Attack Flow</text>
-  <rect x="418" y="67.9519" width="444" height="62.8916" rx="5.9968" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="449.7144" y="95.9036" font-size="15.3654" font-weight="bold" fill="var(--primary-accent)">1.</text>
-  <text x="481.4285" y="95.9036" font-size="16.7623" font-weight="bold" fill="var(--text)">Reconnaissance</text>
-  <text x="481.4285" y="118.2651" font-size="13.9685" fill="var(--text-muted)">Identify target domain &amp; registrar</text>
-  <line x1="640" y1="130.8434" x2="640" y2="158.7952" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="418" y="165.7832" width="444" height="62.8916" rx="5.9968" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="449.7144" y="193.735" font-size="15.3654" font-weight="bold" fill="var(--warn-accent)">2.</text>
-  <text x="481.4285" y="193.735" font-size="16.7623" font-weight="bold" fill="var(--text)">Credential Theft</text>
-  <text x="481.4285" y="216.0964" font-size="13.9685" fill="var(--text-muted)">Phishing / social engineering registrar</text>
-  <line x1="640" y1="228.6748" x2="640" y2="256.6265" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="418" y="263.6145" width="444" height="62.8916" rx="5.9968" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="449.7144" y="291.5663" font-size="15.3654" font-weight="bold" fill="var(--danger-accent)">3.</text>
-  <text x="481.4285" y="291.5663" font-size="16.7623" font-weight="bold" fill="var(--text)">Account Access</text>
-  <text x="481.4285" y="313.9277" font-size="13.9685" fill="var(--text-muted)">Login to registrar account</text>
-  <line x1="640" y1="326.506" x2="640" y2="354.4578" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="418" y="361.4457" width="444" height="62.8916" rx="5.9968" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="449.7144" y="389.3976" font-size="15.3654" font-weight="bold" fill="var(--danger-accent)">4.</text>
-  <text x="481.4285" y="389.3976" font-size="16.7623" font-weight="bold" fill="var(--text)">DNS Modification</text>
-  <text x="481.4285" y="411.759" font-size="13.9685" fill="var(--text-muted)">Change nameservers / DNS records</text>
-  <line x1="640" y1="424.3373" x2="640" y2="452.2891" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="418" y="459.2771" width="444" height="62.8916" rx="5.9968" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="449.7144" y="487.2289" font-size="15.3654" font-weight="bold" fill="var(--danger-accent)">5.</text>
-  <text x="481.4285" y="487.2289" font-size="16.7623" font-weight="bold" fill="var(--text)">Traffic Redirect</text>
-  <text x="481.4285" y="509.5904" font-size="13.9685" fill="var(--text-muted)">Users sent to attacker-controlled server</text>
-  <line x1="640" y1="522.1686" x2="640" y2="550.1205" stroke="var(--danger-border)" stroke-width="2" marker-end="url(#arrow)" />
-  <rect x="418" y="557.1084" width="444" height="62.8916" rx="5.9968" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="449.7144" y="585.0602" font-size="15.3654" font-weight="bold" fill="var(--danger-accent)">6.</text>
-  <text x="481.4285" y="585.0602" font-size="16.7623" font-weight="bold" fill="var(--text)">Data Harvesting</text>
-  <text x="481.4285" y="607.4216" font-size="13.9685" fill="var(--text-muted)">Capture credentials &amp; sensitive data</text>
+  </defs>
+
+  <rect x="40" y="40" width="270" height="168.727273" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="175" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--primary-text)">1. Recon</text>
+  <text x="175" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">WHOIS, DNS records</text>
+  <text x="175" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Registrar identified</text>
+  <text x="175" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Owner email harvested</text>
+
+  <rect x="340" y="40" width="270" height="168.727273" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="475" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--warn-text)">2. Account Takeover</text>
+  <text x="475" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Phish registrar login</text>
+  <text x="475" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Compromise owner email</text>
+  <text x="475" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Bypass or steal MFA</text>
+
+  <rect x="640" y="40" width="270" height="168.727273" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="775" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--danger-text)">3. DNS Change</text>
+  <text x="775" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Repoint NS or A records</text>
+  <text x="775" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Issue rogue TLS cert</text>
+  <text x="775" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Lock out the owner</text>
+
+  <rect x="940" y="40" width="300" height="168.727273" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1090" y="82.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--info-text)">4. Weaponise</text>
+  <text x="1090" y="119.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Phishing clone site</text>
+  <text x="1090" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Ransom, SEO abuse</text>
+  <text x="1090" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Email or payment fraud</text>
+
+  <line x1="310" y1="124.363636" x2="340" y2="124.363636" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="610" y1="124.363636" x2="640" y2="124.363636" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="910" y1="124.363636" x2="940" y2="124.363636" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="240.363636" width="590" height="379.636364" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="335" y="282.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--danger-text)">Impact</text>
+  <text x="335" y="322.618182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Brand trust destroyed</text>
+  <text x="335" y="354.254545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Customer credentials stolen</text>
+  <text x="335" y="385.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Email flow hijacked, BEC risk</text>
+  <text x="335" y="417.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Revenue and SEO loss</text>
+  <text x="335" y="449.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Compliance and legal exposure</text>
+  <text x="335" y="488.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Recovery can take days of registrar</text>
+  <text x="335" y="512.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">support tickets while DNS propagates</text>
+  <text x="335" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Meanwhile attackers monetise</text>
+  <text x="335" y="575.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">every lingering minute of control</text>
+
+  <rect x="650" y="240.363636" width="590" height="379.636364" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="945" y="282.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Defences</text>
+  <text x="945" y="322.618182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Registrar and registry lock</text>
+  <text x="945" y="354.254545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Hardware MFA on registrar account</text>
+  <text x="945" y="385.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">DNSSEC to detect tampering</text>
+  <text x="945" y="417.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">CAA records limit CA issuance</text>
+  <text x="945" y="449.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Monitor WHOIS, DNS and CT logs</text>
+  <text x="945" y="488.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Keep registrar contact email on a</text>
+  <text x="945" y="512.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">separate protected domain</text>
+  <text x="945" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Pre-build an incident runbook</text>
+  <text x="945" y="575.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">with registrar support contacts</text>
 </svg>

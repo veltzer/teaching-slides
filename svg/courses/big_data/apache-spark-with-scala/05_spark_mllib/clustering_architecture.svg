@@ -1,117 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="229" width="240" height="67.3333" rx="5.9926" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="269.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8767">Clustering</text>
-  <rect x="359.9999" y="229" width="240" height="67.3333" rx="5.9926" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="269.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8767">B</text>
-  <rect x="680" y="229" width="240" height="67.3333" rx="5.9926" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="269.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8767">C</text>
-  <rect x="1000" y="229" width="240" height="67.3333" rx="5.9926" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="269.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8767">D</text>
-  <rect x="40" y="363.6667" width="240" height="67.3333" rx="5.9926" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="404.0667" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8767">E</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
-        --surface: #f5f5f5;
-        --border: #e0e0e0;
-        --text: #212121;
-        --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
-        --primary-fill: #2196f3;
-        --primary-border: #1565c0;
-        --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
-        --ok-fill: #4caf50;
-        --ok-border: #2e7d32;
-        --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
-        --warn-fill: #ff9800;
-        --warn-border: #e65100;
-        --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
-        --info-fill: #9c27b0;
-        --info-border: #6a1b9a;
-        --info-text: #ffffff;
-        --info-accent: #4a148c;
+        --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
+        --text: #212121; --text-muted: #555555; --text-faint: #888888;
+        --code-bg: #1a1a2e; --shadow: #00000022; --black: #000000;
+        --primary-fill: #2196f3; --primary-border: #1565c0; --primary-text: #ffffff; --primary-accent: #0d47a1;
+        --ok-fill: #4caf50; --ok-border: #2e7d32; --ok-text: #ffffff; --ok-accent: #1b5e20;
+        --warn-fill: #ff9800; --warn-border: #e65100; --warn-text: #ffffff; --warn-accent: #bf360c;
+        --danger-fill: #e74c3c; --danger-border: #c62828; --danger-text: #ffffff; --danger-accent: #b71c1c;
+        --info-fill: #9c27b0; --info-border: #6a1b9a; --info-text: #ffffff; --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="262.6667" x2="480" y2="262.6667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="262.6667" x2="800" y2="262.6667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="262.6667" x2="1120.0001" y2="262.6667" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="480" y1="262.6667" x2="159.9999" y2="397.3333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="262.6667" x2="159.9999" y2="397.3333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1120.0001" y1="262.6667" x2="159.9999" y2="397.3333" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <!-- palette: resources/palette_diagram.yaml -->
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.945762" font-weight="bold" fill="var(--text)">Clustering Architecture</text>
+
+  <rect x="40" y="82.962963" width="280" height="247.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--primary-text)">Features</text>
+  <text x="180" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--primary-text)">VectorAssembler</text>
+  <text x="180" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--primary-text)">StandardScaler</text>
+  <text x="180" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--primary-text)">Numeric only</text>
+
+  <rect x="360" y="82.962963" width="280" height="247.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="500" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--ok-text)">KMeans</text>
+  <text x="500" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Pick k</text>
+  <text x="500" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Lloyd iterations</text>
+  <text x="500" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--ok-text)">Fast baseline</text>
+
+  <rect x="680" y="82.962963" width="280" height="247.037037" rx="6.218253" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="820" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--warn-text)">Bisecting</text>
+  <text x="820" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">Hierarchical splits</text>
+  <text x="820" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">Stable shapes</text>
+  <text x="820" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--warn-text)">Slower</text>
+
+  <rect x="1000" y="82.962963" width="240" height="247.037037" rx="6.218253" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1120" y="136.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--info-text)">GMM</text>
+  <text x="1120" y="190.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">Soft clusters</text>
+  <text x="1120" y="233.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">Gaussian mix</text>
+  <text x="1120" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--info-text)">EM training</text>
+
+  <rect x="40" y="362.222222" width="1200" height="257.777778" rx="6.218253" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="415.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.80026" font-weight="bold" fill="var(--text)">Evaluation and Tuning</text>
+  <text x="640" y="469.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--text-muted)">Silhouette score measures cluster separation</text>
+  <text x="640" y="512.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--text-muted)">Elbow plot helps choose k</text>
+  <text x="640" y="555.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--text-muted)">Scale features before clustering</text>
+  <text x="640" y="598.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.582007" fill="var(--text-muted)">Re-seed runs to avoid local minima</text>
 </svg>

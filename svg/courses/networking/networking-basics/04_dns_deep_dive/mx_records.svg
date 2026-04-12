@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,73 +33,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="425" y="40" width="308.718" height="174.7945" rx="5.9975" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="579.359" y="147.2603" font-size="28.6788" fill="var(--text)" text-anchor="middle">Sending MTA</text>
-  <line x1="579.359" y1="214.7945" x2="579.359" y2="429.3151" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="612.4359" y="341.9178" font-size="26.4728" fill="var(--text-muted)">Query MX for example.com</text>
-  <rect x="425" y="437.2603" width="308.718" height="174.7945" rx="5.9975" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="579.359" y="544.5205" font-size="28.6788" fill="var(--text)" text-anchor="middle">DNS Server</text>
-  <line x1="733.718" y1="524.6575" x2="839.5641" y2="524.6575" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <text x="855" y="469.0411" font-size="28.6788" fill="var(--text)">Priority 10 → mail1.example.com  (try first)</text>
-  <text x="855" y="544.5205" font-size="28.6788" fill="var(--text)">Priority 20 → mail2.example.com  (fallback)</text>
-  <text x="855" y="620" font-size="28.6788" fill="var(--text)">Priority 30 → mail3.example.com  (last resort)</text>
+  </defs>
+
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">MX Records: Where Email for a Domain Goes</text>
+
+  <rect x="40" y="150" width="320" height="180" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">Sending MTA</text>
+  <text x="200" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">Needs to deliver mail</text>
+  <text x="200" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--primary-text)">to user@example.com</text>
+
+  <line x1="360" y1="240" x2="480" y2="240" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="420" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">MX query</text>
+
+  <rect x="480" y="150" width="320" height="180" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--info-text)">DNS Resolver</text>
+  <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Looks up MX records</text>
+  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">for example.com zone</text>
+
+  <line x1="800" y1="240" x2="920" y2="240" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="860" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">sorted list</text>
+
+  <rect x="920" y="150" width="320" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1080" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--ok-text)">Receiving MTA</text>
+  <text x="1080" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">Lowest priority picked</text>
+  <text x="1080" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">SMTP connection opens</text>
+
+  <rect x="40" y="360" width="1200" height="260" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">MX Record Priorities for example.com</text>
+
+  <rect x="80" y="440" width="360" height="150" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="260" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Priority 10</text>
+  <text x="260" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--ok-text)">mail1.example.com</text>
+  <text x="260" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">tried first</text>
+
+  <rect x="460" y="440" width="360" height="150" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Priority 20</text>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--warn-text)">mail2.example.com</text>
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">fallback</text>
+
+  <rect x="840" y="440" width="360" height="150" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1020" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Priority 30</text>
+  <text x="1020" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--danger-text)">mail3.example.com</text>
+  <text x="1020" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">last resort</text>
 </svg>

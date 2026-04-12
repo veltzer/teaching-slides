@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,82 +33,66 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr8" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,55.3846 5.4857,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="221.5" width="161.194" height="217" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0001" />
-  <text x="120.597" y="357.1249" text-anchor="middle" font-size="19.7019">Build</text>
-  <rect x="272.8358" y="221.5" width="161.194" height="217" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" rx="6.0001" />
-  <text x="353.4328" y="357.1249" text-anchor="middle" font-size="19.7019">Test</text>
-  <rect x="505.6717" y="221.5" width="197.015" height="217" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6.0001" />
-  <text x="604.1791" y="357.1249" text-anchor="middle" font-size="19.7019">Deploy Dev</text>
-  <rect x="774.3283" y="221.5" width="197.015" height="217" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" rx="6.0001" />
-  <text x="872.8358" y="319.15" text-anchor="middle" font-size="19.7019">Deploy Staging</text>
-  <text x="872.8358" y="395.0999" text-anchor="middle" font-size="17.9107" fill="var(--text-muted)">(approval gate)</text>
-  <rect x="1042.985" y="221.5" width="197.015" height="217" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" rx="6.0001" />
-  <text x="1141.4926" y="357.1249" text-anchor="middle" font-size="19.7019">Deploy Prod</text>
-  <line x1="201.1941" y1="330" x2="269.2538" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arr8)" />
-  <line x1="434.0298" y1="330" x2="502.0896" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arr8)" />
-  <line x1="702.6866" y1="330" x2="770.7463" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arr8)" />
-  <line x1="971.3433" y1="330" x2="1039.403" y2="330" stroke="var(--text)" stroke-width="2" marker-end="url(#arr8)" />
+
+  <rect x="40" y="40" width="1200" height="120" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Multi-Stage Deployment Pipeline</text>
+  <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Code progresses through gated stages, each adding confidence before production</text>
+  <text x="640" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Same artifact promoted; config and data differ per environment</text>
+
+  <rect x="40" y="190" width="220" height="200" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="150" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">1. Build</text>
+  <text x="150" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Compile source</text>
+  <text x="150" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Unit tests</text>
+  <text x="150" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Lint, SAST</text>
+  <text x="150" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Produce artifact</text>
+  <text x="150" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Fast feedback</text>
+
+  <rect x="280" y="190" width="220" height="200" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="390" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">2. Test / Dev</text>
+  <text x="390" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Integration tests</text>
+  <text x="390" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Contract tests</text>
+  <text x="390" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Ephemeral env</text>
+  <text x="390" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Synthetic data</text>
+  <text x="390" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">Auto-deploy</text>
+
+  <rect x="520" y="190" width="220" height="200" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="630" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">3. Staging</text>
+  <text x="630" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Prod-like infra</text>
+  <text x="630" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">E2E tests</text>
+  <text x="630" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Load / perf</text>
+  <text x="630" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Smoke tests</text>
+  <text x="630" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Manual gate</text>
+
+  <rect x="760" y="190" width="220" height="200" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="870" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">4. Canary</text>
+  <text x="870" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">1-5% traffic</text>
+  <text x="870" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Watch metrics</text>
+  <text x="870" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Error budget</text>
+  <text x="870" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Auto-rollback</text>
+  <text x="870" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">Real users</text>
+
+  <rect x="1000" y="190" width="240" height="200" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1120" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">5. Production</text>
+  <text x="1120" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Progressive rollout</text>
+  <text x="1120" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Blue/green swap</text>
+  <text x="1120" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">SLO monitoring</text>
+  <text x="1120" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">Full traffic</text>
+  <text x="1120" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-text)">One-click revert</text>
+
+  <line x1="260" y1="290" x2="280" y2="290" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="500" y1="290" x2="520" y2="290" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="740" y1="290" x2="760" y2="290" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="980" y1="290" x2="1000" y2="290" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="420" width="1200" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Key principles</text>
+  <text x="640" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Promote the same immutable artifact; never rebuild between stages</text>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Every stage is automated; gates are policy, not manual approvals where avoidable</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Failure at any stage halts promotion; rollback is cheaper than forward-fix</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Observability at each stage proves readiness for the next</text>
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Stage count varies by risk tolerance and org structure</text>
 </svg>

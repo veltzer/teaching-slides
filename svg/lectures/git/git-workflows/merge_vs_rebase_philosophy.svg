@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,73 +33,36 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Merge vs Rebase Philosophy</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="40" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="335" y="108.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Merge: Preserve History</text>
+  <text x="335" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Records when branches joined</text>
+  <text x="335" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Non-destructive — commits unchanged</text>
+  <text x="335" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Graph shows actual workflow</text>
+  <text x="335" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Safe on shared branches</text>
+  <text x="335" y="250.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Merge commits clutter log</text>
+  <text x="335" y="282.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">"Truth: this is how it happened"</text>
+  <text x="335" y="308.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Default for public/main branches</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="650" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="945" y="108.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Rebase: Clean History</text>
+  <text x="945" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Replays commits on new base</text>
+  <text x="945" y="171.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Rewrites SHAs — new commits</text>
+  <text x="945" y="198.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Linear, readable log</text>
+  <text x="945" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">bisect-friendly</text>
+  <text x="945" y="250.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">Dangerous on shared branches</text>
+  <text x="945" y="282.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">"Story: this is how it reads"</text>
+  <text x="945" y="308.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Default for your feature branch</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="280" y="216.5" font-size="33.6148" font-weight="bold">Merge</text>
-  <line x1="40" y1="281.3571" x2="520" y2="281.3571" stroke="var(--text)" stroke-width="2" />
-  <line x1="159.9999" y1="281.3571" x2="280" y2="443.5" stroke="var(--primary-border)" stroke-width="2" />
-  <line x1="280" y1="443.5" x2="400" y2="443.5" stroke="var(--primary-border)" stroke-width="2" />
-  <line x1="400" y1="443.5" x2="520" y2="281.3571" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1000" y="216.5" font-size="33.6148" font-weight="bold">Rebase</text>
-  <line x1="760" y1="281.3571" x2="1240" y2="281.3571" stroke="var(--text)" stroke-width="2" />
-  <circle cx="880" cy="281.3571" r="9.6042" fill="var(--primary-fill)" />
-  <circle cx="1000" cy="281.3571" r="9.6042" fill="var(--primary-fill)" />
-  <circle cx="1120.0001" cy="281.3571" r="9.6042" fill="var(--primary-fill)" />
+  <rect x="40" y="345.818182" width="1200" height="274.181818" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">The golden rule</text>
+  <text x="640" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Never rebase commits others have based work on — it invalidates their history</text>
+  <text x="640" y="451.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Rebase private branches to tidy up before pushing; merge to integrate with main</text>
+  <text x="640" y="482.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Interactive rebase (-i) squashes fixups, reorders, edits messages</text>
+  <text x="640" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Teams often pick one: GitHub Flow favors squash-merge; git-flow favors merge commits</text>
+  <text x="640" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Neither is "better" — trade fidelity of history for readability of history</text>
+  <text x="640" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Pick a policy per repo and enforce it in CI / branch protections</text>
 </svg>

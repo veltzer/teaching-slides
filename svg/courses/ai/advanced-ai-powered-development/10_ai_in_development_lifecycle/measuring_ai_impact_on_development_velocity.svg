@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,104 +33,48 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <rect x="40" y="40" width="1200" height="70" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="var(--text)">Measuring AI Impact on Development Velocity</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <rect x="40" y="140" width="1200" height="60" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="250" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Metric</text>
+  <text x="640" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Before AI</text>
+  <text x="900" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">After AI</text>
+  <text x="1120" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Delta</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="40" y="210" width="1200" height="55" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="250" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">PR cycle time (median)</text>
+  <text x="640" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">4.2 days</text>
+  <text x="900" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">1.8 days</text>
+  <text x="1120" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">-57%</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="40" y="275" width="1200" height="55" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="250" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">Review turnaround</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">18 hrs</text>
+  <text x="900" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">3 hrs</text>
+  <text x="1120" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">-83%</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <rect x="40" y="340" width="1200" height="55" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="250" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">Defect escape rate</text>
+  <text x="640" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">5.1%</text>
+  <text x="900" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">2.3%</text>
+  <text x="1120" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">-55%</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="40" y="405" width="1200" height="55" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="1"/>
+  <text x="250" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">Test coverage</text>
+  <text x="640" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">64%</text>
+  <text x="900" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">82%</text>
+  <text x="1120" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">+28%</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect width="382" height="580" fill="var(--surface)" rx="6.0012" x="449" y="40"/>
-  <text x="640.0001" y="90.75" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--primary-accent)">Measuring AI Impact on Development Velocity</text>
-  <rect x="458.55" y="119.75" width="362.9" height="55.1" rx="6.0012" fill="var(--border)" stroke="var(--text)" stroke-width="0.5267" />
-  <text x="532.5626" y="156" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--text)">Metric</text>
-  <text x="663.875" y="156" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--text)">Before AI</text>
-  <text x="725.95" y="156" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--text)">After AI</text>
-  <text x="792.8001" y="156" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--text)">Delta</text>
-  <rect x="458.55" y="174.85" width="362.9" height="58" rx="6.0012" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="532.5626" y="211.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">PR cycle time (median)</text>
-  <text x="663.875" y="211.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">4.2 days</text>
-  <text x="725.95" y="211.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">1.8 days</text>
-  <rect x="768.925" y="177.75" width="51.5701" height="52.2" rx="6.0012" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="794.71" y="211.1" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--danger-accent)">-57%</text>
-  <rect x="458.55" y="232.85" width="362.9" height="58" rx="6.0012" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="532.5626" y="269.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">Review turnaround</text>
-  <text x="663.875" y="269.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">18 hrs</text>
-  <text x="725.95" y="269.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">3 hrs</text>
-  <rect x="768.925" y="235.75" width="51.5701" height="52.2" rx="6.0012" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="794.71" y="269.1" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--danger-accent)">-83%</text>
-  <rect x="458.55" y="290.85" width="362.9" height="58" rx="6.0012" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="532.5626" y="327.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">Defect escape rate</text>
-  <text x="663.875" y="327.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">5.1%</text>
-  <text x="725.95" y="327.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">2.3%</text>
-  <rect x="768.925" y="293.75" width="51.5701" height="52.2" rx="6.0012" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="794.71" y="327.1" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--danger-accent)">-55%</text>
-  <rect x="458.55" y="348.85" width="362.9" height="58" rx="6.0012" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="532.5626" y="385.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">Test coverage</text>
-  <text x="663.875" y="385.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">64%</text>
-  <text x="725.95" y="385.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">82%</text>
-  <rect x="768.925" y="351.75" width="51.5701" height="52.2" rx="6.0012" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="794.71" y="385.1" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--ok-accent)">+28%</text>
-  <rect x="458.55" y="406.85" width="362.9" height="58" rx="6.0012" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="532.5626" y="443.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">CI pipeline duration</text>
-  <text x="663.875" y="443.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">38 min</text>
-  <text x="725.95" y="443.1" text-anchor="middle" font-size="10.0021" fill="var(--text)">14 min</text>
-  <rect x="768.925" y="409.75" width="51.5701" height="52.2" rx="6.0012" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="794.71" y="443.1" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--danger-accent)">-63%</text>
-  <rect x="458.55" y="496.75" width="362.9" height="108.75" rx="6.0012" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640.0001" y="537.35" text-anchor="middle" font-size="10.0021" font-weight="bold" fill="var(--primary-accent)">Measurement Guidelines</text>
-  <text x="468.1001" y="572.15" font-size="10.0021" fill="var(--text)">▶ Measure at team level, not individual level — avoid gaming and comparison pressure</text>
-  <text x="468.1001" y="596.8" font-size="10.0021" fill="var(--text)">▶ Track developer satisfaction alongside productivity — re-evaluate quarterly</text>
+  <rect x="40" y="470" width="1200" height="55" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="250" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">CI pipeline duration</text>
+  <text x="640" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">38 min</text>
+  <text x="900" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--text)">14 min</text>
+  <text x="1120" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-accent)">-63%</text>
+
+  <rect x="40" y="540" width="1200" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Measure at team level, not individual level — track satisfaction alongside productivity</text>
+  <text x="640" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="var(--info-text)">Re-evaluate quarterly; numbers guide decisions, they do not replace judgment</text>
 </svg>

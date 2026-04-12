@@ -1,13 +1,4 @@
-<svg viewBox="0 0 1280 720">
-  <rect x="40" y="217.5" width="500.0001" height="225" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" rx="6" />
-  <text x="289.9998" y="292.5001" text-anchor="middle" font-size="40" font-weight="bold">Before C++17</text>
-  <text x="289.9998" y="348.75" text-anchor="middle" font-size="33.3333">Explicit types required</text>
-  <text x="289.9998" y="405" text-anchor="middle" font-size="33.3333">vector&lt;int&gt; v = {1,2,3}</text>
-  <rect x="739.9999" y="217.5" width="500.0001" height="225" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" rx="6" />
-  <text x="989.9998" y="292.5001" text-anchor="middle" font-size="40" font-weight="bold">C++17</text>
-  <text x="989.9998" y="348.75" text-anchor="middle" font-size="33.3333">Automatic deduction</text>
-  <text x="989.9998" y="405" text-anchor="middle" font-size="33.3333">vector v = {1,2,3}</text>
-  <path d="M 540.0001 329.9999 Q 639.9999 255.0001 739.9999 329.9999" stroke="var(--text-muted)" stroke-width="4.2387" fill="none" marker-end="url(#arrow)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -42,56 +33,33 @@
         --info-accent: #4a148c;
       }
     </style>
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
-    </linearGradient>
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
-    </linearGradient>
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
-    </linearGradient>
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
-    </linearGradient>
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
-    </linearGradient>
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
-    </linearGradient>
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
-    </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 11.2,0" fill="#666" />
-    </marker>
   </defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Class Template Argument Deduction (CTAD)</text>
+
+  <rect x="40" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="335" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Before C++17</text>
+  <text x="335" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Function templates deduced args</text>
+  <text x="335" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Class templates did not</text>
+  <text x="335" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">std::pair&lt;int, double&gt; p(1, 2.0);</text>
+  <text x="335" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">auto p = std::make_pair(1, 2.0);</text>
+  <text x="335" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Helpers needed: make_tuple,</text>
+  <text x="335" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">make_shared, make_unique</text>
+
+  <rect x="650" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="945" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">C++17 CTAD</text>
+  <text x="945" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Compiler deduces class template args</text>
+  <text x="945" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">from the constructor call</text>
+  <text x="945" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">std::pair p(1, 2.0);</text>
+  <text x="945" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">std::vector v{1, 2, 3};</text>
+  <text x="945" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">No more make_* helpers needed</text>
+
+  <rect x="40" y="345.818182" width="1200" height="274.181818" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">How deduction works</text>
+  <text x="640" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Compiler builds implicit deduction guides from each constructor signature</text>
+  <text x="640" y="451.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Authors may add user-defined guides when automatic inference is ambiguous</text>
+  <text x="640" y="482.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Example: template&lt;class It&gt; vector(It, It) -&gt; vector&lt;typename iterator_traits&lt;It&gt;::value_type&gt;;</text>
+  <text x="640" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Aggregates get deduction from brace-init in C++20</text>
+  <text x="640" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Watch for surprises: std::vector v{vec}; copies, doesn't wrap</text>
+  <text x="640" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Prefer explicit template args when the deduced type is non-obvious</text>
 </svg>

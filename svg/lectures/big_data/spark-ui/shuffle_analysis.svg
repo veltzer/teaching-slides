@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,81 +33,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead4" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,36 5.6,0" fill="#333" />
-    </marker>
   </defs>
-  <rect x="40" y="233.5" width="171.4286" height="193" rx="6.0022" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="125.7143" y="349.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.0089" fill="var(--text)">Map</text>
-  <rect x="382.8571" y="233.5" width="222.8571" height="193" rx="6.0022" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="494.2857" y="349.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.0089" fill="var(--text)">Shuffle Write</text>
-  <rect x="725.7143" y="233.5" width="222.8571" height="193" rx="6.0022" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="837.1429" y="349.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.0089" fill="var(--text)">Shuffle Read</text>
-  <rect x="1068.5714" y="233.5" width="171.4286" height="193" rx="6.0022" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="1154.2857" y="349.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.0089" fill="var(--text)">Reduce</text>
-  <line x1="211.4286" y1="330.0001" x2="382.8571" y2="330.0001" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead4)" />
-  <line x1="605.7143" y1="330.0001" x2="725.7143" y2="330.0001" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead4)" />
-  <line x1="948.5714" y1="330.0001" x2="1068.5714" y2="330.0001" stroke="var(--text)" stroke-width="2" marker-end="url(#arrowhead4)" />
-  <text x="297.1429" y="291.4001" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8641" fill="var(--text-muted)">write</text>
-  <text x="665.7143" y="291.4001" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8641" fill="var(--text-muted)">network</text>
-  <text x="1008.5714" y="291.4001" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8641" fill="var(--text-muted)">process</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--text)">Shuffle Analysis in Spark UI</text>
+
+  <rect x="40" y="82.181818" width="380" height="232" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="230" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Map Stage (Write)</text>
+  <text x="230" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Each task partitions output</text>
+  <text x="230" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Spills to local disk</text>
+  <text x="230" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Shuffle Write Bytes</text>
+  <text x="230" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Shuffle Write Records</text>
+  <text x="230" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Watch per-task skew</text>
+
+  <line x1="420" y1="198.181818" x2="500" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="460" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">network</text>
+
+  <rect x="500" y="82.181818" width="380" height="232" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="690" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Shuffle Service</text>
+  <text x="690" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">External shuffle serves files</text>
+  <text x="690" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Executors fetch by partition</text>
+  <text x="690" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Remote Bytes Read</text>
+  <text x="690" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Local Bytes Read</text>
+  <text x="690" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Fetch wait time matters</text>
+
+  <line x1="880" y1="198.181818" x2="960" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="920" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">fetch</text>
+
+  <rect x="960" y="82.181818" width="280" height="232" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1100" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Reduce Stage</text>
+  <text x="1100" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Reads assigned partitions</text>
+  <text x="1100" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Shuffle Read Bytes</text>
+  <text x="1100" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Fetch Wait Time</text>
+  <text x="1100" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Aggregates / joins</text>
+  <text x="1100" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Final output</text>
+
+  <rect x="40" y="345.818182" width="1200" height="274.181818" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Reading the Stages tab</text>
+  <text x="640" y="414.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Task summary quartiles reveal skew — 75% vs max column tells the story</text>
+  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">High Shuffle Spill (Memory/Disk) means executors ran out of memory during shuffle</text>
+  <text x="640" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Fetch wait dominates: check network, shuffle service, or skewed partitions</text>
+  <text x="640" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Mitigations: salt keys, enable AQE, broadcast small side, increase partitions</text>
+  <text x="640" y="540.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Watch Shuffle Read/Write ratios — big imbalance points to skew or slow nodes</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">AQE coalesces small partitions and splits skewed ones at runtime</text>
+  <text x="640" y="609.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Event timeline shows scheduler delay vs compute vs shuffle in one view</text>
 </svg>

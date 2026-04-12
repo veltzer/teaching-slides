@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,72 +33,46 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <rect x="40" y="224.5" width="300" height="126.5999" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="6.0009" stroke-width="2"/>
-  <text x="190" y="308.9" font-size="36.0053" text-anchor="middle">Few connections</text>
-  <text x="190" y="435.5" font-size="30.0044" text-anchor="middle">Blocking I/O</text>
-  <rect x="490" y="224.5" width="300" height="126.5999" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6.0009" stroke-width="2"/>
-  <text x="640" y="308.9" font-size="36.0053" text-anchor="middle">Moderate load</text>
-  <text x="640" y="435.5" font-size="30.0044" text-anchor="middle">select/poll</text>
-  <rect x="940" y="224.5" width="300" height="126.5999" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="6.0009" stroke-width="2"/>
-  <text x="1090" y="308.9" font-size="36.0053" text-anchor="middle">High performance</text>
-  <text x="1090" y="435.5" font-size="30.0044" text-anchor="middle">epoll/io_uring</text>
+  </defs>
+  <!-- palette: resources/palette_diagram.yaml -->
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.383207" font-weight="bold" fill="var(--text)">Choosing the Right I/O API</text>
+
+  <rect x="40" y="105.660377" width="380" height="459.622642" rx="6.276641" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="230" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.106565" font-weight="bold" fill="var(--bg)">Few connections</text>
+  <text x="230" y="209.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--bg)">up to ~100</text>
+  <rect x="70" y="247.924528" width="320" height="76.603774" rx="6.276641" fill="var(--bg)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="230" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">Blocking I/O</text>
+  <text x="230" y="379.245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">simplest code</text>
+  <text x="230" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">one thread per fd</text>
+  <text x="230" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">no syscall overhead</text>
+  <text x="230" y="477.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">limits at thread cost</text>
+  <text x="230" y="532.45283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--bg)">ssh, small daemons</text>
+
+  <rect x="450" y="105.660377" width="380" height="459.622642" rx="6.276641" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.106565" font-weight="bold" fill="var(--bg)">Moderate load</text>
+  <text x="640" y="209.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--bg)">hundreds of fds</text>
+  <rect x="480" y="247.924528" width="320" height="76.603774" rx="6.276641" fill="var(--bg)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">select / poll</text>
+  <text x="640" y="379.245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">portable everywhere</text>
+  <text x="640" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">O(n) scan per call</text>
+  <text x="640" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">level-triggered</text>
+  <text x="640" y="477.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">legacy-compatible</text>
+  <text x="640" y="532.45283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--bg)">cross-platform tools</text>
+
+  <rect x="860" y="105.660377" width="380" height="459.622642" rx="6.276641" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1050" y="165.849057" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.106565" font-weight="bold" fill="var(--bg)">High performance</text>
+  <text x="1050" y="209.622642" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--bg)">10k+ connections</text>
+  <rect x="890" y="247.924528" width="320" height="76.603774" rx="6.276641" fill="var(--bg)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1050" y="297.169811" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.014352" font-weight="bold" fill="var(--text)">epoll / io_uring</text>
+  <text x="1050" y="379.245283" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">O(1) ready set</text>
+  <text x="1050" y="412.075472" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">edge-triggered mode</text>
+  <text x="1050" y="444.90566" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">io_uring: zero syscalls</text>
+  <text x="1050" y="477.735849" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.691603" fill="var(--bg)">Linux-specific</text>
+  <text x="1050" y="532.45283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.59939" fill="var(--bg)">nginx, Redis, databases</text>
+
+  <text x="640" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.73771" fill="var(--text-muted)">Start simple. Move right only when measurements justify it.</text>
 </svg>

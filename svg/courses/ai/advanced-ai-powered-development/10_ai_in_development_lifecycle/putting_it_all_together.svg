@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,112 +33,65 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,76.6864 8.96,0" fill="#333" />
-    </marker>
   </defs>
-  <rect width="387" height="580" fill="var(--surface)" rx="5.9981" x="446.5" y="40"/>
-  <text x="640" y="90.75" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">AI Across the Full Development Lifecycle</text>
-  <rect x="456.175" y="134.25" width="82.2375" height="79.75" rx="5.9981" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="497.2938" y="180.65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Plan &amp; Design</text>
-  <line x1="538.4126" y1="173.4" x2="550.5062" y2="173.4" stroke="var(--text)" stroke-width="1.0682" marker-end="url(#arr)" />
-  <rect x="550.5062" y="134.25" width="82.2375" height="79.75" rx="5.9981" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="591.625" y="180.65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">Code &amp; Review</text>
-  <line x1="632.7437" y1="173.4" x2="644.8376" y2="173.4" stroke="var(--text)" stroke-width="1.0682" marker-end="url(#arr)" />
-  <rect x="644.8376" y="134.25" width="82.2375" height="79.75" rx="5.9981" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="685.9563" y="180.65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Test &amp; Verify</text>
-  <line x1="727.0751" y1="173.4" x2="739.1688" y2="173.4" stroke="var(--text)" stroke-width="1.0682" marker-end="url(#arr)" />
-  <rect x="739.1688" y="134.25" width="84.6562" height="79.75" rx="5.9981" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="781.255" y="180.65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-accent)">Deploy &amp; Run</text>
-  <rect x="456.175" y="257.5" width="367.65" height="290" rx="5.9981" fill="var(--surface)" stroke="var(--border)" stroke-width="1" stroke-dasharray="3.2047 1.6024" />
-  <text x="640" y="301" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--text)">AI Layer (transparent to the team)</text>
-  <rect x="463.4312" y="322.75" width="84.6562" height="210.25" rx="5.9981" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="505.5176" y="361.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--primary-accent)">Plan &amp; Design AI</text>
-  <text x="505.5176" y="395.25" text-anchor="middle" font-size="10" fill="var(--text)">Req. analysis</text>
-  <text x="505.5176" y="424.25" text-anchor="middle" font-size="10" fill="var(--text)">Arch proposals</text>
-  <text x="505.5176" y="453.25" text-anchor="middle" font-size="10" fill="var(--text)">Schema design</text>
-  <text x="505.5176" y="482.25" text-anchor="middle" font-size="10" fill="var(--text)">Sprint planning</text>
-  <text x="505.5176" y="511.25" text-anchor="middle" font-size="10" fill="var(--text)">ADR generation</text>
-  <rect x="555.3438" y="322.75" width="84.6562" height="210.25" rx="5.9981" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="597.43" y="361.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--warn-accent)">Code &amp; Review AI</text>
-  <text x="597.43" y="395.25" text-anchor="middle" font-size="10" fill="var(--text)">Agent coding</text>
-  <text x="597.43" y="424.25" text-anchor="middle" font-size="10" fill="var(--text)">Auto review</text>
-  <text x="597.43" y="453.25" text-anchor="middle" font-size="10" fill="var(--text)">Security scan</text>
-  <text x="597.43" y="482.25" text-anchor="middle" font-size="10" fill="var(--text)">Perf analysis</text>
-  <text x="597.43" y="511.25" text-anchor="middle" font-size="10" fill="var(--text)">Debt detection</text>
-  <rect x="647.2563" y="322.75" width="84.6562" height="210.25" rx="5.9981" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="689.3425" y="361.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--ok-accent)">Test &amp; Verify AI</text>
-  <text x="689.3425" y="395.25" text-anchor="middle" font-size="10" fill="var(--text)">Test generation</text>
-  <text x="689.3425" y="424.25" text-anchor="middle" font-size="10" fill="var(--text)">Property-based</text>
-  <text x="689.3425" y="453.25" text-anchor="middle" font-size="10" fill="var(--text)">Smart selection</text>
-  <text x="689.3425" y="482.25" text-anchor="middle" font-size="10" fill="var(--text)">Coverage gaps</text>
-  <text x="689.3425" y="511.25" text-anchor="middle" font-size="10" fill="var(--text)">Visual regression</text>
-  <rect x="739.1688" y="322.75" width="79.8188" height="210.25" rx="5.9981" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
-  <text x="778.8362" y="361.9" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--info-accent)">Deploy &amp; Run AI</text>
-  <text x="778.8362" y="395.25" text-anchor="middle" font-size="10" fill="var(--text)">Risk scoring</text>
-  <text x="778.8362" y="424.25" text-anchor="middle" font-size="10" fill="var(--text)">Auto rollback</text>
-  <text x="778.8362" y="453.25" text-anchor="middle" font-size="10" fill="var(--text)">Incident RCA</text>
-  <text x="778.8362" y="482.25" text-anchor="middle" font-size="10" fill="var(--text)">Log analysis</text>
-  <text x="778.8362" y="511.25" text-anchor="middle" font-size="10" fill="var(--text)">Post-mortems</text>
-  <rect x="456.175" y="569.25" width="367.65" height="40.6" rx="5.9981" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="595.35" text-anchor="middle" font-size="10" fill="var(--text)">Start where your team has the most pain, then expand — keep humans in the decision loop</text>
+
+  <rect x="40" y="40" width="1200" height="60" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="var(--text)">AI Across the Full Development Lifecycle</text>
+
+  <rect x="40" y="130" width="285" height="80" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="182" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Plan &amp; Design</text>
+  <line x1="325" y1="170" x2="345" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="345" y="130" width="285" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="487" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--warn-text)">Code &amp; Review</text>
+  <line x1="630" y1="170" x2="650" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="650" y="130" width="285" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="792" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Test &amp; Verify</text>
+  <line x1="935" y1="170" x2="955" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="955" y="130" width="285" height="80" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1097" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Deploy &amp; Run</text>
+
+  <rect x="40" y="230" width="285" height="300" rx="6" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="182" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-accent)">AI assists</text>
+  <text x="182" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Requirements analysis</text>
+  <text x="182" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Architecture proposals</text>
+  <text x="182" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Schema design</text>
+  <text x="182" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Sprint planning</text>
+  <text x="182" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">ADR generation</text>
+  <text x="182" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Risk assessment</text>
+
+  <rect x="345" y="230" width="285" height="300" rx="6" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="487" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-accent)">AI assists</text>
+  <text x="487" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Agent coding</text>
+  <text x="487" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Automated review</text>
+  <text x="487" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Security scanning</text>
+  <text x="487" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Performance analysis</text>
+  <text x="487" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Debt detection</text>
+  <text x="487" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Refactor suggestions</text>
+
+  <rect x="650" y="230" width="285" height="300" rx="6" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="792" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-accent)">AI assists</text>
+  <text x="792" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Test generation</text>
+  <text x="792" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Property-based tests</text>
+  <text x="792" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Smart selection</text>
+  <text x="792" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Coverage gap finder</text>
+  <text x="792" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Visual regression</text>
+  <text x="792" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Flake triage</text>
+
+  <rect x="955" y="230" width="285" height="300" rx="6" fill="var(--surface)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1097" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-accent)">AI assists</text>
+  <text x="1097" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Deploy risk scoring</text>
+  <text x="1097" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Auto rollback</text>
+  <text x="1097" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Incident RCA</text>
+  <text x="1097" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Log analysis</text>
+  <text x="1097" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Post-mortem drafts</text>
+  <text x="1097" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--text)">Alert correlation</text>
+
+  <rect x="40" y="550" width="1200" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--info-text)">Start where your team has the most pain, then expand — keep humans in the decision loop</text>
 </svg>

@@ -1,18 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <text x="711.6666" y="40" font-size="40.1161" font-weight="bold" text-anchor="middle">Stack Layout and Protection</text>
-  <rect x="425" y="136.6667" width="286.6667" height="96.6667" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="6.0026" stroke-width="2"/>
-  <text x="568.3334" y="201.1111" font-size="28.6543" text-anchor="middle">Return Address</text>
-  <rect x="425" y="233.3333" width="286.6667" height="96.6667" fill="var(--warn-fill)" stroke="var(--warn-border)" rx="6.0026" stroke-width="2"/>
-  <text x="568.3334" y="297.7778" font-size="28.6543" text-anchor="middle">Stack Canary</text>
-  <rect x="425" y="330" width="286.6667" height="96.6667" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="6.0026" stroke-width="2"/>
-  <text x="568.3334" y="394.4444" font-size="28.6543" text-anchor="middle">Local Variables</text>
-  <rect x="425" y="426.6667" width="286.6667" height="96.6667" fill="var(--danger-fill)" stroke="var(--danger-border)" rx="6.0026" stroke-width="2"/>
-  <text x="568.3334" y="491.1111" font-size="28.6543" text-anchor="middle">Buffer</text>
-  <text x="855" y="297.7778" font-size="28.6543">← Stack Canary detects</text>
-  <text x="855" y="346.1111" font-size="28.6543">overflow before return</text>
-  <text x="568.3334" y="620" font-size="34.3852" text-anchor="middle">Stack grows downward</text>
-  <path d="M 568.3334 571.6667 L 568.3334 539.4444" stroke="var(--black)" marker-end="url(#arrow)" />
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -47,67 +33,33 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,28.8 8.96,0" fill="black" />
-    </marker>
   </defs>
+  <!-- palette: resources/palette_diagram.yaml -->
+
+  <text x="547.692308" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="33.092369" font-weight="bold" fill="var(--text)">Stack Layout and Canary Protection</text>
+
+  <rect x="40" y="92.727273" width="646.153846" height="105.454545" rx="6.618474" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="363.076923" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Return Address</text>
+
+  <rect x="40" y="208.727273" width="646.153846" height="105.454545" rx="6.618474" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="363.076923" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Stack Canary</text>
+
+  <rect x="40" y="324.727273" width="646.153846" height="105.454545" rx="6.618474" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="363.076923" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Local Variables</text>
+
+  <rect x="40" y="440.727273" width="646.153846" height="105.454545" rx="6.618474" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="363.076923" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.680053" font-weight="bold" fill="var(--bg)">Buffer (overflow source)</text>
+
+  <rect x="732.307692" y="208.727273" width="507.692308" height="210.909091" rx="6.618474" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="986.153846" y="250.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.855421" font-weight="bold" fill="var(--text)">Canary check</text>
+  <text x="986.153846" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">Compiler inserts a random value</text>
+  <text x="986.153846" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">before the saved return address.</text>
+  <text x="986.153846" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">Overflow corrupts the canary;</text>
+  <text x="986.153846" y="398.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.443106" fill="var(--text-muted)">mismatch aborts via __stack_chk_fail.</text>
+
+  <text x="363.076923" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.855421" font-weight="bold" fill="var(--text)">Stack grows downward — overflow climbs up</text>
+  <line x1="363.076923" y1="620" x2="363.076923" y2="556.727273" stroke="var(--text)" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,71 +33,35 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="434" y="40" font-size="72.1389" font-weight="bold">Level Triggered</text>
-  <rect x="434" y="98" width="309.0001" height="116" fill="var(--primary-fill)" stroke="var(--primary-border)" rx="5.9968" stroke-width="2"/>
-  <text x="511.25" y="185" font-size="51.5277">Data Available</text>
-  <text x="846" y="185" font-size="61.8333">→ Notify repeatedly</text>
-  <text x="434" y="446" font-size="72.1389" font-weight="bold">Edge Triggered</text>
-  <rect x="434" y="504" width="309.0001" height="116" fill="var(--ok-fill)" stroke="var(--ok-border)" rx="5.9968" stroke-width="2"/>
-  <text x="511.25" y="591" font-size="51.5277">State Change</text>
-  <text x="846" y="591" font-size="61.8333">→ Notify once</text>
+  </defs>
+  <!-- palette: resources/palette_diagram.yaml -->
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="31.091264" font-weight="bold" fill="var(--text)">Edge vs Level Triggered</text>
+
+  <rect x="40" y="93.703704" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="93.703704" width="300" height="247.037037" rx="6.218253" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="190" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--primary-text)">Level</text>
+  <text x="190" y="222.592593" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" fill="var(--primary-text)">Triggered</text>
+  <text x="190" y="276.296296" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--primary-text)">default mode</text>
+
+  <text x="370" y="142.037037" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--text)">Data available → notify repeatedly</text>
+  <text x="370" y="185" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Keeps firing as long as the fd is readable.</text>
+  <text x="370" y="217.222222" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Safe with blocking reads and partial drains.</text>
+  <text x="370" y="260.185185" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--text)">Good for: select, poll, straightforward code</text>
+  <text x="370" y="297.777778" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Cost: may wake you many times per event.</text>
+
+  <rect x="40" y="372.962963" width="1200" height="247.037037" rx="6.218253" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="372.962963" width="300" height="247.037037" rx="6.218253" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="190" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.018513" font-weight="bold" fill="var(--ok-text)">Edge</text>
+  <text x="190" y="501.851852" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.654758" fill="var(--ok-text)">Triggered</text>
+  <text x="190" y="555.555556" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--ok-text)">EPOLLET</text>
+
+  <text x="370" y="421.296296" font-family="Arial, sans-serif" font-size="17.618383" font-weight="bold" fill="var(--text)">State change → notify once</text>
+  <text x="370" y="464.259259" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Fires on the transition to ready, then silent.</text>
+  <text x="370" y="496.481481" font-family="Arial, sans-serif" font-size="15.545632" fill="var(--text-muted)">Must drain fully with nonblocking I/O.</text>
+  <text x="370" y="539.444444" font-family="Arial, sans-serif" font-size="15.545632" font-weight="bold" fill="var(--text)">Good for: epoll at scale, low syscall overhead</text>
+  <text x="370" y="577.037037" font-family="Arial, sans-serif" font-size="14.509256" fill="var(--text-muted)">Cost: forget a read loop and events are lost.</text>
 </svg>
