@@ -4,6 +4,12 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 import re
 
+# Register the SVG namespace as the default (unprefixed) namespace before any
+# parse/write. Without this, ElementTree serializes the root as <ns0:svg ...>,
+# which breaks the palette's CSS variable resolution (selectors target "svg",
+# not "ns0:svg"). See doc/HowToWriteSVG.md, section "The ns0: trap".
+ET.register_namespace("", "http://www.w3.org/2000/svg")
+
 def fix_fonts(path):
     try:
         tree = ET.parse(path)

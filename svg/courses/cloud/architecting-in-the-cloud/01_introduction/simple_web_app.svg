@@ -13,128 +13,90 @@
       }
     </style>
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+      <stop offset="0%" stop-color="#1e88e5" />
+      <stop offset="100%" stop-color="#1565c0" />
     </linearGradient>
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#43a047"/><stop offset="100%" stop-color="#2e7d32"/>
+      <stop offset="0%" stop-color="#43a047" />
+      <stop offset="100%" stop-color="#2e7d32" />
     </linearGradient>
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fb8c00"/><stop offset="100%" stop-color="#e65100"/>
+      <stop offset="0%" stop-color="#fb8c00" />
+      <stop offset="100%" stop-color="#e65100" />
     </linearGradient>
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e53935"/><stop offset="100%" stop-color="#c62828"/>
+      <stop offset="0%" stop-color="#e53935" />
+      <stop offset="100%" stop-color="#c62828" />
     </linearGradient>
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8e24aa"/><stop offset="100%" stop-color="#6a1b9a"/>
+      <stop offset="0%" stop-color="#8e24aa" />
+      <stop offset="100%" stop-color="#6a1b9a" />
     </linearGradient>
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
     </filter>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
     </marker>
   </defs>
-
-  <rect width="1280" height="640" fill="var(--bg)"/>
-
-  <!-- Users -->
-  <rect x="30" y="220" width="120" height="80" rx="10" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="90" y="250" font-family="Arial, sans-serif" font-size="14" fill="var(--text)" text-anchor="middle" font-weight="bold">Users</text>
-  <text x="90" y="270" font-family="Arial, sans-serif" font-size="24" fill="var(--text-muted)" text-anchor="middle">👤👤👤</text>
-
-  <!-- Arrow Users -> ALB -->
-  <line x1="150" y1="260" x2="220" y2="260" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- ALB -->
-  <rect x="225" y="220" width="140" height="80" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="295" y="252" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">ALB</text>
-  <text x="295" y="272" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Application</text>
-  <text x="295" y="286" font-family="Arial, sans-serif" font-size="11" fill="var(--text-muted)" text-anchor="middle">Load Balancer</text>
-
-  <!-- AZ-a box -->
-  <rect x="420" y="60" width="280" height="220" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="560" y="85" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone A</text>
-
-  <!-- EC2 in AZ-a -->
-  <rect x="450" y="100" width="100" height="60" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="500" y="125" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
-  <text x="500" y="142" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-
-  <rect x="570" y="100" width="100" height="60" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="620" y="125" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
-  <text x="620" y="142" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-
-  <!-- RDS Primary in AZ-a -->
-  <rect x="480" y="190" width="120" height="60" rx="8" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="540" y="215" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">RDS Primary</text>
-  <text x="540" y="235" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">MySQL/Postgres</text>
-
-  <!-- AZ-b box -->
-  <rect x="420" y="310" width="280" height="220" rx="8" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="560" y="335" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone B</text>
-
-  <!-- EC2 in AZ-b -->
-  <rect x="450" y="350" width="100" height="60" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="500" y="375" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
-  <text x="500" y="392" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-
-  <rect x="570" y="350" width="100" height="60" rx="8" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="620" y="375" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
-  <text x="620" y="392" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
-
-  <!-- RDS Standby in AZ-b -->
-  <rect x="480" y="440" width="120" height="60" rx="8" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.5" stroke-dasharray="5,3" filter="url(#shadow)"/>
-  <text x="540" y="465" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">RDS Standby</text>
-  <text x="540" y="485" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Sync Replication</text>
-
-  <!-- Replication arrow between RDS -->
-  <line x1="540" y1="250" x2="540" y2="440" stroke="var(--warn)" stroke-width="2" stroke-dasharray="4,4"/>
-  <text x="555" y="345" font-family="Arial, sans-serif" font-size="10" fill="var(--warn-dk)">Sync</text>
-
-  <!-- ALB arrows to EC2s -->
-  <line x1="365" y1="245" x2="448" y2="130" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="365" y1="255" x2="448" y2="130" stroke="var(--text-muted)" stroke-width="0" marker-end="url(#arrow)"/>
-  <line x1="365" y1="270" x2="448" y2="380" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Auto Scaling label -->
-  <rect x="430" y="540" width="260" height="30" rx="6" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1"/>
-  <text x="560" y="560" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Auto Scaling Group</text>
-
-  <!-- Static Assets side -->
-  <rect x="800" y="60" width="440" height="250" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
-  <text x="1020" y="90" font-family="Arial, sans-serif" font-size="15" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Static Assets</text>
-
-  <!-- CloudFront -->
-  <rect x="830" y="110" width="160" height="60" rx="8" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="910" y="135" font-family="Arial, sans-serif" font-size="13" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">CloudFront</text>
-  <text x="910" y="155" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">CDN (Edge Locations)</text>
-
-  <!-- S3 -->
-  <rect x="1050" y="110" width="160" height="60" rx="8" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="1130" y="135" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">S3 Bucket</text>
-  <text x="1130" y="155" font-family="Arial, sans-serif" font-size="10" fill="var(--text-muted)" text-anchor="middle">Static Files</text>
-
-  <!-- Arrow CF -> S3 -->
-  <line x1="990" y1="140" x2="1048" y2="140" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Arrow Users -> CloudFront -->
-  <path d="M90,220 L90,50 L828,50 L828,130" fill="none" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
-  <text x="460" y="42" font-family="Arial, sans-serif" font-size="11" fill="var(--text-faint)" text-anchor="middle">Static requests</text>
-
-  <!-- Labels for arrows -->
-  <text x="175" y="250" font-family="Arial, sans-serif" font-size="10" fill="var(--text-faint)">HTTPS</text>
-
-  <!-- EC2 -> RDS arrows -->
-  <line x1="500" y1="160" x2="500" y2="188" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="500" y1="350" x2="500" y2="438" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Legend -->
-  <rect x="800" y="360" width="440" height="250" rx="10" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="1020" y="390" font-family="Arial, sans-serif" font-size="14" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Architecture Highlights</text>
-  <text x="830" y="420" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-dk)">● Multi-AZ deployment for high availability</text>
-  <text x="830" y="445" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-dk)">● Auto Scaling adjusts to traffic</text>
-  <text x="830" y="470" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-dk)">● RDS Multi-AZ with sync replication</text>
-  <text x="830" y="495" font-family="Arial, sans-serif" font-size="12" fill="var(--info-dk)">● CloudFront caches static content</text>
-  <text x="830" y="520" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">● ALB distributes traffic across AZs</text>
-  <text x="830" y="545" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">● S3 stores static assets durably</text>
+  <rect width="989.372" height="494.686" fill="var(--bg)" />
+  <rect x="23.1884" y="170.0483" width="92.7536" height="61.8357" rx="7.7295" fill="var(--surface)" stroke="var(--border-strong)" stroke-width="1.5459" filter="url(#shadow)" />
+  <text x="69.5652" y="193.2367" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--text)" text-anchor="middle" font-weight="bold">Users</text>
+  <text x="69.5652" y="208.6957" font-family="Arial, sans-serif" font-size="18.5507" fill="var(--text-muted)" text-anchor="middle">👤👤👤</text>
+  <line x1="115.942" y1="200.9662" x2="170.0483" y2="200.9662" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
+  <rect x="173.913" y="170.0483" width="108.2126" height="61.8357" rx="7.7295" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="1.5459" filter="url(#shadow)" />
+  <text x="228.0193" y="194.7826" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">ALB</text>
+  <text x="228.0193" y="210.2415" font-family="Arial, sans-serif" font-size="8.5024" fill="var(--text-muted)" text-anchor="middle">Application</text>
+  <text x="228.0193" y="221.0628" font-family="Arial, sans-serif" font-size="8.5024" fill="var(--text-muted)" text-anchor="middle">Load Balancer</text>
+  <rect x="324.6377" y="46.3768" width="216.4251" height="170.0483" rx="6.1836" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.1594" stroke-dasharray="4.6377 2.3188" />
+  <text x="432.8502" y="65.7005" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone A</text>
+  <rect x="347.8261" y="77.2947" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="386.4734" y="96.6184" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="386.4734" y="109.7585" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
+  <rect x="440.5797" y="77.2947" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="479.2271" y="96.6184" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="479.2271" y="109.7585" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
+  <rect x="371.0145" y="146.8599" width="92.7536" height="46.3768" rx="6.1836" fill="var(--warn-lt)" stroke="var(--warn)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="417.3913" y="166.1836" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">RDS Primary</text>
+  <text x="417.3913" y="181.6425" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">MySQL/Postgres</text>
+  <rect x="324.6377" y="239.6135" width="216.4251" height="170.0483" rx="6.1836" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="1.1594" stroke-dasharray="4.6377 2.3188" />
+  <text x="432.8502" y="258.9372" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">Availability Zone B</text>
+  <rect x="347.8261" y="270.5314" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="386.4734" y="289.8551" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="386.4734" y="302.9952" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
+  <rect x="440.5797" y="270.5314" width="77.2947" height="46.3768" rx="6.1836" fill="var(--primary-lt)" stroke="var(--primary)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="479.2271" y="289.8551" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--primary-dk)" text-anchor="middle" font-weight="bold">EC2</text>
+  <text x="479.2271" y="302.9952" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">Web Server</text>
+  <rect x="371.0145" y="340.0966" width="92.7536" height="46.3768" rx="6.1836" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="1.1594" stroke-dasharray="3.8647 2.3188" filter="url(#shadow)" />
+  <text x="417.3913" y="359.4203" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--warn-dk)" text-anchor="middle" font-weight="bold">RDS Standby</text>
+  <text x="417.3913" y="374.8792" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">Sync Replication</text>
+  <line x1="417.3913" y1="193.2367" x2="417.3913" y2="340.0966" stroke="var(--warn)" stroke-width="1.5459" stroke-dasharray="3.0918 3.0918" />
+  <text x="428.9855" y="266.6667" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--warn-dk)">Sync</text>
+  <line x1="282.1256" y1="189.372" x2="346.2802" y2="100.4831" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
+  <line x1="282.1256" y1="197.1014" x2="346.2802" y2="100.4831" stroke="var(--text-muted)" stroke-width="0" marker-end="url(#arrow)" />
+  <line x1="282.1256" y1="208.6957" x2="346.2802" y2="293.7198" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
+  <rect x="332.3671" y="417.3913" width="200.9662" height="23.1884" rx="4.6377" fill="var(--info-pale)" stroke="var(--info)" stroke-width="0.7729" />
+  <text x="432.8502" y="432.8502" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">Auto Scaling Group</text>
+  <rect x="618.3575" y="46.3768" width="340.0966" height="193.2367" rx="7.7295" fill="var(--surface)" stroke="var(--border)" stroke-width="1.1594" />
+  <text x="788.4058" y="69.5652" font-family="Arial, sans-serif" font-size="11.5942" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Static Assets</text>
+  <rect x="641.5459" y="85.0242" width="123.6715" height="46.3768" rx="6.1836" fill="var(--info-pale)" stroke="var(--info)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="703.3816" y="104.3478" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--info-dk)" text-anchor="middle" font-weight="bold">CloudFront</text>
+  <text x="703.3816" y="119.8068" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">CDN (Edge Locations)</text>
+  <rect x="811.5942" y="85.0242" width="123.6715" height="46.3768" rx="6.1836" fill="var(--ok-lt)" stroke="var(--ok)" stroke-width="1.1594" filter="url(#shadow)" />
+  <text x="873.43" y="104.3478" font-family="Arial, sans-serif" font-size="10.0483" fill="var(--ok-dk)" text-anchor="middle" font-weight="bold">S3 Bucket</text>
+  <text x="873.43" y="119.8068" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-muted)" text-anchor="middle">Static Files</text>
+  <line x1="765.2174" y1="108.2126" x2="810.0483" y2="108.2126" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" />
+  <path d="M 69.5652 170.0483 L 69.5652 38.6473 L 640 38.6473 L 640 100.4831" fill="none" stroke="var(--text-muted)" stroke-width="1.5459" marker-end="url(#arrow)" stroke-dasharray="4.6377 2.3188" />
+  <text x="355.5556" y="32.4638" font-family="Arial, sans-serif" font-size="8.5024" fill="var(--text-faint)" text-anchor="middle">Static requests</text>
+  <text x="135.2657" y="193.2367" font-family="Arial, sans-serif" font-size="7.7295" fill="var(--text-faint)">HTTPS</text>
+  <line x1="386.4734" y1="123.6715" x2="386.4734" y2="145.314" stroke="var(--text-muted)" stroke-width="1.1594" marker-end="url(#arrow)" />
+  <line x1="386.4734" y1="270.5314" x2="386.4734" y2="338.5507" stroke="var(--text-muted)" stroke-width="1.1594" marker-end="url(#arrow)" />
+  <rect x="618.3575" y="278.2609" width="340.0966" height="193.2367" rx="7.7295" fill="var(--surface)" stroke="var(--border)" stroke-width="0.7729" />
+  <text x="788.4058" y="301.4493" font-family="Arial, sans-serif" font-size="10.8213" fill="var(--text-dark)" text-anchor="middle" font-weight="bold">Architecture Highlights</text>
+  <text x="641.5459" y="324.6377" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--primary-dk)">● Multi-AZ deployment for high availability</text>
+  <text x="641.5459" y="343.9614" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--ok-dk)">● Auto Scaling adjusts to traffic</text>
+  <text x="641.5459" y="363.285" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--warn-dk)">● RDS Multi-AZ with sync replication</text>
+  <text x="641.5459" y="382.6087" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--info-dk)">● CloudFront caches static content</text>
+  <text x="641.5459" y="401.9324" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--text-muted)">● ALB distributes traffic across AZs</text>
+  <text x="641.5459" y="421.256" font-family="Arial, sans-serif" font-size="9.2754" fill="var(--text-muted)">● S3 stores static assets durably</text>
 </svg>
