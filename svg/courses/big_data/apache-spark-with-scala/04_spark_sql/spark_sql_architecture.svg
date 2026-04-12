@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Spark SQL</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -103,14 +92,74 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Spark SQL Architecture</text>
+
+  <!-- Top: user API -->
+  <rect x="100" y="85" width="350" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="275" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">DataFrame / Dataset API</text>
+  <text x="275" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">Scala, Java, Python, R</text>
+
+  <rect x="470" y="85" width="350" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="645" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">SQL Queries</text>
+  <text x="645" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">spark.sql("SELECT ...")</text>
+
+  <rect x="840" y="85" width="340" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1010" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--primary-text)">Hive Tables</text>
+  <text x="1010" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">metastore-backed tables</text>
+
+  <line x1="275" y1="155" x2="400" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="645" y1="155" x2="645" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1010" y1="155" x2="880" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Catalyst Optimizer -->
+  <rect x="100" y="190" width="1080" height="220" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Catalyst Optimizer</text>
+
+  <rect x="140" y="250" width="200" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="240" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Unresolved</text>
+  <text x="240" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Logical Plan</text>
+  <text x="240" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">column / table refs</text>
+  <text x="240" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">not yet resolved</text>
+
+  <rect x="370" y="250" width="200" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="470" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Analyzed</text>
+  <text x="470" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Logical Plan</text>
+  <text x="470" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">resolve via Catalog</text>
+  <text x="470" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">type-check</text>
+
+  <rect x="600" y="250" width="200" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="700" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Optimized</text>
+  <text x="700" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Logical Plan</text>
+  <text x="700" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">predicate pushdown</text>
+  <text x="700" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">column pruning</text>
+
+  <rect x="830" y="250" width="200" height="130" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="930" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Physical</text>
+  <text x="930" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Plan</text>
+  <text x="930" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">cost-based selection</text>
+  <text x="930" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">broadcast vs sort-merge</text>
+
+  <line x1="340" y1="315" x2="368" y2="315" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="570" y1="315" x2="598" y2="315" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="800" y1="315" x2="828" y2="315" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tungsten + RDDs -->
+  <rect x="100" y="430" width="520" height="90" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="360" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Tungsten Execution</text>
+  <text x="360" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Whole-stage codegen, off-heap memory</text>
+  <text x="360" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Cache-friendly binary row format</text>
+
+  <rect x="660" y="430" width="520" height="90" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="920" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">RDDs of InternalRow</text>
+  <text x="920" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Executed on the Spark engine</text>
+  <text x="920" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Same scheduler, shuffle, fault tolerance</text>
+
+  <line x1="935" y1="380" x2="935" y2="425" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Data sources -->
+  <rect x="100" y="540" width="1080" height="70" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="568" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">Data Source V2</text>
+  <text x="640" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Parquet · ORC · JSON · CSV · JDBC · Delta · Iceberg · Kafka</text>
 </svg>

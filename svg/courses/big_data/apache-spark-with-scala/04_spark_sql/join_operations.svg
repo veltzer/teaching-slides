@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Join Types</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -103,15 +92,76 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Join Strategies in Spark SQL</text>
+
+  <!-- Broadcast Hash Join -->
+  <rect x="40" y="80" width="390" height="250" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="235" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-text)">Broadcast Hash Join</text>
+  <text x="235" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">small side ships to every executor</text>
+  <text x="235" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">no shuffle on the large side</text>
+  <text x="235" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--ok-text)">When</text>
+  <text x="235" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">one side under spark.sql.autoBroadcast</text>
+  <text x="235" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Threshold (default 10MB)</text>
+  <text x="235" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--ok-text)">df.join(broadcast(small), "id")</text>
+  <text x="235" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Fastest; avoid huge broadcasts (OOM)</text>
+
+  <!-- Shuffle Hash Join -->
+  <rect x="445" y="80" width="390" height="250" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Shuffle Hash Join</text>
+  <text x="640" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">both sides hash-shuffled by key</text>
+  <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">hashtable built on smaller side</text>
+  <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">When</text>
+  <text x="640" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">neither side tiny, one fits per executor</text>
+  <text x="640" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">spark.sql.join.preferSortMergeJoin=false</text>
+  <text x="640" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--primary-text)">No sorting, in-memory hash</text>
+  <text x="640" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">Rarely picked unless forced</text>
+
+  <!-- Sort-Merge Join -->
+  <rect x="850" y="80" width="390" height="250" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1045" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-text)">Sort-Merge Join (default)</text>
+  <text x="1045" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">both sides shuffled then sorted</text>
+  <text x="1045" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">merge-scan produces joined rows</text>
+  <text x="1045" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">When</text>
+  <text x="1045" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">both sides large, no broadcast candidate</text>
+  <text x="1045" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Memory-safe: spill-to-disk friendly</text>
+  <text x="1045" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="var(--warn-text)">Predictable, scalable</text>
+  <text x="1045" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">Watch for skew on one key</text>
+
+  <!-- Bottom: Join Types -->
+  <rect x="40" y="360" width="1200" height="250" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Join types</text>
+
+  <rect x="70" y="420" width="180" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="160" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">inner</text>
+  <text x="160" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">rows where key</text>
+  <text x="160" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">matches in both</text>
+  <text x="160" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">default</text>
+
+  <rect x="270" y="420" width="180" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="360" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">left_outer</text>
+  <text x="360" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">all of left</text>
+  <text x="360" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">+ matches of right</text>
+  <text x="360" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">nulls on misses</text>
+
+  <rect x="470" y="420" width="180" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="560" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">right_outer</text>
+  <text x="560" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">mirror of left_outer</text>
+
+  <rect x="670" y="420" width="180" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="760" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">full_outer</text>
+  <text x="760" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">everything from</text>
+  <text x="760" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">both sides</text>
+
+  <rect x="870" y="420" width="180" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="960" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">left_semi</text>
+  <text x="960" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">left rows that</text>
+  <text x="960" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">have a match</text>
+  <text x="960" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="var(--info-text)">no right columns</text>
+
+  <rect x="1070" y="420" width="150" height="160" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1145" y="448" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">left_anti</text>
+  <text x="1145" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">left rows with</text>
+  <text x="1145" y="508" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">NO match</text>
 </svg>

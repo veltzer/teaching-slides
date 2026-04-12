@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
@@ -94,34 +93,59 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="598.8304" y="67.3684" text-anchor="middle" font-size="35.9298" font-weight="bold">Branches Diverge Over Time</text>
-  <circle cx="149.7076" cy="336.8421" r="37.4269" fill="var(--ok-fill)" />
-  <text x="149.7076" y="345.2632" text-anchor="middle" font-size="17.9649" fill="var(--bg)">A</text>
-  <circle cx="299.4152" cy="336.8421" r="37.4269" fill="var(--ok-fill)" />
-  <text x="299.4152" y="345.2632" text-anchor="middle" font-size="17.9649" fill="var(--bg)">B</text>
-  <circle cx="449.1228" cy="336.8421" r="37.4269" fill="var(--ok-fill)" />
-  <text x="449.1228" y="345.2632" text-anchor="middle" font-size="17.9649" fill="var(--bg)">C</text>
-  <text x="299.4152" y="404.2105" text-anchor="middle" font-size="17.9649">Common history</text>
-  <circle cx="598.8304" cy="235.7895" r="37.4269" fill="var(--primary-fill)" />
-  <text x="598.8304" y="244.2105" text-anchor="middle" font-size="17.9649" fill="var(--bg)">D</text>
-  <circle cx="748.538" cy="235.7895" r="37.4269" fill="var(--primary-fill)" />
-  <text x="748.538" y="244.2105" text-anchor="middle" font-size="17.9649" fill="var(--bg)">E</text>
-  <text x="673.6842" y="193.6842" text-anchor="middle" font-size="17.9649">main</text>
-  <circle cx="598.8304" cy="437.8947" r="37.4269" fill="var(--warn-fill)" />
-  <text x="598.8304" y="446.3158" text-anchor="middle" font-size="17.9649" fill="var(--bg)">F</text>
-  <circle cx="748.538" cy="437.8947" r="37.4269" fill="var(--warn-fill)" />
-  <text x="748.538" y="446.3158" text-anchor="middle" font-size="17.9649" fill="var(--bg)">G</text>
-  <circle cx="898.2456" cy="437.8947" r="37.4269" fill="var(--warn-fill)" />
-  <text x="898.2456" y="446.3158" text-anchor="middle" font-size="17.9649" fill="var(--bg)">H</text>
-  <text x="748.538" y="488.4211" text-anchor="middle" font-size="17.9649">feature</text>
-  <line x1="187.1345" y1="336.8421" x2="261.9883" y2="336.8421" stroke="var(--text)" stroke-width="2" />
-  <line x1="336.8421" y1="336.8421" x2="411.6959" y2="336.8421" stroke="var(--text)" stroke-width="2" />
-  <line x1="486.5497" y1="320" x2="561.4035" y2="252.6316" stroke="var(--text)" stroke-width="2" />
-  <line x1="486.5497" y1="353.6842" x2="561.4035" y2="421.0526" stroke="var(--text)" stroke-width="2" />
-  <line x1="636.2573" y1="235.7895" x2="711.1111" y2="235.7895" stroke="var(--text)" stroke-width="2" />
-  <line x1="636.2573" y1="437.8947" x2="711.1111" y2="437.8947" stroke="var(--text)" stroke-width="2" />
-  <line x1="785.9649" y1="437.8947" x2="860.8187" y2="437.8947" stroke="var(--text)" stroke-width="2" />
-  <rect x="299.4152" y="538.9474" width="598.8304" height="101.0526" fill="var(--surface)" stroke="var(--border)" stroke-width="1" rx="6" />
-  <text x="598.8304" y="589.4737" text-anchor="middle" font-size="20.9591">Branches contain different commits</text>
-  <text x="598.8304" y="623.1579" text-anchor="middle" font-size="17.9649">Need to merge or rebase to combine</text>
+
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Branch Divergence</text>
+
+  <!-- Commits on main -->
+  <circle cx="150" cy="270" r="30" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="150" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">A</text>
+
+  <circle cx="280" cy="270" r="30" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="280" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">B</text>
+
+  <line x1="180" y1="270" x2="248" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Fork point -->
+  <circle cx="410" cy="270" r="30" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="410" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">C</text>
+  <text x="410" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">fork point</text>
+  <text x="410" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">(common ancestor)</text>
+
+  <line x1="310" y1="270" x2="378" y2="270" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Main line -->
+  <circle cx="620" cy="170" r="30" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="620" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">D</text>
+  <circle cx="820" cy="170" r="30" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="820" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">E</text>
+  <circle cx="1020" cy="170" r="30" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1020" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">F</text>
+
+  <line x1="435" y1="255" x2="592" y2="185" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="170" x2="788" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="850" y1="170" x2="988" y2="170" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- main label -->
+  <rect x="1070" y="150" width="120" height="40" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1130" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--primary-text)">main</text>
+
+  <!-- Feature branch -->
+  <circle cx="620" cy="380" r="30" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="620" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">X</text>
+  <circle cx="820" cy="380" r="30" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="820" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">Y</text>
+
+  <line x1="435" y1="285" x2="592" y2="365" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="650" y1="380" x2="788" y2="380" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- feature label -->
+  <rect x="870" y="360" width="160" height="40" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="950" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">feature-x</text>
+
+  <!-- Explanation -->
+  <rect x="40" y="480" width="1200" height="140" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">What divergence means</text>
+  <text x="80" y="545" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">• Both branches share history up to C, then commit new work on different lines.</text>
+  <text x="80" y="568" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">• main has D, E, F. feature-x has X, Y. Neither branch is "behind" the other — they are ahead and behind each other.</text>
+  <text x="80" y="591" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">• git merge feature-x from main creates a merge commit with two parents. git rebase replays X, Y on top of F.</text>
 </svg>

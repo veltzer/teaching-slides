@@ -1,18 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Single Machine</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Distributed System</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,13 +92,54 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="393" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Traditional vs Big-Data Processing</text>
+
+  <!-- Left: Traditional -->
+  <rect x="40" y="80" width="600" height="540" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="340" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Traditional (single machine)</text>
+
+  <rect x="200" y="150" width="280" height="80" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="340" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--warn-text)">One Server</text>
+  <text x="340" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">CPU + RAM + disk</text>
+
+  <rect x="200" y="260" width="280" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="340" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Dataset (~1 GB)</text>
+  <text x="340" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">fits in memory</text>
+
+  <rect x="200" y="360" width="280" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="340" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">pandas / SQL</text>
+
+  <text x="340" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Scaling hits hardware limit</text>
+  <text x="340" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Vertical scaling: buy bigger machine</text>
+  <text x="340" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Cost grows non-linearly</text>
+  <text x="340" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-accent)">Fails at TB–PB scale</text>
+  <text x="340" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--danger-accent)">Single point of failure</text>
+
+  <!-- Right: Big-Data -->
+  <rect x="660" y="80" width="600" height="540" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="960" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Big Data (distributed cluster)</text>
+
+  <rect x="720" y="150" width="110" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="775" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Node 1</text>
+  <rect x="845" y="150" width="110" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="900" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Node 2</text>
+  <rect x="970" y="150" width="110" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1025" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Node 3</text>
+  <rect x="1095" y="150" width="110" height="80" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1150" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Node N</text>
+
+  <rect x="720" y="260" width="485" height="70" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="962" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Dataset (TB – PB)</text>
+  <text x="962" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">partitioned across nodes</text>
+
+  <rect x="720" y="360" width="485" height="70" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="962" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--info-text)">Spark / Hadoop / Flink</text>
+
+  <text x="962" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--text)">Horizontal scaling</text>
+  <text x="962" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Add more commodity machines</text>
+  <text x="962" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Linear cost, near-linear throughput</text>
+  <text x="962" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-accent)">Fault tolerant: node loss is survivable</text>
+  <text x="962" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-accent)">Move computation to data, not reverse</text>
 </svg>

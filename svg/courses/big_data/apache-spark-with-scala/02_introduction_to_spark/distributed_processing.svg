@@ -1,18 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Data Input</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -105,14 +92,60 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="1088.0001" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="393" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Distributed Processing with Spark</text>
+
+  <rect x="540" y="90" width="200" height="90" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-text)">Driver</text>
+  <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">SparkContext</text>
+  <text x="640" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">DAGScheduler</text>
+
+  <rect x="540" y="210" width="200" height="60" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--info-text)">Cluster Manager</text>
+  <text x="640" y="256" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--info-text)">YARN / K8s / Standalone</text>
+
+  <line x1="640" y1="180" x2="640" y2="208" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="330" width="240" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="200" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Executor 1</text>
+  <text x="200" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="200" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="200" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Cache partitions</text>
+  <text x="200" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Block manager</text>
+  <text x="200" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">JVM</text>
+
+  <rect x="340" y="330" width="240" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="460" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Executor 2</text>
+  <text x="460" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="460" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="460" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Cache partitions</text>
+  <text x="460" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Block manager</text>
+  <text x="460" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">JVM</text>
+
+  <rect x="600" y="330" width="240" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="720" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Executor 3</text>
+  <text x="720" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="720" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="720" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Cache partitions</text>
+  <text x="720" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Block manager</text>
+  <text x="720" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">JVM</text>
+
+  <rect x="860" y="330" width="240" height="180" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="980" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--ok-text)">Executor N</text>
+  <text x="980" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="980" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Task</text>
+  <text x="980" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Cache partitions</text>
+  <text x="980" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">Block manager</text>
+  <text x="980" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">JVM</text>
+
+  <line x1="600" y1="250" x2="220" y2="328" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="260" x2="460" y2="328" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="660" y1="260" x2="720" y2="328" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="680" y1="250" x2="960" y2="328" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="530" width="1100" height="90" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="630" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="var(--text)">Key ideas</text>
+  <text x="100" y="585" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Driver holds the SparkContext and plans the job as a DAG. Executors run tasks in parallel on worker nodes.</text>
+  <text x="100" y="605" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">Data is split into partitions; one task processes one partition. More partitions means more parallelism up to core count.</text>
 </svg>

@@ -1,20 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">ML Types</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
-  <rect x="677.3333" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">G</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -107,15 +92,70 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="789.3333" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">Types of Machine Learning</text>
+
+  <!-- Supervised -->
+  <rect x="40" y="90" width="390" height="510" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">Supervised</text>
+  <text x="235" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">labeled training data</text>
+  <text x="235" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">learn input → output</text>
+
+  <rect x="70" y="200" width="330" height="150" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Classification</text>
+  <text x="235" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">output is a category</text>
+  <text x="235" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">spam / not-spam, digit 0-9</text>
+  <text x="235" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">LogisticRegression</text>
+  <text x="235" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">DecisionTree, RandomForest</text>
+
+  <rect x="70" y="370" width="330" height="150" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="235" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--primary-text)">Regression</text>
+  <text x="235" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">output is a number</text>
+  <text x="235" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">house price, temperature</text>
+  <text x="235" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">LinearRegression</text>
+  <text x="235" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">GBTRegressor</text>
+
+  <text x="235" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--primary-text)">evaluated with AUC, RMSE, R²</text>
+
+  <!-- Unsupervised -->
+  <rect x="445" y="90" width="390" height="510" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Unsupervised</text>
+  <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">no labels</text>
+  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">find structure in the data</text>
+
+  <rect x="475" y="200" width="330" height="150" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Clustering</text>
+  <text x="640" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">group similar rows</text>
+  <text x="640" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">customer segments</text>
+  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">KMeans, BisectingKMeans</text>
+  <text x="640" y="328" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">GaussianMixture</text>
+
+  <rect x="475" y="370" width="330" height="150" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">Dimensionality reduction</text>
+  <text x="640" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">compress features</text>
+  <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">PCA, SVD</text>
+  <text x="640" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">useful for visualization</text>
+  <text x="640" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">and feature engineering</text>
+
+  <text x="640" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--ok-text)">evaluated with silhouette, explained variance</text>
+
+  <!-- Recommendation / Others -->
+  <rect x="850" y="90" width="390" height="250" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1045" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Recommendation</text>
+  <text x="1045" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">predict user preference</text>
+  <text x="1045" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">from (user, item, rating)</text>
+  <text x="1045" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">ALS (Alternating Least Squares)</text>
+  <text x="1045" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">matrix factorization into user</text>
+  <text x="1045" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">and item latent feature vectors</text>
+  <text x="1045" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--warn-text)">handles implicit feedback too</text>
+
+  <rect x="850" y="360" width="390" height="240" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1045" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--info-text)">Pattern / Outlier</text>
+  <text x="1045" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">frequent itemsets (FPGrowth)</text>
+  <text x="1045" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">association rules</text>
+  <text x="1045" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Topic modeling (LDA)</text>
+  <text x="1045" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Word2Vec embeddings</text>
+  <text x="1045" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">Outlier detection: isolation forest,</text>
+  <text x="1045" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--info-text)">distance-to-cluster-center</text>
 </svg>

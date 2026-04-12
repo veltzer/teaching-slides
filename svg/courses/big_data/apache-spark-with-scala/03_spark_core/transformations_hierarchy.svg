@@ -1,20 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
   <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="80" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">Transformations</text>
-  <rect x="378.6666" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">B</text>
-  <rect x="677.3333" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">C</text>
-  <rect x="976" y="235.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1088.0001" y="273.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">D</text>
-  <rect x="80" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="191.9999" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">E</text>
-  <rect x="378.6666" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="490.6667" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">F</text>
-  <rect x="677.3333" y="361.5" width="224" height="63" rx="6.3" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="789.3333" y="399.3" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.64">G</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -107,15 +92,65 @@
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
+</defs>
 
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
-  </defs>
-  <line x1="191.9999" y1="267" x2="490.6667" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="191.9999" y1="267" x2="789.3333" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="1088.0001" y2="267" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="490.6667" y1="267" x2="191.9999" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="490.6667" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="789.3333" y1="267" x2="789.3333" y2="393" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">RDD Transformations</text>
+
+  <rect x="40" y="85" width="600" height="275" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="340" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Narrow (no shuffle)</text>
+  <text x="340" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Each output partition depends on at most one input partition</text>
+  <text x="340" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Pipelined inside a single stage</text>
+
+  <rect x="70" y="190" width="160" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="150" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">map</text>
+
+  <rect x="250" y="190" width="160" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="330" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">filter</text>
+
+  <rect x="430" y="190" width="160" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="510" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">flatMap</text>
+
+  <rect x="70" y="260" width="160" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="150" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">mapPartitions</text>
+
+  <rect x="250" y="260" width="160" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="330" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">sample</text>
+
+  <rect x="430" y="260" width="160" height="50" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="510" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--ok-text)">union</text>
+
+  <text x="340" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Cheap: stays on the same executor</text>
+
+  <rect x="660" y="85" width="600" height="275" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="960" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Wide (shuffle)</text>
+  <text x="960" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Output partition depends on many input partitions</text>
+  <text x="960" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Starts a new stage — data moves across the network</text>
+
+  <rect x="690" y="190" width="160" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="770" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">groupByKey</text>
+
+  <rect x="870" y="190" width="160" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="950" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">reduceByKey</text>
+
+  <rect x="1050" y="190" width="160" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1130" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">aggregateByKey</text>
+
+  <rect x="690" y="260" width="160" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="770" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">join / cogroup</text>
+
+  <rect x="870" y="260" width="160" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="950" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">distinct</text>
+
+  <rect x="1050" y="260" width="160" height="50" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1130" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="var(--warn-text)">repartition</text>
+
+  <text x="960" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">Expensive: disk write, network transfer, disk read</text>
+
+  <rect x="40" y="390" width="1220" height="210" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="650" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Rules of thumb</text>
+  <text x="80" y="460" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">• Prefer reduceByKey over groupByKey — it combines on the map side before shuffling.</text>
+  <text x="80" y="488" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">• Use mapPartitions when you need to set up per-partition state (connection, buffer).</text>
+  <text x="80" y="516" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">• coalesce shrinks partitions without a shuffle; repartition forces a full shuffle.</text>
+  <text x="80" y="544" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">• broadcast a small lookup table instead of joining when one side fits in memory.</text>
+  <text x="80" y="572" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">• Fewer wide transformations = fewer stages = faster job.</text>
 </svg>
