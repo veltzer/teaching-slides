@@ -1,110 +1,92 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">A((A:User<br />age:28))</text>
-  <rect x="359.9999" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">|knows| B((B:User<br />age:27))</text>
-  <rect x="680" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">B</text>
-  <rect x="1000" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">|follows| C((C:User<br />age:65))</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
         --surface: #f5f5f5;
         --border: #e0e0e0;
         --text: #212121;
         --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
         --ok-fill: #4caf50;
         --ok-border: #2e7d32;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
         --warn-fill: #ff9800;
         --warn-border: #e65100;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="330" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="330" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="1200" height="62.142857" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="67.964286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.318609" font-weight="bold" fill="var(--primary-text)">class Graph[VD, ED]</text>
+  <text x="640" y="90.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--primary-text)">directed multigraph — parallel edges allowed — VD, ED are arbitrary user types</text>
+
+  <g font-family="Arial, sans-serif">
+    <circle cx="200" cy="210.892857" r="42.743421" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+    <text x="200" y="205.714286" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">1 : Alice</text>
+    <text x="200" y="224.357143" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)">age=29</text>
+    <circle cx="500" cy="159.107143" r="42.743421" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+    <text x="500" y="153.928571" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">2 : Bob</text>
+    <text x="500" y="172.571429" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)">age=34</text>
+    <circle cx="500" cy="293.75" r="42.743421" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+    <text x="500" y="288.571429" text-anchor="middle" font-size="13.230106" font-weight="bold" fill="var(--ok-text)">3 : Carol</text>
+    <text x="500" y="307.214286" text-anchor="middle" font-size="11.194705" fill="var(--ok-text)">age=41</text>
+
+    <line x1="242" y1="202.607143" x2="458" y2="164.285714" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="340" y="174.642857" text-anchor="middle" font-size="11.194705" fill="var(--warn-border)" font-weight="bold">follows since=2020</text>
+    <line x1="242" y1="223.321429" x2="458" y2="288.571429" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="340" y="278.214286" text-anchor="middle" font-size="11.194705" fill="var(--warn-border)" font-weight="bold">likes weight=0.8</text>
+    <line x1="500" y1="202.607143" x2="500" y2="250.25" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="538" y="229.535714" font-size="11.194705" fill="var(--warn-border)" font-weight="bold">mgr_of</text>
+  </g>
+
+  <rect x="640" y="128.035714" width="280" height="93.214286" rx="6.106203" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="780" y="153.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">VertexRDD[VD]</text>
+  <text x="780" y="177.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">RDD[(VertexId, VD)]</text>
+  <text x="780" y="200.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">hash-indexed, unique id</text>
+
+  <rect x="940" y="128.035714" width="290" height="93.214286" rx="6.106203" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="1085" y="153.928571" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--text)">EdgeRDD[ED]</text>
+  <text x="1085" y="177.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">RDD[Edge(src, dst, attr)]</text>
+  <text x="1085" y="200.535714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">partitioned by edge strategy</text>
+
+  <rect x="640" y="236.785714" width="590" height="93.214286" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="935" y="264.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.247807" font-weight="bold" fill="var(--info-text)">triplets: RDD[EdgeTriplet[VD, ED]]</text>
+  <text x="935" y="286.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">(srcId, srcAttr, dstId, dstAttr, edgeAttr) — join of edges with both endpoint attrs</text>
+  <text x="935" y="311.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--info-text)">drives Pregel, aggregateMessages — graph's "row view"</text>
+
+  <rect x="40" y="366.25" width="1200" height="253.75" rx="8.141604" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="397.321429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.300908" font-weight="bold" fill="var(--text)">Construction and Views</text>
+
+  <rect x="70" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <text x="255" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Build</text>
+  <text x="255" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph(vertices, edges)</text>
+  <text x="255" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph.fromEdges(edges, default)</text>
+  <text x="255" y="520.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">Graph.fromEdgeTuples(pairs, default)</text>
+  <text x="255" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">VD and ED stored separately,</text>
+  <text x="255" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">joined on demand</text>
+
+  <rect x="460" y="423.214286" width="370" height="176.071429" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <text x="645" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Transform</text>
+  <text x="645" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">mapVertices / mapEdges / mapTriplets</text>
+  <text x="645" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">subgraph(epred, vpred)</text>
+  <text x="645" y="520.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">reverse, mask, groupEdges</text>
+  <text x="645" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">outerJoinVertices merges external tables</text>
+  <text x="645" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">into VD without rebuild</text>
+
+  <rect x="850" y="423.214286" width="360" height="176.071429" rx="6.106203" fill="#ffffff" stroke="var(--border)"/>
+  <text x="1030" y="449.107143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.230106" font-weight="bold" fill="var(--text)">Query</text>
+  <text x="1030" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">numVertices, numEdges</text>
+  <text x="1030" y="497.785714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">inDegrees, outDegrees, degrees</text>
+  <text x="1030" y="520.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">aggregateMessages → VertexRDD</text>
+  <text x="1030" y="549.571429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">triplet-centric: attr(src) + attr(dst)</text>
+  <text x="1030" y="572.357143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.212406" fill="var(--text-muted)">+ attr(edge) available together</text>
 </svg>

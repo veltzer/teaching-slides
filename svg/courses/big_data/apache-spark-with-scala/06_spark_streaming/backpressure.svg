@@ -1,111 +1,87 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">Input</text>
-  <rect x="359.9999" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">B</text>
-  <rect x="680" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">C</text>
-  <rect x="1000" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">|Feedback| B</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
         --surface: #f5f5f5;
         --border: #e0e0e0;
         --text: #212121;
         --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
         --ok-fill: #4caf50;
         --ok-border: #2e7d32;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
         --warn-fill: #ff9800;
         --warn-border: #e65100;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
         --danger-fill: #e74c3c;
         --danger-border: #c62828;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="330" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="480" y1="330" x2="800" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="330" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="1200" height="73.153153" rx="6.133647" fill="var(--surface)" stroke="var(--border)"/>
+  <text x="640" y="71.351351" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.378666" font-weight="bold" fill="var(--text)">spark.streaming.backpressure.enabled = true</text>
+  <text x="640" y="95.387387" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--text-muted)">Spark adjusts receiver ingest rate so batch processing keeps up — prevents unbounded queue growth</text>
+
+  <rect x="40" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="220" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--primary-text)">Source</text>
+  <text x="220" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">Kafka / socket / receiver</text>
+  <text x="220" y="228.108108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--primary-text)">produces at variable rate</text>
+  <text x="220" y="264.684685" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--primary-text)">maxRatePerPartition caps absolute ceiling</text>
+  <text x="220" y="290.810811" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--primary-text)">initialRate sets startup rate</text>
+
+  <rect x="460" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--warn-text)">Receiver (rate limited)</text>
+  <text x="640" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">blocks the producer when</text>
+  <text x="640" y="224.972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--warn-text)">ingest rate exceeds target</text>
+  <text x="640" y="262.594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--warn-text)">RateEstimator sets records/sec</text>
+  <text x="640" y="288.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--warn-text)">updated every batch</text>
+
+  <rect x="880" y="139.279279" width="360" height="177.657658" rx="6.133647" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="1060" y="170.630631" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.40094" font-weight="bold" fill="var(--ok-text)">Processing</text>
+  <text x="1060" y="201.981982" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">batch interval = 2s</text>
+  <text x="1060" y="224.972973" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.289568" fill="var(--ok-text)">goal: process time ≤ interval</text>
+  <text x="1060" y="262.594595" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--ok-text)">reports scheduling + process delay</text>
+  <text x="1060" y="288.720721" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--ok-text)">StreamingListener feedback</text>
+
+  <line x1="400" y1="228.108108" x2="455" y2="228.108108" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="820" y1="228.108108" x2="875" y2="228.108108" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="358.738739" width="1200" height="261.261261" rx="8.178196" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="395.315315" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.445489" font-weight="bold" fill="var(--info-text)">PID Rate Estimator (default)</text>
+  <text x="640" y="426.666667" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.311842" fill="var(--info-text)">spark.streaming.backpressure.pid.{proportional, integral, derived, minRate}</text>
+
+  <rect x="70" y="452.792793" width="270" height="146.306306" rx="6.133647" fill="#ffffff" stroke="var(--info-border)"/>
+  <text x="205" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Proportional</text>
+  <text x="205" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">reacts to current error</text>
+  <text x="205" y="533.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">(processing - batch time)</text>
+  <text x="205" y="562.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">fast response</text>
+  <text x="205" y="585.513514" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">can overshoot</text>
+
+  <rect x="350" y="452.792793" width="270" height="146.306306" rx="6.133647" fill="#ffffff" stroke="var(--info-border)"/>
+  <text x="485" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Integral</text>
+  <text x="485" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">sum of past errors</text>
+  <text x="485" y="533.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">eliminates steady-state drift</text>
+  <text x="485" y="562.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">slow but stable</text>
+
+  <rect x="630" y="452.792793" width="270" height="146.306306" rx="6.133647" fill="#ffffff" stroke="var(--info-border)"/>
+  <text x="765" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">Derivative</text>
+  <text x="765" y="510.27027" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">rate of change of error</text>
+  <text x="765" y="533.261261" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">damps oscillations</text>
+  <text x="765" y="562.522523" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">noisy if batches jitter</text>
+
+  <rect x="910" y="452.792793" width="300" height="146.306306" rx="6.133647" fill="#ffffff" stroke="var(--info-border)"/>
+  <text x="1060" y="482.054054" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.334117" font-weight="bold" fill="var(--text)">newRate = lastRate - ΔP-ΔI-ΔD</text>
+  <text x="1060" y="515.495495" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">clamped to [minRate, maxRate]</text>
+  <text x="1060" y="541.621622" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">published to receivers</text>
+  <text x="1060" y="576.108108" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.267293" fill="var(--text-muted)">via RateController on driver</text>
 </svg>

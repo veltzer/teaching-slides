@@ -1,112 +1,94 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">Edge</text>
-  <rect x="359.9999" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">B</text>
-  <rect x="680" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">C</text>
-  <rect x="1000" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">D</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
         --surface: #f5f5f5;
         --border: #e0e0e0;
         --text: #212121;
         --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
         --ok-fill: #4caf50;
         --ok-border: #2e7d32;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
         --warn-fill: #ff9800;
         --warn-border: #e65100;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
         --danger-fill: #e74c3c;
         --danger-border: #c62828;
         --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="330" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="330" x2="800" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="330" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="290" height="269.285714" rx="6.106203" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="76.25" text-anchor="middle" font-family="monospace" font-size="20.35401" font-weight="bold" fill="var(--primary-text)">reverse</text>
+  <text x="185" y="102.142857" text-anchor="middle" font-family="Arial" font-size="13.230106" fill="var(--primary-text)">flip every edge direction</text>
+  <circle cx="100" cy="185" r="22.389411" fill="#fff"/>
+  <text x="100" y="190.178571" text-anchor="middle" font-family="Arial" font-size="14.247807" font-weight="bold" fill="var(--primary-border)">A</text>
+  <circle cx="270" cy="185" r="22.389411" fill="#fff"/>
+  <text x="270" y="190.178571" text-anchor="middle" font-family="Arial" font-size="14.247807" font-weight="bold" fill="var(--primary-border)">B</text>
+  <line x1="122" y1="185" x2="240" y2="185" stroke="#fff" stroke-width="3"/>
+  <polygon points="240,185 232,180.857143 232,189.142857" fill="#fff"/>
+  <text x="185" y="247.142857" text-anchor="middle" font-family="Arial" font-size="12.212406" fill="var(--primary-text)">A to B becomes B to A</text>
+  <line x1="122" y1="273.035714" x2="240" y2="273.035714" stroke="#fff" stroke-width="3" stroke-dasharray="4,3"/>
+  <polygon points="122,273.035714 130,268.892857 130,277.178571" fill="#fff"/>
+
+  <rect x="350" y="40" width="290" height="269.285714" rx="6.106203" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="495" y="76.25" text-anchor="middle" font-family="monospace" font-size="20.35401" font-weight="bold" fill="var(--ok-text)">subgraph</text>
+  <text x="495" y="102.142857" text-anchor="middle" font-family="Arial" font-size="13.230106" fill="var(--ok-text)">filter edges and vertices</text>
+  <circle cx="400" cy="185" r="18.318609" fill="#fff"/>
+  <circle cx="495" cy="164.285714" r="18.318609" fill="#fff"/>
+  <circle cx="590" cy="195.357143" r="18.318609" fill="#fff"/>
+  <circle cx="440" cy="257.5" r="18.318609" fill="#999" opacity="0.4"/>
+  <circle cx="560" cy="257.5" r="18.318609" fill="#999" opacity="0.4"/>
+  <line x1="418" y1="185" x2="477" y2="166.357143" stroke="#fff" stroke-width="2"/>
+  <line x1="513" y1="164.285714" x2="572" y2="193.285714" stroke="#fff" stroke-width="2"/>
+  <line x1="410" y1="203.642857" x2="430" y2="240.928571" stroke="#999" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="446" y1="257.5" x2="554" y2="257.5" stroke="#999" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="495" y="298.928571" text-anchor="middle" font-family="Arial" font-size="12.212406" fill="var(--ok-text)">keep only edges where pred=true</text>
+
+  <rect x="660" y="40" width="290" height="269.285714" rx="6.106203" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="805" y="76.25" text-anchor="middle" font-family="monospace" font-size="20.35401" font-weight="bold" fill="var(--warn-text)">groupEdges</text>
+  <text x="805" y="102.142857" text-anchor="middle" font-family="Arial" font-size="13.230106" fill="var(--warn-text)">merge parallel edges</text>
+  <circle cx="710" cy="200.535714" r="22.389411" fill="#fff"/>
+  <text x="710" y="205.714286" text-anchor="middle" font-family="Arial" font-size="14.247807" font-weight="bold" fill="var(--warn-border)">A</text>
+  <circle cx="900" cy="200.535714" r="22.389411" fill="#fff"/>
+  <text x="900" y="205.714286" text-anchor="middle" font-family="Arial" font-size="14.247807" font-weight="bold" fill="var(--warn-border)">B</text>
+  <path d="M 732 185 Q 805 143.571429 878 185" stroke="#fff" stroke-width="2" fill="none"/>
+  <path d="M 732 200.535714 L 878 200.535714" stroke="#fff" stroke-width="2"/>
+  <path d="M 732 216.071429 Q 805 257.5 878 216.071429" stroke="#fff" stroke-width="2" fill="none"/>
+  <text x="805" y="278.214286" text-anchor="middle" font-family="Arial" font-size="12.212406" fill="var(--warn-text)">3 edges + merge fn = 1 edge</text>
+
+  <rect x="970" y="40" width="270" height="269.285714" rx="6.106203" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1105" y="76.25" text-anchor="middle" font-family="monospace" font-size="20.35401" font-weight="bold" fill="var(--info-text)">mapEdges</text>
+  <text x="1105" y="102.142857" text-anchor="middle" font-family="Arial" font-size="13.230106" fill="var(--info-text)">transform edge attrs</text>
+  <circle cx="1010" cy="195.357143" r="22.389411" fill="#fff"/>
+  <circle cx="1200" cy="195.357143" r="22.389411" fill="#fff"/>
+  <line x1="1032" y1="195.357143" x2="1178" y2="195.357143" stroke="#fff" stroke-width="3"/>
+  <text x="1105" y="174.642857" text-anchor="middle" font-family="monospace" font-size="14.247807" font-weight="bold" fill="#fff">"friend"</text>
+  <text x="1105" y="234.714286" text-anchor="middle" font-family="Arial" font-size="18.318609" fill="#fff">v</text>
+  <text x="1105" y="267.857143" text-anchor="middle" font-family="monospace" font-size="14.247807" font-weight="bold" fill="#fff">0.8</text>
+  <text x="1105" y="293.75" text-anchor="middle" font-family="Arial" font-size="12.212406" fill="var(--info-text)">preserves structure</text>
+
+  <rect x="40" y="350.714286" width="1200" height="269.285714" rx="6.106203" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="392.142857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.35401" font-weight="bold" fill="var(--text)">Edge Operations Cheat Sheet</text>
+
+  <text x="80" y="438.75" font-family="monospace" font-size="16.283208" font-weight="bold" fill="var(--primary-border)">graph.reverse</text>
+  <text x="80" y="464.642857" font-family="Arial" font-size="13.230106" fill="var(--text-muted)">swaps src and dst - no data moves</text>
+
+  <text x="80" y="511.25" font-family="monospace" font-size="16.283208" font-weight="bold" fill="var(--ok-border)">graph.subgraph(epred, vpred)</text>
+  <text x="80" y="537.142857" font-family="Arial" font-size="13.230106" fill="var(--text-muted)">prune by edge and vertex predicates</text>
+
+  <text x="680" y="438.75" font-family="monospace" font-size="16.283208" font-weight="bold" fill="var(--warn-border)">graph.groupEdges((a,b) =&gt; a+b)</text>
+  <text x="680" y="464.642857" font-family="Arial" font-size="13.230106" fill="var(--text-muted)">collapse parallel edges (needs partitionBy first)</text>
+
+  <text x="680" y="511.25" font-family="monospace" font-size="16.283208" font-weight="bold" fill="var(--info-border)">graph.mapEdges(e =&gt; f(e.attr))</text>
+  <text x="680" y="537.142857" font-family="Arial" font-size="13.230106" fill="var(--text-muted)">rewrite each edge attribute in place</text>
+
+  <text x="640" y="588.928571" text-anchor="middle" font-family="Arial" font-size="13.230106" fill="var(--text-muted)">All return a new Graph - RDDs are immutable</text>
 </svg>

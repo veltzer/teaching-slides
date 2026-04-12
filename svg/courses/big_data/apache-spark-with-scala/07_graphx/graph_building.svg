@@ -1,113 +1,93 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">Raw Data</text>
-  <rect x="359.9999" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">B</text>
-  <rect x="680" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">C</text>
-  <rect x="1000" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">D</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
         --surface: #f5f5f5;
         --border: #e0e0e0;
         --text: #212121;
         --text-muted: #555555;
-        --text-faint: #888888;
         --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
         --ok-fill: #4caf50;
         --ok-border: #2e7d32;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
         --warn-fill: #ff9800;
         --warn-border: #e65100;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="330" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="330" x2="800" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="480" y1="330" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="800" y1="330" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="390" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="40" width="390" height="64.444444" rx="6.218253" fill="var(--primary-fill)"/>
+  <text x="235" y="82.962963" text-anchor="middle" font-family="monospace" font-size="20.727509" font-weight="bold" fill="var(--primary-text)">Graph(vertices, edges)</text>
+
+  <text x="235" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">when you have typed attrs</text>
+
+  <rect x="60" y="163.518519" width="350" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
+  <text x="75" y="190.37037" font-family="monospace" font-size="12.436505" fill="#80d8ff">val v = sc.parallelize(Seq(</text>
+  <text x="75" y="211.851852" font-family="monospace" font-size="12.436505" fill="#fff">  (1L, ("Alice", 28)),</text>
+  <text x="75" y="233.333333" font-family="monospace" font-size="12.436505" fill="#fff">  (2L, ("Bob", 27))))</text>
+  <text x="75" y="256.962963" font-family="monospace" font-size="12.436505" fill="#80d8ff">val e = sc.parallelize(Seq(</text>
+  <text x="75" y="278.444444" font-family="monospace" font-size="12.436505" fill="#fff">  Edge(1L, 2L, "friend")))</text>
+  <text x="75" y="297.777778" font-family="monospace" font-size="12.436505" fill="#80ff80">Graph(v, e)</text>
+
+  <text x="235" y="346.111111" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--primary-border)">inputs</text>
+  <text x="235" y="378.333333" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[(VertexId, VD)]</text>
+  <text x="235" y="405.185185" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[Edge[ED]]</text>
+
+  <text x="235" y="458.888889" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--primary-border)">use when</text>
+  <text x="235" y="491.111111" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">vertex attrs matter</text>
+  <text x="235" y="517.962963" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">edge attrs matter</text>
+  <text x="235" y="544.814815" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">most common choice</text>
+
+  <rect x="450" y="40" width="390" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="450" y="40" width="390" height="64.444444" rx="6.218253" fill="var(--ok-fill)"/>
+  <text x="645" y="82.962963" text-anchor="middle" font-family="monospace" font-size="20.727509" font-weight="bold" fill="var(--ok-text)">Graph.fromEdges</text>
+
+  <text x="645" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">edges only, default vtx attr</text>
+
+  <rect x="470" y="163.518519" width="350" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
+  <text x="485" y="190.37037" font-family="monospace" font-size="12.436505" fill="#80d8ff">val e = sc.parallelize(Seq(</text>
+  <text x="485" y="211.851852" font-family="monospace" font-size="12.436505" fill="#fff">  Edge(1L, 2L, 0.5),</text>
+  <text x="485" y="233.333333" font-family="monospace" font-size="12.436505" fill="#fff">  Edge(2L, 3L, 0.8)))</text>
+  <text x="485" y="270.925926" font-family="monospace" font-size="12.436505" fill="#80ff80">Graph.fromEdges(e,</text>
+  <text x="485" y="292.407407" font-family="monospace" font-size="12.436505" fill="#80ff80">  defaultValue = 1)</text>
+
+  <text x="645" y="346.111111" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--ok-border)">inputs</text>
+  <text x="645" y="378.333333" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[Edge[ED]]</text>
+  <text x="645" y="405.185185" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">defaultValue: VD</text>
+
+  <text x="645" y="458.888889" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--ok-border)">use when</text>
+  <text x="645" y="491.111111" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">vertices inferred from edges</text>
+  <text x="645" y="517.962963" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">edge-only datasets</text>
+  <text x="645" y="544.814815" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">loading from edge file</text>
+
+  <rect x="860" y="40" width="380" height="580" rx="6.218253" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="860" y="40" width="380" height="64.444444" rx="6.218253" fill="var(--warn-fill)"/>
+  <text x="1050" y="82.962963" text-anchor="middle" font-family="monospace" font-size="18.654758" font-weight="bold" fill="var(--warn-text)">fromEdgeTuples</text>
+
+  <text x="1050" y="136.666667" text-anchor="middle" font-family="Arial" font-size="14.509256" fill="var(--text)" font-weight="bold">src/dst pairs, no attrs</text>
+
+  <rect x="880" y="163.518519" width="340" height="139.62963" rx="4.145502" fill="var(--code-bg)"/>
+  <text x="895" y="190.37037" font-family="monospace" font-size="12.436505" fill="#80d8ff">val pairs =</text>
+  <text x="895" y="211.851852" font-family="monospace" font-size="12.436505" fill="#fff">  sc.parallelize(Seq(</text>
+  <text x="895" y="233.333333" font-family="monospace" font-size="12.436505" fill="#fff">    (1L, 2L),</text>
+  <text x="895" y="254.814815" font-family="monospace" font-size="12.436505" fill="#fff">    (2L, 3L)))</text>
+  <text x="895" y="287.037037" font-family="monospace" font-size="12.436505" fill="#80ff80">Graph.fromEdgeTuples(</text>
+  <text x="895" y="303.148148" font-family="monospace" font-size="12.436505" fill="#80ff80">  pairs, defaultValue=1)</text>
+
+  <text x="1050" y="346.111111" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--warn-border)">inputs</text>
+  <text x="1050" y="378.333333" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">RDD[(VertexId, VertexId)]</text>
+  <text x="1050" y="405.185185" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">default VD</text>
+
+  <text x="1050" y="458.888889" text-anchor="middle" font-family="Arial" font-size="14.509256" font-weight="bold" fill="var(--warn-border)">use when</text>
+  <text x="1050" y="491.111111" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">unweighted graph</text>
+  <text x="1050" y="517.962963" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">edges count as weight 1</text>
+  <text x="1050" y="544.814815" text-anchor="middle" font-family="Arial" font-size="13.472881" fill="var(--text-muted)">adj-list style input</text>
 </svg>

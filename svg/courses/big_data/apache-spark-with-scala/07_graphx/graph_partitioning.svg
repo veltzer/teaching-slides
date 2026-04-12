@@ -1,112 +1,120 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- PLACEHOLDERSVG — scaffolded diagram, needs real content -->
-  <!-- palette: resources/palette_diagram.yaml -->
-  <rect x="40" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="159.9999" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">Graph</text>
-  <rect x="359.9999" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="480" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">B</text>
-  <rect x="680" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="800" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">C</text>
-  <rect x="1000" y="296" width="240" height="68" rx="6.0222" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="1120.0001" y="336.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.9699">D</text>
   <defs>
     <style id="palette-vars">
       :root, svg {
-        --bg: #ffffff;
         --surface: #f5f5f5;
         --border: #e0e0e0;
         --text: #212121;
         --text-muted: #555555;
-        --text-faint: #888888;
-        --code-bg: #1a1a2e;
-        --shadow: #00000022;
-        --black: #000000;
         --primary-fill: #2196f3;
         --primary-border: #1565c0;
         --primary-text: #ffffff;
-        --primary-accent: #0d47a1;
         --ok-fill: #4caf50;
         --ok-border: #2e7d32;
         --ok-text: #ffffff;
-        --ok-accent: #1b5e20;
         --warn-fill: #ff9800;
         --warn-border: #e65100;
         --warn-text: #ffffff;
-        --warn-accent: #bf360c;
-        --danger-fill: #e74c3c;
-        --danger-border: #c62828;
-        --danger-text: #ffffff;
-        --danger-accent: #b71c1c;
         --info-fill: #9c27b0;
         --info-border: #6a1b9a;
         --info-text: #ffffff;
-        --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,12 4.9778,0" fill="#666" />
-    </marker>
   </defs>
-  <line x1="159.9999" y1="330" x2="480" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="330" x2="800" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
-  <line x1="159.9999" y1="330" x2="1120.0001" y2="330" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <rect x="40" y="40" width="290" height="274.181818" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="185" y="76.909091" text-anchor="middle" font-family="Arial" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">EdgePartition2D</text>
+  <g transform="translate(85 110)">
+    <rect x="0" y="-23.272727" width="50" height="52.727273" fill="#fff" fill-opacity="0.9"/>
+    <rect x="50" y="-23.272727" width="50" height="52.727273" fill="#fff" fill-opacity="0.4"/>
+    <rect x="100" y="-23.272727" width="50" height="52.727273" fill="#fff" fill-opacity="0.7"/>
+    <rect x="150" y="-23.272727" width="50" height="52.727273" fill="#fff" fill-opacity="0.2"/>
+    <rect x="0" y="29.454545" width="50" height="52.727273" fill="#fff" fill-opacity="0.4"/>
+    <rect x="50" y="29.454545" width="50" height="52.727273" fill="#fff" fill-opacity="0.9"/>
+    <rect x="100" y="29.454545" width="50" height="52.727273" fill="#fff" fill-opacity="0.2"/>
+    <rect x="150" y="29.454545" width="50" height="52.727273" fill="#fff" fill-opacity="0.7"/>
+    <rect x="0" y="82.181818" width="50" height="52.727273" fill="#fff" fill-opacity="0.7"/>
+    <rect x="50" y="82.181818" width="50" height="52.727273" fill="#fff" fill-opacity="0.2"/>
+    <rect x="100" y="82.181818" width="50" height="52.727273" fill="#fff" fill-opacity="0.9"/>
+    <rect x="150" y="82.181818" width="50" height="52.727273" fill="#fff" fill-opacity="0.4"/>
+    <rect x="0" y="134.909091" width="50" height="52.727273" fill="#fff" fill-opacity="0.2"/>
+    <rect x="50" y="134.909091" width="50" height="52.727273" fill="#fff" fill-opacity="0.7"/>
+    <rect x="100" y="134.909091" width="50" height="52.727273" fill="#fff" fill-opacity="0.4"/>
+    <rect x="150" y="134.909091" width="50" height="52.727273" fill="#fff" fill-opacity="0.9"/>
+  </g>
+
+  <rect x="350" y="40" width="290" height="274.181818" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="495" y="76.909091" text-anchor="middle" font-family="Arial" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">RandomVertexCut</text>
+  <g transform="translate(395 125)">
+    <circle cx="25" cy="8.363636" r="8.215285" fill="#fff"/>
+    <circle cx="75" cy="3.090909" r="8.215285" fill="#fff"/>
+    <circle cx="125" cy="18.909091" r="8.215285" fill="#fff"/>
+    <circle cx="175" cy="8.363636" r="8.215285" fill="#fff"/>
+    <circle cx="30" cy="71.636364" r="8.215285" fill="#fff"/>
+    <circle cx="100" cy="82.181818" r="8.215285" fill="#fff"/>
+    <circle cx="160" cy="71.636364" r="8.215285" fill="#fff"/>
+    <circle cx="60" cy="134.909091" r="8.215285" fill="#fff"/>
+    <circle cx="130" cy="134.909091" r="8.215285" fill="#fff"/>
+    <line x1="25" y1="16.8" x2="75" y2="11.527273" stroke="#fff" stroke-width="1.5"/>
+    <line x1="75" y1="11.527273" x2="125" y2="27.345455" stroke="#fff" stroke-width="1.5"/>
+    <line x1="25" y1="16.8" x2="30" y2="63.2" stroke="#fff" stroke-width="1.5"/>
+    <line x1="100" y1="82.181818" x2="60" y2="126.472727" stroke="#fff" stroke-width="1.5"/>
+    <line x1="175" y1="16.8" x2="160" y2="63.2" stroke="#fff" stroke-width="1.5"/>
+    <line x1="130" y1="134.909091" x2="160" y2="80.072727" stroke="#fff" stroke-width="1.5"/>
+  </g>
+  <text x="495" y="298.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--ok-text)">edge hashed by (src, dst)</text>
+
+  <rect x="660" y="40" width="290" height="274.181818" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="805" y="74.8" text-anchor="middle" font-family="Arial" font-size="16.43057" font-weight="bold" fill="var(--warn-text)">CanonicalRandomVertexCut</text>
+  <g transform="translate(700 125)">
+    <circle cx="40" cy="18.909091" r="10.269106" fill="#fff"/>
+    <text x="40" y="23.127273" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--warn-border)">A</text>
+    <circle cx="170" cy="18.909091" r="10.269106" fill="#fff"/>
+    <text x="170" y="23.127273" text-anchor="middle" font-family="Arial" font-size="10.269106" font-weight="bold" fill="var(--warn-border)">B</text>
+    <path d="M 50 13.636364 Q 105 -12.727273 160 13.636364" stroke="#fff" stroke-width="2" fill="none"/>
+    <path d="M 50 24.181818 Q 105 55.818182 160 24.181818" stroke="#fff" stroke-width="2" fill="none"/>
+    <text x="105" y="98" text-anchor="middle" font-family="Arial" font-size="11.296017" fill="#fff">A to B and B to A</text>
+    <text x="105" y="119.090909" text-anchor="middle" font-family="Arial" font-size="11.296017" fill="#fff">land on same partition</text>
+  </g>
+  <text x="805" y="298.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--warn-text)">canonical: min/max of (src,dst)</text>
+
+  <rect x="970" y="40" width="270" height="274.181818" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1105" y="76.909091" text-anchor="middle" font-family="Arial" font-size="18.484391" font-weight="bold" fill="var(--info-text)">EdgePartition1D</text>
+  <g transform="translate(1000 125)">
+    <rect x="0" y="-23.272727" width="50" height="158.181818" fill="#fff" fill-opacity="0.9"/>
+    <rect x="55" y="-23.272727" width="50" height="158.181818" fill="#fff" fill-opacity="0.5"/>
+    <rect x="110" y="-23.272727" width="50" height="158.181818" fill="#fff" fill-opacity="0.7"/>
+    <rect x="165" y="-23.272727" width="50" height="158.181818" fill="#fff" fill-opacity="0.3"/>
+    <text x="25" y="66.363636" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--info-border)">P0</text>
+    <text x="80" y="66.363636" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--info-border)">P1</text>
+    <text x="135" y="66.363636" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--info-border)">P2</text>
+    <text x="190" y="66.363636" text-anchor="middle" font-family="Arial" font-size="14.376749" font-weight="bold" fill="var(--info-border)">P3</text>
+  </g>
+  <text x="1105" y="298.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--info-text)">partition by src id only</text>
+
+  <rect x="40" y="356.363636" width="1200" height="263.636364" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="393.272727" text-anchor="middle" font-family="Arial" font-size="18.484391" font-weight="bold" fill="var(--text)">Choosing a PartitionStrategy</text>
+
+  <line x1="60" y1="414.363636" x2="1220" y2="414.363636" stroke="var(--border)" stroke-width="1"/>
+  <text x="200" y="446" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--primary-border)" font-weight="bold">2D</text>
+  <text x="200" y="472.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">bounded vtx replication</text>
+  <text x="200" y="493.454545" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">2*sqrt(P) per vertex</text>
+  <text x="200" y="514.545455" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)" font-weight="bold">default, best overall</text>
+
+  <text x="475" y="446" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--ok-border)" font-weight="bold">RandomVertexCut</text>
+  <text x="475" y="472.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">even edge distribution</text>
+  <text x="475" y="493.454545" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">parallel A to B split</text>
+  <text x="475" y="514.545455" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">dense random graphs</text>
+
+  <text x="790" y="446" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--warn-border)" font-weight="bold">Canonical</text>
+  <text x="790" y="472.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">co-locates both dirs</text>
+  <text x="790" y="493.454545" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">undirected workloads</text>
+  <text x="790" y="514.545455" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">groupEdges friendly</text>
+
+  <text x="1080" y="446" text-anchor="middle" font-family="Arial" font-size="14.376749" fill="var(--info-border)" font-weight="bold">EdgePartition1D</text>
+  <text x="1080" y="472.363636" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">all out-edges together</text>
+  <text x="1080" y="493.454545" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">skew risk for hubs</text>
+  <text x="1080" y="514.545455" text-anchor="middle" font-family="Arial" font-size="12.322928" fill="var(--text-muted)">rarely optimal</text>
+
+  <text x="640" y="577.818182" text-anchor="middle" font-family="monospace" font-size="13.349838" fill="var(--text)">graph.partitionBy(PartitionStrategy.EdgePartition2D)</text>
 </svg>
