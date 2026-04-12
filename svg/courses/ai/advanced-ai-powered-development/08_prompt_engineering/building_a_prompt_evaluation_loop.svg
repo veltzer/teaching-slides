@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:#1a1a2e">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,95 +33,47 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,360 15.929,0" fill="#dc3545" />
-    </marker>
   </defs>
-  <text x="639.9999" y="40" text-anchor="middle" fill="var(--bg)" font-size="10.0309" font-weight="bold">Building a Prompt Evaluation Loop</text>
-  <rect x="561" y="100.9659" width="34.3027" height="148.2955" rx="5.9941" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.4149" />
-  <text x="578.0473" y="155.3409" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0309" font-weight="bold">Write Prompt</text>
-  <text x="578.0473" y="191.5909" text-anchor="middle" fill="var(--border)" font-size="10.0309">draft template</text>
-  <text x="578.0473" y="227.8409" text-anchor="middle" fill="var(--text-muted)" font-size="10.0309">version in git</text>
-  <line x1="595.3026" y1="175.1136" x2="601.5394" y2="175.1136" stroke="var(--danger-border)" stroke-width="0.4149" marker-end="url(#arr)" />
-  <rect x="601.5394" y="100.9659" width="34.3027" height="148.2955" rx="5.9941" fill="var(--code-bg)" stroke="var(--info-border)" stroke-width="0.4149" />
-  <text x="618.5868" y="155.3409" text-anchor="middle" fill="var(--info-accent)" font-size="10.0309" font-weight="bold">Run Test Suite</text>
-  <text x="618.5868" y="191.5909" text-anchor="middle" fill="var(--border)" font-size="10.0309">20-50 test cases</text>
-  <text x="618.5868" y="227.8409" text-anchor="middle" fill="var(--text-muted)" font-size="10.0309">representative inputs</text>
-  <line x1="635.8421" y1="175.1136" x2="642.0789" y2="175.1136" stroke="var(--danger-border)" stroke-width="0.4149" marker-end="url(#arr)" />
-  <rect x="642.0789" y="100.9659" width="34.3027" height="148.2955" rx="5.9941" fill="var(--code-bg)" stroke="var(--ok-border)" stroke-width="0.4149" />
-  <text x="659.1263" y="155.3409" text-anchor="middle" fill="var(--ok-accent)" font-size="10.0309" font-weight="bold">Score Results</text>
-  <text x="659.1263" y="191.5909" text-anchor="middle" fill="var(--border)" font-size="10.0309">LLM-as-judge</text>
-  <text x="659.1263" y="227.8409" text-anchor="middle" fill="var(--text-muted)" font-size="10.0309">or exact match</text>
-  <line x1="676.3816" y1="175.1136" x2="682.6183" y2="175.1136" stroke="var(--danger-border)" stroke-width="0.4149" marker-end="url(#arr)" />
-  <rect x="682.6183" y="100.9659" width="36.3817" height="148.2955" rx="5.9941" fill="var(--code-bg)" stroke="var(--danger-border)" stroke-width="0.4149" />
-  <text x="700.7052" y="155.3409" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0309" font-weight="bold">Refine Prompt</text>
-  <text x="700.7052" y="191.5909" text-anchor="middle" fill="var(--border)" font-size="10.0309">fix failures</text>
-  <text x="700.7052" y="227.8409" text-anchor="middle" fill="var(--text-muted)" font-size="10.0309">iterate</text>
-  <path d="M 700.7052 249.2613 Q 700.7052 306.9318 639.9999 306.9318 Q 577.6316 306.9318 577.6316 249.2613" fill="none" stroke="var(--danger-border)" stroke-width="0.4149" stroke-dasharray="1.2447 0.6224" marker-end="url(#arr)" />
-  <text x="639.9999" y="339.8863" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0309">iterate until quality threshold met</text>
-  <rect x="561" y="381.0796" width="158" height="238.9204" rx="5.9941" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="0.3112" />
-  <text x="639.9999" y="430.5114" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0309" font-weight="bold">Prompt Evaluation Best Practices</text>
-  <text x="565.1578" y="474.9999" fill="var(--border)" font-size="10.0309">▶ Build a test set of 20-50 representative inputs with expected outputs</text>
-  <text x="565.1578" y="512.8977" fill="var(--border)" font-size="10.0309">▶ Track prompt versions in git alongside their evaluation scores</text>
-  <text x="565.1578" y="550.7954" fill="var(--border)" font-size="10.0309">▶ Use a stronger model as judge than the one being evaluated</text>
-  <text x="565.1578" y="588.6932" fill="var(--border)" font-size="10.0309">▶ Set a quality gate: prompts below threshold do not ship</text>
+
+  <!-- Four-step loop -->
+  <rect x="40" y="40" width="272.268908" height="214.814815" rx="8.325767" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="176.134454" y="104.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.977301" font-weight="bold" fill="var(--primary-text)">1. Write Prompt</text>
+  <text x="176.134454" y="163.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--primary-text)">draft template</text>
+  <text x="176.134454" y="195.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--primary-text)">version in git</text>
+
+  <line x1="322.352941" y1="147.407407" x2="382.857143" y2="147.407407" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="392.941176" y="40" width="272.268908" height="214.814815" rx="8.325767" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="529.07563" y="104.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.977301" font-weight="bold" fill="var(--info-text)">2. Run Tests</text>
+  <text x="529.07563" y="163.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--info-text)">20-50 test cases</text>
+  <text x="529.07563" y="195.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--info-text)">representative inputs</text>
+
+  <line x1="675.294118" y1="147.407407" x2="735.798319" y2="147.407407" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="745.882353" y="40" width="242.016807" height="214.814815" rx="8.325767" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="866.890756" y="104.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.977301" font-weight="bold" fill="var(--ok-text)">3. Score</text>
+  <text x="866.890756" y="163.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--ok-text)">LLM-as-judge</text>
+  <text x="866.890756" y="195.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--ok-text)">or exact match</text>
+
+  <line x1="997.983193" y1="147.407407" x2="1058.487395" y2="147.407407" stroke="var(--text-muted)" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1068.571429" y="40" width="171.428571" height="214.814815" rx="8.325767" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1154.285714" y="104.444444" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.895859" font-weight="bold" fill="var(--warn-text)">4. Refine</text>
+  <text x="1154.285714" y="163.518519" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--warn-text)">fix failures</text>
+  <text x="1154.285714" y="195.740741" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--warn-text)">iterate</text>
+
+  <!-- Feedback arrow -->
+  <path d="M 1154.285714 265.555556 Q 1154.285714 340.740741 634.957983 340.740741 Q 176.134454 340.740741 176.134454 265.555556" fill="none" stroke="var(--danger-border)" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <text x="634.957983" y="378.333333" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.814417" font-weight="bold" fill="var(--warn-accent)">iterate until quality threshold met</text>
+
+  <!-- Best practices -->
+  <rect x="40" y="415.925926" width="1200" height="204.074074" rx="8.325767" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.895859" font-weight="bold" fill="var(--text)">Best Practices</text>
+  <text x="70.252101" y="501.851852" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--text)">- Build a test set of 20-50 representative inputs with expected outputs</text>
+  <text x="70.252101" y="534.074074" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--text)">- Track prompt versions in git alongside their evaluation scores</text>
+  <text x="70.252101" y="566.296296" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--text)">- Use a stronger model as judge than the one being evaluated</text>
+  <text x="70.252101" y="598.518519" font-family="Arial, sans-serif" font-size="17.692255" fill="var(--text)">- Set a quality gate: prompts below threshold do not ship</text>
 </svg>

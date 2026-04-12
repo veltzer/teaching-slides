@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,112 +33,51 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,202.5 11.7029,0" fill="#333" />
-    </marker>
   </defs>
-  <rect width="192" height="580" fill="var(--surface)" rx="6.0072" x="544" y="40"/>
-  <text x="640" y="95.1" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--primary-accent)">Transformer Architecture for Developers</text>
-  <rect x="548.7999" y="185" width="33.6" height="116" rx="6.0072" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="565.6" y="231.4" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--primary-accent)">Input</text>
-  <text x="565.6" y="257.5" text-anchor="middle" font-size="10.012" fill="var(--primary-accent)">Tokens</text>
-  <text x="565.6" y="286.5" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">code + text</text>
-  <line x1="582.3999" y1="243" x2="590.7999" y2="243" stroke="var(--text)" stroke-width="0.5284" marker-end="url(#ah)" />
-  <rect x="590.7999" y="185" width="38.3999" height="116" rx="6.0072" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="609.9999" y="225.6" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--ok-accent)">Self-</text>
-  <text x="609.9999" y="251.7" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--ok-accent)">Attention</text>
-  <text x="609.9999" y="283.6" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">O(n²) cost</text>
-  <line x1="629.2001" y1="243" x2="637.6" y2="243" stroke="var(--text)" stroke-width="0.5284" marker-end="url(#ah)" />
-  <rect x="637.6" y="185" width="38.3999" height="116" rx="6.0072" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="656.8" y="225.6" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--warn-accent)">Feed-</text>
-  <text x="656.8" y="251.7" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--warn-accent)">Forward</text>
-  <text x="656.8" y="283.6" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">transformations</text>
-  <line x1="676" y1="243" x2="684.4" y2="243" stroke="var(--text)" stroke-width="0.5284" marker-end="url(#ah)" />
-  <rect x="684.4" y="185" width="38.3999" height="116" rx="6.0072" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="703.6" y="225.6" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--danger-accent)">Output</text>
-  <text x="703.6" y="251.7" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--danger-accent)">Probs</text>
-  <text x="703.6" y="283.6" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">one token/step</text>
-  <rect x="548.7999" y="359" width="86.3999" height="217.5" rx="6.0072" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="592" y="399.6" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--primary-accent)">Why This Matters for Developers</text>
-  <text x="552.4" y="438.75" font-size="10.012" fill="var(--text)">▶ Self-attention cost scales quadratically with context length</text>
-  <text x="552.4" y="470.65" font-size="10.012" fill="var(--text)">▶ Longer context = higher cost + latency</text>
-  <text x="552.4" y="502.55" font-size="10.012" fill="var(--text)">▶ Output is autoregressive: one token at a time</text>
-  <text x="552.4" y="534.45" font-size="10.012" fill="var(--text)">▶ Larger models have more params, not bigger context</text>
-  <rect x="644.7999" y="359" width="85.2001" height="217.5" rx="6.0072" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="687.28" y="399.6" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--info-accent)">Attention: All Tokens See All Tokens</text>
-  <circle cx="654.4" cy="467.75" r="3.8354" fill="var(--info-fill)" stroke="var(--info-border)" />
-  <text x="654.4" y="475" text-anchor="middle" font-size="10.012" fill="var(--text)">def</text>
-  <circle cx="668.8" cy="467.75" r="3.8354" fill="var(--info-fill)" stroke="var(--info-border)" />
-  <text x="668.8" y="475" text-anchor="middle" font-size="10.012" fill="var(--text)">fib</text>
-  <circle cx="683.2001" cy="467.75" r="3.8354" fill="var(--info-fill)" stroke="var(--info-border)" />
-  <text x="683.2001" y="475" text-anchor="middle" font-size="10.012" fill="var(--text)">(n)</text>
-  <circle cx="697.6" cy="467.75" r="3.8354" fill="var(--info-fill)" stroke="var(--info-border)" />
-  <text x="697.6" y="475" text-anchor="middle" font-size="10.012" fill="var(--text)">return</text>
-  <circle cx="714.3999" cy="467.75" r="3.8354" fill="var(--info-fill)" stroke="var(--info-border)" />
-  <text x="714.3999" y="475" text-anchor="middle" font-size="10.012" fill="var(--text)">n-1</text>
-  <line x1="658.2399" y1="467.75" x2="664.96" y2="467.75" stroke="var(--info-border)" stroke-width="0.2642" />
-  <line x1="672.64" y1="467.75" x2="679.36" y2="467.75" stroke="var(--info-border)" stroke-width="0.2642" />
-  <line x1="687.04" y1="467.75" x2="693.76" y2="467.75" stroke="var(--info-border)" stroke-width="0.2642" />
-  <line x1="701.44" y1="467.75" x2="710.56" y2="467.75" stroke="var(--info-border)" stroke-width="0.2642" />
-  <path d="M 654.4 444.55 Q 684.4 388 714.3999 444.55" fill="none" stroke="var(--info-border)" stroke-width="0.2642" stroke-dasharray="1.0568 0.5284" />
-  <text x="687.28" y="547.5" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">each token attends to every other token</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.996148" font-weight="bold" fill="var(--text)">Transformer Architecture for Developers</text>
+
+  <!-- Pipeline of 4 stages -->
+  <rect x="40" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="172.20339" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--primary-text)">Input Tokens</text>
+  <text x="172.20339" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--primary-text)">code + text split</text>
+  <text x="172.20339" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--primary-text)">into subwords</text>
+  <text x="172.20339" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--primary-text)">embedded as vectors</text>
+
+  <line x1="309.491525" y1="187.636364" x2="350.169492" y2="187.636364" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="355.254237" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="487.457627" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--ok-text)">Self-Attention</text>
+  <text x="487.457627" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--ok-text)">every token sees</text>
+  <text x="487.457627" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--ok-text)">every other token</text>
+  <text x="487.457627" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" font-style="italic" fill="var(--ok-text)">cost is O(n²)</text>
+
+  <line x1="624.745763" y1="187.636364" x2="665.423729" y2="187.636364" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="670.508475" y="92.727273" width="264.40678" height="189.818182" rx="8.284614" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="802.711864" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--warn-text)">Feed-Forward</text>
+  <text x="802.711864" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--warn-text)">non-linear</text>
+  <text x="802.711864" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--warn-text)">transformations</text>
+  <text x="802.711864" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--warn-text)">per-token</text>
+
+  <line x1="940" y1="187.636364" x2="980.677966" y2="187.636364" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="985.762712" y="92.727273" width="254.237288" height="189.818182" rx="8.284614" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1112.881356" y="145.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--danger-text)">Output Probs</text>
+  <text x="1112.881356" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--danger-text)">softmax over vocab</text>
+  <text x="1112.881356" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" fill="var(--danger-text)">sample next token</text>
+  <text x="1112.881356" y="261.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.569227" font-style="italic" fill="var(--danger-text)">repeat autoregressively</text>
+
+  <!-- Bottom: Why this matters -->
+  <rect x="50.169492" y="324.727273" width="1179.661017" height="295.272727" rx="8.284614" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="372.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.782687" font-weight="bold" fill="var(--text)">Why This Matters for Developers</text>
+
+  <text x="90.847458" y="424.909091" font-family="Arial, sans-serif" font-size="18.640381" fill="var(--text)">• Attention cost scales quadratically — long context is expensive and slow</text>
+  <text x="90.847458" y="467.090909" font-family="Arial, sans-serif" font-size="18.640381" fill="var(--text)">• Output is autoregressive: generated one token at a time, no parallel decode</text>
+  <text x="90.847458" y="509.272727" font-family="Arial, sans-serif" font-size="18.640381" fill="var(--text)">• Bigger model = more parameters, not larger context window</text>
+  <text x="90.847458" y="551.454545" font-family="Arial, sans-serif" font-size="18.640381" fill="var(--text)">• Context window is a model spec — pick model by task size and budget</text>
+  <text x="90.847458" y="593.636364" font-family="Arial, sans-serif" font-size="18.640381" fill="var(--text)">• Prompt cache shortcuts repeated prefixes — structure prompts to exploit it</text>
 </svg>

@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,110 +33,66 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,160 8.96,0" fill="#333" />
-    </marker>
   </defs>
-  <rect width="186" height="580" fill="var(--surface)" rx="6.0065" x="547" y="40"/>
-  <text x="640" y="90.75" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--primary-accent)">AI-Powered Automated PR Checks</text>
-  <rect x="550.4875" y="170.5" width="29.0625" height="130.5" rx="6.0065" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="564.9025" y="216.9" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--primary-accent)">PR Opened</text>
-  <text x="564.9025" y="250.25" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">diff ready</text>
-  <text x="564.9025" y="279.25" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">CI triggered</text>
-  <line x1="579.55" y1="235.75" x2="587.6875" y2="235.75" stroke="var(--text)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="587.6875" y="170.5" width="29.0625" height="130.5" rx="6.0065" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="602.1025" y="216.9" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--warn-accent)">AI Review</text>
-  <text x="602.1025" y="250.25" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">security scan</text>
-  <text x="602.1025" y="279.25" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">logic check</text>
-  <line x1="616.75" y1="235.75" x2="624.8875" y2="235.75" stroke="var(--text)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="624.8875" y="170.5" width="29.0625" height="130.5" rx="6.0065" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="639.3025" y="211.1" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--info-accent)">AI Test</text>
-  <text x="639.3025" y="240.1" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--info-accent)">Selection</text>
-  <text x="639.3025" y="272" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">predict failures</text>
-  <line x1="653.95" y1="235.75" x2="662.0875" y2="235.75" stroke="var(--text)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="662.0875" y="170.5" width="29.0625" height="130.5" rx="6.0065" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="676.5025" y="211.1" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--ok-accent)">Risk</text>
-  <text x="676.5025" y="240.1" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--ok-accent)">Scoring</text>
-  <text x="676.5025" y="272" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">files changed</text>
-  <line x1="691.15" y1="235.75" x2="699.2875" y2="235.75" stroke="var(--text)" stroke-width="0.512" marker-end="url(#arr)" />
-  <rect x="699.2875" y="170.5" width="30.225" height="130.5" rx="6.0065" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="714.4" y="211.1" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--danger-accent)">Gate</text>
-  <text x="714.4" y="240.1" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--danger-accent)">Decision</text>
-  <text x="714.4" y="272" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">merge / block</text>
-  <rect x="550.4875" y="359" width="176.7" height="239.25" rx="6.0065" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="640" y="402.5" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--primary-accent)">How AI Assigns Risk Scores to PRs</text>
-  <rect x="555.1375" y="428.6" width="51.15" height="145" rx="6.0065" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="580.7125" y="467.75" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--primary-accent)">High Risk Files</text>
-  <text x="580.7125" y="501.1" text-anchor="middle" font-size="10.0108" fill="var(--text)">auth/, payments/</text>
-  <text x="580.7125" y="530.1" text-anchor="middle" font-size="10.0108" fill="var(--text)">config/, crypto/</text>
-  <text x="580.7125" y="556.2" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">require extra reviewers</text>
-  <rect x="612.1" y="428.6" width="51.15" height="145" rx="6.0065" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="637.675" y="467.75" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--primary-accent)">Complexity Delta</text>
-  <text x="637.675" y="501.1" text-anchor="middle" font-size="10.0108" fill="var(--text)">cyclomatic complexity</text>
-  <text x="637.675" y="530.1" text-anchor="middle" font-size="10.0108" fill="var(--text)">change magnitude</text>
-  <text x="637.675" y="556.2" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">coverage delta tracked</text>
-  <rect x="669.0625" y="428.6" width="53.475" height="145" rx="6.0065" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="695.8" y="467.75" text-anchor="middle" font-size="10.0108" font-weight="bold" fill="var(--primary-accent)">Historical Defect Rate</text>
-  <text x="695.8" y="501.1" text-anchor="middle" font-size="10.0108" fill="var(--text)">past bug frequency</text>
-  <text x="695.8" y="530.1" text-anchor="middle" font-size="10.0108" fill="var(--text)">in changed modules</text>
-  <text x="695.8" y="556.2" text-anchor="middle" font-size="10.0108" fill="var(--text-muted)">learned from history</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.263399" font-weight="bold" fill="var(--text)">AI-Powered Automated PR Checks</text>
+
+  <!-- Pipeline stages -->
+  <rect x="40" y="93.703704" width="203.389831" height="139.62963" rx="8.360971" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="141.694915" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902428" font-weight="bold" fill="var(--primary-text)">PR Opened</text>
+  <text x="141.694915" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--primary-text)">diff ready</text>
+  <text x="141.694915" y="206.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--primary-text)">CI triggered</text>
+
+  <line x1="248.474576" y1="163.518519" x2="289.152542" y2="163.518519" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="294.237288" y="93.703704" width="203.389831" height="139.62963" rx="8.360971" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="395.932203" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902428" font-weight="bold" fill="var(--warn-text)">AI Review</text>
+  <text x="395.932203" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--warn-text)">security scan</text>
+  <text x="395.932203" y="206.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--warn-text)">logic check</text>
+
+  <line x1="502.711864" y1="163.518519" x2="543.389831" y2="163.518519" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="548.474576" y="93.703704" width="203.389831" height="139.62963" rx="8.360971" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="650.169492" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902428" font-weight="bold" fill="var(--info-text)">Test Selection</text>
+  <text x="650.169492" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--info-text)">predict failures</text>
+  <text x="650.169492" y="206.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--info-text)">run smart subset</text>
+
+  <line x1="756.949153" y1="163.518519" x2="797.627119" y2="163.518519" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="802.711864" y="93.703704" width="203.389831" height="139.62963" rx="8.360971" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="904.40678" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902428" font-weight="bold" fill="var(--ok-text)">Risk Scoring</text>
+  <text x="904.40678" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--ok-text)">rank changes</text>
+  <text x="904.40678" y="206.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--ok-text)">assign reviewers</text>
+
+  <line x1="1011.186441" y1="163.518519" x2="1051.864407" y2="163.518519" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1056.949153" y="93.703704" width="183.050847" height="139.62963" rx="8.360971" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="1148.474576" y="142.037037" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.902428" font-weight="bold" fill="var(--danger-text)">Gate Decision</text>
+  <text x="1148.474576" y="179.62963" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--danger-text)">merge</text>
+  <text x="1148.474576" y="206.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" fill="var(--danger-text)">or block</text>
+
+  <!-- Risk score detail box -->
+  <rect x="50.169492" y="287.037037" width="1179.661017" height="332.962963" rx="8.360971" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="335.37037" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.992671" font-weight="bold" fill="var(--text)">How AI Assigns Risk Scores</text>
+
+  <rect x="90.847458" y="372.962963" width="345.762712" height="214.814815" rx="8.360971" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="263.728814" y="415.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.857306" font-weight="bold" fill="var(--primary-text)">High-Risk Files</text>
+  <text x="263.728814" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942" fill="var(--primary-text)">auth / payments / crypto</text>
+  <text x="263.728814" y="496.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942" fill="var(--primary-text)">config / infra</text>
+  <text x="263.728814" y="550.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" font-style="italic" fill="var(--primary-text)">require extra reviewers</text>
+
+  <rect x="467.118644" y="372.962963" width="345.762712" height="214.814815" rx="8.360971" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="415.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.857306" font-weight="bold" fill="var(--primary-text)">Complexity Delta</text>
+  <text x="640" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942" fill="var(--primary-text)">cyclomatic complexity</text>
+  <text x="640" y="496.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942" fill="var(--primary-text)">change magnitude</text>
+  <text x="640" y="550.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" font-style="italic" fill="var(--primary-text)">coverage delta tracked</text>
+
+  <rect x="843.389831" y="372.962963" width="345.762712" height="214.814815" rx="8.360971" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1016.271186" y="415.925926" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.857306" font-weight="bold" fill="var(--primary-text)">Historical Defects</text>
+  <text x="1016.271186" y="458.888889" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942" fill="var(--primary-text)">past bug frequency</text>
+  <text x="1016.271186" y="496.481481" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.721942" fill="var(--primary-text)">in changed modules</text>
+  <text x="1016.271186" y="550.185185" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.676821" font-style="italic" fill="var(--primary-text)">learned from git history</text>
 </svg>

@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,104 +33,50 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
-
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
-
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
-
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
-
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
-
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
-
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
-
-    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
       <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-
-    <marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,264.4899 11.7029,0" fill="#333" />
-    </marker>
   </defs>
-  <rect width="147" height="580" fill="var(--surface)" rx="6.0072" x="566.5" y="40"/>
-  <text x="640.0001" y="95.1" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--primary-accent)">Industry AI Adoption Patterns</text>
-  <rect x="569.2563" y="156" width="29.4" height="145" rx="6.0072" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2" />
-  <text x="583.9563" y="199.5" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--primary-accent)">Stage 1</text>
-  <text x="583.9563" y="228.5" text-anchor="middle" font-size="10.012" fill="var(--primary-accent)">Individual</text>
-  <text x="583.9563" y="254.6" text-anchor="middle" font-size="10.012" fill="var(--primary-accent)">Pilots</text>
-  <text x="583.9563" y="286.5" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">enthusiasts try tools</text>
-  <line x1="598.6562" y1="228.5" x2="605.0875" y2="228.5" stroke="var(--text)" stroke-width="0.4045" marker-end="url(#ah)" />
-  <rect x="605.0875" y="156" width="29.4" height="145" rx="6.0072" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="619.7876" y="199.5" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--ok-accent)">Stage 2</text>
-  <text x="619.7876" y="228.5" text-anchor="middle" font-size="10.012" fill="var(--ok-accent)">Team</text>
-  <text x="619.7876" y="254.6" text-anchor="middle" font-size="10.012" fill="var(--ok-accent)">Adoption</text>
-  <text x="619.7876" y="286.5" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">shared workflows</text>
-  <line x1="634.4875" y1="228.5" x2="640.9188" y2="228.5" stroke="var(--text)" stroke-width="0.4045" marker-end="url(#ah)" />
-  <rect x="640.9188" y="156" width="29.4" height="145" rx="6.0072" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2" />
-  <text x="655.6188" y="199.5" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--warn-accent)">Stage 3</text>
-  <text x="655.6188" y="228.5" text-anchor="middle" font-size="10.012" fill="var(--warn-accent)">Org-wide</text>
-  <text x="655.6188" y="254.6" text-anchor="middle" font-size="10.012" fill="var(--warn-accent)">Rollout</text>
-  <text x="655.6188" y="286.5" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">policy + training</text>
-  <line x1="670.3189" y1="228.5" x2="676.7501" y2="228.5" stroke="var(--text)" stroke-width="0.4045" marker-end="url(#ah)" />
-  <rect x="676.7501" y="156" width="33.9938" height="145" rx="6.0072" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2" />
-  <text x="693.655" y="199.5" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--info-accent)">Stage 4</text>
-  <text x="693.655" y="228.5" text-anchor="middle" font-size="10.012" fill="var(--info-accent)">Workflow</text>
-  <text x="693.655" y="254.6" text-anchor="middle" font-size="10.012" fill="var(--info-accent)">Integration</text>
-  <text x="693.655" y="286.5" text-anchor="middle" font-size="10.012" fill="var(--text-muted)">AI in CI/CD + review</text>
-  <rect x="569.2563" y="359" width="67.9875" height="224.75" rx="6.0072" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2" />
-  <text x="603.25" y="402.5" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--ok-accent)">Reported Outcomes</text>
-  <text x="572.0125" y="443.1" font-size="10.012" fill="var(--text)">▶ 20-40% less time on boilerplate + tests</text>
-  <text x="572.0125" y="475" font-size="10.012" fill="var(--text)">▶ Minimal gain on complex architecture tasks</text>
-  <text x="572.0125" y="506.9" font-size="10.012" fill="var(--text)">▶ Highest satisfaction: dev-chosen tools</text>
-  <text x="572.0125" y="538.8" font-size="10.012" fill="var(--text)">▶ ROI requires training + policy investment</text>
-  <rect x="642.7563" y="359" width="67.9875" height="224.75" rx="6.0072" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2" />
-  <text x="676.7501" y="402.5" text-anchor="middle" font-size="10.012" font-weight="bold" fill="var(--danger-accent)">Common Pitfalls</text>
-  <text x="645.5126" y="443.1" font-size="10.012" fill="var(--text)">▶ Mandating tools without training</text>
-  <text x="645.5126" y="475" font-size="10.012" fill="var(--text)">▶ Skipping security review</text>
-  <text x="645.5126" y="506.9" font-size="10.012" fill="var(--text)">▶ Measuring only speed, ignoring quality</text>
-  <text x="645.5126" y="538.8" font-size="10.012" fill="var(--text)">▶ No feedback loops or retrospectives</text>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.753498" font-weight="bold" fill="var(--text)">Industry Adoption Patterns</text>
+
+  <!-- Four stages across the top -->
+  <rect x="40" y="82.181818" width="280" height="179.272727" rx="6.161464" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="180" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Stage 1</text>
+  <text x="180" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--primary-text)">Individual Pilots</text>
+  <text x="180" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">enthusiasts</text>
+  <text x="180" y="238.254545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--primary-text)">try tools</text>
+
+  <rect x="340" y="82.181818" width="280" height="179.272727" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="480" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Stage 2</text>
+  <text x="480" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--ok-text)">Team Adoption</text>
+  <text x="480" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">shared</text>
+  <text x="480" y="238.254545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--ok-text)">workflows</text>
+
+  <rect x="660" y="82.181818" width="280" height="179.272727" rx="6.161464" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="800" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Stage 3</text>
+  <text x="800" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--warn-text)">Org-wide Rollout</text>
+  <text x="800" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--warn-text)">policy</text>
+  <text x="800" y="238.254545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--warn-text)">+ training</text>
+
+  <rect x="960" y="82.181818" width="280" height="179.272727" rx="6.161464" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="1100" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Stage 4</text>
+  <text x="1100" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.592034" font-weight="bold" fill="var(--info-text)">Workflow Integration</text>
+  <text x="1100" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">AI in CI/CD</text>
+  <text x="1100" y="238.254545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" fill="var(--info-text)">+ review</text>
+
+  <!-- Outcomes and Pitfalls -->
+  <rect x="40" y="303.636364" width="590" height="316.363636" rx="6.161464" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="335" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--ok-text)">Reported Outcomes</text>
+  <text x="70" y="414.363636" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">- 20-40% less time on boilerplate and tests</text>
+  <text x="70" y="461.818182" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">- Minimal gain on complex architecture</text>
+  <text x="70" y="509.272727" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">- Highest satisfaction: dev-chosen tools</text>
+  <text x="70" y="556.727273" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--ok-text)">- ROI requires training and policy</text>
+
+  <rect x="650" y="303.636364" width="590" height="316.363636" rx="6.161464" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="945" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.645855" font-weight="bold" fill="var(--danger-text)">Common Pitfalls</text>
+  <text x="680" y="414.363636" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--danger-text)">- Mandating tools without training</text>
+  <text x="680" y="461.818182" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--danger-text)">- Skipping security review</text>
+  <text x="680" y="509.272727" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--danger-text)">- Measuring speed, ignoring quality</text>
+  <text x="680" y="556.727273" font-family="Arial, sans-serif" font-size="18.484391" fill="var(--danger-text)">- No feedback loops or retrospectives</text>
 </svg>

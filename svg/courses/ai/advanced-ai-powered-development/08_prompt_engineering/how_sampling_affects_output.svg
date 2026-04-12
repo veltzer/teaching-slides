@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:#1a1a2e">
-  <!-- palette: resources/palette_diagram.yaml -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -34,90 +33,41 @@
         --info-accent: #4a148c;
       }
     </style>
-    <!-- Gradients -->
-    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3"/>
-      <stop offset="100%" stop-color="#1565c0"/>
-    </linearGradient>
+  </defs>
 
-    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f5f5f5"/>
-    </linearGradient>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="29.245046" font-weight="bold" fill="var(--text)">Temperature: How Sampling Affects Output</text>
 
-    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50"/>
-      <stop offset="100%" stop-color="#2e7d32"/>
-    </linearGradient>
+  <!-- Temperature scale -->
+  <rect x="40" y="82.181818" width="393.103448" height="116" rx="8.355727" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="236.551724" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978251" font-weight="bold" fill="var(--primary-text)">0.0 — Deterministic</text>
+  <text x="236.551724" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711455" fill="var(--primary-text)">same output every run</text>
 
-    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800"/>
-      <stop offset="100%" stop-color="#e65100"/>
-    </linearGradient>
+  <rect x="443.448276" y="82.181818" width="393.103448" height="116" rx="8.355727" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="640" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978251" font-weight="bold" fill="var(--info-text)">0.4–0.7 — Balanced</text>
+  <text x="640" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711455" fill="var(--info-text)">slight variation</text>
 
-    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c"/>
-      <stop offset="100%" stop-color="#c62828"/>
-    </linearGradient>
+  <rect x="846.896552" y="82.181818" width="393.103448" height="116" rx="8.355727" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1043.448276" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.978251" font-weight="bold" fill="var(--warn-text)">1.0+ — Creative</text>
+  <text x="1043.448276" y="166.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.711455" fill="var(--warn-text)">high variation</text>
 
-    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0"/>
-      <stop offset="100%" stop-color="#6a1b9a"/>
-    </linearGradient>
+  <!-- Two use case columns -->
+  <rect x="40" y="229.818182" width="600" height="210.909091" rx="8.355727" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="340" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889319" font-weight="bold" fill="var(--primary-text)">Low Temp (0.0–0.3) — Use For</text>
+  <text x="71.034483" y="319.454545" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--primary-text)">• Code generation and completion</text>
+  <text x="71.034483" y="356.363636" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--primary-text)">• JSON / structured output</text>
+  <text x="71.034483" y="393.272727" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--primary-text)">• Bug fixing — accuracy matters</text>
+  <text x="71.034483" y="430.181818" font-family="Arial, sans-serif" font-size="17.755921" font-style="italic" fill="var(--primary-text)">deterministic, reproducible</text>
 
-    <!-- Drop shadow -->
-    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
-    </filter>
+  <rect x="660.689655" y="229.818182" width="579.310345" height="210.909091" rx="8.355727" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <text x="950.344828" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889319" font-weight="bold" fill="var(--info-text)">High Temp (0.7–1.0) — Use For</text>
+  <text x="691.724138" y="319.454545" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--info-text)">• Brainstorming solutions</text>
+  <text x="691.724138" y="356.363636" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--info-text)">• Generating test variations</text>
+  <text x="691.724138" y="393.272727" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--info-text)">• Creative naming / docs</text>
+  <text x="691.724138" y="430.181818" font-family="Arial, sans-serif" font-size="17.755921" font-style="italic" fill="var(--info-text)">diverse, creative</text>
 
-    <!-- Arrow markers -->
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
-    </marker>
-    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
-    </marker>
-    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
-    </marker>
-    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
-    </marker>
-    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
-    </marker>
-    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
-    </marker>
-    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
-    </marker>
-</defs>
-  <text x="640" y="40" text-anchor="middle" fill="var(--bg)" font-size="10.0529" font-weight="bold">Temperature: How Sampling Affects Output</text>
-  <rect x="536.5" y="85.1297" width="207" height="91.9309" rx="5.9988" fill="var(--code-bg)" stroke="var(--primary-border)" stroke-width="0.4291" />
-  <rect x="537.075" y="88.4726" width="69" height="85.2449" rx="5.9988" fill="var(--primary-accent)" />
-  <rect x="606.075" y="88.4726" width="68.425" height="85.2449" rx="5.9988" fill="var(--info-accent)" />
-  <rect x="674.4999" y="88.4726" width="68.425" height="85.2449" rx="5.9988" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="571.575" y="126.9165" text-anchor="middle" fill="var(--bg)" font-size="10.0529" font-weight="bold">0.0 — Deterministic</text>
-  <text x="571.575" y="157.0029" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0529">same output every run</text>
-  <text x="640.2874" y="126.9165" text-anchor="middle" fill="var(--bg)" font-size="10.0529" font-weight="bold">0.4-0.7 — Balanced</text>
-  <text x="640.2874" y="157.0029" text-anchor="middle" fill="var(--info-accent)" font-size="10.0529">slight variation</text>
-  <text x="708.7125" y="126.9165" text-anchor="middle" fill="var(--bg)" font-size="10.0529" font-weight="bold">1.0+ — Creative</text>
-  <text x="708.7125" y="157.0029" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0529">high variation</text>
-  <rect x="536.5" y="223.8617" width="97.75" height="208.9337" rx="5.9988" fill="var(--primary-accent)" stroke="var(--primary-border)" stroke-width="0.4291" />
-  <text x="585.3749" y="274.0058" text-anchor="middle" fill="var(--primary-accent)" font-size="10.0529" font-weight="bold">Low Temperature (0.0-0.3)</text>
-  <text x="542.25" y="319.1354" fill="var(--border)" font-size="10.0529">▶ Code generation and completion</text>
-  <text x="542.25" y="357.5793" fill="var(--border)" font-size="10.0529">▶ JSON / structured output</text>
-  <text x="542.25" y="396.023" fill="var(--border)" font-size="10.0529">▶ Bug fixing — need accuracy</text>
-  <text x="542.25" y="422.7666" fill="var(--primary-accent)" font-size="10.0529">deterministic, reproducible, reliable</text>
-  <rect x="645.75" y="223.8617" width="97.75" height="208.9337" rx="5.9988" fill="var(--info-accent)" stroke="var(--info-border)" stroke-width="0.4291" />
-  <text x="694.625" y="274.0058" text-anchor="middle" fill="var(--info-accent)" font-size="10.0529" font-weight="bold">High Temperature (0.7-1.0)</text>
-  <text x="651.5" y="319.1354" fill="var(--border)" font-size="10.0529">▶ Brainstorming solutions</text>
-  <text x="651.5" y="357.5793" fill="var(--border)" font-size="10.0529">▶ Generating test variations</text>
-  <text x="651.5" y="396.023" fill="var(--border)" font-size="10.0529">▶ Creative naming / docs</text>
-  <text x="651.5" y="422.7666" fill="var(--info-accent)" font-size="10.0529">diverse, creative, less predictable</text>
-  <rect x="536.5" y="469.5677" width="207" height="150.4323" rx="5.9988" fill="var(--code-bg)" stroke="var(--warn-border)" stroke-width="0.4291" />
-  <text x="640" y="519.7119" text-anchor="middle" fill="var(--warn-accent)" font-size="10.0529" font-weight="bold">Other Key Parameters</text>
-  <text x="542.25" y="561.4986" fill="var(--border)" font-size="10.0529">▶ top_p (nucleus sampling): 0.95 is a safe default — controls token probability mass</text>
-  <text x="542.25" y="599.9423" fill="var(--border)" font-size="10.0529">▶ frequency_penalty: reduces repetition in long outputs — useful for documentation</text>
+  <!-- Other params -->
+  <rect x="40" y="467.090909" width="1200" height="152.909091" rx="8.355727" fill="var(--surface)" stroke="var(--border)" stroke-width="2"/>
+  <text x="640" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.889319" font-weight="bold" fill="var(--text)">Other Key Sampling Parameters</text>
+  <text x="71.034483" y="551.454545" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--text)">• top_p (nucleus sampling): 0.95 default — caps token probability mass</text>
+  <text x="71.034483" y="588.363636" font-family="Arial, sans-serif" font-size="17.755921" fill="var(--text)">• frequency_penalty: reduces repetition in long outputs</text>
 </svg>
