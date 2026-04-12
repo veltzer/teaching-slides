@@ -99,18 +99,18 @@
   <text x="640" y="76.5766" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.3118" fill="var(--text-muted)">One partition has orders-of-magnitude more rows than the others. That one task blocks the whole stage.</text>
 
   <!-- Symptom panel -->
-  <rect x="40" y="102.7027" width="580" height="313.5135" rx="6.1336" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <rect x="40" y="102.7027" width="580" height="313.5135" rx="6" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
   <text x="330" y="139.2793" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--danger-text)">Symptom</text>
 
-  <rect x="70" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <rect x="70" y="170.6306" width="60" height="41.8018" rx="6" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
   <text x="100" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">50 MB</text>
-  <rect x="140" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <rect x="140" y="170.6306" width="60" height="41.8018" rx="6" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
   <text x="170" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">45 MB</text>
-  <rect x="210" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <rect x="210" y="170.6306" width="60" height="41.8018" rx="6" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
   <text x="240" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">52 MB</text>
-  <rect x="280" y="170.6306" width="60" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
+  <rect x="280" y="170.6306" width="60" height="41.8018" rx="6" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="1"/>
   <text x="310" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--text)">48 MB</text>
-  <rect x="350" y="170.6306" width="260" height="41.8018" rx="6.1336" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="2"/>
+  <rect x="350" y="170.6306" width="260" height="41.8018" rx="6" fill="var(--bg)" stroke="var(--danger-text)" stroke-width="2"/>
   <text x="480" y="196.7568" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" font-weight="bold" fill="var(--text)">12 GB — partition 4 (hot key)</text>
 
   <text x="330" y="249.009" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" font-weight="bold" fill="var(--danger-text)">Spark UI tells you</text>
@@ -121,7 +121,7 @@
   <text x="330" y="379.6396" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--danger-text)">• long GC pauses on one executor</text>
 
   <!-- Causes -->
-  <rect x="640" y="102.7027" width="600" height="313.5135" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="640" y="102.7027" width="600" height="313.5135" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="940" y="139.2793" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Causes</text>
   <text x="670" y="175.8559" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">• Power-law keys: one user / product / country</text>
   <text x="670" y="196.7568" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">   accounts for most of the traffic.</text>
@@ -134,7 +134,7 @@
   <text x="670" y="384.8649" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">   map-side combine (use reduceByKey).</text>
 
   <!-- Fixes -->
-  <rect x="40" y="431.8919" width="1200" height="188.1081" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="40" y="431.8919" width="1200" height="188.1081" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="468.4685" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Fixes</text>
   <text x="80" y="502.955" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• AQE skew handling: spark.sql.adaptive.skewJoin.enabled = true (default on 3.x) — splits the hot partition.</text>
   <text x="80" y="529.0811" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">• Salting: add a random suffix to the hot key, group, then strip the salt. Spreads the hot key across N partitions.</text>

@@ -1,16 +1,109 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <!-- palette: resources/palette_intro.yaml -->
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --border: #e0e0e0;
+        --text: #212121;
+        --text-muted: #555555;
+        --text-faint: #888888;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary-fill: #2196f3;
+        --primary-border: #1565c0;
+        --primary-text: #ffffff;
+        --primary-accent: #0d47a1;
+        --ok-fill: #4caf50;
+        --ok-border: #2e7d32;
+        --ok-text: #ffffff;
+        --ok-accent: #1b5e20;
+        --warn-fill: #ff9800;
+        --warn-border: #e65100;
+        --warn-text: #ffffff;
+        --warn-accent: #bf360c;
+        --danger-fill: #e74c3c;
+        --danger-border: #c62828;
+        --danger-text: #ffffff;
+        --danger-accent: #b71c1c;
+        --info-fill: #9c27b0;
+        --info-border: #6a1b9a;
+        --info-text: #ffffff;
+        --info-accent: #4a148c;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
 
-  <rect x="40" y="100" width="1200" height="200" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
-  <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="var(--primary-text)">Spark Optimization</text>
-  <text x="640" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="var(--primary-text)">Understanding Data Skew</text>
-  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="var(--primary-text)">Python edition</text>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
 
-  <rect x="240" y="360" width="800" height="90" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
-  <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--warn-text)">Data skew</text>
-  <text x="640" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--warn-text)">One partition holds most of the rows — one task blocks the stage.</text>
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
 
-  <rect x="240" y="480" width="800" height="90" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="var(--ok-text)">Fixes</text>
-  <text x="640" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">AQE skew join · salting · broadcast · filter hot keys</text>
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <!-- palette: resources/palette_diagram.yaml -->
+
+  <rect x="40" y="40" width="1200" height="246.8085" rx="6.6652" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="640" y="138.7234" text-anchor="middle" font-family="Arial, sans-serif" font-size="39.9915" font-weight="bold" fill="var(--primary-text)">Spark Optimization</text>
+  <text x="640" y="206.5957" text-anchor="middle" font-family="Arial, sans-serif" font-size="26.661" fill="var(--primary-text)">Understanding Data Skew</text>
+  <text x="640" y="255.9574" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2175" fill="var(--primary-text)">Python edition</text>
+
+  <rect x="240" y="360.8511" width="800" height="111.0638" rx="6.6652" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="640" y="404.0426" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2175" font-weight="bold" fill="var(--warn-text)">Data skew</text>
+  <text x="640" y="441.0638" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.774" fill="var(--warn-text)">One partition holds most of the rows — one task blocks the stage.</text>
+
+  <rect x="240" y="508.9362" width="800" height="111.0638" rx="6.6652" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="640" y="552.1277" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2175" font-weight="bold" fill="var(--ok-text)">Fixes</text>
+  <text x="640" y="589.1489" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.774" fill="var(--ok-text)">AQE skew join · salting · broadcast · filter hot keys</text>
 </svg>

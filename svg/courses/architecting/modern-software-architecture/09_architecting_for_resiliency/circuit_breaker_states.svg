@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,81 +34,101 @@
         --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 5.9733,0" fill="#4a90e2" />
-    </marker>
-    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 5.9733,0" fill="#dc3545" />
-    </marker>
-    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <polygon points="0,20.5714 5.9733,0" fill="#28a745" />
-    </marker>
-  </defs>
-  <circle cx="263.6962" cy="230.5624" r="118.6157" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="1.0153" />
-  <text x="263.6962" y="219.9756" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.5481" font-weight="bold">Closed</text>
-  <text x="263.6962" y="262.3227" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2486" fill="var(--text-muted)">(Normal)</text>
-  <circle cx="1116.7771" cy="230.5624" r="118.6157" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="1.0153" />
-  <text x="1116.7771" y="219.9756" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.5481" font-weight="bold">Open</text>
-  <text x="1116.7771" y="262.3227" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2486" fill="var(--text-muted)">(Failing fast)</text>
-  <circle cx="690.2366" cy="505.8193" r="118.6157" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="1.0153" />
-  <text x="690.2366" y="495.2325" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.5481" font-weight="bold">Half-Open</text>
-  <text x="690.2366" y="537.5797" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.2486" fill="var(--text-muted)">(Testing)</text>
-  <path d="M 386.9191 198.8022 Q 690.2366 40 993.5544 198.8022" fill="none" stroke="var(--danger-border)" stroke-width="1.0153" marker-end="url(#arrow-danger)" />
-  <text x="690.2366" y="82.3473" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0733" fill="var(--danger-accent)">Failure threshold exceeded</text>
-  <path d="M 1040.9477 336.4305 Q 965.1184 484.6456 813.4594 505.8193" fill="none" stroke="var(--warn-border)" stroke-width="1.0153" marker-end="url(#arrow)" />
-  <text x="1003.0329" y="452.8854" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0733" fill="var(--warn-accent)">Timeout expires</text>
-  <path d="M 567.0139 484.6456 Q 377.4404 421.1247 292.1323 368.1908" fill="none" stroke="var(--ok-border)" stroke-width="1.0153" marker-end="url(#arrow-ok)" />
-  <text x="358.4832" y="463.472" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0733" fill="var(--ok-accent)">Probe succeeds</text>
-  <path d="M 813.4594 495.2325 Q 984.0757 463.472 1031.469 357.6041" fill="none" stroke="var(--danger-border)" stroke-width="1.0153" marker-end="url(#arrow-danger)" />
-  <text x="984.0757" y="526.9929" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.0733" fill="var(--danger-accent)">Probe fails</text>
-  <line x1="74.1227" y1="230.5624" x2="136.6819" y2="230.5624" stroke="var(--text)" stroke-width="0.8883" marker-end="url(#arrow)" />
-  <circle cx="55.1657" cy="230.5624" r="14.5987" fill="var(--text)" />
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.3468" font-weight="bold" fill="var(--text)">Circuit Breaker States</text>
+
+  <rect x="100" y="162.6923" width="280" height="200.7692" rx="6.3367" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="240" y="212.8846" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.2346" font-weight="bold" fill="var(--ok-text)">Closed</text>
+  <text x="240" y="251.9231" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7856" fill="var(--ok-text)">requests flow through</text>
+  <text x="240" y="285.3846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--ok-text)">count failures</text>
+  <text x="240" y="318.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--ok-text)">normal operation</text>
+
+  <rect x="500" y="162.6923" width="280" height="200.7692" rx="6.3367" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="640" y="212.8846" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.2346" font-weight="bold" fill="var(--danger-text)">Open</text>
+  <text x="640" y="251.9231" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7856" fill="var(--danger-text)">requests fail fast</text>
+  <text x="640" y="285.3846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--danger-text)">no call to the service</text>
+  <text x="640" y="318.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--danger-text)">wait for the timeout</text>
+
+  <rect x="900" y="162.6923" width="280" height="200.7692" rx="6.3367" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="1040" y="212.8846" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.2346" font-weight="bold" fill="var(--warn-text)">Half-Open</text>
+  <text x="1040" y="251.9231" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.7856" fill="var(--warn-text)">let a few through</text>
+  <text x="1040" y="285.3846" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--warn-text)">test if service is back</text>
+  <text x="1040" y="318.8462" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--warn-text)">probe one request at a time</text>
+
+  <line x1="380" y1="240.7692" x2="498" y2="240.7692" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="439" y="229.6154" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">failures ≥ threshold</text>
+
+  <line x1="780" y1="285.3846" x2="898" y2="285.3846" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="839" y="274.2308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">timeout elapsed</text>
+
+  <line x1="900" y1="240.7692" x2="382" y2="240.7692" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="640" y="157.1154" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">probes succeed → close</text>
+
+  <line x1="1040" y1="363.4615" x2="640" y2="363.4615" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="840" y="385.7692" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">probe fails → re-open</text>
+
+  <rect x="40" y="452.6923" width="1200" height="167.3077" rx="6.3367" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <text x="640" y="491.7308" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8979" font-weight="bold" fill="var(--text)">Why</text>
+  <text x="640" y="530.7692" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--text-muted)">A struggling downstream takes seconds to time out. Cascading to callers</text>
+  <text x="640" y="558.6538" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--text-muted)">exhausts threads and takes the whole system down.</text>
+  <text x="640" y="592.1154" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.7295" fill="var(--text-muted)">Fail fast when the downstream is sick — protect your own resources.</text>
 </svg>

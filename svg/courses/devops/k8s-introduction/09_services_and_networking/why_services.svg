@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!-- palette: resources/palette_diagram.yaml -->
   <defs>
     <style id="palette-vars">
       :root, svg {
@@ -33,83 +34,109 @@
         --info-accent: #4a148c;
       }
     </style>
+    <!-- Gradients -->
     <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2196f3" />
-      <stop offset="100%" stop-color="#1565c0" />
+      <stop offset="0%" stop-color="#2196f3"/>
+      <stop offset="100%" stop-color="#1565c0"/>
     </linearGradient>
+
     <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#f5f5f5" />
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
     </linearGradient>
+
     <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4caf50" />
-      <stop offset="100%" stop-color="#2e7d32" />
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
     </linearGradient>
+
     <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9800" />
-      <stop offset="100%" stop-color="#e65100" />
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#e65100"/>
     </linearGradient>
+
     <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c3c" />
-      <stop offset="100%" stop-color="#c62828" />
+      <stop offset="0%" stop-color="#e74c3c"/>
+      <stop offset="100%" stop-color="#c62828"/>
     </linearGradient>
+
     <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9c27b0" />
-      <stop offset="100%" stop-color="#6a1b9a" />
+      <stop offset="0%" stop-color="#9c27b0"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
     </linearGradient>
+
+    <!-- Drop shadow -->
     <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
     </filter>
+
+    <!-- Arrow markers -->
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#555555" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
     <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
     <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
     </marker>
     <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
     </marker>
     <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
     <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
     </marker>
     <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff" />
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
-  </defs>
-  <text x="725.7143" y="40" text-anchor="middle" font-size="31.7109" font-weight="bold">Problem: Pod IPs are Ephemeral</text>
-  <g id="without-service">
-    <text x="268.5713" y="117.3334" text-anchor="middle" font-size="23.7833">Without Service</text>
-    <rect x="40" y="156" width="228.5716" height="77.3334" fill="var(--text-faint)" rx="6" />
-    <text x="154.2856" y="204.3333" text-anchor="middle" fill="var(--bg)">Client</text>
-    <circle cx="154.2856" cy="368.6666" r="49.5484" fill="var(--danger-fill)" />
-    <text x="154.2856" y="378.3333" text-anchor="middle" fill="var(--bg)" font-size="20.7328">Pod</text>
-    <text x="154.2856" y="436.3334" text-anchor="middle" font-size="20.7328">10.1.1.5 ❌</text>
-    <circle cx="337.143" cy="368.6666" r="49.5484" fill="var(--ok-fill)" />
-    <text x="337.143" y="378.3333" text-anchor="middle" fill="var(--bg)" font-size="20.7328">Pod</text>
-    <text x="337.143" y="436.3334" text-anchor="middle" font-size="20.7328">10.1.1.6 ✓</text>
-    <path d="M 154.2856 233.3334 L 154.2856 320.3333" stroke="var(--text-muted)" stroke-width="0.8882" stroke-dasharray="2.2206 2.2206" />
-    <text x="154.2856" y="523.3333" text-anchor="middle" font-size="21.8012">Direct connection fails</text>
-  </g>
-  <g id="with-service">
-    <text x="1182.857" y="117.3334" text-anchor="middle" font-size="23.7833">With Service</text>
-    <rect x="954.2854" y="156" width="228.5716" height="77.3334" fill="var(--text-faint)" rx="6" />
-    <text x="1068.5714" y="204.3333" text-anchor="middle" fill="var(--bg)">Client</text>
-    <rect x="908.5712" y="291.3334" width="319.9999" height="77.3334" fill="var(--primary-fill)" rx="6" stroke="var(--primary-border)" stroke-width="2" />
-    <text x="1068.5714" y="339.6667" text-anchor="middle" fill="var(--bg)">Service</text>
-    <circle cx="954.2854" cy="484.6666" r="49.5484" fill="var(--danger-fill)" />
-    <text x="954.2854" y="494.3334" text-anchor="middle" fill="var(--bg)" font-size="20.7328">Pod</text>
-    <text x="954.2854" y="552.3332" text-anchor="middle" font-size="20.7328">10.1.2.5 ❌</text>
-    <circle cx="1182.857" cy="484.6666" r="49.5484" fill="var(--ok-fill)" />
-    <text x="1182.857" y="494.3334" text-anchor="middle" fill="var(--bg)" font-size="20.7328">Pod</text>
-    <text x="1182.857" y="552.3332" text-anchor="middle" font-size="20.7328">10.1.2.7 ✓</text>
-    <path d="M 1068.5714 233.3334 L 1068.5714 291.3334" stroke="var(--text-muted)" stroke-width="0.8882" />
-    <path d="M 1068.5714 368.6666 L 1182.857 436.3334" stroke="var(--text-muted)" stroke-width="0.8882" />
-    <text x="1068.5714" y="620" text-anchor="middle" font-size="21.8012">Service handles routing</text>
-  </g>
+</defs>
+
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24.873" font-weight="bold" fill="var(--text)">Why Services?</text>
+
+  <rect x="40" y="82.963" width="580" height="537.037" rx="6.2183" fill="var(--danger-fill)" stroke="var(--danger-border)" stroke-width="2"/>
+  <text x="330" y="125.9259" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6548" font-weight="bold" fill="var(--danger-text)">Without a Service</text>
+
+  <rect x="80" y="158.1481" width="160" height="85.9259" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="160" y="195.7407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--primary-text)">Pod A</text>
+  <text x="160" y="222.5926" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4001" fill="var(--primary-text)">10.0.1.5</text>
+
+  <rect x="260" y="158.1481" width="160" height="85.9259" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="340" y="195.7407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--primary-text)">Pod B</text>
+  <text x="340" y="222.5926" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4001" fill="var(--primary-text)">10.0.1.8</text>
+
+  <rect x="440" y="158.1481" width="160" height="85.9259" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="520" y="195.7407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" fill="var(--primary-text)">Pod C</text>
+  <text x="520" y="222.5926" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4001" fill="var(--primary-text)">10.0.2.3</text>
+
+  <text x="330" y="308.5185" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--danger-text)">Pod IPs change on restart</text>
+  <text x="330" y="340.7407" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--danger-text)">Clients hard-code addresses</text>
+  <text x="330" y="372.963" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--danger-text)">No load balancing</text>
+  <text x="330" y="405.1852" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--danger-text)">Adding a pod requires reconfig</text>
+  <text x="330" y="458.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" font-weight="bold" fill="var(--danger-text)">Fragile and unscalable.</text>
+
+  <rect x="660" y="82.963" width="580" height="537.037" rx="6.2183" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <text x="950" y="125.9259" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.6548" font-weight="bold" fill="var(--ok-text)">With a Service</text>
+
+  <rect x="820" y="158.1481" width="260" height="85.9259" rx="6.2183" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <text x="950" y="195.7407" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.5093" font-weight="bold" fill="var(--warn-text)">Service: web</text>
+  <text x="950" y="222.5926" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.4001" fill="var(--warn-text)">stable DNS + ClusterIP</text>
+
+  <line x1="880" y1="244.0741" x2="780" y2="287.037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="244.0741" x2="950" y2="287.037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1020" y1="244.0741" x2="1120" y2="287.037" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="720" y="297.7778" width="140" height="64.4444" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="790" y="335.3704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--primary-text)">Pod A</text>
+  <rect x="880" y="297.7778" width="140" height="64.4444" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="950" y="335.3704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--primary-text)">Pod B</text>
+  <rect x="1040" y="297.7778" width="140" height="64.4444" rx="6.2183" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <text x="1110" y="335.3704" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--primary-text)">Pod C</text>
+
+  <text x="950" y="426.6667" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--ok-text)">Stable virtual IP + DNS name</text>
+  <text x="950" y="456.7407" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--ok-text)">Selector picks matching pods</text>
+  <text x="950" y="486.8148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--ok-text)">Load balances across endpoints</text>
+  <text x="950" y="516.8889" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.4729" fill="var(--ok-text)">Scale up/down is transparent</text>
 </svg>

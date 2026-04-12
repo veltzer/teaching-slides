@@ -96,7 +96,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3894" font-weight="bold" fill="var(--text)">Spark Execution Model: Job → Stages → Tasks</text>
 
-  <rect x="40" y="81.4286" width="300" height="538.5714" rx="6.1062" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="81.4286" width="300" height="538.5714" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="190" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--primary-text)">Application</text>
   <text x="190" y="153.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--primary-text)">one SparkContext</text>
   <text x="190" y="174.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--primary-text)">one set of executors</text>
@@ -104,7 +104,7 @@
 
   <line x1="340" y1="350.7143" x2="378" y2="350.7143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="380" y="81.4286" width="300" height="538.5714" rx="6.1062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="380" y="81.4286" width="300" height="538.5714" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="530" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--ok-text)">Job</text>
   <text x="530" y="153.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">one per action</text>
   <text x="530" y="174.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--ok-text)">(collect / count / save...)</text>
@@ -115,7 +115,7 @@
 
   <line x1="680" y1="350.7143" x2="718" y2="350.7143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="720" y="81.4286" width="260" height="538.5714" rx="6.1062" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="720" y="81.4286" width="260" height="538.5714" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="850" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--warn-text)">Stage</text>
   <text x="850" y="153.9286" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">between two shuffle points</text>
   <text x="850" y="190.1786" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--warn-text)">all transforms inside a stage</text>
@@ -126,7 +126,7 @@
 
   <line x1="980" y1="350.7143" x2="1018" y2="350.7143" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="1020" y="81.4286" width="220" height="538.5714" rx="6.1062" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="1020" y="81.4286" width="220" height="538.5714" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1130" y="122.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.3186" font-weight="bold" fill="var(--info-text)">Task</text>
   <text x="1130" y="159.1071" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--info-text)">one per partition</text>
   <text x="1130" y="195.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">unit of execution on</text>
@@ -138,7 +138,7 @@
   <text x="1130" y="371.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">failure → retry</text>
   <text x="1130" y="392.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">(spark.task.maxFailures)</text>
 
-  <rect x="380" y="449.1071" width="860" height="155.3571" rx="6.1062" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="380" y="449.1071" width="860" height="155.3571" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="810" y="485.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.2832" font-weight="bold" fill="var(--text)">Example: rdd.filter(...).map(...).groupByKey().count()</text>
   <text x="410" y="521.6071" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--text-muted)">One action (count) → one Job.</text>
   <text x="410" y="547.5" font-family="Arial, sans-serif" font-size="13.2301" fill="var(--text-muted)">groupByKey is a wide transformation → the Job is cut into 2 Stages.</text>

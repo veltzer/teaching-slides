@@ -96,7 +96,7 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.49" font-weight="bold" fill="var(--text)">Stateful Stream Operations</text>
 
-  <rect x="40" y="81.8018" width="390" height="240.3604" rx="6.1336" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="40" y="81.8018" width="390" height="240.3604" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="235" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--primary-text)">Aggregations</text>
   <text x="235" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">df.groupBy(window(...), "userId")</text>
   <text x="235" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--primary-text)">  .agg(count("*"), sum("amount"))</text>
@@ -105,7 +105,7 @@
   <text x="235" y="280.3604" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">output grows unbounded without a</text>
   <text x="235" y="301.2613" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--primary-text)">watermark — see panel below.</text>
 
-  <rect x="445" y="81.8018" width="390" height="240.3604" rx="6.1336" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="445" y="81.8018" width="390" height="240.3604" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="640" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--ok-text)">Stream-stream joins</text>
   <text x="640" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">clicks.join(impressions,</text>
   <text x="640" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--ok-text)">  expr("clickId = impId AND"</text>
@@ -115,7 +115,7 @@
   <text x="640" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">BOTH streams need watermarks +</text>
   <text x="640" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--ok-text)">a time-bound predicate in the join.</text>
 
-  <rect x="850" y="81.8018" width="390" height="240.3604" rx="6.1336" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="850" y="81.8018" width="390" height="240.3604" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="1045" y="118.3784" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.3564" font-weight="bold" fill="var(--warn-text)">Arbitrary state</text>
   <text x="1045" y="154.955" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">mapGroupsWithState</text>
   <text x="1045" y="175.8559" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--warn-text)">flatMapGroupsWithState</text>
@@ -125,7 +125,7 @@
   <text x="1045" y="290.8108" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">Configure timeouts to evict stale state;</text>
   <text x="1045" y="311.7117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2673" fill="var(--warn-text)">otherwise memory grows forever.</text>
 
-  <rect x="40" y="348.2883" width="1200" height="271.7117" rx="6.1336" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="40" y="348.2883" width="1200" height="271.7117" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="384.8649" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4009" font-weight="bold" fill="var(--text)">Watermarks: the key to bounded state</text>
   <text x="80" y="421.4414" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">• A watermark declares "we will not accept events older than (max observed time − delay)".</text>
   <text x="80" y="447.5676" font-family="Arial, sans-serif" font-size="13.2896" fill="var(--text-muted)">• Spark drops late events and discards state whose windows / ranges have fully closed.</text>

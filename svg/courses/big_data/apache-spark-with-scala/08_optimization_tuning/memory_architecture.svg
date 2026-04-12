@@ -96,23 +96,23 @@
 
   <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.3894" font-weight="bold" fill="var(--text)">Executor Memory Architecture (Unified, Spark 2.0+)</text>
 
-  <rect x="40" y="81.4286" width="600" height="538.5714" rx="6.1062" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="40" y="81.4286" width="600" height="538.5714" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="340" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2655" font-weight="bold" fill="var(--text)">JVM Heap (spark.executor.memory)</text>
 
-  <rect x="60" y="138.3929" width="560" height="82.8571" rx="6.1062" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
+  <rect x="60" y="138.3929" width="560" height="82.8571" rx="6" fill="var(--primary-fill)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="340" y="169.4643" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--primary-text)">Reserved Memory</text>
   <text x="340" y="195.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--primary-text)">300 MB — system internals</text>
 
-  <rect x="60" y="231.6071" width="560" height="124.2857" rx="6.1062" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
+  <rect x="60" y="231.6071" width="560" height="124.2857" rx="6" fill="var(--info-fill)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="340" y="262.6786" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--info-text)">User Memory (~40%)</text>
   <text x="340" y="288.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">your UDFs, RDD transformation closures</text>
   <text x="340" y="309.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">large Scala structures you allocate inside tasks</text>
   <text x="340" y="340.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--info-text)">Spark does not manage this — your code does</text>
 
-  <rect x="60" y="366.25" width="560" height="238.2143" rx="6.1062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="60" y="366.25" width="560" height="238.2143" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="340" y="397.3214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--ok-text)">Unified Memory (~60% × spark.memory.fraction)</text>
 
-  <rect x="80" y="412.8571" width="260" height="176.0714" rx="6.1062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="80" y="412.8571" width="260" height="176.0714" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="210" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--ok-text)">Storage</text>
   <text x="210" y="464.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">cached RDDs / DataFrames</text>
   <text x="210" y="485.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">broadcast variables</text>
@@ -120,7 +120,7 @@
   <text x="210" y="537.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">persists across tasks within</text>
   <text x="210" y="554.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">the executor lifetime</text>
 
-  <rect x="360" y="412.8571" width="260" height="176.0714" rx="6.1062" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
+  <rect x="360" y="412.8571" width="260" height="176.0714" rx="6" fill="var(--ok-fill)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="490" y="438.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--ok-text)">Execution</text>
   <text x="490" y="464.6429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">shuffle buffers</text>
   <text x="490" y="485.3571" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">sort / aggregation / join hash tables</text>
@@ -128,7 +128,7 @@
   <text x="490" y="537.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">can evict Storage blocks</text>
   <text x="490" y="554.75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11.1947" fill="var(--ok-text)">to reclaim space when needed</text>
 
-  <rect x="660" y="81.4286" width="580" height="538.5714" rx="6.1062" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="660" y="81.4286" width="580" height="538.5714" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="950" y="112.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.2655" font-weight="bold" fill="var(--text)">How unified memory borrows</text>
 
   <text x="680" y="148.75" font-family="Arial, sans-serif" font-size="13.2301" font-weight="bold" fill="var(--text)">Storage needs more?</text>
@@ -140,7 +140,7 @@
   <text x="680" y="278.2143" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">   floor (spark.memory.storageFraction, ~50%).</text>
   <text x="680" y="298.9286" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--text-muted)">— evicts cached blocks (LRU) until it has enough.</text>
 
-  <rect x="680" y="324.8214" width="540" height="72.5" rx="6.1062" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
+  <rect x="680" y="324.8214" width="540" height="72.5" rx="6" fill="var(--warn-fill)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="950" y="353.8214" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.2478" font-weight="bold" fill="var(--warn-text)">Off-heap (optional)</text>
   <text x="950" y="378.6786" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.2124" fill="var(--warn-text)">spark.memory.offHeap.enabled + .size — avoids GC</text>
 
