@@ -98,44 +98,40 @@
 
   <rect x="40" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="185" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--primary-text)">Blocking</text>
-  <text x="185" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">read() waits until</text>
-  <text x="185" y="171.3208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">data is ready</text>
-  <text x="185" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">one thread per fd</text>
-  <text x="185" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">simplest to write</text>
+  <text x="185" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">read() waits for data</text>
+  <text x="185" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">thread per fd</text>
+  <text x="185" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">simplest</text>
   <text x="185" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">scales poorly</text>
-  <text x="185" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">beyond ~1k connections</text>
+  <text x="185" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--primary-text)">past ~1k conns</text>
 
   <rect x="340" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--ok-text)">Non-blocking</text>
-  <text x="485" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">read() returns</text>
-  <text x="485" y="171.3208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">EAGAIN if not ready</text>
-  <text x="485" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">O_NONBLOCK flag</text>
-  <text x="485" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">caller must retry</text>
+  <text x="485" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">EAGAIN if not ready</text>
+  <text x="485" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">O_NONBLOCK</text>
+  <text x="485" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">caller retries</text>
   <text x="485" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">busy-poll wastes CPU</text>
-  <text x="485" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">rarely used alone</text>
+  <text x="485" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--ok-text)">rare alone</text>
 
   <rect x="640" y="72.8302" width="290" height="284.5283" rx="6.2766" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--warn-text)">Multiplexing</text>
-  <text x="785" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">select / poll / epoll</text>
-  <text x="785" y="187.7358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">kernel tells you</text>
-  <text x="785" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">which fds are ready</text>
+  <text x="785" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">select/poll/epoll</text>
+  <text x="785" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">kernel lists ready fds</text>
   <text x="785" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">one thread, many fds</text>
-  <text x="785" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">scales to 10k+</text>
-  <text x="785" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">used by nginx, Redis</text>
+  <text x="785" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">scales 10k+</text>
+  <text x="785" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--warn-text)">nginx, Redis</text>
 
   <rect x="940" y="72.8302" width="300" height="284.5283" rx="6.2766" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1090" y="111.1321" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.8299" font-weight="bold" fill="var(--info-text)">Async (io_uring)</text>
-  <text x="1090" y="149.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">submit a request,</text>
-  <text x="1090" y="171.3208" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">get a completion</text>
-  <text x="1090" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">shared memory rings</text>
-  <text x="1090" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">kernel polls async</text>
-  <text x="1090" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">zero-syscall hot path</text>
+  <text x="1090" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">submit → completion</text>
+  <text x="1090" y="209.6226" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">shared mem rings</text>
+  <text x="1090" y="247.9245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">kernel polls</text>
+  <text x="1090" y="286.2264" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">zero-syscall path</text>
   <text x="1090" y="324.5283" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--info-text)">Linux 5.1+</text>
 
   <rect x="40" y="401.1321" width="1200" height="218.8679" rx="6.2766" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="439.434" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.7377" font-weight="bold" fill="var(--text)">Pick by scale</text>
-  <text x="640" y="477.7358" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6455" fill="var(--text-muted)">Few connections → blocking is fine. Many → epoll. Storage-heavy → io_uring.</text>
-  <text x="640" y="516.0377" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6455" fill="var(--text-muted)">Network servers: epoll remains the default choice.</text>
-  <text x="640" y="548.8679" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6455" fill="var(--text-muted)">High-throughput disk I/O: io_uring removes per-op syscall overhead.</text>
-  <text x="640" y="587.1698" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--text-muted)">Language runtimes (Go, Node, async Rust) hide these behind async/await.</text>
+  <text x="640" y="477.7358" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6455" fill="var(--text-muted)">Few: blocking. Many: epoll. Disk: io_uring.</text>
+  <text x="640" y="516.0377" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6455" fill="var(--text-muted)">Network servers: epoll by default.</text>
+  <text x="640" y="548.8679" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.6455" fill="var(--text-muted)">io_uring removes syscall overhead.</text>
+  <text x="640" y="587.1698" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.5994" fill="var(--text-muted)">Runtimes hide these behind async/await.</text>
 </svg>

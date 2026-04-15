@@ -98,27 +98,24 @@
 
   <rect x="40" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Before C++17</text>
-  <text x="335" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Function templates deduced args</text>
-  <text x="335" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Class templates did not</text>
-  <text x="335" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">std::pair&lt;int, double&gt; p(1, 2.0);</text>
-  <text x="335" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">auto p = std::make_pair(1, 2.0);</text>
-  <text x="335" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Helpers needed: make_tuple,</text>
-  <text x="335" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">make_shared, make_unique</text>
+  <text x="335" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--danger-text)">Functions deduced; classes did not</text>
+  <text x="335" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">std::pair&lt;int,double&gt; p(1,2.0);</text>
+  <text x="335" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">auto p = make_pair(1,2.0);</text>
+  <text x="335" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Needed make_tuple/shared/unique</text>
 
   <rect x="650" y="71.636364" width="590" height="253.090909" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="113.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">C++17 CTAD</text>
-  <text x="945" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Compiler deduces class template args</text>
-  <text x="945" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">from the constructor call</text>
-  <text x="945" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">std::pair p(1, 2.0);</text>
-  <text x="945" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">std::vector v{1, 2, 3};</text>
-  <text x="945" y="293.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">No more make_* helpers needed</text>
+  <text x="945" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.40366" fill="var(--ok-text)">Compiler deduces from constructor</text>
+  <text x="945" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">std::pair p(1,2.0);</text>
+  <text x="945" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">std::vector v{1,2,3};</text>
+  <text x="945" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">No more make_* helpers</text>
 
   <rect x="40" y="345.818182" width="1200" height="274.181818" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">How deduction works</text>
-  <text x="640" y="419.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Compiler builds implicit deduction guides from each constructor signature</text>
-  <text x="640" y="451.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Authors may add user-defined guides when automatic inference is ambiguous</text>
-  <text x="640" y="482.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Example: template&lt;class It&gt; vector(It, It) -&gt; vector&lt;typename iterator_traits&lt;It&gt;::value_type&gt;;</text>
-  <text x="640" y="514.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Aggregates get deduction from brace-init in C++20</text>
-  <text x="640" y="551.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Watch for surprises: std::vector v{vec}; copies, doesn't wrap</text>
-  <text x="640" y="588.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Prefer explicit template args when the deduced type is non-obvious</text>
+  <text x="640" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Implicit guides built from constructors</text>
+  <text x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">User guides resolve ambiguity</text>
+  <text x="640" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">e.g. vector(It,It) -&gt; vector&lt;value_type&gt;</text>
+  <text x="640" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Aggregates deduced in C++20</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Gotcha: vector v{vec} copies</text>
+  <text x="640" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Be explicit when non-obvious</text>
 </svg>

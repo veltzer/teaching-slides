@@ -93,23 +93,24 @@
       <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
 </defs>
-  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093" font-weight="bold" fill="var(--text)">Notebook Resource Management</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28.885093" font-weight="bold" fill="var(--text)">Resource Management</text>
 
   <rect x="40" y="77.247706" width="340" height="542.752294" rx="6.189663" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="210" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--ok-text)">Spark Session</text>
-  <text x="210" y="157.06422" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Single entry point per kernel</text>
-  <text x="210" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Holds driver + executors</text>
-  <text x="210" y="220.917431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Shared across cells</text>
+  <text x="210" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--ok-text)">Session</text>
+  <text x="210" y="157.06422" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">One per kernel</text>
+  <text x="210" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Driver, executors</text>
+  <text x="210" y="220.917431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Shared</text>
   <text x="210" y="263.486239" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Courier New, monospace">SparkSession.builder</text>
   <text x="210" y="290.091743" text-anchor="middle" font-size="14.442547" fill="var(--ok-text)" font-family="Courier New, monospace">.getOrCreate()</text>
-  <text x="210" y="332.66055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Lives until kernel dies</text>
-  <text x="210" y="364.587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">or spark.stop() is called</text>
-  <text x="210" y="407.155963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Set configs at create time</text>
-  <text x="210" y="439.082569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Most cannot change later</text>
-  <text x="210" y="481.651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Restart kernel to reconfigure</text>
-  <text x="210" y="513.577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">cluster resources</text>
-  <text x="210" y="556.146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Idle sessions still hold</text>
-  <text x="210" y="588.073394" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">cluster slots — stop when done</text>
+  <text x="210" y="332.66055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Until kernel</text>
+
+  <text x="210" y="364.587156" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">or spark.stop()</text>
+  <text x="210" y="407.155963" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Configs at create</text>
+  <text x="210" y="439.082569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Mostly immutable</text>
+  <text x="210" y="481.651376" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Restart to change</text>
+  <text x="210" y="513.577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">resources</text>
+  <text x="210" y="556.146789" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Idle = held slots</text>
+  <text x="210" y="588.073394" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--ok-text)">Stop when done</text>
 
   <line x1="380" y1="178.348624" x2="420" y2="178.348624" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="380" y1="348.623853" x2="420" y2="348.623853" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -117,39 +118,39 @@
 
   <rect x="430" y="77.247706" width="400" height="170.275229" rx="6.189663" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="114.495413" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--warn-text)">Memory</text>
-  <text x="630" y="151.743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Driver heap — collected results</text>
-  <text x="630" y="178.348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Executor heap — shuffled data</text>
-  <text x="630" y="210.275229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Watch collect() and toPandas()</text>
-  <text x="630" y="236.880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Unpersist when done with a cache</text>
+  <text x="630" y="151.743119" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Driver heap: results</text>
+  <text x="630" y="178.348624" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Executor heap: shuffle</text>
+  <text x="630" y="210.275229" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Watch collect, toPandas</text>
+  <text x="630" y="236.880734" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--warn-text)">Unpersist caches</text>
 
   <rect x="430" y="258.165138" width="400" height="170.275229" rx="6.189663" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="295.412844" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--danger-text)">CPU</text>
-  <text x="630" y="332.66055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Executors run tasks in parallel</text>
-  <text x="630" y="359.266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Cores per executor tune throughput</text>
-  <text x="630" y="391.192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Match partitions to cores</text>
-  <text x="630" y="417.798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Notebooks share the cluster fairly</text>
+  <text x="630" y="332.66055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Parallel tasks</text>
+  <text x="630" y="359.266055" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Cores tune throughput</text>
+  <text x="630" y="391.192661" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Partitions = cores</text>
+  <text x="630" y="417.798165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--danger-text)">Share fairly</text>
 
   <rect x="430" y="439.082569" width="400" height="180.917431" rx="6.189663" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="630" y="476.330275" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.63221" font-weight="bold" fill="var(--primary-text)">Storage</text>
-  <text x="630" y="513.577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Cache hot DataFrames, not all</text>
-  <text x="630" y="540.183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Disk spill when memory runs out</text>
-  <text x="630" y="572.110092" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Checkpoint long lineages</text>
-  <text x="630" y="598.715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Clear caches between experiments</text>
+  <text x="630" y="513.577982" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Cache hot DataFrames</text>
+  <text x="630" y="540.183486" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Disk spill on OOM</text>
+  <text x="630" y="572.110092" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Checkpoint lineages</text>
+  <text x="630" y="598.715596" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--primary-text)">Clear caches</text>
 
   <rect x="850" y="77.247706" width="390" height="542.752294" rx="6.189663" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="119.816514" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.695431" font-weight="bold" fill="var(--info-text)">Habits</text>
-  <text x="1045" y="162.385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Run the SparkUI during work</text>
-  <text x="1045" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Port 4040 — jobs, stages, storage</text>
-  <text x="1045" y="231.559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Prefer sample() + limit() first</text>
-  <text x="1045" y="258.165138" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Scale up only once logic works</text>
-  <text x="1045" y="300.733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Tune shuffle.partitions per job</text>
-  <text x="1045" y="327.33945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">200 is a poor one-size default</text>
-  <text x="1045" y="369.908257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Shutdown idle kernels nightly</text>
-  <text x="1045" y="396.513761" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Leaked sessions waste compute</text>
-  <text x="1045" y="439.082569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Use dynamic allocation if</text>
-  <text x="1045" y="465.688073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">workload is bursty</text>
-  <text x="1045" y="508.256881" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Read the plan: explain(true)</text>
-  <text x="1045" y="534.862385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Fix skew before growing cluster</text>
-  <text x="1045" y="577.431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Log metrics, not just results —</text>
-  <text x="1045" y="604.036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">notebooks are easy to forget</text>
+  <text x="1045" y="162.385321" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Use SparkUI</text>
+  <text x="1045" y="188.990826" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Port 4040</text>
+  <text x="1045" y="231.559633" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Sample + limit first</text>
+  <text x="1045" y="258.165138" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Scale after logic</text>
+  <text x="1045" y="300.733945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Tune partitions</text>
+  <text x="1045" y="327.33945" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">200 is poor</text>
+  <text x="1045" y="369.908257" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Stop idle kernels</text>
+  <text x="1045" y="396.513761" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Leaks waste</text>
+  <text x="1045" y="439.082569" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Dynamic alloc</text>
+  <text x="1045" y="465.688073" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">for bursty loads</text>
+  <text x="1045" y="508.256881" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">explain(true)</text>
+  <text x="1045" y="534.862385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Fix skew first</text>
+  <text x="1045" y="577.431193" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">Log metrics</text>
+  <text x="1045" y="604.036697" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.442547" fill="var(--info-text)">easy to forget</text>
 </svg>

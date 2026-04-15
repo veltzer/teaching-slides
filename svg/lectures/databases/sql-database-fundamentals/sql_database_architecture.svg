@@ -98,42 +98,42 @@
 
   <rect x="40" y="71.636364" width="1200" height="84.363636" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="108.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Client / Application</text>
-  <text x="640" y="137.018182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Sends SQL over TCP (libpq, JDBC, ODBC) — authenticates, multiplexes connections</text>
+  <text x="640" y="137.018182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">SQL over TCP (libpq / JDBC / ODBC)</text>
 
   <line x1="640" y1="156" x2="640" y2="187.636364" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="40" y="187.636364" width="590" height="189.818182" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--ok-text)">Query Processor</text>
-  <text x="335" y="259.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Parser: SQL text to AST</text>
-  <text x="335" y="285.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Planner: choose join order, indexes</text>
-  <text x="335" y="312.072727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Optimizer: cost-based, uses statistics</text>
-  <text x="335" y="338.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Executor: walks plan, calls access methods</text>
-  <text x="335" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">EXPLAIN exposes the chosen plan</text>
+  <text x="335" y="259.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Parser: SQL → AST</text>
+  <text x="335" y="285.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Planner: joins, indexes</text>
+  <text x="335" y="312.072727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Optimizer: cost-based</text>
+  <text x="335" y="338.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Executor: walks plan</text>
+  <text x="335" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">EXPLAIN shows plan</text>
 
   <rect x="650" y="187.636364" width="590" height="189.818182" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--warn-text)">Transaction Manager</text>
-  <text x="945" y="259.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">ACID guarantees</text>
-  <text x="945" y="285.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Lock manager / MVCC snapshots</text>
-  <text x="945" y="312.072727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">WAL / redo log for durability</text>
-  <text x="945" y="338.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Isolation levels: RC, RR, serializable</text>
-  <text x="945" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Deadlock detection and rollback</text>
+  <text x="945" y="259.345455" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">ACID</text>
+  <text x="945" y="285.709091" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Locks / MVCC</text>
+  <text x="945" y="312.072727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">WAL for durability</text>
+  <text x="945" y="338.436364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Isolation: RC / RR / serializable</text>
+  <text x="945" y="364.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Deadlock detect + rollback</text>
 
   <line x1="335" y1="377.454545" x2="335" y2="409.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="945" y1="377.454545" x2="945" y2="409.090909" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="40" y="409.090909" width="590" height="210.909091" rx="6.161464" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="335" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--info-text)">Storage Engine</text>
-  <text x="335" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Buffer pool caches pages in RAM</text>
-  <text x="335" y="507.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">B-tree indexes for point / range lookup</text>
-  <text x="335" y="533.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Heap or clustered tables on disk</text>
-  <text x="335" y="559.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Pages written back on checkpoint</text>
-  <text x="335" y="591.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Sequential disk I/O for logs</text>
+  <text x="335" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Buffer pool caches pages</text>
+  <text x="335" y="507.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">B-tree indexes</text>
+  <text x="335" y="533.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Heap / clustered tables</text>
+  <text x="335" y="559.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Checkpoint flushes pages</text>
+  <text x="335" y="591.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--info-text)">Sequential log I/O</text>
 
   <rect x="650" y="409.090909" width="590" height="210.909091" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="945" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.457481" font-weight="bold" fill="var(--danger-text)">Persistent Storage</text>
-  <text x="945" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Data files: tables, indexes</text>
-  <text x="945" y="507.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Write-ahead log (WAL/redo)</text>
-  <text x="945" y="533.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Undo log for rollback / MVCC</text>
-  <text x="945" y="559.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Periodic checkpoints, base backups</text>
-  <text x="945" y="591.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Replication streams to standbys</text>
+  <text x="945" y="480.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Data: tables, indexes</text>
+  <text x="945" y="507.163636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">WAL / redo</text>
+  <text x="945" y="533.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Undo: rollback + MVCC</text>
+  <text x="945" y="559.890909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Checkpoints + backups</text>
+  <text x="945" y="591.527273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Replicas</text>
 </svg>

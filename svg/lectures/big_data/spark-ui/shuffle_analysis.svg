@@ -98,41 +98,41 @@
 
   <rect x="40" y="82.181818" width="380" height="232" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="230" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-text)">Map Stage (Write)</text>
-  <text x="230" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Each task partitions output</text>
-  <text x="230" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Spills to local disk</text>
-  <text x="230" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Shuffle Write Bytes</text>
-  <text x="230" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Shuffle Write Records</text>
-  <text x="230" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Watch per-task skew</text>
+  <text x="230" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Task partitions output</text>
+  <text x="230" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Spills to disk</text>
+  <text x="230" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Write Bytes</text>
+  <text x="230" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Write Records</text>
+  <text x="230" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Watch skew</text>
 
   <line x1="420" y1="198.181818" x2="500" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="460" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">network</text>
 
   <rect x="500" y="82.181818" width="380" height="232" rx="6.161464" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="690" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-text)">Shuffle Service</text>
-  <text x="690" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">External shuffle serves files</text>
-  <text x="690" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Executors fetch by partition</text>
-  <text x="690" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Remote Bytes Read</text>
-  <text x="690" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Local Bytes Read</text>
-  <text x="690" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Fetch wait time matters</text>
+  <text x="690" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Serves files</text>
+  <text x="690" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Executors fetch</text>
+  <text x="690" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Remote Bytes</text>
+  <text x="690" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Local Bytes</text>
+  <text x="690" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--warn-text)">Fetch wait</text>
 
   <line x1="880" y1="198.181818" x2="960" y2="198.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <text x="920" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="12.322928" fill="var(--text-muted)">fetch</text>
 
   <rect x="960" y="82.181818" width="280" height="232" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1100" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-text)">Reduce Stage</text>
-  <text x="1100" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Reads assigned partitions</text>
-  <text x="1100" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Shuffle Read Bytes</text>
-  <text x="1100" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Fetch Wait Time</text>
-  <text x="1100" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Aggregates / joins</text>
-  <text x="1100" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Final output</text>
+  <text x="1100" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Reads partitions</text>
+  <text x="1100" y="187.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Read Bytes</text>
+  <text x="1100" y="214" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Fetch Wait</text>
+  <text x="1100" y="240.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Aggregates</text>
+  <text x="1100" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Output</text>
 
   <rect x="40" y="345.818182" width="1200" height="274.181818" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Reading the Stages tab</text>
-  <text x="640" y="414.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Task summary quartiles reveal skew — 75% vs max column tells the story</text>
-  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">High Shuffle Spill (Memory/Disk) means executors ran out of memory during shuffle</text>
-  <text x="640" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Fetch wait dominates: check network, shuffle service, or skewed partitions</text>
-  <text x="640" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Mitigations: salt keys, enable AQE, broadcast small side, increase partitions</text>
-  <text x="640" y="540.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Watch Shuffle Read/Write ratios — big imbalance points to skew or slow nodes</text>
-  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">AQE coalesces small partitions and splits skewed ones at runtime</text>
-  <text x="640" y="609.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Event timeline shows scheduler delay vs compute vs shuffle in one view</text>
+  <text x="640" y="414.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Quartiles reveal skew (75% vs max)</text>
+  <text x="640" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Spill means OOM during shuffle</text>
+  <text x="640" y="477.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Fetch wait: check network or skew</text>
+  <text x="640" y="509.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Fix: salt keys, AQE, broadcast</text>
+  <text x="640" y="540.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Read/Write imbalance = skew</text>
+  <text x="640" y="577.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">AQE coalesces and splits</text>
+  <text x="640" y="609.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Timeline: delay vs compute</text>
 </svg>

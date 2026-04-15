@@ -99,28 +99,23 @@
   <!-- Row 1: pipeline -->
   <rect x="40" y="82.181818" width="220" height="116" rx="8.215285" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">Input</text>
-  <text x="150" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Parquet, ORC</text>
-  <text x="150" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">predicate pushdown</text>
+  <text x="150" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Parquet/ORC + pushdown</text>
 
   <rect x="285" y="82.181818" width="220" height="116" rx="8.215285" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="395" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--warn-text)">Cache</text>
-  <text x="395" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">persist reused RDDs</text>
-  <text x="395" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">MEMORY_AND_DISK</text>
+  <text x="395" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--warn-text)">persist reused RDDs</text>
 
   <rect x="530" y="82.181818" width="220" height="116" rx="8.215285" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--info-text)">Process</text>
-  <text x="640" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">avoid wide shuffles</text>
-  <text x="640" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">broadcast small joins</text>
+  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--info-text)">avoid shuffles; broadcast</text>
 
   <rect x="775" y="82.181818" width="220" height="116" rx="8.215285" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="885" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Tune</text>
-  <text x="885" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">partitions, executors</text>
-  <text x="885" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">AQE enabled</text>
+  <text x="885" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">partitions, AQE</text>
 
   <rect x="1020" y="82.181818" width="220" height="116" rx="8.215285" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1130" y="129.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">Output</text>
-  <text x="1130" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">coalesce, partition</text>
-  <text x="1130" y="182.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">avoid small files</text>
+  <text x="1130" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">coalesce; no small files</text>
 
   <line x1="260" y1="140.181818" x2="285" y2="140.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
   <line x1="505" y1="140.181818" x2="530" y2="140.181818" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)"/>
@@ -130,37 +125,33 @@
   <!-- Row 2: Four levers -->
   <rect x="40" y="240.363636" width="290" height="179.272727" rx="8.215285" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="185" y="277.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--primary-accent)">Partitioning</text>
-  <text x="185" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Size 128-256 MB per part</text>
-  <text x="185" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Repartition for skew</text>
-  <text x="185" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Coalesce on write</text>
-  <text x="185" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Salt keys when hot</text>
+  <text x="185" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">128-256 MB parts</text>
+  <text x="185" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Repartition for skew</text>
+  <text x="185" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Salt hot keys</text>
 
   <rect x="350" y="240.363636" width="290" height="179.272727" rx="8.215285" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
   <text x="495" y="277.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--ok-accent)">Caching</text>
-  <text x="495" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Cache reused datasets</text>
-  <text x="495" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Use DISK fallback</text>
-  <text x="495" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Unpersist when done</text>
-  <text x="495" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Avoid caching once-read</text>
+  <text x="495" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Cache reused sets</text>
+  <text x="495" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Use DISK fallback</text>
+  <text x="495" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Unpersist when done</text>
 
   <rect x="660" y="240.363636" width="290" height="179.272727" rx="8.215285" fill="var(--surface)" stroke="var(--warn-border)" stroke-width="2"/>
   <text x="805" y="277.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--warn-accent)">Shuffle &amp; Joins</text>
-  <text x="805" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Broadcast small tables</text>
-  <text x="805" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Bucket frequent joins</text>
-  <text x="805" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Push filters early</text>
-  <text x="805" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Prefer DataFrame API</text>
+  <text x="805" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Broadcast small</text>
+  <text x="805" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Bucket joins</text>
+  <text x="805" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Push filters early</text>
 
   <rect x="970" y="240.363636" width="270" height="179.272727" rx="8.215285" fill="var(--surface)" stroke="var(--info-border)" stroke-width="2"/>
   <text x="1105" y="277.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--info-accent)">Resources</text>
-  <text x="1105" y="314.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Right-size executors</text>
-  <text x="1105" y="340.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">4-5 cores per executor</text>
-  <text x="1105" y="366.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Reserve memory overhead</text>
-  <text x="1105" y="393.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Dynamic allocation on</text>
+  <text x="1105" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Right-size executors</text>
+  <text x="1105" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">4-5 cores each</text>
+  <text x="1105" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text)">Dynamic allocation</text>
 
   <!-- Bottom: signals & AQE -->
   <rect x="40" y="451.272727" width="1200" height="168.727273" rx="8.215285" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="488.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.484391" font-weight="bold" fill="var(--text)">Measure first, then tune</text>
-  <text x="640" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Read the Spark UI: stage time, shuffle read/write, spill, skew, and GC.</text>
-  <text x="640" y="546.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Enable Adaptive Query Execution — coalesces partitions and switches join strategies at runtime.</text>
-  <text x="640" y="572.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Columnar formats + partition pruning avoid reading data you do not need.</text>
-  <text x="640" y="604.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Rule of thumb: fix skew and shuffle before touching executor counts.</text>
+  <text x="640" y="519.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Spark UI: stage time, shuffle, spill, skew, GC.</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Enable AQE for runtime coalesce/join switches.</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Columnar + pruning skips data.</text>
+  <text x="640" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Fix skew before tuning executors.</text>
 </svg>

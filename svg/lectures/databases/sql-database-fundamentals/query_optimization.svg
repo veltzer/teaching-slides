@@ -96,35 +96,29 @@
 
   <rect x="40" y="40" width="1200" height="90" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="var(--primary-text)">SELECT ... FROM orders JOIN customers ON ...</text>
-  <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Planner considers candidate join algorithms and picks the cheapest</text>
+  <text x="640" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Planner picks cheapest join</text>
 
   <rect x="40" y="160" width="390" height="260" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Plan A: Nested Loop</text>
-  <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">For each outer row,</text>
-  <text x="235" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">scan inner table</text>
-  <text x="235" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Good for small outer</text>
-  <text x="235" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">and indexed inner</text>
+  <text x="235" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Scan inner per outer row</text>
+  <text x="235" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--danger-text)">Good: small outer + index</text>
   <text x="235" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-text)">Cost: 1000</text>
 
   <rect x="445" y="160" width="390" height="260" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Plan B: Hash Join</text>
-  <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Build hash on smaller</text>
-  <text x="640" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">table, probe with other</text>
-  <text x="640" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Best for equality joins</text>
-  <text x="640" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">on large unsorted data</text>
+  <text x="640" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Hash small, probe other</text>
+  <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--ok-text)">Best: equality, unsorted</text>
   <text x="640" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-text)">Cost: 100  chosen</text>
 
   <rect x="850" y="160" width="390" height="260" rx="6" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Plan C: Merge Join</text>
-  <text x="1045" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sort both inputs,</text>
-  <text x="1045" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">then walk in lockstep</text>
-  <text x="1045" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Wins when both sides</text>
-  <text x="1045" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">already sorted on key</text>
+  <text x="1045" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Sort, walk in lockstep</text>
+  <text x="1045" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="var(--info-text)">Wins: pre-sorted keys</text>
   <text x="1045" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--info-text)">Cost: 500</text>
 
   <rect x="40" y="450" width="1200" height="170" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--text)">Cost-based optimization</text>
-  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Cost uses statistics: row counts, distinct values, index selectivity.</text>
-  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Stale stats lead to bad plans; ANALYZE refreshes them.</text>
-  <text x="640" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">EXPLAIN shows the chosen plan; EXPLAIN ANALYZE adds real timings.</text>
+  <text x="640" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">Stats: row counts, distinct values, selectivity.</text>
+  <text x="640" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--text-muted)">ANALYZE refreshes stale stats.</text>
+  <text x="640" y="592" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-faint)">EXPLAIN shows plan; ANALYZE adds timings.</text>
 </svg>

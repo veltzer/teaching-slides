@@ -122,10 +122,8 @@
   <text x="194.6875" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">INI Format</text>
   <text x="82.1875" y="180.675929" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[webservers]</text>
   <text x="82.1875" y="201.431394" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">web01</text>
-  <text x="82.1875" y="222.186859" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">web02</text>
-  <text x="82.1875" y="242.942324" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[webservers:vars]</text>
-  <text x="82.1875" y="263.697789" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">user=admin</text>
-  <text x="82.1875" y="284.453254" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">port=80</text>
+  <text x="82.1875" y="242.942324" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[web:vars]</text>
+  <text x="82.1875" y="263.697789" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">port=80</text>
   <text x="82.1875" y="305.208718" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[p:children]</text>
 
   <!-- YAML Format Box -->
@@ -134,11 +132,9 @@
   <rect x="68.125" y="362.862788" width="253.125" height="16.143139" fill="url(#grad-ok)" rx="6.767951" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="194.6875" y="366.322095" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">YAML Format</text>
   <text x="82.1875" y="399.761392" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">all:</text>
-  <text x="82.1875" y="420.516857" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">  hosts:</text>
+  <text x="82.1875" y="420.516857" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">  hosts</text>
   <text x="82.1875" y="441.272322" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">    web01:</text>
-  <text x="82.1875" y="462.027787" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">      host: 10.0.0.1</text>
   <text x="82.1875" y="482.783252" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">  children:</text>
-  <text x="82.1875" y="503.538717" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">    webservers:</text>
 
   <!-- === CENTER COLUMN: Groups and Host/Group Vars === -->
   <!-- Groups box -->
@@ -157,7 +153,7 @@
   <rect x="450.625" y="230.258365" width="75" height="29.980116" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="488.125" y="251.013957" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--primary-accent)" text-anchor="middle">staging</text>
   <rect x="536.875" y="230.258365" width="65.625" height="29.980116" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="569.6875" y="251.013957" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--primary-accent)" text-anchor="middle">ungrouped</text>
+  <text x="569.6875" y="251.013957" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--primary-accent)" text-anchor="middle">other</text>
   <line x1="400.9375" y1="260.238608" x2="386.875" y2="284.453254" stroke="var(--text-muted)" stroke-width="1.5"/>
   <line x1="400.9375" y1="260.238608" x2="433.75" y2="284.453254" stroke="var(--text-muted)" stroke-width="1.5"/>
   <rect x="363.4375" y="284.453254" width="54.375" height="27.673953" rx="6.767951" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -177,8 +173,7 @@
   <text x="372.8125" y="459.721624" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">host_vars/</text>
   <text x="372.8125" y="479.323944" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  web01.yml</text>
   <text x="372.8125" y="498.926391" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  web01/</text>
-  <text x="372.8125" y="518.528838" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">    vars.yml</text>
-  <text x="372.8125" y="532.365815" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">    vault.yml</text>
+  <text x="372.8125" y="518.528838" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">    vault.yml</text>
 
   <!-- === RIGHT COLUMN: Dynamic Inventory and Connection Vars === -->
   <!-- Dynamic Inventory box -->
@@ -207,14 +202,10 @@
   <rect x="649.375" y="391.689759" width="271.875" height="16.143139" fill="url(#grad-ok)" rx="6.767951" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785.3125" y="395.149066" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Connection Variables</text>
   <text x="663.4375" y="429.741508" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_host</text>
-  <text x="790" y="429.741508" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">IP</text>
   <text x="663.4375" y="450.496973" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_port</text>
-  <text x="790" y="450.496973" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">SSH port</text>
   <text x="663.4375" y="471.252438" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_user</text>
-  <text x="790" y="471.252438" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">user</text>
   <text x="663.4375" y="492.007903" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_password</text>
-  <text x="790" y="492.007903" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">pwd</text>
-  <text x="663.4375" y="512.763368" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_ssh_key</text>
+  <text x="663.4375" y="512.763368" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ssh_key</text>
   <text x="663.4375" y="533.518833" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_connection</text>
   <text x="790" y="533.518833" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">ssh/local</text>
 

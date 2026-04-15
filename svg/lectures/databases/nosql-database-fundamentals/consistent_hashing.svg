@@ -139,12 +139,12 @@
   <!-- Right side explanation panel -->
   <rect x="604.383562" y="81.801802" width="635.616438" height="229.90991" rx="8.561326" fill="var(--surface)" stroke="var(--primary-border)" stroke-width="2"/>
   <text x="922.191781" y="118.378378" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.262984" font-weight="bold" fill="var(--primary-accent)">How it works</text>
-  <text x="626.30137" y="154.954955" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">1. Hash both nodes and keys onto the same ring.</text>
-  <text x="626.30137" y="186.306306" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">2. A key is owned by the next node clockwise.</text>
-  <text x="626.30137" y="217.657658" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">3. Add or remove a node — only its neighbour's</text>
-  <text x="626.30137" y="238.558559" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   keys move, not the entire dataset.</text>
-  <text x="626.30137" y="275.135135" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">4. Virtual nodes (tokens) smooth the load —</text>
-  <text x="626.30137" y="296.036036" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   each physical node owns many ring positions.</text>
+  <text x="626.30137" y="154.954955" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">1. Hash nodes and keys on same ring.</text>
+  <text x="626.30137" y="186.306306" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">2. Key owned by next node clockwise.</text>
+  <text x="626.30137" y="217.657658" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">3. On change: only neighbour's</text>
+  <text x="626.30137" y="238.558559" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   keys move.</text>
+  <text x="626.30137" y="275.135135" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">4. Virtual nodes smooth load —</text>
+  <text x="626.30137" y="296.036036" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--text)">   many positions per node.</text>
 
   <!-- Benefits -->
   <rect x="604.383562" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -155,15 +155,15 @@
 
   <rect x="933.150685" y="332.612613" width="306.849315" height="135.855856" rx="8.561326" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1086.575342" y="369.189189" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--warn-text)">Watch out</text>
-  <text x="1086.575342" y="400.540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Hot keys on one node</text>
-  <text x="1086.575342" y="424.576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Uneven token spread</text>
+  <text x="1086.575342" y="400.540541" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Hot keys</text>
+  <text x="1086.575342" y="424.576577" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Uneven tokens</text>
   <text x="1086.575342" y="448.612613" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--warn-text)">Rebalance cost</text>
 
   <!-- Used by -->
   <rect x="604.383562" y="489.369369" width="635.616438" height="125.405405" rx="8.561326" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="922.191781" y="525.945946" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.122653" font-weight="bold" fill="var(--info-text)">Used by</text>
-  <text x="922.191781" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Cassandra, DynamoDB, Riak, Redis Cluster, Memcached clients.</text>
-  <text x="922.191781" y="583.423423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Also at the CDN edge — object-to-origin routing.</text>
+  <text x="922.191781" y="557.297297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">Cassandra, Dynamo, Riak, Redis</text>
+  <text x="922.191781" y="583.423423" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.982321" fill="var(--info-text)">CDN edge routing</text>
 
-  <text x="582.465753" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--text-faint)">Key property: adding N+1th node moves ~1/N of the keys.</text>
+  <text x="582.465753" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.912155" fill="var(--text-faint)">Adding node moves ~1/N of keys.</text>
 </svg>
