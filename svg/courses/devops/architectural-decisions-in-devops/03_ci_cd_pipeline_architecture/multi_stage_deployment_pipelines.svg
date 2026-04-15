@@ -96,8 +96,8 @@
 
   <rect x="40" y="40" width="1200" height="120" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--primary-text)">Multi-Stage Deployment Pipeline</text>
-  <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Code progresses through gated stages, each adding confidence before production</text>
-  <text x="640" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Same artifact promoted; config and data differ per environment</text>
+  <text x="640" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="var(--primary-text)">Gated stages add confidence</text>
+  <text x="640" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--primary-text)">Same artifact, different config per env</text>
 
   <rect x="40" y="190" width="220" height="200" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="150" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">1. Build</text>
@@ -146,9 +146,9 @@
 
   <rect x="40" y="420" width="1200" height="200" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--text)">Key principles</text>
-  <text x="640" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Promote the same immutable artifact; never rebuild between stages</text>
-  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Every stage is automated; gates are policy, not manual approvals where avoidable</text>
-  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Failure at any stage halts promotion; rollback is cheaper than forward-fix</text>
-  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Observability at each stage proves readiness for the next</text>
-  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Stage count varies by risk tolerance and org structure</text>
+  <text x="640" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Promote one immutable artifact</text>
+  <text x="640" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Automate gates as policy</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Failure halts promotion; prefer rollback</text>
+  <text x="640" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="var(--text-muted)">Observability proves readiness</text>
+  <text x="640" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-faint)">Stage count varies by risk</text>
 </svg>

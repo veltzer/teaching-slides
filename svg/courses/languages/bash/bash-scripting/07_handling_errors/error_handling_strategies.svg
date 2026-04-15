@@ -109,61 +109,61 @@
   <!-- set -e -->
   <rect x="40" y="129.230769" width="360" height="156.153846" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="220" y="160.461538" font-size="19.010157" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">set -e</text>
-  <text x="220" y="187.230769" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Exit on any error</text>
+  <text x="220" y="187.230769" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Exit on error</text>
   <text x="60" y="216.230769" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">#!/bin/bash</text>
   <text x="60" y="238.538462" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">set -e</text>
-  <text x="60" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">script stops at first failing cmd</text>
+  <text x="60" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">stops at first failure</text>
 
   <!-- set -u -->
   <rect x="460" y="129.230769" width="360" height="156.153846" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="160.461538" font-size="19.010157" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">set -u</text>
-  <text x="640" y="187.230769" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Error on unset variables</text>
+  <text x="640" y="187.230769" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Unset vars = error</text>
   <text x="480" y="216.230769" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">set -u</text>
-  <text x="480" y="238.538462" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">echo $UNDEFINED  # error!</text>
-  <text x="480" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">catches typos in var names</text>
+  <text x="480" y="238.538462" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">echo $UNDEFINED  # err</text>
+  <text x="480" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">catches typos</text>
 
   <!-- set -o pipefail -->
   <rect x="880" y="129.230769" width="360" height="156.153846" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1060" y="160.461538" font-size="16.897905" fill="var(--danger-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">set -o pipefail</text>
-  <text x="1060" y="187.230769" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Pipe failure propagation</text>
-  <text x="900" y="216.230769" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">false | echo "ok"</text>
-  <text x="900" y="238.538462" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">without: exits 0 (echo succeeds)</text>
-  <text x="900" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">with: exits 1 (false failed)</text>
+  <text x="1060" y="187.230769" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Propagate pipe failure</text>
+  <text x="900" y="216.230769" font-size="13.729584" fill="var(--text)" font-family="Courier New, monospace">false | echo ok</text>
+  <text x="900" y="238.538462" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">without: exit 0</text>
+  <text x="900" y="260.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">with: exit 1</text>
 
   <!-- Combined recommended -->
   <rect x="260" y="324.423138" width="760" height="72.499938" rx="6.874703" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="355.653908" font-size="17.953974" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">Recommended: set -euo pipefail</text>
-  <text x="640" y="381.307692" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">combine all three at top of every script for maximum safety</text>
+  <text x="640" y="381.307692" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">combine all three at script top</text>
 
   <!-- trap ERR -->
   <rect x="40" y="441.538462" width="380" height="178.461538" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="230" y="472.769231" font-size="19.010157" fill="var(--info-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">trap ERR</text>
-  <text x="230" y="499.538462" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Run cleanup on error</text>
+  <text x="230" y="499.538462" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Cleanup on error</text>
   <text x="60" y="526.307692" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">cleanup() {</text>
-  <text x="60" y="547.500062" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  echo "Error on line $LINENO"</text>
+  <text x="60" y="547.500062" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  echo "line $LINENO"</text>
   <text x="60" y="568.692308" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">}</text>
   <text x="60" y="589.884554" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">trap cleanup ERR</text>
-  <text x="60" y="608.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">runs function when error occurs</text>
+  <text x="60" y="608.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">fires on error</text>
 
   <!-- Checking $? -->
   <rect x="460" y="441.538462" width="380" height="178.461538" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="650" y="472.769231" font-size="19.010157" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">Checking $?</text>
-  <text x="650" y="499.538462" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Manual exit code check</text>
+  <text x="650" y="499.538462" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Manual check</text>
   <text x="480" y="526.307692" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">cmd</text>
   <text x="480" y="547.500062" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">if [ $? -ne 0 ]; then</text>
-  <text x="480" y="568.692308" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  echo "cmd failed"</text>
+  <text x="480" y="568.692308" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  echo "failed"</text>
   <text x="480" y="589.884554" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">fi</text>
-  <text x="480" y="608.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">$? = exit code of last command</text>
+  <text x="480" y="608.846154" font-family="Arial, sans-serif" font-size="12.6734" fill="var(--text-muted)">$? = last exit code</text>
 
   <!-- || die pattern -->
   <rect x="880" y="441.538462" width="360" height="178.461538" rx="6.874703" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="1060" y="472.769231" font-size="19.010157" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">|| die pattern</text>
-  <text x="1060" y="499.538462" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Inline error handling</text>
+  <text x="1060" y="499.538462" font-family="Arial, sans-serif" font-size="14.785652" fill="var(--text-muted)" text-anchor="middle">Inline handling</text>
   <text x="900" y="526.307692" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">die() {</text>
-  <text x="900" y="547.500062" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  echo "Error: $1" &gt;&amp;2</text>
+  <text x="900" y="547.500062" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  echo "$1" &gt;&amp;2</text>
   <text x="900" y="568.692308" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">  exit 1</text>
   <text x="900" y="589.884554" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">}</text>
-  <text x="900" y="608.846154" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">cmd || die "cmd failed"</text>
+  <text x="900" y="608.846154" font-size="12.6734" fill="var(--text)" font-family="Courier New, monospace">cmd || die "failed"</text>
 
   <!-- Arrows from combined box to lower sections -->
   <line x1="400" y1="396.923077" x2="230" y2="441.538462" stroke="var(--text-muted)" stroke-width="1.5" marker-end="url(#arrow)"/>

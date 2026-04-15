@@ -98,41 +98,35 @@
 
   <rect x="40" y="82.181818" width="390" height="316.363636" rx="6.161464" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="235" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--danger-text)">RDD</text>
-  <text x="235" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Java objects on JVM heap</text>
-  <text x="235" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">No Catalyst optimizer</text>
-  <text x="235" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">No Tungsten memory layout</text>
-  <text x="235" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Higher GC pressure</text>
-  <text x="235" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Slowest typical queries</text>
-  <text x="235" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Use: custom partitioning,</text>
-  <text x="235" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">unstructured data</text>
-  <text x="235" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Type-safe but slow</text>
+  <text x="235" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">JVM heap objects</text>
+  <text x="235" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">No Catalyst/Tungsten</text>
+  <text x="235" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">High GC pressure</text>
+  <text x="235" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--danger-text)">Slowest queries</text>
+  <text x="235" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Use: custom partitioning</text>
+  <text x="235" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--danger-text)">Type-safe but slow</text>
 
   <rect x="445" y="82.181818" width="390" height="316.363636" rx="6.161464" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="640" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--ok-text)">DataFrame</text>
-  <text x="640" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Row-based, untyped</text>
-  <text x="640" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Full Catalyst optimization</text>
-  <text x="640" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Tungsten off-heap memory</text>
-  <text x="640" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Whole-stage codegen</text>
-  <text x="640" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Fastest in most cases</text>
-  <text x="640" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Use: SQL-style analytics,</text>
-  <text x="640" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">column operations</text>
-  <text x="640" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">No compile-time checks</text>
+  <text x="640" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Row-based, untyped</text>
+  <text x="640" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Full Catalyst + Tungsten</text>
+  <text x="640" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Whole-stage codegen</text>
+  <text x="640" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--ok-text)">Fastest usually</text>
+  <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">Use: SQL/column ops</text>
+  <text x="640" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--ok-text)">No compile checks</text>
 
   <rect x="850" y="82.181818" width="390" height="316.363636" rx="6.161464" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1045" y="124.363636" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.538213" font-weight="bold" fill="var(--primary-text)">Dataset[T]</text>
-  <text x="1045" y="161.272727" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Typed, case-class rows</text>
-  <text x="1045" y="192.909091" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Catalyst on column ops</text>
-  <text x="1045" y="224.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Encoder serialization</text>
-  <text x="1045" y="256.181818" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Lambda ops are opaque</text>
-  <text x="1045" y="287.818182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Slight overhead vs DF</text>
-  <text x="1045" y="324.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Use: Scala type safety,</text>
-  <text x="1045" y="351.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">domain objects</text>
-  <text x="1045" y="382.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Best balance</text>
+  <text x="1045" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Typed, case-class rows</text>
+  <text x="1045" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Catalyst on column ops</text>
+  <text x="1045" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Encoder serialization</text>
+  <text x="1045" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--primary-text)">Lambdas opaque</text>
+  <text x="1045" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Use: Scala type safety</text>
+  <text x="1045" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--primary-text)">Best balance</text>
 
   <rect x="40" y="419.636364" width="1200" height="200.363636" rx="6.161464" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="640" y="456.545455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.43057" font-weight="bold" fill="var(--text)">Guidelines</text>
-  <text x="640" y="493.454545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Prefer DataFrame or typed Dataset column expressions over RDD transformations</text>
-  <text x="640" y="525.090909" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Lambdas on Dataset (map, filter with closure) break whole-stage codegen</text>
-  <text x="640" y="556.727273" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Encoder cost matters for tight Dataset pipelines; use DF when types not needed</text>
-  <text x="640" y="593.636364" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Measure with Spark UI — theory rarely matches reality at scale</text>
+  <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Prefer DF/Dataset columns over RDD</text>
+  <text x="640" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Lambdas break whole-stage codegen</text>
+  <text x="640" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="14.376749" fill="var(--text-muted)">Encoder cost in tight loops</text>
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="13.349838" fill="var(--text-faint)">Measure via Spark UI</text>
 </svg>

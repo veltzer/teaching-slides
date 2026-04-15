@@ -112,7 +112,7 @@
   </defs>
   <!-- Top header bar -->
   <rect x="40" y="40" width="1200" height="59.960232" fill="url(#grad-primary)" rx="6.767951" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="79.204767" font-family="Arial, sans-serif" font-size="22.873758" font-weight="bold" fill="var(--bg)" text-anchor="middle">Ansible Inventory Architecture</text>
+  <text x="640" y="79.204767" font-family="Arial, sans-serif" font-size="22.873758" font-weight="bold" fill="var(--bg)" text-anchor="middle">Inventory Architecture</text>
 
   <!-- === LEFT COLUMN: Inventory Formats === -->
   <!-- INI Format Box -->
@@ -121,12 +121,12 @@
   <rect x="68.125" y="143.777325" width="253.125" height="16.143139" fill="url(#grad-primary)" rx="6.767951" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="194.6875" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">INI Format</text>
   <text x="82.1875" y="180.675929" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[webservers]</text>
-  <text x="82.1875" y="201.431394" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">web01 ansible_host=10.0.0.1</text>
-  <text x="82.1875" y="222.186859" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">web02 ansible_host=10.0.0.2</text>
+  <text x="82.1875" y="201.431394" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">web01</text>
+  <text x="82.1875" y="222.186859" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">web02</text>
   <text x="82.1875" y="242.942324" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[webservers:vars]</text>
-  <text x="82.1875" y="263.697789" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">ansible_user=admin</text>
-  <text x="82.1875" y="284.453254" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">http_port=80</text>
-  <text x="82.1875" y="305.208718" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[prod:children]</text>
+  <text x="82.1875" y="263.697789" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">user=admin</text>
+  <text x="82.1875" y="284.453254" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">port=80</text>
+  <text x="82.1875" y="305.208718" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[p:children]</text>
 
   <!-- YAML Format Box -->
   <rect x="68.125" y="339.80116" width="253.125" height="201.789306" rx="6.767951" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -136,17 +136,16 @@
   <text x="82.1875" y="399.761392" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">all:</text>
   <text x="82.1875" y="420.516857" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">  hosts:</text>
   <text x="82.1875" y="441.272322" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">    web01:</text>
-  <text x="82.1875" y="462.027787" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">      ansible_host: 10.0.0.1</text>
+  <text x="82.1875" y="462.027787" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">      host: 10.0.0.1</text>
   <text x="82.1875" y="482.783252" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">  children:</text>
   <text x="82.1875" y="503.538717" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">    webservers:</text>
-  <text x="82.1875" y="524.294181" font-size="12.476605" fill="var(--text-muted)" font-family="Courier New, monospace">      hosts:</text>
 
   <!-- === CENTER COLUMN: Groups and Host/Group Vars === -->
   <!-- Groups box -->
   <rect x="358.75" y="120.715697" width="253.125" height="201.789306" rx="6.767951" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <rect x="358.75" y="120.715697" width="253.125" height="39.204767" rx="6.767951" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="358.75" y="143.777325" width="253.125" height="16.143139" fill="url(#grad-warn)" rx="6.767951" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485.3125" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Groups and Nesting</text>
+  <text x="485.3125" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Groups</text>
   <!-- Group hierarchy diagram -->
   <rect x="396.25" y="173.757441" width="75" height="32.286279" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="433.75" y="195.666051" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--bg)" text-anchor="middle">all</text>
@@ -154,7 +153,7 @@
   <line x1="433.75" y1="206.043719" x2="485.3125" y2="230.258365" stroke="var(--text-muted)" stroke-width="1.5"/>
   <line x1="433.75" y1="206.043719" x2="565" y2="230.258365" stroke="var(--text-muted)" stroke-width="1.5"/>
   <rect x="363.4375" y="230.258365" width="75" height="29.980116" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="400.9375" y="251.013957" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--primary-accent)" text-anchor="middle">production</text>
+  <text x="400.9375" y="251.013957" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--primary-accent)" text-anchor="middle">prod</text>
   <rect x="450.625" y="230.258365" width="75" height="29.980116" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="488.125" y="251.013957" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--primary-accent)" text-anchor="middle">staging</text>
   <rect x="536.875" y="230.258365" width="65.625" height="29.980116" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -165,19 +164,19 @@
   <text x="390.625" y="304.055573" font-family="Arial, sans-serif" font-size="11.279919" fill="var(--warn-accent)" text-anchor="middle">webservers</text>
   <rect x="424.375" y="284.453254" width="54.375" height="27.673953" rx="6.767951" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="451.5625" y="304.055573" font-family="Arial, sans-serif" font-size="11.279919" fill="var(--warn-accent)" text-anchor="middle">dbservers</text>
-  <text x="485.3125" y="314.43337" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-faint)" font-style="italic">:children keyword</text>
+  <text x="485.3125" y="314.43337" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-faint)" font-style="italic">:children</text>
 
   <!-- Host Vars box -->
   <rect x="358.75" y="339.80116" width="253.125" height="201.789306" rx="6.767951" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <rect x="358.75" y="339.80116" width="253.125" height="39.204767" rx="6.767951" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="358.75" y="362.862788" width="253.125" height="16.143139" fill="url(#grad-info)" rx="6.767951" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="485.3125" y="366.322095" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">host_vars / group_vars</text>
+  <text x="485.3125" y="366.322095" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">host/group vars</text>
   <text x="372.8125" y="400.91441" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">group_vars/</text>
-  <text x="372.8125" y="420.516857" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  all.yml         # all hosts</text>
-  <text x="372.8125" y="440.119304" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  webservers.yml  # group</text>
+  <text x="372.8125" y="420.516857" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  all.yml</text>
+  <text x="372.8125" y="440.119304" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  webservers.yml</text>
   <text x="372.8125" y="459.721624" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">host_vars/</text>
-  <text x="372.8125" y="479.323944" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  web01.yml       # one host</text>
-  <text x="372.8125" y="498.926391" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  web01/          # directory</text>
+  <text x="372.8125" y="479.323944" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  web01.yml</text>
+  <text x="372.8125" y="498.926391" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">  web01/</text>
   <text x="372.8125" y="518.528838" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">    vars.yml</text>
   <text x="372.8125" y="532.365815" font-size="11.436935" fill="var(--text-muted)" font-family="Courier New, monospace">    vault.yml</text>
 
@@ -186,21 +185,21 @@
   <rect x="649.375" y="120.715697" width="271.875" height="230.616277" rx="6.767951" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <rect x="649.375" y="120.715697" width="271.875" height="39.204767" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="649.375" y="143.777325" width="271.875" height="16.143139" fill="url(#grad-primary)" rx="6.767951" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="785.3125" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Dynamic Inventory Plugins</text>
+  <text x="785.3125" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Dynamic Plugins</text>
   <!-- Plugin rows -->
   <rect x="663.4375" y="171.451278" width="239.0625" height="27.673953" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="677.5" y="191.053725" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--primary-accent)">amazon.aws.aws_ec2</text>
-  <text x="855.625" y="191.053725" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">AWS EC2</text>
+  <text x="677.5" y="191.053725" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--primary-accent)">aws_ec2</text>
+  <text x="855.625" y="191.053725" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">AWS</text>
   <rect x="663.4375" y="204.890702" width="239.0625" height="27.673953" rx="6.767951" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="677.5" y="224.493022" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--ok-accent)">azure.azcollection.azure_rm</text>
-  <text x="677.5" y="241.789306" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">  Azure VMs</text>
+  <text x="677.5" y="224.493022" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--ok-accent)">azure_rm</text>
+  <text x="677.5" y="241.789306" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">  Azure</text>
   <rect x="663.4375" y="249.860812" width="239.0625" height="27.673953" rx="6.767951" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="677.5" y="269.463259" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--info-accent)">google.cloud.gcp_compute</text>
+  <text x="677.5" y="269.463259" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--info-accent)">gcp_compute</text>
   <text x="855.625" y="269.463259" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">GCP</text>
   <rect x="663.4375" y="283.300236" width="239.0625" height="27.673953" rx="6.767951" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="677.5" y="302.902556" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--warn-accent)">community.vmware.vmware_vm</text>
+  <text x="677.5" y="302.902556" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--warn-accent)">vmware_vm</text>
   <rect x="663.4375" y="316.739532" width="239.0625" height="27.673953" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="677.5" y="336.341852" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--ok-accent)">openstack.cloud.openstack</text>
+  <text x="677.5" y="336.341852" font-family="Arial, sans-serif" font-size="12.476605" font-weight="bold" fill="var(--ok-accent)">openstack</text>
 
   <!-- Connection Variables box -->
   <rect x="649.375" y="368.628131" width="271.875" height="178.727678" rx="6.767951" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
@@ -208,48 +207,48 @@
   <rect x="649.375" y="391.689759" width="271.875" height="16.143139" fill="url(#grad-ok)" rx="6.767951" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="785.3125" y="395.149066" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Connection Variables</text>
   <text x="663.4375" y="429.741508" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_host</text>
-  <text x="790" y="429.741508" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">IP/hostname override</text>
+  <text x="790" y="429.741508" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">IP</text>
   <text x="663.4375" y="450.496973" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_port</text>
-  <text x="790" y="450.496973" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">SSH port (default 22)</text>
+  <text x="790" y="450.496973" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">SSH port</text>
   <text x="663.4375" y="471.252438" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_user</text>
-  <text x="790" y="471.252438" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">Remote user</text>
+  <text x="790" y="471.252438" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">user</text>
   <text x="663.4375" y="492.007903" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_password</text>
-  <text x="790" y="492.007903" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">SSH password</text>
-  <text x="663.4375" y="512.763368" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_ssh_private_key_file</text>
+  <text x="790" y="492.007903" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">pwd</text>
+  <text x="663.4375" y="512.763368" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_ssh_key</text>
   <text x="663.4375" y="533.518833" font-size="11.436935" fill="var(--text)" font-family="Courier New, monospace">ansible_connection</text>
-  <text x="790" y="533.518833" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">ssh/local/docker</text>
+  <text x="790" y="533.518833" font-family="Arial, sans-serif" font-size="11.436935" fill="var(--text-muted)">ssh/local</text>
 
   <!-- Bottom bar: validation commands -->
   <rect x="68.125" y="564.652094" width="853.125" height="55.347906" rx="6.767951" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
-  <text x="86.875" y="585.407431" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--text)">Validation Commands:</text>
-  <text x="86.875" y="607.316041" font-size="12.476605" fill="var(--primary-accent)" font-family="Courier New, monospace">ansible-inventory --list -i inventory/</text>
-  <text x="358.75" y="607.316041" font-size="12.476605" fill="var(--ok-accent)" font-family="Courier New, monospace">ansible all -m ping --list-hosts</text>
-  <text x="621.25" y="607.316041" font-size="12.476605" fill="var(--info-accent)" font-family="Courier New, monospace">ansible-inventory --graph</text>
+  <text x="86.875" y="585.407431" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--text)">Validation:</text>
+  <text x="86.875" y="607.316041" font-size="12.476605" fill="var(--primary-accent)" font-family="Courier New, monospace">ansible-inventory --list</text>
+  <text x="358.75" y="607.316041" font-size="12.476605" fill="var(--ok-accent)" font-family="Courier New, monospace">ansible all -m ping</text>
+  <text x="621.25" y="607.316041" font-size="12.476605" fill="var(--info-accent)" font-family="Courier New, monospace">--graph</text>
 
   <!-- Right: quick tip -->
   <rect x="940" y="120.715697" width="271.875" height="495.824995" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="940" y="120.715697" width="271.875" height="39.204767" rx="6.767951" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <rect x="940" y="143.777325" width="271.875" height="16.143139" fill="url(#grad-primary)" rx="6.767951" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1075.9375" y="147.236505" font-family="Arial, sans-serif" font-size="14.556058" font-weight="bold" fill="var(--bg)" text-anchor="middle">Key Concepts</text>
-  <text x="954.0625" y="184.135109" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">Inventory Sources</text>
-  <text x="954.0625" y="207.196737" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Single file (INI or YAML)</text>
-  <text x="954.0625" y="227.952329" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Directory of files</text>
-  <text x="954.0625" y="248.707667" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Dynamic plugin script</text>
-  <text x="954.0625" y="269.463259" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Multiple sources combined</text>
+  <text x="954.0625" y="184.135109" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">Sources</text>
+  <text x="954.0625" y="207.196737" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Single file</text>
+  <text x="954.0625" y="227.952329" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Directory</text>
+  <text x="954.0625" y="248.707667" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Plugin</text>
+  <text x="954.0625" y="269.463259" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">- Combined</text>
   <line x1="954.0625" y1="284.453254" x2="1197.8125" y2="284.453254" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="954.0625" y="307.514881" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">Variable Precedence</text>
-  <text x="954.0625" y="330.576509" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">1. host_vars (highest)</text>
-  <text x="954.0625" y="351.331974" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">2. group_vars (child group)</text>
-  <text x="954.0625" y="372.087439" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">3. group_vars (parent group)</text>
-  <text x="954.0625" y="392.842904" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">4. group_vars/all</text>
+  <text x="954.0625" y="307.514881" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">Precedence</text>
+  <text x="954.0625" y="330.576509" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">1. host_vars</text>
+  <text x="954.0625" y="351.331974" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">2. child group</text>
+  <text x="954.0625" y="372.087439" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">3. parent group</text>
+  <text x="954.0625" y="392.842904" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text)">4. all</text>
   <line x1="954.0625" y1="407.833025" x2="1197.8125" y2="407.833025" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="954.0625" y="430.894653" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">Ranges in INI</text>
+  <text x="954.0625" y="430.894653" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">Ranges</text>
   <text x="954.0625" y="453.956281" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">web[01:10]</text>
-  <text x="954.0625" y="474.711618" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text-muted)">  expands to web01..web10</text>
+  <text x="954.0625" y="474.711618" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text-muted)">  web01..web10</text>
   <text x="954.0625" y="495.46721" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">db-[a:d]</text>
-  <text x="954.0625" y="516.222548" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text-muted)">  expands to db-a..db-d</text>
+  <text x="954.0625" y="516.222548" font-family="Arial, sans-serif" font-size="12.476605" fill="var(--text-muted)">  db-a..db-d</text>
   <line x1="954.0625" y1="531.21267" x2="1197.8125" y2="531.21267" stroke="var(--primary-border)" stroke-width="1"/>
-  <text x="954.0625" y="554.274297" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">ansible.cfg Reference</text>
+  <text x="954.0625" y="554.274297" font-family="Arial, sans-serif" font-size="13.516388" font-weight="bold" fill="var(--primary-accent)">ansible.cfg</text>
   <text x="954.0625" y="577.335925" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">[defaults]</text>
-  <text x="954.0625" y="598.09139" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">inventory = ./inventory/</text>
+  <text x="954.0625" y="598.09139" font-size="12.476605" fill="var(--text)" font-family="Courier New, monospace">inventory = ./inv/</text>
 </svg>

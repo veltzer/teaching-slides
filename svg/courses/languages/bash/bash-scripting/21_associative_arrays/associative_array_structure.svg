@@ -103,7 +103,7 @@
   <text x="70" y="73.024911" font-size="20.317814" fill="var(--ok-accent)" font-family="Courier New, monospace">declare</text>
   <text x="148" y="73.024911" font-size="20.317814" fill="var(--primary-accent)" font-family="Courier New, monospace"> -A</text>
   <text x="186" y="73.024911" font-size="20.317814" fill="var(--primary-accent)" font-family="Courier New, monospace"> user</text>
-  <text x="280" y="73.024911" font-size="14.222437" fill="var(--text-muted)" font-family="Courier New, monospace">    ← MUST use declare -A (without it, becomes an indexed array!)</text>
+  <text x="280" y="73.024911" font-size="14.222437" fill="var(--text-muted)" font-family="Courier New, monospace">    ← declare -A required (else indexed!)</text>
 
   <!-- Hash map visual -->
   <!-- Hash table container -->
@@ -116,7 +116,6 @@
   <!-- [name] -> "Alice" -->
   <rect x="60" y="182.419929" width="160" height="53.66548" rx="6.612831" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="200.996441" font-size="13.206596" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[name]</text>
-  <text x="140" y="221.637011" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">string key</text>
   <line x1="220" y1="209.252669" x2="320" y2="209.252669" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="320" y="182.419929" width="220" height="53.66548" rx="6.612831" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="430" y="215.44484" font-size="16.254229" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">"Alice"</text>
@@ -124,7 +123,7 @@
   <!-- [age] -> "30" -->
   <rect x="60" y="256.725979" width="160" height="53.66548" rx="6.612831" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="275.302491" font-size="13.206596" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[age]</text>
-  <text x="140" y="295.94306" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">string key</text>
+  <text x="140" y="295.94306" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif"></text>
   <line x1="220" y1="283.558719" x2="320" y2="283.558719" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="320" y="256.725979" width="220" height="53.66548" rx="6.612831" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="430" y="289.75089" font-size="16.254229" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">"30"</text>
@@ -132,15 +131,15 @@
   <!-- [email] -> "alice@example.com" -->
   <rect x="60" y="331.032028" width="160" height="53.66548" rx="6.612831" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="349.608541" font-size="13.206596" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[email]</text>
-  <text x="140" y="370.24911" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">string key</text>
+  <text x="140" y="370.24911" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif"></text>
   <line x1="220" y1="357.864769" x2="320" y2="357.864769" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="320" y="331.032028" width="220" height="53.66548" rx="6.612831" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="430" y="361.992883" font-size="14.222437" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">"alice@example.com"</text>
+  <text x="430" y="361.992883" font-size="14.222437" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">"a@x.com"</text>
 
   <!-- [role] -> "admin" -->
   <rect x="60" y="405.338078" width="160" height="53.66548" rx="6.612831" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="140" y="423.914591" font-size="13.206596" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold" font-family="Courier New, monospace">[role]</text>
-  <text x="140" y="444.55516" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">string key</text>
+  <text x="140" y="444.55516" font-size="11.174803" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif"></text>
   <line x1="220" y1="432.170819" x2="320" y2="432.170819" stroke="var(--primary-border)" stroke-width="2" marker-end="url(#arrow)"/>
   <rect x="320" y="405.338078" width="220" height="53.66548" rx="6.612831" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="430" y="436.298932" font-size="16.254229" fill="var(--ok-accent)" text-anchor="middle" font-family="Courier New, monospace">"admin"</text>
@@ -148,7 +147,7 @@
   <!-- Important note -->
   <rect x="60" y="475.516014" width="480" height="51.601423" rx="6.612831" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="300" y="498.220641" font-size="13.206596" fill="var(--warn-accent)" text-anchor="middle" font-weight="bold" font-family="Arial, sans-serif">Order is NOT guaranteed!</text>
-  <text x="300" y="516.797153" font-size="12.190644" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Associative arrays are hash tables — iteration order is random</text>
+  <text x="300" y="516.797153" font-size="12.190644" fill="var(--text-muted)" text-anchor="middle" font-family="Arial, sans-serif">Hash table — iteration order random</text>
 
   <!-- Right panel: syntax -->
   <rect x="590" y="114.30605" width="650" height="505.69395" rx="6.612831" fill="var(--bg)"/>
@@ -157,47 +156,39 @@
   <text x="915" y="147.330961" font-size="18.286021" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Syntax Reference</text>
 
   <rect x="610" y="178.291815" width="610" height="82.562278" rx="6.612831" fill="var(--code-bg)"/>
-  <text x="630" y="200.996441" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Declaration and initialization</text>
+  <text x="630" y="200.996441" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Declare + init</text>
   <text x="630" y="220.604925" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">declare</text>
-  <text x="689" y="220.604925" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> -A user=([name]="Alice" [age]="30")</text>
-  <text x="630" y="241.245495" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace">user[email]="alice@example.com"</text>
+  <text x="689" y="220.604925" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> -A user=([name]="Alice")</text>
+  <text x="630" y="241.245495" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace">user[age]="30"</text>
 
   <rect x="610" y="277.366548" width="610" height="82.562278" rx="6.612831" fill="var(--code-bg)"/>
-  <text x="630" y="300.071174" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Access and default value</text>
+  <text x="630" y="300.071174" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Access</text>
   <text x="630" y="319.679658" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
   <text x="669" y="319.679658" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${user[name]}"</text>
   <text x="820" y="319.679658" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">       # Alice</text>
   <text x="630" y="340.320228" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
   <text x="669" y="340.320228" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${user[phone]:-N/A}"</text>
-  <text x="820" y="340.320228" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">  # N/A (missing key)</text>
 
   <rect x="610" y="376.441281" width="610" height="99.074733" rx="6.612831" fill="var(--code-bg)"/>
-  <text x="630" y="399.145907" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Iterate over keys and values</text>
-  <text x="630" y="418.754391" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">for</text>
-  <text x="655" y="418.754391" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> key in "${!user[@]}"; </text>
-  <text x="800" y="418.754391" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">do</text>
-  <text x="630" y="439.394961" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace">  echo "$key = ${user[$key]}"</text>
+  <text x="630" y="399.145907" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Iterate</text>
+  <text x="630" y="418.754391" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace">for k in "${!user[@]}"; do</text>
+  <text x="630" y="439.394961" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace">  echo "$k=${user[$k]}"</text>
   <text x="630" y="460.03553" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">done</text>
-  <text x="630" y="465.19573" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">       # all keys</text>
+  <text x="630" y="465.19573" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"></text>
 
   <rect x="610" y="492.02847" width="610" height="99.074733" rx="6.612831" fill="var(--code-bg)"/>
-  <text x="630" y="514.733096" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Check key / count / delete</text>
-  <text x="630" y="534.34158" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">if</text>
-  <text x="650" y="534.34158" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> [[ -v user[name] ]]; </text>
-  <text x="780" y="534.34158" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">then</text>
-  <text x="813" y="534.34158" font-size="13.206596" fill="var(--text-muted)" font-family="Courier New, monospace"> echo "has name"</text>
-  <text x="630" y="554.982149" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">fi</text>
+  <text x="630" y="514.733096" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"># Check/count/delete</text>
+  <text x="630" y="534.34158" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace">[[ -v user[name] ]]</text>
   <text x="630" y="575.622719" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
   <text x="669" y="575.622719" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${#user[@]}"</text>
-  <text x="790" y="575.622719" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">          # count pairs</text>
-  <text x="630" y="575.622719" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">           # count pairs</text>
+  <text x="790" y="575.622719" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">          # count</text>
+  <text x="630" y="575.622719" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace"></text>
   <text x="630" y="578.718861" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">unset</text>
   <text x="676" y="578.718861" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> 'user[age]'</text>
-  <text x="800" y="578.718861" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">       # delete key</text>
+  <text x="800" y="578.718861" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">       # delete</text>
 
   <!-- vs indexed array note -->
   <rect x="610" y="601.423488" width="610" height="16.512456" rx="6.612831" fill="transparent"/>
   <text x="630" y="613.807829" font-size="13.206596" fill="var(--ok-accent)" font-family="Courier New, monospace">echo</text>
   <text x="669" y="613.807829" font-size="13.206596" fill="var(--primary-accent)" font-family="Courier New, monospace"> "${!user[@]}"</text>
-  <text x="800" y="613.807829" font-size="12.190644" fill="var(--text-muted)" font-family="Courier New, monospace">           # all keys</text>
 </svg>

@@ -112,7 +112,7 @@
   </defs>
   <!-- Title banner -->
   <rect x="40" y="40" width="1200" height="50.945946" rx="6.443098" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="71.351351" font-size="21.775846" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Understanding time Output: real vs user vs sys</text>
+  <text x="640" y="71.351351" font-size="21.775846" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">time: real vs user vs sys</text>
 
   <!-- Timeline diagram area -->
   <rect x="40" y="110.540541" width="1200" height="333.108108" rx="6.443098" fill="var(--bg)"/>
@@ -132,26 +132,26 @@
 
   <!-- real time bar: full width -->
   <rect x="150" y="147.77027" width="1040" height="43.108108" rx="6.443098" fill="url(#grad-real)" opacity="0.85"/>
-  <text x="670" y="174.223027" font-size="13.857386" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Wall clock time (stopwatch from start to finish)</text>
+  <text x="670" y="174.223027" font-size="13.857386" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Wall clock (stopwatch)</text>
   <!-- real braces -->
   <line x1="150" y1="198.716216" x2="1190" y2="198.716216" stroke="var(--primary-border)" stroke-width="1.5" stroke-dasharray="4,4"/>
 
   <!-- user time segments -->
   <!-- segment 1: 150-480 -->
   <rect x="150" y="233.986486" width="330" height="43.108108" rx="6.443098" fill="url(#grad-user)" opacity="0.85"/>
-  <text x="315" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU (user code)</text>
+  <text x="315" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU</text>
   <!-- gap: IO wait -->
   <rect x="480" y="233.986486" width="200" height="43.108108" rx="6.443098" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="580" y="260.439243" font-size="11.877744" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">I/O wait</text>
   <!-- segment 2: 680-900 -->
   <rect x="680" y="233.986486" width="220" height="43.108108" rx="6.443098" fill="url(#grad-user)" opacity="0.85"/>
-  <text x="790" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU (user code)</text>
+  <text x="790" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU</text>
   <!-- gap2 -->
   <rect x="900" y="233.986486" width="130" height="43.108108" rx="6.443098" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="965" y="260.439243" font-size="11.877744" fill="var(--text-faint)" text-anchor="middle" font-family="Arial, sans-serif">I/O wait</text>
   <!-- segment 3: 1030-1190 -->
   <rect x="1030" y="233.986486" width="160" height="43.108108" rx="6.443098" fill="url(#grad-user)" opacity="0.85"/>
-  <text x="1110" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU (user)</text>
+  <text x="1110" y="260.439243" font-size="11.877744" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">CPU</text>
 
   <!-- sys time segments -->
   <!-- at 300, brief sys call -->
@@ -173,24 +173,24 @@
   <rect x="40" y="490.675676" width="580" height="11.756757" fill="var(--primary-accent)" rx="6.443098"/>
   <text x="330" y="488.716216" font-size="15.837028" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Key Relationships</text>
   <text x="65" y="522.027027" font-size="13.857386" fill="var(--text)" font-family="Courier New, monospace">real</text>
-  <text x="120" y="522.027027" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = total elapsed wall time (always ≥ user + sys)</text>
+  <text x="120" y="522.027027" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = elapsed wall time</text>
   <text x="65" y="543.581081" font-size="13.857386" fill="var(--text)" font-family="Courier New, monospace">user</text>
-  <text x="120" y="543.581081" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = time your code ran on CPU in user mode</text>
+  <text x="120" y="543.581081" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = CPU in user mode</text>
   <text x="65" y="565.135135" font-size="13.857386" fill="var(--text)" font-family="Courier New, monospace">sys</text>
-  <text x="120" y="565.135135" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif">  = time kernel ran on behalf of your code</text>
+  <text x="120" y="565.135135" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif">  = kernel on your behalf</text>
   <text x="65" y="586.689189" font-size="12.867619" fill="var(--danger-accent)" font-family="Courier New, monospace">I/O wait</text>
-  <text x="135" y="586.689189" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = the gap — real - (user + sys)</text>
-  <text x="65" y="606.283784" font-size="11.877744" fill="var(--text-faint)" font-family="Arial, sans-serif">multi-core: real can be &lt; user + sys (parallel execution)</text>
+  <text x="135" y="586.689189" font-size="12.867619" fill="var(--text-muted)" font-family="Arial, sans-serif"> = real - (user + sys)</text>
+  <text x="65" y="606.283784" font-size="11.877744" fill="var(--text-faint)" font-family="Arial, sans-serif">multi-core: real &lt; user+sys</text>
 
   <!-- Right side: example output and scenarios -->
   <rect x="650" y="463.243243" width="590" height="156.756757" rx="6.443098" fill="var(--code-bg)"/>
   <rect x="650" y="463.243243" width="590" height="39.189189" rx="6.443098" fill="var(--ok-accent)"/>
   <rect x="650" y="490.675676" width="590" height="11.756757" fill="var(--ok-accent)" rx="6.443098"/>
   <text x="945" y="488.716216" font-size="15.837028" font-weight="bold" fill="var(--bg)" text-anchor="middle" font-family="Arial, sans-serif">Example Scenarios</text>
-  <text x="675" y="520.067568" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># CPU-bound:   real ≈ user + sys</text>
-  <text x="675" y="537.702703" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 0m5.2s  user 0m5.1s  sys 0m0.1s</text>
-  <text x="675" y="557.297297" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># I/O-bound:   real >> user + sys</text>
-  <text x="675" y="574.932432" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 0m8.3s  user 0m0.2s  sys 0m0.3s</text>
-  <text x="675" y="594.527027" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># Parallel:    real &lt; user + sys</text>
-  <text x="675" y="612.162162" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 0m2.1s  user 0m7.8s  sys 0m0.2s</text>
+  <text x="675" y="520.067568" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># CPU-bound:</text>
+  <text x="675" y="537.702703" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 5.2s  user 5.1s  sys 0.1s</text>
+  <text x="675" y="557.297297" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># I/O-bound:</text>
+  <text x="675" y="574.932432" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 8.3s  user 0.2s  sys 0.3s</text>
+  <text x="675" y="594.527027" font-size="11.877744" fill="var(--text-muted)" font-family="Courier New, monospace"># Parallel:</text>
+  <text x="675" y="612.162162" font-size="11.877744" fill="var(--primary-accent)" font-family="Courier New, monospace">real 2.1s  user 7.8s  sys 0.2s</text>
 </svg>

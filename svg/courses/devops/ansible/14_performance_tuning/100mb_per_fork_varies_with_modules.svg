@@ -113,10 +113,10 @@
   <line x1="969.508278" y1="101.337508" x2="999.016372" y2="101.337508" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="1003.934511" y="56.236393" width="206.557395" height="90.202231" rx="6.50335" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1107.213208" y="110.357776" text-anchor="middle" font-size="18.838687" fill="var(--text)" font-family="Arial, sans-serif">Host 5</text>
-  <text x="40" y="187.029493" font-size="16.012873" fill="var(--text-muted)" font-family="Arial, sans-serif">Then sequentially: Host 6 -&gt; Host 7 -&gt; Host 8 ... (one batch of 5 at a time)</text>
+  <text x="40" y="187.029493" font-size="16.012873" fill="var(--text-muted)" font-family="Arial, sans-serif">Then Host 6 -&gt; 7 -&gt; 8 ... (batches of 5)</text>
   <rect x="40" y="209.580051" width="550.81972" height="54.121271" rx="6.50335" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="59.672133" y="236.640742" font-size="15.070863" fill="var(--text-muted)" font-family="Arial, sans-serif">Memory per fork: ~50-100 MB (varies with modules used)</text>
-  <text x="59.672133" y="256.485309" font-size="15.070863" fill="var(--text-muted)" font-family="Arial, sans-serif">forks=5 means 5 parallel SSH connections + worker processes</text>
+  <text x="59.672133" y="236.640742" font-size="15.070863" fill="var(--text-muted)" font-family="Arial, sans-serif">~50-100 MB per fork (varies)</text>
+  <text x="59.672133" y="256.485309" font-size="15.070863" fill="var(--text-muted)" font-family="Arial, sans-serif">forks=5: 5 SSH + workers</text>
   <text x="40" y="335.863129" font-size="24.490206" font-weight="bold" fill="var(--ok-accent)" font-family="Arial, sans-serif">forks=20</text>
   <rect x="40" y="352.099522" width="186.885262" height="90.202231" rx="6.50335" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="133.442631" y="406.220793" text-anchor="middle" font-size="18.838687" fill="var(--text)" font-family="Arial, sans-serif">Host 1</text>
@@ -132,9 +132,9 @@
   <line x1="884.918107" y1="397.200637" x2="912.459093" y2="397.200637" stroke="var(--text-muted)" stroke-width="2" marker-end="url(#arrow)" />
   <rect x="917.377126" y="352.099522" width="186.885262" height="90.202231" rx="6.50335" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1010.819757" y="406.220793" text-anchor="middle" font-size="18.838687" fill="var(--text)" font-family="Arial, sans-serif">Host 20</text>
-  <text x="40" y="487.402756" font-size="16.012873" fill="var(--text-muted)" font-family="Arial, sans-serif">Then: Host 21 -&gt; Host 22 ... (all 20 in first batch simultaneously)</text>
+  <text x="40" y="487.402756" font-size="16.012873" fill="var(--text-muted)" font-family="Arial, sans-serif">Then 21 -&gt; 22 ... (20 in parallel)</text>
   <rect x="40" y="511.757345" width="1200" height="108.242655" rx="6.50335" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640.000052" y="537.916077" text-anchor="middle" font-size="15.070863" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Memory impact (approx. 100 MB per fork)</text>
+  <text x="640.000052" y="537.916077" text-anchor="middle" font-size="15.070863" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">Memory (~100 MB/fork)</text>
   <text x="128.524598" y="566.780688" text-anchor="middle" font-size="14.128961" fill="var(--text)" font-family="Arial, sans-serif">forks=5</text>
   <text x="128.524598" y="586.625255" text-anchor="middle" font-size="14.128961" fill="var(--text-muted)" font-family="Arial, sans-serif">~500 MB RAM</text>
   <text x="423.606591" y="566.780688" text-anchor="middle" font-size="14.128961" fill="var(--text)" font-family="Arial, sans-serif">forks=10</text>
@@ -142,7 +142,7 @@
   <text x="718.688584" y="566.780688" text-anchor="middle" font-size="14.128961" fill="var(--text)" font-family="Arial, sans-serif">forks=20</text>
   <text x="718.688584" y="586.625255" text-anchor="middle" font-size="14.128961" fill="var(--text-muted)" font-family="Arial, sans-serif">~2 GB RAM</text>
   <text x="1013.770577" y="566.780688" text-anchor="middle" font-size="14.128961" fill="var(--text)" font-family="Arial, sans-serif">forks=50</text>
-  <text x="1013.770577" y="586.625255" text-anchor="middle" font-size="14.128961" fill="var(--text-muted)" font-family="Arial, sans-serif">~5 GB RAM (watch out!)</text>
+  <text x="1013.770577" y="586.625255" text-anchor="middle" font-size="14.128961" fill="var(--text-muted)" font-family="Arial, sans-serif">~5 GB RAM</text>
   <line x1="276.065594" y1="547.838305" x2="276.065594" y2="597.449554" stroke="var(--border)" stroke-width="0.8889" />
   <line x1="571.147587" y1="547.838305" x2="571.147587" y2="597.449554" stroke="var(--border)" stroke-width="0.8889" />
   <line x1="866.229476" y1="547.838305" x2="866.229476" y2="597.449554" stroke="var(--border)" stroke-width="0.8889" />

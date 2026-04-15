@@ -99,18 +99,17 @@
     </linearGradient>
   </defs>
   <rect x="40" y="40" width="413.114754" height="295.087684" rx="6.907249" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="246.557377" y="70.526229" text-anchor="middle" font-size="18.007774" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Matrix strategy definition</text>
+  <text x="246.557377" y="70.526229" text-anchor="middle" font-size="18.007774" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Matrix strategy</text>
   <text x="59.672131" y="101.052711" font-size="15.006574" fill="var(--primary-accent)" font-family="Courier New, monospace">strategy:</text>
   <text x="59.672131" y="123.438773" font-size="15.006574" fill="var(--primary-accent)" font-family="Courier New, monospace">  matrix:</text>
   <text x="59.672131" y="145.824582" font-size="15.006574" fill="var(--text)" font-family="Courier New, monospace">    os: [ubuntu, windows, macos]</text>
   <text x="59.672131" y="168.210517" font-size="15.006574" fill="var(--text)" font-family="Courier New, monospace">    python: ['3.10', '3.11', '3.12']</text>
   <line x1="59.672131" y1="184.491358" x2="433.442623" y2="184.491358" stroke="var(--border)" stroke-width="0.8889" />
-  <text x="246.557377" y="210.94744" text-anchor="middle" font-size="15.006574" fill="var(--text-muted)" font-family="Arial, sans-serif">3 OS × 3 versions = <tspan font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">9 parallel jobs</tspan>
+  <text x="246.557377" y="210.94744" text-anchor="middle" font-size="15.006574" fill="var(--text-muted)" font-family="Arial, sans-serif">3×3 = <tspan font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">9 jobs</tspan>
   </text>
-  <text x="59.672131" y="243.508996" font-size="14.005829" fill="var(--text-faint)" font-family="Courier New, monospace">    # use in steps:</text>
   <text x="59.672131" y="265.894805" font-size="14.005829" fill="var(--text)" font-family="Courier New, monospace">runs-on: ${{ matrix.os }}</text>
-  <text x="59.672131" y="288.28074" font-size="14.005829" fill="var(--text)" font-family="Courier New, monospace">python-version: ${{ matrix.python }}</text>
-  <text x="59.672131" y="318.807096" font-size="13.364721" fill="var(--text-faint)" font-family="Courier New, monospace">fail-fast: false  # run all even if one fails</text>
+  <text x="59.672131" y="288.28074" font-size="14.005829" fill="var(--text)" font-family="Courier New, monospace">python: ${{ matrix.python }}</text>
+  <text x="59.672131" y="318.807096" font-size="13.364721" fill="var(--text-faint)" font-family="Courier New, monospace">fail-fast: false</text>
   <line x1="455.082072" y1="187.544031" x2="521.967423" y2="187.544031" stroke="var(--primary-border)" stroke-width="1.7778" marker-end="url(#arrow-primary)" />
   <text x="488.52459" y="177.368537" text-anchor="middle" font-size="13.364721" fill="var(--primary-accent)" font-family="Arial, sans-serif">expands to</text>
   <text x="640" y="62.386062" text-anchor="middle" font-size="15.006574" font-weight="bold" fill="var(--text-muted)" font-family="Courier New, monospace">ubuntu</text>
@@ -147,25 +146,25 @@
   <text x="1031.475515" y="294.386087" text-anchor="middle" font-size="14.005829" fill="var(--text)" font-family="Arial, sans-serif">macos / 3.12</text>
   <text x="1031.475515" y="316.772148" text-anchor="middle" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">✓ pass</text>
   <rect x="541.639344" y="357.473745" width="586.229508" height="36.631576" rx="6.907249" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="834.754098" y="381.894754" text-anchor="middle" font-size="15.006574" fill="var(--primary-accent)" font-family="Arial, sans-serif">All 9 jobs run in parallel — one failure visible immediately</text>
+  <text x="834.754098" y="381.894754" text-anchor="middle" font-size="15.006574" fill="var(--primary-accent)" font-family="Arial, sans-serif">9 parallel jobs</text>
   <rect x="40" y="416.491257" width="1200" height="203.508743" rx="6.907249" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="447.017613" text-anchor="middle" font-size="17.007259" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Fine-tuning the matrix</text>
+  <text x="640" y="447.017613" text-anchor="middle" font-size="17.007259" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">Tuning</text>
   <rect x="59.672131" y="463.298453" width="354.098466" height="132.28079" rx="6.907249" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="236.721102" y="489.754536" text-anchor="middle" font-size="15.006574" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">exclude — remove combinations</text>
+  <text x="236.721102" y="489.754536" text-anchor="middle" font-size="15.006574" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">exclude</text>
   <text x="79.344157" y="514.175545" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">exclude:</text>
   <text x="79.344157" y="534.526406" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">  - os: windows</text>
   <text x="79.344157" y="554.877394" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">    python: '3.10'</text>
-  <text x="79.344157" y="577.263203" font-size="13.364721" fill="var(--text-faint)" font-family="Arial, sans-serif">removes windows/3.10 from grid</text>
+  <text x="79.344157" y="577.263203" font-size="13.364721" fill="var(--text-faint)" font-family="Arial, sans-serif">drops windows/3.10</text>
   <rect x="462.95082" y="463.298453" width="354.098466" height="132.28079" rx="6.907249" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
-  <text x="640" y="489.754536" text-anchor="middle" font-size="15.006574" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">include — add extra combinations</text>
+  <text x="640" y="489.754536" text-anchor="middle" font-size="15.006574" font-weight="bold" fill="var(--text)" font-family="Arial, sans-serif">include</text>
   <text x="482.622951" y="514.175545" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">include:</text>
   <text x="482.622951" y="534.526406" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">  - os: ubuntu</text>
   <text x="482.622951" y="554.877394" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">    python: '3.13-dev'</text>
-  <text x="482.622951" y="577.263203" font-size="13.364721" fill="var(--text-faint)" font-family="Arial, sans-serif">adds one extra experimental job</text>
+  <text x="482.622951" y="577.263203" font-size="13.364721" fill="var(--text-faint)" font-family="Arial, sans-serif">adds extra job</text>
   <rect x="866.229508" y="463.298453" width="354.098466" height="132.28079" rx="6.907249" fill="var(--surface)" stroke="var(--border)" stroke-width="1" />
   <text x="1043.278584" y="489.754536" text-anchor="middle" font-size="15.006574" font-weight="bold" fill="var(--primary-accent)" font-family="Arial, sans-serif">fail-fast</text>
-  <text x="885.901744" y="520.280765" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">fail-fast: true   # default</text>
-  <text x="885.901744" y="542.666827" font-size="13.364721" fill="var(--text-muted)" font-family="Arial, sans-serif">cancel remaining jobs on first fail</text>
+  <text x="885.901744" y="520.280765" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">fail-fast: true</text>
+  <text x="885.901744" y="542.666827" font-size="13.364721" fill="var(--text-muted)" font-family="Arial, sans-serif">cancel on first fail</text>
   <text x="885.901744" y="569.122783" font-size="13.364721" fill="var(--text-muted)" font-family="Courier New, monospace">fail-fast: false</text>
-  <text x="885.901744" y="591.50897" font-size="13.364721" fill="var(--text-muted)" font-family="Arial, sans-serif">run all jobs regardless</text>
+  <text x="885.901744" y="591.50897" font-size="13.364721" fill="var(--text-muted)" font-family="Arial, sans-serif">run all</text>
 </svg>

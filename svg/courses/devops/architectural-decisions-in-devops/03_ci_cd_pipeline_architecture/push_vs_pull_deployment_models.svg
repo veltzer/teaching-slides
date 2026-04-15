@@ -95,64 +95,64 @@
 </defs>
 
   <rect x="40" y="40" width="585" height="580" rx="6" fill="var(--surface)" stroke="var(--danger-border)" stroke-width="2"/>
-  <text x="332" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-accent)">Push model (classic CI/CD)</text>
+  <text x="332" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--danger-accent)">Push (classic)</text>
 
   <rect x="70" y="110" width="220" height="150" rx="6" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="180" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-text)">CI Server</text>
-  <text x="180" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Jenkins, GH Actions</text>
-  <text x="180" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">holds prod credentials</text>
-  <text x="180" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">runs kubectl apply</text>
-  <text x="180" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">or terraform apply</text>
+  <text x="180" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">Jenkins/Actions</text>
+  <text x="180" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">holds creds</text>
+  <text x="180" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">kubectl apply</text>
+  <text x="180" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-text)">terraform apply</text>
 
   <rect x="375" y="110" width="220" height="150" rx="6" fill="url(#grad-danger)" stroke="var(--danger-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="485" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--danger-text)">Production</text>
-  <text x="485" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">cluster / servers</text>
-  <text x="485" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">passively receives</text>
-  <text x="485" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">exposes API inbound</text>
-  <text x="485" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">no local reconciler</text>
+  <text x="485" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">cluster</text>
+  <text x="485" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">passive receive</text>
+  <text x="485" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">inbound API</text>
+  <text x="485" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-text)">no reconciler</text>
 
   <line x1="290" y1="185" x2="373" y2="185" stroke="var(--danger-border)" stroke-width="3" marker-end="url(#arrow-danger)"/>
   <text x="332" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--danger-accent)">push + creds</text>
 
   <rect x="70" y="290" width="525" height="310" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
   <text x="332" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-accent)">Trade-offs</text>
-  <text x="90" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Simple mental model, one clear trigger</text>
-  <text x="90" y="385" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Works for any target (VMs, functions, PaaS)</text>
-  <text x="90" y="415" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Easy to roll a targeted hotfix</text>
-  <text x="90" y="455" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− CI holds production secrets (blast radius)</text>
-  <text x="90" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− Drift when someone kubectls directly</text>
-  <text x="90" y="515" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− No self-healing if state is changed</text>
-  <text x="90" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− Inbound access to prod required</text>
-  <text x="90" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− Failed deploys leave half-applied state</text>
+  <text x="90" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Simple model</text>
+  <text x="90" y="385" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Any target</text>
+  <text x="90" y="415" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Easy hotfix</text>
+  <text x="90" y="455" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− CI holds secrets</text>
+  <text x="90" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− Drift possible</text>
+  <text x="90" y="515" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− No self-heal</text>
+  <text x="90" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− Inbound to prod</text>
+  <text x="90" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--danger-accent)">− Half-applied state</text>
 
   <rect x="655" y="40" width="585" height="580" rx="6" fill="var(--surface)" stroke="var(--ok-border)" stroke-width="2"/>
-  <text x="947" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-accent)">Pull model (GitOps)</text>
+  <text x="947" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--ok-accent)">Pull (GitOps)</text>
 
   <rect x="685" y="110" width="220" height="150" rx="6" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="795" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--warn-text)">Git Repo</text>
-  <text x="795" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">desired state manifest</text>
-  <text x="795" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">reviewed via PR</text>
+  <text x="795" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">desired state</text>
+  <text x="795" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">PR-reviewed</text>
   <text x="795" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">signed commits</text>
-  <text x="795" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">single source of truth</text>
+  <text x="795" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-text)">source of truth</text>
 
   <rect x="990" y="110" width="220" height="150" rx="6" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--ok-text)">Production</text>
-  <text x="1100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Argo CD / Flux agent</text>
-  <text x="1100" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">polls repo every 3 min</text>
-  <text x="1100" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">reconciles to desired</text>
-  <text x="1100" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">self-heals drift</text>
+  <text x="1100" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">Argo/Flux</text>
+  <text x="1100" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">polls repo</text>
+  <text x="1100" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">reconciles</text>
+  <text x="1100" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-text)">self-heals</text>
 
   <line x1="988" y1="185" x2="905" y2="185" stroke="var(--ok-border)" stroke-width="3" marker-end="url(#arrow-ok)"/>
   <text x="947" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-accent)">pull desired state</text>
 
   <rect x="685" y="290" width="525" height="310" rx="6" fill="var(--bg)" stroke="var(--border)" stroke-width="2"/>
   <text x="947" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-accent)">Trade-offs</text>
-  <text x="705" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ No outbound creds from CI to prod</text>
-  <text x="705" y="385" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Self-healing — drift is auto-corrected</text>
-  <text x="705" y="415" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Git is the audit log; rollback = git revert</text>
-  <text x="705" y="455" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Prod needs only outbound network access</text>
-  <text x="705" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Reconciler must run inside each cluster</text>
-  <text x="705" y="515" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Poll delay unless webhook-nudged</text>
-  <text x="705" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Fits Kubernetes-style targets best</text>
-  <text x="705" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Emergency hotfix still goes through PR</text>
+  <text x="705" y="355" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ No outbound creds</text>
+  <text x="705" y="385" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Auto self-heal</text>
+  <text x="705" y="415" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Git audit log</text>
+  <text x="705" y="455" font-family="Arial, sans-serif" font-size="14" fill="var(--text)">+ Outbound only</text>
+  <text x="705" y="485" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Needs reconciler</text>
+  <text x="705" y="515" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Poll delay</text>
+  <text x="705" y="545" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Fits k8s best</text>
+  <text x="705" y="580" font-family="Arial, sans-serif" font-size="14" fill="var(--ok-accent)">− Hotfix via PR</text>
 </svg>

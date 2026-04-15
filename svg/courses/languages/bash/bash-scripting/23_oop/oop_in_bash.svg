@@ -100,48 +100,41 @@
   </defs>
   <!-- Title bar -->
   <rect x="40" y="40" width="1200" height="57.477541" rx="6.654403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="75.531535" font-family="Arial, sans-serif" font-size="22.489998" fill="var(--bg)" text-anchor="middle" font-weight="bold">OOP Patterns in Bash using Associative Arrays</text>
+  <text x="640" y="75.531535" font-family="Arial, sans-serif" font-size="22.489998" fill="var(--bg)" text-anchor="middle" font-weight="bold">OOP in Bash via Assoc Arrays</text>
 
   <!-- OOP concept mapping - left side -->
   <rect x="40" y="123.603612" width="300" height="292.612642" rx="6.654403" fill="url(#grad-info)" stroke="var(--info-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="190" y="152.864876" font-family="Arial, sans-serif" font-size="16.356413" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">OOP Concept Mapping</text>
-  <text x="60" y="184.216231" font-family="Arial, sans-serif" font-size="14.311847" fill="var(--text)" font-weight="bold">OOP           Bash</text>
+  <text x="190" y="152.864876" font-family="Arial, sans-serif" font-size="16.356413" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Concept Mapping</text>
+  <text x="60" y="184.216231" font-family="Arial, sans-serif" font-size="14.311847" fill="var(--text)" font-weight="bold">OOP      Bash</text>
   <line x1="60" y1="194.666682" x2="320" y2="194.666682" stroke="var(--info-border)" stroke-width="1"/>
-  <text x="60" y="219.747766" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">class      -&gt;  prefix convention</text>
-  <text x="60" y="242.738759" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">object     -&gt;  assoc array</text>
-  <text x="60" y="265.729752" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">field      -&gt;  array key</text>
-  <text x="60" y="288.720745" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">method     -&gt;  function</text>
-  <text x="60" y="311.711739" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">this/self  -&gt;  nameref (-n)</text>
-  <text x="60" y="334.702732" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">inherit.   -&gt;  not supported</text>
-  <text x="60" y="357.693725" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">new Obj()  -&gt;  declare -A name</text>
-  <text x="60" y="380.684719" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text-muted)" font-style="italic">  + init function</text>
-  <text x="60" y="401.585622" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">destructor -&gt;  cleanup function</text>
+  <text x="60" y="219.747766" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">class  prefix</text>
+  <text x="60" y="242.738759" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">object array</text>
+  <text x="60" y="265.729752" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">field  key</text>
+  <text x="60" y="288.720745" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">method fn</text>
+  <text x="60" y="311.711739" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">self   -n</text>
+  <text x="60" y="334.702732" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">inherit none</text>
+  <text x="60" y="357.693725" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">new    declare</text>
+  <text x="60" y="401.585622" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">destr  cleanup</text>
 
   <!-- Object definition example -->
   <rect x="380" y="123.603612" width="540" height="235.135101" rx="6.654403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="650" y="152.864876" font-family="Arial, sans-serif" font-size="16.356413" fill="var(--info-accent)" text-anchor="middle" font-weight="bold">Defining an Object</text>
-  <text x="400" y="181.081153" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace"># "Constructor" - creates and initializes</text>
   <text x="400" y="201.982056" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">person_new() {</text>
-  <text x="400" y="222.882959" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  local -n _self=$1</text>
-  <text x="400" y="243.783862" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  _self[name]="${2:-unknown}"</text>
-  <text x="400" y="264.684765" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  _self[age]="${3:-0}"</text>
-  <text x="400" y="285.585668" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  _self[email]="${4:-}"</text>
+  <text x="400" y="222.882959" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  local -n _s=$1</text>
+  <text x="400" y="243.783862" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  _s[name]=$2</text>
+  <text x="400" y="264.684765" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  _s[age]=$3</text>
   <text x="400" y="306.486571" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">}</text>
   <text x="400" y="332.612642" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">declare -A alice</text>
-  <text x="400" y="353.513545" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">person_new alice "Alice" 30 "a@x.com"</text>
+  <text x="400" y="353.513545" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">person_new alice</text>
 
   <!-- Methods example -->
   <rect x="380" y="379.639616" width="540" height="240.360384" rx="6.654403" fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
   <text x="650" y="408.90088" font-family="Arial, sans-serif" font-size="16.356413" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Defining Methods</text>
-  <text x="400" y="437.117157" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace"># "Method" - takes object by nameref</text>
   <text x="400" y="458.01806" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">person_greet() {</text>
-  <text x="400" y="478.918963" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  local -n _self=$1</text>
-  <text x="400" y="499.819866" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  echo "Hi, I am ${_self[name]}"</text>
-  <text x="400" y="520.720769" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  echo "Age: ${_self[age]}"</text>
+  <text x="400" y="478.918963" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  local -n _s=$1</text>
+  <text x="400" y="499.819866" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">  echo ${_s[name]}</text>
   <text x="400" y="541.621671" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">}</text>
-  <text x="400" y="567.747743" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace"># "Method call"</text>
   <text x="400" y="588.648646" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">person_greet alice</text>
-  <text x="400" y="609.549549" font-size="13.28962" fill="var(--text-muted)" font-family="Courier New, monospace"># -&gt; Hi, I am Alice</text>
 
   <!-- Limitations and advice -->
   <rect x="960" y="123.603612" width="280" height="224.684765" rx="6.654403" fill="url(#grad-warn)" stroke="var(--warn-border)" stroke-width="2" filter="url(#shadow)"/>
@@ -149,24 +142,18 @@
   <text x="978" y="181.081153" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- No encapsulation</text>
   <text x="978" y="204.072031" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- No inheritance</text>
   <text x="978" y="227.063139" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- No polymorphism</text>
-  <text x="978" y="250.054017" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Nameref bugs with</text>
-  <text x="978" y="270.95492" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">  local var names</text>
-  <text x="978" y="293.946029" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Hard to debug</text>
-  <text x="978" y="316.936907" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Slower than compiled</text>
-  <text x="978" y="339.928015" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text-muted)" font-style="italic">  languages</text>
+  <text x="978" y="250.054017" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Nameref bugs</text>
+  <text x="978" y="270.95492" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Slow</text>
 
   <rect x="960" y="369.18928" width="280" height="141.081153" rx="6.654403" fill="url(#grad-ok)" stroke="var(--ok-border)" stroke-width="2" filter="url(#shadow)"/>
   <text x="1100" y="398.450544" font-family="Arial, sans-serif" font-size="15.334075" fill="var(--ok-accent)" text-anchor="middle" font-weight="bold">When to Use</text>
-  <text x="978" y="426.666705" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Complex scripts that</text>
-  <text x="978" y="447.567608" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">  need data grouping</text>
-  <text x="978" y="468.468511" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- When Python/Perl are</text>
-  <text x="978" y="489.369414" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">  not available</text>
-  <text x="978" y="510.270317" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text-muted)" font-style="italic">- Otherwise: use Python</text>
+  <text x="978" y="426.666705" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- Data grouping</text>
+  <text x="978" y="447.567608" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text)">- No Python</text>
+  <text x="978" y="510.270317" font-family="Arial, sans-serif" font-size="13.28962" fill="var(--text-muted)" font-style="italic">- Else Python</text>
 
   <!-- Naming convention note -->
   <rect x="960" y="531.17122" width="280" height="88.82878" rx="6.654403" fill="url(#grad-primary)" stroke="var(--primary-border)" stroke-width="2" filter="url(#shadow)"/>
-  <text x="1100" y="557.297406" font-family="Arial, sans-serif" font-size="14.311847" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Naming Convention</text>
-  <text x="978" y="581.333387" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">classname_method()</text>
-  <text x="978" y="602.23429" font-family="Arial, sans-serif" font-size="12.267282" fill="var(--text-muted)">e.g. person_greet</text>
-  <text x="978" y="612.684742" font-family="Arial, sans-serif" font-size="12.267282" fill="var(--text-muted)">     stack_push, stack_pop</text>
+  <text x="1100" y="557.297406" font-family="Arial, sans-serif" font-size="14.311847" fill="var(--primary-accent)" text-anchor="middle" font-weight="bold">Naming</text>
+  <text x="978" y="581.333387" font-size="13.28962" fill="var(--text)" font-family="Courier New, monospace">class_method()</text>
+  <text x="978" y="602.23429" font-family="Arial, sans-serif" font-size="12.267282" fill="var(--text-muted)">person_greet</text>
 </svg>
