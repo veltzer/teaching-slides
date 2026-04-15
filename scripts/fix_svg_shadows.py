@@ -119,8 +119,6 @@ def main() -> None:
         path = pathlib.Path(path_str)
         if not path.is_file() or path.suffix != ".svg":
             continue
-        if path.name == "title.svg":
-            continue
         text = path.read_text(encoding="utf-8")
         new, added, removed = transform(text, apply_to, family_fills)
         # If we added shadows but the filter def is missing, inject it.
